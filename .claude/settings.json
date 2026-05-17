@@ -8,12 +8,23 @@
       "WebFetch",
       "Bash(git add *)",
       "Bash(git commit *)",
-      "Bash(git checkout -b claude/*)",
+      "Bash(git checkout *)",
+      "Bash(git pull)",
+      "Bash(git pull *)",
+      "Bash(git merge *)",
+      "Bash(git push *)",
+      "Bash(git branch -d *)",
+      "Bash(git branch -D *)",
+      "Bash(git branch --set-upstream-to *)",
       "Bash(npm run dev)",
       "Bash(npm run build)",
       "Bash(npm run lint)",
       "Bash(npm test)",
-      "Bash(npm run test:watch)"
+      "Bash(npm run test:watch)",
+      "Bash(npm install)",
+      "Bash(supabase migration list)",
+      "Bash(mkdir *)",
+      "Bash(rm .claude/*)"
     ],
     "deny": []
   }
