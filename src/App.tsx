@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { AuthForm } from '@/components/AuthForm'
+import { FillBlankScreen } from '@/components/FillBlankScreen'
 import { useAuth } from '@/store/auth'
 import heroImage from '@/assets/hero.png'
 
@@ -25,16 +26,20 @@ export default function App() {
 
   if (user !== null) {
     return (
-      <main className="mx-auto flex min-h-svh w-full max-w-2xl flex-col items-center justify-center gap-6 px-4 py-8">
-        <h1 className="text-2xl font-semibold text-zinc-900">AburunGo</h1>
-        <p className="text-zinc-600">Welcome, {user.email}</p>
-        <button
-          type="button"
-          onClick={() => { void signOut() }}
-          className="min-h-[44px] rounded-lg border border-zinc-300 px-4 py-2 text-sm font-medium text-zinc-700 transition-colors active:bg-zinc-100"
-        >
-          Sign out
-        </button>
+      <main className="mx-auto flex min-h-svh w-full max-w-xl flex-col gap-0 px-4">
+        <header className="flex items-center justify-between py-4">
+          <h1 className="text-lg font-semibold text-zinc-900">AburunGo</h1>
+          <button
+            type="button"
+            onClick={() => { void signOut() }}
+            className="min-h-[44px] px-3 text-sm text-zinc-500 active:text-zinc-900"
+          >
+            Sign out
+          </button>
+        </header>
+        <div className="flex flex-1 flex-col justify-center py-6">
+          <FillBlankScreen />
+        </div>
       </main>
     )
   }
