@@ -11,6 +11,7 @@ Practical Japanese for English speakers, focused on real-life situations. Multi-
 ## Stack
 
 ### Frontend
+
 - **Build:** Vite + React 19 + TypeScript (strict; `verbatimModuleSyntax`, `erasableSyntaxOnly`, `noUnusedLocals`)
 - **Styling:** Tailwind v4 via `@tailwindcss/vite` (theme tokens in `src/index.css`)
 - **State (in-session, transient):** Zustand
@@ -18,27 +19,32 @@ Practical Japanese for English speakers, focused on real-life situations. Multi-
 - **Tests:** Vitest
 
 ### API Server
+
 - **Runtime:** Node + TypeScript
 - **Framework:** Hono
 - **Auth:** Validate Supabase JWTs on every protected route
 - **Routes:** `/api/auth`, `/api/vocabulary`, `/api/kanji`, `/api/progress`, `/api/audio`, `/api/stt`, `/api/conversation`
 
 ### Repo & Deployment
+
 - **Structure:** Monorepo — `src/` (frontend) + `server/` (Hono API) in one repo
 - **Deployment:** Separate — frontend on Vercel/Netlify, server on Railway/Fly.io/Render
 - **Containers:** Podman preferred over Docker Desktop. Use `podman run` / `podman-compose` wherever Docker commands appear.
 - **VOICEVOX:** Pre-generate audio locally with Podman, upload to Supabase Storage. Do not host VOICEVOX in production for V1.
 
 ### Infrastructure (Supabase)
+
 - **Database:** Postgres — JMdict vocabulary, KANJIDIC2 kanji, user progress, SRS state, conversation history
 - **Auth:** Supabase Auth (JWT, OAuth) — validated server-side, never trusted client-side
 - **Storage:** Pre-generated VOICEVOX audio files, user assets
 
 ### SRS
+
 - **Algorithm:** FSRS via `ts-fsrs`. State per card: `stability`, `difficulty`, `due_at`, `last_review`, `reps`.
 - **Interface:** `Scheduler` in `src/types.ts` — keep function signatures stable so the algorithm is swappable.
 
 ### Learning Mechanics
+
 1. Flashcards (vocabulary + phrases)
 2. Fill-in-the-blank (text)
 3. Hiragana / katakana practice
@@ -48,16 +54,16 @@ Practical Japanese for English speakers, focused on real-life situations. Multi-
 
 ## Data Sources
 
-| Data | Source | License |
-|---|---|---|
-| Vocabulary / phrases | JMdict ("JMdict for Applications" variant) | CC BY 4.0 |
-| Example sentences | Tatoeba TSV download + `jpn_indices.csv` | CC BY 2.0 FR |
-| Kanji (~2136 Joyo) | KANJIDIC2 / KanjiAPI.dev | CC BY-SA 4.0 |
-| Stroke order SVGs | KanjiVG (bundled) | CC BY-SA 3.0 |
-| TTS audio (static) | VOICEVOX (self-hosted, pre-generated) | Per-voice terms |
-| TTS audio (dynamic) | Google Neural2 / Azure Nanami | Paid |
-| STT | Web Speech API (V1) → OpenAI Whisper API | Free / $0.006/min |
-| Conversation AI | Claude Haiku via Anthropic API | $0.80/$4 per M tokens |
+| Data                 | Source                                     | License               |
+| -------------------- | ------------------------------------------ | --------------------- |
+| Vocabulary / phrases | JMdict ("JMdict for Applications" variant) | CC BY 4.0             |
+| Example sentences    | Tatoeba TSV download + `jpn_indices.csv`   | CC BY 2.0 FR          |
+| Kanji (~2136 Joyo)   | KANJIDIC2 / KanjiAPI.dev                   | CC BY-SA 4.0          |
+| Stroke order SVGs    | KanjiVG (bundled)                          | CC BY-SA 3.0          |
+| TTS audio (static)   | VOICEVOX (self-hosted, pre-generated)      | Per-voice terms       |
+| TTS audio (dynamic)  | Google Neural2 / Azure Nanami              | Paid                  |
+| STT                  | Web Speech API (V1) → OpenAI Whisper API   | Free / $0.006/min     |
+| Conversation AI      | Claude Haiku via Anthropic API             | $0.80/$4 per M tokens |
 
 **Licensing note:** Use "JMdict for Applications" (CC BY 4.0) not base JMdict (CC BY-SA 4.0) — avoids share-alike if the app is monetized.
 
