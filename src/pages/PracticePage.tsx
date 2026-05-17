@@ -1,24 +1,26 @@
-import { FillBlankScreen } from '@/components/FillBlankScreen'
-import { useAuth } from '@/store/auth'
+import { FillBlankScreen } from '@/components/FillBlankScreen';
+import { useAuth } from '@/store/auth';
 
 export function PracticePage() {
-  const signOut = useAuth((s) => s.signOut)
+  const signOut = useAuth((s) => s.signOut);
 
   return (
-    <main className="mx-auto flex min-h-svh w-full max-w-xl flex-col gap-0 px-4">
-      <header className="flex items-center justify-between py-4">
-        <h1 className="text-lg font-semibold text-zinc-900">AburunGo</h1>
+    <main className='mx-auto flex min-h-svh w-full max-w-xl flex-col gap-0 px-4'>
+      <header className='flex items-center justify-between py-4'>
+        <h1 className='text-lg font-semibold text-zinc-900'>AburunGo</h1>
         <button
-          type="button"
-          onClick={() => { void signOut() }}
-          className="min-h-[44px] px-3 text-sm text-zinc-500 active:text-zinc-900"
+          type='button'
+          onClick={() => {
+            void signOut();
+          }}
+          className='min-h-[44px] px-3 text-sm text-zinc-500 active:text-zinc-900'
         >
           Sign out
         </button>
       </header>
-      <div className="flex flex-1 flex-col justify-center py-6">
+      <div className='flex flex-1 flex-col justify-center py-6'>
         <FillBlankScreen />
       </div>
     </main>
-  )
+  );
 }
