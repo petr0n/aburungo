@@ -104,6 +104,11 @@ npm run test:watch   vitest, watch mode
 - `verbatimModuleSyntax` on — use `import type` for type-only imports.
 - `erasableSyntaxOnly` on — no parameter properties, no enums. Use explicit field declarations and union types.
 
+## Workflow rules
+
+- **Branch names must be descriptive.** Never use auto-generated or random string names (e.g. `claude/determined-greider-037b03`). Use short, readable names like `feature/kana-keyboard` or `fix/hero-image`.
+- **Warn before requesting OS permissions.** Microphone, camera, location, contacts — flag it before writing code that triggers a permission prompt.
+
 ## Hard constraints
 
 - **Do not call the Supabase client directly from components** — all data goes through the API server. The Supabase JS client in the frontend is for auth token management only.
