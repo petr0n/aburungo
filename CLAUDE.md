@@ -123,7 +123,8 @@ npm run test:watch   vitest, watch mode
 
 ## Workflow rules
 
-- **Branch names must be descriptive.** Never use auto-generated or random string names (e.g. `claude/determined-greider-037b03`). Use short, readable names like `feature/kana-keyboard` or `fix/hero-image`.
+- **No worktrees.** Work directly on main or a named branch. Do not create git worktrees unless the user explicitly requests it.
+- **Branch names must be descriptive.** Never use auto-generated or random string names. Use short, readable names like `feature/kana-keyboard` or `fix/hero-image`.
 - **Warn before requesting OS permissions.** Microphone, camera, location, contacts — flag it before writing code that triggers a permission prompt.
 
 ## Hard constraints
