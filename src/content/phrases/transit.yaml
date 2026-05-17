@@ -1,0 +1,39 @@
+# Practical phrases for getting around — stations, trains, directions.
+# Polite forms (-masu / -desu) by default. Real-world Japanese, not textbook.
+
+- id: transit.station-where
+  japanese: 駅はどこですか
+  reading: えきはどこですか
+  romaji: eki wa doko desu ka
+  english: Where is the station?
+  scenario: transit
+  notes: |
+    Universal — works at info desks, on the street, at hotel front desks.
+    For a specific station, prefix the name: "新宿駅はどこですか".
+
+- id: transit.ticket-where
+  japanese: 切符はどこで買えますか
+  reading: きっぷはどこでかえますか
+  romaji: kippu wa doko de kaemasu ka
+  english: Where can I buy a ticket?
+  scenario: transit
+  notes: |
+    Most JR/Metro stations have IC card machines now. "Suica" or "Pasmo"
+    are the IC card names you'll hear most often.
+
+- id: transit.next-train
+  japanese: 次の電車は何時ですか
+  reading: つぎのでんしゃはなんじですか
+  romaji: tsugi no densha wa nanji desu ka
+  english: What time is the next train?
+  scenario: transit
+
+- id: transit.getting-off-here
+  japanese: ここで降ります
+  reading: ここでおります
+  romaji: koko de orimasu
+  english: I'm getting off here.
+  scenario: transit
+  notes: |
+    Useful in taxis. On trains, just move toward the door — saying this
+    isn't necessary, but it can prompt other passengers to make way.

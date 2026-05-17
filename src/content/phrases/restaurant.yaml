@@ -1,0 +1,42 @@
+# Practical phrases for restaurants, cafes, izakayas.
+# Polite register — works everywhere from a chain to a counter sushi spot.
+
+- id: restaurant.menu-please
+  japanese: メニューをお願いします
+  reading: メニューをおねがいします
+  romaji: menyuu o onegai shimasu
+  english: Menu, please.
+  scenario: restaurant
+  notes: |
+    Many places hand you the menu automatically. Use this if you've been
+    seated for a while without one, or if you want a different language version.
+
+- id: restaurant.this-please
+  japanese: これをください
+  reading: これをください
+  romaji: kore o kudasai
+  english: I'll have this.
+  scenario: restaurant
+  notes: |
+    Said while pointing. The most useful single phrase in any Japanese
+    restaurant — works even when you can't read the menu.
+
+- id: restaurant.check-please
+  japanese: お会計お願いします
+  reading: おかいけいおねがいします
+  romaji: okaikei onegai shimasu
+  english: The check, please.
+  scenario: restaurant
+  notes: |
+    At many places you pay at the register on the way out — they may just
+    nod and gesture toward the front. "Okanjou" is a common alternative.
+
+- id: restaurant.thanks-for-meal
+  japanese: ごちそうさまでした
+  reading: ごちそうさまでした
+  romaji: gochisousama deshita
+  english: Thanks for the meal.
+  scenario: restaurant
+  notes: |
+    Said after eating, often as you leave or pay. Universally appreciated;
+    the polite-finished form ("deshita") fits any restaurant register.
