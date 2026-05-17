@@ -2,6 +2,16 @@
 
 Practical Japanese for English speakers, focused on real-life situations. Multi-user app with progress tracking, spaced repetition, and AI conversation practice.
 
+## Shared memory
+
+All sessions (including worktrees) must read and write memories to:
+
+```
+/Users/peterabeln/.claude/projects/-Users-peterabeln-Documents-japanese-aburungo/memory/
+```
+
+Check `MEMORY.md` there at the start of every conversation. Write updated memories there at the end of any session where decisions were made or code was built. Never write memories to a worktree-specific path.
+
 ## Product rules
 
 - **No gamification.** No XP, hearts, badges, mascots, level-ups. Progress tracking (SRS state, review history, streaks) is fine — reward loops are not.
@@ -67,14 +77,21 @@ Practical Japanese for English speakers, focused on real-life situations. Multi-
 
 **Licensing note:** Use "JMdict for Applications" (CC BY 4.0) not base JMdict (CC BY-SA 4.0) — avoids share-alike if the app is monetized.
 
-## Commit workflow
+## Git workflow and commits
 
-When asked to commit (and push):
-
-1. Check the current branch. If on `main`, create a new branch: `git checkout -b claude/<short-slug>`.
-2. Stage everything: `git add -A`.
-3. Commit with a thorough message: `git commit -m "<full message>"`. Cover what changed and why — not just a one-liner.
-4. **Stop and ask before pushing.** Never run `git push` without explicit user confirmation.
+- **Branching**: Before committing, check branch with `git branch --show-current`. If on `main`, create and switch to `claude/<short-slug>`.
+- **Review before writing message**: Always run `git status` and `git diff` before crafting the commit message.
+- **Staging**: Stage selectively. Prefer `git add -p` for broad diffs; avoid committing unrelated files.
+- **Atomic commits**: Commit at logical boundaries; do not bundle unrelated changes.
+- **Commit format**: Use Conventional Commits: `<type>(<scope>): <description>`.
+- **Commit message rules**:
+  - Use imperative mood.
+  - Subject max 50 chars, no trailing period.
+  - Wrap body at 72 chars with a blank line after subject.
+  - Explain why in the body when needed.
+  - Use ASCII only in all commit messages; never use non-ASCII characters.
+  - Do not include AI-generated footers or watermarks.
+- **Push safety**: After commit, stop and ask before `git push`. Never push without explicit user confirmation.
 
 ## Commands
 
@@ -104,12 +121,18 @@ npm run test:watch   vitest, watch mode
 - `verbatimModuleSyntax` on — use `import type` for type-only imports.
 - `erasableSyntaxOnly` on — no parameter properties, no enums. Use explicit field declarations and union types.
 
+## Workflow rules
+
+- **Branch names must be descriptive.** Never use auto-generated or random string names (e.g. `claude/determined-greider-037b03`). Use short, readable names like `feature/kana-keyboard` or `fix/hero-image`.
+- **Warn before requesting OS permissions.** Microphone, camera, location, contacts — flag it before writing code that triggers a permission prompt.
+
 ## Hard constraints
 
 - **Do not call the Supabase client directly from components** — all data goes through the API server. The Supabase JS client in the frontend is for auth token management only.
 - **Do not couple `useLiveQuery`-style reactive reads to components that also drive writes** — re-render storms during review sessions.
 - **Do not store `Date.now()` inside SRS functions.** Pass `now` in.
 - **Do not generate placeholder Japanese content.**
+- **Do not read binary image files** (`.png`, `.jpg`, `.gif`, `.webp`) with the Read tool — causes conversation context errors. Reference image paths as strings only.
 - **Always run `npm run build` and `npm test` before concluding code changes.**
 
 ## Not built yet (planned)
