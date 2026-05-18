@@ -138,7 +138,7 @@ POST /synthesis?speaker={style_id}  (body: AudioQuery) → WAV audio
 
 ## 7. Web Speech API (Browser STT)
 
-**Use for:** V1 fill-in-the-blank audio input.
+**V1 decision: selected.** Primary STT for fill-in-the-blank audio input.
 
 **Browser support:**
 
@@ -146,17 +146,14 @@ POST /synthesis?speaker={style_id}  (body: AudioQuery) → WAV audio
 |---|---|
 | Chrome / Edge (desktop) | Full support — audio sent to Google's servers |
 | Safari macOS / iOS | Supported (on-device, more private) |
-| Firefox | **Not supported by default** — flag-gated, not shipped to end users |
+| Firefox | Flag-gated in `about:config`, not shipped to end users by default |
 | Opera / IE | Never shipped |
 
 **Setup:** `SpeechRecognition.lang = 'ja-JP'`. HTTPS required (no HTTP).
 
-**Gotchas:**
-- Firefox users (~5–8% of desktop) have no STT — plan a fallback UI state.
-- Chrome/Edge sends audio to Google's cloud; users with privacy concerns may block it.
-- Accuracy degrades on background noise and rare vocabulary.
+**Firefox:** Not a V1 concern. Show a graceful "microphone not supported" message and move on.
 
-**Action:** Show a clear "microphone not supported" message on Firefox. Treat Whisper API as the upgrade path.
+**Upgrade path:** `gpt-4o-transcribe` (see section 8) when mobile support or higher accuracy is needed.
 
 ---
 
