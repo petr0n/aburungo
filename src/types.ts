@@ -95,3 +95,10 @@ export interface Scheduler {
   /** Is this phrase due for review at the given moment? */
   isDue(state: ReviewState, now: EpochMs): boolean
 }
+
+export type ProgressStats = {
+  streak: number
+  reviewedToday: number
+  totalReviewed: number
+  masteryBreakdown: Record<LeitnerBox, number>
+}
