@@ -96,11 +96,11 @@ Check `MEMORY.md` there at the start of every conversation. Write updated memori
 ## Commands
 
 ```
-npm run dev          frontend dev server
-npm run build        type-check + bundle
-npm run lint         eslint
-npm test             vitest, one shot
-npm run test:watch   vitest, watch mode
+pnpm dev             frontend dev server
+pnpm build           type-check + bundle
+pnpm lint            eslint
+pnpm test            vitest, one shot
+pnpm test:watch      vitest, watch mode
 ```
 
 ## Layer boundaries
@@ -134,7 +134,7 @@ npm run test:watch   vitest, watch mode
 - **Do not store `Date.now()` inside SRS functions.** Pass `now` in.
 - **Do not generate placeholder Japanese content.**
 - **Do not read binary image files** (`.png`, `.jpg`, `.gif`, `.webp`) with the Read tool — causes conversation context errors. Reference image paths as strings only.
-- **Always run `npm run build` and `npm test` before concluding code changes.**
+- **Always run `pnpm build` and `pnpm test` before concluding code changes.**
 
 ## Not built yet (planned)
 

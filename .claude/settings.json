@@ -31,7 +31,6 @@
       "Bash(cd * && git branch -d *)",
       "Bash(cd * && git branch -D *)",
       "Bash(cd * && git branch --set-upstream-to *)",
-      "Bash(cd * && git worktree *)",
       "Bash(npm run dev)",
       "Bash(npm run build)",
       "Bash(npm run lint)",
@@ -46,5 +45,17 @@
       "Bash(rm .claude/*)"
     ],
     "deny": []
+  },
+  "hooks": {
+    "WorktreeCreate": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '{\"continue\": false, \"stopReason\": \"Worktrees are disabled for this project. Work directly on main or a named branch per CLAUDE.md.\"}'"
+          }
+        ]
+      }
+    ]
   }
 }
