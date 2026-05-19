@@ -1,0 +1,63 @@
+slug: post-office
+title_en: Post Office
+title_ja: 郵便局で
+description: Sending letters and parcels, stamps, registered mail, and postal forms
+display_order: 17
+
+cards:
+  - japanese: これをアメリカに送りたいのですが
+    reading: これをアメリカにおくりたいのですが
+    romaji: kore o Amerika ni okuritai no desu ga
+    english: I'd like to send this to the USA.
+    notes: Replace アメリカ with your destination. The clerk will weigh it and tell you the rate.
+
+  - japanese: 航空便でお願いします
+    reading: こうくうびんでおねがいします
+    romaji: koukuubin de onegai shimasu
+    english: By airmail, please.
+    notes: 航空便 (airmail) is faster. 船便 (funabin — sea mail) is very slow but cheap for non-urgent items.
+
+  - japanese: 切手をください
+    reading: きってをください
+    romaji: kitte o kudasai
+    english: Stamps, please.
+    notes: "Specify quantity and denomination: 八十四円切手を五枚ください (five 84-yen stamps, please). Post offices and convenience stores both sell stamps."
+
+  - japanese: 書留でお願いします
+    reading: かきとめでおねがいします
+    romaji: kakitome de onegai shimasu
+    english: Registered mail, please.
+    notes: 書留 gives you a tracking number and requires a signature on delivery. Essential for important documents.
+
+  - japanese: 速達でお願いします
+    reading: そくたつでおねがいします
+    romaji: sokutatsu de onegai shimasu
+    english: Express delivery, please.
+    notes: Delivered the next day (or same day in metro areas). Add ¥290 to standard postage.
+
+  - japanese: いくらかかりますか
+    reading: いくらかかりますか
+    romaji: ikura kakarimasu ka
+    english: How much will it cost?
+
+  - japanese: この荷物はいくらですか
+    reading: このにもつはいくらですか
+    romaji: kono nimotsu wa ikura desu ka
+    english: How much is this parcel?
+
+  - japanese: ここに住所を書いてください
+    reading: ここにじゅうしょをかいてください
+    romaji: koko ni juusho o kaite kudasai
+    english: Please write the address here.
+    notes: "Japanese addresses go in the opposite order from Western ones: postal code → prefecture → city → district → building → name."
+
+  - japanese: 不在票が入っていました
+    reading: ふざいひょうがはいっていました
+    romaji: fuzaihyou ga haitte imashita
+    english: There was a delivery notice in my mailbox.
+    notes: Call the number on the slip to rearrange delivery. Alternatively, pick up at the post office listed on the notice within the holding period.
+
+  - japanese: 再配達をお願いしたいのですが
+    reading: さいはいたつをおねがいしたいのですが
+    romaji: saihaatatsu o onegai shitai no desu ga
+    english: I'd like to request a redelivery.

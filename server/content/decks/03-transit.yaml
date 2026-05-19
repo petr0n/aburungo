@@ -1,0 +1,75 @@
+slug: transit
+title_en: Transit & Transport
+title_ja: 交通機関
+description: Trains, buses, taxis, asking for directions, and IC cards
+display_order: 3
+
+cards:
+  - japanese: 駅はどこですか
+    reading: えきはどこですか
+    romaji: eki wa doko desu ka
+    english: Where is the station?
+    notes: "Universal — works at info desks, on the street, at hotel front desks. For a specific station prefix the name: 新宿駅はどこですか."
+
+  - japanese: 切符はどこで買えますか
+    reading: きっぷはどこでかえますか
+    romaji: kippu wa doko de kaemasu ka
+    english: Where can I buy a ticket?
+    notes: Most JR and Metro stations have IC card machines. Suica and Pasmo are the most common IC cards.
+
+  - japanese: 次の電車は何時ですか
+    reading: つぎのでんしゃはなんじですか
+    romaji: tsugi no densha wa nanji desu ka
+    english: What time is the next train?
+
+  - japanese: ここで降ります
+    reading: ここでおります
+    romaji: koko de orimasu
+    english: I'm getting off here.
+    notes: Useful in taxis. On trains you just move toward the door, but this phrase can prompt other passengers to make way.
+
+  - japanese: ～まで、いくらですか
+    reading: ～まで、いくらですか
+    romaji: ~ made, ikura desu ka
+    english: How much is it to ~?
+    notes: Replace ～ with the destination. Taxis have meters so you rarely need to ask, but useful at ferry or bus ticket windows.
+
+  - japanese: ～はどのホームですか
+    reading: ～はどのホームですか
+    romaji: ~ wa dono hoomu desu ka
+    english: Which platform for ~?
+    notes: At large stations like Shinjuku or Osaka, finding the right platform is genuinely confusing. Station staff are helpful.
+
+  - japanese: 乗り換えはありますか
+    reading: のりかえはありますか
+    romaji: norikae wa arimasu ka
+    english: Do I need to transfer?
+
+  - japanese: ～まで行ってください
+    reading: ～までいってください
+    romaji: ~ made itte kudasai
+    english: Please take me to ~.
+    notes: Said to a taxi driver. You can also show the address on your phone — most drivers appreciate it.
+
+  - japanese: この電車は～に止まりますか
+    reading: このでんしゃは～にとまりますか
+    romaji: kono densha wa ~ ni tomarimasu ka
+    english: Does this train stop at ~?
+    notes: Useful when you're not sure if you've boarded an express or local train.
+
+  - japanese: 終電は何時ですか
+    reading: しゅうでんはなんじですか
+    romaji: shuuden wa nanji desu ka
+    english: What time is the last train?
+    notes: Essential on a night out. Last trains in Tokyo are typically around midnight; missing one means a taxi home or waiting for the first train around 5am.
+
+  - japanese: 道に迷いました
+    reading: みちにまよいました
+    romaji: michi ni mayoimashita
+    english: I'm lost.
+    notes: "Follow up with your destination: ～を探しています (~ o sagashite imasu — I'm looking for ~)."
+
+  - japanese: バス停はどこですか
+    reading: バスていはどこですか
+    romaji: basutei wa doko desu ka
+    english: Where is the bus stop?

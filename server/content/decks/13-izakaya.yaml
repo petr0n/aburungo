@@ -1,0 +1,64 @@
+slug: izakaya
+title_en: Izakaya & Bar
+title_ja: 居酒屋・バーで
+description: Ordering drinks and food, toasting, bar etiquette at Japanese pubs
+display_order: 13
+
+cards:
+  - japanese: とりあえずビールをください
+    reading: とりあえずビールをください
+    romaji: toriaezu biiru o kudasai
+    english: A beer for now, please.
+    notes: The classic izakaya opener. とりあえず literally means "for the time being" — implying more orders will follow.
+
+  - japanese: おすすめのおつまみは何ですか
+    reading: おすすめのおつまみはなんですか
+    romaji: osusume no otsumami wa nan desu ka
+    english: What bar snacks do you recommend?
+    notes: おつまみ are drinking snacks — edamame, karaage, yakitori, etc. Izakayas expect you to order food alongside drinks.
+
+  - japanese: 乾杯！
+    reading: かんぱい！
+    romaji: kanpai!
+    english: Cheers!
+    notes: Everyone clinks glasses (touching the rim slightly lower than the other person's is polite). Drink only after kanpai.
+
+  - japanese: おかわりをください
+    reading: おかわりをください
+    romaji: okawari o kudasai
+    english: Another one, please. / Refill, please.
+
+  - japanese: ～をもう一杯ください
+    reading: ～をもういっぱいください
+    romaji: ~ o mou ippai kudasai
+    english: One more ~ please.
+    notes: 一杯 (ippai) is the counter for drinks in glasses/cups. 一本 (ippon) for bottled drinks.
+
+  - japanese: ノンアルコールのものはありますか
+    reading: ノンアルコールのものはありますか
+    romaji: non arukooru no mono wa arimasu ka
+    english: Do you have non-alcoholic options?
+    notes: "Japanese soft drinks: 烏龍茶 (oolong tea), コーラ (cola), ジュース (juice), ウーロン茶ハイ is technically alcoholic."
+
+  - japanese: 飲み放題はありますか
+    reading: のみほうだいはありますか
+    romaji: nomi houdai wa arimasu ka
+    english: Do you have all-you-can-drink?
+    notes: Usually ¥1,000–2,000 for 2 hours. Last order (ラストオーダー) comes 15–30 minutes before time is up.
+
+  - japanese: お会計をお願いします
+    reading: おかいけいをおねがいします
+    romaji: okaikei o onegai shimasu
+    english: The bill, please.
+    notes: At izakayas you typically settle all at once at the end. If splitting, 割り勘 (warikan) means going Dutch.
+
+  - japanese: 割り勘にしましょう
+    reading: わりかんにしましょう
+    romaji: warikan ni shimashou
+    english: Let's split the bill.
+
+  - japanese: もう一軒行きますか
+    reading: もういっけんいきますか
+    romaji: mou ikken ikimasu ka
+    english: Shall we go to one more place?
+    notes: The Japanese bar-hopping culture (はしご酒, hashigo sake) involves moving from bar to bar. 二軒目 (niken-me — the second bar).

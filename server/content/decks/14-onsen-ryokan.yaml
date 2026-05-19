@@ -1,0 +1,64 @@
+slug: onsen-ryokan
+title_en: Onsen & Ryokan
+title_ja: 温泉・旅館
+description: Traditional inn etiquette, hot spring vocabulary, and ryokan requests
+display_order: 14
+
+cards:
+  - japanese: 浴衣の着方を教えてください
+    reading: ゆかたのきかたをおしえてください
+    romaji: yukata no kikata o oshiete kudasai
+    english: Could you show me how to wear the yukata?
+    notes: Yukata are provided at most ryokan. Left side over right (right over left is for the deceased). A staff member will usually demonstrate.
+
+  - japanese: 温泉はどこですか
+    reading: おんせんはどこですか
+    romaji: onsen wa doko desu ka
+    english: Where is the hot spring?
+    notes: Many ryokan have both indoor (内湯, uchiyu) and outdoor (露天風呂, rotemburo) baths. Ask which is which.
+
+  - japanese: タトゥーがあっても入れますか
+    reading: タトゥーがあってもはいれますか
+    romaji: tattuu ga atte mo hairemasu ka
+    english: Can I enter if I have a tattoo?
+    notes: Many traditional onsen prohibit tattoos. Some facilities have private baths (貸切風呂, kashikiri buro) you can book instead.
+
+  - japanese: 夕食は何時からですか
+    reading: ゆうしょくはなんじからですか
+    romaji: yuushoku wa nanji kara desu ka
+    english: From what time is dinner?
+    notes: Ryokan dinner (懐石, kaiseki) is usually served in your room or a private dining area, often starting at 6–7pm. Breakfast is similar.
+
+  - japanese: 布団を敷いてもらえますか
+    reading: ふとんをしいてもらえますか
+    romaji: futon o shiite moraemasu ka
+    english: Could you lay out the futon?
+    notes: Futon are usually set out by staff while you're at dinner. If staying in, ask them to do it at a convenient time.
+
+  - japanese: 朝食は部屋でもいただけますか
+    reading: ちょうしょくはへやでもいただけますか
+    romaji: choushoku wa heya de mo itadakemasu ka
+    english: Can I also have breakfast in my room?
+
+  - japanese: 貸切風呂を予約できますか
+    reading: かしきりぶろをよやくできますか
+    romaji: kashikiri buro o yoyaku dekimasu ka
+    english: Can I book a private bath?
+    notes: Usually priced per hour and bookable at the front desk. Essential if tattoos or mixed bathing are concerns.
+
+  - japanese: タオルは持って入ってもいいですか
+    reading: タオルはもってはいってもいいですか
+    romaji: taoru wa motte haitte mo ii desu ka
+    english: Can I bring a towel in?
+    notes: The small towel (手ぬぐい, tenugui) can be placed on your head but should not enter the water. You shower before entering the bath.
+
+  - japanese: ～時に起こしてもらえますか
+    reading: ～じにおこしてもらえますか
+    romaji: ~ ji ni okoshite moraemasu ka
+    english: Could you wake me at ~ o'clock?
+
+  - japanese: とても気持ちよかったです
+    reading: とてもきもちよかったです
+    romaji: totemo kimochi yokatta desu
+    english: It was very comfortable / relaxing.
+    notes: A natural thing to say after the bath or meal. Ryokan hosts appreciate genuine feedback.

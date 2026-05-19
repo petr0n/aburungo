@@ -1,0 +1,83 @@
+slug: restaurant
+title_en: Restaurant
+title_ja: レストランで
+description: Ordering food, asking for the bill, dietary needs, and common table phrases
+display_order: 2
+
+cards:
+  - japanese: メニューをお願いします
+    reading: メニューをおねがいします
+    romaji: menyuu o onegai shimasu
+    english: Menu, please.
+    notes: Many places hand you the menu automatically. Use this if you've been seated a while without one, or if you want a different language version.
+
+  - japanese: これをください
+    reading: これをください
+    romaji: kore o kudasai
+    english: I'll have this.
+    notes: Said while pointing. The most useful single phrase in any Japanese restaurant — works even when you can't read the menu.
+
+  - japanese: お会計お願いします
+    reading: おかいけいおねがいします
+    romaji: okaikei onegai shimasu
+    english: The check, please.
+    notes: At many places you pay at the register on the way out — they may just nod and gesture toward the front. おかんじょう is a common alternative.
+
+  - japanese: ごちそうさまでした
+    reading: ごちそうさまでした
+    romaji: gochisousama deshita
+    english: Thanks for the meal.
+    notes: Said when you finish eating. Also said to the cashier when you pay. A mark of good manners everywhere.
+
+  - japanese: いただきます
+    reading: いただきます
+    romaji: itadakimasu
+    english: Let's eat. / I humbly receive.
+    notes: Said just before you eat, often with hands together. Not religious, just cultural — do it and locals will appreciate it.
+
+  - japanese: 何名様ですか
+    reading: なんめいさまですか
+    romaji: nanmei sama desu ka
+    english: How many in your party?
+    notes: "You will hear this when you enter a restaurant. Hold up fingers or say the number: 二人です (futari desu — two people)."
+
+  - japanese: 二人です
+    reading: ふたりです
+    romaji: futari desu
+    english: Two people.
+    notes: "一人 (hitori), 二人 (futari), 三人 (sannin), 四人 (yonin). The counter 名 (mei) is also used: 二名 (futamei)."
+
+  - japanese: アレルギーがあります
+    reading: アレルギーがあります
+    romaji: arerugii ga arimasu
+    english: I have an allergy.
+    notes: "Follow up with the specific allergen: えびアレルギーがあります (ebi arerugii — shrimp allergy). Nut and shellfish allergies can be tricky to communicate — carry a card."
+
+  - japanese: ～は入っていますか
+    reading: ～ははいっていますか
+    romaji: ~ wa haitte imasu ka
+    english: Does it contain ~?
+    notes: "Replace ～ with the ingredient you're avoiding: 肉は入っていますか (niku — meat), 小麦は入っていますか (komugi — wheat)."
+
+  - japanese: おすすめは何ですか
+    reading: おすすめはなんですか
+    romaji: osusume wa nan desu ka
+    english: What do you recommend?
+
+  - japanese: お水をください
+    reading: おみずをください
+    romaji: omizu o kudasai
+    english: Water, please.
+    notes: Tap water is safe everywhere in Japan. Most restaurants bring it automatically, but not all.
+
+  - japanese: 禁煙席をお願いします
+    reading: きんえんせきをおねがいします
+    romaji: kinen seki o onegai shimasu
+    english: Non-smoking section, please.
+    notes: 喫煙席 (kitsuenseki) is the smoking section. Smoking rules vary by restaurant and prefecture.
+
+  - japanese: 少々お待ちください
+    reading: しょうしょうおまちください
+    romaji: shoushou omachi kudasai
+    english: Please wait a moment.
+    notes: You will hear this from staff. A handy phrase to know so you're not left wondering what they said.

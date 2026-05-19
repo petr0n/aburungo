@@ -1,0 +1,71 @@
+slug: doctor
+title_en: Doctor & Pharmacy
+title_ja: 病院・薬局
+description: Describing symptoms, visiting a clinic, getting medicine, and prescriptions
+display_order: 10
+
+cards:
+  - japanese: 具合が悪いです
+    reading: ぐあいがわるいです
+    romaji: guai ga warui desu
+    english: I'm not feeling well.
+
+  - japanese: 熱があります
+    reading: ねつがあります
+    romaji: netsu ga arimasu
+    english: I have a fever.
+
+  - japanese: 頭が痛いです
+    reading: あたまがいたいです
+    romaji: atama ga itai desu
+    english: I have a headache.
+
+  - japanese: お腹が痛いです
+    reading: おなかがいたいです
+    romaji: onaka ga itai desu
+    english: I have a stomachache.
+
+  - japanese: 吐き気がします
+    reading: はきけがします
+    romaji: hakike ga shimasu
+    english: I feel nauseous.
+
+  - japanese: 下痢をしています
+    reading: げりをしています
+    romaji: geri o shite imasu
+    english: I have diarrhoea.
+
+  - japanese: いつからですか
+    reading: いつからですか
+    romaji: itsu kara desu ka
+    english: Since when?
+    notes: "You will hear this from the doctor. Answer with: 昨日から (kinou kara — since yesterday), 三日前から (mikkamae kara — since three days ago)."
+
+  - japanese: この薬はどう飲めばいいですか
+    reading: このくすりはどうのめばいいですか
+    romaji: kono kusuri wa dou nomeba ii desu ka
+    english: How should I take this medicine?
+
+  - japanese: 保険証を持っていません
+    reading: ほけんしょうをもっていません
+    romaji: hokenshou o motte imasen
+    english: I don't have a health insurance card.
+    notes: Foreign visitors pay the full unsubsidised rate (usually still very reasonable by international standards). Travel insurance is strongly recommended.
+
+  - japanese: 処方箋をください
+    reading: しょほうせんをください
+    romaji: shohousen o kudasai
+    english: Please give me a prescription.
+    notes: Take your prescription (処方箋) to a 調剤薬局 (chouzai yakkyoku — dispensing pharmacy). Pharmacies are common and easy to find.
+
+  - japanese: 市販の痛み止めはありますか
+    reading: しはんのいたみどめはありますか
+    romaji: shihan no itamidome wa arimasu ka
+    english: Do you have over-the-counter painkillers?
+    notes: ロキソニン (Loxonin — loxoprofen) and イブ (Ibu — ibuprofen) are common Japanese OTC options.
+
+  - japanese: 英語が話せる医師はいますか
+    reading: えいごがはなせるいしはいますか
+    romaji: eigo ga hanaseru ishi wa imasu ka
+    english: Is there a doctor who speaks English?
+    notes: "University hospitals and international clinics in major cities usually have English-speaking staff. AMDA International Medical Information Centre can help: 03-6233-9266."

@@ -1,0 +1,70 @@
+slug: small-talk
+title_en: Small Talk
+title_ja: 雑談
+description: Hobbies, where you're from, compliments, and casual everyday conversation
+display_order: 19
+
+cards:
+  - japanese: どこから来たんですか
+    reading: どこからきたんですか
+    romaji: doko kara kita n desu ka
+    english: Where are you from?
+    notes: "The ん (n) before desu softens the question and makes it more casual. Casual alternative: どこから来たの？"
+
+  - japanese: ～から来ました
+    reading: ～からきました
+    romaji: ~ kara kimashita
+    english: I'm from ~.
+    notes: "Replace ～ with your country or city. Follow with: ～に住んでいます (I live in ~) if you want to be more specific."
+
+  - japanese: 日本語が上手ですね
+    reading: にほんごがじょうずですね
+    romaji: nihongo ga jouzu desu ne
+    english: Your Japanese is great.
+    notes: "This is a common compliment for foreign speakers. A modest response: いいえ、まだまだです (Not at all, I still have a long way to go)."
+
+  - japanese: いいえ、まだまだです
+    reading: いいえ、まだまだです
+    romaji: iie, mada mada desu
+    english: Not at all, I still have a lot to learn.
+    notes: The culturally appropriate humble response to a compliment. Accepting a compliment outright can seem arrogant.
+
+  - japanese: 趣味は何ですか
+    reading: しゅみはなんですか
+    romaji: shumi wa nan desu ka
+    english: What are your hobbies?
+
+  - japanese: ～が好きです
+    reading: ～がすきです
+    romaji: ~ ga suki desu
+    english: I like ~.
+    notes: "Replace ～ with the thing you like: 映画 (eiga — movies), 音楽 (ongaku — music), 旅行 (ryokou — travel), 料理 (ryouri — cooking)."
+
+  - japanese: 日本はどうですか
+    reading: にほんはどうですか
+    romaji: nihon wa dou desu ka
+    english: How do you find Japan? / What do you think of Japan?
+    notes: One of the most common questions you'll be asked. Have a genuine, enthusiastic answer ready.
+
+  - japanese: 日本料理は好きですか
+    reading: にほんりょうりはすきですか
+    romaji: nihon ryouri wa suki desu ka
+    english: Do you like Japanese food?
+    notes: A very safe and common topic. Specific answers like ラーメンが大好きです (I love ramen) will always get a warm response.
+
+  - japanese: 写真を撮ってもらえますか
+    reading: しゃしんをとってもらえますか
+    romaji: shashin o totte moraemasu ka
+    english: Could you take a photo of me?
+    notes: Hand your phone to the person and frame the shot before asking. Most people are happy to help.
+
+  - japanese: 一緒に写真を撮ってもいいですか
+    reading: いっしょにしゃしんをとってもいいですか
+    romaji: issho ni shashin o totte mo ii desu ka
+    english: May I take a photo with you?
+
+  - japanese: また会いましょう
+    reading: またあいましょう
+    romaji: mata aimashou
+    english: Let's meet again.
+    notes: A warm farewell. More committal than またね (see you) and less formal than またよろしくお願いします.

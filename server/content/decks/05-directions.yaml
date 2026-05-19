@@ -1,0 +1,71 @@
+slug: directions
+title_en: Directions
+title_ja: 道案内
+description: Asking and giving directions on foot, landmarks, and distances
+display_order: 5
+
+cards:
+  - japanese: ～はどこですか
+    reading: ～はどこですか
+    romaji: ~ wa doko desu ka
+    english: Where is ~?
+    notes: The most essential direction phrase. Replace ～ with your destination.
+
+  - japanese: ここはどこですか
+    reading: ここはどこですか
+    romaji: koko wa doko desu ka
+    english: Where am I? / Where is this place?
+    notes: Useful when you're completely lost. Point at a map or your phone if you have one.
+
+  - japanese: 右に曲がってください
+    reading: みぎにまがってください
+    romaji: migi ni magatte kudasai
+    english: Please turn right.
+
+  - japanese: 左に曲がってください
+    reading: ひだりにまがってください
+    romaji: hidari ni magatte kudasai
+    english: Please turn left.
+
+  - japanese: まっすぐ行ってください
+    reading: まっすぐいってください
+    romaji: massugu itte kudasai
+    english: Please go straight.
+
+  - japanese: 次の角を曲がってください
+    reading: つぎのかどをまがってください
+    romaji: tsugi no kado o magatte kudasai
+    english: Please turn at the next corner.
+
+  - japanese: 信号を渡ってください
+    reading: しんごうをわたってください
+    romaji: shingou o watatte kudasai
+    english: Cross at the traffic light.
+
+  - japanese: どのくらいかかりますか
+    reading: どのくらいかかりますか
+    romaji: dono kurai kakarimasu ka
+    english: How long does it take?
+    notes: Can refer to time or distance. Answers typically use 分 (fun/pun — minutes) or キロ (kiro — kilometres).
+
+  - japanese: 歩いてどのくらいですか
+    reading: あるいてどのくらいですか
+    romaji: aruite dono kurai desu ka
+    english: How far is it on foot?
+
+  - japanese: 近いですか
+    reading: ちかいですか
+    romaji: chikai desu ka
+    english: Is it close?
+
+  - japanese: ～の近くです
+    reading: ～のちかくです
+    romaji: ~ no chikaku desu
+    english: It's near ~.
+    notes: "Useful for giving rough directions: コンビニの近くです (near the convenience store)."
+
+  - japanese: 地図を描いてもらえますか
+    reading: ちずをかいてもらえますか
+    romaji: chizu o kaite moraemasu ka
+    english: Could you draw me a map?
+    notes: Locals are often happy to do this. Alternatively, ask them to point on your phone's map.

@@ -1,0 +1,67 @@
+slug: phone
+title_en: Phone Calls
+title_ja: 電話で
+description: Making and receiving calls, leaving messages, and common phone phrases
+display_order: 16
+
+cards:
+  - japanese: もしもし
+    reading: もしもし
+    romaji: moshi moshi
+    english: Hello? (on the phone)
+    notes: Used only on the phone. Never used as a regular greeting face-to-face. The origin is unclear, but it is universally understood.
+
+  - japanese: ～と申しますが
+    reading: ～ともうしますが
+    romaji: ~ to moushimasu ga
+    english: This is ~ speaking.
+    notes: Standard way to introduce yourself when calling. The が at the end softens the statement and implies more is coming.
+
+  - japanese: ～さんはいらっしゃいますか
+    reading: ～さんはいらっしゃいますか
+    romaji: ~ san wa irasshaimasu ka
+    english: Is ~ available? / May I speak to ~?
+    notes: いらっしゃいますか is the polite form of いますか. Use this when calling a business or someone's home.
+
+  - japanese: 少々お待ちください
+    reading: しょうしょうおまちください
+    romaji: shoushou omachi kudasai
+    english: Please hold a moment.
+    notes: You'll hear this often when calling businesses. The caller usually responds with はい, よろしくお願いします.
+
+  - japanese: 聞こえますか
+    reading: きこえますか
+    romaji: kikoemasu ka
+    english: Can you hear me?
+    notes: "Useful when the line is bad. Another option: 声が小さくて聞こえません (your voice is too quiet to hear)."
+
+  - japanese: もう一度言っていただけますか
+    reading: もういちどいっていただけますか
+    romaji: mou ichido itte itadakemasu ka
+    english: Could you say that again?
+
+  - japanese: ゆっくり話していただけますか
+    reading: ゆっくりはなしていただけますか
+    romaji: yukkuri hanashite itadakemasu ka
+    english: Could you speak more slowly?
+
+  - japanese: 折り返し電話します
+    reading: おりかえしでんわします
+    romaji: orikaeshi denwa shimasu
+    english: I'll call you back.
+
+  - japanese: 伝言をお願いできますか
+    reading: でんごんをおねがいできますか
+    romaji: dengon o onegai dekimasu ka
+    english: Could I leave a message?
+
+  - japanese: 電話番号を教えてもらえますか
+    reading: でんわばんごうをおしえてもらえますか
+    romaji: denwa bangou o oshiete moraemasu ka
+    english: Could you give me your phone number?
+
+  - japanese: 電波が悪くて
+    reading: でんぱがわるくて
+    romaji: denpa ga warukute
+    english: The signal is bad…
+    notes: A natural, informal way to explain a dropped call or poor quality. Usually followed by …聞こえません (I can't hear you).

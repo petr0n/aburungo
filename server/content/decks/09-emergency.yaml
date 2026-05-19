@@ -1,0 +1,76 @@
+slug: emergency
+title_en: Emergency
+title_ja: 緊急時
+description: Getting help, medical situations, police, lost items, and safety phrases
+display_order: 9
+
+cards:
+  - japanese: 助けてください
+    reading: たすけてください
+    romaji: tasukete kudasai
+    english: Help me, please!
+    notes: The most direct call for help. Shouting 助けて！ (tasukete!) is also understood.
+
+  - japanese: 救急車を呼んでください
+    reading: きゅうきゅうしゃをよんでください
+    romaji: kyuukyuusha o yonde kudasai
+    english: Please call an ambulance.
+    notes: Emergency number in Japan is 119 (fire and ambulance). Police is 110. Both have English-speaking operators.
+
+  - japanese: 警察を呼んでください
+    reading: けいさつをよんでください
+    romaji: keisatsu o yonde kudasai
+    english: Please call the police.
+    notes: Police emergency number is 110. For non-emergency, find the nearest 交番 (kouban — police box), found at many street corners.
+
+  - japanese: 病院に連れて行ってください
+    reading: びょういんにつれていってください
+    romaji: byouin ni tsurete itte kudasai
+    english: Please take me to a hospital.
+
+  - japanese: 財布をなくしました
+    reading: さいふをなくしました
+    romaji: saifu o nakushimashita
+    english: I've lost my wallet.
+    notes: Japan has an exceptionally high rate of lost items being handed in. Report to the nearest police box — your wallet may well turn up.
+
+  - japanese: パスポートをなくしました
+    reading: パスポートをなくしました
+    romaji: pasupooto o nakushimashita
+    english: I've lost my passport.
+    notes: Contact your country's embassy or consulate immediately. File a police report first — you'll need the report number.
+
+  - japanese: ここが痛いです
+    reading: ここがいたいです
+    romaji: koko ga itai desu
+    english: It hurts here.
+    notes: Point to the affected area. Useful when you can't describe symptoms in detail.
+
+  - japanese: 薬アレルギーがあります
+    reading: くすりアレルギーがあります
+    romaji: kusuri arerugii ga arimasu
+    english: I have a drug allergy.
+    notes: Follow with the specific medication if possible. Carry a written note in Japanese for known allergies.
+
+  - japanese: 日本語があまり話せません
+    reading: にほんごがあまりはなせません
+    romaji: nihongo ga amari hanasemasen
+    english: I can't speak much Japanese.
+    notes: This often prompts the other person to simplify, speak slowly, or find someone who speaks English.
+
+  - japanese: 英語を話せる人はいますか
+    reading: えいごをはなせるひとはいますか
+    romaji: eigo o hanaseru hito wa imasu ka
+    english: Is there anyone who speaks English?
+
+  - japanese: 火事です
+    reading: かじです
+    romaji: kaji desu
+    english: Fire!
+    notes: Fire and ambulance emergency number is 119.
+
+  - japanese: 迷子になりました
+    reading: まいごになりました
+    romaji: maigo ni narimashita
+    english: I'm lost.
+    notes: 迷子 (maigo) is typically used for children, but adults can use it without embarrassment.
