@@ -96,6 +96,21 @@ export interface Scheduler {
   isDue(state: ReviewState, now: EpochMs): boolean
 }
 
+/**
+ * A card as returned by the server. Mirrors the DB `cards` table shape.
+ * Use this for all server-backed data flow; `Phrase` is the legacy local type.
+ */
+export type Card = {
+  id: string
+  japanese: string
+  reading: string
+  romaji: string
+  english: string
+  notes: string | null
+  audioUrl: string | null
+  deck: string
+}
+
 /** FSRS card states as returned by the server. */
 export type FsrsState = 'new' | 'learning' | 'review' | 'relearning'
 

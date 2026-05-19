@@ -1,4 +1,4 @@
-import type { Phrase } from '@/types'
+import type { Card } from '@/types'
 import { apiFetch } from './client'
 
 type ListParams = {
@@ -7,10 +7,10 @@ type ListParams = {
   offset?: number
 }
 
-type VocabularyListResponse = { data: Phrase[] }
-type VocabularyItemResponse = { data: Phrase }
+type VocabularyListResponse = { data: Card[] }
+type VocabularyItemResponse = { data: Card }
 
-export async function fetchVocabulary(params: ListParams = {}): Promise<Phrase[]> {
+export async function fetchVocabulary(params: ListParams = {}): Promise<Card[]> {
   const query = new URLSearchParams()
   if (params.deck) query.set('deck', params.deck)
   if (params.limit !== undefined) query.set('limit', String(params.limit))
@@ -21,7 +21,7 @@ export async function fetchVocabulary(params: ListParams = {}): Promise<Phrase[]
   return res.data
 }
 
-export async function fetchPhrase(id: string): Promise<Phrase> {
+export async function fetchCard(id: string): Promise<Card> {
   const res = await apiFetch<VocabularyItemResponse>(`/api/vocabulary/${encodeURIComponent(id)}`)
   return res.data
 }
