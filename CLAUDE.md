@@ -17,6 +17,9 @@ Check `MEMORY.md` there at the start of every conversation. Write updated memori
 - **No gamification.** No XP, hearts, badges, mascots, level-ups. Progress tracking (SRS state, review history, streaks) is fine — reward loops are not.
 - **Touch first.** Mobile-first design. No hover-only affordances. Touch targets ≥ 44px.
 - **Real content only.** All Japanese content comes from JMdict/Tatoeba/KANJIDIC2 or verified sources. Never fabricate, simulate, or placeholder phrase content.
+- **Declare the source before writing content.** Any task that involves creating or modifying Japanese phrase/vocabulary content must begin by stating the exact source (file path, API endpoint, or dataset) the content will come from. Do not write a single phrase, card, or example sentence without first confirming the source. If no verified source is available, stop and ask.
+- **No training-data phrases.** Do not write Japanese phrases, sentences, or vocabulary from memory or training data, even if they appear correct. My training data is not a citable, verifiable source. All content must be traceable to a downloaded dataset or live API call made during the session.
+- **Content changes require source citation in the commit message.** Any commit that adds or modifies Japanese content must name the source in the commit body (e.g. "Source: JMdict for Applications, entry seq 1234567" or "Source: Tatoeba sentence #98765"). A commit without a source citation on content changes must be rejected.
 
 ## Stack
 
