@@ -3,9 +3,10 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "packageManager": "pnpm@11.1.3",
   "scripts": {
     "dev": "vite",
-    "dev:server": "npm run dev --prefix server",
+    "dev:server": "echo 'Frontend runs on http://localhost:5173' && pnpm --filter ./server run dev",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",

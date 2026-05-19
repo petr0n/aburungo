@@ -1,0 +1,66 @@
+slug: apologies-keigo
+title_en: Apologies & Formality
+title_ja: 謝罪・敬語
+description: Apologising at different levels of formality, polite requests, and keigo basics
+display_order: 20
+
+cards:
+  - japanese: ごめんなさい
+    reading: ごめんなさい
+    romaji: gomen nasai
+    english: I'm sorry.
+    notes: A genuine personal apology. More emotional than すみません. Used for real mistakes and direct apologies.
+
+  - japanese: 大変申し訳ございません
+    reading: たいへんもうしわけございません
+    romaji: taihen moushiwake gozaimasen
+    english: I am truly very sorry.
+    notes: The deepest formal apology. Used in professional settings, or when you've caused significant trouble. Said with a bow.
+
+  - japanese: ご迷惑をおかけして申し訳ございません
+    reading: ごめいわくをおかけしてもうしわけございません
+    romaji: gomeiwaku o okake shite moushiwake gozaimasen
+    english: I apologise for the inconvenience I've caused.
+    notes: Business-level apology. Standard in complaint responses, customer service, or when a project is delayed.
+
+  - japanese: おかげさまで
+    reading: おかげさまで
+    romaji: okagesama de
+    english: Thanks to you. / I'm doing well, thanks.
+    notes: Used as a response to お元気ですか. Implies you're doing well because of the other person's support — a cultural acknowledgement of interconnection.
+
+  - japanese: お手数をおかけします
+    reading: おてすうをおかけします
+    romaji: otesuu o okake shimasu
+    english: Sorry to trouble you. / I appreciate your effort.
+    notes: Said before asking someone to do something inconvenient for them. Shows awareness that you're asking for effort.
+
+  - japanese: ～していただけますか
+    reading: ～していただけますか
+    romaji: ~ shite itadakemasu ka
+    english: Would you be so kind as to ~?
+    notes: The polite request form. E.g. 確認していただけますか (could you confirm?). More polite than ～してもらえますか.
+
+  - japanese: おっしゃる通りです
+    reading: おっしゃるとおりです
+    romaji: ossharu toori desu
+    english: You're absolutely right.
+    notes: Polite agreement using the respectful verb おっしゃる (to say — respectful form). Used when agreeing with a superior or customer.
+
+  - japanese: かしこまりました
+    reading: かしこまりました
+    romaji: kashikomarimashita
+    english: Certainly. / I will do as you say.
+    notes: The most deferential form of understanding and acceptance. Used in service contexts — shops, hotels, restaurants — or with important clients.
+
+  - japanese: 少々お待ちいただけますでしょうか
+    reading: しょうしょうおまちいただけますでしょうか
+    romaji: shoushou omachi itadakemasu deshou ka
+    english: Would you be so kind as to wait a moment?
+    notes: Extremely polite version of お待ちください. You'll hear this in high-end service settings.
+
+  - japanese: ご不便をおかけして申し訳ございません
+    reading: ごふべんをおかけしてもうしわけございません
+    romaji: gofuben o okake shite moushiwake gozaimasen
+    english: I sincerely apologise for the inconvenience.
+    notes: A professional written or spoken apology for situations like system downtime, delays, or errors affecting customers.

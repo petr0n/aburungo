@@ -1,0 +1,71 @@
+slug: hotel
+title_en: Hotel
+title_ja: ホテルで
+description: Check-in, check-out, room requests, and common hotel situations
+display_order: 6
+
+cards:
+  - japanese: チェックインをお願いします
+    reading: チェックインをおねがいします
+    romaji: chekku in o onegai shimasu
+    english: I'd like to check in.
+
+  - japanese: 予約しています
+    reading: よやくしています
+    romaji: yoyaku shite imasu
+    english: I have a reservation.
+    notes: "Follow with your name: ～と申します. Hotels will ask for your passport — have it ready."
+
+  - japanese: チェックアウトは何時ですか
+    reading: チェックアウトはなんじですか
+    romaji: chekkuauto wa nanji desu ka
+    english: What time is check-out?
+    notes: Standard check-out in Japan is 11am–noon. You can often request a late check-out for an extra fee.
+
+  - japanese: 部屋のカギをなくしました
+    reading: へやのカギをなくしました
+    romaji: heya no kagi o nakushimashita
+    english: I've lost my room key.
+
+  - japanese: エアコンの使い方を教えてください
+    reading: エアコンのつかいかたをおしえてください
+    romaji: eakon no tsukaikata o oshiete kudasai
+    english: Could you show me how to use the air conditioning?
+
+  - japanese: タオルをもう一枚ください
+    reading: タオルをもういちまいください
+    romaji: taoru o mou ichimai kudasai
+    english: Could I have one more towel?
+
+  - japanese: Wi-Fiのパスワードは何ですか
+    reading: Wi-Fiのパスワードはなんですか
+    romaji: wai fai no pasuwaado wa nan desu ka
+    english: What is the Wi-Fi password?
+
+  - japanese: 荷物を預かってもらえますか
+    reading: にもつをあずかってもらえますか
+    romaji: nimotsu o azukatte moraemasu ka
+    english: Could you hold my luggage?
+    notes: Useful when you check out but want to explore before your flight or onward journey. Most hotels will hold bags for free.
+
+  - japanese: 朝食は何時からですか
+    reading: ちょうしょくはなんじからですか
+    romaji: choushoku wa nanji kara desu ka
+    english: From what time is breakfast?
+
+  - japanese: 部屋を変えてもらえますか
+    reading: へやをかえてもらえますか
+    romaji: heya o kaete moraemasu ka
+    english: Could I change my room?
+    notes: Valid requests include noise, smell, a broken fixture, or facing a wall. Be polite — Japanese hotel staff will usually try hard to help.
+
+  - japanese: 近くにコンビニはありますか
+    reading: ちかくにコンビニはありますか
+    romaji: chikaku ni konbini wa arimasu ka
+    english: Is there a convenience store nearby?
+    notes: In Japan there almost always is.
+
+  - japanese: タクシーを呼んでもらえますか
+    reading: タクシーをよんでもらえますか
+    romaji: takushii o yonde moraemasu ka
+    english: Could you call a taxi for me?

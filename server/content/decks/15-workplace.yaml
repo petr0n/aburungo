@@ -1,0 +1,67 @@
+slug: workplace
+title_en: Workplace
+title_ja: 職場で
+description: Basic office interactions, meetings, emails, and professional Japanese
+display_order: 15
+
+cards:
+  - japanese: お世話になっております
+    reading: おせわになっております
+    romaji: osewa ni natte orimasu
+    english: Thank you for your continued support.
+    notes: The standard opening for business emails and calls to external contacts. No literal English equivalent — just use it.
+
+  - japanese: ～の件でご連絡いたしました
+    reading: ～のけんでごれんらくいたしました
+    romaji: ~ no ken de gorenraku itashimashita
+    english: I am contacting you regarding ~.
+    notes: "Standard email opener. Replace ～ with the subject: 先日のご提案の件 (regarding your recent proposal)."
+
+  - japanese: 少々お時間をいただけますか
+    reading: しょうしょうおじかんをいただけますか
+    romaji: shoushou ojikan o itadakemasu ka
+    english: Could I have a moment of your time?
+    notes: Use before asking a question or starting a discussion. More polite than interrupting directly.
+
+  - japanese: ご確認をお願いいたします
+    reading: ごかくにんをおねがいいたします
+    romaji: gokakunin o onegai itashimasu
+    english: Please review / confirm this.
+    notes: Standard way to ask a colleague or client to check a document or action.
+
+  - japanese: 承知しました
+    reading: しょうちしました
+    romaji: shouchi shimashita
+    english: Understood. / I will do that.
+    notes: The polite, professional way to confirm you've understood a request. わかりました is less formal; かしこまりました is the most deferential (used with clients).
+
+  - japanese: 会議は何時からですか
+    reading: かいぎはなんじからですか
+    romaji: kaigi wa nanji kara desu ka
+    english: What time does the meeting start?
+
+  - japanese: 議事録を送ってもらえますか
+    reading: ぎじろくをおくってもらえますか
+    romaji: gijiroku o okutte moraemasu ka
+    english: Could you send me the meeting minutes?
+
+  - japanese: 締め切りはいつですか
+    reading: しめきりはいつですか
+    romaji: shimekiri wa itsu desu ka
+    english: What is the deadline?
+
+  - japanese: 現在対応中です
+    reading: げんざいたいおうちゅうです
+    romaji: genzai taiou chuu desu
+    english: I'm currently working on it.
+
+  - japanese: お疲れ様でした
+    reading: おつかれさまでした
+    romaji: otsukaresama deshita
+    english: Good work. / Thank you for your hard work.
+    notes: Said to colleagues at the end of the day, after a meeting, or when someone completes a task. Responds with same.
+
+  - japanese: よろしければ、一緒に昼食はいかがですか
+    reading: よろしければ、いっしょにちゅうしょくはいかがですか
+    romaji: yoroshikereba, issho ni chuushoku wa ikaga desu ka
+    english: If you're free, would you like to have lunch together?

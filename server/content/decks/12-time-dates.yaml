@@ -1,0 +1,68 @@
+slug: time-dates
+title_en: Time & Dates
+title_ja: 時間・日付
+description: Telling the time, days of the week, months, and scheduling
+display_order: 12
+
+cards:
+  - japanese: 今、何時ですか
+    reading: いま、なんじですか
+    romaji: ima, nanji desu ka
+    english: What time is it now?
+
+  - japanese: 今日は何日ですか
+    reading: きょうはなんにちですか
+    romaji: kyou wa nannichi desu ka
+    english: What is today's date?
+
+  - japanese: 今日は何曜日ですか
+    reading: きょうはなんようびですか
+    romaji: kyou wa nanyoubi desu ka
+    english: What day of the week is it today?
+
+  - japanese: 月曜日から金曜日
+    reading: げつようびからきんようび
+    romaji: getsuyoubi kara kin'youbi
+    english: Monday through Friday.
+    notes: Days of the week in order — 月 (Mon), 火 (Tue), 水 (Wed), 木 (Thu), 金 (Fri), 土 (Sat), 日 (Sun). Based on moon, fire, water, tree, gold, earth, sun.
+
+  - japanese: 何時に開きますか
+    reading: なんじにあきますか
+    romaji: nanji ni akimasu ka
+    english: What time does it open?
+
+  - japanese: 何時に閉まりますか
+    reading: なんじにしまりますか
+    romaji: nanji ni shimarimasu ka
+    english: What time does it close?
+
+  - japanese: ～時に会いましょう
+    reading: ～じにあいましょう
+    romaji: ~ ji ni aimashou
+    english: Let's meet at ~ o'clock.
+
+  - japanese: 今週の～曜日はいかがですか
+    reading: こんしゅうの～ようびはいかがですか
+    romaji: konshuu no ~ youbi wa ikaga desu ka
+    english: How about this ~ (day of week)?
+
+  - japanese: 来週でもいいですか
+    reading: らいしゅうでもいいですか
+    romaji: raishuu demo ii desu ka
+    english: Is next week OK?
+
+  - japanese: 少し遅れます
+    reading: すこしおくれます
+    romaji: sukoshi okuremasu
+    english: I'll be a little late.
+    notes: "Follow up with how late: 十分くらい遅れます (juppun kurai okuremasu — about 10 minutes late)."
+
+  - japanese: もうすぐ着きます
+    reading: もうすぐつきます
+    romaji: mousugu tsukimasu
+    english: I'll be there soon.
+
+  - japanese: 予約を変更できますか
+    reading: よやくをへんこうできますか
+    romaji: yoyaku o henkou dekimasu ka
+    english: Can I change my reservation?

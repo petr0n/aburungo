@@ -96,9 +96,12 @@ export interface Scheduler {
   isDue(state: ReviewState, now: EpochMs): boolean
 }
 
+/** FSRS card states as returned by the server. */
+export type FsrsState = 'new' | 'learning' | 'review' | 'relearning'
+
 export type ProgressStats = {
   streak: number
   reviewedToday: number
   totalReviewed: number
-  masteryBreakdown: Record<LeitnerBox, number>
+  masteryBreakdown: Record<FsrsState, number>
 }

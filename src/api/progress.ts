@@ -18,13 +18,13 @@ export async function fetchDue(limit?: number): Promise<ReviewState[]> {
 }
 
 export async function submitReview(
-  phraseId: string,
+  cardId: string,
   rating: ReviewRating,
   reviewedAt: number,
 ): Promise<ReviewState> {
   const res = await apiFetch<ReviewResponse>('/api/progress/review', {
     method: 'POST',
-    body: JSON.stringify({ phraseId, rating: toFsrsRating(rating), reviewedAt }),
+    body: JSON.stringify({ cardId, rating: toFsrsRating(rating), reviewedAt }),
   })
   return res.data
 }

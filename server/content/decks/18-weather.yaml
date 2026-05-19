@@ -1,0 +1,67 @@
+slug: weather
+title_en: Weather & Seasons
+title_ja: 天気・季節
+description: Talking about weather, seasons, temperatures, and natural phenomena
+display_order: 18
+
+cards:
+  - japanese: 今日の天気はどうですか
+    reading: きょうのてんきはどうですか
+    romaji: kyou no tenki wa dou desu ka
+    english: What's the weather like today?
+
+  - japanese: 晴れています
+    reading: はれています
+    romaji: harete imasu
+    english: It's sunny.
+
+  - japanese: 雨が降っています
+    reading: あめがふっています
+    romaji: ame ga futte imasu
+    english: It's raining.
+
+  - japanese: 傘を持って行った方がいいですか
+    reading: かさをもっていったほうがいいですか
+    romaji: kasa o motte itta hou ga ii desu ka
+    english: Should I take an umbrella?
+    notes: Japan has a rich umbrella culture. Convenience stores always stock inexpensive umbrellas for ¥500–800.
+
+  - japanese: 台風が来ています
+    reading: たいふうがきています
+    romaji: taifuu ga kite imasu
+    english: There's a typhoon coming.
+    notes: Typhoon season runs roughly June–October. Check 台風情報 (taifuu jouhou — typhoon information) for tracks and warnings.
+
+  - japanese: 暑いですね
+    reading: あついですね
+    romaji: atsui desu ne
+    english: It's hot, isn't it.
+    notes: "ね at the end invites agreement — perfect small talk. Japanese summers (esp. July–August) are genuinely brutal: 35°C+ with high humidity."
+
+  - japanese: 寒いですね
+    reading: さむいですね
+    romaji: samui desu ne
+    english: It's cold, isn't it.
+
+  - japanese: 梅雨ですね
+    reading: つゆですね
+    romaji: tsuyu desu ne
+    english: It's the rainy season, isn't it.
+    notes: 梅雨 (tsuyu — literally "plum rain") runs June–mid July. Grey and humid, but green and lush.
+
+  - japanese: 紅葉がきれいですね
+    reading: こうようがきれいですね
+    romaji: kouyou ga kirei desu ne
+    english: The autumn leaves are beautiful, aren't they.
+    notes: 紅葉 (kouyou) — autumn foliage — is a cultural event in Japan. Peak timing varies by region; late October in Tokyo, earlier in Hokkaido.
+
+  - japanese: 雪が降りそうです
+    reading: ゆきがふりそうです
+    romaji: yuki ga furisou desu
+    english: It looks like it might snow.
+
+  - japanese: 花粉症がひどいです
+    reading: かふんしょうがひどいです
+    romaji: kafunshou ga hidoi desu
+    english: My hay fever is terrible.
+    notes: Japanese cedar (杉, sugi) pollen season is February–April and affects a large proportion of the population. Masks and antihistamines are everywhere.

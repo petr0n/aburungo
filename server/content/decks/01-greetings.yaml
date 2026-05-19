@@ -1,0 +1,82 @@
+slug: greetings
+title_en: Greetings & Basics
+title_ja: あいさつ・基本表現
+description: Meeting people, introductions, thanks, apologies, and everyday small talk
+display_order: 1
+
+cards:
+  - japanese: こんにちは
+    reading: こんにちは
+    romaji: konnichiwa
+    english: Hello / Good afternoon.
+    notes: General daytime greeting. Use おはようございます in the morning and こんばんは in the evening.
+
+  - japanese: おはようございます
+    reading: おはようございます
+    romaji: ohayou gozaimasu
+    english: Good morning.
+    notes: The plain form おはよう is used with close friends and family.
+
+  - japanese: こんばんは
+    reading: こんばんは
+    romaji: konbanwa
+    english: Good evening.
+
+  - japanese: はじめまして
+    reading: はじめまして
+    romaji: hajimemashite
+    english: Nice to meet you.
+    notes: Said the first time you meet someone. Typically followed by your name and よろしくお願いします.
+
+  - japanese: よろしくお願いします
+    reading: よろしくおねがいします
+    romaji: yoroshiku onegai shimasu
+    english: Pleased to meet you / I'm in your care.
+    notes: One of the most versatile phrases in Japanese. Used at introductions, when asking a favour, starting a project, or joining a team.
+
+  - japanese: ありがとうございます
+    reading: ありがとうございます
+    romaji: arigatou gozaimasu
+    english: Thank you very much.
+    notes: Plain form ありがとう is fine among friends. Adding ございます makes it polite for any situation.
+
+  - japanese: すみません
+    reading: すみません
+    romaji: sumimasen
+    english: Excuse me / I'm sorry / Thank you (for the trouble).
+    notes: The single most useful word in Japan. Use it to get attention, apologise lightly, or thank someone who went out of their way.
+
+  - japanese: 申し訳ありません
+    reading: もうしわけありません
+    romaji: moushiwake arimasen
+    english: I sincerely apologise.
+    notes: Much stronger than すみません. Use when you've made a real mistake or caused inconvenience.
+
+  - japanese: お名前は何ですか
+    reading: おなまえはなんですか
+    romaji: onamae wa nan desu ka
+    english: What is your name?
+
+  - japanese: ～と申します
+    reading: ～ともうします
+    romaji: ~ to moushimasu
+    english: My name is ~. (formal)
+    notes: More formal than ～です for introductions. Replace ～ with your name.
+
+  - japanese: お元気ですか
+    reading: おげんきですか
+    romaji: ogenki desu ka
+    english: How are you?
+    notes: Common response is はい、おかげさまで (Yes, thanks to you). Used with people you've met before.
+
+  - japanese: さようなら
+    reading: さようなら
+    romaji: sayounara
+    english: Goodbye.
+    notes: Implies you won't see the person again for a while. For casual "see you later" use またね or じゃあね.
+
+  - japanese: またよろしくお願いします
+    reading: またよろしくおねがいします
+    romaji: mata yoroshiku onegai shimasu
+    english: I look forward to working with you again.
+    notes: A polite sign-off for emails, meetings, or any interaction where you expect future contact.

@@ -1,0 +1,75 @@
+slug: numbers
+title_en: Numbers & Counters
+title_ja: 数字・助数詞
+description: Numbers, prices, telling the time, basic counters, and quantity phrases
+display_order: 11
+
+cards:
+  - japanese: 一、二、三、四、五
+    reading: いち、に、さん、し、ご
+    romaji: ichi, ni, san, shi, go
+    english: One, two, three, four, five.
+    notes: し (4) is avoided for people and floors due to its homophone 死 (death). よん is used instead.
+
+  - japanese: 六、七、八、九、十
+    reading: ろく、なな、はち、きゅう、じゅう
+    romaji: roku, nana, hachi, kyuu, juu
+    english: Six, seven, eight, nine, ten.
+    notes: なな is preferred over しち for 7 in most everyday contexts.
+
+  - japanese: ～円です
+    reading: ～えんです
+    romaji: ~ en desu
+    english: It's ~ yen.
+    notes: Japan has no coins above ¥500 and no note below ¥1,000. Prices are displayed as whole numbers.
+
+  - japanese: ～時です
+    reading: ～じです
+    romaji: ~ ji desu
+    english: It's ~ o'clock.
+    notes: "一時 (ichiji) = 1 o'clock, 二時 (niji) = 2 o'clock, etc. Minutes use 分 (fun/pun): 三時十五分 = 3:15."
+
+  - japanese: ～分です
+    reading: ～ふん／ぷんです
+    romaji: ~ fun / pun desu
+    english: It's ~ minutes.
+    notes: "Pronunciation alternates: 一分 (ippun), 二分 (nifun), 三分 (sanpun), 四分 (yonpun), 五分 (gofun), 六分 (roppun)…"
+
+  - japanese: ひとつ、ふたつ、みっつ
+    reading: ひとつ、ふたつ、みっつ
+    romaji: hitotsu, futatsu, mittsu
+    english: One, two, three (general objects).
+    notes: The つ counter is the safe default when you don't know the correct counter. Works up to 9; above that switch to 個 (ko) or specific counters.
+
+  - japanese: ～枚ください
+    reading: ～まいください
+    romaji: ~ mai kudasai
+    english: ~ sheets / flat things, please.
+    notes: "枚 (mai) counts flat objects: paper, tickets, T-shirts, towels, plates. 一枚 (ichimai), 二枚 (nimai), 三枚 (sanmai)."
+
+  - japanese: ～本ください
+    reading: ～ほんください
+    romaji: ~ hon kudasai
+    english: ~ long, thin things, please.
+    notes: "本 (hon/pon/bon) counts long thin objects: pens, bottles, cans, trains, roads. 一本 (ippon), 二本 (nihon), 三本 (sanbon)."
+
+  - japanese: ～個ください
+    reading: ～こください
+    romaji: ~ ko kudasai
+    english: ~ pieces, please.
+    notes: "個 (ko) is a general counter for small objects: apples, onigiri, batteries. Safe to use when you're unsure."
+
+  - japanese: 半分ください
+    reading: はんぶんください
+    romaji: hanbun kudasai
+    english: Half, please.
+
+  - japanese: もう一つください
+    reading: もうひとつください
+    romaji: mou hitotsu kudasai
+    english: One more, please.
+
+  - japanese: 全部でいくらですか
+    reading: ぜんぶでいくらですか
+    romaji: zenbu de ikura desu ka
+    english: How much is it all together?

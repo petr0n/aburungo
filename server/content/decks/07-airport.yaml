@@ -1,0 +1,70 @@
+slug: airport
+title_en: Airport
+title_ja: 空港で
+description: Check-in, immigration, customs, baggage, and departure gates
+display_order: 7
+
+cards:
+  - japanese: チェックインはどこですか
+    reading: チェックインはどこですか
+    romaji: chekkuin wa doko desu ka
+    english: Where is the check-in counter?
+
+  - japanese: パスポートをお願いします
+    reading: パスポートをおねがいします
+    romaji: pasupooto o onegai shimasu
+    english: Your passport, please.
+    notes: You will hear this at check-in and immigration. Have it open to the photo page.
+
+  - japanese: 窓側の席をお願いします
+    reading: まどがわのせきをおねがいします
+    romaji: madogawa no seki o onegai shimasu
+    english: A window seat, please.
+    notes: 通路側 (tsuurogawa) is the aisle side.
+
+  - japanese: 荷物はいくつ預けられますか
+    reading: にもつはいくつあずけられますか
+    romaji: nimotsu wa ikutsu azukeraremasu ka
+    english: How many bags can I check in?
+
+  - japanese: ～番ゲートはどこですか
+    reading: ～ばんゲートはどこですか
+    romaji: ~ ban geeto wa doko desu ka
+    english: Where is gate number ~?
+
+  - japanese: フライトが遅れていますか
+    reading: フライトがおくれていますか
+    romaji: furaito ga okurete imasu ka
+    english: Is the flight delayed?
+
+  - japanese: 税関申告書の書き方を教えてください
+    reading: ぜいかんしんこくしょのかきかたをおしえてください
+    romaji: zeikan shinkokusho no kakikata o oshiete kudasai
+    english: Could you show me how to fill out the customs declaration?
+
+  - japanese: 何も申告するものはありません
+    reading: なにもしんこくするものはありません
+    romaji: nani mo shinkoku suru mono wa arimasen
+    english: I have nothing to declare.
+
+  - japanese: 荷物が出てきません
+    reading: にもつがでてきません
+    romaji: nimotsu ga dete kimasen
+    english: My baggage hasn't come out.
+    notes: Head to the airline desk in the baggage hall. File a Property Irregularity Report (PIR) before leaving the airport.
+
+  - japanese: 乗り継ぎのゲートはどこですか
+    reading: のりつぎのゲートはどこですか
+    romaji: noritsugi no geeto wa doko desu ka
+    english: Where is the connecting flight gate?
+
+  - japanese: 搭乗開始は何時ですか
+    reading: とうじょうかいしはなんじですか
+    romaji: toujou kaishi wa nanji desu ka
+    english: What time does boarding start?
+
+  - japanese: 両替はどこでできますか
+    reading: りょうがえはどこでできますか
+    romaji: ryougae wa doko de dekimasu ka
+    english: Where can I exchange currency?
+    notes: Airport exchange rates are poor. Use a 7-Bank ATM (7-Eleven) or Post Office ATM for better rates on arrival.

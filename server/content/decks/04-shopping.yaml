@@ -1,0 +1,76 @@
+slug: shopping
+title_en: Shopping
+title_ja: 買い物
+description: Prices, sizes, finding items, checkout, and tax-free shopping
+display_order: 4
+
+cards:
+  - japanese: いくらですか
+    reading: いくらですか
+    romaji: ikura desu ka
+    english: How much is it?
+
+  - japanese: これをください
+    reading: これをください
+    romaji: kore o kudasai
+    english: I'll take this one.
+
+  - japanese: 試着してもいいですか
+    reading: しちゃくしてもいいですか
+    romaji: shichaku shite mo ii desu ka
+    english: May I try this on?
+    notes: Fitting rooms are called 試着室 (shichakushitsu). Staff may ask how many items you're taking in.
+
+  - japanese: 別のサイズはありますか
+    reading: べつのサイズはありますか
+    romaji: betsu no saizu wa arimasu ka
+    english: Do you have a different size?
+    notes: Japanese clothing sizes run small. S/M/L labels exist but measurement-based sizing (cm) is more reliable.
+
+  - japanese: ～はどこにありますか
+    reading: ～はどこにありますか
+    romaji: ~ wa doko ni arimasu ka
+    english: Where is the ~ section?
+    notes: "Replace ～ with what you're looking for: 靴 (kutsu — shoes), 食品 (shokuhin — food), 文房具 (bunbougu — stationery)."
+
+  - japanese: カードで払えますか
+    reading: カードではらえますか
+    romaji: kaado de haraemasu ka
+    english: Can I pay by card?
+    notes: Cash is still widely used in Japan, especially at smaller shops, markets, and temples. Always carry some yen.
+
+  - japanese: 袋をもらえますか
+    reading: ふくろをもらえますか
+    romaji: fukuro o moraemasu ka
+    english: Could I have a bag?
+    notes: "Japan introduced plastic bag charges (typically ¥2–5). Staff will often ask if you want one: 袋はよろしいですか (do you need a bag?)."
+
+  - japanese: 免税はできますか
+    reading: めんぜいはできますか
+    romaji: menzei wa dekimasu ka
+    english: Is tax-free shopping available?
+    notes: Visitors can claim consumption tax (10%) back on purchases over ¥5,000 at registered stores. Bring your passport.
+
+  - japanese: 領収書をお願いします
+    reading: りょうしゅうしょをおねがいします
+    romaji: ryoushuusho o onegai shimasu
+    english: Receipt, please.
+    notes: A 領収書 is a formal receipt for expense claims. A レシート (reshiito) is the simple register receipt you get automatically.
+
+  - japanese: 返品できますか
+    reading: へんぴんできますか
+    romaji: henpin dekimasu ka
+    english: Can I return this?
+    notes: Returns are less straightforward in Japan than in some countries. Policies vary by store; keep your receipt.
+
+  - japanese: ～色はありますか
+    reading: ～いろはありますか
+    romaji: ~ iro wa arimasu ka
+    english: Do you have it in ~?
+    notes: "Colours: 黒 (kuro — black), 白 (shiro — white), 赤 (aka — red), 青 (ao — blue), 緑 (midori — green), 黄色 (kiiro — yellow)."
+
+  - japanese: 少し安くなりますか
+    reading: すこしやすくなりますか
+    romaji: sukoshi yasuku narimasu ka
+    english: Could you make it a little cheaper?
+    notes: Acceptable in markets and some independent shops, but not in department stores or chain retail.

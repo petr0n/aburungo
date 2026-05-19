@@ -1,0 +1,65 @@
+slug: convenience-store
+title_en: Convenience Store
+title_ja: コンビニで
+description: Shopping at 7-Eleven, FamilyMart, Lawson — everyday conbini interactions
+display_order: 8
+
+cards:
+  - japanese: 温めますか
+    reading: あたためますか
+    romaji: atatamemasu ka
+    english: Shall I heat it up?
+    notes: You'll hear this every time you buy food. 「はい、お願いします」 (yes please) or 「いいえ、大丈夫です」 (no thanks).
+
+  - japanese: お箸はいりますか
+    reading: おはしはいりますか
+    romaji: ohashi wa irimasu ka
+    english: Would you like chopsticks?
+    notes: "Also: スプーンはいりますか (spoon?), フォークはいりますか (fork?). They'll add them automatically if you say yes."
+
+  - japanese: ポイントカードはお持ちですか
+    reading: ポイントカードはおもちですか
+    romaji: pointo kaado wa omochi desu ka
+    english: Do you have a points card?
+    notes: Each chain has its own card (Nanaco for 7-Eleven, T-Card for FamilyMart, Ponta for Lawson). 「ありません」or a head shake is fine.
+
+  - japanese: 袋はよろしいですか
+    reading: ふくろはよろしいですか
+    romaji: fukuro wa yoroshii desu ka
+    english: Do you need a bag?
+    notes: Plastic bags cost a few yen now. 「いらないです」(I don't need one) or just shake your head.
+
+  - japanese: ATMはどこですか
+    reading: ATMはどこですか
+    romaji: ATM wa doko desu ka
+    english: Where is the ATM?
+    notes: 7-Bank ATMs (inside 7-Eleven) and Japan Post ATMs accept international cards most reliably.
+
+  - japanese: トイレはありますか
+    reading: トイレはありますか
+    romaji: toire wa arimasu ka
+    english: Is there a restroom?
+    notes: Most convenience stores have a restroom, though some require you to ask for a key. Look for the お手洗い (otearai) sign.
+
+  - japanese: コピー機はどこですか
+    reading: コピーきはどこですか
+    romaji: kopii ki wa doko desu ka
+    english: Where is the copy machine?
+    notes: Japanese conbini copy machines can print, scan, fax, and pay bills. A genuinely useful machine.
+
+  - japanese: 宅急便を送りたいのですが
+    reading: たっきゅうびんをおくりたいのですが
+    romaji: takkyuubin o okuritai no desu ga
+    english: I'd like to send a parcel.
+    notes: Conbini accept packages for Yamato (クロネコ), Sagawa, and Japan Post delivery. Fast, cheap, and reliable.
+
+  - japanese: これをチャージしたいのですが
+    reading: これをチャージしたいのですが
+    romaji: kore o chaaji shitai no desu ga
+    english: I'd like to top up this [IC card].
+    notes: "Hand over your Suica or Pasmo. Specify the amount: 千円チャージしてください (please charge ¥1,000)."
+
+  - japanese: レジ袋を一枚ください
+    reading: レジぶくろをいちまいください
+    romaji: reji bukuro o ichimai kudasai
+    english: One plastic bag, please.
