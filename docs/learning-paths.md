@@ -1,6 +1,12 @@
 # Learning Paths
 
-AburunGo guides learners through four sequential paths, from character recognition to active production. Each path builds on the previous one.
+AburunGo guides learners through five sequential paths, from character recognition to active production. Each path builds on the previous one.
+
+1. Characters — Hiragana + Katakana (phonetics)
+2. Words — Vocabulary flashcards with heavy furigana
+3. Kanji — Introduced through words already learned
+4. Phrases — Real-life scenario phrases
+5. Fill in the Blank — Active production
 
 ---
 
@@ -26,30 +32,35 @@ Once a character passes the recognition threshold, drawing practice unlocks:
 - Each stroke is validated in sequence.
 - Audio plays on completion so the sound stays linked to the written form.
 
-### Kanji
-
-_Details TBD_
 
 ---
 
 ## Path 2 — Words
 
-Vocabulary flashcards.
+_Details TBD_
+
+---
+
+## Path 3 — Kanji
+
+Kanji are introduced through words the learner already knows from Path 2. Approximately 90% of kanji surfaced in this path appear in words already studied — the learner sees the kanji in a familiar context rather than in isolation. The remaining ~10% are new, easy, high-frequency kanji worth knowing early even if the word hasn't been seen yet.
+
+Furigana is shown heavily throughout. A kanji is only hidden (furigana removed) once the learner has explicitly marked it as known.
+
+_Lesson structure TBD_
+
+---
+
+## Path 4 — Phrases
+
+Useful phrases for visiting Japan, organised by real-life scenario (restaurant, transit, hotel, shopping, etc.). Furigana shown on any kanji not yet learned in Path 3.
 
 _Details TBD_
 
 ---
 
-## Path 3 — Phrases
+## Path 5 — Fill in the Blank
 
-Useful phrases for visiting Japan, organised by real-life scenario.
-
-_Details TBD_
-
----
-
-## Path 4 — Fill in the Blank
-
-Active production: given an English prompt, type or speak the Japanese word or phrase.
+Active production: given an English prompt, type or speak the complete Japanese word or phrase.
 
 _Details TBD_
