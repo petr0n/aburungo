@@ -37,7 +37,103 @@ Once a character passes the recognition threshold, drawing practice unlocks:
 
 ## Path 2 — Words
 
-_Details TBD_
+Vocabulary flashcards with heavy furigana and audio. Builds the word-level foundation that Paths 3–5 depend on.
+
+### Vocabulary source — Hybrid
+
+Words come from two sources, merged into a single ordered queue per learner.
+
+**Source A — Scenario deck words (first)**
+The 20 scenario YAML decks (`server/content/decks/`) contain phrases. Each phrase is tokenised at seed time to extract individual words. Those words are looked up in JMdict to get canonical readings, meanings, and frequency data, then stored in the `words` table with a link back to the originating deck(s). These surface first in the queue — the learner sees the building blocks of phrases they will encounter in Path 4.
+
+**Source B — JMdict frequency fill (after)**
+Once scenario-deck words are exhausted (or the learner advances), JMdict words flow in ordered by JLPT level (N5 → N4 → N3) then by frequency rank. This broadens vocabulary beyond travel situations into everyday Japanese.
+
+Words appearing in both sources are deduplicated — a word extracted from a deck that also exists in JMdict is one entry, tagged with both origins.
+
+### Database changes required
+
+A new `words` table, separate from the existing `cards` table (which holds full phrases):
+
+```sql
+create table words (
+  id             uuid primary key default gen_random_uuid(),
+  japanese       text not null,         -- kanji form where applicable
+  reading        text not null,         -- hiragana reading
+  romaji         text not null,
+  meanings       text[] not null,       -- 1–3 English meanings, short
+  jlpt_level     int,                   -- 5=N5 … 1=N1, null if unknown
+  frequency_rank int,                   -- JMdict frequency ordering
+  source         text not null,         -- 'deck' | 'jmdict' | 'both'
+  jmdict_id      int,
+  audio_url      text,
+  created_at     timestamptz not null default now(),
+  unique (japanese, reading)
+);
+
+-- Which scenario decks does this word appear in
+create table word_deck_links (
+  word_id  uuid not null references words(id) on delete cascade,
+  deck_id  uuid not null references decks(id) on delete cascade,
+  primary key (word_id, deck_id)
+);
+
+-- FSRS progress per user per word, with recognition/production phase
+create table user_word_progress (
+  id                    uuid primary key default gen_random_uuid(),
+  user_id               uuid not null references users(id) on delete cascade,
+  word_id               uuid not null references words(id) on delete cascade,
+  phase                 text not null default 'recognition'
+                          check (phase in ('recognition', 'production')),
+  state                 fsrs_state not null default 'new',
+  stability             float not null default 0,
+  difficulty            float not null default 0,
+  elapsed_days          int not null default 0,
+  scheduled_days        int not null default 0,
+  reps                  int not null default 0,
+  lapses                int not null default 0,
+  due_at                timestamptz not null default now(),
+  last_review_at        timestamptz,
+  -- production unlocks when recognition reps reach this threshold
+  production_unlocked   boolean not null default false,
+  unique (user_id, word_id, phase)
+);
+```
+
+`review_logs` needs a `word_id uuid references words(id)` column added (nullable, alongside the existing `card_id`).
+
+### Card mechanic — recognition first, production unlocks
+
+Each word has two sides in the SRS queue, but production is gated.
+
+**Recognition phase** (always first):
+- Front: Japanese word in large type, furigana shown above kanji, audio button.
+- Back: English meanings (up to 3), romaji, one example sentence if available (Tatoeba).
+- Rating: got-it / didn't (binary, matching the app's no-gamification rule).
+
+**Production phase** (unlocks after 3 consecutive correct recognitions):
+- Front: English meaning prompt.
+- Back: Japanese word with furigana and audio.
+- Input: type the reading in hiragana/romaji (auto-converted), or speak it.
+- When production unlocks, a new FSRS row is inserted for that word with `phase = 'production'`. Both phases then run independently in the SRS queue.
+
+### Queue ordering
+
+1. Due recognition cards (FSRS `due_at <= now`), ordered by `due_at` ascending.
+2. New recognition cards — scenario-deck words first (ordered by deck `display_order`, then card `display_order`), then JMdict words by JLPT level then frequency rank.
+3. Due production cards interleaved after recognition, capped so production never outnumbers recognition in a single session.
+
+### Furigana
+
+Furigana is always shown in Path 2. A word's furigana is hidden in later paths only once the learner has explicitly marked the corresponding kanji as known in Path 3.
+
+### Seeding pipeline
+
+1. Parse each deck YAML in `server/content/decks/`.
+2. Tokenise each phrase's `japanese` field using kuromoji (or ichiran) to extract surface forms.
+3. Look each token up in JMdict by surface form and reading to get `jmdict_id`, canonical reading, meanings, JLPT level, frequency rank.
+4. Insert into `words` (upsert on `japanese, reading`), insert `word_deck_links`.
+5. Separately, seed the full JMdict N5–N3 set into `words` (upsert — deck-sourced words already present will just get their `source` updated to `'both'`).
 
 ---
 
