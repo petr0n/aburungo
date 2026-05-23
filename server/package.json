@@ -11,7 +11,8 @@
     "seed": "tsx scripts/seed.ts",
     "seed:decks": "tsx scripts/seed-decks.ts",
     "seed:cards": "tsx scripts/seed-cards.ts",
-    "seed:kanji": "tsx scripts/seed-kanji.ts"
+    "seed:kanji": "tsx scripts/seed-kanji.ts",
+    "seed:jmdict": "tsx scripts/seed-jmdict.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.96.0",
