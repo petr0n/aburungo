@@ -23,6 +23,12 @@ export function PracticePage() {
             Kana
           </Link>
           <Link
+            to='/kanji'
+            className='min-h-[44px] flex items-center px-3 text-body-sm text-fg-subtle active:text-fg'
+          >
+            Kanji
+          </Link>
+          <Link
             to='/how-to'
             className='min-h-[44px] flex items-center px-3 text-body-sm text-fg-subtle active:text-fg'
           >
