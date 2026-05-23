@@ -11,6 +11,18 @@ export function PracticePage() {
         <h1 className='text-heading-sm font-semibold text-fg'>AburunGo</h1>
         <div className='flex items-center gap-1'>
           <Link
+            to='/flashcard'
+            className='min-h-[44px] flex items-center px-3 text-body-sm text-fg-subtle active:text-fg'
+          >
+            Flashcards
+          </Link>
+          <Link
+            to='/kana'
+            className='min-h-[44px] flex items-center px-3 text-body-sm text-fg-subtle active:text-fg'
+          >
+            Kana
+          </Link>
+          <Link
             to='/how-to'
             className='min-h-[44px] flex items-center px-3 text-body-sm text-fg-subtle active:text-fg'
           >

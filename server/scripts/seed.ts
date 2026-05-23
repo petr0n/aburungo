@@ -14,6 +14,7 @@ import 'dotenv/config'
 import { seedDecks } from './seed-decks.js'
 import { seedCards } from './seed-cards.js'
 import { seedKanji } from './seed-kanji.js'
+import { seedJmdict } from './seed-jmdict.js'
 
 async function main(): Promise<void> {
   console.log('=== Seeding decks ===')
@@ -21,6 +22,9 @@ async function main(): Promise<void> {
 
   console.log('\n=== Seeding cards ===')
   await seedCards()
+
+  console.log('\n=== Matching cards to JMdict ===')
+  await seedJmdict()
 
   console.log('\n=== Seeding kanji ===')
   await seedKanji()

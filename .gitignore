@@ -29,3 +29,8 @@ dist-ssr
 
 /AburunGo Japanese learning app/
 *.code-workspace
+
+.local
+
+# Large data files (JMdict, Tatoeba, etc.) — download locally, do not commit
+server/data/
