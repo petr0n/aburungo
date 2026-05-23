@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import type { Phrase } from '@/types';
+import type { Card as CardData } from '@/types';
 import { compareAnswer } from '@/lib/compareAnswer';
 import { Badge } from './ui/Badge';
 import { Button } from './ui/Button';
@@ -12,18 +12,18 @@ type Phase = 'input' | 'result';
 type InputMode = 'text' | 'voice';
 
 type Props = {
-  phrase: Phrase;
+  card: CardData;
   onNext: (correct: boolean) => void;
 };
 
-export function FillBlankCard({ phrase, onNext }: Props) {
+export function FillBlankCard({ card, onNext }: Props) {
   const [phase, setPhase] = useState<Phase>('input');
   const [inputMode, setInputMode] = useState<InputMode>('text');
   const [correct, setCorrect] = useState(false);
   const [userAnswer, setUserAnswer] = useState('');
 
   function handleSubmit(value: string) {
-    const isCorrect = compareAnswer(value, phrase.reading);
+    const isCorrect = compareAnswer(value, card.reading);
     setUserAnswer(value);
     setCorrect(isCorrect);
     setPhase('result');
@@ -62,12 +62,12 @@ export function FillBlankCard({ phrase, onNext }: Props) {
 
         <div className='flex flex-col items-center gap-1 rounded-xl bg-surface-2 p-4 text-center'>
           <p lang='ja' className='font-jp text-jp-lg text-fg'>
-            {phrase.japanese}
+            {card.japanese}
           </p>
           <p lang='ja' className='font-jp text-jp text-fg-muted'>
-            {phrase.reading}
+            {card.reading}
           </p>
-          <p className='text-body-sm italic text-fg-subtle'>{phrase.romaji}</p>
+          <p className='text-body-sm italic text-fg-subtle'>{card.romaji}</p>
         </div>
 
         <Button type='button' onClick={handleNext} fullWidth>
@@ -89,15 +89,15 @@ export function FillBlankCard({ phrase, onNext }: Props) {
     <Card className='mx-auto w-full max-w-xl'>
       <div className='flex flex-col gap-6'>
         <header className='flex items-center justify-between gap-4'>
-          <Badge emphasis>{phrase.scenario}</Badge>
-          <AudioButton src={phrase.audioUrl} />
+          <Badge emphasis>{card.deck}</Badge>
+          <AudioButton src={card.audioUrl ?? undefined} />
         </header>
 
         <div className='flex flex-col items-center gap-2 text-center'>
           <p className='text-body-sm text-fg-subtle'>How do you say...</p>
-          <p className='text-heading text-fg'>{phrase.english}</p>
-          {phrase.notes !== undefined ? (
-            <p className='text-body-sm text-fg-subtle'>{phrase.notes}</p>
+          <p className='text-heading text-fg'>{card.english}</p>
+          {card.notes != null ? (
+            <p className='text-body-sm text-fg-subtle'>{card.notes}</p>
           ) : null}
         </div>
 

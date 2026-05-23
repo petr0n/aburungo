@@ -1,24 +1,21 @@
 /**
  * Session store — ephemeral, in-memory state for the current review session.
  *
- * Persistent review state (which box, when due) lives in IndexedDB via
- * reviewStore. This store only holds what's needed to render the current
- * queue: the ordered list of phrase ids, the current index, and a status.
- *
- * On initialize() we build a queue of (due + never-reviewed) phrases. After
- * each rating, we persist the new ReviewState and advance the index.
+ * Cards and progress come from the server. The queue is ordered:
+ *   1. Due cards first, oldest-due first.
+ *   2. New cards (never reviewed) in server display order.
  */
 import { create } from 'zustand'
-import type { EpochMs, Phrase, ReviewRating, ReviewState } from '@/types'
-import { allPhrases } from '@/content'
-import { isDue, schedule } from '@/srs/leitner'
-import { getAll, upsert } from '@/db/reviewStore'
+import type { Card, ReviewRating } from '@/types'
+import { fetchVocabulary } from '@/api/vocabulary'
+import { fetchDue, submitReview } from '@/api/progress'
 
-type Status = 'idle' | 'loading' | 'ready' | 'empty'
+type Status = 'idle' | 'loading' | 'ready' | 'empty' | 'error'
 
 type SessionState = {
   status: Status
-  queue: string[]
+  error: string | null
+  queue: Card[]
   currentIndex: number
 
   initialize: () => Promise<void>
@@ -26,61 +23,58 @@ type SessionState = {
   reset: () => void
 }
 
-/**
- * Build the ordered review queue:
- *   1. Due phrases first, oldest-due first (the things the learner already
- *      committed to reviewing).
- *   2. Then never-reviewed phrases in authoring order (gentle onramp).
- *
- * Exported separately so tests can call it without going through Zustand.
- */
-export function pickReviewQueue(
-  phrases: Phrase[],
-  states: ReviewState[],
-  now: EpochMs,
-): string[] {
-  const stateById = new Map(states.map((s) => [s.phraseId, s]))
-
-  const due: ReviewState[] = []
-  const fresh: string[] = []
-  for (const p of phrases) {
-    const s = stateById.get(p.id)
-    if (s === undefined) {
-      fresh.push(p.id)
-    } else if (isDue(s, now)) {
-      due.push(s)
-    }
-  }
-  due.sort((a, b) => a.dueAt - b.dueAt)
-  return [...due.map((s) => s.phraseId), ...fresh]
+async function fetchAllCards(): Promise<Card[]> {
+  const pages = await Promise.all([
+    fetchVocabulary({ limit: 100, offset: 0 }),
+    fetchVocabulary({ limit: 100, offset: 100 }),
+    fetchVocabulary({ limit: 100, offset: 200 }),
+  ])
+  return pages.flat()
 }
 
 export const useSession = create<SessionState>((set, get) => ({
   status: 'idle',
+  error: null,
   queue: [],
   currentIndex: 0,
 
   async initialize() {
-    set({ status: 'loading' })
-    const states = await getAll()
-    const queue = pickReviewQueue(allPhrases, states, Date.now())
-    set({
-      queue,
-      currentIndex: 0,
-      status: queue.length === 0 ? 'empty' : 'ready',
-    })
+    set({ status: 'loading', error: null })
+
+    try {
+      const [allCards, dueProgress] = await Promise.all([
+        fetchAllCards(),
+        fetchDue(100),
+      ])
+
+      const cardMap = new Map(allCards.map((c) => [c.id, c]))
+      const dueIds = new Set(dueProgress.map((d) => d.cardId))
+
+      const dueCards = dueProgress
+        .slice()
+        .sort((a, b) => new Date(a.dueAt).getTime() - new Date(b.dueAt).getTime())
+        .map((d) => cardMap.get(d.cardId))
+        .filter((c): c is Card => c !== undefined)
+
+      const newCards = allCards.filter((c) => !dueIds.has(c.id))
+      const queue = [...dueCards, ...newCards]
+
+      set({ queue, currentIndex: 0, status: queue.length === 0 ? 'empty' : 'ready' })
+    } catch (err) {
+      set({ status: 'error', error: err instanceof Error ? err.message : 'Failed to load' })
+    }
   },
 
   async rate(rating) {
     const { queue, currentIndex } = get()
-    const phraseId = queue[currentIndex]
-    if (phraseId === undefined) return
+    const card = queue[currentIndex]
+    if (!card) return
 
-    const now = Date.now()
-    const states = await getAll()
-    const current = states.find((s) => s.phraseId === phraseId)
-    const next = schedule(current, rating, now, phraseId)
-    await upsert(next)
+    try {
+      await submitReview(card.id, rating, Date.now())
+    } catch {
+      // Best-effort — advance the queue even if the server call fails
+    }
 
     const nextIndex = currentIndex + 1
     set({
@@ -90,6 +84,6 @@ export const useSession = create<SessionState>((set, get) => ({
   },
 
   reset() {
-    set({ status: 'idle', queue: [], currentIndex: 0 })
+    set({ status: 'idle', error: null, queue: [], currentIndex: 0 })
   },
 }))

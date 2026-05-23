@@ -4,6 +4,7 @@ import { useAuth } from '@/store/auth'
 import { ProtectedRoute } from '@/components/ProtectedRoute'
 import { LandingPage } from '@/pages/LandingPage'
 import { PracticePage } from '@/pages/PracticePage'
+import { HowToPage } from '@/pages/HowToPage'
 
 export default function App() {
   const initialize = useAuth((s) => s.initialize)
@@ -17,6 +18,7 @@ export default function App() {
       <Route path="/" element={<LandingPage />} />
       <Route element={<ProtectedRoute />}>
         <Route path="/practice" element={<PracticePage />} />
+        <Route path="/how-to" element={<HowToPage />} />
       </Route>
     </Routes>
   )
