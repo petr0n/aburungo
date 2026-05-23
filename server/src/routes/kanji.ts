@@ -1,6 +1,8 @@
 import { Hono } from 'hono'
+import { zValidator } from '@hono/zod-validator'
+import { z } from 'zod'
 import { auth } from '../middleware/auth.js'
-import { listKanji, getKanji } from '../services/kanji.js'
+import { listKanji, getKanji, getDueKanji, submitKanjiReview } from '../services/kanji.js'
 
 export const kanjiRoutes = new Hono()
 
@@ -19,6 +21,35 @@ kanjiRoutes.get('/', async (c) => {
 
   return c.json({ data })
 })
+
+// GET /api/kanji/due?limit=20
+kanjiRoutes.get('/due', async (c) => {
+  const user = c.get('user')
+  const limit = Math.min(parseInt(c.req.query('limit') ?? '20', 10) || 20, 100)
+
+  const data = await getDueKanji(user.id, limit)
+  return c.json({ data })
+})
+
+// POST /api/kanji/review
+kanjiRoutes.post(
+  '/review',
+  zValidator(
+    'json',
+    z.object({
+      kanjiId: z.string().uuid(),
+      rating: z.enum(['again', 'good']),
+      reviewedAt: z.number().int().positive(),
+    }),
+  ),
+  async (c) => {
+    const user = c.get('user')
+    const { kanjiId, rating, reviewedAt } = c.req.valid('json')
+
+    const data = await submitKanjiReview(user.id, kanjiId, rating, reviewedAt)
+    return c.json({ data })
+  },
+)
 
 // GET /api/kanji/:character
 kanjiRoutes.get('/:character', async (c) => {
