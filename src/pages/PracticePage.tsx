@@ -29,6 +29,12 @@ export function PracticePage() {
             Kanji
           </Link>
           <Link
+            to='/conversation'
+            className='min-h-[44px] flex items-center px-3 text-body-sm text-fg-subtle active:text-fg'
+          >
+            Chat
+          </Link>
+          <Link
             to='/how-to'
             className='min-h-[44px] flex items-center px-3 text-body-sm text-fg-subtle active:text-fg'
           >
