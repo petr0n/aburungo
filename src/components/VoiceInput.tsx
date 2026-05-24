@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { MicIcon, SpinnerIcon } from './icons';
+import { MicIcon, SpinnerIcon } from 'aburungo-design-system';
 
 // Minimal declarations for the Web Speech API (not yet in TS's lib.dom for all targets).
 interface SpeechRecognitionResultItem {

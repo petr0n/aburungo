@@ -5,8 +5,7 @@
  * here. Inputs and buttons are ≥ 44px tall per touch-first design rules.
  */
 import { useState } from 'react';
-import { Button } from './ui/Button';
-import { TextInput } from './ui/TextInput';
+import { Button, TextInput } from 'aburungo-design-system';
 
 type Mode = 'sign-in' | 'sign-up';
 

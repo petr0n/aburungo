@@ -1,9 +1,7 @@
 import { useState } from 'react';
 import type { Card as CardData } from '@/types';
 import { compareAnswer } from '@/lib/compareAnswer';
-import { Badge } from './ui/Badge';
-import { Button } from './ui/Button';
-import { Card } from './ui/Card';
+import { Badge, Button, Card } from 'aburungo-design-system';
 import { FillInput } from './FillInput';
 import { VoiceInput } from './VoiceInput';
 import { AudioButton } from './AudioButton';

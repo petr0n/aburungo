@@ -1,6 +1,6 @@
 import type { Card } from '@/types'
 import type { ReviewRating } from '@/types'
-import { Badge } from './ui/Badge'
+import { Badge } from 'aburungo-design-system'
 
 export type FlashCardPhase = 'entering' | 'idle' | 'revealed' | 'exiting'
 

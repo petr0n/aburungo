@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from 'react'
 import { Link } from 'react-router'
+import { ProgressBar } from 'aburungo-design-system'
 import { KANA_PRACTICE_CARDS, type KanaPracticeCard } from '@/lib/kanaData'
 
 type PracticeMode = 'multiple-choice' | 'type-romaji'
@@ -367,12 +368,7 @@ export function KanaPracticePage() {
         <div className="w-14" />
       </header>
 
-      <div className="h-1 w-full overflow-hidden rounded-full bg-surface-2">
-        <div
-          className="h-full rounded-full bg-brand-500 transition-all duration-300"
-          style={{ width: `${((queueIndex + 1) / queue.length) * 100}%` }}
-        />
-      </div>
+      <ProgressBar value={(queueIndex + 1) / queue.length} />
 
       <div className="flex flex-1 flex-col items-center justify-center gap-8 py-8">
         <div
