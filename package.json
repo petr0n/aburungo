@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.105.4",
+    "aburungo-design-system": "file:../aburungo-design-system",
     "dexie": "^4.4.2",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
