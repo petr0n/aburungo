@@ -110,4 +110,5 @@ Practical Japanese for English speakers. Focused on real-life situations with sp
 
 - [Admin dashboard plan](admin-dashboard-plan.md) — full 10-feature plan across 3 phases
 - [Data sources](data-sources.md) — JMdict, Tatoeba, KANJIDIC2 licensing details
+- [Release & Deployment](release.md) — dev workflow, production release steps, hotfix, rollback plan
 - [Todo](todo.md) — active task list
