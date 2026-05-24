@@ -8,6 +8,7 @@ import { HowToPage } from '@/pages/HowToPage'
 import { KanaPracticePage } from '@/pages/KanaPracticePage'
 import { FlashcardPage } from '@/pages/FlashcardPage'
 import { KanjiPage } from '@/pages/KanjiPage'
+import { ConversationPage } from '@/pages/ConversationPage'
 
 export default function App() {
   const initialize = useAuth((s) => s.initialize)
@@ -24,6 +25,7 @@ export default function App() {
         <Route path="/kana" element={<KanaPracticePage />} />
         <Route path="/flashcard" element={<FlashcardPage />} />
         <Route path="/kanji" element={<KanjiPage />} />
+        <Route path="/conversation" element={<ConversationPage />} />
         <Route path="/how-to" element={<HowToPage />} />
       </Route>
     </Routes>

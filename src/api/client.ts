@@ -16,6 +16,42 @@ export class ApiError extends Error {
   }
 }
 
+export async function* apiStreamText(
+  path: string,
+  init: RequestInit = {},
+): AsyncGenerator<string> {
+  const { data } = await supabase.auth.getSession()
+  const token = data.session?.access_token
+
+  const headers: Record<string, string> = {
+    'Content-Type': 'application/json',
+    ...(init.headers as Record<string, string>),
+  }
+
+  if (token) headers['Authorization'] = `Bearer ${token}`
+
+  const res = await fetch(`${API_BASE}${path}`, { ...init, headers })
+
+  if (!res.ok) {
+    const text = await res.text()
+    throw new ApiError(res.status, text || res.statusText)
+  }
+
+  const reader = res.body?.getReader()
+  if (!reader) return
+
+  const decoder = new TextDecoder()
+  try {
+    while (true) {
+      const { done, value } = await reader.read()
+      if (done) break
+      yield decoder.decode(value, { stream: true })
+    }
+  } finally {
+    reader.releaseLock()
+  }
+}
+
 export async function apiFetch<T>(
   path: string,
   init: RequestInit = {},
