@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router'
-import { fetchKanjiList, type KanjiEntry } from '@/api/kanji'
+import { fetchKanjiList, fetchDueKanji, submitKanjiReview, type KanjiEntry } from '@/api/kanji'
 import { KanjiDrillCard, type DrillPhase } from '@/components/KanjiDrillCard'
 
 type Screen = 'browse' | 'drill' | 'result'
@@ -238,8 +238,20 @@ export function KanjiPage() {
       .catch(() => setLoading(false))
   }, [jlpt])
 
-  function startDrill() {
-    const q = shuffle(kanjiList)
+  async function startDrill() {
+    let q: KanjiEntry[]
+    try {
+      const due = await fetchDueKanji(100)
+      const kanjiMap = new Map(kanjiList.map((k) => [k.id, k]))
+      const dueIdSet = new Set(due.map((d) => d.kanjiId))
+      const dueQueue = due
+        .map((d) => kanjiMap.get(d.kanjiId))
+        .filter((k): k is KanjiEntry => k !== undefined)
+      const newQueue = shuffle(kanjiList.filter((k) => !dueIdSet.has(k.id)))
+      q = [...dueQueue, ...newQueue]
+    } catch {
+      q = shuffle(kanjiList)
+    }
     setQueue(q)
     setQueueIndex(0)
     setCorrectCount(0)
@@ -255,7 +267,11 @@ export function KanjiPage() {
   }
 
   function handleRate(correct: boolean) {
-    setStagedKanji(queue[queueIndex] ?? null)
+    const current = queue[queueIndex]
+    if (current) {
+      void submitKanjiReview(current.id, correct ? 'good' : 'again', Date.now())
+    }
+    setStagedKanji(current ?? null)
     setPendingCorrect(correct)
     setPhase('exiting')
   }

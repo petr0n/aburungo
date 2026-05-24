@@ -36,3 +36,40 @@ export async function fetchKanji(character: string): Promise<KanjiEntry> {
   )
   return res.data
 }
+
+export type KanjiRating = 'again' | 'good'
+
+export type DueKanjiEntry = {
+  kanjiId: string
+  state: string
+  dueAt: string
+  reps: number
+}
+
+export type KanjiReviewResult = {
+  kanjiId: string
+  state: string
+  dueAt: string
+  stability: number
+  difficulty: number
+  reps: number
+  lapses: number
+}
+
+export async function fetchDueKanji(limit = 20): Promise<DueKanjiEntry[]> {
+  const res = await apiFetch<{ data: DueKanjiEntry[] }>(`/api/kanji/due?limit=${limit}`)
+  return res.data
+}
+
+export async function submitKanjiReview(
+  kanjiId: string,
+  rating: KanjiRating,
+  reviewedAt: number,
+): Promise<KanjiReviewResult> {
+  const res = await apiFetch<{ data: KanjiReviewResult }>('/api/kanji/review', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ kanjiId, rating, reviewedAt }),
+  })
+  return res.data
+}

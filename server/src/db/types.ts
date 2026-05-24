@@ -41,3 +41,18 @@ export type UserCardProgressRow = {
   due_at: string
   last_review_at: string | null
 }
+
+export type UserKanjiProgressRow = {
+  id: string
+  user_id: string
+  kanji_id: string
+  state: FsrsState
+  stability: number
+  difficulty: number
+  elapsed_days: number
+  scheduled_days: number
+  reps: number
+  lapses: number
+  due_at: string
+  last_review_at: string | null
+}
