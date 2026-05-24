@@ -1,90 +1,150 @@
 # AburunGo
 
-AburunGo helps English speakers feel ready to use Japanese in real life — practical phrases for the situations you actually run into (transit, restaurants, day-to-day interactions), short focused reviews, and nothing in the way.
+Practical Japanese for English speakers. Real-life scenarios — transit, restaurants, day-to-day interactions — delivered through spaced repetition, fill-in-the-blank drills, flashcards, kana practice, kanji drill, and casual AI conversation practice.
 
 ## Philosophy
 
-**No gamification.** No points, streaks, XP, hearts, mascots, level-ups, badges, or any reward-loop mechanics. The reward is being able to use the language. Everything in the UI should reinforce that — clarity, speed, usability over engagement-hacking.
+**No gamification.** No points, streaks, XP, hearts, mascots, level-ups, badges, or reward-loop mechanics. The reward is being able to use the language. Everything in the UI reinforces that — clarity, speed, usability over engagement-hacking.
 
-Other anti-goals (today):
+**Touch first.** Mobile-first design throughout. Every interactive element is ≥ 44px. Hover states are welcome on desktop, but nothing should be *only* discoverable or accessible via hover — every action and label must be visible without it.
 
-- No backend. The app runs entirely in the browser; review state lives in IndexedDB.
-- No auth, accounts, or sync. Add them only when there's a concrete reason.
-- No content treadmill. Phrases are hand-authored, kept small and good.
+**Real content only.** All Japanese content comes from JMdict/Tatoeba/KANJIDIC2 or hand-authored YAML validated at build time. Nothing fabricated.
 
 ## Stack
 
-| Concern | Choice | Why |
-|---|---|---|
-| Build / dev | Vite + React 19 + TypeScript | Standard, fast, no surprises. |
-| Styling | Tailwind v4 (`@tailwindcss/vite`) | Utility-first, mobile-first, zero CSS file sprawl. |
-| State (in-session) | Zustand | Tiny, no Provider, no Context boilerplate. |
-| State (persistent) | IndexedDB via Dexie | Survives reloads, no server needed. |
-| Spaced repetition | Leitner (5 boxes) | Simple, swap to FSRS later behind the same interface. |
-| Content | Hand-authored YAML, validated at module load | Treats content as code, fails the build on bad data. |
-| Tests | Vitest | Pure-function SRS module is fully tested. |
+### Frontend
+| Concern | Choice |
+|---|---|
+| Build / dev | Vite + React 19 + TypeScript (strict) |
+| Styling | Tailwind v4 via `@tailwindcss/vite` |
+| Tokens + components | `aburungo-design-system` (local package) |
+| State (in-session) | Zustand |
+| State (persistent, local) | IndexedDB via Dexie |
+| Auth client | Supabase JS (token management only) |
+| Routing | react-router v7 |
+| Tests | Vitest |
+
+### API Server
+| Concern | Choice |
+|---|---|
+| Runtime | Node + TypeScript |
+| Framework | Hono |
+| Auth | Supabase JWT validation on every protected route |
+| Routes | `/api/auth`, `/api/vocabulary`, `/api/kanji`, `/api/progress`, `/api/audio`, `/api/stt`, `/api/conversation` |
+
+### Infrastructure
+| Concern | Choice |
+|---|---|
+| Database | Supabase Postgres — vocabulary, kanji, user progress, SRS state, conversation history |
+| Auth | Supabase Auth (JWT, validated server-side) |
+| Storage | Pre-generated VOICEVOX audio, user assets |
+| SRS algorithm | FSRS via `ts-fsrs` (server-side); Leitner (local v1, pending migration) |
+| Conversation AI | Claude Haiku (`claude-haiku-4-5-20251001`), streamed |
+
+## Design system
+
+UI primitives, design tokens, and domain components are sourced from a separate package:
+
+```
+aburungo-design-system (file:../aburungo-design-system)
+```
+
+The app imports components directly from the package:
+
+```tsx
+import { Button, Card, Badge, PhraseCard, ProgressBar } from 'aburungo-design-system'
+```
+
+Design tokens (`@theme` block) are imported from the package CSS:
+
+```css
+@import 'aburungo-design-system/src/tokens.css';
+```
+
+See [`../aburungo-design-system`](https://github.com/petr0n/aburungo-design-system) for the full component library and Storybook.
 
 ## Folder structure
 
 ```
 src/
-  components/       UI primitives — Card, AudioButton, ...
-  content/          Phrase YAML and the validator that loads it
-    phrases/        One file per scenario (transit.yaml, restaurant.yaml, ...)
-    schema.ts       Hand-rolled validator — bad content fails the build
-    index.ts        Aggregates all phrases into a typed list
-  db/               IndexedDB schema + review-state store
-    dexie.ts        Schema only (versioned)
-    reviewStore.ts  CRUD helpers for ReviewState
+  api/              Fetch wrappers for the Hono server (no direct Supabase calls from components)
+  assets/           Static assets (hero image)
+  components/       App-specific components; UI primitives re-exported from ADS
+    ui/             (empty — primitives now come from aburungo-design-system)
+  content/          Hand-authored YAML phrases + build-time validator
+  db/               IndexedDB schema (Dexie) + review-state store
+  lib/              Pure utilities: kanaData, romajiToKana, compareAnswer
+  pages/            Route-level page components
+    admin/          Admin dashboard pages (health, users, feedback)
   srs/              Spaced-repetition logic — pure, no React, no DB
-    leitner.ts      Default scheduler
-    leitner.test.ts
-  store/            Zustand stores for ephemeral session state
-    session.ts      Current queue + index + rating handler
+  store/            Zustand stores (auth, session)
   types.ts          Shared domain types — single source of truth
-  App.tsx           The review loop
+  index.css         Tailwind config; imports ADS tokens + app-specific overrides
+  App.tsx           Route definitions
   main.tsx          Entry point
+
+server/
+  src/
+    routes/         Hono route handlers (thin — validate input, call service, return JSON)
+    services/       Business logic (vocabulary, kanji, progress, audio, conversation)
+    middleware/     JWT auth middleware
+    index.ts        Server entry point
 ```
 
-## Adding a phrase
+## Setup
 
-1. Open the right scenario file under `src/content/phrases/` (or create a new one — `<scenario>.yaml`).
-2. Add an entry. Every field is required except `audioUrl` and `notes`:
+### Prerequisites
+- Node.js 20+, pnpm 11+
+- Supabase project (or use the existing `AburunGo` project)
+- `.env.local` with `VITE_SUPABASE_URL` and `VITE_SUPABASE_PUBLISHABLE_KEY`
 
-   ```yaml
-   - id: transit.ticket-machine
-     japanese: 券売機はどこですか
-     reading: けんばいきはどこですか
-     romaji: kenbaiki wa doko desu ka
-     english: Where is the ticket machine?
-     scenario: transit
-     notes: Used at unstaffed stations. "Kippu uriba" is the staffed counter.
-   ```
-3. If you created a new file, import it from `src/content/index.ts` and push its parsed phrases into `allPhrases`.
+### Install
 
-The validator will fail `npm run build` if anything's missing or duplicated.
+```bash
+pnpm install
+```
+
+pnpm resolves the `aburungo-design-system` local package automatically via the `file:` reference in `package.json`.
 
 ## Commands
 
+```bash
+pnpm dev             # frontend only (port 5173)
+pnpm dev:server      # frontend + API server concurrently
+pnpm build           # type-check + bundle
+pnpm lint            # eslint
+pnpm test            # vitest, one shot
+pnpm test:watch      # vitest, watch mode
 ```
-npm run dev          # local dev server
-npm run build        # type-check + bundle
-npm run lint         # eslint
-npm test             # vitest, one shot
-npm run test:watch   # vitest, watch mode
+
+Server commands (from `server/`):
+
+```bash
+pnpm dev             # Hono dev server (port 3000)
+pnpm build           # compile server TypeScript
 ```
 
-## Conventions
+## Layer rules
 
-- **SRS stays pure.** No DB or React imports in `src/srs/`. The scheduler must be deterministic and testable.
-- **DB stays behind a store.** Components and the SRS never touch Dexie directly; everything goes through `src/db/reviewStore.ts`.
-- **Content is validated, not trusted.** Anything coming out of YAML passes through `parsePhrases` first.
-- **Touch first.** No hover-only affordances. Touch targets ≥ 44px.
-- **Japanese typography.** `font-jp` for native text (Noto Sans JP with Hiragino/Yu Gothic fallbacks).
+- **`src/srs/`** is pure. No React, no DB, no fetch. `now` is always a parameter.
+- **`src/api/`** owns all fetch calls to the Hono server. Components never call fetch directly.
+- **`src/store/`** is Zustand, in-memory only. Never duplicate server-persisted entities here.
+- **`src/components/`** is presentation. Receives props, fires callbacks. No fetch, no SRS calls, no direct Supabase calls.
+- **Server routes** are thin. Business logic lives in `server/services/`, not in route handlers.
 
-## What's intentionally not here
+## Data sources
 
-- Routing — there's one view (the review loop). Add `react-router` when a second view exists.
-- Furigana via `<ruby>` — the current Card renders the reading as a separate line. Switching to inline ruby needs segmented authoring or a kana-aware tokenizer.
-- Audio — `audioUrl` is wired through; nothing is bundled yet. Decision pending (recording vs TTS vs licensed).
-- Settings / scenario picker / kana-vs-romaji toggle — coming when there's enough content to make them earn their keep.
+| Data | Source | License |
+|---|---|---|
+| Vocabulary / phrases | JMdict for Applications v3.6.2 | CC BY 4.0 |
+| Example sentences | Tatoeba TSV + `jpn_indices.csv` | CC BY 2.0 FR |
+| Kanji (~2136 Joyo) | KanjiAPI.dev | CC BY-SA 4.0 |
+| TTS audio | VOICEVOX (pre-generated) | Per-voice terms |
+| Conversation AI | Claude Haiku via Anthropic API | Paid |
+
+## What's not built yet
+
+- VOICEVOX audio pre-generation pipeline
+- Audio fill-in-the-blank (Web Speech API → Whisper)
+- FSRS migration (DB schema is ready; frontend still uses local Leitner)
+- Stats / progress screen (server endpoint exists, no UI)
