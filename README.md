@@ -6,7 +6,7 @@ Practical Japanese for English speakers. Real-life scenarios — transit, restau
 
 **No gamification.** No points, streaks, XP, hearts, mascots, level-ups, badges, or reward-loop mechanics. The reward is being able to use the language. Everything in the UI reinforces that — clarity, speed, usability over engagement-hacking.
 
-**Touch first.** Mobile-first design throughout. Every interactive element is ≥ 44px. No hover-only affordances.
+**Touch first.** Mobile-first design throughout. Every interactive element is ≥ 44px. Hover states are welcome on desktop, but nothing should be *only* discoverable or accessible via hover — every action and label must be visible without it.
 
 **Real content only.** All Japanese content comes from JMdict/Tatoeba/KANJIDIC2 or hand-authored YAML validated at build time. Nothing fabricated.
 
