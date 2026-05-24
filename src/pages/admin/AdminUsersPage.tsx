@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { LoadingPlaceholder } from 'aburungo-design-system'
 import { fetchAdminUsers, fetchAdminUser, updateAdminUser, type AdminUser, type AdminUserDetail } from '@/api/admin'
 
 const FSRS_STATES = ['new', 'learning', 'review', 'relearning'] as const
@@ -33,7 +34,7 @@ export function AdminUsersPage() {
   }
 
   if (loading) {
-    return <p className="text-body-sm text-fg-faint">Loading…</p>
+    return <LoadingPlaceholder />
   }
 
   return (

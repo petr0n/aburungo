@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router'
-import { ProgressBar } from 'aburungo-design-system'
+import { AppHeader, LoadingPlaceholder, ProgressBar, ScoreCard } from 'aburungo-design-system'
 import { fetchKanjiList, fetchDueKanji, submitKanjiReview, type KanjiEntry } from '@/api/kanji'
 import { KanjiDrillCard, type DrillPhase } from '@/components/KanjiDrillCard'
 
@@ -144,9 +144,7 @@ function BrowseScreen({
 
       {/* Grid */}
       {loading ? (
-        <div className="flex min-h-[30vh] items-center justify-center">
-          <p className="text-body-sm text-fg-faint">Loading…</p>
-        </div>
+        <LoadingPlaceholder />
       ) : (
         <div className="grid grid-cols-5 gap-2">
           {kanji.map((k) => (
@@ -312,32 +310,34 @@ export function KanjiPage() {
 
   // --- Header ---
   const header = (
-    <header className="flex items-center justify-between py-4">
-      {screen === 'browse' ? (
-        <Link
-          to="/practice"
-          className="flex min-h-[44px] items-center text-body-sm text-fg-subtle active:text-fg"
-        >
-          ← Back
-        </Link>
-      ) : (
-        <button
-          type="button"
-          onClick={() => setScreen('browse')}
-          className="flex min-h-[44px] items-center text-body-sm text-fg-subtle active:text-fg"
-        >
-          {screen === 'result' ? '← Browse' : '✕ Quit'}
-        </button>
-      )}
-      <h1 className="text-heading-sm font-semibold text-fg">Kanji</h1>
-      {screen === 'drill' ? (
-        <p className="text-body-sm text-fg-subtle">
-          {queueIndex + 1} / {queue.length}
-        </p>
-      ) : (
-        <div className="w-16" />
-      )}
-    </header>
+    <AppHeader
+      title="Kanji"
+      left={
+        screen === 'browse' ? (
+          <Link
+            to="/practice"
+            className="flex min-h-[44px] items-center text-body-sm text-fg-subtle active:text-fg"
+          >
+            ← Back
+          </Link>
+        ) : (
+          <button
+            type="button"
+            onClick={() => setScreen('browse')}
+            className="flex min-h-[44px] items-center text-body-sm text-fg-subtle active:text-fg"
+          >
+            {screen === 'result' ? '← Browse' : '✕ Quit'}
+          </button>
+        )
+      }
+      right={
+        screen === 'drill' ? (
+          <p className="text-body-sm text-fg-subtle">
+            {queueIndex + 1} / {queue.length}
+          </p>
+        ) : undefined
+      }
+    />
   )
 
   // --- Drill progress bar ---
@@ -352,39 +352,33 @@ export function KanjiPage() {
       <main className="mx-auto flex min-h-svh w-full max-w-xl flex-col px-4">
         {header}
         <div className="flex flex-1 flex-col gap-6 py-4">
-          <div className="rounded-2xl border border-border bg-surface p-6 text-center">
-            <p className="text-display font-bold text-fg">
-              {correctCount}
-              <span className="text-heading-lg text-fg-subtle"> / {queue.length}</span>
-            </p>
-            <p className="mt-1 text-body-sm text-fg-subtle">correct</p>
-          </div>
-
-          {missed.length > 0 && (
-            <section>
-              <p className="mb-3 text-body-sm font-medium text-fg-subtle">
-                Missed — {missed.length}
-              </p>
-              <div className="grid grid-cols-4 gap-2">
-                {missed.map((k) => (
-                  <div
-                    key={k.id}
-                    className="flex flex-col items-center gap-1 rounded-xl border border-border bg-surface py-3"
-                  >
-                    <span
-                      className="text-jp-lg font-medium text-fg"
-                      style={{ fontFamily: 'var(--font-jp)' }}
+          <ScoreCard correct={correctCount} total={queue.length}>
+            {missed.length > 0 && (
+              <section>
+                <p className="mb-3 text-body-sm font-medium text-fg-subtle">
+                  Missed — {missed.length}
+                </p>
+                <div className="grid grid-cols-4 gap-2">
+                  {missed.map((k) => (
+                    <div
+                      key={k.id}
+                      className="flex flex-col items-center gap-1 rounded-xl border border-border bg-surface py-3"
                     >
-                      {k.character}
-                    </span>
-                    <span className="px-1 text-center text-[0.65rem] leading-tight text-fg-subtle">
-                      {k.meanings[0]}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </section>
-          )}
+                      <span
+                        className="text-jp-lg font-medium text-fg"
+                        style={{ fontFamily: 'var(--font-jp)' }}
+                      >
+                        {k.character}
+                      </span>
+                      <span className="px-1 text-center text-[0.65rem] leading-tight text-fg-subtle">
+                        {k.meanings[0]}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            )}
+          </ScoreCard>
 
           <div className="mt-auto flex flex-col gap-3 pb-8">
             <button
