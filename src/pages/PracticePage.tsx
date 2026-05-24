@@ -1,9 +1,12 @@
+import { useState } from 'react';
 import { Link } from 'react-router';
 import { FillBlankScreen } from '@/components/FillBlankScreen';
+import { FeedbackSheet } from '@/components/FeedbackSheet';
 import { useAuth } from '@/store/auth';
 
 export function PracticePage() {
   const signOut = useAuth((s) => s.signOut);
+  const [feedbackOpen, setFeedbackOpen] = useState(false);
 
   return (
     <main className='mx-auto flex min-h-svh w-full max-w-xl flex-col gap-0 px-4'>
@@ -42,6 +45,13 @@ export function PracticePage() {
           </Link>
           <button
             type='button'
+            onClick={() => setFeedbackOpen(true)}
+            className='min-h-[44px] px-3 text-body-sm text-fg-subtle active:text-fg'
+          >
+            Feedback
+          </button>
+          <button
+            type='button'
             onClick={() => { void signOut(); }}
             className='min-h-[44px] px-3 text-body-sm text-fg-subtle active:text-fg'
           >
@@ -52,6 +62,7 @@ export function PracticePage() {
       <div className='flex flex-1 flex-col justify-center py-6'>
         <FillBlankScreen />
       </div>
+      {feedbackOpen && <FeedbackSheet onClose={() => setFeedbackOpen(false)} />}
     </main>
   );
 }
