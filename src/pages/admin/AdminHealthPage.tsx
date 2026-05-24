@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback } from 'react'
+import { LoadingPlaceholder, ErrorState } from 'aburungo-design-system'
 import { fetchAdminHealth, type HealthStatus } from '@/api/admin'
 
 function StatusDot({ ok, latencyMs }: { ok: boolean; latencyMs?: number }) {
@@ -25,8 +26,8 @@ export function AdminHealthPage() {
     return () => clearInterval(id)
   }, [refresh])
 
-  if (loading) return <p className="text-body-sm text-fg-faint">Checking…</p>
-  if (error) return <p className="text-body-sm text-error-600">{error}</p>
+  if (loading) return <LoadingPlaceholder label="Checking…" />
+  if (error) return <ErrorState message={error} />
   if (!health) return null
 
   const uptimeMins = Math.floor(health.api.uptimeMs / 60_000)

@@ -8,6 +8,13 @@ export { TextInput } from 'aburungo-design-system';
 // Domain components — from ADS
 export { PhraseCard } from 'aburungo-design-system';
 export { ProgressBar } from 'aburungo-design-system';
+export { AppHeader } from 'aburungo-design-system';
+export { LoadingPlaceholder } from 'aburungo-design-system';
+export { EmptyState } from 'aburungo-design-system';
+export { ErrorState } from 'aburungo-design-system';
+export { ScoreCard } from 'aburungo-design-system';
+export { FlipCard } from 'aburungo-design-system';
+export type { FlipCardPhase } from 'aburungo-design-system';
 
 // Icons — from ADS
 export { BackspaceIcon, MicIcon, SpeakerIcon, SpinnerIcon } from 'aburungo-design-system';

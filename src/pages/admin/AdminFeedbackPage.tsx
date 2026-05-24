@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { LoadingPlaceholder, EmptyState } from 'aburungo-design-system'
 import {
   fetchAdminFeedback,
   updateFeedbackStatus,
@@ -67,10 +68,10 @@ export function AdminFeedbackPage() {
         ))}
       </div>
 
-      {loading && <p className="text-body-sm text-fg-faint">Loading…</p>}
+      {loading && <LoadingPlaceholder />}
 
       {!loading && items.length === 0 && (
-        <p className="text-body-sm text-fg-faint">No {statusFilter} feedback.</p>
+        <EmptyState message={`No ${statusFilter} feedback.`} />
       )}
 
       <div className="flex flex-col gap-3">

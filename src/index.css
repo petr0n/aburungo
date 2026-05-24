@@ -26,31 +26,7 @@
 @import 'aburungo-design-system/src/tokens.css';
 
 @theme {
-  /* App-specific tokens */
-  --animate-card-enter: card-enter 0.28s cubic-bezier(0.16, 1, 0.3, 1) both;
-  --animate-card-exit: card-exit 0.2s ease-in both;
-}
-
-@keyframes card-enter {
-  from {
-    transform: translateY(-36px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes card-exit {
-  from {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  to {
-    transform: translateY(44px);
-    opacity: 0;
-  }
+  /* App-specific tokens — card animations live in aburungo-design-system/src/tokens.css */
 }
 
 html {

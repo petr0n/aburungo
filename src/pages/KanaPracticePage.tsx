@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react'
 import { Link } from 'react-router'
-import { ProgressBar } from 'aburungo-design-system'
+import { AppHeader, ProgressBar, ScoreCard } from 'aburungo-design-system'
 import { KANA_PRACTICE_CARDS, type KanaPracticeCard } from '@/lib/kanaData'
 
 type PracticeMode = 'multiple-choice' | 'type-romaji'
@@ -167,16 +167,17 @@ export function KanaPracticePage() {
   if (screen === 'setup') {
     return (
       <main className="mx-auto flex min-h-svh w-full max-w-xl flex-col px-4">
-        <header className="flex items-center justify-between py-4">
-          <Link
-            to="/practice"
-            className="flex min-h-[44px] items-center text-body-sm text-fg-subtle active:text-fg"
-          >
-            ← Back
-          </Link>
-          <h1 className="text-heading-sm font-semibold text-fg">Kana Practice</h1>
-          <div className="w-16" />
-        </header>
+        <AppHeader
+          title="Kana Practice"
+          left={
+            <Link
+              to="/practice"
+              className="flex min-h-[44px] items-center text-body-sm text-fg-subtle active:text-fg"
+            >
+              ← Back
+            </Link>
+          }
+        />
 
         <div className="flex flex-1 flex-col gap-6 py-2">
           <section>
@@ -281,42 +282,34 @@ export function KanaPracticePage() {
   if (screen === 'result') {
     return (
       <main className="mx-auto flex min-h-svh w-full max-w-xl flex-col px-4">
-        <header className="flex items-center justify-between py-4">
-          <h1 className="text-heading-sm font-semibold text-fg">Kana Practice</h1>
-        </header>
+        <AppHeader title="Kana Practice" />
 
         <div className="flex flex-1 flex-col gap-6 py-2">
-          <div className="rounded-2xl border border-border bg-surface p-6 text-center">
-            <p className="text-display font-bold text-fg">
-              {correctCount}
-              <span className="text-heading-lg text-fg-subtle"> / {queue.length}</span>
-            </p>
-            <p className="mt-1 text-body-sm text-fg-subtle">correct</p>
-          </div>
-
-          {missed.length > 0 && (
-            <section>
-              <p className="mb-3 text-body-sm font-medium text-fg-subtle">
-                Missed — {missed.length}
-              </p>
-              <div className="grid grid-cols-3 gap-2">
-                {missed.map((card, i) => (
-                  <div
-                    key={i}
-                    className="flex flex-col items-center gap-1 rounded-xl border border-border bg-surface py-3"
-                  >
-                    <span
-                      className="text-jp-lg font-medium text-fg"
-                      style={{ fontFamily: 'var(--font-jp)' }}
+          <ScoreCard correct={correctCount} total={queue.length}>
+            {missed.length > 0 && (
+              <section>
+                <p className="mb-3 text-body-sm font-medium text-fg-subtle">
+                  Missed — {missed.length}
+                </p>
+                <div className="grid grid-cols-3 gap-2">
+                  {missed.map((card, i) => (
+                    <div
+                      key={i}
+                      className="flex flex-col items-center gap-1 rounded-xl border border-border bg-surface py-3"
                     >
-                      {card.kana}
-                    </span>
-                    <span className="text-caption text-fg-subtle">{card.romaji}</span>
-                  </div>
-                ))}
-              </div>
-            </section>
-          )}
+                      <span
+                        className="text-jp-lg font-medium text-fg"
+                        style={{ fontFamily: 'var(--font-jp)' }}
+                      >
+                        {card.kana}
+                      </span>
+                      <span className="text-caption text-fg-subtle">{card.romaji}</span>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            )}
+          </ScoreCard>
 
           <div className="mt-auto flex flex-col gap-3 pb-8">
             <button
