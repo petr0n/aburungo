@@ -42,6 +42,16 @@ export type UserCardProgressRow = {
   last_review_at: string | null
 }
 
+export type FeedbackRow = {
+  id: string
+  user_id: string | null
+  type: 'bug' | 'suggestion' | 'other'
+  message: string
+  status: 'open' | 'reviewed' | 'resolved'
+  screenshot_url: string | null
+  created_at: string
+}
+
 export type UserKanjiProgressRow = {
   id: string
   user_id: string
