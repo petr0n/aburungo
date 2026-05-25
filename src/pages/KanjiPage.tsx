@@ -195,7 +195,7 @@ export function KanjiPage() {
   const [screen, setScreen] = useState<Screen>('browse')
   const [jlpt, setJlpt] = useState<JlptFilter>(5)
   const [kanjiList, setKanjiList] = useState<KanjiEntry[]>([])
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(true)
   const [selected, setSelected] = useState<KanjiEntry | null>(null)
 
   // Drill state
@@ -209,10 +209,14 @@ export function KanjiPage() {
 
   const advanceRef = useRef<() => void>(() => {})
 
-  // Load kanji when JLPT filter changes
-  useEffect(() => {
+  function handleJlptChange(newJlpt: JlptFilter) {
+    setJlpt(newJlpt)
     setLoading(true)
     setKanjiList([])
+  }
+
+  // Load kanji when JLPT filter changes
+  useEffect(() => {
     // Fetch up to 500 per level — N1 has ~1200 so we cap and note it
     fetchKanjiList({ jlpt, limit: 100, offset: 0 })
       .then((first) => {
@@ -296,7 +300,9 @@ export function KanjiPage() {
     setPendingCorrect(null)
     setPhase('entering')
   }
-  advanceRef.current = advance
+  useEffect(() => {
+    advanceRef.current = advance
+  })
 
   function handleEntered() {
     setPhase('idle')
@@ -409,7 +415,7 @@ export function KanjiPage() {
       {screen === 'browse' && (
         <BrowseScreen
           jlpt={jlpt}
-          onJlptChange={setJlpt}
+          onJlptChange={handleJlptChange}
           kanji={kanjiList}
           loading={loading}
           selected={selected}
