@@ -81,7 +81,9 @@ export function KanaPracticePage() {
       setChoices(makeChoices(next, queue))
     }
   }
-  advanceRef.current = advance
+  useEffect(() => {
+    advanceRef.current = advance
+  })
 
   useEffect(() => {
     if (screen === 'practice' && practiceMode === 'type-romaji') {

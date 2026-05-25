@@ -33,7 +33,6 @@ export function AdminFeedbackPage() {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    setLoading(true)
     fetchAdminFeedback(statusFilter)
       .then(setItems)
       .finally(() => setLoading(false))
@@ -55,7 +54,7 @@ export function AdminFeedbackPage() {
           <button
             key={s}
             type="button"
-            onClick={() => setStatusFilter(s)}
+            onClick={() => { setStatusFilter(s); setLoading(true) }}
             className={[
               'flex min-h-[36px] items-center rounded-xl px-4 text-body-sm font-medium capitalize transition-colors',
               statusFilter === s
