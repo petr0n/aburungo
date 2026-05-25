@@ -19,10 +19,8 @@ export function FillInput({ onSubmit, placeholder, disabled }: Props) {
   const [kanaSection, setKanaSection] = useState<KanaSection>('basic')
   const inputRef = useRef<HTMLInputElement>(null)
 
-  // Focus the text input and clear values when the mode changes
+  // Focus the active text input when mode changes
   useEffect(() => {
-    setRomaji('')
-    setKana('')
     inputRef.current?.focus()
   }, [mode])
 
@@ -54,7 +52,11 @@ export function FillInput({ onSubmit, placeholder, disabled }: Props) {
       placeholder={placeholder}
       showSystemHint={showHint}
       inputRef={inputRef}
-      onModeChange={setMode}
+      onModeChange={(m) => {
+        setRomaji('')
+        setKana('')
+        setMode(m)
+      }}
       onRomajiChange={setRomaji}
       onKanaKey={(char) => setKana((prev) => prev + char)}
       onKanaBackspace={() => setKana((prev) => [...prev].slice(0, -1).join(''))}
