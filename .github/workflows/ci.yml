@@ -25,7 +25,6 @@ jobs:
         with:
           repository: petr0n/aburungo-design-system
           path: aburungo-design-system
-          token: ${{ secrets.ADS_READ_TOKEN }}
 
       - uses: pnpm/action-setup@v4
         with:
