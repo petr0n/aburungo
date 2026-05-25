@@ -10,18 +10,42 @@ jobs:
   ci:
     name: Lint, Build & Test
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: aburungo
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout app
+        uses: actions/checkout@v4
+        with:
+          path: aburungo
+
+      - name: Checkout design system
+        uses: actions/checkout@v4
+        with:
+          repository: petr0n/aburungo-design-system
+          path: aburungo-design-system
+          token: ${{ secrets.ADS_READ_TOKEN }}
 
       - uses: pnpm/action-setup@v4
+        with:
+          package_json_file: aburungo/package.json
 
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
           cache: "pnpm"
+          cache-dependency-path: "aburungo/pnpm-lock.yaml"
 
-      - name: Install dependencies
+      - name: Install ADS dependencies
+        run: pnpm install --frozen-lockfile
+        working-directory: aburungo-design-system
+
+      - name: Build ADS
+        run: pnpm build
+        working-directory: aburungo-design-system
+
+      - name: Install app dependencies
         run: pnpm install --frozen-lockfile
 
       - name: Lint
