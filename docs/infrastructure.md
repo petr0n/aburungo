@@ -40,6 +40,10 @@ your existing DNS records.
 
 In GoDaddy DNS settings, replace the default nameservers with the two
 Cloudflare nameservers shown during setup (e.g. `aria.ns.cloudflare.com`).
+For `aburungo.app` the nameservers are:
+- `itzel.ns.cloudflare.com`
+- `scott.ns.cloudflare.com`
+
 Propagation takes a few minutes to a few hours.
 
 From this point on, all DNS is managed in Cloudflare — not GoDaddy.
