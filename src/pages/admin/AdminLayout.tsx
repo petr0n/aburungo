@@ -4,6 +4,9 @@ const NAV = [
   { to: '/admin/users', label: 'Users' },
   { to: '/admin/feedback', label: 'Feedback' },
   { to: '/admin/health', label: 'Health' },
+  { to: '/admin/analytics', label: 'Analytics' },
+  { to: '/admin/content', label: 'Content' },
+  { to: '/admin/logs', label: 'Logs' },
 ]
 
 export function AdminLayout() {

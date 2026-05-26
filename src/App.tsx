@@ -14,6 +14,9 @@ import { AdminLayout } from '@/pages/admin/AdminLayout'
 import { AdminUsersPage } from '@/pages/admin/AdminUsersPage'
 import { AdminFeedbackPage } from '@/pages/admin/AdminFeedbackPage'
 import { AdminHealthPage } from '@/pages/admin/AdminHealthPage'
+import { AdminAnalyticsPage } from '@/pages/admin/AdminAnalyticsPage'
+import { AdminContentPage } from '@/pages/admin/AdminContentPage'
+import { AdminLogsPage } from '@/pages/admin/AdminLogsPage'
 
 export default function App() {
   const initialize = useAuth((s) => s.initialize)
@@ -38,6 +41,9 @@ export default function App() {
           <Route path="/admin/users" element={<AdminUsersPage />} />
           <Route path="/admin/feedback" element={<AdminFeedbackPage />} />
           <Route path="/admin/health" element={<AdminHealthPage />} />
+          <Route path="/admin/analytics" element={<AdminAnalyticsPage />} />
+          <Route path="/admin/content" element={<AdminContentPage />} />
+          <Route path="/admin/logs" element={<AdminLogsPage />} />
         </Route>
       </Route>
     </Routes>
