@@ -141,7 +141,7 @@ curl -X PUT "https://ecwzexrjgnecpfyvrsdb.supabase.co/auth/v1/admin/users/<uid>"
 ## Current status
 
 - [x] Domain purchased (aburungo.app secured 2026-05-25)
-- [ ] Cloudflare DNS active
+- [x] Cloudflare DNS active (nameservers updated 2026-05-25)
 - [ ] Cloudflare Email Routing configured
 - [ ] Frontend deployed to Vercel
 - [ ] Backend deployed
