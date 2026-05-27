@@ -1,5 +1,5 @@
 {
   "buildCommand": "pnpm --filter . run build",
   "outputDirectory": "dist",
-  "installCommand": "pnpm install"
+  "installCommand": "git clone https://github.com/petr0n/aburungo-design-system.git ../aburungo-design-system && cd ../aburungo-design-system && pnpm install --frozen-lockfile && pnpm build && cd - && pnpm install --frozen-lockfile"
 }
