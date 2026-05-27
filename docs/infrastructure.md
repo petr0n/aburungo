@@ -146,4 +146,4 @@ curl -X PUT "https://ecwzexrjgnecpfyvrsdb.supabase.co/auth/v1/admin/users/<uid>"
 - [ ] Frontend deployed to Vercel
 - [ ] Backend deployed
 - [ ] Resend configured in Supabase
-- [ ] Test accounts created
+- [x] Test accounts created (2026-05-26)
