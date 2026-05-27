@@ -1,5 +1,5 @@
 {
   "buildCommand": "pnpm --filter . run build",
   "outputDirectory": "dist",
-  "installCommand": "git clone https://github.com/petr0n/aburungo-design-system.git ../aburungo-design-system && cd ../aburungo-design-system && npx --yes pnpm@11.1.3 install --frozen-lockfile && npx pnpm@11.1.3 build && cd - && npx pnpm@11.1.3 install --frozen-lockfile"
+  "installCommand": "bash scripts/vercel-install.sh"
 }
