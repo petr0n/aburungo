@@ -13,7 +13,10 @@ export function AdminLayout() {
   return (
     <div className="mx-auto flex min-h-svh w-full max-w-2xl flex-col px-4">
       <header className="flex items-center gap-6 border-b border-border py-4">
-        <span className="text-body-sm font-semibold text-fg">Admin</span>
+        <span className="flex items-center gap-2">
+          <span className="hanko" style={{ fontSize: 28 }} />
+          <span className="text-body-sm font-semibold text-fg">Admin</span>
+        </span>
         <nav className="flex gap-1">
           {NAV.map(({ to, label }) => (
             <NavLink

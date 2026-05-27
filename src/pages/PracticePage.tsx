@@ -11,7 +11,10 @@ export function PracticePage() {
   return (
     <main className='mx-auto flex min-h-svh w-full max-w-xl flex-col gap-0 px-4'>
       <header className='flex items-center justify-between py-4'>
-        <h1 className='text-heading-sm font-semibold text-fg'>AburunGo</h1>
+        <span className='flex items-center gap-2'>
+          <span className='hanko' style={{ fontSize: 32 }} />
+          <h1 className='text-heading-sm font-semibold text-fg'>AburunGo</h1>
+        </span>
         <div className='flex items-center gap-1'>
           <Link
             to='/flashcard'

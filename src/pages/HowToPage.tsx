@@ -36,7 +36,7 @@ export function HowToPage() {
               },
             ].map(({ step, title, body }) => (
               <li key={step} className='flex gap-3'>
-                <span className='mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand text-body-sm font-bold text-white'>
+                <span className='mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand-500 text-body-sm font-bold text-white'>
                   {step}
                 </span>
                 <div>
@@ -58,7 +58,7 @@ export function HowToPage() {
               'All content from verified sources — no made-up Japanese',
             ].map((item) => (
               <li key={item} className='flex gap-2 text-body-sm text-fg-subtle'>
-                <span className='text-brand'>•</span>
+                <span className='text-brand-500'>•</span>
                 {item}
               </li>
             ))}
@@ -75,7 +75,7 @@ export function HowToPage() {
               'Use the Speak mode to practise your pronunciation with the microphone',
             ].map((item) => (
               <li key={item} className='flex gap-2 text-body-sm text-fg-subtle'>
-                <span className='text-brand'>•</span>
+                <span className='text-brand-500'>•</span>
                 {item}
               </li>
             ))}
