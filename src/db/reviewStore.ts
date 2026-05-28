@@ -5,17 +5,17 @@
  * The rest of the app (SRS, components, session store) never touches Dexie
  * directly — that keeps the data layer swappable and the SRS pure.
  */
-import type { EpochMs, ReviewState } from '@/types'
-import { db } from './dexie'
+import type { EpochMs, ReviewState } from "@/types";
+import { db } from "./dexie";
 
 /** Fetch every stored ReviewState. Use sparingly — fine at session start. */
 export function getAll(): Promise<ReviewState[]> {
-  return db.reviewStates.toArray()
+  return db.reviewStates.toArray();
 }
 
 /** Fetch one phrase's state, or undefined if it's never been reviewed. */
 export function getOne(phraseId: string): Promise<ReviewState | undefined> {
-  return db.reviewStates.get(phraseId)
+  return db.reviewStates.get(phraseId);
 }
 
 /**
@@ -26,15 +26,15 @@ export function getOne(phraseId: string): Promise<ReviewState | undefined> {
  * separately (see session store / pickReviewQueue).
  */
 export function getDue(now: EpochMs): Promise<ReviewState[]> {
-  return db.reviewStates.where('dueAt').belowOrEqual(now).sortBy('dueAt')
+  return db.reviewStates.where("dueAt").belowOrEqual(now).sortBy("dueAt");
 }
 
 /** Insert or replace a phrase's review state. Keyed by phraseId. */
 export async function upsert(state: ReviewState): Promise<void> {
-  await db.reviewStates.put(state)
+  await db.reviewStates.put(state);
 }
 
 /** Wipe everything. Only meant for dev/debug — no UI hook yet. */
 export async function reset(): Promise<void> {
-  await db.reviewStates.clear()
+  await db.reviewStates.clear();
 }

@@ -1,66 +1,58 @@
-import { useState, useEffect, useRef } from 'react'
-import { Link } from 'react-router'
-import { AppHeader, LoadingPlaceholder, ProgressBar, ScoreCard } from 'aburungo-design-system'
-import { fetchKanjiList, fetchDueKanji, submitKanjiReview, type KanjiEntry } from '@/api/kanji'
-import { KanjiDrillCard, type DrillPhase } from '@/components/KanjiDrillCard'
+import { useState, useEffect, useRef } from "react";
+import { Link } from "react-router";
+import { AppHeader, LoadingPlaceholder, ProgressBar, ScoreCard } from "aburungo-design-system";
+import { fetchKanjiList, fetchDueKanji, submitKanjiReview, type KanjiEntry } from "@/api/kanji";
+import { KanjiDrillCard, type DrillPhase } from "@/components/KanjiDrillCard";
 
-type Screen = 'browse' | 'drill' | 'result'
-type JlptFilter = 5 | 4 | 3 | 2 | 1
+type Screen = "browse" | "drill" | "result";
+type JlptFilter = 5 | 4 | 3 | 2 | 1;
 
-const JLPT_TABS: JlptFilter[] = [5, 4, 3, 2, 1]
+const JLPT_TABS: JlptFilter[] = [5, 4, 3, 2, 1];
 
 // --- Furigana helper (also used in browse detail panel) ---
 
 function parseKun(raw: string): { reading: string; okurigana: string } {
-  const [reading, okurigana = ''] = raw.split('.')
-  return { reading, okurigana }
+  const [reading, okurigana = ""] = raw.split(".");
+  return { reading, okurigana };
 }
 
 function KunReading({ kanji, raw }: { kanji: string; raw: string }) {
-  const { reading, okurigana } = parseKun(raw)
+  const { reading, okurigana } = parseKun(raw);
   return (
     <span>
-      <ruby style={{ fontFamily: 'var(--font-jp)' }}>
+      <ruby style={{ fontFamily: "var(--font-jp)" }}>
         {kanji}
         <rt className="text-caption text-fg-subtle">{reading}</rt>
       </ruby>
-      {okurigana && <span style={{ fontFamily: 'var(--font-jp)' }}>{okurigana}</span>}
+      {okurigana && <span style={{ fontFamily: "var(--font-jp)" }}>{okurigana}</span>}
     </span>
-  )
+  );
 }
 
 // --- Shuffle ---
 
 function shuffle<T>(arr: readonly T[]): T[] {
-  const a = [...arr]
+  const a = [...arr];
   for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1))
-    ;[a[i], a[j]] = [a[j], a[i]]
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
   }
-  return a
+  return a;
 }
 
 // --- Browse screen ---
 
 type BrowseProps = {
-  jlpt: JlptFilter
-  onJlptChange: (j: JlptFilter) => void
-  kanji: KanjiEntry[]
-  loading: boolean
-  selected: KanjiEntry | null
-  onSelect: (k: KanjiEntry | null) => void
-  onStartDrill: () => void
-}
+  jlpt: JlptFilter;
+  onJlptChange: (j: JlptFilter) => void;
+  kanji: KanjiEntry[];
+  loading: boolean;
+  selected: KanjiEntry | null;
+  onSelect: (k: KanjiEntry | null) => void;
+  onStartDrill: () => void;
+};
 
-function BrowseScreen({
-  jlpt,
-  onJlptChange,
-  kanji,
-  loading,
-  selected,
-  onSelect,
-  onStartDrill,
-}: BrowseProps) {
+function BrowseScreen({ jlpt, onJlptChange, kanji, loading, selected, onSelect, onStartDrill }: BrowseProps) {
   return (
     <div className="flex flex-1 flex-col gap-4 pb-8">
       {/* JLPT tabs */}
@@ -70,15 +62,15 @@ function BrowseScreen({
             key={level}
             type="button"
             onClick={() => {
-              onJlptChange(level)
-              onSelect(null)
+              onJlptChange(level);
+              onSelect(null);
             }}
             className={[
-              'flex min-h-[40px] shrink-0 items-center justify-center rounded-xl px-4 text-body-sm font-medium transition-colors',
+              "flex min-h-[40px] shrink-0 items-center justify-center rounded-xl px-4 text-body-sm font-medium transition-colors",
               jlpt === level
-                ? 'bg-brand-600 text-white'
-                : 'border border-border bg-surface text-fg-subtle active:bg-surface-2',
-            ].join(' ')}
+                ? "bg-brand-600 text-white"
+                : "border border-border bg-surface text-fg-subtle active:bg-surface-2",
+            ].join(" ")}
           >
             N{level}
           </button>
@@ -89,36 +81,24 @@ function BrowseScreen({
       {selected != null && (
         <div className="rounded-2xl border border-brand-200 bg-brand-50 p-5">
           <div className="flex items-start gap-4">
-            <span
-              className="text-[3.5rem] font-medium leading-none text-fg"
-              style={{ fontFamily: 'var(--font-jp)' }}
-            >
+            <span className="text-[3.5rem] font-medium leading-none text-fg" style={{ fontFamily: "var(--font-jp)" }}>
               {selected.character}
             </span>
             <div className="flex flex-1 flex-col gap-2">
-              <p className="text-body font-semibold text-fg">
-                {selected.meanings.slice(0, 3).join(', ')}
-              </p>
+              <p className="text-body font-semibold text-fg">{selected.meanings.slice(0, 3).join(", ")}</p>
 
               {selected.onReadings.length > 0 && (
                 <div>
-                  <span className="text-caption font-medium uppercase tracking-wider text-fg-subtle">
-                    On{' '}
-                  </span>
-                  <span
-                    className="text-body-sm text-fg"
-                    style={{ fontFamily: 'var(--font-jp)' }}
-                  >
-                    {selected.onReadings.join('、')}
+                  <span className="text-caption font-medium uppercase tracking-wider text-fg-subtle">On </span>
+                  <span className="text-body-sm text-fg" style={{ fontFamily: "var(--font-jp)" }}>
+                    {selected.onReadings.join("、")}
                   </span>
                 </div>
               )}
 
               {selected.kunReadings.length > 0 && (
                 <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
-                  <span className="text-caption font-medium uppercase tracking-wider text-fg-subtle">
-                    Kun{' '}
-                  </span>
+                  <span className="text-caption font-medium uppercase tracking-wider text-fg-subtle">Kun </span>
                   {selected.kunReadings.slice(0, 4).map((r) => (
                     <KunReading key={r} kanji={selected.character} raw={r} />
                   ))}
@@ -126,9 +106,7 @@ function BrowseScreen({
               )}
 
               {selected.strokeCount != null && (
-                <p className="text-body-sm text-fg-subtle">
-                  {selected.strokeCount} strokes
-                </p>
+                <p className="text-body-sm text-fg-subtle">{selected.strokeCount} strokes</p>
               )}
             </div>
             <button
@@ -153,21 +131,14 @@ function BrowseScreen({
               type="button"
               onClick={() => onSelect(selected?.id === k.id ? null : k)}
               className={[
-                'flex min-h-[60px] flex-col items-center justify-center gap-0.5 rounded-xl border transition-colors',
-                selected?.id === k.id
-                  ? 'border-brand-500 bg-brand-50'
-                  : 'border-border bg-surface active:bg-surface-2',
-              ].join(' ')}
+                "flex min-h-[60px] flex-col items-center justify-center gap-0.5 rounded-xl border transition-colors",
+                selected?.id === k.id ? "border-brand-500 bg-brand-50" : "border-border bg-surface active:bg-surface-2",
+              ].join(" ")}
             >
-              <span
-                className="text-jp-lg font-medium text-fg"
-                style={{ fontFamily: 'var(--font-jp)' }}
-              >
+              <span className="text-jp-lg font-medium text-fg" style={{ fontFamily: "var(--font-jp)" }}>
                 {k.character}
               </span>
-              <span className="max-w-full truncate px-1 text-[0.6rem] text-fg-subtle">
-                {k.meanings[0]}
-              </span>
+              <span className="max-w-full truncate px-1 text-[0.6rem] text-fg-subtle">{k.meanings[0]}</span>
             </button>
           ))}
         </div>
@@ -186,33 +157,33 @@ function BrowseScreen({
         </div>
       )}
     </div>
-  )
+  );
 }
 
 // --- Main page ---
 
 export function KanjiPage() {
-  const [screen, setScreen] = useState<Screen>('browse')
-  const [jlpt, setJlpt] = useState<JlptFilter>(5)
-  const [kanjiList, setKanjiList] = useState<KanjiEntry[]>([])
-  const [loading, setLoading] = useState(true)
-  const [selected, setSelected] = useState<KanjiEntry | null>(null)
+  const [screen, setScreen] = useState<Screen>("browse");
+  const [jlpt, setJlpt] = useState<JlptFilter>(5);
+  const [kanjiList, setKanjiList] = useState<KanjiEntry[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [selected, setSelected] = useState<KanjiEntry | null>(null);
 
   // Drill state
-  const [queue, setQueue] = useState<KanjiEntry[]>([])
-  const [queueIndex, setQueueIndex] = useState(0)
-  const [correctCount, setCorrectCount] = useState(0)
-  const [missed, setMissed] = useState<KanjiEntry[]>([])
-  const [phase, setPhase] = useState<DrillPhase>('entering')
-  const [stagedKanji, setStagedKanji] = useState<KanjiEntry | null>(null)
-  const [pendingCorrect, setPendingCorrect] = useState<boolean | null>(null)
+  const [queue, setQueue] = useState<KanjiEntry[]>([]);
+  const [queueIndex, setQueueIndex] = useState(0);
+  const [correctCount, setCorrectCount] = useState(0);
+  const [missed, setMissed] = useState<KanjiEntry[]>([]);
+  const [phase, setPhase] = useState<DrillPhase>("entering");
+  const [stagedKanji, setStagedKanji] = useState<KanjiEntry | null>(null);
+  const [pendingCorrect, setPendingCorrect] = useState<boolean | null>(null);
 
-  const advanceRef = useRef<() => void>(() => {})
+  const advanceRef = useRef<() => void>(() => {});
 
   function handleJlptChange(newJlpt: JlptFilter) {
-    setJlpt(newJlpt)
-    setLoading(true)
-    setKanjiList([])
+    setJlpt(newJlpt);
+    setLoading(true);
+    setKanjiList([]);
   }
 
   // Load kanji when JLPT filter changes
@@ -221,139 +192,131 @@ export function KanjiPage() {
     fetchKanjiList({ jlpt, limit: 100, offset: 0 })
       .then((first) => {
         if (first.length < 100) {
-          setKanjiList(first)
-          setLoading(false)
-          return
+          setKanjiList(first);
+          setLoading(false);
+          return;
         }
         // Fetch remaining pages
         return fetchKanjiList({ jlpt, limit: 100, offset: 100 }).then((second) => {
           if (second.length < 100) {
-            setKanjiList([...first, ...second])
-            setLoading(false)
-            return
+            setKanjiList([...first, ...second]);
+            setLoading(false);
+            return;
           }
           return fetchKanjiList({ jlpt, limit: 100, offset: 200 }).then((third) => {
-            setKanjiList([...first, ...second, ...third])
-            setLoading(false)
-          })
-        })
+            setKanjiList([...first, ...second, ...third]);
+            setLoading(false);
+          });
+        });
       })
-      .catch(() => setLoading(false))
-  }, [jlpt])
+      .catch(() => setLoading(false));
+  }, [jlpt]);
 
   async function startDrill() {
-    let q: KanjiEntry[]
+    let q: KanjiEntry[];
     try {
-      const due = await fetchDueKanji(100)
-      const kanjiMap = new Map(kanjiList.map((k) => [k.id, k]))
-      const dueIdSet = new Set(due.map((d) => d.kanjiId))
-      const dueQueue = due
-        .map((d) => kanjiMap.get(d.kanjiId))
-        .filter((k): k is KanjiEntry => k !== undefined)
-      const newQueue = shuffle(kanjiList.filter((k) => !dueIdSet.has(k.id)))
-      q = [...dueQueue, ...newQueue]
+      const due = await fetchDueKanji(100);
+      const kanjiMap = new Map(kanjiList.map((k) => [k.id, k]));
+      const dueIdSet = new Set(due.map((d) => d.kanjiId));
+      const dueQueue = due.map((d) => kanjiMap.get(d.kanjiId)).filter((k): k is KanjiEntry => k !== undefined);
+      const newQueue = shuffle(kanjiList.filter((k) => !dueIdSet.has(k.id)));
+      q = [...dueQueue, ...newQueue];
     } catch {
-      q = shuffle(kanjiList)
+      q = shuffle(kanjiList);
     }
-    setQueue(q)
-    setQueueIndex(0)
-    setCorrectCount(0)
-    setMissed([])
-    setPhase('entering')
-    setStagedKanji(null)
-    setPendingCorrect(null)
-    setScreen('drill')
+    setQueue(q);
+    setQueueIndex(0);
+    setCorrectCount(0);
+    setMissed([]);
+    setPhase("entering");
+    setStagedKanji(null);
+    setPendingCorrect(null);
+    setScreen("drill");
   }
 
   function handleReveal() {
-    setPhase('revealed')
+    setPhase("revealed");
   }
 
   function handleRate(correct: boolean) {
-    const current = queue[queueIndex]
+    const current = queue[queueIndex];
     if (current) {
-      void submitKanjiReview(current.id, correct ? 'good' : 'again', Date.now())
+      void submitKanjiReview(current.id, correct ? "good" : "again", Date.now());
     }
-    setStagedKanji(current ?? null)
-    setPendingCorrect(correct)
-    setPhase('exiting')
+    setStagedKanji(current ?? null);
+    setPendingCorrect(correct);
+    setPhase("exiting");
   }
 
   function advance() {
-    const correct = pendingCorrect ?? false
-    const current = stagedKanji ?? queue[queueIndex]
+    const correct = pendingCorrect ?? false;
+    const current = stagedKanji ?? queue[queueIndex];
 
     if (correct) {
-      setCorrectCount((n) => n + 1)
+      setCorrectCount((n) => n + 1);
     } else if (current) {
-      setMissed((m) => [...m, current])
+      setMissed((m) => [...m, current]);
     }
 
-    const nextIndex = queueIndex + 1
+    const nextIndex = queueIndex + 1;
     if (nextIndex >= queue.length) {
-      setScreen('result')
-      return
+      setScreen("result");
+      return;
     }
 
-    setQueueIndex(nextIndex)
-    setStagedKanji(null)
-    setPendingCorrect(null)
-    setPhase('entering')
+    setQueueIndex(nextIndex);
+    setStagedKanji(null);
+    setPendingCorrect(null);
+    setPhase("entering");
   }
   useEffect(() => {
-    advanceRef.current = advance
-  })
+    advanceRef.current = advance;
+  });
 
   function handleEntered() {
-    setPhase('idle')
+    setPhase("idle");
   }
 
   function handleExited() {
-    advanceRef.current()
+    advanceRef.current();
   }
 
-  const displayKanji = stagedKanji ?? queue[queueIndex] ?? null
+  const displayKanji = stagedKanji ?? queue[queueIndex] ?? null;
 
   // --- Header ---
   const header = (
     <AppHeader
       title="Kanji"
       left={
-        screen === 'browse' ? (
-          <Link
-            to="/practice"
-            className="flex min-h-[44px] items-center text-body-sm text-fg-subtle active:text-fg"
-          >
+        screen === "browse" ? (
+          <Link to="/practice" className="flex min-h-[44px] items-center text-body-sm text-fg-subtle active:text-fg">
             ← Back
           </Link>
         ) : (
           <button
             type="button"
-            onClick={() => setScreen('browse')}
+            onClick={() => setScreen("browse")}
             className="flex min-h-[44px] items-center text-body-sm text-fg-subtle active:text-fg"
           >
-            {screen === 'result' ? '← Browse' : '✕ Quit'}
+            {screen === "result" ? "← Browse" : "✕ Quit"}
           </button>
         )
       }
       right={
-        screen === 'drill' ? (
+        screen === "drill" ? (
           <p className="text-body-sm text-fg-subtle">
             {queueIndex + 1} / {queue.length}
           </p>
         ) : undefined
       }
     />
-  )
+  );
 
   // --- Drill progress bar ---
-  const progressBar =
-    screen === 'drill' ? (
-      <ProgressBar value={(queueIndex + 1) / queue.length} />
-    ) : null
+  const progressBar = screen === "drill" ? <ProgressBar value={(queueIndex + 1) / queue.length} /> : null;
 
   // --- Result screen ---
-  if (screen === 'result') {
+  if (screen === "result") {
     return (
       <main className="mx-auto flex min-h-svh w-full max-w-xl flex-col px-4">
         {header}
@@ -361,19 +324,14 @@ export function KanjiPage() {
           <ScoreCard correct={correctCount} total={queue.length}>
             {missed.length > 0 && (
               <section>
-                <p className="mb-3 text-body-sm font-medium text-fg-subtle">
-                  Missed — {missed.length}
-                </p>
+                <p className="mb-3 text-body-sm font-medium text-fg-subtle">Missed — {missed.length}</p>
                 <div className="grid grid-cols-4 gap-2">
                   {missed.map((k) => (
                     <div
                       key={k.id}
                       className="flex flex-col items-center gap-1 rounded-xl border border-border bg-surface py-3"
                     >
-                      <span
-                        className="text-jp-lg font-medium text-fg"
-                        style={{ fontFamily: 'var(--font-jp)' }}
-                      >
+                      <span className="text-jp-lg font-medium text-fg" style={{ fontFamily: "var(--font-jp)" }}>
                         {k.character}
                       </span>
                       <span className="px-1 text-center text-[0.65rem] leading-tight text-fg-subtle">
@@ -396,7 +354,7 @@ export function KanjiPage() {
             </button>
             <button
               type="button"
-              onClick={() => setScreen('browse')}
+              onClick={() => setScreen("browse")}
               className="flex min-h-[52px] w-full items-center justify-center rounded-2xl border border-border bg-surface text-body font-medium text-fg active:bg-surface-2"
             >
               Back to browse
@@ -404,7 +362,7 @@ export function KanjiPage() {
           </div>
         </div>
       </main>
-    )
+    );
   }
 
   return (
@@ -412,7 +370,7 @@ export function KanjiPage() {
       {header}
       {progressBar}
 
-      {screen === 'browse' && (
+      {screen === "browse" && (
         <BrowseScreen
           jlpt={jlpt}
           onJlptChange={handleJlptChange}
@@ -424,7 +382,7 @@ export function KanjiPage() {
         />
       )}
 
-      {screen === 'drill' && displayKanji != null && (
+      {screen === "drill" && displayKanji != null && (
         <div className="flex flex-1 flex-col justify-center py-6">
           <KanjiDrillCard
             key={displayKanji.id}
@@ -438,5 +396,5 @@ export function KanjiPage() {
         </div>
       )}
     </main>
-  )
+  );
 }

@@ -1,40 +1,38 @@
-import { useState, useEffect } from 'react'
-import { LoadingPlaceholder } from 'aburungo-design-system'
-import { fetchAdminUsers, fetchAdminUser, updateAdminUser, type AdminUser, type AdminUserDetail } from '@/api/admin'
+import { useState, useEffect } from "react";
+import { LoadingPlaceholder } from "aburungo-design-system";
+import { fetchAdminUsers, fetchAdminUser, updateAdminUser, type AdminUser, type AdminUserDetail } from "@/api/admin";
 
-const FSRS_STATES = ['new', 'learning', 'review', 'relearning'] as const
+const FSRS_STATES = ["new", "learning", "review", "relearning"] as const;
 
 export function AdminUsersPage() {
-  const [users, setUsers] = useState<AdminUser[]>([])
-  const [loading, setLoading] = useState(true)
-  const [selected, setSelected] = useState<AdminUserDetail | null>(null)
-  const [detailLoading, setDetailLoading] = useState(false)
+  const [users, setUsers] = useState<AdminUser[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [selected, setSelected] = useState<AdminUserDetail | null>(null);
+  const [detailLoading, setDetailLoading] = useState(false);
 
   useEffect(() => {
     fetchAdminUsers()
       .then(setUsers)
-      .finally(() => setLoading(false))
-  }, [])
+      .finally(() => setLoading(false));
+  }, []);
 
   async function handleSelect(id: string) {
-    setDetailLoading(true)
-    const detail = await fetchAdminUser(id)
-    setSelected(detail)
-    setDetailLoading(false)
+    setDetailLoading(true);
+    const detail = await fetchAdminUser(id);
+    setSelected(detail);
+    setDetailLoading(false);
   }
 
   async function handleToggleSuspend(user: AdminUser) {
-    await updateAdminUser(user.id, { suspended: !user.suspended })
-    setUsers((prev) =>
-      prev.map((u) => (u.id === user.id ? { ...u, suspended: !u.suspended } : u)),
-    )
+    await updateAdminUser(user.id, { suspended: !user.suspended });
+    setUsers((prev) => prev.map((u) => (u.id === user.id ? { ...u, suspended: !u.suspended } : u)));
     if (selected?.id === user.id) {
-      setSelected((prev) => prev ? { ...prev, suspended: !prev.suspended } : prev)
+      setSelected((prev) => (prev ? { ...prev, suspended: !prev.suspended } : prev));
     }
   }
 
   if (loading) {
-    return <LoadingPlaceholder />
+    return <LoadingPlaceholder />;
   }
 
   return (
@@ -48,7 +46,7 @@ export function AdminUsersPage() {
         <div className="rounded-2xl border border-border bg-surface p-5">
           <div className="mb-4 flex items-center justify-between">
             <div>
-              <p className="text-body font-medium text-fg">{selected.email ?? 'No email'}</p>
+              <p className="text-body font-medium text-fg">{selected.email ?? "No email"}</p>
               <p className="text-body-sm text-fg-subtle">
                 Joined {new Date(selected.created_at).toLocaleDateString()} · {selected.totalReviewed} reviews
               </p>
@@ -58,13 +56,11 @@ export function AdminUsersPage() {
                 type="button"
                 onClick={() => void handleToggleSuspend(selected)}
                 className={[
-                  'rounded-xl px-3 py-1.5 text-body-sm font-medium',
-                  selected.suspended
-                    ? 'bg-success-bg text-success-fg'
-                    : 'bg-error-bg text-error-fg',
-                ].join(' ')}
+                  "rounded-xl px-3 py-1.5 text-body-sm font-medium",
+                  selected.suspended ? "bg-success-bg text-success-fg" : "bg-error-bg text-error-fg",
+                ].join(" ")}
               >
-                {selected.suspended ? 'Unsuspend' : 'Suspend'}
+                {selected.suspended ? "Unsuspend" : "Suspend"}
               </button>
               <button
                 type="button"
@@ -78,9 +74,7 @@ export function AdminUsersPage() {
 
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <p className="mb-2 text-caption font-medium uppercase tracking-wider text-fg-subtle">
-                Vocab FSRS
-              </p>
+              <p className="mb-2 text-caption font-medium uppercase tracking-wider text-fg-subtle">Vocab FSRS</p>
               <div className="flex flex-col gap-1">
                 {FSRS_STATES.map((s) => (
                   <div key={s} className="flex justify-between text-body-sm">
@@ -91,9 +85,7 @@ export function AdminUsersPage() {
               </div>
             </div>
             <div>
-              <p className="mb-2 text-caption font-medium uppercase tracking-wider text-fg-subtle">
-                Kanji FSRS
-              </p>
+              <p className="mb-2 text-caption font-medium uppercase tracking-wider text-fg-subtle">Kanji FSRS</p>
               <div className="flex flex-col gap-1">
                 {FSRS_STATES.map((s) => (
                   <div key={s} className="flex justify-between text-body-sm">
@@ -107,9 +99,7 @@ export function AdminUsersPage() {
         </div>
       )}
 
-      {detailLoading && (
-        <p className="text-body-sm text-fg-faint">Loading user…</p>
-      )}
+      {detailLoading && <p className="text-body-sm text-fg-faint">Loading user…</p>}
 
       {/* User table */}
       <div className="flex flex-col divide-y divide-border rounded-2xl border border-border">
@@ -138,5 +128,5 @@ export function AdminUsersPage() {
         ))}
       </div>
     </div>
-  )
+  );
 }

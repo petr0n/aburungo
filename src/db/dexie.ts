@@ -8,19 +8,19 @@
  * Schema migrations: bump the version() number and add a new .stores() call.
  * Never edit an existing version block once it's shipped.
  */
-import Dexie, { type EntityTable } from 'dexie'
-import type { ReviewState } from '@/types'
+import Dexie, { type EntityTable } from "dexie";
+import type { ReviewState } from "@/types";
 
 export class AburunGoDB extends Dexie {
-  reviewStates!: EntityTable<ReviewState, 'phraseId'>
+  reviewStates!: EntityTable<ReviewState, "phraseId">;
 
   constructor() {
-    super('aburungo')
+    super("aburungo");
     // v1: review state per phrase. Indexes: dueAt for "what's due now" queries.
     this.version(1).stores({
-      reviewStates: 'phraseId, dueAt',
-    })
+      reviewStates: "phraseId, dueAt",
+    });
   }
 }
 
-export const db = new AburunGoDB()
+export const db = new AburunGoDB();

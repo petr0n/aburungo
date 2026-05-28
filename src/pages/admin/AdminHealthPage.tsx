@@ -1,44 +1,45 @@
-import { useState, useEffect, useCallback } from 'react'
-import { LoadingPlaceholder, ErrorState } from 'aburungo-design-system'
-import { fetchAdminHealth, type HealthStatus } from '@/api/admin'
+import { useState, useEffect, useCallback } from "react";
+import { LoadingPlaceholder, ErrorState } from "aburungo-design-system";
+import { fetchAdminHealth, type HealthStatus } from "@/api/admin";
 
 function StatusDot({ ok, latencyMs }: { ok: boolean; latencyMs?: number }) {
-  const degraded = latencyMs !== undefined && latencyMs > 300
-  const color = !ok ? 'bg-error-500' : degraded ? 'bg-yellow-400' : 'bg-success-500'
-  return <span className={`inline-block h-2.5 w-2.5 rounded-full ${color}`} />
+  const degraded = latencyMs !== undefined && latencyMs > 300;
+  const color = !ok ? "bg-error-500" : degraded ? "bg-yellow-400" : "bg-success-500";
+  return <span className={`inline-block h-2.5 w-2.5 rounded-full ${color}`} />;
 }
 
 export function AdminHealthPage() {
-  const [health, setHealth] = useState<HealthStatus | null>(null)
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState<string | null>(null)
+  const [health, setHealth] = useState<HealthStatus | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   const refresh = useCallback(() => {
     fetchAdminHealth()
-      .then((h) => { setHealth(h); setError(null) })
-      .catch((e: unknown) => setError(e instanceof Error ? e.message : 'Failed'))
-      .finally(() => setLoading(false))
-  }, [])
+      .then((h) => {
+        setHealth(h);
+        setError(null);
+      })
+      .catch((e: unknown) => setError(e instanceof Error ? e.message : "Failed"))
+      .finally(() => setLoading(false));
+  }, []);
 
   useEffect(() => {
-    refresh()
-    const id = setInterval(refresh, 30_000)
-    return () => clearInterval(id)
-  }, [refresh])
+    refresh();
+    const id = setInterval(refresh, 30_000);
+    return () => clearInterval(id);
+  }, [refresh]);
 
-  if (loading) return <LoadingPlaceholder label="Checking…" />
-  if (error) return <ErrorState message={error} />
-  if (!health) return null
+  if (loading) return <LoadingPlaceholder label="Checking…" />;
+  if (error) return <ErrorState message={error} />;
+  if (!health) return null;
 
-  const uptimeMins = Math.floor(health.api.uptimeMs / 60_000)
+  const uptimeMins = Math.floor(health.api.uptimeMs / 60_000);
 
   return (
     <div className="flex flex-col gap-6">
       <div className="flex items-center justify-between">
         <h2 className="text-heading-sm font-semibold text-fg">Health</h2>
-        <p className="text-caption text-fg-faint">
-          Last checked {new Date(health.checkedAt).toLocaleTimeString()}
-        </p>
+        <p className="text-caption text-fg-faint">Last checked {new Date(health.checkedAt).toLocaleTimeString()}</p>
       </div>
 
       <div className="grid grid-cols-2 gap-3">
@@ -49,7 +50,9 @@ export function AdminHealthPage() {
             <StatusDot ok={health.api.ok} />
           </div>
           <p className="text-body-sm text-fg-subtle">Uptime {uptimeMins}m</p>
-          <p className="text-caption text-fg-faint">Node {health.node} · {health.env}</p>
+          <p className="text-caption text-fg-faint">
+            Node {health.node} · {health.env}
+          </p>
         </div>
 
         {/* DB */}
@@ -59,9 +62,7 @@ export function AdminHealthPage() {
             <StatusDot ok={health.db.ok} latencyMs={health.db.latencyMs} />
           </div>
           <p className="text-body-sm text-fg-subtle">{health.db.latencyMs}ms latency</p>
-          {health.db.error && (
-            <p className="text-caption text-error-fg">{health.db.error}</p>
-          )}
+          {health.db.error && <p className="text-caption text-error-fg">{health.db.error}</p>}
         </div>
       </div>
 
@@ -73,5 +74,5 @@ export function AdminHealthPage() {
         Refresh now
       </button>
     </div>
-  )
+  );
 }
