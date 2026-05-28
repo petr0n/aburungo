@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Button, TextInput } from "aburungo-design-system";
 
 type Mode = "sign-in" | "sign-up" | "forgot-password" | "set-new-password";
@@ -22,31 +22,29 @@ export function AuthForm(props: Props) {
   const [resetSent, setResetSent] = useState(false);
   const [passwordUpdated, setPasswordUpdated] = useState(false);
 
-  useEffect(() => {
-    if (isRecovery) {
-      setMode("set-new-password");
-      setError(null);
-    }
-  }, [isRecovery]);
+  // Derive the active mode from the prop — avoids setState-in-effect lint error.
+  // When isRecovery is true (Supabase PASSWORD_RECOVERY event), always show the
+  // set-new-password form regardless of what mode state holds.
+  const effectiveMode: Mode = isRecovery ? "set-new-password" : mode;
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setError(null);
 
-    if (mode === "sign-in") {
+    if (effectiveMode === "sign-in") {
       const err = await onSignIn(email.trim(), password);
       if (err !== null) setError(err);
-    } else if (mode === "sign-up") {
+    } else if (effectiveMode === "sign-up") {
       const err = await onSignUp(email.trim(), password);
       if (err !== null) setError(err);
-    } else if (mode === "forgot-password") {
+    } else if (effectiveMode === "forgot-password") {
       const err = await onForgotPassword(email.trim());
       if (err !== null) {
         setError(err);
       } else {
         setResetSent(true);
       }
-    } else if (mode === "set-new-password") {
+    } else if (effectiveMode === "set-new-password") {
       const err = await onUpdatePassword(password);
       if (err !== null) {
         setError(err);
@@ -64,9 +62,9 @@ export function AuthForm(props: Props) {
     setResetSent(false);
   }
 
-  const isSignIn = mode === "sign-in";
+  const isSignIn = effectiveMode === "sign-in";
 
-  if (mode === "forgot-password") {
+  if (effectiveMode === "forgot-password") {
     return (
       <div className="mx-auto w-full max-w-sm">
         {resetSent ? (
@@ -136,7 +134,7 @@ export function AuthForm(props: Props) {
     );
   }
 
-  if (mode === "set-new-password") {
+  if (effectiveMode === "set-new-password") {
     return (
       <div className="mx-auto w-full max-w-sm">
         {passwordUpdated ? (
