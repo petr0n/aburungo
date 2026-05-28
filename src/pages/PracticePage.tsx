@@ -5,6 +5,7 @@ import { FeedbackSheet } from "@/components/FeedbackSheet";
 import { useAuth } from "@/store/auth";
 
 export function PracticePage() {
+  const user = useAuth((s) => s.user);
   const signOut = useAuth((s) => s.signOut);
   const [feedbackOpen, setFeedbackOpen] = useState(false);
 
@@ -47,15 +48,22 @@ export function PracticePage() {
           >
             Feedback
           </button>
-          <button
-            type="button"
-            onClick={() => {
-              void signOut();
-            }}
-            className="min-h-[44px] px-3 text-body-sm text-fg-subtle active:text-fg"
-          >
-            Sign out
-          </button>
+          {user !== null ? (
+            <button
+              type="button"
+              onClick={() => { void signOut(); }}
+              className="min-h-[44px] px-3 text-body-sm text-fg-subtle active:text-fg"
+            >
+              Sign out
+            </button>
+          ) : (
+            <Link
+              to="/"
+              className="min-h-[44px] flex items-center px-3 text-body-sm text-fg-subtle active:text-fg"
+            >
+              Sign in
+            </Link>
+          )}
         </div>
       </header>
       <div className="flex flex-1 flex-col justify-center py-6">

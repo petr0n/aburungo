@@ -1,0 +1,52 @@
+# Hotel and accommodation phrases.
+# content-source: training — N5 canonical vocabulary, pending JMdict seed verification
+# jlpt-source: training
+
+- id: hotel.have-reservation
+  jlpt: N5
+  japanese: 予約があります
+  reading: よやくがあります
+  romaji: yoyaku ga arimasu
+  english: I have a reservation.
+  scenario: hotel
+
+- id: hotel.check-in
+  jlpt: N5
+  japanese: チェックインをお願いします
+  reading: チェックインをおねがいします
+  romaji: chekku-in o onegai shimasu
+  english: Check-in, please.
+  scenario: hotel
+
+- id: hotel.check-out-time
+  jlpt: N5
+  japanese: チェックアウトは何時ですか
+  reading: チェックアウトはなんじですか
+  romaji: chekku-auto wa nanji desu ka
+  english: What time is check-out?
+  scenario: hotel
+
+- id: hotel.wifi
+  jlpt: N5
+  japanese: 部屋にワイファイはありますか
+  reading: へやにワイファイはありますか
+  romaji: heya ni wai-fai wa arimasu ka
+  english: Is there Wi-Fi in the room?
+  scenario: hotel
+
+- id: hotel.taxi-please
+  jlpt: N5
+  japanese: タクシーをお願いします
+  reading: タクシーをおねがいします
+  romaji: takushii o onegai shimasu
+  english: A taxi, please.
+  scenario: hotel
+  notes: Said at the front desk — the staff will call one for you.
+
+- id: hotel.breakfast-included
+  jlpt: N5
+  japanese: 朝食は付いていますか
+  reading: ちょうしょくはついていますか
+  romaji: choushoku wa tsuite imasu ka
+  english: Is breakfast included?
+  scenario: hotel

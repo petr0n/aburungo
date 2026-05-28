@@ -3,11 +3,19 @@ import { Link } from "react-router";
 import { AppHeader, LoadingPlaceholder, ProgressBar, ScoreCard } from "aburungo-design-system";
 import { fetchKanjiList, fetchDueKanji, submitKanjiReview, type KanjiEntry } from "@/api/kanji";
 import { KanjiDrillCard, type DrillPhase } from "@/components/KanjiDrillCard";
+import { useUserTier } from "@/store/auth";
 
 type Screen = "browse" | "drill" | "result";
 type JlptFilter = 5 | 4 | 3 | 2 | 1;
 
-const JLPT_TABS: JlptFilter[] = [5, 4, 3, 2, 1];
+const ALL_JLPT_TABS: JlptFilter[] = [5, 4, 3, 2, 1];
+
+/** Highest JLPT number (easiest level) accessible per tier. N5=5, N4=4, etc. */
+const TIER_MAX_JLPT: Record<string, number> = {
+  guest: 5,
+  free: 4,
+  paid: 1,
+};
 
 // --- Furigana helper (also used in browse detail panel) ---
 
@@ -50,14 +58,15 @@ type BrowseProps = {
   selected: KanjiEntry | null;
   onSelect: (k: KanjiEntry | null) => void;
   onStartDrill: () => void;
+  tabs: JlptFilter[];
 };
 
-function BrowseScreen({ jlpt, onJlptChange, kanji, loading, selected, onSelect, onStartDrill }: BrowseProps) {
+function BrowseScreen({ jlpt, onJlptChange, kanji, loading, selected, onSelect, onStartDrill, tabs }: BrowseProps) {
   return (
     <div className="flex flex-1 flex-col gap-4 pb-8">
       {/* JLPT tabs */}
       <div className="flex gap-2 overflow-x-auto pb-1">
-        {JLPT_TABS.map((level) => (
+        {tabs.map((level) => (
           <button
             key={level}
             type="button"
@@ -163,6 +172,9 @@ function BrowseScreen({ jlpt, onJlptChange, kanji, loading, selected, onSelect, 
 // --- Main page ---
 
 export function KanjiPage() {
+  const tier = useUserTier();
+  const jlptTabs = ALL_JLPT_TABS.filter((n) => n >= TIER_MAX_JLPT[tier]);
+
   const [screen, setScreen] = useState<Screen>("browse");
   const [jlpt, setJlpt] = useState<JlptFilter>(5);
   const [kanjiList, setKanjiList] = useState<KanjiEntry[]>([]);
@@ -379,6 +391,7 @@ export function KanjiPage() {
           selected={selected}
           onSelect={setSelected}
           onStartDrill={startDrill}
+          tabs={jlptTabs}
         />
       )}
 

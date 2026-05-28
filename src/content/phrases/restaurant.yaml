@@ -1,7 +1,9 @@
 # Practical phrases for restaurants, cafes, izakayas.
 # Polite register — works everywhere from a chain to a counter sushi spot.
+# jlpt-source: training — pending JMdict seed verification
 
 - id: restaurant.menu-please
+  jlpt: N5
   japanese: メニューをお願いします
   reading: メニューをおねがいします
   romaji: menyuu o onegai shimasu
@@ -12,6 +14,7 @@
     seated for a while without one, or if you want a different language version.
 
 - id: restaurant.this-please
+  jlpt: N5
   japanese: これをください
   reading: これをください
   romaji: kore o kudasai
@@ -22,6 +25,7 @@
     restaurant — works even when you can't read the menu.
 
 - id: restaurant.check-please
+  jlpt: N5
   japanese: お会計お願いします
   reading: おかいけいおねがいします
   romaji: okaikei onegai shimasu
@@ -32,6 +36,7 @@
     nod and gesture toward the front. "Okanjou" is a common alternative.
 
 - id: restaurant.thanks-for-meal
+  jlpt: N5
   japanese: ごちそうさまでした
   reading: ごちそうさまでした
   romaji: gochisousama deshita

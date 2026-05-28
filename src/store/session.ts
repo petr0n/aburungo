@@ -1,36 +1,36 @@
 /**
  * Session store — ephemeral, in-memory state for the current review session.
  *
- * Cards and progress come from the server. The queue is ordered:
+ * Progress is persisted locally via IndexedDB (Dexie). The session is built
+ * from a caller-supplied phrase list so tier filtering happens outside this
+ * store — see phrasesForTier() in src/content/index.ts.
+ *
+ * Queue order:
  *   1. Due cards first, oldest-due first.
- *   2. New cards (never reviewed) in server display order.
+ *   2. New cards (never reviewed) in source order.
  */
 import { create } from "zustand";
-import type { Card, ReviewRating } from "@/types";
-import { fetchVocabulary } from "@/api/vocabulary";
-import { fetchDue, submitReview } from "@/api/progress";
+import type { Phrase, ReviewRating } from "@/types";
+import { getAll, getOne, upsert } from "@/db/reviewStore";
+import { schedule, isDue } from "@/srs/leitner";
 
 type Status = "idle" | "loading" | "ready" | "empty" | "error";
 
 type SessionState = {
   status: Status;
   error: string | null;
-  queue: Card[];
+  queue: Phrase[];
   currentIndex: number;
 
-  initialize: () => Promise<void>;
+  /**
+   * Build a review queue from the supplied phrases.
+   * Phrases already in IndexedDB that are due come first (oldest-due first).
+   * Phrases never reviewed come after, in the order supplied.
+   */
+  initialize: (phrases: Phrase[]) => Promise<void>;
   rate: (rating: ReviewRating) => Promise<void>;
   reset: () => void;
 };
-
-async function fetchAllCards(): Promise<Card[]> {
-  const pages = await Promise.all([
-    fetchVocabulary({ limit: 100, offset: 0 }),
-    fetchVocabulary({ limit: 100, offset: 100 }),
-    fetchVocabulary({ limit: 100, offset: 200 }),
-  ]);
-  return pages.flat();
-}
 
 export const useSession = create<SessionState>((set, get) => ({
   status: "idle",
@@ -38,24 +38,26 @@ export const useSession = create<SessionState>((set, get) => ({
   queue: [],
   currentIndex: 0,
 
-  async initialize() {
-    set({ status: "loading", error: null });
+  async initialize(phrases) {
+    set({ status: "loading", error: null, queue: [], currentIndex: 0 });
 
     try {
-      const [allCards, dueProgress] = await Promise.all([fetchAllCards(), fetchDue(100)]);
+      const now = Date.now();
+      const stored = await getAll();
+      const stateMap = new Map(stored.map((s) => [s.phraseId, s]));
+      const phraseMap = new Map(phrases.map((p) => [p.id, p]));
 
-      const cardMap = new Map(allCards.map((c) => [c.id, c]));
-      const dueIds = new Set(dueProgress.map((d) => d.cardId));
+      // Due phrases: stored state exists and dueAt has passed
+      const dueQueue = stored
+        .filter((s) => isDue(s, now) && phraseMap.has(s.phraseId))
+        .sort((a, b) => a.dueAt - b.dueAt)
+        .map((s) => phraseMap.get(s.phraseId))
+        .filter((p): p is Phrase => p !== undefined);
 
-      const dueCards = dueProgress
-        .slice()
-        .sort((a, b) => new Date(a.dueAt).getTime() - new Date(b.dueAt).getTime())
-        .map((d) => cardMap.get(d.cardId))
-        .filter((c): c is Card => c !== undefined);
+      // New phrases: never reviewed (no IndexedDB entry)
+      const newQueue = phrases.filter((p) => !stateMap.has(p.id));
 
-      const newCards = allCards.filter((c) => !dueIds.has(c.id));
-      const queue = [...dueCards, ...newCards];
-
+      const queue = [...dueQueue, ...newQueue];
       set({ queue, currentIndex: 0, status: queue.length === 0 ? "empty" : "ready" });
     } catch (err) {
       set({ status: "error", error: err instanceof Error ? err.message : "Failed to load" });
@@ -64,13 +66,15 @@ export const useSession = create<SessionState>((set, get) => ({
 
   async rate(rating) {
     const { queue, currentIndex } = get();
-    const card = queue[currentIndex];
-    if (!card) return;
+    const phrase = queue[currentIndex];
+    if (!phrase) return;
 
     try {
-      await submitReview(card.id, rating, Date.now());
+      const current = await getOne(phrase.id);
+      const next = schedule(current, rating, Date.now(), phrase.id);
+      await upsert(next);
     } catch {
-      // Best-effort — advance the queue even if the server call fails
+      // Best-effort — advance the queue even if persistence fails
     }
 
     const nextIndex = currentIndex + 1;

@@ -15,6 +15,18 @@ export type EpochMs = number;
  */
 export type Scenario = string;
 
+/** JLPT proficiency levels, N5 = beginner, N1 = advanced. */
+export type JlptLevel = "N5" | "N4" | "N3" | "N2" | "N1";
+
+/**
+ * Access tier for a user session.
+ *
+ * guest      — unauthenticated; N5 content only
+ * free       — signed-in free account; N5 + N4
+ * paid       — subscriber; all content + Conversation
+ */
+export type UserTier = "guest" | "free" | "paid";
+
 /**
  * A single phrase the learner is studying.
  *
@@ -38,6 +50,14 @@ export type Phrase = {
   scenario: Scenario;
   /** Authoring notes — usage, register, common mistakes. Not used by SRS. */
   notes?: string;
+  /**
+   * JLPT difficulty level. Drives access tier gating:
+   *   N5 — guest (no account)
+   *   N4 — free account
+   *   N3/N2/N1 — paid
+   * Omit only for content that predates JLPT tagging; treat as N5 until resolved.
+   */
+  jlpt?: JlptLevel;
 };
 
 /**

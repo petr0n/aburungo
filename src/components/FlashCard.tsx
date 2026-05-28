@@ -1,5 +1,4 @@
-import type { Card } from "@/types";
-import type { ReviewRating } from "@/types";
+import type { Phrase, ReviewRating } from "@/types";
 import { Badge, FlipCard } from "aburungo-design-system";
 import type { FlipCardPhase } from "aburungo-design-system";
 
@@ -10,7 +9,7 @@ function toFlipPhase(p: FlashCardPhase): FlipCardPhase {
 }
 
 type Props = {
-  card: Card;
+  card: Phrase;
   phase: FlashCardPhase;
   onReveal: () => void;
   onRate: (rating: ReviewRating) => void;
@@ -31,7 +30,7 @@ export function FlashCard({ card, phase, onReveal, onRate, onEntered, onExited }
         <div className="w-full rounded-2xl border border-border bg-bg shadow-card">
           <div className="flex flex-col gap-5 p-6">
             <div className="flex items-start justify-between">
-              <Badge emphasis>{card.deck}</Badge>
+              <Badge emphasis>{card.scenario.charAt(0).toUpperCase() + card.scenario.slice(1)}</Badge>
             </div>
             <div className="flex flex-col items-center gap-2 py-8">
               <p lang="ja" className="text-center text-jp-display font-medium text-fg">
@@ -55,7 +54,7 @@ export function FlashCard({ card, phase, onReveal, onRate, onEntered, onExited }
         <div className="flex h-full w-full flex-col rounded-2xl border border-border bg-bg shadow-card">
           <div className="flex flex-1 flex-col gap-5 p-6">
             <div className="flex items-start justify-between">
-              <Badge emphasis>{card.deck}</Badge>
+              <Badge emphasis>{card.scenario.charAt(0).toUpperCase() + card.scenario.slice(1)}</Badge>
             </div>
             <div className="flex flex-col items-center gap-3 py-4">
               <p lang="ja" className="text-center text-jp text-fg-muted">

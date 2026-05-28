@@ -1,11 +1,14 @@
 import { useState, useEffect } from "react";
-import type { Card, ReviewRating } from "@/types";
+import type { Phrase, ReviewRating } from "@/types";
 import { useSession } from "@/store/session";
+import { useUserTier } from "@/store/auth";
+import { phrasesForTier } from "@/content";
 import { LoadingPlaceholder, EmptyState, ErrorState } from "aburungo-design-system";
 import { FlashCard } from "./FlashCard";
 import type { FlashCardPhase } from "./FlashCard";
 
 export function FlashcardScreen() {
+  const tier = useUserTier();
   const status = useSession((s) => s.status);
   const error = useSession((s) => s.error);
   const queue = useSession((s) => s.queue);
@@ -15,12 +18,12 @@ export function FlashcardScreen() {
   const reset = useSession((s) => s.reset);
 
   const [phase, setPhase] = useState<FlashCardPhase>("entering");
-  const [stagedCard, setStagedCard] = useState<Card | null>(null);
+  const [stagedCard, setStagedCard] = useState<Phrase | null>(null);
   const [pendingRating, setPendingRating] = useState<ReviewRating | null>(null);
 
   useEffect(() => {
-    void initialize();
-  }, [initialize]);
+    void initialize(phrasesForTier(tier));
+  }, [initialize, tier]);
 
   const currentCard = queue[currentIndex];
   const displayCard = stagedCard ?? currentCard;
@@ -60,7 +63,7 @@ export function FlashcardScreen() {
             type="button"
             onClick={() => {
               reset();
-              void initialize();
+              void initialize(phrasesForTier(tier));
             }}
             className="h-12 rounded-xl border border-border-strong px-6 text-body font-medium text-fg-muted hover:bg-surface-2 active:bg-surface-2"
           >
@@ -81,7 +84,7 @@ export function FlashcardScreen() {
             type="button"
             onClick={() => {
               reset();
-              void initialize();
+              void initialize(phrasesForTier(tier));
             }}
             className="h-12 rounded-xl border border-border-strong px-6 text-body font-medium text-fg-muted hover:bg-surface-2 active:bg-surface-2"
           >

@@ -69,6 +69,21 @@
     "deny": []
   },
   "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/peterabeln/Documents/japanese/aburungo/.claude/watch-ci.sh",
+            "timeout": 600,
+            "asyncRewake": true,
+            "statusMessage": "Watching CI...",
+            "rewakeSummary": "CI/Vercel build result"
+          }
+        ]
+      }
+    ],
     "WorktreeCreate": [
       {
         "hooks": [
