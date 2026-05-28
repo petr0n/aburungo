@@ -1,107 +1,94 @@
-import { useState, useEffect, useRef } from 'react'
-import { Link } from 'react-router'
-import { createSession, streamMessage, type JlptLevel } from '@/api/conversation'
+import { useState, useEffect, useRef } from "react";
+import { Link } from "react-router";
+import { createSession, streamMessage, type JlptLevel } from "@/api/conversation";
 
-type Screen = 'setup' | 'chat'
+type Screen = "setup" | "chat";
 
 type Message = {
-  id: string
-  role: 'user' | 'assistant'
-  content: string
-  streaming: boolean
-}
+  id: string;
+  role: "user" | "assistant";
+  content: string;
+  streaming: boolean;
+};
 
-const JLPT_LEVELS: JlptLevel[] = ['N5', 'N4', 'N3', 'N2', 'N1']
+const JLPT_LEVELS: JlptLevel[] = ["N5", "N4", "N3", "N2", "N1"];
 
 export function ConversationPage() {
-  const [screen, setScreen] = useState<Screen>('setup')
-  const [jlpt, setJlpt] = useState<JlptLevel>('N4')
-  const [sessionId, setSessionId] = useState<string | null>(null)
-  const [messages, setMessages] = useState<Message[]>([])
-  const [input, setInput] = useState('')
-  const [sending, setSending] = useState(false)
-  const [starting, setStarting] = useState(false)
-  const messagesEndRef = useRef<HTMLDivElement>(null)
+  const [screen, setScreen] = useState<Screen>("setup");
+  const [jlpt, setJlpt] = useState<JlptLevel>("N4");
+  const [sessionId, setSessionId] = useState<string | null>(null);
+  const [messages, setMessages] = useState<Message[]>([]);
+  const [input, setInput] = useState("");
+  const [sending, setSending] = useState(false);
+  const [starting, setStarting] = useState(false);
+  const messagesEndRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
-  }, [messages])
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [messages]);
 
   async function handleStart() {
-    setStarting(true)
+    setStarting(true);
     try {
-      const { sessionId: sid } = await createSession(jlpt)
-      setSessionId(sid)
-      setMessages([])
-      setScreen('chat')
+      const { sessionId: sid } = await createSession(jlpt);
+      setSessionId(sid);
+      setMessages([]);
+      setScreen("chat");
     } finally {
-      setStarting(false)
+      setStarting(false);
     }
   }
 
   async function handleSend() {
-    if (!input.trim() || !sessionId || sending) return
+    if (!input.trim() || !sessionId || sending) return;
 
-    const text = input.trim()
-    setInput('')
-    setSending(true)
+    const text = input.trim();
+    setInput("");
+    setSending(true);
 
-    const userMsgId = `u-${Date.now()}`
-    const assistantMsgId = `a-${Date.now()}`
+    const userMsgId = `u-${Date.now()}`;
+    const assistantMsgId = `a-${Date.now()}`;
 
     setMessages((prev) => [
       ...prev,
-      { id: userMsgId, role: 'user', content: text, streaming: false },
-      { id: assistantMsgId, role: 'assistant', content: '', streaming: true },
-    ])
+      { id: userMsgId, role: "user", content: text, streaming: false },
+      { id: assistantMsgId, role: "assistant", content: "", streaming: true },
+    ]);
 
     try {
       for await (const chunk of streamMessage(sessionId, text)) {
-        setMessages((prev) =>
-          prev.map((m) =>
-            m.id === assistantMsgId ? { ...m, content: m.content + chunk } : m,
-          ),
-        )
+        setMessages((prev) => prev.map((m) => (m.id === assistantMsgId ? { ...m, content: m.content + chunk } : m)));
       }
     } catch {
       setMessages((prev) =>
-        prev.map((m) =>
-          m.id === assistantMsgId && m.content === ''
-            ? { ...m, content: '…', streaming: false }
-            : m,
-        ),
-      )
+        prev.map((m) => (m.id === assistantMsgId && m.content === "" ? { ...m, content: "…", streaming: false } : m)),
+      );
     } finally {
-      setMessages((prev) =>
-        prev.map((m) => (m.id === assistantMsgId ? { ...m, streaming: false } : m)),
-      )
-      setSending(false)
+      setMessages((prev) => prev.map((m) => (m.id === assistantMsgId ? { ...m, streaming: false } : m)));
+      setSending(false);
     }
   }
 
   function handleKeyDown(e: React.KeyboardEvent<HTMLInputElement>) {
-    if (e.key === 'Enter' && !e.shiftKey) {
-      e.preventDefault()
-      void handleSend()
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault();
+      void handleSend();
     }
   }
 
   function handleEnd() {
-    setScreen('setup')
-    setSessionId(null)
-    setMessages([])
-    setInput('')
+    setScreen("setup");
+    setSessionId(null);
+    setMessages([]);
+    setInput("");
   }
 
   // --- Setup screen ---
-  if (screen === 'setup') {
+  if (screen === "setup") {
     return (
       <main className="mx-auto flex min-h-svh w-full max-w-xl flex-col px-4">
         <header className="flex items-center justify-between py-4">
-          <Link
-            to="/practice"
-            className="flex min-h-[44px] items-center text-body-sm text-fg-subtle active:text-fg"
-          >
+          <Link to="/practice" className="flex min-h-[44px] items-center text-body-sm text-fg-subtle active:text-fg">
             ← Back
           </Link>
           <h1 className="text-heading-sm font-semibold text-fg">Conversation</h1>
@@ -110,9 +97,7 @@ export function ConversationPage() {
 
         <div className="flex flex-1 flex-col gap-8 py-6">
           <div className="flex flex-col gap-2">
-            <p className="text-body text-fg">
-              Practice with Hana, your Japanese conversation partner.
-            </p>
+            <p className="text-body text-fg">Practice with Hana, your Japanese conversation partner.</p>
             <p className="text-body-sm text-fg-subtle">
               She'll match your level and gently correct mistakes by modelling the right form inline.
             </p>
@@ -127,11 +112,11 @@ export function ConversationPage() {
                   type="button"
                   onClick={() => setJlpt(level)}
                   className={[
-                    'flex min-h-[40px] flex-1 items-center justify-center rounded-xl text-body-sm font-medium transition-colors',
+                    "flex min-h-[40px] flex-1 items-center justify-center rounded-xl text-body-sm font-medium transition-colors",
                     jlpt === level
-                      ? 'bg-brand-600 text-white'
-                      : 'border border-border bg-surface text-fg-subtle active:bg-surface-2',
-                  ].join(' ')}
+                      ? "bg-brand-600 text-white"
+                      : "border border-border bg-surface text-fg-subtle active:bg-surface-2",
+                  ].join(" ")}
                 >
                   {level}
                 </button>
@@ -146,12 +131,12 @@ export function ConversationPage() {
               disabled={starting}
               className="flex min-h-[52px] w-full items-center justify-center rounded-2xl bg-brand-600 text-body font-semibold text-white active:bg-brand-700 disabled:opacity-60"
             >
-              {starting ? 'Starting…' : 'Start conversation'}
+              {starting ? "Starting…" : "Start conversation"}
             </button>
           </div>
         </div>
       </main>
-    )
+    );
   }
 
   // --- Chat screen ---
@@ -172,23 +157,16 @@ export function ConversationPage() {
       {/* Message list */}
       <div className="flex flex-1 flex-col gap-3 overflow-y-auto py-2">
         {messages.length === 0 && (
-          <p className="text-center text-body-sm text-fg-faint">
-            Say something to start the conversation.
-          </p>
+          <p className="text-center text-body-sm text-fg-faint">Say something to start the conversation.</p>
         )}
         {messages.map((msg) => (
-          <div
-            key={msg.id}
-            className={['flex', msg.role === 'user' ? 'justify-end' : 'justify-start'].join(' ')}
-          >
+          <div key={msg.id} className={["flex", msg.role === "user" ? "justify-end" : "justify-start"].join(" ")}>
             <div
               className={[
-                'max-w-[80%] rounded-2xl px-4 py-3 text-body leading-relaxed',
-                msg.role === 'user'
-                  ? 'bg-brand-600 text-white'
-                  : 'border border-border bg-surface text-fg',
-              ].join(' ')}
-              style={msg.role === 'assistant' ? { fontFamily: 'var(--font-jp)' } : undefined}
+                "max-w-[80%] rounded-2xl px-4 py-3 text-body leading-relaxed",
+                msg.role === "user" ? "bg-brand-600 text-white" : "border border-border bg-surface text-fg",
+              ].join(" ")}
+              style={msg.role === "assistant" ? { fontFamily: "var(--font-jp)" } : undefined}
             >
               {msg.content}
               {msg.streaming && <span className="ml-0.5 animate-pulse">▋</span>}
@@ -219,5 +197,5 @@ export function ConversationPage() {
         </button>
       </div>
     </main>
-  )
+  );
 }

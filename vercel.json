@@ -1,0 +1,7 @@
+{
+  "framework": "vite",
+  "buildCommand": "pnpm --filter . run build",
+  "outputDirectory": "dist",
+  "installCommand": "npm i -g pnpm@11.1.3 && PATH=$(npm config get prefix)/bin:$PATH && git clone https://github.com/petr0n/aburungo-design-system.git ../aburungo-design-system && (cd ../aburungo-design-system&&pnpm i&&pnpm build) && pnpm i --frozen-lockfile",
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+}

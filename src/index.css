@@ -24,6 +24,7 @@
 }
 
 @import 'aburungo-design-system/src/tokens.css';
+@import 'aburungo-design-system/src/brand.css';
 
 @theme {
   /* App-specific tokens — card animations live in aburungo-design-system/src/tokens.css */

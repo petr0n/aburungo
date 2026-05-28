@@ -1,48 +1,46 @@
-import type { KanjiEntry } from '@/api/kanji'
-import { FlipCard } from 'aburungo-design-system'
-import type { FlipCardPhase } from 'aburungo-design-system'
+import type { KanjiEntry } from "@/api/kanji";
+import { FlipCard } from "aburungo-design-system";
+import type { FlipCardPhase } from "aburungo-design-system";
 
-export type DrillPhase = 'entering' | 'idle' | 'revealed' | 'exiting'
+export type DrillPhase = "entering" | "idle" | "revealed" | "exiting";
 
 function toFlipPhase(p: DrillPhase): FlipCardPhase {
-  return p === 'revealed' ? 'idle' : p
+  return p === "revealed" ? "idle" : p;
 }
 
 type Props = {
-  kanji: KanjiEntry
-  phase: DrillPhase
-  onReveal: () => void
-  onRate: (correct: boolean) => void
-  onEntered: () => void
-  onExited: () => void
-}
+  kanji: KanjiEntry;
+  phase: DrillPhase;
+  onReveal: () => void;
+  onRate: (correct: boolean) => void;
+  onEntered: () => void;
+  onExited: () => void;
+};
 
 function parseKun(raw: string): { reading: string; okurigana: string } {
-  const [reading, okurigana = ''] = raw.split('.')
-  return { reading, okurigana }
+  const [reading, okurigana = ""] = raw.split(".");
+  return { reading, okurigana };
 }
 
-type KunReadingProps = { kanji: string; raw: string }
+type KunReadingProps = { kanji: string; raw: string };
 
 function KunReading({ kanji, raw }: KunReadingProps) {
-  const { reading, okurigana } = parseKun(raw)
+  const { reading, okurigana } = parseKun(raw);
   return (
     <span>
-      <ruby style={{ fontFamily: 'var(--font-jp)' }}>
+      <ruby style={{ fontFamily: "var(--font-jp)" }}>
         {kanji}
         <rt className="text-caption text-fg-subtle">{reading}</rt>
       </ruby>
-      {okurigana && (
-        <span style={{ fontFamily: 'var(--font-jp)' }}>{okurigana}</span>
-      )}
+      {okurigana && <span style={{ fontFamily: "var(--font-jp)" }}>{okurigana}</span>}
     </span>
-  )
+  );
 }
 
 export function KanjiDrillCard({ kanji, phase, onReveal, onRate, onEntered, onExited }: Props) {
-  const isFlipped = phase === 'revealed' || phase === 'exiting'
-  const primaryMeaning = kanji.meanings[0] ?? ''
-  const otherMeanings = kanji.meanings.slice(1, 4)
+  const isFlipped = phase === "revealed" || phase === "exiting";
+  const primaryMeaning = kanji.meanings[0] ?? "";
+  const otherMeanings = kanji.meanings.slice(1, 4);
 
   return (
     <FlipCard
@@ -59,10 +57,7 @@ export function KanjiDrillCard({ kanji, phase, onReveal, onRate, onEntered, onEx
               </span>
             )}
             <div className="flex items-center justify-center py-8">
-              <span
-                className="text-[6rem] font-medium leading-none text-fg"
-                style={{ fontFamily: 'var(--font-jp)' }}
-              >
+              <span className="text-[6rem] font-medium leading-none text-fg" style={{ fontFamily: "var(--font-jp)" }}>
                 {kanji.character}
               </span>
             </div>
@@ -85,38 +80,27 @@ export function KanjiDrillCard({ kanji, phase, onReveal, onRate, onEntered, onEx
               </span>
             )}
             <div className="flex flex-col items-center gap-1 py-2">
-              <span
-                className="text-[3.5rem] font-medium leading-none text-fg"
-                style={{ fontFamily: 'var(--font-jp)' }}
-              >
+              <span className="text-[3.5rem] font-medium leading-none text-fg" style={{ fontFamily: "var(--font-jp)" }}>
                 {kanji.character}
               </span>
             </div>
             <div className="flex flex-col gap-3">
               <div>
-                <p className="mb-1 text-caption font-medium uppercase tracking-wider text-fg-subtle">
-                  Meaning
-                </p>
+                <p className="mb-1 text-caption font-medium uppercase tracking-wider text-fg-subtle">Meaning</p>
                 <p className="text-body font-semibold text-fg">{primaryMeaning}</p>
-                {otherMeanings.length > 0 && (
-                  <p className="text-body-sm text-fg-subtle">{otherMeanings.join(', ')}</p>
-                )}
+                {otherMeanings.length > 0 && <p className="text-body-sm text-fg-subtle">{otherMeanings.join(", ")}</p>}
               </div>
               {kanji.onReadings.length > 0 && (
                 <div>
-                  <p className="mb-1 text-caption font-medium uppercase tracking-wider text-fg-subtle">
-                    On
-                  </p>
-                  <p className="text-body text-fg" style={{ fontFamily: 'var(--font-jp)' }}>
-                    {kanji.onReadings.join('、')}
+                  <p className="mb-1 text-caption font-medium uppercase tracking-wider text-fg-subtle">On</p>
+                  <p className="text-body text-fg" style={{ fontFamily: "var(--font-jp)" }}>
+                    {kanji.onReadings.join("、")}
                   </p>
                 </div>
               )}
               {kanji.kunReadings.length > 0 && (
                 <div>
-                  <p className="mb-1 text-caption font-medium uppercase tracking-wider text-fg-subtle">
-                    Kun
-                  </p>
+                  <p className="mb-1 text-caption font-medium uppercase tracking-wider text-fg-subtle">Kun</p>
                   <div className="flex flex-wrap gap-x-3 gap-y-1">
                     {kanji.kunReadings.slice(0, 6).map((r) => (
                       <KunReading key={r} kanji={kanji.character} raw={r} />
@@ -124,9 +108,7 @@ export function KanjiDrillCard({ kanji, phase, onReveal, onRate, onEntered, onEx
                   </div>
                 </div>
               )}
-              {kanji.strokeCount != null && (
-                <p className="text-body-sm text-fg-subtle">{kanji.strokeCount} strokes</p>
-              )}
+              {kanji.strokeCount != null && <p className="text-body-sm text-fg-subtle">{kanji.strokeCount} strokes</p>}
             </div>
             <div className="mt-auto flex gap-3 pt-2">
               <button
@@ -148,5 +130,5 @@ export function KanjiDrillCard({ kanji, phase, onReveal, onRate, onEntered, onEx
         </div>
       }
     />
-  )
+  );
 }

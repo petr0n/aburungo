@@ -7,13 +7,13 @@
  */
 
 /** Epoch milliseconds. Keeping it as a plain number for cheap comparisons. */
-export type EpochMs = number
+export type EpochMs = number;
 
 /**
  * Free-form for now. Once the scenario set stabilizes we can lock this to a
  * union literal, but premature narrowing makes adding content painful.
  */
-export type Scenario = string
+export type Scenario = string;
 
 /**
  * A single phrase the learner is studying.
@@ -23,22 +23,22 @@ export type Scenario = string
  */
 export type Phrase = {
   /** Stable slug, e.g. "transit.station-where". Used as the persistent key. */
-  id: string
+  id: string;
   /** Native form, may contain kanji. e.g. "駅はどこですか" */
-  japanese: string
+  japanese: string;
   /** Hiragana-only reading, used to render furigana via <ruby>. */
-  reading: string
+  reading: string;
   /** Hepburn romaji, for users who haven't learned kana yet. */
-  romaji: string
+  romaji: string;
   /** Natural English translation, not a literal gloss. */
-  english: string
+  english: string;
   /** Optional pronunciation audio. Bundle path or absolute URL. */
-  audioUrl?: string
+  audioUrl?: string;
   /** Real-world situation the phrase belongs to. */
-  scenario: Scenario
+  scenario: Scenario;
   /** Authoring notes — usage, register, common mistakes. Not used by SRS. */
-  notes?: string
-}
+  notes?: string;
+};
 
 /**
  * A grouping of phrases that share a scenario or theme.
@@ -47,14 +47,14 @@ export type Phrase = {
  * use lessons directly — that comes later when there's a lesson picker.
  */
 export type Lesson = {
-  id: string
-  title: string
-  scenario: Scenario
-  phraseIds: string[]
-}
+  id: string;
+  title: string;
+  scenario: Scenario;
+  phraseIds: string[];
+};
 
 /** Leitner boxes 1–5. Box 1 = seen tomorrow, box 5 = seen in a month-ish. */
-export type LeitnerBox = 1 | 2 | 3 | 4 | 5
+export type LeitnerBox = 1 | 2 | 3 | 4 | 5;
 
 /**
  * Per-phrase review state, persisted in IndexedDB.
@@ -63,18 +63,18 @@ export type LeitnerBox = 1 | 2 | 3 | 4 | 5
  * them that way so swapping Leitner for FSRS later is a localized change.
  */
 export type ReviewState = {
-  phraseId: string
-  box: LeitnerBox
-  dueAt: EpochMs
-  lastSeenAt?: EpochMs
-}
+  phraseId: string;
+  box: LeitnerBox;
+  dueAt: EpochMs;
+  lastSeenAt?: EpochMs;
+};
 
 /**
  * What the learner said about a phrase they just saw.
  * Deliberately binary — no "easy / hard / good" middle ground. The first
  * version of the app pushes the learner to commit to one or the other.
  */
-export type ReviewRating = 'got-it' | 'didnt'
+export type ReviewRating = "got-it" | "didnt";
 
 /**
  * The scheduler interface. Leitner today, FSRS later — same shape.
@@ -85,15 +85,10 @@ export interface Scheduler {
    * Given the current state (or none, for a phrase never reviewed before),
    * the learner's rating, and the current time, return the next state.
    */
-  schedule(
-    current: ReviewState | undefined,
-    rating: ReviewRating,
-    now: EpochMs,
-    phraseId: string,
-  ): ReviewState
+  schedule(current: ReviewState | undefined, rating: ReviewRating, now: EpochMs, phraseId: string): ReviewState;
 
   /** Is this phrase due for review at the given moment? */
-  isDue(state: ReviewState, now: EpochMs): boolean
+  isDue(state: ReviewState, now: EpochMs): boolean;
 }
 
 /**
@@ -101,22 +96,22 @@ export interface Scheduler {
  * Use this for all server-backed data flow; `Phrase` is the legacy local type.
  */
 export type Card = {
-  id: string
-  japanese: string
-  reading: string
-  romaji: string
-  english: string
-  notes: string | null
-  audioUrl: string | null
-  deck: string
-}
+  id: string;
+  japanese: string;
+  reading: string;
+  romaji: string;
+  english: string;
+  notes: string | null;
+  audioUrl: string | null;
+  deck: string;
+};
 
 /** FSRS card states as returned by the server. */
-export type FsrsState = 'new' | 'learning' | 'review' | 'relearning'
+export type FsrsState = "new" | "learning" | "review" | "relearning";
 
 export type ProgressStats = {
-  streak: number
-  reviewedToday: number
-  totalReviewed: number
-  masteryBreakdown: Record<FsrsState, number>
-}
+  streak: number;
+  reviewedToday: number;
+  totalReviewed: number;
+  masteryBreakdown: Record<FsrsState, number>;
+};

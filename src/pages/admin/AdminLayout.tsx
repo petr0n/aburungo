@@ -1,19 +1,26 @@
-import { NavLink, Outlet } from 'react-router'
+import { NavLink, Outlet } from "react-router";
 
 const NAV = [
-  { to: '/admin/users', label: 'Users' },
-  { to: '/admin/feedback', label: 'Feedback' },
-  { to: '/admin/health', label: 'Health' },
-  { to: '/admin/analytics', label: 'Analytics' },
-  { to: '/admin/content', label: 'Content' },
-  { to: '/admin/logs', label: 'Logs' },
-]
+  { to: "/admin/users", label: "Users" },
+  { to: "/admin/feedback", label: "Feedback" },
+  { to: "/admin/health", label: "Health" },
+  { to: "/admin/analytics", label: "Analytics" },
+  { to: "/admin/content", label: "Content" },
+  { to: "/admin/logs", label: "Logs" },
+];
 
 export function AdminLayout() {
   return (
     <div className="mx-auto flex min-h-svh w-full max-w-2xl flex-col px-4">
       <header className="flex items-center gap-6 border-b border-border py-4">
-        <span className="text-body-sm font-semibold text-fg">Admin</span>
+        <span className="ctype" style={{ gap: 8 }}>
+          <span className="hanko" style={{ fontSize: 22 }} />
+          <span className="wm xs">
+            aburungo
+            <span className="maru" />
+          </span>
+          <span className="text-body-sm font-semibold text-fg-subtle">/ admin</span>
+        </span>
         <nav className="flex gap-1">
           {NAV.map(({ to, label }) => (
             <NavLink
@@ -21,11 +28,9 @@ export function AdminLayout() {
               to={to}
               className={({ isActive }) =>
                 [
-                  'flex min-h-[36px] items-center rounded-lg px-3 text-body-sm transition-colors',
-                  isActive
-                    ? 'bg-brand-50 font-medium text-brand-600'
-                    : 'text-fg-subtle active:text-fg',
-                ].join(' ')
+                  "flex min-h-[36px] items-center rounded-lg px-3 text-body-sm transition-colors",
+                  isActive ? "bg-brand-50 font-medium text-brand-600" : "text-fg-subtle active:text-fg",
+                ].join(" ")
               }
             >
               {label}
@@ -37,5 +42,5 @@ export function AdminLayout() {
         <Outlet />
       </div>
     </div>
-  )
+  );
 }

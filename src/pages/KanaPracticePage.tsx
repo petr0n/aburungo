@@ -1,181 +1,174 @@
-import { useState, useRef, useEffect } from 'react'
-import { Link } from 'react-router'
-import { AppHeader, ProgressBar, ScoreCard } from 'aburungo-design-system'
-import { KANA_PRACTICE_CARDS, type KanaPracticeCard } from '@/lib/kanaData'
+import { useState, useRef, useEffect } from "react";
+import { Link } from "react-router";
+import { AppHeader, ProgressBar, ScoreCard } from "aburungo-design-system";
+import { KANA_PRACTICE_CARDS, type KanaPracticeCard } from "@/lib/kanaData";
 
-type PracticeMode = 'multiple-choice' | 'type-romaji'
-type SetKey = 'basic' | 'voiced' | 'combos'
-type ScriptKey = 'hiragana' | 'katakana'
-type Screen = 'setup' | 'practice' | 'result'
-type AnswerResult = 'correct' | 'wrong'
+type PracticeMode = "multiple-choice" | "type-romaji";
+type SetKey = "basic" | "voiced" | "combos";
+type ScriptKey = "hiragana" | "katakana";
+type Screen = "setup" | "practice" | "result";
+type AnswerResult = "correct" | "wrong";
 
 const SET_META: Record<SetKey, { label: string; count: number }> = {
-  basic: { label: 'Basic', count: 46 },
-  voiced: { label: 'Voiced + semi-voiced', count: 25 },
-  combos: { label: 'Combinations', count: 33 },
-}
+  basic: { label: "Basic", count: 46 },
+  voiced: { label: "Voiced + semi-voiced", count: 25 },
+  combos: { label: "Combinations", count: 33 },
+};
 
 const SCRIPT_META: Record<ScriptKey, { label: string; sub: string }> = {
-  hiragana: { label: 'Hiragana', sub: 'あいう' },
-  katakana: { label: 'Katakana', sub: 'アイウ' },
-}
+  hiragana: { label: "Hiragana", sub: "あいう" },
+  katakana: { label: "Katakana", sub: "アイウ" },
+};
 
 function shuffle<T>(arr: readonly T[]): T[] {
-  const a = [...arr]
+  const a = [...arr];
   for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1))
-    ;[a[i], a[j]] = [a[j], a[i]]
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
   }
-  return a
+  return a;
 }
 
 function makeChoices(card: KanaPracticeCard, pool: KanaPracticeCard[]): string[] {
   const distractors = shuffle(pool.filter((c) => c.romaji !== card.romaji))
     .slice(0, 3)
-    .map((c) => c.romaji)
-  return shuffle([card.romaji, ...distractors])
+    .map((c) => c.romaji);
+  return shuffle([card.romaji, ...distractors]);
 }
 
 function checkAnswer(input: string, card: KanaPracticeCard): boolean {
-  const norm = input.trim().toLowerCase()
-  return norm === card.romaji || (card.alts ?? []).includes(norm)
+  const norm = input.trim().toLowerCase();
+  return norm === card.romaji || (card.alts ?? []).includes(norm);
 }
 
 export function KanaPracticePage() {
-  const [screen, setScreen] = useState<Screen>('setup')
-  const [practiceMode, setPracticeMode] = useState<PracticeMode>('multiple-choice')
-  const [selectedSets, setSelectedSets] = useState<Set<SetKey>>(new Set<SetKey>(['basic']))
-  const [selectedScripts, setSelectedScripts] = useState<Set<ScriptKey>>(
-    new Set<ScriptKey>(['hiragana']),
-  )
+  const [screen, setScreen] = useState<Screen>("setup");
+  const [practiceMode, setPracticeMode] = useState<PracticeMode>("multiple-choice");
+  const [selectedSets, setSelectedSets] = useState<Set<SetKey>>(new Set<SetKey>(["basic"]));
+  const [selectedScripts, setSelectedScripts] = useState<Set<ScriptKey>>(new Set<ScriptKey>(["hiragana"]));
 
-  const [queue, setQueue] = useState<KanaPracticeCard[]>([])
-  const [queueIndex, setQueueIndex] = useState(0)
-  const [correctCount, setCorrectCount] = useState(0)
-  const [missed, setMissed] = useState<KanaPracticeCard[]>([])
+  const [queue, setQueue] = useState<KanaPracticeCard[]>([]);
+  const [queueIndex, setQueueIndex] = useState(0);
+  const [correctCount, setCorrectCount] = useState(0);
+  const [missed, setMissed] = useState<KanaPracticeCard[]>([]);
 
-  const [choices, setChoices] = useState<string[]>([])
-  const [answered, setAnswered] = useState<AnswerResult | null>(null)
-  const [selectedChoice, setSelectedChoice] = useState<string | null>(null)
-  const [typeInput, setTypeInput] = useState('')
+  const [choices, setChoices] = useState<string[]>([]);
+  const [answered, setAnswered] = useState<AnswerResult | null>(null);
+  const [selectedChoice, setSelectedChoice] = useState<string | null>(null);
+  const [typeInput, setTypeInput] = useState("");
 
-  const inputRef = useRef<HTMLInputElement>(null)
-  const advanceRef = useRef<() => void>(() => {})
-  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const inputRef = useRef<HTMLInputElement>(null);
+  const advanceRef = useRef<() => void>(() => {});
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  const currentCard = queue[queueIndex] ?? null
+  const currentCard = queue[queueIndex] ?? null;
 
   function advance() {
-    if (timerRef.current) clearTimeout(timerRef.current)
-    const nextIndex = queueIndex + 1
+    if (timerRef.current) clearTimeout(timerRef.current);
+    const nextIndex = queueIndex + 1;
     if (nextIndex >= queue.length) {
-      setScreen('result')
-      return
+      setScreen("result");
+      return;
     }
-    const next = queue[nextIndex]
-    setQueueIndex(nextIndex)
-    setAnswered(null)
-    setSelectedChoice(null)
-    setTypeInput('')
-    if (practiceMode === 'multiple-choice') {
-      setChoices(makeChoices(next, queue))
+    const next = queue[nextIndex];
+    setQueueIndex(nextIndex);
+    setAnswered(null);
+    setSelectedChoice(null);
+    setTypeInput("");
+    if (practiceMode === "multiple-choice") {
+      setChoices(makeChoices(next, queue));
     }
   }
   useEffect(() => {
-    advanceRef.current = advance
-  })
+    advanceRef.current = advance;
+  });
 
   useEffect(() => {
-    if (screen === 'practice' && practiceMode === 'type-romaji') {
-      inputRef.current?.focus()
+    if (screen === "practice" && practiceMode === "type-romaji") {
+      inputRef.current?.focus();
     }
-  }, [screen, queueIndex, practiceMode])
+  }, [screen, queueIndex, practiceMode]);
 
   useEffect(() => {
     return () => {
-      if (timerRef.current) clearTimeout(timerRef.current)
-    }
-  }, [])
+      if (timerRef.current) clearTimeout(timerRef.current);
+    };
+  }, []);
 
   function startSession() {
-    if (timerRef.current) clearTimeout(timerRef.current)
-    const pool = KANA_PRACTICE_CARDS.filter(
-      (c) => selectedSets.has(c.group) && selectedScripts.has(c.script),
-    )
-    const q = shuffle(pool)
-    setQueue(q)
-    setQueueIndex(0)
-    setCorrectCount(0)
-    setMissed([])
-    setAnswered(null)
-    setSelectedChoice(null)
-    setTypeInput('')
-    if (practiceMode === 'multiple-choice' && q.length > 0) {
-      setChoices(makeChoices(q[0], q))
+    if (timerRef.current) clearTimeout(timerRef.current);
+    const pool = KANA_PRACTICE_CARDS.filter((c) => selectedSets.has(c.group) && selectedScripts.has(c.script));
+    const q = shuffle(pool);
+    setQueue(q);
+    setQueueIndex(0);
+    setCorrectCount(0);
+    setMissed([]);
+    setAnswered(null);
+    setSelectedChoice(null);
+    setTypeInput("");
+    if (practiceMode === "multiple-choice" && q.length > 0) {
+      setChoices(makeChoices(q[0], q));
     }
-    setScreen('practice')
+    setScreen("practice");
   }
 
   function handleChoice(choice: string) {
-    if (answered !== null || !currentCard) return
-    const isCorrect = choice === currentCard.romaji
-    setSelectedChoice(choice)
-    setAnswered(isCorrect ? 'correct' : 'wrong')
+    if (answered !== null || !currentCard) return;
+    const isCorrect = choice === currentCard.romaji;
+    setSelectedChoice(choice);
+    setAnswered(isCorrect ? "correct" : "wrong");
     if (isCorrect) {
-      setCorrectCount((n) => n + 1)
+      setCorrectCount((n) => n + 1);
     } else {
-      setMissed((m) => [...m, currentCard])
+      setMissed((m) => [...m, currentCard]);
     }
-    timerRef.current = setTimeout(() => advanceRef.current(), 800)
+    timerRef.current = setTimeout(() => advanceRef.current(), 800);
   }
 
   function handleTypeSubmit() {
-    if (answered !== null || !currentCard || !typeInput.trim()) return
-    const isCorrect = checkAnswer(typeInput, currentCard)
-    setAnswered(isCorrect ? 'correct' : 'wrong')
+    if (answered !== null || !currentCard || !typeInput.trim()) return;
+    const isCorrect = checkAnswer(typeInput, currentCard);
+    setAnswered(isCorrect ? "correct" : "wrong");
     if (isCorrect) {
-      setCorrectCount((n) => n + 1)
-      timerRef.current = setTimeout(() => advanceRef.current(), 700)
+      setCorrectCount((n) => n + 1);
+      timerRef.current = setTimeout(() => advanceRef.current(), 700);
     } else {
-      setMissed((m) => [...m, currentCard])
+      setMissed((m) => [...m, currentCard]);
     }
   }
 
   function toggleSet(key: SetKey) {
     setSelectedSets((prev) => {
-      if (prev.has(key) && prev.size === 1) return prev
-      const next = new Set(prev)
-      if (next.has(key)) next.delete(key)
-      else next.add(key)
-      return next
-    })
+      if (prev.has(key) && prev.size === 1) return prev;
+      const next = new Set(prev);
+      if (next.has(key)) next.delete(key);
+      else next.add(key);
+      return next;
+    });
   }
 
   function toggleScript(key: ScriptKey) {
     setSelectedScripts((prev) => {
-      if (prev.has(key) && prev.size === 1) return prev
-      const next = new Set(prev)
-      if (next.has(key)) next.delete(key)
-      else next.add(key)
-      return next
-    })
+      if (prev.has(key) && prev.size === 1) return prev;
+      const next = new Set(prev);
+      if (next.has(key)) next.delete(key);
+      else next.add(key);
+      return next;
+    });
   }
 
   const totalSelected = KANA_PRACTICE_CARDS.filter(
     (c) => selectedSets.has(c.group) && selectedScripts.has(c.script),
-  ).length
+  ).length;
 
   // --- SETUP ---
-  if (screen === 'setup') {
+  if (screen === "setup") {
     return (
       <main className="mx-auto flex min-h-svh w-full max-w-xl flex-col px-4">
         <AppHeader
           title="Kana Practice"
           left={
-            <Link
-              to="/practice"
-              className="flex min-h-[44px] items-center text-body-sm text-fg-subtle active:text-fg"
-            >
+            <Link to="/practice" className="flex min-h-[44px] items-center text-body-sm text-fg-subtle active:text-fg">
               ← Back
             </Link>
           }
@@ -185,19 +178,19 @@ export function KanaPracticePage() {
           <section>
             <p className="mb-3 text-body-sm font-medium text-fg-subtle">Mode</p>
             <div className="grid grid-cols-2 gap-2">
-              {(['multiple-choice', 'type-romaji'] as PracticeMode[]).map((mode) => (
+              {(["multiple-choice", "type-romaji"] as PracticeMode[]).map((mode) => (
                 <button
                   key={mode}
                   type="button"
                   onClick={() => setPracticeMode(mode)}
                   className={[
-                    'flex min-h-[60px] flex-col items-center justify-center rounded-2xl border px-3 text-body-sm font-medium transition-colors',
+                    "flex min-h-[60px] flex-col items-center justify-center rounded-2xl border px-3 text-body-sm font-medium transition-colors",
                     practiceMode === mode
-                      ? 'border-brand-500 bg-brand-50 text-brand-700'
-                      : 'border-border bg-surface text-fg active:bg-surface-2',
-                  ].join(' ')}
+                      ? "border-brand-500 bg-brand-50 text-brand-700"
+                      : "border-border bg-surface text-fg active:bg-surface-2",
+                  ].join(" ")}
                 >
-                  {mode === 'multiple-choice' ? 'Multiple choice' : 'Type romaji'}
+                  {mode === "multiple-choice" ? "Multiple choice" : "Type romaji"}
                 </button>
               ))}
             </div>
@@ -207,33 +200,24 @@ export function KanaPracticePage() {
             <p className="mb-3 text-body-sm font-medium text-fg-subtle">Script</p>
             <div className="grid grid-cols-2 gap-2">
               {(Object.keys(SCRIPT_META) as ScriptKey[]).map((key) => {
-                const { label, sub } = SCRIPT_META[key]
-                const checked = selectedScripts.has(key)
+                const { label, sub } = SCRIPT_META[key];
+                const checked = selectedScripts.has(key);
                 return (
                   <button
                     key={key}
                     type="button"
                     onClick={() => toggleScript(key)}
                     className={[
-                      'flex min-h-[60px] flex-col items-center justify-center gap-0.5 rounded-2xl border px-3 transition-colors',
-                      checked
-                        ? 'border-brand-500 bg-brand-50'
-                        : 'border-border bg-surface active:bg-surface-2',
-                    ].join(' ')}
+                      "flex min-h-[60px] flex-col items-center justify-center gap-0.5 rounded-2xl border px-3 transition-colors",
+                      checked ? "border-brand-500 bg-brand-50" : "border-border bg-surface active:bg-surface-2",
+                    ].join(" ")}
                   >
-                    <span
-                      className={`text-body font-medium ${checked ? 'text-brand-700' : 'text-fg'}`}
-                    >
-                      {label}
-                    </span>
-                    <span
-                      className="text-body-sm text-fg-subtle"
-                      style={{ fontFamily: 'var(--font-jp)' }}
-                    >
+                    <span className={`text-body font-medium ${checked ? "text-brand-700" : "text-fg"}`}>{label}</span>
+                    <span className="text-body-sm text-fg-subtle" style={{ fontFamily: "var(--font-jp)" }}>
                       {sub}
                     </span>
                   </button>
-                )
+                );
               })}
             </div>
           </section>
@@ -242,26 +226,22 @@ export function KanaPracticePage() {
             <p className="mb-3 text-body-sm font-medium text-fg-subtle">Sets</p>
             <div className="flex flex-col gap-2">
               {(Object.keys(SET_META) as SetKey[]).map((key) => {
-                const { label, count } = SET_META[key]
-                const checked = selectedSets.has(key)
+                const { label, count } = SET_META[key];
+                const checked = selectedSets.has(key);
                 return (
                   <button
                     key={key}
                     type="button"
                     onClick={() => toggleSet(key)}
                     className={[
-                      'flex min-h-[56px] items-center justify-between rounded-2xl border px-4 transition-colors',
-                      checked
-                        ? 'border-brand-500 bg-brand-50'
-                        : 'border-border bg-surface active:bg-surface-2',
-                    ].join(' ')}
+                      "flex min-h-[56px] items-center justify-between rounded-2xl border px-4 transition-colors",
+                      checked ? "border-brand-500 bg-brand-50" : "border-border bg-surface active:bg-surface-2",
+                    ].join(" ")}
                   >
-                    <span className={`text-body font-medium ${checked ? 'text-brand-700' : 'text-fg'}`}>
-                      {label}
-                    </span>
+                    <span className={`text-body font-medium ${checked ? "text-brand-700" : "text-fg"}`}>{label}</span>
                     <span className="text-body-sm text-fg-subtle">{count}</span>
                   </button>
-                )
+                );
               })}
             </div>
           </section>
@@ -277,11 +257,11 @@ export function KanaPracticePage() {
           </div>
         </div>
       </main>
-    )
+    );
   }
 
   // --- RESULT ---
-  if (screen === 'result') {
+  if (screen === "result") {
     return (
       <main className="mx-auto flex min-h-svh w-full max-w-xl flex-col px-4">
         <AppHeader title="Kana Practice" />
@@ -290,19 +270,14 @@ export function KanaPracticePage() {
           <ScoreCard correct={correctCount} total={queue.length}>
             {missed.length > 0 && (
               <section>
-                <p className="mb-3 text-body-sm font-medium text-fg-subtle">
-                  Missed — {missed.length}
-                </p>
+                <p className="mb-3 text-body-sm font-medium text-fg-subtle">Missed — {missed.length}</p>
                 <div className="grid grid-cols-3 gap-2">
                   {missed.map((card, i) => (
                     <div
                       key={i}
                       className="flex flex-col items-center gap-1 rounded-xl border border-border bg-surface py-3"
                     >
-                      <span
-                        className="text-jp-lg font-medium text-fg"
-                        style={{ fontFamily: 'var(--font-jp)' }}
-                      >
+                      <span className="text-jp-lg font-medium text-fg" style={{ fontFamily: "var(--font-jp)" }}>
                         {card.kana}
                       </span>
                       <span className="text-caption text-fg-subtle">{card.romaji}</span>
@@ -323,7 +298,7 @@ export function KanaPracticePage() {
             </button>
             <button
               type="button"
-              onClick={() => setScreen('setup')}
+              onClick={() => setScreen("setup")}
               className="flex min-h-[52px] w-full items-center justify-center rounded-2xl border border-border bg-surface text-body font-medium text-fg active:bg-surface-2"
             >
               Change settings
@@ -331,18 +306,18 @@ export function KanaPracticePage() {
           </div>
         </div>
       </main>
-    )
+    );
   }
 
   // --- PRACTICE ---
-  if (!currentCard) return null
+  if (!currentCard) return null;
 
   const cardBorderClass =
-    answered === 'correct'
-      ? 'border-success-500 bg-success-bg'
-      : answered === 'wrong'
-        ? 'border-error-500 bg-error-bg'
-        : 'border-border bg-surface'
+    answered === "correct"
+      ? "border-success-500 bg-success-bg"
+      : answered === "wrong"
+        ? "border-error-500 bg-error-bg"
+        : "border-border bg-surface";
 
   return (
     <main className="mx-auto flex min-h-svh w-full max-w-xl flex-col px-4">
@@ -350,8 +325,8 @@ export function KanaPracticePage() {
         <button
           type="button"
           onClick={() => {
-            if (timerRef.current) clearTimeout(timerRef.current)
-            setScreen('setup')
+            if (timerRef.current) clearTimeout(timerRef.current);
+            setScreen("setup");
           }}
           className="flex min-h-[44px] items-center text-body-sm text-fg-subtle active:text-fg"
         >
@@ -369,24 +344,20 @@ export function KanaPracticePage() {
         <div
           className={`flex h-40 w-40 items-center justify-center rounded-3xl border-2 transition-colors duration-150 ${cardBorderClass}`}
         >
-          <span
-            className="text-jp-display-lg"
-            style={{ fontFamily: 'var(--font-jp)' }}
-          >
+          <span className="text-jp-display-lg" style={{ fontFamily: "var(--font-jp)" }}>
             {currentCard.kana}
           </span>
         </div>
 
-        {practiceMode === 'multiple-choice' ? (
+        {practiceMode === "multiple-choice" ? (
           <div className="grid w-full grid-cols-2 gap-3">
             {choices.map((choice) => {
-              let cls =
-                'border-border bg-surface text-fg active:bg-surface-2'
+              let cls = "border-border bg-surface text-fg active:bg-surface-2";
               if (answered !== null) {
                 if (choice === currentCard.romaji) {
-                  cls = 'border-success-500 bg-success-bg text-success-fg'
+                  cls = "border-success-500 bg-success-bg text-success-fg";
                 } else if (choice === selectedChoice) {
-                  cls = 'border-error-500 bg-error-bg text-error-fg'
+                  cls = "border-error-500 bg-error-bg text-error-fg";
                 }
               }
               return (
@@ -399,7 +370,7 @@ export function KanaPracticePage() {
                 >
                   {choice}
                 </button>
-              )
+              );
             })}
           </div>
         ) : (
@@ -415,18 +386,18 @@ export function KanaPracticePage() {
                 value={typeInput}
                 onChange={(e) => setTypeInput(e.target.value)}
                 onKeyDown={(e) => {
-                  if (e.key === 'Enter') handleTypeSubmit()
+                  if (e.key === "Enter") handleTypeSubmit();
                 }}
                 disabled={answered !== null}
                 placeholder="type romaji…"
                 className={[
-                  'min-h-[52px] flex-1 rounded-2xl border px-4 text-body outline-none transition-colors',
-                  answered === 'correct'
-                    ? 'border-success-500 bg-success-bg text-success-fg'
-                    : answered === 'wrong'
-                      ? 'border-error-500 bg-error-bg text-error-fg'
-                      : 'border-border bg-surface text-fg focus:border-brand-500',
-                ].join(' ')}
+                  "min-h-[52px] flex-1 rounded-2xl border px-4 text-body outline-none transition-colors",
+                  answered === "correct"
+                    ? "border-success-500 bg-success-bg text-success-fg"
+                    : answered === "wrong"
+                      ? "border-error-500 bg-error-bg text-error-fg"
+                      : "border-border bg-surface text-fg focus:border-brand-500",
+                ].join(" ")}
               />
               <button
                 type="button"
@@ -438,7 +409,7 @@ export function KanaPracticePage() {
               </button>
             </div>
 
-            {answered === 'wrong' && (
+            {answered === "wrong" && (
               <div className="flex flex-col items-center gap-3">
                 <p className="text-body-sm text-error-fg">
                   Answer: <span className="font-semibold">{currentCard.romaji}</span>
@@ -456,5 +427,5 @@ export function KanaPracticePage() {
         )}
       </div>
     </main>
-  )
+  );
 }

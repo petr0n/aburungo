@@ -8,22 +8,22 @@
  * Validation runs at module load (see index.ts). Bad content fails the build
  * loudly rather than silently shipping garbage.
  */
-import type { Phrase } from '@/types'
+import type { Phrase } from "@/types";
 
 function isString(v: unknown): v is string {
-  return typeof v === 'string' && v.length > 0
+  return typeof v === "string" && v.length > 0;
 }
 
 function isOptionalString(v: unknown): v is string | undefined {
-  return v === undefined || isString(v)
+  return v === undefined || isString(v);
 }
 
 class PhraseSchemaError extends Error {
-  readonly raw: unknown
+  readonly raw: unknown;
   constructor(message: string, raw: unknown) {
-    super(message)
-    this.name = 'PhraseSchemaError'
-    this.raw = raw
+    super(message);
+    this.name = "PhraseSchemaError";
+    this.raw = raw;
   }
 }
 
@@ -32,38 +32,22 @@ class PhraseSchemaError extends Error {
  * and which entry caused it.
  */
 export function parsePhrase(raw: unknown, source: string): Phrase {
-  if (typeof raw !== 'object' || raw === null) {
-    throw new PhraseSchemaError(`${source}: entry is not an object`, raw)
+  if (typeof raw !== "object" || raw === null) {
+    throw new PhraseSchemaError(`${source}: entry is not an object`, raw);
   }
-  const o = raw as Record<string, unknown>
+  const o = raw as Record<string, unknown>;
 
-  const required: Array<keyof Phrase> = [
-    'id',
-    'japanese',
-    'reading',
-    'romaji',
-    'english',
-    'scenario',
-  ]
+  const required: Array<keyof Phrase> = ["id", "japanese", "reading", "romaji", "english", "scenario"];
   for (const key of required) {
     if (!isString(o[key])) {
-      throw new PhraseSchemaError(
-        `${source}: entry "${String(o.id ?? '?')}" missing or empty field "${key}"`,
-        raw,
-      )
+      throw new PhraseSchemaError(`${source}: entry "${String(o.id ?? "?")}" missing or empty field "${key}"`, raw);
     }
   }
   if (!isOptionalString(o.audioUrl)) {
-    throw new PhraseSchemaError(
-      `${source}: entry "${String(o.id)}" has invalid audioUrl`,
-      raw,
-    )
+    throw new PhraseSchemaError(`${source}: entry "${String(o.id)}" has invalid audioUrl`, raw);
   }
   if (!isOptionalString(o.notes)) {
-    throw new PhraseSchemaError(
-      `${source}: entry "${String(o.id)}" has invalid notes`,
-      raw,
-    )
+    throw new PhraseSchemaError(`${source}: entry "${String(o.id)}" has invalid notes`, raw);
   }
 
   return {
@@ -75,7 +59,7 @@ export function parsePhrase(raw: unknown, source: string): Phrase {
     scenario: o.scenario as string,
     audioUrl: o.audioUrl as string | undefined,
     notes: o.notes as string | undefined,
-  }
+  };
 }
 
 /**
@@ -84,16 +68,16 @@ export function parsePhrase(raw: unknown, source: string): Phrase {
  */
 export function parsePhrases(raw: unknown, source: string): Phrase[] {
   if (!Array.isArray(raw)) {
-    throw new PhraseSchemaError(`${source}: top-level value must be an array`, raw)
+    throw new PhraseSchemaError(`${source}: top-level value must be an array`, raw);
   }
-  const phrases = raw.map((entry) => parsePhrase(entry, source))
+  const phrases = raw.map((entry) => parsePhrase(entry, source));
 
-  const seen = new Set<string>()
+  const seen = new Set<string>();
   for (const p of phrases) {
     if (seen.has(p.id)) {
-      throw new PhraseSchemaError(`${source}: duplicate phrase id "${p.id}"`, p)
+      throw new PhraseSchemaError(`${source}: duplicate phrase id "${p.id}"`, p);
     }
-    seen.add(p.id)
+    seen.add(p.id);
   }
-  return phrases
+  return phrases;
 }
