@@ -1,0 +1,60 @@
+# Directions — asking for help navigating, and understanding responses.
+# content-source: training — N5 canonical vocabulary, pending JMdict seed verification
+# jlpt-source: training
+
+- id: directions.where-am-i
+  jlpt: N5
+  japanese: ここはどこですか
+  reading: ここはどこですか
+  romaji: koko wa doko desu ka
+  english: Where am I?
+  scenario: directions
+
+- id: directions.is-it-far
+  jlpt: N5
+  japanese: 遠いですか
+  reading: とおいですか
+  romaji: tooi desu ka
+  english: Is it far?
+  scenario: directions
+
+- id: directions.is-it-near
+  jlpt: N5
+  japanese: 近いですか
+  reading: ちかいですか
+  romaji: chikai desu ka
+  english: Is it nearby?
+  scenario: directions
+
+- id: directions.go-straight
+  jlpt: N5
+  japanese: まっすぐ行ってください
+  reading: まっすぐいってください
+  romaji: massugu itte kudasai
+  english: Please go straight.
+  scenario: directions
+  notes: You'll hear this when locals give you directions.
+
+- id: directions.turn-right
+  jlpt: N5
+  japanese: 右に曲がってください
+  reading: みぎにまがってください
+  romaji: migi ni magatte kudasai
+  english: Please turn right.
+  scenario: directions
+
+- id: directions.turn-left
+  jlpt: N5
+  japanese: 左に曲がってください
+  reading: ひだりにまがってください
+  romaji: hidari ni magatte kudasai
+  english: Please turn left.
+  scenario: directions
+
+- id: directions.have-map
+  jlpt: N5
+  japanese: 地図はありますか
+  reading: ちずはありますか
+  romaji: chizu wa arimasu ka
+  english: Do you have a map?
+  scenario: directions

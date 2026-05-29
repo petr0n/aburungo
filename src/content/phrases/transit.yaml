@@ -1,7 +1,9 @@
 # Practical phrases for getting around — stations, trains, directions.
 # Polite forms (-masu / -desu) by default. Real-world Japanese, not textbook.
+# jlpt-source: training — pending JMdict seed verification
 
 - id: transit.station-where
+  jlpt: N5
   japanese: 駅はどこですか
   reading: えきはどこですか
   romaji: eki wa doko desu ka
@@ -12,6 +14,7 @@
     For a specific station, prefix the name: "新宿駅はどこですか".
 
 - id: transit.ticket-where
+  jlpt: N5
   japanese: 切符はどこで買えますか
   reading: きっぷはどこでかえますか
   romaji: kippu wa doko de kaemasu ka
@@ -22,6 +25,7 @@
     are the IC card names you'll hear most often.
 
 - id: transit.next-train
+  jlpt: N5
   japanese: 次の電車は何時ですか
   reading: つぎのでんしゃはなんじですか
   romaji: tsugi no densha wa nanji desu ka
@@ -29,6 +33,7 @@
   scenario: transit
 
 - id: transit.getting-off-here
+  jlpt: N5
   japanese: ここで降ります
   reading: ここでおります
   romaji: koko de orimasu

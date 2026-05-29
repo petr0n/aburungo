@@ -1,5 +1,5 @@
 import { useState } from "react";
-import type { Card as CardData } from "@/types";
+import type { Phrase } from "@/types";
 import { compareAnswer } from "@/lib/compareAnswer";
 import { Badge, Button, Card } from "aburungo-design-system";
 import { FillInput } from "./FillInput";
@@ -10,7 +10,7 @@ type Phase = "input" | "result";
 type InputMode = "text" | "voice";
 
 type Props = {
-  card: CardData;
+  card: Phrase;
   onNext: (correct: boolean) => void;
 };
 
@@ -70,7 +70,7 @@ export function FillBlankCard({ card, onNext }: Props) {
     <Card className="mx-auto w-full max-w-xl">
       <div className="flex flex-col gap-6">
         <header className="flex items-center justify-between gap-4">
-          <Badge emphasis>{card.deck}</Badge>
+          <Badge emphasis>{card.scenario.charAt(0).toUpperCase() + card.scenario.slice(1)}</Badge>
           <AudioButton src={card.audioUrl ?? undefined} />
         </header>
 

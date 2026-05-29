@@ -1,9 +1,12 @@
 import { useEffect } from "react";
 import { useSession } from "@/store/session";
+import { useUserTier } from "@/store/auth";
+import { phrasesForTier } from "@/content";
 import { LoadingPlaceholder, EmptyState, ErrorState } from "aburungo-design-system";
 import { FillBlankCard } from "./FillBlankCard";
 
 export function FillBlankScreen() {
+  const tier = useUserTier();
   const status = useSession((s) => s.status);
   const error = useSession((s) => s.error);
   const queue = useSession((s) => s.queue);
@@ -13,8 +16,8 @@ export function FillBlankScreen() {
   const reset = useSession((s) => s.reset);
 
   useEffect(() => {
-    void initialize();
-  }, [initialize]);
+    void initialize(phrasesForTier(tier));
+  }, [initialize, tier]);
 
   if (status === "idle" || status === "loading") {
     return <LoadingPlaceholder label="Loading review queue…" />;
@@ -30,7 +33,7 @@ export function FillBlankScreen() {
             type="button"
             onClick={() => {
               reset();
-              void initialize();
+              void initialize(phrasesForTier(tier));
             }}
             className="h-12 rounded-xl border border-border-strong px-6 text-body font-medium text-fg-muted hover:bg-surface-2 active:bg-surface-2"
           >
@@ -51,7 +54,7 @@ export function FillBlankScreen() {
             type="button"
             onClick={() => {
               reset();
-              void initialize();
+              void initialize(phrasesForTier(tier));
             }}
             className="h-12 rounded-xl border border-border-strong px-6 text-body font-medium text-fg-muted hover:bg-surface-2 active:bg-surface-2"
           >

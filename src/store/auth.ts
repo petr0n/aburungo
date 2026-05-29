@@ -1,6 +1,7 @@
 import { create } from "zustand";
 import type { User } from "@supabase/supabase-js";
 import { supabase } from "@/lib/supabase";
+import type { UserTier } from "@/types";
 
 type AuthState = {
   user: User | null;
@@ -14,6 +15,23 @@ type AuthState = {
   requestPasswordReset: (email: string) => Promise<string | null>;
   updatePassword: (newPassword: string) => Promise<string | null>;
 };
+
+/**
+ * Derive the user's access tier from auth state.
+ *
+ * guest — no session
+ * free  — signed-in free account (default for all authenticated users until
+ *         payment is wired; check user_metadata.tier === "paid" when ready)
+ * paid  — subscriber
+ */
+export function useUserTier(): UserTier {
+  return useAuth((s) => {
+    if (s.user === null) return "guest";
+    // Paid tier: stubbed as false until payment integration is built.
+    // When ready: check s.user.user_metadata?.tier === "paid"
+    return "free";
+  });
+}
 
 export const useAuth = create<AuthState>((set) => ({
   user: null,

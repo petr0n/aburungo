@@ -1,0 +1,68 @@
+# Shopping phrases — stores, prices, payment, and browsing.
+# content-source: training — N5 canonical vocabulary, pending JMdict seed verification
+# jlpt-source: training
+
+- id: shopping.how-much
+  jlpt: N5
+  japanese: いくらですか
+  reading: いくらですか
+  romaji: ikura desu ka
+  english: How much is this?
+  scenario: shopping
+
+- id: shopping.this-please
+  jlpt: N5
+  japanese: これをください
+  reading: これをください
+  romaji: kore o kudasai
+  english: This one, please.
+  scenario: shopping
+  notes: Point at the item — works without any further Japanese.
+
+- id: shopping.just-looking
+  jlpt: N5
+  japanese: 見ているだけです
+  reading: みているだけです
+  romaji: mite iru dake desu
+  english: I'm just looking.
+  scenario: shopping
+  notes: |
+    Shop staff will greet you with "いらっしゃいませ" when you enter.
+    This is the polite reply that lets you browse freely.
+
+- id: shopping.pay-by-card
+  jlpt: N5
+  japanese: カードで払えますか
+  reading: カードではらえますか
+  romaji: kaado de haraemasu ka
+  english: Can I pay by card?
+  scenario: shopping
+  notes: Smaller shops and traditional restaurants are often cash only.
+
+- id: shopping.receipt-please
+  jlpt: N5
+  japanese: レシートをください
+  reading: レシートをください
+  romaji: reshiito o kudasai
+  english: A receipt, please.
+  scenario: shopping
+
+- id: shopping.no-bag
+  jlpt: N5
+  japanese: 袋はいりません
+  reading: ふくろはいりません
+  romaji: fukuro wa irimasen
+  english: No bag needed, thank you.
+  scenario: shopping
+  notes: |
+    Since 2020, plastic bags are charged at most shops. The cashier will
+    ask "袋はいりますか?" — this is your reply if you don't need one.
+
+- id: shopping.bigger-size
+  jlpt: N5
+  japanese: 大きいサイズはありますか
+  reading: おおきいサイズはありますか
+  romaji: ookii saizu wa arimasu ka
+  english: Do you have a larger size?
+  scenario: shopping
+  notes: Swap 大きい (ookii) for 小さい (chiisai) to ask for a smaller size.

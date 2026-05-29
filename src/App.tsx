@@ -27,15 +27,20 @@ export default function App() {
 
   return (
     <Routes>
+      {/* Public — no auth required */}
       <Route path="/" element={<LandingPage />} />
+      <Route path="/practice" element={<PracticePage />} />
+      <Route path="/kana" element={<KanaPracticePage />} />
+      <Route path="/flashcard" element={<FlashcardPage />} />
+      <Route path="/kanji" element={<KanjiPage />} />
+      <Route path="/how-to" element={<HowToPage />} />
+
+      {/* Auth required — Conversation uses Anthropic API (paid cost) */}
       <Route element={<ProtectedRoute />}>
-        <Route path="/practice" element={<PracticePage />} />
-        <Route path="/kana" element={<KanaPracticePage />} />
-        <Route path="/flashcard" element={<FlashcardPage />} />
-        <Route path="/kanji" element={<KanjiPage />} />
         <Route path="/conversation" element={<ConversationPage />} />
-        <Route path="/how-to" element={<HowToPage />} />
       </Route>
+
+      {/* Admin only */}
       <Route element={<AdminRoute />}>
         <Route element={<AdminLayout />}>
           <Route path="/admin/users" element={<AdminUsersPage />} />

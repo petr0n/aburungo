@@ -8,7 +8,9 @@
  * Validation runs at module load (see index.ts). Bad content fails the build
  * loudly rather than silently shipping garbage.
  */
-import type { Phrase } from "@/types";
+import type { JlptLevel, Phrase } from "@/types";
+
+const JLPT_LEVELS = new Set<string>(["N5", "N4", "N3", "N2", "N1"]);
 
 function isString(v: unknown): v is string {
   return typeof v === "string" && v.length > 0;
@@ -49,6 +51,12 @@ export function parsePhrase(raw: unknown, source: string): Phrase {
   if (!isOptionalString(o.notes)) {
     throw new PhraseSchemaError(`${source}: entry "${String(o.id)}" has invalid notes`, raw);
   }
+  if (o.jlpt !== undefined && (typeof o.jlpt !== "string" || !JLPT_LEVELS.has(o.jlpt))) {
+    throw new PhraseSchemaError(
+      `${source}: entry "${String(o.id)}" has invalid jlpt "${String(o.jlpt)}" — must be N5/N4/N3/N2/N1`,
+      raw,
+    );
+  }
 
   return {
     id: o.id as string,
@@ -59,6 +67,7 @@ export function parsePhrase(raw: unknown, source: string): Phrase {
     scenario: o.scenario as string,
     audioUrl: o.audioUrl as string | undefined,
     notes: o.notes as string | undefined,
+    jlpt: o.jlpt as JlptLevel | undefined,
   };
 }
 

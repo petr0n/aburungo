@@ -1,0 +1,99 @@
+# Social phrases — greetings, introductions, and essential communication tools.
+# content-source: training — N5 canonical vocabulary, pending JMdict seed verification
+# jlpt-source: training
+
+- id: greetings.good-morning
+  jlpt: N5
+  japanese: おはようございます
+  reading: おはようございます
+  romaji: ohayou gozaimasu
+  english: Good morning.
+  scenario: greetings
+  notes: |
+    Use until around 10–11am. The casual form "おはよう" is for close friends
+    and family. In shops and offices, always use the full polite form.
+
+- id: greetings.hello
+  jlpt: N5
+  japanese: こんにちは
+  reading: こんにちは
+  romaji: konnichiwa
+  english: Hello.
+  scenario: greetings
+  notes: Daytime greeting, roughly 10am–6pm.
+
+- id: greetings.good-evening
+  jlpt: N5
+  japanese: こんばんは
+  reading: こんばんは
+  romaji: konbanwa
+  english: Good evening.
+  scenario: greetings
+  notes: Use from around 6pm onwards.
+
+- id: greetings.thank-you
+  jlpt: N5
+  japanese: ありがとうございます
+  reading: ありがとうございます
+  romaji: arigatou gozaimasu
+  english: Thank you.
+  scenario: greetings
+  notes: |
+    The full polite form. The casual "ありがとう" is for close friends.
+    "どうもありがとうございます" adds extra emphasis for a big favour.
+
+- id: greetings.excuse-me
+  jlpt: N5
+  japanese: すみません
+  reading: すみません
+  romaji: sumimasen
+  english: Excuse me.
+  scenario: greetings
+  notes: |
+    Multi-purpose: gets a server's attention, apologises for bumping into
+    someone, or prefaces a question to a stranger. The single most useful
+    phrase in Japan.
+
+- id: greetings.nice-to-meet-you
+  jlpt: N5
+  japanese: はじめまして
+  reading: はじめまして
+  romaji: hajimemashite
+  english: Nice to meet you.
+  scenario: greetings
+  notes: Said only on a first meeting. Always followed by よろしくお願いします.
+
+- id: greetings.yoroshiku
+  jlpt: N5
+  japanese: よろしくお願いします
+  reading: よろしくおねがいします
+  romaji: yoroshiku onegai shimasu
+  english: Pleased to meet you. / I look forward to working with you.
+  scenario: greetings
+  notes: |
+    Follows はじめまして in introductions. Also used when asking for a favour
+    or starting any collaboration — one of the most versatile phrases in Japanese.
+
+- id: greetings.dont-understand
+  jlpt: N5
+  japanese: わかりません
+  reading: わかりません
+  romaji: wakarimasen
+  english: I don't understand.
+  scenario: greetings
+
+- id: greetings.say-again
+  jlpt: N5
+  japanese: もう一度言ってください
+  reading: もういちどいってください
+  romaji: mou ichido itte kudasai
+  english: Please say that again.
+  scenario: greetings
+
+- id: greetings.speak-slowly
+  jlpt: N5
+  japanese: ゆっくり話してください
+  reading: ゆっくりはなしてください
+  romaji: yukkuri hanashite kudasai
+  english: Please speak slowly.
+  scenario: greetings
