@@ -8,6 +8,7 @@ export function LandingPage() {
   const loading = useAuth((s) => s.loading);
   const signIn = useAuth((s) => s.signIn);
   const signUp = useAuth((s) => s.signUp);
+  const signInWithGoogle = useAuth((s) => s.signInWithGoogle);
   const requestPasswordReset = useAuth((s) => s.requestPasswordReset);
   const updatePassword = useAuth((s) => s.updatePassword);
   const isRecovery = useAuth((s) => s.isRecovery);
@@ -120,6 +121,7 @@ export function LandingPage() {
         <AuthForm
           onSignIn={signIn}
           onSignUp={signUp}
+          onGoogleSignIn={signInWithGoogle}
           onForgotPassword={requestPasswordReset}
           onUpdatePassword={updatePassword}
           isRecovery={isRecovery}
