@@ -165,9 +165,13 @@ export function KanjiPage() {
 
   const [screen, setScreen] = useState<Screen>("browse");
   const [jlpt, setJlpt] = useState<JlptFilter>(5);
-  const [kanjiList, setKanjiList] = useState<KanjiEntry[]>([]);
-  const [loading, setLoading] = useState(false);
+  const [kanjiData, setKanjiData] = useState<{ jlpt: JlptFilter; list: KanjiEntry[] } | null>(null);
   const [selected, setSelected] = useState<KanjiEntry | null>(null);
+
+  // Derive effectiveJlpt so tier changes never need a setState-in-effect
+  const effectiveJlpt: JlptFilter = jlptTabs.includes(jlpt) ? jlpt : (jlptTabs[0] ?? 5);
+  const kanjiList = kanjiData?.jlpt === effectiveJlpt ? kanjiData.list : [];
+  const loading = kanjiData === null || kanjiData.jlpt !== effectiveJlpt;
 
   const [queue, setQueue] = useState<KanjiEntry[]>([]);
   const [queueIndex, setQueueIndex] = useState(0);
@@ -179,43 +183,30 @@ export function KanjiPage() {
   const advanceRef = useRef<() => void>(() => {});
 
   useEffect(() => {
-    if (!jlptTabs.includes(jlpt)) {
-      setJlpt(jlptTabs[0] ?? 5);
-    }
-  }, [tier]);
-
-  function loadKanji(newJlpt: JlptFilter) {
-    setLoading(true);
-    setSelected(null);
-    fetchKanjiList({ jlpt: newJlpt, limit: 100 })
+    const target = effectiveJlpt;
+    fetchKanjiList({ jlpt: target, limit: 100 })
       .then((first) => {
         if (first.length < 100) {
-          setKanjiList(first);
-          setLoading(false);
+          setKanjiData({ jlpt: target, list: first });
           return;
         }
-        return fetchKanjiList({ jlpt: newJlpt, limit: 100, offset: 100 }).then((second) => {
+        return fetchKanjiList({ jlpt: target, limit: 100, offset: 100 }).then((second) => {
           if (second.length < 100) {
-            setKanjiList([...first, ...second]);
-            setLoading(false);
+            setKanjiData({ jlpt: target, list: [...first, ...second] });
             return;
           }
-          return fetchKanjiList({ jlpt: newJlpt, limit: 100, offset: 200 }).then((third) => {
-            setKanjiList([...first, ...second, ...third]);
-            setLoading(false);
+          return fetchKanjiList({ jlpt: target, limit: 100, offset: 200 }).then((third) => {
+            setKanjiData({ jlpt: target, list: [...first, ...second, ...third] });
           });
         });
       })
-      .catch(() => setLoading(false));
-  }
-
-  useEffect(() => {
-    loadKanji(jlpt);
-  }, [jlpt]);
+      .catch(() => setKanjiData({ jlpt: target, list: [] }));
+  }, [effectiveJlpt]);
 
   function handleJlptChange(newJlpt: JlptFilter) {
     if (newJlpt < maxJlpt) return;
     setJlpt(newJlpt);
+    setSelected(null);
   }
 
   async function startDrill() {
@@ -361,7 +352,7 @@ export function KanjiPage() {
   } else {
     content = (
       <BrowseScreen
-        jlpt={jlpt}
+        jlpt={effectiveJlpt}
         onJlptChange={handleJlptChange}
         kanji={kanjiList}
         loading={loading}
