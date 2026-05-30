@@ -91,7 +91,7 @@ export function ConversationPage() {
   if (!authLoading && user === null) {
     return (
       <PageShell>
-        <div className="mx-auto flex w-full max-w-sm flex-col items-center gap-6 py-16 text-center">
+        <div className="flex w-full flex-col items-center gap-6 py-16 text-center">
           <div className="flex flex-col gap-2">
             <p className="text-heading-sm font-semibold text-fg">Sign in to chat with Hana</p>
             <p className="text-body-sm text-fg-subtle">
@@ -114,7 +114,7 @@ export function ConversationPage() {
   if (screen === "setup") {
     return (
       <PageShell>
-        <div className="mx-auto w-full max-w-xl flex-1">
+        <div className="w-full flex-1">
           <div className="flex flex-col gap-8 py-6">
             <div className="flex flex-col gap-2">
               <p className="text-body text-fg">Practice with Hana, your Japanese conversation partner.</p>

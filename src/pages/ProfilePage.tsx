@@ -15,7 +15,7 @@ const TOTAL_KANA: Record<KanaScript, number> = {
 
 function GuestView() {
   return (
-    <div className="mx-auto w-full max-w-sm py-16">
+    <div className="w-full py-16">
       <div className="flex flex-col gap-8">
         <div className="flex flex-col gap-3">
           <h2 className="text-heading font-semibold text-fg">Your progress</h2>
@@ -135,7 +135,7 @@ function SignedInView() {
   }
 
   return (
-    <div className="mx-auto w-full max-w-2xl py-8">
+    <div className="w-full py-8">
       <div className="flex flex-col gap-8">
 
         {/* Account */}

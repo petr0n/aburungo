@@ -30,7 +30,7 @@ export function Card({ phrase, onRate }: Props) {
   // the state local for clarity).
 
   return (
-    <article className="mx-auto flex w-full max-w-xl flex-col gap-6 rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm">
+    <article className="flex w-full flex-col gap-6 rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm">
       <header className="flex items-start justify-between gap-4">
         <span className="text-xs font-medium uppercase tracking-wider text-zinc-500">{phrase.scenario}</span>
         <AudioButton src={phrase.audioUrl} />
