@@ -11,6 +11,7 @@ type AuthState = {
   initialize: () => void;
   signIn: (email: string, password: string) => Promise<string | null>;
   signUp: (email: string, password: string) => Promise<string | null>;
+  signInWithGoogle: () => Promise<string | null>;
   signOut: () => Promise<void>;
   requestPasswordReset: (email: string) => Promise<string | null>;
   updatePassword: (newPassword: string) => Promise<string | null>;
@@ -63,6 +64,14 @@ export const useAuth = create<AuthState>((set) => ({
     set({ loading: true });
     const { error } = await supabase.auth.signUp({ email, password });
     set({ loading: false });
+    return error?.message ?? null;
+  },
+
+  async signInWithGoogle() {
+    const { error } = await supabase.auth.signInWithOAuth({
+      provider: "google",
+      options: { redirectTo: window.location.origin },
+    });
     return error?.message ?? null;
   },
 
