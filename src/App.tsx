@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import { Routes, Route } from "react-router";
 import { useAuth } from "@/store/auth";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { AdminRoute } from "@/components/AdminRoute";
 import { LandingPage } from "@/pages/LandingPage";
 import { PracticePage } from "@/pages/PracticePage";
@@ -10,6 +9,7 @@ import { KanaPracticePage } from "@/pages/KanaPracticePage";
 import { FlashcardPage } from "@/pages/FlashcardPage";
 import { KanjiPage } from "@/pages/KanjiPage";
 import { ConversationPage } from "@/pages/ConversationPage";
+import { ProfilePage } from "@/pages/ProfilePage";
 import { AdminLayout } from "@/pages/admin/AdminLayout";
 import { AdminUsersPage } from "@/pages/admin/AdminUsersPage";
 import { AdminFeedbackPage } from "@/pages/admin/AdminFeedbackPage";
@@ -35,10 +35,10 @@ export default function App() {
       <Route path="/kanji" element={<KanjiPage />} />
       <Route path="/how-to" element={<HowToPage />} />
 
-      {/* Auth required — Conversation uses Anthropic API (paid cost) */}
-      <Route element={<ProtectedRoute />}>
-        <Route path="/conversation" element={<ConversationPage />} />
-      </Route>
+      {/* Conversation: public route — page handles its own guest gate */}
+      <Route path="/conversation" element={<ConversationPage />} />
+      {/* Profile: public route — page handles guest vs signed-in view */}
+      <Route path="/profile" element={<ProfilePage />} />
 
       {/* Admin only */}
       <Route element={<AdminRoute />}>

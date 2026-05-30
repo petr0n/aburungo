@@ -1,23 +1,23 @@
-import { useState, useEffect, useRef } from "react";
-import { Link } from "react-router";
-import { AppHeader, LoadingPlaceholder, ProgressBar, ScoreCard } from "aburungo-design-system";
-import { fetchKanjiList, fetchDueKanji, submitKanjiReview, type KanjiEntry } from "@/api/kanji";
+import { useState, useEffect, useRef, type ReactNode } from "react";
+import { LoadingPlaceholder, ProgressBar, ScoreCard } from "aburungo-design-system";
+import { fetchKanjiList, fetchDueKanji, submitKanjiReview } from "@/api/kanji";
+import type { KanjiEntry } from "@/api/kanji";
 import { KanjiDrillCard, type DrillPhase } from "@/components/KanjiDrillCard";
 import { useUserTier } from "@/store/auth";
+import { PageShell } from "@/components/PageShell";
 
 type Screen = "browse" | "drill" | "result";
 type JlptFilter = 5 | 4 | 3 | 2 | 1;
 
 const ALL_JLPT_TABS: JlptFilter[] = [5, 4, 3, 2, 1];
 
-/** Highest JLPT number (easiest level) accessible per tier. N5=5, N4=4, etc. */
 const TIER_MAX_JLPT: Record<string, number> = {
   guest: 5,
   free: 4,
   paid: 1,
 };
 
-// --- Furigana helper (also used in browse detail panel) ---
+// --- Browse helpers ---
 
 function parseKun(raw: string): { reading: string; okurigana: string } {
   const [reading, okurigana = ""] = raw.split(".");
@@ -37,9 +37,7 @@ function KunReading({ kanji, raw }: { kanji: string; raw: string }) {
   );
 }
 
-// --- Shuffle ---
-
-function shuffle<T>(arr: readonly T[]): T[] {
+function shuffle<T>(arr: T[]): T[] {
   const a = [...arr];
   for (let i = a.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -50,199 +48,183 @@ function shuffle<T>(arr: readonly T[]): T[] {
 
 // --- Browse screen ---
 
-type BrowseProps = {
+type BrowseScreenProps = {
   jlpt: JlptFilter;
-  onJlptChange: (j: JlptFilter) => void;
+  onJlptChange: (jlpt: JlptFilter) => void;
   kanji: KanjiEntry[];
   loading: boolean;
   selected: KanjiEntry | null;
-  onSelect: (k: KanjiEntry | null) => void;
+  onSelect: (k: KanjiEntry) => void;
   onStartDrill: () => void;
   tabs: JlptFilter[];
 };
 
-function BrowseScreen({ jlpt, onJlptChange, kanji, loading, selected, onSelect, onStartDrill, tabs }: BrowseProps) {
+function BrowseScreen({ jlpt, onJlptChange, kanji, loading, selected, onSelect, onStartDrill, tabs }: BrowseScreenProps) {
   return (
-    <div className="flex flex-1 flex-col gap-4 pb-8">
-      {/* JLPT tabs */}
-      <div className="flex gap-2 overflow-x-auto pb-1">
-        {tabs.map((level) => (
+    <div className="flex flex-1 flex-col gap-4 py-4">
+      <div className="flex gap-2 overflow-x-auto pb-1 scrollbar-none">
+        {tabs.map((n) => (
           <button
-            key={level}
+            key={n}
             type="button"
-            onClick={() => {
-              onJlptChange(level);
-              onSelect(null);
-            }}
+            onClick={() => onJlptChange(n)}
             className={[
-              "flex min-h-[40px] shrink-0 items-center justify-center rounded-xl px-4 text-body-sm font-medium transition-colors",
-              jlpt === level
+              "shrink-0 rounded-full px-4 py-1.5 text-body-sm font-medium transition-colors",
+              jlpt === n
                 ? "bg-brand-600 text-white"
                 : "border border-border bg-surface text-fg-subtle active:bg-surface-2",
             ].join(" ")}
           >
-            N{level}
+            N{n}
           </button>
         ))}
       </div>
 
-      {/* Detail panel */}
-      {selected != null && (
-        <div className="rounded-2xl border border-brand-200 bg-brand-50 p-5">
-          <div className="flex items-start gap-4">
-            <span className="text-[3.5rem] font-medium leading-none text-fg" style={{ fontFamily: "var(--font-jp)" }}>
-              {selected.character}
-            </span>
-            <div className="flex flex-1 flex-col gap-2">
-              <p className="text-body font-semibold text-fg">{selected.meanings.slice(0, 3).join(", ")}</p>
+      {loading ? (
+        <LoadingPlaceholder label="Loading kanji…" />
+      ) : (
+        <div className="flex flex-1 flex-col gap-4 overflow-hidden lg:flex-row">
+          <div className="grid h-fit grid-cols-8 gap-1 sm:grid-cols-10 lg:grid-cols-8">
+            {kanji.map((k) => (
+              <button
+                key={k.id}
+                type="button"
+                onClick={() => onSelect(k)}
+                className={[
+                  "flex aspect-square items-center justify-center rounded-xl text-body-sm transition-colors",
+                  selected?.id === k.id
+                    ? "bg-brand-600 text-white"
+                    : "border border-border bg-surface text-fg active:bg-surface-2",
+                ].join(" ")}
+                style={{ fontFamily: "var(--font-jp)" }}
+              >
+                {k.character}
+              </button>
+            ))}
+          </div>
 
-              {selected.onReadings.length > 0 && (
+          {selected && (
+            <div className="shrink-0 rounded-2xl border border-border bg-surface p-4 lg:w-56">
+              <div className="mb-3 flex items-center gap-3">
+                <span className="text-jp-display font-medium text-fg" style={{ fontFamily: "var(--font-jp)" }}>
+                  {selected.character}
+                </span>
                 <div>
-                  <span className="text-caption font-medium uppercase tracking-wider text-fg-subtle">On </span>
+                  <p className="text-body font-medium text-fg">{selected.meanings.slice(0, 2).join(", ")}</p>
+                  {selected.jlptLevel != null && (
+                    <p className="text-caption text-fg-subtle">N{selected.jlptLevel}</p>
+                  )}
+                </div>
+              </div>
+              {selected.onReadings.length > 0 && (
+                <div className="mb-1">
+                  <span className="text-caption font-medium text-fg-subtle">On: </span>
                   <span className="text-body-sm text-fg" style={{ fontFamily: "var(--font-jp)" }}>
                     {selected.onReadings.join("、")}
                   </span>
                 </div>
               )}
-
               {selected.kunReadings.length > 0 && (
-                <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
-                  <span className="text-caption font-medium uppercase tracking-wider text-fg-subtle">Kun </span>
-                  {selected.kunReadings.slice(0, 4).map((r) => (
-                    <KunReading key={r} kanji={selected.character} raw={r} />
-                  ))}
+                <div className="mb-3">
+                  <span className="text-caption font-medium text-fg-subtle">Kun: </span>
+                  <span className="text-body-sm text-fg">
+                    {selected.kunReadings.map((r, i) => (
+                      <span key={r}>
+                        {i > 0 && "、"}
+                        <KunReading kanji={selected.character} raw={r} />
+                      </span>
+                    ))}
+                  </span>
                 </div>
               )}
-
-              {selected.strokeCount != null && (
-                <p className="text-body-sm text-fg-subtle">{selected.strokeCount} strokes</p>
-              )}
             </div>
-            <button
-              type="button"
-              onClick={() => onSelect(null)}
-              className="flex min-h-[44px] min-w-[44px] items-center justify-center text-fg-subtle active:text-fg"
-            >
-              ✕
-            </button>
-          </div>
+          )}
         </div>
       )}
 
-      {/* Grid */}
-      {loading ? (
-        <LoadingPlaceholder />
-      ) : (
-        <div className="grid grid-cols-5 gap-2">
-          {kanji.map((k) => (
-            <button
-              key={k.id}
-              type="button"
-              onClick={() => onSelect(selected?.id === k.id ? null : k)}
-              className={[
-                "flex min-h-[60px] flex-col items-center justify-center gap-0.5 rounded-xl border transition-colors",
-                selected?.id === k.id ? "border-brand-500 bg-brand-50" : "border-border bg-surface active:bg-surface-2",
-              ].join(" ")}
-            >
-              <span className="text-jp-lg font-medium text-fg" style={{ fontFamily: "var(--font-jp)" }}>
-                {k.character}
-              </span>
-              <span className="max-w-full truncate px-1 text-[0.6rem] text-fg-subtle">{k.meanings[0]}</span>
-            </button>
-          ))}
-        </div>
-      )}
-
-      {/* Drill button */}
-      {!loading && kanji.length > 0 && (
-        <div className="mt-auto">
-          <button
-            type="button"
-            onClick={onStartDrill}
-            className="flex min-h-[52px] w-full items-center justify-center rounded-2xl bg-brand-600 text-body font-semibold text-white active:bg-brand-700"
-          >
-            Drill N{jlpt} — {kanji.length} kanji
-          </button>
-        </div>
-      )}
+      <div className="pb-4">
+        <button
+          type="button"
+          onClick={onStartDrill}
+          disabled={kanji.length === 0}
+          className="flex min-h-[52px] w-full items-center justify-center rounded-2xl bg-brand-600 text-body font-semibold text-white active:bg-brand-700 disabled:opacity-40"
+        >
+          Drill N{jlpt} kanji
+        </button>
+      </div>
     </div>
   );
 }
 
-// --- Main page ---
+// --- Main component ---
 
 export function KanjiPage() {
   const tier = useUserTier();
-  const jlptTabs = ALL_JLPT_TABS.filter((n) => n >= TIER_MAX_JLPT[tier]);
+  const maxJlpt = TIER_MAX_JLPT[tier] ?? 5;
+  const jlptTabs = ALL_JLPT_TABS.filter((n) => n >= maxJlpt);
 
   const [screen, setScreen] = useState<Screen>("browse");
   const [jlpt, setJlpt] = useState<JlptFilter>(5);
-  const [kanjiList, setKanjiList] = useState<KanjiEntry[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [kanjiData, setKanjiData] = useState<{ jlpt: JlptFilter; list: KanjiEntry[] } | null>(null);
   const [selected, setSelected] = useState<KanjiEntry | null>(null);
 
-  // Drill state
+  // Derive effectiveJlpt so tier changes never need a setState-in-effect
+  const effectiveJlpt: JlptFilter = jlptTabs.includes(jlpt) ? jlpt : (jlptTabs[0] ?? 5);
+  const kanjiList = kanjiData?.jlpt === effectiveJlpt ? kanjiData.list : [];
+  const loading = kanjiData === null || kanjiData.jlpt !== effectiveJlpt;
+
   const [queue, setQueue] = useState<KanjiEntry[]>([]);
   const [queueIndex, setQueueIndex] = useState(0);
-  const [correctCount, setCorrectCount] = useState(0);
-  const [missed, setMissed] = useState<KanjiEntry[]>([]);
   const [phase, setPhase] = useState<DrillPhase>("entering");
   const [stagedKanji, setStagedKanji] = useState<KanjiEntry | null>(null);
-  const [pendingCorrect, setPendingCorrect] = useState<boolean | null>(null);
+  const [correctCount, setCorrectCount] = useState(0);
+  const [missed, setMissed] = useState<KanjiEntry[]>([]);
 
   const advanceRef = useRef<() => void>(() => {});
 
-  function handleJlptChange(newJlpt: JlptFilter) {
-    setJlpt(newJlpt);
-    setLoading(true);
-    setKanjiList([]);
-  }
-
-  // Load kanji when JLPT filter changes
   useEffect(() => {
-    // Fetch up to 500 per level — N1 has ~1200 so we cap and note it
-    fetchKanjiList({ jlpt, limit: 100, offset: 0 })
+    const target = effectiveJlpt;
+    fetchKanjiList({ jlpt: target, limit: 100 })
       .then((first) => {
         if (first.length < 100) {
-          setKanjiList(first);
-          setLoading(false);
+          setKanjiData({ jlpt: target, list: first });
           return;
         }
-        // Fetch remaining pages
-        return fetchKanjiList({ jlpt, limit: 100, offset: 100 }).then((second) => {
+        return fetchKanjiList({ jlpt: target, limit: 100, offset: 100 }).then((second) => {
           if (second.length < 100) {
-            setKanjiList([...first, ...second]);
-            setLoading(false);
+            setKanjiData({ jlpt: target, list: [...first, ...second] });
             return;
           }
-          return fetchKanjiList({ jlpt, limit: 100, offset: 200 }).then((third) => {
-            setKanjiList([...first, ...second, ...third]);
-            setLoading(false);
+          return fetchKanjiList({ jlpt: target, limit: 100, offset: 200 }).then((third) => {
+            setKanjiData({ jlpt: target, list: [...first, ...second, ...third] });
           });
         });
       })
-      .catch(() => setLoading(false));
-  }, [jlpt]);
+      .catch(() => setKanjiData({ jlpt: target, list: [] }));
+  }, [effectiveJlpt]);
+
+  function handleJlptChange(newJlpt: JlptFilter) {
+    if (newJlpt < maxJlpt) return;
+    setJlpt(newJlpt);
+    setSelected(null);
+  }
 
   async function startDrill() {
     let q: KanjiEntry[];
     try {
-      const due = await fetchDueKanji(100);
-      const kanjiMap = new Map(kanjiList.map((k) => [k.id, k]));
-      const dueIdSet = new Set(due.map((d) => d.kanjiId));
-      const dueQueue = due.map((d) => kanjiMap.get(d.kanjiId)).filter((k): k is KanjiEntry => k !== undefined);
-      const newQueue = shuffle(kanjiList.filter((k) => !dueIdSet.has(k.id)));
-      q = [...dueQueue, ...newQueue];
+      const due = await fetchDueKanji();
+      const dueIds = new Set(due.map((d) => d.kanjiId));
+      const dueKanji = kanjiList.filter((k) => dueIds.has(k.id));
+      q = dueKanji.length > 0 ? dueKanji : shuffle([...kanjiList]).slice(0, 20);
     } catch {
-      q = shuffle(kanjiList);
+      q = shuffle([...kanjiList]).slice(0, 20);
     }
     setQueue(q);
     setQueueIndex(0);
     setCorrectCount(0);
     setMissed([]);
-    setPhase("entering");
     setStagedKanji(null);
-    setPendingCorrect(null);
+    setPhase("entering");
     setScreen("drill");
   }
 
@@ -252,33 +234,25 @@ export function KanjiPage() {
 
   function handleRate(correct: boolean) {
     const current = queue[queueIndex];
-    if (current) {
-      void submitKanjiReview(current.id, correct ? "good" : "again", Date.now());
+    if (!current) return;
+    if (correct) {
+      setCorrectCount((n) => n + 1);
+    } else {
+      setMissed((m) => [...m, current]);
     }
-    setStagedKanji(current ?? null);
-    setPendingCorrect(correct);
+    void submitKanjiReview(current.id, correct ? "good" : "again", Date.now()).catch(() => {});
     setPhase("exiting");
   }
 
   function advance() {
-    const correct = pendingCorrect ?? false;
-    const current = stagedKanji ?? queue[queueIndex];
-
-    if (correct) {
-      setCorrectCount((n) => n + 1);
-    } else if (current) {
-      setMissed((m) => [...m, current]);
-    }
-
     const nextIndex = queueIndex + 1;
     if (nextIndex >= queue.length) {
       setScreen("result");
       return;
     }
-
+    setStagedKanji(queue[nextIndex] ?? null);
     setQueueIndex(nextIndex);
     setStagedKanji(null);
-    setPendingCorrect(null);
     setPhase("entering");
   }
   useEffect(() => {
@@ -295,119 +269,100 @@ export function KanjiPage() {
 
   const displayKanji = stagedKanji ?? queue[queueIndex] ?? null;
 
-  // --- Header ---
-  const header = (
-    <AppHeader
-      title="Kanji"
-      left={
-        screen === "browse" ? (
-          <Link to="/practice" className="flex min-h-[44px] items-center text-body-sm text-fg-subtle active:text-fg">
-            ← Back
-          </Link>
-        ) : (
+  // ── Screen content ────────────────────────────────────────────────────────
+
+  let content: ReactNode;
+
+  if (screen === "result") {
+    content = (
+      <div className="flex flex-col gap-6 py-4">
+        <ScoreCard correct={correctCount} total={queue.length}>
+          {missed.length > 0 && (
+            <section>
+              <p className="mb-3 text-body-sm font-medium text-fg-subtle">Missed — {missed.length}</p>
+              <div className="grid grid-cols-4 gap-2">
+                {missed.map((k) => (
+                  <div
+                    key={k.id}
+                    className="flex flex-col items-center gap-1 rounded-xl border border-border bg-surface py-3"
+                  >
+                    <span className="text-jp-lg font-medium text-fg" style={{ fontFamily: "var(--font-jp)" }}>
+                      {k.character}
+                    </span>
+                    <span className="px-1 text-center text-[0.65rem] leading-tight text-fg-subtle">
+                      {k.meanings[0]}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
+        </ScoreCard>
+
+        <div className="flex flex-col gap-3 pb-8">
+          <button
+            type="button"
+            onClick={startDrill}
+            className="flex min-h-[52px] w-full items-center justify-center rounded-2xl bg-brand-600 text-body font-semibold text-white active:bg-brand-700"
+          >
+            Drill again
+          </button>
+          <button
+            type="button"
+            onClick={() => setScreen("browse")}
+            className="flex min-h-[52px] w-full items-center justify-center rounded-2xl border border-border bg-surface text-body font-medium text-fg active:bg-surface-2"
+          >
+            Back to browse
+          </button>
+        </div>
+      </div>
+    );
+  } else if (screen === "drill") {
+    content = (
+      <div className="flex flex-col">
+        <div className="flex items-center justify-between py-2">
           <button
             type="button"
             onClick={() => setScreen("browse")}
             className="flex min-h-[44px] items-center text-body-sm text-fg-subtle active:text-fg"
           >
-            {screen === "result" ? "← Browse" : "✕ Quit"}
+            ✕ Quit
           </button>
-        )
-      }
-      right={
-        screen === "drill" ? (
           <p className="text-body-sm text-fg-subtle">
             {queueIndex + 1} / {queue.length}
           </p>
-        ) : undefined
-      }
-    />
-  );
-
-  // --- Drill progress bar ---
-  const progressBar = screen === "drill" ? <ProgressBar value={(queueIndex + 1) / queue.length} /> : null;
-
-  // --- Result screen ---
-  if (screen === "result") {
-    return (
-      <main className="mx-auto flex min-h-svh w-full max-w-xl flex-col px-4">
-        {header}
-        <div className="flex flex-1 flex-col gap-6 py-4">
-          <ScoreCard correct={correctCount} total={queue.length}>
-            {missed.length > 0 && (
-              <section>
-                <p className="mb-3 text-body-sm font-medium text-fg-subtle">Missed — {missed.length}</p>
-                <div className="grid grid-cols-4 gap-2">
-                  {missed.map((k) => (
-                    <div
-                      key={k.id}
-                      className="flex flex-col items-center gap-1 rounded-xl border border-border bg-surface py-3"
-                    >
-                      <span className="text-jp-lg font-medium text-fg" style={{ fontFamily: "var(--font-jp)" }}>
-                        {k.character}
-                      </span>
-                      <span className="px-1 text-center text-[0.65rem] leading-tight text-fg-subtle">
-                        {k.meanings[0]}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </section>
-            )}
-          </ScoreCard>
-
-          <div className="mt-auto flex flex-col gap-3 pb-8">
-            <button
-              type="button"
-              onClick={startDrill}
-              className="flex min-h-[52px] w-full items-center justify-center rounded-2xl bg-brand-600 text-body font-semibold text-white active:bg-brand-700"
-            >
-              Drill again
-            </button>
-            <button
-              type="button"
-              onClick={() => setScreen("browse")}
-              className="flex min-h-[52px] w-full items-center justify-center rounded-2xl border border-border bg-surface text-body font-medium text-fg active:bg-surface-2"
-            >
-              Back to browse
-            </button>
-          </div>
+          <div className="w-14" />
         </div>
-      </main>
+        <ProgressBar value={(queueIndex + 1) / queue.length} />
+        <div className="flex flex-col justify-center py-6">
+          {displayKanji && (
+            <KanjiDrillCard
+              key={displayKanji.id}
+              kanji={displayKanji}
+              phase={phase}
+              onReveal={handleReveal}
+              onRate={handleRate}
+              onEntered={handleEntered}
+              onExited={handleExited}
+            />
+          )}
+        </div>
+      </div>
+    );
+  } else {
+    content = (
+      <BrowseScreen
+        jlpt={effectiveJlpt}
+        onJlptChange={handleJlptChange}
+        kanji={kanjiList}
+        loading={loading}
+        selected={selected}
+        onSelect={setSelected}
+        onStartDrill={startDrill}
+        tabs={jlptTabs}
+      />
     );
   }
 
-  return (
-    <main className="mx-auto flex min-h-svh w-full max-w-xl flex-col px-4">
-      {header}
-      {progressBar}
-
-      {screen === "browse" && (
-        <BrowseScreen
-          jlpt={jlpt}
-          onJlptChange={handleJlptChange}
-          kanji={kanjiList}
-          loading={loading}
-          selected={selected}
-          onSelect={setSelected}
-          onStartDrill={startDrill}
-          tabs={jlptTabs}
-        />
-      )}
-
-      {screen === "drill" && displayKanji != null && (
-        <div className="flex flex-1 flex-col justify-center py-6">
-          <KanjiDrillCard
-            key={displayKanji.id}
-            kanji={displayKanji}
-            phase={phase}
-            onReveal={handleReveal}
-            onRate={handleRate}
-            onEntered={handleEntered}
-            onExited={handleExited}
-          />
-        </div>
-      )}
-    </main>
-  );
+  return <PageShell>{content}</PageShell>;
 }
