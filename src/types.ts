@@ -129,9 +129,37 @@ export type Card = {
 /** FSRS card states as returned by the server. */
 export type FsrsState = "new" | "learning" | "review" | "relearning";
 
+export type KanaScript = "hiragana" | "katakana";
+
+export type KanaProgressEntry = {
+  character: string;
+  script: KanaScript;
+  recognizedCount: number;
+  recalledCount: number;
+  lastSeenAt: string | null;
+};
+
+export type KanaScriptStats = {
+  recognized: number;
+  recalled: number;
+};
+
+export type PhraseLevelStats = {
+  reviewed: number;
+  mastered: number;
+};
+
+export type KanjiLevelStats = {
+  reviewed: number;
+  mastered: number;
+};
+
 export type ProgressStats = {
   streak: number;
   reviewedToday: number;
   totalReviewed: number;
   masteryBreakdown: Record<FsrsState, number>;
+  phrases: Record<number, PhraseLevelStats>;
+  kana: Record<KanaScript, KanaScriptStats>;
+  kanji: Record<number, KanjiLevelStats>;
 };

@@ -2,6 +2,7 @@ import { useState, useRef, useEffect, type ReactNode } from "react";
 import { ProgressBar, ScoreCard } from "aburungo-design-system";
 import { KANA_PRACTICE_CARDS, type KanaPracticeCard } from "@/lib/kanaData";
 import { PageShell, SectionNav } from "@/components/PageShell";
+import { ProgressWidget } from "@/components/ProgressWidget";
 
 type PracticeMode = "multiple-choice" | "type-romaji";
 type SetKey = "basic" | "voiced" | "combos";
@@ -422,7 +423,14 @@ export function KanaPracticePage() {
   }
 
   return (
-    <PageShell sideNav={<SectionNav links={SECTION_LINKS} />}>
+    <PageShell
+      sideNav={
+        <div className="flex flex-col gap-6">
+          <SectionNav links={SECTION_LINKS} />
+          <ProgressWidget section="kana" />
+        </div>
+      }
+    >
       {content}
     </PageShell>
   );
