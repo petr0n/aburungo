@@ -227,4 +227,95 @@ The command was kept to 237 characters, under Vercel's 256-character schema limi
 
 ---
 
+## DR-008 — Navigation layout: persistent PageShell with sidebar
+
+**Date:** 2026-05-30
+**Status:** Active
+
+**Context:**
+Each page was managing its own header and layout independently. As the number of routes
+grew (practice, flashcard, kana, kanji, conversation, profile), the lack of a shared shell
+produced inconsistent spacing, duplicate header markup, and no obvious place to add
+cross-page features like progress stats.
+
+Two content-width constants had also drifted — some pages used `max-w-xl` (576px) and
+others used wider values, making the desktop experience inconsistent.
+
+**Decision:**
+Introduce `src/components/PageShell.tsx` as the single shared layout wrapper:
+- Two-row header: row 1 = logo + account chip; row 2 = main nav tabs with active
+  underline indicator.
+- Max content width set to `max-w-5xl` (1024px) across all pages.
+- Right sidebar column always present on desktop (lg breakpoint). Pages with sibling
+  practice modes render a `SectionNav` component in the sidebar ("IN THIS SECTION"
+  sub-nav). All pages will eventually show progress stats there.
+- `/conversation` no longer uses `ProtectedRoute` hard-redirect for guests; instead
+  shows an inline soft prompt — consistent with the product rule "soft inline prompt,
+  never a hard redirect".
+- `/profile` added as a public route: guests see a sign-in prompt, logged-in users see
+  their progress dashboard and account info. Linked from the account chip.
+
+**Consequences:**
+- Header and nav changes now happen in one file.
+- Sidebar is available as a consistent slot for future widgets (progress bars, tips,
+  section links) without per-page scaffold changes.
+- `max-w-5xl` gives more breathing room on tablet and desktop without breaking the
+  mobile layout.
+- Any route that previously relied on `ProtectedRoute` for a hard redirect must be
+  audited — the convention is now always a soft inline prompt.
+
+---
+
+## DR-009 — Progress tracking: localStorage-first with server mirror
+
+**Date:** 2026-05-30
+**Status:** Active (design locked; implementation in progress)
+
+**Context:**
+Progress data was not being tracked in a consistent shape across phrase, kana, and kanji
+modes. Guests had no persistence at all for kana. The sidebar needed a progress widget,
+the profile page needed a full stats view, and the reset-controls UX required a clear
+owner for the data.
+
+Several design questions were resolved:
+- Should guests get progress tracking at all? Yes — local-only, with sync as the
+  incentive to sign up.
+- Single localStorage key or per-feature keys? Single key with a versioned envelope,
+  easier to migrate.
+- What counts as "mastered" vs "reviewed/seen"? Deliberate two-threshold model: light
+  fill = reviewed/seen, dark fill = mastered/recalled.
+
+**Decision:**
+Use a single localStorage key `aburungo_progress` (versioned envelope, version 1) as
+the canonical store for guests. For signed-in users the same shape is mirrored to the
+server via `/api/progress/stats` (extended) and a Zustand progress store that dual-writes.
+
+Data shape:
+- `phrases` — per-JLPT-tier: `reviewed`, `mastered`, `total`
+- `kana` — per script per set: `correct`, `total` (aggregate); per character:
+  `recognized` (threshold 3, multiple-choice mode) and `recalled` (threshold 3,
+  type-romaji mode), stored in `user_kana_progress` DB table for signed-in users
+- `kanji` — per-JLPT-tier: `seen`, `mastered`, `total`
+
+Progress bar widget is two-tone (light = reviewed/seen, dark = mastered/recalled) and
+context-sensitive — shows only the data relevant to the current page section.
+
+Reset controls: per script (hiragana / katakana) + full reset, with confirmation dialog.
+For signed-in users the reset wipes the corresponding `user_kana_progress` server rows.
+
+`user_card_progress` and `user_kanji_progress` tables already exist in the schema.
+`user_kana_progress` requires a new migration (not yet written).
+
+**Consequences:**
+- Guests get persistent, meaningful progress tracking immediately.
+- The sync incentive (sign up to keep progress across devices) remains intact.
+- `/api/progress/stats` needs extension: currently returns global counts; must return
+  per-tier phrase + kanji + kana breakdowns.
+- A new `user_kana_progress` migration must be written before kana tracking can be
+  server-backed.
+- The two-tone progress bar widget is reusable across practice, flashcard, kana, and
+  kanji sidebar slots with only the data source changing.
+
+---
+
 *New decisions should be appended with the next DR-NNN number and today's date.*

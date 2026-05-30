@@ -57,3 +57,10 @@ button,
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
 }
+
+.scrollbar-none {
+  scrollbar-width: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}

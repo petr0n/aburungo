@@ -1,7 +1,7 @@
-import { useState, useRef, useEffect } from "react";
-import { Link } from "react-router";
-import { AppHeader, ProgressBar, ScoreCard } from "aburungo-design-system";
+import { useState, useRef, useEffect, type ReactNode } from "react";
+import { ProgressBar, ScoreCard } from "aburungo-design-system";
 import { KANA_PRACTICE_CARDS, type KanaPracticeCard } from "@/lib/kanaData";
+import { PageShell, SectionNav } from "@/components/PageShell";
 
 type PracticeMode = "multiple-choice" | "type-romaji";
 type SetKey = "basic" | "voiced" | "combos";
@@ -19,6 +19,11 @@ const SCRIPT_META: Record<ScriptKey, { label: string; sub: string }> = {
   hiragana: { label: "Hiragana", sub: "あいう" },
   katakana: { label: "Katakana", sub: "アイウ" },
 };
+
+const SECTION_LINKS = [
+  { to: "/flashcard", label: "Flashcards" },
+  { to: "/practice", label: "Fill-In" },
+];
 
 function shuffle<T>(arr: readonly T[]): T[] {
   const a = [...arr];
@@ -161,20 +166,15 @@ export function KanaPracticePage() {
     (c) => selectedSets.has(c.group) && selectedScripts.has(c.script),
   ).length;
 
-  // --- SETUP ---
-  if (screen === "setup") {
-    return (
-      <main className="mx-auto flex min-h-svh w-full max-w-xl flex-col px-4">
-        <AppHeader
-          title="Kana Practice"
-          left={
-            <Link to="/practice" className="flex min-h-[44px] items-center text-body-sm text-fg-subtle active:text-fg">
-              ← Back
-            </Link>
-          }
-        />
+  // ── Screen content ──────────────────────────────────────────────────────
 
-        <div className="flex flex-1 flex-col gap-6 py-2">
+  let content: ReactNode;
+
+  if (screen === "setup") {
+    content = (
+      <div className="mx-auto w-full max-w-xl">
+        <h2 className="mb-6 text-heading-sm font-semibold text-fg">Kana Practice</h2>
+        <div className="flex flex-col gap-6">
           <section>
             <p className="mb-3 text-body-sm font-medium text-fg-subtle">Mode</p>
             <div className="grid grid-cols-2 gap-2">
@@ -246,27 +246,20 @@ export function KanaPracticePage() {
             </div>
           </section>
 
-          <div className="mt-auto pb-8">
-            <button
-              type="button"
-              onClick={startSession}
-              className="flex min-h-[52px] w-full items-center justify-center rounded-2xl bg-brand-600 text-body font-semibold text-white active:bg-brand-700"
-            >
-              Start — {totalSelected} kana
-            </button>
-          </div>
+          <button
+            type="button"
+            onClick={startSession}
+            className="flex min-h-[52px] w-full items-center justify-center rounded-2xl bg-brand-600 text-body font-semibold text-white active:bg-brand-700"
+          >
+            Start — {totalSelected} kana
+          </button>
         </div>
-      </main>
+      </div>
     );
-  }
-
-  // --- RESULT ---
-  if (screen === "result") {
-    return (
-      <main className="mx-auto flex min-h-svh w-full max-w-xl flex-col px-4">
-        <AppHeader title="Kana Practice" />
-
-        <div className="flex flex-1 flex-col gap-6 py-2">
+  } else if (screen === "result") {
+    content = (
+      <div className="mx-auto w-full max-w-xl">
+        <div className="flex flex-col gap-6">
           <ScoreCard correct={correctCount} total={queue.length}>
             {missed.length > 0 && (
               <section>
@@ -288,7 +281,7 @@ export function KanaPracticePage() {
             )}
           </ScoreCard>
 
-          <div className="mt-auto flex flex-col gap-3 pb-8">
+          <div className="flex flex-col gap-3">
             <button
               type="button"
               onClick={startSession}
@@ -305,127 +298,132 @@ export function KanaPracticePage() {
             </button>
           </div>
         </div>
-      </main>
+      </div>
     );
-  }
+  } else if (currentCard !== null) {
+    const cardBorderClass =
+      answered === "correct"
+        ? "border-success-500 bg-success-bg"
+        : answered === "wrong"
+          ? "border-error-500 bg-error-bg"
+          : "border-border bg-surface";
 
-  // --- PRACTICE ---
-  if (!currentCard) return null;
-
-  const cardBorderClass =
-    answered === "correct"
-      ? "border-success-500 bg-success-bg"
-      : answered === "wrong"
-        ? "border-error-500 bg-error-bg"
-        : "border-border bg-surface";
-
-  return (
-    <main className="mx-auto flex min-h-svh w-full max-w-xl flex-col px-4">
-      <header className="flex items-center justify-between py-4">
-        <button
-          type="button"
-          onClick={() => {
-            if (timerRef.current) clearTimeout(timerRef.current);
-            setScreen("setup");
-          }}
-          className="flex min-h-[44px] items-center text-body-sm text-fg-subtle active:text-fg"
-        >
-          ✕ Quit
-        </button>
-        <p className="text-body-sm text-fg-subtle">
-          {queueIndex + 1} / {queue.length}
-        </p>
-        <div className="w-14" />
-      </header>
-
-      <ProgressBar value={(queueIndex + 1) / queue.length} />
-
-      <div className="flex flex-1 flex-col items-center justify-center gap-8 py-8">
-        <div
-          className={`flex h-40 w-40 items-center justify-center rounded-3xl border-2 transition-colors duration-150 ${cardBorderClass}`}
-        >
-          <span className="text-jp-display-lg" style={{ fontFamily: "var(--font-jp)" }}>
-            {currentCard.kana}
-          </span>
+    content = (
+      <div className="mx-auto flex w-full max-w-xl flex-col gap-6">
+        <div className="flex items-center justify-between">
+          <button
+            type="button"
+            onClick={() => {
+              if (timerRef.current) clearTimeout(timerRef.current);
+              setScreen("setup");
+            }}
+            className="flex min-h-[44px] items-center text-body-sm text-fg-subtle active:text-fg"
+          >
+            ✕ Quit
+          </button>
+          <p className="text-body-sm text-fg-subtle">
+            {queueIndex + 1} / {queue.length}
+          </p>
+          <div className="w-14" />
         </div>
 
-        {practiceMode === "multiple-choice" ? (
-          <div className="grid w-full grid-cols-2 gap-3">
-            {choices.map((choice) => {
-              let cls = "border-border bg-surface text-fg active:bg-surface-2";
-              if (answered !== null) {
-                if (choice === currentCard.romaji) {
-                  cls = "border-success-500 bg-success-bg text-success-fg";
-                } else if (choice === selectedChoice) {
-                  cls = "border-error-500 bg-error-bg text-error-fg";
-                }
-              }
-              return (
-                <button
-                  key={choice}
-                  type="button"
-                  onClick={() => handleChoice(choice)}
-                  disabled={answered !== null}
-                  className={`flex min-h-[60px] items-center justify-center rounded-2xl border text-body font-medium transition-colors ${cls}`}
-                >
-                  {choice}
-                </button>
-              );
-            })}
-          </div>
-        ) : (
-          <div className="flex w-full flex-col gap-3">
-            <div className="flex gap-2">
-              <input
-                ref={inputRef}
-                type="text"
-                inputMode="text"
-                autoCapitalize="none"
-                autoCorrect="off"
-                autoComplete="off"
-                value={typeInput}
-                onChange={(e) => setTypeInput(e.target.value)}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter") handleTypeSubmit();
-                }}
-                disabled={answered !== null}
-                placeholder="type romaji…"
-                className={[
-                  "min-h-[52px] flex-1 rounded-2xl border px-4 text-body outline-none transition-colors",
-                  answered === "correct"
-                    ? "border-success-500 bg-success-bg text-success-fg"
-                    : answered === "wrong"
-                      ? "border-error-500 bg-error-bg text-error-fg"
-                      : "border-border bg-surface text-fg focus:border-brand-500",
-                ].join(" ")}
-              />
-              <button
-                type="button"
-                onClick={handleTypeSubmit}
-                disabled={answered !== null || !typeInput.trim()}
-                className="flex min-h-[52px] items-center justify-center rounded-2xl bg-brand-600 px-5 text-body font-semibold text-white disabled:opacity-40 active:bg-brand-700"
-              >
-                Go
-              </button>
-            </div>
+        <ProgressBar value={(queueIndex + 1) / queue.length} />
 
-            {answered === "wrong" && (
-              <div className="flex flex-col items-center gap-3">
-                <p className="text-body-sm text-error-fg">
-                  Answer: <span className="font-semibold">{currentCard.romaji}</span>
-                </p>
+        <div className="flex flex-col items-center gap-8 py-4">
+          <div
+            className={`flex h-40 w-40 items-center justify-center rounded-3xl border-2 transition-colors duration-150 ${cardBorderClass}`}
+          >
+            <span className="text-jp-display-lg" style={{ fontFamily: "var(--font-jp)" }}>
+              {currentCard.kana}
+            </span>
+          </div>
+
+          {practiceMode === "multiple-choice" ? (
+            <div className="grid w-full grid-cols-2 gap-3">
+              {choices.map((choice) => {
+                let cls = "border-border bg-surface text-fg active:bg-surface-2";
+                if (answered !== null) {
+                  if (choice === currentCard.romaji) {
+                    cls = "border-success-500 bg-success-bg text-success-fg";
+                  } else if (choice === selectedChoice) {
+                    cls = "border-error-500 bg-error-bg text-error-fg";
+                  }
+                }
+                return (
+                  <button
+                    key={choice}
+                    type="button"
+                    onClick={() => handleChoice(choice)}
+                    disabled={answered !== null}
+                    className={`flex min-h-[60px] items-center justify-center rounded-2xl border text-body font-medium transition-colors ${cls}`}
+                  >
+                    {choice}
+                  </button>
+                );
+              })}
+            </div>
+          ) : (
+            <div className="flex w-full flex-col gap-3">
+              <div className="flex gap-2">
+                <input
+                  ref={inputRef}
+                  type="text"
+                  inputMode="text"
+                  autoCapitalize="none"
+                  autoCorrect="off"
+                  autoComplete="off"
+                  value={typeInput}
+                  onChange={(e) => setTypeInput(e.target.value)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter") handleTypeSubmit();
+                  }}
+                  disabled={answered !== null}
+                  placeholder="type romaji…"
+                  className={[
+                    "min-h-[52px] flex-1 rounded-2xl border px-4 text-body outline-none transition-colors",
+                    answered === "correct"
+                      ? "border-success-500 bg-success-bg text-success-fg"
+                      : answered === "wrong"
+                        ? "border-error-500 bg-error-bg text-error-fg"
+                        : "border-border bg-surface text-fg focus:border-brand-500",
+                  ].join(" ")}
+                />
                 <button
                   type="button"
-                  onClick={() => advanceRef.current()}
-                  className="flex min-h-[48px] w-full items-center justify-center rounded-2xl border border-border bg-surface text-body font-medium text-fg active:bg-surface-2"
+                  onClick={handleTypeSubmit}
+                  disabled={answered !== null || !typeInput.trim()}
+                  className="flex min-h-[52px] items-center justify-center rounded-2xl bg-brand-600 px-5 text-body font-semibold text-white disabled:opacity-40 active:bg-brand-700"
                 >
-                  Next →
+                  Go
                 </button>
               </div>
-            )}
-          </div>
-        )}
+
+              {answered === "wrong" && (
+                <div className="flex flex-col items-center gap-3">
+                  <p className="text-body-sm text-error-fg">
+                    Answer: <span className="font-semibold">{currentCard.romaji}</span>
+                  </p>
+                  <button
+                    type="button"
+                    onClick={() => advanceRef.current()}
+                    className="flex min-h-[48px] w-full items-center justify-center rounded-2xl border border-border bg-surface text-body font-medium text-fg active:bg-surface-2"
+                  >
+                    Next →
+                  </button>
+                </div>
+              )}
+            </div>
+          )}
+        </div>
       </div>
-    </main>
+    );
+  } else {
+    content = null;
+  }
+
+  return (
+    <PageShell sideNav={<SectionNav links={SECTION_LINKS} />}>
+      {content}
+    </PageShell>
   );
 }
