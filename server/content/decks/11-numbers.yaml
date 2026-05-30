@@ -4,6 +4,7 @@ title_ja: 数字・助数詞
 description: Numbers, prices, telling the time, basic counters, and quantity phrases
 display_order: 11
 
+jlpt_level: 5
 cards:
   - japanese: 一、二、三、四、五
     reading: いち、に、さん、し、ご

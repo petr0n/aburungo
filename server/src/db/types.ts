@@ -10,6 +10,7 @@ export type DeckRow = {
   title_ja: string
   description: string | null
   display_order: number
+  jlpt_level: number | null
   created_at: string
 }
 
@@ -65,4 +66,15 @@ export type UserKanjiProgressRow = {
   lapses: number
   due_at: string
   last_review_at: string | null
+}
+
+export type UserKanaProgressRow = {
+  id: string
+  user_id: string
+  character: string
+  script: 'hiragana' | 'katakana'
+  recognized_count: number
+  recalled_count: number
+  last_seen_at: string | null
+  created_at: string
 }

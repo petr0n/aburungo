@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { Routes, Route } from "react-router";
 import { useAuth } from "@/store/auth";
+import { useProgress } from "@/store/progress";
 import { AdminRoute } from "@/components/AdminRoute";
 import { LandingPage } from "@/pages/LandingPage";
 import { PracticePage } from "@/pages/PracticePage";
@@ -20,10 +21,21 @@ import { AdminLogsPage } from "@/pages/admin/AdminLogsPage";
 
 export default function App() {
   const initialize = useAuth((s) => s.initialize);
+  const authLoading = useAuth((s) => s.loading);
+  const user = useAuth((s) => s.user);
+  const loadStats = useProgress((s) => s.loadStats);
+  const loadKana = useProgress((s) => s.loadKana);
 
   useEffect(() => {
     initialize();
   }, [initialize]);
+
+  useEffect(() => {
+    if (authLoading) return;
+    const userId = user?.id ?? null;
+    void loadKana(userId);
+    void loadStats(userId);
+  }, [authLoading, user?.id, loadKana, loadStats]);
 
   return (
     <Routes>

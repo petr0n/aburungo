@@ -4,6 +4,7 @@ title_ja: 時間・日付
 description: Telling the time, days of the week, months, and scheduling
 display_order: 12
 
+jlpt_level: 5
 cards:
   - japanese: 今、何時ですか
     reading: いま、なんじですか

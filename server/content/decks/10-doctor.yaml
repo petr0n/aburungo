@@ -4,6 +4,7 @@ title_ja: 病院・薬局
 description: Describing symptoms, visiting a clinic, getting medicine, and prescriptions
 display_order: 10
 
+jlpt_level: 5
 cards:
   - japanese: 具合が悪いです
     reading: ぐあいがわるいです

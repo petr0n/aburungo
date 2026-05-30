@@ -4,6 +4,7 @@ title_ja: 交通機関
 description: Trains, buses, taxis, asking for directions, and IC cards
 display_order: 3
 
+jlpt_level: 5
 cards:
   - japanese: 駅はどこですか
     reading: えきはどこですか

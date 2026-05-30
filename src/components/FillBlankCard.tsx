@@ -67,7 +67,7 @@ export function FillBlankCard({ card, onNext }: Props) {
     );
 
   return (
-    <Card className="mx-auto w-full max-w-xl">
+    <Card className="w-full">
       <div className="flex flex-col gap-6">
         <header className="flex items-center justify-between gap-4">
           <Badge emphasis>{card.scenario.charAt(0).toUpperCase() + card.scenario.slice(1)}</Badge>

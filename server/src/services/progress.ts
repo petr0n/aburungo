@@ -42,7 +42,7 @@ function rowToCard(row: UserCardProgressRow): Card {
   }
 }
 
-// --- Public API ---
+// --- Public types ---
 
 export type DueCard = {
   cardId: string
@@ -61,12 +61,29 @@ export type ReviewResult = {
   lapses: number
 }
 
+export type KanaProgressEntry = {
+  character: string
+  script: 'hiragana' | 'katakana'
+  recognizedCount: number
+  recalledCount: number
+  lastSeenAt: string | null
+}
+
+export type KanaScriptStats = { recognized: number; recalled: number }
+export type PhraseLevelStats = { reviewed: number; mastered: number }
+export type KanjiLevelStats = { reviewed: number; mastered: number }
+
 export type StatsResult = {
   streak: number
   reviewedToday: number
   totalReviewed: number
   masteryBreakdown: Record<FsrsState, number>
+  phrases: Record<number, PhraseLevelStats>
+  kana: Record<'hiragana' | 'katakana', KanaScriptStats>
+  kanji: Record<number, KanjiLevelStats>
 }
+
+// --- Card progress ---
 
 export async function getDueCards(userId: string, limit: number): Promise<DueCard[]> {
   const { data, error } = await supabase
@@ -96,7 +113,6 @@ export async function submitReview(
   const now = new Date(reviewedAt)
   const fsrsRating = RATING_MAP[rating]
 
-  // Load existing progress or start fresh
   const { data: existing } = await supabase
     .from('user_card_progress')
     .select('*')
@@ -107,10 +123,8 @@ export async function submitReview(
   const currentCard = existing ? rowToCard(existing as UserCardProgressRow) : createEmptyCard(now)
   const result = scheduler.repeat(currentCard, now)
   const next = result[fsrsRating].card
-
   const nextState = STATE_TO_DB[next.state]
 
-  // Upsert progress
   const { error: upsertError } = await supabase.from('user_card_progress').upsert(
     {
       user_id: userId,
@@ -130,7 +144,6 @@ export async function submitReview(
 
   if (upsertError) throw new Error(upsertError.message)
 
-  // Append review log
   await supabase.from('review_logs').insert({
     user_id: userId,
     card_id: cardId,
@@ -151,12 +164,96 @@ export async function submitReview(
   }
 }
 
+// --- Kana progress ---
+
+export async function upsertKanaProgress(
+  userId: string,
+  character: string,
+  script: 'hiragana' | 'katakana',
+  mode: 'recognized' | 'recalled',
+  correct: boolean,
+): Promise<KanaProgressEntry> {
+  const now = new Date().toISOString()
+
+  const { data: existing } = await supabase
+    .from('user_kana_progress')
+    .select('*')
+    .eq('user_id', userId)
+    .eq('character', character)
+    .single()
+
+  const currentRecognized = (existing?.recognized_count as number | undefined) ?? 0
+  const currentRecalled = (existing?.recalled_count as number | undefined) ?? 0
+
+  const updates = {
+    user_id: userId,
+    character,
+    script,
+    recognized_count: mode === 'recognized' && correct ? currentRecognized + 1 : currentRecognized,
+    recalled_count: mode === 'recalled' && correct ? currentRecalled + 1 : currentRecalled,
+    last_seen_at: now,
+  }
+
+  const { data, error } = await supabase
+    .from('user_kana_progress')
+    .upsert(updates, { onConflict: 'user_id,character' })
+    .select()
+    .single()
+
+  if (error) throw new Error(error.message)
+
+  return {
+    character: data.character as string,
+    script: data.script as 'hiragana' | 'katakana',
+    recognizedCount: data.recognized_count as number,
+    recalledCount: data.recalled_count as number,
+    lastSeenAt: data.last_seen_at as string | null,
+  }
+}
+
+export async function fetchKanaProgress(userId: string): Promise<KanaProgressEntry[]> {
+  const { data, error } = await supabase
+    .from('user_kana_progress')
+    .select('character, script, recognized_count, recalled_count, last_seen_at')
+    .eq('user_id', userId)
+
+  if (error) throw new Error(error.message)
+
+  return (data ?? []).map((row) => ({
+    character: row.character as string,
+    script: row.script as 'hiragana' | 'katakana',
+    recognizedCount: row.recognized_count as number,
+    recalledCount: row.recalled_count as number,
+    lastSeenAt: row.last_seen_at as string | null,
+  }))
+}
+
+export async function resetKanaProgress(
+  userId: string,
+  script: 'hiragana' | 'katakana' | 'all',
+): Promise<void> {
+  const query = supabase.from('user_kana_progress').delete().eq('user_id', userId)
+  const { error } = script === 'all' ? await query : await query.eq('script', script)
+  if (error) throw new Error(error.message)
+}
+
+// --- Stats ---
+
+const MASTERY_THRESHOLD = 3
+
 export async function getStats(userId: string): Promise<StatsResult> {
   const todayStart = new Date()
   todayStart.setHours(0, 0, 0, 0)
 
-  // Total and today counts
-  const [{ count: totalReviewed }, { count: reviewedToday }] = await Promise.all([
+  const [
+    { count: totalReviewed },
+    { count: reviewedToday },
+    { data: progressRows },
+    { data: phraseRows },
+    { data: kanjiRows },
+    { data: kanaRows },
+    { data: reviewDays },
+  ] = await Promise.all([
     supabase
       .from('review_logs')
       .select('*', { count: 'exact', head: true })
@@ -168,14 +265,37 @@ export async function getStats(userId: string): Promise<StatsResult> {
       .eq('user_id', userId)
       .gte('reviewed_at', todayStart.toISOString())
       .then((r) => ({ count: r.count ?? 0 })),
+    supabase
+      .from('user_card_progress')
+      .select('state')
+      .eq('user_id', userId)
+      .then((r) => ({ data: r.data })),
+    supabase
+      .from('user_card_progress')
+      .select('state, reps, cards!inner(decks!inner(jlpt_level))')
+      .eq('user_id', userId)
+      .gt('reps', 0)
+      .then((r) => ({ data: r.data })),
+    supabase
+      .from('user_kanji_progress')
+      .select('state, reps, kanji!inner(jlpt_level)')
+      .eq('user_id', userId)
+      .gt('reps', 0)
+      .then((r) => ({ data: r.data })),
+    supabase
+      .from('user_kana_progress')
+      .select('script, recognized_count, recalled_count')
+      .eq('user_id', userId)
+      .then((r) => ({ data: r.data })),
+    supabase
+      .from('review_logs')
+      .select('reviewed_at')
+      .eq('user_id', userId)
+      .order('reviewed_at', { ascending: false })
+      .then((r) => ({ data: r.data })),
   ])
 
-  // Mastery breakdown by FSRS state
-  const { data: progressRows } = await supabase
-    .from('user_card_progress')
-    .select('state')
-    .eq('user_id', userId)
-
+  // FSRS mastery breakdown
   const masteryBreakdown: Record<FsrsState, number> = {
     new: 0,
     learning: 0,
@@ -187,19 +307,43 @@ export async function getStats(userId: string): Promise<StatsResult> {
     masteryBreakdown[s] = (masteryBreakdown[s] ?? 0) + 1
   }
 
-  // Streak: consecutive days with at least one review, ending today
-  const { data: reviewDays } = await supabase
-    .from('review_logs')
-    .select('reviewed_at')
-    .eq('user_id', userId)
-    .order('reviewed_at', { ascending: false })
+  // Phrase stats by JLPT level
+  const phrases: Record<number, PhraseLevelStats> = {}
+  for (const row of phraseRows ?? []) {
+    const level = (row as { cards: { decks: { jlpt_level: number | null } } }).cards?.decks?.jlpt_level
+    if (level == null) continue
+    if (!phrases[level]) phrases[level] = { reviewed: 0, mastered: 0 }
+    phrases[level].reviewed++
+    if ((row.state as string) === 'review') phrases[level].mastered++
+  }
 
+  // Kanji stats by JLPT level
+  const kanji: Record<number, KanjiLevelStats> = {}
+  for (const row of kanjiRows ?? []) {
+    const level = (row as { kanji: { jlpt_level: number | null } }).kanji?.jlpt_level
+    if (level == null) continue
+    if (!kanji[level]) kanji[level] = { reviewed: 0, mastered: 0 }
+    kanji[level].reviewed++
+    if ((row.state as string) === 'review') kanji[level].mastered++
+  }
+
+  // Kana stats by script
+  const kana: Record<'hiragana' | 'katakana', KanaScriptStats> = {
+    hiragana: { recognized: 0, recalled: 0 },
+    katakana: { recognized: 0, recalled: 0 },
+  }
+  for (const row of kanaRows ?? []) {
+    const script = row.script as 'hiragana' | 'katakana'
+    if (row.recognized_count as number >= MASTERY_THRESHOLD) kana[script].recognized++
+    if (row.recalled_count as number >= MASTERY_THRESHOLD) kana[script].recalled++
+  }
+
+  // Streak
   const uniqueDays = [
     ...new Set(
       (reviewDays ?? []).map((r) => new Date(r.reviewed_at as string).toDateString()),
     ),
   ]
-
   let streak = 0
   const today = new Date()
   for (let i = 0; i < uniqueDays.length; i++) {
@@ -217,5 +361,8 @@ export async function getStats(userId: string): Promise<StatsResult> {
     reviewedToday: reviewedToday as number,
     totalReviewed: totalReviewed as number,
     masteryBreakdown,
+    phrases,
+    kana,
+    kanji,
   }
 }

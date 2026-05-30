@@ -4,6 +4,7 @@ title_ja: 道案内
 description: Asking and giving directions on foot, landmarks, and distances
 display_order: 5
 
+jlpt_level: 5
 cards:
   - japanese: ～はどこですか
     reading: ～はどこですか

@@ -3,7 +3,7 @@ import { PageShell } from "@/components/PageShell";
 export function HowToPage() {
   return (
     <PageShell>
-      <div className="mx-auto w-full max-w-2xl">
+      <div className="w-full">
         <h2 className="mb-6 text-heading-sm font-semibold text-fg">How it works</h2>
         <div className="flex flex-col gap-6">
           <section className="rounded-2xl border border-border bg-surface p-6">

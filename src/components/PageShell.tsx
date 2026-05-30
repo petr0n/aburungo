@@ -109,15 +109,17 @@ export function PageShell({ children, onFeedback, sideNav }: PageShellProps) {
 
   return (
     <div className="mx-auto flex min-h-svh w-full max-w-5xl flex-col px-4 sm:px-6">
-      <header>
+      <header translate="no">
         {/* Row 1: logo + account */}
-        <div className="flex items-center justify-between py-3">
-          <Link to="/practice" className="ctype" style={{ gap: 10 }}>
-            <span className="hanko" style={{ fontSize: 24 }} />
-            <span className="wm sm">
+        <div className="flex items-center justify-between py-4">
+          <Link to="/practice" className="ctype" style={{ gap: 12 }}>
+            <span className="hanko" style={{ fontSize: "clamp(60px,9vw,108px)" }} />
+            <span className="wm" style={{ fontSize: "clamp(44px,7.5vw,96px)" }}>
               aburungo
               <span className="maru" />
             </span>
+            <span className="rule" />
+            <span className="kata-vert" style={{ fontSize: "clamp(11px,1.4vw,16px)" }}>アブルンゴ</span>
           </Link>
           <AccountChip />
         </div>
@@ -154,11 +156,21 @@ export function PageShell({ children, onFeedback, sideNav }: PageShellProps) {
       </header>
 
       <div className="flex flex-1 gap-8 py-6">
-        <div className="flex min-w-0 flex-1 flex-col justify-center">{children}</div>
+        <div className="flex w-full min-w-0 flex-1 flex-col items-start">{children}</div>
         <aside className="hidden w-44 shrink-0 lg:block">
           {sideNav}
         </aside>
       </div>
+
+      <footer className="flex items-center justify-center border-t border-border py-6">
+        <Link to="/practice" className="ctype" style={{ gap: 6 }}>
+          <span className="hanko" style={{ fontSize: 16 }} />
+          <span className="wm sm">
+            aburungo
+            <span className="maru" />
+          </span>
+        </Link>
+      </footer>
     </div>
   );
 }

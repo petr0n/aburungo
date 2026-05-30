@@ -1,4 +1,4 @@
-import type { FsrsState, ReviewRating, ProgressStats } from "@/types";
+import type { FsrsState, ReviewRating, ProgressStats, KanaProgressEntry, KanaScript } from "@/types";
 import { apiFetch } from "./client";
 
 export type DueCard = {
@@ -30,7 +30,11 @@ export async function fetchDue(limit?: number): Promise<DueCard[]> {
   return res.data;
 }
 
-export async function submitReview(cardId: string, rating: ReviewRating, reviewedAt: number): Promise<ReviewResult> {
+export async function submitReview(
+  cardId: string,
+  rating: ReviewRating,
+  reviewedAt: number,
+): Promise<ReviewResult> {
   const res = await apiFetch<{ data: ReviewResult }>("/api/progress/review", {
     method: "POST",
     body: JSON.stringify({ cardId, rating: toFsrsRating(rating), reviewedAt }),
@@ -41,4 +45,26 @@ export async function submitReview(cardId: string, rating: ReviewRating, reviewe
 export async function fetchStats(): Promise<ProgressStats> {
   const res = await apiFetch<{ data: ProgressStats }>("/api/progress/stats");
   return res.data;
+}
+
+export async function fetchKanaProgress(): Promise<KanaProgressEntry[]> {
+  const res = await apiFetch<{ data: KanaProgressEntry[] }>("/api/progress/kana");
+  return res.data;
+}
+
+export async function submitKanaAnswer(
+  character: string,
+  script: KanaScript,
+  mode: "recognized" | "recalled",
+  correct: boolean,
+): Promise<KanaProgressEntry> {
+  const res = await apiFetch<{ data: KanaProgressEntry }>("/api/progress/kana", {
+    method: "POST",
+    body: JSON.stringify({ character, script, mode, correct }),
+  });
+  return res.data;
+}
+
+export async function resetKanaProgress(script: KanaScript | "all"): Promise<void> {
+  await apiFetch(`/api/progress/kana?script=${script}`, { method: "DELETE" });
 }

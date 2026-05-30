@@ -5,6 +5,7 @@ import type { KanjiEntry } from "@/api/kanji";
 import { KanjiDrillCard, type DrillPhase } from "@/components/KanjiDrillCard";
 import { useUserTier } from "@/store/auth";
 import { PageShell } from "@/components/PageShell";
+import { ProgressWidget } from "@/components/ProgressWidget";
 
 type Screen = "browse" | "drill" | "result";
 type JlptFilter = 5 | 4 | 3 | 2 | 1;
@@ -364,5 +365,5 @@ export function KanjiPage() {
     );
   }
 
-  return <PageShell>{content}</PageShell>;
+  return <PageShell sideNav={<ProgressWidget section="kanji" />}>{content}</PageShell>;
 }

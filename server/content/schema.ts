@@ -14,6 +14,7 @@ export const DeckFileSchema = z.object({
   title_ja: z.string().min(1),
   description: z.string().min(1),
   display_order: z.number().int().positive(),
+  jlpt_level: z.number().int().min(1).max(5).optional(),
   cards: z.array(CardSchema).min(1),
 })
 

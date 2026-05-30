@@ -4,6 +4,7 @@ title_ja: 空港で
 description: Check-in, immigration, customs, baggage, and departure gates
 display_order: 7
 
+jlpt_level: 5
 cards:
   - japanese: チェックインはどこですか
     reading: チェックインはどこですか
