@@ -12,6 +12,7 @@ import { FlashcardPage } from "@/pages/FlashcardPage";
 import { KanjiPage } from "@/pages/KanjiPage";
 import { ConversationPage } from "@/pages/ConversationPage";
 import { ProfilePage } from "@/pages/ProfilePage";
+import { AdminLoginPage } from "@/pages/admin/AdminLoginPage";
 import { AdminLayout } from "@/pages/admin/AdminLayout";
 import { AdminUsersPage } from "@/pages/admin/AdminUsersPage";
 import { AdminFeedbackPage } from "@/pages/admin/AdminFeedbackPage";
@@ -53,6 +54,9 @@ export default function App() {
       <Route path="/conversation" element={<ConversationPage />} />
       {/* Profile: public route — page handles guest vs signed-in view */}
       <Route path="/profile" element={<ProfilePage />} />
+
+      {/* Admin login — public, handles its own auth state */}
+      <Route path="/admin" element={<AdminLoginPage />} />
 
       {/* Admin only */}
       <Route element={<AdminRoute />}>

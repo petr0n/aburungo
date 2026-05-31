@@ -9,7 +9,7 @@ export function AdminRoute() {
 
   const isAdmin = (user?.app_metadata as Record<string, unknown> | undefined)?.role === "admin";
 
-  if (!user || !isAdmin) return <Navigate to="/practice" replace />;
+  if (!user || !isAdmin) return <Navigate to="/admin" replace />;
 
   return <Outlet />;
 }

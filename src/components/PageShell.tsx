@@ -26,9 +26,10 @@ const NAV_LINKS: NavLink[] = [
 
 // ── Sub-components ───────────────────────────────────────────────────────────
 
-function AccountChip() {
+export function AccountChip() {
   const user = useAuth((s) => s.user);
   const signOut = useAuth((s) => s.signOut);
+  const location = useLocation();
 
   if (user === null) {
     return (
@@ -45,9 +46,19 @@ function AccountChip() {
     user.email?.split("@")[0] ??
     "Account";
   const initial = displayName.charAt(0).toUpperCase();
+  const isAdmin = (user.app_metadata as Record<string, unknown> | undefined)?.role === "admin";
+  const onAdminPages = location.pathname.startsWith("/admin");
 
   return (
     <div className="flex items-center gap-2">
+      {isAdmin && !onAdminPages && (
+        <Link
+          to="/admin"
+          className="hidden rounded-md border border-brand-200 bg-brand-50 px-2 py-0.5 text-caption font-semibold text-brand-600 active:bg-brand-100 sm:block"
+        >
+          Admin
+        </Link>
+      )}
       <Link to="/profile" className="flex items-center gap-2">
         <div className="flex h-8 w-8 shrink-0 items-center justify-center overflow-hidden rounded-full bg-brand-100">
           {avatarUrl !== undefined ? (
