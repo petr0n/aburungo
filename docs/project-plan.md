@@ -24,12 +24,13 @@ Practical Japanese for English speakers. Focused on real-life situations with sp
 | Feature | Route | Auth required | Backend |
 |---|---|---|---|
 | Landing + auth | `/` | — | Supabase Auth |
-| Fill-in-the-blank | `/practice` | No | Local YAML + IndexedDB + Leitner SRS |
-| Flashcards (3D flip) | `/flashcard` | No | Local YAML + IndexedDB + Leitner SRS |
-| Kana practice | `/kana` | No | Local only (always has been) |
+| Fill-in-the-blank | `/practice` | No | Local YAML + IndexedDB + Leitner SRS (server sync pending) |
+| Flashcards (3D flip) | `/flashcard` | No | Local YAML + IndexedDB + Leitner SRS (server sync pending) |
+| Kana hub | `/kana` | No | — |
+| Kana practice | `/kana/practice` | No | Guest: localStorage. Signed-in: Hono progress API (dual-write) |
 | Kanji browse + drill | `/kanji` | No | Hono + KANJIDIC2 (N5 tab only for guests) |
 | Conversation with Hana | `/conversation` | No (soft prompt for guests) | Hono + Anthropic Haiku, streamed |
-| Profile / progress | `/profile` | No (soft prompt for guests) | Hono progress API (when deployed) |
+| Profile / progress | `/profile` | No (soft prompt for guests) | Hono progress API (stats + kana) |
 | Admin dashboard | `/admin/*` | Admin role | Hono admin routes |
 
 ### Navigation & layout
@@ -37,6 +38,20 @@ Practical Japanese for English speakers. Focused on real-life situations with sp
 - `PageShell` (`src/components/PageShell.tsx`) wraps all pages — two-row header (logo + account chip, then nav tabs with active underline), max content width `max-w-5xl` (1024px)
 - Right sidebar always present on desktop (lg breakpoint); Practice / Flashcard / Kana pages render a `SectionNav` ("IN THIS SECTION") sub-nav linking to sibling modes; all pages will show progress stats here
 - `/conversation` shows an inline soft prompt for guests rather than a hard redirect (see DR-008)
+
+### Progress system
+
+- **Kana:** fully wired — guest progress in localStorage, signed-in users sync via Hono API + `user_kana_progress` table; dual-write on first sign-in migrates guest data
+- **Kanji:** drill reviews sync via Hono API + `user_kanji_progress` table
+- **Phrases (fill-in-blank / flashcard):** local Leitner + IndexedDB only — server sync not yet wired (`submitReview`/`fetchDue` exist in `src/api/progress.ts` but no component calls them)
+- **Progress widget:** `src/components/ProgressWidget.tsx` — two-tone bar (reviewed/mastered); currently kana only
+- **Profile page:** full stats view with kana breakdown and per-script reset controls
+
+### Auth
+
+- Email + password with forgot-password / recovery flow — live
+- Google OAuth — live (consent screen published)
+- Apple Sign-In — deferred (requires $99/yr Apple Developer account; see `todo.md`)
 
 ### Content
 
@@ -46,42 +61,38 @@ Practical Japanese for English speakers. Focused on real-life situations with sp
 
 ### Infrastructure
 
-- Supabase project live (East US) — schema migrated, RLS enabled on all tables
-- Hono server with Supabase JWT auth on all protected routes
+- Supabase project live (East US) — 5 migrations applied, RLS enabled on all tables
+- **Hono server deployed on Railway** — Node 22, Nixpacks build, `/health` endpoint
 - pnpm monorepo: `src/` (Vite + React 19) + `server/` (Hono + Node)
-- 228 vocabulary cards across 20 decks seeded to production DB (server-backed; available once Hono server is deployed)
+- 228 vocabulary cards across 20 decks seeded to production DB
 - 2,140 Joyo kanji seeded from KANJIDIC2
-- Vercel deployment: frontend SPA, framework preset `vite`, ADS cloned as sibling during install
+- Vercel deployment: frontend SPA at `aburungo.app`, ADS cloned as sibling during install
 - CI: GitHub Actions lint + build + test on every PR
+- **`VITE_API_URL`** must be set in Vercel env vars pointing to the Railway service URL
 
 ---
 
 ## Roadmap
 
 ### Near term
-1. **`user_kana_progress` migration** — new Supabase migration; one row per user per kana character (`recognized`, `recalled`, `lastSeenAt`)
-2. **Extend `/api/progress/stats`** — add per-tier phrase + kanji + kana breakdowns (currently returns global counts only)
-3. **Progress store (Zustand)** — localStorage for guests, API for signed-in users; single `aburungo_progress` key with versioned envelope (see DR-009)
-4. **Two-tone progress bar widget** — sidebar component; light fill = reviewed/seen, dark fill = mastered/recalled; context-sensitive per page section
-5. **Profile page progress dashboard** — full stats view + per-script and full reset controls (with confirmation dialog)
-6. **Deploy Hono server** — Railway/Fly/Render; set env vars from `server/.env.example`; update `VITE_API_URL` in Vercel
-7. **Connect phrase progress to server** — once server is live, dual-write IndexedDB + API; free tier stays local, authenticated tier syncs
-8. **Add custom domain** — `aburungo.app` in Vercel after server deploy
-9. **Apply admin migration** — run `supabase db push` for `20260523000000_admin_phase1.sql`
+1. **Verify `VITE_API_URL` in Vercel** — confirm Railway URL is set so the frontend can reach the API; the client throws on load if missing
+2. **Connect phrase/flashcard progress to server** — `submitReview`/`fetchDue` exist in `src/api/progress.ts` but no component calls them; authenticated sessions should dual-write IndexedDB + FSRS API; guests stay local Leitner
+3. **Extend progress widget to phrases + kanji** — widget currently shows kana only; add phrase and kanji rows using server stats breakdown
 
 ### Medium term
-10. **Paywall / payment integration** — flip `isPaid` check in `useUserTier()` when Stripe/RevenueCat is wired; architecture is ready
-11. **N4 content** — add YAML scenario files for N4-level vocabulary; verify JLPT level against JMdict seed
-12. **VOICEVOX audio pipeline** — vet voice licenses, pre-generate TTS locally via Podman, upload to Supabase Storage (see `admin-dashboard-plan.md` for multi-voice strategy)
-13. **Admin Phase 2** — log viewer (pino), learning analytics, content audit (see `admin-dashboard-plan.md`)
-14. **Audio fill-in-the-blank** — Web Speech API for input, Whisper upgrade path
+4. **FSRS migration for session store** — local session SRS is Leitner; DB schema uses FSRS; once server sync is live, authenticated sessions should pull due cards from server and post reviews (replaces client-side Leitner scheduling for signed-in users)
+5. **N4 content** — add YAML scenario files for N4-level vocabulary; verify JLPT level against JMdict seed before merging
+6. **VOICEVOX audio pipeline** — vet voice licenses, pre-generate TTS locally via Podman, upload to Supabase Storage (see `admin-dashboard-plan.md` for multi-voice strategy)
+7. **Admin Phase 2** — log viewer (pino ring buffer), learning analytics, content audit (see `admin-dashboard-plan.md`)
+8. **Paywall / payment integration** — flip `isPaid` check in `useUserTier()` when Stripe/RevenueCat is wired; slot in `UserTier` type is ready
 
 ### Longer term
-15. **Admin Phase 3** — feature flags, announcements, rate limiting dashboard
-16. **FSRS migration** — session store currently uses Leitner for local SRS; DB schema uses FSRS. Migrate to server-backed FSRS when server is deployed and free-tier sync is in place.
-17. **Lesson picker** — structured lesson flow on top of the existing `Lesson` type
-18. **Tatoeba example sentences** — seed and surface example sentences per card
-19. **Mobile app** — React Native or PWA with offline support
+9. **Audio fill-in-the-blank** — Web Speech API for STT input; Whisper API upgrade path
+10. **Admin Phase 3** — feature flags, announcements, rate limiting dashboard
+11. **Lesson picker** — structured lesson flow on top of the existing `Lesson` type
+12. **Tatoeba example sentences** — seed and surface example sentences per card
+13. **Apple Sign-In** — when $99/yr Apple Developer account is obtained (see `todo.md`)
+14. **Mobile app** — React Native or PWA with offline support
 
 ---
 
