@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router";
 import { AuthForm } from "@/components/AuthForm";
 import { useAuth } from "@/store/auth";
@@ -13,12 +13,28 @@ export function LandingPage() {
   const updatePassword = useAuth((s) => s.updatePassword);
   const isRecovery = useAuth((s) => s.isRecovery);
   const navigate = useNavigate();
+  const [hashError] = useState<string | null>(() => {
+    const params = new URLSearchParams(window.location.hash.slice(1));
+    if (!params.has("error")) return null;
+    if (params.get("error_code") === "otp_expired") return "That reset link has expired. Request a new one below.";
+    return params.get("error_description")?.replace(/\+/g, " ") ?? "Something went wrong. Please try again.";
+  });
+  const [initialMode] = useState<"forgot-password" | undefined>(() => {
+    const params = new URLSearchParams(window.location.hash.slice(1));
+    return params.get("error_code") === "otp_expired" ? "forgot-password" : undefined;
+  });
 
   useEffect(() => {
-    if (!loading && user !== null) {
+    if (window.location.hash.includes("error=")) {
+      window.history.replaceState(null, "", window.location.pathname);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (!loading && user !== null && !isRecovery) {
       void navigate("/practice", { replace: true });
     }
-  }, [user, loading, navigate]);
+  }, [user, loading, isRecovery, navigate]);
 
   if (loading) {
     return (
@@ -114,10 +130,17 @@ export function LandingPage() {
 
       {/* Auth form — for returning users */}
       <div className="w-full">
-        <p className="mb-4 text-center text-body-sm text-fg-subtle">
-          Already have an account?{" "}
-          <span className="font-medium text-fg">Sign in below.</span>
-        </p>
+        {hashError !== null && (
+          <p role="alert" className="mb-4 rounded-lg bg-error-bg px-3 py-2 text-center text-body-sm text-error-fg">
+            {hashError}
+          </p>
+        )}
+        {hashError === null && (
+          <p className="mb-4 text-center text-body-sm text-fg-subtle">
+            Already have an account?{" "}
+            <span className="font-medium text-fg">Sign in below.</span>
+          </p>
+        )}
         <AuthForm
           onSignIn={signIn}
           onSignUp={signUp}
@@ -126,6 +149,7 @@ export function LandingPage() {
           onUpdatePassword={updatePassword}
           isRecovery={isRecovery}
           loading={loading}
+          initialMode={initialMode}
         />
       </div>
 

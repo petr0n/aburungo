@@ -11,12 +11,13 @@ type Props = {
   onUpdatePassword: (newPassword: string) => Promise<string | null>;
   isRecovery: boolean;
   loading: boolean;
+  initialMode?: "forgot-password";
 };
 
 export function AuthForm(props: Props) {
-  const { onSignIn, onSignUp, onGoogleSignIn, onForgotPassword, onUpdatePassword, isRecovery, loading } = props;
+  const { onSignIn, onSignUp, onGoogleSignIn, onForgotPassword, onUpdatePassword, isRecovery, loading, initialMode } = props;
 
-  const [mode, setMode] = useState<Mode>("sign-in");
+  const [mode, setMode] = useState<Mode>(initialMode ?? "sign-in");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState<string | null>(null);

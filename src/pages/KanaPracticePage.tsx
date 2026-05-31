@@ -22,6 +22,7 @@ const SCRIPT_META: Record<ScriptKey, { label: string; sub: string }> = {
 };
 
 const SECTION_LINKS = [
+  { to: "/kana", label: "Learn" },
   { to: "/flashcard", label: "Flashcards" },
   { to: "/practice", label: "Fill-In" },
 ];

@@ -6,6 +6,7 @@ import { AdminRoute } from "@/components/AdminRoute";
 import { LandingPage } from "@/pages/LandingPage";
 import { PracticePage } from "@/pages/PracticePage";
 import { HowToPage } from "@/pages/HowToPage";
+import { KanaPage } from "@/pages/KanaPage";
 import { KanaPracticePage } from "@/pages/KanaPracticePage";
 import { FlashcardPage } from "@/pages/FlashcardPage";
 import { KanjiPage } from "@/pages/KanjiPage";
@@ -42,7 +43,8 @@ export default function App() {
       {/* Public — no auth required */}
       <Route path="/" element={<LandingPage />} />
       <Route path="/practice" element={<PracticePage />} />
-      <Route path="/kana" element={<KanaPracticePage />} />
+      <Route path="/kana" element={<KanaPage />} />
+      <Route path="/kana/practice" element={<KanaPracticePage />} />
       <Route path="/flashcard" element={<FlashcardPage />} />
       <Route path="/kanji" element={<KanjiPage />} />
       <Route path="/how-to" element={<HowToPage />} />

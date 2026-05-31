@@ -16,9 +16,9 @@ type SectionLink = { to: string; label: string };
 // ── Constants ────────────────────────────────────────────────────────────────
 
 const NAV_LINKS: NavLink[] = [
-  { to: "/practice", label: "Practice" },
-  { to: "/flashcard", label: "Flashcards" },
   { to: "/kana", label: "Kana" },
+  { to: "/flashcard", label: "Flashcards" },
+  { to: "/practice", label: "Practice" },
   { to: "/kanji", label: "Kanji" },
   { to: "/conversation", label: "Chat" },
   { to: "/how-to", label: "How to use" },
@@ -32,10 +32,7 @@ function AccountChip() {
 
   if (user === null) {
     return (
-      <Link
-        to="/"
-        className="flex min-h-[44px] items-center px-3 text-body-sm text-fg-subtle active:text-fg"
-      >
+      <Link to="/" className="flex min-h-[44px] items-center px-3 text-body-sm text-fg-subtle active:text-fg">
         Sign in
       </Link>
     );
@@ -63,7 +60,9 @@ function AccountChip() {
       </Link>
       <button
         type="button"
-        onClick={() => { void signOut(); }}
+        onClick={() => {
+          void signOut();
+        }}
         className="min-h-[44px] px-2 text-body-sm text-fg-subtle active:text-fg"
       >
         Sign out
@@ -78,9 +77,7 @@ export function SectionNav({ links }: { links: SectionLink[] }) {
   const location = useLocation();
   return (
     <nav className="flex flex-col gap-0.5 pt-4">
-      <p className="mb-1 px-3 text-caption font-semibold uppercase tracking-widest text-fg-faint">
-        In this section
-      </p>
+      <p className="mb-1 px-3 text-caption font-semibold uppercase tracking-widest text-fg-faint">In this section</p>
       {links.map((link) => {
         const isActive = location.pathname === link.to;
         return (
@@ -89,9 +86,7 @@ export function SectionNav({ links }: { links: SectionLink[] }) {
             to={link.to}
             className={[
               "flex min-h-[44px] items-center rounded-lg px-3 text-body-sm transition-colors",
-              isActive
-                ? "bg-surface-2 font-medium text-fg"
-                : "text-fg-subtle active:bg-surface-2 active:text-fg",
+              isActive ? "bg-surface-2 font-medium text-fg" : "text-fg-subtle active:bg-surface-2 active:text-fg",
             ].join(" ")}
           >
             {link.label}
@@ -119,7 +114,9 @@ export function PageShell({ children, onFeedback, sideNav }: PageShellProps) {
               <span className="maru" />
             </span>
             <span className="rule" />
-            <span className="kata-vert" style={{ fontSize: "clamp(11px,1.4vw,16px)" }}>アブルンゴ</span>
+            <span className="kata-vert" style={{ fontSize: "clamp(11px,1.4vw,16px)" }}>
+              アブルンゴ
+            </span>
           </Link>
           <AccountChip />
         </div>
@@ -157,9 +154,7 @@ export function PageShell({ children, onFeedback, sideNav }: PageShellProps) {
 
       <div className="flex flex-1 gap-8 py-6">
         <div className="flex w-full min-w-0 flex-1 flex-col items-start">{children}</div>
-        <aside className="hidden w-44 shrink-0 lg:block">
-          {sideNav}
-        </aside>
+        <aside className="hidden w-44 shrink-0 lg:block">{sideNav}</aside>
       </div>
 
       <footer className="flex items-center justify-center border-t border-border py-6">
