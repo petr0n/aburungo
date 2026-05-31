@@ -310,7 +310,7 @@ export async function getStats(userId: string): Promise<StatsResult> {
   // Phrase stats by JLPT level
   const phrases: Record<number, PhraseLevelStats> = {}
   for (const row of phraseRows ?? []) {
-    const level = (row as { cards: { decks: { jlpt_level: number | null } } }).cards?.decks?.jlpt_level
+    const level = (row as unknown as { cards: { decks: { jlpt_level: number | null } } }).cards?.decks?.jlpt_level
     if (level == null) continue
     if (!phrases[level]) phrases[level] = { reviewed: 0, mastered: 0 }
     phrases[level].reviewed++
@@ -320,7 +320,7 @@ export async function getStats(userId: string): Promise<StatsResult> {
   // Kanji stats by JLPT level
   const kanji: Record<number, KanjiLevelStats> = {}
   for (const row of kanjiRows ?? []) {
-    const level = (row as { kanji: { jlpt_level: number | null } }).kanji?.jlpt_level
+    const level = (row as unknown as { kanji: { jlpt_level: number | null } }).kanji?.jlpt_level
     if (level == null) continue
     if (!kanji[level]) kanji[level] = { reviewed: 0, mastered: 0 }
     kanji[level].reviewed++
