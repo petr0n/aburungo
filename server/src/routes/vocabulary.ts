@@ -12,7 +12,7 @@ vocabularyRoutes.get('/', async (c) => {
 
   const data = await listCards({
     deck: deck || undefined,
-    limit: Math.min(parseInt(limit, 10) || 20, 100),
+    limit: Math.min(parseInt(limit, 10) || 20, 500),
     offset: parseInt(offset, 10) || 0,
   })
 

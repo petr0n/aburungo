@@ -53,7 +53,7 @@ export const useSession = create<SessionState>((set, get) => ({
     // Kick off vocabulary fetch in parallel with local queue build so the map
     // is ready before the first card is shown. Failure is non-fatal.
     const cardIdMapPromise: Promise<Map<string, string>> = userId
-      ? fetchVocabulary()
+      ? fetchVocabulary({ limit: 500 })
           .then((cards) => new Map(cards.map((c) => [c.japanese, c.id])))
           .catch(() => new Map())
       : Promise.resolve(new Map());
