@@ -48,7 +48,15 @@ export const useSession = create<SessionState>((set, get) => ({
   cardIdMap: new Map(),
 
   async initialize(phrases, userId) {
-    set({ status: "loading", error: null, queue: [], currentIndex: 0 });
+    set({ status: "loading", error: null, queue: [], currentIndex: 0, cardIdMap: new Map() });
+
+    // Kick off vocabulary fetch in parallel with local queue build so the map
+    // is ready before the first card is shown. Failure is non-fatal.
+    const cardIdMapPromise: Promise<Map<string, string>> = userId
+      ? fetchVocabulary()
+          .then((cards) => new Map(cards.map((c) => [c.japanese, c.id])))
+          .catch(() => new Map())
+      : Promise.resolve(new Map());
 
     try {
       const now = Date.now();
@@ -67,20 +75,11 @@ export const useSession = create<SessionState>((set, get) => ({
       const newQueue = phrases.filter((p) => !stateMap.has(p.id));
 
       const queue = [...dueQueue, ...newQueue];
-      set({ queue, currentIndex: 0, status: queue.length === 0 ? "empty" : "ready" });
+      const cardIdMap = await cardIdMapPromise;
+      set({ queue, currentIndex: 0, status: queue.length === 0 ? "empty" : "ready", cardIdMap });
     } catch (err) {
-      set({ status: "error", error: err instanceof Error ? err.message : "Failed to load" });
-    }
-
-    // Build japanese → cardId map so authenticated ratings can sync to server
-    if (userId) {
-      fetchVocabulary()
-        .then((cards) => {
-          set({ cardIdMap: new Map(cards.map((c) => [c.japanese, c.id])) });
-        })
-        .catch(() => {
-          // Non-fatal — server sync disabled for this session
-        });
+      const cardIdMap = await cardIdMapPromise;
+      set({ status: "error", error: err instanceof Error ? err.message : "Failed to load", cardIdMap });
     }
   },
 
