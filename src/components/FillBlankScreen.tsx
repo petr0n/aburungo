@@ -1,12 +1,13 @@
 import { useEffect } from "react";
 import { useSession } from "@/store/session";
-import { useUserTier } from "@/store/auth";
+import { useAuth, useUserTier } from "@/store/auth";
 import { phrasesForTier } from "@/content";
 import { LoadingPlaceholder, EmptyState, ErrorState } from "aburungo-design-system";
 import { FillBlankCard } from "./FillBlankCard";
 
 export function FillBlankScreen() {
   const tier = useUserTier();
+  const userId = useAuth((s) => s.user?.id ?? null);
   const status = useSession((s) => s.status);
   const error = useSession((s) => s.error);
   const queue = useSession((s) => s.queue);
@@ -16,8 +17,8 @@ export function FillBlankScreen() {
   const reset = useSession((s) => s.reset);
 
   useEffect(() => {
-    void initialize(phrasesForTier(tier));
-  }, [initialize, tier]);
+    void initialize(phrasesForTier(tier), userId);
+  }, [initialize, tier, userId]);
 
   if (status === "idle" || status === "loading") {
     return <LoadingPlaceholder label="Loading review queue…" />;
@@ -33,7 +34,7 @@ export function FillBlankScreen() {
             type="button"
             onClick={() => {
               reset();
-              void initialize(phrasesForTier(tier));
+              void initialize(phrasesForTier(tier), userId);
             }}
             className="h-12 rounded-xl border border-border-strong px-6 text-body font-medium text-fg-muted hover:bg-surface-2 active:bg-surface-2"
           >
@@ -54,7 +55,7 @@ export function FillBlankScreen() {
             type="button"
             onClick={() => {
               reset();
-              void initialize(phrasesForTier(tier));
+              void initialize(phrasesForTier(tier), userId);
             }}
             className="h-12 rounded-xl border border-border-strong px-6 text-body font-medium text-fg-muted hover:bg-surface-2 active:bg-surface-2"
           >
@@ -68,5 +69,5 @@ export function FillBlankScreen() {
   const card = queue[currentIndex];
   if (card === undefined) return null;
 
-  return <FillBlankCard key={card.id} card={card} onNext={(correct) => void rate(correct ? "got-it" : "didnt")} />;
+  return <FillBlankCard key={card.id} card={card} onNext={(correct) => void rate(correct ? "got-it" : "didnt", userId)} />;
 }

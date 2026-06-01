@@ -5,6 +5,9 @@
  * from a caller-supplied phrase list so tier filtering happens outside this
  * store — see phrasesForTier() in src/content/index.ts.
  *
+ * For authenticated users, each rating is also fire-and-forget posted to the
+ * server so progress syncs across devices. Guests stay local-only.
+ *
  * Queue order:
  *   1. Due cards first, oldest-due first.
  *   2. New cards (never reviewed) in source order.
@@ -13,6 +16,8 @@ import { create } from "zustand";
 import type { Phrase, ReviewRating } from "@/types";
 import { getAll, getOne, upsert } from "@/db/reviewStore";
 import { schedule, isDue } from "@/srs/leitner";
+import { fetchVocabulary } from "@/api/vocabulary";
+import { submitReview } from "@/api/progress";
 
 type Status = "idle" | "loading" | "ready" | "empty" | "error";
 
@@ -21,14 +26,17 @@ type SessionState = {
   error: string | null;
   queue: Phrase[];
   currentIndex: number;
+  /** japanese text → server card UUID; populated for authenticated users */
+  cardIdMap: Map<string, string>;
 
   /**
    * Build a review queue from the supplied phrases.
    * Phrases already in IndexedDB that are due come first (oldest-due first).
    * Phrases never reviewed come after, in the order supplied.
+   * For authenticated users, also fetches the card ID map from the server.
    */
-  initialize: (phrases: Phrase[]) => Promise<void>;
-  rate: (rating: ReviewRating) => Promise<void>;
+  initialize: (phrases: Phrase[], userId: string | null) => Promise<void>;
+  rate: (rating: ReviewRating, userId: string | null) => Promise<void>;
   reset: () => void;
 };
 
@@ -37,8 +45,9 @@ export const useSession = create<SessionState>((set, get) => ({
   error: null,
   queue: [],
   currentIndex: 0,
+  cardIdMap: new Map(),
 
-  async initialize(phrases) {
+  async initialize(phrases, userId) {
     set({ status: "loading", error: null, queue: [], currentIndex: 0 });
 
     try {
@@ -62,19 +71,41 @@ export const useSession = create<SessionState>((set, get) => ({
     } catch (err) {
       set({ status: "error", error: err instanceof Error ? err.message : "Failed to load" });
     }
+
+    // Build japanese → cardId map so authenticated ratings can sync to server
+    if (userId) {
+      fetchVocabulary()
+        .then((cards) => {
+          set({ cardIdMap: new Map(cards.map((c) => [c.japanese, c.id])) });
+        })
+        .catch(() => {
+          // Non-fatal — server sync disabled for this session
+        });
+    }
   },
 
-  async rate(rating) {
-    const { queue, currentIndex } = get();
+  async rate(rating, userId) {
+    const { queue, currentIndex, cardIdMap } = get();
     const phrase = queue[currentIndex];
     if (!phrase) return;
 
+    // Local Leitner — always runs for all users
     try {
       const current = await getOne(phrase.id);
       const next = schedule(current, rating, Date.now(), phrase.id);
       await upsert(next);
     } catch {
       // Best-effort — advance the queue even if persistence fails
+    }
+
+    // Server sync — fire-and-forget for authenticated users
+    if (userId) {
+      const cardId = cardIdMap.get(phrase.japanese);
+      if (cardId) {
+        submitReview(cardId, rating, Date.now()).catch(() => {
+          // Non-fatal — local state is source of truth
+        });
+      }
     }
 
     const nextIndex = currentIndex + 1;
@@ -85,6 +116,6 @@ export const useSession = create<SessionState>((set, get) => ({
   },
 
   reset() {
-    set({ status: "idle", error: null, queue: [], currentIndex: 0 });
+    set({ status: "idle", error: null, queue: [], currentIndex: 0, cardIdMap: new Map() });
   },
 }));

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import type { Phrase, ReviewRating } from "@/types";
 import { useSession } from "@/store/session";
-import { useUserTier } from "@/store/auth";
+import { useAuth, useUserTier } from "@/store/auth";
 import { phrasesForTier } from "@/content";
 import { LoadingPlaceholder, EmptyState, ErrorState } from "aburungo-design-system";
 import { FlashCard } from "./FlashCard";
@@ -9,6 +9,7 @@ import type { FlashCardPhase } from "./FlashCard";
 
 export function FlashcardScreen() {
   const tier = useUserTier();
+  const userId = useAuth((s) => s.user?.id ?? null);
   const status = useSession((s) => s.status);
   const error = useSession((s) => s.error);
   const queue = useSession((s) => s.queue);
@@ -22,8 +23,8 @@ export function FlashcardScreen() {
   const [pendingRating, setPendingRating] = useState<ReviewRating | null>(null);
 
   useEffect(() => {
-    void initialize(phrasesForTier(tier));
-  }, [initialize, tier]);
+    void initialize(phrasesForTier(tier), userId);
+  }, [initialize, tier, userId]);
 
   const currentCard = queue[currentIndex];
   const displayCard = stagedCard ?? currentCard;
@@ -43,7 +44,7 @@ export function FlashcardScreen() {
   }
 
   function handleExited() {
-    void rate(pendingRating ?? "didnt");
+    void rate(pendingRating ?? "didnt", userId);
     setPendingRating(null);
     setStagedCard(null);
     setPhase("entering");
@@ -63,7 +64,7 @@ export function FlashcardScreen() {
             type="button"
             onClick={() => {
               reset();
-              void initialize(phrasesForTier(tier));
+              void initialize(phrasesForTier(tier), userId);
             }}
             className="h-12 rounded-xl border border-border-strong px-6 text-body font-medium text-fg-muted hover:bg-surface-2 active:bg-surface-2"
           >
@@ -84,7 +85,7 @@ export function FlashcardScreen() {
             type="button"
             onClick={() => {
               reset();
-              void initialize(phrasesForTier(tier));
+              void initialize(phrasesForTier(tier), userId);
             }}
             className="h-12 rounded-xl border border-border-strong px-6 text-body font-medium text-fg-muted hover:bg-surface-2 active:bg-surface-2"
           >
