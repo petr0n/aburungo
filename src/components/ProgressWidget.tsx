@@ -48,7 +48,7 @@ function ProgressRow({ label, reviewed, mastered, total }: RowProps) {
     <div className="flex flex-col gap-1">
       <div className="flex items-baseline justify-between">
         <span className="text-caption text-fg-subtle">{label}</span>
-        <span className="text-caption text-fg-faint">{mastered}/{total}</span>
+        <span className="text-caption text-fg-faint">{reviewed}/{total}</span>
       </div>
       <TwoToneBar reviewedFraction={reviewed / total} masteredFraction={mastered / total} />
     </div>
@@ -113,7 +113,7 @@ export function ProgressWidget({ section }: ProgressWidgetProps) {
               label={`N${level} Phrases`}
               reviewed={s.reviewed}
               mastered={s.mastered}
-              total={s.reviewed}
+              total={s.total}
             />
           ))}
 
@@ -144,7 +144,7 @@ export function ProgressWidget({ section }: ProgressWidgetProps) {
               label={`N${level} Kanji`}
               reviewed={s.reviewed}
               mastered={s.mastered}
-              total={s.reviewed}
+              total={s.total}
             />
           ))}
       </div>

@@ -70,8 +70,8 @@ export type KanaProgressEntry = {
 }
 
 export type KanaScriptStats = { recognized: number; recalled: number }
-export type PhraseLevelStats = { reviewed: number; mastered: number }
-export type KanjiLevelStats = { reviewed: number; mastered: number }
+export type PhraseLevelStats = { reviewed: number; mastered: number; total: number }
+export type KanjiLevelStats = { reviewed: number; mastered: number; total: number }
 
 export type StatsResult = {
   streak: number
@@ -253,6 +253,8 @@ export async function getStats(userId: string): Promise<StatsResult> {
     { data: kanjiRows },
     { data: kanaRows },
     { data: reviewDays },
+    { data: cardTotals },
+    { data: kanjiTotals },
   ] = await Promise.all([
     supabase
       .from('review_logs')
@@ -293,6 +295,14 @@ export async function getStats(userId: string): Promise<StatsResult> {
       .eq('user_id', userId)
       .order('reviewed_at', { ascending: false })
       .then((r) => ({ data: r.data })),
+    supabase
+      .from('cards')
+      .select('decks!inner(jlpt_level)')
+      .then((r) => ({ data: r.data })),
+    supabase
+      .from('kanji')
+      .select('jlpt_level')
+      .then((r) => ({ data: r.data })),
   ])
 
   // FSRS mastery breakdown
@@ -307,12 +317,28 @@ export async function getStats(userId: string): Promise<StatsResult> {
     masteryBreakdown[s] = (masteryBreakdown[s] ?? 0) + 1
   }
 
+  // Total cards available per JLPT level
+  const cardTotalByLevel: Record<number, number> = {}
+  for (const row of cardTotals ?? []) {
+    const level = (row as unknown as { decks: { jlpt_level: number | null } }).decks?.jlpt_level
+    if (level == null) continue
+    cardTotalByLevel[level] = (cardTotalByLevel[level] ?? 0) + 1
+  }
+
+  // Total kanji available per JLPT level
+  const kanjiTotalByLevel: Record<number, number> = {}
+  for (const row of kanjiTotals ?? []) {
+    const level = (row as unknown as { jlpt_level: number | null }).jlpt_level
+    if (level == null) continue
+    kanjiTotalByLevel[level] = (kanjiTotalByLevel[level] ?? 0) + 1
+  }
+
   // Phrase stats by JLPT level
   const phrases: Record<number, PhraseLevelStats> = {}
   for (const row of phraseRows ?? []) {
     const level = (row as unknown as { cards: { decks: { jlpt_level: number | null } } }).cards?.decks?.jlpt_level
     if (level == null) continue
-    if (!phrases[level]) phrases[level] = { reviewed: 0, mastered: 0 }
+    if (!phrases[level]) phrases[level] = { reviewed: 0, mastered: 0, total: cardTotalByLevel[level] ?? 0 }
     phrases[level].reviewed++
     if ((row.state as string) === 'review') phrases[level].mastered++
   }
@@ -322,7 +348,7 @@ export async function getStats(userId: string): Promise<StatsResult> {
   for (const row of kanjiRows ?? []) {
     const level = (row as unknown as { kanji: { jlpt_level: number | null } }).kanji?.jlpt_level
     if (level == null) continue
-    if (!kanji[level]) kanji[level] = { reviewed: 0, mastered: 0 }
+    if (!kanji[level]) kanji[level] = { reviewed: 0, mastered: 0, total: kanjiTotalByLevel[level] ?? 0 }
     kanji[level].reviewed++
     if ((row.state as string) === 'review') kanji[level].mastered++
   }

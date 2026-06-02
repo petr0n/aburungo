@@ -35,12 +35,13 @@ export async function seedDecks(): Promise<void> {
   const decks = loadDeckFiles()
   console.log(`Upserting ${decks.length} decks...`)
 
-  const rows = decks.map(({ slug, title_en, title_ja, description, display_order }) => ({
+  const rows = decks.map(({ slug, title_en, title_ja, description, display_order, jlpt_level }) => ({
     slug,
     title_en,
     title_ja,
     description,
     display_order,
+    jlpt_level: jlpt_level ?? null,
   }))
 
   const { data, error } = await supabase
