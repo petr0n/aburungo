@@ -68,6 +68,7 @@ function useSpeak(): (text: string) => void {
     const pick = () => {
       const voices = synth.getVoices();
       voiceRef.current =
+        voices.find((v) => v.name === "Kyoko") ??
         voices.find((v) => v.lang === "ja-JP") ??
         voices.find((v) => v.lang.toLowerCase().startsWith("ja")) ??
         null;
@@ -83,7 +84,7 @@ function useSpeak(): (text: string) => void {
     synth.cancel();
     const utt = new SpeechSynthesisUtterance(text);
     utt.lang = "ja-JP";
-    utt.rate = 0.8;
+    utt.rate = 0.6;
     if (voiceRef.current) utt.voice = voiceRef.current;
     synth.speak(utt);
   }, []);

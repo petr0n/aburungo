@@ -147,11 +147,13 @@ export type KanaScriptStats = {
 export type PhraseLevelStats = {
   reviewed: number;
   mastered: number;
+  total: number;
 };
 
 export type KanjiLevelStats = {
   reviewed: number;
   mastered: number;
+  total: number;
 };
 
 export type ProgressStats = {

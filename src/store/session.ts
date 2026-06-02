@@ -18,6 +18,7 @@ import { getAll, getOne, upsert } from "@/db/reviewStore";
 import { schedule, isDue } from "@/srs/leitner";
 import { fetchVocabulary } from "@/api/vocabulary";
 import { submitReview } from "@/api/progress";
+import { useProgress } from "@/store/progress";
 
 type Status = "idle" | "loading" | "ready" | "empty" | "error";
 
@@ -101,9 +102,9 @@ export const useSession = create<SessionState>((set, get) => ({
     if (userId) {
       const cardId = cardIdMap.get(phrase.japanese);
       if (cardId) {
-        submitReview(cardId, rating, Date.now()).catch(() => {
-          // Non-fatal — local state is source of truth
-        });
+        submitReview(cardId, rating, Date.now())
+          .then(() => { useProgress.getState().loadStats(userId); })
+          .catch(() => {});
       }
     }
 
