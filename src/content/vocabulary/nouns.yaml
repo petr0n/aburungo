@@ -1,0 +1,274 @@
+# N5 common nouns — frequency-filtered content words, presented in thematic clusters.
+# content-source: training — N5 canonical vocabulary, pending JMdict seed verification
+# jlpt-source: training
+
+# ── People ───────────────────────────────────────────────────────────────────
+
+- id: vocab.hito
+  jlpt: N5
+  word_type: noun
+  theme: people
+  japanese: 人
+  reading: ひと
+  romaji: hito
+  english: person, people
+
+- id: vocab.onna-no-hito
+  jlpt: N5
+  word_type: noun
+  theme: people
+  japanese: 女の人
+  reading: おんなのひと
+  romaji: onna no hito
+  english: woman
+
+- id: vocab.otoko-no-hito
+  jlpt: N5
+  word_type: noun
+  theme: people
+  japanese: 男の人
+  reading: おとこのひと
+  romaji: otoko no hito
+  english: man
+
+- id: vocab.tomodachi
+  jlpt: N5
+  word_type: noun
+  theme: people
+  japanese: 友達
+  reading: ともだち
+  romaji: tomodachi
+  english: friend
+
+- id: vocab.sensei
+  jlpt: N5
+  word_type: noun
+  theme: people
+  japanese: 先生
+  reading: せんせい
+  romaji: sensei
+  english: teacher
+
+- id: vocab.kazoku
+  jlpt: N5
+  word_type: noun
+  theme: people
+  japanese: 家族
+  reading: かぞく
+  romaji: kazoku
+  english: family
+
+# ── Places ───────────────────────────────────────────────────────────────────
+
+- id: vocab.ie
+  jlpt: N5
+  word_type: noun
+  theme: places
+  japanese: 家
+  reading: いえ
+  romaji: ie
+  english: house, home
+
+- id: vocab.gakkou
+  jlpt: N5
+  word_type: noun
+  theme: places
+  japanese: 学校
+  reading: がっこう
+  romaji: gakkou
+  english: school
+
+- id: vocab.eki
+  jlpt: N5
+  word_type: noun
+  theme: places
+  japanese: 駅
+  reading: えき
+  romaji: eki
+  english: station
+
+- id: vocab.mise
+  jlpt: N5
+  word_type: noun
+  theme: places
+  japanese: 店
+  reading: みせ
+  romaji: mise
+  english: shop, store
+
+- id: vocab.byouin
+  jlpt: N5
+  word_type: noun
+  theme: places
+  japanese: 病院
+  reading: びょういん
+  romaji: byouin
+  english: hospital
+
+- id: vocab.toshokan
+  jlpt: N5
+  word_type: noun
+  theme: places
+  japanese: 図書館
+  reading: としょかん
+  romaji: toshokan
+  english: library
+
+# ── Food & drink ─────────────────────────────────────────────────────────────
+
+- id: vocab.mizu
+  jlpt: N5
+  word_type: noun
+  theme: food
+  japanese: 水
+  reading: みず
+  romaji: mizu
+  english: water
+
+- id: vocab.gohan
+  jlpt: N5
+  word_type: noun
+  theme: food
+  japanese: ご飯
+  reading: ごはん
+  romaji: gohan
+  english: rice, meal
+
+- id: vocab.ocha
+  jlpt: N5
+  word_type: noun
+  theme: food
+  japanese: お茶
+  reading: おちゃ
+  romaji: ocha
+  english: tea
+
+- id: vocab.pan
+  jlpt: N5
+  word_type: noun
+  theme: food
+  japanese: パン
+  reading: パン
+  romaji: pan
+  english: bread
+
+- id: vocab.sakana
+  jlpt: N5
+  word_type: noun
+  theme: food
+  japanese: 魚
+  reading: さかな
+  romaji: sakana
+  english: fish
+
+- id: vocab.niku
+  jlpt: N5
+  word_type: noun
+  theme: food
+  japanese: 肉
+  reading: にく
+  romaji: niku
+  english: meat
+
+- id: vocab.yasai
+  jlpt: N5
+  word_type: noun
+  theme: food
+  japanese: 野菜
+  reading: やさい
+  romaji: yasai
+  english: vegetable
+
+# ── Everyday objects ──────────────────────────────────────────────────────────
+
+- id: vocab.hon
+  jlpt: N5
+  word_type: noun
+  theme: objects
+  japanese: 本
+  reading: ほん
+  romaji: hon
+  english: book
+
+- id: vocab.kuruma
+  jlpt: N5
+  word_type: noun
+  theme: objects
+  japanese: 車
+  reading: くるま
+  romaji: kuruma
+  english: car
+
+- id: vocab.denwa
+  jlpt: N5
+  word_type: noun
+  theme: objects
+  japanese: 電話
+  reading: でんわ
+  romaji: denwa
+  english: telephone
+
+- id: vocab.kaban
+  jlpt: N5
+  word_type: noun
+  theme: objects
+  japanese: かばん
+  reading: かばん
+  romaji: kaban
+  english: bag
+
+- id: vocab.okane
+  jlpt: N5
+  word_type: noun
+  theme: objects
+  japanese: お金
+  reading: おかね
+  romaji: okane
+  english: money
+
+# ── Time ─────────────────────────────────────────────────────────────────────
+
+- id: vocab.ima
+  jlpt: N5
+  word_type: noun
+  theme: time
+  japanese: 今
+  reading: いま
+  romaji: ima
+  english: now
+
+- id: vocab.kyou
+  jlpt: N5
+  word_type: noun
+  theme: time
+  japanese: 今日
+  reading: きょう
+  romaji: kyou
+  english: today
+
+- id: vocab.ashita
+  jlpt: N5
+  word_type: noun
+  theme: time
+  japanese: 明日
+  reading: あした
+  romaji: ashita
+  english: tomorrow
+
+- id: vocab.kinou
+  jlpt: N5
+  word_type: noun
+  theme: time
+  japanese: 昨日
+  reading: きのう
+  romaji: kinou
+  english: yesterday
+
+- id: vocab.jikan
+  jlpt: N5
+  word_type: noun
+  theme: time
+  japanese: 時間
+  reading: じかん
+  romaji: jikan
+  english: time, hour

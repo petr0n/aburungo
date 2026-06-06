@@ -13,7 +13,7 @@
  *   2. New cards (never reviewed) in source order.
  */
 import { create } from "zustand";
-import type { Phrase, ReviewRating } from "@/types";
+import type { Phrase, Word, ReviewRating } from "@/types";
 import { getAll, getOne, upsert } from "@/db/reviewStore";
 import { schedule, isDue } from "@/srs/leitner";
 import { fetchVocabulary } from "@/api/vocabulary";
@@ -25,18 +25,18 @@ type Status = "idle" | "loading" | "ready" | "empty" | "error";
 type SessionState = {
   status: Status;
   error: string | null;
-  queue: Phrase[];
+  queue: Array<Phrase | Word>;
   currentIndex: number;
   /** japanese text → server card UUID; populated for authenticated users */
   cardIdMap: Map<string, string>;
 
   /**
-   * Build a review queue from the supplied phrases.
-   * Phrases already in IndexedDB that are due come first (oldest-due first).
-   * Phrases never reviewed come after, in the order supplied.
+   * Build a review queue from the supplied items (phrases or words).
+   * Items already in IndexedDB that are due come first (oldest-due first).
+   * Items never reviewed come after, in the order supplied.
    * For authenticated users, also fetches the card ID map from the server.
    */
-  initialize: (phrases: Phrase[], userId: string | null) => Promise<void>;
+  initialize: (items: Array<Phrase | Word>, userId: string | null) => Promise<void>;
   rate: (rating: ReviewRating, userId: string | null) => Promise<void>;
   reset: () => void;
 };
@@ -48,7 +48,7 @@ export const useSession = create<SessionState>((set, get) => ({
   currentIndex: 0,
   cardIdMap: new Map(),
 
-  async initialize(phrases, userId) {
+  async initialize(items, userId) {
     set({ status: "loading", error: null, queue: [], currentIndex: 0, cardIdMap: new Map() });
 
     // Kick off vocabulary fetch in parallel with local queue build so the map
@@ -63,17 +63,17 @@ export const useSession = create<SessionState>((set, get) => ({
       const now = Date.now();
       const stored = await getAll();
       const stateMap = new Map(stored.map((s) => [s.phraseId, s]));
-      const phraseMap = new Map(phrases.map((p) => [p.id, p]));
+      const itemMap = new Map(items.map((p) => [p.id, p]));
 
-      // Due phrases: stored state exists and dueAt has passed
+      // Due items: stored state exists and dueAt has passed
       const dueQueue = stored
-        .filter((s) => isDue(s, now) && phraseMap.has(s.phraseId))
+        .filter((s) => isDue(s, now) && itemMap.has(s.phraseId))
         .sort((a, b) => a.dueAt - b.dueAt)
-        .map((s) => phraseMap.get(s.phraseId))
-        .filter((p): p is Phrase => p !== undefined);
+        .map((s) => itemMap.get(s.phraseId))
+        .filter((p): p is Phrase | Word => p !== undefined);
 
-      // New phrases: never reviewed (no IndexedDB entry)
-      const newQueue = phrases.filter((p) => !stateMap.has(p.id));
+      // New items: never reviewed (no IndexedDB entry)
+      const newQueue = items.filter((p) => !stateMap.has(p.id));
 
       const queue = [...dueQueue, ...newQueue];
       const cardIdMap = await cardIdMapPromise;

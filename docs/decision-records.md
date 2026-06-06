@@ -319,3 +319,141 @@ For signed-in users the reset wipes the corresponding `user_kana_progress` serve
 ---
 
 *New decisions should be appended with the next DR-NNN number and today's date.*
+
+---
+
+## DR-010 — Vocabulary feature: words-first graduation model
+
+**Date:** 2026-06-05
+**Status:** Active
+
+**Context:**
+The app had no dedicated vocabulary section. Practice and Flashcards covered phrases and
+sentences only. A learner cannot meaningfully practice phrases without a vocabulary
+foundation — drilling "駅はどこですか" before knowing what 駅 means produces surface
+pattern-matching, not durable retention. Research (i+1 input hypothesis) confirms that
+learners retain vocabulary 3–5x longer when new items appear in context where 95–98% of
+surrounding words are already known.
+
+**Decision:**
+Introduce a words-first graduation model across Practice and Flashcards:
+- All users start with vocabulary words only. Phrases do not appear until the learner has
+  a word foundation.
+- **Free accounts:** manual toggle (Words / Phrases) — user decides when to add phrases.
+  Default is Words.
+- **Paid accounts:** smart unlock — a phrase enters the review queue automatically once
+  the user's FSRS state for a threshold percentage (~80%) of that phrase's vocabulary
+  dependencies reaches "learning" or better. No manual toggle needed; the algorithm
+  surfaces phrases when the learner is ready.
+- A `/words` page will be added to the nav before Kana — it is the entry point to the
+  language and should appear first.
+
+**Consequences:**
+- Paid smart unlock requires a vocab → phrase dependency map: each phrase must list the
+  vocabulary items it draws on. This can be authored in YAML or auto-derived via a
+  server-side tokenizer (kuromoji/sudachi).
+- Smart unlock requires FSRS server sync for vocabulary items to be live. The free toggle
+  works without server state and can ship first.
+- The `card_type: "word" | "phrase"` field must be added to the card schema to enable
+  filtering in Practice and Flashcards.
+
+---
+
+## DR-011 — Vocabulary word card schema and content rules
+
+**Date:** 2026-06-05
+**Status:** Active
+
+**Context:**
+The existing `Card` type and deck YAML schema were designed for phrase-level content.
+Vocabulary words need additional structure: word type (for browse filtering and eventual
+grammar integration), verb display form, and a clear content sourcing rule.
+
+**Decision:**
+
+**Card schema additions:**
+- `word_type`: `"noun" | "verb" | "i-adj" | "na-adj" | "adverb" | "counter" | "particle" | "expression"`
+  Required for vocabulary cards; omitted for phrase cards.
+- `verb_class`: `"ru" | "u" | "irregular"` — hidden data field, never displayed to the
+  learner. Used by the system to auto-generate the polite form (食べます from 食べる).
+  Not taught as a grammar concept until a grammar section exists.
+
+**Verb display:**
+Show both dictionary form and polite form on every verb card:
+```
+食べる · 食べます
+to eat
+```
+Dictionary form is the linguistic reference standard (JMdict headword). Polite form is
+what learners will actually produce in everyday speech. Showing both eliminates the
+"I know the word but not how to say it politely" gap without requiring a grammar lesson.
+
+**Content rules:**
+- Primary English meaning only (no lists of 6 equivalents). Alternatives go in `notes`.
+- No particles (は, が, を, etc.) as standalone vocabulary cards — they are grammar items,
+  not content words, and cannot be drilled meaningfully in isolation.
+- Content words only: nouns, verbs, adjectives, adverbs, counters.
+- Content sourced from JMdict per existing CLAUDE.md rules. Mark N5 training-knowledge
+  items with `# content-source: training` until JMdict seed verifies.
+
+**Content organization:**
+- Frequency-ordered to determine which words to include and in what priority (top
+  frequency words first), filtered to content words only.
+- Presented in thematic clusters as the surface structure (food words together, transport
+  words together) — the ordering logic is frequency, the UI grouping is thematic.
+- Same framework at all JLPT levels (no switching from frequency to thematic between
+  levels).
+
+**Consequences:**
+- `verb_class` must be authored in all verb YAML entries. It is a required field for verbs
+  even though it is never shown to the learner.
+- The polite form is auto-generated at render time; it is not stored in the DB.
+- Particle-type words in JMdict are excluded from the vocabulary section and deferred to
+  a future grammar section.
+- `card_type` distinguishes vocabulary cards from phrase cards in the existing `cards` table.
+
+---
+
+## DR-012 — Vocabulary progress mechanics and session sizing
+
+**Date:** 2026-06-05
+**Status:** Active
+
+**Context:**
+Three questions needed resolving before building the vocabulary review loop: (1) in what
+order to test meaning vs. reading; (2) what constitutes "knowing" a word for the phrase
+graduation system; (3) how many new words to introduce per session.
+
+**Decision:**
+
+**Review direction:**
+Test recognition before production for every new word:
+1. JP → EN (recognition): see the Japanese word, recall the English meaning. Self-rated.
+   Mapped to the Flashcards mechanic.
+2. EN → JP (production): see the English meaning, produce the Japanese reading. Type-in.
+   Mapped to the Practice (fill-in-blank) mechanic.
+A word does not enter the EN→JP queue until it has passed JP→EN at least once.
+
+**Progress tracking:**
+Correct answers feed FSRS state exclusively — no separate correct-answer counter.
+"Knowing" a word for the phrase-unlock graduation system means reaching FSRS state
+"review" or better, not a raw count of correct responses. This prevents short-term
+memory masquerading as retention.
+
+**Session sizing:**
+- 10 new words per day cap for all tiers. Research shows spacing and retrieval frequency
+  matter more than volume; more than 10–15 new words/day without proportional review time
+  leads to review pile-up and learner dropout.
+- The cap is per day, not per session. Multiple sessions in a day still share the 10-word
+  daily limit.
+- Paid users get smart word selection: instead of the next N words in sequence, the system
+  prioritizes words that are vocabulary dependencies of phrases the user is close to
+  unlocking. This is a meaningful quality difference, not just "more words."
+
+**Consequences:**
+- FSRS server sync for vocabulary must be live before the graduation system can function.
+  The 10/day cap and review direction work without server state and can ship first.
+- Smart word selection for paid users requires the vocab → phrase dependency map
+  (see DR-010) and server-side readiness computation.
+- The daily cap must be enforced server-side for authenticated users to prevent
+  multi-device circumvention.

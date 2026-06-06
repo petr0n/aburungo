@@ -1,6 +1,8 @@
 import { useState } from "react";
-import type { Phrase } from "@/types";
+import type { Phrase, Word, WordType } from "@/types";
+import { isWord } from "@/types";
 import { compareAnswer } from "@/lib/compareAnswer";
+import { toPoliteJapanese, toPoliteReading } from "@/lib/verbForms";
 import { Badge, Button, Card } from "aburungo-design-system";
 import { FillInput } from "./FillInput";
 import { VoiceInput } from "./VoiceInput";
@@ -9,8 +11,17 @@ import { AudioButton } from "./AudioButton";
 type Phase = "input" | "result";
 type InputMode = "text" | "voice";
 
+const WORD_TYPE_LABELS: Record<WordType, string> = {
+  noun: "Noun",
+  verb: "Verb",
+  "i-adj": "Adjective",
+  "na-adj": "Adjective",
+  adverb: "Adverb",
+  counter: "Counter",
+};
+
 type Props = {
-  card: Phrase;
+  card: Phrase | Word;
   onNext: (correct: boolean) => void;
 };
 
@@ -19,6 +30,17 @@ export function FillBlankCard({ card, onNext }: Props) {
   const [inputMode, setInputMode] = useState<InputMode>("text");
   const [correct, setCorrect] = useState(false);
   const [userAnswer, setUserAnswer] = useState("");
+
+  const badgeLabel = isWord(card)
+    ? WORD_TYPE_LABELS[card.wordType]
+    : card.scenario.charAt(0).toUpperCase() + card.scenario.slice(1);
+
+  const politeJapanese = isWord(card) && card.verbClass !== undefined
+    ? toPoliteJapanese(card.japanese, card.reading, card.verbClass)
+    : null;
+  const politeReading = isWord(card) && card.verbClass !== undefined
+    ? toPoliteReading(card.reading, card.verbClass)
+    : null;
 
   function handleSubmit(value: string) {
     const isCorrect = compareAnswer(value, card.reading);
@@ -47,12 +69,25 @@ export function FillBlankCard({ card, onNext }: Props) {
         </div>
 
         <div className="flex flex-col items-center gap-1 rounded-xl bg-surface-2 p-4 text-center">
-          <p lang="ja" className="font-jp text-jp-lg text-fg">
-            {card.japanese}
-          </p>
-          <p lang="ja" className="font-jp text-jp text-fg-muted">
-            {card.reading}
-          </p>
+          {politeJapanese !== null ? (
+            <>
+              <p lang="ja" className="font-jp text-jp-lg text-fg">
+                {card.japanese} · {politeJapanese}
+              </p>
+              <p lang="ja" className="font-jp text-jp text-fg-muted">
+                {card.reading} · {politeReading}
+              </p>
+            </>
+          ) : (
+            <>
+              <p lang="ja" className="font-jp text-jp-lg text-fg">
+                {card.japanese}
+              </p>
+              <p lang="ja" className="font-jp text-jp text-fg-muted">
+                {card.reading}
+              </p>
+            </>
+          )}
           <p className="text-body-sm italic text-fg-subtle">{card.romaji}</p>
         </div>
 
@@ -70,7 +105,7 @@ export function FillBlankCard({ card, onNext }: Props) {
     <Card className="w-full">
       <div className="flex flex-col gap-6">
         <header className="flex items-center justify-between gap-4">
-          <Badge emphasis>{card.scenario.charAt(0).toUpperCase() + card.scenario.slice(1)}</Badge>
+          <Badge emphasis>{badgeLabel}</Badge>
           <AudioButton src={card.audioUrl ?? undefined} />
         </header>
 

@@ -1,12 +1,13 @@
 import { useEffect } from "react";
+import type { Phrase, Word } from "@/types";
 import { useSession } from "@/store/session";
-import { useAuth, useUserTier } from "@/store/auth";
-import { phrasesForTier } from "@/content";
+import { useAuth } from "@/store/auth";
 import { LoadingPlaceholder, EmptyState, ErrorState } from "aburungo-design-system";
 import { FillBlankCard } from "./FillBlankCard";
 
-export function FillBlankScreen() {
-  const tier = useUserTier();
+type Props = { cards: Array<Phrase | Word> };
+
+export function FillBlankScreen({ cards }: Props) {
   const userId = useAuth((s) => s.user?.id ?? null);
   const status = useSession((s) => s.status);
   const error = useSession((s) => s.error);
@@ -17,8 +18,8 @@ export function FillBlankScreen() {
   const reset = useSession((s) => s.reset);
 
   useEffect(() => {
-    void initialize(phrasesForTier(tier), userId);
-  }, [initialize, tier, userId]);
+    void initialize(cards, userId);
+  }, [initialize, cards, userId]);
 
   if (status === "idle" || status === "loading") {
     return <LoadingPlaceholder label="Loading review queue…" />;
@@ -34,7 +35,7 @@ export function FillBlankScreen() {
             type="button"
             onClick={() => {
               reset();
-              void initialize(phrasesForTier(tier), userId);
+              void initialize(cards, userId);
             }}
             className="h-12 rounded-xl border border-border-strong px-6 text-body font-medium text-fg-muted hover:bg-surface-2 active:bg-surface-2"
           >
@@ -49,13 +50,13 @@ export function FillBlankScreen() {
     return (
       <EmptyState
         message="All caught up!"
-        description="No phrases due for review right now."
+        description="No cards due for review right now."
         action={
           <button
             type="button"
             onClick={() => {
               reset();
-              void initialize(phrasesForTier(tier), userId);
+              void initialize(cards, userId);
             }}
             className="h-12 rounded-xl border border-border-strong px-6 text-body font-medium text-fg-muted hover:bg-surface-2 active:bg-surface-2"
           >

@@ -1,0 +1,213 @@
+# N5 core verbs — frequency-filtered, ordered by everyday utility.
+# content-source: training — N5 canonical vocabulary, pending JMdict seed verification
+# jlpt-source: training
+
+# ── Daily life ────────────────────────────────────────────────────────────────
+
+- id: vocab.taberu
+  jlpt: N5
+  word_type: verb
+  verb_class: ru
+  theme: daily-life
+  japanese: 食べる
+  reading: たべる
+  romaji: taberu
+  english: to eat
+
+- id: vocab.nomu
+  jlpt: N5
+  word_type: verb
+  verb_class: u
+  theme: daily-life
+  japanese: 飲む
+  reading: のむ
+  romaji: nomu
+  english: to drink
+
+- id: vocab.neru
+  jlpt: N5
+  word_type: verb
+  verb_class: ru
+  theme: daily-life
+  japanese: 寝る
+  reading: ねる
+  romaji: neru
+  english: to sleep
+
+- id: vocab.okiru
+  jlpt: N5
+  word_type: verb
+  verb_class: ru
+  theme: daily-life
+  japanese: 起きる
+  reading: おきる
+  romaji: okiru
+  english: to wake up, to get up
+
+- id: vocab.kau
+  jlpt: N5
+  word_type: verb
+  verb_class: u
+  theme: daily-life
+  japanese: 買う
+  reading: かう
+  romaji: kau
+  english: to buy
+
+- id: vocab.suru
+  jlpt: N5
+  word_type: verb
+  verb_class: irregular
+  theme: daily-life
+  japanese: する
+  reading: する
+  romaji: suru
+  english: to do
+
+# ── Movement ──────────────────────────────────────────────────────────────────
+
+- id: vocab.iku
+  jlpt: N5
+  word_type: verb
+  verb_class: u
+  theme: movement
+  japanese: 行く
+  reading: いく
+  romaji: iku
+  english: to go
+
+- id: vocab.kuru
+  jlpt: N5
+  word_type: verb
+  verb_class: irregular
+  theme: movement
+  japanese: 来る
+  reading: くる
+  romaji: kuru
+  english: to come
+
+- id: vocab.kaeru
+  jlpt: N5
+  word_type: verb
+  verb_class: u
+  theme: movement
+  japanese: 帰る
+  reading: かえる
+  romaji: kaeru
+  english: to return home
+  notes: u-verb despite ending in る
+
+- id: vocab.hairu
+  jlpt: N5
+  word_type: verb
+  verb_class: u
+  theme: movement
+  japanese: 入る
+  reading: はいる
+  romaji: hairu
+  english: to enter, to go in
+  notes: u-verb despite ending in る
+
+- id: vocab.deru
+  jlpt: N5
+  word_type: verb
+  verb_class: ru
+  theme: movement
+  japanese: 出る
+  reading: でる
+  romaji: deru
+  english: to leave, to exit
+
+# ── Communication ─────────────────────────────────────────────────────────────
+
+- id: vocab.hanasu
+  jlpt: N5
+  word_type: verb
+  verb_class: u
+  theme: communication
+  japanese: 話す
+  reading: はなす
+  romaji: hanasu
+  english: to speak, to talk
+
+- id: vocab.kiku
+  jlpt: N5
+  word_type: verb
+  verb_class: u
+  theme: communication
+  japanese: 聞く
+  reading: きく
+  romaji: kiku
+  english: to listen, to ask
+
+- id: vocab.yomu
+  jlpt: N5
+  word_type: verb
+  verb_class: u
+  theme: communication
+  japanese: 読む
+  reading: よむ
+  romaji: yomu
+  english: to read
+
+- id: vocab.kaku
+  jlpt: N5
+  word_type: verb
+  verb_class: u
+  theme: communication
+  japanese: 書く
+  reading: かく
+  romaji: kaku
+  english: to write
+
+- id: vocab.miru
+  jlpt: N5
+  word_type: verb
+  verb_class: ru
+  theme: communication
+  japanese: 見る
+  reading: みる
+  romaji: miru
+  english: to see, to watch
+
+# ── Other core verbs ──────────────────────────────────────────────────────────
+
+- id: vocab.wakaru
+  jlpt: N5
+  word_type: verb
+  verb_class: u
+  theme: other
+  japanese: わかる
+  reading: わかる
+  romaji: wakaru
+  english: to understand
+
+- id: vocab.aru
+  jlpt: N5
+  word_type: verb
+  verb_class: u
+  theme: other
+  japanese: ある
+  reading: ある
+  romaji: aru
+  english: to exist, to have (inanimate)
+
+- id: vocab.iru
+  jlpt: N5
+  word_type: verb
+  verb_class: ru
+  theme: other
+  japanese: いる
+  reading: いる
+  romaji: iru
+  english: to exist, to be (animate)
+
+- id: vocab.au
+  jlpt: N5
+  word_type: verb
+  verb_class: u
+  theme: other
+  japanese: 会う
+  reading: あう
+  romaji: au
+  english: to meet
