@@ -3,11 +3,12 @@ import type { Word } from "@/types";
 import { useUserTier } from "@/store/auth";
 import { wordsForTier } from "@/content/vocabulary";
 import { WordDrillCard, type DrillPhase } from "@/components/WordDrillCard";
+import { WordLearnCard } from "@/components/WordLearnCard";
 import { PageShell, SectionNav } from "@/components/PageShell";
 import { ProgressWidget } from "@/components/ProgressWidget";
 import { LoadingPlaceholder, ProgressBar, ScoreCard } from "aburungo-design-system";
 
-type Screen = "browse" | "drill" | "result";
+type Screen = "browse" | "learn" | "drill" | "result";
 
 const SECTION_LINKS = [
   { to: "/flashcard", label: "Flashcards" },
@@ -35,15 +36,6 @@ function themeLabel(theme: string): string {
   return THEME_LABELS[theme] ?? theme.charAt(0).toUpperCase() + theme.slice(1);
 }
 
-function shuffle<T>(arr: T[]): T[] {
-  const a = [...arr];
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
-  }
-  return a;
-}
-
 // ── Browse screen ─────────────────────────────────────────────────────────────
 
 type BrowseScreenProps = {
@@ -67,6 +59,26 @@ function BrowseScreen({ words, selected, onSelect, onStartDrill }: BrowseScreenP
 
   return (
     <div className="flex flex-1 flex-col gap-6 py-4">
+      {selected !== null && (
+        <div className="rounded-2xl border border-brand-200 bg-brand-50 p-4">
+          <div className="flex items-start gap-4">
+            <p lang="ja" className="text-jp-lg font-medium text-fg" style={{ fontFamily: "var(--font-jp)" }}>
+              {selected.japanese}
+            </p>
+            <div className="flex flex-col">
+              <p lang="ja" className="text-body-sm text-fg-muted" style={{ fontFamily: "var(--font-jp)" }}>
+                {selected.reading}
+              </p>
+              <p className="text-body-sm text-fg-subtle">{selected.romaji}</p>
+            </div>
+          </div>
+          <p className="mt-2 text-body font-semibold text-fg">{selected.english}</p>
+          {selected.notes != null && (
+            <p className="mt-1 text-body-sm text-fg-subtle">{selected.notes}</p>
+          )}
+        </div>
+      )}
+
       {Array.from(grouped.entries()).map(([theme, group]) => (
         <section key={theme}>
           <h2 className="mb-3 text-caption font-semibold uppercase tracking-widest text-fg-faint">
@@ -93,26 +105,6 @@ function BrowseScreen({ words, selected, onSelect, onStartDrill }: BrowseScreenP
         </section>
       ))}
 
-      {selected !== null && (
-        <div className="sticky bottom-4 rounded-2xl border border-border bg-bg p-4 shadow-card">
-          <div className="mb-3 flex items-start gap-3">
-            <div>
-              <p lang="ja" className="text-jp-lg font-medium text-fg" style={{ fontFamily: "var(--font-jp)" }}>
-                {selected.japanese}
-              </p>
-              <p lang="ja" className="text-body-sm text-fg-muted" style={{ fontFamily: "var(--font-jp)" }}>
-                {selected.reading}
-              </p>
-              <p className="text-body-sm text-fg-subtle">{selected.romaji}</p>
-            </div>
-          </div>
-          <p className="mb-1 text-body font-semibold text-fg">{selected.english}</p>
-          {selected.notes != null && (
-            <p className="text-body-sm text-fg-subtle">{selected.notes}</p>
-          )}
-        </div>
-      )}
-
       <div className="pb-4">
         <button
           type="button"
@@ -120,7 +112,7 @@ function BrowseScreen({ words, selected, onSelect, onStartDrill }: BrowseScreenP
           disabled={words.length === 0}
           className="flex min-h-[52px] w-full items-center justify-center rounded-2xl bg-brand-600 text-body font-semibold text-white active:bg-brand-700 disabled:opacity-40"
         >
-          Drill all words
+          Learn words
         </button>
       </div>
     </div>
@@ -137,6 +129,7 @@ export function WordsPage() {
   const [selected, setSelected] = useState<Word | null>(null);
 
   const [queue, setQueue] = useState<Word[]>([]);
+  const [learnIndex, setLearnIndex] = useState(0);
   const [queueIndex, setQueueIndex] = useState(0);
   const [phase, setPhase] = useState<DrillPhase>("entering");
   const [stagedWord, setStagedWord] = useState<Word | null>(null);
@@ -145,8 +138,28 @@ export function WordsPage() {
 
   const advanceRef = useRef<() => void>(() => {});
 
-  function startDrill() {
-    const q = shuffle([...words]).slice(0, 20);
+  function startLearn() {
+    const q = [...words].slice(0, 10);
+    setQueue(q);
+    setLearnIndex(0);
+    setCorrectCount(0);
+    setMissed([]);
+    setScreen("learn");
+  }
+
+  function advanceLearn() {
+    const next = learnIndex + 1;
+    if (next >= queue.length) {
+      setQueueIndex(0);
+      setStagedWord(null);
+      setPhase("entering");
+      setScreen("drill");
+    } else {
+      setLearnIndex(next);
+    }
+  }
+
+  function startTest(q: Word[]) {
     setQueue(q);
     setQueueIndex(0);
     setCorrectCount(0);
@@ -182,6 +195,10 @@ export function WordsPage() {
     setPhase("entering");
   }
 
+  function retestMissed() {
+    startTest(missed.length > 0 ? missed : queue);
+  }
+
   useEffect(() => {
     advanceRef.current = advance;
   });
@@ -200,6 +217,20 @@ export function WordsPage() {
 
   if (words.length === 0) {
     content = <LoadingPlaceholder label="Loading vocabulary…" />;
+  } else if (screen === "learn") {
+    const word = queue[learnIndex];
+    content = word !== undefined ? (
+      <div className="flex w-full flex-col gap-4 py-4">
+        <ProgressBar value={(learnIndex + 1) / queue.length} />
+        <WordLearnCard
+          key={word.id}
+          word={word}
+          index={learnIndex}
+          total={queue.length}
+          onNext={advanceLearn}
+        />
+      </div>
+    ) : null;
   } else if (screen === "result") {
     content = (
       <div className="flex flex-col gap-6 py-4">
@@ -224,17 +255,26 @@ export function WordsPage() {
           )}
         </ScoreCard>
         <div className="flex flex-col gap-3 pb-8">
+          {missed.length > 0 && (
+            <button
+              type="button"
+              onClick={retestMissed}
+              className="flex min-h-[52px] w-full items-center justify-center rounded-2xl bg-brand-600 text-body font-semibold text-white active:bg-brand-700"
+            >
+              Retest missed ({missed.length})
+            </button>
+          )}
           <button
             type="button"
-            onClick={startDrill}
-            className="flex min-h-[52px] w-full items-center justify-center rounded-2xl bg-brand-600 text-body font-semibold text-white active:bg-brand-700"
+            onClick={startLearn}
+            className="flex min-h-[52px] w-full items-center justify-center rounded-2xl border border-border bg-surface text-body font-medium text-fg active:bg-surface-2"
           >
-            Drill again
+            Learn again
           </button>
           <button
             type="button"
             onClick={() => setScreen("browse")}
-            className="flex min-h-[52px] w-full items-center justify-center rounded-2xl border border-border bg-surface text-body font-medium text-fg active:bg-surface-2"
+            className="flex min-h-[52px] w-full items-center justify-center rounded-2xl border border-border bg-surface text-body-sm font-medium text-fg-subtle active:bg-surface-2"
           >
             Back to browse
           </button>
@@ -243,7 +283,7 @@ export function WordsPage() {
     );
   } else if (screen === "drill") {
     content = (
-      <div className="flex flex-col">
+      <div className="flex w-full flex-col">
         <div className="flex items-center justify-between py-2">
           <button
             type="button"
@@ -258,7 +298,7 @@ export function WordsPage() {
           <div className="w-14" />
         </div>
         <ProgressBar value={(queueIndex + 1) / queue.length} />
-        <div className="flex flex-col justify-center py-6">
+        <div className="flex w-full flex-col justify-center py-6">
           {displayWord !== null && (
             <WordDrillCard
               key={displayWord.id}
@@ -279,7 +319,7 @@ export function WordsPage() {
         words={words}
         selected={selected}
         onSelect={setSelected}
-        onStartDrill={startDrill}
+        onStartDrill={startLearn}
       />
     );
   }
