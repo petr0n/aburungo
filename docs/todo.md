@@ -2,7 +2,7 @@
 
 ## Pending
 
-- [ ] **Verify `VITE_API_URL` in Vercel** — confirm Railway URL is set as an env var; `src/api/client.ts` throws on load if missing, breaking the entire frontend in production
+- [ ] **Delete duplicate Vercel project `project-hbbvq`** — stray project wired to the same repo, builds identical output; only `aburungo-server` (owns the `aburungo.app` domain) is needed. Remove the `VITE_API_URL` mistakenly added there too. (DR-013)
 - [ ] **Connect phrase/flashcard progress to server** — `submitReview`/`fetchDue` exist in `src/api/progress.ts` but are never called; `PracticePage` and `FlashcardPage` use local Leitner only; authenticated users should dual-write IndexedDB + server FSRS
 - [ ] **Extend progress widget to phrases + kanji** — `ProgressWidget` currently shows kana only; add phrase and kanji rows sourced from `/api/progress/stats`
 - [ ] **FSRS migration for session store** — once server sync is live, authenticated sessions should pull due cards from server and post reviews (replacing client-side Leitner for signed-in users)
@@ -19,6 +19,7 @@
 
 ## Done
 
+- [x] **aburungo.app live** — set all three frontend env vars on `aburungo-server` (`VITE_SUPABASE_URL`, `VITE_SUPABASE_PUBLISHABLE_KEY`, `VITE_API_URL`); fixed duplicate-React `useId` crash via `resolve.dedupe` (PR #40, DR-013/DR-014). Blank-page failure modes documented in infrastructure.md.
 - [x] **Persistent PageShell** — shared two-row header, `max-w-5xl` content width, sidebar always present on desktop (lg); `SectionNav` sub-nav on practice/flashcard/kana pages (DR-008)
 - [x] **Profile route** — `/profile` added; guests see sign-in prompt, logged-in users see account info (DR-008)
 - [x] **Soft prompt for `/conversation`** — replaced `ProtectedRoute` hard-redirect with inline soft prompt for guests (DR-008)
