@@ -1,0 +1,151 @@
+# N5 adjectives — i-adjectives and na-adjectives, ordered by frequency.
+# content-source: training — N5 canonical vocabulary, pending JMdict seed verification
+# jlpt-source: training
+
+# ── Size & quantity (i-adj) ───────────────────────────────────────────────────
+
+- id: vocab.ookii
+  jlpt: N5
+  word_type: i-adj
+  theme: size
+  japanese: 大きい
+  reading: おおきい
+  romaji: ookii
+  english: big, large
+
+- id: vocab.chiisai
+  jlpt: N5
+  word_type: i-adj
+  theme: size
+  japanese: 小さい
+  reading: ちいさい
+  romaji: chiisai
+  english: small, little
+
+# ── Price & value (i-adj) ─────────────────────────────────────────────────────
+
+- id: vocab.takai
+  jlpt: N5
+  word_type: i-adj
+  theme: price
+  japanese: 高い
+  reading: たかい
+  romaji: takai
+  english: expensive, tall, high
+
+- id: vocab.yasui
+  jlpt: N5
+  word_type: i-adj
+  theme: price
+  japanese: 安い
+  reading: やすい
+  romaji: yasui
+  english: cheap, inexpensive
+
+# ── Age & newness (i-adj) ─────────────────────────────────────────────────────
+
+- id: vocab.atarashii
+  jlpt: N5
+  word_type: i-adj
+  theme: quality
+  japanese: 新しい
+  reading: あたらしい
+  romaji: atarashii
+  english: new
+
+- id: vocab.furui
+  jlpt: N5
+  word_type: i-adj
+  theme: quality
+  japanese: 古い
+  reading: ふるい
+  romaji: furui
+  english: old (for things, not people)
+
+# ── Temperature (i-adj) ───────────────────────────────────────────────────────
+
+- id: vocab.atsui-hot
+  jlpt: N5
+  word_type: i-adj
+  theme: temperature
+  japanese: 暑い
+  reading: あつい
+  romaji: atsui
+  english: hot (weather)
+
+- id: vocab.samui
+  jlpt: N5
+  word_type: i-adj
+  theme: temperature
+  japanese: 寒い
+  reading: さむい
+  romaji: samui
+  english: cold (weather)
+
+# ── Quality (i-adj) ───────────────────────────────────────────────────────────
+
+- id: vocab.ii
+  jlpt: N5
+  word_type: i-adj
+  theme: quality
+  japanese: いい
+  reading: いい
+  romaji: ii
+  english: good
+  notes: Plain form いい; negative/past forms use the alternative stem よ (よくない, よかった).
+
+- id: vocab.omoshiroi
+  jlpt: N5
+  word_type: i-adj
+  theme: quality
+  japanese: 面白い
+  reading: おもしろい
+  romaji: omoshiroi
+  english: interesting, funny
+
+# ── Na-adjectives ─────────────────────────────────────────────────────────────
+
+- id: vocab.shizuka
+  jlpt: N5
+  word_type: na-adj
+  theme: quality
+  japanese: 静か
+  reading: しずか
+  romaji: shizuka
+  english: quiet
+
+- id: vocab.nigiyaka
+  jlpt: N5
+  word_type: na-adj
+  theme: quality
+  japanese: にぎやか
+  reading: にぎやか
+  romaji: nigiyaka
+  english: lively, bustling
+
+- id: vocab.kirei
+  jlpt: N5
+  word_type: na-adj
+  theme: quality
+  japanese: きれい
+  reading: きれい
+  romaji: kirei
+  english: beautiful, clean
+
+- id: vocab.genki
+  jlpt: N5
+  word_type: na-adj
+  theme: quality
+  japanese: 元気
+  reading: げんき
+  romaji: genki
+  english: healthy, energetic, fine
+
+- id: vocab.daijoubu
+  jlpt: N5
+  word_type: na-adj
+  theme: quality
+  japanese: 大丈夫
+  reading: だいじょうぶ
+  romaji: daijoubu
+  english: OK, alright, fine

@@ -60,6 +60,37 @@ export type Phrase = {
   jlpt?: JlptLevel;
 };
 
+export type WordType = "noun" | "verb" | "i-adj" | "na-adj" | "adverb" | "counter";
+export type VerbClass = "ru" | "u" | "irregular";
+
+/**
+ * A single vocabulary word the learner is studying.
+ *
+ * Authored in YAML under src/content/vocabulary/*.yaml. Distinct from Phrase:
+ * a Word is a recombineable lexical item; a Phrase is a fixed situational expression.
+ *
+ * verbClass is stored but never surfaced to the learner directly — it is used
+ * to auto-generate the polite form for display (食べる → 食べます).
+ */
+export type Word = {
+  id: string;
+  japanese: string;
+  reading: string;
+  romaji: string;
+  english: string;
+  audioUrl?: string;
+  notes?: string;
+  jlpt?: JlptLevel;
+  wordType: WordType;
+  verbClass?: VerbClass;
+  theme?: string;
+};
+
+/** Type guard — distinguishes vocabulary words from situational phrases. */
+export function isWord(card: Phrase | Word): card is Word {
+  return "wordType" in card;
+}
+
 /**
  * A grouping of phrases that share a scenario or theme.
  *

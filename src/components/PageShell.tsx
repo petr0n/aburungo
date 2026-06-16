@@ -16,6 +16,7 @@ type SectionLink = { to: string; label: string };
 // ── Constants ────────────────────────────────────────────────────────────────
 
 const NAV_LINKS: NavLink[] = [
+  { to: "/words", label: "Words" },
   { to: "/kana", label: "Kana" },
   { to: "/flashcard", label: "Flashcards" },
   { to: "/practice", label: "Practice" },
