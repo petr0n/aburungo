@@ -2,6 +2,12 @@
   "version": "0.0.1",
   "configurations": [
     {
+      "name": "dev",
+      "runtimeExecutable": "pnpm",
+      "runtimeArgs": ["dev"],
+      "port": 5173
+    },
+    {
       "name": "storybook",
       "runtimeExecutable": "npx",
       "runtimeArgs": ["http-server", "../aburungo-design-system", "-p", "6007", "--cors", "-c-1"],
