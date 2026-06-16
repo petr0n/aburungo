@@ -10,10 +10,46 @@ How the app is hosted, where DNS lives, and how email works.
 |---|---|---|
 | Domain | GoDaddy (`aburungo.app`) | ~$20/yr |
 | DNS + Email routing | Cloudflare (free) | Free |
-| Frontend hosting | Vercel | Free tier |
-| Backend hosting | Railway / Fly.io / Render | TBD |
+| Frontend hosting | Vercel — project **`aburungo-server`** | Free tier |
+| Backend hosting | Railway (`aburungo-server-production.up.railway.app`) | Free tier |
 | Transactional email | Resend | Free tier |
 | Database + Auth | Supabase (`ecwzexrjgnecpfyvrsdb`, East US) | Free tier |
+
+---
+
+## Live deployment — current values
+
+The frontend is the Vercel project **`aburungo-server`** (misleading name — it serves the
+frontend SPA, not the API; the API server is on Railway). The `aburungo.app` and
+`www.aburungo.app` domains are attached to this project. See DR-013 / DR-014.
+
+> **Stray duplicate project `project-hbbvq`** is wired to the same repo and builds identical
+> output. It is unused and should be deleted — do not add config to it.
+
+**Required frontend env vars** — Vercel -> `aburungo-server` -> Settings -> Environment
+Variables, scope Production + Preview. All are baked in at build time by Vite, so changing
+any requires a redeploy:
+
+| Variable | Value |
+|---|---|
+| `VITE_SUPABASE_URL` | `https://ecwzexrjgnecpfyvrsdb.supabase.co` |
+| `VITE_SUPABASE_PUBLISHABLE_KEY` | Supabase **publishable** key (`sb_publishable_...`) — safe in frontend; never the secret key |
+| `VITE_API_URL` | `https://aburungo-server-production.up.railway.app` (no trailing slash) |
+
+### Troubleshooting: blank / white page on aburungo.app
+
+HTTP 200 but nothing renders is almost always one of these (not a build failure):
+
+1. **Missing env vars.** `src/lib/supabase.ts` and `src/api/client.ts` throw at module load
+   if their `VITE_*` vars are unset — before React mounts, so the page is blank and the JS
+   bundle can look like a small "stub." Fix: confirm all three vars above exist, then
+   **redeploy** (Vite only bakes env vars at build time).
+2. **Supabase project paused** (free tier pauses after inactivity). Breaks auth/data even
+   with correct env vars; resume it in the Supabase dashboard. Does *not* cause the blank
+   page throw.
+3. **Duplicate React** (`Cannot read properties of null (reading 'useId')` in console). The
+   linked design system ships its own React; `vite.config.ts` must keep
+   `resolve.dedupe: ['react','react-dom']` (DR-014).
 
 ---
 

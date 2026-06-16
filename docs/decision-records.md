@@ -457,3 +457,65 @@ memory masquerading as retention.
   (see DR-010) and server-side readiness computation.
 - The daily cap must be enforced server-side for authenticated users to prevent
   multi-device circumvention.
+
+---
+
+## DR-013 — Frontend on a single Vercel project; env vars are deploy-critical
+
+**Date:** 2026-06-16
+**Status:** Active
+
+**Context:**
+`aburungo.app` was returning HTTP 200 but rendering a blank page. Diagnosis revealed
+two compounding issues:
+1. **Two Vercel projects** were wired to the `petr0n/aburungo` repo — `aburungo-server`
+   (which owns the `aburungo.app` + `www` domains) and a stray auto-named `project-hbbvq`.
+   Both built identical output, causing confusion about where config belonged; an env var
+   was even set on the wrong one.
+2. **Missing frontend env vars.** `src/lib/supabase.ts` and `src/api/client.ts` throw at
+   module load if their `VITE_*` vars are unset. The throw fires before React mounts, so
+   the page is blank — which masqueraded as a "build produces a stub" problem when it was
+   actually a runtime env-var problem. A separate Supabase free-tier pause was also found.
+
+**Decision:**
+- The frontend is served by exactly one Vercel project, `aburungo-server` (keep the
+  misleading name — renaming risks breaking the domain/Git wiring). Delete the duplicate
+  `project-hbbvq`.
+- Treat the three frontend env vars (`VITE_SUPABASE_URL`, `VITE_SUPABASE_PUBLISHABLE_KEY`,
+  `VITE_API_URL`) as deploy-critical config, documented with exact values in
+  `infrastructure.md` -> "Live deployment". Vite bakes them at build time, so any change
+  requires a redeploy.
+
+**Consequences:**
+- A blank live page is now a documented failure mode with a checklist (env vars present
+  + redeployed; Supabase not paused) rather than a multi-hour mystery.
+- Single frontend project removes the "which project?" ambiguity for future config.
+- The throw-on-missing-env-var behaviour is intentionally kept — it fails loud and early;
+  the cost (a missing var white-screens the app) is acceptable now that it's documented.
+
+---
+
+## DR-014 — Dedupe React for the linked design system
+
+**Date:** 2026-06-16
+**Status:** Active
+
+**Context:**
+After the env vars were fixed, the live app threw at runtime:
+`Uncaught TypeError: Cannot read properties of null (reading 'useId')`. The design system
+`aburungo-design-system` is consumed via `link:../aburungo-design-system` and ships its own
+`node_modules/react`. ADS components import `useId` from `react` and `jsx` from
+`react/jsx-runtime`; without deduping, the bundle resolved those to ADS's React copy while
+the app used its own — two React instances, null hook dispatcher, crash on first render of
+any ADS component (immediate, since the landing AuthForm uses ADS `TextInput`).
+
+**Decision:**
+Add `resolve.dedupe: ['react', 'react-dom']` to `vite.config.ts` so all React imports
+resolve to a single instance.
+
+**Consequences:**
+- Hooks work; ADS components render. Verified locally (dev server, clean console) and live.
+- Only React *core* was duplicated (ADS never imports `react-dom`), so bundle size barely
+  changed — bundle size is not a reliable signal of this bug; the runtime console is.
+- Any future linked workspace package that bundles its own React is covered by the same
+  dedupe entry.
