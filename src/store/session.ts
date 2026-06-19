@@ -17,7 +17,7 @@ import type { Phrase, Word, ReviewRating } from "@/types";
 import { getAll, getOne, upsert } from "@/db/reviewStore";
 import { schedule, isDue } from "@/srs/leitner";
 import { fetchVocabulary } from "@/api/vocabulary";
-import { submitReview } from "@/api/progress";
+import { submitReview, fetchDue } from "@/api/progress";
 import { useProgress } from "@/store/progress";
 
 type Status = "idle" | "loading" | "ready" | "empty" | "error";
@@ -65,18 +65,48 @@ export const useSession = create<SessionState>((set, get) => ({
       const stateMap = new Map(stored.map((s) => [s.phraseId, s]));
       const itemMap = new Map(items.map((p) => [p.id, p]));
 
-      // Due items: stored state exists and dueAt has passed
-      const dueQueue = stored
+      // Local due items (Leitner): stored state exists and dueAt has passed.
+      // Primary source of "due" on the device where the reviews happened.
+      const localDue = stored
         .filter((s) => isDue(s, now) && itemMap.has(s.phraseId))
         .sort((a, b) => a.dueAt - b.dueAt)
         .map((s) => itemMap.get(s.phraseId))
         .filter((p): p is Phrase | Word => p !== undefined);
 
-      // New items: never reviewed (no IndexedDB entry)
-      const newQueue = items.filter((p) => !stateMap.has(p.id));
+      const cardIdMap = await cardIdMapPromise;
+
+      // Server due items (FSRS), for authenticated users only. Closes the
+      // cross-device gap: on a device with empty IndexedDB, the server still
+      // knows which cards are due. Mapped server cardId -> japanese -> item.
+      // Non-fatal: a failed/empty fetch just falls back to local-only.
+      let serverDue: Array<Phrase | Word> = [];
+      if (userId && cardIdMap.size > 0) {
+        try {
+          const due = await fetchDue(100);
+          const dueCardIds = new Set(due.map((d) => d.cardId));
+          serverDue = items.filter((p) => {
+            const cardId = cardIdMap.get(p.japanese);
+            return cardId !== undefined && dueCardIds.has(cardId);
+          });
+        } catch {
+          // ignore — local due queue still applies
+        }
+      }
+
+      // Merge due (local first, then any server-only due), de-duped by item id.
+      const dueIds = new Set<string>();
+      const dueQueue: Array<Phrase | Word> = [];
+      for (const item of [...localDue, ...serverDue]) {
+        if (!dueIds.has(item.id)) {
+          dueIds.add(item.id);
+          dueQueue.push(item);
+        }
+      }
+
+      // New items: never reviewed locally and not already queued as due.
+      const newQueue = items.filter((p) => !stateMap.has(p.id) && !dueIds.has(p.id));
 
       const queue = [...dueQueue, ...newQueue];
-      const cardIdMap = await cardIdMapPromise;
       set({ queue, currentIndex: 0, status: queue.length === 0 ? "empty" : "ready", cardIdMap });
     } catch (err) {
       const cardIdMap = await cardIdMapPromise;
