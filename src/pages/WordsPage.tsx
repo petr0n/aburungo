@@ -4,6 +4,7 @@ import { useUserTier } from "@/store/auth";
 import { wordsForTier } from "@/content/vocabulary";
 import { WordDrillCard, type DrillPhase } from "@/components/WordDrillCard";
 import { WordLearnCard } from "@/components/WordLearnCard";
+import { Furigana } from "@/components/Furigana";
 import { PageShell, SectionNav } from "@/components/PageShell";
 import { ProgressWidget } from "@/components/ProgressWidget";
 import { LoadingPlaceholder, ProgressBar, ScoreCard } from "aburungo-design-system";
@@ -62,9 +63,11 @@ function BrowseScreen({ words, selected, onSelect, onStartDrill }: BrowseScreenP
       {selected !== null && (
         <div className="rounded-2xl border border-brand-200 bg-brand-50 p-4">
           <div className="flex items-start gap-4">
-            <p lang="ja" className="text-jp-lg font-medium text-fg" style={{ fontFamily: "var(--font-jp)" }}>
-              {selected.japanese}
-            </p>
+            <Furigana
+              japanese={selected.japanese}
+              reading={selected.reading}
+              className="text-jp-lg font-medium text-fg lg:text-jp-display"
+            />
             <div className="flex flex-col">
               <p lang="ja" className="text-body-sm text-fg-muted" style={{ fontFamily: "var(--font-jp)" }}>
                 {selected.reading}

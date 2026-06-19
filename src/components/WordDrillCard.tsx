@@ -1,5 +1,6 @@
 import type { Word, WordType } from "@/types";
 import { toPoliteJapanese, toPoliteReading } from "@/lib/verbForms";
+import { Furigana } from "@/components/Furigana";
 import { FlipCard } from "aburungo-design-system";
 import type { FlipCardPhase } from "aburungo-design-system";
 
@@ -53,9 +54,11 @@ export function WordDrillCard({ word, phase, onReveal, onRate, onEntered, onExit
             <div className="flex flex-col items-center gap-2 py-6">
               {politeJapanese !== null ? (
                 <>
-                  <p lang="ja" className="text-center text-jp-display font-medium text-fg" style={{ fontFamily: "var(--font-jp)" }}>
-                    {word.japanese}
-                  </p>
+                  <Furigana
+                    japanese={word.japanese}
+                    reading={word.reading}
+                    className="block text-center text-jp-display font-medium text-fg lg:text-jp-display-lg"
+                  />
                   <p lang="ja" className="text-center text-jp text-fg-muted" style={{ fontFamily: "var(--font-jp)" }}>
                     {politeJapanese}
                   </p>
@@ -65,9 +68,11 @@ export function WordDrillCard({ word, phase, onReveal, onRate, onEntered, onExit
                 </>
               ) : (
                 <>
-                  <p lang="ja" className="text-center text-jp-display font-medium text-fg" style={{ fontFamily: "var(--font-jp)" }}>
-                    {word.japanese}
-                  </p>
+                  <Furigana
+                    japanese={word.japanese}
+                    reading={word.reading}
+                    className="block text-center text-jp-display font-medium text-fg lg:text-jp-display-lg"
+                  />
                   <p lang="ja" className="text-center text-jp text-fg-muted" style={{ fontFamily: "var(--font-jp)" }}>
                     {word.reading}
                   </p>
