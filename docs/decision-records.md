@@ -519,3 +519,37 @@ resolve to a single instance.
   changed — bundle size is not a reliable signal of this bug; the runtime console is.
 - Any future linked workspace package that bundles its own React is covered by the same
   dedupe entry.
+
+---
+
+## DR-015 — Phrase due selection: merge server FSRS into the local queue (incremental)
+
+**Date:** 2026-06-16
+**Status:** Active
+
+**Context:**
+Phrase/flashcard *reviews* already sync to the server for signed-in users (`session.rate()`
+posts `submitReview`), but the *due queue* was built only from local Leitner/IndexedDB. On a
+second device (empty IndexedDB) a signed-in user saw no due cards even though the server had
+their full FSRS history — writes synced, the schedule did not.
+
+The "correct" end state (per DR-001/DR-005) is: for signed-in users the server FSRS is the
+sole source of truth and local Leitner is dropped. But the server `/api/progress/due` only
+returns cards with a progress row that are *due now* (`getDueCards`) — it cannot tell the
+client which cards are *new* (never reviewed) vs *reviewed-but-not-due*. Doing the full
+migration correctly therefore needs a new server endpoint, which expands scope + a deploy.
+
+**Decision:**
+Ship the incremental, frontend-only step: in `session.initialize()`, for signed-in users
+fetch `fetchDue(100)`, map server `cardId -> japanese -> item`, and **merge** those into the
+due queue alongside the local-Leitner due cards (de-duped by item id). New-card detection
+stays local (`!stateMap.has(id)`). Guests are unchanged.
+
+**Consequences:**
+- Primary device: behaviour is unchanged (local due already covers everything; merge adds
+  nothing new). No regression.
+- Second device: server-due cards now surface — the cross-device gap is closed for *due*
+  cards. Reviewed-but-not-due cards may still re-appear as "new" there (same as the existing
+  kanji behaviour), since the client can't yet distinguish them without a server endpoint.
+- Full server-source-of-truth (drop local Leitner for signed-in users) remains a follow-up,
+  gated on a server endpoint that returns the user's reviewed/new card set. Tracked in todo.md.

@@ -3,9 +3,7 @@
 ## Pending
 
 - [ ] **Delete duplicate Vercel project `project-hbbvq`** — stray project wired to the same repo, builds identical output; only `aburungo-server` (owns the `aburungo.app` domain) is needed. Remove the `VITE_API_URL` mistakenly added there too. (DR-013)
-- [ ] **Connect phrase/flashcard progress to server** — `submitReview`/`fetchDue` exist in `src/api/progress.ts` but are never called; `PracticePage` and `FlashcardPage` use local Leitner only; authenticated users should dual-write IndexedDB + server FSRS
-- [ ] **Extend progress widget to phrases + kanji** — `ProgressWidget` currently shows kana only; add phrase and kanji rows sourced from `/api/progress/stats`
-- [ ] **FSRS migration for session store** — once server sync is live, authenticated sessions should pull due cards from server and post reviews (replacing client-side Leitner for signed-in users)
+- [ ] **Full FSRS source-of-truth for signed-in users** — currently the session store posts reviews to the server AND merges server `fetchDue()` due cards into the queue (DR-015), but local Leitner still co-drives the queue and "new vs reviewed-not-due" is detected locally. To make the server the sole source of truth cross-device, add a server endpoint returning all card IDs the user has progress on (or "new cards"), then drop local Leitner for signed-in users. Guests stay on local Leitner.
 - [ ] **N4 content** — add YAML scenario files for N4-level phrases; verify JLPT levels against JMdict seed before merging
 - [ ] **VOICEVOX pipeline** — pre-generate audio locally with Podman, upload to Supabase Storage
 - [ ] **Admin Phase 2** — log viewer (pino ring buffer), learning analytics, content audit
@@ -19,6 +17,8 @@
 
 ## Done
 
+- [x] **Phrase/flashcard review sync to server** — `FillBlankScreen`/`FlashcardScreen` pass `userId`; `session.rate()` fire-and-forget posts `submitReview(cardId,…)` for signed-in users and refreshes stats (PRs #37/#38). Server `fetchDue()` due cards now merged into the queue for cross-device due selection (DR-015). (Full server-source-of-truth tracked separately under Pending.)
+- [x] **Progress widget shows phrases + kanji** — `ProgressWidget` renders phrases-by-JLPT, kana, and kanji rows from `/api/progress/stats` (not kana-only).
 - [x] **aburungo.app live** — set all three frontend env vars on `aburungo-server` (`VITE_SUPABASE_URL`, `VITE_SUPABASE_PUBLISHABLE_KEY`, `VITE_API_URL`); fixed duplicate-React `useId` crash via `resolve.dedupe` (PR #40, DR-013/DR-014). Blank-page failure modes documented in infrastructure.md.
 - [x] **Persistent PageShell** — shared two-row header, `max-w-5xl` content width, sidebar always present on desktop (lg); `SectionNav` sub-nav on practice/flashcard/kana pages (DR-008)
 - [x] **Profile route** — `/profile` added; guests see sign-in prompt, logged-in users see account info (DR-008)
