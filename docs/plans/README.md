@@ -15,13 +15,15 @@ from recognition (N5) to production/immersion (N3+). Free through N4, paid from 
 | [02-path-n5.md](02-path-n5.md) | **N5 ladder** — the template path (free). Worked "At the café" unit included |
 | [03-path-n4.md](03-path-n4.md) | **N4 ladder** — the bridge to producing sentences (free) |
 | [04-path-n3.md](04-path-n3.md) | **N3 ladder** — the paid flagship: extensive reading, sentence mining, output-first ("the wall") |
-| 99-roadmap.md | Build sequencing / MVP (pending the build-scope decision) |
+| [99-roadmap.md](99-roadmap.md) | Build sequencing: Phase 1 = N5 guided loop on existing content, then mnemonics/grammar+N4, then the N3 pipeline |
 
 ## Decisions locked so far
 
 - **Q1 — Spine:** JLPT level ladders.
 - **Q2 — Session model:** guided default + free roam (one "Today's session" button; nothing locked away).
 - **Q3 — Content sourcing:** extend DR-006 (N5/N4 marked training content; Tatoeba pipeline + verified by N3).
+- **Q4 — First build:** the N5 guided daily loop on existing content (prove the engine cheaply on the free tier).
 
-Status: vision + 3 paths drafted. Next: MVP/build-sequencing, then implementation decision records
-in the main `docs/decision-records.md`.
+Status: **planning complete** — vision, 3 paths, and a phased roadmap drafted. Next step is
+implementation: Phase 1 (N5 loop), which begins with a Path/Unit data model + the daily-loop
+orchestrator, and its own decision records in the main `docs/decision-records.md`.
