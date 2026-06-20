@@ -40,9 +40,12 @@ why?* If it relies on the user **not** noticing the trick, it's out.
 
 1. ✅ **The daily-return trigger** — **resolved (sync #1):** a combo of **aspiration-pull +
    user-set rhythm** (see Decisions below).
-2. 🟡 **Progress made visible** — how we show "you're getting better" using only real signals
-   (mastery counts, can-do unlocks, comprehensible-% of a target text) and never points.
-3. 🟡 **The reward beat** — the genuine "that felt good" moment at the end of a session.
+2. ✅ **Progress made visible** — **resolved (sync #2):** the **can-do checklist** is the hero,
+   and a ✓ is **AI-verified** by a two-agent setup (see Decisions). Mastery counts support it on the
+   profile; comprehensible-% arrives at N3.
+3. ✅ **The reward beat** — **substantially resolved:** passing the AI can-do verification *is* the
+   reward beat ("I actually did it"). Honest, earned, situational. Revisit only for micro-rewards
+   inside a normal (non-verification) session.
 4. 🟡 **Re-engagement** — notifications/reminders philosophy: kind and informational, never guilt.
 5. 🟡 **Handling lapses** — what happens after a week away (the "200 reviews" cliff that kills SRS
    apps) — so coming back feels welcoming, not punishing.
@@ -70,6 +73,46 @@ the rhythm and the goal themselves). Reviews are surfaced as "ready," never "ove
 **Open thread for later:** *where the goal comes from* — does the learner explicitly pick a can-do
 goal, or does the app surface the next can-do from the ladder automatically? Defer to the
 **onboarding** pass (refinement #2), since that's where the first goal gets set.
+
+### Sync #2 — progress hero: the AI-verified can-do checklist
+
+**Hero representation = a can-do checklist** of real abilities ("order food," "ask directions,"
+"check into a hotel"). But the key idea (the owner's): a checkmark must be **earned by demonstrated
+ability, not by grinding cards** — otherwise it's dishonest. So progress is **two-tier**:
+
+| State | Earned by | Means |
+|---|---|---|
+| **Learned** | SRS mastery of the can-do's underlying items (automatic) | "You know the pieces — *ready to attempt*" |
+| **Can-do ✓** | **AI verification** of an actual performance | "You *did* it" — the real checkmark |
+
+You **cannot grind your way to a ✓** — you have to perform. This is the anti-gaming mechanism and
+the honest core of the whole engine.
+
+**Verification = two AI agents (deliberately separated so the judge can't be flattered):**
+
+- **Partner agent (Hana)** — plays the situation in character (the waiter, the clerk), supportive,
+  rooting for the learner, never breaks role to grade.
+- **Assessor agent** — impartial examiner. Reads the transcript, judges it against the **adaptive
+  rubric** for that can-do + level, returns ✓ / "not yet" + specific, honest, kind feedback. It has
+  no incentive to be nice, which is what makes the ✓ trustworthy.
+
+**Adaptive bar (sync, this dimension):** lenient early → strict later. **N5** = a one-word success
+counts ("you communicated — ✓"); by **N3** the bar is "this would actually work with a real
+Japanese person." Matches the ladder's recognition→production emphasis shift.
+
+**On-brand check:** this is situational *performance* ("you're at a café, order something"), never a
+quiz or exam — stays out of test-prep land (see overarching plan's core principle).
+
+**Cost:** verification is a deliberate **milestone** the learner attempts when ready (not every
+session), so the extra assessor call is bounded. Full sizing in the Hana-cost pass (refinement #4).
+
+**North-star (not now): the Coach agent.** A persistent AI tutor that knows the learner's history,
+decides readiness, picks the next can-do, remembers weak spots, and personalizes the path —
+orchestrating partner + assessor. Biggest differentiator ("AI sensei") but the biggest build +
+ongoing cost; revisit as a later phase once the loop is proven. Two-agent verification ships first.
+
+This one mechanic does triple duty: it's the **progress hero** (dim 2), the **reward beat** (dim 3),
+and it reinforces the **aspiration trigger** (dim 1, "you're ready to attempt X").
 
 ---
 
