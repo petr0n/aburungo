@@ -1,7 +1,15 @@
-# The Honest-Retention Engine
+# Keeping It Interesting (formerly "Retention Engine")
 
-> **Status: collaborative design in progress.** This doc is being worked out *together*, not
-> written solo. Sections marked 🟡 are open and get filled as we sync, one decision at a time.
+> **Scope recalibration (important):** AburunGo is being built **primarily as a personal learning
+> tool for a self-motivated learner**, not a commercial product. So this is **not** about fighting
+> churn, conversion, or willingness-to-pay. The question is narrower and nicer: *how does the app
+> stay genuinely engaging and effective for a motivated learner over months?* — variety, novelty,
+> flow, and the real satisfaction of using Japanese. Commercial-retention concerns (re-engagement
+> notifications as anti-churn, the lapse "cliff" as a churn risk, retention telemetry, pricing) are
+> **out of scope**. The honest-motivation work that survives does so because it makes learning
+> *better*, not because it keeps a customer.
+
+> **Status: collaborative design in progress.** Worked out *together*, not solo. 🟡 = open.
 
 The soul of the whole plan. The brief's #1 ask was **retention**. The hard part: the techniques
 that reliably drive daily return — streaks, loss aversion, variable rewards — are exactly the
@@ -46,10 +54,17 @@ why?* If it relies on the user **not** noticing the trick, it's out.
 3. ✅ **The reward beat** — **substantially resolved:** passing the AI can-do verification *is* the
    reward beat ("I actually did it"). Honest, earned, situational. Revisit only for micro-rewards
    inside a normal (non-verification) session.
-4. 🟡 **Re-engagement** — notifications/reminders philosophy: kind and informational, never guilt.
-5. 🟡 **Handling lapses** — what happens after a week away (the "200 reviews" cliff that kills SRS
-   apps) — so coming back feels welcoming, not punishing.
-6. 🟡 **Measuring it** — how we *know* it's working without creepy surveillance (ties to doc #9 idea).
+4. 🟢 **Variety / novelty / flow** — *the real lever for a solo motivated learner.* How the app
+   stays fresh over months: rotating activities (not the same drill daily), new + surprising
+   content, the right challenge (i+1 flow), content the learner actually cares about, and
+   genuinely fun Hana conversations. **This is now the priority open dimension.** (Sync #3 next.)
+5. 🟢 **Don't make it a chore** — *reframed from the "lapse cliff."* Not about churn — about
+   self-respect of the learner's time/interest: after a break, coming back to 200 piled-up reviews
+   is miserable for anyone, including you. Sensible review-load management (caps, catch-up,
+   "what matters most today") so the tool never feels like a punishing backlog.
+
+~~Re-engagement notifications (anti-churn)~~ and ~~retention telemetry~~ — **dropped** (out of scope
+per the recalibration; an optional gentle reminder at the user-set time, from sync #1, is enough).
 
 ## Decisions (filled as we sync)
 
