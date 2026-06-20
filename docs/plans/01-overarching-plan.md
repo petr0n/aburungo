@@ -131,17 +131,23 @@ These are sequenced in `99-roadmap.md` (to be written once the paths are locked)
 - *(Q2)* **Guided default + free roam** — one clear "Today's session" button drives the rail; the
   learner can still freely jump into any bucket or revisit anything. Nothing is locked away.
 
+- *(Q3)* **Content sourcing = extend DR-006, verify by N3.** N5/N4 grammar examples + short readings
+  may use training-canonical content marked `content-source: training`; before N3 we stand up a
+  **Tatoeba (CC BY) ingestion + i+1 leveling pipeline**, and N3+ content must be verified. (This
+  also resolves the old "reading content source" question for N3+: Tatoeba assembly, not
+  Hana-generated — generated sentences remain disallowed for any stored/SRS content.)
+
 **Still open:**
-1. **Daily-loop shape & length** — is the 5-step loop above right? Target ~12–15 min confirmed?
-3. **Grammar source** — N5/N4 grammar from training-canonical (marked, like phrases) vs. waiting on a
-   verified grammar dataset.
-4. **Reading content source** — Tatoeba assembly vs. licensing graded readers vs. Hana-generated
-   (the last collides with "no fabricated sentences" — likely disallowed for SRS, maybe ok for
-   throwaway practice).
-5. **Mnemonic authoring** — author our own kanji mnemonics, or integrate an existing component scheme.
-6. **How many paths to fully spec now** — N5/N4/N3 in depth, with N2/N1 as outlines?
+1. **Daily-loop shape & length** — the 5-step loop is the working model; target ~12–15 min. Confirm
+   or adjust when we build the orchestrator.
+5. **Mnemonic authoring** — author our own kanji mnemonics, or integrate an existing component
+   scheme/license one. (Resolve before the kanji layer build.)
+6. **Build sequencing / MVP** — what ships first (see `99-roadmap.md`).
+
+Paths specced: **N5** (`02-path-n5.md`, template), **N4** (`03-path-n4.md`), **N3**
+(`04-path-n3.md`, paid flagship). N2/N1 extend the N3 reading+mining+conversation machinery with
+harder content — to be outlined once N3 is validated.
 
 ---
 
-*Next: individual path docs (`02-path-n5.md`, `03-path-n4.md`, `04-path-n3.md`, …) once the open
-decisions above are settled enough to make them concrete.*
+*Next: build sequencing — see `99-roadmap.md` (written after the MVP-scope decision).*
