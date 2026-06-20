@@ -126,9 +126,13 @@ These are sequenced in `99-roadmap.md` (to be written once the paths are locked)
 
 ## 5. Open design decisions (we'll resolve these iteratively)
 
-1. **Daily-loop shape & length** — is the 5-step loop above right? How long is the target session?
-2. **Guided vs. flexible** — does the app put the learner on a rail (recommended for retention), or
-   offer the loop as a strong suggestion they can deviate from?
+**Resolved:**
+- *(Q1)* **Spine = JLPT level ladders.**
+- *(Q2)* **Guided default + free roam** — one clear "Today's session" button drives the rail; the
+  learner can still freely jump into any bucket or revisit anything. Nothing is locked away.
+
+**Still open:**
+1. **Daily-loop shape & length** — is the 5-step loop above right? Target ~12–15 min confirmed?
 3. **Grammar source** — N5/N4 grammar from training-canonical (marked, like phrases) vs. waiting on a
    verified grammar dataset.
 4. **Reading content source** — Tatoeba assembly vs. licensing graded readers vs. Hana-generated
