@@ -38,8 +38,8 @@ why?* If it relies on the user **not** noticing the trick, it's out.
 
 ## The dimensions we need to design (our sync agenda)
 
-1. 🟡 **The daily-return trigger** — what *honestly* makes someone open the app tomorrow, with no
-   streak to protect? (Sync #1 — in progress.)
+1. ✅ **The daily-return trigger** — **resolved (sync #1):** a combo of **aspiration-pull +
+   user-set rhythm** (see Decisions below).
 2. 🟡 **Progress made visible** — how we show "you're getting better" using only real signals
    (mastery counts, can-do unlocks, comprehensible-% of a target text) and never points.
 3. 🟡 **The reward beat** — the genuine "that felt good" moment at the end of a session.
@@ -50,7 +50,26 @@ why?* If it relies on the user **not** noticing the trick, it's out.
 
 ## Decisions (filled as we sync)
 
-*(none yet)*
+### Sync #1 — daily-return trigger: aspiration-pull + user-set rhythm
+
+The primary pull is a **combo**, not one mechanic:
+
+- **Aspiration (the *why*):** the learner is always working toward a concrete, near-term **can-do
+  goal** ("order food in a café"), and the app shows how close they are. The daily reason to return
+  is "get closer to *doing* a real thing," not "protect a streak" or "clear a quota."
+- **User-set rhythm (the *when / how much*):** during onboarding the learner sets their own
+  cadence — a preferred time and a rough daily size (e.g. "~10 min, mornings"). We honor it.
+- **The daily nudge** (opt-in) fires at *their* chosen time and is framed around the goal:
+  *"~10 min today gets you closer to ordering food."* Calm, informational, skippable.
+- **Missing a day costs nothing punitive:** the goal simply arrives later and reviews accumulate
+  (handled honestly in dimension 5). No streak, no guilt, no lost progress.
+
+Why honest: passes the test — it works *better* when the user understands it (they literally set
+the rhythm and the goal themselves). Reviews are surfaced as "ready," never "overdue."
+
+**Open thread for later:** *where the goal comes from* — does the learner explicitly pick a can-do
+goal, or does the app surface the next can-do from the ladder automatically? Defer to the
+**onboarding** pass (refinement #2), since that's where the first goal gets set.
 
 ---
 
