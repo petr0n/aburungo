@@ -5,6 +5,15 @@ the *same* retention engine; what changes between levels is the **content** and 
 (recognition-heavy at N5 → production/immersion-heavy at N3+). Grounded in
 [00-research-foundations.md](00-research-foundations.md).
 
+> **Core principle — AburunGo is NOT a JLPT test-prep app.** We *borrow ideas* from the JLPT
+> framework (sensible difficulty ordering, i+1 sequencing, a content scaffold our data already
+> uses), but the learner experiences **real-life situations** ("order a coffee," "check into a
+> hotel"), never exam drills, vocab-list numbers, or a mock test. JLPT is the **invisible
+> skeleton**; "practical Japanese for real life" is what the user sees and feels. Surface UI leads
+> with situations; the N-level is backbone, shown lightly if at all. Ladders end in a **can-do
+> checkpoint** ("you can do X"), never an exam score. If a design choice starts to feel like
+> test-prep, it's wrong.
+
 > Design rule: we **do not replace** the existing buckets (words, characters, phrases, flashcards,
 > audio, Hana). A path is a *sequence and a daily loop* that pulls those buckets into one coherent
 > flow. New capabilities (grammar-in-context, graded reading, kanji radicals/mnemonics) are
