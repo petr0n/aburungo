@@ -72,36 +72,50 @@ psql $DATABASE_URL -c "
 
 ### Flow A — First Timer (`test-new@aburungo.app`)
 
-**What this covers:** empty states, onboarding path, first card experience,
+**What this covers:** empty states, onboarding path, words learning flow,
 zero-progress UI, no SRS history edge cases.
 
 #### 1. Landing + auth
-- [ ] Navigate to `/` — landing page renders, "How it works" section visible
+- [ ] Navigate to `/` — landing page renders
 - [ ] Sign in with `test-new@aburungo.app`
 - [ ] Confirm redirect to `/practice`
 
-#### 2. Empty state
-- [ ] Practice screen renders without crashing despite no due cards
-- [ ] Empty state component is shown (not a blank screen or JS error)
-- [ ] CTA or guidance is present — user isn't stranded
+#### 2. Words — browse, learn, drill (new path, primary entry point)
+- [ ] Navigate to `/words` — browse screen renders, words grouped by theme
+- [ ] Tap a word chip — detail panel shows kanji, furigana, reading, English
+- [ ] Furigana renders correctly above kanji (not as plain text)
+- [ ] Tap "Learn words" — learn screen opens, progress bar visible
+- [ ] Learn card shows: word type badge, large kanji with furigana, reading, English
+- [ ] For a verb: polite form shown alongside plain form
+- [ ] Tap "Got it — Next" through all 10 cards — progress bar advances each step
+- [ ] On final card "Got it — Start test" transitions to drill screen
+- [ ] Drill screen: card front shows English prompt, "Reveal" button present
+- [ ] Tap Reveal — card flips, Japanese + furigana shown on back
+- [ ] Rate "Got it" — card exits with animation, next card enters
+- [ ] Rate "Missed" on one card — missed counter increments
+- [ ] Complete all 10 — result screen shows score and missed word list
+- [ ] Tap "Retest missed" — drill restarts with only missed words
+- [ ] Tap "Back to browse" — returns to browse screen cleanly
 
-#### 3. First card (browse to any deck manually)
-- [ ] Navigate to `/flashcard` — first card loads
-- [ ] Flip card — back face shows reading + translation
-- [ ] Rate card (Good) — advances to next card without error
-- [ ] New card state (reps=0) handled correctly — no stale SRS data shown
-
-#### 4. Kana practice (no prior history)
+#### 3. Kana practice (no prior history)
 - [ ] `/kana` loads, hiragana grid renders
 - [ ] Answer a multiple-choice question — correct and incorrect paths both work
 - [ ] No "undefined" or stale progress shown from previous sessions
 
-#### 5. Kanji (browse only)
-- [ ] `/kanji` grid loads, JLPT filter renders
-- [ ] Tap a kanji — detail panel opens
-- [ ] No prior drill history shown — detail panel handles zero-state
+#### 4. Empty practice queue
+- [ ] Navigate to `/practice` — empty state shown (no due cards), not a crash
+- [ ] CTA or guidance present — user isn't stranded
 
-#### 6. Conversation (fresh session)
+#### 5. Flashcard (new user, no history)
+- [ ] `/flashcard` loads — first card renders
+- [ ] Flip card — back face shows reading + translation
+- [ ] Rate card (Good) — advances to next card without error
+
+#### 6. Kanji (browse only)
+- [ ] `/kanji` grid loads, JLPT filter renders
+- [ ] Tap a kanji — detail panel opens, handles zero drill history
+
+#### 7. Conversation (fresh session)
 - [ ] `/conversation` loads — no prior session history visible
 - [ ] Start N5 session, confirm Hana replies
 - [ ] Session history shows only current session
@@ -113,39 +127,51 @@ File as `docs/test-runs/YYYY-MM-DD-flow-a-new.md`
 
 ### Flow B — Regular Learner (`test-active@aburungo.app`)
 
-**What this covers:** normal review loop, all three FillInput modes, flashcard
-SRS cycle, kana and kanji drill, conversation, typical daily-use path.
+**What this covers:** full daily-use path across all learning modes — words,
+phrases, fill-in-the-blank, kana, kanji, conversation. Server FSRS sync.
 
-#### 1. Auth + practice queue
-- [ ] Sign in, confirm due cards are waiting on `/practice`
-- [ ] Card count and queue order look correct
+#### 1. Auth + landing
+- [ ] Sign in, confirm navigation shell and sidebar render correctly
+- [ ] Progress widget visible in sidebar with phrase and kana stats
 
-#### 2. Fill-in-the-blank — all three input modes
-- [ ] **Romaji:** type `sushi` → preview shows `すし`, submit
-- [ ] **Kana grid:** switch mode, tap す → し → accumulates correctly, backspace removes last char, submit
-- [ ] **System IME:** switch mode, type directly in Japanese, submit
+#### 2. Words — repeat session (returning learner)
+- [ ] Navigate to `/words` — browse shows full N5 vocabulary set
+- [ ] Words are grouped by theme with correct labels (People, Food, etc.)
+- [ ] Tap any verb — polite form shown in detail panel
+- [ ] Start learn → complete 10 cards → enter drill
+- [ ] In drill: furigana renders on back of card (not plain reading text)
+- [ ] Miss 2 cards intentionally — result screen shows them in missed list
+- [ ] Retest missed — only the 2 missed cards appear in queue
+
+#### 3. Fill-in-the-blank — all three input modes + server sync
+- [ ] Navigate to `/practice` — due cards loaded (mix of local + server FSRS for auth user)
+- [ ] **Romaji:** type romaji → preview shows kana live, submit
+- [ ] **Kana grid:** tap kana keys, backspace removes last char, submit
+- [ ] **System IME:** type Japanese directly, submit
 - [ ] Correct answer: correct state renders
 - [ ] Wrong answer: wrong state renders with expected answer shown
-- [ ] Complete 8 cards — session ends, score screen appears
+- [ ] Complete 8 cards — check network tab: POST to `/api/progress` fired for each
+- [ ] Score screen appears with correct total
 
-#### 3. Flashcard full cycle
-- [ ] Load `/flashcard`, flip a card
+#### 4. Flashcard full cycle
+- [ ] Load `/flashcard`, flip a card — furigana shows on back
 - [ ] Rate Again — card comes back later in session
 - [ ] Rate Easy — card scheduled far out, doesn't reappear this session
 - [ ] Complete session — result screen shows correct/total breakdown
+- [ ] Check network tab: progress sync calls fired for auth user
 
-#### 4. Kana practice — both scripts
+#### 5. Kana practice — both scripts
 - [ ] Hiragana multiple-choice: answer 5 questions
 - [ ] Switch to katakana, answer 5 questions
 - [ ] Type-romaji mode: type romaji for displayed kana, confirm validation
 
-#### 5. Kanji drill
+#### 6. Kanji drill
 - [ ] Browse grid with N5 filter
 - [ ] Enter drill mode — kanji card shows, self-rate works
 - [ ] Missed kanji appear in result set at end
 
-#### 6. Conversation
-- [ ] Start N4 session (one level up from N5)
+#### 7. Conversation
+- [ ] Start N4 session
 - [ ] Send 3 messages, confirm Hana replies in appropriate difficulty
 - [ ] Reload page — session history persists
 
@@ -420,6 +446,20 @@ import { test } from "@antiwork/shortest"
 
 // Auth
 test("user can sign in with email and password and land on the practice page")
+
+// Words — browse
+test("user can browse the words page and see vocabulary grouped by theme")
+test("tapping a word chip shows the kanji, furigana, reading, and English meaning in the detail panel")
+test("a verb entry shows the polite form alongside the plain form")
+
+// Words — learn flow
+test("user can start a learn session and advance through 10 word cards with the progress bar updating")
+test("on the final learn card tapping Got It transitions to the drill screen")
+
+// Words — drill flow
+test("word drill card shows English on the front and reveals Japanese with furigana on tap")
+test("rating a card as Got It animates to the next card")
+test("missing cards appear in the result screen missed list and can be retested")
 
 // Fill-in-the-blank — all three input modes
 test("user can answer a practice card using romaji input and see kana preview update live")
