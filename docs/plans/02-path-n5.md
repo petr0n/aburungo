@@ -27,6 +27,8 @@ engine. Engine details live in [01-overarching-plan.md](01-overarching-plan.md).
 - The ladder ends in a **can-do checkpoint** (not an exam): a short mixed review + one Hana
   situation that requires items from across the level. Passing it surfaces the N4 upgrade prompt.
 
+The full unit-by-unit sequence is in [02b-n5-units.md](02b-n5-units.md).
+
 ### N5 can-do moments (19 milestones)
 
 The learner's progress is anchored to these 19 real-life abilities. Each is a milestone on the

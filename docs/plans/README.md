@@ -13,8 +13,10 @@ from recognition (N5) to production/immersion (N3+). Free through N4, paid from 
 | [00-research-foundations.md](00-research-foundations.md) | The evidence base: the 7 retention levers, what works, market gaps, constraints, design principles (with sources) |
 | [01-overarching-plan.md](01-overarching-plan.md) | The shared engine: Level→Unit→Item, Recognize→Recall→Produce, the daily loop, how buckets plug in, gating, build inventory, resolved/open decisions |
 | [02-path-n5.md](02-path-n5.md) | **N5 ladder** — the template path (free). Worked "At the café" unit included |
+| [02b-n5-units.md](02b-n5-units.md) | **N5 unit map** — all 35 units sequenced across 8 situations, with words, kanji, grammar, and produce beat per unit |
 | [03-path-n4.md](03-path-n4.md) | **N4 ladder** — the bridge to producing sentences (free) |
 | [04-path-n3.md](04-path-n3.md) | **N3 ladder** — the paid flagship: extensive reading, sentence mining, output-first ("the wall") |
+| [06-onboarding.md](06-onboarding.md) | Onboarding flow: 3 questions, automatic first can-do goal, frictionless entry into first session |
 | [99-roadmap.md](99-roadmap.md) | Build sequencing: Phase 1 = N5 guided loop on existing content, then mnemonics/grammar+N4, then the N3 pipeline |
 
 ## Decisions locked so far
