@@ -9,6 +9,19 @@ furigana all already exist. Each phase adds the *connective tissue*, not new sil
 
 ---
 
+## Already built (start line for Phase 1)
+
+These exist in the app today and do not need to be built:
+
+- **WordsPage** (`src/pages/WordsPage.tsx`) — browse, learn, drill, and recognition flow for vocabulary; tier-gated content; theme grouping
+- **RecognitionPass** (`src/components/RecognitionPass.tsx`) — tile-tap recognition screen (3 options, no judgment); queue + pool props; already wired into WordsPage
+- **Basics theme vocabulary** (`src/content/vocabulary/basics.yaml`) — 10 kana-only N5 words (pronouns + demonstratives) with theme field; establishes the YAML schema all vocabulary follows
+- **74 N5 words total** across `basics.yaml`, `adjectives.yaml`, `verbs.yaml`, `nouns.yaml` — ~117 more needed to complete the N5 unit map
+
+Phase 1 picks up from here. The loop orchestrator, unit data model, and session UI are what remain.
+
+---
+
 ## Phase 1 — N5 guided daily loop (MVP)
 
 **Goal:** a learner opens the app, taps **Today's session**, and gets one orchestrated N5 loop

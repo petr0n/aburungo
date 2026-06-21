@@ -17,6 +17,7 @@ from recognition (N5) to production/immersion (N3+). Free through N4, paid from 
 | [03-path-n4.md](03-path-n4.md) | **N4 ladder** — the bridge to producing sentences (free) |
 | [04-path-n3.md](04-path-n3.md) | **N3 ladder** — the paid flagship: extensive reading, sentence mining, output-first ("the wall") |
 | [06-onboarding.md](06-onboarding.md) | Onboarding flow: 3 questions, automatic first can-do goal, frictionless entry into first session |
+| [07-session-loop-ui-prompt.md](07-session-loop-ui-prompt.md) | **DS agent prompt** — ready-to-run prompt for designing the 7-screen N5 session loop UI in the design system repo |
 | [99-roadmap.md](99-roadmap.md) | Build sequencing: Phase 1 = N5 guided loop on existing content, then mnemonics/grammar+N4, then the N3 pipeline |
 
 ## Decisions locked so far

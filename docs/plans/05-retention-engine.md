@@ -54,14 +54,10 @@ why?* If it relies on the user **not** noticing the trick, it's out.
 3. ✅ **The reward beat** — **substantially resolved:** passing the AI can-do verification *is* the
    reward beat ("I actually did it"). Honest, earned, situational. Revisit only for micro-rewards
    inside a normal (non-verification) session.
-4. 🟢 **Variety / novelty / flow** — *the real lever for a solo motivated learner.* How the app
-   stays fresh over months: rotating activities (not the same drill daily), new + surprising
-   content, the right challenge (i+1 flow), content the learner actually cares about, and
-   genuinely fun Hana conversations. **This is now the priority open dimension.** (Sync #3 next.)
-5. 🟢 **Don't make it a chore** — *reframed from the "lapse cliff."* Not about churn — about
-   self-respect of the learner's time/interest: after a break, coming back to 200 piled-up reviews
-   is miserable for anyone, including you. Sensible review-load management (caps, catch-up,
-   "what matters most today") so the tool never feels like a punishing backlog.
+4. ✅ **Variety / novelty / flow** — **resolved (sync #3):** two mechanisms keep sessions fresh
+   across the weeks. See Decisions below.
+5. ✅ **Pace is self-set — you can't be behind** — **resolved (sync #4):** the app never frames
+   accumulated reviews as debt or failure. See Decisions below.
 
 ~~Re-engagement notifications (anti-churn)~~ and ~~retention telemetry~~ — **dropped** (out of scope
 per the recalibration; an optional gentle reminder at the user-set time, from sync #1, is enough).
@@ -85,9 +81,8 @@ The primary pull is a **combo**, not one mechanic:
 Why honest: passes the test — it works *better* when the user understands it (they literally set
 the rhythm and the goal themselves). Reviews are surfaced as "ready," never "overdue."
 
-**Open thread for later:** *where the goal comes from* — does the learner explicitly pick a can-do
-goal, or does the app surface the next can-do from the ladder automatically? Defer to the
-**onboarding** pass (refinement #2), since that's where the first goal gets set.
+**Resolved:** the first can-do goal is assigned automatically from N5 Unit 1 — no learner choice.
+Subsequent goals advance automatically with the ladder. See [06-onboarding.md](06-onboarding.md).
 
 ### Sync #2 — progress hero: the AI-verified can-do checklist
 
@@ -128,6 +123,41 @@ ongoing cost; revisit as a later phase once the loop is proven. Two-agent verifi
 
 This one mechanic does triple duty: it's the **progress hero** (dim 2), the **reward beat** (dim 3),
 and it reinforces the **aspiration trigger** (dim 1, "you're ready to attempt X").
+
+### Sync #3 — variety/novelty/flow: format rotation + contextual variety
+
+Two mechanisms keep sessions fresh without adding any learner decisions:
+
+- **Format rotation (across sessions):** the orchestrator cycles the *activity type* for each item
+  on resurfacing — a word reviewed as a flashcard this session comes back as fill-in-the-blank next
+  time, then as a scoped Hana phrase. The same format never repeats on consecutive reviews of the
+  same item. This is the primary variety lever: the learner sees familiar material through a
+  different retrieval pathway each time, which is exactly what the testing-effect research calls for.
+
+- **Contextual variety:** example sentences for an item rotate on each resurfacing. Same word, fresh
+  sentence context — so the item feels new even when the format is the same.
+
+- **i+1 unlock is fully automatic.** The orchestrator gates new unit introduction on FSRS stability
+  scores for prerequisite items. No learner decision, no manual "I'm ready" button.
+
+**Cross-cutting principle (applies to all dimensions):** every flow must be frictionless. The app
+makes all sequencing and format decisions invisibly. The learner shows up and learns — nothing to
+configure, nothing to choose mid-session.
+
+### Sync #4 — pace is self-set: you can never be behind
+
+AburunGo has no fixed schedule. There is no "overdue." You pick up exactly where you left off,
+whether that's tomorrow or three weeks from now.
+
+- **No debt framing.** The UI never shows a count of "pending" or "overdue" reviews. Reviews are
+  surfaced as "ready," never as a backlog.
+- **Gap = no penalty.** A break of any length costs nothing. Items whose optimal review window
+  passed are simply prioritized when the learner returns — silently, by the orchestrator.
+- **Automatic rebalancing.** If a lot has accumulated, the orchestrator weights the session toward
+  review and holds back new content — but presents this as a normal session, never as catch-up or
+  punishment. The learner just notices slightly fewer new items.
+- **No streak mechanics.** Progress is measured by mastery (SRS stability) and can-do checkpoints,
+  never by consistency of sessions. Consistent sessions are great; inconsistent ones are fine too.
 
 ---
 

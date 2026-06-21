@@ -14,6 +14,24 @@ the *same* retention engine; what changes between levels is the **content** and 
 > checkpoint** ("you can do X"), never an exam score. If a design choice starts to feel like
 > test-prep, it's wrong.
 
+> **Assessment principle — feedback through what you see next, not what you scored.** A score is
+> a reward loop: it creates anxiety on bad sessions and a dopamine hit on good ones. AburunGo
+> shows counts ("7 recalled") as a momentary reflection, never a percentage, grade, or pass/fail
+> verdict. The real feedback signal is the SRS queue — words a learner struggled with surface
+> sooner. That is invisible to the user by design. Assessment lives in lightweight **recognition
+> passes** (tap the matching Japanese tile from 3 options) and SRS re-surfacing; not timed tests
+> or scored quizzes. **Skip is always available** on every assessment screen — it is the relief
+> valve for learners who do not want to be quizzed. The app never tells a learner they failed.
+> Language: "recalled" not "correct", "worth another look" not "missed".
+
+> **Furigana principle — kanji is never a wall outside explicit kanji learning.** All Japanese
+> text containing kanji must display furigana (via `<ruby>`) everywhere except the `/kanji` route
+> and any screen explicitly framed as "read this kanji." This applies to: word tiles, learn cards,
+> flashcards, phrases, fill-in-the-blank, conversation history, result/review screens — the full
+> app surface. Pure-kana text passes through unchanged. The only exception is the kanji-learning
+> path, where reading the character unassisted is the point. Use the `<Furigana>` component
+> (`src/components/Furigana.tsx`); never inline `<ruby>` by hand.
+
 > Design rule: we **do not replace** the existing buckets (words, characters, phrases, flashcards,
 > audio, Hana). A path is a *sequence and a daily loop* that pulls those buckets into one coherent
 > flow. New capabilities (grammar-in-context, graded reading, kanji radicals/mnemonics) are
@@ -57,23 +75,49 @@ review system escalates difficulty as stability grows:
 
 This directly operationalizes the **testing effect** and stops items stalling at recognition.
 
-### 2c. The daily loop (where the levers live)
+### 2c. The session loop (where the levers live)
 
-Each day in a ladder is one orchestrated session, not a menu. Default shape (tunable — see open
-decisions):
+Each session is one orchestrated loop, not a menu. The learner taps **Start session** and the
+orchestrator assembles it — no step choices, no configuration. Session shape is driven by three
+onboarding preferences: `intensity`, `session_length`, and `session_end_check`.
 
-1. **Warm-up review** (interleaved): the SRS surfaces what's due *across item types* — mix words,
-   kanji, grammar, phrases. Interleaving is the point.
-2. **New unit** (i+1): introduce the next unit's items with full scaffolding (audio, furigana,
-   kanji component breakdown + mnemonic, example sentence).
-3. **Integrate**: a short graded reading or cloze that *reuses* today's new items plus recent ones
-   (comprehensible input at 95%).
-4. **Produce**: one output beat — type a sentence, or a 3–5 turn Hana exchange themed to the unit,
-   or read a line aloud (audio in).
-5. **Close**: an honest "done for today" with what's now mastered and what's coming due tomorrow.
+**The six steps:**
 
-A session should be completable in a sustainable window (target ~10–15 min; a "short on time"
-variant does review + a micro-unit). **Short and repeatable beats long and abandoned.**
+1. **Review** — FSRS-due items from all past lessons, interleaved across item types (words, kanji,
+   grammar, phrases). Format rotates per item — same word won't surface as a flashcard twice in a
+   row. Empty on the very first session; grows as the learner accumulates material.
+
+2. **New unit** (i+1) — introduce the unit's new words, kanji, grammar pattern, and phrases with
+   full scaffolding: audio, furigana, kanji component breakdown + mnemonic, example sentence.
+   Item count is set by `intensity` × `session_length`:
+   - *Casual + short* → fewest new items, slowest unlock pace
+   - *Challenging + long* → most new items, fastest unlock pace
+
+3. **Integrate** — scaffolded by level; the orchestrator picks the right format automatically:
+
+   | Stage | Format |
+   |---|---|
+   | Early N5 (kana + first words) | Characters forming a word — see kana making a real word |
+   | Mid N5 | New word in a short phrase (2–3 words) |
+   | Late N5 / early N4 | Phrase in a sentence — cloze or short reading |
+   | N4+ | Full sentence or short passage |
+
+4. **Produce** — one output beat, also scaffolded by level:
+   - Early N5: type or tap a single word/phrase
+   - Mid–late N5: type the phrase you just learned
+   - N4+: compose a sentence or a 3–5 turn scoped Hana exchange
+
+5. **Close** — progress toward the current can-do goal, a brief summary of what was learned.
+   No score, no XP.
+
+6. **Recognition pass** *(only if `session_end_check = true`)* — see the English meaning, tap the
+   matching Japanese tile from three options. Lightweight re-encounter; not a quiz, no judgment.
+
+**On session length:** `session_length` sets the item budget, not a clock. Short sessions have
+fewer items; long sessions have more. The learner is never cut off mid-item.
+
+**On gaps:** if the learner returns after a break, the orchestrator silently weights the session
+toward review and holds back new unit content. Presented as a normal session — never as catch-up.
 
 ### 2d. How the buckets plug in
 
@@ -94,21 +138,27 @@ variant does review + a micro-unit). **Short and repeatable beats long and aband
 - **SRS** → FSRS backbone already in place; extend to grammar + sentence items.
 - **Active recall** → Recall/Produce gates; default to typing/production over multiple choice once an
   item is past Recognize.
-- **Interleaving** → the warm-up review mixes item types and units, never one bucket.
-- **Comprehensible input** → unit ordering + the integrate step keep reading at ~95% known.
+- **Interleaving** → the Review step mixes item types and units, never one bucket.
+- **Comprehensible input** → unit ordering + the scaffolded Integrate step keep input at ~95% known.
 - **Output** → the Produce beat every session; Hana scoped to current items.
 - **Mnemonics** → kanji component stories; vocab hooks where useful.
-- **Habit** → one calm daily loop, visible mastery, gentle re-engagement — **no XP/streak dark
+- **Habit** → one calm session loop, visible mastery, pace-is-self-set — **no XP/streak dark
   patterns** (CLAUDE.md).
 
 ---
 
 ## 3. Progression & gating
 
-- A unit unlocks when its prerequisites are **mastered** (FSRS stability past a threshold), not just
-  seen — this enforces i+1 and prevents the "I unlocked it but can't use it" trap.
-- The learner always has: **today's due reviews** (always available) + **the next unit** (gated).
-- Falling behind surfaces as "reviews due," never as punishment. No streak loss, no lost progress.
+- A unit unlocks **automatically** when FSRS stability for prerequisite items crosses a threshold —
+  no learner decision required. This enforces i+1 and prevents the "I unlocked it but can't use
+  it" trap. The unlock is invisible: the session simply begins to include the next unit's items.
+- **You can never be behind.** There is no fixed schedule, no "overdue," no streak to protect.
+  The learner picks up wherever they left off — tomorrow or three weeks from now.
+- When returning after a gap, the orchestrator silently rebalances: more review weight, less new
+  content. The UI presents this as a normal session, never as catch-up or debt.
+- **Item format rotates across sessions.** The orchestrator cycles the activity type on each
+  resurfacing (flashcard → fill-in-the-blank → Hana phrase) so the same word is seen in different
+  retrieval contexts. Example sentences also rotate per resurfacing.
 - Free vs paid: N5/N4 ladders fully playable free; hitting N3 shows a soft upgrade prompt
   (consistent with the existing soft-gate pattern), with the learner's progress preserved.
 
@@ -160,3 +210,55 @@ harder content — to be outlined once N3 is validated.
 ---
 
 *Next: build sequencing — see `99-roadmap.md` (written after the MVP-scope decision).*
+
+---
+
+## 6. Build checklist
+
+High-level tracking for the Learning Paths initiative. Check off items as they ship.
+
+### Planning (this doc set)
+- [x] Research foundations (`00-research-foundations.md`)
+- [x] Overarching plan — engine, session loop, gating, build inventory (`01-overarching-plan.md`)
+- [x] N5 path spec — can-do milestones, unit structure, daily session flavor (`02-path-n5.md`)
+- [x] N5 unit map — all 35 units across 8 situations (`02b-n5-units.md`)
+- [x] N4 path spec (`03-path-n4.md`)
+- [x] N3 path spec (`04-path-n3.md`)
+- [x] Retention engine — dimensions, mechanisms, rhythm (`05-retention-engine.md`)
+- [x] Onboarding flow — 3 questions, first can-do goal, session entry (`06-onboarding.md`)
+- [x] Session loop UI — DS agent prompt for 7-screen session flow (`07-session-loop-ui-prompt.md`)
+- [x] Build roadmap — phased sequencing (`99-roadmap.md`)
+- [ ] Decision records — Path/Unit data model DR; daily-loop orchestration DR
+
+### Design (design system repo)
+- [ ] Session loop UI — 7 screens built and reviewed in DS
+- [ ] Onboarding screens — 3-question flow + first session entry
+- [ ] Can-do milestone moment — editorial card design
+
+### Phase 1 — N5 guided daily loop
+- [x] RecognitionPass component (`src/components/RecognitionPass.tsx`)
+- [x] WordsPage with browse / learn / drill / recognition flow (`src/pages/WordsPage.tsx`)
+- [x] Basics vocabulary YAML schema + 74 N5 words in place
+- [ ] ~117 remaining N5 words added to vocabulary YAML files
+- [ ] Path / Unit / PathProgress data model (`src/types.ts`)
+- [ ] N5 unit content authored (35 units referencing existing item ids)
+- [ ] Daily-loop orchestrator (`src/store/` + `src/srs/`)
+- [ ] "Today's session" UI — `/learn` route, 7-screen guided flow
+- [ ] Recognize → Recall → Produce gating wired up
+- [ ] Close screen — can-do progress, session summary, no score
+- [ ] Recognition pass wired into session loop (behind `session_end_check`)
+- [ ] Guest can complete multiple consecutive N5 sessions end-to-end
+
+### Phase 2 — Kanji mnemonics + grammar + N4
+- [ ] Mnemonic authoring decision locked (open decision §5.5)
+- [ ] Kanji component + mnemonic layer (KANJIDIC2/KanjiVG)
+- [ ] Grammar patterns as first-class SRS items
+- [ ] N4 unit content authored
+- [ ] Scoped Hana launch (constrained to unit items + JLPT level)
+
+### Phase 3 — N3 paid flagship
+- [ ] Tatoeba ingestion + i+1 leveling pipeline
+- [ ] Graded reading library + reader UI
+- [ ] In-text sentence mining → SRS
+- [ ] Hana structured feedback mode
+- [ ] Paywall wired (N3 entry behind tier gate)
