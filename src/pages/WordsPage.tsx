@@ -5,11 +5,12 @@ import { wordsForTier } from "@/content/vocabulary";
 import { WordDrillCard, type DrillPhase } from "@/components/WordDrillCard";
 import { WordLearnCard } from "@/components/WordLearnCard";
 import { Furigana } from "@/components/Furigana";
+import { RecognitionPass } from "@/components/RecognitionPass";
 import { PageShell, SectionNav } from "@/components/PageShell";
 import { ProgressWidget } from "@/components/ProgressWidget";
 import { LoadingPlaceholder, ProgressBar, ScoreCard } from "aburungo-design-system";
 
-type Screen = "browse" | "learn" | "drill" | "result";
+type Screen = "browse" | "learn" | "recognition" | "drill" | "result";
 
 const SECTION_LINKS = [
   { to: "/flashcard", label: "Flashcards" },
@@ -18,6 +19,7 @@ const SECTION_LINKS = [
 ];
 
 const THEME_LABELS: Record<string, string> = {
+  basics: "Basics",
   people: "People",
   places: "Places",
   food: "Food & Drink",
@@ -76,9 +78,7 @@ function BrowseScreen({ words, selected, onSelect, onStartDrill }: BrowseScreenP
             </div>
           </div>
           <p className="mt-2 text-body font-semibold text-fg">{selected.english}</p>
-          {selected.notes != null && (
-            <p className="mt-1 text-body-sm text-fg-subtle">{selected.notes}</p>
-          )}
+          {selected.notes != null && <p className="mt-1 text-body-sm text-fg-subtle">{selected.notes}</p>}
         </div>
       )}
 
@@ -94,14 +94,14 @@ function BrowseScreen({ words, selected, onSelect, onStartDrill }: BrowseScreenP
                 type="button"
                 onClick={() => onSelect(w)}
                 className={[
-                  "flex min-h-[44px] items-center rounded-xl border px-3 py-2 text-body-sm transition-colors",
+                  "flex min-h-[44px] items-center rounded-xl border px-3 py-2 transition-colors",
                   selected?.id === w.id
                     ? "border-brand-500 bg-brand-600 text-white"
                     : "border-border bg-surface text-fg active:bg-surface-2",
                 ].join(" ")}
                 style={{ fontFamily: "var(--font-jp)" }}
               >
-                {w.japanese}
+                <Furigana japanese={w.japanese} reading={w.reading} />
               </button>
             ))}
           </div>
@@ -133,6 +133,7 @@ export function WordsPage() {
 
   const [queue, setQueue] = useState<Word[]>([]);
   const [learnIndex, setLearnIndex] = useState(0);
+  const [recognitionQueue, setRecognitionQueue] = useState<Word[]>([]);
   const [queueIndex, setQueueIndex] = useState(0);
   const [phase, setPhase] = useState<DrillPhase>("entering");
   const [stagedWord, setStagedWord] = useState<Word | null>(null);
@@ -153,10 +154,8 @@ export function WordsPage() {
   function advanceLearn() {
     const next = learnIndex + 1;
     if (next >= queue.length) {
-      setQueueIndex(0);
-      setStagedWord(null);
-      setPhase("entering");
-      setScreen("drill");
+      setRecognitionQueue(queue.slice(0, Math.min(5, queue.length)));
+      setScreen("recognition");
     } else {
       setLearnIndex(next);
     }
@@ -222,25 +221,28 @@ export function WordsPage() {
     content = <LoadingPlaceholder label="Loading vocabulary…" />;
   } else if (screen === "learn") {
     const word = queue[learnIndex];
-    content = word !== undefined ? (
-      <div className="flex w-full flex-col gap-4 py-4">
-        <ProgressBar value={(learnIndex + 1) / queue.length} />
-        <WordLearnCard
-          key={word.id}
-          word={word}
-          index={learnIndex}
-          total={queue.length}
-          onNext={advanceLearn}
-        />
-      </div>
-    ) : null;
+    content =
+      word !== undefined ? (
+        <div className="flex w-full flex-col gap-4 py-4">
+          <ProgressBar value={(learnIndex + 1) / queue.length} />
+          <WordLearnCard key={word.id} word={word} index={learnIndex} total={queue.length} onNext={advanceLearn} />
+        </div>
+      ) : null;
+  } else if (screen === "recognition") {
+    content = (
+      <RecognitionPass
+        queue={recognitionQueue}
+        pool={words}
+        onDone={() => setScreen("browse")}
+      />
+    );
   } else if (screen === "result") {
     content = (
       <div className="flex flex-col gap-6 py-4">
-        <ScoreCard correct={correctCount} total={queue.length}>
+        <ScoreCard correct={correctCount} total={queue.length} label="recalled">
           {missed.length > 0 && (
             <section>
-              <p className="mb-3 text-body-sm font-medium text-fg-subtle">Missed — {missed.length}</p>
+              <p className="mb-3 text-body-sm font-medium text-fg-subtle">Worth another look · {missed.length}</p>
               <div className="flex flex-col gap-2">
                 {missed.map((w) => (
                   <div
@@ -264,7 +266,7 @@ export function WordsPage() {
               onClick={retestMissed}
               className="flex min-h-[52px] w-full items-center justify-center rounded-2xl bg-brand-600 text-body font-semibold text-white active:bg-brand-700"
             >
-              Retest missed ({missed.length})
+              Review again ({missed.length})
             </button>
           )}
           <button
@@ -272,7 +274,7 @@ export function WordsPage() {
             onClick={startLearn}
             className="flex min-h-[52px] w-full items-center justify-center rounded-2xl border border-border bg-surface text-body font-medium text-fg active:bg-surface-2"
           >
-            Learn again
+            Start over
           </button>
           <button
             type="button"
@@ -317,14 +319,7 @@ export function WordsPage() {
       </div>
     );
   } else {
-    content = (
-      <BrowseScreen
-        words={words}
-        selected={selected}
-        onSelect={setSelected}
-        onStartDrill={startLearn}
-      />
-    );
+    content = <BrowseScreen words={words} selected={selected} onSelect={setSelected} onStartDrill={startLearn} />;
   }
 
   return (

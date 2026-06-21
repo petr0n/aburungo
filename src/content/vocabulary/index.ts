@@ -1,11 +1,13 @@
 import type { JlptLevel, Word, UserTier } from "@/types";
 import { parseWords } from "./schema";
 
+import basicsRaw from "./basics.yaml";
 import nounsRaw from "./nouns.yaml";
 import verbsRaw from "./verbs.yaml";
 import adjectivesRaw from "./adjectives.yaml";
 
 export const allWords: Word[] = [
+  ...parseWords(basicsRaw, "vocabulary/basics.yaml"),
   ...parseWords(nounsRaw, "vocabulary/nouns.yaml"),
   ...parseWords(verbsRaw, "vocabulary/verbs.yaml"),
   ...parseWords(adjectivesRaw, "vocabulary/adjectives.yaml"),

@@ -26,7 +26,7 @@ export function Furigana({ japanese, reading, className }: Props) {
         seg.ruby !== undefined ? (
           <ruby key={i}>
             {seg.text}
-            <rt className="text-[0.4em] font-normal text-fg-subtle">{seg.ruby}</rt>
+            <rt className="font-normal opacity-60">{seg.ruby}</rt>
           </ruby>
         ) : (
           <span key={i}>{seg.text}</span>
