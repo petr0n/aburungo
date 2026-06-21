@@ -27,6 +27,50 @@ engine. Engine details live in [01-overarching-plan.md](01-overarching-plan.md).
 - The ladder ends in a **can-do checkpoint** (not an exam): a short mixed review + one Hana
   situation that requires items from across the level. Passing it surfaces the N4 upgrade prompt.
 
+### N5 can-do moments (19 milestones)
+
+The learner's progress is anchored to these 19 real-life abilities. Each is a milestone on the
+ladder — surfaced in the Close step and verified by the two-agent system (Hana + assessor) when
+the learner is ready to attempt it.
+
+**Greetings & basics**
+1. Greet someone — hello, good morning, goodbye, nice to meet you
+2. Introduce yourself — your name and where you're from
+3. Thank someone and respond when thanked
+4. Say you don't understand and ask someone to speak slowly
+
+**Food & drink**
+5. Order a drink at a café
+6. Order a meal at a restaurant
+7. Ask for the bill
+8. Ask what something is on a menu
+
+**Shopping**
+9. Ask how much something costs
+10. Buy something at a shop — point, ask the price, pay
+
+**Getting around**
+11. Buy a train ticket to a destination
+12. Ask which platform or exit to use
+13. Tell a taxi driver where you want to go
+
+**Hotel**
+14. Check into a hotel — give your name and confirm your reservation
+
+**Directions**
+15. Ask where something is (bathroom, exit, station) and understand a basic answer (left, right,
+    straight ahead)
+
+**Weather**
+16. Comment on the weather — "It's hot today, isn't it?" / "It's cold" (暑いですね / 寒いですね)
+17. Ask what the weather will be like — "What's the weather tomorrow?" (明日の天気は？)
+
+**Food preferences**
+18. Say what food you like or don't like — using すし、ごはん、ラーメン、たまご、やさい
+    (〜が好きです / 〜が嫌いです)
+19. Say what you want to eat — same vocabulary, pattern 〜が食べたいです
+    ("I want to eat ramen" / "I want to eat eggs")
+
 ## 2. What's in a unit (N5 emphasis)
 
 A unit bundles a small, coherent batch that all reinforces each other:
@@ -44,22 +88,27 @@ Hotel, Directions) so the JLPT ladder still *feels* like "real-life Japanese," h
 
 ## 3. The daily session, N5 flavor
 
-The shared 5-step loop (review → new unit → integrate → produce → close), tuned for beginners:
+The shared 6-step session loop (review → new unit → integrate → produce → close → recognition
+pass), tuned for beginners. Session length and item count are driven by the learner's `intensity`
+and `session_length` preferences set during onboarding.
 
-1. **Warm-up review (~3–5 min):** interleaved due items — words, kana, the odd kanji, a phrase.
-   Early on this is short; it grows as the SRS fills. Recognition-friendly formats dominate at first
-   (multiple choice, audio match), escalating to recall (type the reading) as items stabilize.
-2. **New unit (~4–6 min):** introduce the 5–7 words with **audio + furigana**, the kanji with its
-   mnemonic, the grammar pattern with one worked example, then the phrases that combine them.
-3. **Integrate (~2 min):** a cloze or the short reading that reuses today's items — first real
-   "comprehensible input" moment.
-4. **Produce (~2–3 min):** *one* output beat. N5 examples: type the phrase you just learned; or a
-   tiny scoped Hana chat ("You're at a café. Order a coffee.") that only expects N5 items.
-5. **Close:** "Done. You learned 6 words and 1 kanji. 12 reviews due tomorrow." Visible mastery, no
-   XP, no streak guilt.
-
-Target ~12–15 min. A **"2-minute" fallback** (reviews only) exists for low-energy days, because a
-session you'll actually repeat beats a heroic one you'll skip.
+1. **Review:** interleaved due items — words, kana, the odd kanji, a phrase. Empty on the first
+   session; grows as the SRS fills. Format rotates per item (flashcard one session, fill-in-blank
+   the next — never the same format twice in a row for the same item).
+2. **New unit:** introduce the 5–7 words with **audio + furigana**, the kanji with its mnemonic,
+   the grammar pattern with one worked example, then the phrases that combine them.
+3. **Integrate (scaffolded at N5):**
+   - *Early N5:* characters forming a word — see the kana making a real word
+   - *Mid N5:* new word in a short 2–3 word phrase
+   - *Late N5:* phrase in a sentence — cloze or short reading passage
+4. **Produce:** one output beat, forgiving and short at N5:
+   - *Early N5:* tap or type a single word
+   - *Mid N5:* type the phrase just learned
+   - *Late N5:* tiny scoped Hana exchange ("You're at a café. Order something to drink.")
+5. **Close:** progress toward the current can-do goal, brief summary of what was learned. No score,
+   no XP, no streak.
+6. **Recognition pass** *(only if `session_end_check = true`):* see English, tap the matching
+   Japanese tile from three options. Not a quiz — no right/wrong feedback, no judgment.
 
 ## 4. Recognize → Recall → Produce at N5
 
