@@ -1,0 +1,100 @@
+# N5 foundational kana-only words — shown first to ease new learners into the browse page.
+# Pronouns and demonstratives are all pure kana; no kanji, no furigana needed.
+# content-source: training — N5 canonical vocabulary, pending JMdict seed verification
+# jlpt-source: training
+
+# ── Pronouns ──────────────────────────────────────────────────────────────────
+
+- id: vocab.watashi
+  jlpt: N5
+  word_type: noun
+  theme: basics
+  japanese: わたし
+  reading: わたし
+  romaji: watashi
+  english: I, me
+
+- id: vocab.anata
+  jlpt: N5
+  word_type: noun
+  theme: basics
+  japanese: あなた
+  reading: あなた
+  romaji: anata
+  english: you
+
+# ── Demonstratives (things) ───────────────────────────────────────────────────
+
+- id: vocab.kore
+  jlpt: N5
+  word_type: noun
+  theme: basics
+  japanese: これ
+  reading: これ
+  romaji: kore
+  english: this (thing)
+
+- id: vocab.sore
+  jlpt: N5
+  word_type: noun
+  theme: basics
+  japanese: それ
+  reading: それ
+  romaji: sore
+  english: that (thing)
+
+- id: vocab.are
+  jlpt: N5
+  word_type: noun
+  theme: basics
+  japanese: あれ
+  reading: あれ
+  romaji: are
+  english: that (thing, over there)
+
+- id: vocab.dore
+  jlpt: N5
+  word_type: noun
+  theme: basics
+  japanese: どれ
+  reading: どれ
+  romaji: dore
+  english: which (one)
+
+# ── Demonstratives (places) ───────────────────────────────────────────────────
+
+- id: vocab.koko
+  jlpt: N5
+  word_type: noun
+  theme: basics
+  japanese: ここ
+  reading: ここ
+  romaji: koko
+  english: here
+
+- id: vocab.soko
+  jlpt: N5
+  word_type: noun
+  theme: basics
+  japanese: そこ
+  reading: そこ
+  romaji: soko
+  english: there
+
+- id: vocab.asoko
+  jlpt: N5
+  word_type: noun
+  theme: basics
+  japanese: あそこ
+  reading: あそこ
+  romaji: asoko
+  english: over there
+
+- id: vocab.doko
+  jlpt: N5
+  word_type: noun
+  theme: basics
+  japanese: どこ
+  reading: どこ
+  romaji: doko
+  english: where

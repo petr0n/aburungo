@@ -1,5 +1,6 @@
 import type { Word, WordType } from "@/types";
 import { toPoliteJapanese, toPoliteReading } from "@/lib/verbForms";
+import { Furigana } from "@/components/Furigana";
 
 const WORD_TYPE_LABELS: Record<WordType, string> = {
   noun: "Noun",
@@ -49,9 +50,11 @@ export function WordLearnCard({ word, index, total, onNext }: Props) {
           <div className="flex flex-col items-center gap-3 py-4">
             {politeJapanese !== null ? (
               <>
-                <p lang="ja" className="text-center text-jp-display font-medium text-fg" style={{ fontFamily: "var(--font-jp)" }}>
-                  {word.japanese}
-                </p>
+                <Furigana
+                  japanese={word.japanese}
+                  reading={word.reading}
+                  className="block text-center text-jp-display font-medium text-fg lg:text-jp-display-lg"
+                />
                 <p lang="ja" className="text-center text-jp text-fg-muted" style={{ fontFamily: "var(--font-jp)" }}>
                   {politeJapanese}
                 </p>
@@ -61,9 +64,11 @@ export function WordLearnCard({ word, index, total, onNext }: Props) {
               </>
             ) : (
               <>
-                <p lang="ja" className="text-center text-jp-display font-medium text-fg" style={{ fontFamily: "var(--font-jp)" }}>
-                  {word.japanese}
-                </p>
+                <Furigana
+                  japanese={word.japanese}
+                  reading={word.reading}
+                  className="block text-center text-jp-display font-medium text-fg lg:text-jp-display-lg"
+                />
                 <p lang="ja" className="text-center text-body-sm text-fg-subtle" style={{ fontFamily: "var(--font-jp)" }}>
                   {word.reading} · {word.romaji}
                 </p>

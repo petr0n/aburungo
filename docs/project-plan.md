@@ -43,8 +43,8 @@ Practical Japanese for English speakers. Focused on real-life situations with sp
 
 - **Kana:** fully wired — guest progress in localStorage, signed-in users sync via Hono API + `user_kana_progress` table; dual-write on first sign-in migrates guest data
 - **Kanji:** drill reviews sync via Hono API + `user_kanji_progress` table
-- **Phrases (fill-in-blank / flashcard):** local Leitner + IndexedDB only — server sync not yet wired (`submitReview`/`fetchDue` exist in `src/api/progress.ts` but no component calls them)
-- **Progress widget:** `src/components/ProgressWidget.tsx` — two-tone bar (reviewed/mastered); currently kana only
+- **Phrases (fill-in-blank / flashcard):** reviews sync to server for signed-in users (`session.rate()` posts `submitReview`); due queue merges server `fetchDue()` with local Leitner so due cards surface cross-device (DR-015). Guests stay local Leitner + IndexedDB. Full server-source-of-truth (dropping local Leitner for signed-in users) is a follow-up needing a server endpoint.
+- **Progress widget:** `src/components/ProgressWidget.tsx` — two-tone bar (reviewed/mastered); renders phrases-by-JLPT, kana, and kanji from `/api/progress/stats`
 - **Profile page:** full stats view with kana breakdown and per-script reset controls
 
 ### Auth
@@ -74,25 +74,25 @@ Practical Japanese for English speakers. Focused on real-life situations with sp
 
 ## Roadmap
 
-### Near term
-1. **Verify `VITE_API_URL` in Vercel** — confirm Railway URL is set so the frontend can reach the API; the client throws on load if missing
-2. **Connect phrase/flashcard progress to server** — `submitReview`/`fetchDue` exist in `src/api/progress.ts` but no component calls them; authenticated sessions should dual-write IndexedDB + FSRS API; guests stay local Leitner
-3. **Extend progress widget to phrases + kanji** — widget currently shows kana only; add phrase and kanji rows using server stats breakdown
+### Done (was near-term)
+- ~~Verify `VITE_API_URL` in Vercel~~ — all three frontend env vars set; site live (DR-013/014)
+- ~~Connect phrase/flashcard progress to server~~ — reviews sync for signed-in users; server due cards merged into the queue (DR-015)
+- ~~Extend progress widget to phrases + kanji~~ — widget renders all three from `/api/progress/stats`
 
-### Medium term
-4. **FSRS migration for session store** — local session SRS is Leitner; DB schema uses FSRS; once server sync is live, authenticated sessions should pull due cards from server and post reviews (replaces client-side Leitner scheduling for signed-in users)
-5. **N4 content** — add YAML scenario files for N4-level vocabulary; verify JLPT level against JMdict seed before merging
-6. **VOICEVOX audio pipeline** — vet voice licenses, pre-generate TTS locally via Podman, upload to Supabase Storage (see `admin-dashboard-plan.md` for multi-voice strategy)
-7. **Admin Phase 2** — log viewer (pino ring buffer), learning analytics, content audit (see `admin-dashboard-plan.md`)
-8. **Paywall / payment integration** — flip `isPaid` check in `useUserTier()` when Stripe/RevenueCat is wired; slot in `UserTier` type is ready
+### Near term
+1. **Full FSRS source-of-truth for signed-in users** — today the session store posts reviews to the server and merges server `fetchDue()` due cards, but local Leitner still co-drives the queue and new-card detection is local (DR-015). To make the server authoritative cross-device, add a server endpoint returning the user's reviewed/new card set, then drop local Leitner for signed-in users. Guests stay on local Leitner.
+2. **N4 content** — add YAML scenario files for N4-level vocabulary; verify JLPT level against JMdict seed before merging
+3. **VOICEVOX audio pipeline** — vet voice licenses, pre-generate TTS locally via Podman, upload to Supabase Storage (see `admin-dashboard-plan.md` for multi-voice strategy)
+4. **Admin Phase 2** — log viewer (pino ring buffer), learning analytics, content audit (see `admin-dashboard-plan.md`)
+5. **Paywall / payment integration** — flip `isPaid` check in `useUserTier()` when Stripe/RevenueCat is wired; slot in `UserTier` type is ready
 
 ### Longer term
-9. **Audio fill-in-the-blank** — Web Speech API for STT input; Whisper API upgrade path
-10. **Admin Phase 3** — feature flags, announcements, rate limiting dashboard
-11. **Lesson picker** — structured lesson flow on top of the existing `Lesson` type
-12. **Tatoeba example sentences** — seed and surface example sentences per card
-13. **Apple Sign-In** — when $99/yr Apple Developer account is obtained (see `todo.md`)
-14. **Mobile app** — React Native or PWA with offline support
+6. **Audio fill-in-the-blank** — Web Speech API for STT input; Whisper API upgrade path
+7. **Admin Phase 3** — feature flags, announcements, rate limiting dashboard
+8. **Lesson picker** — structured lesson flow on top of the existing `Lesson` type
+9. **Tatoeba example sentences** — seed and surface example sentences per card
+10. **Apple Sign-In** — when $99/yr Apple Developer account is obtained (see `todo.md`)
+11. **Mobile app** — React Native or PWA with offline support
 
 ---
 
@@ -148,6 +148,20 @@ Practical Japanese for English speakers. Focused on real-life situations with sp
 - **Source cited in commit message** for any content change.
 - See [data-sources.md](data-sources.md) for full licensing details.
 
+## Display rules (non-negotiable)
+
+- **Furigana everywhere outside kanji-learning paths.** Any Japanese text containing kanji must use the `<Furigana>` component (renders `<ruby>`) so learners are never blocked by an unfamiliar character. This applies to: word tiles, learn cards, drill cards, flashcards, fill-in-the-blank, phrase displays, result/review screens, conversation history. Pure-kana text passes through unchanged — the component handles this automatically.
+- **Furigana off in kanji-learning paths.** The `/kanji` route and any future explicit kanji-reading exercises must not show furigana — the point of those screens is to read the character.
+- **Use `<Furigana>` not raw `<ruby>`.** Segmentation logic lives in `src/lib/furigana.ts`; the component is `src/components/Furigana.tsx`. Never inline a `<ruby>` tag manually.
+- **Assessment language is non-judgmental.** Use "recalled" not "correct", "worth another look" not "missed", "review again" not "retest". A score is a momentary reflection, never a grade. See assessment principles below.
+
+## Assessment principles (non-negotiable)
+
+- **No exams or drills.** The app never tells a learner they failed. Assessment lives in lightweight recognition passes (tap-to-match from 3 options) and SRS re-surfacing.
+- **Scores are reflection, not judgment.** Show counts ("7 recalled") but never percentages, pass/fail verdicts, or persistent grades. The real feedback is what the SRS surfaces next — not a number.
+- **Skip is always available.** Every assessment screen must have a visible skip/pass option. It is the relief valve for users who do not want to be quizzed.
+- **The SRS queue is the signal.** Words a learner struggled with surface again sooner — that is the feedback mechanism, invisible to the user. Do not surface SRS state as a score.
+
 ---
 
 ## Key technical decisions
@@ -161,6 +175,8 @@ Practical Japanese for English speakers. Focused on real-life situations with sp
 | Admin auth | Supabase `app_metadata.role` | Server-set only; included in JWT; no extra table |
 | Audio (V1) | Pre-generated VOICEVOX, stored in Supabase Storage | No real-time hosting cost |
 | Fonts | Noto Sans JP (variable, self-hosted) | Full kanji coverage; no external CDN dependency |
+| Furigana | `<Furigana>` (`<ruby>`) on all kanji outside `/kanji` route | Learners should never be blocked by an unfamiliar character; kanji-learning path is the only exception |
+| Assessment | Recognition pass (3-option tap) + SRS re-surfacing; no scored drills | A score is a reward loop — feedback lives in what surfaces next, not a number |
 
 See [decision-records.md](decision-records.md) for full rationale on product and architecture decisions.
 

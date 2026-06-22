@@ -15,6 +15,8 @@ Check `MEMORY.md` there at the start of every conversation. Write updated memori
 ## Product rules
 
 - **No gamification.** No XP, hearts, badges, mascots, level-ups. Progress tracking (SRS state, review history, streaks) is fine — reward loops are not.
+- **Scores are reflection, not judgment.** A score may be shown as a momentary snapshot ("7 recalled") but must never drive anxiety or dopamine — no percentages, no pass/fail framing, no persistent grade. The signal of what needs more work lives in the SRS queue (what surfaces next), not in a number. Use language like "recalled" and "worth another look" rather than "correct" and "missed."
+- **No exams or drills.** Assessment lives in lightweight recognition passes and SRS re-surfacing, not timed tests or scored quizzes. The app never tells a learner they failed.
 - **Touch first.** Mobile-first design. No hover-only affordances. Touch targets ≥ 44px.
 - **No fabricated Japanese sentences.** Do not invent novel Japanese phrases or sentences. All Japanese sentence content must come from JMdict/Tatoeba/KANJIDIC2 or a verified source — never composed from scratch.
 - **JLPT level assignments** may be applied from training knowledge to well-established vocabulary. N5 and N4 vocabulary is canonical and consistent across all references. Mark any training-derived JLPT classification with `# jlpt-source: training` in YAML until the JMdict seed is complete and levels can be verified against the dataset.
