@@ -1,0 +1,29 @@
+# Foundational sentence patterns — the copula and basic exchanges, used to
+# introduce grammar patterns in the earliest N5 daily-loop units.
+# content-source: training — N5 canonical vocabulary, pending JMdict seed verification
+# jlpt-source: training
+
+- id: basics.this-is-a-book
+  jlpt: N5
+  japanese: これは本です
+  reading: これはほんです
+  romaji: kore wa hon desu
+  english: This is a book.
+  scenario: basics
+  notes: The ～は～です pattern — the fundamental "X is Y" copula.
+
+- id: basics.what-is-that
+  jlpt: N5
+  japanese: それは何ですか
+  reading: それはなんですか
+  romaji: sore wa nan desu ka
+  english: What is that?
+  scenario: basics
+
+- id: basics.hello-how-are-you
+  jlpt: N5
+  japanese: こんにちは、おげんきですか
+  reading: こんにちは、おげんきですか
+  romaji: konnichiwa, ogenki desu ka
+  english: Hello, how are you?
+  scenario: basics

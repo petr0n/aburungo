@@ -13,6 +13,7 @@ const WORD_TYPE_LABELS: Record<WordType, string> = {
   "na-adj": "Adjective",
   adverb: "Adverb",
   counter: "Counter",
+  interjection: "Interjection",
 };
 
 function toFlipPhase(p: FlashCardPhase): FlipCardPhase {

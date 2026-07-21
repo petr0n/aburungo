@@ -9,16 +9,22 @@
  * Never edit an existing version block once it's shipped.
  */
 import Dexie, { type EntityTable } from "dexie";
-import type { ReviewState } from "@/types";
+import type { PathProgress, ReviewState } from "@/types";
 
 export class AburunGoDB extends Dexie {
   reviewStates!: EntityTable<ReviewState, "phraseId">;
+  pathProgress!: EntityTable<PathProgress, "pathId">;
 
   constructor() {
     super("aburungo");
     // v1: review state per phrase. Indexes: dueAt for "what's due now" queries.
     this.version(1).stores({
       reviewStates: "phraseId, dueAt",
+    });
+    // v2: per-path unit progress for the guided daily loop (one row per pathId, e.g. "n5").
+    this.version(2).stores({
+      reviewStates: "phraseId, dueAt",
+      pathProgress: "pathId",
     });
   }
 }

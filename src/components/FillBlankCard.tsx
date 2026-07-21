@@ -18,6 +18,7 @@ const WORD_TYPE_LABELS: Record<WordType, string> = {
   "na-adj": "Adjective",
   adverb: "Adverb",
   counter: "Counter",
+  interjection: "Interjection",
 };
 
 type Props = {

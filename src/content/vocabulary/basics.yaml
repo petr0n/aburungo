@@ -98,3 +98,50 @@
   reading: どこ
   romaji: doko
   english: where
+
+# ── Basic exchange words ───────────────────────────────────────────────────────
+
+- id: vocab.hai
+  jlpt: N5
+  word_type: interjection
+  theme: basics
+  japanese: はい
+  reading: はい
+  romaji: hai
+  english: yes
+
+- id: vocab.iie
+  jlpt: N5
+  word_type: interjection
+  theme: basics
+  japanese: いいえ
+  reading: いいえ
+  romaji: iie
+  english: no
+
+- id: vocab.namae
+  jlpt: N5
+  word_type: noun
+  theme: basics
+  japanese: なまえ
+  reading: なまえ
+  romaji: namae
+  english: name
+
+- id: vocab.sayounara
+  jlpt: N5
+  word_type: interjection
+  theme: basics
+  japanese: さようなら
+  reading: さようなら
+  romaji: sayounara
+  english: goodbye
+
+- id: vocab.matane
+  jlpt: N5
+  word_type: interjection
+  theme: basics
+  japanese: またね
+  reading: またね
+  romaji: matane
+  english: see you later

@@ -60,7 +60,7 @@ export type Phrase = {
   jlpt?: JlptLevel;
 };
 
-export type WordType = "noun" | "verb" | "i-adj" | "na-adj" | "adverb" | "counter";
+export type WordType = "noun" | "verb" | "i-adj" | "na-adj" | "adverb" | "counter" | "interjection";
 export type VerbClass = "ru" | "u" | "irregular";
 
 /**
@@ -102,6 +102,44 @@ export type Lesson = {
   title: string;
   scenario: Scenario;
   phraseIds: string[];
+};
+
+/**
+ * A step on the guided N5 daily-loop ladder.
+ *
+ * Authored in YAML under src/content/units/*.yaml. A Unit does not define new
+ * content — it's an ordering layer over existing Word/Phrase ids, per the
+ * "reuse, don't rebuild" rule in docs/plans/99-roadmap.md.
+ */
+export type Unit = {
+  id: string;
+  /** Position in the ladder, 1-indexed. Determines introduction order. */
+  order: number;
+  /** Grouping wrapper shown to the learner, e.g. "Greetings & basics". */
+  situation: string;
+  title: string;
+  /** The can-do milestone this unit builds toward, shown on the close screen. */
+  canDo: string;
+  wordIds: string[];
+  phraseIds: string[];
+  /**
+   * Kanji characters introduced by this unit. Informational only for now —
+   * not yet scheduled through SRS (see docs/plans/01-overarching-plan.md §5).
+   */
+  kanji: string[];
+  /** Short training-sourced explanation of the unit's grammar pattern. */
+  grammarNote: string;
+};
+
+/**
+ * A learner's position on a Unit ladder, persisted per path (e.g. "n5").
+ * IndexedDB-only for now — guests and signed-in users behave the same until
+ * server sync for signed-in users is built (tracked in docs/todo.md).
+ */
+export type PathProgress = {
+  pathId: string;
+  /** Unit ids the learner has completed the "new unit" step for, in order. */
+  seenUnitIds: string[];
 };
 
 /** Leitner boxes 1–5. Box 1 = seen tomorrow, box 5 = seen in a month-ish. */
