@@ -14,7 +14,7 @@
  * informationally only, not yet scheduled through SRS (see
  * docs/plans/01-overarching-plan.md open decision #5).
  */
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import type { Phrase, ReviewRating, Unit, Word } from "@/types";
 import { useAuth, useUserTier } from "@/store/auth";
 import { n5Units } from "@/content/units";
@@ -319,18 +319,20 @@ export function LearnPage() {
     };
   }, [tier, userId]);
 
-  async function finishUnitAndClose() {
+  const finishUnitAndClose = useCallback(async () => {
     if (session?.unit != null) {
       await markUnitSeen(PATH_ID, session.unit.id);
     }
     setStep("close");
-  }
+  }, [session]);
 
   function afterReview() {
     setStep(session?.unit !== null ? "new-unit" : "close");
   }
 
-  function afterNewUnit() {
+  // Stable identity: NewUnitStep depends on this in a useEffect (see below),
+  // so an inline function here would re-fire that effect on every render.
+  const afterNewUnit = useCallback(() => {
     if (session === null) return;
     const produceItems = [...session.newWords, ...session.newPhrases];
     if (produceItems.length > 0) {
@@ -340,7 +342,7 @@ export function LearnPage() {
     } else {
       void finishUnitAndClose();
     }
-  }
+  }, [session, finishUnitAndClose]);
 
   function afterProduce() {
     if (session !== null && session.newWords.length > 0) {

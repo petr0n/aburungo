@@ -49,9 +49,19 @@ export function buildDailySession(
   const wordById = new Map(allWords.map((w) => [w.id, w]));
   const phraseById = new Map(allPhrases.map((p) => [p.id, p]));
 
+  // reviewStates has one row per phraseId when it comes from IndexedDB (Dexie's
+  // primary key enforces it), but this is a pure function — a future caller
+  // that merges local + server due state (like src/store/session.ts already
+  // does) could pass duplicates. Dedupe defensively, keeping the earliest due.
+  const seenReviewIds = new Set<string>();
   const reviewItems = reviewStates
     .filter((s) => isDue(s, now) && seenItemIds.has(s.phraseId))
     .sort((a, b) => a.dueAt - b.dueAt)
+    .filter((s) => {
+      if (seenReviewIds.has(s.phraseId)) return false;
+      seenReviewIds.add(s.phraseId);
+      return true;
+    })
     .map((s) => wordById.get(s.phraseId) ?? phraseById.get(s.phraseId))
     .filter((item): item is Phrase | Word => item !== undefined);
 

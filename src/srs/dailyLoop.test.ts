@@ -95,4 +95,18 @@ describe("buildDailySession", () => {
 
     expect(session.reviewItems.map((i) => i.id)).toEqual(["w2", "w1"]);
   });
+
+  it("dedupes review items by phraseId, keeping the earliest due", () => {
+    // Simulates a future caller that merges local + server due state (like
+    // src/store/session.ts already does) and passes the same phraseId twice.
+    const progress: PathProgress = { pathId: "n5", seenUnitIds: ["unit-1"] };
+    const reviewStates: ReviewState[] = [
+      { phraseId: "w1", box: 1, dueAt: NOW - 2 * DAY_MS },
+      { phraseId: "w1", box: 3, dueAt: NOW - DAY_MS },
+    ];
+
+    const session = buildDailySession(units, progress, allWords, allPhrases, reviewStates, NOW);
+
+    expect(session.reviewItems.map((i) => i.id)).toEqual(["w1"]);
+  });
 });
