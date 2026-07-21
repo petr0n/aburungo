@@ -344,11 +344,14 @@ export function KanaPracticePage() {
             <div className="grid w-full grid-cols-2 gap-3">
               {choices.map((choice) => {
                 let cls = "border-border bg-surface text-fg active:bg-surface-2";
+                let marker = "";
                 if (answered !== null) {
                   if (choice === currentCard.romaji) {
                     cls = "border-success-500 bg-success-bg text-success-fg";
+                    marker = "✓ ";
                   } else if (choice === selectedChoice) {
                     cls = "border-error-500 bg-error-bg text-error-fg";
+                    marker = "✗ ";
                   }
                 }
                 return (
@@ -359,6 +362,7 @@ export function KanaPracticePage() {
                     disabled={answered !== null}
                     className={`flex min-h-[60px] items-center justify-center rounded-2xl border text-body font-medium transition-colors ${cls}`}
                   >
+                    {marker}
                     {choice}
                   </button>
                 );
