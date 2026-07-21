@@ -58,3 +58,27 @@
   romaji: chizu wa arimasu ka
   english: Do you have a map?
   scenario: directions
+
+- id: directions.near-convenience-store
+  jlpt: N5
+  japanese: コンビニの近くです
+  reading: コンビニのちかくです
+  romaji: konbini no chikaku desu
+  english: It's near the convenience store.
+  scenario: directions
+
+- id: directions.walking-distance
+  jlpt: N5
+  japanese: 歩いて五分くらいです
+  reading: あるいてごふんくらいです
+  romaji: aruite gofun kurai desu
+  english: It's about 5 minutes on foot.
+  scenario: directions
+
+- id: directions.behind-building
+  jlpt: N5
+  japanese: あのビルのうしろです
+  reading: あのビルのうしろです
+  romaji: ano biru no ushiro desu
+  english: It's behind that building.
+  scenario: directions

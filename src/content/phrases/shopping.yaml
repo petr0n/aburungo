@@ -66,3 +66,48 @@
   english: Do you have a larger size?
   scenario: shopping
   notes: Swap 大きい (ookii) for 小さい (chiisai) to ask for a smaller size.
+
+- id: shopping.may-i-look
+  jlpt: N5
+  japanese: ちょっと見てもいいですか
+  reading: ちょっとみてもいいですか
+  romaji: chotto mite mo ii desu ka
+  english: May I have a look?
+  scenario: shopping
+  notes: The standard way to browse without committing — ～てもいいですか is the general "may I ~?" permission pattern.
+
+- id: shopping.big-one-please
+  jlpt: N5
+  japanese: 大きいのをください
+  reading: おおきいのをください
+  romaji: ookii no o kudasai
+  english: The big one, please.
+  scenario: shopping
+  notes: の stands in for the item already pointed at — swap 大きい for 小さい to ask for the small one.
+
+- id: shopping.two-please
+  jlpt: N5
+  japanese: ふたつください
+  reading: ふたつください
+  romaji: futatsu kudasai
+  english: Two, please.
+  scenario: shopping
+  notes: Native counter (ひとつ、ふたつ、みっつ...) — works for most small countable items without needing a specific counter word.
+
+- id: shopping.other-colors
+  jlpt: N5
+  japanese: ほかのいろはありますか
+  reading: ほかのいろはありますか
+  romaji: hoka no iro wa arimasu ka
+  english: Do you have other colors?
+  scenario: shopping
+  notes: ～はありますか is the general "do you have ~?" stock question — swap いろ for another noun to ask about other attributes.
+
+- id: shopping.dont-have-it
+  jlpt: N5
+  japanese: すみません、ありません
+  reading: すみません、ありません
+  romaji: sumimasen, arimasen
+  english: I'm sorry, we don't have it.
+  scenario: shopping
+  notes: The clerk's typical reply when an item is out of stock.

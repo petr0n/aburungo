@@ -45,3 +45,69 @@
   notes: |
     Said after eating, often as you leave or pay. Universally appreciated;
     the polite-finished form ("deshita") fits any restaurant register.
+
+- id: restaurant.coffee-please
+  jlpt: N5
+  japanese: コーヒーをお願いします
+  reading: コーヒーをおねがいします
+  romaji: koohii o onegai shimasu
+  english: A coffee, please.
+  scenario: restaurant
+  notes: |
+    Works at a counter or table. Swap コーヒー for any drink name to order
+    something else the same way.
+
+- id: restaurant.water-please
+  jlpt: N5
+  japanese: 水をください
+  reading: みずをください
+  romaji: mizu o kudasai
+  english: Water, please.
+  scenario: restaurant
+  notes: |
+    Many restaurants bring water automatically, but this is the line to ask
+    for a refill or if none has appeared.
+
+- id: restaurant.what-is-this
+  jlpt: N5
+  japanese: これは何ですか
+  reading: これはなんですか
+  romaji: kore wa nan desu ka
+  english: What is this?
+  scenario: restaurant
+  notes: |
+    Said while pointing at a dish or menu item, distinct from それは何ですか
+    (asking about something farther away).
+
+- id: restaurant.that-is-fish
+  jlpt: N5
+  japanese: それは魚です
+  reading: それはさかなです
+  romaji: sore wa sakana desu
+  english: That is fish.
+  scenario: restaurant
+  notes: |
+    A typical answer to これは何ですか — swap 魚 for any food word to answer
+    about a different dish.
+
+- id: restaurant.price-300
+  jlpt: N5
+  japanese: 三百円です
+  reading: さんびゃくえんです
+  romaji: sanbyaku en desu
+  english: It's 300 yen.
+  scenario: restaurant
+  notes: |
+    百 combines with small numbers to form hundreds; note the sound changes
+    (三百 = さんびゃく, not さんひゃく).
+
+- id: restaurant.price-5000
+  jlpt: N5
+  japanese: 五千円です
+  reading: ごせんえんです
+  romaji: gosen en desu
+  english: It's 5,000 yen.
+  scenario: restaurant
+  notes: |
+    千 combines directly with small numbers for thousands (五千 = ごせん),
+    no sound change needed like with 百.

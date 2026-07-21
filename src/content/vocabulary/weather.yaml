@@ -1,0 +1,126 @@
+# N5 weather vocabulary — Situation 7 (Units 27-29): weather, seasons, temperature.
+# content-source: training — N5 canonical vocabulary, pending JMdict seed verification
+# jlpt-source: training
+
+# ── Weather conditions (noun) ───────────────────────────────────────────────
+
+- id: vocab.tenki
+  jlpt: N5
+  word_type: noun
+  theme: weather
+  japanese: 天気
+  reading: てんき
+  romaji: tenki
+  english: weather
+
+- id: vocab.ame
+  jlpt: N5
+  word_type: noun
+  theme: weather
+  japanese: 雨
+  reading: あめ
+  romaji: ame
+  english: rain
+
+- id: vocab.yuki
+  jlpt: N5
+  word_type: noun
+  theme: weather
+  japanese: 雪
+  reading: ゆき
+  romaji: yuki
+  english: snow
+
+- id: vocab.hare
+  jlpt: N5
+  word_type: noun
+  theme: weather
+  japanese: 晴れ
+  reading: はれ
+  romaji: hare
+  english: sunny, clear (weather)
+
+- id: vocab.kumori
+  jlpt: N5
+  word_type: noun
+  theme: weather
+  japanese: 曇り
+  reading: くもり
+  romaji: kumori
+  english: cloudy
+
+- id: vocab.kaze
+  jlpt: N5
+  word_type: noun
+  theme: weather
+  japanese: 風
+  reading: かぜ
+  romaji: kaze
+  english: wind
+
+# ── Temperature (i-adj) ─────────────────────────────────────────────────────
+
+- id: vocab.atatakai
+  jlpt: N5
+  word_type: i-adj
+  theme: weather
+  japanese: 暖かい
+  reading: あたたかい
+  romaji: atatakai
+  english: warm
+
+- id: vocab.suzushii
+  jlpt: N5
+  word_type: i-adj
+  theme: weather
+  japanese: 涼しい
+  reading: すずしい
+  romaji: suzushii
+  english: cool, refreshing
+
+- id: vocab.kion
+  jlpt: N5
+  word_type: noun
+  theme: weather
+  japanese: 気温
+  reading: きおん
+  romaji: kion
+  english: temperature
+
+# ── Seasons (noun) ───────────────────────────────────────────────────────────
+
+- id: vocab.haru
+  jlpt: N5
+  word_type: noun
+  theme: weather
+  japanese: 春
+  reading: はる
+  romaji: haru
+  english: spring
+
+- id: vocab.natsu
+  jlpt: N5
+  word_type: noun
+  theme: weather
+  japanese: 夏
+  reading: なつ
+  romaji: natsu
+  english: summer
+
+- id: vocab.aki
+  jlpt: N5
+  word_type: noun
+  theme: weather
+  japanese: 秋
+  reading: あき
+  romaji: aki
+  english: autumn, fall
+
+- id: vocab.fuyu
+  jlpt: N5
+  word_type: noun
+  theme: weather
+  japanese: 冬
+  reading: ふゆ
+  romaji: fuyu
+  english: winter

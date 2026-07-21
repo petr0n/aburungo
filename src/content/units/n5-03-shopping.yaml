@@ -1,0 +1,58 @@
+# N5 daily-loop units — Situation 3: Shopping (Units 13-15 of 35).
+# See docs/plans/02b-n5-units.md for the full 35-unit map this slice is drawn
+# from. Word/phrase ids reference existing content plus vocabulary/shopping.yaml
+# and phrases/shopping.yaml — no new Japanese content is composed here beyond
+# what's authored in those two files.
+# content-source: training — N5 canonical vocabulary, pending JMdict seed verification
+
+- id: n5.unit-13
+  order: 13
+  situation: Shopping
+  title: In a shop
+  canDo: Ask the price
+  wordIds:
+    - vocab.mise
+    - vocab.kau
+    - vocab.miru
+    - vocab.kudasai
+  phraseIds:
+    - shopping.may-i-look
+    - shopping.this-please
+  kanji:
+    - 店
+  grammarNote: "～てもいいですか — may I ~? (permission request)"
+
+- id: n5.unit-14
+  order: 14
+  situation: Shopping
+  title: Sizes & quantities
+  canDo: Buy something
+  wordIds:
+    - vocab.ookii
+    - vocab.chiisai
+    - vocab.ikutsu
+    - vocab.hitotsu
+    - vocab.futatsu
+  phraseIds:
+    - shopping.big-one-please
+    - shopping.two-please
+  kanji:
+    - 大
+    - 小
+  grammarNote: "～をひとつください — one ~ please"
+
+- id: n5.unit-15
+  order: 15
+  situation: Shopping
+  title: Do you have it?
+  canDo: Buy something
+  wordIds:
+    - vocab.aru
+    - vocab.hoka
+    - vocab.iro
+    - vocab.onaji
+  phraseIds:
+    - shopping.other-colors
+    - shopping.dont-have-it
+  kanji: []
+  grammarNote: "～はありますか — Do you have ~?"

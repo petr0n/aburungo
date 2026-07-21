@@ -1,0 +1,110 @@
+# N5 daily-loop units — Situation 8: Food preferences (Units 30-32) and the
+# Integration & checkpoint block (Units 33-35), the final slice of the 35-unit
+# ladder. See docs/plans/02b-n5-units.md for the full map. Units 34-35 are
+# deliberately review-only / no-new-content per the plan doc: the app doesn't
+# yet build the special multi-turn "no safety net" session (Unit 34) or the
+# two-agent verification checkpoint UX (Unit 35), so both degrade gracefully
+# to an empty wordIds/phraseIds unit intro rather than inventing new content
+# or a UI that doesn't exist yet.
+# content-source: training — N5 canonical vocabulary, pending JMdict seed verification
+# jlpt-source: training
+
+- id: n5.unit-30
+  order: 30
+  situation: Food preferences
+  title: I like sushi
+  canDo: Say what food you like or don't like
+  wordIds:
+    - vocab.suki
+    - vocab.kirai
+    - vocab.sushi
+    - vocab.gohan
+    - vocab.tamago
+  phraseIds:
+    - food-preferences.like-sushi
+    - food-preferences.dislike-eggs
+  kanji:
+    - 好
+  grammarNote: "～がすきです / ～がきらいです — I like ~ / I don't like ~ (the object of liking/disliking is marked with が, not を)"
+
+- id: n5.unit-31
+  order: 31
+  situation: Food preferences
+  title: I want to eat ramen
+  canDo: Say what you want to eat
+  wordIds:
+    - vocab.ramen
+    - vocab.yasai
+    - vocab.tabetai
+    - vocab.nomitai
+    - vocab.hoshii
+  phraseIds:
+    - food-preferences.want-ramen
+    - food-preferences.want-water
+  kanji: []
+  grammarNote: "～がたべたいです — I want to eat ~ (the たい desiderative form conjugates like an i-adjective, e.g. たべたくないです)"
+
+- id: n5.unit-32
+  order: 32
+  situation: Food preferences
+  title: More food & combining preferences
+  canDo: Say what food you like or don't like
+  wordIds:
+    - vocab.tenpura
+    - vocab.onigiri
+    - vocab.niku
+    - vocab.sakana
+    - vocab.pan
+  phraseIds:
+    - food-preferences.like-both
+    - food-preferences.dislike-meat
+  kanji:
+    - 魚
+  grammarNote: "～も～もすきです — I like both ~ and ~ (も replaces が/は to combine two things under one predicate)"
+
+- id: n5.unit-33
+  order: 33
+  situation: Integration & checkpoint
+  title: Daily life vocabulary
+  canDo: Describe how often you do something using frequency adverbs
+  wordIds:
+    - vocab.mainichi
+    - vocab.itsumo
+    - vocab.tokidoki
+    - vocab.amari
+    - vocab.zenzen
+  phraseIds:
+    - food-preferences.daily-coffee
+    - food-preferences.not-at-all
+  kanji:
+    - 毎
+  grammarNote: "Frequency adverbs (まいにち、いつも、ときどき、あまり、ぜんぜん) pair with ～ます sentences; あまり and ぜんぜん require a negative verb ending (～ません)"
+
+- id: n5.unit-34
+  order: 34
+  situation: Integration & checkpoint
+  title: Cross-situation conversation
+  canDo: Hold a longer exchange spanning two situations with no single-answer safety net
+  wordIds: []
+  phraseIds: []
+  kanji:
+    - 日
+    - 水
+    - 食
+    - 円
+    - 電
+    - 天
+    - 気
+    - 雨
+    - 好
+  grammarNote: "Review only, no new content — this unit strings together patterns from earlier units (e.g. 行って、買って、帰ります) across a longer 5-7 turn Hana exchange that spans two situations, such as a cafe stop followed by shopping on the same street. Kanji listed above are review items carried over from Units 1-32, not new introductions."
+
+- id: n5.unit-35
+  order: 35
+  situation: Integration & checkpoint
+  title: Can-do checkpoint
+  canDo: "N5 completion — all 19 can-dos"
+  wordIds: []
+  phraseIds: []
+  kanji: []
+  grammarNote: "Informational checkpoint, not a grammar pattern. This is the two-agent verification session: Hana plays a full situation of the learner's choosing from the 19 N5 can-do list, an assessor judges the transcript, and a check mark on any can-do unlocks it permanently. The N5 'complete' prompt surfaces once all 19 can-dos are verified. No new words, phrases, or kanji are introduced."

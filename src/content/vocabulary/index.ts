@@ -5,12 +5,28 @@ import basicsRaw from "./basics.yaml";
 import nounsRaw from "./nouns.yaml";
 import verbsRaw from "./verbs.yaml";
 import adjectivesRaw from "./adjectives.yaml";
+import greetings2Raw from "./greetings-2.yaml";
+import foodDrinkRaw from "./food-drink.yaml";
+import shoppingRaw from "./shopping.yaml";
+import transitRaw from "./transit.yaml";
+import hotelRaw from "./hotel.yaml";
+import directionsRaw from "./directions.yaml";
+import weatherRaw from "./weather.yaml";
+import foodPreferencesRaw from "./food-preferences.yaml";
 
 export const allWords: Word[] = [
   ...parseWords(basicsRaw, "vocabulary/basics.yaml"),
   ...parseWords(nounsRaw, "vocabulary/nouns.yaml"),
   ...parseWords(verbsRaw, "vocabulary/verbs.yaml"),
   ...parseWords(adjectivesRaw, "vocabulary/adjectives.yaml"),
+  ...parseWords(greetings2Raw, "vocabulary/greetings-2.yaml"),
+  ...parseWords(foodDrinkRaw, "vocabulary/food-drink.yaml"),
+  ...parseWords(shoppingRaw, "vocabulary/shopping.yaml"),
+  ...parseWords(transitRaw, "vocabulary/transit.yaml"),
+  ...parseWords(hotelRaw, "vocabulary/hotel.yaml"),
+  ...parseWords(directionsRaw, "vocabulary/directions.yaml"),
+  ...parseWords(weatherRaw, "vocabulary/weather.yaml"),
+  ...parseWords(foodPreferencesRaw, "vocabulary/food-preferences.yaml"),
 ];
 
 export function findWord(id: string): Word | undefined {

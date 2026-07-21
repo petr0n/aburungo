@@ -1,0 +1,124 @@
+# Directions vocabulary — left/right/straight, location words, and distance
+# expressions for Situation 6 (N5 units 24-26).
+# content-source: training — N5 canonical vocabulary, pending JMdict seed verification
+# jlpt-source: training
+
+# ── Left, right, straight (Unit 24) ───────────────────────────────────────────
+
+- id: vocab.migi
+  jlpt: N5
+  word_type: noun
+  theme: directions
+  japanese: 右
+  reading: みぎ
+  romaji: migi
+  english: right (direction)
+
+- id: vocab.hidari
+  jlpt: N5
+  word_type: noun
+  theme: directions
+  japanese: 左
+  reading: ひだり
+  romaji: hidari
+  english: left (direction)
+
+- id: vocab.massugu
+  jlpt: N5
+  word_type: adverb
+  theme: directions
+  japanese: まっすぐ
+  reading: まっすぐ
+  romaji: massugu
+  english: straight ahead
+
+- id: vocab.magaru
+  jlpt: N5
+  word_type: verb
+  verb_class: u
+  theme: directions
+  japanese: 曲がる
+  reading: まがる
+  romaji: magaru
+  english: to turn
+
+- id: vocab.sugu
+  jlpt: N5
+  word_type: adverb
+  theme: directions
+  japanese: すぐ
+  reading: すぐ
+  romaji: sugu
+  english: right away, just ahead
+
+# ── Where is ~? (Unit 25) ──────────────────────────────────────────────────────
+
+- id: vocab.chikaku
+  jlpt: N5
+  word_type: noun
+  theme: directions
+  japanese: 近く
+  reading: ちかく
+  romaji: chikaku
+  english: nearby, near
+
+- id: vocab.tonari
+  jlpt: N5
+  word_type: noun
+  theme: directions
+  japanese: となり
+  reading: となり
+  romaji: tonari
+  english: next to, neighboring
+
+- id: vocab.mae
+  jlpt: N5
+  word_type: noun
+  theme: directions
+  japanese: まえ
+  reading: まえ
+  romaji: mae
+  english: in front of, before
+
+- id: vocab.ushiro
+  jlpt: N5
+  word_type: noun
+  theme: directions
+  japanese: うしろ
+  reading: うしろ
+  romaji: ushiro
+  english: behind
+
+- id: vocab.chizu
+  jlpt: N5
+  word_type: noun
+  theme: directions
+  japanese: 地図
+  reading: ちず
+  romaji: chizu
+  english: map
+
+# ── How far? (Unit 26) ────────────────────────────────────────────────────────
+
+- id: vocab.aruite
+  jlpt: N5
+  word_type: adverb
+  theme: directions
+  japanese: 歩いて
+  reading: あるいて
+  romaji: aruite
+  english: on foot, walking
+
+# vocab.fun (分/ふん, minutes) is owned by vocabulary/transit.yaml — Unit 18
+# ("Time expressions") is its canonical teaching point; Unit 26 here revisits
+# it via the same id rather than redefining it.
+  notes: Revisits the 分 counter first introduced with clock time; here used for duration ("about 5 minutes").
+
+- id: vocab.kurai
+  jlpt: N5
+  word_type: adverb
+  theme: directions
+  japanese: くらい
+  reading: くらい
+  romaji: kurai
+  english: about, approximately
