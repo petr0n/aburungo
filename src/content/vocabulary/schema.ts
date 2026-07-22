@@ -1,7 +1,7 @@
 import type { JlptLevel, Word, WordType, VerbClass } from "@/types";
 
 const JLPT_LEVELS = new Set<string>(["N5", "N4", "N3", "N2", "N1"]);
-const WORD_TYPES = new Set<string>(["noun", "verb", "i-adj", "na-adj", "adverb", "counter"]);
+const WORD_TYPES = new Set<string>(["noun", "verb", "i-adj", "na-adj", "adverb", "counter", "interjection"]);
 const VERB_CLASSES = new Set<string>(["ru", "u", "irregular"]);
 
 class WordSchemaError extends Error {

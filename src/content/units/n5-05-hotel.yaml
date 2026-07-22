@@ -1,0 +1,59 @@
+# N5 daily-loop units — Situation 5: Hotel (Units 21-23 of 35).
+# See docs/plans/02b-n5-units.md for the full 35-unit map this slice is drawn
+# from. Word/phrase ids reference existing content only — no new Japanese
+# content is composed here beyond what's already in vocabulary/*.yaml and
+# phrases/*.yaml.
+# content-source: training — N5 canonical vocabulary, pending JMdict seed verification
+
+- id: n5.unit-21
+  order: 21
+  situation: Hotel
+  title: Checking in
+  canDo: Check into a hotel
+  wordIds:
+    - vocab.hoteru
+    - vocab.heya
+    - vocab.yoyaku
+    - vocab.namae
+    - vocab.chekku-in
+  phraseIds:
+    - hotel.have-reservation
+    - hotel.check-in
+  kanji:
+    - 予
+    - 約
+  grammarNote: "～のなまえで — under the name of ~ (reservation pattern)"
+
+- id: n5.unit-22
+  order: 22
+  situation: Hotel
+  title: Hotel amenities
+  canDo: Check into a hotel
+  wordIds:
+    - vocab.toire
+    - vocab.erebeetaa
+    - vocab.nankai
+    - vocab.furo
+  phraseIds:
+    - hotel.toilet-where
+    - hotel.bath-floor
+  kanji:
+    - 階
+  grammarNote: "～はなんかいですか — What floor is ~?"
+
+- id: n5.unit-23
+  order: 23
+  situation: Hotel
+  title: Hotel requests
+  canDo: Check into a hotel
+  wordIds:
+    - vocab.motto
+    - vocab.taoru
+    - vocab.mottekuru
+    - vocab.onegaishimasu
+    - vocab.ashita
+  phraseIds:
+    - hotel.bring-towel
+    - hotel.wake-up-call
+  kanji: []
+  grammarNote: "～をもってきてください — Please bring me ~"

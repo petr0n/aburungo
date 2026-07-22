@@ -98,3 +98,60 @@
   reading: どこ
   romaji: doko
   english: where
+
+# ── Basic exchange words ───────────────────────────────────────────────────────
+
+- id: vocab.hai
+  jlpt: N5
+  word_type: interjection
+  theme: basics
+  japanese: はい
+  reading: はい
+  romaji: hai
+  english: yes
+
+- id: vocab.iie
+  jlpt: N5
+  word_type: interjection
+  theme: basics
+  japanese: いいえ
+  reading: いいえ
+  romaji: iie
+  english: no
+
+- id: vocab.namae
+  jlpt: N5
+  word_type: noun
+  theme: basics
+  japanese: なまえ
+  reading: なまえ
+  romaji: namae
+  english: name
+
+- id: vocab.sayounara
+  jlpt: N5
+  word_type: interjection
+  theme: basics
+  japanese: さようなら
+  reading: さようなら
+  romaji: sayounara
+  english: goodbye
+
+- id: vocab.matane
+  jlpt: N5
+  word_type: interjection
+  theme: basics
+  japanese: またね
+  reading: またね
+  romaji: matane
+  english: see you later
+
+- id: vocab.onegaishimasu
+  jlpt: N5
+  word_type: interjection
+  theme: basics
+  japanese: お願いします
+  reading: おねがいします
+  romaji: onegai shimasu
+  english: please (when requesting something)
+  notes: Shared across many N5 daily-loop units (café, hotel, taxi requests) — introduced once, reused via wordIds rather than re-taught per unit.

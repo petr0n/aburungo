@@ -1,0 +1,95 @@
+# N5 daily-loop units — Situation 2: Food & drink (Units 8-12 of 35).
+# See docs/plans/02b-n5-units.md for the full 35-unit map this slice is drawn
+# from. Word/phrase ids reference existing content only — no new Japanese
+# content is composed here beyond what's already in vocabulary/*.yaml and
+# phrases/*.yaml.
+# content-source: training — N5 canonical vocabulary, pending JMdict seed verification
+
+- id: n5.unit-8
+  order: 8
+  situation: Food & drink
+  title: At the café
+  canDo: Order a drink
+  wordIds:
+    - vocab.koohii
+    - vocab.mizu
+    - vocab.ocha
+    - vocab.kore
+    - vocab.onegaishimasu
+  phraseIds:
+    - restaurant.coffee-please
+    - restaurant.water-please
+  kanji:
+    - 水
+  grammarNote: "～をおねがいします — ~ please (ordering pattern)"
+
+- id: n5.unit-9
+  order: 9
+  situation: Food & drink
+  title: At the restaurant
+  canDo: Order a meal
+  wordIds:
+    - vocab.resutoran
+    - vocab.menyuu
+    - vocab.taberu
+    - vocab.oishii
+    - vocab.itadakimasu
+  phraseIds:
+    - restaurant.menu-please
+    - restaurant.this-please
+  kanji:
+    - 食
+  grammarNote: "～をください — please give me ~ (receiving pattern)"
+
+- id: n5.unit-10
+  order: 10
+  situation: Food & drink
+  title: What is this?
+  canDo: Ask what something is on a menu
+  wordIds:
+    - vocab.nani
+    - vocab.kore
+    - vocab.sore
+    - vocab.dore
+  phraseIds:
+    - restaurant.what-is-this
+    - restaurant.that-is-fish
+  kanji:
+    - 何
+  grammarNote: "これは何ですか — What is this?"
+
+- id: n5.unit-11
+  order: 11
+  situation: Food & drink
+  title: How much & paying
+  canDo: Ask for the bill
+  wordIds:
+    - vocab.ikura
+    - vocab.okaikei
+    - vocab.en
+    - vocab.takai
+    - vocab.yasui
+  phraseIds:
+    - restaurant.check-please
+    - shopping.how-much
+  kanji:
+    - 円
+  grammarNote: "いくらですか — How much is it?"
+
+- id: n5.unit-12
+  order: 12
+  situation: Food & drink
+  title: Bigger numbers
+  canDo: Say prices in yen
+  wordIds:
+    - vocab.hyaku
+    - vocab.sen
+    - vocab.man
+    - vocab.nan-en
+  phraseIds:
+    - restaurant.price-300
+    - restaurant.price-5000
+  kanji:
+    - 百
+    - 千
+  grammarNote: "number + えん — price expressions (さんびゃくえん、いちまんえん)"

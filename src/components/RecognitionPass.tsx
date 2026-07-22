@@ -6,6 +6,8 @@ type Props = {
   queue: Word[];
   pool: Word[];
   onDone: () => void;
+  /** Label for the closing button. Defaults to the WordsPage context. */
+  doneLabel?: string;
 };
 
 function buildOptions(current: Word, pool: Word[]): Word[] {
@@ -16,7 +18,7 @@ function buildOptions(current: Word, pool: Word[]): Word[] {
   return [current, ...distractors].sort(() => Math.random() - 0.5);
 }
 
-export function RecognitionPass({ queue, pool, onDone }: Props) {
+export function RecognitionPass({ queue, pool, onDone, doneLabel = "Back to words" }: Props) {
   const [index, setIndex] = useState(0);
   const [missed, setMissed] = useState<Word[]>([]);
   const [selectedId, setSelectedId] = useState<string | null>(null);
@@ -85,7 +87,7 @@ export function RecognitionPass({ queue, pool, onDone }: Props) {
           onClick={onDone}
           className="flex min-h-[52px] w-full items-center justify-center rounded-2xl border border-border bg-surface text-body font-medium text-fg active:bg-surface-2"
         >
-          Back to words
+          {doneLabel}
         </button>
       </div>
     );

@@ -4,6 +4,7 @@ import { useAuth } from "@/store/auth";
 import { useProgress } from "@/store/progress";
 import { AdminRoute } from "@/components/AdminRoute";
 import { LandingPage } from "@/pages/LandingPage";
+import { LearnPage } from "@/pages/LearnPage";
 import { WordsPage } from "@/pages/WordsPage";
 import { PracticePage } from "@/pages/PracticePage";
 import { HowToPage } from "@/pages/HowToPage";
@@ -44,6 +45,7 @@ export default function App() {
     <Routes>
       {/* Public — no auth required */}
       <Route path="/" element={<LandingPage />} />
+      <Route path="/learn" element={<LearnPage />} />
       <Route path="/words" element={<WordsPage />} />
       <Route path="/practice" element={<PracticePage />} />
       <Route path="/kana" element={<KanaPage />} />

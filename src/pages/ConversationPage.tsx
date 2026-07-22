@@ -17,7 +17,7 @@ const JLPT_LEVELS: JlptLevel[] = ["N5", "N4", "N3", "N2", "N1"];
 
 export function ConversationPage() {
   const [screen, setScreen] = useState<Screen>("setup");
-  const [jlpt, setJlpt] = useState<JlptLevel>("N4");
+  const [jlpt, setJlpt] = useState<JlptLevel>("N5");
   const [sessionId, setSessionId] = useState<string | null>(null);
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");

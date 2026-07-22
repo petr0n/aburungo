@@ -17,6 +17,9 @@ import greetingsRaw from "./phrases/greetings.yaml";
 import shoppingRaw from "./phrases/shopping.yaml";
 import hotelRaw from "./phrases/hotel.yaml";
 import directionsRaw from "./phrases/directions.yaml";
+import basicsRaw from "./phrases/basics.yaml";
+import weatherRaw from "./phrases/weather.yaml";
+import foodPreferencesRaw from "./phrases/food-preferences.yaml";
 
 export const allPhrases: Phrase[] = [
   ...parsePhrases(transitRaw, "phrases/transit.yaml"),
@@ -25,6 +28,9 @@ export const allPhrases: Phrase[] = [
   ...parsePhrases(shoppingRaw, "phrases/shopping.yaml"),
   ...parsePhrases(hotelRaw, "phrases/hotel.yaml"),
   ...parsePhrases(directionsRaw, "phrases/directions.yaml"),
+  ...parsePhrases(basicsRaw, "phrases/basics.yaml"),
+  ...parsePhrases(weatherRaw, "phrases/weather.yaml"),
+  ...parsePhrases(foodPreferencesRaw, "phrases/food-preferences.yaml"),
 ];
 
 /** Lookup helper. O(n), fine for hundreds; reach for a Map if it grows large. */

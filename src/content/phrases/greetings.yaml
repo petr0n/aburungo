@@ -97,3 +97,45 @@
   romaji: yukkuri hanashite kudasai
   english: Please speak slowly.
   scenario: greetings
+
+- id: greetings.where-from
+  jlpt: N5
+  japanese: どこから来ましたか
+  reading: どこからきましたか
+  romaji: doko kara kimashita ka
+  english: Where are you from?
+  scenario: greetings
+
+- id: greetings.from-america
+  jlpt: N5
+  japanese: アメリカから来ました
+  reading: アメリカからきました
+  romaji: amerika kara kimashita
+  english: I'm from America.
+  scenario: greetings
+  notes: America is used as the example origin; swap in any country name after から来ました.
+
+- id: greetings.youre-welcome
+  jlpt: N5
+  japanese: いいえ、どういたしまして
+  reading: いいえ、どういたしまして
+  romaji: iie, dou itashimashite
+  english: No, not at all. (You're welcome.)
+  scenario: greetings
+
+- id: greetings.one-please
+  jlpt: N5
+  japanese: ひとつください
+  reading: ひとつください
+  romaji: hitotsu kudasai
+  english: One, please.
+  scenario: greetings
+  notes: ひとつ uses the native-Japanese counting series (hitotsu, futatsu, mittsu...), not the cardinal number いち.
+
+- id: greetings.three-there-are
+  jlpt: N5
+  japanese: みっつあります
+  reading: みっつあります
+  romaji: mittsu arimasu
+  english: There are three.
+  scenario: greetings

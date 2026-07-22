@@ -1,0 +1,66 @@
+# N5 daily-loop units — Situation 6: Directions (Units 24-26 of 35).
+# See docs/plans/02b-n5-units.md for the full 35-unit map this slice is drawn
+# from. Word/phrase ids reference existing content only — no new Japanese
+# content is composed here beyond what's already in vocabulary/*.yaml and
+# phrases/*.yaml. This situation was unusually well-covered already:
+# directions.turn-right/turn-left/go-straight/have-map/is-it-far and
+# transit.station-where predate this file and are reused as-is.
+# content-source: training — N5 canonical vocabulary, pending JMdict seed verification
+
+- id: n5.unit-24
+  order: 24
+  situation: Directions
+  title: Left, right, straight
+  canDo: Understand a basic answer about directions
+  wordIds:
+    - vocab.migi
+    - vocab.hidari
+    - vocab.massugu
+    - vocab.magaru
+    - vocab.sugu
+  phraseIds:
+    - directions.turn-right
+    - directions.turn-left
+    - directions.go-straight
+  kanji:
+    - 右
+    - 左
+  grammarNote: "～に曲がってください — Please turn ~ (direction + magaru pattern)"
+
+- id: n5.unit-25
+  order: 25
+  situation: Directions
+  title: Where is ~?
+  canDo: Ask where something is
+  wordIds:
+    - vocab.chikaku
+    - vocab.tonari
+    - vocab.mae
+    - vocab.ushiro
+    - vocab.chizu
+  phraseIds:
+    - transit.station-where
+    - directions.have-map
+    - directions.near-convenience-store
+  kanji:
+    - 近
+  grammarNote: "～はどこにありますか — Where is ~? (location question)"
+
+- id: n5.unit-26
+  order: 26
+  situation: Directions
+  title: How far?
+  canDo: Understand a basic answer about distance
+  wordIds:
+    - vocab.aruite
+    - vocab.fun
+    - vocab.kurai
+    - vocab.koko
+    - vocab.asoko
+  phraseIds:
+    - directions.is-it-far
+    - directions.walking-distance
+    - directions.behind-building
+  kanji:
+    - 歩
+  grammarNote: "～ふんくらいです — It's about ~ minutes"

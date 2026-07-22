@@ -1,0 +1,179 @@
+# N5 vocabulary for Situation 1, Units 4-7 (origin, thanks, clarification, numbers).
+# Continues src/content/vocabulary/basics.yaml and greetings.yaml — see
+# docs/plans/02b-n5-units.md Units 4-7 for the unit-by-unit word lists this
+# file was drawn from. Words whose Japanese text already existed elsewhere
+# (e.g. どこ, いいえ, わかる, お願いします) are reused via their existing ids in
+# src/content/units/n5-01-greetings-cont.yaml rather than duplicated here.
+# content-source: training — N5 canonical vocabulary, pending JMdict seed verification
+# jlpt-source: training
+
+# ── Unit 4: Where are you from? ────────────────────────────────────────────────
+
+- id: vocab.kuni
+  jlpt: N5
+  word_type: noun
+  theme: places
+  japanese: 国
+  reading: くに
+  romaji: kuni
+  english: country
+
+- id: vocab.nihon
+  jlpt: N5
+  word_type: noun
+  theme: places
+  japanese: 日本
+  reading: にほん
+  romaji: nihon
+  english: Japan
+
+- id: vocab.eigo
+  jlpt: N5
+  word_type: noun
+  theme: language
+  japanese: 英語
+  reading: えいご
+  romaji: eigo
+  english: English (language)
+
+# ── Unit 5: Thank you & you're welcome ───────────────────────────────────────────
+
+- id: vocab.dou-itashimashite
+  jlpt: N5
+  word_type: interjection
+  theme: basics
+  japanese: どういたしまして
+  reading: どういたしまして
+  romaji: dou itashimashite
+  english: you're welcome
+
+- id: vocab.gomennasai
+  jlpt: N5
+  word_type: interjection
+  theme: basics
+  japanese: ごめんなさい
+  reading: ごめんなさい
+  romaji: gomen nasai
+  english: I'm sorry
+
+# ── Unit 6: I don't understand ───────────────────────────────────────────────────
+
+- id: vocab.mou-ichido
+  jlpt: N5
+  word_type: adverb
+  theme: communication
+  japanese: もういちど
+  reading: もういちど
+  romaji: mou ichido
+  english: one more time
+
+- id: vocab.yukkuri
+  jlpt: N5
+  word_type: adverb
+  theme: communication
+  japanese: ゆっくり
+  reading: ゆっくり
+  romaji: yukkuri
+  english: slowly
+
+# ── Unit 7: Numbers 1-10 ─────────────────────────────────────────────────────────
+
+- id: vocab.ichi
+  jlpt: N5
+  word_type: noun
+  theme: numbers
+  japanese: 一
+  reading: いち
+  romaji: ichi
+  english: one
+
+- id: vocab.ni
+  jlpt: N5
+  word_type: noun
+  theme: numbers
+  japanese: 二
+  reading: に
+  romaji: ni
+  english: two
+
+- id: vocab.san
+  jlpt: N5
+  word_type: noun
+  theme: numbers
+  japanese: 三
+  reading: さん
+  romaji: san
+  english: three
+
+- id: vocab.yon
+  jlpt: N5
+  word_type: noun
+  theme: numbers
+  japanese: 四
+  reading: よん
+  romaji: yon
+  english: four
+
+- id: vocab.go
+  jlpt: N5
+  word_type: noun
+  theme: numbers
+  japanese: 五
+  reading: ご
+  romaji: go
+  english: five
+
+- id: vocab.roku
+  jlpt: N5
+  word_type: noun
+  theme: numbers
+  japanese: ろく
+  reading: ろく
+  romaji: roku
+  english: six
+
+- id: vocab.nana
+  jlpt: N5
+  word_type: noun
+  theme: numbers
+  japanese: なな
+  reading: なな
+  romaji: nana
+  english: seven
+
+- id: vocab.hachi
+  jlpt: N5
+  word_type: noun
+  theme: numbers
+  japanese: はち
+  reading: はち
+  romaji: hachi
+  english: eight
+
+- id: vocab.kyuu
+  jlpt: N5
+  word_type: noun
+  theme: numbers
+  japanese: きゅう
+  reading: きゅう
+  romaji: kyuu
+  english: nine
+
+- id: vocab.juu
+  jlpt: N5
+  word_type: noun
+  theme: numbers
+  japanese: じゅう
+  reading: じゅう
+  romaji: juu
+  english: ten
+
+- id: vocab.tsu-counter
+  jlpt: N5
+  word_type: counter
+  theme: numbers
+  japanese: ～つ
+  reading: つ
+  romaji: -tsu
+  english: counter suffix for general objects (hitotsu, futatsu, mittsu...)
+  notes: Native-Japanese counting series for small objects, distinct from the Sino-Japanese cardinal numbers (いち, に, さん...). Used in phrases like ひとつください.

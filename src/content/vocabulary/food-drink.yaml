@@ -1,0 +1,132 @@
+# N5 food & drink vocabulary — cafés, restaurants, and paying (Situation 2,
+# Units 8-12 of the N5 daily-loop ladder, see docs/plans/02b-n5-units.md).
+# content-source: training — N5 canonical vocabulary, pending JMdict seed verification
+# jlpt-source: training
+
+# ── Café & restaurant ────────────────────────────────────────────────────────
+
+- id: vocab.koohii
+  jlpt: N5
+  word_type: noun
+  theme: food
+  japanese: コーヒー
+  reading: コーヒー
+  romaji: koohii
+  english: coffee
+
+- id: vocab.resutoran
+  jlpt: N5
+  word_type: noun
+  theme: places
+  japanese: レストラン
+  reading: レストラン
+  romaji: resutoran
+  english: restaurant
+
+- id: vocab.menyuu
+  jlpt: N5
+  word_type: noun
+  theme: food
+  japanese: メニュー
+  reading: メニュー
+  romaji: menyuu
+  english: menu
+
+- id: vocab.oishii
+  jlpt: N5
+  word_type: i-adj
+  theme: food
+  japanese: おいしい
+  reading: おいしい
+  romaji: oishii
+  english: delicious, tasty
+
+- id: vocab.itadakimasu
+  jlpt: N5
+  word_type: interjection
+  theme: food
+  japanese: いただきます
+  reading: いただきます
+  romaji: itadakimasu
+  english: (said before eating) thanks for the food, I humbly receive this
+
+# ── Question words ───────────────────────────────────────────────────────────
+
+- id: vocab.nani
+  jlpt: N5
+  word_type: noun
+  theme: basics
+  japanese: 何
+  reading: なに
+  romaji: nani
+  english: what
+  notes: |
+    Read なん before です, counters, and some particles (何ですか → なんですか);
+    read なに when standalone or before の.
+
+# ── Money & prices ───────────────────────────────────────────────────────────
+
+- id: vocab.ikura
+  jlpt: N5
+  word_type: noun
+  theme: money
+  japanese: いくら
+  reading: いくら
+  romaji: ikura
+  english: how much
+
+- id: vocab.okaikei
+  jlpt: N5
+  word_type: noun
+  theme: money
+  japanese: お会計
+  reading: おかいけい
+  romaji: okaikei
+  english: the bill, the check
+
+- id: vocab.en
+  jlpt: N5
+  word_type: counter
+  theme: money
+  japanese: 円
+  reading: えん
+  romaji: en
+  english: yen
+
+- id: vocab.nan-en
+  jlpt: N5
+  word_type: counter
+  theme: money
+  japanese: 何円
+  reading: なんえん
+  romaji: nan'en
+  english: how many yen, how much (in yen)
+
+# ── Numbers (hundreds & up) ──────────────────────────────────────────────────
+
+- id: vocab.hyaku
+  jlpt: N5
+  word_type: counter
+  theme: numbers
+  japanese: 百
+  reading: ひゃく
+  romaji: hyaku
+  english: hundred
+
+- id: vocab.sen
+  jlpt: N5
+  word_type: counter
+  theme: numbers
+  japanese: 千
+  reading: せん
+  romaji: sen
+  english: thousand
+
+- id: vocab.man
+  jlpt: N5
+  word_type: counter
+  theme: numbers
+  japanese: 万
+  reading: まん
+  romaji: man
+  english: ten thousand
