@@ -1,0 +1,100 @@
+# N5 daily-loop units — Situation 4: Getting around (Units 16-20 of 35).
+# See docs/plans/02b-n5-units.md for the full 35-unit map this slice is drawn
+# from. Word/phrase ids reference existing content only — no new Japanese
+# content is composed here beyond what's already in vocabulary/*.yaml and
+# phrases/*.yaml.
+# content-source: training — N5 canonical vocabulary, pending JMdict seed verification
+
+- id: n5.unit-16
+  order: 16
+  situation: Getting around
+  title: At the station
+  canDo: Buy a train ticket
+  wordIds:
+    - vocab.eki
+    - vocab.iku
+    - vocab.densha
+    - vocab.kippu
+    - vocab.made
+  phraseIds:
+    - transit.ticket-where
+    - transit.shinjuku-ticket
+    - transit.shinjuku-how-much
+  kanji:
+    - 電
+    - 車
+  grammarNote: "～までいくらですか — How much to ~? (まで marks the destination)"
+
+- id: n5.unit-17
+  order: 17
+  situation: Getting around
+  title: Platform & exit
+  canDo: Ask which platform or exit
+  wordIds:
+    - vocab.homu
+    - vocab.deguchi
+    - vocab.iriguchi
+    - vocab.nanban
+  phraseIds:
+    - transit.station-where
+    - transit.nanban-homu
+    - transit.deguchi-where
+  kanji:
+    - 口
+    - 番
+  grammarNote: "～はどこですか — Where is ~? (the general location-question pattern)"
+
+- id: n5.unit-18
+  order: 18
+  situation: Getting around
+  title: Time expressions
+  canDo: Tell and confirm the time
+  wordIds:
+    - vocab.nanji
+    - vocab.gozen
+    - vocab.gogo
+    - vocab.asa
+    - vocab.yoru
+    - vocab.fun
+  phraseIds:
+    - transit.next-train
+    - transit.nanji-desu-ka
+    - transit.sanji-han
+  kanji:
+    - 時
+    - 分
+  grammarNote: "～じ～ふんです — It is ~ o'clock, ~ minutes."
+
+- id: n5.unit-19
+  order: 19
+  situation: Getting around
+  title: Taxi
+  canDo: Tell a taxi driver your destination
+  wordIds:
+    - vocab.takushii
+    - vocab.tomeru
+    - vocab.koko
+    - vocab.migi
+  phraseIds:
+    - transit.eki-made-onegaishimasu
+    - transit.koko-tomete-kudasai
+  kanji: []
+  grammarNote: "～までお願いします — Please take me to ~ (the taxi destination pattern)"
+
+- id: n5.unit-20
+  order: 20
+  situation: Getting around
+  title: Bus
+  canDo: Ask about the next bus and get off at the right stop
+  wordIds:
+    - vocab.basu
+    - vocab.basutei
+    - vocab.noru
+    - vocab.oriru
+    - vocab.tsugi
+  phraseIds:
+    - transit.getting-off-here
+    - transit.tsugi-no-basu-nanji
+  kanji:
+    - 次
+  grammarNote: "～でおりてください — Please get off at ~"

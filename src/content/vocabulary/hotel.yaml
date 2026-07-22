@@ -1,0 +1,110 @@
+# N5 hotel vocabulary — checking in, amenities, and simple requests.
+# content-source: training — N5 canonical vocabulary, pending JMdict seed verification
+# jlpt-source: training
+
+# ── Checking in ──────────────────────────────────────────────────────────────
+
+- id: vocab.hoteru
+  jlpt: N5
+  word_type: noun
+  theme: hotel
+  japanese: ホテル
+  reading: ホテル
+  romaji: hoteru
+  english: hotel
+
+- id: vocab.heya
+  jlpt: N5
+  word_type: noun
+  theme: hotel
+  japanese: 部屋
+  reading: へや
+  romaji: heya
+  english: room
+
+- id: vocab.yoyaku
+  jlpt: N5
+  word_type: noun
+  theme: hotel
+  japanese: 予約
+  reading: よやく
+  romaji: yoyaku
+  english: reservation
+
+- id: vocab.chekku-in
+  jlpt: N5
+  word_type: noun
+  theme: hotel
+  japanese: チェックイン
+  reading: チェックイン
+  romaji: chekku-in
+  english: check-in
+
+# ── Amenities ────────────────────────────────────────────────────────────────
+
+- id: vocab.toire
+  jlpt: N5
+  word_type: noun
+  theme: hotel
+  japanese: トイレ
+  reading: トイレ
+  romaji: toire
+  english: toilet, bathroom
+
+- id: vocab.erebeetaa
+  jlpt: N5
+  word_type: noun
+  theme: hotel
+  japanese: エレベーター
+  reading: エレベーター
+  romaji: erebeetaa
+  english: elevator
+
+- id: vocab.nankai
+  jlpt: N5
+  word_type: noun
+  theme: hotel
+  japanese: 何階
+  reading: なんかい
+  romaji: nankai
+  english: which floor
+
+- id: vocab.furo
+  jlpt: N5
+  word_type: noun
+  theme: hotel
+  japanese: 風呂
+  reading: ふろ
+  romaji: furo
+  english: bath
+
+# ── Requests ─────────────────────────────────────────────────────────────────
+
+- id: vocab.motto
+  jlpt: N5
+  word_type: adverb
+  theme: hotel
+  japanese: もっと
+  reading: もっと
+  romaji: motto
+  english: more
+
+- id: vocab.taoru
+  jlpt: N5
+  word_type: noun
+  theme: hotel
+  japanese: タオル
+  reading: タオル
+  romaji: taoru
+  english: towel
+
+- id: vocab.mottekuru
+  jlpt: N5
+  word_type: verb
+  verb_class: irregular
+  theme: hotel
+  japanese: 持ってくる
+  reading: もってくる
+  romaji: motte kuru
+  english: to bring
+  notes: irregular compound — 持つ (to hold) + 来る (to come); conjugates as 来る does.

@@ -1,0 +1,150 @@
+# N5 food-preferences vocabulary — Units 30-32 (Situation 8: Food preferences)
+# and Unit 33 (Integration & checkpoint: daily-life frequency adverbs).
+# See docs/plans/02b-n5-units.md for the unit map this content is drawn from.
+# content-source: training — N5 canonical vocabulary, pending JMdict seed verification
+# jlpt-source: training
+
+# ── Food preferences (Unit 30) ──────────────────────────────────────────────
+
+- id: vocab.suki
+  jlpt: N5
+  word_type: na-adj
+  theme: food-preferences
+  japanese: 好き
+  reading: すき
+  romaji: suki
+  english: like, favorite
+
+- id: vocab.kirai
+  jlpt: N5
+  word_type: na-adj
+  theme: food-preferences
+  japanese: きらい
+  reading: きらい
+  romaji: kirai
+  english: dislike
+
+- id: vocab.sushi
+  jlpt: N5
+  word_type: noun
+  theme: food-preferences
+  japanese: すし
+  reading: すし
+  romaji: sushi
+  english: sushi
+
+- id: vocab.tamago
+  jlpt: N5
+  word_type: noun
+  theme: food-preferences
+  japanese: たまご
+  reading: たまご
+  romaji: tamago
+  english: egg
+
+# ── Wanting food & drink (Unit 31) ──────────────────────────────────────────
+
+- id: vocab.ramen
+  jlpt: N5
+  word_type: noun
+  theme: food-preferences
+  japanese: ラーメン
+  reading: ラーメン
+  romaji: raamen
+  english: ramen
+
+- id: vocab.tabetai
+  jlpt: N5
+  word_type: i-adj
+  theme: food-preferences
+  japanese: 食べたい
+  reading: たべたい
+  romaji: tabetai
+  english: want to eat
+  notes: Desiderative たい-form of 食べる — conjugates like an i-adjective (食べたくない, 食べたかった), not like a verb.
+
+- id: vocab.nomitai
+  jlpt: N5
+  word_type: i-adj
+  theme: food-preferences
+  japanese: 飲みたい
+  reading: のみたい
+  romaji: nomitai
+  english: want to drink
+  notes: Desiderative たい-form of 飲む — conjugates like an i-adjective.
+
+- id: vocab.hoshii
+  jlpt: N5
+  word_type: i-adj
+  theme: food-preferences
+  japanese: ほしい
+  reading: ほしい
+  romaji: hoshii
+  english: want (a thing)
+
+# ── More food (Unit 32) ─────────────────────────────────────────────────────
+
+- id: vocab.tenpura
+  jlpt: N5
+  word_type: noun
+  theme: food-preferences
+  japanese: 天ぷら
+  reading: てんぷら
+  romaji: tenpura
+  english: tempura
+
+- id: vocab.onigiri
+  jlpt: N5
+  word_type: noun
+  theme: food-preferences
+  japanese: おにぎり
+  reading: おにぎり
+  romaji: onigiri
+  english: rice ball
+
+# ── Daily life frequency adverbs (Unit 33) ──────────────────────────────────
+
+- id: vocab.mainichi
+  jlpt: N5
+  word_type: adverb
+  theme: daily-life
+  japanese: 毎日
+  reading: まいにち
+  romaji: mainichi
+  english: every day
+
+- id: vocab.itsumo
+  jlpt: N5
+  word_type: adverb
+  theme: daily-life
+  japanese: いつも
+  reading: いつも
+  romaji: itsumo
+  english: always
+
+- id: vocab.tokidoki
+  jlpt: N5
+  word_type: adverb
+  theme: daily-life
+  japanese: ときどき
+  reading: ときどき
+  romaji: tokidoki
+  english: sometimes
+
+- id: vocab.amari
+  jlpt: N5
+  word_type: adverb
+  theme: daily-life
+  japanese: あまり
+  reading: あまり
+  romaji: amari
+  english: not very (used with a negative)
+
+- id: vocab.zenzen
+  jlpt: N5
+  word_type: adverb
+  theme: daily-life
+  japanese: ぜんぜん
+  reading: ぜんぜん
+  romaji: zenzen
+  english: not at all (used with a negative)

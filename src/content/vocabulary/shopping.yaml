@@ -1,0 +1,76 @@
+# N5 daily-loop vocabulary — Situation 3: Shopping (Units 13-15 of 35).
+# See docs/plans/02b-n5-units.md for the full 35-unit map this slice is drawn
+# from. mise/kau/miru/ookii/chiisai/aru already exist in vocabulary/*.yaml
+# and are reused directly by the unit YAML — not redefined here.
+# content-source: training — N5 canonical vocabulary, pending JMdict seed verification
+# jlpt-source: training
+
+# ── Shop requests ────────────────────────────────────────────────────────────
+
+- id: vocab.kudasai
+  jlpt: N5
+  word_type: interjection
+  theme: shopping
+  japanese: ください
+  reading: ください
+  romaji: kudasai
+  english: please (give me this)
+  notes: Standalone polite request word — distinct from the ~をください "please give me ~" attachment pattern taught alongside it.
+
+# ── Quantities ───────────────────────────────────────────────────────────────
+
+- id: vocab.ikutsu
+  jlpt: N5
+  word_type: noun
+  theme: shopping
+  japanese: いくつ
+  reading: いくつ
+  romaji: ikutsu
+  english: how many
+
+- id: vocab.hitotsu
+  jlpt: N5
+  word_type: counter
+  theme: shopping
+  japanese: ひとつ
+  reading: ひとつ
+  romaji: hitotsu
+  english: one (thing)
+
+- id: vocab.futatsu
+  jlpt: N5
+  word_type: counter
+  theme: shopping
+  japanese: ふたつ
+  reading: ふたつ
+  romaji: futatsu
+  english: two (things)
+
+# ── Stock & choice ───────────────────────────────────────────────────────────
+
+- id: vocab.hoka
+  jlpt: N5
+  word_type: noun
+  theme: shopping
+  japanese: ほか
+  reading: ほか
+  romaji: hoka
+  english: other, another
+
+- id: vocab.iro
+  jlpt: N5
+  word_type: noun
+  theme: shopping
+  japanese: いろ
+  reading: いろ
+  romaji: iro
+  english: color
+
+- id: vocab.onaji
+  jlpt: N5
+  word_type: na-adj
+  theme: shopping
+  japanese: おなじ
+  reading: おなじ
+  romaji: onaji
+  english: same

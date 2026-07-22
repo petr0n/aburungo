@@ -1,0 +1,65 @@
+# N5 daily-loop units — Situation 7: Weather (Units 27-29 of 35).
+# See docs/plans/02b-n5-units.md for the full 35-unit map this slice is drawn
+# from. Word/phrase ids reference existing content in vocabulary/weather.yaml,
+# phrases/weather.yaml, and previously-taught basics vocabulary — no new
+# Japanese content is composed here.
+# content-source: training — N5 canonical vocabulary, pending JMdict seed verification
+
+- id: n5.unit-27
+  order: 27
+  situation: Weather
+  title: Hot, cold, and nice
+  canDo: Comment on the weather
+  wordIds:
+    - vocab.tenki
+    - vocab.atsui-hot
+    - vocab.samui
+    - vocab.ii
+    - vocab.kyou
+  phraseIds:
+    - weather.hot-today
+    - weather.nice-weather
+  kanji:
+    - 天
+    - 気
+  grammarNote: "～ですね — isn't it ~? (weather small talk pattern)"
+
+- id: n5.unit-28
+  order: 28
+  situation: Weather
+  title: Rain, snow & sun
+  canDo: Ask about tomorrow's weather
+  wordIds:
+    - vocab.ame
+    - vocab.yuki
+    - vocab.hare
+    - vocab.kumori
+    - vocab.ashita
+  phraseIds:
+    - weather.rain-tomorrow
+    - weather.tomorrow-forecast
+  kanji:
+    - 雨
+    - 雪
+  grammarNote: "～の天気はどうですか — What's the weather like ~? (asking about a future day's weather)"
+
+- id: n5.unit-29
+  order: 29
+  situation: Weather
+  title: Wind & temperature
+  canDo: Comment on the weather
+  wordIds:
+    - vocab.kaze
+    - vocab.atatakai
+    - vocab.suzushii
+    - vocab.kion
+    - vocab.haru
+    - vocab.natsu
+    - vocab.aki
+    - vocab.fuyu
+  phraseIds:
+    - weather.strong-wind
+    - weather.summer-hot
+  kanji:
+    - 風
+  grammarNote: "～そうです — it looks like ~ / it seems like ~"

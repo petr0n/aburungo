@@ -1,0 +1,69 @@
+# Food preferences — saying what you like, dislike, and want to eat/drink,
+# plus daily-life frequency phrases for the integration units.
+# See docs/plans/02b-n5-units.md, Situation 8 and Units 33-35.
+# content-source: training — N5 canonical vocabulary, pending JMdict seed verification
+# jlpt-source: training
+
+- id: food-preferences.like-sushi
+  jlpt: N5
+  japanese: すしが好きです
+  reading: すしがすきです
+  romaji: sushi ga suki desu
+  english: I like sushi.
+  scenario: food-preferences
+
+- id: food-preferences.dislike-eggs
+  jlpt: N5
+  japanese: たまごがきらいです
+  reading: たまごがきらいです
+  romaji: tamago ga kirai desu
+  english: I don't like eggs.
+  scenario: food-preferences
+
+- id: food-preferences.want-ramen
+  jlpt: N5
+  japanese: ラーメンが食べたいです
+  reading: ラーメンがたべたいです
+  romaji: raamen ga tabetai desu
+  english: I want to eat ramen.
+  scenario: food-preferences
+
+- id: food-preferences.want-water
+  jlpt: N5
+  japanese: 水が飲みたいです
+  reading: みずがのみたいです
+  romaji: mizu ga nomitai desu
+  english: I want to drink water.
+  scenario: food-preferences
+
+- id: food-preferences.like-both
+  jlpt: N5
+  japanese: すしもラーメンも好きです
+  reading: すしもラーメンもすきです
+  romaji: sushi mo raamen mo suki desu
+  english: I like both sushi and ramen.
+  scenario: food-preferences
+
+- id: food-preferences.dislike-meat
+  jlpt: N5
+  japanese: 肉は好きじゃないです
+  reading: にくはすきじゃないです
+  romaji: niku wa suki janai desu
+  english: I don't like meat.
+  scenario: food-preferences
+
+- id: food-preferences.daily-coffee
+  jlpt: N5
+  japanese: 毎日コーヒーを飲みます
+  reading: まいにちコーヒーをのみます
+  romaji: mainichi koohii wo nomimasu
+  english: I drink coffee every day.
+  scenario: food-preferences
+
+- id: food-preferences.not-at-all
+  jlpt: N5
+  japanese: ぜんぜん食べません
+  reading: ぜんぜんたべません
+  romaji: zenzen tabemasen
+  english: I don't eat it at all.
+  scenario: food-preferences

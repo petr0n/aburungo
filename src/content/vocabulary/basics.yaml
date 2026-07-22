@@ -145,3 +145,13 @@
   reading: またね
   romaji: matane
   english: see you later
+
+- id: vocab.onegaishimasu
+  jlpt: N5
+  word_type: interjection
+  theme: basics
+  japanese: お願いします
+  reading: おねがいします
+  romaji: onegai shimasu
+  english: please (when requesting something)
+  notes: Shared across many N5 daily-loop units (café, hotel, taxi requests) — introduced once, reused via wordIds rather than re-taught per unit.

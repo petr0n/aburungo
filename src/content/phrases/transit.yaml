@@ -42,3 +42,86 @@
   notes: |
     Useful in taxis. On trains, just move toward the door — saying this
     isn't necessary, but it can prompt other passengers to make way.
+
+- id: transit.shinjuku-ticket
+  jlpt: N5
+  japanese: しんじゅくまでいちまいください
+  reading: しんじゅくまでいちまいください
+  romaji: Shinjuku made ichimai kudasai
+  english: One ticket to Shinjuku, please.
+  scenario: transit
+  notes: |
+    まい is the counter for flat, thin things (tickets, sheets of paper).
+    Swap しんじゅく for any destination station name.
+
+- id: transit.shinjuku-how-much
+  jlpt: N5
+  japanese: しんじゅくまでいくらですか
+  reading: しんじゅくまでいくらですか
+  romaji: Shinjuku made ikura desu ka
+  english: How much is it to Shinjuku?
+  scenario: transit
+
+- id: transit.nanban-homu
+  jlpt: N5
+  japanese: 何番ホームですか
+  reading: なんばんホームですか
+  romaji: nanban hoomu desu ka
+  english: Which platform is it?
+  scenario: transit
+
+- id: transit.deguchi-where
+  jlpt: N5
+  japanese: でぐちはどこですか
+  reading: でぐちはどこですか
+  romaji: deguchi wa doko desu ka
+  english: Where is the exit?
+  scenario: transit
+  notes: |
+    いりぐちはどこですか works the same way for "Where is the entrance?".
+
+- id: transit.nanji-desu-ka
+  jlpt: N5
+  japanese: 何時ですか
+  reading: なんじですか
+  romaji: nanji desu ka
+  english: What time is it?
+  scenario: transit
+
+- id: transit.sanji-han
+  jlpt: N5
+  japanese: 三時半です
+  reading: さんじはんです
+  romaji: sanji han desu
+  english: It's 3:30.
+  scenario: transit
+  notes: |
+    半 (han) means "half" — じ半 always means the half hour. For other
+    minutes, swap in a number plus ふん/ぷん (さんじじゅっぷん — 3:10).
+
+- id: transit.eki-made-onegaishimasu
+  jlpt: N5
+  japanese: 駅までお願いします
+  reading: えきまでおねがいします
+  romaji: eki made onegaishimasu
+  english: To the station, please.
+  scenario: transit
+  notes: |
+    The core taxi pattern: [destination] + までお願いします. Swap 駅 for a
+    hotel name, address, or landmark.
+
+- id: transit.koko-tomete-kudasai
+  jlpt: N5
+  japanese: ここでとめてください
+  reading: ここでとめてください
+  romaji: koko de tomete kudasai
+  english: Please stop here.
+  scenario: transit
+
+- id: transit.tsugi-no-basu-nanji
+  jlpt: N5
+  japanese: 次のバスは何時ですか
+  reading: つぎのバスはなんじですか
+  romaji: tsugi no basu wa nanji desu ka
+  english: What time is the next bus?
+  scenario: transit

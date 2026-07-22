@@ -50,3 +50,35 @@
   romaji: choushoku wa tsuite imasu ka
   english: Is breakfast included?
   scenario: hotel
+
+- id: hotel.toilet-where
+  jlpt: N5
+  japanese: トイレはどこですか
+  reading: トイレはどこですか
+  romaji: toire wa doko desu ka
+  english: Where is the bathroom?
+  scenario: hotel
+
+- id: hotel.bath-floor
+  jlpt: N5
+  japanese: 風呂は何階ですか
+  reading: ふろはなんかいですか
+  romaji: furo wa nankai desu ka
+  english: What floor is the bath on?
+  scenario: hotel
+
+- id: hotel.bring-towel
+  jlpt: N5
+  japanese: タオルを持ってきてください
+  reading: タオルをもってきてください
+  romaji: taoru o motte kite kudasai
+  english: Please bring me a towel.
+  scenario: hotel
+
+- id: hotel.wake-up-call
+  jlpt: N5
+  japanese: 明日の朝、6時に起こしてください
+  reading: あしたのあさ、ろくじにおこしてください
+  romaji: ashita no asa, roku-ji ni okoshite kudasai
+  english: Please wake me at 6 tomorrow morning.
+  scenario: hotel

@@ -1,0 +1,51 @@
+# Weather — commenting on today's weather and asking about tomorrow's forecast.
+# content-source: training — N5 canonical vocabulary, pending JMdict seed verification
+# jlpt-source: training
+
+- id: weather.hot-today
+  jlpt: N5
+  japanese: 今日は暑いですね
+  reading: きょうはあついですね
+  romaji: kyou wa atsui desu ne
+  english: It's hot today, isn't it?
+  scenario: weather
+
+- id: weather.nice-weather
+  jlpt: N5
+  japanese: いい天気ですね
+  reading: いいてんきですね
+  romaji: ii tenki desu ne
+  english: Nice weather, isn't it?
+  scenario: weather
+
+- id: weather.rain-tomorrow
+  jlpt: N5
+  japanese: 明日は雨ですか
+  reading: あしたはあめですか
+  romaji: ashita wa ame desu ka
+  english: Will it rain tomorrow?
+  scenario: weather
+
+- id: weather.tomorrow-forecast
+  jlpt: N5
+  japanese: 明日の天気はどうですか
+  reading: あしたのてんきはどうですか
+  romaji: ashita no tenki wa dou desu ka
+  english: What's the weather like tomorrow?
+  scenario: weather
+
+- id: weather.strong-wind
+  jlpt: N5
+  japanese: 風がつよいですね
+  reading: かぜがつよいですね
+  romaji: kaze ga tsuyoi desu ne
+  english: The wind is strong, isn't it?
+  scenario: weather
+
+- id: weather.summer-hot
+  jlpt: N5
+  japanese: 夏は暑いです
+  reading: なつはあついです
+  romaji: natsu wa atsui desu
+  english: Summer is hot.
+  scenario: weather
