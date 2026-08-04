@@ -1,0 +1,24 @@
+# N5 grammar patterns — retrofit of Unit grammarNotes into first-class,
+# reviewable GrammarPattern items. See
+# docs/superpowers/specs/2026-07-21-grammar-in-context-design.md for the
+# design and docs/plans/02b-n5-units.md for the source unit map. Each
+# pattern references an existing phrase rather than composing new Japanese
+# content — no new example sentences are authored here.
+# content-source: training — N5 canonical vocabulary, pending JMdict seed verification
+
+- id: grammar.n5-unit-1
+  jlpt: N5
+  pattern: "～は～です"
+  gloss: "X is Y — the fundamental copula."
+  phraseId: basics.this-is-a-book
+  blank: です
+
+- id: grammar.n5-unit-2
+  jlpt: N5
+  pattern: "～ですね"
+  gloss: "Confirmation / softening (\"It is, isn't it?\")"
+  # No unit-2 phrase ends in ですね specifically (they end in ですか) — using
+  # the closest representative phrase per the fallback rule in the design
+  # spec; blanks the shared です rather than forcing an exact ですね match.
+  phraseId: basics.hello-how-are-you
+  blank: です
