@@ -132,8 +132,13 @@ caller is single-source IndexedDB).
 **New presentational component**, `src/components/GrammarClozeCard.tsx`:
 - Props: `pattern: GrammarPattern`, `phrase: Phrase`, `onNext: (correct: boolean) => void`.
 - Shows `pattern.gloss` and the phrase's `reading` with `pattern.blank` replaced by a blank
-  marker, a text input, and a check/reveal flow — same visual language and `compareAnswer`
-  answer-checking as `FillBlankCard`, but blanking a substring instead of the whole field.
+  marker, then reuses `src/components/FillInput.tsx` directly for the answer input
+  (romaji/kana-grid/JP-keyboard entry) — it's already a standalone component (`onSubmit`/
+  `placeholder`/`disabled` props) with no `FillBlankCard`-specific coupling (no word-type
+  badge, no verb conjugation display), so this is a straight reuse, not a new input widget.
+  Answer checking via `compareAnswer(userInput, pattern.blank)`, same as `FillBlankCard`.
+  Whether to also offer `FillBlankCard`'s voice-input mode is an implementation-time call,
+  not a design decision — it doesn't affect data model or architecture either way.
 
 **Teach moment** — a small addition inside `NewUnitStep` (`src/pages/LearnPage.tsx`): the
 existing stage sequence `intro → words → phrases` gains a fourth stage, `grammar`, shown
