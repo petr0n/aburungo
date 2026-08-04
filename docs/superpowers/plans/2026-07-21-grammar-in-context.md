@@ -1041,9 +1041,9 @@ function NewUnitStep({
     // this only fires if a unit is authored with an empty phraseIds list.
     if (stage === "phrases" && currentPhrase === undefined) {
       if (pattern !== null) {
-        // eslint-disable-next-line react-hooks/set-state-in-effect -- bounded
-        // to this defensive branch (never fires for real content), matches
-        // the existing disable precedent in RecognitionPass.tsx.
+        // Defensive-only branch (see comment above) — bounded to a single
+        // extra render, not a cascading loop.
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         setStage("grammar");
       } else {
         onDone();
