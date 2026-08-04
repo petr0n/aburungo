@@ -294,6 +294,7 @@ Create `src/content/grammar/n5.yaml`. Unit 1's phrase `basics.this-is-a-book` (r
 # pattern references an existing phrase rather than composing new Japanese
 # content — no new example sentences are authored here.
 # content-source: training — N5 canonical vocabulary, pending JMdict seed verification
+# jlpt-source: training
 
 - id: grammar.n5-unit-1
   jlpt: N5
