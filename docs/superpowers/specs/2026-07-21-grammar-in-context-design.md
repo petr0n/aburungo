@@ -146,17 +146,32 @@ only if the unit has a `patternId`. It displays `pattern.pattern` + `pattern.glo
 full phrase (kanji + furigana, unblanked) — same shape as the existing word/phrase intro
 cards, no new visual pattern.
 
-**New loop step** — `GrammarStep`, positioned after New Unit and before Produce. Queue =
-`dueGrammarPatterns` (oldest-due first) + `newGrammarPattern` appended last (so a
-freshly-taught pattern is practiced immediately after teaching). Drives `GrammarClozeCard`
-through the queue with local index state, persisting via `schedule()`/`upsert()` on each
-answer — same local-queue-state pattern as `ReviewStep`/`ProduceStep`, not the global
-session store.
+**No new loop step — interleaved into Review and Produce instead.** An earlier version of
+this spec added a separate `GrammarStep` positioned after New Unit and before Produce, with
+one combined queue (`dueGrammarPatterns` + `newGrammarPattern`). That's wrong: routing to it
+directly from initial page load (when nothing is due in the word/phrase queue) would surface
+`newGrammarPattern` — the pattern the *next* unit introduces — before the learner has been
+taught it, since the teach moment only happens partway through New Unit. Untangling that
+correctly needs extra state (a queue plus an entry-context flag) just to make one step safe
+to enter from two different places.
 
-**Step machinery:** `LearnPage`'s `Step` union gains `"grammar"`. `afterNewUnit`'s
-transition logic extends the existing skip-if-empty pattern: go to `"grammar"` if there's
-anything in the combined due+new pattern queue, else fall through to the existing
-produce/recognition/close skip chain unchanged.
+The plan doc already says what to do instead (`01-overarching-plan.md` §2c, step 1): Review
+should be "interleaved across item types (words, kanji, **grammar**, phrases)" — grammar was
+never supposed to be its own step. So:
+
+- **`ReviewStep`'s queue becomes `Array<Phrase | Word | GrammarPattern>`.** It renders
+  `FlashCard` for `Phrase`/`Word` items and `GrammarClozeCard` for `GrammarPattern` items —
+  one more case in an item-kind branch, not a widened `FlashCard` union. This carries
+  `dueGrammarPatterns`, safe to review any time since those patterns were taught in past
+  sessions.
+- **`ProduceStep`'s queue becomes `Array<Phrase | Word | GrammarPattern>`** the same way,
+  carrying `newGrammarPattern` (if any) alongside `newWords`/`newPhrases` — Produce is
+  already "type what you just learned," so practicing the just-taught pattern belongs there,
+  not in a new step.
+
+Net effect: **no new `Step` value, no new state, less code than the original design.**
+`dailyLoop.ts`'s `dueGrammarPatterns`/`newGrammarPattern` fields are unchanged from the
+Orchestrator section above — only which existing step consumes each one changes.
 
 **Close screen:** the existing "Reviewed N item(s)" / "Learned N item(s)" counts on
 `CloseStep` fold in grammar pattern counts (`dueGrammarPatterns.length` into reviewed,
@@ -172,8 +187,11 @@ produce/recognition/close skip chain unchanged.
   content-count verification) asserting all 35 units resolve a valid `patternId` after the
   retrofit, deleted after the PR is verified — not kept as permanent test debt.
 - Full scripted browser walkthrough of all 35 units (extending the Phase 1 verification
-  script), confirming the new Grammar step renders and advances correctly for every unit,
-  zero console errors — the same rigor applied to the Phase 1 content PR.
+  script), confirming `GrammarClozeCard` renders and advances correctly wherever it appears
+  in Review or Produce, zero console errors — the same rigor applied to the Phase 1 content
+  PR. Also decided during that walkthrough's earlier run (Phase 1): test-script timing, not
+  the app, is the usual suspect for a stall — see the debugging note in that PR before
+  assuming a new content bug.
 
 ## Explicitly out of scope
 
