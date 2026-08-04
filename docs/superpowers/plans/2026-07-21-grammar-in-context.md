@@ -515,7 +515,7 @@ export function GrammarClozeCard({ pattern, phrase, onNext }: Props) {
             <div className="flex flex-col gap-4">
               <div className={["rounded-xl p-4 text-center", correct ? "bg-success-bg" : "bg-error-bg"].join(" ")}>
                 <p className={["text-heading-sm font-semibold", correct ? "text-success-fg" : "text-error-fg"].join(" ")}>
-                  {correct ? "Correct!" : "Not quite"}
+                  {correct ? "Recalled!" : "Worth another look"}
                 </p>
                 {!correct && userAnswer !== "" && (
                   <p className="mt-1 font-jp text-body-sm text-error-fg">You answered: {userAnswer}</p>
