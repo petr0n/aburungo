@@ -65,11 +65,13 @@ pattern (some N4+ units may only reinforce an existing one).
 New content module, mirroring `src/content/units/`:
 
 - `src/content/grammar/n5.yaml` — 35 entries, one per existing unit.
-- `src/content/grammar/schema.ts` — `parseGrammarPatterns(raw, source, knownPhraseIds)`,
-  same shape as `parseUnits`. Validates: required fields present; `jlpt` is a valid level;
-  `phraseId` resolves against `knownPhraseIds`; `blank` is a non-empty substring that
-  appears in the resolved phrase's `reading` **exactly once** (ambiguous or missing blanks
-  fail the build, same philosophy as the existing schema validators); no duplicate `id`s.
+- `src/content/grammar/schema.ts` — `parseGrammarPatterns(raw, source, phrasesById)`, where
+  `phrasesById: Map<string, Phrase>` (not just a `Set<string>` of known ids, unlike
+  `parseUnits` — the validator needs the actual `reading` text to check blank uniqueness,
+  not just id existence). Validates: required fields present; `jlpt` is a valid level;
+  `phraseId` resolves in `phrasesById`; `blank` is a non-empty substring that appears in the
+  resolved phrase's `reading` **exactly once** (ambiguous or missing blanks fail the build,
+  same philosophy as the existing schema validators); no duplicate `id`s.
 - `src/content/grammar/index.ts` — exports `allGrammarPatterns: GrammarPattern[]` and
   `findGrammarPattern(id)`.
 
@@ -108,24 +110,35 @@ exact same Leitner scheduling with zero Dexie/DB changes.
 
 ## Orchestrator (`src/srs/dailyLoop.ts`)
 
-`buildDailySession` gains two new parameters (`allPatterns: readonly GrammarPattern[]`) and
-two new return fields:
+`buildDailySession` gains one new parameter (`allPatterns: readonly GrammarPattern[]`).
+`reviewItems`'s type widens in place — **no separate `dueGrammarPatterns` field** — plus one
+new field for the freshly-taught pattern:
 
 ```ts
 export type DailySession = {
-  // ...existing fields...
-  /** Due grammar patterns from already-seen units, oldest-due first. */
-  dueGrammarPatterns: GrammarPattern[];
+  unit: Unit | null;
+  /** Due items (words, phrases, AND grammar patterns) from seen units, oldest-due first — true interleaving, not just adjacency. */
+  reviewItems: Array<Phrase | Word | GrammarPattern>;
+  newWords: Word[];
+  newPhrases: Phrase[];
   /** The pattern the next unit introduces, or null. */
   newGrammarPattern: GrammarPattern | null;
 };
 ```
 
-Selection logic mirrors the existing `reviewItems`/`newWords` logic: due patterns come from
-units in `progress.seenUnitIds` whose `ReviewState` is due now; the new pattern comes from
-`nextUnit.patternId` if set. Same dedupe-by-id defensive guard as `reviewItems` (a pattern
-could theoretically be reused by id from a future merged-source caller, though today's only
-caller is single-source IndexedDB).
+`seenItemIds` (already built from seen units' `wordIds`/`phraseIds`) also collects each seen
+unit's `patternId`, using the exact same `Set`. The existing due/sort/dedupe pipeline for
+`reviewItems` is otherwise unchanged — it already does `wordById.get(id) ?? phraseById.get(id)`
+as its final lookup; widen that one line to `?? patternById.get(id)`. Because the sort is by
+`dueAt` before the lookup, this yields genuine interleaving (a due grammar pattern can sort
+between two due words), not grammar items merely clustered at the end of the same UI step.
+`newGrammarPattern` comes from `nextUnit.patternId` if set, looked up in `patternById` — same
+shape as `newWords`/`newPhrases` construction.
+
+This is simpler than an earlier draft that kept a separate `dueGrammarPatterns` field: no new
+dedup pass, no second `seenReviewIds`-style Set, and the initial step-routing in `LearnPage`
+(`reviewItems.length > 0 ? "review" : ...`) needs no changes at all, since grammar patterns
+already count as review items.
 
 ## UI
 
@@ -148,34 +161,38 @@ cards, no new visual pattern.
 
 **No new loop step — interleaved into Review and Produce instead.** An earlier version of
 this spec added a separate `GrammarStep` positioned after New Unit and before Produce, with
-one combined queue (`dueGrammarPatterns` + `newGrammarPattern`). That's wrong: routing to it
-directly from initial page load (when nothing is due in the word/phrase queue) would surface
-`newGrammarPattern` — the pattern the *next* unit introduces — before the learner has been
-taught it, since the teach moment only happens partway through New Unit. Untangling that
-correctly needs extra state (a queue plus an entry-context flag) just to make one step safe
-to enter from two different places.
+one combined queue (due patterns + the new pattern). That's wrong: routing to it directly
+from initial page load (when nothing is due in the word/phrase queue) would surface the next
+unit's pattern before the learner has been taught it, since the teach moment only happens
+partway through New Unit. Untangling that correctly needed extra state (a queue plus an
+entry-context flag) just to make one step safe to enter from two different places.
 
 The plan doc already says what to do instead (`01-overarching-plan.md` §2c, step 1): Review
 should be "interleaved across item types (words, kanji, **grammar**, phrases)" — grammar was
 never supposed to be its own step. So:
 
-- **`ReviewStep`'s queue becomes `Array<Phrase | Word | GrammarPattern>`.** It renders
-  `FlashCard` for `Phrase`/`Word` items and `GrammarClozeCard` for `GrammarPattern` items —
-  one more case in an item-kind branch, not a widened `FlashCard` union. This carries
-  `dueGrammarPatterns`, safe to review any time since those patterns were taught in past
-  sessions.
+- **`ReviewStep`'s queue becomes `Array<Phrase | Word | GrammarPattern>`** — it's now exactly
+  `session.reviewItems` (see Orchestrator above, which already widened to include due grammar
+  patterns, sorted in with everything else by `dueAt`). Renders `FlashCard` for `Phrase`/`Word`
+  items and `GrammarClozeCard` for `GrammarPattern` items — one more case in an item-kind
+  branch, not a widened `FlashCard` union.
 - **`ProduceStep`'s queue becomes `Array<Phrase | Word | GrammarPattern>`** the same way,
-  carrying `newGrammarPattern` (if any) alongside `newWords`/`newPhrases` — Produce is
-  already "type what you just learned," so practicing the just-taught pattern belongs there,
-  not in a new step.
+  assembled at the call site as `[...newWords, ...newPhrases, ...(newGrammarPattern ? [newGrammarPattern] : [])]`
+  — Produce is already "type what you just learned," so practicing the just-taught pattern
+  belongs there, not in a new step.
 
-Net effect: **no new `Step` value, no new state, less code than the original design.**
-`dailyLoop.ts`'s `dueGrammarPatterns`/`newGrammarPattern` fields are unchanged from the
-Orchestrator section above — only which existing step consumes each one changes.
+Net effect: **no new `Step` value, no new state, less code than the original design**, and
+because `reviewItems` already includes grammar patterns, `LearnPage`'s initial step-routing
+(`reviewItems.length > 0 ? "review" : ...`) needs no changes.
+
+**`afterNewUnit`'s transition logic** (decides produce vs. recognition vs. close) needs one
+surgical change: its `produceItems` count must also include `newGrammarPattern` so a unit
+that introduces *only* a new pattern (no new words/phrases — not expected in the N5 retrofit,
+but the type allows it) still routes to Produce instead of skipping it.
 
 **Close screen:** the existing "Reviewed N item(s)" / "Learned N item(s)" counts on
-`CloseStep` fold in grammar pattern counts (`dueGrammarPatterns.length` into reviewed,
-`newGrammarPattern ? 1 : 0` into learned) rather than adding a third separate count line.
+`CloseStep` already count `session.reviewItems.length` (now inclusive of grammar patterns
+with zero changes) and gain `newGrammarPattern ? 1 : 0` folded into the learned count.
 
 ## Testing
 
