@@ -1041,6 +1041,9 @@ function NewUnitStep({
     // this only fires if a unit is authored with an empty phraseIds list.
     if (stage === "phrases" && currentPhrase === undefined) {
       if (pattern !== null) {
+        // eslint-disable-next-line react-hooks/set-state-in-effect -- bounded
+        // to this defensive branch (never fires for real content), matches
+        // the existing disable precedent in RecognitionPass.tsx.
         setStage("grammar");
       } else {
         onDone();
@@ -1073,24 +1076,41 @@ In the `"words"` stage block, replace the `onNext` handler:
 
 (This replaces the existing `if (next >= words.length) { setIndex(0); setStage("phrases"); if (phrases.length === 0) onDone(); }` block — same intent, but now routes through `grammar` when phrases are empty and a pattern exists, instead of always going straight to `onDone`.)
 
-In the `"phrases"` stage block (the final `return` in the function, after `const phrase = currentPhrase; if (phrase === undefined) return null;`), replace the `PhraseIntroCard`'s `onNext`:
+The `"phrases"` stage block currently reads `const phrase = currentPhrase; if (phrase === undefined) return null;` followed by its `return (...)`. **This guard must be scoped to `stage === "phrases"` explicitly** — left as an unconditional `if (phrase === undefined) return null;`, it fires for the new `"grammar"` stage too (since `currentPhrase` is only ever defined when `stage === "phrases"`, it's `undefined` for every other stage), making the grammar block added below permanently unreachable dead code. Replace the whole phrases-stage block with:
 
 ```tsx
-        onNext={() => {
-          const next = index + 1;
-          if (next >= phrases.length) {
-            if (pattern !== null) {
-              setStage("grammar");
+  if (stage === "phrases") {
+    const phrase = currentPhrase;
+    if (phrase === undefined) return null;
+    return (
+      <div className="flex w-full flex-col gap-4 py-4">
+        <ProgressBar value={(index + 1) / phrases.length} />
+        <PhraseIntroCard
+          key={phrase.id}
+          phrase={phrase}
+          index={index}
+          total={phrases.length}
+          onNext={() => {
+            const next = index + 1;
+            if (next >= phrases.length) {
+              if (pattern !== null) {
+                setStage("grammar");
+              } else {
+                onDone();
+              }
             } else {
-              onDone();
+              setIndex(next);
             }
-          } else {
-            setIndex(next);
-          }
-        }}
+          }}
+        />
+      </div>
+    );
+  }
 ```
 
-Finally, add a new `"grammar"` stage render block. Insert it right after the `"phrases"` stage's closing `return ( ... );` block (i.e., as the new final block before the function's closing `}`):
+(Only the `onNext` handler's body is new — the guard is now scoped with `if (stage === "phrases") { ... }` wrapping the whole block instead of an unconditional early return, so control falls through to the `"grammar"` check below instead of returning `null` first.)
+
+Finally, add a new `"grammar"` stage render block. Insert it right after the `"phrases"` stage's closing block above (i.e., as the new final block before the function's closing `}`):
 
 ```tsx
   if (stage === "grammar" && pattern !== null) {
