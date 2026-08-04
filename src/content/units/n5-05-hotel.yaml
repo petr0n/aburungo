@@ -40,6 +40,7 @@
   kanji:
     - 階
   grammarNote: "～はなんかいですか — What floor is ~?"
+  patternId: grammar.n5-unit-22
 
 - id: n5.unit-23
   order: 23
@@ -57,3 +58,4 @@
     - hotel.wake-up-call
   kanji: []
   grammarNote: "～をもってきてください — Please bring me ~"
+  patternId: grammar.n5-unit-23

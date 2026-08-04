@@ -23,3 +23,204 @@
   # spec; blanks the shared です rather than forcing an exact ですね match.
   phraseId: basics.hello-how-are-you
   blank: です
+
+- id: grammar.n5-unit-4
+  jlpt: N5
+  pattern: "～から来ました"
+  gloss: "I came from ~ (origin pattern)"
+  phraseId: greetings.from-america
+  blank: きました
+
+- id: grammar.n5-unit-5
+  jlpt: N5
+  pattern: "ありがとうございます／どういたしまして"
+  gloss: "the thanks exchange"
+  phraseId: greetings.youre-welcome
+  blank: どういたしまして
+
+- id: grammar.n5-unit-7
+  jlpt: N5
+  pattern: "～つ"
+  gloss: "counting small things (ひとつ, ふたつ, みっつ...)"
+  phraseId: greetings.one-please
+  blank: ひとつ
+
+- id: grammar.n5-unit-8
+  jlpt: N5
+  pattern: "～をおねがいします"
+  gloss: "~ please (ordering pattern)"
+  phraseId: restaurant.coffee-please
+  blank: おねがいします
+
+- id: grammar.n5-unit-9
+  jlpt: N5
+  pattern: "～をください"
+  gloss: "please give me ~ (receiving pattern)"
+  phraseId: restaurant.this-please
+  blank: ください
+
+- id: grammar.n5-unit-10
+  jlpt: N5
+  pattern: "これは何ですか"
+  gloss: "What is this?"
+  phraseId: restaurant.what-is-this
+  blank: なんですか
+
+- id: grammar.n5-unit-11
+  jlpt: N5
+  pattern: "いくらですか"
+  gloss: "How much is it?"
+  phraseId: shopping.how-much
+  blank: いくら
+
+- id: grammar.n5-unit-12
+  jlpt: N5
+  pattern: "number + えん"
+  gloss: "price expressions (さんびゃくえん、いちまんえん)"
+  phraseId: restaurant.price-300
+  blank: えん
+
+- id: grammar.n5-unit-13
+  jlpt: N5
+  pattern: "～てもいいですか"
+  gloss: "may I ~? (permission request)"
+  phraseId: shopping.may-i-look
+  blank: てもいいですか
+
+- id: grammar.n5-unit-14
+  jlpt: N5
+  pattern: "～をひとつください"
+  gloss: "one ~ please"
+  # grammarNote's example uses ひとつ specifically; the closest authored
+  # phrase uses ふたつ (same counter+ください shape, different number) —
+  # the pattern being taught (counter directly before ください) transfers.
+  phraseId: shopping.two-please
+  blank: ください
+
+- id: grammar.n5-unit-15
+  jlpt: N5
+  pattern: "～はありますか"
+  gloss: "Do you have ~?"
+  phraseId: shopping.other-colors
+  blank: ありますか
+
+- id: grammar.n5-unit-16
+  jlpt: N5
+  pattern: "～までいくらですか"
+  gloss: "How much to ~? (まで marks the destination)"
+  phraseId: transit.shinjuku-how-much
+  blank: いくらですか
+
+- id: grammar.n5-unit-17
+  jlpt: N5
+  pattern: "～はどこですか"
+  gloss: "Where is ~? (the general location-question pattern)"
+  phraseId: transit.deguchi-where
+  blank: どこですか
+
+- id: grammar.n5-unit-18
+  jlpt: N5
+  pattern: "～じ～ふんです"
+  gloss: "It is ~ o'clock, ~ minutes."
+  # Closest authored phrase uses 半 (han, "half past") rather than a literal
+  # ふん(minutes) count, but it's the same hour+time-word+です predicate
+  # shape the pattern teaches.
+  phraseId: transit.sanji-han
+  blank: さんじはん
+
+- id: grammar.n5-unit-19
+  jlpt: N5
+  pattern: "～までお願いします"
+  gloss: "Please take me to ~ (the taxi destination pattern)"
+  phraseId: transit.eki-made-onegaishimasu
+  blank: おねがいします
+
+- id: grammar.n5-unit-20
+  jlpt: N5
+  pattern: "～でおりてください"
+  gloss: "Please get off at ~"
+  # Closest authored phrase is the statement form (おります) rather than the
+  # てください imperative the pattern names, but it's the same おりる verb
+  # in the same でおりる construction.
+  phraseId: transit.getting-off-here
+  blank: おります
+
+- id: grammar.n5-unit-22
+  jlpt: N5
+  pattern: "～はなんかいですか"
+  gloss: "What floor is ~?"
+  phraseId: hotel.bath-floor
+  blank: なんかいですか
+
+- id: grammar.n5-unit-23
+  jlpt: N5
+  pattern: "～をもってきてください"
+  gloss: "Please bring me ~"
+  phraseId: hotel.bring-towel
+  blank: もってきてください
+
+- id: grammar.n5-unit-24
+  jlpt: N5
+  pattern: "～に曲がってください"
+  gloss: "Please turn ~ (direction + magaru pattern)"
+  phraseId: directions.turn-right
+  blank: まがってください
+
+- id: grammar.n5-unit-25
+  jlpt: N5
+  pattern: "～はどこにありますか"
+  gloss: "Where is ~? (location question)"
+  # Closest authored phrase is the shorter どこですか form rather than the
+  # full どこにありますか the pattern names, but it's the same どこ-question
+  # construction over the same topic-marker shape.
+  phraseId: transit.station-where
+  blank: どこですか
+
+- id: grammar.n5-unit-26
+  jlpt: N5
+  pattern: "～ふんくらいです"
+  gloss: "It's about ~ minutes"
+  phraseId: directions.walking-distance
+  blank: ふんくらいです
+
+- id: grammar.n5-unit-27
+  jlpt: N5
+  pattern: "～ですね"
+  gloss: "isn't it ~? (weather small talk pattern)"
+  phraseId: weather.hot-today
+  blank: ですね
+
+- id: grammar.n5-unit-28
+  jlpt: N5
+  pattern: "～の天気はどうですか"
+  gloss: "What's the weather like ~?"
+  phraseId: weather.tomorrow-forecast
+  blank: どうですか
+
+- id: grammar.n5-unit-30
+  jlpt: N5
+  pattern: "～がすきです／～がきらいです"
+  gloss: "I like ~ / I don't like ~"
+  phraseId: food-preferences.like-sushi
+  blank: すきです
+
+- id: grammar.n5-unit-31
+  jlpt: N5
+  pattern: "～がたべたいです"
+  gloss: "I want to eat ~"
+  phraseId: food-preferences.want-ramen
+  blank: たべたいです
+
+- id: grammar.n5-unit-32
+  jlpt: N5
+  pattern: "～も～もすきです"
+  gloss: "I like both ~ and ~"
+  phraseId: food-preferences.like-both
+  blank: すきです
+
+- id: grammar.n5-unit-33
+  jlpt: N5
+  pattern: "frequency adverbs + ～ます"
+  gloss: "あまり and ぜんぜん require a negative verb ending (～ません)"
+  phraseId: food-preferences.not-at-all
+  blank: たべません

@@ -26,6 +26,7 @@
     - 右
     - 左
   grammarNote: "～に曲がってください — Please turn ~ (direction + magaru pattern)"
+  patternId: grammar.n5-unit-24
 
 - id: n5.unit-25
   order: 25
@@ -45,6 +46,7 @@
   kanji:
     - 近
   grammarNote: "～はどこにありますか — Where is ~? (location question)"
+  patternId: grammar.n5-unit-25
 
 - id: n5.unit-26
   order: 26
@@ -64,3 +66,4 @@
   kanji:
     - 歩
   grammarNote: "～ふんくらいです — It's about ~ minutes"
+  patternId: grammar.n5-unit-26

@@ -24,6 +24,7 @@
     - 電
     - 車
   grammarNote: "～までいくらですか — How much to ~? (まで marks the destination)"
+  patternId: grammar.n5-unit-16
 
 - id: n5.unit-17
   order: 17
@@ -43,6 +44,7 @@
     - 口
     - 番
   grammarNote: "～はどこですか — Where is ~? (the general location-question pattern)"
+  patternId: grammar.n5-unit-17
 
 - id: n5.unit-18
   order: 18
@@ -64,6 +66,7 @@
     - 時
     - 分
   grammarNote: "～じ～ふんです — It is ~ o'clock, ~ minutes."
+  patternId: grammar.n5-unit-18
 
 - id: n5.unit-19
   order: 19
@@ -80,6 +83,7 @@
     - transit.koko-tomete-kudasai
   kanji: []
   grammarNote: "～までお願いします — Please take me to ~ (the taxi destination pattern)"
+  patternId: grammar.n5-unit-19
 
 - id: n5.unit-20
   order: 20
@@ -98,3 +102,4 @@
   kanji:
     - 次
   grammarNote: "～でおりてください — Please get off at ~"
+  patternId: grammar.n5-unit-20

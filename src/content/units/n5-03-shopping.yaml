@@ -21,6 +21,7 @@
   kanji:
     - 店
   grammarNote: "～てもいいですか — may I ~? (permission request)"
+  patternId: grammar.n5-unit-13
 
 - id: n5.unit-14
   order: 14
@@ -40,6 +41,7 @@
     - 大
     - 小
   grammarNote: "～をひとつください — one ~ please"
+  patternId: grammar.n5-unit-14
 
 - id: n5.unit-15
   order: 15
@@ -56,3 +58,4 @@
     - shopping.dont-have-it
   kanji: []
   grammarNote: "～はありますか — Do you have ~?"
+  patternId: grammar.n5-unit-15
