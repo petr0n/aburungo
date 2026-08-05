@@ -1,0 +1,70 @@
+# N5 transit vocabulary, depth pass for Situation 4 (Units 16-20).
+# Densifies the existing station / platform / taxi / bus units (DR-017).
+#
+# Example sentences are Tatoeba, chosen by hand. Most transit words have no
+# N5-appropriate candidate — the corpus tends to formal or N4+ grammar for them
+# (koto ga aru, ware-ware), so they ship without one rather than with a poor fit.
+#
+# content-source: training — headwords verified against JMdict 3.6.2 on 2026-08-04
+# jlpt-source: training — JLPT level unverified (JMdict carries no JLPT data)
+# example-source: Tatoeba via JMdict-examples 3.6.2 (CC BY 2.0 FR), ids inline
+
+# ── Ways to travel (Unit 16) ──────────────────────────────────────────────────
+
+- id: vocab.chikatetsu
+  jlpt: N5
+  word_type: noun
+  theme: transit
+  japanese: 地下鉄
+  reading: ちかてつ
+  romaji: chikatetsu
+  english: subway, underground
+  example:
+    japanese: 地下鉄で行きたいのです。
+    english: I want to get there by subway.
+    tatoeba_id: "127016"
+
+- id: vocab.hikouki
+  jlpt: N5
+  word_type: noun
+  theme: transit
+  japanese: 飛行機
+  reading: ひこうき
+  romaji: hikouki
+  english: aeroplane
+
+# ── On the street (Unit 19) ───────────────────────────────────────────────────
+
+- id: vocab.michi
+  jlpt: N5
+  word_type: noun
+  theme: transit
+  japanese: 道
+  reading: みち
+  romaji: michi
+  english: road, street, way
+
+# ── Under your own steam (Unit 20) ────────────────────────────────────────────
+
+- id: vocab.aruku
+  jlpt: N5
+  word_type: verb
+  verb_class: u
+  theme: transit
+  japanese: 歩く
+  reading: あるく
+  romaji: aruku
+  english: to walk
+  example:
+    japanese: ジョンとメアリーはいつも手をつないで歩く。
+    english: John and Mary always walk hand in hand.
+    tatoeba_id: "215476"
+
+- id: vocab.jitensha
+  jlpt: N5
+  word_type: noun
+  theme: transit
+  japanese: 自転車
+  reading: じてんしゃ
+  romaji: jitensha
+  english: bicycle

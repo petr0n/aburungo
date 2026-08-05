@@ -19,6 +19,8 @@
     - vocab.kippu
     - vocab.made
     - vocab.kuruma
+    - vocab.chikatetsu
+    - vocab.hikouki
   phraseIds:
     - transit.ticket-where
     - transit.shinjuku-ticket
@@ -41,6 +43,8 @@
     - vocab.nanban
     - vocab.deru
     - vocab.hairu
+    - vocab.noru
+    - vocab.oriru
   phraseIds:
     - transit.station-where
     - transit.nanban-homu
@@ -85,6 +89,7 @@
     - vocab.tomeru
     - vocab.koko
     - vocab.migi
+    - vocab.michi
   phraseIds:
     - transit.eki-made-onegaishimasu
     - transit.koko-tomete-kudasai
@@ -104,6 +109,8 @@
     - vocab.oriru
     - vocab.tsugi
     - vocab.kuru
+    - vocab.aruku
+    - vocab.jitensha
   phraseIds:
     - transit.getting-off-here
     - transit.tsugi-no-basu-nanji
