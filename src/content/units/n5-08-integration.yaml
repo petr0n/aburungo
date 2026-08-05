@@ -26,6 +26,7 @@
   kanji:
     - 好
   grammarNote: "～がすきです / ～がきらいです — I like ~ / I don't like ~ (the object of liking/disliking is marked with が, not を)"
+  patternId: grammar.n5-unit-30
 
 - id: n5.unit-31
   order: 31
@@ -43,6 +44,7 @@
     - food-preferences.want-water
   kanji: []
   grammarNote: "～がたべたいです — I want to eat ~ (the たい desiderative form conjugates like an i-adjective, e.g. たべたくないです)"
+  patternId: grammar.n5-unit-31
 
 - id: n5.unit-32
   order: 32
@@ -61,6 +63,7 @@
   kanji:
     - 魚
   grammarNote: "～も～もすきです — I like both ~ and ~ (も replaces が/は to combine two things under one predicate)"
+  patternId: grammar.n5-unit-32
 
 - id: n5.unit-33
   order: 33
@@ -79,6 +82,7 @@
   kanji:
     - 毎
   grammarNote: "Frequency adverbs (まいにち、いつも、ときどき、あまり、ぜんぜん) pair with ～ます sentences; あまり and ぜんぜん require a negative verb ending (～ません)"
+  patternId: grammar.n5-unit-33
 
 - id: n5.unit-34
   order: 34

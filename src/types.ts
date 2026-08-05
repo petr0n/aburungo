@@ -105,6 +105,31 @@ export type Lesson = {
 };
 
 /**
+ * A grammar pattern taught and reviewed as its own SRS item, distinct from
+ * Word/Phrase. The example is an existing Phrase, referenced not duplicated;
+ * `blank` is the substring of that phrase's `reading` blanked out for the
+ * cloze review card (see
+ * docs/superpowers/specs/2026-07-21-grammar-in-context-design.md).
+ */
+export type GrammarPattern = {
+  id: string;
+  jlpt: JlptLevel;
+  /** Display form of the pattern, e.g. "～は～です". */
+  pattern: string;
+  /** Short English explanation. */
+  gloss: string;
+  /** An existing Phrase id that demonstrates the pattern. Reused, never duplicated. */
+  phraseId: string;
+  /** Substring of that phrase's `reading` to blank out. Must appear exactly once. */
+  blank: string;
+};
+
+/** Type guard — distinguishes GrammarPattern from Phrase/Word in a mixed review queue. */
+export function isGrammarPattern(item: Phrase | Word | GrammarPattern): item is GrammarPattern {
+  return "blank" in item;
+}
+
+/**
  * A step on the guided N5 daily-loop ladder.
  *
  * Authored in YAML under src/content/units/*.yaml. A Unit does not define new
@@ -129,6 +154,8 @@ export type Unit = {
   kanji: string[];
   /** Short training-sourced explanation of the unit's grammar pattern. */
   grammarNote: string;
+  /** The GrammarPattern id this unit introduces, if any — not every unit has one. */
+  patternId?: string;
 };
 
 /**

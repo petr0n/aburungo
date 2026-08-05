@@ -22,6 +22,7 @@
   kanji:
     - 水
   grammarNote: "～をおねがいします — ~ please (ordering pattern)"
+  patternId: grammar.n5-unit-8
 
 - id: n5.unit-9
   order: 9
@@ -40,6 +41,7 @@
   kanji:
     - 食
   grammarNote: "～をください — please give me ~ (receiving pattern)"
+  patternId: grammar.n5-unit-9
 
 - id: n5.unit-10
   order: 10
@@ -57,6 +59,7 @@
   kanji:
     - 何
   grammarNote: "これは何ですか — What is this?"
+  patternId: grammar.n5-unit-10
 
 - id: n5.unit-11
   order: 11
@@ -75,6 +78,7 @@
   kanji:
     - 円
   grammarNote: "いくらですか — How much is it?"
+  patternId: grammar.n5-unit-11
 
 - id: n5.unit-12
   order: 12
@@ -93,3 +97,4 @@
     - 百
     - 千
   grammarNote: "number + えん — price expressions (さんびゃくえん、いちまんえん)"
+  patternId: grammar.n5-unit-12

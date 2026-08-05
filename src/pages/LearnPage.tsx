@@ -1,12 +1,15 @@
 /**
- * "Today's session" — the guided N5 daily loop (Phase 1 slice, Units 1-3).
+ * "Today's session" — the guided N5 daily loop.
  *
- * Sequences: review (due items from already-seen units) -> new unit intro ->
- * produce (type what you just learned) -> recognition pass -> close.
- * Reuses existing presentational cards (FlashCard, WordLearnCard,
- * FillBlankCard, RecognitionPass) driven by local queue state, the same
- * pattern WordsPage/KanaPracticePage already use — the daily-loop
- * orchestrator (src/srs/dailyLoop.ts) only decides *what* goes in the queues.
+ * Sequences: review (due items from already-seen units, including due
+ * grammar patterns interleaved by due date) -> new unit intro (words,
+ * phrases, then the unit's grammar pattern if it has one) -> produce (type
+ * what you just learned, including the freshly-taught pattern) ->
+ * recognition pass -> close. Reuses existing presentational cards
+ * (FlashCard, WordLearnCard, FillBlankCard, GrammarClozeCard,
+ * RecognitionPass) driven by local queue state, the same pattern
+ * WordsPage/KanaPracticePage already use — the daily-loop orchestrator
+ * (src/srs/dailyLoop.ts) only decides *what* goes in the queues.
  *
  * Scope note: review-step ratings persist to local Leitner state only (no
  * server sync yet) — full FSRS source-of-truth for signed-in users is
@@ -15,19 +18,23 @@
  * docs/plans/01-overarching-plan.md open decision #5).
  */
 import { useCallback, useEffect, useState } from "react";
-import type { Phrase, ReviewRating, Unit, Word } from "@/types";
+import type { GrammarPattern, Phrase, ReviewRating, Unit, Word } from "@/types";
+import { isGrammarPattern } from "@/types";
 import { useAuth, useUserTier } from "@/store/auth";
 import { n5Units } from "@/content/units";
 import { wordsForTier } from "@/content/vocabulary";
 import { phrasesForTier } from "@/content";
+import { findPhrase } from "@/content";
 import { getPathProgress, markUnitSeen } from "@/db/pathProgressStore";
 import { getAll, getOne, upsert } from "@/db/reviewStore";
 import { schedule } from "@/srs/leitner";
 import { buildDailySession, type DailySession } from "@/srs/dailyLoop";
+import { allGrammarPatterns } from "@/content/grammar";
 import { PageShell } from "@/components/PageShell";
 import { FlashCard, type FlashCardPhase } from "@/components/FlashCard";
 import { WordLearnCard } from "@/components/WordLearnCard";
 import { FillBlankCard } from "@/components/FillBlankCard";
+import { GrammarClozeCard } from "@/components/GrammarClozeCard";
 import { RecognitionPass } from "@/components/RecognitionPass";
 import { Furigana } from "@/components/Furigana";
 import { LoadingPlaceholder, EmptyState, ProgressBar } from "aburungo-design-system";
@@ -38,7 +45,7 @@ type Step = "loading" | "review" | "new-unit" | "produce" | "recognition" | "clo
 
 // ── Review step — flip cards for already-seen items that are due ───────────────
 
-function ReviewStep({ items, onDone }: { items: Array<Phrase | Word>; onDone: () => void }) {
+function ReviewStep({ items, onDone }: { items: Array<Phrase | Word | GrammarPattern>; onDone: () => void }) {
   const [index, setIndex] = useState(0);
   const [phase, setPhase] = useState<FlashCardPhase>("entering");
   const [staged, setStaged] = useState<Phrase | Word | null>(null);
@@ -47,7 +54,8 @@ function ReviewStep({ items, onDone }: { items: Array<Phrase | Word>; onDone: ()
   const current = staged ?? items[index] ?? null;
 
   function handleRate(rating: ReviewRating) {
-    setStaged(items[index] ?? null);
+    const item = items[index];
+    setStaged(item !== undefined && !isGrammarPattern(item) ? item : null);
     setPendingRating(rating);
     setPhase("exiting");
   }
@@ -70,7 +78,36 @@ function ReviewStep({ items, onDone }: { items: Array<Phrase | Word>; onDone: ()
     setPhase("entering");
   }
 
+  async function handleGrammarNext(correct: boolean) {
+    const item = items[index];
+    if (item !== undefined) {
+      const existing = await getOne(item.id);
+      const next = schedule(existing, correct ? "got-it" : "didnt", Date.now(), item.id);
+      await upsert(next);
+    }
+    const nextIndex = index + 1;
+    if (nextIndex >= items.length) {
+      onDone();
+      return;
+    }
+    setIndex(nextIndex);
+  }
+
   if (current === null) return null;
+
+  if (isGrammarPattern(current)) {
+    const phrase = findPhrase(current.phraseId);
+    if (phrase === undefined) return null;
+    return (
+      <div className="flex w-full flex-col gap-4 py-4">
+        <p className="text-body-sm text-fg-subtle">
+          Review · {index + 1} / {items.length}
+        </p>
+        <ProgressBar value={(index + 1) / items.length} />
+        <GrammarClozeCard key={current.id} pattern={current} phrase={phrase} onNext={(correct) => void handleGrammarNext(correct)} />
+      </div>
+    );
+  }
 
   return (
     <div className="flex w-full flex-col gap-4 py-4">
@@ -126,16 +163,37 @@ function PhraseIntroCard({ phrase, index, total, onNext }: { phrase: Phrase; ind
   );
 }
 
-function NewUnitStep({ unit, words, phrases, onDone }: { unit: Unit; words: Word[]; phrases: Phrase[]; onDone: () => void }) {
-  const [stage, setStage] = useState<"intro" | "words" | "phrases">("intro");
+function NewUnitStep({
+  unit,
+  words,
+  phrases,
+  pattern,
+  onDone,
+}: {
+  unit: Unit;
+  words: Word[];
+  phrases: Phrase[];
+  pattern: GrammarPattern | null;
+  onDone: () => void;
+}) {
+  const [stage, setStage] = useState<"intro" | "words" | "phrases" | "grammar">("intro");
   const [index, setIndex] = useState(0);
   const currentPhrase = stage === "phrases" ? phrases[index] : undefined;
 
   useEffect(() => {
     // Defensive only: real unit content always has at least one phrase, so
     // this only fires if a unit is authored with an empty phraseIds list.
-    if (stage === "phrases" && currentPhrase === undefined) onDone();
-  }, [stage, currentPhrase, onDone]);
+    if (stage === "phrases" && currentPhrase === undefined) {
+      if (pattern !== null) {
+        // Defensive-only branch (see comment above) — bounded to a single
+        // extra render, not a cascading loop.
+        // eslint-disable-next-line react-hooks/set-state-in-effect
+        setStage("grammar");
+      } else {
+        onDone();
+      }
+    }
+  }, [stage, currentPhrase, pattern, onDone]);
 
   if (stage === "intro") {
     return (
@@ -190,8 +248,13 @@ function NewUnitStep({ unit, words, phrases, onDone }: { unit: Unit; words: Word
             const next = index + 1;
             if (next >= words.length) {
               setIndex(0);
-              setStage("phrases");
-              if (phrases.length === 0) onDone();
+              if (phrases.length > 0) {
+                setStage("phrases");
+              } else if (pattern !== null) {
+                setStage("grammar");
+              } else {
+                onDone();
+              }
             } else {
               setIndex(next);
             }
@@ -201,37 +264,80 @@ function NewUnitStep({ unit, words, phrases, onDone }: { unit: Unit; words: Word
     );
   }
 
-  const phrase = currentPhrase;
-  if (phrase === undefined) return null;
+  if (stage === "phrases") {
+    const phrase = currentPhrase;
+    if (phrase === undefined) return null;
 
-  return (
-    <div className="flex w-full flex-col gap-4 py-4">
-      <ProgressBar value={(index + 1) / phrases.length} />
-      <PhraseIntroCard
-        key={phrase.id}
-        phrase={phrase}
-        index={index}
-        total={phrases.length}
-        onNext={() => {
-          const next = index + 1;
-          if (next >= phrases.length) {
-            onDone();
-          } else {
-            setIndex(next);
-          }
-        }}
-      />
-    </div>
-  );
+    return (
+      <div className="flex w-full flex-col gap-4 py-4">
+        <ProgressBar value={(index + 1) / phrases.length} />
+        <PhraseIntroCard
+          key={phrase.id}
+          phrase={phrase}
+          index={index}
+          total={phrases.length}
+          onNext={() => {
+            const next = index + 1;
+            if (next >= phrases.length) {
+              if (pattern !== null) {
+                setStage("grammar");
+              } else {
+                onDone();
+              }
+            } else {
+              setIndex(next);
+            }
+          }}
+        />
+      </div>
+    );
+  }
+
+  if (stage === "grammar" && pattern !== null) {
+    const patternPhrase = findPhrase(pattern.phraseId);
+    return (
+      <div className="flex w-full flex-col gap-6 py-4">
+        <div className="flex flex-col gap-1">
+          <p className="text-body-sm font-medium text-brand-700">Grammar pattern</p>
+          <p className="text-heading-sm font-semibold text-fg">{pattern.pattern}</p>
+        </div>
+        <div className="rounded-2xl border border-border bg-surface p-4">
+          <p className="text-body text-fg">{pattern.gloss}</p>
+        </div>
+        {patternPhrase !== undefined && (
+          <div className="w-full rounded-2xl border border-border bg-bg shadow-card">
+            <div className="flex flex-col items-center gap-3 p-6 py-8">
+              <Furigana
+                japanese={patternPhrase.japanese}
+                reading={patternPhrase.reading}
+                className="block text-center text-jp-display font-medium text-fg"
+              />
+              <p className="text-center text-body font-semibold text-fg">{patternPhrase.english}</p>
+            </div>
+          </div>
+        )}
+        <button
+          type="button"
+          onClick={onDone}
+          className="flex min-h-[52px] w-full items-center justify-center rounded-2xl bg-brand-600 text-body font-semibold text-white active:bg-brand-700"
+        >
+          Got it — Continue
+        </button>
+      </div>
+    );
+  }
+
+  return null;
 }
 
 // ── Produce step — type what you just learned, forgiving feedback ──────────────
 
-function ProduceStep({ items, onDone }: { items: Array<Phrase | Word>; onDone: () => void }) {
+function ProduceStep({ items, onDone }: { items: Array<Phrase | Word | GrammarPattern>; onDone: () => void }) {
   const [index, setIndex] = useState(0);
   const current = items[index];
 
   async function handleNext(correct: boolean) {
+    if (current === undefined) return;
     const existing = await getOne(current.id);
     const next = schedule(existing, correct ? "got-it" : "didnt", Date.now(), current.id);
     await upsert(next);
@@ -244,6 +350,20 @@ function ProduceStep({ items, onDone }: { items: Array<Phrase | Word>; onDone: (
   }
 
   if (current === undefined) return null;
+
+  if (isGrammarPattern(current)) {
+    const phrase = findPhrase(current.phraseId);
+    if (phrase === undefined) return null;
+    return (
+      <div className="flex w-full flex-col gap-4 py-4">
+        <p className="text-body-sm text-fg-subtle">
+          Try it · {index + 1} / {items.length}
+        </p>
+        <ProgressBar value={(index + 1) / items.length} />
+        <GrammarClozeCard key={current.id} pattern={current} phrase={phrase} onNext={(correct) => void handleNext(correct)} />
+      </div>
+    );
+  }
 
   return (
     <div className="flex w-full flex-col gap-4 py-4">
@@ -259,7 +379,7 @@ function ProduceStep({ items, onDone }: { items: Array<Phrase | Word>; onDone: (
 // ── Close step ───────────────────────────────────────────────────────────────
 
 function CloseStep({ session }: { session: DailySession }) {
-  const learnedCount = session.newWords.length + session.newPhrases.length;
+  const learnedCount = session.newWords.length + session.newPhrases.length + (session.newGrammarPattern !== null ? 1 : 0);
   return (
     <div className="flex w-full flex-col gap-6 py-8">
       <div className="flex flex-col gap-2">
@@ -303,7 +423,7 @@ export function LearnPage() {
       if (cancelled) return;
       const words = wordsForTier(tier);
       const phrases = phrasesForTier(tier);
-      const built = buildDailySession(n5Units, progress, words, phrases, reviewStates, Date.now());
+      const built = buildDailySession(n5Units, progress, words, phrases, allGrammarPatterns, reviewStates, Date.now());
       setSession(built);
       if (built.reviewItems.length > 0) {
         setStep("review");
@@ -334,7 +454,7 @@ export function LearnPage() {
   // so an inline function here would re-fire that effect on every render.
   const afterNewUnit = useCallback(() => {
     if (session === null) return;
-    const produceItems = [...session.newWords, ...session.newPhrases];
+    const produceItems = [...session.newWords, ...session.newPhrases, ...(session.newGrammarPattern ? [session.newGrammarPattern] : [])];
     if (produceItems.length > 0) {
       setStep("produce");
     } else if (session.newWords.length > 0) {
@@ -359,10 +479,21 @@ export function LearnPage() {
     content = <ReviewStep items={session.reviewItems} onDone={afterReview} />;
   } else if (step === "new-unit" && session.unit !== null) {
     content = (
-      <NewUnitStep unit={session.unit} words={session.newWords} phrases={session.newPhrases} onDone={afterNewUnit} />
+      <NewUnitStep
+        unit={session.unit}
+        words={session.newWords}
+        phrases={session.newPhrases}
+        pattern={session.newGrammarPattern}
+        onDone={afterNewUnit}
+      />
     );
   } else if (step === "produce") {
-    content = <ProduceStep items={[...session.newWords, ...session.newPhrases]} onDone={afterProduce} />;
+    content = (
+      <ProduceStep
+        items={[...session.newWords, ...session.newPhrases, ...(session.newGrammarPattern ? [session.newGrammarPattern] : [])]}
+        onDone={afterProduce}
+      />
+    );
   } else if (step === "recognition") {
     content = (
       <RecognitionPass

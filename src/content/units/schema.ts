@@ -49,6 +49,10 @@ export function parseUnit(raw: unknown, source: string): Unit {
     }
   }
 
+  if (o.patternId !== undefined && !isString(o.patternId)) {
+    throw new UnitSchemaError(`${source}: entry "${String(o.id)}" has invalid "patternId"`, raw);
+  }
+
   return {
     id: o.id as string,
     order: o.order as number,
@@ -59,6 +63,7 @@ export function parseUnit(raw: unknown, source: string): Unit {
     phraseIds: o.phraseIds as string[],
     kanji: o.kanji as string[],
     grammarNote: o.grammarNote as string,
+    patternId: o.patternId as string | undefined,
   };
 }
 
@@ -66,7 +71,13 @@ export function parseUnit(raw: unknown, source: string): Unit {
  * Validate an array of raw entries plus cross-references against the known
  * word/phrase id sets. Also checks for duplicate ids and duplicate order.
  */
-export function parseUnits(raw: unknown, source: string, knownWordIds: Set<string>, knownPhraseIds: Set<string>): Unit[] {
+export function parseUnits(
+  raw: unknown,
+  source: string,
+  knownWordIds: Set<string>,
+  knownPhraseIds: Set<string>,
+  knownPatternIds: Set<string>,
+): Unit[] {
   if (!Array.isArray(raw)) {
     throw new UnitSchemaError(`${source}: top-level value must be an array`, raw);
   }
@@ -94,6 +105,10 @@ export function parseUnits(raw: unknown, source: string, knownWordIds: Set<strin
       if (!knownPhraseIds.has(phraseId)) {
         throw new UnitSchemaError(`${source}: unit "${u.id}" references unknown phrase id "${phraseId}"`, u);
       }
+    }
+
+    if (u.patternId !== undefined && !knownPatternIds.has(u.patternId)) {
+      throw new UnitSchemaError(`${source}: unit "${u.id}" references unknown pattern id "${u.patternId}"`, u);
     }
   }
 

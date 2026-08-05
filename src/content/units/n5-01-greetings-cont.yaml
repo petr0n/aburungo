@@ -22,6 +22,7 @@
     - 国
     - 本
   grammarNote: "～から来ました — I came from ~ (origin pattern)"
+  patternId: grammar.n5-unit-4
 
 - id: n5.unit-5
   order: 5
@@ -37,6 +38,7 @@
     - greetings.youre-welcome
   kanji: []
   grammarNote: "ありがとうございます / どういたしまして — the thanks exchange"
+  patternId: grammar.n5-unit-5
 
 - id: n5.unit-6
   order: 6
@@ -83,3 +85,4 @@
     - 四
     - 五
   grammarNote: "～つ — counting small things (ひとつ, ふたつ, みっつ...)"
+  patternId: grammar.n5-unit-7

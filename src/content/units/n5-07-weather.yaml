@@ -23,6 +23,7 @@
     - 天
     - 気
   grammarNote: "～ですね — isn't it ~? (weather small talk pattern)"
+  patternId: grammar.n5-unit-27
 
 - id: n5.unit-28
   order: 28
@@ -42,6 +43,7 @@
     - 雨
     - 雪
   grammarNote: "～の天気はどうですか — What's the weather like ~? (asking about a future day's weather)"
+  patternId: grammar.n5-unit-28
 
 - id: n5.unit-29
   order: 29
