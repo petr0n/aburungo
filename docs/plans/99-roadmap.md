@@ -54,9 +54,21 @@ path, with reviews interleaving correctly and visible mastery.
 
 ---
 
-## Phase 2 — Kanji mnemonics + grammar-in-context (depth, and N4)
+## Phase 2 — Depth first, then N4
 
 **Goal:** make the *teaching* inside a unit excellent, and extend the ladder to N4.
+
+**Resequenced 2026-08-04 (DR-017).** Grammar-in-context shipped (PR #50). The remaining order is:
+
+1. **Server-durable learning state (DR-016) — before any content work.** `PathProgress` and FSRS
+   state live in IndexedDB, which Safari's ITP deletes after 7 days without site interaction.
+   That destroys the accumulated FSRS model, not just ladder position, in exactly the scenario
+   SRS exists to survive. Content compounds on state that can currently vanish.
+2. **Deepen N5 vocabulary (189 → 400+).** N5 references cite ~800-900 words; the 35-unit ladder
+   being fully authored is not the same as N5 breadth. Author against the Tatoeba examples
+   already embedded in `server/data/jmdict-examples-eng-3.6.2.json` — no download needed.
+3. **Scoped Hana** — production practice; also unlocks units 34-35, which are gated on it.
+4. **Kanji mnemonics last, integrated into vocabulary** rather than built as a standalone silo.
 
 **Build:**
 - **Kanji component + mnemonic layer:** components from KANJIDIC2/KanjiVG; mnemonic per kanji
