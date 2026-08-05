@@ -2,6 +2,7 @@
 
 ## Pending
 
+- [ ] **Apply `user_path_progress` migration to production** — `supabase db push` for `20260804000000_path_progress.sql` (DR-016). Needs `SUPABASE_DB_PASSWORD`, which is not stored in `.local/`. Until applied, the `/api/progress/path` endpoints return an error and the client silently falls back to IndexedDB — i.e. current behaviour, no breakage, but ladder position is still evictable.
 - [ ] **Delete duplicate Vercel project `project-hbbvq`** — stray project wired to the same repo, builds identical output; only `aburungo-server` (owns the `aburungo.app` domain) is needed. Remove the `VITE_API_URL` mistakenly added there too. (DR-013)
 - [ ] **Full FSRS source-of-truth for signed-in users** — currently the session store posts reviews to the server AND merges server `fetchDue()` due cards into the queue (DR-015), but local Leitner still co-drives the queue and "new vs reviewed-not-due" is detected locally. To make the server the sole source of truth cross-device, add a server endpoint returning all card IDs the user has progress on (or "new cards"), then drop local Leitner for signed-in users. Guests stay on local Leitner.
 - [ ] **N4 content** — add YAML scenario files for N4-level phrases; verify JLPT levels against JMdict seed before merging

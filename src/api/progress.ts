@@ -1,4 +1,11 @@
-import type { FsrsState, ReviewRating, ProgressStats, KanaProgressEntry, KanaScript } from "@/types";
+import type {
+  FsrsState,
+  ReviewRating,
+  ProgressStats,
+  KanaProgressEntry,
+  KanaScript,
+  PathProgress,
+} from "@/types";
 import { apiFetch } from "./client";
 
 export type DueCard = {
@@ -67,4 +74,19 @@ export async function submitKanaAnswer(
 
 export async function resetKanaProgress(script: KanaScript | "all"): Promise<void> {
   await apiFetch(`/api/progress/kana?script=${script}`, { method: "DELETE" });
+}
+
+export async function fetchPathProgress(pathId: string): Promise<PathProgress> {
+  const res = await apiFetch<{ data: PathProgress }>(
+    `/api/progress/path?pathId=${encodeURIComponent(pathId)}`,
+  );
+  return res.data;
+}
+
+export async function markUnitSeenRemote(pathId: string, unitId: string): Promise<PathProgress> {
+  const res = await apiFetch<{ data: PathProgress }>("/api/progress/path", {
+    method: "POST",
+    body: JSON.stringify({ pathId, unitId }),
+  });
+  return res.data;
 }

@@ -9,6 +9,8 @@ import {
   upsertKanaProgress,
   fetchKanaProgress,
   resetKanaProgress,
+  fetchPathProgress,
+  markUnitSeen,
 } from '../services/progress.js'
 
 export const progressRoutes = new Hono()
@@ -86,3 +88,29 @@ progressRoutes.delete('/kana', async (c) => {
   await resetKanaProgress(user.id, script)
   return c.json({ ok: true })
 })
+
+// GET /api/progress/path?pathId=n5
+progressRoutes.get('/path', async (c) => {
+  const user = c.get('user')
+  const pathId = c.req.query('pathId') ?? 'n5'
+  const data = await fetchPathProgress(user.id, pathId)
+  return c.json({ data })
+})
+
+// POST /api/progress/path
+progressRoutes.post(
+  '/path',
+  zValidator(
+    'json',
+    z.object({
+      pathId: z.string().min(1).max(64),
+      unitId: z.string().min(1).max(128),
+    }),
+  ),
+  async (c) => {
+    const user = c.get('user')
+    const { pathId, unitId } = c.req.valid('json')
+    const data = await markUnitSeen(user.id, pathId, unitId)
+    return c.json({ data })
+  },
+)

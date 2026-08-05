@@ -392,3 +392,59 @@ export async function getStats(userId: string): Promise<StatsResult> {
     kanji,
   }
 }
+
+// ── Path progress (DR-016) ───────────────────────────────────────────────────
+
+export type PathProgressResult = {
+  pathId: string
+  seenUnitIds: string[]
+}
+
+export async function fetchPathProgress(
+  userId: string,
+  pathId: string,
+): Promise<PathProgressResult> {
+  const { data, error } = await supabase
+    .from('user_path_progress')
+    .select('path_id, seen_unit_ids')
+    .eq('user_id', userId)
+    .eq('path_id', pathId)
+    .maybeSingle()
+
+  if (error) throw new Error(error.message)
+
+  return {
+    pathId,
+    seenUnitIds: (data?.seen_unit_ids as string[] | undefined) ?? [],
+  }
+}
+
+/**
+ * Append a unit to the seen list, idempotently. Read-modify-write is safe here:
+ * a single learner advances one unit at a time, so there is no concurrent writer
+ * to lose. If that ever changes, move the append into a Postgres function using
+ * array_append with a unique guard.
+ */
+export async function markUnitSeen(
+  userId: string,
+  pathId: string,
+  unitId: string,
+): Promise<PathProgressResult> {
+  const current = await fetchPathProgress(userId, pathId)
+  if (current.seenUnitIds.includes(unitId)) return current
+
+  const seenUnitIds = [...current.seenUnitIds, unitId]
+  const { error } = await supabase.from('user_path_progress').upsert(
+    {
+      user_id: userId,
+      path_id: pathId,
+      seen_unit_ids: seenUnitIds,
+      updated_at: new Date().toISOString(),
+    },
+    { onConflict: 'user_id,path_id' },
+  )
+
+  if (error) throw new Error(error.message)
+
+  return { pathId, seenUnitIds }
+}
