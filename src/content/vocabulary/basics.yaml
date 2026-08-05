@@ -1,7 +1,7 @@
 # N5 foundational kana-only words — shown first to ease new learners into the browse page.
 # Pronouns and demonstratives are all pure kana; no kanji, no furigana needed.
-# content-source: training — N5 canonical vocabulary, pending JMdict seed verification
-# jlpt-source: training
+# content-source: training — headwords verified against JMdict 3.6.2 on 2026-08-04
+# jlpt-source: training — JLPT level unverified (JMdict carries no JLPT data)
 
 # ── Pronouns ──────────────────────────────────────────────────────────────────
 

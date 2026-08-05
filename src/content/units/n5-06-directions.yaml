@@ -5,7 +5,9 @@
 # phrases/*.yaml. This situation was unusually well-covered already:
 # directions.turn-right/turn-left/go-straight/have-map/is-it-far and
 # transit.station-where predate this file and are reused as-is.
-# content-source: training — N5 canonical vocabulary, pending JMdict seed verification
+# content-source: training — N5 canonical, pending Tatoeba verification.
+#   JMdict cannot verify composed sentences (only fixed expressions are headwords),
+#   so JMdict is the wrong instrument here — sentence checks need Tatoeba.
 
 - id: n5.unit-24
   order: 24

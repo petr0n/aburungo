@@ -3,7 +3,9 @@
 # from. Word/phrase ids reference existing content in vocabulary/weather.yaml,
 # phrases/weather.yaml, and previously-taught basics vocabulary — no new
 # Japanese content is composed here.
-# content-source: training — N5 canonical vocabulary, pending JMdict seed verification
+# content-source: training — N5 canonical, pending Tatoeba verification.
+#   JMdict cannot verify composed sentences (only fixed expressions are headwords),
+#   so JMdict is the wrong instrument here — sentence checks need Tatoeba.
 
 - id: n5.unit-27
   order: 27

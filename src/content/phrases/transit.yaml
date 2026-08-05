@@ -1,6 +1,9 @@
 # Practical phrases for getting around — stations, trains, directions.
 # Polite forms (-masu / -desu) by default. Real-world Japanese, not textbook.
-# jlpt-source: training — pending JMdict seed verification
+# content-source: training — N5 canonical, pending Tatoeba verification.
+#   JMdict cannot verify composed sentences (only fixed expressions are headwords),
+#   so JMdict is the wrong instrument here — sentence checks need Tatoeba.
+# jlpt-source: training — JLPT level unverified
 
 - id: transit.station-where
   jlpt: N5

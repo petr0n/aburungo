@@ -4,8 +4,8 @@
 # file was drawn from. Words whose Japanese text already existed elsewhere
 # (e.g. どこ, いいえ, わかる, お願いします) are reused via their existing ids in
 # src/content/units/n5-01-greetings-cont.yaml rather than duplicated here.
-# content-source: training — N5 canonical vocabulary, pending JMdict seed verification
-# jlpt-source: training
+# content-source: training — headwords verified against JMdict 3.6.2 on 2026-08-04
+# jlpt-source: training — JLPT level unverified (JMdict carries no JLPT data)
 
 # ── Unit 4: Where are you from? ────────────────────────────────────────────────
 

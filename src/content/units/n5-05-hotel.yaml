@@ -3,7 +3,9 @@
 # from. Word/phrase ids reference existing content only — no new Japanese
 # content is composed here beyond what's already in vocabulary/*.yaml and
 # phrases/*.yaml.
-# content-source: training — N5 canonical vocabulary, pending JMdict seed verification
+# content-source: training — N5 canonical, pending Tatoeba verification.
+#   JMdict cannot verify composed sentences (only fixed expressions are headwords),
+#   so JMdict is the wrong instrument here — sentence checks need Tatoeba.
 
 - id: n5.unit-21
   order: 21

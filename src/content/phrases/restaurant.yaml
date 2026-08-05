@@ -1,6 +1,9 @@
 # Practical phrases for restaurants, cafes, izakayas.
 # Polite register — works everywhere from a chain to a counter sushi spot.
-# jlpt-source: training — pending JMdict seed verification
+# content-source: training — N5 canonical, pending Tatoeba verification.
+#   JMdict cannot verify composed sentences (only fixed expressions are headwords),
+#   so JMdict is the wrong instrument here — sentence checks need Tatoeba.
+# jlpt-source: training — JLPT level unverified
 
 - id: restaurant.menu-please
   jlpt: N5

@@ -2,8 +2,8 @@
 # See docs/plans/02b-n5-units.md for the full 35-unit map this slice is drawn
 # from. mise/kau/miru/ookii/chiisai/aru already exist in vocabulary/*.yaml
 # and are reused directly by the unit YAML — not redefined here.
-# content-source: training — N5 canonical vocabulary, pending JMdict seed verification
-# jlpt-source: training
+# content-source: training — headwords verified against JMdict 3.6.2 on 2026-08-04
+# jlpt-source: training — JLPT level unverified (JMdict carries no JLPT data)
 
 # ── Shop requests ────────────────────────────────────────────────────────────
 

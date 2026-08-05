@@ -3,7 +3,9 @@
 # for the full 35-unit map this slice is drawn from. Word/phrase ids reference
 # existing content plus src/content/vocabulary/greetings-2.yaml and the
 # phrases appended to src/content/phrases/greetings.yaml.
-# content-source: training — N5 canonical vocabulary, pending JMdict seed verification
+# content-source: training — N5 canonical, pending Tatoeba verification.
+#   JMdict cannot verify composed sentences (only fixed expressions are headwords),
+#   so JMdict is the wrong instrument here — sentence checks need Tatoeba.
 
 - id: n5.unit-4
   order: 4
