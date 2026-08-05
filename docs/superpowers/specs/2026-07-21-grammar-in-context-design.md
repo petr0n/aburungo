@@ -1,6 +1,6 @@
 # Grammar-in-context — design
 
-**Status:** approved, pending implementation plan.
+**Status:** implemented (see docs/superpowers/plans/2026-07-21-grammar-in-context.md).
 **Scope:** Phase 2 of `docs/plans/99-roadmap.md`, item 2 ("Grammar-in-context"), built and
 proven against the existing 35 N5 units before N4 content authoring begins. Kanji
 mnemonics, N4 content, and scoped-Hana launch (the other three Phase 2 items) are
