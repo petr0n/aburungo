@@ -18,6 +18,9 @@
     - vocab.ocha
     - vocab.kore
     - vocab.onegaishimasu
+    - vocab.biiru
+    - vocab.juusu
+    - vocab.gyuunyuu
   phraseIds:
     - restaurant.coffee-please
     - restaurant.water-please
@@ -37,6 +40,8 @@
     - vocab.taberu
     - vocab.oishii
     - vocab.itadakimasu
+    - vocab.chuumon
+    - vocab.seki
   phraseIds:
     - restaurant.menu-please
     - restaurant.this-please
@@ -55,6 +60,9 @@
     - vocab.kore
     - vocab.sore
     - vocab.dore
+    - vocab.amai
+    - vocab.karai
+    - vocab.kudamono
   phraseIds:
     - restaurant.what-is-this
     - restaurant.that-is-fish
@@ -75,6 +83,7 @@
     - vocab.takai
     - vocab.yasui
     - vocab.okane
+    - vocab.zenbu
   phraseIds:
     - restaurant.check-please
     - shopping.how-much
