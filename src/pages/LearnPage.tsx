@@ -419,7 +419,10 @@ export function LearnPage() {
     // Re-runs on tier/userId change (e.g. guest -> signed-in on sign-up mid-session).
     let cancelled = false;
     async function load() {
-      const [progress, reviewStates] = await Promise.all([getPathProgress(PATH_ID), getAll()]);
+      const [progress, reviewStates] = await Promise.all([
+        getPathProgress(PATH_ID, userId !== null),
+        getAll(),
+      ]);
       if (cancelled) return;
       const words = wordsForTier(tier);
       const phrases = phrasesForTier(tier);
@@ -441,10 +444,10 @@ export function LearnPage() {
 
   const finishUnitAndClose = useCallback(async () => {
     if (session?.unit != null) {
-      await markUnitSeen(PATH_ID, session.unit.id);
+      await markUnitSeen(PATH_ID, session.unit.id, userId !== null);
     }
     setStep("close");
-  }, [session]);
+  }, [session, userId]);
 
   function afterReview() {
     setStep(session?.unit !== null ? "new-unit" : "close");
