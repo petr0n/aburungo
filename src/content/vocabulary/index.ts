@@ -10,6 +10,7 @@ import greetings2Raw from "./greetings-2.yaml";
 import foodDrinkRaw from "./food-drink.yaml";
 import foodDrink2Raw from "./food-drink-2.yaml";
 import shoppingRaw from "./shopping.yaml";
+import shopping2Raw from "./shopping-2.yaml";
 import transitRaw from "./transit.yaml";
 import hotelRaw from "./hotel.yaml";
 import directionsRaw from "./directions.yaml";
@@ -26,6 +27,7 @@ export const allWords: Word[] = [
   ...parseWords(foodDrinkRaw, "vocabulary/food-drink.yaml"),
   ...parseWords(foodDrink2Raw, "vocabulary/food-drink-2.yaml"),
   ...parseWords(shoppingRaw, "vocabulary/shopping.yaml"),
+  ...parseWords(shopping2Raw, "vocabulary/shopping-2.yaml"),
   ...parseWords(transitRaw, "vocabulary/transit.yaml"),
   ...parseWords(hotelRaw, "vocabulary/hotel.yaml"),
   ...parseWords(directionsRaw, "vocabulary/directions.yaml"),

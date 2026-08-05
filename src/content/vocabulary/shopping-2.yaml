@@ -1,0 +1,105 @@
+# N5 shopping vocabulary, depth pass for Situation 3 (Units 13-15).
+# Densifies the existing shop / sizes / do-you-have-it units (DR-017).
+#
+# Example sentences are Tatoeba, chosen by hand. Several words here carry no
+# example: shiroi could not get one because the search substring-matches it
+# inside omoshiroi, so nearly every candidate meant "interesting", not "white".
+#
+# content-source: training — headwords verified against JMdict 3.6.2 on 2026-08-04
+# jlpt-source: training — JLPT level unverified (JMdict carries no JLPT data)
+# example-source: Tatoeba via JMdict-examples 3.6.2 (CC BY 2.0 FR), ids inline
+
+# ── Things you buy (Unit 13) ──────────────────────────────────────────────────
+
+- id: vocab.fuku
+  jlpt: N5
+  word_type: noun
+  theme: shopping
+  japanese: 服
+  reading: ふく
+  romaji: fuku
+  english: clothes
+
+- id: vocab.kutsu
+  jlpt: N5
+  word_type: noun
+  theme: shopping
+  japanese: 靴
+  reading: くつ
+  romaji: kutsu
+  english: shoes
+  example:
+    japanese: その靴は高すぎる。
+    english: These shoes are too expensive.
+    tatoeba_id: "211335"
+
+- id: vocab.saizu
+  jlpt: N5
+  word_type: noun
+  theme: shopping
+  japanese: サイズ
+  reading: サイズ
+  romaji: saizu
+  english: size
+
+# ── Counting things (Unit 14) ─────────────────────────────────────────────────
+
+- id: vocab.mittsu
+  jlpt: N5
+  word_type: counter
+  theme: numbers
+  japanese: 三つ
+  reading: みっつ
+  romaji: mittsu
+  english: three (things)
+
+- id: vocab.yottsu
+  jlpt: N5
+  word_type: counter
+  theme: numbers
+  japanese: 四つ
+  reading: よっつ
+  romaji: yottsu
+  english: four (things)
+
+- id: vocab.itsutsu
+  jlpt: N5
+  word_type: counter
+  theme: numbers
+  japanese: 五つ
+  reading: いつつ
+  romaji: itsutsu
+  english: five (things)
+
+# ── Colours (Unit 15, alongside vocab.iro) ────────────────────────────────────
+
+- id: vocab.akai
+  jlpt: N5
+  word_type: i-adj
+  theme: shopping
+  japanese: 赤い
+  reading: あかい
+  romaji: akai
+  english: red
+  example:
+    japanese: 彼女は赤いスカートをはいていた。
+    english: She was wearing a red skirt.
+    tatoeba_id: "88306"
+
+- id: vocab.shiroi
+  jlpt: N5
+  word_type: i-adj
+  theme: shopping
+  japanese: 白い
+  reading: しろい
+  romaji: shiroi
+  english: white
+
+- id: vocab.kuroi
+  jlpt: N5
+  word_type: i-adj
+  theme: shopping
+  japanese: 黒い
+  reading: くろい
+  romaji: kuroi
+  english: black
