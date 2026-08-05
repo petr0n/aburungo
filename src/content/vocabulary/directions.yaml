@@ -1,7 +1,8 @@
 # Directions vocabulary — left/right/straight, location words, and distance
 # expressions for Situation 6 (N5 units 24-26).
-# content-source: training — N5 canonical vocabulary, pending JMdict seed verification
-# jlpt-source: training
+# content-source: training — headwords verified against JMdict 3.6.2 on 2026-08-04,
+#   except vocab.aruite (歩いて) — te-form of 歩く, not a JMdict headword by design.
+# jlpt-source: training — JLPT level unverified (JMdict carries no JLPT data)
 
 # ── Left, right, straight (Unit 24) ───────────────────────────────────────────
 

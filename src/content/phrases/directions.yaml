@@ -1,6 +1,8 @@
 # Directions — asking for help navigating, and understanding responses.
-# content-source: training — N5 canonical vocabulary, pending JMdict seed verification
-# jlpt-source: training
+# content-source: training — N5 canonical, pending Tatoeba verification.
+#   JMdict cannot verify composed sentences (only fixed expressions are headwords),
+#   so JMdict is the wrong instrument here — sentence checks need Tatoeba.
+# jlpt-source: training — JLPT level unverified
 
 - id: directions.where-am-i
   jlpt: N5

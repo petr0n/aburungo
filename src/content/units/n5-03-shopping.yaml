@@ -3,7 +3,9 @@
 # from. Word/phrase ids reference existing content plus vocabulary/shopping.yaml
 # and phrases/shopping.yaml — no new Japanese content is composed here beyond
 # what's authored in those two files.
-# content-source: training — N5 canonical vocabulary, pending JMdict seed verification
+# content-source: training — N5 canonical, pending Tatoeba verification.
+#   JMdict cannot verify composed sentences (only fixed expressions are headwords),
+#   so JMdict is the wrong instrument here — sentence checks need Tatoeba.
 
 - id: n5.unit-13
   order: 13

@@ -6,8 +6,10 @@
 # two-agent verification checkpoint UX (Unit 35), so both degrade gracefully
 # to an empty wordIds/phraseIds unit intro rather than inventing new content
 # or a UI that doesn't exist yet.
-# content-source: training — N5 canonical vocabulary, pending JMdict seed verification
-# jlpt-source: training
+# content-source: training — N5 canonical, pending Tatoeba verification.
+#   JMdict cannot verify composed sentences (only fixed expressions are headwords),
+#   so JMdict is the wrong instrument here — sentence checks need Tatoeba.
+# jlpt-source: training — JLPT level unverified
 
 - id: n5.unit-30
   order: 30
