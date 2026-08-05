@@ -18,6 +18,10 @@
     - vocab.eigo
     - vocab.doko
     - vocab.gakusei
+    - vocab.sensei
+    - vocab.kazoku
+    - vocab.onna-no-hito
+    - vocab.otoko-no-hito
   phraseIds:
     - greetings.where-from
     - greetings.from-america
@@ -56,6 +60,8 @@
     - vocab.wakaru
     - vocab.sukoshi
     - vocab.takusan
+    - vocab.hanasu
+    - vocab.kiku
   phraseIds:
     - greetings.excuse-me
     - greetings.dont-understand
