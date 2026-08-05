@@ -41,6 +41,7 @@
     - vocab.tabetai
     - vocab.nomitai
     - vocab.hoshii
+    - vocab.nomu
   phraseIds:
     - food-preferences.want-ramen
     - food-preferences.want-water
@@ -78,6 +79,12 @@
     - vocab.tokidoki
     - vocab.amari
     - vocab.zenzen
+    - vocab.neru
+    - vocab.okiru
+    - vocab.suru
+    - vocab.yomu
+    - vocab.kaku
+    - vocab.kaeru
   phraseIds:
     - food-preferences.daily-coffee
     - food-preferences.not-at-all

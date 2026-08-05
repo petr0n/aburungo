@@ -72,6 +72,17 @@ export type VerbClass = "ru" | "u" | "irregular";
  * verbClass is stored but never surfaced to the learner directly — it is used
  * to auto-generate the polite form for display (食べる → 食べます).
  */
+/**
+ * A verified example sentence. `tatoebaId` is required so provenance is carried
+ * by the data rather than by a comment — content rules forbid composed Japanese,
+ * and an example without a source id cannot be checked.
+ */
+export type WordExample = {
+  japanese: string;
+  english: string;
+  tatoebaId: string;
+};
+
 export type Word = {
   id: string;
   japanese: string;
@@ -84,6 +95,7 @@ export type Word = {
   wordType: WordType;
   verbClass?: VerbClass;
   theme?: string;
+  example?: WordExample;
 };
 
 /** Type guard — distinguishes vocabulary words from situational phrases. */

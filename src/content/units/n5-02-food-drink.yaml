@@ -74,6 +74,7 @@
     - vocab.en
     - vocab.takai
     - vocab.yasui
+    - vocab.okane
   phraseIds:
     - restaurant.check-please
     - shopping.how-much

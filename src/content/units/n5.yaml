@@ -18,6 +18,7 @@
     - vocab.kore
     - vocab.sore
     - vocab.are
+    - vocab.soko
   phraseIds:
     - basics.this-is-a-book
     - basics.what-is-that
@@ -34,6 +35,8 @@
   wordIds:
     - vocab.sayounara
     - vocab.matane
+    - vocab.genki
+    - vocab.daijoubu
   phraseIds:
     - greetings.good-morning
     - greetings.hello
@@ -52,6 +55,11 @@
     - vocab.namae
     - vocab.watashi
     - vocab.anata
+    - vocab.dare
+    - vocab.watashitachi
+    - vocab.hito
+    - vocab.tomodachi
+    - vocab.au
   phraseIds:
     - greetings.nice-to-meet-you
     - greetings.yoroshiku

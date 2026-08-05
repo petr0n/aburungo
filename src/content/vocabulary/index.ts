@@ -2,6 +2,7 @@ import type { JlptLevel, Word, UserTier } from "@/types";
 import { parseWords } from "./schema";
 
 import basicsRaw from "./basics.yaml";
+import basics2Raw from "./basics-2.yaml";
 import nounsRaw from "./nouns.yaml";
 import verbsRaw from "./verbs.yaml";
 import adjectivesRaw from "./adjectives.yaml";
@@ -16,6 +17,7 @@ import foodPreferencesRaw from "./food-preferences.yaml";
 
 export const allWords: Word[] = [
   ...parseWords(basicsRaw, "vocabulary/basics.yaml"),
+  ...parseWords(basics2Raw, "vocabulary/basics-2.yaml"),
   ...parseWords(nounsRaw, "vocabulary/nouns.yaml"),
   ...parseWords(verbsRaw, "vocabulary/verbs.yaml"),
   ...parseWords(adjectivesRaw, "vocabulary/adjectives.yaml"),
@@ -28,6 +30,18 @@ export const allWords: Word[] = [
   ...parseWords(weatherRaw, "vocabulary/weather.yaml"),
   ...parseWords(foodPreferencesRaw, "vocabulary/food-preferences.yaml"),
 ];
+
+// parseWords only rejects duplicate ids within a single file, so the same id in
+// two files used to slip through and findWord would silently return whichever
+// loaded first. Caught in practice: vocab.asa was added to basics-2.yaml when it
+// already existed in transit.yaml.
+const seenIds = new Set<string>();
+for (const w of allWords) {
+  if (seenIds.has(w.id)) {
+    throw new Error(`vocabulary: duplicate word id "${w.id}" across files`);
+  }
+  seenIds.add(w.id);
+}
 
 export function findWord(id: string): Word | undefined {
   return allWords.find((w) => w.id === id);

@@ -18,6 +18,7 @@
     - vocab.densha
     - vocab.kippu
     - vocab.made
+    - vocab.kuruma
   phraseIds:
     - transit.ticket-where
     - transit.shinjuku-ticket
@@ -38,6 +39,8 @@
     - vocab.deguchi
     - vocab.iriguchi
     - vocab.nanban
+    - vocab.deru
+    - vocab.hairu
   phraseIds:
     - transit.station-where
     - transit.nanban-homu
@@ -60,6 +63,8 @@
     - vocab.asa
     - vocab.yoru
     - vocab.fun
+    - vocab.ima
+    - vocab.jikan
   phraseIds:
     - transit.next-train
     - transit.nanji-desu-ka
@@ -98,6 +103,7 @@
     - vocab.noru
     - vocab.oriru
     - vocab.tsugi
+    - vocab.kuru
   phraseIds:
     - transit.getting-off-here
     - transit.tsugi-no-basu-nanji

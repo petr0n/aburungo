@@ -41,6 +41,10 @@
     - vocab.mae
     - vocab.ushiro
     - vocab.chizu
+    - vocab.ie
+    - vocab.gakkou
+    - vocab.byouin
+    - vocab.toshokan
   phraseIds:
     - transit.station-where
     - directions.have-map
@@ -61,6 +65,10 @@
     - vocab.kurai
     - vocab.koko
     - vocab.asoko
+    - vocab.shizuka
+    - vocab.nigiyaka
+    - vocab.kirei
+    - vocab.omoshiroi
   phraseIds:
     - directions.is-it-far
     - directions.walking-distance
