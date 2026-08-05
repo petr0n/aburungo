@@ -89,6 +89,16 @@ export function WordLearnCard({ word, index, total, onNext }: Props) {
               <p className="mt-1 text-body-sm text-fg-subtle">{word.notes}</p>
             )}
           </div>
+
+          {word.example != null && (
+            <div className="rounded-xl border border-border px-4 py-3">
+              <p className="mb-1 text-body-sm text-fg-subtle">In context</p>
+              <p lang="ja" className="text-jp text-fg" style={{ fontFamily: "var(--font-jp)" }}>
+                {word.example.japanese}
+              </p>
+              <p className="mt-1 text-body-sm text-fg-subtle">{word.example.english}</p>
+            </div>
+          )}
         </div>
       </div>
 

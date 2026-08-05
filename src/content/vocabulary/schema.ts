@@ -1,4 +1,4 @@
-import type { JlptLevel, Word, WordType, VerbClass } from "@/types";
+import type { JlptLevel, Word, WordType, VerbClass, WordExample } from "@/types";
 
 const JLPT_LEVELS = new Set<string>(["N5", "N4", "N3", "N2", "N1"]);
 const WORD_TYPES = new Set<string>(["noun", "verb", "i-adj", "na-adj", "adverb", "counter", "interjection"]);
@@ -19,6 +19,29 @@ function isString(v: unknown): v is string {
 
 function isOptionalString(v: unknown): v is string | undefined {
   return v === undefined || isString(v);
+}
+
+/**
+ * Examples must carry a Tatoeba id. Content rules forbid composed Japanese, and
+ * an unsourced sentence is indistinguishable from a fabricated one — so a missing
+ * id is a schema error rather than a missing optional field.
+ */
+function parseExample(v: unknown, id: string, source: string): WordExample | undefined {
+  if (v === undefined) return undefined;
+  if (typeof v !== "object" || v === null) {
+    throw new WordSchemaError(`${source}: entry "${id}" has a non-object example`, v);
+  }
+  const e = v as Record<string, unknown>;
+  for (const key of ["japanese", "english", "tatoeba_id"] as const) {
+    if (!isString(e[key])) {
+      throw new WordSchemaError(`${source}: entry "${id}" example is missing "${key}"`, v);
+    }
+  }
+  return {
+    japanese: e.japanese as string,
+    english: e.english as string,
+    tatoebaId: e.tatoeba_id as string,
+  };
 }
 
 export function parseWord(raw: unknown, source: string): Word {
@@ -56,6 +79,8 @@ export function parseWord(raw: unknown, source: string): Word {
     throw new WordSchemaError(`${source}: entry "${String(o.id)}" has invalid theme`, raw);
   }
 
+  const example = parseExample(o.example, String(o.id), source);
+
   return {
     id: o.id as string,
     japanese: o.japanese as string,
@@ -67,6 +92,7 @@ export function parseWord(raw: unknown, source: string): Word {
     wordType: wordType as WordType,
     verbClass: o.verb_class as VerbClass | undefined,
     theme: o.theme as string | undefined,
+    example,
   };
 }
 
