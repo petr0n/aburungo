@@ -109,7 +109,7 @@ Check `MEMORY.md` there at the start of every conversation. Write updated memori
   - Explain why in the body when needed.
   - Use ASCII only in all commit messages; never use non-ASCII characters.
   - Do not include AI-generated footers or watermarks.
-- **Push safety**: After commit, stop and ask before `git push`. Never push without explicit user confirmation.
+- **Push freely**: The app is pre-alpha with no public users, so push, open PRs, and merge green-CI PRs without asking. Only pause for genuinely destructive or irreversible operations (`git reset --hard`, force-push over shared history, deleting data).
 
 ## Commands
 
