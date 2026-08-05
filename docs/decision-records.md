@@ -553,3 +553,92 @@ stays local (`!stateMap.has(id)`). Guests are unchanged.
   kanji behaviour), since the client can't yet distinguish them without a server endpoint.
 - Full server-source-of-truth (drop local Leitner for signed-in users) remains a follow-up,
   gated on a server endpoint that returns the user's reviewed/new card set. Tracked in todo.md.
+
+---
+
+## DR-016 — Client storage is a cache, never the source of truth for learning state
+
+**Date:** 2026-08-04
+**Status:** Active
+
+**Context:**
+`PathProgress` (ladder position) lives only in IndexedDB via `src/db/pathProgressStore.ts`,
+and for signed-in users FSRS review state is still partly local (DR-015). This was treated as
+an acceptable scope cut. Research on 2026-08-04 showed it is not.
+
+Safari's Intelligent Tracking Prevention deletes **all script-writable storage after 7 days
+with no user interaction with the site** — IndexedDB, LocalStorage, Service Worker caches.
+This is deliberate anti-tracking policy, not a bug, and it is not specific to one browser
+vendor's quality: it is the documented behaviour of the engine that backs Safari and, outside
+the EU, every iOS browser.
+
+The failure mode is specific and severe for this app. FSRS derives its schedule from
+accumulated per-card `stability` and `difficulty`. Losing IndexedDB does not merely reset
+ladder position — it destroys the model built over months and returns every card to "new".
+The scenario that triggers it (a two-week break from study) is precisely the scenario spaced
+repetition exists to survive. A learner returning after a holiday would find the app had
+forgotten everything.
+
+**Decision:**
+Treat client-side storage as a **cache only**. The server is the source of truth for all
+learning state: `PathProgress` and FSRS review state alike. Specifically:
+- Add server persistence for `PathProgress` (path id + seen unit ids) behind the existing
+  Hono API, hydrated on load for signed-in users.
+- Complete the DR-015 follow-up: a server endpoint returning the user's new/reviewed card
+  set, so local Leitner can be dropped for signed-in users.
+- Guests remain local-only by definition, and this limitation is now understood and accepted
+  rather than overlooked — guest progress is inherently ephemeral.
+
+**Consequences:**
+- Learning state survives storage eviction, device loss, and cross-device use.
+- Requires a schema addition and API surface for path progress; work is sequenced ahead of
+  all Phase 2 content work because content compounds on state that could otherwise vanish.
+- Guests keep the current behaviour. Sign-in becomes the durability boundary, which is an
+  honest reason to prompt sign-in without resorting to gamification.
+- Offline capability is unchanged: IndexedDB still serves as the local cache, it simply
+  stops being authoritative.
+
+---
+
+## DR-017 — Phase 2 resequenced: N5 depth before N4 breadth
+
+**Date:** 2026-08-04
+**Status:** Active
+
+**Context:**
+Phase 2 of `docs/plans/99-roadmap.md` listed kanji mnemonics, grammar-in-context, the N4
+ladder, and scoped Hana. Grammar-in-context shipped 2026-08-04 (PR #50). Choosing what came
+next surfaced three facts that had not been checked:
+
+1. **N5 is ~22% covered.** JLPT N5 references cite roughly 800-900 vocabulary items and ~100
+   kanji. The app has 189 words. "N5 content-complete" in prior notes referred to the 35-unit
+   *ladder* being fully authored, not to N5 breadth. Starting N4 would add width on a base
+   covering roughly a fifth of the level.
+2. **Tatoeba example sentences are already on disk.** `server/data/jmdict-examples-eng-3.6.2.json`
+   is the *examples* variant: 31,587 senses carry Tatoeba-sourced sentences with citable ids
+   (`source: {type: "tatoeba", value: "..."}`), 25,983 unique Japanese sentences. Authoring new
+   vocabulary with verified example sentences needs no download. (These do **not** match the
+   existing 87 practical phrases — 0/87 exact — so phrase verification is unaffected.)
+3. **Units 34-35 are not cheap.** Unit 35 is specified as a two-agent verification session
+   with Hana, so it is gated on scoped Hana rather than being standalone content work.
+
+Set against this: the product is explicitly **not** a test-prep app, so JLPT counts are a
+reference point rather than a target. The argument for depth is that vocabulary is the main
+lever on unscripted ability, not that a level must be "completed".
+
+**Decision:**
+Resequence Phase 2 as:
+1. Server-durable learning state (DR-016) — before any content work.
+2. Deepen N5 vocabulary (189 -> 400+), authored against the embedded Tatoeba examples.
+3. Scoped Hana — production practice; unlocks units 34-35 as designed.
+4. Kanji mnemonics last, and **integrated into vocabulary rather than a standalone silo.**
+   Research supports mnemonics over rote, but documents a failure mode where mnemonics bind
+   meaning without pronunciation, producing learners who recognise a kanji and cannot read it.
+   Standard guidance is to learn kanji inside the vocabulary actually used.
+
+**Consequences:**
+- N4 slips behind N5 depth. Accepted: breadth on a thin base serves the owner's learning worse.
+- Kanji mnemonics stop being a separate build item and become a property of vocabulary cards.
+  The unresolved authoring-vs-licensing question (overarching plan 5.5) is deferred with it.
+- Tatoeba download is still required for Phase 3 graded reading, but is no longer a
+  prerequisite for authoring vocabulary examples.

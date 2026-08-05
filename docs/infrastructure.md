@@ -15,6 +15,18 @@ How the app is hosted, where DNS lives, and how email works.
 | Transactional email | Resend | Free tier |
 | Database + Auth | Supabase (`ecwzexrjgnecpfyvrsdb`, East US) | Free tier |
 
+### Browser storage is not durable (DR-016)
+
+IndexedDB/LocalStorage are a **cache, never the source of truth for learning state.** Safari's
+Intelligent Tracking Prevention deletes all script-writable storage after **7 days with no user
+interaction with the site** — IndexedDB, LocalStorage, and Service Worker caches alike. This is
+deliberate anti-tracking policy, applies to every iOS browser outside the EU, and cannot be
+opted out of by the site.
+
+For this app the consequence is severe: FSRS schedules are derived from accumulated per-card
+`stability`/`difficulty`, so eviction destroys the model built over months, not just the current
+position. Anything a learner would be upset to lose must round-trip to Postgres.
+
 ---
 
 ## Live deployment — current values

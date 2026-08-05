@@ -30,6 +30,16 @@ The CLAUDE.md mentions "JMdict for Applications (CC BY 4.0)" but research found 
 
 ## 2. Tatoeba
 
+> **Already partly on disk (verified 2026-08-04).** `server/data/jmdict-examples-eng-3.6.2.json`
+> is the *JMdict-examples* variant and embeds Tatoeba sentences directly: **31,587 senses carry
+> examples, 25,983 unique Japanese sentences**, each with a citable id in the form
+> `source: {type: "tatoeba", value: "162365"}` — exactly the citation format the content rules
+> require. **Authoring vocabulary with verified example sentences needs no download.**
+>
+> The full export below is still required for Phase 3 graded reading and for verifying composed
+> phrases: the embedded subset matched **0 of the 87** existing practical phrases, because those
+> are short situational utterances while the embedded examples illustrate dictionary senses.
+
 **Use for:** Example sentences (~17 MB Japanese-English subset) linked back to JMdict entries.
 
 **Download:** https://downloads.tatoeba.org/exports/ (updated regularly; files last modified May 9, 2026)
