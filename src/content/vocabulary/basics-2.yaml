@@ -1,0 +1,97 @@
+# N5 basics vocabulary, depth pass for Situation 1 (Units 1-7). Densifies the
+# existing greetings/basics units rather than extending the ladder (DR-017).
+#
+# Example sentences are Tatoeba, pulled via server/scripts/find-examples.ts and
+# selected by hand. Candidates were reviewed, not pasted: the ranking favours
+# kana-heavy sentences, which surfaces unusable ones like "I have a lot of
+# phlegm" for takusan. Words with no clean N5-level candidate carry no example
+# rather than a poor one.
+#
+# content-source: training — headwords verified against JMdict 3.6.2 on 2026-08-04
+# jlpt-source: training — JLPT level unverified (JMdict carries no JLPT data)
+# example-source: Tatoeba via JMdict-examples 3.6.2 (CC BY 2.0 FR), ids inline
+
+# ── Question words (Units 1, 3) ───────────────────────────────────────────────
+
+- id: vocab.dare
+  jlpt: N5
+  word_type: noun
+  theme: basics
+  japanese: 誰
+  reading: だれ
+  romaji: dare
+  english: who
+  example:
+    japanese: 誰かがドアをノックした。
+    english: Someone knocked on the door.
+    tatoeba_id: "137114"
+
+- id: vocab.itsu
+  jlpt: N5
+  word_type: noun
+  theme: basics
+  japanese: いつ
+  reading: いつ
+  romaji: itsu
+  english: when
+
+# ── People (Units 3, 4) ───────────────────────────────────────────────────────
+
+- id: vocab.watashitachi
+  jlpt: N5
+  word_type: noun
+  theme: basics
+  japanese: 私たち
+  reading: わたしたち
+  romaji: watashitachi
+  english: we, us
+
+- id: vocab.gakusei
+  jlpt: N5
+  word_type: noun
+  theme: people
+  japanese: 学生
+  reading: がくせい
+  romaji: gakusei
+  english: student
+
+# ── Degree adverbs (Units 5, 6) ───────────────────────────────────────────────
+
+- id: vocab.totemo
+  jlpt: N5
+  word_type: adverb
+  theme: basics
+  japanese: とても
+  reading: とても
+  romaji: totemo
+  english: very
+  example:
+    japanese: 今朝はとても寒かった。
+    english: It was very cold this morning.
+    tatoeba_id: "172291"
+
+- id: vocab.sukoshi
+  jlpt: N5
+  word_type: adverb
+  theme: basics
+  japanese: 少し
+  reading: すこし
+  romaji: sukoshi
+  english: a little, a few
+  example:
+    japanese: トムはパイを少しもらった。
+    english: Tom got a small portion of pie.
+    tatoeba_id: "200022"
+
+- id: vocab.takusan
+  jlpt: N5
+  word_type: adverb
+  theme: basics
+  japanese: たくさん
+  reading: たくさん
+  romaji: takusan
+  english: a lot, many
+  example:
+    japanese: ダウンタウンにたくさんのホテルがあります。
+    english: There are many hotels downtown.
+    tatoeba_id: "203860"

@@ -17,6 +17,7 @@
     - vocab.nihon
     - vocab.eigo
     - vocab.doko
+    - vocab.gakusei
   phraseIds:
     - greetings.where-from
     - greetings.from-america
@@ -35,6 +36,7 @@
     - vocab.dou-itashimashite
     - vocab.gomennasai
     - vocab.iie
+    - vocab.totemo
   phraseIds:
     - greetings.thank-you
     - greetings.youre-welcome
@@ -52,6 +54,8 @@
     - vocab.yukkuri
     - vocab.onegaishimasu
     - vocab.wakaru
+    - vocab.sukoshi
+    - vocab.takusan
   phraseIds:
     - greetings.excuse-me
     - greetings.dont-understand
@@ -77,6 +81,7 @@
     - vocab.kyuu
     - vocab.juu
     - vocab.tsu-counter
+    - vocab.itsu
   phraseIds:
     - greetings.one-please
     - greetings.three-there-are

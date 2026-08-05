@@ -18,6 +18,7 @@
     - vocab.kore
     - vocab.sore
     - vocab.are
+    - vocab.soko
   phraseIds:
     - basics.this-is-a-book
     - basics.what-is-that
@@ -52,6 +53,8 @@
     - vocab.namae
     - vocab.watashi
     - vocab.anata
+    - vocab.dare
+    - vocab.watashitachi
   phraseIds:
     - greetings.nice-to-meet-you
     - greetings.yoroshiku

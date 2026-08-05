@@ -79,16 +79,6 @@ function unknownCount(sentence: string, known: Set<string>): number {
   return n
 }
 
-function yamlFor(word: string, s: Sentence): string {
-  return [
-    `  # ${word}`,
-    `  example:`,
-    `    japanese: ${s.jp}`,
-    `    english: ${s.en.replace(/"/g, "'")}`,
-    `    tatoeba_id: "${s.id}"`,
-  ].join('\n')
-}
-
 function main() {
   const args = process.argv.slice(2)
   if (args.length === 0) {
@@ -110,11 +100,14 @@ function main() {
       console.log(`# ${word}: NO EXAMPLE FOUND — leave example: unset rather than inventing one\n`)
       continue
     }
-    const best = hits[0]!
-    console.log(yamlFor(word, best.s))
-    console.log(`  #   (${best.unknown} unfamiliar kanji)`)
-    for (const alt of hits.slice(1, 3)) {
-      console.log(`  #   alt: ${alt.s.jp}  (${alt.s.en}) [#${alt.s.id}, ${alt.unknown} unfamiliar]`)
+    // Candidates only — the top hit is NOT safe to paste unreviewed. Two traps:
+    // substring matches (いつ matches inside そいつ, a different word), and the
+    // kanji score favouring kana-heavy sentences, which surfaces things like
+    // "I have a lot of phlegm" for たくさん. A human picks from this list.
+    console.log(`# ${word} — ${hits.length} candidates, review before use:`)
+    for (const { s, unknown } of hits.slice(0, 8)) {
+      console.log(`  ${s.jp}`)
+      console.log(`      ${s.en}  [tatoeba #${s.id}, ${unknown} unfamiliar kanji]`)
     }
     console.log()
   }
