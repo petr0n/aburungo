@@ -700,3 +700,57 @@ batch, which also repairs writes that failed mid-lesson.
 - Guests remain local-only, as in DR-016.
 - The FK targets `auth.users` directly, per DR-016's follow-up fix — `public.users` requires a
   profile row that may not exist.
+
+---
+
+## DR-019 — Extend the ladder rather than densify; two checkpoints
+
+**Date:** 2026-08-06
+**Status:** Approved, not yet implemented
+
+**Context:**
+DR-017 chose to densify the existing 35 units rather than extend the ladder, which was correct
+at the time because 41 words sat orphaned and densifying them was free. That backlog is now
+cleared (PR #55) and all 232 words are taught, so every further word is genuinely new and has
+to go somewhere. Mean words per unit had reached 7.4 and was rising.
+
+**Decision:**
+- **Extend the ladder**, holding **~7.5 new words per session** as the pacing target. Session
+  weight is the binding constraint for a daily-habit tool: a session the owner dreads is a
+  session skipped, which is the failure the SRS work exists to prevent.
+- **Two checkpoints** (not one at the end, not one mid-course): the existing checkpoint stays
+  as a mid-way milestone, and a second, harder one is added at the end of the extended ladder.
+  The end checkpoint has no spec yet.
+- **New situations**, not deeper coverage of the existing eight. The remaining N5 vocabulary
+  mostly lives outside them — there are no days of the week, dates, family members, work or
+  study words at all, and none of those belong to greetings/food/shopping/transit/hotel/
+  directions/weather/food-preferences.
+
+**Scope decisions:**
+- Deferred to **N4**: "feeling unwell / at the clinic", "errands: post office & bank",
+  "trouble & getting help".
+- **Time expressions** are built around the grid — 先/今/来/毎 crossed with 週/月/年 — because
+  the learner is then acquiring two axes rather than twelve words. 去年 (not 先年) is the single
+  irregularity and is taught as the exception.
+
+**Ladder layout:**
+
+| Units | Content |
+|---|---|
+| 1-33 | unchanged |
+| 34-36 | Days of the week; dates 1st-10th; dates 11th+ |
+| 37-38 | Mid-way checkpoint (moved from 34-35) |
+| 39-40 | Time grid: week/month rows; year row + exception |
+
+Appending before the checkpoint means **nothing in 1-33 renumbers** — only the checkpoint
+shifts, and it is a non-functional shell (gated on scoped Hana) so moving it is free now.
+
+Dates split across two units because 一日 (ついたち) and 二日 (ふつか) ignore the number system
+taught in units 7 and 12; combining them with the regular 11th+ would be the heaviest session
+in the ladder.
+
+**Consequences:**
+- The day row (今日/明日/昨日) is already taught in the weather units, so the grid units must
+  **reference** it rather than re-teach it — concrete instances first, pattern later.
+- The checkpoint moves to 37-38 and must now also cover days and dates.
+- N4 inherits three pre-scoped situations.
