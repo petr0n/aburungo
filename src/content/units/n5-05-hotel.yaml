@@ -18,6 +18,8 @@
     - vocab.yoyaku
     - vocab.namae
     - vocab.chekku-in
+    - vocab.kagi
+    - vocab.nimotsu
   phraseIds:
     - hotel.have-reservation
     - hotel.check-in
@@ -36,6 +38,7 @@
     - vocab.erebeetaa
     - vocab.nankai
     - vocab.furo
+    - vocab.shawaa
   phraseIds:
     - hotel.toilet-where
     - hotel.bath-floor
@@ -56,6 +59,7 @@
     - vocab.onegaishimasu
     - vocab.ashita
     - vocab.denwa
+    - vocab.choushoku
   phraseIds:
     - hotel.bring-towel
     - hotel.wake-up-call

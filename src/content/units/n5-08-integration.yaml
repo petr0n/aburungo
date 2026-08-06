@@ -85,6 +85,7 @@
     - vocab.yomu
     - vocab.kaku
     - vocab.kaeru
+    - vocab.hiru
   phraseIds:
     - food-preferences.daily-coffee
     - food-preferences.not-at-all

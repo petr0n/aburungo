@@ -1,0 +1,150 @@
+# N5 vocabulary depth pass for Situations 5-8: hotel (Units 21-23),
+# directions (24-26), weather (27-29) and daily life (30-33). Densifies the
+# existing units rather than extending the ladder (DR-017).
+#
+# Example sentences are Tatoeba, chosen by hand and checked by
+# server/scripts/verify-examples.ts. Words with no N5-appropriate candidate
+# carry none — the corpus skews formal or N4+ for much of this vocabulary.
+#
+# content-source: training — headwords verified against JMdict 3.6.2 on 2026-08-04
+# jlpt-source: training — JLPT level unverified (JMdict carries no JLPT data)
+# example-source: Tatoeba via JMdict-examples 3.6.2 (CC BY 2.0 FR), ids inline
+
+# ── Hotel (Units 21-23) ───────────────────────────────────────────────────────
+
+- id: vocab.kagi
+  jlpt: N5
+  word_type: noun
+  theme: hotel
+  japanese: 鍵
+  reading: かぎ
+  romaji: kagi
+  english: key
+  example:
+    japanese: ドアに鍵をかけてくださいませんか。
+    english: Would you please lock the door?
+    tatoeba_id: "201877"
+
+- id: vocab.nimotsu
+  jlpt: N5
+  word_type: noun
+  theme: hotel
+  japanese: 荷物
+  reading: にもつ
+  romaji: nimotsu
+  english: luggage, baggage
+  example:
+    japanese: この荷物をトランクにいれてもらえますか。
+    english: Could you put these bags in the trunk?
+    tatoeba_id: "222709"
+
+- id: vocab.shawaa
+  jlpt: N5
+  word_type: noun
+  theme: hotel
+  japanese: シャワー
+  reading: シャワー
+  romaji: shawaa
+  english: shower
+
+- id: vocab.choushoku
+  jlpt: N5
+  word_type: noun
+  theme: hotel
+  japanese: 朝食
+  reading: ちょうしょく
+  romaji: choushoku
+  english: breakfast
+  notes: More formal than あさごはん — the word hotels and menus use.
+
+# ── Landmarks & directions (Units 24-26) ──────────────────────────────────────
+
+- id: vocab.kousaten
+  jlpt: N5
+  word_type: noun
+  theme: directions
+  japanese: 交差点
+  reading: こうさてん
+  romaji: kousaten
+  english: intersection, crossing
+
+- id: vocab.kado
+  jlpt: N5
+  word_type: noun
+  theme: directions
+  japanese: 角
+  reading: かど
+  romaji: kado
+  english: corner
+
+- id: vocab.hashi
+  jlpt: N5
+  word_type: noun
+  theme: directions
+  japanese: 橋
+  reading: はし
+  romaji: hashi
+  english: bridge
+  notes: Same reading as はし (chopsticks) and はし (edge) — pitch accent differs, context decides.
+
+- id: vocab.kouen
+  jlpt: N5
+  word_type: noun
+  theme: places
+  japanese: 公園
+  reading: こうえん
+  romaji: kouen
+  english: park
+  example:
+    japanese: 公園を散歩しましょう。
+    english: Let's take a walk in the park.
+    tatoeba_id: "174014"
+
+- id: vocab.ginkou
+  jlpt: N5
+  word_type: noun
+  theme: places
+  japanese: 銀行
+  reading: ぎんこう
+  romaji: ginkou
+  english: bank
+
+- id: vocab.yuubinkyoku
+  jlpt: N5
+  word_type: noun
+  theme: places
+  japanese: 郵便局
+  reading: ゆうびんきょく
+  romaji: yuubinkyoku
+  english: post office
+
+# ── Sky & weather (Units 27-29) ───────────────────────────────────────────────
+
+- id: vocab.sora
+  jlpt: N5
+  word_type: noun
+  theme: weather
+  japanese: 空
+  reading: そら
+  romaji: sora
+  english: sky
+
+- id: vocab.kumo
+  jlpt: N5
+  word_type: noun
+  theme: weather
+  japanese: 雲
+  reading: くも
+  romaji: kumo
+  english: cloud
+
+# ── Times of day (Unit 33) ────────────────────────────────────────────────────
+
+- id: vocab.hiru
+  jlpt: N5
+  word_type: noun
+  theme: time
+  japanese: 昼
+  reading: ひる
+  romaji: hiru
+  english: noon, daytime
