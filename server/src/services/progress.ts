@@ -448,3 +448,57 @@ export async function markUnitSeen(
 
   return { pathId, seenUnitIds }
 }
+
+// ── Content progress: /learn daily loop review state (DR-018) ─────────────────
+
+export type ContentProgressEntry = {
+  contentId: string
+  box: number
+  dueAt: number
+  lastSeenAt: number | null
+}
+
+export async function fetchContentProgress(userId: string): Promise<ContentProgressEntry[]> {
+  const { data, error } = await supabase
+    .from('user_content_progress')
+    .select('content_id, box, due_at, last_seen_at')
+    .eq('user_id', userId)
+
+  if (error) throw new Error(error.message)
+
+  return (data ?? []).map((row) => ({
+    contentId: row.content_id as string,
+    box: row.box as number,
+    dueAt: Date.parse(row.due_at as string),
+    lastSeenAt: row.last_seen_at ? Date.parse(row.last_seen_at as string) : null,
+  }))
+}
+
+/**
+ * Upsert a batch of review states. The client sends whole states rather than
+ * ratings because the Leitner schedule is computed client-side in src/srs — the
+ * server stores the outcome, it does not re-derive it. Keeping the scheduler in
+ * one place avoids two implementations drifting apart.
+ */
+export async function upsertContentProgress(
+  userId: string,
+  entries: ContentProgressEntry[],
+): Promise<number> {
+  if (entries.length === 0) return 0
+
+  const rows = entries.map((e) => ({
+    user_id: userId,
+    content_id: e.contentId,
+    box: e.box,
+    due_at: new Date(e.dueAt).toISOString(),
+    last_seen_at: e.lastSeenAt === null ? null : new Date(e.lastSeenAt).toISOString(),
+    updated_at: new Date().toISOString(),
+  }))
+
+  const { error } = await supabase
+    .from('user_content_progress')
+    .upsert(rows, { onConflict: 'user_id,content_id' })
+
+  if (error) throw new Error(error.message)
+  return rows.length
+}

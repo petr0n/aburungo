@@ -642,3 +642,61 @@ Resequence Phase 2 as:
   The unresolved authoring-vs-licensing question (overarching plan 5.5) is deferred with it.
 - Tatoeba download is still required for Phase 3 graded reading, but is no longer a
   prerequisite for authoring vocabulary examples.
+
+---
+
+## DR-018 — Review state is server-durable, keyed by content id not card id
+
+**Date:** 2026-08-06
+**Status:** Active
+
+**Context:**
+DR-016 made ladder position (`PathProgress`) server-durable, but a check of
+`src/pages/LearnPage.tsx` found it made **no API calls at all** for reviews. Every rating in
+the `/learn` daily loop — the primary guided experience — wrote to IndexedDB and stopped
+there. Only the older practice/flashcard flow (`src/store/session.ts`) posted to the server.
+
+So the app persisted *which unit you had reached* while leaving *everything you had actually
+learned* in storage Safari clears after 7 days idle. That is the DR-016 bug, unfixed, in the
+main learning path.
+
+The obvious fix — post reviews through the existing `submitReview` — does not work. That
+endpoint keys on `cards.id`, and the `cards` table holds phrases only, seeded from decks. The
+232 words and 29 grammar patterns exist purely as YAML in the repo and have no server row to
+attach progress to.
+
+Two options were considered:
+
+1. **Seed words and grammar patterns as `cards`.** Reuses `user_card_progress`, but copies
+   content into Postgres and creates a reseed obligation on every content edit — which, during
+   a content push, is constant.
+2. **A content-keyed progress table.** Store progress against `vocab.totemo` /
+   `grammar.n5-unit-1` directly.
+
+**Decision:**
+Option 2. Add `user_content_progress`, keyed by `(user_id, content_id)`, holding only the
+Leitner box and schedule — never the Japanese.
+
+Content stays in YAML because that is where it is **fast and reviewable**: the whole content
+tree is 25KB gzipped inside a 210KB bundle, so lookups are in-memory and work offline, whereas
+a database read costs a round-trip to Railway. Just as important, the content rules require a
+source citation in the commit message for any content change; a database row has no commit
+message, so moving content into Postgres would silently disable the provenance discipline that
+caught a fabricated Tatoeba id during authoring.
+
+The client keeps computing the schedule (`src/srs/leitner.ts`) and sends whole states; the
+server stores outcomes and does not re-derive them, so there is only one scheduler.
+
+Merge on load is **last-write-wins by `lastSeenAt`**, not the union used for path progress —
+review state is mutable and the same card can be reviewed on two devices, so a union is
+meaningless. Anything the server lacks or holds an older version of is pushed back in one
+batch, which also repairs writes that failed mid-lesson.
+
+**Consequences:**
+- The `/learn` history survives storage eviction, device loss and cross-device use.
+- A second progress system now sits alongside `user_card_progress`. Accepted: that table is
+  tied to the older practice/flashcard flow, and the daily loop is where the product is going.
+  Converging them is a later cleanup, not a blocker.
+- Guests remain local-only, as in DR-016.
+- The FK targets `auth.users` directly, per DR-016's follow-up fix — `public.users` requires a
+  profile row that may not exist.

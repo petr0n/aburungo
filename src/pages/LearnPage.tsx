@@ -26,7 +26,7 @@ import { wordsForTier } from "@/content/vocabulary";
 import { phrasesForTier } from "@/content";
 import { findPhrase } from "@/content";
 import { getPathProgress, markUnitSeen } from "@/db/pathProgressStore";
-import { getAll, getOne, upsert } from "@/db/reviewStore";
+import { getOne, upsertSynced, hydrateFromServer } from "@/db/reviewStore";
 import { schedule } from "@/srs/leitner";
 import { buildDailySession, type DailySession } from "@/srs/dailyLoop";
 import { allGrammarPatterns } from "@/content/grammar";
@@ -46,6 +46,7 @@ type Step = "loading" | "review" | "new-unit" | "produce" | "recognition" | "clo
 // ── Review step — flip cards for already-seen items that are due ───────────────
 
 function ReviewStep({ items, onDone }: { items: Array<Phrase | Word | GrammarPattern>; onDone: () => void }) {
+  const signedIn = useAuth((s) => s.user !== null);
   const [index, setIndex] = useState(0);
   const [phase, setPhase] = useState<FlashCardPhase>("entering");
   const [staged, setStaged] = useState<Phrase | Word | null>(null);
@@ -65,7 +66,7 @@ function ReviewStep({ items, onDone }: { items: Array<Phrase | Word | GrammarPat
     if (item !== undefined) {
       const existing = await getOne(item.id);
       const next = schedule(existing, pendingRating ?? "didnt", Date.now(), item.id);
-      await upsert(next);
+      await upsertSynced(next, signedIn);
     }
     setPendingRating(null);
     setStaged(null);
@@ -83,7 +84,7 @@ function ReviewStep({ items, onDone }: { items: Array<Phrase | Word | GrammarPat
     if (item !== undefined) {
       const existing = await getOne(item.id);
       const next = schedule(existing, correct ? "got-it" : "didnt", Date.now(), item.id);
-      await upsert(next);
+      await upsertSynced(next, signedIn);
     }
     const nextIndex = index + 1;
     if (nextIndex >= items.length) {
@@ -333,6 +334,7 @@ function NewUnitStep({
 // ── Produce step — type what you just learned, forgiving feedback ──────────────
 
 function ProduceStep({ items, onDone }: { items: Array<Phrase | Word | GrammarPattern>; onDone: () => void }) {
+  const signedIn = useAuth((s) => s.user !== null);
   const [index, setIndex] = useState(0);
   const current = items[index];
 
@@ -340,7 +342,7 @@ function ProduceStep({ items, onDone }: { items: Array<Phrase | Word | GrammarPa
     if (current === undefined) return;
     const existing = await getOne(current.id);
     const next = schedule(existing, correct ? "got-it" : "didnt", Date.now(), current.id);
-    await upsert(next);
+    await upsertSynced(next, signedIn);
     const nextIndex = index + 1;
     if (nextIndex >= items.length) {
       onDone();
@@ -421,7 +423,7 @@ export function LearnPage() {
     async function load() {
       const [progress, reviewStates] = await Promise.all([
         getPathProgress(PATH_ID, userId !== null),
-        getAll(),
+        hydrateFromServer(userId !== null),
       ]);
       if (cancelled) return;
       const words = wordsForTier(tier);

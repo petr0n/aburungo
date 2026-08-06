@@ -5,6 +5,7 @@ import type {
   KanaProgressEntry,
   KanaScript,
   PathProgress,
+  LeitnerBox,
 } from "@/types";
 import { apiFetch } from "./client";
 
@@ -89,4 +90,24 @@ export async function markUnitSeenRemote(pathId: string, unitId: string): Promis
     body: JSON.stringify({ pathId, unitId }),
   });
   return res.data;
+}
+
+export type ContentProgressEntry = {
+  contentId: string;
+  box: LeitnerBox;
+  dueAt: number;
+  lastSeenAt: number | null;
+};
+
+export async function fetchContentProgress(): Promise<ContentProgressEntry[]> {
+  const res = await apiFetch<{ data: ContentProgressEntry[] }>("/api/progress/content");
+  return res.data;
+}
+
+export async function saveContentProgress(entries: ContentProgressEntry[]): Promise<void> {
+  if (entries.length === 0) return;
+  await apiFetch("/api/progress/content", {
+    method: "POST",
+    body: JSON.stringify({ entries }),
+  });
 }
