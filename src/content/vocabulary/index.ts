@@ -8,8 +8,11 @@ import verbsRaw from "./verbs.yaml";
 import adjectivesRaw from "./adjectives.yaml";
 import greetings2Raw from "./greetings-2.yaml";
 import foodDrinkRaw from "./food-drink.yaml";
+import foodDrink2Raw from "./food-drink-2.yaml";
 import shoppingRaw from "./shopping.yaml";
+import shopping2Raw from "./shopping-2.yaml";
 import transitRaw from "./transit.yaml";
+import transit2Raw from "./transit-2.yaml";
 import hotelRaw from "./hotel.yaml";
 import directionsRaw from "./directions.yaml";
 import weatherRaw from "./weather.yaml";
@@ -23,8 +26,11 @@ export const allWords: Word[] = [
   ...parseWords(adjectivesRaw, "vocabulary/adjectives.yaml"),
   ...parseWords(greetings2Raw, "vocabulary/greetings-2.yaml"),
   ...parseWords(foodDrinkRaw, "vocabulary/food-drink.yaml"),
+  ...parseWords(foodDrink2Raw, "vocabulary/food-drink-2.yaml"),
   ...parseWords(shoppingRaw, "vocabulary/shopping.yaml"),
+  ...parseWords(shopping2Raw, "vocabulary/shopping-2.yaml"),
   ...parseWords(transitRaw, "vocabulary/transit.yaml"),
+  ...parseWords(transit2Raw, "vocabulary/transit-2.yaml"),
   ...parseWords(hotelRaw, "vocabulary/hotel.yaml"),
   ...parseWords(directionsRaw, "vocabulary/directions.yaml"),
   ...parseWords(weatherRaw, "vocabulary/weather.yaml"),

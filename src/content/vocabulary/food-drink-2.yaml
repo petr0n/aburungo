@@ -1,0 +1,120 @@
+# N5 food & drink vocabulary, depth pass for Situation 2 (Units 8-12).
+# Densifies the existing café / restaurant / paying units (DR-017).
+#
+# Example sentences are Tatoeba, pulled via server/scripts/find-examples.ts and
+# chosen by hand — the ranking cannot judge register or reading, only kanji
+# familiarity. Words with no clean N5-level candidate carry no example.
+#
+# content-source: training — headwords verified against JMdict 3.6.2 on 2026-08-04
+# jlpt-source: training — JLPT level unverified (JMdict carries no JLPT data)
+# example-source: Tatoeba via JMdict-examples 3.6.2 (CC BY 2.0 FR), ids inline
+
+# ── Drinks (Unit 8, café) ─────────────────────────────────────────────────────
+
+- id: vocab.biiru
+  jlpt: N5
+  word_type: noun
+  theme: food
+  japanese: ビール
+  reading: ビール
+  romaji: biiru
+  english: beer
+  example:
+    japanese: ライトビールはありますか。
+    english: Do you have any light beer?
+    tatoeba_id: "192660"
+
+- id: vocab.juusu
+  jlpt: N5
+  word_type: noun
+  theme: food
+  japanese: ジュース
+  reading: ジュース
+  romaji: juusu
+  english: juice
+
+- id: vocab.gyuunyuu
+  jlpt: N5
+  word_type: noun
+  theme: food
+  japanese: 牛乳
+  reading: ぎゅうにゅう
+  romaji: gyuunyuu
+  english: milk
+  example:
+    japanese: 私は牛乳が飲みたいな。
+    english: I want to drink milk.
+    tatoeba_id: "157660"
+
+# ── Restaurant service (Unit 9) ───────────────────────────────────────────────
+
+- id: vocab.chuumon
+  jlpt: N5
+  word_type: noun
+  theme: food
+  japanese: 注文
+  reading: ちゅうもん
+  romaji: chuumon
+  english: order (in a restaurant)
+
+- id: vocab.seki
+  jlpt: N5
+  word_type: noun
+  theme: food
+  japanese: 席
+  reading: せき
+  romaji: seki
+  english: seat
+
+# ── Describing food (Unit 10) ─────────────────────────────────────────────────
+
+- id: vocab.amai
+  jlpt: N5
+  word_type: i-adj
+  theme: food
+  japanese: 甘い
+  reading: あまい
+  romaji: amai
+  english: sweet
+  example:
+    japanese: 何か甘いものがほしい。
+    english: I want something sweet to eat.
+    tatoeba_id: "188040"
+
+- id: vocab.karai
+  jlpt: N5
+  word_type: i-adj
+  theme: food
+  japanese: 辛い
+  reading: からい
+  romaji: karai
+  english: spicy, hot
+  notes: Read からい for food. The same kanji read つらい means tough or painful — a different word.
+  example:
+    japanese: 私は辛い食物はあまり好きではない。
+    english: I don't care too much for hot food.
+    tatoeba_id: "155680"
+
+- id: vocab.kudamono
+  jlpt: N5
+  word_type: noun
+  theme: food
+  japanese: 果物
+  reading: くだもの
+  romaji: kudamono
+  english: fruit
+
+# ── Paying (Unit 11) ──────────────────────────────────────────────────────────
+
+- id: vocab.zenbu
+  jlpt: N5
+  word_type: noun
+  theme: money
+  japanese: 全部
+  reading: ぜんぶ
+  romaji: zenbu
+  english: all, everything
+  example:
+    japanese: そのパッケージは全部でいくらですか。
+    english: How much is the whole package?
+    tatoeba_id: "212724"

@@ -18,6 +18,9 @@
     - vocab.miru
     - vocab.kudasai
     - vocab.kaban
+    - vocab.fuku
+    - vocab.kutsu
+    - vocab.saizu
   phraseIds:
     - shopping.may-i-look
     - shopping.this-please
@@ -39,6 +42,9 @@
     - vocab.futatsu
     - vocab.atarashii
     - vocab.furui
+    - vocab.mittsu
+    - vocab.yottsu
+    - vocab.itsutsu
   phraseIds:
     - shopping.big-one-please
     - shopping.two-please
@@ -60,6 +66,9 @@
     - vocab.onaji
     - vocab.hon
     - vocab.iru
+    - vocab.akai
+    - vocab.shiroi
+    - vocab.kuroi
   phraseIds:
     - shopping.other-colors
     - shopping.dont-have-it
