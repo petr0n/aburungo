@@ -11,6 +11,8 @@ import {
   resetKanaProgress,
   fetchPathProgress,
   markUnitSeen,
+  fetchContentProgress,
+  upsertContentProgress,
 } from '../services/progress.js'
 
 export const progressRoutes = new Hono()
@@ -112,5 +114,38 @@ progressRoutes.post(
     const { pathId, unitId } = c.req.valid('json')
     const data = await markUnitSeen(user.id, pathId, unitId)
     return c.json({ data })
+  },
+)
+
+// GET /api/progress/content
+progressRoutes.get('/content', async (c) => {
+  const user = c.get('user')
+  const data = await fetchContentProgress(user.id)
+  return c.json({ data })
+})
+
+// POST /api/progress/content — batch upsert of review states
+progressRoutes.post(
+  '/content',
+  zValidator(
+    'json',
+    z.object({
+      entries: z
+        .array(
+          z.object({
+            contentId: z.string().min(1).max(128),
+            box: z.number().int().min(1).max(5),
+            dueAt: z.number().int().positive(),
+            lastSeenAt: z.number().int().positive().nullable(),
+          }),
+        )
+        .max(500),
+    }),
+  ),
+  async (c) => {
+    const user = c.get('user')
+    const { entries } = c.req.valid('json')
+    const count = await upsertContentProgress(user.id, entries)
+    return c.json({ data: { saved: count } })
   },
 )
