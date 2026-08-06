@@ -20,6 +20,8 @@
     - vocab.massugu
     - vocab.magaru
     - vocab.sugu
+    - vocab.kousaten
+    - vocab.kado
   phraseIds:
     - directions.turn-right
     - directions.turn-left
@@ -45,6 +47,8 @@
     - vocab.gakkou
     - vocab.byouin
     - vocab.toshokan
+    - vocab.ginkou
+    - vocab.yuubinkyoku
   phraseIds:
     - transit.station-where
     - directions.have-map
@@ -69,6 +73,8 @@
     - vocab.nigiyaka
     - vocab.kirei
     - vocab.omoshiroi
+    - vocab.hashi
+    - vocab.kouen
   phraseIds:
     - directions.is-it-far
     - directions.walking-distance

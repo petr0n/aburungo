@@ -39,6 +39,8 @@
     - vocab.kumori
     - vocab.ashita
     - vocab.kinou
+    - vocab.sora
+    - vocab.kumo
   phraseIds:
     - weather.rain-tomorrow
     - weather.tomorrow-forecast
