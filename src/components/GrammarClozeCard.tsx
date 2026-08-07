@@ -1,7 +1,7 @@
 import { useState } from "react";
 import type { GrammarPattern, Phrase } from "@/types";
 import { compareAnswer } from "@/lib/compareAnswer";
-import { Badge, Button, Card } from "aburungo-design-system";
+import { AnswerResult, Badge, Button, Card } from "aburungo-design-system";
 import { FillInput } from "./FillInput";
 import { Furigana } from "./Furigana";
 
@@ -56,19 +56,13 @@ export function GrammarClozeCard({ pattern, phrase, onNext }: Props) {
 
           {phase === "result" && (
             <div className="flex flex-col gap-4">
-              <div className={["rounded-xl p-4 text-center", correct ? "bg-success-bg" : "bg-error-bg"].join(" ")}>
-                <p className={["text-heading-sm font-semibold", correct ? "text-success-fg" : "text-error-fg"].join(" ")}>
-                  {correct ? "Recalled!" : "Worth another look"}
-                </p>
-                {!correct && userAnswer !== "" && (
-                  <p className="mt-1 font-jp text-body-sm text-error-fg">You answered: {userAnswer}</p>
-                )}
-              </div>
-
-              <div className="flex flex-col items-center gap-1 rounded-xl bg-surface-2 p-4 text-center">
+              <AnswerResult
+                outcome={correct ? "recalled" : "review"}
+                userAnswer={correct ? undefined : userAnswer}
+              >
                 <Furigana japanese={phrase.japanese} reading={phrase.reading} className="font-jp text-jp-lg text-fg" />
                 <p className="text-body-sm italic text-fg-subtle">{phrase.romaji}</p>
-              </div>
+              </AnswerResult>
 
               <Button type="button" onClick={handleNext} fullWidth>
                 Next
