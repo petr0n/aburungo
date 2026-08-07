@@ -164,7 +164,8 @@ In the app repo (`aburungo`):
 - `docs/plans/06-onboarding.md` — the three questions, verbatim
 - `docs/plans/99-roadmap.md` — phase sequencing
 - `docs/decision-records.md` — DR-008 (navigation shell), DR-010/011/012 (vocabulary model,
-  card schema, session sizing), DR-019 (ladder extension; **currently on PR #59, not main**)
+  card schema, session sizing), DR-019 (ladder extension to 40 units, the two checkpoints,
+  and the time grid)
 - `src/pages/LearnPage.tsx` — what the loop actually is today
 - `src/components/` — the app-side components that would consume anything you build
 
