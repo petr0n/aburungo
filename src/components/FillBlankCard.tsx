@@ -3,7 +3,7 @@ import type { Phrase, Word, WordType } from "@/types";
 import { isWord } from "@/types";
 import { compareAnswer } from "@/lib/compareAnswer";
 import { toPoliteJapanese, toPoliteReading } from "@/lib/verbForms";
-import { Badge, Button, Card } from "aburungo-design-system";
+import { AnswerResult, Badge, Button, Card } from "aburungo-design-system";
 import { FillInput } from "./FillInput";
 import { VoiceInput } from "./VoiceInput";
 import { AudioButton } from "./AudioButton";
@@ -60,16 +60,10 @@ export function FillBlankCard({ card, onNext }: Props) {
   const footer =
     phase === "result" ? (
       <div className="flex flex-col gap-4">
-        <div className={["rounded-xl p-4 text-center", correct ? "bg-success-bg" : "bg-error-bg"].join(" ")}>
-          <p className={["text-heading-sm font-semibold", correct ? "text-success-fg" : "text-error-fg"].join(" ")}>
-            {correct ? "Correct!" : "Not quite"}
-          </p>
-          {!correct && userAnswer !== "" && (
-            <p className="mt-1 font-jp text-body-sm text-error-fg">You answered: {userAnswer}</p>
-          )}
-        </div>
-
-        <div className="flex flex-col items-center gap-1 rounded-xl bg-surface-2 p-4 text-center">
+        <AnswerResult
+          outcome={correct ? "recalled" : "review"}
+          userAnswer={correct ? undefined : userAnswer}
+        >
           {politeJapanese !== null ? (
             <>
               <p lang="ja" className="font-jp text-jp-lg text-fg">
@@ -90,7 +84,7 @@ export function FillBlankCard({ card, onNext }: Props) {
             </>
           )}
           <p className="text-body-sm italic text-fg-subtle">{card.romaji}</p>
-        </div>
+        </AnswerResult>
 
         <Button type="button" onClick={handleNext} fullWidth>
           Next

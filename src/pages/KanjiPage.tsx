@@ -280,7 +280,7 @@ export function KanjiPage() {
         <ScoreCard correct={correctCount} total={queue.length}>
           {missed.length > 0 && (
             <section>
-              <p className="mb-3 text-body-sm font-medium text-fg-subtle">Missed — {missed.length}</p>
+              <p className="mb-3 text-body-sm font-medium text-fg-subtle">Worth another look · {missed.length}</p>
               <div className="grid grid-cols-4 gap-2">
                 {missed.map((k) => (
                   <div

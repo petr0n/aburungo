@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect, type ReactNode } from "react";
-import { ProgressBar, ScoreCard } from "aburungo-design-system";
+import { Maru, ProgressBar, ScoreCard } from "aburungo-design-system";
+import type { AnswerOutcome } from "aburungo-design-system";
 import { KANA_PRACTICE_CARDS, type KanaPracticeCard } from "@/lib/kanaData";
 import { PageShell, SectionNav } from "@/components/PageShell";
 import { ProgressWidget } from "@/components/ProgressWidget";
@@ -265,7 +266,7 @@ export function KanaPracticePage() {
           <ScoreCard correct={correctCount} total={queue.length}>
             {missed.length > 0 && (
               <section>
-                <p className="mb-3 text-body-sm font-medium text-fg-subtle">Missed — {missed.length}</p>
+                <p className="mb-3 text-body-sm font-medium text-fg-subtle">Worth another look · {missed.length}</p>
                 <div className="grid grid-cols-3 gap-2">
                   {missed.map((card, i) => (
                     <div
@@ -344,14 +345,14 @@ export function KanaPracticePage() {
             <div className="grid w-full grid-cols-2 gap-3">
               {choices.map((choice) => {
                 let cls = "border-border bg-surface text-fg active:bg-surface-2";
-                let marker = "";
+                let mark: AnswerOutcome | null = null;
                 if (answered !== null) {
                   if (choice === currentCard.romaji) {
                     cls = "border-success-500 bg-success-bg text-success-fg";
-                    marker = "✓ ";
+                    mark = "recalled";
                   } else if (choice === selectedChoice) {
                     cls = "border-error-500 bg-error-bg text-error-fg";
-                    marker = "✗ ";
+                    mark = "review";
                   }
                 }
                 return (
@@ -360,9 +361,9 @@ export function KanaPracticePage() {
                     type="button"
                     onClick={() => handleChoice(choice)}
                     disabled={answered !== null}
-                    className={`flex min-h-[60px] items-center justify-center rounded-2xl border text-body font-medium transition-colors ${cls}`}
+                    className={`flex min-h-[60px] items-center justify-center gap-2 rounded-2xl border text-body font-medium transition-colors ${cls}`}
                   >
-                    {marker}
+                    {mark !== null && <Maru outcome={mark} />}
                     {choice}
                   </button>
                 );
