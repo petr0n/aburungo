@@ -94,31 +94,3 @@
   grammarNote: "Frequency adverbs (まいにち、いつも、ときどき、あまり、ぜんぜん) pair with ～ます sentences; あまり and ぜんぜん require a negative verb ending (～ません)"
   patternId: grammar.n5-unit-33
 
-- id: n5.unit-34
-  order: 34
-  situation: Integration & checkpoint
-  title: Cross-situation conversation
-  canDo: Hold a longer exchange spanning two situations with no single-answer safety net
-  wordIds: []
-  phraseIds: []
-  kanji:
-    - 日
-    - 水
-    - 食
-    - 円
-    - 電
-    - 天
-    - 気
-    - 雨
-    - 好
-  grammarNote: "Review only, no new content — this unit strings together patterns from earlier units (e.g. 行って、買って、帰ります) across a longer 5-7 turn Hana exchange that spans two situations, such as a cafe stop followed by shopping on the same street. Kanji listed above are review items carried over from Units 1-32, not new introductions."
-
-- id: n5.unit-35
-  order: 35
-  situation: Integration & checkpoint
-  title: Can-do checkpoint
-  canDo: "N5 completion — all 19 can-dos"
-  wordIds: []
-  phraseIds: []
-  kanji: []
-  grammarNote: "Informational checkpoint, not a grammar pattern. This is the two-agent verification session: Hana plays a full situation of the learner's choosing from the 19 N5 can-do list, an assessor judges the transcript, and a check mark on any can-do unlocks it permanently. The N5 'complete' prompt surfaces once all 19 can-dos are verified. No new words, phrases, or kanji are introduced."

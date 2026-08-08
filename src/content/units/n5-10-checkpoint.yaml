@@ -1,0 +1,44 @@
+# N5 daily-loop units — mid-way checkpoint (Units 38-39).
+#
+# Moved out of n5-08-integration.yaml by DR-019 so the days & dates units can sit
+# before it. Renumbered from 34-35; safe to renumber because no PathProgress rows
+# referenced the old ids (verified against production: 0 rows, 0 seen units).
+#
+# Both units are still non-functional shells: they need the multi-turn "no safety
+# net" session and the two-agent verification UX, which are gated on scoped Hana.
+# They degrade to an intro screen with nothing new to learn.
+#
+# DR-019 makes this the *mid-way* checkpoint of two; a second, harder one goes at
+# the end of the extended ladder and has no spec yet.
+#
+# content-source: training — N5 canonical vocabulary, pending JMdict seed verification
+# jlpt-source: training — JLPT level unverified
+
+- id: n5.unit-38
+  order: 38
+  situation: Integration & checkpoint
+  title: Cross-situation conversation
+  canDo: Hold a longer exchange spanning two situations with no single-answer safety net
+  wordIds: []
+  phraseIds: []
+  kanji:
+    - 日
+    - 水
+    - 食
+    - 円
+    - 電
+    - 天
+    - 気
+    - 雨
+    - 好
+  grammarNote: "Review only, no new content — this unit strings together patterns from earlier units (e.g. 行って、買って、帰ります) across a longer 5-7 turn Hana exchange that spans two situations, such as a cafe stop followed by shopping on the same street. Kanji listed above are review items carried over from Units 1-32, not new introductions."
+
+- id: n5.unit-39
+  order: 39
+  situation: Integration & checkpoint
+  title: Can-do checkpoint
+  canDo: "N5 completion — all 19 can-dos"
+  wordIds: []
+  phraseIds: []
+  kanji: []
+  grammarNote: "Informational checkpoint, not a grammar pattern. This is the two-agent verification session: Hana plays a full situation of the learner's choosing from the 19 N5 can-do list, an assessor judges the transcript, and a check mark on any can-do unlocks it permanently. The N5 'complete' prompt surfaces once all 19 can-dos are verified. No new words, phrases, or kanji are introduced."
