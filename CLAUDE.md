@@ -119,7 +119,14 @@ pnpm build           type-check + bundle
 pnpm lint            eslint
 pnpm test            vitest, one shot
 pnpm test:watch      vitest, watch mode
+pnpm walkthrough     drive every /learn unit end-to-end in headless Chromium
 ```
+
+`pnpm walkthrough` builds, serves the static bundle on :4173, and walks the whole ladder
+to "All caught up", reporting console and page errors. Run it before merging content that
+adds or renumbers units. It deliberately does **not** use the dev server: HMR from another
+agent editing the linked design-system package remounts React mid-session and reports a
+false stall. First run needs `pnpm exec playwright install chromium`.
 
 ## Layer boundaries
 
