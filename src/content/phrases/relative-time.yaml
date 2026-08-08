@@ -1,0 +1,60 @@
+# N5 relative time phrases (DR-019, Units 40-41).
+#
+# Every phrase pairs one new grid word with vocabulary and patterns already
+# taught (日本, 行く, 来る, ここ, 天気, いい, 雨) so the only new element is the
+# time expression itself. Nothing here introduces lexis the learner has not met.
+#
+# content-source: training — N5 canonical, pending Tatoeba verification.
+#   JMdict cannot verify composed sentences (only fixed expressions are
+#   headwords), so sentence checks need Tatoeba, not JMdict.
+# jlpt-source: training — JLPT level unverified
+
+- id: rel-time.this-week-rain
+  jlpt: N5
+  scenario: relative-time
+  japanese: 今週は雨です。
+  reading: こんしゅうはあめです。
+  romaji: konshuu wa ame desu.
+  english: It is rainy this week.
+
+- id: rel-time.next-week-good-weather
+  jlpt: N5
+  scenario: relative-time
+  japanese: 来週は天気がいいです。
+  reading: らいしゅうはてんきがいいです。
+  romaji: raishuu wa tenki ga ii desu.
+  english: The weather is good next week.
+
+- id: rel-time.went-japan-last-month
+  jlpt: N5
+  scenario: relative-time
+  japanese: 先月日本へ行きました。
+  reading: せんげつにほんへいきました。
+  romaji: sengetsu nihon e ikimashita.
+  english: I went to Japan last month.
+  notes: Time expressions come first in the sentence, before the destination.
+
+- id: rel-time.came-japan-last-year
+  jlpt: N5
+  scenario: relative-time
+  japanese: 去年日本へ来ました。
+  reading: きょねんにほんへきました。
+  romaji: kyonen nihon e kimashita.
+  english: I came to Japan last year.
+
+- id: rel-time.going-japan-next-year
+  jlpt: N5
+  scenario: relative-time
+  japanese: 来年日本へ行きます。
+  reading: らいねんにほんへいきます。
+  romaji: rainen nihon e ikimasu.
+  english: I am going to Japan next year.
+  notes: Japanese has no future tense — ～ます covers both habit and plans, and the time word does the rest.
+
+- id: rel-time.come-here-every-year
+  jlpt: N5
+  scenario: relative-time
+  japanese: 毎年ここへ来ます。
+  reading: まいとしここへきます。
+  romaji: maitoshi koko e kimasu.
+  english: I come here every year.

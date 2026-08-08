@@ -1,0 +1,175 @@
+# N5 relative time expressions (DR-019, Units 40-41).
+#
+# The grid is the lesson. 先 / 今 / 来 / 毎 crossed with 週 / 月 / 年 gives twelve
+# words from two axes, so the learner acquires a system rather than a list.
+#
+# The day row (昨日 / 今日 / 明日 / 毎日) is deliberately absent here — it is already
+# taught in the weather units and Unit 33. DR-019 requires the grid units to
+# *reference* it rather than re-teach it: concrete instances first, pattern later.
+#
+# Irregularities, all taught as exceptions rather than smuggled in:
+#   去年   uses 去, not 先 — the only slot where the prefix itself changes
+#   今年   is ことし, not こんねん — the reading breaks, not the character
+#   毎月   is まいつき, not まいげつ
+#   一昨日 / 明後日 are the day row's own irregulars — no 先々日 or 来々日 exists
+#
+# content-source: training — headwords and readings verified against JMdict 3.6.2
+#   on 2026-08-07, JMdict sequence numbers inline
+# jlpt-source: training — JLPT level unverified (JMdict carries no JLPT data)
+# example-source: Tatoeba via JMdict-examples 3.6.2 (CC BY 2.0 FR), ids inline
+
+# ── The 週 row (Unit 40) ──────────────────────────────────────────────────────
+
+- id: vocab.senshuu
+  jlpt: N5
+  word_type: noun
+  theme: time
+  japanese: 先週
+  reading: せんしゅう
+  romaji: senshuu
+  english: last week
+  notes: 先 = previous. JMdict seq 1387870.
+
+- id: vocab.konshuu
+  jlpt: N5
+  word_type: noun
+  theme: time
+  japanese: 今週
+  reading: こんしゅう
+  romaji: konshuu
+  english: this week
+  notes: 今 = now — the same character as 今日 and 今. JMdict seq 1289220.
+
+- id: vocab.raishuu
+  jlpt: N5
+  word_type: noun
+  theme: time
+  japanese: 来週
+  reading: らいしゅう
+  romaji: raishuu
+  english: next week
+  notes: 来 = coming, from 来る. JMdict seq 1548010.
+
+- id: vocab.maishuu
+  jlpt: N5
+  word_type: noun
+  theme: time
+  japanese: 毎週
+  reading: まいしゅう
+  romaji: maishuu
+  english: every week
+  notes: 毎 = every — the same character as 毎日, which you already know.
+  example:
+    japanese: 彼らは毎週日曜日に教会へ行く。
+    english: They go to church every Sunday.
+    tatoeba_id: "96141"
+
+# ── The 月 row (Unit 40) ──────────────────────────────────────────────────────
+# Same four prefixes, same order. Only 毎月 bends, and only in its reading.
+
+- id: vocab.sengetsu
+  jlpt: N5
+  word_type: noun
+  theme: time
+  japanese: 先月
+  reading: せんげつ
+  romaji: sengetsu
+  english: last month
+  notes: JMdict seq 1387500.
+
+- id: vocab.kongetsu
+  jlpt: N5
+  word_type: noun
+  theme: time
+  japanese: 今月
+  reading: こんげつ
+  romaji: kongetsu
+  english: this month
+  notes: JMdict seq 1289100.
+
+- id: vocab.raigetsu
+  jlpt: N5
+  word_type: noun
+  theme: time
+  japanese: 来月
+  reading: らいげつ
+  romaji: raigetsu
+  english: next month
+  notes: JMdict seq 1547900.
+  example:
+    japanese: 来月タクシー料金があがります。
+    english: Taxi fares will go up next month.
+    tatoeba_id: "78688"
+
+- id: vocab.maitsuki
+  jlpt: N5
+  word_type: noun
+  theme: time
+  japanese: 毎月
+  reading: まいつき
+  romaji: maitsuki
+  english: every month
+  notes: つき, not げつ — the odd one in this row. まいげつ is also correct but far less common. JMdict seq 1584350.
+
+# ── The 年 row, and the exceptions (Unit 41) ──────────────────────────────────
+# Two of the four break the pattern, which is why the row gets its own unit.
+
+- id: vocab.kyonen
+  jlpt: N5
+  word_type: noun
+  theme: time
+  japanese: 去年
+  reading: きょねん
+  romaji: kyonen
+  english: last year
+  notes: The one real gap in the grid — 去, not 先. There is no 先年 in this sense. JMdict seq 1231690.
+
+- id: vocab.kotoshi
+  jlpt: N5
+  word_type: noun
+  theme: time
+  japanese: 今年
+  reading: ことし
+  romaji: kotoshi
+  english: this year
+  notes: The characters follow the pattern but the reading does not — ことし, not こんねん. JMdict seq 1579130.
+
+- id: vocab.rainen
+  jlpt: N5
+  word_type: noun
+  theme: time
+  japanese: 来年
+  reading: らいねん
+  romaji: rainen
+  english: next year
+  notes: Regular, like 来週 and 来月. JMdict seq 1548220.
+
+- id: vocab.maitoshi
+  jlpt: N5
+  word_type: noun
+  theme: time
+  japanese: 毎年
+  reading: まいとし
+  romaji: maitoshi
+  english: every year
+  notes: まいねん is equally correct and equally common — either is safe. JMdict seq 1584360.
+
+- id: vocab.ototoi
+  jlpt: N5
+  word_type: noun
+  theme: time
+  japanese: 一昨日
+  reading: おととい
+  romaji: ototoi
+  english: the day before yesterday
+  notes: The day row's own irregular — the characters say "one day before yesterday" but the reading is unrelated to either. JMdict seq 1576050.
+
+- id: vocab.asatte
+  jlpt: N5
+  word_type: noun
+  theme: time
+  japanese: 明後日
+  reading: あさって
+  romaji: asatte
+  english: the day after tomorrow
+  notes: Pairs with おととい — both are single words, not built from a prefix. JMdict seq 1584640.

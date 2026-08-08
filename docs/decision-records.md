@@ -706,7 +706,7 @@ batch, which also repairs writes that failed mid-lesson.
 ## DR-019 — Extend the ladder rather than densify; two checkpoints
 
 **Date:** 2026-08-06
-**Status:** Approved; days & dates implemented 2026-08-07 (units 34-39), time grid pending
+**Status:** Implemented 2026-08-07 — units 34-41, ladder extended from 35 to 41 units
 
 **Context:**
 DR-017 chose to densify the existing 35 units rather than extend the ladder, which was correct
@@ -761,5 +761,11 @@ be true again — this was the free moment to move them.
   **reference** it rather than re-teach it — concrete instances first, pattern later.
 - The checkpoint moves to 38-39 and must now also cover days and dates.
 - N4 inherits three pre-scoped situations.
-- The ladder is 39 units at 257 words, mean 6.9 words/unit — down from 7.4, so extending
-  rather than densifying did what it was chosen to do.
+- The ladder is 41 units at 271 words, mean 7.3 words/unit — still under the 7.5 target
+  despite adding 39 words, so extending rather than densifying did what it was chosen to do.
+- The grid rows split 8/6, not 6/6: the 週 and 月 rows are perfectly regular and behave as
+  one idea, while the 年 row breaks twice (去年 takes 去 not 先; 今年 reads ことし not こんねん)
+  and shares Unit 41 with the day row's own irregulars, おととい and あさって. Unit 41 is
+  therefore the exceptions unit for the whole relative-time system.
+- The **second, end-of-ladder checkpoint is still unspecified** and is now the only
+  outstanding piece of this record.

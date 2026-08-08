@@ -1,0 +1,66 @@
+# N5 daily-loop units — Relative time (Units 40-41 of the extended ladder).
+#
+# Placed after the mid-way checkpoint per DR-019: the grid is conversational
+# rather than transactional, so it belongs with what follows the milestone, not
+# with the eight situations before it.
+#
+# The day row (昨日 / 今日 / 明日 / 毎日) is referenced, never re-taught — it was
+# learned as concrete instances in the weather units and Unit 33, and its job
+# here is to be the row the learner already knows, which makes the pattern
+# visible instead of abstract.
+#
+# The rows split 8 / 6 rather than 12 / 0 or 6 / 6 because the 週 and 月 rows are
+# perfectly regular and behave as one idea, while the 年 row breaks twice (去年,
+# 今年) and needs the room. Unit 41 collects every exception in the system.
+#
+# content-source: training — N5 canonical vocabulary, headwords verified against
+#   JMdict 3.6.2; composed phrases pending Tatoeba verification
+# jlpt-source: training — JLPT level unverified
+
+- id: n5.unit-40
+  order: 40
+  situation: Relative time
+  title: Weeks and months
+  canDo: Say when something happened or will happen, in weeks and months
+  wordIds:
+    - vocab.senshuu
+    - vocab.konshuu
+    - vocab.raishuu
+    - vocab.maishuu
+    - vocab.sengetsu
+    - vocab.kongetsu
+    - vocab.raigetsu
+    - vocab.maitsuki
+  phraseIds:
+    - rel-time.this-week-rain
+    - rel-time.next-week-good-weather
+    - rel-time.went-japan-last-month
+  kanji:
+    - 先
+    - 週
+    - 来
+    - 毎
+  grammarNote: "You already say 昨日、今日、明日、毎日 without thinking. Those four are one row of a grid, and swapping the second half gives you the rest: 先 last, 今 this, 来 next, 毎 every, crossed with 週 week and 月 month. Eight words, but only two things to learn — and the prefixes are ones you have already met, in 今日 and 毎日 and 来る. Only 毎月 bends: まいつき, not まいげつ."
+
+- id: n5.unit-41
+  order: 41
+  situation: Relative time
+  title: Years, and the exceptions
+  canDo: Talk about last year and next year, and name any day around today
+  wordIds:
+    - vocab.kyonen
+    - vocab.kotoshi
+    - vocab.rainen
+    - vocab.maitoshi
+    - vocab.ototoi
+    - vocab.asatte
+  phraseIds:
+    - rel-time.came-japan-last-year
+    - rel-time.going-japan-next-year
+    - rel-time.come-here-every-year
+  kanji:
+    - 去
+    - 年
+    - 昨
+    - 明
+  grammarNote: "The 年 row completes the grid, and it is where the pattern finally gives way. 来年 and 毎年 behave. 今年 keeps the right character but takes an unrelated reading — ことし, not こんねん. 去年 is the single true gap: 去, not 先. The day row has its own two irregulars at the far edges, おととい and あさって, which are single words rather than anything built from a prefix. Learn these six as exceptions and the whole system is yours."

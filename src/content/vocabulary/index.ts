@@ -16,6 +16,7 @@ import transit2Raw from "./transit-2.yaml";
 import hotelRaw from "./hotel.yaml";
 import places2Raw from "./places-2.yaml";
 import datesRaw from "./dates.yaml";
+import relativeTimeRaw from "./relative-time.yaml";
 import directionsRaw from "./directions.yaml";
 import weatherRaw from "./weather.yaml";
 import foodPreferencesRaw from "./food-preferences.yaml";
@@ -36,6 +37,7 @@ export const allWords: Word[] = [
   ...parseWords(hotelRaw, "vocabulary/hotel.yaml"),
   ...parseWords(places2Raw, "vocabulary/places-2.yaml"),
   ...parseWords(datesRaw, "vocabulary/dates.yaml"),
+  ...parseWords(relativeTimeRaw, "vocabulary/relative-time.yaml"),
   ...parseWords(directionsRaw, "vocabulary/directions.yaml"),
   ...parseWords(weatherRaw, "vocabulary/weather.yaml"),
   ...parseWords(foodPreferencesRaw, "vocabulary/food-preferences.yaml"),
