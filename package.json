@@ -6,13 +6,14 @@
   "packageManager": "pnpm@11.1.3",
   "scripts": {
     "dev": "vite",
-    "dev:api": "lsof -ti:3000 >/dev/null 2>&1 && echo 'Error: port 3000 is already in use — kill that process first' || pnpm --filter ./server run dev",
+    "dev:api": "lsof -ti:3000 >/dev/null 2>&1 && echo 'Error: port 3000 is already in use \u2014 kill that process first' || pnpm --filter ./server run dev",
     "dev:server": "concurrently -n frontend,api -c cyan,magenta \"pnpm dev\" \"pnpm dev:api\"",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "walkthrough": "pnpm build && vite preview --port 4173 --strictPort & sleep 4 && BASE=http://localhost:4173 node scripts/walkthrough.js; kill %1"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.105.4",
@@ -36,6 +37,7 @@
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.2",
     "globals": "^17.6.0",
+    "playwright": "^1.62.1",
     "prettier": "^3.8.3",
     "tailwindcss": "^4.3.0",
     "typescript": "~6.0.2",

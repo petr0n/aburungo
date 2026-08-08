@@ -21,6 +21,7 @@ import n5WeatherRaw from "./n5-07-weather.yaml";
 import n5IntegrationRaw from "./n5-08-integration.yaml";
 import n5DatesRaw from "./n5-09-dates.yaml";
 import n5CheckpointRaw from "./n5-10-checkpoint.yaml";
+import n5RelativeTimeRaw from "./n5-11-relative-time.yaml";
 
 const knownWordIds = new Set(allWords.map((w) => w.id));
 const knownPhraseIds = new Set(allPhrases.map((p) => p.id));
@@ -38,6 +39,7 @@ export const n5Units: Unit[] = [
   ...parseUnits(n5IntegrationRaw, "units/n5-08-integration.yaml", knownWordIds, knownPhraseIds, knownPatternIds),
   ...parseUnits(n5DatesRaw, "units/n5-09-dates.yaml", knownWordIds, knownPhraseIds, knownPatternIds),
   ...parseUnits(n5CheckpointRaw, "units/n5-10-checkpoint.yaml", knownWordIds, knownPhraseIds, knownPatternIds),
+  ...parseUnits(n5RelativeTimeRaw, "units/n5-11-relative-time.yaml", knownWordIds, knownPhraseIds, knownPatternIds),
 ].sort((a, b) => a.order - b.order);
 
 export function findUnit(id: string): Unit | undefined {

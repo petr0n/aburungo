@@ -42,3 +42,6 @@ server/pnpm-lock.yaml
 # Git worktrees and superpowers:subagent-driven-development scratch state
 .claude/worktrees/
 .superpowers/
+
+# /learn walkthrough artifacts (screenshots, results.json, run logs)
+scripts/.walkthrough-out/
