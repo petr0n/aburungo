@@ -1,0 +1,68 @@
+# N5 date and weekday phrases (DR-019, Units 34-37).
+#
+# Short, canonical N5 exchanges — asking and answering the day, the date, and a
+# birthday. Every one uses only patterns already taught (～は～です, ～は何ですか)
+# plus the vocabulary introduced in these units.
+#
+# content-source: training — N5 canonical, pending Tatoeba verification.
+#   JMdict cannot verify composed sentences (only fixed expressions are headwords),
+#   so JMdict is the wrong instrument here — sentence checks need Tatoeba.
+# jlpt-source: training — JLPT level unverified
+
+- id: dates.what-day-today
+  jlpt: N5
+  scenario: dates
+  japanese: 今日は何曜日ですか。
+  reading: きょうはなんようびですか。
+  romaji: kyou wa nanyoubi desu ka.
+  english: What day of the week is it today?
+
+- id: dates.today-is-monday
+  jlpt: N5
+  scenario: dates
+  japanese: 今日は月曜日です。
+  reading: きょうはげつようびです。
+  romaji: kyou wa getsuyoubi desu.
+  english: Today is Monday.
+
+- id: dates.closed-on-sunday
+  jlpt: N5
+  scenario: dates
+  japanese: 日曜日は休みです。
+  reading: にちようびはやすみです。
+  romaji: nichiyoubi wa yasumi desu.
+  english: It is closed on Sunday.
+  notes: What a shop sign or a colleague will tell you — やすみ covers both closed and a day off.
+
+- id: dates.what-date-today
+  jlpt: N5
+  scenario: dates
+  japanese: 今日は何日ですか。
+  reading: きょうはなんにちですか。
+  romaji: kyou wa nannichi desu ka.
+  english: What is the date today?
+
+- id: dates.today-is-third
+  jlpt: N5
+  scenario: dates
+  japanese: 今日は三日です。
+  reading: きょうはみっかです。
+  romaji: kyou wa mikka desu.
+  english: Today is the 3rd.
+
+- id: dates.when-is-your-birthday
+  jlpt: N5
+  scenario: dates
+  japanese: 誕生日はいつですか。
+  reading: たんじょうびはいつですか。
+  romaji: tanjoubi wa itsu desu ka.
+  english: When is your birthday?
+
+- id: dates.birthday-is-may-fifth
+  jlpt: N5
+  scenario: dates
+  japanese: 誕生日は五月五日です。
+  reading: たんじょうびはごがついつかです。
+  romaji: tanjoubi wa gogatsu itsuka desu.
+  english: My birthday is the 5th of May.
+  notes: Month before day, the reverse of the usual English order.

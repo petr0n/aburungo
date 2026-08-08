@@ -1,0 +1,265 @@
+# N5 days of the week and calendar dates (DR-019, Units 34-37).
+#
+# The app had no way to say "Monday" or "the third" before this, which blocked
+# anything involving opening days, appointments or making plans.
+#
+# Dates 1st-10th are split across two units on purpose: their readings ignore the
+# number system taught in Units 7 and 12 entirely (一日 is ついたち, not いちにち),
+# so they are ten separate memorisations rather than a pattern. Ten in one
+# session would be the heaviest sitting in the ladder.
+#
+# content-source: training — headwords verified against JMdict 3.6.2 on 2026-08-04
+# jlpt-source: training — JLPT level unverified (JMdict carries no JLPT data)
+# example-source: Tatoeba via JMdict-examples 3.6.2 (CC BY 2.0 FR), ids inline
+
+# ── Days of the week (Unit 34) ────────────────────────────────────────────────
+# One pattern with a shared 曜日 suffix, so nine words behave like one idea.
+
+- id: vocab.youbi
+  jlpt: N5
+  word_type: noun
+  theme: time
+  japanese: 曜日
+  reading: ようび
+  romaji: youbi
+  english: day of the week
+  notes: The shared suffix — every weekday name ends in it.
+
+- id: vocab.getsuyoubi
+  jlpt: N5
+  word_type: noun
+  theme: time
+  japanese: 月曜日
+  reading: げつようび
+  romaji: getsuyoubi
+  english: Monday
+  notes: 月 = moon. The weekday names follow the classical planets, as in English.
+
+- id: vocab.kayoubi
+  jlpt: N5
+  word_type: noun
+  theme: time
+  japanese: 火曜日
+  reading: かようび
+  romaji: kayoubi
+  english: Tuesday
+
+- id: vocab.suiyoubi
+  jlpt: N5
+  word_type: noun
+  theme: time
+  japanese: 水曜日
+  reading: すいようび
+  romaji: suiyoubi
+  english: Wednesday
+
+- id: vocab.mokuyoubi
+  jlpt: N5
+  word_type: noun
+  theme: time
+  japanese: 木曜日
+  reading: もくようび
+  romaji: mokuyoubi
+  english: Thursday
+
+- id: vocab.kinyoubi
+  jlpt: N5
+  word_type: noun
+  theme: time
+  japanese: 金曜日
+  reading: きんようび
+  romaji: kinyoubi
+  english: Friday
+
+- id: vocab.doyoubi
+  jlpt: N5
+  word_type: noun
+  theme: time
+  japanese: 土曜日
+  reading: どようび
+  romaji: doyoubi
+  english: Saturday
+
+- id: vocab.nichiyoubi
+  jlpt: N5
+  word_type: noun
+  theme: time
+  japanese: 日曜日
+  reading: にちようび
+  romaji: nichiyoubi
+  english: Sunday
+  example:
+    japanese: 私は日曜日にはどこへも行きません。
+    english: I am not going anywhere on Sunday.
+    tatoeba_id: "154688"
+
+- id: vocab.nanyoubi
+  jlpt: N5
+  word_type: noun
+  theme: time
+  japanese: 何曜日
+  reading: なんようび
+  romaji: nanyoubi
+  english: what day of the week
+
+# ── Dates 1st-5th (Unit 35) ───────────────────────────────────────────────────
+# Irregular readings. These do not follow the counting system already learned.
+
+- id: vocab.tsuitachi
+  jlpt: N5
+  word_type: noun
+  theme: time
+  japanese: 一日
+  reading: ついたち
+  romaji: tsuitachi
+  english: the 1st (of the month)
+  notes: Wholly irregular — not いちにち, which means "one day" as a duration.
+
+- id: vocab.futsuka
+  jlpt: N5
+  word_type: noun
+  theme: time
+  japanese: 二日
+  reading: ふつか
+  romaji: futsuka
+  english: the 2nd (of the month)
+
+- id: vocab.mikka
+  jlpt: N5
+  word_type: noun
+  theme: time
+  japanese: 三日
+  reading: みっか
+  romaji: mikka
+  english: the 3rd (of the month)
+
+- id: vocab.yokka
+  jlpt: N5
+  word_type: noun
+  theme: time
+  japanese: 四日
+  reading: よっか
+  romaji: yokka
+  english: the 4th (of the month)
+
+- id: vocab.itsuka
+  jlpt: N5
+  word_type: noun
+  theme: time
+  japanese: 五日
+  reading: いつか
+  romaji: itsuka
+  english: the 5th (of the month)
+
+# ── Dates 6th-10th (Unit 36) ──────────────────────────────────────────────────
+
+- id: vocab.muika
+  jlpt: N5
+  word_type: noun
+  theme: time
+  japanese: 六日
+  reading: むいか
+  romaji: muika
+  english: the 6th (of the month)
+
+- id: vocab.nanoka
+  jlpt: N5
+  word_type: noun
+  theme: time
+  japanese: 七日
+  reading: なのか
+  romaji: nanoka
+  english: the 7th (of the month)
+
+- id: vocab.youka
+  jlpt: N5
+  word_type: noun
+  theme: time
+  japanese: 八日
+  reading: ようか
+  romaji: youka
+  english: the 8th (of the month)
+  notes: Easily confused with よっか (the 4th) — the difference is one small vowel.
+
+- id: vocab.kokonoka
+  jlpt: N5
+  word_type: noun
+  theme: time
+  japanese: 九日
+  reading: ここのか
+  romaji: kokonoka
+  english: the 9th (of the month)
+
+- id: vocab.tooka
+  jlpt: N5
+  word_type: noun
+  theme: time
+  japanese: 十日
+  reading: とおか
+  romaji: tooka
+  english: the 10th (of the month)
+
+# ── Dates 11th onward, months (Unit 37) ───────────────────────────────────────
+# From the 11th the pattern becomes regular: number + にち. Only three
+# exceptions survive, and they are the ones listed here.
+
+- id: vocab.nannichi
+  jlpt: N5
+  word_type: noun
+  theme: time
+  japanese: 何日
+  reading: なんにち
+  romaji: nannichi
+  english: what date, how many days
+
+- id: vocab.juuyokka
+  jlpt: N5
+  word_type: noun
+  theme: time
+  japanese: 十四日
+  reading: じゅうよっか
+  romaji: juuyokka
+  english: the 14th (of the month)
+  notes: Keeps the irregular よっか rather than becoming じゅうよんにち.
+
+- id: vocab.hatsuka
+  jlpt: N5
+  word_type: noun
+  theme: time
+  japanese: 二十日
+  reading: はつか
+  romaji: hatsuka
+  english: the 20th (of the month)
+  notes: Wholly irregular, like ついたち — not にじゅうにち.
+
+- id: vocab.gatsu
+  jlpt: N5
+  word_type: noun
+  theme: time
+  japanese: 月
+  reading: がつ
+  romaji: gatsu
+  english: month (in a month's name)
+  notes: Months are fully regular — number + がつ. 四月 is しがつ, 七月 しちがつ, 九月 くがつ.
+
+- id: vocab.nangatsu
+  jlpt: N5
+  word_type: noun
+  theme: time
+  japanese: 何月
+  reading: なんがつ
+  romaji: nangatsu
+  english: what month
+
+- id: vocab.tanjoubi
+  jlpt: N5
+  word_type: noun
+  theme: time
+  japanese: 誕生日
+  reading: たんじょうび
+  romaji: tanjoubi
+  english: birthday
+  example:
+    japanese: 誕生日おめでとうございます。
+    english: Many happy returns of the day!
+    tatoeba_id: "127350"

@@ -706,7 +706,7 @@ batch, which also repairs writes that failed mid-lesson.
 ## DR-019 — Extend the ladder rather than densify; two checkpoints
 
 **Date:** 2026-08-06
-**Status:** Approved, not yet implemented
+**Status:** Approved; days & dates implemented 2026-08-07 (units 34-39), time grid pending
 
 **Context:**
 DR-017 chose to densify the existing 35 units rather than extend the ladder, which was correct
@@ -738,19 +738,28 @@ to go somewhere. Mean words per unit had reached 7.4 and was rising.
 | Units | Content |
 |---|---|
 | 1-33 | unchanged |
-| 34-36 | Days of the week; dates 1st-10th; dates 11th+ |
-| 37-38 | Mid-way checkpoint (moved from 34-35) |
-| 39-40 | Time grid: week/month rows; year row + exception |
+| 34-37 | Days of the week; dates 1st-5th; dates 6th-10th; dates 11th+, months & birthdays |
+| 38-39 | Mid-way checkpoint (moved from 34-35) |
+| 40-41 | Time grid: week/month rows; year row + exception |
 
 Appending before the checkpoint means **nothing in 1-33 renumbers** — only the checkpoint
 shifts, and it is a non-functional shell (gated on scoped Hana) so moving it is free now.
 
-Dates split across two units because 一日 (ついたち) and 二日 (ふつか) ignore the number system
-taught in units 7 and 12; combining them with the regular 11th+ would be the heaviest session
-in the ladder.
+**Amended at implementation (2026-08-07):** dates 1st-10th occupy **two** units, not one, so
+days & dates is four units and the layout shifts one place right. Their readings ignore the
+number system taught in units 7 and 12 entirely (一日 is ついたち, not いちにち), which makes
+them ten separate memorisations rather than a pattern; ten in one sitting would have been the
+heaviest session in the ladder and overshoots the ~7.5 words/session target this record exists
+to hold. Splitting 5/5 keeps every unit at or under target.
+
+The renumber was verified safe against production before shipping: `user_path_progress` held
+0 rows and 0 seen unit ids, so no learner's progress referenced the old 34/35. That will not
+be true again — this was the free moment to move them.
 
 **Consequences:**
 - The day row (今日/明日/昨日) is already taught in the weather units, so the grid units must
   **reference** it rather than re-teach it — concrete instances first, pattern later.
-- The checkpoint moves to 37-38 and must now also cover days and dates.
+- The checkpoint moves to 38-39 and must now also cover days and dates.
 - N4 inherits three pre-scoped situations.
+- The ladder is 39 units at 257 words, mean 6.9 words/unit — down from 7.4, so extending
+  rather than densifying did what it was chosen to do.
