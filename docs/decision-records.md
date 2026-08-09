@@ -767,8 +767,9 @@ be true again — this was the free moment to move them.
   one idea, while the 年 row breaks twice (去年 takes 去 not 先; 今年 reads ことし not こんねん)
   and shares Unit 41 with the day row's own irregulars, おととい and あさって. Unit 41 is
   therefore the exceptions unit for the whole relative-time system.
-- The **second, end-of-ladder checkpoint is still unspecified** and is now the only
-  outstanding piece of this record.
+- The second, end-of-ladder checkpoint shipped 2026-08-09 as **unit 42**, specified by DR-020
+  as a retryable mastery gate. The ladder is 42 units. The mid-way pair at 38-39 remains
+  gated on scoped Hana, which is the only outstanding piece of this record.
 
 ## DR-020 — Mastery gates are permitted; grades are not
 

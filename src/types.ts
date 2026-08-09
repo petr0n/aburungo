@@ -168,6 +168,15 @@ export type Unit = {
   grammarNote: string;
   /** The GrammarPattern id this unit introduces, if any — not every unit has one. */
   patternId?: string;
+  /**
+   * Marks a unit as a checkpoint rather than new material, and says which kind.
+   *
+   * "sweep" is the end-of-ladder mastery gate from DR-020: a wide recognition
+   * pass over everything already learned, complete when the remaining set
+   * empties. Unlimited retry, nothing recorded, misses rejoin the SRS queue —
+   * a gate, not a grade.
+   */
+  checkpoint?: "sweep";
 };
 
 /**
