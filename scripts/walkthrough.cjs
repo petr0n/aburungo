@@ -9,7 +9,7 @@ const BASE = process.env.BASE || "http://localhost:5173";
 const WAIT_SHORT = 500; // generous, per task-6 brief guidance re: timing stalls
 const CLICK_TIMEOUT = 10000;
 const CLICK_TIMEOUT_RETRY = 20000;
-const MAX_SESSIONS = process.env.MAX_SESSIONS ? parseInt(process.env.MAX_SESSIONS, 10) : 42; // 35 expected + buffer
+const MAX_SESSIONS = process.env.MAX_SESSIONS ? parseInt(process.env.MAX_SESSIONS, 10) : 60; // 42 units + buffer
 
 let currentPage = null;
 
@@ -174,6 +174,45 @@ async function verifyReviewStep(browser) {
   log(`  review step OK — card advanced and vocab.kyou moved to box ${box}`);
 }
 
+/**
+ * The end-of-ladder checkpoint (unit 42) is a mastery gate, not a teach step:
+ * rounds of recognition repeat until nothing is left to place. It has no
+ * words/phrases/grammar stages, so the normal stage loop would never find a
+ * terminal. Drive it to completion here instead.
+ */
+async function handleCheckpointIfPresent(page, sessionIndex) {
+  if (!(await visible(page, "text=to place"))) return false;
+  log(`  checkpoint sweep detected (session ${sessionIndex})`);
+
+  let guard = 0;
+  let rounds = 1;
+  while (guard < 400) {
+    guard++;
+
+    if (await visible(page, "button:has-text('Done — all placed')")) {
+      await clickWhenReady(page, "button:has-text('Done — all placed')", "Done — all placed");
+      log(`  checkpoint complete after ${rounds} round(s)`);
+      return true;
+    }
+    if (await visible(page, "button:has-text('Place these again')")) {
+      await clickWhenReady(page, "button:has-text('Place these again')", "Place these again");
+      rounds++;
+      await page.waitForTimeout(WAIT_SHORT);
+      continue;
+    }
+
+    // Answer the current card. Any option is fine — a miss simply re-queues,
+    // which is the behaviour under test.
+    const option = page.locator("main button, body button").filter({ hasNotText: "skip" }).last();
+    if ((await option.count()) === 0) break;
+    await option.click({ timeout: CLICK_TIMEOUT }).catch(() => {});
+    await page.waitForTimeout(450);
+  }
+
+  await failHard(page, sessionIndex, "stuck-in-checkpoint-sweep");
+  return true;
+}
+
 async function main() {
   const browser = await chromium.launch({ args: ["--no-sandbox"] });
   log("=== Pre-flight: review step ===");
@@ -227,6 +266,15 @@ async function main() {
       await page.waitForTimeout(WAIT_SHORT);
     } else {
       log(`  No Start button immediately visible — proceeding to terminal detection`);
+    }
+
+    // The checkpoint replaces the teach stages entirely.
+    if (await handleCheckpointIfPresent(page, sessionIndex)) {
+      await page.locator("text=Nice work today.").first().waitFor({ state: "visible", timeout: CLICK_TIMEOUT });
+      log(`  Session ${sessionIndex} CLOSED (checkpoint)`);
+      results.sessionsCompleted++;
+      sessionIndex++;
+      continue;
     }
 
     // Click through words / phrases / grammar-teach stages
