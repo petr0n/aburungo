@@ -2,6 +2,8 @@ import { useState, useRef, useEffect, type ReactNode } from "react";
 import { Maru, ProgressBar, ScoreCard } from "aburungo-design-system";
 import type { AnswerOutcome } from "aburungo-design-system";
 import { KANA_PRACTICE_CARDS, type KanaPracticeCard } from "@/lib/kanaData";
+import { useAuth } from "@/store/auth";
+import { useProgress } from "@/store/progress";
 import { PageShell, SectionNav } from "@/components/PageShell";
 import { ProgressWidget } from "@/components/ProgressWidget";
 
@@ -50,6 +52,8 @@ function checkAnswer(input: string, card: KanaPracticeCard): boolean {
 }
 
 export function KanaPracticePage() {
+  const userId = useAuth((s) => s.user?.id ?? null);
+  const recordKanaAnswer = useProgress((s) => s.recordKanaAnswer);
   const [screen, setScreen] = useState<Screen>("setup");
   const [practiceMode, setPracticeMode] = useState<PracticeMode>("multiple-choice");
   const [selectedSets, setSelectedSets] = useState<Set<SetKey>>(new Set<SetKey>(["basic"]));
@@ -125,6 +129,8 @@ export function KanaPracticePage() {
     const isCorrect = choice === currentCard.romaji;
     setSelectedChoice(choice);
     setAnswered(isCorrect ? "correct" : "wrong");
+    // Picking from options is recognition; typing it unprompted is recall.
+    void recordKanaAnswer(userId, currentCard.kana, currentCard.script, "recognized", isCorrect);
     if (isCorrect) {
       setCorrectCount((n) => n + 1);
     } else {
@@ -137,6 +143,7 @@ export function KanaPracticePage() {
     if (answered !== null || !currentCard || !typeInput.trim()) return;
     const isCorrect = checkAnswer(typeInput, currentCard);
     setAnswered(isCorrect ? "correct" : "wrong");
+    void recordKanaAnswer(userId, currentCard.kana, currentCard.script, "recalled", isCorrect);
     if (isCorrect) {
       setCorrectCount((n) => n + 1);
       timerRef.current = setTimeout(() => advanceRef.current(), 700);
