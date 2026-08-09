@@ -13,7 +13,8 @@
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest",
-    "walkthrough": "bash scripts/walkthrough.sh"
+    "walkthrough": "bash scripts/walkthrough.sh",
+    "verify:persistence": "bash -c \"pnpm build && (pnpm exec vite preview --port 4173 --strictPort &) && until curl -fsS -o /dev/null http://localhost:4173/; do sleep 0.5; done && node scripts/verify-persistence.cjs; pkill -f \"vite preview\"\""
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.105.4",
