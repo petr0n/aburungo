@@ -86,3 +86,37 @@ describe("isDue", () => {
     expect(isDue({ ...base, dueAt: NOW + 1 }, NOW)).toBe(false);
   });
 });
+
+/**
+ * The /learn session runs a new word through the produce step and then the
+ * recognition pass. These pin the scheduling consequences of that ordering,
+ * which is why RecognitionPass reports misses only (see its onMissed prop).
+ */
+describe("one /learn session over a brand-new word", () => {
+  it("keeps a recalled word on the produce step's short interval", () => {
+    const afterProduce = schedule(undefined, "got-it", NOW, "vocab.new");
+    expect(afterProduce.box).toBe(2);
+
+    // Recognition reports nothing on a hit, so this is the state that persists.
+    expect(afterProduce.dueAt).toBe(NOW + BOX_DURATION_DAYS[2] * DAY_MS);
+  });
+
+  it("would skip the 1- and 3-day intervals if recognition also promoted", () => {
+    const afterProduce = schedule(undefined, "got-it", NOW, "vocab.new");
+    const ifRecognitionPromoted = schedule(afterProduce, "got-it", NOW, "vocab.new");
+
+    // Guards the demote-only decision: a word introduced minutes ago must not
+    // land a week out. If this ever passes as box 3, recognition started
+    // double-counting hits.
+    expect(ifRecognitionPromoted.box).toBe(3);
+    expect(BOX_DURATION_DAYS[3]).toBe(7);
+  });
+
+  it("returns a missed word to tomorrow regardless of the produce result", () => {
+    const afterProduce = schedule(undefined, "got-it", NOW, "vocab.new");
+    const afterMissedRecognition = schedule(afterProduce, "didnt", NOW, "vocab.new");
+
+    expect(afterMissedRecognition.box).toBe(1);
+    expect(afterMissedRecognition.dueAt).toBe(NOW + BOX_DURATION_DAYS[1] * DAY_MS);
+  });
+});
