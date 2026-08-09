@@ -16,12 +16,16 @@ import { render, screen, cleanup } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import type { Word } from "@/types";
 
-const recordRating = vi.fn(() => Promise.resolve());
-const recordReview = vi.fn(() => Promise.resolve());
+const recordRating = vi.fn<(id: string, rating: string, signedIn: boolean) => Promise<void>>(
+  () => Promise.resolve(),
+);
+const recordReview = vi.fn<(id: string, correct: boolean, signedIn: boolean) => Promise<void>>(
+  () => Promise.resolve(),
+);
 
 vi.mock("@/db/reviewStore", () => ({
-  recordRating: (...args: unknown[]) => recordRating(...args),
-  recordReview: (...args: unknown[]) => recordReview(...args),
+  recordRating: (id: string, rating: string, signedIn: boolean) => recordRating(id, rating, signedIn),
+  recordReview: (id: string, correct: boolean, signedIn: boolean) => recordReview(id, correct, signedIn),
   getOne: vi.fn(() => Promise.resolve(undefined)),
   upsertSynced: vi.fn(() => Promise.resolve()),
   hydrateFromServer: vi.fn(() => Promise.resolve([])),
