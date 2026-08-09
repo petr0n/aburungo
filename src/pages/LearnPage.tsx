@@ -378,6 +378,23 @@ function ProduceStep({ items, onDone }: { items: Array<Phrase | Word | GrammarPa
   );
 }
 
+// ── Recognition wiring ───────────────────────────────────────────────────────
+
+/**
+ * Drop a word the learner failed to recognise back to box 1, so it returns in
+ * tomorrow's review step. This is what makes the recognition pass consequential
+ * — until 2026-08-08 its result was discarded and the closing "tricky words
+ * will come back sooner" was not true of anything.
+ *
+ * Demotion only. These words were scheduled by the produce step minutes ago, so
+ * also promoting on a hit would move a brand-new word 1 -> 2 -> 3 within one
+ * session and skip its short reinforcement intervals.
+ */
+async function demoteMissedWord(wordId: string, signedIn: boolean): Promise<void> {
+  const existing = await getOne(wordId);
+  await upsertSynced(schedule(existing, "didnt", Date.now(), wordId), signedIn);
+}
+
 // ── Close step ───────────────────────────────────────────────────────────────
 
 function CloseStep({ session }: { session: DailySession }) {
@@ -504,6 +521,7 @@ export function LearnPage() {
       <RecognitionPass
         queue={session.newWords}
         pool={wordsForTier(tier)}
+        onMissed={(word) => void demoteMissedWord(word.id, userId !== null)}
         onDone={() => void finishUnitAndClose()}
         doneLabel="Finish session"
       />

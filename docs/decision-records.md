@@ -769,3 +769,51 @@ be true again — this was the free moment to move them.
   therefore the exceptions unit for the whole relative-time system.
 - The **second, end-of-ladder checkpoint is still unspecified** and is now the only
   outstanding piece of this record.
+
+## DR-020 — Mastery gates are permitted; grades are not
+
+**Date:** 2026-08-08
+**Status:** Approved
+
+**Context:**
+The end-of-ladder checkpoint (DR-019) had no spec, and specifying it ran straight into the
+product rule "no percentages, no pass/fail framing, no persistent grade". Taken literally that
+rule leaves a checkpoint with no way to express completion at all, which is why the question
+kept being deferred. The owner challenged the rule directly: pass/fail framing is near-universal
+in commercial language apps, so does it actually help learning?
+
+**Findings:**
+A quiz bundles four things, and the evidence for them differs sharply.
+
+| Component | Evidence | Already in the app |
+|---|---|---|
+| Retrieval attempt | Strong (testing effect, Roediger & Karpicke) | produce step, recognition pass |
+| Immediate corrective feedback | Strong | `AnswerResult`, per-answer marks |
+| Spaced re-surfacing | Strong | Leitner; recognition wired in 2026-08-08 |
+| Aggregate score / pass-fail verdict | Weak to negative | — |
+
+Kluger & DeNisi's meta-analysis found roughly a third of feedback interventions *reduced*
+subsequent performance, with self-directed feedback the harmful subset; Hattie & Timperley
+rank praise and grades among the least effective forms while task- and process-level feedback
+ranks highest. A percentage is self-level feedback wearing a number. The apps that use scores
+optimise engagement metrics, not attainment — and this app is a personal tool for a
+self-motivated learner, which removes the one thing scores are reliably good at.
+
+**Decision:**
+Permit **retryable mastery gates**; continue to forbid grades. A checkpoint may have a
+completion condition that empties as the learner works, with unlimited retry and nothing
+recorded. Misses rejoin the SRS queue instead of being tallied.
+
+The distinguishing test, now in CLAUDE.md: *does the number shrink to zero as you work, or does
+it stand as a verdict on you?* Shrinking is a gate. Standing is a grade.
+
+**Consequences:**
+- The end-of-ladder checkpoint is unblocked and no longer needs a novel assessment concept —
+  it is a wide recognition + produce sweep over everything learned, complete when the remaining
+  set empties.
+- Bloom-style mastery framing ("not yet, let's do those again") is now explicitly in scope,
+  which also gives per-unit flows a sanctioned way to say "not yet" without saying "wrong".
+- `docs/decision-records.md` DR-013's assessment principles are narrowed, not reversed:
+  aggregate scores and verdict prose remain banned.
+- Does **not** unblock unit 38's conversational can-do verification, which still needs scoped
+  Hana. Only the vocabulary sweep is buildable today.

@@ -13,7 +13,7 @@
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest",
-    "walkthrough": "pnpm build && vite preview --port 4173 --strictPort & sleep 4 && BASE=http://localhost:4173 node scripts/walkthrough.js; kill %1"
+    "walkthrough": "bash scripts/walkthrough.sh"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.105.4",

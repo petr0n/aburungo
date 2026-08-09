@@ -6,6 +6,17 @@ type Props = {
   queue: Word[];
   pool: Word[];
   onDone: () => void;
+  /**
+   * Fired per card when the learner does not recall a word, so the caller can
+   * re-schedule it. Deliberately not fired on a hit: in the /learn flow these
+   * words were already scheduled by the produce step moments earlier, and
+   * promoting them twice in one session would jump a brand-new word to box 3
+   * (7 days) and skip its 1- and 3-day reinforcement entirely.
+   *
+   * Kept as a callback rather than an SRS call because src/components/ is
+   * presentation only — see the layer boundaries in CLAUDE.md.
+   */
+  onMissed?: (word: Word) => void;
   /** Label for the closing button. Defaults to the WordsPage context. */
   doneLabel?: string;
 };
@@ -18,7 +29,7 @@ function buildOptions(current: Word, pool: Word[]): Word[] {
   return [current, ...distractors].sort(() => Math.random() - 0.5);
 }
 
-export function RecognitionPass({ queue, pool, onDone, doneLabel = "Back to words" }: Props) {
+export function RecognitionPass({ queue, pool, onDone, onMissed, doneLabel = "Back to words" }: Props) {
   const [index, setIndex] = useState(0);
   const [missed, setMissed] = useState<Word[]>([]);
   const [selectedId, setSelectedId] = useState<string | null>(null);
@@ -32,6 +43,9 @@ export function RecognitionPass({ queue, pool, onDone, doneLabel = "Back to word
 
   function advance(wasCorrect: boolean) {
     if (!current) return;
+    // Report per card, not as a list at the end: a session abandoned midway
+    // should still re-schedule what was already missed.
+    if (!wasCorrect) onMissed?.(current);
     const nextMissed = wasCorrect ? missed : [...missed, current];
     const nextIndex = index + 1;
     if (nextIndex >= queue.length) {
