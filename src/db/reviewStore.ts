@@ -5,7 +5,7 @@
  * The rest of the app (SRS, components, session store) never touches Dexie
  * directly — that keeps the data layer swappable and the SRS pure.
  */
-import type { EpochMs, ReviewState } from "@/types";
+import type { EpochMs, ReviewRating, ReviewState } from "@/types";
 import { db } from "./dexie";
 import { fetchContentProgress, saveContentProgress } from "@/api/progress";
 import { schedule } from "@/srs/leitner";
@@ -133,7 +133,12 @@ export async function reset(): Promise<void> {
  *
  * `now` is read here, at the db boundary, so src/srs/ stays pure per CLAUDE.md.
  */
-export async function recordReview(itemId: string, correct: boolean, signedIn: boolean): Promise<void> {
+export async function recordRating(itemId: string, rating: ReviewRating, signedIn: boolean): Promise<void> {
   const existing = await getOne(itemId);
-  await upsertSynced(schedule(existing, correct ? "got-it" : "didnt", Date.now(), itemId), signedIn);
+  await upsertSynced(schedule(existing, rating, Date.now(), itemId), signedIn);
+}
+
+/** Boolean-outcome convenience for surfaces that only know correct/incorrect. */
+export async function recordReview(itemId: string, correct: boolean, signedIn: boolean): Promise<void> {
+  return recordRating(itemId, correct ? "got-it" : "didnt", signedIn);
 }

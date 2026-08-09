@@ -26,7 +26,7 @@ import { wordsForTier } from "@/content/vocabulary";
 import { phrasesForTier } from "@/content";
 import { findPhrase } from "@/content";
 import { getPathProgress, markUnitSeen } from "@/db/pathProgressStore";
-import { getOne, upsertSynced, hydrateFromServer } from "@/db/reviewStore";
+import { getOne, upsertSynced, hydrateFromServer, recordRating, recordReview } from "@/db/reviewStore";
 import { schedule } from "@/srs/leitner";
 import { buildDailySession, type DailySession } from "@/srs/dailyLoop";
 import { allGrammarPatterns } from "@/content/grammar";
@@ -50,25 +50,34 @@ function ReviewStep({ items, onDone }: { items: Array<Phrase | Word | GrammarPat
   const [index, setIndex] = useState(0);
   const [phase, setPhase] = useState<FlashCardPhase>("entering");
   const [staged, setStaged] = useState<Phrase | Word | null>(null);
-  const [pendingRating, setPendingRating] = useState<ReviewRating | null>(null);
 
   const current = staged ?? items[index] ?? null;
 
+  /**
+   * Persist and advance on the click itself — never from the exit animation.
+   *
+   * This used to run in onExited, which FlipCard fires from onAnimationEnd. The
+   * `animate-card-exit` utility is not generated in this project's Tailwind
+   * build (the class is only referenced inside the design system, which the
+   * content scan does not reach), so animationName computed to `none`, no
+   * animationend ever fired, and the review step deadlocked: the card never
+   * advanced and the rating was never saved. Verified 2026-08-09 — supplying
+   * the animation by hand made the same flow work, withholding it froze.
+   *
+   * The animation would also be disabled for anyone with prefers-reduced-motion,
+   * so correctness must not depend on it under any circumstances. Exit phase is
+   * still set, purely for the visual when the animation does run.
+   */
   function handleRate(rating: ReviewRating) {
     const item = items[index];
-    setStaged(item !== undefined && !isGrammarPattern(item) ? item : null);
-    setPendingRating(rating);
-    setPhase("exiting");
+    if (item !== undefined) {
+      setStaged(!isGrammarPattern(item) ? item : null);
+      void recordRating(item.id, rating, signedIn);
+    }
+    advance();
   }
 
-  async function handleExited() {
-    const item = items[index];
-    if (item !== undefined) {
-      const existing = await getOne(item.id);
-      const next = schedule(existing, pendingRating ?? "didnt", Date.now(), item.id);
-      await upsertSynced(next, signedIn);
-    }
-    setPendingRating(null);
+  function advance() {
     setStaged(null);
     const nextIndex = index + 1;
     if (nextIndex >= items.length) {
@@ -79,19 +88,10 @@ function ReviewStep({ items, onDone }: { items: Array<Phrase | Word | GrammarPat
     setPhase("entering");
   }
 
-  async function handleGrammarNext(correct: boolean) {
+  function handleGrammarNext(correct: boolean) {
     const item = items[index];
-    if (item !== undefined) {
-      const existing = await getOne(item.id);
-      const next = schedule(existing, correct ? "got-it" : "didnt", Date.now(), item.id);
-      await upsertSynced(next, signedIn);
-    }
-    const nextIndex = index + 1;
-    if (nextIndex >= items.length) {
-      onDone();
-      return;
-    }
-    setIndex(nextIndex);
+    if (item !== undefined) void recordReview(item.id, correct, signedIn);
+    advance();
   }
 
   if (current === null) return null;
@@ -123,7 +123,7 @@ function ReviewStep({ items, onDone }: { items: Array<Phrase | Word | GrammarPat
         onReveal={() => setPhase("revealed")}
         onRate={handleRate}
         onEntered={() => setPhase("idle")}
-        onExited={() => void handleExited()}
+        onExited={() => setPhase("idle")}
       />
     </div>
   );
