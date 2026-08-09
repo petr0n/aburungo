@@ -3,18 +3,19 @@ import { supabase } from '../lib/supabase.js'
 
 const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY })
 
-export type JlptLevel = 'N5' | 'N4' | 'N3' | 'N2' | 'N1'
+import { buildSystemPrompt, type ConversationScope, type JlptLevel } from './conversationPrompt.js'
 
-const SYSTEM_PROMPT = (jlpt: JlptLevel) => `\
-You are Hana, a friendly Japanese conversation partner. Speak naturally and casually.
-Adjust vocabulary and grammar complexity to JLPT ${jlpt} level.
-Use Japanese script (hiragana, katakana, kanji) appropriate to ${jlpt}, with furigana in parentheses for kanji above ${jlpt} level.
-Keep responses concise — 1-3 sentences unless the student asks for more.
-Gently correct mistakes by modelling the correct form in your reply without lecturing.`
+export type { JlptLevel, ConversationScope }
 
+/**
+ * Open a session. With a `scope` this becomes a unit practice session —
+ * one situation, that unit's vocabulary, a handful of turns — instead of the
+ * open-ended companion.
+ */
 export async function createSession(
   userId: string,
   jlpt: JlptLevel = 'N4',
+  scope?: ConversationScope,
 ): Promise<{ sessionId: string }> {
   const { data, error } = await supabase
     .from('sessions')
@@ -24,11 +25,12 @@ export async function createSession(
 
   if (error) throw new Error(error.message)
 
-  // Store JLPT level in the opening system message so it's recoverable
+  // The opening system message is the session's memory of its own scope —
+  // streamReply replays the stored history, so nothing needs to be re-sent.
   await supabase.from('conversation_messages').insert({
     session_id: (data as { id: string }).id,
     role: 'system',
-    content: SYSTEM_PROMPT(jlpt),
+    content: buildSystemPrompt(jlpt, scope),
   })
 
   return { sessionId: (data as { id: string }).id }
@@ -72,7 +74,11 @@ export async function* streamReply(
   const stream = anthropic.messages.stream({
     model: 'claude-haiku-4-5-20251001',
     max_tokens: 512,
-    system: systemMsg?.content ?? SYSTEM_PROMPT('N4'),
+    // The stored system message carries the session's scope. The fallback is
+    // only for a session whose opening insert failed, and is intentionally the
+    // unscoped prompt — better an open conversation than a silently unbounded
+    // one claiming to be scoped.
+    system: systemMsg?.content ?? buildSystemPrompt('N4'),
     messages: [
       ...chatHistory.map((r) => ({
         role: r.role as 'user' | 'assistant',
