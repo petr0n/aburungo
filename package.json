@@ -6,7 +6,7 @@
   "packageManager": "pnpm@11.1.3",
   "scripts": {
     "dev": "vite",
-    "dev:api": "lsof -ti:3000 >/dev/null 2>&1 && echo 'Error: port 3000 is already in use — kill that process first' || pnpm --filter ./server run dev",
+    "dev:api": "lsof -ti:3000 >/dev/null 2>&1 && echo 'Error: port 3000 is already in use \u2014 kill that process first' || pnpm --filter ./server run dev",
     "dev:server": "concurrently -n frontend,api -c cyan,magenta \"pnpm dev\" \"pnpm dev:api\"",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
@@ -14,7 +14,9 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "walkthrough": "bash scripts/walkthrough.sh",
-    "verify:persistence": "bash -c \"pnpm build && (pnpm exec vite preview --port 4173 --strictPort &) && until curl -fsS -o /dev/null http://localhost:4173/; do sleep 0.5; done && node scripts/verify-persistence.cjs; pkill -f \"vite preview\"\""
+    "verify:persistence": "bash -c \"pnpm build && (pnpm exec vite preview --port 4173 --strictPort &) && until curl -fsS -o /dev/null http://localhost:4173/; do sleep 0.5; done && node scripts/verify-persistence.cjs; pkill -f \"vite preview\"\"",
+    "typecheck": "tsc -b",
+    "prepare": "git config core.hooksPath .githooks || true"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.105.4",

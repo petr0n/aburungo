@@ -45,3 +45,8 @@ server/pnpm-lock.yaml
 
 # /learn walkthrough artifacts (screenshots, results.json, run logs)
 scripts/.walkthrough-out/
+
+# Supabase CLI scratch state — version probes, linked-project ref, pooler URL.
+# Rewritten on every CLI invocation, so tracking it dirties the tree on every
+# branch. No secrets: the anon key and project ref are public by design.
+supabase/.temp/
