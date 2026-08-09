@@ -100,8 +100,85 @@ async function handleReviewStepIfPresent(page, sessionIndex) {
   return handledAny;
 }
 
+
+/**
+ * The 41-session sweep never sees the review step: a fresh profile has nothing
+ * due, so every session skips straight to the new unit. That blind spot hid a
+ * hard deadlock — ratings were persisted from FlipCard's onAnimationEnd, the
+ * `animate-card-exit` utility was never generated, and the review card froze
+ * with the rating silently dropped (2026-08-09).
+ *
+ * Seed one overdue item in its own profile and prove the step actually moves.
+ */
+async function verifyReviewStep(browser) {
+  const ctx = await browser.newContext({ viewport: { width: 420, height: 900 } });
+  const page = await ctx.newPage();
+  await page.goto(`${BASE}/learn`, { waitUntil: "networkidle" });
+
+  await page.evaluate(
+    () =>
+      new Promise((resolve) => {
+        const req = indexedDB.open("aburungo");
+        req.onsuccess = () => {
+          const db = req.result;
+          const tx = db.transaction(["reviewStates", "pathProgress"], "readwrite");
+          tx.objectStore("reviewStates").put({
+            phraseId: "vocab.kyou",
+            box: 2,
+            dueAt: Date.now() - 86400000,
+            lastSeenAt: Date.now() - 172800000,
+          });
+          tx.objectStore("pathProgress").put({
+            pathId: "n5",
+            seenUnitIds: Array.from({ length: 41 }, (_, i) => `n5.unit-${i + 1}`),
+          });
+          tx.oncomplete = () => resolve(true);
+        };
+      }),
+  );
+
+  await page.reload({ waitUntil: "networkidle" });
+  await page.waitForTimeout(800);
+
+  const body = await page.locator("body").innerText();
+  if (!body.includes("Review \u00b7")) {
+    await ctx.close();
+    throw new Error("REVIEW CHECK: seeded a due item but the review step never appeared");
+  }
+
+  const reveal = page.locator("button:has-text('Reveal')").first();
+  if ((await reveal.count()) > 0) await reveal.click().catch(() => {});
+  await page.waitForTimeout(300);
+  await clickWhenReady(page, "button:has-text('Got it')", "Got it (review step)");
+  await page.waitForTimeout(1200);
+
+  const after = await page.locator("body").innerText();
+  const stuck = after.includes("Review \u00b7 1 / 1");
+  const box = await page.evaluate(
+    () =>
+      new Promise((resolve) => {
+        const req = indexedDB.open("aburungo");
+        req.onsuccess = () => {
+          const get = req.result
+            .transaction("reviewStates", "readonly")
+            .objectStore("reviewStates")
+            .get("vocab.kyou");
+          get.onsuccess = () => resolve(get.result ? get.result.box : "missing");
+        };
+      }),
+  );
+  await ctx.close();
+
+  if (stuck) throw new Error("REVIEW CHECK: rating did not advance the card — review step is deadlocked");
+  if (box !== 3) throw new Error(`REVIEW CHECK: rating not persisted — box is ${box}, expected 3`);
+  log(`  review step OK — card advanced and vocab.kyou moved to box ${box}`);
+}
+
 async function main() {
   const browser = await chromium.launch({ args: ["--no-sandbox"] });
+  log("=== Pre-flight: review step ===");
+  await verifyReviewStep(browser);
+
   const context = await browser.newContext({ viewport: { width: 420, height: 900 } });
   const page = await context.newPage();
   currentPage = page;

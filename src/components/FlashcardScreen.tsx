@@ -20,7 +20,6 @@ export function FlashcardScreen({ cards }: Props) {
 
   const [phase, setPhase] = useState<FlashCardPhase>("entering");
   const [stagedCard, setStagedCard] = useState<Phrase | Word | null>(null);
-  const [pendingRating, setPendingRating] = useState<ReviewRating | null>(null);
 
   useEffect(() => {
     void initialize(cards, userId);
@@ -33,21 +32,29 @@ export function FlashcardScreen({ cards }: Props) {
     setPhase("revealed");
   }
 
+  /**
+   * Rate on the click, not on the exit animation. FlipCard fires onExited from
+   * onAnimationEnd, and `animate-card-exit` is not generated in this project's
+   * Tailwind build, so the callback never ran and every rating was silently
+   * dropped — the card sat there and nothing reached the review queue.
+   * Correctness must not ride on an animation that prefers-reduced-motion is
+   * also entitled to disable.
+   */
   function handleRate(rating: ReviewRating) {
     setStagedCard(currentCard ?? null);
-    setPendingRating(rating);
-    setPhase("exiting");
+    void rate(rating, userId);
+    setStagedCard(null);
+    setPhase("entering");
   }
 
   function handleEntered() {
     setPhase("idle");
   }
 
+  // Visual only — see handleRate. Kept so the animation, when it does run,
+  // still settles the card into its idle state.
   function handleExited() {
-    void rate(pendingRating ?? "didnt", userId);
-    setPendingRating(null);
-    setStagedCard(null);
-    setPhase("entering");
+    setPhase("idle");
   }
 
   if (status === "idle" || status === "loading") {
