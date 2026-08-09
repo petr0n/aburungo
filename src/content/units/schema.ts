@@ -52,6 +52,12 @@ export function parseUnit(raw: unknown, source: string): Unit {
   if (o.patternId !== undefined && !isString(o.patternId)) {
     throw new UnitSchemaError(`${source}: entry "${String(o.id)}" has invalid "patternId"`, raw);
   }
+  if (o.checkpoint !== undefined && o.checkpoint !== "sweep") {
+    throw new UnitSchemaError(
+      `${source}: entry "${String(o.id)}" has invalid "checkpoint" — only "sweep" is defined`,
+      raw,
+    );
+  }
 
   return {
     id: o.id as string,
@@ -64,6 +70,7 @@ export function parseUnit(raw: unknown, source: string): Unit {
     kanji: o.kanji as string[],
     grammarNote: o.grammarNote as string,
     patternId: o.patternId as string | undefined,
+    checkpoint: o.checkpoint as "sweep" | undefined,
   };
 }
 

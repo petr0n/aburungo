@@ -36,12 +36,13 @@ import { WordLearnCard } from "@/components/WordLearnCard";
 import { FillBlankCard } from "@/components/FillBlankCard";
 import { GrammarClozeCard } from "@/components/GrammarClozeCard";
 import { RecognitionPass } from "@/components/RecognitionPass";
+import { CheckpointSweep } from "@/components/CheckpointSweep";
 import { Furigana } from "@/components/Furigana";
 import { LoadingPlaceholder, EmptyState, ProgressBar } from "aburungo-design-system";
 
 const PATH_ID = "n5";
 
-type Step = "loading" | "review" | "new-unit" | "produce" | "recognition" | "close" | "nothing-due";
+type Step = "loading" | "review" | "new-unit" | "checkpoint" | "produce" | "recognition" | "close" | "nothing-due";
 
 // ── Review step — flip cards for already-seen items that are due ───────────────
 
@@ -451,7 +452,7 @@ export function LearnPage() {
       if (built.reviewItems.length > 0) {
         setStep("review");
       } else if (built.unit !== null) {
-        setStep("new-unit");
+        setStep(built.unit.checkpoint === "sweep" ? "checkpoint" : "new-unit");
       } else {
         setStep("nothing-due");
       }
@@ -470,7 +471,12 @@ export function LearnPage() {
   }, [session, userId]);
 
   function afterReview() {
-    setStep(session?.unit !== null ? "new-unit" : "close");
+    const unit = session?.unit ?? null;
+    if (unit === null) {
+      setStep("close");
+      return;
+    }
+    setStep(unit.checkpoint === "sweep" ? "checkpoint" : "new-unit");
   }
 
   // Stable identity: NewUnitStep depends on this in a useEffect (see below),
@@ -508,6 +514,21 @@ export function LearnPage() {
         phrases={session.newPhrases}
         pattern={session.newGrammarPattern}
         onDone={afterNewUnit}
+      />
+    );
+  } else if (step === "checkpoint" && session.unit !== null) {
+    // Everything taught *before* this checkpoint, not every word in the tier.
+    // Identical today, since unit 42 sits last — but a checkpoint inserted
+    // mid-ladder later must never quiz material the learner has not met.
+    const taughtIds = new Set(
+      n5Units.filter((u) => u.order < (session.unit?.order ?? 0)).flatMap((u) => u.wordIds),
+    );
+    content = (
+      <CheckpointSweep
+        unit={session.unit}
+        words={wordsForTier(tier).filter((w) => taughtIds.has(w.id))}
+        onMissed={(word) => void demoteMissedWord(word.id, userId !== null)}
+        onDone={() => void finishUnitAndClose()}
       />
     );
   } else if (step === "produce") {

@@ -1,0 +1,27 @@
+# N5 daily-loop units — end-of-ladder checkpoint (Unit 42).
+#
+# The second of the two checkpoints DR-019 called for. The mid-way one lives at
+# units 38-39 and is still gated on scoped Hana; this one is buildable today
+# because DR-020 settled what "finishing" may look like.
+#
+# It is a mastery gate, not a grade: a wide recognition round over everything
+# already learned, complete when the remaining set empties. Unlimited retry,
+# nothing recorded, misses rejoin the SRS queue. The only number on screen is
+# how much is left to place, and it can only shrink — per CLAUDE.md, a number
+# that shrinks as you work is a gate, one that stands is a verdict.
+#
+# No new words, phrases or kanji. Behaviour comes from `checkpoint: sweep`,
+# which LearnPage renders instead of the new-unit flow.
+#
+# content-source: n/a — introduces no content, only re-presents taught items
+
+- id: n5.unit-42
+  order: 42
+  situation: Integration & checkpoint
+  title: Everything so far
+  canDo: Recognise the vocabulary from every situation on the ladder
+  checkpoint: sweep
+  wordIds: []
+  phraseIds: []
+  kanji: []
+  grammarNote: "No new material. This is the end-of-ladder checkpoint: a wide pass over the vocabulary from every situation you have worked through, sampled across themes rather than tested exhaustively. Anything you do not place comes straight back, and the checkpoint ends when there is nothing left to place. There is no score and nothing is recorded — whatever you miss simply returns to your review queue sooner."
