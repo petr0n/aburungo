@@ -45,7 +45,8 @@ type Step = "loading" | "review" | "new-unit" | "produce" | "recognition" | "clo
 
 // ── Review step — flip cards for already-seen items that are due ───────────────
 
-function ReviewStep({ items, onDone }: { items: Array<Phrase | Word | GrammarPattern>; onDone: () => void }) {
+/** Exported for direct testing — see LearnPage.review.dom.test.tsx. */
+export function ReviewStep({ items, onDone }: { items: Array<Phrase | Word | GrammarPattern>; onDone: () => void }) {
   const signedIn = useAuth((s) => s.user !== null);
   const [index, setIndex] = useState(0);
   const [phase, setPhase] = useState<FlashCardPhase>("entering");
