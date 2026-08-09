@@ -1,7 +1,8 @@
 import { useState, useRef, useEffect, type ReactNode } from "react";
 import type { Word } from "@/types";
-import { useUserTier } from "@/store/auth";
+import { useAuth, useUserTier } from "@/store/auth";
 import { wordsForTier } from "@/content/vocabulary";
+import { recordReview } from "@/db/reviewStore";
 import { WordDrillCard, type DrillPhase } from "@/components/WordDrillCard";
 import { WordLearnCard } from "@/components/WordLearnCard";
 import { Furigana } from "@/components/Furigana";
@@ -126,6 +127,7 @@ function BrowseScreen({ words, selected, onSelect, onStartDrill }: BrowseScreenP
 
 export function WordsPage() {
   const tier = useUserTier();
+  const signedIn = useAuth((s) => s.user !== null);
   const words = wordsForTier(tier);
 
   const [screen, setScreen] = useState<Screen>("browse");
@@ -178,6 +180,7 @@ export function WordsPage() {
   function handleRate(correct: boolean) {
     const current = queue[queueIndex];
     if (current === undefined) return;
+    void recordReview(current.id, correct, signedIn);
     if (correct) {
       setCorrectCount((n) => n + 1);
     } else {
@@ -233,6 +236,7 @@ export function WordsPage() {
       <RecognitionPass
         queue={recognitionQueue}
         pool={words}
+        onMissed={(word) => void recordReview(word.id, false, signedIn)}
         onDone={() => setScreen("browse")}
       />
     );

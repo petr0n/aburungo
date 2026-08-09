@@ -8,6 +8,7 @@
 import type { EpochMs, ReviewState } from "@/types";
 import { db } from "./dexie";
 import { fetchContentProgress, saveContentProgress } from "@/api/progress";
+import { schedule } from "@/srs/leitner";
 
 /** Fetch every stored ReviewState. Use sparingly — fine at session start. */
 export function getAll(): Promise<ReviewState[]> {
@@ -118,4 +119,21 @@ export async function hydrateFromServer(signedIn: boolean): Promise<ReviewState[
 /** Wipe everything. Only meant for dev/debug — no UI hook yet. */
 export async function reset(): Promise<void> {
   await db.reviewStates.clear();
+}
+
+/**
+ * Record one review outcome for any schedulable item — word, phrase or grammar
+ * pattern — and sync it when signed in.
+ *
+ * Exists because every practice surface needs the identical read-schedule-write
+ * triple, and the ones that open-coded it mostly forgot the write: until
+ * 2026-08-09 the whole WordsPage drill/recognition flow only moved local
+ * component state, so drilling never reached the review queue. Callers should
+ * reach for this rather than reassembling the steps.
+ *
+ * `now` is read here, at the db boundary, so src/srs/ stays pure per CLAUDE.md.
+ */
+export async function recordReview(itemId: string, correct: boolean, signedIn: boolean): Promise<void> {
+  const existing = await getOne(itemId);
+  await upsertSynced(schedule(existing, correct ? "got-it" : "didnt", Date.now(), itemId), signedIn);
 }
