@@ -1,0 +1,12 @@
+#!/bin/sh
+# Shared pre-commit gate. Tracked in the repo and activated by the `prepare`
+# script in package.json (`git config core.hooksPath .githooks`), so every
+# clone gets it — the previous hook lived in .git/hooks and existed on exactly
+# one machine.
+#
+# Runs the type check as well as lint. On 2026-08-09 a tsc error reached a
+# commit because the hook ran eslint only, and CI caught it a minute later.
+set -e
+
+pnpm lint
+pnpm typecheck
