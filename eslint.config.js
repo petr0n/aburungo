@@ -6,7 +6,9 @@ import tseslint from 'typescript-eslint'
 import { defineConfig, globalIgnores } from 'eslint/config'
 
 export default defineConfig([
-  globalIgnores(['dist']),
+  // 'dist' alone only matches the root build; server/dist held stale compiled
+  // output that was being linted (and, before vite.config.ts excluded it, tested).
+  globalIgnores(['dist', '**/dist/**']),
   {
     files: ['**/*.{ts,tsx}'],
     extends: [
