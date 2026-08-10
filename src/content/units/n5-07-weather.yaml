@@ -8,7 +8,7 @@
 #   so JMdict is the wrong instrument here — sentence checks need Tatoeba.
 
 - id: n5.unit-27
-  order: 27
+  order: 28
   situation: Weather
   title: Hot, cold, and nice
   canDo: Comment on the weather
@@ -28,7 +28,7 @@
   patternId: grammar.n5-unit-27
 
 - id: n5.unit-28
-  order: 28
+  order: 29
   situation: Weather
   title: Rain, snow & sun
   canDo: Ask about tomorrow's weather
@@ -51,7 +51,7 @@
   patternId: grammar.n5-unit-28
 
 - id: n5.unit-29
-  order: 29
+  order: 30
   situation: Weather
   title: Wind & temperature
   canDo: Comment on the weather

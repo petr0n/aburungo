@@ -8,7 +8,7 @@
 #   so JMdict is the wrong instrument here — sentence checks need Tatoeba.
 
 - id: n5.unit-21
-  order: 21
+  order: 22
   situation: Hotel
   title: Checking in
   canDo: Check into a hotel
@@ -29,7 +29,7 @@
   grammarNote: "～のなまえで — under the name of ~ (reservation pattern)"
 
 - id: n5.unit-22
-  order: 22
+  order: 23
   situation: Hotel
   title: Hotel amenities
   canDo: Check into a hotel
@@ -48,7 +48,7 @@
   patternId: grammar.n5-unit-22
 
 - id: n5.unit-23
-  order: 23
+  order: 24
   situation: Hotel
   title: Hotel requests
   canDo: Check into a hotel

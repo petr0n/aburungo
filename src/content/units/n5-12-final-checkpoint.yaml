@@ -1,4 +1,4 @@
-# N5 daily-loop units — end-of-ladder checkpoint (Unit 42).
+# N5 daily-loop units — end-of-ladder checkpoint (Unit 43).
 #
 # The second of the two checkpoints DR-019 called for. The mid-way one lives at
 # units 38-39 and is still gated on scoped Hana; this one is buildable today
@@ -16,7 +16,7 @@
 # content-source: n/a — introduces no content, only re-presents taught items
 
 - id: n5.unit-42
-  order: 42
+  order: 43
   situation: Integration & checkpoint
   title: Everything so far
   canDo: Recognise the vocabulary from every situation on the ladder
