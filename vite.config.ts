@@ -19,6 +19,10 @@ export default defineConfig({
     dedupe: ['react', 'react-dom'],
   },
   test: {
+    // Without this, `server/dist` is scanned and every compiled server test runs
+    // a second time — it inflated the count from 91 to 104 and would happily
+    // execute stale build output instead of source.
+    exclude: ['**/node_modules/**', '**/dist/**'],
     // src/lib/supabase.ts and src/api/client.ts throw at import time when these
     // are absent, which takes down any component test that transitively reaches
     // them. A local .env.local masked that; CI has none, so the suite passed

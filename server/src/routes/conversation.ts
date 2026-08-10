@@ -5,6 +5,7 @@ import { z } from 'zod'
 import { auth } from '../middleware/auth.js'
 import { createSession, streamReply } from '../services/conversation.js'
 import type { JlptLevel } from '../services/conversation.js'
+import { MAX_SCOPE_TURNS, MAX_SCOPE_WORDS } from '../services/conversationPrompt.js'
 
 export const conversationRoutes = new Hono()
 
@@ -17,12 +18,34 @@ conversationRoutes.post(
   '/session',
   zValidator(
     'json',
-    z.object({ jlpt: z.enum(JLPT_LEVELS).optional() }),
+    // The word list arrives from the client because unit content is bundled
+    // there, not in the database. Bounded here as well as in the prompt
+    // builder: an unbounded list is unbounded API spend on someone else's
+    // token budget.
+    z.object({
+      jlpt: z.enum(JLPT_LEVELS).optional(),
+      scope: z
+        .object({
+          situation: z.string().min(1).max(120),
+          canDo: z.string().min(1).max(240),
+          words: z
+            .array(
+              z.object({
+                japanese: z.string().min(1).max(60),
+                reading: z.string().min(1).max(60),
+                english: z.string().min(1).max(120),
+              }),
+            )
+            .max(MAX_SCOPE_WORDS),
+          maxTurns: z.number().int().min(1).max(MAX_SCOPE_TURNS),
+        })
+        .optional(),
+    }),
   ),
   async (c) => {
     const user = c.get('user')
-    const { jlpt } = c.req.valid('json')
-    const result = await createSession(user.id, (jlpt ?? 'N4') as JlptLevel)
+    const { jlpt, scope } = c.req.valid('json')
+    const result = await createSession(user.id, (jlpt ?? 'N4') as JlptLevel, scope)
     return c.json(result)
   },
 )
