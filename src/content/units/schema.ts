@@ -8,6 +8,11 @@
  */
 import type { Unit } from "@/types";
 
+type CheckpointKind = NonNullable<Unit["checkpoint"]>;
+
+/** Kept in sync with Unit["checkpoint"] by the type annotation below. */
+const CHECKPOINT_KINDS: readonly CheckpointKind[] = ["sweep", "conversation", "can-do"];
+
 function isString(v: unknown): v is string {
   return typeof v === "string" && v.length > 0;
 }
@@ -52,9 +57,9 @@ export function parseUnit(raw: unknown, source: string): Unit {
   if (o.patternId !== undefined && !isString(o.patternId)) {
     throw new UnitSchemaError(`${source}: entry "${String(o.id)}" has invalid "patternId"`, raw);
   }
-  if (o.checkpoint !== undefined && o.checkpoint !== "sweep") {
+  if (o.checkpoint !== undefined && !CHECKPOINT_KINDS.includes(o.checkpoint as CheckpointKind)) {
     throw new UnitSchemaError(
-      `${source}: entry "${String(o.id)}" has invalid "checkpoint" — only "sweep" is defined`,
+      `${source}: entry "${String(o.id)}" has invalid "checkpoint" — expected one of ${CHECKPOINT_KINDS.join(", ")}`,
       raw,
     );
   }
@@ -70,7 +75,7 @@ export function parseUnit(raw: unknown, source: string): Unit {
     kanji: o.kanji as string[],
     grammarNote: o.grammarNote as string,
     patternId: o.patternId as string | undefined,
-    checkpoint: o.checkpoint as "sweep" | undefined,
+    checkpoint: o.checkpoint as CheckpointKind | undefined,
   };
 }
 

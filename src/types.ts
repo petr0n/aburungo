@@ -171,12 +171,31 @@ export type Unit = {
   /**
    * Marks a unit as a checkpoint rather than new material, and says which kind.
    *
-   * "sweep" is the end-of-ladder mastery gate from DR-020: a wide recognition
+   * "sweep" is the recurring mastery gate from DR-020/021: a wide recognition
    * pass over everything already learned, complete when the remaining set
    * empties. Unlimited retry, nothing recorded, misses rejoin the SRS queue —
    * a gate, not a grade.
+   *
+   * "conversation" and "can-do" are the two terminal checkpoints (DR-022).
+   * Both hand the learner to Hana instead of a card UI: the first for one
+   * unscripted exchange spanning two taught situations, the second for the
+   * can-do verification pass that closes out the level.
    */
-  checkpoint?: "sweep";
+  checkpoint?: "sweep" | "conversation" | "can-do";
+};
+
+/**
+ * A conversation constrained to one situation and one set of taught words.
+ *
+ * Mirrored on the server in server/src/services/conversationPrompt.ts, which
+ * turns it into a system prompt, and re-validated there — this shape crosses a
+ * trust boundary, so the client copy is a convenience, never the enforcement.
+ */
+export type ConversationScope = {
+  situation: string;
+  canDo: string;
+  words: Array<{ japanese: string; reading: string; english: string }>;
+  maxTurns: number;
 };
 
 /**
