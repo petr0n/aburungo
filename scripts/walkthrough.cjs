@@ -273,7 +273,8 @@ async function main() {
       await page.locator("text=Nice work today.").first().waitFor({ state: "visible", timeout: CLICK_TIMEOUT });
       log(`  Session ${sessionIndex} CLOSED (checkpoint)`);
       results.sessionsCompleted++;
-      sessionIndex++;
+      // No sessionIndex++ here — the loop increments at the top, and doing it
+      // again made every checkpoint skip a number (43 sessions labelled up to 46).
       continue;
     }
 

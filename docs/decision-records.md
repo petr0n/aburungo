@@ -767,9 +767,11 @@ be true again — this was the free moment to move them.
   one idea, while the 年 row breaks twice (去年 takes 去 not 先; 今年 reads ことし not こんねん)
   and shares Unit 41 with the day row's own irregulars, おととい and あさって. Unit 41 is
   therefore the exceptions unit for the whole relative-time system.
-- The second, end-of-ladder checkpoint shipped 2026-08-09 as **unit 42**, specified by DR-020
-  as a retryable mastery gate. The ladder is 42 units. The mid-way pair at 38-39 remains
-  gated on scoped Hana, which is the only outstanding piece of this record.
+- The end-of-ladder checkpoint shipped 2026-08-09 as a retryable mastery gate (DR-020).
+- **The "mid-way milestone" framing here is superseded by DR-021**, which replaced it with a
+  cadence — a midpoint stops being a midpoint the moment the ladder grows. The two-checkpoint
+  intent survives as "regular consolidation plus one completion gate"; the positional wording
+  does not. The completion pair remains gated on scoped Hana.
 
 ## DR-020 — Mastery gates are permitted; grades are not
 
@@ -818,3 +820,58 @@ it stand as a verdict on you?* Shrinking is a gate. Standing is a grade.
   aggregate scores and verdict prose remain banned.
 - Does **not** unblock unit 38's conversational can-do verification, which still needs scoped
   Hana. Only the vocabulary sweep is buildable today.
+
+## DR-021 — Checkpoints run on a cadence, not at a "mid-way" point
+
+**Date:** 2026-08-10
+**Status:** Approved and implemented
+
+**Context:**
+DR-019 placed one checkpoint "mid-way" and one at the end. The mid-way label stopped being
+true almost immediately: at 42 units it sat at 38, which is 90% through, with two more
+checkpoint units after it. The label described a ladder expected to grow well past 42 rather
+than the one that existed, and it would have needed re-deriving on every extension.
+
+The owner asked for a regular interval instead, noting that any midpoint stops being a midpoint
+as soon as content is added.
+
+**Decision:**
+- **Consolidation checkpoints run on a cadence**: roughly every ten teaching units, placed at
+  the next situation boundary. Coherence beats arithmetic — a sweep between "at the café" and
+  "how much & paying" consolidates nothing.
+- **~10 is an authoring target for new content**, not a retrofit. Thin situations (Shopping 3,
+  Relative time 2, Directions 3) get filled out as N5 deepens, so blocks converge on ten
+  without cutting any situation that already works.
+- **Consolidation and completion are different things.** Consolidation recurs and is a sweep
+  (DR-020's mastery gate), functional today. Completion happens once, at the end, and needs
+  scoped Hana. Conflating them is what produced four checkpoint units in three moments.
+
+**Positions are computed, not hand-placed:** take the situation boundary nearest each multiple
+of ten. Re-running that rule regenerates the layout after any content change.
+
+**Ladder as built (45 units, 39 teaching, 6 checkpoint):**
+
+| Position | |
+|---|---|
+| 13 | Sweep — after Greetings & Food & drink (12 units) |
+| 22 | Sweep — after Shopping & Getting around (8) |
+| 32 | Sweep — after Hotel, Directions, Weather (9) |
+| 43 | Sweep — after Food preferences, Daily life, Days & dates, Relative time (10) |
+| 44 | Cross-situation conversation (Hana) |
+| 45 | Can-do completion (Hana) |
+
+The end reads as an escalation rather than a cluster: recognise everything, produce it in
+conversation, then verify the can-dos.
+
+**Consequences:**
+- Supersedes DR-019's "mid-way milestone" framing. The two-checkpoint decision stands in
+  spirit — regular consolidation plus one completion gate — but not in its positional wording.
+- **The learner never sees a unit number.** No UI renders one, so a strict every-tenth-position
+  rule would buy authoring tidiness the learner cannot perceive, at the cost of splitting
+  situations. If the cadence should be *felt*, that is a UI change (progress indicator), not a
+  content reshape — deliberately not taken here.
+- Checkpoint ids are non-positional (`n5.checkpoint-1..3`). `n5.unit-N` ties identity to a slot
+  and the two disagree the moment anything is inserted; PathProgress stores ids, so ids must be
+  stable while order moves freely.
+- Unit 33's situation label was corrected from "Integration & checkpoint" to "Daily life" — it
+  teaches 12 words and the label is what groups the learner's progress.
