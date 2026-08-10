@@ -1,4 +1,4 @@
-# N5 daily-loop units — mid-way checkpoint (Unit 21).
+# N5 daily-loop units — consolidation checkpoint (after Getting around).
 #
 # Authored for this position rather than moved into it. The existing checkpoint
 # at 39-40 could not be relocated: its own worked example uses 帰る, which is not
@@ -21,8 +21,8 @@
 #
 # content-source: n/a — introduces no content, only re-presents taught items
 
-- id: n5.checkpoint-mid
-  order: 21
+- id: n5.checkpoint-2
+  order: 22
   situation: Integration & checkpoint
   title: Out and about
   canDo: Recognise the vocabulary from the first four situations

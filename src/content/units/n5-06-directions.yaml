@@ -10,7 +10,7 @@
 #   so JMdict is the wrong instrument here — sentence checks need Tatoeba.
 
 - id: n5.unit-24
-  order: 25
+  order: 26
   situation: Directions
   title: Left, right, straight
   canDo: Understand a basic answer about directions
@@ -33,7 +33,7 @@
   patternId: grammar.n5-unit-24
 
 - id: n5.unit-25
-  order: 26
+  order: 27
   situation: Directions
   title: Where is ~?
   canDo: Ask where something is
@@ -59,7 +59,7 @@
   patternId: grammar.n5-unit-25
 
 - id: n5.unit-26
-  order: 27
+  order: 28
   situation: Directions
   title: How far?
   canDo: Understand a basic answer about distance

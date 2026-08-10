@@ -16,7 +16,9 @@ import n5FoodDrinkRaw from "./n5-02-food-drink.yaml";
 import n5ShoppingRaw from "./n5-03-shopping.yaml";
 import n5TransitRaw from "./n5-04-transit.yaml";
 import n5HotelRaw from "./n5-05-hotel.yaml";
-import n5CheckpointMidRaw from "./n5-04b-checkpoint-mid.yaml";
+import n5Checkpoint1Raw from "./n5-02b-checkpoint-1.yaml";
+import n5Checkpoint2Raw from "./n5-04b-checkpoint-2.yaml";
+import n5Checkpoint3Raw from "./n5-07b-checkpoint-3.yaml";
 import n5DirectionsRaw from "./n5-06-directions.yaml";
 import n5WeatherRaw from "./n5-07-weather.yaml";
 import n5IntegrationRaw from "./n5-08-integration.yaml";
@@ -36,7 +38,9 @@ export const n5Units: Unit[] = [
   ...parseUnits(n5ShoppingRaw, "units/n5-03-shopping.yaml", knownWordIds, knownPhraseIds, knownPatternIds),
   ...parseUnits(n5TransitRaw, "units/n5-04-transit.yaml", knownWordIds, knownPhraseIds, knownPatternIds),
   ...parseUnits(n5HotelRaw, "units/n5-05-hotel.yaml", knownWordIds, knownPhraseIds, knownPatternIds),
-  ...parseUnits(n5CheckpointMidRaw, "units/n5-04b-checkpoint-mid.yaml", knownWordIds, knownPhraseIds, knownPatternIds),
+  ...parseUnits(n5Checkpoint1Raw, "units/n5-02b-checkpoint-1.yaml", knownWordIds, knownPhraseIds, knownPatternIds),
+  ...parseUnits(n5Checkpoint2Raw, "units/n5-04b-checkpoint-2.yaml", knownWordIds, knownPhraseIds, knownPatternIds),
+  ...parseUnits(n5Checkpoint3Raw, "units/n5-07b-checkpoint-3.yaml", knownWordIds, knownPhraseIds, knownPatternIds),
   ...parseUnits(n5DirectionsRaw, "units/n5-06-directions.yaml", knownWordIds, knownPhraseIds, knownPatternIds),
   ...parseUnits(n5WeatherRaw, "units/n5-07-weather.yaml", knownWordIds, knownPhraseIds, knownPatternIds),
   ...parseUnits(n5IntegrationRaw, "units/n5-08-integration.yaml", knownWordIds, knownPhraseIds, knownPatternIds),

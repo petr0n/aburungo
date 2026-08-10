@@ -15,7 +15,7 @@
 # jlpt-source: training — JLPT level unverified
 
 - id: n5.unit-38
-  order: 39
+  order: 44
   situation: Integration & checkpoint
   title: Cross-situation conversation
   canDo: Hold a longer exchange spanning two situations with no single-answer safety net
@@ -34,7 +34,7 @@
   grammarNote: "Review only, no new content — this unit strings together patterns from earlier units (e.g. 行って、買って、帰ります) across a longer 5-7 turn Hana exchange that spans two situations, such as a cafe stop followed by shopping on the same street. Kanji listed above are review items carried over from Units 1-32, not new introductions."
 
 - id: n5.unit-39
-  order: 40
+  order: 45
   situation: Integration & checkpoint
   title: Can-do checkpoint
   canDo: "N5 completion — all 19 can-dos"
