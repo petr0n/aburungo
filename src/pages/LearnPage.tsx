@@ -26,6 +26,7 @@ import { wordsForTier } from "@/content/vocabulary";
 import { phrasesForTier } from "@/content";
 import { findPhrase } from "@/content";
 import { getPathProgress, markUnitSeen } from "@/db/pathProgressStore";
+import { buildCanDoScope, buildCrossSituationScope, canDoMarkerId, taughtSituations, verifiedCanDos } from "@/srs/canDo";
 import { getOne, upsertSynced, hydrateFromServer, recordRating, recordReview } from "@/db/reviewStore";
 import { schedule } from "@/srs/leitner";
 import { buildDailySession, type DailySession } from "@/srs/dailyLoop";
@@ -37,12 +38,31 @@ import { FillBlankCard } from "@/components/FillBlankCard";
 import { GrammarClozeCard } from "@/components/GrammarClozeCard";
 import { RecognitionPass } from "@/components/RecognitionPass";
 import { CheckpointSweep } from "@/components/CheckpointSweep";
+import { UnitConversation } from "@/components/UnitConversation";
+import { CanDoCheckpoint } from "@/components/CanDoCheckpoint";
 import { Furigana } from "@/components/Furigana";
 import { LoadingPlaceholder, EmptyState, ProgressBar } from "aburungo-design-system";
 
 const PATH_ID = "n5";
 
-type Step = "loading" | "review" | "new-unit" | "checkpoint" | "produce" | "recognition" | "close" | "nothing-due";
+type Step =
+  | "loading"
+  | "review"
+  | "new-unit"
+  | "checkpoint"
+  | "conversation"
+  | "can-do"
+  | "produce"
+  | "recognition"
+  | "close"
+  | "nothing-due";
+
+/** Which step a checkpoint unit routes to. Non-checkpoint units go to "new-unit". */
+const CHECKPOINT_STEP = { sweep: "checkpoint", conversation: "conversation", "can-do": "can-do" } as const;
+
+function stepForUnit(unit: Unit): Step {
+  return unit.checkpoint === undefined ? "new-unit" : CHECKPOINT_STEP[unit.checkpoint];
+}
 
 // ── Review step — flip cards for already-seen items that are due ───────────────
 
@@ -435,6 +455,14 @@ export function LearnPage() {
 
   const [step, setStep] = useState<Step>("loading");
   const [session, setSession] = useState<DailySession | null>(null);
+  /**
+   * The learner's progress list, kept here as well as inside the built session
+   * because the two terminal checkpoints read it directly: which situations
+   * have been taught, and which can-dos are already verified. Updated
+   * optimistically on verification so the remaining count shrinks on screen
+   * before the write lands.
+   */
+  const [seenUnitIds, setSeenUnitIds] = useState<string[]>([]);
 
   useEffect(() => {
     // Re-runs on tier/userId change (e.g. guest -> signed-in on sign-up mid-session).
@@ -445,6 +473,7 @@ export function LearnPage() {
         hydrateFromServer(userId !== null),
       ]);
       if (cancelled) return;
+      setSeenUnitIds(progress.seenUnitIds);
       const words = wordsForTier(tier);
       const phrases = phrasesForTier(tier);
       const built = buildDailySession(n5Units, progress, words, phrases, allGrammarPatterns, reviewStates, Date.now());
@@ -452,7 +481,7 @@ export function LearnPage() {
       if (built.reviewItems.length > 0) {
         setStep("review");
       } else if (built.unit !== null) {
-        setStep(built.unit.checkpoint === "sweep" ? "checkpoint" : "new-unit");
+        setStep(stepForUnit(built.unit));
       } else {
         setStep("nothing-due");
       }
@@ -476,7 +505,7 @@ export function LearnPage() {
       setStep("close");
       return;
     }
-    setStep(unit.checkpoint === "sweep" ? "checkpoint" : "new-unit");
+    setStep(stepForUnit(unit));
   }
 
   // Stable identity: NewUnitStep depends on this in a useEffect (see below),
@@ -529,6 +558,36 @@ export function LearnPage() {
         words={wordsForTier(tier).filter((w) => taughtIds.has(w.id))}
         onMissed={(word) => void demoteMissedWord(word.id, userId !== null)}
         onDone={() => void finishUnitAndClose()}
+      />
+    );
+  } else if (step === "conversation" && session.unit !== null) {
+    content = (
+      <UnitConversation
+        unit={session.unit}
+        scope={buildCrossSituationScope(n5Units, seenUnitIds, wordsForTier(tier))}
+        signedIn={userId !== null}
+        onDone={() => void finishUnitAndClose()}
+      />
+    );
+  } else if (step === "can-do" && session.unit !== null) {
+    const words = wordsForTier(tier);
+    content = (
+      <CanDoCheckpoint
+        unit={session.unit}
+        situations={taughtSituations(n5Units, seenUnitIds)}
+        verified={verifiedCanDos(seenUnitIds)}
+        scopeFor={(situation) => buildCanDoScope(n5Units, situation, words)}
+        signedIn={userId !== null}
+        onVerified={(situation) => {
+          const marker = canDoMarkerId(situation);
+          setSeenUnitIds((prev) => (prev.includes(marker) ? prev : [...prev, marker]));
+          void markUnitSeen(PATH_ID, marker, userId !== null);
+        }}
+        onComplete={() => void finishUnitAndClose()}
+        // Deliberately does NOT mark the unit seen. This is the last unit on the
+        // ladder, so finishing it with can-dos outstanding would leave the
+        // learner at "All caught up" with no route back to the ones they left.
+        onLater={() => setStep("close")}
       />
     );
   } else if (step === "produce") {
