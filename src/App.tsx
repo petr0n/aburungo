@@ -13,6 +13,7 @@ import { KanaPracticePage } from "@/pages/KanaPracticePage";
 import { FlashcardPage } from "@/pages/FlashcardPage";
 import { KanjiPage } from "@/pages/KanjiPage";
 import { ConversationPage } from "@/pages/ConversationPage";
+import { hanaEnabled } from "@/config";
 import { ProfilePage } from "@/pages/ProfilePage";
 import { AdminLoginPage } from "@/pages/admin/AdminLoginPage";
 import { AdminLayout } from "@/pages/admin/AdminLayout";
@@ -54,8 +55,10 @@ export default function App() {
       <Route path="/kanji" element={<KanjiPage />} />
       <Route path="/how-to" element={<HowToPage />} />
 
-      {/* Conversation: public route — page handles its own guest gate */}
-      <Route path="/conversation" element={<ConversationPage />} />
+      {/* Conversation: public route — page handles its own guest gate.
+          Absent entirely when Hana is shelved (DR-023), so the URL 404s rather
+          than offering a screen that cannot work. */}
+      {hanaEnabled && <Route path="/conversation" element={<ConversationPage />} />}
       {/* Profile: public route — page handles guest vs signed-in view */}
       <Route path="/profile" element={<ProfilePage />} />
 

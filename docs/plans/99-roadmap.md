@@ -67,7 +67,11 @@ path, with reviews interleaving correctly and visible mastery.
 2. **Deepen N5 vocabulary (189 → 400+).** N5 references cite ~800-900 words; the 35-unit ladder
    being fully authored is not the same as N5 breadth. Author against the Tatoeba examples
    already embedded in `server/data/jmdict-examples-eng-3.6.2.json` — no download needed.
-3. **Scoped Hana** — production practice; also unlocks units 34-35, which are gated on it.
+3. ~~**Scoped Hana**~~ — **built, then shelved (DR-023).** It works and is tested, but it is
+   switched off behind `VITE_HANA_ENABLED` (default off): the owner does not want a per-use API
+   cost in an otherwise fixed-cost tool. Production practice is covered instead by the
+   **production checkpoint** at unit 44 — write each item from its English — which needs no API.
+   Do not plan new work that depends on Hana without asking.
 4. **Kanji mnemonics last, integrated into vocabulary** rather than built as a standalone silo.
 
 **Build:**
@@ -96,6 +100,8 @@ This is the heaviest phase and the paid value prop.
   read-for-flow UX.
 - **In-text sentence mining → SRS:** tap an unknown item, store it with its sentence, schedule it.
 - **Hana structured feedback mode:** open conversation + post-exchange "one thing to tighten."
+  **Blocked by DR-023** — Hana is shelved, so this whole line item is on hold until that
+  decision is revisited. Reading and mining below do not depend on it.
 - **Honest progress counters:** lines read, words mined→mastered, conversation minutes.
 - **Paywall:** N3 entry behind the existing tier/`isPaid` slot (soft prompt, preserved progress).
 

@@ -38,3 +38,37 @@ describe("content integrity", () => {
     expect(orphans).toEqual([]);
   });
 });
+
+/**
+ * The shipped ladder shape.
+ *
+ * Hana is shelved (DR-023), so these assert what a learner *actually* gets. The
+ * conversation units are still authored and still tested as components — they
+ * are simply filtered out of the ladder, and this is the guard that says so.
+ * Flip VITE_HANA_ENABLED and these expectations change by design.
+ */
+describe("the ladder with Hana shelved", () => {
+  it("ends on the production checkpoint", () => {
+    const last = n5Units[n5Units.length - 1];
+    expect(last?.checkpoint).toBe("production");
+  });
+
+  it("carries no unit that would need an API call", () => {
+    // The failure this guards: a Hana unit reaching the ladder and becoming a
+    // screen that apologises for itself, which is the dead end DR-022 removed.
+    const gated = n5Units.filter((u) => u.checkpoint === "conversation" || u.checkpoint === "can-do");
+    expect(gated.map((u) => u.id)).toEqual([]);
+  });
+
+  it("has contiguous orders with no gap left by the filtered units", () => {
+    expect(n5Units.map((u) => u.order)).toEqual(n5Units.map((_, i) => i + 1));
+  });
+
+  it("puts production after the last recognition sweep, not before it", () => {
+    // Recognise everything, then produce it. The reverse would gate on the
+    // harder skill first and make the sweep redundant.
+    const lastSweep = [...n5Units].reverse().find((u) => u.checkpoint === "sweep");
+    const production = n5Units.find((u) => u.checkpoint === "production");
+    expect(production?.order).toBeGreaterThan(lastSweep?.order ?? Infinity);
+  });
+});

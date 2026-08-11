@@ -34,7 +34,10 @@ Check `MEMORY.md` there at the start of every conversation. Write updated memori
 | Paid | Subscription | N5–N1 | All features + Conversation with Hana |
 
 - Kana practice (hiragana/katakana) is fully free — it is pre-JLPT and prerequisite to all levels.
-- Conversation with Hana is paid-only (Anthropic API cost).
+- **Conversation with Hana is shelved (DR-023).** Built, tested, and switched off behind
+  `VITE_HANA_ENABLED`, which defaults to off — the owner does not want a per-use API cost in a
+  fixed-cost tool. Do not enable it, re-add it to the nav, or build new features that depend on
+  it without asking. It stays paid-only if it ever comes back.
 - Paywall enforcement is aspirational; stub `isPaid = false` until payment is wired. The `tier` field in user metadata carries the slot.
 - When a guest or free-tier user hits gated content, show a soft inline prompt — never a hard redirect.
 

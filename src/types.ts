@@ -176,12 +176,16 @@ export type Unit = {
    * empties. Unlimited retry, nothing recorded, misses rejoin the SRS queue —
    * a gate, not a grade.
    *
-   * "conversation" and "can-do" are the two terminal checkpoints (DR-022).
-   * Both hand the learner to Hana instead of a card UI: the first for one
-   * unscripted exchange spanning two taught situations, the second for the
-   * can-do verification pass that closes out the level.
+   * "production" is the gate that closes the level (DR-023): the same shape as
+   * a sweep, but the learner writes each item from its English rather than
+   * picking it out of a line-up. Recognition and production are different
+   * skills, so it is its own checkpoint rather than a harder sweep.
+   *
+   * "conversation" and "can-do" hand the learner to Hana instead of a card UI
+   * (DR-022). Both are gated behind `hanaEnabled` and drop out of the ladder
+   * entirely when it is off — see src/content/units/index.ts.
    */
-  checkpoint?: "sweep" | "conversation" | "can-do";
+  checkpoint?: "sweep" | "production" | "conversation" | "can-do";
 };
 
 /**

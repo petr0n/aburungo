@@ -945,3 +945,66 @@ escape hatch closes the session without marking the unit, so the checkpoint is t
   unit 45 is one session plus one assessor call per can-do attempt, capped at 300 tokens.
 - The chat surface was extracted to `HanaChat` and is now shared by free-roam conversation and
   both checkpoints. ConversationPage went from 222 lines to 106.
+
+---
+
+## DR-023 — Hana is shelved behind a flag; a production checkpoint closes the level instead
+
+**Date:** 2026-08-11
+**Status:** Approved and implemented
+
+**Context:**
+DR-022 finished the two Hana checkpoints and the N5 ladder ran end to end for the first time.
+Before any of it made a live call, the owner decided against carrying a per-use API cost in what
+is otherwise a fixed-cost personal tool.
+
+The cost itself is small — roughly $0.008 a scoped session, $0.001 an assessor call, about $0.10
+for a full pass over all eleven can-dos. The objection is not the number: it is holding a metered
+dependency at all, plus the prepaid credit an API account requires. That reasoning does not
+change with scale, so it is recorded as a standing decision rather than a budget note.
+
+**Decision:**
+
+**Shelve, do not delete.** One build-time flag, `VITE_HANA_ENABLED`, defaulting **off**. Any
+value other than the exact string `"true"` — including the variable being unset — leaves it off,
+so a misconfiguration can never start spend. The conversation code is written, tested and
+working; reversing this is one line.
+
+**Gate at the content export, not at the screens.** `src/content/units/index.ts` filters
+conversation and can-do units out of `n5Units`. The orchestrator, the step router, the can-do
+helpers and the walkthrough then all see one consistent ladder that simply ends at unit 44.
+Gating further down would have left the units on the ladder as screens apologising for
+themselves — the exact dead end DR-022 was written to remove. The filter keys off the checkpoint
+*kind*, so a Hana unit added later is covered without touching it.
+
+**A production checkpoint closes the level.** DR-021 is explicit that consolidation and
+completion are different things, so ending on the last sweep would leave N5 with no completion
+moment. Unit 44 asks the learner to write each item from its English instead of picking it from
+a line-up. Every checkpoint before it could be cleared by recognition alone; this is the first
+that gates on production, which is the skill the ladder is actually for.
+
+It is always present, including when Hana is on. The ending then escalates properly: recognise
+everything (43), write it (44), say it (45), have it verified (46).
+
+**Ladder as shipped (44 units):** 39 teaching, sweeps at 13/22/32/43, production at 44.
+With the flag on, 46 units.
+
+**Consequences:**
+- **The production round is half the size of a sweep** (12 vs 24). Writing an answer costs far
+  more than tapping one, so the pacing target the sweep size protects applies with more force.
+- **The gate cannot be cleared by guessing**, unlike a four-option sweep. That is the point, but
+  it means the answer must be *shown* on a miss so the next round is learnable rather than a
+  wall. `FillBlankCard` already reveals the reading and romaji, so the loop is see-it, write-it.
+  The walkthrough passes the same way a learner does: reveal in round one, type it back in round
+  two.
+- **"All caught up!" is reachable again** as the walkthrough's terminus, since the standing
+  can-do checkpoint is no longer on the ladder. The `ladderEndReached` check from DR-022 stays,
+  because the flag-on ladder still ends on it.
+- `roundRobinSample` was extracted from `buildSweepQueue` so the production queue can span words
+  *and* phrases, which group by different fields. Phrases belong in a production gate in a way
+  they do not in a recognition sweep: "how do you say excuse me" is the question the ladder is
+  for, and vocabulary-only would leave out everything situational.
+- The `/conversation` route is absent rather than hidden, so the URL 404s instead of offering a
+  screen that cannot work.
+- **No live Anthropic call was ever made.** The integration was built, tested against mocks, and
+  shelved without spending anything.
