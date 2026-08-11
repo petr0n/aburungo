@@ -59,7 +59,7 @@ Gently correct mistakes by modelling the correct form in your reply without lect
  * so an allowlist would reject valid vocabulary on day one, and those
  * characters cannot forge structure anyway.
  */
-function sanitize(text: string): string {
+export function sanitize(text: string): string {
   return (
     text
       // eslint-disable-next-line no-control-regex

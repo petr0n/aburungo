@@ -213,6 +213,52 @@ async function handleCheckpointIfPresent(page, sessionIndex) {
   return true;
 }
 
+/**
+ * Handle the two terminal checkpoints, units 44-45 (DR-022).
+ *
+ * Both are Hana screens. The walkthrough serves a static bundle with no API
+ * server behind it, so every conversation call fails — which is precisely the
+ * degraded path worth exercising: neither screen may dead-end the ladder when
+ * Hana is unreachable. If a server *is* running the chat opens instead, and
+ * both branches are handled.
+ *
+ * Returns "conversation", "can-do", or null.
+ */
+async function handleTerminalCheckpointIfPresent(page, sessionIndex) {
+  // Detected by title, not by button label: the button reads "Start
+  // conversation" when signed in and "Continue" for a guest, and the
+  // walkthrough runs as a guest.
+  if (await visible(page, "text=Cross-situation conversation")) {
+    log(`  cross-situation conversation detected (session ${sessionIndex})`);
+
+    if (await visible(page, "button:has-text('Start conversation')")) {
+      await clickWhenReady(page, "button:has-text('Start conversation')", "Start conversation");
+      await page.waitForTimeout(WAIT_SHORT * 2);
+    }
+
+    // Chat opened (server up), or the screen offers a way past (guest / server down).
+    if (await visible(page, "button:has-text('← Finish')")) {
+      await clickWhenReady(page, "button:has-text('← Finish')", "Finish (conversation)");
+    } else if (await visible(page, "button:has-text('Continue')")) {
+      await clickWhenReady(page, "button:has-text('Continue')", "Continue (Hana unavailable)");
+    } else {
+      await failHard(page, sessionIndex, "conversation-checkpoint-dead-end");
+    }
+    return "conversation";
+  }
+
+  if (await visible(page, "text=Come back to this later")) {
+    log(`  can-do checkpoint detected (session ${sessionIndex})`);
+    // Leaving without verifying must NOT complete the unit — the checkpoint has
+    // to still be there tomorrow. That is why this is the end of the walk
+    // rather than a session that rolls on to "All caught up!".
+    await clickWhenReady(page, "button:has-text('Come back to this later')", "Come back to this later");
+    return "can-do";
+  }
+
+  return null;
+}
+
 async function main() {
   const browser = await chromium.launch({ args: ["--no-sandbox"] });
   log("=== Pre-flight: review step ===");
@@ -236,6 +282,14 @@ async function main() {
   let sessionIndex = 0;
   let grammarClozeCount = 0;
   let allCaughtUpReached = false;
+  /**
+   * The ladder now ends at the can-do checkpoint rather than at "All caught
+   * up!". That checkpoint is a standing one — leaving it unverified does not
+   * complete it — so a walk with no API server behind it can never exhaust the
+   * ladder. Either terminus counts as reaching the end; stopping before both
+   * still fails.
+   */
+  let ladderEndReached = false;
 
   while (sessionIndex < MAX_SESSIONS) {
     sessionIndex++;
@@ -253,11 +307,27 @@ async function main() {
     if (await visible(page, "text=All caught up!")) {
       log(`All caught up! reached at session ${sessionIndex} — walkthrough complete.`);
       allCaughtUpReached = true;
+      ladderEndReached = true;
       sessionIndex--; // this iteration did not consume a real session
       break;
     }
 
     await handleReviewStepIfPresent(page, sessionIndex);
+
+    // The two terminal checkpoints have no unit intro and no cards, so they are
+    // detected before the generic Start click ("Start conversation" would match it).
+    const terminalCheckpoint = await handleTerminalCheckpointIfPresent(page, sessionIndex);
+    if (terminalCheckpoint !== null) {
+      await page.locator("text=Nice work today.").first().waitFor({ state: "visible", timeout: CLICK_TIMEOUT });
+      log(`  Session ${sessionIndex} CLOSED (${terminalCheckpoint} checkpoint)`);
+      results.sessionsCompleted++;
+      if (terminalCheckpoint === "can-do") {
+        log(`Ladder end reached at session ${sessionIndex} — can-do checkpoint is the last unit.`);
+        ladderEndReached = true;
+        break;
+      }
+      continue;
+    }
 
     // Unit intro
     if (await visible(page, "button:has-text('Start')")) {
@@ -373,16 +443,18 @@ async function main() {
   }
 
   log(
-    `=== SUMMARY: sessionsCompleted=${results.sessionsCompleted}, allCaughtUpReached=${allCaughtUpReached}, ` +
-      `grammarClozeCardsSeen=${grammarClozeCount}, consoleErrors=${results.consoleErrors.length}, pageErrors=${results.pageErrors.length} ===`,
+    `=== SUMMARY: sessionsCompleted=${results.sessionsCompleted}, ladderEndReached=${ladderEndReached}, ` +
+      `allCaughtUpReached=${allCaughtUpReached}, grammarClozeCardsSeen=${grammarClozeCount}, ` +
+      `consoleErrors=${results.consoleErrors.length}, pageErrors=${results.pageErrors.length} ===`,
   );
+  results.ladderEndReached = ladderEndReached;
   results.allCaughtUpReached = allCaughtUpReached;
   results.grammarClozeCardsSeen = grammarClozeCount;
   fs.writeFileSync(`${SCREEN_DIR}/results.json`, JSON.stringify(results, null, 2));
 
   await browser.close();
 
-  if (!allCaughtUpReached || results.consoleErrors.length > 0 || results.pageErrors.length > 0) {
+  if (!ladderEndReached || results.consoleErrors.length > 0 || results.pageErrors.length > 0) {
     process.exitCode = 2;
   }
 }

@@ -3,7 +3,7 @@ import { streamText } from 'hono/streaming'
 import { zValidator } from '@hono/zod-validator'
 import { z } from 'zod'
 import { auth } from '../middleware/auth.js'
-import { createSession, streamReply } from '../services/conversation.js'
+import { assessCanDo, createSession, streamReply } from '../services/conversation.js'
 import type { JlptLevel } from '../services/conversation.js'
 import { MAX_SCOPE_TURNS, MAX_SCOPE_WORDS } from '../services/conversationPrompt.js'
 
@@ -69,5 +69,27 @@ conversationRoutes.post(
         await stream.write(chunk)
       }
     })
+  },
+)
+
+// POST /api/conversation/assess — judge a finished session against one can-do
+//
+// Deliberately takes no transcript. The service reads it from the database, so
+// a client cannot submit a conversation it did not have. `canDo` and
+// `situation` are only labels for the judgement and are sanitised downstream.
+conversationRoutes.post(
+  '/assess',
+  zValidator(
+    'json',
+    z.object({
+      sessionId: z.string().uuid(),
+      canDo: z.string().min(1).max(240),
+      situation: z.string().min(1).max(120),
+    }),
+  ),
+  async (c) => {
+    const user = c.get('user')
+    const { sessionId, canDo, situation } = c.req.valid('json')
+    return c.json(await assessCanDo(user.id, sessionId, canDo, situation))
   },
 )

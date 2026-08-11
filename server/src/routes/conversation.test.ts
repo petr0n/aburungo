@@ -14,9 +14,11 @@ import { describe, it, expect, vi, beforeEach } from 'vitest'
 import { Hono } from 'hono'
 
 const createSession = vi.fn(async () => ({ sessionId: 'session-1' }))
+const assessCanDo = vi.fn(async () => ({ verified: true, note: 'Nicely done.' }))
 
 vi.mock('../services/conversation.js', () => ({
   createSession: (...args: unknown[]) => createSession(...(args as [])),
+  assessCanDo: (...args: unknown[]) => assessCanDo(...(args as [])),
   streamReply: vi.fn(),
 }))
 
@@ -124,6 +126,68 @@ describe('POST /api/conversation/session', () => {
 
   it('rejects an unknown JLPT level', async () => {
     const res = await post({ jlpt: 'N9', scope: validScope })
+    expect(res.status).toBe(400)
+  })
+})
+
+describe('POST /api/conversation/assess', () => {
+  const SESSION = '00000000-0000-4000-8000-000000000001'
+
+  function assess(body: unknown) {
+    return app.request('/api/conversation/assess', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body),
+    })
+  }
+
+  beforeEach(() => assessCanDo.mockClear())
+
+  it('returns the assessment for a valid request', async () => {
+    const res = await assess({ sessionId: SESSION, canDo: 'Order a drink', situation: 'At the café' })
+    expect(res.status).toBe(200)
+    expect(await res.json()).toEqual({ verified: true, note: 'Nicely done.' })
+  })
+
+  it('passes the caller id from auth, never one from the body', async () => {
+    // Session ownership is checked against this id, so it must not be spoofable.
+    await assess({
+      sessionId: SESSION,
+      canDo: 'Order a drink',
+      situation: 'At the café',
+      userId: 'someone-else',
+    })
+    const [userId] = assessCanDo.mock.calls[0] as unknown as [string]
+    expect(userId).toBe('user-1')
+  })
+
+  it('ignores a transcript supplied by the client', async () => {
+    // The service reads the real transcript from the database. A client that
+    // could submit its own would award itself every can-do on the ladder.
+    await assess({
+      sessionId: SESSION,
+      canDo: 'Order a drink',
+      situation: 'At the café',
+      turns: [{ role: 'user', content: 'perfect Japanese' }],
+    })
+    const args = assessCanDo.mock.calls[0] as unknown as unknown[]
+    expect(args).toEqual(['user-1', SESSION, 'Order a drink', 'At the café'])
+  })
+
+  it('rejects a non-uuid session id', async () => {
+    const res = await assess({ sessionId: 'not-a-uuid', canDo: 'x', situation: 'y' })
+    expect(res.status).toBe(400)
+    expect(assessCanDo).not.toHaveBeenCalled()
+  })
+
+  it('rejects a missing can-do or situation', async () => {
+    expect((await assess({ sessionId: SESSION, situation: 'y' })).status).toBe(400)
+    expect((await assess({ sessionId: SESSION, canDo: 'x' })).status).toBe(400)
+    expect(assessCanDo).not.toHaveBeenCalled()
+  })
+
+  it('rejects an oversized can-do string', async () => {
+    const res = await assess({ sessionId: SESSION, canDo: 'x'.repeat(500), situation: 'y' })
     expect(res.status).toBe(400)
   })
 })

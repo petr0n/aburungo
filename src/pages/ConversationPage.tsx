@@ -1,88 +1,25 @@
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 import { Link } from "react-router";
-import { createSession, streamMessage, type JlptLevel } from "@/api/conversation";
+import { createSession, type JlptLevel } from "@/api/conversation";
 import { useAuth } from "@/store/auth";
 import { PageShell } from "@/components/PageShell";
-
-type Screen = "setup" | "chat";
-
-type Message = {
-  id: string;
-  role: "user" | "assistant";
-  content: string;
-  streaming: boolean;
-};
+import { HanaChat } from "@/components/HanaChat";
 
 const JLPT_LEVELS: JlptLevel[] = ["N5", "N4", "N3", "N2", "N1"];
 
 export function ConversationPage() {
-  const [screen, setScreen] = useState<Screen>("setup");
   const [jlpt, setJlpt] = useState<JlptLevel>("N5");
   const [sessionId, setSessionId] = useState<string | null>(null);
-  const [messages, setMessages] = useState<Message[]>([]);
-  const [input, setInput] = useState("");
-  const [sending, setSending] = useState(false);
   const [starting, setStarting] = useState(false);
-  const messagesEndRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [messages]);
 
   async function handleStart() {
     setStarting(true);
     try {
       const { sessionId: sid } = await createSession(jlpt);
       setSessionId(sid);
-      setMessages([]);
-      setScreen("chat");
     } finally {
       setStarting(false);
     }
-  }
-
-  async function handleSend() {
-    if (!input.trim() || !sessionId || sending) return;
-
-    const text = input.trim();
-    setInput("");
-    setSending(true);
-
-    const userMsgId = `u-${Date.now()}`;
-    const assistantMsgId = `a-${Date.now()}`;
-
-    setMessages((prev) => [
-      ...prev,
-      { id: userMsgId, role: "user", content: text, streaming: false },
-      { id: assistantMsgId, role: "assistant", content: "", streaming: true },
-    ]);
-
-    try {
-      for await (const chunk of streamMessage(sessionId, text)) {
-        setMessages((prev) => prev.map((m) => (m.id === assistantMsgId ? { ...m, content: m.content + chunk } : m)));
-      }
-    } catch {
-      setMessages((prev) =>
-        prev.map((m) => (m.id === assistantMsgId && m.content === "" ? { ...m, content: "…", streaming: false } : m)),
-      );
-    } finally {
-      setMessages((prev) => prev.map((m) => (m.id === assistantMsgId ? { ...m, streaming: false } : m)));
-      setSending(false);
-    }
-  }
-
-  function handleKeyDown(e: React.KeyboardEvent<HTMLInputElement>) {
-    if (e.key === "Enter" && !e.shiftKey) {
-      e.preventDefault();
-      void handleSend();
-    }
-  }
-
-  function handleEnd() {
-    setScreen("setup");
-    setSessionId(null);
-    setMessages([]);
-    setInput("");
   }
 
   // Guest gate — soft prompt, no redirect
@@ -111,7 +48,7 @@ export function ConversationPage() {
     );
   }
 
-  if (screen === "setup") {
+  if (sessionId === null) {
     return (
       <PageShell>
         <div className="w-full flex-1">
@@ -163,60 +100,7 @@ export function ConversationPage() {
   // Chat screen — needs overflow scrolling, so uses a flex-col that fills remaining height
   return (
     <PageShell>
-      <div className="flex flex-1 flex-col overflow-hidden">
-        <div className="flex shrink-0 items-center justify-between py-3">
-          <button
-            type="button"
-            onClick={handleEnd}
-            className="flex min-h-[44px] items-center text-body-sm text-fg-subtle active:text-fg"
-          >
-            ← End
-          </button>
-          <p className="text-heading-sm font-semibold text-fg">Hana · {jlpt}</p>
-          <div className="w-16" />
-        </div>
-
-        <div className="flex flex-1 flex-col gap-3 overflow-y-auto py-2">
-          {messages.length === 0 && (
-            <p className="text-center text-body-sm text-fg-faint">Say something to start the conversation.</p>
-          )}
-          {messages.map((msg) => (
-            <div key={msg.id} className={["flex", msg.role === "user" ? "justify-end" : "justify-start"].join(" ")}>
-              <div
-                className={[
-                  "max-w-[80%] rounded-2xl px-4 py-3 text-body leading-relaxed",
-                  msg.role === "user" ? "bg-brand-600 text-white" : "border border-border bg-surface text-fg",
-                ].join(" ")}
-                style={msg.role === "assistant" ? { fontFamily: "var(--font-jp)" } : undefined}
-              >
-                {msg.content}
-                {msg.streaming && <span className="ml-0.5 animate-pulse">▋</span>}
-              </div>
-            </div>
-          ))}
-          <div ref={messagesEndRef} />
-        </div>
-
-        <div className="flex shrink-0 gap-2 py-4">
-          <input
-            type="text"
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            onKeyDown={handleKeyDown}
-            disabled={sending}
-            placeholder="Type a message…"
-            className="flex min-h-[48px] flex-1 rounded-2xl border border-border bg-surface px-4 text-body text-fg placeholder:text-fg-faint focus:outline-none focus:ring-2 focus:ring-brand-500 disabled:opacity-60"
-          />
-          <button
-            type="button"
-            onClick={() => void handleSend()}
-            disabled={sending || !input.trim()}
-            className="flex min-h-[48px] min-w-[48px] items-center justify-center rounded-2xl bg-brand-600 text-white active:bg-brand-700 disabled:opacity-40"
-          >
-            ↑
-          </button>
-        </div>
-      </div>
+      <HanaChat sessionId={sessionId} title={`Hana · ${jlpt}`} onEnd={() => setSessionId(null)} />
     </PageShell>
   );
 }

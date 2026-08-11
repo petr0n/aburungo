@@ -4,8 +4,15 @@ import { supabase } from '../lib/supabase.js'
 const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY })
 
 import { buildSystemPrompt, type ConversationScope, type JlptLevel } from './conversationPrompt.js'
+import {
+  ASSESSOR_MAX_TOKENS,
+  buildAssessorPrompt,
+  parseAssessment,
+  type Assessment,
+  type TranscriptTurn,
+} from './canDoPrompt.js'
 
-export type { JlptLevel, ConversationScope }
+export type { JlptLevel, ConversationScope, Assessment }
 
 /**
  * Open a session. With a `scope` this becomes a unit practice session —
@@ -36,20 +43,70 @@ export async function createSession(
   return { sessionId: (data as { id: string }).id }
 }
 
-export async function* streamReply(
-  userId: string,
-  sessionId: string,
-  userMessage: string,
-): AsyncGenerator<string> {
-  // Verify session belongs to user
-  const { data: session, error: sessionErr } = await supabase
+/** Throws unless the session exists and belongs to this user. */
+async function assertOwnsSession(userId: string, sessionId: string): Promise<void> {
+  const { data, error } = await supabase
     .from('sessions')
     .select('id')
     .eq('id', sessionId)
     .eq('user_id', userId)
     .single()
 
-  if (sessionErr || !session) throw new Error('Session not found')
+  if (error || !data) throw new Error('Session not found')
+}
+
+/**
+ * The second agent of the can-do checkpoint (DR-022).
+ *
+ * Reads the transcript from the database rather than accepting one from the
+ * client. That is the whole security model here: a client that could post its
+ * own transcript could award itself every can-do on the ladder, and the only
+ * thing standing between the two is that this function never looks at what the
+ * caller sent.
+ */
+export async function assessCanDo(
+  userId: string,
+  sessionId: string,
+  canDo: string,
+  situation: string,
+): Promise<Assessment> {
+  await assertOwnsSession(userId, sessionId)
+
+  const { data: rows } = await supabase
+    .from('conversation_messages')
+    .select('role, content')
+    .eq('session_id', sessionId)
+    .order('created_at', { ascending: true })
+
+  const turns: TranscriptTurn[] = (rows ?? [])
+    .filter((r) => r.role === 'user' || r.role === 'assistant')
+    .map((r) => ({ role: r.role as 'user' | 'assistant', content: r.content as string }))
+
+  // Nothing was said, so there is nothing to judge. Short-circuit rather than
+  // spending a call to be told so.
+  if (!turns.some((t) => t.role === 'user')) {
+    return { verified: false, note: 'Have a go at the conversation first, then check it here.' }
+  }
+
+  const reply = await anthropic.messages.create({
+    model: 'claude-haiku-4-5-20251001',
+    max_tokens: ASSESSOR_MAX_TOKENS,
+    messages: [{ role: 'user', content: buildAssessorPrompt(canDo, situation, turns) }],
+  })
+
+  const text = reply.content
+    .map((block) => (block.type === 'text' ? block.text : ''))
+    .join('')
+
+  return parseAssessment(text)
+}
+
+export async function* streamReply(
+  userId: string,
+  sessionId: string,
+  userMessage: string,
+): AsyncGenerator<string> {
+  await assertOwnsSession(userId, sessionId)
 
   // Load history
   const { data: rows } = await supabase

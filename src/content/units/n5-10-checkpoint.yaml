@@ -1,24 +1,24 @@
-# N5 daily-loop units — late checkpoints (Units 39-40).
+# N5 daily-loop units — the two terminal checkpoints (Units 44-45).
 #
 # Moved out of n5-08-integration.yaml by DR-019 so the days & dates units can sit
 # before it. Renumbered from 34-35; safe to renumber because no PathProgress rows
 # referenced the old ids (verified against production: 0 rows, 0 seen units).
 #
-# Both units are still non-functional shells: they need the multi-turn "no safety
-# net" session and the two-agent verification UX, which are gated on scoped Hana.
-# They degrade to an intro screen with nothing new to learn.
+# Both were non-functional shells until DR-022 built the scoped-Hana screens they
+# were waiting on. They are the only two units with no cards: one is an
+# unscripted exchange, the other is the verification pass that closes the level.
 #
-# DR-019 makes this the *mid-way* checkpoint of two; a second, harder one goes at
-# the end of the extended ladder and has no spec yet.
+# These sit *after* the recurring sweeps DR-021 placed on a ten-unit cadence.
+# A sweep consolidates; these two finish. Do not merge the concepts.
 #
-# content-source: training — N5 canonical vocabulary, pending JMdict seed verification
-# jlpt-source: training — JLPT level unverified
+# content-source: n/a — introduces no content, only re-presents taught items
 
 - id: n5.unit-38
   order: 44
   situation: Integration & checkpoint
   title: Cross-situation conversation
   canDo: Hold a longer exchange spanning two situations with no single-answer safety net
+  checkpoint: conversation
   wordIds: []
   phraseIds: []
   kanji:
@@ -31,14 +31,15 @@
     - 気
     - 雨
     - 好
-  grammarNote: "Review only, no new content — this unit strings together patterns from earlier units (e.g. 行って、買って、帰ります) across a longer 5-7 turn Hana exchange that spans two situations, such as a cafe stop followed by shopping on the same street. Kanji listed above are review items carried over from Units 1-32, not new introductions."
+  grammarNote: "No new material. This is a live conversation with Hana across two of the situations you have already worked through — a cafe stop and then shopping on the same street, say — chosen from your own ladder. Nothing here has a single right answer and nothing is recorded or judged; the point is carrying one thread across a change of scene. Kanji listed above are review items carried over from earlier units, not new introductions."
 
 - id: n5.unit-39
   order: 45
   situation: Integration & checkpoint
   title: Can-do checkpoint
-  canDo: "N5 completion — all 19 can-dos"
+  canDo: Handle every situation on the ladder unaided
+  checkpoint: can-do
   wordIds: []
   phraseIds: []
   kanji: []
-  grammarNote: "Informational checkpoint, not a grammar pattern. This is the two-agent verification session: Hana plays a full situation of the learner's choosing from the 19 N5 can-do list, an assessor judges the transcript, and a check mark on any can-do unlocks it permanently. The N5 'complete' prompt surfaces once all 19 can-dos are verified. No new words, phrases, or kanji are introduced."
+  grammarNote: "No new material. Pick a situation, play it through with Hana, and the conversation is read back afterwards to see whether it worked. Anything that lands is checked off for good; anything that does not simply stays on the list, with unlimited attempts and no record kept of how many you took. The list is drawn from the situations you have been taught, so it grows as the ladder does."
