@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import { Link, useLocation } from "react-router";
 import { useAuth } from "@/store/auth";
+import { hanaEnabled } from "@/config";
 
 // ── Types ────────────────────────────────────────────────────────────────────
 
@@ -22,7 +23,8 @@ const NAV_LINKS: NavLink[] = [
   { to: "/flashcard", label: "Flashcards" },
   { to: "/practice", label: "Practice" },
   { to: "/kanji", label: "Kanji" },
-  { to: "/conversation", label: "Chat" },
+  // Chat is dropped when Hana is shelved (DR-023) — there is no route behind it.
+  ...(hanaEnabled ? [{ to: "/conversation", label: "Chat" }] : []),
   { to: "/how-to", label: "How to use" },
 ];
 

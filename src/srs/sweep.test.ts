@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
-import type { Word } from "@/types";
-import { buildSweepQueue, SWEEP_SIZE } from "./sweep";
+import type { Phrase, Word } from "@/types";
+import { buildProductionQueue, buildSweepQueue, PRODUCTION_SIZE, SWEEP_SIZE } from "./sweep";
 
 /** Identity "shuffle" so ordering is deterministic and assertions mean something. */
 const noShuffle = <T,>(items: readonly T[]): T[] => [...items];
@@ -58,5 +58,37 @@ describe("buildSweepQueue", () => {
   it("returns an empty round for an empty pool or a zero size", () => {
     expect(buildSweepQueue([], SWEEP_SIZE, noShuffle)).toEqual([]);
     expect(buildSweepQueue(lopsided, 0, noShuffle)).toEqual([]);
+  });
+});
+
+describe("buildProductionQueue", () => {
+  const phrase = (id: string, scenario: string): Phrase =>
+    ({ id, japanese: id, reading: id, romaji: id, english: id, scenario }) as Phrase;
+
+  const words = [word("w-a", "food"), word("w-b", "food"), word("w-c", "weather")];
+  const phrases = [phrase("p-a", "cafe"), phrase("p-b", "cafe")];
+
+  it("draws from words and phrases together", () => {
+    // A production gate over vocabulary alone would silently leave out
+    // everything situational, which is most of what the ladder teaches.
+    const ids = buildProductionQueue(words, phrases, 10, noShuffle).map((i) => i.id);
+    expect(ids).toContain("w-a");
+    expect(ids).toContain("p-a");
+  });
+
+  it("caps the round well below the sweep, since writing costs more than tapping", () => {
+    const many = Array.from({ length: 60 }, (_, i) => word(`w${i}`, `theme-${i % 5}`));
+    expect(buildProductionQueue(many, [], PRODUCTION_SIZE, noShuffle)).toHaveLength(PRODUCTION_SIZE);
+    expect(PRODUCTION_SIZE).toBeLessThan(SWEEP_SIZE);
+  });
+
+  it("spreads across groups rather than draining one", () => {
+    const lopsidedWords = Array.from({ length: 30 }, (_, i) => word(`t${i}`, "time"));
+    const ids = buildProductionQueue(lopsidedWords, [phrase("p-x", "cafe")], 4, noShuffle).map((i) => i.id);
+    expect(ids).toContain("p-x");
+  });
+
+  it("returns nothing for an empty ladder rather than throwing", () => {
+    expect(buildProductionQueue([], [], PRODUCTION_SIZE, noShuffle)).toEqual([]);
   });
 });

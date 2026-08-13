@@ -38,6 +38,7 @@ import { FillBlankCard } from "@/components/FillBlankCard";
 import { GrammarClozeCard } from "@/components/GrammarClozeCard";
 import { RecognitionPass } from "@/components/RecognitionPass";
 import { CheckpointSweep } from "@/components/CheckpointSweep";
+import { ProductionCheckpoint } from "@/components/ProductionCheckpoint";
 import { UnitConversation } from "@/components/UnitConversation";
 import { CanDoCheckpoint } from "@/components/CanDoCheckpoint";
 import { Furigana } from "@/components/Furigana";
@@ -50,6 +51,7 @@ type Step =
   | "review"
   | "new-unit"
   | "checkpoint"
+  | "production"
   | "conversation"
   | "can-do"
   | "produce"
@@ -58,7 +60,12 @@ type Step =
   | "nothing-due";
 
 /** Which step a checkpoint unit routes to. Non-checkpoint units go to "new-unit". */
-const CHECKPOINT_STEP = { sweep: "checkpoint", conversation: "conversation", "can-do": "can-do" } as const;
+const CHECKPOINT_STEP = {
+  sweep: "checkpoint",
+  production: "production",
+  conversation: "conversation",
+  "can-do": "can-do",
+} as const;
 
 function stepForUnit(unit: Unit): Step {
   return unit.checkpoint === undefined ? "new-unit" : CHECKPOINT_STEP[unit.checkpoint];
@@ -557,6 +564,20 @@ export function LearnPage() {
         unit={session.unit}
         words={wordsForTier(tier).filter((w) => taughtIds.has(w.id))}
         onMissed={(word) => void demoteMissedWord(word.id, userId !== null)}
+        onDone={() => void finishUnitAndClose()}
+      />
+    );
+  } else if (step === "production" && session.unit !== null) {
+    // Words *and* phrases, both scoped to what was taught before this unit.
+    const before = n5Units.filter((u) => u.order < (session.unit?.order ?? 0));
+    const taughtWordIds = new Set(before.flatMap((u) => u.wordIds));
+    const taughtPhraseIds = new Set(before.flatMap((u) => u.phraseIds));
+    content = (
+      <ProductionCheckpoint
+        unit={session.unit}
+        words={wordsForTier(tier).filter((w) => taughtWordIds.has(w.id))}
+        phrases={phrasesForTier(tier).filter((p) => taughtPhraseIds.has(p.id))}
+        onMissed={(item) => void demoteMissedWord(item.id, userId !== null)}
         onDone={() => void finishUnitAndClose()}
       />
     );

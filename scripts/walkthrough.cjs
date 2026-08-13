@@ -9,7 +9,7 @@ const BASE = process.env.BASE || "http://localhost:5173";
 const WAIT_SHORT = 500; // generous, per task-6 brief guidance re: timing stalls
 const CLICK_TIMEOUT = 10000;
 const CLICK_TIMEOUT_RETRY = 20000;
-const MAX_SESSIONS = process.env.MAX_SESSIONS ? parseInt(process.env.MAX_SESSIONS, 10) : 60; // 42 units + buffer
+const MAX_SESSIONS = process.env.MAX_SESSIONS ? parseInt(process.env.MAX_SESSIONS, 10) : 60; // 44 units (46 with Hana enabled) + buffer
 
 let currentPage = null;
 
@@ -214,7 +214,72 @@ async function handleCheckpointIfPresent(page, sessionIndex) {
 }
 
 /**
- * Handle the two terminal checkpoints, units 44-45 (DR-022).
+ * Handle the production checkpoint, unit 44 (DR-023).
+ *
+ * Unlike a sweep, this one cannot be cleared by guessing: the answer is typed,
+ * not picked from four options, so a driver that does not know Japanese would
+ * miss every card forever and the round would never shrink.
+ *
+ * It passes the way a learner does. Round one reveals each answer with "Show
+ * answer" — which counts as a miss and requeues the card — while recording the
+ * kana reading. Round two types those readings back. Both paths of the gate get
+ * exercised, and it terminates in two rounds.
+ *
+ * Two details that cost a stalled 20-minute run each, found with
+ * scripts/probe-production.cjs rather than by reading the markup:
+ *
+ * 1. **Type kana, not romaji.** The app prints romaji as "mizu o kudasai" —
+ *    spaced, particle spelled `o` — which converts back to "みず お ください",
+ *    never "みずをください". JP-keyboard mode takes the kana reading verbatim.
+ * 2. **Verbs render "reading · politeReading" in one node.** Scraping it whole
+ *    types both forms. Only the plain form before the separator is the answer.
+ */
+async function handleProductionCheckpointIfPresent(page, sessionIndex) {
+  if (!(await visible(page, "text=to write"))) return false;
+  log(`  production checkpoint detected (session ${sessionIndex})`);
+
+  const answers = new Map();
+  let guard = 0;
+
+  while (guard < 200) {
+    guard++;
+    if (!(await visible(page, "text=to write"))) break; // round(s) done, unit closed
+
+    const prompt = await page.locator("p.text-heading").first().textContent().catch(() => null);
+    if (prompt === null) break;
+    const known = answers.get(prompt.trim());
+
+    if (known === undefined) {
+      await clickWhenReady(page, "button:has-text('Show answer')", "Show answer (production)");
+      const reading = await page
+        .locator("p.font-jp.text-jp.text-fg-muted")
+        .first()
+        .textContent()
+        .catch(() => null);
+      if (reading !== null) answers.set(prompt.trim(), reading.split("·")[0].trim());
+    } else {
+      await clickWhenReady(page, "button:has-text('JP keyboard')", "JP keyboard (production)");
+      const input = page.locator('input[placeholder="Type the Japanese..."]').first();
+      await input.waitFor({ state: "visible", timeout: CLICK_TIMEOUT });
+      await input.fill(known);
+      await page.waitForTimeout(150);
+      await clickWhenReady(page, "button:has-text('Check answer')", "Check answer (production)");
+    }
+
+    await clickWhenReady(page, "button:has-text('Next')", "Next (production)");
+    await page.waitForTimeout(300);
+  }
+
+  if (guard >= 200) await failHard(page, sessionIndex, "stuck-in-production-checkpoint");
+  log(`  production checkpoint complete (${answers.size} distinct items)`);
+  return true;
+}
+
+/**
+ * Handle the two Hana checkpoints (DR-022).
+ *
+ * These are absent from the ladder unless VITE_HANA_ENABLED is set (DR-023), so
+ * this normally does nothing. Kept because the flag-on ladder must still walk.
  *
  * Both are Hana screens. The walkthrough serves a static bundle with no API
  * server behind it, so every conversation call fails — which is precisely the
@@ -314,7 +379,7 @@ async function main() {
 
     await handleReviewStepIfPresent(page, sessionIndex);
 
-    // The two terminal checkpoints have no unit intro and no cards, so they are
+    // The Hana checkpoints have no unit intro and no cards, so they are
     // detected before the generic Start click ("Start conversation" would match it).
     const terminalCheckpoint = await handleTerminalCheckpointIfPresent(page, sessionIndex);
     if (terminalCheckpoint !== null) {
@@ -336,6 +401,15 @@ async function main() {
       await page.waitForTimeout(WAIT_SHORT);
     } else {
       log(`  No Start button immediately visible — proceeding to terminal detection`);
+    }
+
+    // The production checkpoint replaces the teach stages, like a sweep, but is
+    // reached through the same Start button so it is detected after that click.
+    if (await handleProductionCheckpointIfPresent(page, sessionIndex)) {
+      await page.locator("text=Nice work today.").first().waitFor({ state: "visible", timeout: CLICK_TIMEOUT });
+      log(`  Session ${sessionIndex} CLOSED (production checkpoint)`);
+      results.sessionsCompleted++;
+      continue;
     }
 
     // The checkpoint replaces the teach stages entirely.
