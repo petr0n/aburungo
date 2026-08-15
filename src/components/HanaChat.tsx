@@ -139,7 +139,7 @@ export function HanaChat({ sessionId, title, onEnd, endLabel = "← End", turnLi
           onKeyDown={handleKeyDown}
           disabled={sending}
           placeholder="Type a message…"
-          className="flex min-h-[48px] flex-1 rounded-2xl border border-border bg-surface px-4 text-body text-fg placeholder:text-fg-faint focus:outline-none focus:ring-2 focus:ring-brand-500 disabled:opacity-60"
+          className="flex min-h-[48px] flex-1 rounded-2xl border border-border bg-surface px-4 text-body text-fg placeholder:text-fg-faint focus:outline-none focus:ring-2 focus:ring-focus focus:ring-offset-2 focus:ring-offset-bg disabled:opacity-60"
         />
         <button
           type="button"

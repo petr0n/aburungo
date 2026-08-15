@@ -158,7 +158,7 @@ export function AdminLoginPage() {
               onChange={(e) => setEmail(e.target.value)}
               disabled={submitting}
               placeholder="admin@example.com"
-              className="min-h-[44px] rounded-lg border border-border bg-bg px-3 text-body text-fg placeholder:text-fg-faint focus:border-brand-500 focus:outline-none disabled:opacity-50"
+              className="min-h-[44px] rounded-lg border border-border bg-bg px-3 text-body text-fg placeholder:text-fg-faint focus:border-focus focus:outline-none disabled:opacity-50"
             />
           </div>
 
@@ -175,7 +175,7 @@ export function AdminLoginPage() {
               onChange={(e) => setPassword(e.target.value)}
               disabled={submitting}
               placeholder="Your password"
-              className="min-h-[44px] rounded-lg border border-border bg-bg px-3 text-body text-fg placeholder:text-fg-faint focus:border-brand-500 focus:outline-none disabled:opacity-50"
+              className="min-h-[44px] rounded-lg border border-border bg-bg px-3 text-body text-fg placeholder:text-fg-faint focus:border-focus focus:outline-none disabled:opacity-50"
             />
           </div>
 

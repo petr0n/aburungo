@@ -119,7 +119,7 @@ function KanaKey({ cell, script, onPlay }: KanaKeyProps) {
       className={[
         "group relative flex flex-col items-center justify-center gap-0.5 rounded-lg border bg-bg",
         "shadow-key transition-colors duration-150 active:bg-surface-2",
-        "focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500",
+        "focus:outline-none focus-visible:ring-2 focus-visible:ring-focus focus-visible:ring-offset-2 focus-visible:ring-offset-bg",
         pulsing ? "border-brand-400" : "border-border hover:border-border-strong",
       ].join(" ")}
       style={{ height: "var(--kana-cell)" }}

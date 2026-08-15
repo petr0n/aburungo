@@ -399,7 +399,7 @@ export function KanaPracticePage() {
                       ? "border-success-500 bg-success-bg text-success-fg"
                       : answered === "wrong"
                         ? "border-error-500 bg-error-bg text-error-fg"
-                        : "border-border bg-surface text-fg focus:border-brand-500",
+                        : "border-border bg-surface text-fg focus:border-focus",
                   ].join(" ")}
                 />
                 <button

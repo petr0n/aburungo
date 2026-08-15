@@ -94,7 +94,7 @@ export function AdminLogsPage() {
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           placeholder="Search…"
-          className="min-h-[36px] flex-1 rounded-xl border border-border bg-surface px-3 text-body-sm text-fg outline-none focus:border-brand-500"
+          className="min-h-[36px] flex-1 rounded-xl border border-border bg-surface px-3 text-body-sm text-fg outline-none focus:border-focus"
         />
       </div>
 
