@@ -3,7 +3,7 @@
 # The app had no way to say "Monday" or "the third" before this, which blocked
 # anything involving opening days, appointments or making plans.
 #
-# Dates 1st-10th are split across two units on purpose: their readings ignore the
+# Dates 1st-10th are split across two lessons on purpose: their readings ignore the
 # number system taught in Units 7 and 12 entirely (一日 is ついたち, not いちにち),
 # so they are ten separate memorisations rather than a pattern. Ten in one
 # session would be the heaviest sitting in the ladder.
@@ -12,7 +12,7 @@
 # jlpt-source: training — JLPT level unverified (JMdict carries no JLPT data)
 # example-source: Tatoeba via JMdict-examples 3.6.2 (CC BY 2.0 FR), ids inline
 
-# ── Days of the week (Unit 34) ────────────────────────────────────────────────
+# ── Days of the week (Lesson 34) ────────────────────────────────────────────────
 # One pattern with a shared 曜日 suffix, so nine words behave like one idea.
 
 - id: vocab.youbi
@@ -102,7 +102,7 @@
   romaji: nanyoubi
   english: what day of the week
 
-# ── Dates 1st-5th (Unit 35) ───────────────────────────────────────────────────
+# ── Dates 1st-5th (Lesson 35) ───────────────────────────────────────────────────
 # Irregular readings. These do not follow the counting system already learned.
 
 - id: vocab.tsuitachi
@@ -151,7 +151,7 @@
   romaji: itsuka
   english: the 5th (of the month)
 
-# ── Dates 6th-10th (Unit 36) ──────────────────────────────────────────────────
+# ── Dates 6th-10th (Lesson 36) ──────────────────────────────────────────────────
 
 - id: vocab.muika
   jlpt: N5
@@ -199,7 +199,7 @@
   romaji: tooka
   english: the 10th (of the month)
 
-# ── Dates 11th onward, months (Unit 37) ───────────────────────────────────────
+# ── Dates 11th onward, months (Lesson 37) ───────────────────────────────────────
 # From the 11th the pattern becomes regular: number + にち. Only three
 # exceptions survive, and they are the ones listed here.
 

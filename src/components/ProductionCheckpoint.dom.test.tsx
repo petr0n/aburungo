@@ -11,10 +11,10 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 import { render, screen, cleanup } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import type { Phrase, Unit, Word } from "@/types";
+import type { Phrase, Lesson, Word } from "@/types";
 import { ProductionCheckpoint } from "./ProductionCheckpoint";
 
-const unit: Unit = {
+const lesson: Lesson = {
   id: "n5.checkpoint-production",
   order: 44,
   situation: "Integration & checkpoint",
@@ -35,7 +35,7 @@ const words = [word("w1", "water", "みず"), word("w2", "cat", "ねこ")];
 const phrases: Phrase[] = [];
 
 function setup(over: Partial<Parameters<typeof ProductionCheckpoint>[0]> = {}) {
-  const props = { unit, words, phrases, onMissed: vi.fn(), onDone: vi.fn(), ...over };
+  const props = { lesson, words, phrases, onMissed: vi.fn(), onDone: vi.fn(), ...over };
   render(<ProductionCheckpoint {...props} />);
   return props;
 }

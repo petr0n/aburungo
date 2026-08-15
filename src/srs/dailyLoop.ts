@@ -1,41 +1,41 @@
 /**
- * Daily-loop orchestrator — assembles one guided N5 session from Unit
+ * Daily-loop orchestrator — assembles one guided N5 session from Lesson
  * content + FSRS/Leitner due state. Pure: no React, no DB, no fetch. `now`
  * is always a parameter, per the src/srs/ layer boundary in CLAUDE.md.
  *
  * Review-due detection reuses the existing per-item ReviewState (see
  * src/srs/leitner.ts) rather than introducing a second scheduling concept —
- * a Unit is purely an ordering/grouping layer over already-scheduled items.
+ * a Lesson is purely an ordering/grouping layer over already-scheduled items.
  * GrammarPattern ids slot into the same ReviewState/isDue mechanism as
  * words and phrases, so reviewItems interleaves all three by due date (see
  * docs/superpowers/specs/2026-07-21-grammar-in-context-design.md).
  */
-import type { EpochMs, GrammarPattern, PathProgress, Phrase, ReviewState, Unit, Word } from "@/types";
+import type { EpochMs, GrammarPattern, PathProgress, Phrase, ReviewState, Lesson, Word } from "@/types";
 import { isDue } from "./leitner";
 
 export type DailySession = {
-  /** The next not-yet-introduced unit, or null once every unit has been seen. */
-  unit: Unit | null;
-  /** Due items (words, phrases, and grammar patterns) from seen units, oldest-due first. */
+  /** The next not-yet-introduced lesson, or null once every lesson has been seen. */
+  lesson: Lesson | null;
+  /** Due items (words, phrases, and grammar patterns) from seen lessons, oldest-due first. */
   reviewItems: Array<Phrase | Word | GrammarPattern>;
-  /** This session's new-unit words, in unit order. Empty once `unit` is null. */
+  /** This session's new-lesson words, in lesson order. Empty once `lesson` is null. */
   newWords: Word[];
-  /** This session's new-unit phrases, in unit order. Empty once `unit` is null. */
+  /** This session's new-lesson phrases, in lesson order. Empty once `lesson` is null. */
   newPhrases: Phrase[];
-  /** The pattern the next unit introduces, or null. */
+  /** The pattern the next lesson introduces, or null. */
   newGrammarPattern: GrammarPattern | null;
 };
 
 /**
- * Build today's session from ordered unit content, the learner's path
+ * Build today's session from ordered lesson content, the learner's path
  * progress, the full word/phrase/pattern content pools, and per-item review
  * state.
  *
- * `units` must be sorted ascending by `order` — parseUnits() guarantees this
- * for content loaded through content/units/index.ts.
+ * `lessons` must be sorted ascending by `order` — parseLessons() guarantees this
+ * for content loaded through content/lessons/index.ts.
  */
 export function buildDailySession(
-  units: readonly Unit[],
+  lessons: readonly Lesson[],
   progress: PathProgress,
   allWords: readonly Word[],
   allPhrases: readonly Phrase[],
@@ -43,15 +43,15 @@ export function buildDailySession(
   reviewStates: readonly ReviewState[],
   now: EpochMs,
 ): DailySession {
-  const seenUnitIds = new Set(progress.seenUnitIds);
-  const nextUnit = units.find((u) => !seenUnitIds.has(u.id)) ?? null;
+  const seenLessonIds = new Set(progress.seenLessonIds);
+  const nextUnit = lessons.find((u) => !seenLessonIds.has(u.id)) ?? null;
 
   const seenItemIds = new Set<string>();
-  for (const unit of units) {
-    if (!seenUnitIds.has(unit.id)) continue;
-    for (const id of unit.wordIds) seenItemIds.add(id);
-    for (const id of unit.phraseIds) seenItemIds.add(id);
-    if (unit.patternId !== undefined) seenItemIds.add(unit.patternId);
+  for (const lesson of lessons) {
+    if (!seenLessonIds.has(lesson.id)) continue;
+    for (const id of lesson.wordIds) seenItemIds.add(id);
+    for (const id of lesson.phraseIds) seenItemIds.add(id);
+    if (lesson.patternId !== undefined) seenItemIds.add(lesson.patternId);
   }
 
   const wordById = new Map(allWords.map((w) => [w.id, w]));
@@ -79,5 +79,5 @@ export function buildDailySession(
     nextUnit === null ? [] : nextUnit.phraseIds.map((id) => phraseById.get(id)).filter((p): p is Phrase => p !== undefined);
   const newGrammarPattern = nextUnit?.patternId !== undefined ? (patternById.get(nextUnit.patternId) ?? null) : null;
 
-  return { unit: nextUnit, reviewItems, newWords, newPhrases, newGrammarPattern };
+  return { lesson: nextUnit, reviewItems, newWords, newPhrases, newGrammarPattern };
 }

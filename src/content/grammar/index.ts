@@ -3,7 +3,7 @@
  *
  * Add a new pattern file by creating src/content/grammar/<path>.yaml and
  * pushing it into `allGrammarPatterns` below (or a new export, for N4+
- * ladders later) — mirrors src/content/units/index.ts.
+ * ladders later) — mirrors src/content/lessons/index.ts.
  */
 import type { GrammarPattern } from "@/types";
 import { parseGrammarPatterns } from "./schema";

@@ -8,7 +8,7 @@
  */
 import { describe, expect, it } from "vitest";
 import { allWords } from "./vocabulary";
-import { n5Units } from "./units";
+import { n5Lessons } from "./lessons";
 
 describe("content integrity", () => {
   it("has no duplicate word ids across files", () => {
@@ -21,19 +21,19 @@ describe("content integrity", () => {
     expect(dupes).toEqual([]);
   });
 
-  it("has no unit referencing a word that does not exist", () => {
+  it("has no lesson referencing a word that does not exist", () => {
     const ids = new Set(allWords.map((w) => w.id));
     const dangling: string[] = [];
-    for (const u of n5Units) {
+    for (const u of n5Lessons) {
       for (const id of u.wordIds) if (!ids.has(id)) dangling.push(`${u.id} -> ${id}`);
     }
     expect(dangling).toEqual([]);
   });
 
   it("teaches every word somewhere in the ladder", () => {
-    // A word no unit references is content the learner never meets. 41 words
+    // A word no lesson references is content the learner never meets. 41 words
     // sat orphaned this way before the depth pass.
-    const taught = new Set(n5Units.flatMap((u) => u.wordIds));
+    const taught = new Set(n5Lessons.flatMap((u) => u.wordIds));
     const orphans = allWords.filter((w) => !taught.has(w.id)).map((w) => w.id);
     expect(orphans).toEqual([]);
   });
@@ -43,32 +43,32 @@ describe("content integrity", () => {
  * The shipped ladder shape.
  *
  * Hana is shelved (DR-023), so these assert what a learner *actually* gets. The
- * conversation units are still authored and still tested as components — they
+ * conversation lessons are still authored and still tested as components — they
  * are simply filtered out of the ladder, and this is the guard that says so.
  * Flip VITE_HANA_ENABLED and these expectations change by design.
  */
 describe("the ladder with Hana shelved", () => {
   it("ends on the production checkpoint", () => {
-    const last = n5Units[n5Units.length - 1];
+    const last = n5Lessons[n5Lessons.length - 1];
     expect(last?.checkpoint).toBe("production");
   });
 
-  it("carries no unit that would need an API call", () => {
-    // The failure this guards: a Hana unit reaching the ladder and becoming a
+  it("carries no lesson that would need an API call", () => {
+    // The failure this guards: a Hana lesson reaching the ladder and becoming a
     // screen that apologises for itself, which is the dead end DR-022 removed.
-    const gated = n5Units.filter((u) => u.checkpoint === "conversation" || u.checkpoint === "can-do");
+    const gated = n5Lessons.filter((u) => u.checkpoint === "conversation" || u.checkpoint === "can-do");
     expect(gated.map((u) => u.id)).toEqual([]);
   });
 
-  it("has contiguous orders with no gap left by the filtered units", () => {
-    expect(n5Units.map((u) => u.order)).toEqual(n5Units.map((_, i) => i + 1));
+  it("has contiguous orders with no gap left by the filtered lessons", () => {
+    expect(n5Lessons.map((u) => u.order)).toEqual(n5Lessons.map((_, i) => i + 1));
   });
 
   it("puts production after the last recognition checkpoint, not before it", () => {
     // Recognise everything, then produce it. The reverse would gate on the
     // harder skill first and make the recognition checkpoint redundant.
-    const lastRecognition = [...n5Units].reverse().find((u) => u.checkpoint === "recognition");
-    const production = n5Units.find((u) => u.checkpoint === "production");
+    const lastRecognition = [...n5Lessons].reverse().find((u) => u.checkpoint === "recognition");
+    const production = n5Lessons.find((u) => u.checkpoint === "production");
     expect(production?.order).toBeGreaterThan(lastRecognition?.order ?? Infinity);
   });
 });

@@ -1,5 +1,5 @@
 # N5 transit vocabulary, depth pass for Situation 4 (Units 16-20).
-# Densifies the existing station / platform / taxi / bus units (DR-017).
+# Densifies the existing station / platform / taxi / bus lessons (DR-017).
 #
 # Example sentences are Tatoeba, chosen by hand. Most transit words have no
 # N5-appropriate candidate — the corpus tends to formal or N4+ grammar for them
@@ -9,7 +9,7 @@
 # jlpt-source: training — JLPT level unverified (JMdict carries no JLPT data)
 # example-source: Tatoeba via JMdict-examples 3.6.2 (CC BY 2.0 FR), ids inline
 
-# ── Ways to travel (Unit 16) ──────────────────────────────────────────────────
+# ── Ways to travel (Lesson 16) ──────────────────────────────────────────────────
 
 - id: vocab.chikatetsu
   jlpt: N5
@@ -33,7 +33,7 @@
   romaji: hikouki
   english: aeroplane
 
-# ── On the street (Unit 19) ───────────────────────────────────────────────────
+# ── On the street (Lesson 19) ───────────────────────────────────────────────────
 
 - id: vocab.michi
   jlpt: N5
@@ -44,7 +44,7 @@
   romaji: michi
   english: road, street, way
 
-# ── Under your own steam (Unit 20) ────────────────────────────────────────────
+# ── Under your own steam (Lesson 20) ────────────────────────────────────────────
 
 - id: vocab.aruku
   jlpt: N5

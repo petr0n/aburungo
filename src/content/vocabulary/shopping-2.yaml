@@ -1,5 +1,5 @@
 # N5 shopping vocabulary, depth pass for Situation 3 (Units 13-15).
-# Densifies the existing shop / sizes / do-you-have-it units (DR-017).
+# Densifies the existing shop / sizes / do-you-have-it lessons (DR-017).
 #
 # Example sentences are Tatoeba, chosen by hand. Several words here carry no
 # example: shiroi could not get one because the search substring-matches it
@@ -9,7 +9,7 @@
 # jlpt-source: training — JLPT level unverified (JMdict carries no JLPT data)
 # example-source: Tatoeba via JMdict-examples 3.6.2 (CC BY 2.0 FR), ids inline
 
-# ── Things you buy (Unit 13) ──────────────────────────────────────────────────
+# ── Things you buy (Lesson 13) ──────────────────────────────────────────────────
 
 - id: vocab.fuku
   jlpt: N5
@@ -42,7 +42,7 @@
   romaji: saizu
   english: size
 
-# ── Counting things (Unit 14) ─────────────────────────────────────────────────
+# ── Counting things (Lesson 14) ─────────────────────────────────────────────────
 
 - id: vocab.mittsu
   jlpt: N5
@@ -71,7 +71,7 @@
   romaji: itsutsu
   english: five (things)
 
-# ── Colours (Unit 15, alongside vocab.iro) ────────────────────────────────────
+# ── Colours (Lesson 15, alongside vocab.iro) ────────────────────────────────────
 
 - id: vocab.akai
   jlpt: N5

@@ -6,7 +6,7 @@ export type JlptLevel = "N5" | "N4" | "N3" | "N2" | "N1";
 export type { ConversationScope };
 
 /**
- * Open a conversation. Passing a `scope` constrains Hana to one unit's
+ * Open a conversation. Passing a `scope` constrains Hana to one lesson's
  * situation and vocabulary for a few turns, instead of open-ended chat.
  */
 export async function createSession(

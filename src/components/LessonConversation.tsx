@@ -1,10 +1,10 @@
 import { useState } from "react";
-import type { ConversationScope, Unit } from "@/types";
+import type { ConversationScope, Lesson } from "@/types";
 import { createSession } from "@/api/conversation";
 import { HanaChat } from "./HanaChat";
 
 type Props = {
-  unit: Unit;
+  lesson: Lesson;
   /** Null when the ladder has not taught two situations yet. */
   scope: ConversationScope | null;
   /** Conversation is an authenticated route. Guests get a prompt, not an error. */
@@ -13,7 +13,7 @@ type Props = {
 };
 
 /**
- * Unit 44 — one unscripted exchange spanning two taught situations (DR-022).
+ * Lesson 44 — one unscripted exchange spanning two taught situations (DR-022).
  *
  * The only checkpoint in the app with no right answer on screen. Everything up
  * to here has a card with an answer behind it; this asks the learner to keep a
@@ -21,10 +21,10 @@ type Props = {
  * were for.
  *
  * Nothing is recorded and nothing is judged — Hana never evaluates mid-session
- * by design. Having the conversation is the whole of it. Judging is what unit
+ * by design. Having the conversation is the whole of it. Judging is what lesson
  * 45 does, once, afterwards, with a different agent.
  */
-export function UnitConversation({ unit, scope, signedIn, onDone }: Props) {
+export function LessonConversation({ lesson, scope, signedIn, onDone }: Props) {
   const [sessionId, setSessionId] = useState<string | null>(null);
   const [starting, setStarting] = useState(false);
   const [failed, setFailed] = useState(false);
@@ -48,7 +48,7 @@ export function UnitConversation({ unit, scope, signedIn, onDone }: Props) {
     return (
       <HanaChat
         sessionId={sessionId}
-        title={unit.title}
+        title={lesson.title}
         onEnd={onDone}
         endLabel="← Finish"
         turnLimit={scope?.maxTurns ?? 6}
@@ -61,9 +61,9 @@ export function UnitConversation({ unit, scope, signedIn, onDone }: Props) {
   return (
     <div className="flex w-full flex-col gap-6 py-8">
       <div className="flex flex-col gap-2">
-        <p className="text-body-sm uppercase tracking-widest text-fg-faint">{unit.situation}</p>
-        <p className="text-heading font-semibold text-fg">{unit.title}</p>
-        <p className="text-body text-fg-subtle">{unit.canDo}</p>
+        <p className="text-body-sm uppercase tracking-widest text-fg-faint">{lesson.situation}</p>
+        <p className="text-heading font-semibold text-fg">{lesson.title}</p>
+        <p className="text-body text-fg-subtle">{lesson.canDo}</p>
       </div>
 
       {scope !== null && !failed && signedIn && (
@@ -73,7 +73,7 @@ export function UnitConversation({ unit, scope, signedIn, onDone }: Props) {
         </div>
       )}
 
-      <p className="text-body-sm text-fg-subtle">{unit.grammarNote}</p>
+      <p className="text-body-sm text-fg-subtle">{lesson.grammarNote}</p>
 
       {!signedIn && (
         // Soft prompt, not a redirect (CLAUDE.md). Distinguishing this from an

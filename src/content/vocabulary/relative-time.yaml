@@ -4,7 +4,7 @@
 # words from two axes, so the learner acquires a system rather than a list.
 #
 # The day row (昨日 / 今日 / 明日 / 毎日) is deliberately absent here — it is already
-# taught in the weather units and Unit 33. DR-019 requires the grid units to
+# taught in the weather lessons and Lesson 33. DR-019 requires the grid lessons to
 # *reference* it rather than re-teach it: concrete instances first, pattern later.
 #
 # Irregularities, all taught as exceptions rather than smuggled in:
@@ -18,7 +18,7 @@
 # jlpt-source: training — JLPT level unverified (JMdict carries no JLPT data)
 # example-source: Tatoeba via JMdict-examples 3.6.2 (CC BY 2.0 FR), ids inline
 
-# ── The 週 row (Unit 40) ──────────────────────────────────────────────────────
+# ── The 週 row (Lesson 40) ──────────────────────────────────────────────────────
 
 - id: vocab.senshuu
   jlpt: N5
@@ -64,7 +64,7 @@
     english: They go to church every Sunday.
     tatoeba_id: "96141"
 
-# ── The 月 row (Unit 40) ──────────────────────────────────────────────────────
+# ── The 月 row (Lesson 40) ──────────────────────────────────────────────────────
 # Same four prefixes, same order. Only 毎月 bends, and only in its reading.
 
 - id: vocab.sengetsu
@@ -111,8 +111,8 @@
   english: every month
   notes: つき, not げつ — the odd one in this row. まいげつ is also correct but far less common. JMdict seq 1584350.
 
-# ── The 年 row, and the exceptions (Unit 41) ──────────────────────────────────
-# Two of the four break the pattern, which is why the row gets its own unit.
+# ── The 年 row, and the exceptions (Lesson 41) ──────────────────────────────────
+# Two of the four break the pattern, which is why the row gets its own lesson.
 
 - id: vocab.kyonen
   jlpt: N5

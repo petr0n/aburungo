@@ -1,10 +1,10 @@
 import { useState } from "react";
-import type { ConversationScope, Unit } from "@/types";
+import type { ConversationScope, Lesson } from "@/types";
 import { assessCanDo, createSession } from "@/api/conversation";
 import { HanaChat } from "./HanaChat";
 
 type Props = {
-  unit: Unit;
+  lesson: Lesson;
   /** Every situation the learner has been taught, in ladder order. */
   situations: string[];
   /** Situations already verified on a previous visit. */
@@ -16,7 +16,7 @@ type Props = {
   onVerified: (situation: string) => void;
   /** Every can-do verified — the level is finished. */
   onComplete: () => void;
-  /** Leave with work outstanding. The unit must stay on the ladder. */
+  /** Leave with work outstanding. The lesson must stay on the ladder. */
   onLater: () => void;
 };
 
@@ -35,7 +35,7 @@ const MIN_TURNS_BEFORE_CHECK = 2;
 type Result = { situation: string; verified: boolean; note: string };
 
 /**
- * Unit 45 — the can-do checkpoint (DR-022).
+ * Lesson 45 — the can-do checkpoint (DR-022).
  *
  * The learner picks a situation, plays it through with Hana, and a separate
  * assessor reads the transcript afterwards and decides whether the exchange
@@ -48,12 +48,12 @@ type Result = { situation: string; verified: boolean; note: string };
  * list. There is no total, no ratio, and no record of how many attempts a
  * can-do took.
  *
- * Leaving early does not finish the unit — `onLater` deliberately does not mark
+ * Leaving early does not finish the lesson — `onLater` deliberately does not mark
  * it seen, so the checkpoint is still there tomorrow. Finishing it any other
  * way would strand a learner one can-do short with no route back.
  */
 export function CanDoCheckpoint({
-  unit,
+  lesson,
   situations,
   verified,
   scopeFor,
@@ -193,9 +193,9 @@ export function CanDoCheckpoint({
   return (
     <div className="flex w-full flex-col gap-6 py-8">
       <div className="flex flex-col gap-2">
-        <p className="text-body-sm uppercase tracking-widest text-fg-faint">{unit.situation}</p>
-        <p className="text-heading font-semibold text-fg">{unit.title}</p>
-        <p className="text-body-sm text-fg-subtle">{unit.grammarNote}</p>
+        <p className="text-body-sm uppercase tracking-widest text-fg-faint">{lesson.situation}</p>
+        <p className="text-heading font-semibold text-fg">{lesson.title}</p>
+        <p className="text-body-sm text-fg-subtle">{lesson.grammarNote}</p>
       </div>
 
       {!signedIn && (

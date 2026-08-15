@@ -1,7 +1,7 @@
-# N5 daily-loop units — end-of-ladder checkpoint (Unit 43).
+# N5 daily-loop lessons — end-of-ladder checkpoint (Lesson 43).
 #
 # The second of the two checkpoints DR-019 called for. The mid-way one lives at
-# units 38-39 and is still gated on scoped Hana; this one is buildable today
+# lessons 38-39 and is still gated on scoped Hana; this one is buildable today
 # because DR-020 settled what "finishing" may look like.
 #
 # It is a mastery gate, not a grade: a wide recognition round over everything
@@ -11,7 +11,7 @@
 # that shrinks as you work is a gate, one that stands is a verdict.
 #
 # No new words, phrases or kanji. Behaviour comes from `checkpoint: recognition`,
-# which LearnPage renders instead of the new-unit flow.
+# which LearnPage renders instead of the new-lesson flow.
 #
 # content-source: n/a — introduces no content, only re-presents taught items
 

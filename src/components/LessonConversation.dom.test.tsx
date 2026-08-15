@@ -1,9 +1,9 @@
 // @vitest-environment jsdom
 /**
- * Cover for unit 44 (DR-022).
+ * Cover for lesson 44 (DR-022).
  *
- * There is no gate and nothing is recorded here, so the only way this unit can
- * be wrong is by trapping the learner: it is the second-to-last unit on the
+ * There is no gate and nothing is recorded here, so the only way this lesson can
+ * be wrong is by trapping the learner: it is the second-to-last lesson on the
  * ladder, and it has three ways to have no conversation available — guest,
  * unreachable server, or a ladder too short to have two situations. All three
  * must still lead somewhere.
@@ -11,7 +11,7 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 import { render, screen, cleanup } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import type { ConversationScope, Unit } from "@/types";
+import type { ConversationScope, Lesson } from "@/types";
 
 const createSession = vi.fn<() => Promise<{ sessionId: string }>>(() =>
   Promise.resolve({ sessionId: "session-1" }),
@@ -24,9 +24,9 @@ vi.mock("@/api/conversation", () => ({
   }),
 }));
 
-const { UnitConversation } = await import("./UnitConversation");
+const { LessonConversation } = await import("./LessonConversation");
 
-const unit: Unit = {
+const lesson: Lesson = {
   id: "n5.unit-38",
   order: 44,
   situation: "Integration & checkpoint",
@@ -46,9 +46,9 @@ const scope: ConversationScope = {
   maxTurns: 6,
 };
 
-function setup(over: Partial<Parameters<typeof UnitConversation>[0]> = {}) {
-  const props = { unit, scope, signedIn: true, onDone: vi.fn(), ...over };
-  render(<UnitConversation {...props} />);
+function setup(over: Partial<Parameters<typeof LessonConversation>[0]> = {}) {
+  const props = { lesson, scope, signedIn: true, onDone: vi.fn(), ...over };
+  render(<LessonConversation {...props} />);
   return props;
 }
 

@@ -1,17 +1,17 @@
-# N5 daily-loop units — Relative time (Units 41-42 of the extended ladder).
+# N5 daily-loop lessons — Relative time (Units 41-42 of the extended ladder).
 #
 # Placed after the mid-way checkpoint per DR-019: the grid is conversational
 # rather than transactional, so it belongs with what follows the milestone, not
 # with the eight situations before it.
 #
 # The day row (昨日 / 今日 / 明日 / 毎日) is referenced, never re-taught — it was
-# learned as concrete instances in the weather units and Unit 33, and its job
+# learned as concrete instances in the weather lessons and Lesson 33, and its job
 # here is to be the row the learner already knows, which makes the pattern
 # visible instead of abstract.
 #
 # The rows split 8 / 6 rather than 12 / 0 or 6 / 6 because the 週 and 月 rows are
 # perfectly regular and behave as one idea, while the 年 row breaks twice (去年,
-# 今年) and needs the room. Unit 41 collects every exception in the system.
+# 今年) and needs the room. Lesson 41 collects every exception in the system.
 #
 # content-source: training — N5 canonical vocabulary, headwords verified against
 #   JMdict 3.6.2; composed phrases pending Tatoeba verification

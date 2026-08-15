@@ -1,9 +1,9 @@
-# N5 daily-loop units — consolidation checkpoint (after Getting around).
+# N5 daily-loop lessons — consolidation checkpoint (after Getting around).
 #
 # Authored for this position rather than moved into it. The existing checkpoint
 # at 39-40 could not be relocated: its own worked example uses 帰る, which is not
-# taught until unit 34, and five of its nine review kanji (天 気 雨 好 日) arrive
-# between units 28 and 36. Dropping it here would have reviewed material the
+# taught until lesson 34, and five of its nine review kanji (天 気 雨 好 日) arrive
+# between lessons 28 and 36. Dropping it here would have reviewed material the
 # learner has not met — incoherent rather than merely hard.
 #
 # Sits at the boundary between "Getting around" and "Hotel", so it consolidates
@@ -11,7 +11,7 @@
 # food & drink (8-12), shopping (13-15), getting around (16-20). 148 words are
 # available to it; the recognition checkpoint samples 24 across themes.
 #
-# A recognition checkpoint, not a Hana shell. RecognitionCheckpoint already scopes itself to units
+# A recognition checkpoint, not a Hana shell. RecognitionCheckpoint already scopes itself to lessons
 # ordered before the checkpoint, so this needs no new mechanism and — unlike the
 # 39-40 pair — it functions today rather than degrading to an intro screen.
 #

@@ -1,11 +1,11 @@
 import { useState } from "react";
-import type { Unit, Word } from "@/types";
+import type { Lesson, Word } from "@/types";
 import { buildRecognitionQueue } from "@/srs/checkpoint";
 import { RecognitionPass } from "./RecognitionPass";
 
 type Props = {
-  /** The checkpoint unit, for the intro screen. */
-  unit: Unit;
+  /** The checkpoint lesson, for the intro screen. */
+  lesson: Lesson;
   /** Everything the learner has already been taught. */
   words: Word[];
   /** Reported per miss so the caller can return the word to the SRS queue. */
@@ -28,7 +28,7 @@ type Props = {
  * The retry loop is composition rather than a new card UI: each round is a
  * RecognitionPass over the words still to place.
  */
-export function RecognitionCheckpoint({ unit, words, onMissed, onDone }: Props) {
+export function RecognitionCheckpoint({ lesson, words, onMissed, onDone }: Props) {
   const [started, setStarted] = useState(false);
   const [round, setRound] = useState<Word[]>(() => buildRecognitionQueue(words));
   const [missedThisRound, setMissedThisRound] = useState<Word[]>([]);
@@ -55,11 +55,11 @@ export function RecognitionCheckpoint({ unit, words, onMissed, onDone }: Props) 
     return (
       <div className="flex w-full flex-col gap-6 py-8">
         <div className="flex flex-col gap-2">
-          <p className="text-body-sm uppercase tracking-widest text-fg-faint">{unit.situation}</p>
-          <p className="text-heading font-semibold text-fg">{unit.title}</p>
-          <p className="text-body text-fg-subtle">{unit.canDo}</p>
+          <p className="text-body-sm uppercase tracking-widest text-fg-faint">{lesson.situation}</p>
+          <p className="text-heading font-semibold text-fg">{lesson.title}</p>
+          <p className="text-body text-fg-subtle">{lesson.canDo}</p>
         </div>
-        <p className="text-body-sm text-fg-subtle">{unit.grammarNote}</p>
+        <p className="text-body-sm text-fg-subtle">{lesson.grammarNote}</p>
         <button
           type="button"
           onClick={() => setStarted(true)}

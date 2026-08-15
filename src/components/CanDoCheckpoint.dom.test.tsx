@@ -4,14 +4,14 @@
  *
  * The things worth pinning here are the ones that would fail silently: a
  * verified can-do that never persists, an unreachable assessor that strands the
- * learner, an early exit that quietly completes the unit and locks them out of
+ * learner, an early exit that quietly completes the lesson and locks them out of
  * the can-dos they had left. None of those throw — they just leave someone
  * stuck, which is why they get a test rather than an inspection.
  */
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 import { render, screen, cleanup, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import type { ConversationScope, Unit } from "@/types";
+import type { ConversationScope, Lesson } from "@/types";
 
 const createSession = vi.fn<() => Promise<{ sessionId: string }>>(() =>
   Promise.resolve({ sessionId: "session-1" }),
@@ -31,7 +31,7 @@ vi.mock("@/api/conversation", () => ({
 
 const { CanDoCheckpoint } = await import("./CanDoCheckpoint");
 
-const unit: Unit = {
+const lesson: Lesson = {
   id: "n5.unit-39",
   order: 45,
   situation: "Integration & checkpoint",
@@ -55,7 +55,7 @@ const situations = ["Greetings", "Food & drink", "Shopping"];
 
 function setup(over: Partial<Parameters<typeof CanDoCheckpoint>[0]> = {}) {
   const props = {
-    unit,
+    lesson,
     situations,
     verified: new Set<string>(),
     scopeFor: () => scope,
@@ -210,7 +210,7 @@ describe("running a can-do", () => {
 });
 
 describe("finishing", () => {
-  it("completes the unit only once every situation is verified", async () => {
+  it("completes the lesson only once every situation is verified", async () => {
     const user = userEvent.setup();
     const { onComplete } = setup({ verified: new Set(["Greetings", "Shopping"]) });
     await playThrough(user);
@@ -220,8 +220,8 @@ describe("finishing", () => {
     expect(onComplete).toHaveBeenCalled();
   });
 
-  it("leaving early does not complete the unit", async () => {
-    // This is the trap the escape hatch has to avoid: unit 45 is the last on
+  it("leaving early does not complete the lesson", async () => {
+    // This is the trap the escape hatch has to avoid: lesson 45 is the last on
     // the ladder, so completing it with can-dos outstanding would leave the
     // learner at "All caught up" with no route back to them.
     const user = userEvent.setup();

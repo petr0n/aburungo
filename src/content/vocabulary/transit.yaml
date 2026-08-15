@@ -1,10 +1,10 @@
 # N5 transit vocabulary — trains, stations, taxis, buses (Situation 4: Getting
-# around, Units 16-20). See docs/plans/02b-n5-units.md for the unit map this
+# around, Units 16-20). See docs/plans/02b-n5-lessons.md for the lesson map this
 # content is drawn from.
 # content-source: training — headwords verified against JMdict 3.6.2 on 2026-08-04
 # jlpt-source: training — JLPT level unverified (JMdict carries no JLPT data)
 
-# ── At the station (Unit 16) ──────────────────────────────────────────────────
+# ── At the station (Lesson 16) ──────────────────────────────────────────────────
 
 - id: vocab.densha
   jlpt: N5
@@ -37,7 +37,7 @@
     available word_type since the schema has no dedicated particle category.
     Attaches after a place or time noun (駅まで, 三時まで).
 
-# ── Platform & exit (Unit 17) ─────────────────────────────────────────────────
+# ── Platform & exit (Lesson 17) ─────────────────────────────────────────────────
 
 - id: vocab.homu
   jlpt: N5
@@ -81,7 +81,7 @@
   romaji: nanban
   english: which number (platform, gate, etc.)
 
-# ── Time expressions (Unit 18) ────────────────────────────────────────────────
+# ── Time expressions (Lesson 18) ────────────────────────────────────────────────
 
 - id: vocab.nanji
   jlpt: N5
@@ -140,7 +140,7 @@
     Becomes ぷん after 1, 3, 4, 6, 8, 10 (いっぷん, さんぷん, よんぷん,
     ろっぷん, はっぷん, じゅっぷん) — the reading given here is the base form.
 
-# ── Taxi (Unit 19) ─────────────────────────────────────────────────────────────
+# ── Taxi (Lesson 19) ─────────────────────────────────────────────────────────────
 
 - id: vocab.takushii
   jlpt: N5
@@ -161,12 +161,12 @@
   romaji: tomeru
   english: to stop (something)
 
-# vocab.migi (右/みぎ, right) is owned by vocabulary/directions.yaml — Unit 24
-# ("Left, right, straight") is its canonical kanji-teaching point; Unit 19
-# here (taxi) uses the same id ahead of that unit in the ladder, kana-only
+# vocab.migi (右/みぎ, right) is owned by vocabulary/directions.yaml — Lesson 24
+# ("Left, right, straight") is its canonical kanji-teaching point; Lesson 19
+# here (taxi) uses the same id ahead of that lesson in the ladder, kana-only
 # in practice since the app doesn't gate word display on kanji-teaching order.
 
-# ── Bus (Unit 20) ────────────────────────────────────────────────────────────
+# ── Bus (Lesson 20) ────────────────────────────────────────────────────────────
 
 - id: vocab.basu
   jlpt: N5

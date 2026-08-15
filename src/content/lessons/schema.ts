@@ -1,16 +1,16 @@
 /**
- * Runtime validator for hand-authored Unit YAML.
+ * Runtime validator for hand-authored Lesson YAML.
  *
  * Mirrors the pattern in content/schema.ts and vocabulary/schema.ts. In
  * addition to shape checks, verifies every wordIds/phraseIds entry resolves
- * against the existing content — a Unit is an ordering layer, not new
+ * against the existing content — a Lesson is an ordering layer, not new
  * content, so a dangling reference is always an authoring mistake.
  */
-import type { Unit } from "@/types";
+import type { Lesson } from "@/types";
 
-type CheckpointKind = NonNullable<Unit["checkpoint"]>;
+type CheckpointKind = NonNullable<Lesson["checkpoint"]>;
 
-/** Kept in sync with Unit["checkpoint"] by the type annotation below. */
+/** Kept in sync with Lesson["checkpoint"] by the type annotation below. */
 const CHECKPOINT_KINDS: readonly CheckpointKind[] = ["recognition", "production", "conversation", "can-do"];
 
 function isString(v: unknown): v is string {
@@ -25,40 +25,40 @@ function isNumber(v: unknown): v is number {
   return typeof v === "number" && Number.isFinite(v);
 }
 
-class UnitSchemaError extends Error {
+class LessonSchemaError extends Error {
   readonly raw: unknown;
   constructor(message: string, raw: unknown) {
     super(message);
-    this.name = "UnitSchemaError";
+    this.name = "LessonSchemaError";
     this.raw = raw;
   }
 }
 
-export function parseUnit(raw: unknown, source: string): Unit {
+export function parseLesson(raw: unknown, source: string): Lesson {
   if (typeof raw !== "object" || raw === null) {
-    throw new UnitSchemaError(`${source}: entry is not an object`, raw);
+    throw new LessonSchemaError(`${source}: entry is not an object`, raw);
   }
   const o = raw as Record<string, unknown>;
 
   for (const key of ["id", "situation", "title", "canDo", "grammarNote"] as const) {
     if (!isString(o[key])) {
-      throw new UnitSchemaError(`${source}: entry "${String(o.id ?? "?")}" missing or empty field "${key}"`, raw);
+      throw new LessonSchemaError(`${source}: entry "${String(o.id ?? "?")}" missing or empty field "${key}"`, raw);
     }
   }
   if (!isNumber(o.order)) {
-    throw new UnitSchemaError(`${source}: entry "${String(o.id)}" missing or invalid "order"`, raw);
+    throw new LessonSchemaError(`${source}: entry "${String(o.id)}" missing or invalid "order"`, raw);
   }
   for (const key of ["wordIds", "phraseIds", "kanji"] as const) {
     if (!isStringArray(o[key])) {
-      throw new UnitSchemaError(`${source}: entry "${String(o.id)}" has invalid "${key}" — must be a string array`, raw);
+      throw new LessonSchemaError(`${source}: entry "${String(o.id)}" has invalid "${key}" — must be a string array`, raw);
     }
   }
 
   if (o.patternId !== undefined && !isString(o.patternId)) {
-    throw new UnitSchemaError(`${source}: entry "${String(o.id)}" has invalid "patternId"`, raw);
+    throw new LessonSchemaError(`${source}: entry "${String(o.id)}" has invalid "patternId"`, raw);
   }
   if (o.checkpoint !== undefined && !CHECKPOINT_KINDS.includes(o.checkpoint as CheckpointKind)) {
-    throw new UnitSchemaError(
+    throw new LessonSchemaError(
       `${source}: entry "${String(o.id)}" has invalid "checkpoint" — expected one of ${CHECKPOINT_KINDS.join(", ")}`,
       raw,
     );
@@ -83,46 +83,46 @@ export function parseUnit(raw: unknown, source: string): Unit {
  * Validate an array of raw entries plus cross-references against the known
  * word/phrase id sets. Also checks for duplicate ids and duplicate order.
  */
-export function parseUnits(
+export function parseLessons(
   raw: unknown,
   source: string,
   knownWordIds: Set<string>,
   knownPhraseIds: Set<string>,
   knownPatternIds: Set<string>,
-): Unit[] {
+): Lesson[] {
   if (!Array.isArray(raw)) {
-    throw new UnitSchemaError(`${source}: top-level value must be an array`, raw);
+    throw new LessonSchemaError(`${source}: top-level value must be an array`, raw);
   }
-  const units = raw.map((entry) => parseUnit(entry, source));
+  const lessons = raw.map((entry) => parseLesson(entry, source));
 
   const seenIds = new Set<string>();
   const seenOrders = new Set<number>();
-  for (const u of units) {
+  for (const u of lessons) {
     if (seenIds.has(u.id)) {
-      throw new UnitSchemaError(`${source}: duplicate unit id "${u.id}"`, u);
+      throw new LessonSchemaError(`${source}: duplicate lesson id "${u.id}"`, u);
     }
     seenIds.add(u.id);
 
     if (seenOrders.has(u.order)) {
-      throw new UnitSchemaError(`${source}: duplicate unit order ${u.order} (unit "${u.id}")`, u);
+      throw new LessonSchemaError(`${source}: duplicate lesson order ${u.order} (lesson "${u.id}")`, u);
     }
     seenOrders.add(u.order);
 
     for (const wordId of u.wordIds) {
       if (!knownWordIds.has(wordId)) {
-        throw new UnitSchemaError(`${source}: unit "${u.id}" references unknown word id "${wordId}"`, u);
+        throw new LessonSchemaError(`${source}: lesson "${u.id}" references unknown word id "${wordId}"`, u);
       }
     }
     for (const phraseId of u.phraseIds) {
       if (!knownPhraseIds.has(phraseId)) {
-        throw new UnitSchemaError(`${source}: unit "${u.id}" references unknown phrase id "${phraseId}"`, u);
+        throw new LessonSchemaError(`${source}: lesson "${u.id}" references unknown phrase id "${phraseId}"`, u);
       }
     }
 
     if (u.patternId !== undefined && !knownPatternIds.has(u.patternId)) {
-      throw new UnitSchemaError(`${source}: unit "${u.id}" references unknown pattern id "${u.patternId}"`, u);
+      throw new LessonSchemaError(`${source}: lesson "${u.id}" references unknown pattern id "${u.patternId}"`, u);
     }
   }
 
-  return units.sort((a, b) => a.order - b.order);
+  return lessons.sort((a, b) => a.order - b.order);
 }

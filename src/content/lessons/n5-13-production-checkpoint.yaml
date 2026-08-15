@@ -1,4 +1,4 @@
-# N5 daily-loop units — the production checkpoint (Unit 44).
+# N5 daily-loop lessons — the production checkpoint (Lesson 44).
 #
 # The gate that closes the level (DR-023). Every checkpoint before this one is a
 # recognition checkpoint, and that can be cleared by recognition alone — picking the right
@@ -6,14 +6,14 @@
 # English, which is the skill the ladder is actually for.
 #
 # It sits after the last recognition checkpoint so the level escalates rather than repeats:
-# recognise everything (unit 43), then produce it (unit 44).
+# recognise everything (lesson 43), then produce it (lesson 44).
 #
-# This unit is always present. The two Hana units that follow it are gated
+# This lesson is always present. The two Hana lessons that follow it are gated
 # behind `hanaEnabled` and drop out of the ladder when it is off, so with the
 # AI shelved this is the ending — see src/config.ts and DR-023.
 #
 # No new words, phrases or kanji. Behaviour comes from `checkpoint: production`,
-# which LearnPage renders instead of the new-unit flow.
+# which LearnPage renders instead of the new-lesson flow.
 #
 # content-source: n/a — introduces no content, only re-presents taught items
 

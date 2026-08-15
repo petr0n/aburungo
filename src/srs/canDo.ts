@@ -1,15 +1,15 @@
 /**
  * Scope and can-do bookkeeping for the two terminal checkpoints (DR-022).
  *
- * Unit 44 runs one unscripted exchange spanning two situations the learner has
- * already worked through; unit 45 verifies can-dos one situation at a time.
+ * Lesson 44 runs one unscripted exchange spanning two situations the learner has
+ * already worked through; lesson 45 verifies can-dos one situation at a time.
  * Both need the same two things — which situations are in play, and which words
  * Hana is allowed to use — so both live here.
  *
  * Pure, like everything else in src/srs/: no React, no DB, no fetch, and
  * randomness injected so tests are deterministic.
  */
-import type { ConversationScope, Unit, Word } from "@/types";
+import type { ConversationScope, Lesson, Word } from "@/types";
 import { buildRecognitionQueue } from "./checkpoint";
 
 /**
@@ -20,17 +20,17 @@ import { buildRecognitionQueue } from "./checkpoint";
  */
 export const MAX_SCOPE_WORDS = 60;
 
-/** Turn budgets. Unit 44 wants 5-7 exchanges; a can-do run gets slightly more. */
+/** Turn budgets. Lesson 44 wants 5-7 exchanges; a can-do run gets slightly more. */
 export const CONVERSATION_TURNS = 6;
 export const CAN_DO_TURNS = 7;
 
 /**
  * Prefix for the marker ids that record a verified can-do.
  *
- * These live in PathProgress.seenUnitIds alongside real unit ids. That list is
+ * These live in PathProgress.seenLessonIds alongside real lesson ids. That list is
  * an append-only set of opaque strings with no foreign key behind it, and every
  * consumer only ever asks "is this id present?" — so a marker that matches no
- * unit is inert. Riding on it means verified can-dos sync to the server, union
+ * lesson is inert. Riding on it means verified can-dos sync to the server, union
  * correctly across devices, and survive an ITP cache wipe, with no migration.
  *
  * The alternative was a second table plus a migration, and `supabase db push`
@@ -43,33 +43,33 @@ export function canDoMarkerId(situation: string): string {
 }
 
 /** The situations the learner has had verified, read back out of the marker ids. */
-export function verifiedCanDos(seenUnitIds: readonly string[]): Set<string> {
+export function verifiedCanDos(seenLessonIds: readonly string[]): Set<string> {
   return new Set(
-    seenUnitIds.filter((id) => id.startsWith(CAN_DO_PREFIX)).map((id) => id.slice(CAN_DO_PREFIX.length)),
+    seenLessonIds.filter((id) => id.startsWith(CAN_DO_PREFIX)).map((id) => id.slice(CAN_DO_PREFIX.length)),
   );
 }
 
 /**
  * Distinct situations the learner has actually been taught, in ladder order.
  *
- * Checkpoint units are excluded by their `checkpoint` field rather than by
+ * Checkpoint lessons are excluded by their `checkpoint` field rather than by
  * matching their situation label, so renaming "Integration & checkpoint" can
  * never silently turn a checkpoint into something Hana tries to role-play.
  */
-export function taughtSituations(units: readonly Unit[], seenUnitIds: readonly string[]): string[] {
-  const seen = new Set(seenUnitIds);
+export function taughtSituations(lessons: readonly Lesson[], seenLessonIds: readonly string[]): string[] {
+  const seen = new Set(seenLessonIds);
   const out: string[] = [];
-  for (const unit of units) {
-    if (unit.checkpoint !== undefined) continue;
-    if (!seen.has(unit.id)) continue;
-    if (!out.includes(unit.situation)) out.push(unit.situation);
+  for (const lesson of lessons) {
+    if (lesson.checkpoint !== undefined) continue;
+    if (!seen.has(lesson.id)) continue;
+    if (!out.includes(lesson.situation)) out.push(lesson.situation);
   }
   return out;
 }
 
 /** Every word taught under the given situations, deduplicated, in ladder order. */
 export function wordsForSituations(
-  units: readonly Unit[],
+  lessons: readonly Lesson[],
   situations: readonly string[],
   allWords: readonly Word[],
 ): Word[] {
@@ -77,9 +77,9 @@ export function wordsForSituations(
   const byId = new Map(allWords.map((w) => [w.id, w]));
   const out: Word[] = [];
   const taken = new Set<string>();
-  for (const unit of units) {
-    if (!wanted.has(unit.situation)) continue;
-    for (const id of unit.wordIds) {
+  for (const lesson of lessons) {
+    if (!wanted.has(lesson.situation)) continue;
+    for (const id of lesson.wordIds) {
       const word = byId.get(id);
       if (word === undefined || taken.has(id)) continue;
       taken.add(id);
@@ -109,22 +109,22 @@ function defaultShuffle<T>(items: readonly T[]): T[] {
 }
 
 /**
- * Scope for unit 44 — two taught situations strung together.
+ * Scope for lesson 44 — two taught situations strung together.
  *
  * The pair is drawn at random rather than fixed. Which two matters far less
- * than that there are two: the point of the unit is that the learner has to
+ * than that there are two: the point of the lesson is that the learner has to
  * carry a thread across a scene change with no single-answer safety net.
  *
  * Returns null when fewer than two situations have been taught, which only
- * happens on a ladder too short to have reached this unit.
+ * happens on a ladder too short to have reached this lesson.
  */
 export function buildCrossSituationScope(
-  units: readonly Unit[],
-  seenUnitIds: readonly string[],
+  lessons: readonly Lesson[],
+  seenLessonIds: readonly string[],
   allWords: readonly Word[],
   shuffle: <T>(items: readonly T[]) => T[] = defaultShuffle,
 ): ConversationScope | null {
-  const situations = taughtSituations(units, seenUnitIds);
+  const situations = taughtSituations(lessons, seenLessonIds);
   if (situations.length < 2) return null;
 
   const [first, second] = shuffle(situations);
@@ -134,18 +134,18 @@ export function buildCrossSituationScope(
   return toScope(
     `${first}, then ${second}`,
     `Move from ${first.toLowerCase()} to ${second.toLowerCase()} in one conversation without starting over`,
-    wordsForSituations(units, pair, allWords),
+    wordsForSituations(lessons, pair, allWords),
     CONVERSATION_TURNS,
   );
 }
 
-/** Scope for one can-do run in unit 45 — a single situation, played through. */
+/** Scope for one can-do run in lesson 45 — a single situation, played through. */
 export function buildCanDoScope(
-  units: readonly Unit[],
+  lessons: readonly Lesson[],
   situation: string,
   allWords: readonly Word[],
 ): ConversationScope | null {
-  const words = wordsForSituations(units, [situation], allWords);
+  const words = wordsForSituations(lessons, [situation], allWords);
   if (words.length === 0) return null;
   return toScope(situation, `Handle a whole ${situation.toLowerCase()} exchange unaided`, words, CAN_DO_TURNS);
 }

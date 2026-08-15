@@ -9,17 +9,31 @@
  */
 import type { PathProgress } from "@/types";
 import { db } from "./dexie";
-import { fetchPathProgress, markUnitSeenRemote } from "@/api/progress";
+import { fetchPathProgress, markLessonSeenRemote } from "@/api/progress";
 
+/**
+ * Read the cached record, tolerating the pre-rename field name.
+ *
+ * Rows written before lessons were called lessons hold `seenUnitIds`. Reading
+ * only the new name off one of those yields undefined, which reads as "no
+ * progress" and silently sends the learner back to lesson 1 — a data loss the
+ * typechecker cannot see, because the stored value never passed through TypeScript.
+ *
+ * The next write normalises the row, so this shim only matters until each
+ * device has completed one lesson. Cheap enough to leave in place.
+ */
 async function readLocal(pathId: string): Promise<PathProgress> {
   const existing = await db.pathProgress.get(pathId);
-  return existing ?? { pathId, seenUnitIds: [] };
+  if (existing === undefined) return { pathId, seenLessonIds: [] };
+
+  const legacy = (existing as Partial<PathProgress> & { seenUnitIds?: string[] }).seenUnitIds;
+  return { pathId, seenLessonIds: existing.seenLessonIds ?? legacy ?? [] };
 }
 
 /**
  * Fetch progress for a path, or a fresh empty record if none exists yet.
  *
- * When signed in, local and server sets are unioned: seeing a unit is monotonic,
+ * When signed in, local and server sets are unioned: seeing a lesson is monotonic,
  * so a union is always correct and it covers three cases at once — guest progress
  * migrating on first sign-in, a second device with an empty cache, and writes that
  * failed to reach the server on a previous session (they get pushed here).
@@ -30,15 +44,15 @@ export async function getPathProgress(pathId: string, signedIn = false): Promise
 
   try {
     const remote = await fetchPathProgress(pathId);
-    const merged = [...new Set([...remote.seenUnitIds, ...local.seenUnitIds])];
+    const merged = [...new Set([...remote.seenLessonIds, ...local.seenLessonIds])];
 
     // Push anything the server is missing (guest history, or a failed earlier write).
-    const missingOnServer = local.seenUnitIds.filter((id) => !remote.seenUnitIds.includes(id));
-    for (const unitId of missingOnServer) {
-      await markUnitSeenRemote(pathId, unitId);
+    const missingOnServer = local.seenLessonIds.filter((id) => !remote.seenLessonIds.includes(id));
+    for (const lessonId of missingOnServer) {
+      await markLessonSeenRemote(pathId, lessonId);
     }
 
-    const next: PathProgress = { pathId, seenUnitIds: merged };
+    const next: PathProgress = { pathId, seenLessonIds: merged };
     await db.pathProgress.put(next);
     return next;
   } catch {
@@ -47,22 +61,22 @@ export async function getPathProgress(pathId: string, signedIn = false): Promise
   }
 }
 
-export async function markUnitSeen(
+export async function markLessonSeen(
   pathId: string,
-  unitId: string,
+  lessonId: string,
   signedIn = false,
 ): Promise<PathProgress> {
   const current = await readLocal(pathId);
-  if (current.seenUnitIds.includes(unitId)) return current;
+  if (current.seenLessonIds.includes(lessonId)) return current;
 
-  const next: PathProgress = { pathId, seenUnitIds: [...current.seenUnitIds, unitId] };
+  const next: PathProgress = { pathId, seenLessonIds: [...current.seenLessonIds, lessonId] };
   await db.pathProgress.put(next);
 
   if (signedIn) {
     // A failed write is recovered by the union in getPathProgress on next load,
     // so this must not break the session the learner is in the middle of.
     try {
-      await markUnitSeenRemote(pathId, unitId);
+      await markLessonSeenRemote(pathId, lessonId);
     } catch {
       /* retried on next load */
     }
