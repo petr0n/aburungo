@@ -11,7 +11,7 @@ import type { Unit } from "@/types";
 type CheckpointKind = NonNullable<Unit["checkpoint"]>;
 
 /** Kept in sync with Unit["checkpoint"] by the type annotation below. */
-const CHECKPOINT_KINDS: readonly CheckpointKind[] = ["sweep", "production", "conversation", "can-do"];
+const CHECKPOINT_KINDS: readonly CheckpointKind[] = ["recognition", "production", "conversation", "can-do"];
 
 function isString(v: unknown): v is string {
   return typeof v === "string" && v.length > 0;

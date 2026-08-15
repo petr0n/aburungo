@@ -37,7 +37,7 @@ import { WordLearnCard } from "@/components/WordLearnCard";
 import { FillBlankCard } from "@/components/FillBlankCard";
 import { GrammarClozeCard } from "@/components/GrammarClozeCard";
 import { RecognitionPass } from "@/components/RecognitionPass";
-import { CheckpointSweep } from "@/components/CheckpointSweep";
+import { RecognitionCheckpoint } from "@/components/RecognitionCheckpoint";
 import { ProductionCheckpoint } from "@/components/ProductionCheckpoint";
 import { UnitConversation } from "@/components/UnitConversation";
 import { CanDoCheckpoint } from "@/components/CanDoCheckpoint";
@@ -61,7 +61,7 @@ type Step =
 
 /** Which step a checkpoint unit routes to. Non-checkpoint units go to "new-unit". */
 const CHECKPOINT_STEP = {
-  sweep: "checkpoint",
+  recognition: "checkpoint",
   production: "production",
   conversation: "conversation",
   "can-do": "can-do",
@@ -560,7 +560,7 @@ export function LearnPage() {
       n5Units.filter((u) => u.order < (session.unit?.order ?? 0)).flatMap((u) => u.wordIds),
     );
     content = (
-      <CheckpointSweep
+      <RecognitionCheckpoint
         unit={session.unit}
         words={wordsForTier(tier).filter((w) => taughtIds.has(w.id))}
         onMissed={(word) => void demoteMissedWord(word.id, userId !== null)}

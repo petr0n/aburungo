@@ -171,21 +171,21 @@ export type Unit = {
   /**
    * Marks a unit as a checkpoint rather than new material, and says which kind.
    *
-   * "sweep" is the recurring mastery gate from DR-020/021: a wide recognition
+   * "recognition" is the recurring mastery gate from DR-020/021: a wide recognition
    * pass over everything already learned, complete when the remaining set
    * empties. Unlimited retry, nothing recorded, misses rejoin the SRS queue —
    * a gate, not a grade.
    *
    * "production" is the gate that closes the level (DR-023): the same shape as
-   * a sweep, but the learner writes each item from its English rather than
+   * a recognition checkpoint, but the learner writes each item from its English rather than
    * picking it out of a line-up. Recognition and production are different
-   * skills, so it is its own checkpoint rather than a harder sweep.
+   * skills, so it is its own checkpoint rather than a harder recognition round.
    *
    * "conversation" and "can-do" hand the learner to Hana instead of a card UI
    * (DR-022). Both are gated behind `hanaEnabled` and drop out of the ladder
    * entirely when it is off — see src/content/units/index.ts.
    */
-  checkpoint?: "sweep" | "production" | "conversation" | "can-do";
+  checkpoint?: "recognition" | "production" | "conversation" | "can-do";
 };
 
 /**

@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 import type { Phrase, Word } from "@/types";
-import { buildProductionQueue, buildSweepQueue, PRODUCTION_SIZE, SWEEP_SIZE } from "./sweep";
+import { buildProductionQueue, buildRecognitionQueue, PRODUCTION_SIZE, RECOGNITION_SIZE } from "./checkpoint";
 
 /** Identity "shuffle" so ordering is deterministic and assertions mean something. */
 const noShuffle = <T,>(items: readonly T[]): T[] => [...items];
@@ -24,14 +24,14 @@ const lopsided: Word[] = [
   ...Array.from({ length: 3 }, (_, i) => word(`weather-${i}`, "weather")),
 ];
 
-describe("buildSweepQueue", () => {
+describe("buildRecognitionQueue", () => {
   it("caps the round rather than presenting the whole ladder", () => {
-    const queue = buildSweepQueue(lopsided, SWEEP_SIZE, noShuffle);
-    expect(queue).toHaveLength(SWEEP_SIZE);
+    const queue = buildRecognitionQueue(lopsided, RECOGNITION_SIZE, noShuffle);
+    expect(queue).toHaveLength(RECOGNITION_SIZE);
   });
 
   it("reaches a small theme instead of drowning it in a large one", () => {
-    const queue = buildSweepQueue(lopsided, 10, noShuffle);
+    const queue = buildRecognitionQueue(lopsided, 10, noShuffle);
     const themes = queue.map((w) => w.theme);
 
     // Taking the first 10 by order would be all "time". Round-robin must not.
@@ -40,24 +40,24 @@ describe("buildSweepQueue", () => {
   });
 
   it("never repeats a word inside one round", () => {
-    const queue = buildSweepQueue(lopsided, SWEEP_SIZE, noShuffle);
+    const queue = buildRecognitionQueue(lopsided, RECOGNITION_SIZE, noShuffle);
     expect(new Set(queue.map((w) => w.id)).size).toBe(queue.length);
   });
 
   it("returns everything available when the pool is smaller than the size", () => {
     const few = [word("a", "time"), word("b", "food")];
-    expect(buildSweepQueue(few, SWEEP_SIZE, noShuffle)).toHaveLength(2);
+    expect(buildRecognitionQueue(few, RECOGNITION_SIZE, noShuffle)).toHaveLength(2);
   });
 
   it("treats words with no theme as their own group rather than dropping them", () => {
     const untagged = { ...word("x", "time"), theme: undefined } as Word;
-    const queue = buildSweepQueue([untagged], SWEEP_SIZE, noShuffle);
+    const queue = buildRecognitionQueue([untagged], RECOGNITION_SIZE, noShuffle);
     expect(queue.map((w) => w.id)).toEqual(["x"]);
   });
 
   it("returns an empty round for an empty pool or a zero size", () => {
-    expect(buildSweepQueue([], SWEEP_SIZE, noShuffle)).toEqual([]);
-    expect(buildSweepQueue(lopsided, 0, noShuffle)).toEqual([]);
+    expect(buildRecognitionQueue([], RECOGNITION_SIZE, noShuffle)).toEqual([]);
+    expect(buildRecognitionQueue(lopsided, 0, noShuffle)).toEqual([]);
   });
 });
 
@@ -76,10 +76,10 @@ describe("buildProductionQueue", () => {
     expect(ids).toContain("p-a");
   });
 
-  it("caps the round well below the sweep, since writing costs more than tapping", () => {
+  it("caps the round well below the recognition checkpoint, since writing costs more than tapping", () => {
     const many = Array.from({ length: 60 }, (_, i) => word(`w${i}`, `theme-${i % 5}`));
     expect(buildProductionQueue(many, [], PRODUCTION_SIZE, noShuffle)).toHaveLength(PRODUCTION_SIZE);
-    expect(PRODUCTION_SIZE).toBeLessThan(SWEEP_SIZE);
+    expect(PRODUCTION_SIZE).toBeLessThan(RECOGNITION_SIZE);
   });
 
   it("spreads across groups rather than draining one", () => {

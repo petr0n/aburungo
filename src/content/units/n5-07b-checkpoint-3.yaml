@@ -1,11 +1,11 @@
 # N5 daily-loop units — consolidation checkpoint (after Weather).
 #
-# One of the regular consolidation sweeps. DR-021 replaced the "mid-way"
+# One of the regular consolidation checkpoints. DR-021 replaced the "mid-way"
 # checkpoint idea with a cadence: roughly every ten teaching units, snapped to
-# the next situation boundary so a sweep never splits a situation in half.
+# the next situation boundary so a recognition checkpoint never splits a situation in half.
 # A cadence survives the ladder changing length; a midpoint does not.
 #
-# CheckpointSweep scopes itself to units ordered before this one, so this needs
+# RecognitionCheckpoint scopes itself to units ordered before this one, so this needs
 # no per-unit configuration — it covers everything taught so far and nothing
 # the learner has not met.
 #
@@ -16,7 +16,7 @@
   situation: Integration & checkpoint
   title: Around town
   canDo: Recognise the vocabulary from hotels, directions and weather
-  checkpoint: sweep
+  checkpoint: recognition
   wordIds: []
   phraseIds: []
   kanji: []

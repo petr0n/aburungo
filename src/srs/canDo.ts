@@ -10,7 +10,7 @@
  * randomness injected so tests are deterministic.
  */
 import type { ConversationScope, Unit, Word } from "@/types";
-import { buildSweepQueue } from "./sweep";
+import { buildRecognitionQueue } from "./checkpoint";
 
 /**
  * Hard ceiling mirrored from the server (MAX_SCOPE_WORDS in
@@ -93,9 +93,9 @@ function toScope(situation: string, canDo: string, words: readonly Word[], maxTu
   return {
     situation,
     canDo,
-    // buildSweepQueue round-robins across themes, so capping at MAX_SCOPE_WORDS
+    // buildRecognitionQueue round-robins across themes, so capping at MAX_SCOPE_WORDS
     // keeps both situations represented instead of dropping whichever sorts last.
-    words: buildSweepQueue(words, MAX_SCOPE_WORDS).map((w) => ({
+    words: buildRecognitionQueue(words, MAX_SCOPE_WORDS).map((w) => ({
       japanese: w.japanese,
       reading: w.reading,
       english: w.english,

@@ -36,7 +36,7 @@ const units: Unit[] = [
   unit("u1", 1, "Greetings", ["a", "b"]),
   unit("u2", 2, "Greetings", ["c"]),
   unit("u3", 3, "Food & drink", ["d", "e"]),
-  unit("cp", 4, "Integration & checkpoint", [], "sweep"),
+  unit("cp", 4, "Integration & checkpoint", [], "recognition"),
   unit("u4", 5, "Shopping", ["f"]),
 ];
 

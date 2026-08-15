@@ -8,8 +8,8 @@
 # were waiting on. They are the only two units with no cards: one is an
 # unscripted exchange, the other is the verification pass that closes the level.
 #
-# These sit *after* the recurring sweeps DR-021 placed on a ten-unit cadence,
-# and after the production checkpoint at unit 44. A sweep consolidates; these
+# These sit *after* the recurring recognition checkpoints DR-021 placed on a ten-unit cadence,
+# and after the production checkpoint at unit 44. A recognition checkpoint consolidates; these
 # two finish. Do not merge the concepts.
 #
 # **Both are gated behind `hanaEnabled` (DR-023) and are filtered out of the

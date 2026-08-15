@@ -10,7 +10,7 @@
 # how much is left to place, and it can only shrink — per CLAUDE.md, a number
 # that shrinks as you work is a gate, one that stands is a verdict.
 #
-# No new words, phrases or kanji. Behaviour comes from `checkpoint: sweep`,
+# No new words, phrases or kanji. Behaviour comes from `checkpoint: recognition`,
 # which LearnPage renders instead of the new-unit flow.
 #
 # content-source: n/a — introduces no content, only re-presents taught items
@@ -20,7 +20,7 @@
   situation: Integration & checkpoint
   title: Everything so far
   canDo: Recognise the vocabulary from every situation on the ladder
-  checkpoint: sweep
+  checkpoint: recognition
   wordIds: []
   phraseIds: []
   kanji: []

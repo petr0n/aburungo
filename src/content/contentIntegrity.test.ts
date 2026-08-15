@@ -64,11 +64,11 @@ describe("the ladder with Hana shelved", () => {
     expect(n5Units.map((u) => u.order)).toEqual(n5Units.map((_, i) => i + 1));
   });
 
-  it("puts production after the last recognition sweep, not before it", () => {
+  it("puts production after the last recognition checkpoint, not before it", () => {
     // Recognise everything, then produce it. The reverse would gate on the
-    // harder skill first and make the sweep redundant.
-    const lastSweep = [...n5Units].reverse().find((u) => u.checkpoint === "sweep");
+    // harder skill first and make the recognition checkpoint redundant.
+    const lastRecognition = [...n5Units].reverse().find((u) => u.checkpoint === "recognition");
     const production = n5Units.find((u) => u.checkpoint === "production");
-    expect(production?.order).toBeGreaterThan(lastSweep?.order ?? Infinity);
+    expect(production?.order).toBeGreaterThan(lastRecognition?.order ?? Infinity);
   });
 });

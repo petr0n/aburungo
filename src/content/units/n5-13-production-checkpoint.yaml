@@ -1,11 +1,11 @@
 # N5 daily-loop units — the production checkpoint (Unit 44).
 #
 # The gate that closes the level (DR-023). Every checkpoint before this one is a
-# sweep, and a sweep can be cleared entirely by recognition — picking the right
+# recognition checkpoint, and that can be cleared by recognition alone — picking the right
 # card out of four. This one asks the learner to write each item from its
 # English, which is the skill the ladder is actually for.
 #
-# It sits after the last sweep so the level escalates rather than repeats:
+# It sits after the last recognition checkpoint so the level escalates rather than repeats:
 # recognise everything (unit 43), then produce it (unit 44).
 #
 # This unit is always present. The two Hana units that follow it are gated

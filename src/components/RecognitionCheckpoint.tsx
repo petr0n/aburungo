@@ -1,6 +1,6 @@
 import { useState } from "react";
 import type { Unit, Word } from "@/types";
-import { buildSweepQueue } from "@/srs/sweep";
+import { buildRecognitionQueue } from "@/srs/checkpoint";
 import { RecognitionPass } from "./RecognitionPass";
 
 type Props = {
@@ -28,9 +28,9 @@ type Props = {
  * The retry loop is composition rather than a new card UI: each round is a
  * RecognitionPass over the words still to place.
  */
-export function CheckpointSweep({ unit, words, onMissed, onDone }: Props) {
+export function RecognitionCheckpoint({ unit, words, onMissed, onDone }: Props) {
   const [started, setStarted] = useState(false);
-  const [round, setRound] = useState<Word[]>(() => buildSweepQueue(words));
+  const [round, setRound] = useState<Word[]>(() => buildRecognitionQueue(words));
   const [missedThisRound, setMissedThisRound] = useState<Word[]>([]);
   const [roundNumber, setRoundNumber] = useState(1);
 

@@ -20,7 +20,7 @@ import { isWord } from "@/types";
  * failure the ~7.5-words-per-session pacing target exists to prevent. Wide
  * means *touches every theme*, not *exhausts every word*.
  */
-export const SWEEP_SIZE = 24;
+export const RECOGNITION_SIZE = 24;
 
 function defaultShuffle<T>(items: readonly T[]): T[] {
   return [...items].sort(() => Math.random() - 0.5);
@@ -72,10 +72,10 @@ export function roundRobinSample<T>(
   return queue;
 }
 
-/** Build the opening sweep round: a broad sample of taught words, across themes. */
-export function buildSweepQueue(
+/** Build the opening recognition round: a broad sample of taught words, across themes. */
+export function buildRecognitionQueue(
   words: readonly Word[],
-  size: number = SWEEP_SIZE,
+  size: number = RECOGNITION_SIZE,
   shuffle: <T>(items: readonly T[]) => T[] = defaultShuffle,
 ): Word[] {
   return roundRobinSample(words, size, (w) => w.theme ?? "other", shuffle);
@@ -84,9 +84,9 @@ export function buildSweepQueue(
 /**
  * How many items the production checkpoint opens with.
  *
- * Half the sweep, because writing an item out costs far more than picking it
+ * Half the recognition checkpoint, because writing an item out costs far more than picking it
  * from four options — twelve typed answers is already a longer sitting than
- * twenty-four taps. The pacing target the sweep size exists to protect applies
+ * twenty-four taps. The pacing target the recognition checkpoint size exists to protect applies
  * here with more force, not less.
  */
 export const PRODUCTION_SIZE = 12;
@@ -94,7 +94,7 @@ export const PRODUCTION_SIZE = 12;
 /**
  * Build the opening production round, sampled across both words and phrases.
  *
- * Phrases belong here in a way they do not in a recognition sweep: "how do you
+ * Phrases belong here in a way they do not in a recognition checkpoint: "how do you
  * say excuse me" is the question the whole ladder is for, and a production gate
  * over vocabulary alone would quietly leave out everything situational.
  */

@@ -9,9 +9,9 @@
 # Sits at the boundary between "Getting around" and "Hotel", so it consolidates
 # four complete situations instead of splitting one: greetings & basics (1-7),
 # food & drink (8-12), shopping (13-15), getting around (16-20). 148 words are
-# available to it; the sweep samples 24 across themes.
+# available to it; the recognition checkpoint samples 24 across themes.
 #
-# A sweep, not a Hana shell. CheckpointSweep already scopes itself to units
+# A recognition checkpoint, not a Hana shell. RecognitionCheckpoint already scopes itself to units
 # ordered before the checkpoint, so this needs no new mechanism and — unlike the
 # 39-40 pair — it functions today rather than degrading to an intro screen.
 #
@@ -26,7 +26,7 @@
   situation: Integration & checkpoint
   title: Out and about
   canDo: Recognise the vocabulary from the first four situations
-  checkpoint: sweep
+  checkpoint: recognition
   wordIds: []
   phraseIds: []
   kanji: []

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import type { Phrase, Unit, Word } from "@/types";
-import { buildProductionQueue } from "@/srs/sweep";
+import { buildProductionQueue } from "@/srs/checkpoint";
 import { FillBlankCard } from "./FillBlankCard";
 
 type Props = {
@@ -18,7 +18,7 @@ type Props = {
 /**
  * The production checkpoint that closes the level (DR-023).
  *
- * Same gate as the sweeps, one rung harder: instead of picking an item out of a
+ * Same gate as the recognition checkpoints, one rung harder: instead of picking an item out of a
  * line-up, the learner writes it from its English. Recognising コーヒー and
  * producing it are different skills, and the ladder had only ever gated the
  * first — every checkpoint before this one could be cleared by recognition.
@@ -28,7 +28,7 @@ type Props = {
  * nothing is recorded and there is no total or ratio anywhere on screen.
  *
  * Reuses FillBlankCard rather than introducing a fifth card UI — the same
- * composition CheckpointSweep does with RecognitionPass. Answers are checked
+ * composition RecognitionCheckpoint does with RecognitionPass. Answers are checked
  * against the reading, so kana and romaji both count; the point is recall, not
  * orthography.
  */
