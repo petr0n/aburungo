@@ -77,7 +77,7 @@ export function FeedbackSheet({ onClose }: Props) {
               onChange={(e) => setMessage(e.target.value)}
               placeholder="Describe the issue or idea…"
               rows={4}
-              className="w-full rounded-2xl border border-border bg-surface px-4 py-3 text-body text-fg placeholder:text-fg-faint focus:outline-none focus:ring-2 focus:ring-brand-500"
+              className="w-full rounded-2xl border border-border bg-surface px-4 py-3 text-body text-fg placeholder:text-fg-faint focus:outline-none focus:ring-2 focus:ring-focus focus:ring-offset-2 focus:ring-offset-bg"
             />
 
             <button
