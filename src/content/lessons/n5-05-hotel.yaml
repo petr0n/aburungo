@@ -9,6 +9,7 @@
 
 - id: n5.unit-21
   order: 24
+  chapterId: n5.chapter-3
   situation: Hotel
   title: Checking in
   canDo: Check into a hotel
@@ -30,6 +31,7 @@
 
 - id: n5.unit-22
   order: 25
+  chapterId: n5.chapter-3
   situation: Hotel
   title: Hotel amenities
   canDo: Check into a hotel
@@ -51,6 +53,7 @@
 
 - id: n5.unit-23
   order: 26
+  chapterId: n5.chapter-3
   situation: Hotel
   title: Hotel requests
   canDo: Check into a hotel
@@ -74,6 +77,7 @@
 # reason as the shopping lesson: チェックアウト is not in the vocabulary yet.
 - id: n5.hotel-checkout
   order: 27
+  chapterId: n5.chapter-3
   situation: Hotel
   title: Checking out
   canDo: Check out and get to your next stop

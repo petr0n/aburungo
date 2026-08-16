@@ -19,6 +19,7 @@
 
 - id: n5.unit-34
   order: 42
+  chapterId: n5.chapter-4
   situation: Days & dates
   title: Days of the week
   canDo: Ask and say what day it is
@@ -44,6 +45,7 @@
 
 - id: n5.unit-35
   order: 43
+  chapterId: n5.chapter-4
   situation: Days & dates
   title: The 1st to the 5th
   canDo: Say a date in the first third of the month
@@ -62,6 +64,7 @@
 
 - id: n5.unit-36
   order: 44
+  chapterId: n5.chapter-4
   situation: Days & dates
   title: The 6th to the 10th
   canDo: Say a date in the first third of the month
@@ -79,6 +82,7 @@
 
 - id: n5.unit-37
   order: 45
+  chapterId: n5.chapter-4
   situation: Days & dates
   title: Later dates, months & birthdays
   canDo: Say any date, and ask when someone's birthday is

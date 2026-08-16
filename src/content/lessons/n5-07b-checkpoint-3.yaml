@@ -13,6 +13,7 @@
 
 - id: n5.checkpoint-3
   order: 34
+  chapterId: n5.chapter-3
   situation: Integration & checkpoint
   title: Around town
   canDo: Recognise the vocabulary from hotels, directions and weather

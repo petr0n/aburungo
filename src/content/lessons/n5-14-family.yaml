@@ -20,6 +20,7 @@
 
 - id: n5.family-mine
   order: 39
+  chapterId: n5.chapter-4
   situation: People & family
   title: My family
   canDo: Say who is in your family
@@ -45,6 +46,7 @@
 
 - id: n5.family-yours
   order: 40
+  chapterId: n5.chapter-4
   situation: People & family
   title: Your family
   canDo: Ask about someone else's family
@@ -63,6 +65,7 @@
 
 - id: n5.family-wider
   order: 41
+  chapterId: n5.chapter-4
   situation: People & family
   title: Everyone else
   canDo: Talk about the rest of the family

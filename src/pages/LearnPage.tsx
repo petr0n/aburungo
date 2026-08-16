@@ -22,6 +22,7 @@ import type { GrammarPattern, Phrase, ReviewRating, Lesson, Word } from "@/types
 import { isGrammarPattern } from "@/types";
 import { useAuth, useUserTier } from "@/store/auth";
 import { n5Lessons } from "@/content/lessons";
+import { n5Chapters, chapterLabel, placeInChapter } from "@/content/chapters";
 import { wordsForTier } from "@/content/vocabulary";
 import { phrasesForTier } from "@/content";
 import { findPhrase } from "@/content";
@@ -208,6 +209,7 @@ function NewLessonStep({
 }) {
   const [stage, setStage] = useState<"intro" | "words" | "phrases" | "grammar">("intro");
   const [index, setIndex] = useState(0);
+  const placement = placeInChapter(lesson, n5Lessons, n5Chapters);
   const currentPhrase = stage === "phrases" ? phrases[index] : undefined;
 
   useEffect(() => {
@@ -229,8 +231,15 @@ function NewLessonStep({
     return (
       <div className="flex w-full flex-col gap-6 py-4">
         <div className="flex flex-col gap-1">
-          <p className="text-body-sm font-medium text-brand-700">{lesson.situation}</p>
+          <p className="text-body-sm font-medium text-brand-700">
+            {placement === null ? lesson.situation : `${chapterLabel(placement.chapter)} · ${placement.chapter.title}`}
+          </p>
           <p className="text-heading-sm font-semibold text-fg">{lesson.title}</p>
+          {placement !== null && placement.lessonNumber !== null && (
+            <p className="text-body-sm text-fg-subtle">
+              {lesson.situation} · Lesson {placement.lessonNumber} of {placement.lessonCount}
+            </p>
+          )}
         </div>
         <div className="rounded-2xl border border-border bg-surface p-4">
           <p className="text-body text-fg">{lesson.grammarNote}</p>
@@ -426,6 +435,32 @@ async function demoteMissedWord(wordId: string, signedIn: boolean): Promise<void
 
 // ── Close step ───────────────────────────────────────────────────────────────
 
+/**
+ * How much of the chapter is left, in the chapter's own terms.
+ *
+ * Describes the work, never the learner: "2 lessons to go" shrinks to zero as
+ * you do it, which is the test CLAUDE.md sets for a gate rather than a grade.
+ * Nothing here is a score, and there is no way to fall short of it.
+ */
+function ChapterProgress({ lesson }: { lesson: Lesson }) {
+  const placement = placeInChapter(lesson, n5Lessons, n5Chapters);
+  if (placement === null || placement.lessonNumber === null) return null;
+
+  const { chapter, remaining } = placement;
+  return (
+    <p className="text-body-sm text-fg-subtle">
+      {chapterLabel(chapter)} · {chapter.title} —{" "}
+      {remaining === 0 ? (
+        <span className="font-medium text-fg">the checkpoint is next</span>
+      ) : (
+        <>
+          {remaining} {remaining === 1 ? "lesson" : "lessons"} to go before the checkpoint
+        </>
+      )}
+    </p>
+  );
+}
+
 function CloseStep({ session }: { session: DailySession }) {
   const learnedCount = session.newWords.length + session.newPhrases.length + (session.newGrammarPattern !== null ? 1 : 0);
   return (
@@ -443,6 +478,7 @@ function CloseStep({ session }: { session: DailySession }) {
           <p className="text-body-sm text-fg-subtle">Reviewed {session.reviewItems.length} item(s)</p>
         )}
         {learnedCount > 0 && <p className="text-body-sm text-fg-subtle">Learned {learnedCount} new item(s)</p>}
+        {session.lesson !== null && <ChapterProgress lesson={session.lesson} />}
       </div>
       <a
         href="/"

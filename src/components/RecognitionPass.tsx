@@ -64,9 +64,17 @@ export function RecognitionPass({ queue, pool, onDone, onMissed, doneLabel = "Ba
     setTimeout(() => advance(word.id === current?.id), 350);
   }
 
+  /**
+   * A skipped word counts as not recalled.
+   *
+   * This passed `true` until 2026-08-16, which told the scheduler the learner
+   * had recalled a word they declined to answer — the one word most likely to
+   * need re-surfacing was the one guaranteed not to. Skipping is a way past a
+   * card, never a claim to know it.
+   */
   function handleSkip() {
     if (selectedId !== null) return;
-    advance(true);
+    advance(false);
   }
 
   if (done) {

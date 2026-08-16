@@ -9,6 +9,7 @@
 
 - id: n5.unit-27
   order: 31
+  chapterId: n5.chapter-3
   situation: Weather
   title: Hot, cold, and nice
   canDo: Comment on the weather
@@ -29,6 +30,7 @@
 
 - id: n5.unit-28
   order: 32
+  chapterId: n5.chapter-3
   situation: Weather
   title: Rain, snow & sun
   canDo: Ask about tomorrow's weather
@@ -52,6 +54,7 @@
 
 - id: n5.unit-29
   order: 33
+  chapterId: n5.chapter-3
   situation: Weather
   title: Wind & temperature
   canDo: Comment on the weather

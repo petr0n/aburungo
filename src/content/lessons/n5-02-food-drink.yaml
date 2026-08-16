@@ -9,6 +9,7 @@
 
 - id: n5.unit-8
   order: 8
+  chapterId: n5.chapter-1
   situation: Food & drink
   title: At the café
   canDo: Order a drink
@@ -31,6 +32,7 @@
 
 - id: n5.unit-9
   order: 9
+  chapterId: n5.chapter-1
   situation: Food & drink
   title: At the restaurant
   canDo: Order a meal
@@ -53,6 +55,7 @@
 
 - id: n5.unit-10
   order: 10
+  chapterId: n5.chapter-1
   situation: Food & drink
   title: What is this?
   canDo: Ask what something is on a menu
@@ -74,6 +77,7 @@
 
 - id: n5.unit-11
   order: 11
+  chapterId: n5.chapter-1
   situation: Food & drink
   title: How much & paying
   canDo: Ask for the bill
@@ -95,6 +99,7 @@
 
 - id: n5.unit-12
   order: 12
+  chapterId: n5.chapter-1
   situation: Food & drink
   title: Bigger numbers
   canDo: Say prices in yen

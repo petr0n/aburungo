@@ -57,6 +57,19 @@ describe("RecognitionPass", () => {
     expect(onMissed).toHaveBeenCalledWith(expect.objectContaining({ id: "vocab.target" }));
   });
 
+  it("treats a skip as not recalled", async () => {
+    // Skipping used to report a hit, so the one word the learner explicitly
+    // declined to answer was the one word never re-surfaced.
+    const user = userEvent.setup();
+    const onMissed = vi.fn();
+    render(<RecognitionPass queue={[target]} pool={pool} onMissed={onMissed} onDone={() => {}} />);
+
+    await user.click(screen.getByRole("button", { name: /skip/i }));
+
+    await waitFor(() => expect(onMissed).toHaveBeenCalledTimes(1));
+    expect(onMissed).toHaveBeenCalledWith(expect.objectContaining({ id: "vocab.target" }));
+  });
+
   it("stays silent on a hit, so produce-step scheduling is not double-counted", async () => {
     const user = userEvent.setup();
     const onMissed = vi.fn();

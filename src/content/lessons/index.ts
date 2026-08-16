@@ -10,6 +10,7 @@ import { parseLessons } from "./schema";
 import { allWords } from "@/content/vocabulary";
 import { allPhrases } from "@/content/index";
 import { allGrammarPatterns } from "@/content/grammar";
+import { n5ChapterIds } from "@/content/chapters";
 
 import n5Raw from "./n5.yaml";
 import n5GreetingsContRaw from "./n5-01-greetings-cont.yaml";
@@ -35,24 +36,24 @@ const knownPhraseIds = new Set(allPhrases.map((p) => p.id));
 const knownPatternIds = new Set(allGrammarPatterns.map((p) => p.id));
 
 export const n5Lessons: Lesson[] = [
-  ...parseLessons(n5Raw, "lessons/n5.yaml", knownWordIds, knownPhraseIds, knownPatternIds),
-  ...parseLessons(n5GreetingsContRaw, "lessons/n5-01-greetings-cont.yaml", knownWordIds, knownPhraseIds, knownPatternIds),
-  ...parseLessons(n5FoodDrinkRaw, "lessons/n5-02-food-drink.yaml", knownWordIds, knownPhraseIds, knownPatternIds),
-  ...parseLessons(n5ShoppingRaw, "lessons/n5-03-shopping.yaml", knownWordIds, knownPhraseIds, knownPatternIds),
-  ...parseLessons(n5TransitRaw, "lessons/n5-04-transit.yaml", knownWordIds, knownPhraseIds, knownPatternIds),
-  ...parseLessons(n5HotelRaw, "lessons/n5-05-hotel.yaml", knownWordIds, knownPhraseIds, knownPatternIds),
-  ...parseLessons(n5Checkpoint1Raw, "lessons/n5-02b-checkpoint-1.yaml", knownWordIds, knownPhraseIds, knownPatternIds),
-  ...parseLessons(n5Checkpoint2Raw, "lessons/n5-04b-checkpoint-2.yaml", knownWordIds, knownPhraseIds, knownPatternIds),
-  ...parseLessons(n5Checkpoint3Raw, "lessons/n5-07b-checkpoint-3.yaml", knownWordIds, knownPhraseIds, knownPatternIds),
-  ...parseLessons(n5DirectionsRaw, "lessons/n5-06-directions.yaml", knownWordIds, knownPhraseIds, knownPatternIds),
-  ...parseLessons(n5WeatherRaw, "lessons/n5-07-weather.yaml", knownWordIds, knownPhraseIds, knownPatternIds),
-  ...parseLessons(n5IntegrationRaw, "lessons/n5-08-integration.yaml", knownWordIds, knownPhraseIds, knownPatternIds),
-  ...parseLessons(n5DatesRaw, "lessons/n5-09-dates.yaml", knownWordIds, knownPhraseIds, knownPatternIds),
-  ...parseLessons(n5CheckpointRaw, "lessons/n5-10-checkpoint.yaml", knownWordIds, knownPhraseIds, knownPatternIds),
-  ...parseLessons(n5RelativeTimeRaw, "lessons/n5-11-relative-time.yaml", knownWordIds, knownPhraseIds, knownPatternIds),
-  ...parseLessons(n5FinalCheckpointRaw, "lessons/n5-12-final-checkpoint.yaml", knownWordIds, knownPhraseIds, knownPatternIds),
-  ...parseLessons(n5ProductionCheckpointRaw, "lessons/n5-13-production-checkpoint.yaml", knownWordIds, knownPhraseIds, knownPatternIds),
-  ...parseLessons(n5FamilyRaw, "lessons/n5-14-family.yaml", knownWordIds, knownPhraseIds, knownPatternIds),
+  ...parseLessons(n5Raw, "lessons/n5.yaml", knownWordIds, knownPhraseIds, knownPatternIds, n5ChapterIds),
+  ...parseLessons(n5GreetingsContRaw, "lessons/n5-01-greetings-cont.yaml", knownWordIds, knownPhraseIds, knownPatternIds, n5ChapterIds),
+  ...parseLessons(n5FoodDrinkRaw, "lessons/n5-02-food-drink.yaml", knownWordIds, knownPhraseIds, knownPatternIds, n5ChapterIds),
+  ...parseLessons(n5ShoppingRaw, "lessons/n5-03-shopping.yaml", knownWordIds, knownPhraseIds, knownPatternIds, n5ChapterIds),
+  ...parseLessons(n5TransitRaw, "lessons/n5-04-transit.yaml", knownWordIds, knownPhraseIds, knownPatternIds, n5ChapterIds),
+  ...parseLessons(n5HotelRaw, "lessons/n5-05-hotel.yaml", knownWordIds, knownPhraseIds, knownPatternIds, n5ChapterIds),
+  ...parseLessons(n5Checkpoint1Raw, "lessons/n5-02b-checkpoint-1.yaml", knownWordIds, knownPhraseIds, knownPatternIds, n5ChapterIds),
+  ...parseLessons(n5Checkpoint2Raw, "lessons/n5-04b-checkpoint-2.yaml", knownWordIds, knownPhraseIds, knownPatternIds, n5ChapterIds),
+  ...parseLessons(n5Checkpoint3Raw, "lessons/n5-07b-checkpoint-3.yaml", knownWordIds, knownPhraseIds, knownPatternIds, n5ChapterIds),
+  ...parseLessons(n5DirectionsRaw, "lessons/n5-06-directions.yaml", knownWordIds, knownPhraseIds, knownPatternIds, n5ChapterIds),
+  ...parseLessons(n5WeatherRaw, "lessons/n5-07-weather.yaml", knownWordIds, knownPhraseIds, knownPatternIds, n5ChapterIds),
+  ...parseLessons(n5IntegrationRaw, "lessons/n5-08-integration.yaml", knownWordIds, knownPhraseIds, knownPatternIds, n5ChapterIds),
+  ...parseLessons(n5DatesRaw, "lessons/n5-09-dates.yaml", knownWordIds, knownPhraseIds, knownPatternIds, n5ChapterIds),
+  ...parseLessons(n5CheckpointRaw, "lessons/n5-10-checkpoint.yaml", knownWordIds, knownPhraseIds, knownPatternIds, n5ChapterIds),
+  ...parseLessons(n5RelativeTimeRaw, "lessons/n5-11-relative-time.yaml", knownWordIds, knownPhraseIds, knownPatternIds, n5ChapterIds),
+  ...parseLessons(n5FinalCheckpointRaw, "lessons/n5-12-final-checkpoint.yaml", knownWordIds, knownPhraseIds, knownPatternIds, n5ChapterIds),
+  ...parseLessons(n5ProductionCheckpointRaw, "lessons/n5-13-production-checkpoint.yaml", knownWordIds, knownPhraseIds, knownPatternIds, n5ChapterIds),
+  ...parseLessons(n5FamilyRaw, "lessons/n5-14-family.yaml", knownWordIds, knownPhraseIds, knownPatternIds, n5ChapterIds),
 ]
   .sort((a, b) => a.order - b.order)
   /**

@@ -54,6 +54,9 @@ export function parseLesson(raw: unknown, source: string): Lesson {
     }
   }
 
+  if (o.chapterId !== undefined && !isString(o.chapterId)) {
+    throw new LessonSchemaError(`${source}: entry "${String(o.id)}" has invalid "chapterId"`, raw);
+  }
   if (o.patternId !== undefined && !isString(o.patternId)) {
     throw new LessonSchemaError(`${source}: entry "${String(o.id)}" has invalid "patternId"`, raw);
   }
@@ -67,6 +70,7 @@ export function parseLesson(raw: unknown, source: string): Lesson {
   return {
     id: o.id as string,
     order: o.order as number,
+    chapterId: o.chapterId as string | undefined,
     situation: o.situation as string,
     title: o.title as string,
     canDo: o.canDo as string,
@@ -89,6 +93,7 @@ export function parseLessons(
   knownWordIds: Set<string>,
   knownPhraseIds: Set<string>,
   knownPatternIds: Set<string>,
+  knownChapterIds: ReadonlySet<string>,
 ): Lesson[] {
   if (!Array.isArray(raw)) {
     throw new LessonSchemaError(`${source}: top-level value must be an array`, raw);
@@ -121,6 +126,15 @@ export function parseLessons(
 
     if (u.patternId !== undefined && !knownPatternIds.has(u.patternId)) {
       throw new LessonSchemaError(`${source}: lesson "${u.id}" references unknown pattern id "${u.patternId}"`, u);
+    }
+
+    if (u.chapterId !== undefined && !knownChapterIds.has(u.chapterId)) {
+      throw new LessonSchemaError(`${source}: lesson "${u.id}" references unknown chapter id "${u.chapterId}"`, u);
+    }
+    // Only a checkpoint may stand outside a chapter, and only because the ones
+    // that close the book review every situation rather than one chapter's.
+    if (u.chapterId === undefined && u.checkpoint === undefined) {
+      throw new LessonSchemaError(`${source}: lesson "${u.id}" has no chapterId — only a checkpoint may omit it`, u);
     }
   }
 

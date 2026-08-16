@@ -13,6 +13,7 @@
 
 - id: n5.unit-30
   order: 35
+  chapterId: n5.chapter-4
   situation: Food preferences
   title: I like sushi
   canDo: Say what food you like or don't like
@@ -32,6 +33,7 @@
 
 - id: n5.unit-31
   order: 36
+  chapterId: n5.chapter-4
   situation: Food preferences
   title: I want to eat ramen
   canDo: Say what you want to eat
@@ -51,6 +53,7 @@
 
 - id: n5.unit-32
   order: 37
+  chapterId: n5.chapter-4
   situation: Food preferences
   title: More food & combining preferences
   canDo: Say what food you like or don't like
@@ -70,6 +73,7 @@
 
 - id: n5.unit-33
   order: 38
+  chapterId: n5.chapter-4
   # Was labelled "Integration & checkpoint" although it teaches 12 words. The
   # label is what the learner sees grouping their progress, and this lesson is
   # ordinary vocabulary, not assessment.

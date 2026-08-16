@@ -129,6 +129,32 @@ export function isGrammarPattern(item: Phrase | Word | GrammarPattern): item is 
 }
 
 /**
+ * A named run of lessons ending in a checkpoint.
+ *
+ * The unit of commitment a learner actually feels: a ladder of fifty lessons is
+ * shapeless, four chapters is a plan. Chapters exist so a checkpoint arrives
+ * somewhere meaningful — at the end of a body of related situations — rather
+ * than every N lessons regardless of what N lands on (DR-021).
+ *
+ * A chapter owns no content. Membership lives on the Lesson, so adding a lesson
+ * is one edit; the chapter file only names and orders them. Lessons in a chapter
+ * must be contiguous in `order` and the last one must be the checkpoint, both
+ * enforced in src/content/contentIntegrity.test.ts.
+ *
+ * Chapters group lessons; a *book* groups chapters and is what an outside
+ * reference would call a JLPT level. The `jlpt` tags on content stay as they
+ * are — useful, and the coverage tooling depends on them — but a learner reads
+ * "Book One", not "N5".
+ */
+export type Chapter = {
+  id: string;
+  /** Position within the book, 1-indexed. */
+  order: number;
+  /** Shown to the learner in the session header, e.g. "Shopping & getting around". */
+  title: string;
+};
+
+/**
  * A step on the guided N5 daily-loop ladder.
  *
  * Authored in YAML under src/content/lessons/*.yaml. A Lesson does not define new
@@ -139,6 +165,14 @@ export type Lesson = {
   id: string;
   /** Position in the ladder, 1-indexed. Determines introduction order. */
   order: number;
+  /**
+   * The Chapter this lesson belongs to.
+   *
+   * Optional, and only a checkpoint may leave it out: the checkpoints that close
+   * the *book* (production, and the Hana-gated pair) answer to no chapter, since
+   * they review the whole level rather than one body of situations.
+   */
+  chapterId?: string;
   /** Grouping wrapper shown to the learner, e.g. "Greetings & basics". */
   situation: string;
   title: string;
