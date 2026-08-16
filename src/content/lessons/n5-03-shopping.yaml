@@ -48,6 +48,7 @@
   phraseIds:
     - shopping.big-one-please
     - shopping.two-please
+    - shopping.bigger-size
   kanji:
     - 大
     - 小
@@ -75,3 +76,24 @@
   kanji: []
   grammarNote: "～はありますか — Do you have ~?"
   patternId: grammar.n5-unit-15
+
+# Added 2026-08-16. Shopping taught browsing, sizes and availability but never
+# the till, which left five authored phrases with no lesson to live in. This is
+# the transaction end of the situation.
+#
+# Phrase-only by design: カード, レシート and 袋 are not in the vocabulary yet, and
+# adding them is new content needing JMdict verification. The phrases themselves
+# are already authored and sourced, so teaching them costs nothing new.
+- id: n5.shopping-paying
+  order: 17
+  situation: Shopping
+  title: Paying and leaving
+  canDo: Pay for something and leave without help
+  wordIds: []
+  phraseIds:
+    - shopping.just-looking
+    - shopping.pay-by-card
+    - shopping.receipt-please
+    - shopping.no-bag
+  kanji: []
+  grammarNote: "No new words this time — four set phrases for the end of a shop visit. Two of them decline rather than request, which is the harder half of shopping in Japan: 見ているだけです turns away an offer of help without being abrupt, and 袋はいりません refuses a bag. The other two ask whether a card is accepted and request a receipt."

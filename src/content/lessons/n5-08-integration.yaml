@@ -12,7 +12,7 @@
 # jlpt-source: training — JLPT level unverified
 
 - id: n5.unit-30
-  order: 33
+  order: 35
   situation: Food preferences
   title: I like sushi
   canDo: Say what food you like or don't like
@@ -31,7 +31,7 @@
   patternId: grammar.n5-unit-30
 
 - id: n5.unit-31
-  order: 34
+  order: 36
   situation: Food preferences
   title: I want to eat ramen
   canDo: Say what you want to eat
@@ -50,7 +50,7 @@
   patternId: grammar.n5-unit-31
 
 - id: n5.unit-32
-  order: 35
+  order: 37
   situation: Food preferences
   title: More food & combining preferences
   canDo: Say what food you like or don't like
@@ -69,7 +69,7 @@
   patternId: grammar.n5-unit-32
 
 - id: n5.unit-33
-  order: 36
+  order: 38
   # Was labelled "Integration & checkpoint" although it teaches 12 words. The
   # label is what the learner sees grouping their progress, and this lesson is
   # ordinary vocabulary, not assessment.

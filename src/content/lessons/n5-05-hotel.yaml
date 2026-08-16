@@ -8,7 +8,7 @@
 #   so JMdict is the wrong instrument here — sentence checks need Tatoeba.
 
 - id: n5.unit-21
-  order: 23
+  order: 24
   situation: Hotel
   title: Checking in
   canDo: Check into a hotel
@@ -29,7 +29,7 @@
   grammarNote: "～のなまえで — under the name of ~ (reservation pattern)"
 
 - id: n5.unit-22
-  order: 24
+  order: 25
   situation: Hotel
   title: Hotel amenities
   canDo: Check into a hotel
@@ -42,13 +42,15 @@
   phraseIds:
     - hotel.toilet-where
     - hotel.bath-floor
+    - hotel.wifi
+    - hotel.breakfast-included
   kanji:
     - 階
   grammarNote: "～はなんかいですか — What floor is ~?"
   patternId: grammar.n5-unit-22
 
 - id: n5.unit-23
-  order: 25
+  order: 26
   situation: Hotel
   title: Hotel requests
   canDo: Check into a hotel
@@ -66,3 +68,18 @@
   kanji: []
   grammarNote: "～をもってきてください — Please bring me ~"
   patternId: grammar.n5-unit-23
+
+# Added 2026-08-16. Hotel covered arriving and asking for things, but nothing
+# about leaving, so two authored phrases had no lesson. Phrase-only for the same
+# reason as the shopping lesson: チェックアウト is not in the vocabulary yet.
+- id: n5.hotel-checkout
+  order: 27
+  situation: Hotel
+  title: Checking out
+  canDo: Check out and get to your next stop
+  wordIds: []
+  phraseIds:
+    - hotel.check-out-time
+    - hotel.taxi-please
+  kanji: []
+  grammarNote: "No new words — two phrases for the morning you leave. Asking what time checkout is uses the same 何時ですか you already know from telling the time, and asking for a taxi reuses お願いします from ordering. Both are recombinations rather than new material."

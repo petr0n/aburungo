@@ -10,7 +10,7 @@
 #   so JMdict is the wrong instrument here — sentence checks need Tatoeba.
 
 - id: n5.unit-24
-  order: 26
+  order: 28
   situation: Directions
   title: Left, right, straight
   canDo: Understand a basic answer about directions
@@ -33,7 +33,7 @@
   patternId: grammar.n5-unit-24
 
 - id: n5.unit-25
-  order: 27
+  order: 29
   situation: Directions
   title: Where is ~?
   canDo: Ask where something is
@@ -53,13 +53,14 @@
     - transit.station-where
     - directions.have-map
     - directions.near-convenience-store
+    - directions.where-am-i
   kanji:
     - 近
   grammarNote: "～はどこにありますか — Where is ~? (location question)"
   patternId: grammar.n5-unit-25
 
 - id: n5.unit-26
-  order: 28
+  order: 30
   situation: Directions
   title: How far?
   canDo: Understand a basic answer about distance
@@ -79,6 +80,7 @@
     - directions.is-it-far
     - directions.walking-distance
     - directions.behind-building
+    - directions.is-it-near
   kanji:
     - 歩
   grammarNote: "～ふんくらいです — It's about ~ minutes"

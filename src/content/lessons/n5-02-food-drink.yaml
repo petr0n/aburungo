@@ -45,6 +45,7 @@
   phraseIds:
     - restaurant.menu-please
     - restaurant.this-please
+    - restaurant.thanks-for-meal
   kanji:
     - 食
   grammarNote: "～をください — please give me ~ (receiving pattern)"

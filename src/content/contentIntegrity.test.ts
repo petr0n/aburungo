@@ -8,6 +8,7 @@
  */
 import { describe, expect, it } from "vitest";
 import { allWords } from "./vocabulary";
+import { allPhrases } from "./index";
 import { n5Lessons } from "./lessons";
 
 describe("content integrity", () => {
@@ -28,6 +29,18 @@ describe("content integrity", () => {
       for (const id of u.wordIds) if (!ids.has(id)) dangling.push(`${u.id} -> ${id}`);
     }
     expect(dangling).toEqual([]);
+  });
+
+  it("teaches every phrase somewhere in the ladder", () => {
+    // Added 2026-08-16 after twelve authored phrases were found sitting in the
+    // content tree with no lesson referencing them — five about paying in a
+    // shop, four about a hotel stay, two about directions. They were valid and
+    // sourced, and a learner simply never met them. The word version of this
+    // check existed; the phrase version did not, which is exactly why it went
+    // unnoticed while the word orphans got fixed twice.
+    const taught = new Set(n5Lessons.flatMap((l) => l.phraseIds));
+    const orphans = allPhrases.filter((p) => !taught.has(p.id)).map((p) => p.id);
+    expect(orphans).toEqual([]);
   });
 
   it("teaches every word somewhere in the ladder", () => {

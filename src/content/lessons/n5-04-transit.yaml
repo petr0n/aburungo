@@ -8,7 +8,7 @@
 #   so JMdict is the wrong instrument here — sentence checks need Tatoeba.
 
 - id: n5.unit-16
-  order: 17
+  order: 18
   situation: Getting around
   title: At the station
   canDo: Buy a train ticket
@@ -32,7 +32,7 @@
   patternId: grammar.n5-unit-16
 
 - id: n5.unit-17
-  order: 18
+  order: 19
   situation: Getting around
   title: Platform & exit
   canDo: Ask which platform or exit
@@ -56,7 +56,7 @@
   patternId: grammar.n5-unit-17
 
 - id: n5.unit-18
-  order: 19
+  order: 20
   situation: Getting around
   title: Time expressions
   canDo: Tell and confirm the time
@@ -80,7 +80,7 @@
   patternId: grammar.n5-unit-18
 
 - id: n5.unit-19
-  order: 20
+  order: 21
   situation: Getting around
   title: Taxi
   canDo: Tell a taxi driver your destination
@@ -98,7 +98,7 @@
   patternId: grammar.n5-unit-19
 
 - id: n5.unit-20
-  order: 21
+  order: 22
   situation: Getting around
   title: Bus
   canDo: Ask about the next bus and get off at the right stop
