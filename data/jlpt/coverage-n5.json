@@ -3,9 +3,9 @@
  "generated": "2026-08-16",
  "summary": {
   "reference": 809,
-  "taught": 271,
-  "covered": 253,
-  "missing": 556
+  "taught": 287,
+  "covered": 270,
+  "missing": 539
  },
  "missing": [
   {
@@ -122,26 +122,6 @@
    "written": "後",
    "reading": "あと",
    "english": "afterwards (later); in the future; the rest; since then",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "兄",
-   "reading": "あに",
-   "english": "(my) older brother (humble)",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "姉",
-   "reading": "あね",
-   "english": "(my) older sister (humble)",
    "sources": [
     "tanos",
     "open-anki"
@@ -282,16 +262,6 @@
    "written": "意味",
    "reading": "いみ",
    "english": "meaning, significance",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "妹",
-   "reading": "いもうと",
-   "english": "younger sister (humble)",
    "sources": [
     "tanos",
     "open-anki"
@@ -479,16 +449,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "お母さん",
-   "reading": "おかあさん",
-   "english": "mother (formal)",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "お菓子",
    "reading": "おかし",
    "english": "confections, sweets, snack",
@@ -502,16 +462,6 @@
    "written": "置く",
    "reading": "おく",
    "english": "to put; to lay; to place",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "奥さん",
-   "reading": "おくさん",
-   "english": "(someone else's) wife (hon.)",
    "sources": [
     "tanos",
     "open-anki"
@@ -559,26 +509,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "お父さん",
-   "reading": "おとうさん",
-   "english": "father (formal)",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "弟",
-   "reading": "おとうと",
-   "english": "younger brother",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "男",
    "reading": "おとこ",
    "english": "man, male",
@@ -602,36 +532,6 @@
    "written": "大人",
    "reading": "おとな",
    "english": "adult",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "お兄さん",
-   "reading": "おにいさん",
-   "english": "(someone else's) older brother (formal)",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "お姉さん",
-   "reading": "おねえさん",
-   "english": "older sister (formal)",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "おばあさん",
-   "reading": "おばあさん",
-   "english": "grandmother, female senior-citizen",
    "sources": [
     "tanos",
     "open-anki"
@@ -1322,16 +1222,6 @@
    "written": "言葉",
    "reading": "ことば",
    "english": "language; word(s); expression(s)",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "子供",
-   "reading": "こども",
-   "english": "child(ren)",
    "sources": [
     "tanos",
     "open-anki"
@@ -3829,16 +3719,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "両親",
-   "reading": "りょうしん",
-   "english": "parents (lit., both parents)",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "料理",
    "reading": "りょうり",
    "english": "cooking; cuisine",
@@ -4184,33 +4064,6 @@
    "written": "お～",
    "reading": "お",
    "english": "honorable ~ (honorific)",
-   "sources": [
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "伯父",
-   "reading": "おじいさん",
-   "english": "",
-   "sources": [
-    "tanos"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "叔父",
-   "reading": "おじいさん",
-   "english": "",
-   "sources": [
-    "tanos"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "おじいさん",
-   "reading": "おじいさん",
-   "english": "grandfather, male senior citizen",
    "sources": [
     "open-anki"
    ],
@@ -4820,15 +4673,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "父",
-   "reading": "ちち",
-   "english": "(my) father",
-   "sources": [
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "ちゃわん",
    "reading": "ちゃわん",
    "english": "",
@@ -5021,15 +4865,6 @@
    "written": "初め; 始め",
    "reading": "はじめ",
    "english": "beginning, start",
-   "sources": [
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "母",
-   "reading": "はは",
-   "english": "(my) mother",
    "sources": [
     "open-anki"
    ],
@@ -5469,6 +5304,11 @@
    "id": "vocab.aruite",
    "japanese": "歩いて",
    "reading": "あるいて"
+  },
+  {
+   "id": "vocab.shujin",
+   "japanese": "主人",
+   "reading": "しゅじん"
   },
   {
    "id": "vocab.biiru",
