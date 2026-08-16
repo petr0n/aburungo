@@ -3,9 +3,9 @@
  "generated": "2026-08-16",
  "summary": {
   "reference": 809,
-  "taught": 287,
-  "covered": 270,
-  "missing": 539
+  "taught": 329,
+  "covered": 314,
+  "missing": 495
  },
  "missing": [
   {
@@ -32,26 +32,6 @@
    "written": "赤",
    "reading": "あか",
    "english": "red",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "開く",
-   "reading": "あく",
-   "english": "to open, to become open",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "開ける",
-   "reading": "あける",
-   "english": "to open (v.t.)",
    "sources": [
     "tanos",
     "open-anki"
@@ -159,26 +139,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "洗う",
-   "reading": "あらう",
-   "english": "to wash",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "言う",
-   "reading": "いう",
-   "english": "to say",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "いかが",
    "reading": "いかが",
    "english": "how, in what way",
@@ -272,16 +232,6 @@
    "written": "嫌",
    "reading": "いや",
    "english": "disagreeable, detestable, unpleasant",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "入れる",
-   "reading": "いれる",
-   "english": "to put in",
    "sources": [
     "tanos",
     "open-anki"
@@ -459,36 +409,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "置く",
-   "reading": "おく",
-   "english": "to put; to lay; to place",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "教える",
-   "reading": "おしえる",
-   "english": "to teach, to inform, to instruct",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "押す",
-   "reading": "おす",
-   "english": "to push, to press, to stamp (e.g., a passport)",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "遅い",
    "reading": "おそい",
    "english": "slow; (to be) late",
@@ -559,16 +479,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "覚える",
-   "reading": "おぼえる",
-   "english": "to learn, to commit to memory, to remember, to memorize",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "おまわりさん",
    "reading": "おまわりさん",
    "english": "policeman (friendly term)",
@@ -592,16 +502,6 @@
    "written": "泳ぐ",
    "reading": "およぐ",
    "english": "to swim",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "終る",
-   "reading": "おわる",
-   "english": "to finish, to close",
    "sources": [
     "tanos",
     "open-anki"
@@ -652,16 +552,6 @@
    "written": "外国人",
    "reading": "がいこくじん",
    "english": "foreigner",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "会社",
-   "reading": "かいしゃ",
-   "english": "company, corporation",
    "sources": [
     "tanos",
     "open-anki"
@@ -1099,16 +989,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "消す",
-   "reading": "けす",
-   "english": "to erase, to delete, to turn off power",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "結構",
    "reading": "けっこう",
    "english": "splendid; enough, tolerably",
@@ -1179,16 +1059,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "答える",
-   "reading": "こたえる",
-   "english": "to answer, to reply",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "こちら",
    "reading": "こちら",
    "english": "this person (polite); this way (polite)",
@@ -1232,16 +1102,6 @@
    "written": "この",
    "reading": "この",
    "english": "this",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "困る",
-   "reading": "こまる",
-   "english": "to be bothered, to have difficulty",
    "sources": [
     "tanos",
     "open-anki"
@@ -1389,16 +1249,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "仕事",
-   "reading": "しごと",
-   "english": "work, job, occupation, employment",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "辞書",
    "reading": "じしょ",
    "english": "dictionary",
@@ -1479,36 +1329,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "閉まる",
-   "reading": "しまる",
-   "english": "to close, to be closed",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "閉める",
-   "reading": "しめる",
-   "english": "to close, to shut",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "締める",
-   "reading": "しめる",
-   "english": "to tie, to fasten, to tighten",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "写真",
    "reading": "しゃしん",
    "english": "a picture; a photograph",
@@ -1539,16 +1359,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "宿題",
-   "reading": "しゅくだい",
-   "english": "homework",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "上手",
    "reading": "じょうず",
    "english": "be good at, skillful",
@@ -1572,16 +1382,6 @@
    "written": "食堂",
    "reading": "しょくどう",
    "english": "cafeteria, dining hall",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "知る",
-   "reading": "しる",
-   "english": "to know, to understand",
    "sources": [
     "tanos",
     "open-anki"
@@ -1682,26 +1482,6 @@
    "written": "ズボン",
    "reading": "ずぼん",
    "english": "trousers",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "住む",
-   "reading": "すむ",
-   "english": "to reside, to live in",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "座る",
-   "reading": "すわる",
-   "english": "to sit",
    "sources": [
     "tanos",
     "open-anki"
@@ -1889,26 +1669,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "出す",
-   "reading": "だす",
-   "english": "to take (something) out; to hand in (something)",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "立つ",
-   "reading": "たつ",
-   "english": "to stand up",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "たて",
    "reading": "たて",
    "english": "length, height",
@@ -1932,16 +1692,6 @@
    "written": "楽しい",
    "reading": "たのしい",
    "english": "enjoyable, fun",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "頼む",
-   "reading": "たのむ",
-   "english": "to request, to ask (a favor)",
    "sources": [
     "tanos",
     "open-anki"
@@ -1989,16 +1739,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "違う",
-   "reading": "ちがう",
-   "english": "to be different; to differ; wrong",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "茶色",
    "reading": "ちゃいろ",
    "english": "brown",
@@ -2019,69 +1759,9 @@
    "jmdictCommon": true
   },
   {
-   "written": "使う",
-   "reading": "つかう",
-   "english": "to use",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "疲れる",
-   "reading": "つかれる",
-   "english": "to get (become) tired; to become fatigued",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "着く",
-   "reading": "つく",
-   "english": "to arrive at, to reach",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "机",
    "reading": "つくえ",
    "english": "desk",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "作る",
-   "reading": "つくる",
-   "english": "to make, to create",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "つける",
-   "reading": "つける",
-   "english": "to turn on (e.g., a light); to take",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "勤める",
-   "reading": "つとめる",
-   "english": "to work (for)",
    "sources": [
     "tanos",
     "open-anki"
@@ -2119,16 +1799,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "手",
-   "reading": "て",
-   "english": "hand",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "テープ",
    "reading": "てーぷ",
    "english": "tape",
@@ -2142,16 +1812,6 @@
    "written": "テーブル",
    "reading": "てーぶる",
    "english": "table",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "出かける",
-   "reading": "でかける",
-   "english": "to go out; to depart",
    "sources": [
     "tanos",
     "open-anki"
@@ -2222,16 +1882,6 @@
    "written": "テレビ",
    "reading": "てれび",
    "english": "television, TV",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "電気",
-   "reading": "でんき",
-   "english": "electricity, (electric) light",
    "sources": [
     "tanos",
     "open-anki"
@@ -2479,16 +2129,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "無くす",
-   "reading": "なくす",
-   "english": "to lose something",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "なぜ",
    "reading": "なぜ",
    "english": "why (same as どうして)",
@@ -2519,16 +2159,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "習う",
-   "reading": "ならう",
-   "english": "to learn",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "並ぶ",
    "reading": "ならぶ",
    "english": "to line up, to stand in a line (v.i.)",
@@ -2542,16 +2172,6 @@
    "written": "並べる",
    "reading": "ならべる",
    "english": "to put (things) side by side; to line up",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "なる",
-   "reading": "なる",
-   "english": "to become",
    "sources": [
     "tanos",
     "open-anki"
@@ -2769,16 +2389,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "働く",
-   "reading": "はたらく",
-   "english": "to work",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "花",
    "reading": "はな",
    "english": "flower",
@@ -2902,26 +2512,6 @@
    "written": "東",
    "reading": "ひがし",
    "english": "east",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "引く",
-   "reading": "ひく",
-   "english": "to pull, to draw; subtract",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "弾く",
-   "reading": "ひく",
-   "english": "to play (a string instrument or piano)",
    "sources": [
     "tanos",
     "open-anki"
@@ -3309,16 +2899,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "窓",
-   "reading": "まど",
-   "english": "window",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "万年筆",
    "reading": "まんねんひつ",
    "english": "fountain pen",
@@ -3552,16 +3132,6 @@
    "written": "休み",
    "reading": "やすみ",
    "english": "holiday; day off; absence",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "休む",
-   "reading": "やすむ",
-   "english": "to rest, to have a break, to get time off",
    "sources": [
     "tanos",
     "open-anki"
@@ -4136,15 +3706,6 @@
    "written": "～階",
    "reading": "かい",
    "english": "counter for stories (floors) of a building",
-   "sources": [
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "顔",
-   "reading": "かお",
-   "english": "face (body part)",
    "sources": [
     "open-anki"
    ],
