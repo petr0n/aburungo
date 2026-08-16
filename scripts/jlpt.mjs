@@ -269,11 +269,15 @@ function ourWords() {
       const id = line.match(/^\s*-\s+id:\s*(\S+)/);
       if (id) { cur = { id: id[1], file: f }; out.push(cur); continue; }
       if (!cur) continue;
-      const jp = line.match(/^\s+japanese:\s*(.+?)\s*$/);
+      // Exactly two spaces. A word's own fields sit at that depth; an
+      // `example:` block nests its own `japanese:` at four, and matching on
+      // leading whitespace loosely lets the example sentence overwrite the
+      // word it belongs to.
+      const jp = line.match(/^ {2}japanese: *(.+?) *$/);
       if (jp) cur.japanese = jp[1];
-      const rd = line.match(/^\s+reading:\s*(.+?)\s*$/);
+      const rd = line.match(/^ {2}reading: *(.+?) *$/);
       if (rd) cur.reading = rd[1];
-      const jl = line.match(/^\s+jlpt:\s*(\S+)/);
+      const jl = line.match(/^ {2}jlpt: *(\S+)/);
       if (jl) cur.jlpt = jl[1];
     }
   }
