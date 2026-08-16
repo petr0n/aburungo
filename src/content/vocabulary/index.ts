@@ -21,6 +21,7 @@ import directionsRaw from "./directions.yaml";
 import weatherRaw from "./weather.yaml";
 import foodPreferencesRaw from "./food-preferences.yaml";
 import familyRaw from "./family.yaml";
+import homeWorkRaw from "./home-work.yaml";
 
 export const allWords: Word[] = [
   ...parseWords(basicsRaw, "vocabulary/basics.yaml"),
@@ -43,6 +44,7 @@ export const allWords: Word[] = [
   ...parseWords(weatherRaw, "vocabulary/weather.yaml"),
   ...parseWords(foodPreferencesRaw, "vocabulary/food-preferences.yaml"),
   ...parseWords(familyRaw, "vocabulary/family.yaml"),
+  ...parseWords(homeWorkRaw, "vocabulary/home-work.yaml"),
 ];
 
 // parseWords only rejects duplicate ids within a single file, so the same id in
