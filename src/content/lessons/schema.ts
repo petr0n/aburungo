@@ -1,0 +1,128 @@
+/**
+ * Runtime validator for hand-authored Lesson YAML.
+ *
+ * Mirrors the pattern in content/schema.ts and vocabulary/schema.ts. In
+ * addition to shape checks, verifies every wordIds/phraseIds entry resolves
+ * against the existing content — a Lesson is an ordering layer, not new
+ * content, so a dangling reference is always an authoring mistake.
+ */
+import type { Lesson } from "@/types";
+
+type CheckpointKind = NonNullable<Lesson["checkpoint"]>;
+
+/** Kept in sync with Lesson["checkpoint"] by the type annotation below. */
+const CHECKPOINT_KINDS: readonly CheckpointKind[] = ["recognition", "production", "conversation", "can-do"];
+
+function isString(v: unknown): v is string {
+  return typeof v === "string" && v.length > 0;
+}
+
+function isStringArray(v: unknown): v is string[] {
+  return Array.isArray(v) && v.every((x) => typeof x === "string");
+}
+
+function isNumber(v: unknown): v is number {
+  return typeof v === "number" && Number.isFinite(v);
+}
+
+class LessonSchemaError extends Error {
+  readonly raw: unknown;
+  constructor(message: string, raw: unknown) {
+    super(message);
+    this.name = "LessonSchemaError";
+    this.raw = raw;
+  }
+}
+
+export function parseLesson(raw: unknown, source: string): Lesson {
+  if (typeof raw !== "object" || raw === null) {
+    throw new LessonSchemaError(`${source}: entry is not an object`, raw);
+  }
+  const o = raw as Record<string, unknown>;
+
+  for (const key of ["id", "situation", "title", "canDo", "grammarNote"] as const) {
+    if (!isString(o[key])) {
+      throw new LessonSchemaError(`${source}: entry "${String(o.id ?? "?")}" missing or empty field "${key}"`, raw);
+    }
+  }
+  if (!isNumber(o.order)) {
+    throw new LessonSchemaError(`${source}: entry "${String(o.id)}" missing or invalid "order"`, raw);
+  }
+  for (const key of ["wordIds", "phraseIds", "kanji"] as const) {
+    if (!isStringArray(o[key])) {
+      throw new LessonSchemaError(`${source}: entry "${String(o.id)}" has invalid "${key}" — must be a string array`, raw);
+    }
+  }
+
+  if (o.patternId !== undefined && !isString(o.patternId)) {
+    throw new LessonSchemaError(`${source}: entry "${String(o.id)}" has invalid "patternId"`, raw);
+  }
+  if (o.checkpoint !== undefined && !CHECKPOINT_KINDS.includes(o.checkpoint as CheckpointKind)) {
+    throw new LessonSchemaError(
+      `${source}: entry "${String(o.id)}" has invalid "checkpoint" — expected one of ${CHECKPOINT_KINDS.join(", ")}`,
+      raw,
+    );
+  }
+
+  return {
+    id: o.id as string,
+    order: o.order as number,
+    situation: o.situation as string,
+    title: o.title as string,
+    canDo: o.canDo as string,
+    wordIds: o.wordIds as string[],
+    phraseIds: o.phraseIds as string[],
+    kanji: o.kanji as string[],
+    grammarNote: o.grammarNote as string,
+    patternId: o.patternId as string | undefined,
+    checkpoint: o.checkpoint as CheckpointKind | undefined,
+  };
+}
+
+/**
+ * Validate an array of raw entries plus cross-references against the known
+ * word/phrase id sets. Also checks for duplicate ids and duplicate order.
+ */
+export function parseLessons(
+  raw: unknown,
+  source: string,
+  knownWordIds: Set<string>,
+  knownPhraseIds: Set<string>,
+  knownPatternIds: Set<string>,
+): Lesson[] {
+  if (!Array.isArray(raw)) {
+    throw new LessonSchemaError(`${source}: top-level value must be an array`, raw);
+  }
+  const lessons = raw.map((entry) => parseLesson(entry, source));
+
+  const seenIds = new Set<string>();
+  const seenOrders = new Set<number>();
+  for (const u of lessons) {
+    if (seenIds.has(u.id)) {
+      throw new LessonSchemaError(`${source}: duplicate lesson id "${u.id}"`, u);
+    }
+    seenIds.add(u.id);
+
+    if (seenOrders.has(u.order)) {
+      throw new LessonSchemaError(`${source}: duplicate lesson order ${u.order} (lesson "${u.id}")`, u);
+    }
+    seenOrders.add(u.order);
+
+    for (const wordId of u.wordIds) {
+      if (!knownWordIds.has(wordId)) {
+        throw new LessonSchemaError(`${source}: lesson "${u.id}" references unknown word id "${wordId}"`, u);
+      }
+    }
+    for (const phraseId of u.phraseIds) {
+      if (!knownPhraseIds.has(phraseId)) {
+        throw new LessonSchemaError(`${source}: lesson "${u.id}" references unknown phrase id "${phraseId}"`, u);
+      }
+    }
+
+    if (u.patternId !== undefined && !knownPatternIds.has(u.patternId)) {
+      throw new LessonSchemaError(`${source}: lesson "${u.id}" references unknown pattern id "${u.patternId}"`, u);
+    }
+  }
+
+  return lessons.sort((a, b) => a.order - b.order);
+}

@@ -1,9 +1,9 @@
 /**
  * "Today's session" — the guided N5 daily loop.
  *
- * Sequences: review (due items from already-seen units, including due
- * grammar patterns interleaved by due date) -> new unit intro (words,
- * phrases, then the unit's grammar pattern if it has one) -> produce (type
+ * Sequences: review (due items from already-seen lessons, including due
+ * grammar patterns interleaved by due date) -> new lesson intro (words,
+ * phrases, then the lesson's grammar pattern if it has one) -> produce (type
  * what you just learned, including the freshly-taught pattern) ->
  * recognition pass -> close. Reuses existing presentational cards
  * (FlashCard, WordLearnCard, FillBlankCard, GrammarClozeCard,
@@ -13,19 +13,19 @@
  *
  * Scope note: review-step ratings persist to local Leitner state only (no
  * server sync yet) — full FSRS source-of-truth for signed-in users is
- * tracked separately in docs/todo.md. Kanji introduced by a unit are shown
+ * tracked separately in docs/todo.md. Kanji introduced by a lesson are shown
  * informationally only, not yet scheduled through SRS (see
  * docs/plans/01-overarching-plan.md open decision #5).
  */
 import { useCallback, useEffect, useState } from "react";
-import type { GrammarPattern, Phrase, ReviewRating, Unit, Word } from "@/types";
+import type { GrammarPattern, Phrase, ReviewRating, Lesson, Word } from "@/types";
 import { isGrammarPattern } from "@/types";
 import { useAuth, useUserTier } from "@/store/auth";
-import { n5Units } from "@/content/units";
+import { n5Lessons } from "@/content/lessons";
 import { wordsForTier } from "@/content/vocabulary";
 import { phrasesForTier } from "@/content";
 import { findPhrase } from "@/content";
-import { getPathProgress, markUnitSeen } from "@/db/pathProgressStore";
+import { getPathProgress, markLessonSeen } from "@/db/pathProgressStore";
 import { buildCanDoScope, buildCrossSituationScope, canDoMarkerId, taughtSituations, verifiedCanDos } from "@/srs/canDo";
 import { getOne, upsertSynced, hydrateFromServer, recordRating, recordReview } from "@/db/reviewStore";
 import { schedule } from "@/srs/leitner";
@@ -37,9 +37,9 @@ import { WordLearnCard } from "@/components/WordLearnCard";
 import { FillBlankCard } from "@/components/FillBlankCard";
 import { GrammarClozeCard } from "@/components/GrammarClozeCard";
 import { RecognitionPass } from "@/components/RecognitionPass";
-import { CheckpointSweep } from "@/components/CheckpointSweep";
+import { RecognitionCheckpoint } from "@/components/RecognitionCheckpoint";
 import { ProductionCheckpoint } from "@/components/ProductionCheckpoint";
-import { UnitConversation } from "@/components/UnitConversation";
+import { LessonConversation } from "@/components/LessonConversation";
 import { CanDoCheckpoint } from "@/components/CanDoCheckpoint";
 import { Furigana } from "@/components/Furigana";
 import { LoadingPlaceholder, EmptyState, ProgressBar } from "aburungo-design-system";
@@ -49,7 +49,7 @@ const PATH_ID = "n5";
 type Step =
   | "loading"
   | "review"
-  | "new-unit"
+  | "new-lesson"
   | "checkpoint"
   | "production"
   | "conversation"
@@ -59,16 +59,16 @@ type Step =
   | "close"
   | "nothing-due";
 
-/** Which step a checkpoint unit routes to. Non-checkpoint units go to "new-unit". */
+/** Which step a checkpoint lesson routes to. Non-checkpoint lessons go to "new-lesson". */
 const CHECKPOINT_STEP = {
-  sweep: "checkpoint",
+  recognition: "checkpoint",
   production: "production",
   conversation: "conversation",
   "can-do": "can-do",
 } as const;
 
-function stepForUnit(unit: Unit): Step {
-  return unit.checkpoint === undefined ? "new-unit" : CHECKPOINT_STEP[unit.checkpoint];
+function stepForLesson(lesson: Lesson): Step {
+  return lesson.checkpoint === undefined ? "new-lesson" : CHECKPOINT_STEP[lesson.checkpoint];
 }
 
 // ── Review step — flip cards for already-seen items that are due ───────────────
@@ -158,7 +158,7 @@ export function ReviewStep({ items, onDone }: { items: Array<Phrase | Word | Gra
   );
 }
 
-// ── New unit step — grammar note, kanji, then each word/phrase in turn ─────────
+// ── New lesson step — grammar note, kanji, then each word/phrase in turn ─────────
 
 function PhraseIntroCard({ phrase, index, total, onNext }: { phrase: Phrase; index: number; total: number; onNext: () => void }) {
   return (
@@ -193,14 +193,14 @@ function PhraseIntroCard({ phrase, index, total, onNext }: { phrase: Phrase; ind
   );
 }
 
-function NewUnitStep({
-  unit,
+function NewLessonStep({
+  lesson,
   words,
   phrases,
   pattern,
   onDone,
 }: {
-  unit: Unit;
+  lesson: Lesson;
   words: Word[];
   phrases: Phrase[];
   pattern: GrammarPattern | null;
@@ -211,8 +211,8 @@ function NewUnitStep({
   const currentPhrase = stage === "phrases" ? phrases[index] : undefined;
 
   useEffect(() => {
-    // Defensive only: real unit content always has at least one phrase, so
-    // this only fires if a unit is authored with an empty phraseIds list.
+    // Defensive only: real lesson content always has at least one phrase, so
+    // this only fires if a lesson is authored with an empty phraseIds list.
     if (stage === "phrases" && currentPhrase === undefined) {
       if (pattern !== null) {
         // Defensive-only branch (see comment above) — bounded to a single
@@ -229,17 +229,17 @@ function NewUnitStep({
     return (
       <div className="flex w-full flex-col gap-6 py-4">
         <div className="flex flex-col gap-1">
-          <p className="text-body-sm font-medium text-brand-700">{unit.situation}</p>
-          <p className="text-heading-sm font-semibold text-fg">{unit.title}</p>
+          <p className="text-body-sm font-medium text-brand-700">{lesson.situation}</p>
+          <p className="text-heading-sm font-semibold text-fg">{lesson.title}</p>
         </div>
         <div className="rounded-2xl border border-border bg-surface p-4">
-          <p className="text-body text-fg">{unit.grammarNote}</p>
+          <p className="text-body text-fg">{lesson.grammarNote}</p>
         </div>
-        {unit.kanji.length > 0 && (
+        {lesson.kanji.length > 0 && (
           <div className="flex flex-col gap-2">
             <p className="text-body-sm font-medium text-fg-subtle">New kanji today</p>
             <div className="flex gap-2">
-              {unit.kanji.map((k) => (
+              {lesson.kanji.map((k) => (
                 <span
                   key={k}
                   lang="ja"
@@ -432,9 +432,9 @@ function CloseStep({ session }: { session: DailySession }) {
     <div className="flex w-full flex-col gap-6 py-8">
       <div className="flex flex-col gap-2">
         <p className="text-heading font-semibold text-fg">Nice work today.</p>
-        {session.unit !== null && learnedCount > 0 && (
+        {session.lesson !== null && learnedCount > 0 && (
           <p className="text-body text-fg-subtle">
-            You worked toward: <span className="font-medium text-fg">{session.unit.canDo}</span>
+            You worked toward: <span className="font-medium text-fg">{session.lesson.canDo}</span>
           </p>
         )}
       </div>
@@ -469,7 +469,7 @@ export function LearnPage() {
    * optimistically on verification so the remaining count shrinks on screen
    * before the write lands.
    */
-  const [seenUnitIds, setSeenUnitIds] = useState<string[]>([]);
+  const [seenLessonIds, setSeenUnitIds] = useState<string[]>([]);
 
   useEffect(() => {
     // Re-runs on tier/userId change (e.g. guest -> signed-in on sign-up mid-session).
@@ -480,15 +480,15 @@ export function LearnPage() {
         hydrateFromServer(userId !== null),
       ]);
       if (cancelled) return;
-      setSeenUnitIds(progress.seenUnitIds);
+      setSeenUnitIds(progress.seenLessonIds);
       const words = wordsForTier(tier);
       const phrases = phrasesForTier(tier);
-      const built = buildDailySession(n5Units, progress, words, phrases, allGrammarPatterns, reviewStates, Date.now());
+      const built = buildDailySession(n5Lessons, progress, words, phrases, allGrammarPatterns, reviewStates, Date.now());
       setSession(built);
       if (built.reviewItems.length > 0) {
         setStep("review");
-      } else if (built.unit !== null) {
-        setStep(stepForUnit(built.unit));
+      } else if (built.lesson !== null) {
+        setStep(stepForLesson(built.lesson));
       } else {
         setStep("nothing-due");
       }
@@ -500,22 +500,22 @@ export function LearnPage() {
   }, [tier, userId]);
 
   const finishUnitAndClose = useCallback(async () => {
-    if (session?.unit != null) {
-      await markUnitSeen(PATH_ID, session.unit.id, userId !== null);
+    if (session?.lesson != null) {
+      await markLessonSeen(PATH_ID, session.lesson.id, userId !== null);
     }
     setStep("close");
   }, [session, userId]);
 
   function afterReview() {
-    const unit = session?.unit ?? null;
-    if (unit === null) {
+    const lesson = session?.lesson ?? null;
+    if (lesson === null) {
       setStep("close");
       return;
     }
-    setStep(stepForUnit(unit));
+    setStep(stepForLesson(lesson));
   }
 
-  // Stable identity: NewUnitStep depends on this in a useEffect (see below),
+  // Stable identity: NewLessonStep depends on this in a useEffect (see below),
   // so an inline function here would re-fire that effect on every render.
   const afterNewUnit = useCallback(() => {
     if (session === null) return;
@@ -542,70 +542,70 @@ export function LearnPage() {
     content = <LoadingPlaceholder label="Preparing today's session…" />;
   } else if (step === "review") {
     content = <ReviewStep items={session.reviewItems} onDone={afterReview} />;
-  } else if (step === "new-unit" && session.unit !== null) {
+  } else if (step === "new-lesson" && session.lesson !== null) {
     content = (
-      <NewUnitStep
-        unit={session.unit}
+      <NewLessonStep
+        lesson={session.lesson}
         words={session.newWords}
         phrases={session.newPhrases}
         pattern={session.newGrammarPattern}
         onDone={afterNewUnit}
       />
     );
-  } else if (step === "checkpoint" && session.unit !== null) {
+  } else if (step === "checkpoint" && session.lesson !== null) {
     // Everything taught *before* this checkpoint, not every word in the tier.
-    // Identical today, since unit 42 sits last — but a checkpoint inserted
+    // Identical today, since lesson 42 sits last — but a checkpoint inserted
     // mid-ladder later must never quiz material the learner has not met.
     const taughtIds = new Set(
-      n5Units.filter((u) => u.order < (session.unit?.order ?? 0)).flatMap((u) => u.wordIds),
+      n5Lessons.filter((u) => u.order < (session.lesson?.order ?? 0)).flatMap((u) => u.wordIds),
     );
     content = (
-      <CheckpointSweep
-        unit={session.unit}
+      <RecognitionCheckpoint
+        lesson={session.lesson}
         words={wordsForTier(tier).filter((w) => taughtIds.has(w.id))}
         onMissed={(word) => void demoteMissedWord(word.id, userId !== null)}
         onDone={() => void finishUnitAndClose()}
       />
     );
-  } else if (step === "production" && session.unit !== null) {
-    // Words *and* phrases, both scoped to what was taught before this unit.
-    const before = n5Units.filter((u) => u.order < (session.unit?.order ?? 0));
+  } else if (step === "production" && session.lesson !== null) {
+    // Words *and* phrases, both scoped to what was taught before this lesson.
+    const before = n5Lessons.filter((u) => u.order < (session.lesson?.order ?? 0));
     const taughtWordIds = new Set(before.flatMap((u) => u.wordIds));
     const taughtPhraseIds = new Set(before.flatMap((u) => u.phraseIds));
     content = (
       <ProductionCheckpoint
-        unit={session.unit}
+        lesson={session.lesson}
         words={wordsForTier(tier).filter((w) => taughtWordIds.has(w.id))}
         phrases={phrasesForTier(tier).filter((p) => taughtPhraseIds.has(p.id))}
         onMissed={(item) => void demoteMissedWord(item.id, userId !== null)}
         onDone={() => void finishUnitAndClose()}
       />
     );
-  } else if (step === "conversation" && session.unit !== null) {
+  } else if (step === "conversation" && session.lesson !== null) {
     content = (
-      <UnitConversation
-        unit={session.unit}
-        scope={buildCrossSituationScope(n5Units, seenUnitIds, wordsForTier(tier))}
+      <LessonConversation
+        lesson={session.lesson}
+        scope={buildCrossSituationScope(n5Lessons, seenLessonIds, wordsForTier(tier))}
         signedIn={userId !== null}
         onDone={() => void finishUnitAndClose()}
       />
     );
-  } else if (step === "can-do" && session.unit !== null) {
+  } else if (step === "can-do" && session.lesson !== null) {
     const words = wordsForTier(tier);
     content = (
       <CanDoCheckpoint
-        unit={session.unit}
-        situations={taughtSituations(n5Units, seenUnitIds)}
-        verified={verifiedCanDos(seenUnitIds)}
-        scopeFor={(situation) => buildCanDoScope(n5Units, situation, words)}
+        lesson={session.lesson}
+        situations={taughtSituations(n5Lessons, seenLessonIds)}
+        verified={verifiedCanDos(seenLessonIds)}
+        scopeFor={(situation) => buildCanDoScope(n5Lessons, situation, words)}
         signedIn={userId !== null}
         onVerified={(situation) => {
           const marker = canDoMarkerId(situation);
           setSeenUnitIds((prev) => (prev.includes(marker) ? prev : [...prev, marker]));
-          void markUnitSeen(PATH_ID, marker, userId !== null);
+          void markLessonSeen(PATH_ID, marker, userId !== null);
         }}
         onComplete={() => void finishUnitAndClose()}
-        // Deliberately does NOT mark the unit seen. This is the last unit on the
+        // Deliberately does NOT mark the lesson seen. This is the last lesson on the
         // ladder, so finishing it with can-dos outstanding would leave the
         // learner at "All caught up" with no route back to the ones they left.
         onLater={() => setStep("close")}

@@ -18,6 +18,6 @@
  * this is a reversal of one line if that decision changes. See DR-023.
  *
  * Turning it on restores three things: the /conversation route, its nav entry,
- * and the two Hana checkpoint units at the end of the N5 ladder.
+ * and the two Hana checkpoint lessons at the end of the N5 ladder.
  */
 export const hanaEnabled = import.meta.env.VITE_HANA_ENABLED === "true";

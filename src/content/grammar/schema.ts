@@ -1,7 +1,7 @@
 /**
  * Runtime validator for hand-authored GrammarPattern YAML.
  *
- * Mirrors the pattern in units/schema.ts. In addition to shape checks,
+ * Mirrors the pattern in lessons/schema.ts. In addition to shape checks,
  * verifies phraseId resolves to an existing phrase and that blank appears
  * in that phrase's reading exactly once — an ambiguous or missing blank is
  * always an authoring mistake, not a runtime concern.

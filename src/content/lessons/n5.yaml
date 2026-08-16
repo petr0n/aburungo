@@ -1,0 +1,68 @@
+# N5 daily-loop lessons — Situation 1: Greetings & basics (Units 1-3 of 35).
+# See docs/plans/02b-n5-lessons.md for the full 35-lesson map this slice is drawn
+# from. Word/phrase ids reference existing content only — no new Japanese
+# content is composed here beyond what's already in vocabulary/*.yaml and
+# phrases/*.yaml.
+# content-source: training — N5 canonical, pending Tatoeba verification.
+#   JMdict cannot verify composed sentences (only fixed expressions are headwords),
+#   so JMdict is the wrong instrument here — sentence checks need Tatoeba.
+
+- id: n5.unit-1
+  order: 1
+  situation: Greetings & basics
+  title: Yes, no, and this/that
+  canDo: Greet someone
+  wordIds:
+    - vocab.hai
+    - vocab.iie
+    - vocab.kore
+    - vocab.sore
+    - vocab.are
+    - vocab.soko
+  phraseIds:
+    - basics.this-is-a-book
+    - basics.what-is-that
+  kanji:
+    - 日
+  grammarNote: "～は～です — X is Y, the fundamental copula."
+  patternId: grammar.n5-unit-1
+
+- id: n5.unit-2
+  order: 2
+  situation: Greetings & basics
+  title: Hello & goodbye
+  canDo: Greet someone
+  wordIds:
+    - vocab.sayounara
+    - vocab.matane
+    - vocab.genki
+    - vocab.daijoubu
+  phraseIds:
+    - greetings.good-morning
+    - greetings.hello
+    - greetings.good-evening
+    - basics.hello-how-are-you
+  kanji: []
+  grammarNote: "～ですね — confirmation / softening (\"It is, isn't it?\")"
+  patternId: grammar.n5-unit-2
+
+- id: n5.unit-3
+  order: 3
+  situation: Greetings & basics
+  title: Nice to meet you
+  canDo: Introduce yourself
+  wordIds:
+    - vocab.namae
+    - vocab.watashi
+    - vocab.anata
+    - vocab.dare
+    - vocab.watashitachi
+    - vocab.hito
+    - vocab.tomodachi
+    - vocab.au
+  phraseIds:
+    - greetings.nice-to-meet-you
+    - greetings.yoroshiku
+  kanji:
+    - 名
+  grammarNote: "わたしは～です — I am ~ (self-introduction pattern)"

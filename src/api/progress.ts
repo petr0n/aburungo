@@ -77,19 +77,34 @@ export async function resetKanaProgress(script: KanaScript | "all"): Promise<voi
   await apiFetch(`/api/progress/kana?script=${script}`, { method: "DELETE" });
 }
 
-export async function fetchPathProgress(pathId: string): Promise<PathProgress> {
-  const res = await apiFetch<{ data: PathProgress }>(
-    `/api/progress/path?pathId=${encodeURIComponent(pathId)}`,
-  );
-  return res.data;
+/**
+ * The server's wire shape, which still says "unit".
+ *
+ * The app now calls these lessons, but the database column is `seen_unit_ids`
+ * and renaming it means a migration someone has to run by hand for a purely
+ * cosmetic gain. So the old name stops at this boundary and nothing above it
+ * needs to know. Renaming without this mapping typechecks perfectly and fails
+ * at runtime — the POST 400s and the GET reads an undefined field.
+ */
+type WirePathProgress = { pathId: string; seenUnitIds: string[] };
+
+function fromWire(wire: WirePathProgress): PathProgress {
+  return { pathId: wire.pathId, seenLessonIds: wire.seenUnitIds ?? [] };
 }
 
-export async function markUnitSeenRemote(pathId: string, unitId: string): Promise<PathProgress> {
-  const res = await apiFetch<{ data: PathProgress }>("/api/progress/path", {
+export async function fetchPathProgress(pathId: string): Promise<PathProgress> {
+  const res = await apiFetch<{ data: WirePathProgress }>(
+    `/api/progress/path?pathId=${encodeURIComponent(pathId)}`,
+  );
+  return fromWire(res.data);
+}
+
+export async function markLessonSeenRemote(pathId: string, lessonId: string): Promise<PathProgress> {
+  const res = await apiFetch<{ data: WirePathProgress }>("/api/progress/path", {
     method: "POST",
-    body: JSON.stringify({ pathId, unitId }),
+    body: JSON.stringify({ pathId, unitId: lessonId }),
   });
-  return res.data;
+  return fromWire(res.data);
 }
 
 export type ContentProgressEntry = {

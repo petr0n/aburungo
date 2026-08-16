@@ -1,0 +1,99 @@
+# N5 daily-loop lessons — Days & dates (Units 34-37 of the extended ladder).
+#
+# Placed before the mid-way checkpoint per DR-019: days and dates are
+# transactional (opening days, bookings, "what time on the 3rd?") and belong
+# with the other eight situations. The relative-time grid is conversational and
+# sits after the checkpoint.
+#
+# Appending here rather than inserting means Units 1-33 keep their numbering;
+# only the checkpoint moved, from 34-35 to 38-39.
+#
+# Dates 1st-10th occupy two lessons rather than one. Their readings ignore the
+# number system taught in Units 7 and 12 (一日 is ついたち, not いちにち), so they
+# are ten separate memorisations, not a pattern — ten in one sitting would be the
+# heaviest session in the ladder and overshoots the ~7.5 words/session target.
+#
+# content-source: training — N5 canonical vocabulary, headwords verified against
+#   JMdict 3.6.2; composed phrases pending Tatoeba verification
+# jlpt-source: training — JLPT level unverified
+
+- id: n5.unit-34
+  order: 42
+  situation: Days & dates
+  title: Days of the week
+  canDo: Ask and say what day it is
+  wordIds:
+    - vocab.youbi
+    - vocab.getsuyoubi
+    - vocab.kayoubi
+    - vocab.suiyoubi
+    - vocab.mokuyoubi
+    - vocab.kinyoubi
+    - vocab.doyoubi
+    - vocab.nichiyoubi
+    - vocab.nanyoubi
+  phraseIds:
+    - dates.what-day-today
+    - dates.today-is-monday
+    - dates.closed-on-sunday
+  kanji:
+    - 曜
+    - 月
+    - 火
+  grammarNote: "今日は～曜日です — Today is ~. Nine words, but one idea: every weekday name is a kanji plus the shared 曜日 suffix, so learning 曜日 plus seven characters gives you the whole set. The characters follow the classical planets — 月 moon, 火 fire, 水 water, 木 wood, 金 metal, 土 earth, 日 sun — the same scheme behind Monday and Sunday in English."
+
+- id: n5.unit-35
+  order: 43
+  situation: Days & dates
+  title: The 1st to the 5th
+  canDo: Say a date in the first third of the month
+  wordIds:
+    - vocab.tsuitachi
+    - vocab.futsuka
+    - vocab.mikka
+    - vocab.yokka
+    - vocab.itsuka
+  phraseIds:
+    - dates.what-date-today
+    - dates.today-is-third
+  kanji:
+    - 日
+  grammarNote: "今日は～日です — Today is the ~. These readings are irregular and do not follow the counting you already know: 一日 is ついたち, not いちにち. Treat them as five separate words rather than as numbers, and expect them to need more repetitions than usual."
+
+- id: n5.unit-36
+  order: 44
+  situation: Days & dates
+  title: The 6th to the 10th
+  canDo: Say a date in the first third of the month
+  wordIds:
+    - vocab.muika
+    - vocab.nanoka
+    - vocab.youka
+    - vocab.kokonoka
+    - vocab.tooka
+  phraseIds:
+    - dates.what-date-today
+  kanji:
+    - 日
+  grammarNote: "The second half of the irregular dates. Watch よっか (the 4th) against ようか (the 8th) — one small vowel apart, and the pair that most often gets mixed up. After the 10th the system becomes regular."
+
+- id: n5.unit-37
+  order: 45
+  situation: Days & dates
+  title: Later dates, months & birthdays
+  canDo: Say any date, and ask when someone's birthday is
+  wordIds:
+    - vocab.nannichi
+    - vocab.juuyokka
+    - vocab.hatsuka
+    - vocab.gatsu
+    - vocab.nangatsu
+    - vocab.tanjoubi
+  phraseIds:
+    - dates.when-is-your-birthday
+    - dates.birthday-is-may-fifth
+  kanji:
+    - 何
+    - 月
+    - 生
+  grammarNote: "誕生日はいつですか — When is your birthday? From the 11th the dates turn regular: number + にち. Only 十四日 (じゅうよっか), 二十日 (はつか) and 二十四日 keep an irregular reading. Months are fully regular — number + がつ — and a full date runs month before day, the reverse of English: 五月五日 is the 5th of May."

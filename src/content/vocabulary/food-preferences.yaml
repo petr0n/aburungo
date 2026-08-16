@@ -1,12 +1,12 @@
 # N5 food-preferences vocabulary — Units 30-32 (Situation 8: Food preferences)
-# and Unit 33 (Integration & checkpoint: daily-life frequency adverbs).
-# See docs/plans/02b-n5-units.md for the unit map this content is drawn from.
+# and Lesson 33 (Integration & checkpoint: daily-life frequency adverbs).
+# See docs/plans/02b-n5-lessons.md for the lesson map this content is drawn from.
 # content-source: training — headwords verified against JMdict 3.6.2 on 2026-08-04,
 #   except vocab.tabetai (食べたい) and vocab.nomitai (飲みたい) — tai-forms of 食べる / 飲む,
 #   not JMdict headwords by design.
 # jlpt-source: training — JLPT level unverified (JMdict carries no JLPT data)
 
-# ── Food preferences (Unit 30) ──────────────────────────────────────────────
+# ── Food preferences (Lesson 30) ──────────────────────────────────────────────
 
 - id: vocab.suki
   jlpt: N5
@@ -44,7 +44,7 @@
   romaji: tamago
   english: egg
 
-# ── Wanting food & drink (Unit 31) ──────────────────────────────────────────
+# ── Wanting food & drink (Lesson 31) ──────────────────────────────────────────
 
 - id: vocab.ramen
   jlpt: N5
@@ -84,7 +84,7 @@
   romaji: hoshii
   english: want (a thing)
 
-# ── More food (Unit 32) ─────────────────────────────────────────────────────
+# ── More food (Lesson 32) ─────────────────────────────────────────────────────
 
 - id: vocab.tenpura
   jlpt: N5
@@ -104,7 +104,7 @@
   romaji: onigiri
   english: rice ball
 
-# ── Daily life frequency adverbs (Unit 33) ──────────────────────────────────
+# ── Daily life frequency adverbs (Lesson 33) ──────────────────────────────────
 
 - id: vocab.mainichi
   jlpt: N5

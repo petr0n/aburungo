@@ -1,10 +1,10 @@
 # Directions vocabulary — left/right/straight, location words, and distance
-# expressions for Situation 6 (N5 units 24-26).
+# expressions for Situation 6 (N5 lessons 24-26).
 # content-source: training — headwords verified against JMdict 3.6.2 on 2026-08-04,
 #   except vocab.aruite (歩いて) — te-form of 歩く, not a JMdict headword by design.
 # jlpt-source: training — JLPT level unverified (JMdict carries no JLPT data)
 
-# ── Left, right, straight (Unit 24) ───────────────────────────────────────────
+# ── Left, right, straight (Lesson 24) ───────────────────────────────────────────
 
 - id: vocab.migi
   jlpt: N5
@@ -52,7 +52,7 @@
   romaji: sugu
   english: right away, just ahead
 
-# ── Where is ~? (Unit 25) ──────────────────────────────────────────────────────
+# ── Where is ~? (Lesson 25) ──────────────────────────────────────────────────────
 
 - id: vocab.chikaku
   jlpt: N5
@@ -99,7 +99,7 @@
   romaji: chizu
   english: map
 
-# ── How far? (Unit 26) ────────────────────────────────────────────────────────
+# ── How far? (Lesson 26) ────────────────────────────────────────────────────────
 
 - id: vocab.aruite
   jlpt: N5
@@ -110,8 +110,8 @@
   romaji: aruite
   english: on foot, walking
 
-# vocab.fun (分/ふん, minutes) is owned by vocabulary/transit.yaml — Unit 18
-# ("Time expressions") is its canonical teaching point; Unit 26 here revisits
+# vocab.fun (分/ふん, minutes) is owned by vocabulary/transit.yaml — Lesson 18
+# ("Time expressions") is its canonical teaching point; Lesson 26 here revisits
 # it via the same id rather than redefining it.
   notes: Revisits the 分 counter first introduced with clock time; here used for duration ("about 5 minutes").
 

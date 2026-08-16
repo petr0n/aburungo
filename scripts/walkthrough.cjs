@@ -102,7 +102,7 @@ async function handleReviewStepIfPresent(page, sessionIndex) {
 
 
 /**
- * The 41-session sweep never sees the review step: a fresh profile has nothing
+ * The 41-session walk never sees the review step: a fresh profile has nothing
  * due, so every session skips straight to the new unit. That blind spot hid a
  * hard deadlock — ratings were persisted from FlipCard's onAnimationEnd, the
  * `animate-card-exit` utility was never generated, and the review card froze
@@ -182,7 +182,7 @@ async function verifyReviewStep(browser) {
  */
 async function handleCheckpointIfPresent(page, sessionIndex) {
   if (!(await visible(page, "text=to place"))) return false;
-  log(`  checkpoint sweep detected (session ${sessionIndex})`);
+  log(`  recognition checkpoint detected (session ${sessionIndex})`);
 
   let guard = 0;
   let rounds = 1;
@@ -209,14 +209,14 @@ async function handleCheckpointIfPresent(page, sessionIndex) {
     await page.waitForTimeout(450);
   }
 
-  await failHard(page, sessionIndex, "stuck-in-checkpoint-sweep");
+  await failHard(page, sessionIndex, "stuck-in-recognition-checkpoint");
   return true;
 }
 
 /**
  * Handle the production checkpoint, unit 44 (DR-023).
  *
- * Unlike a sweep, this one cannot be cleared by guessing: the answer is typed,
+ * Unlike a recognition checkpoint, this one cannot be cleared by guessing: the answer is typed,
  * not picked from four options, so a driver that does not know Japanese would
  * miss every card forever and the round would never shrink.
  *
@@ -403,7 +403,7 @@ async function main() {
       log(`  No Start button immediately visible — proceeding to terminal detection`);
     }
 
-    // The production checkpoint replaces the teach stages, like a sweep, but is
+    // The production checkpoint replaces the teach stages, like a recognition checkpoint, but is
     // reached through the same Start button so it is detected after that click.
     if (await handleProductionCheckpointIfPresent(page, sessionIndex)) {
       await page.locator("text=Nice work today.").first().waitFor({ state: "visible", timeout: CLICK_TIMEOUT });

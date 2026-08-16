@@ -1,0 +1,91 @@
+# N5 family phrases (DR-025, Lessons 39-41).
+#
+# Every sentence pairs one new family word with grammar and vocabulary already
+# taught — います from the existence lessons, 〜は〜です from Lesson 1, and 先生 /
+# 学生 / 元気 from earlier situations — so the only new element is the family
+# word itself.
+#
+# The humble and honorific sets appear as matched pairs (兄がいます against
+# お兄さんがいますか) so the distinction shows up in the sentences and not only
+# in the word list.
+#
+# Deliberately no people-counters. "How many in your family" is the obvious
+# family sentence and 何人 / 二人 / 四人 are not taught anywhere yet, so writing
+# it here would smuggle in unmet vocabulary — the exact fault this chapter is
+# meant to avoid. Counters belong to the Numbers & counting work; the family
+# lessons can gain that sentence once they exist.
+#
+# content-source: training — N5 canonical, pending Tatoeba verification.
+#   JMdict cannot verify composed sentences (only fixed expressions are
+#   headwords), so sentence checks need Tatoeba, not JMdict.
+# jlpt-source: training — JLPT level unverified
+
+# ── My family ────────────────────────────────────────────────────────────────
+
+- id: family.i-have-older-brother
+  jlpt: N5
+  scenario: family
+  japanese: 兄がいます。
+  reading: あにがいます。
+  romaji: ani ga imasu.
+  english: I have an older brother.
+
+- id: family.my-father-is-a-teacher
+  jlpt: N5
+  scenario: family
+  japanese: 父は先生です。
+  reading: ちちはせんせいです。
+  romaji: chichi wa sensei desu.
+  english: My father is a teacher.
+
+- id: family.my-younger-brother-is-a-student
+  jlpt: N5
+  scenario: family
+  japanese: 弟は学生です。
+  reading: おとうとはがくせいです。
+  romaji: otouto wa gakusei desu.
+  english: My younger brother is a student.
+
+# ── Your family ──────────────────────────────────────────────────────────────
+
+- id: family.do-you-have-older-brother
+  jlpt: N5
+  scenario: family
+  japanese: お兄さんがいますか。
+  reading: おにいさんがいますか。
+  romaji: oniisan ga imasu ka.
+  english: Do you have an older brother?
+
+- id: family.is-your-mother-well
+  jlpt: N5
+  scenario: family
+  japanese: お母さんは元気ですか。
+  reading: おかあさんはげんきですか。
+  romaji: okaasan wa genki desu ka.
+  english: Is your mother well?
+
+- id: family.your-older-sister-is-a-teacher
+  jlpt: N5
+  scenario: family
+  japanese: お姉さんは先生ですか。
+  reading: おねえさんはせんせいですか。
+  romaji: oneesan wa sensei desu ka.
+  english: Is your older sister a teacher?
+
+# ── The wider family ─────────────────────────────────────────────────────────
+
+- id: family.i-have-children
+  jlpt: N5
+  scenario: family
+  japanese: 子供がいます。
+  reading: こどもがいます。
+  romaji: kodomo ga imasu.
+  english: I have children.
+
+- id: family.grandmother-is-well
+  jlpt: N5
+  scenario: family
+  japanese: おばあさんは元気です。
+  reading: おばあさんはげんきです。
+  romaji: obaasan wa genki desu.
+  english: My grandmother is well.

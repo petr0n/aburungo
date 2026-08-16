@@ -22,6 +22,7 @@ import weatherRaw from "./phrases/weather.yaml";
 import foodPreferencesRaw from "./phrases/food-preferences.yaml";
 import datesPhrasesRaw from "./phrases/dates.yaml";
 import relativeTimePhrasesRaw from "./phrases/relative-time.yaml";
+import familyPhrasesRaw from "./phrases/family.yaml";
 
 export const allPhrases: Phrase[] = [
   ...parsePhrases(transitRaw, "phrases/transit.yaml"),
@@ -35,6 +36,7 @@ export const allPhrases: Phrase[] = [
   ...parsePhrases(foodPreferencesRaw, "phrases/food-preferences.yaml"),
   ...parsePhrases(datesPhrasesRaw, "phrases/dates.yaml"),
   ...parsePhrases(relativeTimePhrasesRaw, "phrases/relative-time.yaml"),
+  ...parsePhrases(familyPhrasesRaw, "phrases/family.yaml"),
 ];
 
 /** Lookup helper. O(n), fine for hundreds; reach for a Map if it grows large. */

@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import type { GrammarPattern, PathProgress, Phrase, ReviewState, Unit, Word } from "@/types";
+import type { GrammarPattern, PathProgress, Phrase, ReviewState, Lesson, Word } from "@/types";
 import { buildDailySession } from "./dailyLoop";
 
 const NOW = Date.UTC(2026, 4, 16, 12, 0, 0);
@@ -32,9 +32,9 @@ const grammarPattern = (id: string, phraseId: string): GrammarPattern => ({
   blank: "x",
 });
 
-const units: Unit[] = [
+const lessons: Lesson[] = [
   {
-    id: "unit-1",
+    id: "lesson-1",
     order: 1,
     situation: "s",
     title: "t",
@@ -46,7 +46,7 @@ const units: Unit[] = [
     patternId: "g1",
   },
   {
-    id: "unit-2",
+    id: "lesson-2",
     order: 2,
     situation: "s",
     title: "t",
@@ -63,98 +63,98 @@ const allWords = ["w1", "w2", "w3"].map(word);
 const allPhrases = ["p1", "p2"].map(phrase);
 const allPatterns = [grammarPattern("g1", "p1"), grammarPattern("g2", "p2")];
 
-const emptyProgress: PathProgress = { pathId: "n5", seenUnitIds: [] };
+const emptyProgress: PathProgress = { pathId: "n5", seenLessonIds: [] };
 
 describe("buildDailySession", () => {
-  it("returns the first unit as new when nothing has been seen", () => {
-    const session = buildDailySession(units, emptyProgress, allWords, allPhrases, allPatterns, [], NOW);
+  it("returns the first lesson as new when nothing has been seen", () => {
+    const session = buildDailySession(lessons, emptyProgress, allWords, allPhrases, allPatterns, [], NOW);
 
-    expect(session.unit?.id).toBe("unit-1");
+    expect(session.lesson?.id).toBe("lesson-1");
     expect(session.newWords.map((w) => w.id)).toEqual(["w1", "w2"]);
     expect(session.newPhrases.map((p) => p.id)).toEqual(["p1"]);
     expect(session.reviewItems).toEqual([]);
   });
 
-  it("advances to the next unseen unit", () => {
-    const progress: PathProgress = { pathId: "n5", seenUnitIds: ["unit-1"] };
-    const session = buildDailySession(units, progress, allWords, allPhrases, allPatterns, [], NOW);
+  it("advances to the next unseen lesson", () => {
+    const progress: PathProgress = { pathId: "n5", seenLessonIds: ["lesson-1"] };
+    const session = buildDailySession(lessons, progress, allWords, allPhrases, allPatterns, [], NOW);
 
-    expect(session.unit?.id).toBe("unit-2");
+    expect(session.lesson?.id).toBe("lesson-2");
     expect(session.newWords.map((w) => w.id)).toEqual(["w3"]);
   });
 
-  it("returns null unit once every unit has been seen", () => {
-    const progress: PathProgress = { pathId: "n5", seenUnitIds: ["unit-1", "unit-2"] };
-    const session = buildDailySession(units, progress, allWords, allPhrases, allPatterns, [], NOW);
+  it("returns null lesson once every lesson has been seen", () => {
+    const progress: PathProgress = { pathId: "n5", seenLessonIds: ["lesson-1", "lesson-2"] };
+    const session = buildDailySession(lessons, progress, allWords, allPhrases, allPatterns, [], NOW);
 
-    expect(session.unit).toBeNull();
+    expect(session.lesson).toBeNull();
     expect(session.newWords).toEqual([]);
     expect(session.newPhrases).toEqual([]);
   });
 
-  it("surfaces due items only from already-seen units, oldest-due first", () => {
-    const progress: PathProgress = { pathId: "n5", seenUnitIds: ["unit-1"] };
+  it("surfaces due items only from already-seen lessons, oldest-due first", () => {
+    const progress: PathProgress = { pathId: "n5", seenLessonIds: ["lesson-1"] };
     const reviewStates: ReviewState[] = [
       { phraseId: "w1", box: 2, dueAt: NOW - DAY_MS },
       { phraseId: "w2", box: 2, dueAt: NOW - 2 * DAY_MS },
-      { phraseId: "w3", box: 2, dueAt: NOW - DAY_MS }, // due, but unit-2 not seen yet
+      { phraseId: "w3", box: 2, dueAt: NOW - DAY_MS }, // due, but lesson-2 not seen yet
       { phraseId: "p1", box: 2, dueAt: NOW + DAY_MS }, // not due yet
     ];
 
-    const session = buildDailySession(units, progress, allWords, allPhrases, allPatterns, reviewStates, NOW);
+    const session = buildDailySession(lessons, progress, allWords, allPhrases, allPatterns, reviewStates, NOW);
 
     expect(session.reviewItems.map((i) => i.id)).toEqual(["w2", "w1"]);
   });
 
   it("dedupes review items by phraseId, keeping the earliest due", () => {
-    const progress: PathProgress = { pathId: "n5", seenUnitIds: ["unit-1"] };
+    const progress: PathProgress = { pathId: "n5", seenLessonIds: ["lesson-1"] };
     const reviewStates: ReviewState[] = [
       { phraseId: "w1", box: 1, dueAt: NOW - 2 * DAY_MS },
       { phraseId: "w1", box: 3, dueAt: NOW - DAY_MS },
     ];
 
-    const session = buildDailySession(units, progress, allWords, allPhrases, allPatterns, reviewStates, NOW);
+    const session = buildDailySession(lessons, progress, allWords, allPhrases, allPatterns, reviewStates, NOW);
 
     expect(session.reviewItems.map((i) => i.id)).toEqual(["w1"]);
   });
 
   it("interleaves a due grammar pattern into reviewItems by dueAt, not appended after", () => {
-    const progress: PathProgress = { pathId: "n5", seenUnitIds: ["unit-1"] };
+    const progress: PathProgress = { pathId: "n5", seenLessonIds: ["lesson-1"] };
     const reviewStates: ReviewState[] = [
       { phraseId: "w1", box: 2, dueAt: NOW - DAY_MS }, // due, newer
       { phraseId: "g1", box: 2, dueAt: NOW - 2 * DAY_MS }, // due, older — should sort first
     ];
 
-    const session = buildDailySession(units, progress, allWords, allPhrases, allPatterns, reviewStates, NOW);
+    const session = buildDailySession(lessons, progress, allWords, allPhrases, allPatterns, reviewStates, NOW);
 
     expect(session.reviewItems.map((i) => i.id)).toEqual(["g1", "w1"]);
   });
 
-  it("does not surface a due grammar pattern from a unit that hasn't been seen yet", () => {
-    const progress: PathProgress = { pathId: "n5", seenUnitIds: [] };
+  it("does not surface a due grammar pattern from a lesson that hasn't been seen yet", () => {
+    const progress: PathProgress = { pathId: "n5", seenLessonIds: [] };
     const reviewStates: ReviewState[] = [{ phraseId: "g1", box: 2, dueAt: NOW - DAY_MS }];
 
-    const session = buildDailySession(units, progress, allWords, allPhrases, allPatterns, reviewStates, NOW);
+    const session = buildDailySession(lessons, progress, allWords, allPhrases, allPatterns, reviewStates, NOW);
 
     expect(session.reviewItems).toEqual([]);
   });
 
-  it("returns the next unit's grammar pattern as newGrammarPattern", () => {
-    const session = buildDailySession(units, emptyProgress, allWords, allPhrases, allPatterns, [], NOW);
+  it("returns the next lesson's grammar pattern as newGrammarPattern", () => {
+    const session = buildDailySession(lessons, emptyProgress, allWords, allPhrases, allPatterns, [], NOW);
 
     expect(session.newGrammarPattern?.id).toBe("g1");
   });
 
-  it("returns null newGrammarPattern when the next unit has no patternId", () => {
-    const unitsWithoutPattern: Unit[] = [{ ...units[0]!, patternId: undefined }];
+  it("returns null newGrammarPattern when the next lesson has no patternId", () => {
+    const unitsWithoutPattern: Lesson[] = [{ ...lessons[0]!, patternId: undefined }];
     const session = buildDailySession(unitsWithoutPattern, emptyProgress, allWords, allPhrases, allPatterns, [], NOW);
 
     expect(session.newGrammarPattern).toBeNull();
   });
 
-  it("returns null newGrammarPattern once every unit has been seen", () => {
-    const progress: PathProgress = { pathId: "n5", seenUnitIds: ["unit-1", "unit-2"] };
-    const session = buildDailySession(units, progress, allWords, allPhrases, allPatterns, [], NOW);
+  it("returns null newGrammarPattern once every lesson has been seen", () => {
+    const progress: PathProgress = { pathId: "n5", seenLessonIds: ["lesson-1", "lesson-2"] };
+    const session = buildDailySession(lessons, progress, allWords, allPhrases, allPatterns, [], NOW);
 
     expect(session.newGrammarPattern).toBeNull();
   });

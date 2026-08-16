@@ -1,5 +1,5 @@
 # N5 food & drink vocabulary, depth pass for Situation 2 (Units 8-12).
-# Densifies the existing café / restaurant / paying units (DR-017).
+# Densifies the existing café / restaurant / paying lessons (DR-017).
 #
 # Example sentences are Tatoeba, pulled via server/scripts/find-examples.ts and
 # chosen by hand — the ranking cannot judge register or reading, only kanji
@@ -9,7 +9,7 @@
 # jlpt-source: training — JLPT level unverified (JMdict carries no JLPT data)
 # example-source: Tatoeba via JMdict-examples 3.6.2 (CC BY 2.0 FR), ids inline
 
-# ── Drinks (Unit 8, café) ─────────────────────────────────────────────────────
+# ── Drinks (Lesson 8, café) ─────────────────────────────────────────────────────
 
 - id: vocab.biiru
   jlpt: N5
@@ -46,7 +46,7 @@
     english: I want to drink milk.
     tatoeba_id: "157660"
 
-# ── Restaurant service (Unit 9) ───────────────────────────────────────────────
+# ── Restaurant service (Lesson 9) ───────────────────────────────────────────────
 
 - id: vocab.chuumon
   jlpt: N5
@@ -66,7 +66,7 @@
   romaji: seki
   english: seat
 
-# ── Describing food (Unit 10) ─────────────────────────────────────────────────
+# ── Describing food (Lesson 10) ─────────────────────────────────────────────────
 
 - id: vocab.amai
   jlpt: N5
@@ -104,7 +104,7 @@
   romaji: kudamono
   english: fruit
 
-# ── Paying (Unit 11) ──────────────────────────────────────────────────────────
+# ── Paying (Lesson 11) ──────────────────────────────────────────────────────────
 
 - id: vocab.zenbu
   jlpt: N5

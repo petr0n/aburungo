@@ -1,7 +1,7 @@
 # N5 daily-loop vocabulary — Situation 3: Shopping (Units 13-15 of 35).
-# See docs/plans/02b-n5-units.md for the full 35-unit map this slice is drawn
+# See docs/plans/02b-n5-lessons.md for the full 35-lesson map this slice is drawn
 # from. mise/kau/miru/ookii/chiisai/aru already exist in vocabulary/*.yaml
-# and are reused directly by the unit YAML — not redefined here.
+# and are reused directly by the lesson YAML — not redefined here.
 # content-source: training — headwords verified against JMdict 3.6.2 on 2026-08-04
 # jlpt-source: training — JLPT level unverified (JMdict carries no JLPT data)
 

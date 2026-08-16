@@ -1,6 +1,6 @@
 # N5 vocabulary depth pass for Situations 5-8: hotel (Units 21-23),
 # directions (24-26), weather (27-29) and daily life (30-33). Densifies the
-# existing units rather than extending the ladder (DR-017).
+# existing lessons rather than extending the ladder (DR-017).
 #
 # Example sentences are Tatoeba, chosen by hand and checked by
 # server/scripts/verify-examples.ts. Words with no N5-appropriate candidate
@@ -138,7 +138,7 @@
   romaji: kumo
   english: cloud
 
-# ── Times of day (Unit 33) ────────────────────────────────────────────────────
+# ── Times of day (Lesson 33) ────────────────────────────────────────────────────
 
 - id: vocab.hiru
   jlpt: N5

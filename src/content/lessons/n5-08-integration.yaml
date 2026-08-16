@@ -1,0 +1,99 @@
+# N5 daily-loop lessons — Situation 8: Food preferences (Units 30-32) and the
+# Integration & checkpoint block (Units 33-35), the final slice of the 35-lesson
+# ladder. See docs/plans/02b-n5-lessons.md for the full map. Units 34-35 are
+# deliberately review-only / no-new-content per the plan doc: the app doesn't
+# yet build the special multi-turn "no safety net" session (Lesson 34) or the
+# two-agent verification checkpoint UX (Lesson 35), so both degrade gracefully
+# to an empty wordIds/phraseIds lesson intro rather than inventing new content
+# or a UI that doesn't exist yet.
+# content-source: training — N5 canonical, pending Tatoeba verification.
+#   JMdict cannot verify composed sentences (only fixed expressions are headwords),
+#   so JMdict is the wrong instrument here — sentence checks need Tatoeba.
+# jlpt-source: training — JLPT level unverified
+
+- id: n5.unit-30
+  order: 35
+  situation: Food preferences
+  title: I like sushi
+  canDo: Say what food you like or don't like
+  wordIds:
+    - vocab.suki
+    - vocab.kirai
+    - vocab.sushi
+    - vocab.gohan
+    - vocab.tamago
+  phraseIds:
+    - food-preferences.like-sushi
+    - food-preferences.dislike-eggs
+  kanji:
+    - 好
+  grammarNote: "～がすきです / ～がきらいです — I like ~ / I don't like ~ (the object of liking/disliking is marked with が, not を)"
+  patternId: grammar.n5-unit-30
+
+- id: n5.unit-31
+  order: 36
+  situation: Food preferences
+  title: I want to eat ramen
+  canDo: Say what you want to eat
+  wordIds:
+    - vocab.ramen
+    - vocab.yasai
+    - vocab.tabetai
+    - vocab.nomitai
+    - vocab.hoshii
+    - vocab.nomu
+  phraseIds:
+    - food-preferences.want-ramen
+    - food-preferences.want-water
+  kanji: []
+  grammarNote: "～がたべたいです — I want to eat ~ (the たい desiderative form conjugates like an i-adjective, e.g. たべたくないです)"
+  patternId: grammar.n5-unit-31
+
+- id: n5.unit-32
+  order: 37
+  situation: Food preferences
+  title: More food & combining preferences
+  canDo: Say what food you like or don't like
+  wordIds:
+    - vocab.tenpura
+    - vocab.onigiri
+    - vocab.niku
+    - vocab.sakana
+    - vocab.pan
+  phraseIds:
+    - food-preferences.like-both
+    - food-preferences.dislike-meat
+  kanji:
+    - 魚
+  grammarNote: "～も～もすきです — I like both ~ and ~ (も replaces が/は to combine two things under one predicate)"
+  patternId: grammar.n5-unit-32
+
+- id: n5.unit-33
+  order: 38
+  # Was labelled "Integration & checkpoint" although it teaches 12 words. The
+  # label is what the learner sees grouping their progress, and this lesson is
+  # ordinary vocabulary, not assessment.
+  situation: Daily life
+  title: Daily life vocabulary
+  canDo: Describe how often you do something using frequency adverbs
+  wordIds:
+    - vocab.mainichi
+    - vocab.itsumo
+    - vocab.tokidoki
+    - vocab.amari
+    - vocab.zenzen
+    - vocab.neru
+    - vocab.okiru
+    - vocab.suru
+    - vocab.yomu
+    - vocab.kaku
+    - vocab.kaeru
+    - vocab.hiru
+  phraseIds:
+    - food-preferences.daily-coffee
+    - food-preferences.not-at-all
+  kanji:
+    - 毎
+  grammarNote: "Frequency adverbs (まいにち、いつも、ときどき、あまり、ぜんぜん) pair with ～ます sentences; あまり and ぜんぜん require a negative verb ending (～ません)"
+  patternId: grammar.n5-unit-33
+

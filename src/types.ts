@@ -104,19 +104,6 @@ export function isWord(card: Phrase | Word): card is Word {
 }
 
 /**
- * A grouping of phrases that share a scenario or theme.
- *
- * Declared now so the data model is complete; the spine review loop doesn't
- * use lessons directly — that comes later when there's a lesson picker.
- */
-export type Lesson = {
-  id: string;
-  title: string;
-  scenario: Scenario;
-  phraseIds: string[];
-};
-
-/**
  * A grammar pattern taught and reviewed as its own SRS item, distinct from
  * Word/Phrase. The example is an existing Phrase, referenced not duplicated;
  * `blank` is the substring of that phrase's `reading` blanked out for the
@@ -144,48 +131,48 @@ export function isGrammarPattern(item: Phrase | Word | GrammarPattern): item is 
 /**
  * A step on the guided N5 daily-loop ladder.
  *
- * Authored in YAML under src/content/units/*.yaml. A Unit does not define new
+ * Authored in YAML under src/content/lessons/*.yaml. A Lesson does not define new
  * content — it's an ordering layer over existing Word/Phrase ids, per the
  * "reuse, don't rebuild" rule in docs/plans/99-roadmap.md.
  */
-export type Unit = {
+export type Lesson = {
   id: string;
   /** Position in the ladder, 1-indexed. Determines introduction order. */
   order: number;
   /** Grouping wrapper shown to the learner, e.g. "Greetings & basics". */
   situation: string;
   title: string;
-  /** The can-do milestone this unit builds toward, shown on the close screen. */
+  /** The can-do milestone this lesson builds toward, shown on the close screen. */
   canDo: string;
   wordIds: string[];
   phraseIds: string[];
   /**
-   * Kanji characters introduced by this unit. Informational only for now —
+   * Kanji characters introduced by this lesson. Informational only for now —
    * not yet scheduled through SRS (see docs/plans/01-overarching-plan.md §5).
    */
   kanji: string[];
-  /** Short training-sourced explanation of the unit's grammar pattern. */
+  /** Short training-sourced explanation of the lesson's grammar pattern. */
   grammarNote: string;
-  /** The GrammarPattern id this unit introduces, if any — not every unit has one. */
+  /** The GrammarPattern id this lesson introduces, if any — not every lesson has one. */
   patternId?: string;
   /**
-   * Marks a unit as a checkpoint rather than new material, and says which kind.
+   * Marks a lesson as a checkpoint rather than new material, and says which kind.
    *
-   * "sweep" is the recurring mastery gate from DR-020/021: a wide recognition
+   * "recognition" is the recurring mastery gate from DR-020/021: a wide recognition
    * pass over everything already learned, complete when the remaining set
    * empties. Unlimited retry, nothing recorded, misses rejoin the SRS queue —
    * a gate, not a grade.
    *
    * "production" is the gate that closes the level (DR-023): the same shape as
-   * a sweep, but the learner writes each item from its English rather than
+   * a recognition checkpoint, but the learner writes each item from its English rather than
    * picking it out of a line-up. Recognition and production are different
-   * skills, so it is its own checkpoint rather than a harder sweep.
+   * skills, so it is its own checkpoint rather than a harder recognition round.
    *
    * "conversation" and "can-do" hand the learner to Hana instead of a card UI
    * (DR-022). Both are gated behind `hanaEnabled` and drop out of the ladder
-   * entirely when it is off — see src/content/units/index.ts.
+   * entirely when it is off — see src/content/lessons/index.ts.
    */
-  checkpoint?: "sweep" | "production" | "conversation" | "can-do";
+  checkpoint?: "recognition" | "production" | "conversation" | "can-do";
 };
 
 /**
@@ -203,14 +190,14 @@ export type ConversationScope = {
 };
 
 /**
- * A learner's position on a Unit ladder, persisted per path (e.g. "n5").
+ * A learner's position on a Lesson ladder, persisted per path (e.g. "n5").
  * IndexedDB-only for now — guests and signed-in users behave the same until
  * server sync for signed-in users is built (tracked in docs/todo.md).
  */
 export type PathProgress = {
   pathId: string;
-  /** Unit ids the learner has completed the "new unit" step for, in order. */
-  seenUnitIds: string[];
+  /** Lesson ids the learner has completed the "new lesson" step for, in order. */
+  seenLessonIds: string[];
 };
 
 /** Leitner boxes 1–5. Box 1 = seen tomorrow, box 5 = seen in a month-ish. */

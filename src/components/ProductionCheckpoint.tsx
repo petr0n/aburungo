@@ -1,11 +1,11 @@
 import { useState } from "react";
-import type { Phrase, Unit, Word } from "@/types";
-import { buildProductionQueue } from "@/srs/sweep";
+import type { Phrase, Lesson, Word } from "@/types";
+import { buildProductionQueue } from "@/srs/checkpoint";
 import { FillBlankCard } from "./FillBlankCard";
 
 type Props = {
-  /** The checkpoint unit, for the intro screen. */
-  unit: Unit;
+  /** The checkpoint lesson, for the intro screen. */
+  lesson: Lesson;
   /** Words the learner has already been taught. */
   words: Word[];
   /** Phrases the learner has already been taught. */
@@ -18,7 +18,7 @@ type Props = {
 /**
  * The production checkpoint that closes the level (DR-023).
  *
- * Same gate as the sweeps, one rung harder: instead of picking an item out of a
+ * Same gate as the recognition checkpoints, one rung harder: instead of picking an item out of a
  * line-up, the learner writes it from its English. Recognising コーヒー and
  * producing it are different skills, and the ladder had only ever gated the
  * first — every checkpoint before this one could be cleared by recognition.
@@ -28,11 +28,11 @@ type Props = {
  * nothing is recorded and there is no total or ratio anywhere on screen.
  *
  * Reuses FillBlankCard rather than introducing a fifth card UI — the same
- * composition CheckpointSweep does with RecognitionPass. Answers are checked
+ * composition RecognitionCheckpoint does with RecognitionPass. Answers are checked
  * against the reading, so kana and romaji both count; the point is recall, not
  * orthography.
  */
-export function ProductionCheckpoint({ unit, words, phrases, onMissed, onDone }: Props) {
+export function ProductionCheckpoint({ lesson, words, phrases, onMissed, onDone }: Props) {
   const [started, setStarted] = useState(false);
   const [round, setRound] = useState<Array<Word | Phrase>>(() => buildProductionQueue(words, phrases));
   const [index, setIndex] = useState(0);
@@ -76,11 +76,11 @@ export function ProductionCheckpoint({ unit, words, phrases, onMissed, onDone }:
     return (
       <div className="flex w-full flex-col gap-6 py-8">
         <div className="flex flex-col gap-2">
-          <p className="text-body-sm uppercase tracking-widest text-fg-faint">{unit.situation}</p>
-          <p className="text-heading font-semibold text-fg">{unit.title}</p>
-          <p className="text-body text-fg-subtle">{unit.canDo}</p>
+          <p className="text-body-sm uppercase tracking-widest text-fg-faint">{lesson.situation}</p>
+          <p className="text-heading font-semibold text-fg">{lesson.title}</p>
+          <p className="text-body text-fg-subtle">{lesson.canDo}</p>
         </div>
-        <p className="text-body-sm text-fg-subtle">{unit.grammarNote}</p>
+        <p className="text-body-sm text-fg-subtle">{lesson.grammarNote}</p>
         <button
           type="button"
           onClick={() => setStarted(true)}

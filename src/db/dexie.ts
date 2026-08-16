@@ -21,7 +21,7 @@ export class AburunGoDB extends Dexie {
     this.version(1).stores({
       reviewStates: "phraseId, dueAt",
     });
-    // v2: per-path unit progress for the guided daily loop (one row per pathId, e.g. "n5").
+    // v2: per-path lesson progress for the guided daily loop (one row per pathId, e.g. "n5").
     this.version(2).stores({
       reviewStates: "phraseId, dueAt",
       pathProgress: "pathId",

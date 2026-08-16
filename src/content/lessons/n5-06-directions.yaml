@@ -1,0 +1,87 @@
+# N5 daily-loop lessons — Situation 6: Directions (Units 24-26 of 35).
+# See docs/plans/02b-n5-lessons.md for the full 35-lesson map this slice is drawn
+# from. Word/phrase ids reference existing content only — no new Japanese
+# content is composed here beyond what's already in vocabulary/*.yaml and
+# phrases/*.yaml. This situation was unusually well-covered already:
+# directions.turn-right/turn-left/go-straight/have-map/is-it-far and
+# transit.station-where predate this file and are reused as-is.
+# content-source: training — N5 canonical, pending Tatoeba verification.
+#   JMdict cannot verify composed sentences (only fixed expressions are headwords),
+#   so JMdict is the wrong instrument here — sentence checks need Tatoeba.
+
+- id: n5.unit-24
+  order: 28
+  situation: Directions
+  title: Left, right, straight
+  canDo: Understand a basic answer about directions
+  wordIds:
+    - vocab.migi
+    - vocab.hidari
+    - vocab.massugu
+    - vocab.magaru
+    - vocab.sugu
+    - vocab.kousaten
+    - vocab.kado
+  phraseIds:
+    - directions.turn-right
+    - directions.turn-left
+    - directions.go-straight
+  kanji:
+    - 右
+    - 左
+  grammarNote: "～に曲がってください — Please turn ~ (direction + magaru pattern)"
+  patternId: grammar.n5-unit-24
+
+- id: n5.unit-25
+  order: 29
+  situation: Directions
+  title: Where is ~?
+  canDo: Ask where something is
+  wordIds:
+    - vocab.chikaku
+    - vocab.tonari
+    - vocab.mae
+    - vocab.ushiro
+    - vocab.chizu
+    - vocab.ie
+    - vocab.gakkou
+    - vocab.byouin
+    - vocab.toshokan
+    - vocab.ginkou
+    - vocab.yuubinkyoku
+  phraseIds:
+    - transit.station-where
+    - directions.have-map
+    - directions.near-convenience-store
+    - directions.where-am-i
+  kanji:
+    - 近
+  grammarNote: "～はどこにありますか — Where is ~? (location question)"
+  patternId: grammar.n5-unit-25
+
+- id: n5.unit-26
+  order: 30
+  situation: Directions
+  title: How far?
+  canDo: Understand a basic answer about distance
+  wordIds:
+    - vocab.aruite
+    - vocab.fun
+    - vocab.kurai
+    - vocab.koko
+    - vocab.asoko
+    - vocab.shizuka
+    - vocab.nigiyaka
+    - vocab.kirei
+    - vocab.omoshiroi
+    - vocab.hashi
+    - vocab.kouen
+  phraseIds:
+    - directions.is-it-far
+    - directions.walking-distance
+    - directions.behind-building
+    - directions.is-it-near
+  kanji:
+    - 歩
+  grammarNote: "～ふんくらいです — It's about ~ minutes"
+  patternId: grammar.n5-unit-26

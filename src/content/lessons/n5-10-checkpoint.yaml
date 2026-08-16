@@ -1,0 +1,51 @@
+# N5 daily-loop lessons — the two Hana checkpoints (Units 45-46).
+#
+# Moved out of n5-08-integration.yaml by DR-019 so the days & dates lessons can sit
+# before it. Renumbered from 34-35; safe to renumber because no PathProgress rows
+# referenced the old ids (verified against production: 0 rows, 0 seen lessons).
+#
+# Both were non-functional shells until DR-022 built the scoped-Hana screens they
+# were waiting on. They are the only two lessons with no cards: one is an
+# unscripted exchange, the other is the verification pass that closes the level.
+#
+# These sit *after* the recurring recognition checkpoints DR-021 placed on a ten-lesson cadence,
+# and after the production checkpoint at lesson 44. A recognition checkpoint consolidates; these
+# two finish. Do not merge the concepts.
+#
+# **Both are gated behind `hanaEnabled` (DR-023) and are filtered out of the
+# ladder when it is off**, which is the shipped default — Hana is the only part
+# of the app that costs money per use. With the AI shelved the level ends at
+# lesson 44. Turning the flag on restores these two and the ladder runs to 46.
+#
+# content-source: n/a — introduces no content, only re-presents taught items
+
+- id: n5.unit-38
+  order: 50
+  situation: Integration & checkpoint
+  title: Cross-situation conversation
+  canDo: Hold a longer exchange spanning two situations with no single-answer safety net
+  checkpoint: conversation
+  wordIds: []
+  phraseIds: []
+  kanji:
+    - 日
+    - 水
+    - 食
+    - 円
+    - 電
+    - 天
+    - 気
+    - 雨
+    - 好
+  grammarNote: "No new material. This is a live conversation with Hana across two of the situations you have already worked through — a cafe stop and then shopping on the same street, say — chosen from your own ladder. Nothing here has a single right answer and nothing is recorded or judged; the point is carrying one thread across a change of scene. Kanji listed above are review items carried over from earlier lessons, not new introductions."
+
+- id: n5.unit-39
+  order: 51
+  situation: Integration & checkpoint
+  title: Can-do checkpoint
+  canDo: Handle every situation on the ladder unaided
+  checkpoint: can-do
+  wordIds: []
+  phraseIds: []
+  kanji: []
+  grammarNote: "No new material. Pick a situation, play it through with Hana, and the conversation is read back afterwards to see whether it worked. Anything that lands is checked off for good; anything that does not simply stays on the list, with unlimited attempts and no record kept of how many you took. The list is drawn from the situations you have been taught, so it grows as the ladder does."
