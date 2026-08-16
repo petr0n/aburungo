@@ -10,6 +10,7 @@ Built by `scripts/jlpt.mjs`:
 pnpm jlpt:fetch n5      # download the raw source files
 pnpm jlpt:build n5      # merge them into reference-n5.json
 pnpm jlpt:coverage n5   # diff the reference against what the app teaches
+pnpm jlpt:sentences n5  # find Tatoeba sentences we could teach next
 ```
 
 Every level works identically — N4 through N1 need a run, not new code.
@@ -100,3 +101,55 @@ them:
 `inAppNotInReference` is the other direction: words we tag at this level that no
 list mentions. Not necessarily wrong — situational vocabulary an exam-oriented
 list would not carry is exactly what this app should have — but worth reading.
+
+## Finding sentences to teach
+
+The rule against inventing Japanese means every phrase has to come from a real
+source. `sentences` is how you find one that fits a given point in the ladder.
+
+It reads the ~26,000 Tatoeba example sentences bundled into JMdict and keeps
+only those a learner could already read:
+
+```
+pnpm jlpt:sentences n5 --polite            # what we could teach with today's vocabulary
+pnpm jlpt:sentences n5 --upto 12 --polite  # ...using only words taught by lesson 12
+pnpm jlpt:sentences n5 --for 洗う           # sentences for a word we are about to teach
+```
+
+| Flag | |
+|---|---|
+| `--upto N` | restrict to words taught by lesson order N — the "no unmet vocabulary" guarantee for a specific slot |
+| `--for 洗う` | require the sentence to use this word, and treat it as taught |
+| `--polite` | keep only です/ます endings |
+| `--max-len` | characters, default 16 |
+| `--per-word` | candidates kept per word, default 3 |
+
+Output goes to `sentences-<level>.json`, grouped by the word each sentence
+exercises. When `--for` finds nothing it prints the **near misses** instead —
+sentences using that word and the one or two words still blocking them, which
+is usually the more useful answer.
+
+### What it filters, and what it cannot
+
+Four gates, each earned by something the corpus actually did:
+
+1. **Untaught kanji or katakana words** — greedy longest-match over the taught
+   set, accepting kanji prefixes so inflection passes (a sentence says 洗って,
+   never 洗う).
+2. **Compounds** — 何人 segments into 何 + 人 and 兄弟 into 兄 + 弟, so
+   character-level matching alone called 何人兄弟がいますか teachable. It is not:
+   何人 is its own word. Any common multi-character JMdict word longer than what
+   the learner has met rejects the sentence. This is the mistake that reached a
+   draft lesson by hand before this tool existed.
+3. **Coarse language** — Tatoeba is real speech, and the first run surfaced
+   anatomical crudity within twenty hits. Forms from JMdict senses tagged
+   `vulg`, `X`, `derog` or `sl` are blocked wherever they appear.
+4. **Register** — plain and imperative forms are everywhere in the corpus and
+   useless at a level that teaches です/ます.
+
+**It cannot check hiragana-only vocabulary.** Particles and inflection are kana,
+so there is no way to tell an unmet kana word from grammar without a
+morphological analyser. A candidate can still carry a word like うんざり.
+
+So these are candidates, not content. Read every one before authoring it, and
+cite the Tatoeba id in the commit message.

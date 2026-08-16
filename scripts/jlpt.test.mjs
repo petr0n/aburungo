@@ -1,0 +1,109 @@
+/**
+ * The matching rules behind `jlpt.mjs sentences`.
+ *
+ * Every case here is a bug that actually shipped into a run of the command, not
+ * a hypothetical. The segmentation rules look obvious and are not: each one was
+ * written, run against 26,000 real sentences, and found wrong.
+ */
+import { describe, it, expect } from "vitest";
+import {
+  normReading, searchStem, runCovered, uncoveredRuns, segmentationVocab, isPolite,
+} from "./jlpt.mjs";
+
+describe("normReading", () => {
+  it("folds katakana to hiragana so a word matches whichever way it is written", () => {
+    expect(normReading("コーヒー")).toBe("こーひー");
+    expect(normReading("あさ")).toBe("あさ");
+  });
+
+  it("strips the spacing and interpuncts the source lists use", () => {
+    expect(normReading("お・かあ さん")).toBe("おかあさん");
+  });
+});
+
+describe("searchStem", () => {
+  it("drops okurigana from verbs, because sentences inflect them", () => {
+    // The corpus says 洗って and 洗います; neither contains the string 洗う.
+    expect(searchStem("洗う", "verb")).toBe("洗");
+    expect(searchStem("食べる", "verb")).toBe("食");
+    expect(searchStem("大きい", "i-adj")).toBe("大");
+  });
+
+  it("leaves non-inflecting words whole", () => {
+    // 私たち trimmed to 私 matched every sentence containing "I".
+    expect(searchStem("私たち", "noun")).toBe("私たち");
+    expect(searchStem("子供", "noun")).toBe("子供");
+  });
+
+  it("returns kana-only words unchanged", () => {
+    expect(searchStem("おばあさん", "noun")).toBe("おばあさん");
+    expect(searchStem("あらう", "verb")).toBe("あらう");
+  });
+});
+
+describe("runCovered", () => {
+  const vocab = segmentationVocab([
+    { japanese: "何", reading: "なに" },
+    { japanese: "人", reading: "ひと" },
+    { japanese: "兄", reading: "あに" },
+    { japanese: "弟", reading: "おとうと" },
+    { japanese: "洗う", reading: "あらう" },
+  ]);
+
+  it("accepts a run built only from taught words", () => {
+    expect(runCovered("人", vocab)).toBe(true);
+  });
+
+  it("accepts an inflected verb via its stem", () => {
+    // 洗います appears in text as the kanji run 洗.
+    expect(runCovered("洗", vocab)).toBe(true);
+  });
+
+  it("rejects a run containing an untaught word", () => {
+    expect(runCovered("犬", vocab)).toBe(false);
+  });
+
+  it("rejects a compound whose parts are taught but whose whole is not", () => {
+    // The bug this command exists to prevent: 何人 splits into 何 + 人 and 兄弟
+    // into 兄 + 弟, so character segmentation alone calls both teachable.
+    const dictForms = new Set(["何人", "兄弟"]);
+    expect(runCovered("何人", vocab, dictForms)).toBe(false);
+    expect(runCovered("何人兄弟", vocab, dictForms)).toBe(false);
+    expect(runCovered("何人", vocab)).toBe(true); // without the guard, it slips through
+  });
+
+  it("still accepts the compound once it is taught", () => {
+    const taught = segmentationVocab([{ japanese: "何人", reading: "なんにん" }]);
+    expect(runCovered("何人", taught, new Set(["何人"]))).toBe(true);
+  });
+});
+
+describe("uncoveredRuns", () => {
+  const vocab = segmentationVocab([{ japanese: "洗う", reading: "あらう" }]);
+
+  it("names the words blocking a sentence", () => {
+    expect(uncoveredRuns("このセーターは洗っても大丈夫です。", vocab)).toEqual(["大丈夫", "セーター"]);
+  });
+
+  it("is empty when nothing blocks", () => {
+    expect(uncoveredRuns("洗いますか。", vocab)).toEqual([]);
+  });
+
+  it("ignores single katakana characters, which are rarely whole words", () => {
+    expect(uncoveredRuns("ア", vocab)).toEqual([]);
+  });
+});
+
+describe("isPolite", () => {
+  it("accepts the です/ます forms every lesson at this level teaches", () => {
+    for (const s of ["いいお天気ですね。", "予約席はありますか。", "六時に起きます。", "行きました。"]) {
+      expect(isPolite(s)).toBe(true);
+    }
+  });
+
+  it("rejects the plain and imperative forms the corpus is full of", () => {
+    for (const s of ["好きにしろよ。", "すごいじゃん。", "もうだめだ。", "白黒つけろ。"]) {
+      expect(isPolite(s)).toBe(false);
+    }
+  });
+});
