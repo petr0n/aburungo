@@ -1,0 +1,1135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Book One Ladder</title>
+<style>
+:root{
+  --paper:#F7F6F1; --card:#FFFDF8; --ink:#2D2D2D; --ink-2:#57534C; --ink-3:#6B665E;
+  --line:#E2DED2; --line-2:#CFC9B9;
+  --ai:#1F3A66; --ai-soft:#eff3f9; --rok:#4F9C8D; --rok-deep:#33685e; --rok-soft:#eef6f4;
+  --ogon:#8a6a2b; --ogon-soft:#fbf6ea; --ogon-line:#ecd9a5;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Times New Roman",serif;
+  --sans:ui-sans-serif,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --jp:"Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP","Yu Gothic",sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#14140f; --card:#1c1b17; --ink:#EFEDE5; --ink-2:#CFC9B9; --ink-3:#A4A4A4;
+  --line:#33322c; --line-2:#403D38;
+  --ai:#8fa5c7; --ai-soft:#101d34; --rok:#85bfb3; --rok-deep:#b3d7cf; --rok-soft:#18322d;
+  --ogon:#dfc074; --ogon-soft:#2a2313; --ogon-line:#654d1f;
+}}
+:root[data-theme="dark"]{
+  --paper:#14140f; --card:#1c1b17; --ink:#EFEDE5; --ink-2:#CFC9B9; --ink-3:#A4A4A4;
+  --line:#33322c; --line-2:#403D38;
+  --ai:#8fa5c7; --ai-soft:#101d34; --rok:#85bfb3; --rok-deep:#b3d7cf; --rok-soft:#18322d;
+  --ogon:#dfc074; --ogon-soft:#2a2313; --ogon-line:#654d1f;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.5;-webkit-text-size-adjust:100%}
+.wrap{max-width:920px;margin:0 auto;padding:clamp(20px,5vw,56px) clamp(14px,4vw,32px) 72px}
+header.book{border-bottom:2px solid var(--ink);padding-bottom:22px;margin-bottom:34px}
+.eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3);margin:0 0 10px}
+h1{font-family:var(--serif);font-weight:600;font-size:clamp(30px,6vw,46px);line-height:1.08;margin:0 0 6px;text-wrap:balance;letter-spacing:-.01em}
+.sub{margin:0;color:var(--ink-2);max-width:62ch}
+.totals{display:flex;flex-wrap:wrap;gap:8px 26px;margin-top:20px;font-variant-numeric:tabular-nums}
+.totals div{display:flex;flex-direction:column}
+.totals b{font-family:var(--serif);font-size:24px;font-weight:600;line-height:1.1}
+.totals span{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
+.chapter{background:var(--card);border:1px solid var(--line);border-radius:12px;margin-bottom:26px;overflow:hidden}
+.ch-head{display:flex;align-items:flex-start;gap:16px;padding:18px 20px;border-bottom:1px solid var(--line);background:var(--ai-soft)}
+.ch-num{font-family:var(--serif);font-size:38px;line-height:.9;font-weight:600;color:var(--ai);min-width:34px}
+.ch-meta{flex:1 1 auto;min-width:0}
+.ch-meta h2{font-family:var(--serif);font-size:21px;font-weight:600;margin:0 0 3px;letter-spacing:-.01em}
+.sits{margin:0;font-size:12.5px;color:var(--ink-3)}
+.ch-stats{display:flex;flex-direction:column;align-items:flex-end;gap:1px;font-size:12px;color:var(--ink-3);font-variant-numeric:tabular-nums;white-space:nowrap}
+.ch-stats b{color:var(--ink);font-weight:600}
+ol.rows{list-style:none;margin:0;padding:0}
+.row{display:flex;gap:14px;padding:13px 20px;border-bottom:1px solid var(--line);align-items:flex-start}
+.row:last-child{border-bottom:0}
+.ord{font-variant-numeric:tabular-nums;font-size:12px;color:var(--ink-3);min-width:22px;padding-top:3px;text-align:right;flex:0 0 auto}
+.body{flex:1 1 auto;min-width:0;display:flex;flex-direction:column;gap:2px}
+.head{display:flex;gap:9px;align-items:baseline;flex-wrap:wrap}
+.n{font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--ai);font-weight:600}
+.sit{font-size:11.5px;color:var(--ink-3)}
+.title{font-family:var(--serif);font-size:17px;font-weight:600;line-height:1.25}
+.cando{font-size:13px;color:var(--ink-2)}
+.pat{font-size:12.5px;color:var(--ogon);margin-top:2px}
+.pat span{font-family:var(--jp)}
+details{margin-top:7px}
+summary{cursor:pointer;font-size:11.5px;color:var(--ink-3);font-variant-numeric:tabular-nums;
+  list-style:none;display:inline-flex;align-items:center;gap:5px;padding:3px 9px;border:1px solid var(--line-2);border-radius:99px;min-height:26px}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"+";font-weight:600;color:var(--ai)}
+details[open] summary::before{content:"−"}
+summary:hover{color:var(--ink-2)}
+.detail{padding:10px 0 4px}
+.detail table{border-collapse:collapse;width:100%;font-size:13px;margin-bottom:8px}
+.detail th{text-align:left;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);font-weight:600;padding:3px 8px 3px 0;border-bottom:1px solid var(--line)}
+.detail td{padding:4px 8px 4px 0;border-bottom:1px solid var(--line);vertical-align:top}
+.detail td:first-child{font-family:var(--jp);font-size:15px;white-space:nowrap}
+.detail td:nth-child(2){font-family:var(--jp);color:var(--ink-3);white-space:nowrap}
+ul.phrases{list-style:none;margin:0 0 8px;padding:0;font-size:13px}
+ul.phrases li{padding:3px 0;border-bottom:1px solid var(--line)}
+ul.phrases span{font-family:var(--jp);font-size:15px}
+ul.phrases em{color:var(--ink-2);font-style:normal}
+p.kanji{display:flex;gap:4px;flex-wrap:wrap;margin:0 0 8px}
+.k{font-family:var(--jp);font-size:14px;line-height:1;padding:5px 6px;border-radius:4px;background:var(--ogon-soft);border:1px solid var(--ogon-line)}
+p.note{margin:0;font-size:12.5px;color:var(--ink-2);background:var(--paper);border-left:2px solid var(--line-2);padding:8px 10px;border-radius:0 6px 6px 0}
+.row--cp{background:var(--rok-soft);border-top:2px solid var(--rok);align-items:center}
+.cp-body{flex:1 1 auto;min-width:0;display:flex;flex-direction:column;gap:1px}
+.cp-title{font-family:var(--serif);font-size:16px;font-weight:600;color:var(--rok-deep)}
+.cp-note{font-size:12.5px;color:var(--ink-2)}
+.cp-tag{font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--rok-deep);border:1px solid var(--rok);border-radius:99px;padding:3px 9px;white-space:nowrap;flex:0 0 auto}
+section.closers{background:var(--card);border:1px solid var(--line-2);border-radius:12px;padding:4px 0;margin-bottom:26px}
+.closers h3,.shelf h3{font-family:var(--serif);font-size:15px;margin:14px 20px 2px;font-weight:600}
+.closers p,.shelf p{margin:0 20px 8px;font-size:12.5px;color:var(--ink-3);max-width:64ch}
+.closers ol{list-style:none;margin:0;padding:0}
+.shelf{border:1px dashed var(--line-2);border-radius:12px;padding:4px 0 12px;opacity:.75}
+.shelf ul{list-style:none;margin:0;padding:0 20px}
+.shelf li{display:flex;gap:14px;font-size:13px;color:var(--ink-3);padding:3px 0}
+footer{margin-top:30px;font-size:12px;color:var(--ink-3);border-top:1px solid var(--line);padding-top:14px}
+code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.92em;color:var(--ink-2)}
+@media (max-width:620px){.ch-head{flex-wrap:wrap}.ch-stats{flex-direction:row;gap:12px;align-items:flex-start}.detail{overflow-x:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="book">
+  <p class="eyebrow">AburunGo · Book One · internally N5</p>
+  <h1>Book One Ladder</h1>
+  <p class="sub">Every chapter, lesson and checkpoint a learner meets, in order. Expand any lesson for
+    the words and phrases it teaches. Generated from <code>src/content/</code> by <code>pnpm ladder</code>,
+    so it is what the app ships — not a plan of what it might.</p>
+  <div class="totals">
+    <div><b>58</b><span>lessons</span></div>
+    <div><b>5</b><span>chapters</span></div>
+    <div><b>6</b><span>checkpoints</span></div>
+    <div><b>329</b><span>words</span></div>
+    <div><b>125</b><span>phrases</span></div>
+    <div><b>29</b><span>patterns</span></div>
+    <div><b>88</b><span>kanji</span></div>
+  </div>
+</header>
+
+<section class="chapter" aria-labelledby="ch1">
+    <header class="ch-head">
+      <span class="ch-num">1</span>
+      <span class="ch-meta">
+        <h2 id="ch1">Greetings &amp; ordering</h2>
+        <p class="sits">Greetings &amp; basics · Food &amp; drink</p>
+      </span>
+      <span class="ch-stats">
+        <span><b>12</b> lessons</span>
+        <span><b>84</b> words</span>
+        <span><b>29</b> phrases</span>
+      </span>
+    </header>
+    <ol class="rows"><li class="row">
+      <span class="ord">1</span>
+      <div class="body">
+        <span class="head"><span class="n">Lesson 1 of 12</span><span class="sit">Greetings &amp; basics</span></span>
+        <span class="title">Yes, no, and this/that</span>
+        <span class="cando">Greet someone</span>
+        <span class="pat"><span lang="ja">～は～です</span> — X is Y — the fundamental copula.</span>
+        <details>
+          <summary>6 words · 2 phrases · 1 kanji</summary>
+          <div class="detail">
+            <table><thead><tr><th>Word</th><th>Reading</th><th>Meaning</th></tr></thead><tbody><tr><td lang="ja">はい</td><td lang="ja">はい</td><td>yes</td></tr><tr><td lang="ja">いいえ</td><td lang="ja">いいえ</td><td>no</td></tr><tr><td lang="ja">これ</td><td lang="ja">これ</td><td>this (thing)</td></tr><tr><td lang="ja">それ</td><td lang="ja">それ</td><td>that (thing)</td></tr><tr><td lang="ja">あれ</td><td lang="ja">あれ</td><td>that (thing, over there)</td></tr><tr><td lang="ja">そこ</td><td lang="ja">そこ</td><td>there</td></tr></tbody></table>
+            <ul class="phrases"><li><span lang="ja">これは本です</span> <em>This is a book.</em></li><li><span lang="ja">それは何ですか</span> <em>What is that?</em></li></ul>
+            <p class="kanji"><span class="k" lang="ja">日</span></p>
+            <p class="note">～は～です — X is Y, the fundamental copula.</p>
+          </div>
+        </details>
+      </div>
+    </li><li class="row">
+      <span class="ord">2</span>
+      <div class="body">
+        <span class="head"><span class="n">Lesson 2 of 12</span><span class="sit">Greetings &amp; basics</span></span>
+        <span class="title">Hello &amp; goodbye</span>
+        <span class="cando">Greet someone</span>
+        <span class="pat"><span lang="ja">～ですね</span> — Confirmation / softening (&quot;It is, isn't it?&quot;)</span>
+        <details>
+          <summary>4 words · 4 phrases</summary>
+          <div class="detail">
+            <table><thead><tr><th>Word</th><th>Reading</th><th>Meaning</th></tr></thead><tbody><tr><td lang="ja">さようなら</td><td lang="ja">さようなら</td><td>goodbye</td></tr><tr><td lang="ja">またね</td><td lang="ja">またね</td><td>see you later</td></tr><tr><td lang="ja">元気</td><td lang="ja">げんき</td><td>healthy, energetic, fine</td></tr><tr><td lang="ja">大丈夫</td><td lang="ja">だいじょうぶ</td><td>OK, alright, fine</td></tr></tbody></table>
+            <ul class="phrases"><li><span lang="ja">おはようございます</span> <em>Good morning.</em></li><li><span lang="ja">こんにちは</span> <em>Hello.</em></li><li><span lang="ja">こんばんは</span> <em>Good evening.</em></li><li><span lang="ja">こんにちは、おげんきですか</span> <em>Hello, how are you?</em></li></ul>
+            
+            <p class="note">～ですね — confirmation / softening (&quot;It is, isn't it?&quot;)</p>
+          </div>
+        </details>
+      </div>
+    </li><li class="row">
+      <span class="ord">3</span>
+      <div class="body">
+        <span class="head"><span class="n">Lesson 3 of 12</span><span class="sit">Greetings &amp; basics</span></span>
+        <span class="title">Nice to meet you</span>
+        <span class="cando">Introduce yourself</span>
+        
+        <details>
+          <summary>8 words · 2 phrases · 1 kanji</summary>
+          <div class="detail">
+            <table><thead><tr><th>Word</th><th>Reading</th><th>Meaning</th></tr></thead><tbody><tr><td lang="ja">なまえ</td><td lang="ja">なまえ</td><td>name</td></tr><tr><td lang="ja">わたし</td><td lang="ja">わたし</td><td>I, me</td></tr><tr><td lang="ja">あなた</td><td lang="ja">あなた</td><td>you</td></tr><tr><td lang="ja">誰</td><td lang="ja">だれ</td><td>who</td></tr><tr><td lang="ja">私たち</td><td lang="ja">わたしたち</td><td>we, us</td></tr><tr><td lang="ja">人</td><td lang="ja">ひと</td><td>person, people</td></tr><tr><td lang="ja">友達</td><td lang="ja">ともだち</td><td>friend</td></tr><tr><td lang="ja">会う</td><td lang="ja">あう</td><td>to meet</td></tr></tbody></table>
+            <ul class="phrases"><li><span lang="ja">はじめまして</span> <em>Nice to meet you.</em></li><li><span lang="ja">よろしくお願いします</span> <em>Pleased to meet you. / I look forward to working with you.</em></li></ul>
+            <p class="kanji"><span class="k" lang="ja">名</span></p>
+            <p class="note">わたしは～です — I am ~ (self-introduction pattern)</p>
+          </div>
+        </details>
+      </div>
+    </li><li class="row">
+      <span class="ord">4</span>
+      <div class="body">
+        <span class="head"><span class="n">Lesson 4 of 12</span><span class="sit">Greetings &amp; basics</span></span>
+        <span class="title">Where are you from?</span>
+        <span class="cando">Introduce yourself</span>
+        <span class="pat"><span lang="ja">～から来ました</span> — I came from ~ (origin pattern)</span>
+        <details>
+          <summary>9 words · 2 phrases · 2 kanji</summary>
+          <div class="detail">
+            <table><thead><tr><th>Word</th><th>Reading</th><th>Meaning</th></tr></thead><tbody><tr><td lang="ja">国</td><td lang="ja">くに</td><td>country</td></tr><tr><td lang="ja">日本</td><td lang="ja">にほん</td><td>Japan</td></tr><tr><td lang="ja">英語</td><td lang="ja">えいご</td><td>English (language)</td></tr><tr><td lang="ja">どこ</td><td lang="ja">どこ</td><td>where</td></tr><tr><td lang="ja">学生</td><td lang="ja">がくせい</td><td>student</td></tr><tr><td lang="ja">先生</td><td lang="ja">せんせい</td><td>teacher</td></tr><tr><td lang="ja">家族</td><td lang="ja">かぞく</td><td>family</td></tr><tr><td lang="ja">女の人</td><td lang="ja">おんなのひと</td><td>woman</td></tr><tr><td lang="ja">男の人</td><td lang="ja">おとこのひと</td><td>man</td></tr></tbody></table>
+            <ul class="phrases"><li><span lang="ja">どこから来ましたか</span> <em>Where are you from?</em></li><li><span lang="ja">アメリカから来ました</span> <em>I'm from America.</em></li></ul>
+            <p class="kanji"><span class="k" lang="ja">国</span><span class="k" lang="ja">本</span></p>
+            <p class="note">～から来ました — I came from ~ (origin pattern)</p>
+          </div>
+        </details>
+      </div>
+    </li><li class="row">
+      <span class="ord">5</span>
+      <div class="body">
+        <span class="head"><span class="n">Lesson 5 of 12</span><span class="sit">Greetings &amp; basics</span></span>
+        <span class="title">Thank you &amp; you're welcome</span>
+        <span class="cando">Thank someone</span>
+        <span class="pat"><span lang="ja">ありがとうございます／どういたしまして</span> — the thanks exchange</span>
+        <details>
+          <summary>4 words · 2 phrases</summary>
+          <div class="detail">
+            <table><thead><tr><th>Word</th><th>Reading</th><th>Meaning</th></tr></thead><tbody><tr><td lang="ja">どういたしまして</td><td lang="ja">どういたしまして</td><td>you're welcome</td></tr><tr><td lang="ja">ごめんなさい</td><td lang="ja">ごめんなさい</td><td>I'm sorry</td></tr><tr><td lang="ja">いいえ</td><td lang="ja">いいえ</td><td>no</td></tr><tr><td lang="ja">とても</td><td lang="ja">とても</td><td>very</td></tr></tbody></table>
+            <ul class="phrases"><li><span lang="ja">ありがとうございます</span> <em>Thank you.</em></li><li><span lang="ja">いいえ、どういたしまして</span> <em>No, not at all. (You're welcome.)</em></li></ul>
+            
+            <p class="note">ありがとうございます / どういたしまして — the thanks exchange</p>
+          </div>
+        </details>
+      </div>
+    </li><li class="row">
+      <span class="ord">6</span>
+      <div class="body">
+        <span class="head"><span class="n">Lesson 6 of 12</span><span class="sit">Greetings &amp; basics</span></span>
+        <span class="title">I don't understand</span>
+        <span class="cando">Say you don't understand</span>
+        
+        <details>
+          <summary>8 words · 4 phrases</summary>
+          <div class="detail">
+            <table><thead><tr><th>Word</th><th>Reading</th><th>Meaning</th></tr></thead><tbody><tr><td lang="ja">もういちど</td><td lang="ja">もういちど</td><td>one more time</td></tr><tr><td lang="ja">ゆっくり</td><td lang="ja">ゆっくり</td><td>slowly</td></tr><tr><td lang="ja">お願いします</td><td lang="ja">おねがいします</td><td>please (when requesting something)</td></tr><tr><td lang="ja">わかる</td><td lang="ja">わかる</td><td>to understand</td></tr><tr><td lang="ja">少し</td><td lang="ja">すこし</td><td>a little, a few</td></tr><tr><td lang="ja">たくさん</td><td lang="ja">たくさん</td><td>a lot, many</td></tr><tr><td lang="ja">話す</td><td lang="ja">はなす</td><td>to speak, to talk</td></tr><tr><td lang="ja">聞く</td><td lang="ja">きく</td><td>to listen, to ask</td></tr></tbody></table>
+            <ul class="phrases"><li><span lang="ja">すみません</span> <em>Excuse me.</em></li><li><span lang="ja">わかりません</span> <em>I don't understand.</em></li><li><span lang="ja">もう一度言ってください</span> <em>Please say that again.</em></li><li><span lang="ja">ゆっくり話してください</span> <em>Please speak slowly.</em></li></ul>
+            
+            <p class="note">～をおねがいします — please do ~ (polite request)</p>
+          </div>
+        </details>
+      </div>
+    </li><li class="row">
+      <span class="ord">7</span>
+      <div class="body">
+        <span class="head"><span class="n">Lesson 7 of 12</span><span class="sit">Greetings &amp; basics</span></span>
+        <span class="title">Numbers 1-10</span>
+        <span class="cando">Count and state simple quantities</span>
+        <span class="pat"><span lang="ja">～つ</span> — counting small things (ひとつ, ふたつ, みっつ...)</span>
+        <details>
+          <summary>12 words · 2 phrases · 5 kanji</summary>
+          <div class="detail">
+            <table><thead><tr><th>Word</th><th>Reading</th><th>Meaning</th></tr></thead><tbody><tr><td lang="ja">一</td><td lang="ja">いち</td><td>one</td></tr><tr><td lang="ja">二</td><td lang="ja">に</td><td>two</td></tr><tr><td lang="ja">三</td><td lang="ja">さん</td><td>three</td></tr><tr><td lang="ja">四</td><td lang="ja">よん</td><td>four</td></tr><tr><td lang="ja">五</td><td lang="ja">ご</td><td>five</td></tr><tr><td lang="ja">ろく</td><td lang="ja">ろく</td><td>six</td></tr><tr><td lang="ja">なな</td><td lang="ja">なな</td><td>seven</td></tr><tr><td lang="ja">はち</td><td lang="ja">はち</td><td>eight</td></tr><tr><td lang="ja">きゅう</td><td lang="ja">きゅう</td><td>nine</td></tr><tr><td lang="ja">じゅう</td><td lang="ja">じゅう</td><td>ten</td></tr><tr><td lang="ja">～つ</td><td lang="ja">つ</td><td>counter suffix for general objects (hitotsu, futatsu, mittsu...)</td></tr><tr><td lang="ja">いつ</td><td lang="ja">いつ</td><td>when</td></tr></tbody></table>
+            <ul class="phrases"><li><span lang="ja">ひとつください</span> <em>One, please.</em></li><li><span lang="ja">みっつあります</span> <em>There are three.</em></li></ul>
+            <p class="kanji"><span class="k" lang="ja">一</span><span class="k" lang="ja">二</span><span class="k" lang="ja">三</span><span class="k" lang="ja">四</span><span class="k" lang="ja">五</span></p>
+            <p class="note">～つ — counting small things (ひとつ, ふたつ, みっつ...)</p>
+          </div>
+        </details>
+      </div>
+    </li><li class="row">
+      <span class="ord">8</span>
+      <div class="body">
+        <span class="head"><span class="n">Lesson 8 of 12</span><span class="sit">Food &amp; drink</span></span>
+        <span class="title">At the café</span>
+        <span class="cando">Order a drink</span>
+        <span class="pat"><span lang="ja">～をおねがいします</span> — ~ please (ordering pattern)</span>
+        <details>
+          <summary>8 words · 2 phrases · 1 kanji</summary>
+          <div class="detail">
+            <table><thead><tr><th>Word</th><th>Reading</th><th>Meaning</th></tr></thead><tbody><tr><td lang="ja">コーヒー</td><td lang="ja">コーヒー</td><td>coffee</td></tr><tr><td lang="ja">水</td><td lang="ja">みず</td><td>water</td></tr><tr><td lang="ja">お茶</td><td lang="ja">おちゃ</td><td>tea</td></tr><tr><td lang="ja">これ</td><td lang="ja">これ</td><td>this (thing)</td></tr><tr><td lang="ja">お願いします</td><td lang="ja">おねがいします</td><td>please (when requesting something)</td></tr><tr><td lang="ja">ビール</td><td lang="ja">ビール</td><td>beer</td></tr><tr><td lang="ja">ジュース</td><td lang="ja">ジュース</td><td>juice</td></tr><tr><td lang="ja">牛乳</td><td lang="ja">ぎゅうにゅう</td><td>milk</td></tr></tbody></table>
+            <ul class="phrases"><li><span lang="ja">コーヒーをお願いします</span> <em>A coffee, please.</em></li><li><span lang="ja">水をください</span> <em>Water, please.</em></li></ul>
+            <p class="kanji"><span class="k" lang="ja">水</span></p>
+            <p class="note">～をおねがいします — ~ please (ordering pattern)</p>
+          </div>
+        </details>
+      </div>
+    </li><li class="row">
+      <span class="ord">9</span>
+      <div class="body">
+        <span class="head"><span class="n">Lesson 9 of 12</span><span class="sit">Food &amp; drink</span></span>
+        <span class="title">At the restaurant</span>
+        <span class="cando">Order a meal</span>
+        <span class="pat"><span lang="ja">～をください</span> — please give me ~ (receiving pattern)</span>
+        <details>
+          <summary>7 words · 3 phrases · 1 kanji</summary>
+          <div class="detail">
+            <table><thead><tr><th>Word</th><th>Reading</th><th>Meaning</th></tr></thead><tbody><tr><td lang="ja">レストラン</td><td lang="ja">レストラン</td><td>restaurant</td></tr><tr><td lang="ja">メニュー</td><td lang="ja">メニュー</td><td>menu</td></tr><tr><td lang="ja">食べる</td><td lang="ja">たべる</td><td>to eat</td></tr><tr><td lang="ja">おいしい</td><td lang="ja">おいしい</td><td>delicious, tasty</td></tr><tr><td lang="ja">いただきます</td><td lang="ja">いただきます</td><td>(said before eating) thanks for the food, I humbly receive this</td></tr><tr><td lang="ja">注文</td><td lang="ja">ちゅうもん</td><td>order (in a restaurant)</td></tr><tr><td lang="ja">席</td><td lang="ja">せき</td><td>seat</td></tr></tbody></table>
+            <ul class="phrases"><li><span lang="ja">メニューをお願いします</span> <em>Menu, please.</em></li><li><span lang="ja">これをください</span> <em>I'll have this.</em></li><li><span lang="ja">ごちそうさまでした</span> <em>Thanks for the meal.</em></li></ul>
+            <p class="kanji"><span class="k" lang="ja">食</span></p>
+            <p class="note">～をください — please give me ~ (receiving pattern)</p>
+          </div>
+        </details>
+      </div>
+    </li><li class="row">
+      <span class="ord">10</span>
+      <div class="body">
+        <span class="head"><span class="n">Lesson 10 of 12</span><span class="sit">Food &amp; drink</span></span>
+        <span class="title">What is this?</span>
+        <span class="cando">Ask what something is on a menu</span>
+        <span class="pat"><span lang="ja">これは何ですか</span> — What is this?</span>
+        <details>
+          <summary>7 words · 2 phrases · 1 kanji</summary>
+          <div class="detail">
+            <table><thead><tr><th>Word</th><th>Reading</th><th>Meaning</th></tr></thead><tbody><tr><td lang="ja">何</td><td lang="ja">なに</td><td>what</td></tr><tr><td lang="ja">これ</td><td lang="ja">これ</td><td>this (thing)</td></tr><tr><td lang="ja">それ</td><td lang="ja">それ</td><td>that (thing)</td></tr><tr><td lang="ja">どれ</td><td lang="ja">どれ</td><td>which (one)</td></tr><tr><td lang="ja">甘い</td><td lang="ja">あまい</td><td>sweet</td></tr><tr><td lang="ja">辛い</td><td lang="ja">からい</td><td>spicy, hot</td></tr><tr><td lang="ja">果物</td><td lang="ja">くだもの</td><td>fruit</td></tr></tbody></table>
+            <ul class="phrases"><li><span lang="ja">これは何ですか</span> <em>What is this?</em></li><li><span lang="ja">それは魚です</span> <em>That is fish.</em></li></ul>
+            <p class="kanji"><span class="k" lang="ja">何</span></p>
+            <p class="note">これは何ですか — What is this?</p>
+          </div>
+        </details>
+      </div>
+    </li><li class="row">
+      <span class="ord">11</span>
+      <div class="body">
+        <span class="head"><span class="n">Lesson 11 of 12</span><span class="sit">Food &amp; drink</span></span>
+        <span class="title">How much &amp; paying</span>
+        <span class="cando">Ask for the bill</span>
+        <span class="pat"><span lang="ja">いくらですか</span> — How much is it?</span>
+        <details>
+          <summary>7 words · 2 phrases · 1 kanji</summary>
+          <div class="detail">
+            <table><thead><tr><th>Word</th><th>Reading</th><th>Meaning</th></tr></thead><tbody><tr><td lang="ja">いくら</td><td lang="ja">いくら</td><td>how much</td></tr><tr><td lang="ja">お会計</td><td lang="ja">おかいけい</td><td>the bill, the check</td></tr><tr><td lang="ja">円</td><td lang="ja">えん</td><td>yen</td></tr><tr><td lang="ja">高い</td><td lang="ja">たかい</td><td>expensive, tall, high</td></tr><tr><td lang="ja">安い</td><td lang="ja">やすい</td><td>cheap, inexpensive</td></tr><tr><td lang="ja">お金</td><td lang="ja">おかね</td><td>money</td></tr><tr><td lang="ja">全部</td><td lang="ja">ぜんぶ</td><td>all, everything</td></tr></tbody></table>
+            <ul class="phrases"><li><span lang="ja">お会計お願いします</span> <em>The check, please.</em></li><li><span lang="ja">いくらですか</span> <em>How much is this?</em></li></ul>
+            <p class="kanji"><span class="k" lang="ja">円</span></p>
+            <p class="note">いくらですか — How much is it?</p>
+          </div>
+        </details>
+      </div>
+    </li><li class="row">
+      <span class="ord">12</span>
+      <div class="body">
+        <span class="head"><span class="n">Lesson 12 of 12</span><span class="sit">Food &amp; drink</span></span>
+        <span class="title">Bigger numbers</span>
+        <span class="cando">Say prices in yen</span>
+        <span class="pat"><span lang="ja">number + えん</span> — price expressions (さんびゃくえん、いちまんえん)</span>
+        <details>
+          <summary>4 words · 2 phrases · 2 kanji</summary>
+          <div class="detail">
+            <table><thead><tr><th>Word</th><th>Reading</th><th>Meaning</th></tr></thead><tbody><tr><td lang="ja">百</td><td lang="ja">ひゃく</td><td>hundred</td></tr><tr><td lang="ja">千</td><td lang="ja">せん</td><td>thousand</td></tr><tr><td lang="ja">万</td><td lang="ja">まん</td><td>ten thousand</td></tr><tr><td lang="ja">何円</td><td lang="ja">なんえん</td><td>how many yen, how much (in yen)</td></tr></tbody></table>
+            <ul class="phrases"><li><span lang="ja">三百円です</span> <em>It's 300 yen.</em></li><li><span lang="ja">五千円です</span> <em>It's 5,000 yen.</em></li></ul>
+            <p class="kanji"><span class="k" lang="ja">百</span><span class="k" lang="ja">千</span></p>
+            <p class="note">number + えん — price expressions (さんびゃくえん、いちまんえん)</p>
+          </div>
+        </details>
+      </div>
+    </li><li class="row row--cp">
+      <span class="ord">13</span>
+      <span class="cp-body">
+        <span class="cp-title">Recognition checkpoint</span>
+        <span class="cp-note">Recognise the vocabulary from greetings and eating out</span>
+      </span>
+      <span class="cp-tag">closes the chapter</span>
+    </li></ol>
+  </section>
+<section class="chapter" aria-labelledby="ch2">
+    <header class="ch-head">
+      <span class="ch-num">2</span>
+      <span class="ch-meta">
+        <h2 id="ch2">Shopping &amp; getting around</h2>
+        <p class="sits">Shopping · Getting around</p>
+      </span>
+      <span class="ch-stats">
+        <span><b>9</b> lessons</span>
+        <span><b>64</b> words</span>
+        <span><b>24</b> phrases</span>
+      </span>
+    </header>
+    <ol class="rows"><li class="row">
+      <span class="ord">14</span>
+      <div class="body">
+        <span class="head"><span class="n">Lesson 1 of 9</span><span class="sit">Shopping</span></span>
+        <span class="title">In a shop</span>
+        <span class="cando">Ask the price</span>
+        <span class="pat"><span lang="ja">～てもいいですか</span> — may I ~? (permission request)</span>
+        <details>
+          <summary>8 words · 2 phrases · 1 kanji</summary>
+          <div class="detail">
+            <table><thead><tr><th>Word</th><th>Reading</th><th>Meaning</th></tr></thead><tbody><tr><td lang="ja">店</td><td lang="ja">みせ</td><td>shop, store</td></tr><tr><td lang="ja">買う</td><td lang="ja">かう</td><td>to buy</td></tr><tr><td lang="ja">見る</td><td lang="ja">みる</td><td>to see, to watch</td></tr><tr><td lang="ja">ください</td><td lang="ja">ください</td><td>please (give me this)</td></tr><tr><td lang="ja">かばん</td><td lang="ja">かばん</td><td>bag</td></tr><tr><td lang="ja">服</td><td lang="ja">ふく</td><td>clothes</td></tr><tr><td lang="ja">靴</td><td lang="ja">くつ</td><td>shoes</td></tr><tr><td lang="ja">サイズ</td><td lang="ja">サイズ</td><td>size</td></tr></tbody></table>
+            <ul class="phrases"><li><span lang="ja">ちょっと見てもいいですか</span> <em>May I have a look?</em></li><li><span lang="ja">これをください</span> <em>This one, please.</em></li></ul>
+            <p class="kanji"><span class="k" lang="ja">店</span></p>
+            <p class="note">～てもいいですか — may I ~? (permission request)</p>
+          </div>
+        </details>
+      </div>
+    </li><li class="row">
+      <span class="ord">15</span>
+      <div class="body">
+        <span class="head"><span class="n">Lesson 2 of 9</span><span class="sit">Shopping</span></span>
+        <span class="title">Sizes &amp; quantities</span>
+        <span class="cando">Buy something</span>
+        <span class="pat"><span lang="ja">～をひとつください</span> — one ~ please</span>
+        <details>
+          <summary>10 words · 3 phrases · 2 kanji</summary>
+          <div class="detail">
+            <table><thead><tr><th>Word</th><th>Reading</th><th>Meaning</th></tr></thead><tbody><tr><td lang="ja">大きい</td><td lang="ja">おおきい</td><td>big, large</td></tr><tr><td lang="ja">小さい</td><td lang="ja">ちいさい</td><td>small, little</td></tr><tr><td lang="ja">いくつ</td><td lang="ja">いくつ</td><td>how many</td></tr><tr><td lang="ja">ひとつ</td><td lang="ja">ひとつ</td><td>one (thing)</td></tr><tr><td lang="ja">ふたつ</td><td lang="ja">ふたつ</td><td>two (things)</td></tr><tr><td lang="ja">新しい</td><td lang="ja">あたらしい</td><td>new</td></tr><tr><td lang="ja">古い</td><td lang="ja">ふるい</td><td>old (for things, not people)</td></tr><tr><td lang="ja">三つ</td><td lang="ja">みっつ</td><td>three (things)</td></tr><tr><td lang="ja">四つ</td><td lang="ja">よっつ</td><td>four (things)</td></tr><tr><td lang="ja">五つ</td><td lang="ja">いつつ</td><td>five (things)</td></tr></tbody></table>
+            <ul class="phrases"><li><span lang="ja">大きいのをください</span> <em>The big one, please.</em></li><li><span lang="ja">ふたつください</span> <em>Two, please.</em></li><li><span lang="ja">大きいサイズはありますか</span> <em>Do you have a larger size?</em></li></ul>
+            <p class="kanji"><span class="k" lang="ja">大</span><span class="k" lang="ja">小</span></p>
+            <p class="note">～をひとつください — one ~ please</p>
+          </div>
+        </details>
+      </div>
+    </li><li class="row">
+      <span class="ord">16</span>
+      <div class="body">
+        <span class="head"><span class="n">Lesson 3 of 9</span><span class="sit">Shopping</span></span>
+        <span class="title">Do you have it?</span>
+        <span class="cando">Buy something</span>
+        <span class="pat"><span lang="ja">～はありますか</span> — Do you have ~?</span>
+        <details>
+          <summary>9 words · 2 phrases</summary>
+          <div class="detail">
+            <table><thead><tr><th>Word</th><th>Reading</th><th>Meaning</th></tr></thead><tbody><tr><td lang="ja">ある</td><td lang="ja">ある</td><td>to exist, to have (inanimate)</td></tr><tr><td lang="ja">ほか</td><td lang="ja">ほか</td><td>other, another</td></tr><tr><td lang="ja">いろ</td><td lang="ja">いろ</td><td>color</td></tr><tr><td lang="ja">おなじ</td><td lang="ja">おなじ</td><td>same</td></tr><tr><td lang="ja">本</td><td lang="ja">ほん</td><td>book</td></tr><tr><td lang="ja">いる</td><td lang="ja">いる</td><td>to exist, to be (animate)</td></tr><tr><td lang="ja">赤い</td><td lang="ja">あかい</td><td>red</td></tr><tr><td lang="ja">白い</td><td lang="ja">しろい</td><td>white</td></tr><tr><td lang="ja">黒い</td><td lang="ja">くろい</td><td>black</td></tr></tbody></table>
+            <ul class="phrases"><li><span lang="ja">ほかのいろはありますか</span> <em>Do you have other colors?</em></li><li><span lang="ja">すみません、ありません</span> <em>I'm sorry, we don't have it.</em></li></ul>
+            
+            <p class="note">～はありますか — Do you have ~?</p>
+          </div>
+        </details>
+      </div>
+    </li><li class="row">
+      <span class="ord">17</span>
+      <div class="body">
+        <span class="head"><span class="n">Lesson 4 of 9</span><span class="sit">Shopping</span></span>
+        <span class="title">Paying and leaving</span>
+        <span class="cando">Pay for something and leave without help</span>
+        
+        <details>
+          <summary>0 words · 4 phrases</summary>
+          <div class="detail">
+            
+            <ul class="phrases"><li><span lang="ja">見ているだけです</span> <em>I'm just looking.</em></li><li><span lang="ja">カードで払えますか</span> <em>Can I pay by card?</em></li><li><span lang="ja">レシートをください</span> <em>A receipt, please.</em></li><li><span lang="ja">袋はいりません</span> <em>No bag needed, thank you.</em></li></ul>
+            
+            <p class="note">No new words this time — four set phrases for the end of a shop visit. Two of them decline rather than request, which is the harder half of shopping in Japan: 見ているだけです turns away an offer of help without being abrupt, and 袋はいりません refuses a bag. The other two ask whether a card is accepted and request a receipt.</p>
+          </div>
+        </details>
+      </div>
+    </li><li class="row">
+      <span class="ord">18</span>
+      <div class="body">
+        <span class="head"><span class="n">Lesson 5 of 9</span><span class="sit">Getting around</span></span>
+        <span class="title">At the station</span>
+        <span class="cando">Buy a train ticket</span>
+        <span class="pat"><span lang="ja">～までいくらですか</span> — How much to ~? (まで marks the destination)</span>
+        <details>
+          <summary>8 words · 3 phrases · 2 kanji</summary>
+          <div class="detail">
+            <table><thead><tr><th>Word</th><th>Reading</th><th>Meaning</th></tr></thead><tbody><tr><td lang="ja">駅</td><td lang="ja">えき</td><td>station</td></tr><tr><td lang="ja">行く</td><td lang="ja">いく</td><td>to go</td></tr><tr><td lang="ja">電車</td><td lang="ja">でんしゃ</td><td>train</td></tr><tr><td lang="ja">切符</td><td lang="ja">きっぷ</td><td>ticket</td></tr><tr><td lang="ja">まで</td><td lang="ja">まで</td><td>to, until, as far as (marks a destination or limit)</td></tr><tr><td lang="ja">車</td><td lang="ja">くるま</td><td>car</td></tr><tr><td lang="ja">地下鉄</td><td lang="ja">ちかてつ</td><td>subway, underground</td></tr><tr><td lang="ja">飛行機</td><td lang="ja">ひこうき</td><td>aeroplane</td></tr></tbody></table>
+            <ul class="phrases"><li><span lang="ja">切符はどこで買えますか</span> <em>Where can I buy a ticket?</em></li><li><span lang="ja">しんじゅくまでいちまいください</span> <em>One ticket to Shinjuku, please.</em></li><li><span lang="ja">しんじゅくまでいくらですか</span> <em>How much is it to Shinjuku?</em></li></ul>
+            <p class="kanji"><span class="k" lang="ja">電</span><span class="k" lang="ja">車</span></p>
+            <p class="note">～までいくらですか — How much to ~? (まで marks the destination)</p>
+          </div>
+        </details>
+      </div>
+    </li><li class="row">
+      <span class="ord">19</span>
+      <div class="body">
+        <span class="head"><span class="n">Lesson 6 of 9</span><span class="sit">Getting around</span></span>
+        <span class="title">Platform &amp; exit</span>
+        <span class="cando">Ask which platform or exit</span>
+        <span class="pat"><span lang="ja">～はどこですか</span> — Where is ~? (the general location-question pattern)</span>
+        <details>
+          <summary>8 words · 3 phrases · 2 kanji</summary>
+          <div class="detail">
+            <table><thead><tr><th>Word</th><th>Reading</th><th>Meaning</th></tr></thead><tbody><tr><td lang="ja">ホーム</td><td lang="ja">ホーム</td><td>platform</td></tr><tr><td lang="ja">でぐち</td><td lang="ja">でぐち</td><td>exit</td></tr><tr><td lang="ja">いりぐち</td><td lang="ja">いりぐち</td><td>entrance</td></tr><tr><td lang="ja">何番</td><td lang="ja">なんばん</td><td>which number (platform, gate, etc.)</td></tr><tr><td lang="ja">出る</td><td lang="ja">でる</td><td>to leave, to exit</td></tr><tr><td lang="ja">入る</td><td lang="ja">はいる</td><td>to enter, to go in</td></tr><tr><td lang="ja">のる</td><td lang="ja">のる</td><td>to ride, to board</td></tr><tr><td lang="ja">おりる</td><td lang="ja">おりる</td><td>to get off, to alight</td></tr></tbody></table>
+            <ul class="phrases"><li><span lang="ja">駅はどこですか</span> <em>Where is the station?</em></li><li><span lang="ja">何番ホームですか</span> <em>Which platform is it?</em></li><li><span lang="ja">でぐちはどこですか</span> <em>Where is the exit?</em></li></ul>
+            <p class="kanji"><span class="k" lang="ja">口</span><span class="k" lang="ja">番</span></p>
+            <p class="note">～はどこですか — Where is ~? (the general location-question pattern)</p>
+          </div>
+        </details>
+      </div>
+    </li><li class="row">
+      <span class="ord">20</span>
+      <div class="body">
+        <span class="head"><span class="n">Lesson 7 of 9</span><span class="sit">Getting around</span></span>
+        <span class="title">Time expressions</span>
+        <span class="cando">Tell and confirm the time</span>
+        <span class="pat"><span lang="ja">～じ～ふんです</span> — It is ~ o'clock, ~ minutes.</span>
+        <details>
+          <summary>8 words · 3 phrases · 2 kanji</summary>
+          <div class="detail">
+            <table><thead><tr><th>Word</th><th>Reading</th><th>Meaning</th></tr></thead><tbody><tr><td lang="ja">何時</td><td lang="ja">なんじ</td><td>what time</td></tr><tr><td lang="ja">ごぜん</td><td lang="ja">ごぜん</td><td>a.m., morning (before noon)</td></tr><tr><td lang="ja">ごご</td><td lang="ja">ごご</td><td>p.m., afternoon</td></tr><tr><td lang="ja">あさ</td><td lang="ja">あさ</td><td>morning</td></tr><tr><td lang="ja">よる</td><td lang="ja">よる</td><td>night, evening</td></tr><tr><td lang="ja">分</td><td lang="ja">ふん</td><td>minute(s) (counter)</td></tr><tr><td lang="ja">今</td><td lang="ja">いま</td><td>now</td></tr><tr><td lang="ja">時間</td><td lang="ja">じかん</td><td>time, hour</td></tr></tbody></table>
+            <ul class="phrases"><li><span lang="ja">次の電車は何時ですか</span> <em>What time is the next train?</em></li><li><span lang="ja">何時ですか</span> <em>What time is it?</em></li><li><span lang="ja">三時半です</span> <em>It's 3:30.</em></li></ul>
+            <p class="kanji"><span class="k" lang="ja">時</span><span class="k" lang="ja">分</span></p>
+            <p class="note">～じ～ふんです — It is ~ o'clock, ~ minutes.</p>
+          </div>
+        </details>
+      </div>
+    </li><li class="row">
+      <span class="ord">21</span>
+      <div class="body">
+        <span class="head"><span class="n">Lesson 8 of 9</span><span class="sit">Getting around</span></span>
+        <span class="title">Taxi</span>
+        <span class="cando">Tell a taxi driver your destination</span>
+        <span class="pat"><span lang="ja">～までお願いします</span> — Please take me to ~ (the taxi destination pattern)</span>
+        <details>
+          <summary>5 words · 2 phrases</summary>
+          <div class="detail">
+            <table><thead><tr><th>Word</th><th>Reading</th><th>Meaning</th></tr></thead><tbody><tr><td lang="ja">タクシー</td><td lang="ja">タクシー</td><td>taxi</td></tr><tr><td lang="ja">とめる</td><td lang="ja">とめる</td><td>to stop (something)</td></tr><tr><td lang="ja">ここ</td><td lang="ja">ここ</td><td>here</td></tr><tr><td lang="ja">右</td><td lang="ja">みぎ</td><td>right (direction)</td></tr><tr><td lang="ja">道</td><td lang="ja">みち</td><td>road, street, way</td></tr></tbody></table>
+            <ul class="phrases"><li><span lang="ja">駅までお願いします</span> <em>To the station, please.</em></li><li><span lang="ja">ここでとめてください</span> <em>Please stop here.</em></li></ul>
+            
+            <p class="note">～までお願いします — Please take me to ~ (the taxi destination pattern)</p>
+          </div>
+        </details>
+      </div>
+    </li><li class="row">
+      <span class="ord">22</span>
+      <div class="body">
+        <span class="head"><span class="n">Lesson 9 of 9</span><span class="sit">Getting around</span></span>
+        <span class="title">Bus</span>
+        <span class="cando">Ask about the next bus and get off at the right stop</span>
+        <span class="pat"><span lang="ja">～でおりてください</span> — Please get off at ~</span>
+        <details>
+          <summary>8 words · 2 phrases · 1 kanji</summary>
+          <div class="detail">
+            <table><thead><tr><th>Word</th><th>Reading</th><th>Meaning</th></tr></thead><tbody><tr><td lang="ja">バス</td><td lang="ja">バス</td><td>bus</td></tr><tr><td lang="ja">バスてい</td><td lang="ja">バスてい</td><td>bus stop</td></tr><tr><td lang="ja">のる</td><td lang="ja">のる</td><td>to ride, to board</td></tr><tr><td lang="ja">おりる</td><td lang="ja">おりる</td><td>to get off, to alight</td></tr><tr><td lang="ja">次</td><td lang="ja">つぎ</td><td>next</td></tr><tr><td lang="ja">来る</td><td lang="ja">くる</td><td>to come</td></tr><tr><td lang="ja">歩く</td><td lang="ja">あるく</td><td>to walk</td></tr><tr><td lang="ja">自転車</td><td lang="ja">じてんしゃ</td><td>bicycle</td></tr></tbody></table>
+            <ul class="phrases"><li><span lang="ja">ここで降ります</span> <em>I'm getting off here.</em></li><li><span lang="ja">次のバスは何時ですか</span> <em>What time is the next bus?</em></li></ul>
+            <p class="kanji"><span class="k" lang="ja">次</span></p>
+            <p class="note">～でおりてください — Please get off at ~</p>
+          </div>
+        </details>
+      </div>
+    </li><li class="row row--cp">
+      <span class="ord">23</span>
+      <span class="cp-body">
+        <span class="cp-title">Recognition checkpoint</span>
+        <span class="cp-note">Recognise the vocabulary from the first four situations</span>
+      </span>
+      <span class="cp-tag">closes the chapter</span>
+    </li></ol>
+  </section>
+<section class="chapter" aria-labelledby="ch3">
+    <header class="ch-head">
+      <span class="ch-num">3</span>
+      <span class="ch-meta">
+        <h2 id="ch3">Staying &amp; finding your way</h2>
+        <p class="sits">Hotel · Directions · Weather</p>
+      </span>
+      <span class="ch-stats">
+        <span><b>10</b> lessons</span>
+        <span><b>69</b> words</span>
+        <span><b>27</b> phrases</span>
+      </span>
+    </header>
+    <ol class="rows"><li class="row">
+      <span class="ord">24</span>
+      <div class="body">
+        <span class="head"><span class="n">Lesson 1 of 10</span><span class="sit">Hotel</span></span>
+        <span class="title">Checking in</span>
+        <span class="cando">Check into a hotel</span>
+        
+        <details>
+          <summary>7 words · 2 phrases · 2 kanji</summary>
+          <div class="detail">
+            <table><thead><tr><th>Word</th><th>Reading</th><th>Meaning</th></tr></thead><tbody><tr><td lang="ja">ホテル</td><td lang="ja">ホテル</td><td>hotel</td></tr><tr><td lang="ja">部屋</td><td lang="ja">へや</td><td>room</td></tr><tr><td lang="ja">予約</td><td lang="ja">よやく</td><td>reservation</td></tr><tr><td lang="ja">なまえ</td><td lang="ja">なまえ</td><td>name</td></tr><tr><td lang="ja">チェックイン</td><td lang="ja">チェックイン</td><td>check-in</td></tr><tr><td lang="ja">鍵</td><td lang="ja">かぎ</td><td>key</td></tr><tr><td lang="ja">荷物</td><td lang="ja">にもつ</td><td>luggage, baggage</td></tr></tbody></table>
+            <ul class="phrases"><li><span lang="ja">予約があります</span> <em>I have a reservation.</em></li><li><span lang="ja">チェックインをお願いします</span> <em>Check-in, please.</em></li></ul>
+            <p class="kanji"><span class="k" lang="ja">予</span><span class="k" lang="ja">約</span></p>
+            <p class="note">～のなまえで — under the name of ~ (reservation pattern)</p>
+          </div>
+        </details>
+      </div>
+    </li><li class="row">
+      <span class="ord">25</span>
+      <div class="body">
+        <span class="head"><span class="n">Lesson 2 of 10</span><span class="sit">Hotel</span></span>
+        <span class="title">Hotel amenities</span>
+        <span class="cando">Check into a hotel</span>
+        <span class="pat"><span lang="ja">～はなんかいですか</span> — What floor is ~?</span>
+        <details>
+          <summary>5 words · 4 phrases · 1 kanji</summary>
+          <div class="detail">
+            <table><thead><tr><th>Word</th><th>Reading</th><th>Meaning</th></tr></thead><tbody><tr><td lang="ja">トイレ</td><td lang="ja">トイレ</td><td>toilet, bathroom</td></tr><tr><td lang="ja">エレベーター</td><td lang="ja">エレベーター</td><td>elevator</td></tr><tr><td lang="ja">何階</td><td lang="ja">なんかい</td><td>which floor</td></tr><tr><td lang="ja">風呂</td><td lang="ja">ふろ</td><td>bath</td></tr><tr><td lang="ja">シャワー</td><td lang="ja">シャワー</td><td>shower</td></tr></tbody></table>
+            <ul class="phrases"><li><span lang="ja">トイレはどこですか</span> <em>Where is the bathroom?</em></li><li><span lang="ja">風呂は何階ですか</span> <em>What floor is the bath on?</em></li><li><span lang="ja">部屋にワイファイはありますか</span> <em>Is there Wi-Fi in the room?</em></li><li><span lang="ja">朝食は付いていますか</span> <em>Is breakfast included?</em></li></ul>
+            <p class="kanji"><span class="k" lang="ja">階</span></p>
+            <p class="note">～はなんかいですか — What floor is ~?</p>
+          </div>
+        </details>
+      </div>
+    </li><li class="row">
+      <span class="ord">26</span>
+      <div class="body">
+        <span class="head"><span class="n">Lesson 3 of 10</span><span class="sit">Hotel</span></span>
+        <span class="title">Hotel requests</span>
+        <span class="cando">Check into a hotel</span>
+        <span class="pat"><span lang="ja">～をもってきてください</span> — Please bring me ~</span>
+        <details>
+          <summary>7 words · 2 phrases</summary>
+          <div class="detail">
+            <table><thead><tr><th>Word</th><th>Reading</th><th>Meaning</th></tr></thead><tbody><tr><td lang="ja">もっと</td><td lang="ja">もっと</td><td>more</td></tr><tr><td lang="ja">タオル</td><td lang="ja">タオル</td><td>towel</td></tr><tr><td lang="ja">持ってくる</td><td lang="ja">もってくる</td><td>to bring</td></tr><tr><td lang="ja">お願いします</td><td lang="ja">おねがいします</td><td>please (when requesting something)</td></tr><tr><td lang="ja">明日</td><td lang="ja">あした</td><td>tomorrow</td></tr><tr><td lang="ja">電話</td><td lang="ja">でんわ</td><td>telephone</td></tr><tr><td lang="ja">朝食</td><td lang="ja">ちょうしょく</td><td>breakfast</td></tr></tbody></table>
+            <ul class="phrases"><li><span lang="ja">タオルを持ってきてください</span> <em>Please bring me a towel.</em></li><li><span lang="ja">明日の朝、6時に起こしてください</span> <em>Please wake me at 6 tomorrow morning.</em></li></ul>
+            
+            <p class="note">～をもってきてください — Please bring me ~</p>
+          </div>
+        </details>
+      </div>
+    </li><li class="row">
+      <span class="ord">27</span>
+      <div class="body">
+        <span class="head"><span class="n">Lesson 4 of 10</span><span class="sit">Hotel</span></span>
+        <span class="title">Checking out</span>
+        <span class="cando">Check out and get to your next stop</span>
+        
+        <details>
+          <summary>0 words · 2 phrases</summary>
+          <div class="detail">
+            
+            <ul class="phrases"><li><span lang="ja">チェックアウトは何時ですか</span> <em>What time is check-out?</em></li><li><span lang="ja">タクシーをお願いします</span> <em>A taxi, please.</em></li></ul>
+            
+            <p class="note">No new words — two phrases for the morning you leave. Asking what time checkout is uses the same 何時ですか you already know from telling the time, and asking for a taxi reuses お願いします from ordering. Both are recombinations rather than new material.</p>
+          </div>
+        </details>
+      </div>
+    </li><li class="row">
+      <span class="ord">28</span>
+      <div class="body">
+        <span class="head"><span class="n">Lesson 5 of 10</span><span class="sit">Directions</span></span>
+        <span class="title">Left, right, straight</span>
+        <span class="cando">Understand a basic answer about directions</span>
+        <span class="pat"><span lang="ja">～に曲がってください</span> — Please turn ~ (direction + magaru pattern)</span>
+        <details>
+          <summary>7 words · 3 phrases · 2 kanji</summary>
+          <div class="detail">
+            <table><thead><tr><th>Word</th><th>Reading</th><th>Meaning</th></tr></thead><tbody><tr><td lang="ja">右</td><td lang="ja">みぎ</td><td>right (direction)</td></tr><tr><td lang="ja">左</td><td lang="ja">ひだり</td><td>left (direction)</td></tr><tr><td lang="ja">まっすぐ</td><td lang="ja">まっすぐ</td><td>straight ahead</td></tr><tr><td lang="ja">曲がる</td><td lang="ja">まがる</td><td>to turn</td></tr><tr><td lang="ja">すぐ</td><td lang="ja">すぐ</td><td>right away, just ahead</td></tr><tr><td lang="ja">交差点</td><td lang="ja">こうさてん</td><td>intersection, crossing</td></tr><tr><td lang="ja">角</td><td lang="ja">かど</td><td>corner</td></tr></tbody></table>
+            <ul class="phrases"><li><span lang="ja">右に曲がってください</span> <em>Please turn right.</em></li><li><span lang="ja">左に曲がってください</span> <em>Please turn left.</em></li><li><span lang="ja">まっすぐ行ってください</span> <em>Please go straight.</em></li></ul>
+            <p class="kanji"><span class="k" lang="ja">右</span><span class="k" lang="ja">左</span></p>
+            <p class="note">～に曲がってください — Please turn ~ (direction + magaru pattern)</p>
+          </div>
+        </details>
+      </div>
+    </li><li class="row">
+      <span class="ord">29</span>
+      <div class="body">
+        <span class="head"><span class="n">Lesson 6 of 10</span><span class="sit">Directions</span></span>
+        <span class="title">Where is ~?</span>
+        <span class="cando">Ask where something is</span>
+        <span class="pat"><span lang="ja">～はどこにありますか</span> — Where is ~? (location question)</span>
+        <details>
+          <summary>11 words · 4 phrases · 1 kanji</summary>
+          <div class="detail">
+            <table><thead><tr><th>Word</th><th>Reading</th><th>Meaning</th></tr></thead><tbody><tr><td lang="ja">近く</td><td lang="ja">ちかく</td><td>nearby, near</td></tr><tr><td lang="ja">となり</td><td lang="ja">となり</td><td>next to, neighboring</td></tr><tr><td lang="ja">まえ</td><td lang="ja">まえ</td><td>in front of, before</td></tr><tr><td lang="ja">うしろ</td><td lang="ja">うしろ</td><td>behind</td></tr><tr><td lang="ja">地図</td><td lang="ja">ちず</td><td>map</td></tr><tr><td lang="ja">家</td><td lang="ja">いえ</td><td>house, home</td></tr><tr><td lang="ja">学校</td><td lang="ja">がっこう</td><td>school</td></tr><tr><td lang="ja">病院</td><td lang="ja">びょういん</td><td>hospital</td></tr><tr><td lang="ja">図書館</td><td lang="ja">としょかん</td><td>library</td></tr><tr><td lang="ja">銀行</td><td lang="ja">ぎんこう</td><td>bank</td></tr><tr><td lang="ja">郵便局</td><td lang="ja">ゆうびんきょく</td><td>post office</td></tr></tbody></table>
+            <ul class="phrases"><li><span lang="ja">駅はどこですか</span> <em>Where is the station?</em></li><li><span lang="ja">地図はありますか</span> <em>Do you have a map?</em></li><li><span lang="ja">コンビニの近くです</span> <em>It's near the convenience store.</em></li><li><span lang="ja">ここはどこですか</span> <em>Where am I?</em></li></ul>
+            <p class="kanji"><span class="k" lang="ja">近</span></p>
+            <p class="note">～はどこにありますか — Where is ~? (location question)</p>
+          </div>
+        </details>
+      </div>
+    </li><li class="row">
+      <span class="ord">30</span>
+      <div class="body">
+        <span class="head"><span class="n">Lesson 7 of 10</span><span class="sit">Directions</span></span>
+        <span class="title">How far?</span>
+        <span class="cando">Understand a basic answer about distance</span>
+        <span class="pat"><span lang="ja">～ふんくらいです</span> — It's about ~ minutes</span>
+        <details>
+          <summary>11 words · 4 phrases · 1 kanji</summary>
+          <div class="detail">
+            <table><thead><tr><th>Word</th><th>Reading</th><th>Meaning</th></tr></thead><tbody><tr><td lang="ja">歩いて</td><td lang="ja">あるいて</td><td>on foot, walking</td></tr><tr><td lang="ja">分</td><td lang="ja">ふん</td><td>minute(s) (counter)</td></tr><tr><td lang="ja">くらい</td><td lang="ja">くらい</td><td>about, approximately</td></tr><tr><td lang="ja">ここ</td><td lang="ja">ここ</td><td>here</td></tr><tr><td lang="ja">あそこ</td><td lang="ja">あそこ</td><td>over there</td></tr><tr><td lang="ja">静か</td><td lang="ja">しずか</td><td>quiet</td></tr><tr><td lang="ja">にぎやか</td><td lang="ja">にぎやか</td><td>lively, bustling</td></tr><tr><td lang="ja">きれい</td><td lang="ja">きれい</td><td>beautiful, clean</td></tr><tr><td lang="ja">面白い</td><td lang="ja">おもしろい</td><td>interesting, funny</td></tr><tr><td lang="ja">橋</td><td lang="ja">はし</td><td>bridge</td></tr><tr><td lang="ja">公園</td><td lang="ja">こうえん</td><td>park</td></tr></tbody></table>
+            <ul class="phrases"><li><span lang="ja">遠いですか</span> <em>Is it far?</em></li><li><span lang="ja">歩いて五分くらいです</span> <em>It's about 5 minutes on foot.</em></li><li><span lang="ja">あのビルのうしろです</span> <em>It's behind that building.</em></li><li><span lang="ja">近いですか</span> <em>Is it nearby?</em></li></ul>
+            <p class="kanji"><span class="k" lang="ja">歩</span></p>
+            <p class="note">～ふんくらいです — It's about ~ minutes</p>
+          </div>
+        </details>
+      </div>
+    </li><li class="row">
+      <span class="ord">31</span>
+      <div class="body">
+        <span class="head"><span class="n">Lesson 8 of 10</span><span class="sit">Weather</span></span>
+        <span class="title">Hot, cold, and nice</span>
+        <span class="cando">Comment on the weather</span>
+        <span class="pat"><span lang="ja">～ですね</span> — isn't it ~? (weather small talk pattern)</span>
+        <details>
+          <summary>5 words · 2 phrases · 2 kanji</summary>
+          <div class="detail">
+            <table><thead><tr><th>Word</th><th>Reading</th><th>Meaning</th></tr></thead><tbody><tr><td lang="ja">天気</td><td lang="ja">てんき</td><td>weather</td></tr><tr><td lang="ja">暑い</td><td lang="ja">あつい</td><td>hot (weather)</td></tr><tr><td lang="ja">寒い</td><td lang="ja">さむい</td><td>cold (weather)</td></tr><tr><td lang="ja">いい</td><td lang="ja">いい</td><td>good</td></tr><tr><td lang="ja">今日</td><td lang="ja">きょう</td><td>today</td></tr></tbody></table>
+            <ul class="phrases"><li><span lang="ja">今日は暑いですね</span> <em>It's hot today, isn't it?</em></li><li><span lang="ja">いい天気ですね</span> <em>Nice weather, isn't it?</em></li></ul>
+            <p class="kanji"><span class="k" lang="ja">天</span><span class="k" lang="ja">気</span></p>
+            <p class="note">～ですね — isn't it ~? (weather small talk pattern)</p>
+          </div>
+        </details>
+      </div>
+    </li><li class="row">
+      <span class="ord">32</span>
+      <div class="body">
+        <span class="head"><span class="n">Lesson 9 of 10</span><span class="sit">Weather</span></span>
+        <span class="title">Rain, snow &amp; sun</span>
+        <span class="cando">Ask about tomorrow's weather</span>
+        <span class="pat"><span lang="ja">～の天気はどうですか</span> — What's the weather like ~?</span>
+        <details>
+          <summary>8 words · 2 phrases · 2 kanji</summary>
+          <div class="detail">
+            <table><thead><tr><th>Word</th><th>Reading</th><th>Meaning</th></tr></thead><tbody><tr><td lang="ja">雨</td><td lang="ja">あめ</td><td>rain</td></tr><tr><td lang="ja">雪</td><td lang="ja">ゆき</td><td>snow</td></tr><tr><td lang="ja">晴れ</td><td lang="ja">はれ</td><td>sunny, clear (weather)</td></tr><tr><td lang="ja">曇り</td><td lang="ja">くもり</td><td>cloudy</td></tr><tr><td lang="ja">明日</td><td lang="ja">あした</td><td>tomorrow</td></tr><tr><td lang="ja">昨日</td><td lang="ja">きのう</td><td>yesterday</td></tr><tr><td lang="ja">空</td><td lang="ja">そら</td><td>sky</td></tr><tr><td lang="ja">雲</td><td lang="ja">くも</td><td>cloud</td></tr></tbody></table>
+            <ul class="phrases"><li><span lang="ja">明日は雨ですか</span> <em>Will it rain tomorrow?</em></li><li><span lang="ja">明日の天気はどうですか</span> <em>What's the weather like tomorrow?</em></li></ul>
+            <p class="kanji"><span class="k" lang="ja">雨</span><span class="k" lang="ja">雪</span></p>
+            <p class="note">～の天気はどうですか — What's the weather like ~? (asking about a future day's weather)</p>
+          </div>
+        </details>
+      </div>
+    </li><li class="row">
+      <span class="ord">33</span>
+      <div class="body">
+        <span class="head"><span class="n">Lesson 10 of 10</span><span class="sit">Weather</span></span>
+        <span class="title">Wind &amp; temperature</span>
+        <span class="cando">Comment on the weather</span>
+        
+        <details>
+          <summary>8 words · 2 phrases · 1 kanji</summary>
+          <div class="detail">
+            <table><thead><tr><th>Word</th><th>Reading</th><th>Meaning</th></tr></thead><tbody><tr><td lang="ja">風</td><td lang="ja">かぜ</td><td>wind</td></tr><tr><td lang="ja">暖かい</td><td lang="ja">あたたかい</td><td>warm</td></tr><tr><td lang="ja">涼しい</td><td lang="ja">すずしい</td><td>cool, refreshing</td></tr><tr><td lang="ja">気温</td><td lang="ja">きおん</td><td>temperature</td></tr><tr><td lang="ja">春</td><td lang="ja">はる</td><td>spring</td></tr><tr><td lang="ja">夏</td><td lang="ja">なつ</td><td>summer</td></tr><tr><td lang="ja">秋</td><td lang="ja">あき</td><td>autumn, fall</td></tr><tr><td lang="ja">冬</td><td lang="ja">ふゆ</td><td>winter</td></tr></tbody></table>
+            <ul class="phrases"><li><span lang="ja">風がつよいですね</span> <em>The wind is strong, isn't it?</em></li><li><span lang="ja">夏は暑いです</span> <em>Summer is hot.</em></li></ul>
+            <p class="kanji"><span class="k" lang="ja">風</span></p>
+            <p class="note">～そうです — it looks like ~ / it seems like ~</p>
+          </div>
+        </details>
+      </div>
+    </li><li class="row row--cp">
+      <span class="ord">34</span>
+      <span class="cp-body">
+        <span class="cp-title">Recognition checkpoint</span>
+        <span class="cp-note">Recognise the vocabulary from hotels, directions and weather</span>
+      </span>
+      <span class="cp-tag">closes the chapter</span>
+    </li></ol>
+  </section>
+<section class="chapter" aria-labelledby="ch4">
+    <header class="ch-head">
+      <span class="ch-num">4</span>
+      <span class="ch-meta">
+        <h2 id="ch4">People, days &amp; routines</h2>
+        <p class="sits">Food preferences · Daily life · People &amp; family · Days &amp; dates · Relative time</p>
+      </span>
+      <span class="ch-stats">
+        <span><b>13</b> lessons</span>
+        <span><b>83</b> words</span>
+        <span><b>30</b> phrases</span>
+      </span>
+    </header>
+    <ol class="rows"><li class="row">
+      <span class="ord">35</span>
+      <div class="body">
+        <span class="head"><span class="n">Lesson 1 of 13</span><span class="sit">Food preferences</span></span>
+        <span class="title">I like sushi</span>
+        <span class="cando">Say what food you like or don't like</span>
+        <span class="pat"><span lang="ja">～がすきです／～がきらいです</span> — I like ~ / I don't like ~</span>
+        <details>
+          <summary>5 words · 2 phrases · 1 kanji</summary>
+          <div class="detail">
+            <table><thead><tr><th>Word</th><th>Reading</th><th>Meaning</th></tr></thead><tbody><tr><td lang="ja">好き</td><td lang="ja">すき</td><td>like, favorite</td></tr><tr><td lang="ja">きらい</td><td lang="ja">きらい</td><td>dislike</td></tr><tr><td lang="ja">すし</td><td lang="ja">すし</td><td>sushi</td></tr><tr><td lang="ja">ご飯</td><td lang="ja">ごはん</td><td>rice, meal</td></tr><tr><td lang="ja">たまご</td><td lang="ja">たまご</td><td>egg</td></tr></tbody></table>
+            <ul class="phrases"><li><span lang="ja">すしが好きです</span> <em>I like sushi.</em></li><li><span lang="ja">たまごがきらいです</span> <em>I don't like eggs.</em></li></ul>
+            <p class="kanji"><span class="k" lang="ja">好</span></p>
+            <p class="note">～がすきです / ～がきらいです — I like ~ / I don't like ~ (the object of liking/disliking is marked with が, not を)</p>
+          </div>
+        </details>
+      </div>
+    </li><li class="row">
+      <span class="ord">36</span>
+      <div class="body">
+        <span class="head"><span class="n">Lesson 2 of 13</span><span class="sit">Food preferences</span></span>
+        <span class="title">I want to eat ramen</span>
+        <span class="cando">Say what you want to eat</span>
+        <span class="pat"><span lang="ja">～がたべたいです</span> — I want to eat ~</span>
+        <details>
+          <summary>6 words · 2 phrases</summary>
+          <div class="detail">
+            <table><thead><tr><th>Word</th><th>Reading</th><th>Meaning</th></tr></thead><tbody><tr><td lang="ja">ラーメン</td><td lang="ja">ラーメン</td><td>ramen</td></tr><tr><td lang="ja">野菜</td><td lang="ja">やさい</td><td>vegetable</td></tr><tr><td lang="ja">食べたい</td><td lang="ja">たべたい</td><td>want to eat</td></tr><tr><td lang="ja">飲みたい</td><td lang="ja">のみたい</td><td>want to drink</td></tr><tr><td lang="ja">ほしい</td><td lang="ja">ほしい</td><td>want (a thing)</td></tr><tr><td lang="ja">飲む</td><td lang="ja">のむ</td><td>to drink</td></tr></tbody></table>
+            <ul class="phrases"><li><span lang="ja">ラーメンが食べたいです</span> <em>I want to eat ramen.</em></li><li><span lang="ja">水が飲みたいです</span> <em>I want to drink water.</em></li></ul>
+            
+            <p class="note">～がたべたいです — I want to eat ~ (the たい desiderative form conjugates like an i-adjective, e.g. たべたくないです)</p>
+          </div>
+        </details>
+      </div>
+    </li><li class="row">
+      <span class="ord">37</span>
+      <div class="body">
+        <span class="head"><span class="n">Lesson 3 of 13</span><span class="sit">Food preferences</span></span>
+        <span class="title">More food &amp; combining preferences</span>
+        <span class="cando">Say what food you like or don't like</span>
+        <span class="pat"><span lang="ja">～も～もすきです</span> — I like both ~ and ~</span>
+        <details>
+          <summary>5 words · 2 phrases · 1 kanji</summary>
+          <div class="detail">
+            <table><thead><tr><th>Word</th><th>Reading</th><th>Meaning</th></tr></thead><tbody><tr><td lang="ja">天ぷら</td><td lang="ja">てんぷら</td><td>tempura</td></tr><tr><td lang="ja">おにぎり</td><td lang="ja">おにぎり</td><td>rice ball</td></tr><tr><td lang="ja">肉</td><td lang="ja">にく</td><td>meat</td></tr><tr><td lang="ja">魚</td><td lang="ja">さかな</td><td>fish</td></tr><tr><td lang="ja">パン</td><td lang="ja">パン</td><td>bread</td></tr></tbody></table>
+            <ul class="phrases"><li><span lang="ja">すしもラーメンも好きです</span> <em>I like both sushi and ramen.</em></li><li><span lang="ja">肉は好きじゃないです</span> <em>I don't like meat.</em></li></ul>
+            <p class="kanji"><span class="k" lang="ja">魚</span></p>
+            <p class="note">～も～もすきです — I like both ~ and ~ (も replaces が/は to combine two things under one predicate)</p>
+          </div>
+        </details>
+      </div>
+    </li><li class="row">
+      <span class="ord">38</span>
+      <div class="body">
+        <span class="head"><span class="n">Lesson 4 of 13</span><span class="sit">Daily life</span></span>
+        <span class="title">Daily life vocabulary</span>
+        <span class="cando">Describe how often you do something using frequency adverbs</span>
+        <span class="pat"><span lang="ja">frequency adverbs + ～ます</span> — あまり and ぜんぜん require a negative verb ending (～ません)</span>
+        <details>
+          <summary>12 words · 2 phrases · 1 kanji</summary>
+          <div class="detail">
+            <table><thead><tr><th>Word</th><th>Reading</th><th>Meaning</th></tr></thead><tbody><tr><td lang="ja">毎日</td><td lang="ja">まいにち</td><td>every day</td></tr><tr><td lang="ja">いつも</td><td lang="ja">いつも</td><td>always</td></tr><tr><td lang="ja">ときどき</td><td lang="ja">ときどき</td><td>sometimes</td></tr><tr><td lang="ja">あまり</td><td lang="ja">あまり</td><td>not very (used with a negative)</td></tr><tr><td lang="ja">ぜんぜん</td><td lang="ja">ぜんぜん</td><td>not at all (used with a negative)</td></tr><tr><td lang="ja">寝る</td><td lang="ja">ねる</td><td>to sleep</td></tr><tr><td lang="ja">起きる</td><td lang="ja">おきる</td><td>to wake up, to get up</td></tr><tr><td lang="ja">する</td><td lang="ja">する</td><td>to do</td></tr><tr><td lang="ja">読む</td><td lang="ja">よむ</td><td>to read</td></tr><tr><td lang="ja">書く</td><td lang="ja">かく</td><td>to write</td></tr><tr><td lang="ja">帰る</td><td lang="ja">かえる</td><td>to return home</td></tr><tr><td lang="ja">昼</td><td lang="ja">ひる</td><td>noon, daytime</td></tr></tbody></table>
+            <ul class="phrases"><li><span lang="ja">毎日コーヒーを飲みます</span> <em>I drink coffee every day.</em></li><li><span lang="ja">ぜんぜん食べません</span> <em>I don't eat it at all.</em></li></ul>
+            <p class="kanji"><span class="k" lang="ja">毎</span></p>
+            <p class="note">Frequency adverbs (まいにち、いつも、ときどき、あまり、ぜんぜん) pair with ～ます sentences; あまり and ぜんぜん require a negative verb ending (～ません)</p>
+          </div>
+        </details>
+      </div>
+    </li><li class="row">
+      <span class="ord">39</span>
+      <div class="body">
+        <span class="head"><span class="n">Lesson 5 of 13</span><span class="sit">People &amp; family</span></span>
+        <span class="title">My family</span>
+        <span class="cando">Say who is in your family</span>
+        
+        <details>
+          <summary>6 words · 3 phrases · 6 kanji</summary>
+          <div class="detail">
+            <table><thead><tr><th>Word</th><th>Reading</th><th>Meaning</th></tr></thead><tbody><tr><td lang="ja">父</td><td lang="ja">ちち</td><td>my father</td></tr><tr><td lang="ja">母</td><td lang="ja">はは</td><td>my mother</td></tr><tr><td lang="ja">兄</td><td lang="ja">あに</td><td>my older brother</td></tr><tr><td lang="ja">姉</td><td lang="ja">あね</td><td>my older sister</td></tr><tr><td lang="ja">弟</td><td lang="ja">おとうと</td><td>my younger brother</td></tr><tr><td lang="ja">妹</td><td lang="ja">いもうと</td><td>my younger sister</td></tr></tbody></table>
+            <ul class="phrases"><li><span lang="ja">兄がいます。</span> <em>I have an older brother.</em></li><li><span lang="ja">父は先生です。</span> <em>My father is a teacher.</em></li><li><span lang="ja">弟は学生です。</span> <em>My younger brother is a student.</em></li></ul>
+            <p class="kanji"><span class="k" lang="ja">父</span><span class="k" lang="ja">母</span><span class="k" lang="ja">兄</span><span class="k" lang="ja">姉</span><span class="k" lang="ja">弟</span><span class="k" lang="ja">妹</span></p>
+            <p class="note">Japanese has no plain word for &quot;brother&quot; or &quot;sister&quot; — you have to know whether they are older or younger than you, and say so. 兄 and 姉 are older, 弟 and 妹 younger. These six words are for your *own* family, used when talking to someone else; the other set comes next. To say you have someone, use います, the same verb you met for people and animals existing somewhere: 兄がいます.</p>
+          </div>
+        </details>
+      </div>
+    </li><li class="row">
+      <span class="ord">40</span>
+      <div class="body">
+        <span class="head"><span class="n">Lesson 6 of 13</span><span class="sit">People &amp; family</span></span>
+        <span class="title">Your family</span>
+        <span class="cando">Ask about someone else's family</span>
+        
+        <details>
+          <summary>5 words · 3 phrases</summary>
+          <div class="detail">
+            <table><thead><tr><th>Word</th><th>Reading</th><th>Meaning</th></tr></thead><tbody><tr><td lang="ja">お父さん</td><td lang="ja">おとうさん</td><td>your father, someone's father</td></tr><tr><td lang="ja">お母さん</td><td lang="ja">おかあさん</td><td>your mother, someone's mother</td></tr><tr><td lang="ja">お兄さん</td><td lang="ja">おにいさん</td><td>your older brother, someone's older brother</td></tr><tr><td lang="ja">お姉さん</td><td lang="ja">おねえさん</td><td>your older sister, someone's older sister</td></tr><tr><td lang="ja">奥さん</td><td lang="ja">おくさん</td><td>your wife, someone's wife</td></tr></tbody></table>
+            <ul class="phrases"><li><span lang="ja">お兄さんがいますか。</span> <em>Do you have an older brother?</em></li><li><span lang="ja">お母さんは元気ですか。</span> <em>Is your mother well?</em></li><li><span lang="ja">お姉さんは先生ですか。</span> <em>Is your older sister a teacher?</em></li></ul>
+            
+            <p class="note">Now the same relationships again, said the other way. お父さん is *your* father; 父 from last lesson is mine. This is not a politeness dial you may leave alone — using お父さん about your own father sounds childish, and using 父 about someone else's is rude. The pattern is visible: お〜さん wraps the word. Note that 弟 and 妹 do not change, so only the older siblings split into two sets. 奥さん is someone else's wife only.</p>
+          </div>
+        </details>
+      </div>
+    </li><li class="row">
+      <span class="ord">41</span>
+      <div class="body">
+        <span class="head"><span class="n">Lesson 7 of 13</span><span class="sit">People &amp; family</span></span>
+        <span class="title">Everyone else</span>
+        <span class="cando">Talk about the rest of the family</span>
+        
+        <details>
+          <summary>5 words · 2 phrases · 2 kanji</summary>
+          <div class="detail">
+            <table><thead><tr><th>Word</th><th>Reading</th><th>Meaning</th></tr></thead><tbody><tr><td lang="ja">子供</td><td lang="ja">こども</td><td>child, children</td></tr><tr><td lang="ja">両親</td><td lang="ja">りょうしん</td><td>parents, both parents</td></tr><tr><td lang="ja">おじいさん</td><td lang="ja">おじいさん</td><td>grandfather, elderly man</td></tr><tr><td lang="ja">おばあさん</td><td lang="ja">おばあさん</td><td>grandmother, elderly woman</td></tr><tr><td lang="ja">主人</td><td lang="ja">しゅじん</td><td>husband, head of household</td></tr></tbody></table>
+            <ul class="phrases"><li><span lang="ja">子供がいます。</span> <em>I have children.</em></li><li><span lang="ja">おばあさんは元気です。</span> <em>My grandmother is well.</em></li></ul>
+            <p class="kanji"><span class="k" lang="ja">子</span><span class="k" lang="ja">両</span></p>
+            <p class="note">The rest of the household. 子供 covers one child or several — Japanese does not mark plurals. おじいさん and おばあさん are one vowel apart and worth saying aloud until they separate; both are also used politely of any elderly person, not only relatives. 主人 follows the reverse of the 奥さん rule: 主人 is your own husband, ご主人 is someone else's.</p>
+          </div>
+        </details>
+      </div>
+    </li><li class="row">
+      <span class="ord">42</span>
+      <div class="body">
+        <span class="head"><span class="n">Lesson 8 of 13</span><span class="sit">Days &amp; dates</span></span>
+        <span class="title">Days of the week</span>
+        <span class="cando">Ask and say what day it is</span>
+        
+        <details>
+          <summary>9 words · 3 phrases · 3 kanji</summary>
+          <div class="detail">
+            <table><thead><tr><th>Word</th><th>Reading</th><th>Meaning</th></tr></thead><tbody><tr><td lang="ja">曜日</td><td lang="ja">ようび</td><td>day of the week</td></tr><tr><td lang="ja">月曜日</td><td lang="ja">げつようび</td><td>Monday</td></tr><tr><td lang="ja">火曜日</td><td lang="ja">かようび</td><td>Tuesday</td></tr><tr><td lang="ja">水曜日</td><td lang="ja">すいようび</td><td>Wednesday</td></tr><tr><td lang="ja">木曜日</td><td lang="ja">もくようび</td><td>Thursday</td></tr><tr><td lang="ja">金曜日</td><td lang="ja">きんようび</td><td>Friday</td></tr><tr><td lang="ja">土曜日</td><td lang="ja">どようび</td><td>Saturday</td></tr><tr><td lang="ja">日曜日</td><td lang="ja">にちようび</td><td>Sunday</td></tr><tr><td lang="ja">何曜日</td><td lang="ja">なんようび</td><td>what day of the week</td></tr></tbody></table>
+            <ul class="phrases"><li><span lang="ja">今日は何曜日ですか。</span> <em>What day of the week is it today?</em></li><li><span lang="ja">今日は月曜日です。</span> <em>Today is Monday.</em></li><li><span lang="ja">日曜日は休みです。</span> <em>It is closed on Sunday.</em></li></ul>
+            <p class="kanji"><span class="k" lang="ja">曜</span><span class="k" lang="ja">月</span><span class="k" lang="ja">火</span></p>
+            <p class="note">今日は～曜日です — Today is ~. Nine words, but one idea: every weekday name is a kanji plus the shared 曜日 suffix, so learning 曜日 plus seven characters gives you the whole set. The characters follow the classical planets — 月 moon, 火 fire, 水 water, 木 wood, 金 metal, 土 earth, 日 sun — the same scheme behind Monday and Sunday in English.</p>
+          </div>
+        </details>
+      </div>
+    </li><li class="row">
+      <span class="ord">43</span>
+      <div class="body">
+        <span class="head"><span class="n">Lesson 9 of 13</span><span class="sit">Days &amp; dates</span></span>
+        <span class="title">The 1st to the 5th</span>
+        <span class="cando">Say a date in the first third of the month</span>
+        
+        <details>
+          <summary>5 words · 2 phrases · 1 kanji</summary>
+          <div class="detail">
+            <table><thead><tr><th>Word</th><th>Reading</th><th>Meaning</th></tr></thead><tbody><tr><td lang="ja">一日</td><td lang="ja">ついたち</td><td>the 1st (of the month)</td></tr><tr><td lang="ja">二日</td><td lang="ja">ふつか</td><td>the 2nd (of the month)</td></tr><tr><td lang="ja">三日</td><td lang="ja">みっか</td><td>the 3rd (of the month)</td></tr><tr><td lang="ja">四日</td><td lang="ja">よっか</td><td>the 4th (of the month)</td></tr><tr><td lang="ja">五日</td><td lang="ja">いつか</td><td>the 5th (of the month)</td></tr></tbody></table>
+            <ul class="phrases"><li><span lang="ja">今日は何日ですか。</span> <em>What is the date today?</em></li><li><span lang="ja">今日は三日です。</span> <em>Today is the 3rd.</em></li></ul>
+            <p class="kanji"><span class="k" lang="ja">日</span></p>
+            <p class="note">今日は～日です — Today is the ~. These readings are irregular and do not follow the counting you already know: 一日 is ついたち, not いちにち. Treat them as five separate words rather than as numbers, and expect them to need more repetitions than usual.</p>
+          </div>
+        </details>
+      </div>
+    </li><li class="row">
+      <span class="ord">44</span>
+      <div class="body">
+        <span class="head"><span class="n">Lesson 10 of 13</span><span class="sit">Days &amp; dates</span></span>
+        <span class="title">The 6th to the 10th</span>
+        <span class="cando">Say a date in the first third of the month</span>
+        
+        <details>
+          <summary>5 words · 1 phrases · 1 kanji</summary>
+          <div class="detail">
+            <table><thead><tr><th>Word</th><th>Reading</th><th>Meaning</th></tr></thead><tbody><tr><td lang="ja">六日</td><td lang="ja">むいか</td><td>the 6th (of the month)</td></tr><tr><td lang="ja">七日</td><td lang="ja">なのか</td><td>the 7th (of the month)</td></tr><tr><td lang="ja">八日</td><td lang="ja">ようか</td><td>the 8th (of the month)</td></tr><tr><td lang="ja">九日</td><td lang="ja">ここのか</td><td>the 9th (of the month)</td></tr><tr><td lang="ja">十日</td><td lang="ja">とおか</td><td>the 10th (of the month)</td></tr></tbody></table>
+            <ul class="phrases"><li><span lang="ja">今日は何日ですか。</span> <em>What is the date today?</em></li></ul>
+            <p class="kanji"><span class="k" lang="ja">日</span></p>
+            <p class="note">The second half of the irregular dates. Watch よっか (the 4th) against ようか (the 8th) — one small vowel apart, and the pair that most often gets mixed up. After the 10th the system becomes regular.</p>
+          </div>
+        </details>
+      </div>
+    </li><li class="row">
+      <span class="ord">45</span>
+      <div class="body">
+        <span class="head"><span class="n">Lesson 11 of 13</span><span class="sit">Days &amp; dates</span></span>
+        <span class="title">Later dates, months &amp; birthdays</span>
+        <span class="cando">Say any date, and ask when someone's birthday is</span>
+        
+        <details>
+          <summary>6 words · 2 phrases · 3 kanji</summary>
+          <div class="detail">
+            <table><thead><tr><th>Word</th><th>Reading</th><th>Meaning</th></tr></thead><tbody><tr><td lang="ja">何日</td><td lang="ja">なんにち</td><td>what date, how many days</td></tr><tr><td lang="ja">十四日</td><td lang="ja">じゅうよっか</td><td>the 14th (of the month)</td></tr><tr><td lang="ja">二十日</td><td lang="ja">はつか</td><td>the 20th (of the month)</td></tr><tr><td lang="ja">月</td><td lang="ja">がつ</td><td>month (in a month's name)</td></tr><tr><td lang="ja">何月</td><td lang="ja">なんがつ</td><td>what month</td></tr><tr><td lang="ja">誕生日</td><td lang="ja">たんじょうび</td><td>birthday</td></tr></tbody></table>
+            <ul class="phrases"><li><span lang="ja">誕生日はいつですか。</span> <em>When is your birthday?</em></li><li><span lang="ja">誕生日は五月五日です。</span> <em>My birthday is the 5th of May.</em></li></ul>
+            <p class="kanji"><span class="k" lang="ja">何</span><span class="k" lang="ja">月</span><span class="k" lang="ja">生</span></p>
+            <p class="note">誕生日はいつですか — When is your birthday? From the 11th the dates turn regular: number + にち. Only 十四日 (じゅうよっか), 二十日 (はつか) and 二十四日 keep an irregular reading. Months are fully regular — number + がつ — and a full date runs month before day, the reverse of English: 五月五日 is the 5th of May.</p>
+          </div>
+        </details>
+      </div>
+    </li><li class="row">
+      <span class="ord">46</span>
+      <div class="body">
+        <span class="head"><span class="n">Lesson 12 of 13</span><span class="sit">Relative time</span></span>
+        <span class="title">Weeks and months</span>
+        <span class="cando">Say when something happened or will happen, in weeks and months</span>
+        
+        <details>
+          <summary>8 words · 3 phrases · 4 kanji</summary>
+          <div class="detail">
+            <table><thead><tr><th>Word</th><th>Reading</th><th>Meaning</th></tr></thead><tbody><tr><td lang="ja">先週</td><td lang="ja">せんしゅう</td><td>last week</td></tr><tr><td lang="ja">今週</td><td lang="ja">こんしゅう</td><td>this week</td></tr><tr><td lang="ja">来週</td><td lang="ja">らいしゅう</td><td>next week</td></tr><tr><td lang="ja">毎週</td><td lang="ja">まいしゅう</td><td>every week</td></tr><tr><td lang="ja">先月</td><td lang="ja">せんげつ</td><td>last month</td></tr><tr><td lang="ja">今月</td><td lang="ja">こんげつ</td><td>this month</td></tr><tr><td lang="ja">来月</td><td lang="ja">らいげつ</td><td>next month</td></tr><tr><td lang="ja">毎月</td><td lang="ja">まいつき</td><td>every month</td></tr></tbody></table>
+            <ul class="phrases"><li><span lang="ja">今週は雨です。</span> <em>It is rainy this week.</em></li><li><span lang="ja">来週は天気がいいです。</span> <em>The weather is good next week.</em></li><li><span lang="ja">先月日本へ行きました。</span> <em>I went to Japan last month.</em></li></ul>
+            <p class="kanji"><span class="k" lang="ja">先</span><span class="k" lang="ja">週</span><span class="k" lang="ja">来</span><span class="k" lang="ja">毎</span></p>
+            <p class="note">You already say 昨日、今日、明日、毎日 without thinking. Those four are one row of a grid, and swapping the second half gives you the rest: 先 last, 今 this, 来 next, 毎 every, crossed with 週 week and 月 month. Eight words, but only two things to learn — and the prefixes are ones you have already met, in 今日 and 毎日 and 来る. Only 毎月 bends: まいつき, not まいげつ.</p>
+          </div>
+        </details>
+      </div>
+    </li><li class="row">
+      <span class="ord">47</span>
+      <div class="body">
+        <span class="head"><span class="n">Lesson 13 of 13</span><span class="sit">Relative time</span></span>
+        <span class="title">Years, and the exceptions</span>
+        <span class="cando">Talk about last year and next year, and name any day around today</span>
+        
+        <details>
+          <summary>6 words · 3 phrases · 4 kanji</summary>
+          <div class="detail">
+            <table><thead><tr><th>Word</th><th>Reading</th><th>Meaning</th></tr></thead><tbody><tr><td lang="ja">去年</td><td lang="ja">きょねん</td><td>last year</td></tr><tr><td lang="ja">今年</td><td lang="ja">ことし</td><td>this year</td></tr><tr><td lang="ja">来年</td><td lang="ja">らいねん</td><td>next year</td></tr><tr><td lang="ja">毎年</td><td lang="ja">まいとし</td><td>every year</td></tr><tr><td lang="ja">一昨日</td><td lang="ja">おととい</td><td>the day before yesterday</td></tr><tr><td lang="ja">明後日</td><td lang="ja">あさって</td><td>the day after tomorrow</td></tr></tbody></table>
+            <ul class="phrases"><li><span lang="ja">去年日本へ来ました。</span> <em>I came to Japan last year.</em></li><li><span lang="ja">来年日本へ行きます。</span> <em>I am going to Japan next year.</em></li><li><span lang="ja">毎年ここへ来ます。</span> <em>I come here every year.</em></li></ul>
+            <p class="kanji"><span class="k" lang="ja">去</span><span class="k" lang="ja">年</span><span class="k" lang="ja">昨</span><span class="k" lang="ja">明</span></p>
+            <p class="note">The 年 row completes the grid, and it is where the pattern finally gives way. 来年 and 毎年 behave. 今年 keeps the right character but takes an unrelated reading — ことし, not こんねん. 去年 is the single true gap: 去, not 先. The day row has its own two irregulars at the far edges, おととい and あさって, which are single words rather than anything built from a prefix. Learn these six as exceptions and the whole system is yours.</p>
+          </div>
+        </details>
+      </div>
+    </li><li class="row row--cp">
+      <span class="ord">48</span>
+      <span class="cp-body">
+        <span class="cp-title">Recognition checkpoint</span>
+        <span class="cp-note">Recognise the vocabulary from every situation on the ladder</span>
+      </span>
+      <span class="cp-tag">closes the chapter</span>
+    </li></ol>
+  </section>
+<section class="chapter" aria-labelledby="ch5">
+    <header class="ch-head">
+      <span class="ch-num">5</span>
+      <span class="ch-meta">
+        <h2 id="ch5">Home, work &amp; study</h2>
+        <p class="sits">At home · Work &amp; study</p>
+      </span>
+      <span class="ch-stats">
+        <span><b>8</b> lessons</span>
+        <span><b>42</b> words</span>
+        <span><b>17</b> phrases</span>
+      </span>
+    </header>
+    <ol class="rows"><li class="row">
+      <span class="ord">49</span>
+      <div class="body">
+        <span class="head"><span class="n">Lesson 1 of 8</span><span class="sit">At home</span></span>
+        <span class="title">Open and closed</span>
+        <span class="cando">Say that you opened something, or that it opened</span>
+        
+        <details>
+          <summary>5 words · 3 phrases · 3 kanji</summary>
+          <div class="detail">
+            <table><thead><tr><th>Word</th><th>Reading</th><th>Meaning</th></tr></thead><tbody><tr><td lang="ja">開ける</td><td lang="ja">あける</td><td>to open (something)</td></tr><tr><td lang="ja">開く</td><td lang="ja">あく</td><td>to open (by itself)</td></tr><tr><td lang="ja">閉める</td><td lang="ja">しめる</td><td>to close (something)</td></tr><tr><td lang="ja">閉まる</td><td lang="ja">しまる</td><td>to close (by itself)</td></tr><tr><td lang="ja">窓</td><td lang="ja">まど</td><td>window</td></tr></tbody></table>
+            <ul class="phrases"><li><span lang="ja">窓を開けます。</span> <em>I open the window.</em></li><li><span lang="ja">窓が開きます。</span> <em>The window opens.</em></li><li><span lang="ja">窓を閉めます。</span> <em>I close the window.</em></li></ul>
+            <p class="kanji"><span class="k" lang="ja">開</span><span class="k" lang="ja">閉</span><span class="k" lang="ja">窓</span></p>
+            <p class="note">Japanese uses a different verb depending on whether *you* did it or it simply happened. 窓を開けます is &quot;I open the window&quot; — I am doing it, so the window takes を. 窓が開きます is &quot;the window opens&quot; — nobody is mentioned, so the window takes が and the verb changes shape. English uses one word for both and lets context sort it out; Japanese decides in the verb. 開ける/開く and 閉める/閉まる are the two pairs here, and the pattern repeats across dozens of verbs, so it is worth more than the four words.</p>
+          </div>
+        </details>
+      </div>
+    </li><li class="row">
+      <span class="ord">50</span>
+      <div class="body">
+        <span class="head"><span class="n">Lesson 2 of 8</span><span class="sit">At home</span></span>
+        <span class="title">On, off, push, pull</span>
+        <span class="cando">Turn things on and off, and read a door</span>
+        
+        <details>
+          <summary>6 words · 2 phrases · 3 kanji</summary>
+          <div class="detail">
+            <table><thead><tr><th>Word</th><th>Reading</th><th>Meaning</th></tr></thead><tbody><tr><td lang="ja">つける</td><td lang="ja">つける</td><td>to turn on, to switch on</td></tr><tr><td lang="ja">消す</td><td lang="ja">けす</td><td>to turn off, to erase</td></tr><tr><td lang="ja">電気</td><td lang="ja">でんき</td><td>electricity, the light</td></tr><tr><td lang="ja">使う</td><td lang="ja">つかう</td><td>to use</td></tr><tr><td lang="ja">押す</td><td lang="ja">おす</td><td>to push, to press</td></tr><tr><td lang="ja">引く</td><td lang="ja">ひく</td><td>to pull</td></tr></tbody></table>
+            <ul class="phrases"><li><span lang="ja">電気をつけます。</span> <em>I turn on the light.</em></li><li><span lang="ja">電気を消します。</span> <em>I turn off the light.</em></li></ul>
+            <p class="kanji"><span class="k" lang="ja">電</span><span class="k" lang="ja">消</span><span class="k" lang="ja">使</span></p>
+            <p class="note">電気 is both &quot;electricity&quot; and &quot;the light&quot;, so 電気をつけます is the ordinary way to say you turned the light on. つける is usually written in kana even though it has a kanji (点ける). 消す covers switching a light off and rubbing writing out — the idea is making something disappear. 押す and 引く are worth knowing before you meet a Japanese door: they are what the sign says. All four are transitive, so all four take を.</p>
+          </div>
+        </details>
+      </div>
+    </li><li class="row">
+      <span class="ord">51</span>
+      <div class="body">
+        <span class="head"><span class="n">Lesson 3 of 8</span><span class="sit">At home</span></span>
+        <span class="title">Washing and putting away</span>
+        <span class="cando">Say what you are doing around the house</span>
+        
+        <details>
+          <summary>6 words · 2 phrases · 4 kanji</summary>
+          <div class="detail">
+            <table><thead><tr><th>Word</th><th>Reading</th><th>Meaning</th></tr></thead><tbody><tr><td lang="ja">洗う</td><td lang="ja">あらう</td><td>to wash</td></tr><tr><td lang="ja">置く</td><td lang="ja">おく</td><td>to put, to place</td></tr><tr><td lang="ja">入れる</td><td lang="ja">いれる</td><td>to put in</td></tr><tr><td lang="ja">出す</td><td lang="ja">だす</td><td>to take out, to hand in</td></tr><tr><td lang="ja">手</td><td lang="ja">て</td><td>hand</td></tr><tr><td lang="ja">顔</td><td lang="ja">かお</td><td>face</td></tr></tbody></table>
+            <ul class="phrases"><li><span lang="ja">手を洗います。</span> <em>I wash my hands.</em></li><li><span lang="ja">ここに置きます。</span> <em>I'll put it here.</em></li></ul>
+            <p class="kanji"><span class="k" lang="ja">洗</span><span class="k" lang="ja">置</span><span class="k" lang="ja">手</span><span class="k" lang="ja">顔</span></p>
+            <p class="note">入れる and 出す are the transitive partners of two verbs you already know: 入る is to go in, 入れる is to put something in; 出る is to go out, 出す is to take something out. Same pattern as last-but-one lesson — the transitive one takes を. 置く takes に for where the thing ends up: ここに置きます. Japanese does not say &quot;my&quot; hands; 手を洗います is understood as your own.</p>
+          </div>
+        </details>
+      </div>
+    </li><li class="row">
+      <span class="ord">52</span>
+      <div class="body">
+        <span class="head"><span class="n">Lesson 4 of 8</span><span class="sit">At home</span></span>
+        <span class="title">Sitting, standing, resting</span>
+        <span class="cando">Say you are tired or taking a break</span>
+        
+        <details>
+          <summary>4 words · 2 phrases · 3 kanji</summary>
+          <div class="detail">
+            <table><thead><tr><th>Word</th><th>Reading</th><th>Meaning</th></tr></thead><tbody><tr><td lang="ja">立つ</td><td lang="ja">たつ</td><td>to stand up</td></tr><tr><td lang="ja">座る</td><td lang="ja">すわる</td><td>to sit down</td></tr><tr><td lang="ja">疲れる</td><td lang="ja">つかれる</td><td>to get tired</td></tr><tr><td lang="ja">休む</td><td lang="ja">やすむ</td><td>to rest, to take a day off</td></tr></tbody></table>
+            <ul class="phrases"><li><span lang="ja">ここに座ります。</span> <em>I'll sit here.</em></li><li><span lang="ja">今日は休みます。</span> <em>I'm taking today off.</em></li></ul>
+            <p class="kanji"><span class="k" lang="ja">立</span><span class="k" lang="ja">座</span><span class="k" lang="ja">休</span></p>
+            <p class="note">All four describe you rather than something you act on, so they take が or nothing at all — never を. 座る takes に for the seat, the same に that 置く took for a place. 疲れる is nearly always said as 疲れました, in the past: you are reporting that you *got* tired, not that you are tiring now. 休む stretches from resting for a minute to taking the day off work.</p>
+          </div>
+        </details>
+      </div>
+    </li><li class="row">
+      <span class="ord">53</span>
+      <div class="body">
+        <span class="head"><span class="n">Lesson 5 of 8</span><span class="sit">At home</span></span>
+        <span class="title">Out and back</span>
+        <span class="cando">Say you are going out and when you get in</span>
+        
+        <details>
+          <summary>5 words · 2 phrases · 3 kanji</summary>
+          <div class="detail">
+            <table><thead><tr><th>Word</th><th>Reading</th><th>Meaning</th></tr></thead><tbody><tr><td lang="ja">住む</td><td lang="ja">すむ</td><td>to live, to reside</td></tr><tr><td lang="ja">出かける</td><td lang="ja">でかける</td><td>to go out</td></tr><tr><td lang="ja">着く</td><td lang="ja">つく</td><td>to arrive</td></tr><tr><td lang="ja">なる</td><td lang="ja">なる</td><td>to become</td></tr><tr><td lang="ja">作る</td><td lang="ja">つくる</td><td>to make</td></tr></tbody></table>
+            <ul class="phrases"><li><span lang="ja">出かけます。</span> <em>I'm going out.</em></li><li><span lang="ja">家に着きます。</span> <em>I arrive home.</em></li></ul>
+            <p class="kanji"><span class="k" lang="ja">住</span><span class="k" lang="ja">着</span><span class="k" lang="ja">作</span></p>
+            <p class="note">着く takes に for where you arrive: 家に着きます. 住む takes に too, and never で — the place you live is a destination, not a location of activity. One warning about 住む: in real speech it is almost always 住んでいます (&quot;I am living&quot;), a form this ladder has not reached yet, so learn the word now and the sentence later. なる is &quot;become&quot;, usually written in kana.</p>
+          </div>
+        </details>
+      </div>
+    </li><li class="row">
+      <span class="ord">54</span>
+      <div class="body">
+        <span class="head"><span class="n">Lesson 6 of 8</span><span class="sit">Work &amp; study</span></span>
+        <span class="title">At work</span>
+        <span class="cando">Say where you work and what you do</span>
+        
+        <details>
+          <summary>6 words · 2 phrases · 6 kanji</summary>
+          <div class="detail">
+            <table><thead><tr><th>Word</th><th>Reading</th><th>Meaning</th></tr></thead><tbody><tr><td lang="ja">働く</td><td lang="ja">はたらく</td><td>to work</td></tr><tr><td lang="ja">勤める</td><td lang="ja">つとめる</td><td>to be employed at</td></tr><tr><td lang="ja">会社</td><td lang="ja">かいしゃ</td><td>company, office</td></tr><tr><td lang="ja">仕事</td><td lang="ja">しごと</td><td>work, job</td></tr><tr><td lang="ja">頼む</td><td lang="ja">たのむ</td><td>to ask for, to request</td></tr><tr><td lang="ja">終わる</td><td lang="ja">おわる</td><td>to finish, to end</td></tr></tbody></table>
+            <ul class="phrases"><li><span lang="ja">会社で働きます。</span> <em>I work at a company.</em></li><li><span lang="ja">仕事が終わります。</span> <em>The work finishes.</em></li></ul>
+            <p class="kanji"><span class="k" lang="ja">働</span><span class="k" lang="ja">会</span><span class="k" lang="ja">社</span><span class="k" lang="ja">仕</span><span class="k" lang="ja">事</span><span class="k" lang="ja">終</span></p>
+            <p class="note">働く and 勤める both mean working, and they take different particles. 会社で働きます — で marks where an activity happens. 会社に勤めています — に marks the employer you belong to. Use 働く and で until the second form arrives. 終わる is intransitive, so the work does the finishing: 仕事が終わります, with が. 頼む is asking someone for something, and is also how you order in a restaurant.</p>
+          </div>
+        </details>
+      </div>
+    </li><li class="row">
+      <span class="ord">55</span>
+      <div class="body">
+        <span class="head"><span class="n">Lesson 7 of 8</span><span class="sit">Work &amp; study</span></span>
+        <span class="title">Learning and teaching</span>
+        <span class="cando">Talk about studying and being taught</span>
+        
+        <details>
+          <summary>4 words · 2 phrases · 3 kanji</summary>
+          <div class="detail">
+            <table><thead><tr><th>Word</th><th>Reading</th><th>Meaning</th></tr></thead><tbody><tr><td lang="ja">習う</td><td lang="ja">ならう</td><td>to learn (from someone)</td></tr><tr><td lang="ja">教える</td><td lang="ja">おしえる</td><td>to teach, to tell</td></tr><tr><td lang="ja">覚える</td><td lang="ja">おぼえる</td><td>to memorise, to remember</td></tr><tr><td lang="ja">宿題</td><td lang="ja">しゅくだい</td><td>homework</td></tr></tbody></table>
+            <ul class="phrases"><li><span lang="ja">宿題をします。</span> <em>I do my homework.</em></li><li><span lang="ja">ここで習います。</span> <em>I learn it here.</em></li></ul>
+            <p class="kanji"><span class="k" lang="ja">習</span><span class="k" lang="ja">教</span><span class="k" lang="ja">覚</span></p>
+            <p class="note">習う is learning *from someone* — a teacher, a class — which is why it pairs with 教える, to teach. 覚える is the separate act of getting something into your memory, so you can 習う a word in class and still not 覚える it. 教える also does duty as &quot;tell&quot;: asking someone to 教える you an address is normal, not a request for a lesson. 宿題 takes する: 宿題をします.</p>
+          </div>
+        </details>
+      </div>
+    </li><li class="row">
+      <span class="ord">56</span>
+      <div class="body">
+        <span class="head"><span class="n">Lesson 8 of 8</span><span class="sit">Work &amp; study</span></span>
+        <span class="title">Knowing and not knowing</span>
+        <span class="cando">Say you don't know, or that something is wrong</span>
+        
+        <details>
+          <summary>6 words · 2 phrases · 5 kanji</summary>
+          <div class="detail">
+            <table><thead><tr><th>Word</th><th>Reading</th><th>Meaning</th></tr></thead><tbody><tr><td lang="ja">答える</td><td lang="ja">こたえる</td><td>to answer, to reply</td></tr><tr><td lang="ja">知る</td><td lang="ja">しる</td><td>to know</td></tr><tr><td lang="ja">言う</td><td lang="ja">いう</td><td>to say</td></tr><tr><td lang="ja">違う</td><td lang="ja">ちがう</td><td>to be different, to be wrong</td></tr><tr><td lang="ja">困る</td><td lang="ja">こまる</td><td>to be in trouble, to be stuck</td></tr><tr><td lang="ja">無くす</td><td lang="ja">なくす</td><td>to lose (something)</td></tr></tbody></table>
+            <ul class="phrases"><li><span lang="ja">知りません。</span> <em>I don't know.</em></li><li><span lang="ja">違います。</span> <em>That's not right.</em></li></ul>
+            <p class="kanji"><span class="k" lang="ja">答</span><span class="k" lang="ja">知</span><span class="k" lang="ja">言</span><span class="k" lang="ja">違</span><span class="k" lang="ja">困</span></p>
+            <p class="note">知りません is the everyday &quot;I don't know&quot; — and note that the positive is not 知ります but 知っています, another form waiting on the て-form. 違います is how you correct someone politely: it says &quot;that is different&quot;, not &quot;you are wrong&quot;, which is why it lands softer than it looks. 言う is spelled いう and pronounced ゆう. 困る and 無くす travel together: lose something, and you are 困ります.</p>
+          </div>
+        </details>
+      </div>
+    </li><li class="row row--cp">
+      <span class="ord">57</span>
+      <span class="cp-body">
+        <span class="cp-title">Recognition checkpoint</span>
+        <span class="cp-note">Recognise everything taught so far</span>
+      </span>
+      <span class="cp-tag">closes the chapter</span>
+    </li></ol>
+  </section>
+
+<section class="closers">
+  <h3>Closing the book</h3>
+  <p>Belongs to no chapter: it reviews every situation in the book rather than one chapter's worth.</p>
+  <ol class="rows"><li class="row row--cp">
+      <span class="ord">58</span>
+      <span class="cp-body">
+        <span class="cp-title">Production checkpoint</span>
+        <span class="cp-note">Produce the vocabulary and phrases from every situation, unprompted</span>
+      </span>
+      <span class="cp-tag">closes the book</span>
+    </li></ol>
+</section>
+
+<section class="shelf">
+  <h3>Shelved — not on the ladder</h3>
+  <ul><li><span class="ord">59</span><span>Cross-situation conversation — Conversation with Hana</span></li><li><span class="ord">60</span><span>Can-do checkpoint — Can-do review</span></li></ul>
+  <p style="margin-top:8px">Built and tested, switched off behind <code>VITE_HANA_ENABLED</code> (DR-023).
+    Filtered out of the ladder entirely, so orders run 1–58 with no gap.</p>
+</section>
+
+<footer>Chapter length varies on purpose. Padding a chapter to a round number would put a checkpoint
+mid-situation, which is what DR-021 exists to prevent.</footer>
+</div>
+</body>
+</html>
