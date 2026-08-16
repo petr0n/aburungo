@@ -19,7 +19,8 @@
     "prepare": "git config core.hooksPath .githooks || true",
     "jlpt:fetch": "node scripts/jlpt.mjs fetch",
     "jlpt:build": "node scripts/jlpt.mjs build",
-    "jlpt:coverage": "node scripts/jlpt.mjs coverage"
+    "jlpt:coverage": "node scripts/jlpt.mjs coverage",
+    "jlpt:sentences": "node scripts/jlpt.mjs sentences"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.105.4",
