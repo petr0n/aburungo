@@ -1,0 +1,175 @@
+# Chapter 5 phrases — home, work & study (DR-026).
+#
+# Every sentence uses the ～を～ます frame the ladder already established with
+# 毎日コーヒーを飲みます, plus が for the intransitive half, に for a destination
+# and で for a place of activity. Nothing here needs the て-form, the past tense
+# or ～ています, none of which the ladder teaches yet — which is why 住む gets no
+# sentence of its own despite being in this chapter's word list. It is almost
+# always 住んでいます in real use, and 住みます would be teaching a form nobody
+# says. The word is taught with a note; the sentence waits for the て-form.
+#
+# The transitive/intransitive pairs are deliberately adjacent (窓を開けます
+# against 窓が開きます) so the を/が swap is visible in the sentences and not only
+# asserted in the grammar note.
+#
+# Checked with `pnpm jlpt:sentences n5 --for ...` before authoring: the Tatoeba
+# corpus yields about fifteen usable sentences across this chapter's thirty-two
+# target words, and on inspection nearly all are above N5 or unsuitable. So
+# these follow the same path as the other 108 phrases in this repo.
+#
+# content-source: training — N5 canonical, pending Tatoeba verification.
+#   JMdict cannot verify composed sentences (only fixed expressions are
+#   headwords), so sentence checks need Tatoeba, not JMdict.
+# jlpt-source: training — JLPT level unverified
+
+# ── Opening and closing ───────────────────────────────────────────────────────
+
+- id: home.open-the-window
+  jlpt: N5
+  scenario: home
+  japanese: 窓を開けます。
+  reading: まどをあけます。
+  romaji: mado o akemasu.
+  english: I open the window.
+
+- id: home.the-window-opens
+  jlpt: N5
+  scenario: home
+  japanese: 窓が開きます。
+  reading: まどがあきます。
+  romaji: mado ga akimasu.
+  english: The window opens.
+
+- id: home.close-the-window
+  jlpt: N5
+  scenario: home
+  japanese: 窓を閉めます。
+  reading: まどをしめます。
+  romaji: mado o shimemasu.
+  english: I close the window.
+
+# ── On and off ────────────────────────────────────────────────────────────────
+
+- id: home.turn-on-the-light
+  jlpt: N5
+  scenario: home
+  japanese: 電気をつけます。
+  reading: でんきをつけます。
+  romaji: denki o tsukemasu.
+  english: I turn on the light.
+
+- id: home.turn-off-the-light
+  jlpt: N5
+  scenario: home
+  japanese: 電気を消します。
+  reading: でんきをけします。
+  romaji: denki o keshimasu.
+  english: I turn off the light.
+
+# ── Washing and tidying ───────────────────────────────────────────────────────
+
+- id: home.wash-my-hands
+  jlpt: N5
+  scenario: home
+  japanese: 手を洗います。
+  reading: てをあらいます。
+  romaji: te o araimasu.
+  english: I wash my hands.
+
+- id: home.put-it-here
+  jlpt: N5
+  scenario: home
+  japanese: ここに置きます。
+  reading: ここにおきます。
+  romaji: koko ni okimasu.
+  english: I'll put it here.
+
+# ── Sitting and resting ───────────────────────────────────────────────────────
+
+- id: home.sit-here
+  jlpt: N5
+  scenario: home
+  japanese: ここに座ります。
+  reading: ここにすわります。
+  romaji: koko ni suwarimasu.
+  english: I'll sit here.
+
+- id: home.im-taking-today-off
+  jlpt: N5
+  scenario: home
+  japanese: 今日は休みます。
+  reading: きょうはやすみます。
+  romaji: kyou wa yasumimasu.
+  english: I'm taking today off.
+
+# ── Coming and going ──────────────────────────────────────────────────────────
+
+- id: home.im-going-out
+  jlpt: N5
+  scenario: home
+  japanese: 出かけます。
+  reading: でかけます。
+  romaji: dekakemasu.
+  english: I'm going out.
+
+- id: home.arrive-home
+  jlpt: N5
+  scenario: home
+  japanese: 家に着きます。
+  reading: いえにつきます。
+  romaji: ie ni tsukimasu.
+  english: I arrive home.
+
+# ── Working ───────────────────────────────────────────────────────────────────
+
+- id: work.i-work-at-a-company
+  jlpt: N5
+  scenario: work
+  japanese: 会社で働きます。
+  reading: かいしゃではたらきます。
+  romaji: kaisha de hatarakimasu.
+  english: I work at a company.
+
+- id: work.the-work-finishes
+  jlpt: N5
+  scenario: work
+  japanese: 仕事が終わります。
+  reading: しごとがおわります。
+  romaji: shigoto ga owarimasu.
+  english: The work finishes.
+
+# ── Studying ──────────────────────────────────────────────────────────────────
+
+- id: work.i-do-my-homework
+  jlpt: N5
+  scenario: work
+  japanese: 宿題をします。
+  reading: しゅくだいをします。
+  romaji: shukudai o shimasu.
+  english: I do my homework.
+
+- id: work.i-learn-it-here
+  jlpt: N5
+  scenario: work
+  japanese: ここで習います。
+  reading: ここでならいます。
+  romaji: koko de naraimasu.
+  english: I learn it here.
+
+# ── Answering ─────────────────────────────────────────────────────────────────
+
+- id: work.i-dont-know
+  jlpt: N5
+  scenario: work
+  japanese: 知りません。
+  reading: しりません。
+  romaji: shirimasen.
+  english: I don't know.
+
+- id: work.thats-not-right
+  jlpt: N5
+  scenario: work
+  japanese: 違います。
+  reading: ちがいます。
+  romaji: chigaimasu.
+  english: That's not right.

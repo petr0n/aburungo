@@ -1,12 +1,12 @@
 # Book One chapters.
 #
-# Four chapters, each ending in the recognition checkpoint that already sat at
+# Five chapters, each ending in the recognition checkpoint that already sat at
 # that point in the ladder. The boundaries were not invented for this file —
 # they are where the checkpoints were placed under DR-021, at situation
 # boundaries rather than on a fixed count. Naming them is what turns "a
 # checkpoint every so often" into "the end of a chapter".
 #
-# Lessons 49-51 belong to no chapter on purpose. The production checkpoint
+# The book-closing checkpoints belong to no chapter on purpose. The production checkpoint
 # closes the *book*, reviewing every situation rather than one chapter's worth,
 # and the two Hana-gated closers behind it do the same. See the Chapter type in
 # src/types.ts.
@@ -35,3 +35,7 @@
 - id: n5.chapter-4
   order: 4
   title: People, days & routines
+
+- id: n5.chapter-5
+  order: 5
+  title: Home, work & study

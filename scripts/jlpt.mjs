@@ -486,6 +486,25 @@ export function searchStem(form, wordType) {
 }
 
 /**
+ * A tighter stem, for when JMdict can tell us how the verb conjugates.
+ *
+ * An ichidan verb keeps everything but its final る through every form — 開ける
+ * gives 開け, which 開けます and 開けて share and 開きます does not. Cutting at the
+ * kanji boundary instead gives 開, and on the first real run that matched
+ * 開きます (a different verb), お手洗い for 洗う, and お風呂に入ります for 入れる.
+ *
+ * A godan verb changes the kana right after its stem (洗います, 洗って), so there
+ * is nothing tighter to cut to and it falls back to the kanji stem.
+ */
+export function conjugationStem(form, partsOfSpeech) {
+  const f = (form ?? "").trim();
+  if (!f) return "";
+  const isIchidan = (partsOfSpeech ?? []).some((p) => p === "v1" || p === "v1-s");
+  if (isIchidan && f.endsWith("る") && f.length > 1) return f.slice(0, -1);
+  return searchStem(f, "verb");
+}
+
+/**
  * Does the sentence end in a です/ます form?
  *
  * Tatoeba is a corpus of real speech, so plain and imperative forms are
@@ -522,6 +541,9 @@ function jmdictExamples() {
   // segment into taught characters. Common only: every rare compound in JMdict
   // would reject nearly every sentence for a word no learner will meet.
   const dictForms = new Set();
+  // Part of speech per surface form, so --for can cut an ichidan verb at its
+  // real stem rather than at the kanji boundary.
+  const posByForm = new Map();
 
   const fd = openSync(path, "r");
   const size = statSync(path).size;
@@ -538,6 +560,8 @@ function jmdictExamples() {
       try { entry = JSON.parse(line.replace(/,$/, "")); } catch { continue; }
       const forms = [...(entry.kanji ?? []), ...(entry.kana ?? [])].map((k) => k.text);
       for (const k of entry.kanji ?? []) if (k.common && k.text.length > 1) dictForms.add(k.text);
+      const partsOfSpeech = entry.sense?.[0]?.partOfSpeech ?? [];
+      if (partsOfSpeech.length) for (const f of forms) if (!posByForm.has(f)) posByForm.set(f, partsOfSpeech);
       if (entry.sense?.some((s) => (s.misc ?? []).some((m) => BLOCK.has(m)))) {
         for (const f of forms) blocked.add(f);
       }
@@ -554,7 +578,7 @@ function jmdictExamples() {
     pos += read;
   }
   closeSync(fd);
-  return { examples: [...examples.values()], blocked, dictForms };
+  return { examples: [...examples.values()], blocked, dictForms, posByForm };
 }
 
 /**
@@ -594,7 +618,14 @@ function sentences(l, opts) {
     const ref = readJson(join(REF, `reference-${l}.json`));
     for (const form of opts.for) {
       const hit = ref.entries.find((e) => e.written === form || e.reading === normReading(form));
-      targets.push({ id: `--for:${form}`, japanese: form, reading: hit?.reading ?? form, stems: [searchStem(form), searchStem(hit?.reading ?? "")].filter(Boolean) });
+      const reading = hit?.reading ?? form;
+      const partsOfSpeech = corpus.posByForm.get(form) ?? corpus.posByForm.get(reading);
+      // Both spellings. A corpus sentence may write the verb in kana (あけます)
+      // where the headword is kanji (開ける), and searching only the written
+      // form would miss every one of them. The reading goes through the same
+      // conjugation-aware cut, so あける gives あけ rather than the whole word.
+      const stems = [...new Set([conjugationStem(form, partsOfSpeech), conjugationStem(reading, partsOfSpeech)])];
+      targets.push({ id: `--for:${form}`, japanese: form, reading, stems: stems.filter(Boolean) });
     }
     universe = [...universe, ...targets];
   }

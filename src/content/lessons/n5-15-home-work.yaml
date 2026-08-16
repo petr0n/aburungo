@@ -1,0 +1,213 @@
+# Chapter 5 — Home, work & study (Lessons 49-56 + checkpoint, DR-026).
+#
+# The verb chapter. Book One taught 26 verbs across 44 lessons and nearly all of
+# them were motion or eating, so a learner could say where they were going but
+# not that they had opened the window, washed their hands or turned off a light.
+#
+# Two situations under one roof, ending at the second's boundary so the
+# checkpoint still lands where a body of material finishes (DR-021):
+#
+#   At home     lessons 1-5   the things you do to objects and to yourself
+#   Work & study lessons 6-8  where you do them and what you say about it
+#
+# Lesson 1 carries the chapter. Japanese marks transitivity in the verb itself,
+# so 開ける and 開く are two words where English has one, and the を/が swap that
+# goes with them is the single most useful thing in this chapter. It is taught
+# first and every later lesson's notes keep pointing back at it.
+#
+# No て-form, no past tense, no ～ています anywhere: none of the three is on the
+# ladder yet. That constraint is why 住む is taught as a word with a note but
+# gets no sentence -- it is 住んでいます in real use, and 住みます would be a form
+# nobody says.
+#
+# content-source: n/a for this file -- it references vocabulary/home-work.yaml
+#   and phrases/home-work.yaml, whose own provenance markers apply.
+
+- id: n5.home-open-close
+  order: 49
+  chapterId: n5.chapter-5
+  situation: At home
+  title: Open and closed
+  canDo: Say that you opened something, or that it opened
+  wordIds:
+    - vocab.akeru
+    - vocab.aku
+    - vocab.shimeru
+    - vocab.shimaru
+    - vocab.mado
+  phraseIds:
+    - home.open-the-window
+    - home.the-window-opens
+    - home.close-the-window
+  kanji:
+    - 開
+    - 閉
+    - 窓
+  grammarNote: "Japanese uses a different verb depending on whether *you* did it or it simply happened. 窓を開けます is \"I open the window\" — I am doing it, so the window takes を. 窓が開きます is \"the window opens\" — nobody is mentioned, so the window takes が and the verb changes shape. English uses one word for both and lets context sort it out; Japanese decides in the verb. 開ける/開く and 閉める/閉まる are the two pairs here, and the pattern repeats across dozens of verbs, so it is worth more than the four words."
+
+- id: n5.home-on-off
+  order: 50
+  chapterId: n5.chapter-5
+  situation: At home
+  title: On, off, push, pull
+  canDo: Turn things on and off, and read a door
+  wordIds:
+    - vocab.tsukeru
+    - vocab.kesu
+    - vocab.denki
+    - vocab.tsukau
+    - vocab.osu
+    - vocab.hiku
+  phraseIds:
+    - home.turn-on-the-light
+    - home.turn-off-the-light
+  kanji:
+    - 電
+    - 消
+    - 使
+  grammarNote: "電気 is both \"electricity\" and \"the light\", so 電気をつけます is the ordinary way to say you turned the light on. つける is usually written in kana even though it has a kanji (点ける). 消す covers switching a light off and rubbing writing out — the idea is making something disappear. 押す and 引く are worth knowing before you meet a Japanese door: they are what the sign says. All four are transitive, so all four take を."
+
+- id: n5.home-washing
+  order: 51
+  chapterId: n5.chapter-5
+  situation: At home
+  title: Washing and putting away
+  canDo: Say what you are doing around the house
+  wordIds:
+    - vocab.arau
+    - vocab.oku
+    - vocab.ireru
+    - vocab.dasu
+    - vocab.te
+    - vocab.kao
+  phraseIds:
+    - home.wash-my-hands
+    - home.put-it-here
+  kanji:
+    - 洗
+    - 置
+    - 手
+    - 顔
+  grammarNote: "入れる and 出す are the transitive partners of two verbs you already know: 入る is to go in, 入れる is to put something in; 出る is to go out, 出す is to take something out. Same pattern as last-but-one lesson — the transitive one takes を. 置く takes に for where the thing ends up: ここに置きます. Japanese does not say \"my\" hands; 手を洗います is understood as your own."
+
+- id: n5.home-sitting
+  order: 52
+  chapterId: n5.chapter-5
+  situation: At home
+  title: Sitting, standing, resting
+  canDo: Say you are tired or taking a break
+  wordIds:
+    - vocab.tatsu
+    - vocab.suwaru
+    - vocab.tsukareru
+    - vocab.yasumu
+  phraseIds:
+    - home.sit-here
+    - home.im-taking-today-off
+  kanji:
+    - 立
+    - 座
+    - 休
+  grammarNote: "All four describe you rather than something you act on, so they take が or nothing at all — never を. 座る takes に for the seat, the same に that 置く took for a place. 疲れる is nearly always said as 疲れました, in the past: you are reporting that you *got* tired, not that you are tiring now. 休む stretches from resting for a minute to taking the day off work."
+
+- id: n5.home-living
+  order: 53
+  chapterId: n5.chapter-5
+  situation: At home
+  title: Out and back
+  canDo: Say you are going out and when you get in
+  wordIds:
+    - vocab.sumu
+    - vocab.dekakeru
+    - vocab.tsuku
+    - vocab.naru
+    - vocab.tsukuru
+  phraseIds:
+    - home.im-going-out
+    - home.arrive-home
+  kanji:
+    - 住
+    - 着
+    - 作
+  grammarNote: "着く takes に for where you arrive: 家に着きます. 住む takes に too, and never で — the place you live is a destination, not a location of activity. One warning about 住む: in real speech it is almost always 住んでいます (\"I am living\"), a form this ladder has not reached yet, so learn the word now and the sentence later. なる is \"become\", usually written in kana."
+
+- id: n5.work-working
+  order: 54
+  chapterId: n5.chapter-5
+  situation: Work & study
+  title: At work
+  canDo: Say where you work and what you do
+  wordIds:
+    - vocab.hataraku
+    - vocab.tsutomeru
+    - vocab.kaisha
+    - vocab.shigoto
+    - vocab.tanomu
+    - vocab.owaru
+  phraseIds:
+    - work.i-work-at-a-company
+    - work.the-work-finishes
+  kanji:
+    - 働
+    - 会
+    - 社
+    - 仕
+    - 事
+    - 終
+  grammarNote: "働く and 勤める both mean working, and they take different particles. 会社で働きます — で marks where an activity happens. 会社に勤めています — に marks the employer you belong to. Use 働く and で until the second form arrives. 終わる is intransitive, so the work does the finishing: 仕事が終わります, with が. 頼む is asking someone for something, and is also how you order in a restaurant."
+
+- id: n5.work-studying
+  order: 55
+  chapterId: n5.chapter-5
+  situation: Work & study
+  title: Learning and teaching
+  canDo: Talk about studying and being taught
+  wordIds:
+    - vocab.narau
+    - vocab.oshieru
+    - vocab.oboeru
+    - vocab.shukudai
+  phraseIds:
+    - work.i-do-my-homework
+    - work.i-learn-it-here
+  kanji:
+    - 習
+    - 教
+    - 覚
+  grammarNote: "習う is learning *from someone* — a teacher, a class — which is why it pairs with 教える, to teach. 覚える is the separate act of getting something into your memory, so you can 習う a word in class and still not 覚える it. 教える also does duty as \"tell\": asking someone to 教える you an address is normal, not a request for a lesson. 宿題 takes する: 宿題をします."
+
+- id: n5.work-answering
+  order: 56
+  chapterId: n5.chapter-5
+  situation: Work & study
+  title: Knowing and not knowing
+  canDo: Say you don't know, or that something is wrong
+  wordIds:
+    - vocab.kotaeru
+    - vocab.shiru
+    - vocab.iu
+    - vocab.chigau
+    - vocab.komaru
+    - vocab.nakusu
+  phraseIds:
+    - work.i-dont-know
+    - work.thats-not-right
+  kanji:
+    - 答
+    - 知
+    - 言
+    - 違
+    - 困
+  grammarNote: "知りません is the everyday \"I don't know\" — and note that the positive is not 知ります but 知っています, another form waiting on the て-form. 違います is how you correct someone politely: it says \"that is different\", not \"you are wrong\", which is why it lands softer than it looks. 言う is spelled いう and pronounced ゆう. 困る and 無くす travel together: lose something, and you are 困ります."
+
+- id: n5.checkpoint-5
+  order: 57
+  chapterId: n5.chapter-5
+  situation: Integration & checkpoint
+  title: Chapter 5 checkpoint
+  canDo: Recognise everything taught so far
+  wordIds: []
+  phraseIds: []
+  kanji: []
+  checkpoint: recognition
+  grammarNote: "A wide pass over everything the book has taught, this chapter included. Pick each word out of a line-up; anything you miss comes back sooner. It finishes when the remaining set empties — retry as often as you like, nothing is recorded."

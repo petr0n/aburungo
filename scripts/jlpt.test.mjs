@@ -7,7 +7,7 @@
  */
 import { describe, it, expect } from "vitest";
 import {
-  normReading, searchStem, runCovered, uncoveredRuns, segmentationVocab, isPolite,
+  normReading, searchStem, conjugationStem, runCovered, uncoveredRuns, segmentationVocab, isPolite,
 } from "./jlpt.mjs";
 
 describe("normReading", () => {
@@ -38,6 +38,35 @@ describe("searchStem", () => {
   it("returns kana-only words unchanged", () => {
     expect(searchStem("おばあさん", "noun")).toBe("おばあさん");
     expect(searchStem("あらう", "verb")).toBe("あらう");
+  });
+});
+
+describe("conjugationStem", () => {
+  it("cuts an ichidan verb at its real stem, not the kanji boundary", () => {
+    // 開 also begins 開きます, a different verb. 開け does not.
+    expect(conjugationStem("開ける", ["v1", "vt"])).toBe("開け");
+    expect(conjugationStem("入れる", ["v1", "vt"])).toBe("入れ");
+    expect(conjugationStem("教える", ["v1", "vt"])).toBe("教え");
+  });
+
+  it("falls back to the kanji stem for a godan verb", () => {
+    // 洗います and 洗って differ right after 洗, so there is nothing tighter.
+    expect(conjugationStem("洗う", ["v5u", "vt"])).toBe("洗");
+    expect(conjugationStem("知る", ["v5r", "vt"])).toBe("知");
+  });
+
+  it("cuts a kana reading the same way, so kana-written sentences match", () => {
+    // A sentence may write the verb as あけます where the headword is 開ける;
+    // searching only the written form misses every one of them.
+    expect(conjugationStem("あける", ["v1", "vt"])).toBe("あけ");
+    expect(conjugationStem("いれる", ["v1", "vt"])).toBe("いれ");
+    // Godan kana has no safe cut — あら would match あります and much else.
+    expect(conjugationStem("あらう", ["v5u", "vt"])).toBe("あらう");
+  });
+
+  it("falls back when JMdict says nothing about the verb", () => {
+    expect(conjugationStem("開ける", undefined)).toBe("開");
+    expect(conjugationStem("", ["v1"])).toBe("");
   });
 });
 

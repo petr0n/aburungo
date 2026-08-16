@@ -1,0 +1,496 @@
+# Chapter 5 vocabulary — home, work & study (DR-026).
+#
+# The chapter that finally teaches verbs in bulk. The ladder had 26 verbs in 44
+# lessons, almost all of them motion or eating; everything you do to an object
+# was missing, so a learner could say where they were going but not that they
+# had opened the window.
+#
+# Transitivity is the spine of the first lesson and the reason 開ける/開く and
+# 閉める/閉まる are taught as pairs rather than as four separate words. Japanese
+# marks the difference in the verb itself, which English does not — "the door
+# opens" and "I open the door" share a verb in English and never in Japanese.
+# Every verb here therefore records vt or vi in its notes.
+#
+# Already taught elsewhere and deliberately absent: 寝る, 帰る, 入る, 出る, 行く,
+# 来る, する, 買う, 見る, 聞く, 読む, 書く, 話す, 会う, 歩く, 食べる, 飲む, 起きる,
+# 部屋, 名前, 服.
+#
+# content-source: training — headwords, readings, part of speech and
+#   transitivity verified against JMdict 3.6.2 on 2026-08-16, sequence numbers
+#   inline. つける needed care: matching on the kana alone returns "to install
+#   (a king, emperor)", a homograph that is not even flagged common. The entry
+#   taught here is 点ける, seq 1610400. できる has the same trap and was held back
+#   to a later chapter rather than rushed.
+# jlpt-source: training — JLPT level unverified (JMdict carries no JLPT data);
+#   all forty-one appear in both the Tanos and open-anki N5 reference lists
+
+# ── Opening and closing ───────────────────────────────────────────────────────
+
+- id: vocab.akeru
+  jlpt: N5
+  word_type: verb
+  verb_class: ru
+  theme: home
+  japanese: 開ける
+  reading: あける
+  romaji: akeru
+  english: to open (something)
+  notes: Transitive (vt) — you open it. Pairs with 開く, which is what the thing itself does. JMdict seq 1202450.
+
+- id: vocab.aku
+  jlpt: N5
+  word_type: verb
+  verb_class: u
+  theme: home
+  japanese: 開く
+  reading: あく
+  romaji: aku
+  english: to open (by itself)
+  notes: Intransitive (vi) — the door opens. Never takes を. JMdict seq 1586270.
+
+- id: vocab.shimeru
+  jlpt: N5
+  word_type: verb
+  verb_class: ru
+  theme: home
+  japanese: 閉める
+  reading: しめる
+  romaji: shimeru
+  english: to close (something)
+  notes: Transitive (vt), the mirror of 開ける. JMdict seq 1508590.
+
+- id: vocab.shimaru
+  jlpt: N5
+  word_type: verb
+  verb_class: u
+  theme: home
+  japanese: 閉まる
+  reading: しまる
+  romaji: shimaru
+  english: to close (by itself)
+  notes: Intransitive (vi). The shop closes; nobody is mentioned. JMdict seq 1436560.
+
+- id: vocab.mado
+  jlpt: N5
+  word_type: noun
+  theme: home
+  japanese: 窓
+  reading: まど
+  romaji: mado
+  english: window
+  notes: JMdict seq 1401400.
+
+# ── On, off, and using things ─────────────────────────────────────────────────
+
+- id: vocab.tsukeru
+  jlpt: N5
+  word_type: verb
+  verb_class: ru
+  theme: home
+  japanese: つける
+  reading: つける
+  romaji: tsukeru
+  english: to turn on, to switch on
+  notes: Written 点ける but usually kana. Transitive (vt). JMdict seq 1610400.
+
+- id: vocab.kesu
+  jlpt: N5
+  word_type: verb
+  verb_class: u
+  theme: home
+  japanese: 消す
+  reading: けす
+  romaji: kesu
+  english: to turn off, to erase
+  notes: Transitive (vt). Covers switching off a light and rubbing out writing. JMdict seq 1350110.
+
+- id: vocab.denki
+  jlpt: N5
+  word_type: noun
+  theme: home
+  japanese: 電気
+  reading: でんき
+  romaji: denki
+  english: electricity, the light
+  notes: 電気をつけます is the ordinary way to say "turn the light on". JMdict seq 1443000.
+
+- id: vocab.tsukau
+  jlpt: N5
+  word_type: verb
+  verb_class: u
+  theme: home
+  japanese: 使う
+  reading: つかう
+  romaji: tsukau
+  english: to use
+  notes: Transitive (vt). JMdict seq 1305990.
+
+- id: vocab.osu
+  jlpt: N5
+  word_type: verb
+  verb_class: u
+  theme: home
+  japanese: 押す
+  reading: おす
+  romaji: osu
+  english: to push, to press
+  notes: Transitive (vt). What a door and a button both say. JMdict seq 1180470.
+
+- id: vocab.hiku
+  jlpt: N5
+  word_type: verb
+  verb_class: u
+  theme: home
+  japanese: 引く
+  reading: ひく
+  romaji: hiku
+  english: to pull
+  notes: Transitive (vt). The other half of the door sign. JMdict seq 1169250.
+
+# ── Washing and tidying ───────────────────────────────────────────────────────
+
+- id: vocab.arau
+  jlpt: N5
+  word_type: verb
+  verb_class: u
+  theme: home
+  japanese: 洗う
+  reading: あらう
+  romaji: arau
+  english: to wash
+  notes: Transitive (vt). JMdict seq 1390930.
+
+- id: vocab.oku
+  jlpt: N5
+  word_type: verb
+  verb_class: u
+  theme: home
+  japanese: 置く
+  reading: おく
+  romaji: oku
+  english: to put, to place
+  notes: Transitive (vt). Takes に for where it goes. JMdict seq 1421850.
+
+- id: vocab.ireru
+  jlpt: N5
+  word_type: verb
+  verb_class: ru
+  theme: home
+  japanese: 入れる
+  reading: いれる
+  romaji: ireru
+  english: to put in
+  notes: Transitive (vt), the pair of 入る (to enter), which you already know. JMdict seq 1465610.
+
+- id: vocab.dasu
+  jlpt: N5
+  word_type: verb
+  verb_class: u
+  theme: home
+  japanese: 出す
+  reading: だす
+  romaji: dasu
+  english: to take out, to hand in
+  notes: Transitive (vt), the pair of 出る (to go out). JMdict seq 1338180.
+
+- id: vocab.te
+  jlpt: N5
+  word_type: noun
+  theme: home
+  japanese: 手
+  reading: て
+  romaji: te
+  english: hand
+  notes: JMdict seq 1327190.
+
+- id: vocab.kao
+  jlpt: N5
+  word_type: noun
+  theme: home
+  japanese: 顔
+  reading: かお
+  romaji: kao
+  english: face
+  notes: JMdict seq 1217730.
+
+# ── Sitting, standing, resting ────────────────────────────────────────────────
+
+- id: vocab.tatsu
+  jlpt: N5
+  word_type: verb
+  verb_class: u
+  theme: home
+  japanese: 立つ
+  reading: たつ
+  romaji: tatsu
+  english: to stand up
+  notes: Intransitive (vi). JMdict seq 1597040.
+
+- id: vocab.suwaru
+  jlpt: N5
+  word_type: verb
+  verb_class: u
+  theme: home
+  japanese: 座る
+  reading: すわる
+  romaji: suwaru
+  english: to sit down
+  notes: Intransitive (vi). Takes に for the seat. JMdict seq 1291800.
+
+- id: vocab.tsukareru
+  jlpt: N5
+  word_type: verb
+  verb_class: ru
+  theme: home
+  japanese: 疲れる
+  reading: つかれる
+  romaji: tsukareru
+  english: to get tired
+  notes: Intransitive (vi). Usually said as 疲れました — already tired, so past tense. JMdict seq 1483740.
+
+- id: vocab.yasumu
+  jlpt: N5
+  word_type: verb
+  verb_class: u
+  theme: home
+  japanese: 休む
+  reading: やすむ
+  romaji: yasumu
+  english: to rest, to take a day off
+  notes: Intransitive (vi). Also what you say about missing school or work. JMdict seq 1227560.
+
+# ── Living somewhere ──────────────────────────────────────────────────────────
+
+- id: vocab.sumu
+  jlpt: N5
+  word_type: verb
+  verb_class: u
+  theme: home
+  japanese: 住む
+  reading: すむ
+  romaji: sumu
+  english: to live, to reside
+  notes: Intransitive (vi). Takes に, not で — 東京に住んでいます. JMdict seq 1334040.
+
+- id: vocab.dekakeru
+  jlpt: N5
+  word_type: verb
+  verb_class: ru
+  theme: home
+  japanese: 出かける
+  reading: でかける
+  romaji: dekakeru
+  english: to go out
+  notes: Intransitive (vi). Leaving the house for a while, not moving away. JMdict seq 1598550.
+
+- id: vocab.tsuku
+  jlpt: N5
+  word_type: verb
+  verb_class: u
+  theme: home
+  japanese: 着く
+  reading: つく
+  romaji: tsuku
+  english: to arrive
+  notes: Intransitive (vi). Takes に for the destination. JMdict seq 1422970.
+
+- id: vocab.naru
+  jlpt: N5
+  word_type: verb
+  verb_class: u
+  theme: home
+  japanese: なる
+  reading: なる
+  romaji: naru
+  english: to become
+  notes: Intransitive (vi). Usually kana. JMdict seq 1375610.
+
+- id: vocab.tsukuru
+  jlpt: N5
+  word_type: verb
+  verb_class: u
+  theme: home
+  japanese: 作る
+  reading: つくる
+  romaji: tsukuru
+  english: to make
+  notes: Transitive (vt). JMdict seq 1597890.
+
+# ── Working ───────────────────────────────────────────────────────────────────
+
+- id: vocab.hataraku
+  jlpt: N5
+  word_type: verb
+  verb_class: u
+  theme: work
+  japanese: 働く
+  reading: はたらく
+  romaji: hataraku
+  english: to work
+  notes: Intransitive (vi). The act of working. JMdict seq 1451150.
+
+- id: vocab.tsutomeru
+  jlpt: N5
+  word_type: verb
+  verb_class: ru
+  theme: work
+  japanese: 勤める
+  reading: つとめる
+  romaji: tsutomeru
+  english: to be employed at
+  notes: Takes に for the employer, where 働く takes で for the place. JMdict seq 1240825.
+
+- id: vocab.kaisha
+  jlpt: N5
+  word_type: noun
+  theme: work
+  japanese: 会社
+  reading: かいしゃ
+  romaji: kaisha
+  english: company, office
+  notes: JMdict seq 1198550.
+
+- id: vocab.shigoto
+  jlpt: N5
+  word_type: noun
+  theme: work
+  japanese: 仕事
+  reading: しごと
+  romaji: shigoto
+  english: work, job
+  notes: JMdict seq 1304970.
+
+- id: vocab.tanomu
+  jlpt: N5
+  word_type: verb
+  verb_class: u
+  theme: work
+  japanese: 頼む
+  reading: たのむ
+  romaji: tanomu
+  english: to ask for, to request
+  notes: Transitive (vt). Also how you order in a restaurant. JMdict seq 1548370.
+
+- id: vocab.owaru
+  jlpt: N5
+  word_type: verb
+  verb_class: u
+  theme: work
+  japanese: 終わる
+  reading: おわる
+  romaji: owaru
+  english: to finish, to end
+  notes: Intransitive (vi) — the work does the finishing, so it takes が. JMdict seq 1589600.
+
+# ── Studying ──────────────────────────────────────────────────────────────────
+
+- id: vocab.narau
+  jlpt: N5
+  word_type: verb
+  verb_class: u
+  theme: study
+  japanese: 習う
+  reading: ならう
+  romaji: narau
+  english: to learn (from someone)
+  notes: Transitive (vt). Learning taught by a person, unlike 勉強する. JMdict seq 1333070.
+
+- id: vocab.oshieru
+  jlpt: N5
+  word_type: verb
+  verb_class: ru
+  theme: study
+  japanese: 教える
+  reading: おしえる
+  romaji: oshieru
+  english: to teach, to tell
+  notes: Transitive (vt). Also used to ask for information — 教えてください. JMdict seq 1236900.
+
+- id: vocab.oboeru
+  jlpt: N5
+  word_type: verb
+  verb_class: ru
+  theme: study
+  japanese: 覚える
+  reading: おぼえる
+  romaji: oboeru
+  english: to memorise, to remember
+  notes: Transitive (vt). The act of committing to memory. JMdict seq 1206050.
+
+- id: vocab.shukudai
+  jlpt: N5
+  word_type: noun
+  theme: study
+  japanese: 宿題
+  reading: しゅくだい
+  romaji: shukudai
+  english: homework
+  notes: JMdict seq 1337270.
+
+# ── Asking and answering ──────────────────────────────────────────────────────
+
+- id: vocab.kotaeru
+  jlpt: N5
+  word_type: verb
+  verb_class: ru
+  theme: study
+  japanese: 答える
+  reading: こたえる
+  romaji: kotaeru
+  english: to answer, to reply
+  notes: Intransitive (vi) — takes に for what you answer. JMdict seq 1449540.
+
+- id: vocab.shiru
+  jlpt: N5
+  word_type: verb
+  verb_class: u
+  theme: study
+  japanese: 知る
+  reading: しる
+  romaji: shiru
+  english: to know
+  notes: Transitive (vt). Nearly always said as 知っています; the plain 知ります is rare. JMdict seq 1420470.
+
+- id: vocab.iu
+  jlpt: N5
+  word_type: verb
+  verb_class: u
+  theme: study
+  japanese: 言う
+  reading: いう
+  romaji: iu
+  english: to say
+  notes: Transitive (vt). Pronounced ゆう despite the spelling. JMdict seq 1587040.
+
+- id: vocab.chigau
+  jlpt: N5
+  word_type: verb
+  verb_class: u
+  theme: study
+  japanese: 違う
+  reading: ちがう
+  romaji: chigau
+  english: to be different, to be wrong
+  notes: Intransitive (vi). Used on its own as "no, that's not it". JMdict seq 1158880.
+
+- id: vocab.komaru
+  jlpt: N5
+  word_type: verb
+  verb_class: u
+  theme: study
+  japanese: 困る
+  reading: こまる
+  romaji: komaru
+  english: to be in trouble, to be stuck
+  notes: Intransitive (vi). Usually 困っています. JMdict seq 1289590.
+
+- id: vocab.nakusu
+  jlpt: N5
+  word_type: verb
+  verb_class: u
+  theme: study
+  japanese: 無くす
+  reading: なくす
+  romaji: nakusu
+  english: to lose (something)
+  notes: Transitive (vt). Usually written なくす. JMdict seq 1529530.
