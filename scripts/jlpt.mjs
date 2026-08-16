@@ -618,9 +618,14 @@ function sentences(l, opts) {
     const ref = readJson(join(REF, `reference-${l}.json`));
     for (const form of opts.for) {
       const hit = ref.entries.find((e) => e.written === form || e.reading === normReading(form));
-      const partsOfSpeech = corpus.posByForm.get(form);
-      const stem = conjugationStem(form, partsOfSpeech);
-      targets.push({ id: `--for:${form}`, japanese: form, reading: hit?.reading ?? form, stems: [stem].filter(Boolean) });
+      const reading = hit?.reading ?? form;
+      const partsOfSpeech = corpus.posByForm.get(form) ?? corpus.posByForm.get(reading);
+      // Both spellings. A corpus sentence may write the verb in kana (あけます)
+      // where the headword is kanji (開ける), and searching only the written
+      // form would miss every one of them. The reading goes through the same
+      // conjugation-aware cut, so あける gives あけ rather than the whole word.
+      const stems = [...new Set([conjugationStem(form, partsOfSpeech), conjugationStem(reading, partsOfSpeech)])];
+      targets.push({ id: `--for:${form}`, japanese: form, reading, stems: stems.filter(Boolean) });
     }
     universe = [...universe, ...targets];
   }

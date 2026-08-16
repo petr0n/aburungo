@@ -55,6 +55,15 @@ describe("conjugationStem", () => {
     expect(conjugationStem("知る", ["v5r", "vt"])).toBe("知");
   });
 
+  it("cuts a kana reading the same way, so kana-written sentences match", () => {
+    // A sentence may write the verb as あけます where the headword is 開ける;
+    // searching only the written form misses every one of them.
+    expect(conjugationStem("あける", ["v1", "vt"])).toBe("あけ");
+    expect(conjugationStem("いれる", ["v1", "vt"])).toBe("いれ");
+    // Godan kana has no safe cut — あら would match あります and much else.
+    expect(conjugationStem("あらう", ["v5u", "vt"])).toBe("あらう");
+  });
+
   it("falls back when JMdict says nothing about the verb", () => {
     expect(conjugationStem("開ける", undefined)).toBe("開");
     expect(conjugationStem("", ["v1"])).toBe("");
