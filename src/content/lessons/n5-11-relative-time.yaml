@@ -18,7 +18,7 @@
 # jlpt-source: training — JLPT level unverified
 
 - id: n5.unit-40
-  order: 43
+  order: 46
   situation: Relative time
   title: Weeks and months
   canDo: Say when something happened or will happen, in weeks and months
@@ -43,7 +43,7 @@
   grammarNote: "You already say 昨日、今日、明日、毎日 without thinking. Those four are one row of a grid, and swapping the second half gives you the rest: 先 last, 今 this, 来 next, 毎 every, crossed with 週 week and 月 month. Eight words, but only two things to learn — and the prefixes are ones you have already met, in 今日 and 毎日 and 来る. Only 毎月 bends: まいつき, not まいげつ."
 
 - id: n5.unit-41
-  order: 44
+  order: 47
   situation: Relative time
   title: Years, and the exceptions
   canDo: Talk about last year and next year, and name any day around today

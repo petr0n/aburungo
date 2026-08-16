@@ -1,0 +1,81 @@
+# N5 daily-loop lessons — People & family (Lessons 39-41, DR-025).
+#
+# Sits directly after Daily life so the ladder runs "what you like, what you do,
+# who you live among" before turning to dates. It also thickens what was the
+# ladder's thinnest block: Food preferences (3) + Daily life (1) was four
+# lessons between checkpoints, and is now seven.
+#
+# The two-set distinction is the whole reason this is three lessons rather than
+# two. Lessons 39 and 40 are a matched pair — the same six relationships said
+# two ways, depending on whose family it is — and 40 follows 39 immediately so
+# the contrast lands while the first set is still fresh. Splitting them across a
+# checkpoint would break the only thing that makes this vocabulary hard.
+#
+# No people-counters here. 何人 / 二人 are the obvious family sentences and are
+# not taught anywhere yet; they belong to the Numbers & counting work rather
+# than being smuggled in as supporting lexis.
+#
+# content-source: n/a for this file — it references vocabulary/family.yaml and
+#   phrases/family.yaml, whose own provenance markers apply.
+
+- id: n5.family-mine
+  order: 39
+  situation: People & family
+  title: My family
+  canDo: Say who is in your family
+  wordIds:
+    - vocab.chichi
+    - vocab.haha
+    - vocab.ani
+    - vocab.ane
+    - vocab.otouto
+    - vocab.imouto
+  phraseIds:
+    - family.i-have-older-brother
+    - family.my-father-is-a-teacher
+    - family.my-younger-brother-is-a-student
+  kanji:
+    - 父
+    - 母
+    - 兄
+    - 姉
+    - 弟
+    - 妹
+  grammarNote: "Japanese has no plain word for \"brother\" or \"sister\" — you have to know whether they are older or younger than you, and say so. 兄 and 姉 are older, 弟 and 妹 younger. These six words are for your *own* family, used when talking to someone else; the other set comes next. To say you have someone, use います, the same verb you met for people and animals existing somewhere: 兄がいます."
+
+- id: n5.family-yours
+  order: 40
+  situation: People & family
+  title: Your family
+  canDo: Ask about someone else's family
+  wordIds:
+    - vocab.otousan
+    - vocab.okaasan
+    - vocab.oniisan
+    - vocab.oneesan
+    - vocab.okusan
+  phraseIds:
+    - family.do-you-have-older-brother
+    - family.is-your-mother-well
+    - family.your-older-sister-is-a-teacher
+  kanji: []
+  grammarNote: "Now the same relationships again, said the other way. お父さん is *your* father; 父 from last lesson is mine. This is not a politeness dial you may leave alone — using お父さん about your own father sounds childish, and using 父 about someone else's is rude. The pattern is visible: お〜さん wraps the word. Note that 弟 and 妹 do not change, so only the older siblings split into two sets. 奥さん is someone else's wife only."
+
+- id: n5.family-wider
+  order: 41
+  situation: People & family
+  title: Everyone else
+  canDo: Talk about the rest of the family
+  wordIds:
+    - vocab.kodomo
+    - vocab.ryoushin
+    - vocab.ojiisan
+    - vocab.obaasan
+    - vocab.shujin
+  phraseIds:
+    - family.i-have-children
+    - family.grandmother-is-well
+  kanji:
+    - 子
+    - 両
+  grammarNote: "The rest of the household. 子供 covers one child or several — Japanese does not mark plurals. おじいさん and おばあさん are one vowel apart and worth saying aloud until they separate; both are also used politely of any elderly person, not only relatives. 主人 follows the reverse of the 奥さん rule: 主人 is your own husband, ご主人 is someone else's."

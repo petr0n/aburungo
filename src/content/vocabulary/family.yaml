@@ -1,0 +1,184 @@
+# N5 family vocabulary (DR-025, Lessons 39-41).
+#
+# Japanese keeps two complete sets of family words, and which one you use says
+# *whose* family you mean, not how polite you are being. 父 is my father; お父さん
+# is yours. Using お父さん about your own father sounds like a small child, and
+# using 父 about someone else's is plainly rude — so the pair is the lesson, and
+# the two halves are taught back to back while the first is still fresh.
+#
+# The humble set (Lesson 39) and the honorific set (Lesson 40) are therefore
+# authored as matched rows. Nothing here is a synonym of anything else.
+#
+# Already taught elsewhere and deliberately absent: 家族, 人, 友達, 先生, 学生,
+# 女の人, 男の人, わたし, あなた, 私たち.
+#
+# content-source: training — headwords and readings verified against JMdict 3.6.2
+#   on 2026-08-16, JMdict sequence numbers inline
+# jlpt-source: training — JLPT level unverified (JMdict carries no JLPT data);
+#   all sixteen appear in both the Tanos and open-anki N5 reference lists
+
+# ── The humble set — my own family (Lesson 39) ────────────────────────────────
+
+- id: vocab.chichi
+  jlpt: N5
+  word_type: noun
+  theme: family
+  japanese: 父
+  reading: ちち
+  romaji: chichi
+  english: my father
+  notes: Used only of your own father, when speaking to someone else. JMdict seq 1497610.
+
+- id: vocab.haha
+  jlpt: N5
+  word_type: noun
+  theme: family
+  japanese: 母
+  reading: はは
+  romaji: haha
+  english: my mother
+  notes: Used only of your own mother, when speaking to someone else. JMdict seq 1514990.
+
+- id: vocab.ani
+  jlpt: N5
+  word_type: noun
+  theme: family
+  japanese: 兄
+  reading: あに
+  romaji: ani
+  english: my older brother
+  notes: Japanese distinguishes older from younger siblings — there is no plain word for "brother". JMdict seq 1249900.
+
+- id: vocab.ane
+  jlpt: N5
+  word_type: noun
+  theme: family
+  japanese: 姉
+  reading: あね
+  romaji: ane
+  english: my older sister
+  notes: JMdict seq 1307630.
+
+- id: vocab.otouto
+  jlpt: N5
+  word_type: noun
+  theme: family
+  japanese: 弟
+  reading: おとうと
+  romaji: otouto
+  english: my younger brother
+  notes: Same word whether you are talking about your own or someone else's — only the older siblings split into two sets. JMdict seq 1581930.
+
+- id: vocab.imouto
+  jlpt: N5
+  word_type: noun
+  theme: family
+  japanese: 妹
+  reading: いもうと
+  romaji: imouto
+  english: my younger sister
+  notes: JMdict seq 1524590.
+
+# ── The honorific set — someone else's family (Lesson 40) ─────────────────────
+
+- id: vocab.otousan
+  jlpt: N5
+  word_type: noun
+  theme: family
+  japanese: お父さん
+  reading: おとうさん
+  romaji: otousan
+  english: your father, someone's father
+  notes: Also what children call their own father directly. JMdict seq 1002590.
+
+- id: vocab.okaasan
+  jlpt: N5
+  word_type: noun
+  theme: family
+  japanese: お母さん
+  reading: おかあさん
+  romaji: okaasan
+  english: your mother, someone's mother
+  notes: JMdict seq 1002650.
+
+- id: vocab.oniisan
+  jlpt: N5
+  word_type: noun
+  theme: family
+  japanese: お兄さん
+  reading: おにいさん
+  romaji: oniisan
+  english: your older brother, someone's older brother
+  notes: JMdict seq 1001830.
+
+- id: vocab.oneesan
+  jlpt: N5
+  word_type: noun
+  theme: family
+  japanese: お姉さん
+  reading: おねえさん
+  romaji: oneesan
+  english: your older sister, someone's older sister
+  notes: JMdict seq 1001990.
+
+- id: vocab.okusan
+  jlpt: N5
+  word_type: noun
+  theme: family
+  japanese: 奥さん
+  reading: おくさん
+  romaji: okusan
+  english: your wife, someone's wife
+  notes: Only for someone else's wife. Your own is 妻 or 家内, which are N4. JMdict seq 1179330.
+
+# ── The wider family (Lesson 41) ──────────────────────────────────────────────
+
+- id: vocab.kodomo
+  jlpt: N5
+  word_type: noun
+  theme: family
+  japanese: 子供
+  reading: こども
+  romaji: kodomo
+  english: child, children
+  notes: No plural marking — 子供 covers one or several. JMdict seq 1307850.
+
+- id: vocab.ryoushin
+  jlpt: N5
+  word_type: noun
+  theme: family
+  japanese: 両親
+  reading: りょうしん
+  romaji: ryoushin
+  english: parents, both parents
+  notes: 両 = both. JMdict seq 1602710.
+
+- id: vocab.ojiisan
+  jlpt: N5
+  word_type: noun
+  theme: family
+  japanese: おじいさん
+  reading: おじいさん
+  romaji: ojiisan
+  english: grandfather, elderly man
+  notes: Written お祖父さん, but usually kana. Also used politely of any elderly man. JMdict seq 1002320.
+
+- id: vocab.obaasan
+  jlpt: N5
+  word_type: noun
+  theme: family
+  japanese: おばあさん
+  reading: おばあさん
+  romaji: obaasan
+  english: grandmother, elderly woman
+  notes: Written お祖母さん, but usually kana. One vowel apart from おじいさん — worth practising aloud. JMdict seq 1002330.
+
+- id: vocab.shujin
+  jlpt: N5
+  word_type: noun
+  theme: family
+  japanese: 主人
+  reading: しゅじん
+  romaji: shujin
+  english: husband, head of household
+  notes: ご主人 for someone else's husband; 主人 for your own. The reverse of the 奥さん pattern. JMdict seq 1579780.
