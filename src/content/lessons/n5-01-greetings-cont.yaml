@@ -9,6 +9,7 @@
 
 - id: n5.unit-4
   order: 4
+  chapterId: n5.chapter-1
   situation: Greetings & basics
   title: Where are you from?
   canDo: Introduce yourself
@@ -33,6 +34,7 @@
 
 - id: n5.unit-5
   order: 5
+  chapterId: n5.chapter-1
   situation: Greetings & basics
   title: Thank you & you're welcome
   canDo: Thank someone
@@ -50,6 +52,7 @@
 
 - id: n5.unit-6
   order: 6
+  chapterId: n5.chapter-1
   situation: Greetings & basics
   title: I don't understand
   canDo: Say you don't understand
@@ -72,6 +75,7 @@
 
 - id: n5.unit-7
   order: 7
+  chapterId: n5.chapter-1
   situation: Greetings & basics
   title: Numbers 1-10
   canDo: Count and state simple quantities

@@ -9,6 +9,7 @@
 
 - id: n5.unit-13
   order: 14
+  chapterId: n5.chapter-2
   situation: Shopping
   title: In a shop
   canDo: Ask the price
@@ -31,6 +32,7 @@
 
 - id: n5.unit-14
   order: 15
+  chapterId: n5.chapter-2
   situation: Shopping
   title: Sizes & quantities
   canDo: Buy something
@@ -57,6 +59,7 @@
 
 - id: n5.unit-15
   order: 16
+  chapterId: n5.chapter-2
   situation: Shopping
   title: Do you have it?
   canDo: Buy something
@@ -86,6 +89,7 @@
 # are already authored and sourced, so teaching them costs nothing new.
 - id: n5.shopping-paying
   order: 17
+  chapterId: n5.chapter-2
   situation: Shopping
   title: Paying and leaving
   canDo: Pay for something and leave without help

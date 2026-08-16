@@ -1,0 +1,37 @@
+# Book One chapters.
+#
+# Four chapters, each ending in the recognition checkpoint that already sat at
+# that point in the ladder. The boundaries were not invented for this file —
+# they are where the checkpoints were placed under DR-021, at situation
+# boundaries rather than on a fixed count. Naming them is what turns "a
+# checkpoint every so often" into "the end of a chapter".
+#
+# Lessons 49-51 belong to no chapter on purpose. The production checkpoint
+# closes the *book*, reviewing every situation rather than one chapter's worth,
+# and the two Hana-gated closers behind it do the same. See the Chapter type in
+# src/types.ts.
+#
+# Chapter length varies by theme and is meant to: Chapter 2 runs nine teaching
+# lessons and Chapter 4 runs thirteen, because "shopping and getting around" and
+# "people, days and routines" are the sizes they are. Padding a chapter to hit a
+# number would put a checkpoint mid-situation, which is the thing DR-021 exists
+# to prevent.
+#
+# content-source: n/a — this file names and orders existing lessons; it adds no
+#   Japanese content of its own.
+
+- id: n5.chapter-1
+  order: 1
+  title: Greetings & ordering
+
+- id: n5.chapter-2
+  order: 2
+  title: Shopping & getting around
+
+- id: n5.chapter-3
+  order: 3
+  title: Staying & finding your way
+
+- id: n5.chapter-4
+  order: 4
+  title: People, days & routines

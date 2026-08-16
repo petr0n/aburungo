@@ -9,6 +9,7 @@
 
 - id: n5.unit-1
   order: 1
+  chapterId: n5.chapter-1
   situation: Greetings & basics
   title: Yes, no, and this/that
   canDo: Greet someone
@@ -29,6 +30,7 @@
 
 - id: n5.unit-2
   order: 2
+  chapterId: n5.chapter-1
   situation: Greetings & basics
   title: Hello & goodbye
   canDo: Greet someone
@@ -48,6 +50,7 @@
 
 - id: n5.unit-3
   order: 3
+  chapterId: n5.chapter-1
   situation: Greetings & basics
   title: Nice to meet you
   canDo: Introduce yourself

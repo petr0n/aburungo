@@ -17,6 +17,7 @@
 
 - id: n5.unit-42
   order: 48
+  chapterId: n5.chapter-4
   situation: Integration & checkpoint
   title: Everything so far
   canDo: Recognise the vocabulary from every situation on the ladder

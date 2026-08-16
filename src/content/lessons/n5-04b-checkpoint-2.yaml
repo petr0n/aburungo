@@ -23,6 +23,7 @@
 
 - id: n5.checkpoint-2
   order: 23
+  chapterId: n5.chapter-2
   situation: Integration & checkpoint
   title: Out and about
   canDo: Recognise the vocabulary from the first four situations

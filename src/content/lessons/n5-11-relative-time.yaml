@@ -19,6 +19,7 @@
 
 - id: n5.unit-40
   order: 46
+  chapterId: n5.chapter-4
   situation: Relative time
   title: Weeks and months
   canDo: Say when something happened or will happen, in weeks and months
@@ -44,6 +45,7 @@
 
 - id: n5.unit-41
   order: 47
+  chapterId: n5.chapter-4
   situation: Relative time
   title: Years, and the exceptions
   canDo: Talk about last year and next year, and name any day around today

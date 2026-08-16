@@ -11,6 +11,7 @@
 
 - id: n5.unit-24
   order: 28
+  chapterId: n5.chapter-3
   situation: Directions
   title: Left, right, straight
   canDo: Understand a basic answer about directions
@@ -34,6 +35,7 @@
 
 - id: n5.unit-25
   order: 29
+  chapterId: n5.chapter-3
   situation: Directions
   title: Where is ~?
   canDo: Ask where something is
@@ -61,6 +63,7 @@
 
 - id: n5.unit-26
   order: 30
+  chapterId: n5.chapter-3
   situation: Directions
   title: How far?
   canDo: Understand a basic answer about distance
