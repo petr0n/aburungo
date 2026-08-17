@@ -1,0 +1,225 @@
+# Chapter 7 vocabulary — choosing and counting (DR-028).
+#
+# Finishes three things the ladder started and left open.
+#
+# The ～つ series stopped at 五つ. Japanese counts differently depending on what
+# is being counted, and the learner had half of the most general set.
+#
+# 一人 and 二人 are irregular — ひとり and ふたり, not いちにん and *ににん — which
+# is why they are taught as words rather than left to a rule. 何人 is the point
+# of the lesson: the family chapter had to leave out "how many children do you
+# have" because no lesson taught it, and phrases/family.yaml records that debt.
+# It is paid here rather than retrofitted into Chapter 4, since a phrase must
+# never use vocabulary from a later chapter.
+#
+# Colours: 赤い, 白い, 黒い and いろ are already taught, so only four are new.
+#
+# この/その/あの complete the こそあど set whose pronoun half (これ/それ/あれ/どれ)
+# the learner met in Lesson 1. The difference is grammatical, not semantic:
+# これ stands alone, この must be followed by a noun.
+#
+# content-source: training — headwords, readings and part of speech verified
+#   against JMdict 3.6.2 on 2026-08-17, sequence numbers inline, all flagged
+#   common. この and どの each needed the correct homograph: matching the kana
+#   alone returns a numeral reading for この and the honorific 殿 for どの.
+# jlpt-source: training — JLPT level unverified
+
+# ── Six to ten (Lesson 1) ─────────────────────────────────────────────────────
+
+- id: vocab.muttsu
+  jlpt: N5
+  word_type: counter
+  theme: counting
+  japanese: 六つ
+  reading: むっつ
+  romaji: muttsu
+  english: six (things)
+  notes: The general counter, for things with no counter of their own. JMdict seq 1585315.
+
+- id: vocab.nanatsu
+  jlpt: N5
+  word_type: counter
+  theme: counting
+  japanese: 七つ
+  reading: ななつ
+  romaji: nanatsu
+  english: seven (things)
+  notes: JMdict seq 1319220.
+
+- id: vocab.yattsu
+  jlpt: N5
+  word_type: counter
+  theme: counting
+  japanese: 八つ
+  reading: やっつ
+  romaji: yattsu
+  english: eight (things)
+  notes: JMdict seq 1583095.
+
+- id: vocab.kokonotsu
+  jlpt: N5
+  word_type: counter
+  theme: counting
+  japanese: 九つ
+  reading: ここのつ
+  romaji: kokonotsu
+  english: nine (things)
+  notes: JMdict seq 1243600.
+
+- id: vocab.too
+  jlpt: N5
+  word_type: counter
+  theme: counting
+  japanese: 十
+  reading: とお
+  romaji: too
+  english: ten (things)
+  notes: The same kanji you know as じゅう, read とお when it is ten *things*. It also breaks the pattern by dropping the つ. JMdict seq 1579840.
+
+# ── Counting people (Lesson 2) ────────────────────────────────────────────────
+
+- id: vocab.hitori
+  jlpt: N5
+  word_type: counter
+  theme: counting
+  japanese: 一人
+  reading: ひとり
+  romaji: hitori
+  english: one person, alone
+  notes: Irregular — ひとり, not いちにん. Also means "by oneself". JMdict seq 1576150.
+
+- id: vocab.futari
+  jlpt: N5
+  word_type: counter
+  theme: counting
+  japanese: 二人
+  reading: ふたり
+  romaji: futari
+  english: two people
+  notes: Irregular in the same way — ふたり. From three onward the rule takes over, so 三人 is さんにん. JMdict seq 1582670.
+
+- id: vocab.nannin
+  jlpt: N5
+  word_type: counter
+  theme: counting
+  japanese: 何人
+  reading: なんにん
+  romaji: nannin
+  english: how many people
+  notes: JMdict seq 1189100.
+
+# ── Counting things (Lesson 3) ────────────────────────────────────────────────
+
+- id: vocab.mai
+  jlpt: N5
+  word_type: counter
+  theme: counting
+  japanese: 枚
+  reading: まい
+  romaji: mai
+  english: counter for flat things
+  notes: Paper, tickets, shirts, plates — anything thin and flat. 二枚 is two of them. JMdict seq 1524610.
+
+- id: vocab.dai
+  jlpt: N5
+  word_type: counter
+  theme: counting
+  japanese: 台
+  reading: だい
+  romaji: dai
+  english: counter for machines and vehicles
+  notes: Cars, computers, washing machines. JMdict seq 1412560.
+
+# ── Colours (Lesson 4) ────────────────────────────────────────────────────────
+
+- id: vocab.aoi
+  jlpt: N5
+  word_type: i-adj
+  theme: colour
+  japanese: 青い
+  reading: あおい
+  romaji: aoi
+  english: blue
+  notes: Also covers the green of a traffic light and of unripe fruit. JMdict seq 1381390.
+
+- id: vocab.kiiroi
+  jlpt: N5
+  word_type: i-adj
+  theme: colour
+  japanese: 黄色い
+  reading: きいろい
+  romaji: kiiroi
+  english: yellow
+  notes: JMdict seq 1182030.
+
+- id: vocab.chairo
+  jlpt: N5
+  word_type: noun
+  theme: colour
+  japanese: 茶色
+  reading: ちゃいろ
+  romaji: chairo
+  english: brown
+  notes: A noun, not an い-adjective — 茶色です, not *茶色いです in careful speech. Literally "tea colour". JMdict seq 1422720.
+
+- id: vocab.midori
+  jlpt: N5
+  word_type: noun
+  theme: colour
+  japanese: 緑
+  reading: みどり
+  romaji: midori
+  english: green
+  notes: A noun, like 茶色. JMdict seq 1555300.
+
+# ── Pointing at things (Lesson 5) ─────────────────────────────────────────────
+
+- id: vocab.kono
+  jlpt: N5
+  word_type: noun
+  theme: pointing
+  japanese: この
+  reading: この
+  romaji: kono
+  english: this (+ noun)
+  notes: Written 此の but always kana. Must be followed by a noun — この本, never この alone. JMdict seq 1582920.
+
+- id: vocab.sono
+  jlpt: N5
+  word_type: noun
+  theme: pointing
+  japanese: その
+  reading: その
+  romaji: sono
+  english: that (+ noun)
+  notes: The pair of それ, and near the listener rather than the speaker. JMdict seq 1006830.
+
+- id: vocab.ano
+  jlpt: N5
+  word_type: noun
+  theme: pointing
+  japanese: あの
+  reading: あの
+  romaji: ano
+  english: that over there (+ noun)
+  notes: Away from both of you. JMdict seq 1000420.
+
+- id: vocab.dono
+  jlpt: N5
+  word_type: noun
+  theme: pointing
+  japanese: どの
+  reading: どの
+  romaji: dono
+  english: which (+ noun)
+  notes: Written 何の but always kana in this sense. JMdict seq 1920240.
+
+- id: vocab.kochira
+  jlpt: N5
+  word_type: noun
+  theme: pointing
+  japanese: こちら
+  reading: こちら
+  romaji: kochira
+  english: this way, this one (polite)
+  notes: The polite member of the set. Also how staff say "this way" and how you introduce someone. JMdict seq 1004500.

@@ -1,6 +1,6 @@
 # Book One chapters.
 #
-# Six chapters, each ending in the recognition checkpoint that already sat at
+# Seven chapters, each ending in the recognition checkpoint that already sat at
 # that point in the ladder. The boundaries were not invented for this file —
 # they are where the checkpoints were placed under DR-021, at situation
 # boundaries rather than on a fixed count. Naming them is what turns "a
@@ -43,3 +43,7 @@
 - id: n5.chapter-6
   order: 6
   title: Asking someone to do something
+
+- id: n5.chapter-7
+  order: 7
+  title: Choosing and counting

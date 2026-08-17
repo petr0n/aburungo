@@ -15,6 +15,11 @@
 # meant to avoid. Counters belong to the Numbers & counting work; the family
 # lessons can gain that sentence once they exist.
 #
+# Settled in Chapter 7 (DR-028): 子供は何人いますか now lives in the lesson that
+# teaches 何人, not here. Adding it to this file would have had a Chapter 4
+# lesson using Chapter 7 vocabulary, which is the same fault from the other
+# direction.
+#
 # content-source: training — N5 canonical, pending Tatoeba verification.
 #   JMdict cannot verify composed sentences (only fixed expressions are
 #   headwords), so sentence checks need Tatoeba, not JMdict.

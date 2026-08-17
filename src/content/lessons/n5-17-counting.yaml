@@ -1,0 +1,129 @@
+# Chapter 7 — Choosing and counting (Lessons 64-69, DR-028).
+#
+# Three loose ends, and they belong together because they are the three things
+# you do to pick something out: point at it, say what colour it is, say how many
+# you want. あの本を二枚ください is the shape of the whole chapter.
+#
+# It also settles a debt. phrases/family.yaml records that "how many children do
+# you have" had to be left out because 何人 was taught nowhere. Paying it by
+# adding the sentence to the family lesson would have been wrong -- a phrase must
+# never reach forward into a later chapter for vocabulary -- so it is paid here,
+# in the lesson that teaches the counter.
+#
+#   1  six to ten          finishes the ～つ series, which stopped at 五つ
+#   2  counting people     一人 and 二人 are irregular, so they are taught not derived
+#   3  counting things     枚 and 台, and why Japanese has counters at all
+#   4  colours             only four are new; 赤い, 白い, 黒い are long taught
+#   5  pointing            この/その/あの/どの complete the set begun in Lesson 1
+#
+# content-source: n/a for this file -- it references vocabulary/counting.yaml and
+#   phrases/counting.yaml, whose own provenance markers apply.
+
+- id: n5.count-six-to-ten
+  order: 64
+  chapterId: n5.chapter-7
+  situation: Choosing and counting
+  title: Six to ten
+  canDo: Count up to ten of anything
+  wordIds:
+    - vocab.muttsu
+    - vocab.nanatsu
+    - vocab.yattsu
+    - vocab.kokonotsu
+    - vocab.too
+  phraseIds:
+    - count.eight-please
+    - count.there-are-six
+  kanji:
+    - 六
+    - 七
+    - 八
+    - 九
+  grammarNote: "You already count to five with ひとつ, ふたつ, 三つ, 四つ, 五つ. Here is the rest of the run. This is the general counter — the one to reach for when you do not know the specific one, and it works for most objects you can pick up. 十 breaks the pattern twice over: it drops the つ, and it is read とお rather than the じゅう you already know for the same kanji. Japanese does this constantly, so treat a familiar kanji with an unfamiliar reading as normal rather than as a mistake."
+
+- id: n5.count-people
+  order: 65
+  chapterId: n5.chapter-7
+  situation: Choosing and counting
+  title: Counting people
+  canDo: Ask and say how many people there are
+  wordIds:
+    - vocab.hitori
+    - vocab.futari
+    - vocab.nannin
+  phraseIds:
+    - count.how-many-children
+    - count.there-are-two-people
+  kanji:
+    - 人
+  grammarNote: "People get their own counter, 人, and the first two are irregular: ひとり and ふたり, not いちにん and ににん. From three onward the rule takes over — 三人 さんにん, 四人 よにん — so these two are memorised and the rest are built. 何人 asks how many. This is the counter the family lessons needed and did not have: 子供は何人いますか is the natural way to ask about someone's children, and now you can say it."
+
+- id: n5.count-things
+  order: 66
+  chapterId: n5.chapter-7
+  situation: Choosing and counting
+  title: Flat things and machines
+  canDo: Count objects with the right counter
+  wordIds:
+    - vocab.mai
+    - vocab.dai
+  phraseIds:
+    - count.two-flat-please
+    - count.there-is-one-car
+  kanji:
+    - 枚
+    - 台
+  grammarNote: "Japanese sorts objects by shape before counting them. 枚 is for thin flat things — paper, tickets, shirts, plates. 台 is for machines and vehicles — cars, computers, washing machines. There are dozens more, and you already own one of them: 本, the book, is also the counter for long thin things like bottles and umbrellas. Nobody expects a beginner to have them all. When you are stuck, ～つ from two lessons ago is understood, and being understood beats being exact."
+
+- id: n5.count-colours
+  order: 67
+  chapterId: n5.chapter-7
+  situation: Choosing and counting
+  title: More colours
+  canDo: Say what colour something is
+  wordIds:
+    - vocab.aoi
+    - vocab.kiiroi
+    - vocab.chairo
+    - vocab.midori
+  phraseIds:
+    - count.i-like-green
+    - count.its-brown
+    - count.this-book-is-blue
+  kanji:
+    - 青
+    - 黄
+    - 茶
+    - 緑
+  grammarNote: "You have 赤い, 白い and 黒い already. These four finish the everyday set, and they split into two grammatical kinds. 青い and 黄色い are い-adjectives, so they attach straight to a noun: 青い本. 茶色 and 緑 are nouns, so they need の: 茶色の本. Getting this wrong is a very common beginner mistake and a completely harmless one. 青い is worth a note of its own — it covers the green of a traffic light and of unripe fruit, a boundary English draws in a different place."
+
+- id: n5.count-pointing
+  order: 68
+  chapterId: n5.chapter-7
+  situation: Choosing and counting
+  title: This one, that one
+  canDo: Point at the thing you mean
+  wordIds:
+    - vocab.kono
+    - vocab.sono
+    - vocab.ano
+    - vocab.dono
+    - vocab.kochira
+  phraseIds:
+    - count.this-book-please
+    - count.that-person-is-a-teacher
+    - count.which-book
+  kanji: []
+  grammarNote: "In Lesson 1 you learned これ, それ, あれ and どれ. This is their other half, and the difference is grammatical rather than about meaning. これ stands on its own — これをください, this one please. この cannot: it must be followed by a noun — この本をください, this book please. Same distances as before: こ near me, そ near you, あ away from us both, ど the question. こちら is the polite one, and it does double duty — staff use it for \"this way\", and you use it to introduce someone."
+
+- id: n5.checkpoint-7
+  order: 69
+  chapterId: n5.chapter-7
+  situation: Integration & checkpoint
+  title: Chapter 7 checkpoint
+  canDo: Recognise everything taught so far
+  wordIds: []
+  phraseIds: []
+  kanji: []
+  checkpoint: recognition
+  grammarNote: "A wide pass over everything the book has taught, this chapter included. Pick each word out of a line-up; anything you miss comes back sooner. It finishes when the remaining set empties — retry as often as you like, nothing is recorded."
