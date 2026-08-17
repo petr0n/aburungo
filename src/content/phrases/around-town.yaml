@@ -1,0 +1,109 @@
+# Chapter 9 phrases — around town (DR-030).
+#
+# The position sentences all use the same frame, 〜の上に〜があります, because
+# that frame is the point: a position word in Japanese is a noun, so it needs の
+# in front of it and に after it. Seeing it four times in one lesson is what
+# makes it stick.
+#
+# 〜があります and 〜います were taught long ago, and both appear here unchanged.
+#
+# content-source: training — N5 canonical, pending Tatoeba verification.
+#   JMdict cannot verify composed sentences (only fixed expressions are
+#   headwords), so sentence checks need Tatoeba, not JMdict.
+# jlpt-source: training — JLPT level unverified
+
+# ── Where things are ──────────────────────────────────────────────────────────
+
+- id: town.in-the-bag
+  jlpt: N5
+  scenario: town
+  japanese: 本はかばんの中にあります。
+  reading: ほんはかばんのなかにあります。
+  romaji: hon wa kaban no naka ni arimasu.
+  english: The book is in the bag.
+
+- id: town.outside-the-shop
+  jlpt: N5
+  scenario: town
+  japanese: 店の外にいます。
+  reading: みせのそとにいます。
+  romaji: mise no soto ni imasu.
+  english: I'm outside the shop.
+
+- id: town.between-the-station-and-the-school
+  jlpt: N5
+  scenario: town
+  japanese: 駅と学校の間にあります。
+  reading: えきとがっこうのあいだにあります。
+  romaji: eki to gakkou no aida ni arimasu.
+  english: It's between the station and the school.
+
+# ── Near and far ──────────────────────────────────────────────────────────────
+
+- id: town.the-station-is-near
+  jlpt: N5
+  scenario: town
+  japanese: 駅は近いです。
+  reading: えきはちかいです。
+  romaji: eki wa chikai desu.
+  english: The station is near.
+
+- id: town.which-way-is-it
+  jlpt: N5
+  scenario: town
+  japanese: どちらですか。
+  reading: どちらですか。
+  romaji: dochira desu ka.
+  english: Which way is it?
+
+# ── Out of town ───────────────────────────────────────────────────────────────
+
+- id: town.i-like-the-sea
+  jlpt: N5
+  scenario: town
+  japanese: 海が好きです。
+  reading: うみがすきです。
+  romaji: umi ga suki desu.
+  english: I like the sea.
+
+- id: town.there-is-a-tree-in-the-park
+  jlpt: N5
+  scenario: town
+  japanese: 公園に木があります。
+  reading: こうえんにきがあります。
+  romaji: kouen ni ki ga arimasu.
+  english: There is a tree in the park.
+
+- id: town.the-flowers-are-beautiful
+  jlpt: N5
+  scenario: town
+  japanese: 花はきれいです。
+  reading: はなはきれいです。
+  romaji: hana wa kirei desu.
+  english: The flowers are beautiful.
+
+# ── Going somewhere ───────────────────────────────────────────────────────────
+
+- id: town.lets-go-together
+  jlpt: N5
+  scenario: town
+  japanese: 一緒に行きます。
+  reading: いっしょにいきます。
+  romaji: issho ni ikimasu.
+  english: I'll go with you.
+
+- id: town.i-climb-the-mountain
+  jlpt: N5
+  scenario: town
+  japanese: 山に登ります。
+  reading: やまにのぼります。
+  romaji: yama ni noborimasu.
+  english: I climb the mountain.
+
+- id: town.please-cross-the-road
+  jlpt: N5
+  scenario: town
+  japanese: 道を渡ってください。
+  reading: みちをわたってください。
+  romaji: michi o watatte kudasai.
+  english: Please cross the road.

@@ -3,9 +3,9 @@
  "generated": "2026-08-17",
  "summary": {
   "reference": 809,
-  "taught": 387,
-  "covered": 372,
-  "missing": 437
+  "taught": 409,
+  "covered": 396,
+  "missing": 413
  },
  "missing": [
   {
@@ -42,16 +42,6 @@
    "written": "朝御飯",
    "reading": "あさごはん",
    "english": "breakfast",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "あちら",
-   "reading": "あちら",
-   "english": "this way (polite)",
    "sources": [
     "tanos",
     "open-anki"
@@ -109,16 +99,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "池",
-   "reading": "いけ",
-   "english": "pond",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "医者",
    "reading": "いしゃ",
    "english": "doctor; physician",
@@ -132,16 +112,6 @@
    "written": "一日",
    "reading": "いちにち",
    "english": "one day (duration)",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "一緒",
-   "reading": "いっしょ",
-   "english": "together",
    "sources": [
     "tanos",
     "open-anki"
@@ -179,16 +149,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "上",
-   "reading": "うえ",
-   "english": "above (up, top, etc.), over, on top of",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "薄い",
    "reading": "うすい",
    "english": "thin, weak",
@@ -212,16 +172,6 @@
    "written": "生まれる",
    "reading": "うまれる",
    "english": "to be born",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "海",
-   "reading": "うみ",
-   "english": "sea, beach",
    "sources": [
     "tanos",
     "open-anki"
@@ -459,16 +409,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "買い物",
-   "reading": "かいもの",
-   "english": "shopping",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "かかる",
    "reading": "かかる",
    "english": "it takes (amount of time, money) (v.i.)",
@@ -592,16 +532,6 @@
    "written": "漢字",
    "reading": "かんじ",
    "english": "kanji; Chinese character",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "木",
-   "reading": "き",
-   "english": "tree, wood, timber",
    "sources": [
     "tanos",
     "open-anki"
@@ -1039,16 +969,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "下",
-   "reading": "した",
-   "english": "under, below, beneath",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "七",
    "reading": "しち",
    "english": "seven",
@@ -1319,29 +1239,9 @@
    "jmdictCommon": true
   },
   {
-   "written": "そちら",
-   "reading": "そちら",
-   "english": "over there",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "そっち",
    "reading": "そっち",
    "english": "over there",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "外",
-   "reading": "そと",
-   "english": "outside, exterior",
    "sources": [
     "tanos",
     "open-anki"
@@ -1439,16 +1339,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "建物",
-   "reading": "たてもの",
-   "english": "building",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "楽しい",
    "reading": "たのしい",
    "english": "enjoyable, fun",
@@ -1482,16 +1372,6 @@
    "written": "小さな",
    "reading": "ちいさな",
    "english": "small, little",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "近い",
-   "reading": "ちかい",
-   "english": "near, close by, short",
    "sources": [
     "tanos",
     "open-anki"
@@ -1699,16 +1579,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "遠い",
-   "reading": "とおい",
-   "english": "far (away), distant",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "時計",
    "reading": "とけい",
    "english": "a watch; a clock",
@@ -1732,16 +1602,6 @@
    "written": "年",
    "reading": "とし",
    "english": "year, age",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "どちら",
-   "reading": "どちら",
-   "english": "which (one) (way); where (polite)",
    "sources": [
     "tanos",
     "open-anki"
@@ -1792,16 +1652,6 @@
    "written": "ナイフ",
    "reading": "ないふ",
    "english": "knife",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "中",
-   "reading": "なか",
-   "english": "inside, middle, among",
    "sources": [
     "tanos",
     "open-anki"
@@ -1939,16 +1789,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "登る",
-   "reading": "のぼる",
-   "english": "to climb",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "飲み物",
    "reading": "のみもの",
    "english": "drink, beverage",
@@ -2052,26 +1892,6 @@
    "written": "二十歳",
    "reading": "はたち",
    "english": "20 years old",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "花",
-   "reading": "はな",
-   "english": "flower",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "鼻",
-   "reading": "はな",
-   "english": "nose",
    "sources": [
     "tanos",
     "open-anki"
@@ -2679,16 +2499,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "山",
-   "reading": "やま",
-   "english": "mountain",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "やる",
    "reading": "やる",
    "english": "to do; to give (to pets, parents, siblings, etc.)",
@@ -2809,16 +2619,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "旅行",
-   "reading": "りょこう",
-   "english": "travel, trip",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "零",
    "reading": "れい",
    "english": "zero, nought",
@@ -2882,16 +2682,6 @@
    "written": "渡す",
    "reading": "わたす",
    "english": "to hand (something) over (v.t.); to get across",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "渡る",
-   "reading": "わたる",
-   "english": "to cross over, to go across",
    "sources": [
     "tanos",
     "open-anki"
@@ -3186,33 +2976,6 @@
    "written": "～がる",
    "reading": "がる",
    "english": "feel",
-   "sources": [
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "川",
-   "reading": "かわ",
-   "english": "",
-   "sources": [
-    "tanos"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "河",
-   "reading": "かわ",
-   "english": "",
-   "sources": [
-    "tanos"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "川; 河",
-   "reading": "かわ",
-   "english": "river",
    "sources": [
     "open-anki"
    ],
@@ -4237,6 +4000,11 @@
   }
  ],
  "inAppNotInReference": [
+  {
+   "id": "vocab.aida",
+   "japanese": "間",
+   "reading": "あいだ"
+  },
   {
    "id": "vocab.watashitachi",
    "japanese": "私たち",

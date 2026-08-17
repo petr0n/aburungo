@@ -8,12 +8,12 @@ fails if this file is out of date. Book One is N5 internally; a learner never re
 
 | | |
 |---|---|
-| Chapters | 8 |
-| Lessons | 76 (67 teaching, 9 checkpoints) |
-| Words | 387 |
-| Phrases | 162 |
+| Chapters | 9 |
+| Lessons | 81 (71 teaching, 10 checkpoints) |
+| Words | 409 |
+| Phrases | 173 |
 | Grammar patterns | 34 |
-| Kanji introduced | 135 |
+| Kanji introduced | 153 |
 
 ---
 
@@ -1360,11 +1360,96 @@ fails if this file is out of date. Book One is N5 internally; a learner never re
 
 ---
 
+## Chapter 9 — Around town
+
+*Around town*
+
+4 lessons · 22 words · 11 phrases
+
+### 76. On, under, in, out
+
+**Lesson 1 of 4** · Around town
+**Can do:** Say where something is
+**New kanji:** 上 下 中 外 間
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 上 | うえ | on, above |
+| 下 | した | under, below |
+| 中 | なか | inside, in |
+| 外 | そと | outside |
+| 間 | あいだ | between |
+
+- 本はかばんの中にあります。 — The book is in the bag.
+- 店の外にいます。 — I'm outside the shop.
+- 駅と学校の間にあります。 — It's between the station and the school.
+
+### 77. Near, far, and which way
+
+**Lesson 2 of 4** · Around town
+**Can do:** Ask which way something is and how far
+**New kanji:** 近 遠
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 近い | ちかい | near, close |
+| 遠い | とおい | far |
+| そちら | そちら | that way, that one (polite) |
+| あちら | あちら | that way over there (polite) |
+| どちら | どちら | which way, which one (polite) |
+
+- 駅は近いです。 — The station is near.
+- どちらですか。 — Which way is it?
+
+### 78. Out of town
+
+**Lesson 3 of 4** · Around town
+**Can do:** Talk about the sea, mountains and countryside
+**New kanji:** 海 山 川 池 木 花
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 海 | うみ | sea, ocean |
+| 山 | やま | mountain |
+| 川 | かわ | river |
+| 池 | いけ | pond |
+| 木 | き | tree, wood |
+| 花 | はな | flower |
+
+- 海が好きです。 — I like the sea.
+- 公園に木があります。 — There is a tree in the park.
+- 花はきれいです。 — The flowers are beautiful.
+
+### 79. Going somewhere
+
+**Lesson 4 of 4** · Around town
+**Can do:** Say you are going out and who with
+**New kanji:** 建 物 買 旅 登 渡
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 建物 | たてもの | building |
+| 買い物 | かいもの | shopping |
+| 旅行 | りょこう | trip, travel |
+| 一緒 | いっしょ | together |
+| 登る | のぼる | to climb |
+| 渡る | わたる | to cross |
+
+- 一緒に行きます。 — I'll go with you.
+- 山に登ります。 — I climb the mountain.
+- 道を渡ってください。 — Please cross the road.
+
+### 80. Recognition checkpoint — closes the chapter
+
+> A wide pass over everything the book has taught, this chapter included. Pick each word out of a line-up; anything you miss comes back sooner. It finishes when the remaining set empties — retry as often as you like, nothing is recorded.
+
+---
+
 ## Closing the book
 
 Belongs to no chapter — reviews every situation in the book rather than one chapter's worth.
 
-### 76. Production checkpoint
+### 81. Production checkpoint
 
 > No new material. Everything so far has asked you to recognise Japanese; this asks you to produce it. You will see an English meaning and write the Japanese, drawn from across every situation you have worked through. Kana or romaji both count — this is about recall, not spelling. Anything you do not get comes straight back, and the checkpoint ends when there is nothing left to write. There is no score and nothing is recorded; whatever you miss simply returns to your review queue sooner.
 
@@ -1373,7 +1458,7 @@ Belongs to no chapter — reviews every situation in the book rather than one ch
 ## Shelved — not on the ladder
 
 Built and tested, switched off behind `VITE_HANA_ENABLED` (DR-023). Filtered out of the
-ladder entirely, so the orders above run 1–76 with no gap.
+ladder entirely, so the orders above run 1–81 with no gap.
 
 - Cross-situation conversation — Conversation with Hana
 - Can-do checkpoint — Can-do review

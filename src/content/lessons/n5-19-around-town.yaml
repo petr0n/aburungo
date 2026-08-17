@@ -1,0 +1,132 @@
+# Chapter 9 — Around town (DR-030).
+#
+# The position words are why this chapter exists. 前, 後ろ and 隣 arrived with
+# the directions lessons and 上, 下, 中, 外 and 間 never did, so the learner could
+# say "in front of the station" but not "inside" it. Half a system, missing the
+# more useful half.
+#
+# The こそあど set finishes here too. これ/それ/あれ/どれ came in Lesson 1,
+# この/その/あの/どの in Chapter 7, and そちら/あちら/どちら complete it beside
+# こちら. Chapter 8 deferred them for belonging with pointing rather than
+# describing; this is the chapter where pointing happens.
+#
+#   1  above, below, inside, outside   the frame 〜の上に〜があります, four times
+#   2  near and far                    近い/遠い, and the こそあど set closed
+#   3  out of town                     海, 山, 川, 池, 木, 花
+#   4  going somewhere                 買い物, 旅行, 一緒に, 登る, 渡る
+#
+# Public buildings are absent on purpose: 駅, 学校, 病院, 銀行, 郵便局, 図書館
+# and 公園 were all taught long ago. Checking first is what stopped this from
+# repeating a lesson the ladder already had -- the same check that shrank
+# Chapter 8 from "adjectives" to the body and the pairs.
+#
+# content-source: n/a for this file -- it references vocabulary/around-town.yaml
+#   and phrases/around-town.yaml, whose own provenance markers apply.
+
+- id: n5.town-position
+  order: 76
+  chapterId: n5.chapter-9
+  situation: Around town
+  title: On, under, in, out
+  canDo: Say where something is
+  wordIds:
+    - vocab.ue
+    - vocab.shita
+    - vocab.naka
+    - vocab.soto
+    - vocab.aida
+  phraseIds:
+    - town.in-the-bag
+    - town.outside-the-shop
+    - town.between-the-station-and-the-school
+  kanji:
+    - 上
+    - 下
+    - 中
+    - 外
+    - 間
+  grammarNote: "English uses prepositions — on, under, in. Japanese uses nouns, and that changes the shape of the sentence. かばんの中 is literally \"the bag's inside\", so the position word comes *after* the thing, joined by の, and then に marks it as a location: 本はかばんの中にあります. Once you have that frame, all five of these words drop into the same slot, and so do 前, 後ろ and 隣, which you already know. 間 needs two things, joined by と: 駅と学校の間."
+
+- id: n5.town-near-far
+  order: 77
+  chapterId: n5.chapter-9
+  situation: Around town
+  title: Near, far, and which way
+  canDo: Ask which way something is and how far
+  wordIds:
+    - vocab.chikai
+    - vocab.tooi
+    - vocab.sochira
+    - vocab.achira
+    - vocab.dochira
+  phraseIds:
+    - town.the-station-is-near
+    - town.which-way-is-it
+  kanji:
+    - 近
+    - 遠
+  grammarNote: "近い and 遠い are an ordinary pair of い-adjectives. Note that you already know 近く, which is the noun — \"the vicinity\" — so 駅の近く is \"near the station\" and 駅は近いです is \"the station is near\". This lesson also closes a set you have been collecting since Lesson 1: これ, この and now こちら each have そ, あ and ど partners. こちら/そちら/あちら/どちら are the polite ones, and they mean a direction as well as a thing. どちらですか is how you ask which way — and, of a person, where they are from."
+
+- id: n5.town-nature
+  order: 78
+  chapterId: n5.chapter-9
+  situation: Around town
+  title: Out of town
+  canDo: Talk about the sea, mountains and countryside
+  wordIds:
+    - vocab.umi
+    - vocab.yama
+    - vocab.kawa
+    - vocab.ike
+    - vocab.ki
+    - vocab.hana
+  phraseIds:
+    - town.i-like-the-sea
+    - town.there-is-a-tree-in-the-park
+    - town.the-flowers-are-beautiful
+  kanji:
+    - 海
+    - 山
+    - 川
+    - 池
+    - 木
+    - 花
+  grammarNote: "Six of the most-used kanji in the language, and several are pictures of what they mean — 川 is a river seen from above, 木 a tree with branches and roots. 木 covers the living tree and the material, the way English \"wood\" nearly does. One to listen for: 花 (flower) and 鼻 (nose) are both はな, distinguished in writing and in speech only by what is being talked about."
+
+- id: n5.town-going
+  order: 79
+  chapterId: n5.chapter-9
+  situation: Around town
+  title: Going somewhere
+  canDo: Say you are going out and who with
+  wordIds:
+    - vocab.tatemono
+    - vocab.kaimono
+    - vocab.ryokou
+    - vocab.issho
+    - vocab.noboru
+    - vocab.wataru
+  phraseIds:
+    - town.lets-go-together
+    - town.i-climb-the-mountain
+    - town.please-cross-the-road
+  kanji:
+    - 建
+    - 物
+    - 買
+    - 旅
+    - 登
+    - 渡
+  grammarNote: "買い物 and 旅行 are nouns that become verbs with する: 買い物をします, 旅行をします. 買い物 is built from 買う, which you have had since the shopping lessons — Japanese does this constantly, and spotting the verb inside a noun is a good habit. 一緒に is how you say \"together\", almost always with the に. 渡る is worth a second look: it is intransitive, yet it takes を — 道を渡ります. The を here marks the route travelled rather than something acted on, and it does the same for 歩く and 走る."
+
+- id: n5.checkpoint-9
+  order: 80
+  chapterId: n5.chapter-9
+  situation: Integration & checkpoint
+  title: Chapter 9 checkpoint
+  canDo: Recognise everything taught so far
+  wordIds: []
+  phraseIds: []
+  kanji: []
+  checkpoint: recognition
+  grammarNote: "A wide pass over everything the book has taught, this chapter included. Pick each word out of a line-up; anything you miss comes back sooner. It finishes when the remaining set empties — retry as often as you like, nothing is recorded."

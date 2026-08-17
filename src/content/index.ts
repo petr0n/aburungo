@@ -27,6 +27,7 @@ import homeWorkPhrasesRaw from "./phrases/home-work.yaml";
 import teFormPhrasesRaw from "./phrases/te-form.yaml";
 import countingPhrasesRaw from "./phrases/counting.yaml";
 import describingPhrasesRaw from "./phrases/describing.yaml";
+import aroundTownPhrasesRaw from "./phrases/around-town.yaml";
 
 export const allPhrases: Phrase[] = [
   ...parsePhrases(transitRaw, "phrases/transit.yaml"),
@@ -45,6 +46,7 @@ export const allPhrases: Phrase[] = [
   ...parsePhrases(teFormPhrasesRaw, "phrases/te-form.yaml"),
   ...parsePhrases(countingPhrasesRaw, "phrases/counting.yaml"),
   ...parsePhrases(describingPhrasesRaw, "phrases/describing.yaml"),
+  ...parsePhrases(aroundTownPhrasesRaw, "phrases/around-town.yaml"),
 ];
 
 /** Lookup helper. O(n), fine for hundreds; reach for a Map if it grows large. */
