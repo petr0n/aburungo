@@ -1,0 +1,120 @@
+# Chapter 7 phrases — choosing and counting (DR-028).
+#
+# 子供は何人いますか is the sentence phrases/family.yaml had to leave out. The
+# note there records why: 何人 was taught nowhere, and smuggling it into the
+# family lesson would have used vocabulary from a chapter the learner had not
+# reached. It lives here instead, in the lesson that teaches the counter.
+#
+# Everything else uses ～ください and ～です, both long established, so the only
+# new element in each sentence is the counter, colour or demonstrative itself.
+#
+# content-source: training — N5 canonical, pending Tatoeba verification.
+#   JMdict cannot verify composed sentences (only fixed expressions are
+#   headwords), so sentence checks need Tatoeba, not JMdict.
+# jlpt-source: training — JLPT level unverified
+
+# ── Six to ten ────────────────────────────────────────────────────────────────
+
+- id: count.eight-please
+  jlpt: N5
+  scenario: counting
+  japanese: 八つください。
+  reading: やっつください。
+  romaji: yattsu kudasai.
+  english: Eight, please.
+
+- id: count.there-are-six
+  jlpt: N5
+  scenario: counting
+  japanese: 六つあります。
+  reading: むっつあります。
+  romaji: muttsu arimasu.
+  english: There are six.
+
+# ── People ────────────────────────────────────────────────────────────────────
+
+- id: count.how-many-children
+  jlpt: N5
+  scenario: counting
+  japanese: 子供は何人いますか。
+  reading: こどもはなんにんいますか。
+  romaji: kodomo wa nannin imasu ka.
+  english: How many children do you have?
+
+- id: count.there-are-two-people
+  jlpt: N5
+  scenario: counting
+  japanese: 二人います。
+  reading: ふたりいます。
+  romaji: futari imasu.
+  english: There are two of them.
+
+# ── Things ────────────────────────────────────────────────────────────────────
+
+- id: count.two-flat-please
+  jlpt: N5
+  scenario: counting
+  japanese: 二枚ください。
+  reading: にまいください。
+  romaji: nimai kudasai.
+  english: Two, please.
+
+- id: count.there-is-one-car
+  jlpt: N5
+  scenario: counting
+  japanese: 一台あります。
+  reading: いちだいあります。
+  romaji: ichidai arimasu.
+  english: There is one.
+
+# ── Colours ───────────────────────────────────────────────────────────────────
+
+- id: count.i-like-green
+  jlpt: N5
+  scenario: counting
+  japanese: 緑が好きです。
+  reading: みどりがすきです。
+  romaji: midori ga suki desu.
+  english: I like green.
+
+- id: count.its-brown
+  jlpt: N5
+  scenario: counting
+  japanese: 茶色です。
+  reading: ちゃいろです。
+  romaji: chairo desu.
+  english: It's brown.
+
+- id: count.this-book-is-blue
+  jlpt: N5
+  scenario: counting
+  japanese: この本は青いです。
+  reading: このほんはあおいです。
+  romaji: kono hon wa aoi desu.
+  english: This book is blue.
+
+# ── Pointing ──────────────────────────────────────────────────────────────────
+
+- id: count.this-book-please
+  jlpt: N5
+  scenario: counting
+  japanese: この本をください。
+  reading: このほんをください。
+  romaji: kono hon o kudasai.
+  english: This book, please.
+
+- id: count.that-person-is-a-teacher
+  jlpt: N5
+  scenario: counting
+  japanese: あの人は先生です。
+  reading: あのひとはせんせいです。
+  romaji: ano hito wa sensei desu.
+  english: That person is a teacher.
+
+- id: count.which-book
+  jlpt: N5
+  scenario: counting
+  japanese: どの本ですか。
+  reading: どのほんですか。
+  romaji: dono hon desu ka.
+  english: Which book is it?

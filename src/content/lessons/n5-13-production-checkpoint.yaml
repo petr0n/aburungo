@@ -1,4 +1,8 @@
-# N5 daily-loop lessons — the production checkpoint (Lesson 44).
+# N5 daily-loop lessons — the production checkpoint, which closes the book.
+#
+# Deliberately no lesson number in this file: it sat at 44, then 49, then 58,
+# then 64, then 70, and the comment was wrong after each one. It is the last
+# lesson on the shipped ladder; that is the fact worth writing down.
 #
 # The gate that closes the level (DR-023). Every checkpoint before this one is a
 # recognition checkpoint, and that can be cleared by recognition alone — picking the right
@@ -6,7 +10,7 @@
 # English, which is the skill the ladder is actually for.
 #
 # It sits after the last recognition checkpoint so the level escalates rather than repeats:
-# recognise everything (lesson 43), then produce it (lesson 44).
+# recognise everything at the last recognition checkpoint, then produce it here.
 #
 # This lesson is always present. The two Hana lessons that follow it are gated
 # behind `hanaEnabled` and drop out of the ladder when it is off, so with the
@@ -18,7 +22,7 @@
 # content-source: n/a — introduces no content, only re-presents taught items
 
 - id: n5.checkpoint-production
-  order: 64
+  order: 70
   situation: Integration & checkpoint
   title: Write it from memory
   canDo: Produce the vocabulary and phrases from every situation, unprompted

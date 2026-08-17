@@ -8,12 +8,12 @@ fails if this file is out of date. Book One is N5 internally; a learner never re
 
 | | |
 |---|---|
-| Chapters | 6 |
-| Lessons | 64 (57 teaching, 7 checkpoints) |
-| Words | 347 |
-| Phrases | 139 |
+| Chapters | 7 |
+| Lessons | 70 (62 teaching, 8 checkpoints) |
+| Words | 366 |
+| Phrases | 151 |
 | Grammar patterns | 34 |
-| Kanji introduced | 105 |
+| Kanji introduced | 116 |
 
 ---
 
@@ -1174,11 +1174,103 @@ fails if this file is out of date. Book One is N5 internally; a learner never re
 
 ---
 
+## Chapter 7 — Choosing and counting
+
+*Choosing and counting*
+
+5 lessons · 19 words · 12 phrases
+
+### 64. Six to ten
+
+**Lesson 1 of 5** · Choosing and counting
+**Can do:** Count up to ten of anything
+**New kanji:** 六 七 八 九
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 六つ | むっつ | six (things) |
+| 七つ | ななつ | seven (things) |
+| 八つ | やっつ | eight (things) |
+| 九つ | ここのつ | nine (things) |
+| 十 | とお | ten (things) |
+
+- 八つください。 — Eight, please.
+- 六つあります。 — There are six.
+
+### 65. Counting people
+
+**Lesson 2 of 5** · Choosing and counting
+**Can do:** Ask and say how many people there are
+**New kanji:** 人
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 一人 | ひとり | one person, alone |
+| 二人 | ふたり | two people |
+| 何人 | なんにん | how many people |
+
+- 子供は何人いますか。 — How many children do you have?
+- 二人います。 — There are two of them.
+
+### 66. Flat things and machines
+
+**Lesson 3 of 5** · Choosing and counting
+**Can do:** Count objects with the right counter
+**New kanji:** 枚 台
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 枚 | まい | counter for flat things |
+| 台 | だい | counter for machines and vehicles |
+
+- 二枚ください。 — Two, please.
+- 一台あります。 — There is one.
+
+### 67. More colours
+
+**Lesson 4 of 5** · Choosing and counting
+**Can do:** Say what colour something is
+**New kanji:** 青 黄 茶 緑
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 青い | あおい | blue |
+| 黄色い | きいろい | yellow |
+| 茶色 | ちゃいろ | brown |
+| 緑 | みどり | green |
+
+- 緑が好きです。 — I like green.
+- 茶色です。 — It's brown.
+- この本は青いです。 — This book is blue.
+
+### 68. This one, that one
+
+**Lesson 5 of 5** · Choosing and counting
+**Can do:** Point at the thing you mean
+
+| Word | Reading | Meaning |
+|---|---|---|
+| この | この | this (+ noun) |
+| その | その | that (+ noun) |
+| あの | あの | that over there (+ noun) |
+| どの | どの | which (+ noun) |
+| こちら | こちら | this way, this one (polite) |
+
+- この本をください。 — This book, please.
+- あの人は先生です。 — That person is a teacher.
+- どの本ですか。 — Which book is it?
+
+### 69. Recognition checkpoint — closes the chapter
+
+> A wide pass over everything the book has taught, this chapter included. Pick each word out of a line-up; anything you miss comes back sooner. It finishes when the remaining set empties — retry as often as you like, nothing is recorded.
+
+---
+
 ## Closing the book
 
 Belongs to no chapter — reviews every situation in the book rather than one chapter's worth.
 
-### 64. Production checkpoint
+### 70. Production checkpoint
 
 > No new material. Everything so far has asked you to recognise Japanese; this asks you to produce it. You will see an English meaning and write the Japanese, drawn from across every situation you have worked through. Kana or romaji both count — this is about recall, not spelling. Anything you do not get comes straight back, and the checkpoint ends when there is nothing left to write. There is no score and nothing is recorded; whatever you miss simply returns to your review queue sooner.
 
@@ -1187,7 +1279,7 @@ Belongs to no chapter — reviews every situation in the book rather than one ch
 ## Shelved — not on the ladder
 
 Built and tested, switched off behind `VITE_HANA_ENABLED` (DR-023). Filtered out of the
-ladder entirely, so the orders above run 1–64 with no gap.
+ladder entirely, so the orders above run 1–70 with no gap.
 
 - Cross-situation conversation — Conversation with Hana
 - Can-do checkpoint — Can-do review

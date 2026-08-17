@@ -2,8 +2,9 @@
 # Integration & checkpoint block (Units 33-35), the final slice of the 35-lesson
 # ladder. See docs/plans/02b-n5-lessons.md for the full map. Units 34-35 are
 # deliberately review-only / no-new-content per the plan doc: the app doesn't
-# yet build the special multi-turn "no safety net" session (Lesson 34) or the
-# two-agent verification checkpoint UX (Lesson 35), so both degrade gracefully
+# yet build the special multi-turn "no safety net" session or the two-agent
+# verification checkpoint UX -- both belong to the shelved Hana work -- so both
+# degrade gracefully
 # to an empty wordIds/phraseIds lesson intro rather than inventing new content
 # or a UI that doesn't exist yet.
 # content-source: training — N5 canonical, pending Tatoeba verification.
