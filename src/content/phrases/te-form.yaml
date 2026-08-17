@@ -1,0 +1,141 @@
+# Chapter 6 phrases — the te-form (DR-027).
+#
+# Almost every sentence here is 〜てください, because that is what makes the form
+# worth learning on the day you learn it: the ladder already carries ten
+# memorised 〜てください phrases (右に曲がってください, ゆっくり話してください,
+# タオルを持ってきてください) that no lesson ever explained. These sentences are
+# the same shape, built deliberately, so the old ones stop being lumps of sound.
+#
+# One sentence per conjugation group, using a verb from that group, so the
+# grammar pattern attached to each lesson has a real example to blank out.
+#
+# The last three use 〜ています, which finally lets the ladder say things it has
+# been unable to say: 知っています rather than the odd 知ります, and a natural
+# answer to "what are you doing".
+#
+# content-source: training — N5 canonical, pending Tatoeba verification.
+#   JMdict cannot verify composed sentences (only fixed expressions are
+#   headwords), so sentence checks need Tatoeba, not JMdict.
+# jlpt-source: training — JLPT level unverified
+
+# ── Ichidan and the irregulars ────────────────────────────────────────────────
+
+- id: te.please-look
+  jlpt: N5
+  scenario: actions
+  japanese: 見てください。
+  reading: みてください。
+  romaji: mite kudasai.
+  english: Please look.
+
+- id: te.please-open-the-window
+  jlpt: N5
+  scenario: actions
+  japanese: 窓を開けてください。
+  reading: まどをあけてください。
+  romaji: mado o akete kudasai.
+  english: Please open the window.
+
+- id: te.may-i-borrow
+  jlpt: N5
+  scenario: actions
+  japanese: 借りてもいいですか。
+  reading: かりてもいいですか。
+  romaji: karite mo ii desu ka.
+  english: May I borrow it?
+
+# ── く and ぐ ─────────────────────────────────────────────────────────────────
+
+- id: te.please-walk-slowly
+  jlpt: N5
+  scenario: actions
+  japanese: ゆっくり歩いてください。
+  reading: ゆっくりあるいてください。
+  romaji: yukkuri aruite kudasai.
+  english: Please walk slowly.
+
+- id: te.please-hurry
+  jlpt: N5
+  scenario: actions
+  japanese: 急いでください。
+  reading: いそいでください。
+  romaji: isoide kudasai.
+  english: Please hurry.
+
+# ── う, つ and る ─────────────────────────────────────────────────────────────
+
+- id: te.please-wait
+  jlpt: N5
+  scenario: actions
+  japanese: 待ってください。
+  reading: まってください。
+  romaji: matte kudasai.
+  english: Please wait.
+
+- id: te.please-wash-your-hands
+  jlpt: N5
+  scenario: actions
+  japanese: 手を洗ってください。
+  reading: てをあらってください。
+  romaji: te o aratte kudasai.
+  english: Please wash your hands.
+
+- id: te.please-sit-here
+  jlpt: N5
+  scenario: actions
+  japanese: ここに座ってください。
+  reading: ここにすわってください。
+  romaji: koko ni suwatte kudasai.
+  english: Please sit here.
+
+# ── む, ぬ, ぶ and す ─────────────────────────────────────────────────────────
+
+- id: te.please-call
+  jlpt: N5
+  scenario: actions
+  japanese: 呼んでください。
+  reading: よんでください。
+  romaji: yonde kudasai.
+  english: Please call someone.
+
+- id: te.please-lend-it-to-me
+  jlpt: N5
+  scenario: actions
+  japanese: 貸してください。
+  reading: かしてください。
+  romaji: kashite kudasai.
+  english: Please lend it to me.
+
+- id: te.please-turn-off-the-light
+  jlpt: N5
+  scenario: actions
+  japanese: 電気を消してください。
+  reading: でんきをけしてください。
+  romaji: denki o keshite kudasai.
+  english: Please turn off the light.
+
+# ── ています ──────────────────────────────────────────────────────────────────
+
+- id: te.i-work-at-a-company
+  jlpt: N5
+  scenario: actions
+  japanese: 会社で働いています。
+  reading: かいしゃではたらいています。
+  romaji: kaisha de hataraite imasu.
+  english: I work at a company.
+
+- id: te.i-know
+  jlpt: N5
+  scenario: actions
+  japanese: 知っています。
+  reading: しっています。
+  romaji: shitte imasu.
+  english: I know.
+
+- id: te.what-are-you-doing
+  jlpt: N5
+  scenario: actions
+  japanese: 何をしていますか。
+  reading: なにをしていますか。
+  romaji: nani o shite imasu ka.
+  english: What are you doing?

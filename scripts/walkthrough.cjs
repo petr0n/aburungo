@@ -9,7 +9,13 @@ const BASE = process.env.BASE || "http://localhost:5173";
 const WAIT_SHORT = 500; // generous, per task-6 brief guidance re: timing stalls
 const CLICK_TIMEOUT = 10000;
 const CLICK_TIMEOUT_RETRY = 20000;
-const MAX_SESSIONS = process.env.MAX_SESSIONS ? parseInt(process.env.MAX_SESSIONS, 10) : 60; // 44 units (46 with Hana enabled) + buffer
+// A stop so a genuine stall cannot loop forever -- not a statement about how
+// long the ladder is. It was 60 with a comment reading "44 units", and Chapter 6
+// took the ladder to 64: the run then ended at session 60 having passed every
+// lesson it saw, reporting ladderEndReached=false with nothing actually broken.
+// Keep it comfortably above the lesson count; per-step guards catch real stalls,
+// so a generous cap costs nothing.
+const MAX_SESSIONS = process.env.MAX_SESSIONS ? parseInt(process.env.MAX_SESSIONS, 10) : 200;
 
 let currentPage = null;
 

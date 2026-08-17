@@ -1,0 +1,146 @@
+# Chapter 6 — Asking someone to do something (Lessons 58-63, DR-027).
+#
+# The first chapter organised around a rule rather than a place, and the reason
+# is retroactive: the ladder already carries ten 〜てください phrases -- 右に
+# 曲がってください, ゆっくり話してください, タオルを持ってきてください -- and four
+# grammar patterns built on the te-form, none of which ever explained how the
+# form is made. A learner has met it ten times as a lump of sound and cannot
+# turn 洗う into 洗ってください on their own. This chapter is that debt paid.
+#
+# It is still given a situation, "Asking someone to do something", because
+# 〜てください is what the form buys you on day one. Each lesson takes one row of
+# the conjugation table and brings new verbs that sit in it, so the rule is
+# practised on fresh material rather than only on half-remembered verbs.
+#
+#   1  ichidan + irregulars     drop る, add て
+#   2  く / ぐ                  いて / いで, and 行く as the one exception
+#   3  う / つ / る             って -- the largest group, so its own lesson
+#   4  む / ぬ / ぶ / す        んで and して
+#   5  ～ています               the payoff: 知っています, and a natural "what are you doing"
+#
+# Lesson 5 depends on all four form lessons, so this chapter must not be split
+# by a checkpoint -- the same constraint as the humble/honorific family pair.
+#
+# content-source: n/a for this file -- it references vocabulary/te-form.yaml and
+#   phrases/te-form.yaml, whose own provenance markers apply.
+
+- id: n5.te-ichidan
+  order: 58
+  chapterId: n5.chapter-6
+  situation: Asking someone to do something
+  title: Asking, the easy half
+  canDo: Ask someone to do something
+  wordIds:
+    - vocab.kariru
+    - vocab.wasureru
+    - vocab.kieru
+  phraseIds:
+    - te.please-look
+    - te.please-open-the-window
+    - te.may-i-borrow
+  kanji:
+    - 借
+    - 忘
+  patternId: grammar.n5-te-ichidan
+  grammarNote: "You already say 右に曲がってください and ゆっくり話してください. Those are not fixed phrases — they are ordinary verbs in a form called the te-form, and once you can build it you can ask for anything. Start with the easy half: an ichidan verb drops る and adds て. 見る becomes 見て, 開ける becomes 開けて, 借りる becomes 借りて. Add ください and it is a request. The two irregulars come free: する becomes して and 来る becomes 来て. Godan verbs are the fiddly half, and they take the next three lessons."
+
+- id: n5.te-ku
+  order: 59
+  chapterId: n5.chapter-6
+  situation: Asking someone to do something
+  title: Verbs ending in ku and gu
+  canDo: Ask someone to hurry or slow down
+  wordIds:
+    - vocab.oyogu
+    - vocab.isogu
+    - vocab.saku
+  phraseIds:
+    - te.please-walk-slowly
+    - te.please-hurry
+  kanji:
+    - 泳
+    - 急
+    - 咲
+  patternId: grammar.n5-te-ku
+  grammarNote: "Godan verbs change according to their last sound, and く is the first group: く becomes いて. 書く → 書いて, 聞く → 聞いて, 歩く → 歩いて. If the verb ends in ぐ the ending voices to match: 泳ぐ → 泳いで, 急ぐ → 急いで. There is exactly one exception in the entire language and it is a verb you use constantly: 行く becomes 行って, not 行いて. Learn it as the exception now and it will never trip you."
+
+- id: n5.te-tte
+  order: 60
+  chapterId: n5.chapter-6
+  situation: Asking someone to do something
+  title: The big group
+  canDo: Ask someone to wait, sit or hold something
+  wordIds:
+    - vocab.utau
+    - vocab.matsu
+    - vocab.motsu
+    - vocab.uru
+    - vocab.toru
+    - vocab.hashiru
+  phraseIds:
+    - te.please-wait
+    - te.please-wash-your-hands
+    - te.please-sit-here
+  kanji:
+    - 歌
+    - 待
+    - 持
+    - 売
+    - 取
+    - 走
+  patternId: grammar.n5-te-tte
+  grammarNote: "Three endings collapse into one: う, つ and る all become って. 洗う → 洗って, 待つ → 待って, 座る → 座って. This is the largest group by far, so it gets a lesson to itself. One trap: a verb ending in る is not automatically ichidan. 走る and 帰る end in る and are godan, so they take って — 走って, 帰って — not 走て. The reading tells you: ichidan verbs almost always have an え or い sound before the る."
+
+- id: n5.te-nde
+  order: 61
+  chapterId: n5.chapter-6
+  situation: Asking someone to do something
+  title: Verbs ending in mu, nu, bu and su
+  canDo: Ask to borrow or be lent something
+  wordIds:
+    - vocab.asobu
+    - vocab.yobu
+    - vocab.tobu
+    - vocab.shinu
+    - vocab.kasu
+    - vocab.kaesu
+  phraseIds:
+    - te.please-call
+    - te.please-lend-it-to-me
+    - te.please-turn-off-the-light
+  kanji:
+    - 遊
+    - 呼
+    - 飛
+    - 死
+    - 貸
+    - 返
+  patternId: grammar.n5-te-nde
+  grammarNote: "The last two groups. む, ぬ and ぶ all become んで: 飲む → 飲んで, 呼ぶ → 呼んで, 死ぬ → 死んで. That ぬ row has exactly one member, because 死ぬ is the only verb in Japanese that ends in ぬ. Then す becomes して: 話す → 話して, 貸す → 貸して, 消す → 消して. That completes the table — every verb you meet from here fits one of these rows, and you can now build 〜てもいいですか for yourself as well as 〜てください."
+
+- id: n5.te-imasu
+  order: 62
+  chapterId: n5.chapter-6
+  situation: Asking someone to do something
+  title: What you are doing now
+  canDo: Say what you are doing and where you live
+  wordIds: []
+  phraseIds:
+    - te.i-work-at-a-company
+    - te.i-know
+    - te.what-are-you-doing
+  kanji: []
+  patternId: grammar.n5-te-imasu
+  grammarNote: "The te-form's other big job. Add います and you get what is happening now, or what is true as a rule: 何をしていますか — what are you doing? Some verbs live almost entirely in this form. 知る is one: 知っています is how you say you know something, and the plain 知ります is not what people say — though 知りません, for not knowing, is. 住む is another: 東京に住んでいます, not 住みます. This lesson teaches no new words on purpose. Everything in it is a verb you already have, finally said the way it is actually said."
+
+- id: n5.checkpoint-6
+  order: 63
+  chapterId: n5.chapter-6
+  situation: Integration & checkpoint
+  title: Chapter 6 checkpoint
+  canDo: Recognise everything taught so far
+  wordIds: []
+  phraseIds: []
+  kanji: []
+  checkpoint: recognition
+  grammarNote: "A wide pass over everything the book has taught, this chapter included. Pick each word out of a line-up; anything you miss comes back sooner. It finishes when the remaining set empties — retry as often as you like, nothing is recorded."
