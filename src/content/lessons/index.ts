@@ -31,6 +31,7 @@ import n5FinalCheckpointRaw from "./n5-12-final-checkpoint.yaml";
 import n5ProductionCheckpointRaw from "./n5-13-production-checkpoint.yaml";
 import n5FamilyRaw from "./n5-14-family.yaml";
 import n5HomeWorkRaw from "./n5-15-home-work.yaml";
+import n5TeFormRaw from "./n5-16-te-form.yaml";
 
 const knownWordIds = new Set(allWords.map((w) => w.id));
 const knownPhraseIds = new Set(allPhrases.map((p) => p.id));
@@ -56,6 +57,7 @@ export const n5Lessons: Lesson[] = [
   ...parseLessons(n5ProductionCheckpointRaw, "lessons/n5-13-production-checkpoint.yaml", knownWordIds, knownPhraseIds, knownPatternIds, n5ChapterIds),
   ...parseLessons(n5FamilyRaw, "lessons/n5-14-family.yaml", knownWordIds, knownPhraseIds, knownPatternIds, n5ChapterIds),
   ...parseLessons(n5HomeWorkRaw, "lessons/n5-15-home-work.yaml", knownWordIds, knownPhraseIds, knownPatternIds, n5ChapterIds),
+  ...parseLessons(n5TeFormRaw, "lessons/n5-16-te-form.yaml", knownWordIds, knownPhraseIds, knownPatternIds, n5ChapterIds),
 ]
   .sort((a, b) => a.order - b.order)
   /**

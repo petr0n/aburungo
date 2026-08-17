@@ -226,3 +226,43 @@
   gloss: "あまり and ぜんぜん require a negative verb ending (～ません)"
   phraseId: food-preferences.not-at-all
   blank: たべません
+
+# ── Chapter 6 — the te-form (DR-027) ─────────────────────────────────────────
+# One pattern per conjugation group, each blanking the te-form itself out of a
+# sentence from that group. The blank is matched against the phrase's reading,
+# so these are kana.
+
+- id: grammar.n5-te-ichidan
+  jlpt: N5
+  pattern: ～てください
+  gloss: Please do ~. Ichidan verbs drop る and add て.
+  phraseId: te.please-look
+  blank: みて
+
+- id: grammar.n5-te-ku
+  jlpt: N5
+  pattern: く → いて
+  gloss: A verb ending in く takes いて; ぐ takes いで.
+  phraseId: te.please-walk-slowly
+  blank: あるいて
+
+- id: grammar.n5-te-tte
+  jlpt: N5
+  pattern: う・つ・る → って
+  gloss: The largest group — う, つ and る all become って.
+  phraseId: te.please-wait
+  blank: まって
+
+- id: grammar.n5-te-nde
+  jlpt: N5
+  pattern: む・ぬ・ぶ → んで
+  gloss: む, ぬ and ぶ all become んで; す becomes して.
+  phraseId: te.please-call
+  blank: よんで
+
+- id: grammar.n5-te-imasu
+  jlpt: N5
+  pattern: ～ています
+  gloss: Doing it now, or doing it as a rule.
+  phraseId: te.i-work-at-a-company
+  blank: はたらいて

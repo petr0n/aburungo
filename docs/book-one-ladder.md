@@ -8,12 +8,12 @@ fails if this file is out of date. Book One is N5 internally; a learner never re
 
 | | |
 |---|---|
-| Chapters | 5 |
-| Lessons | 58 (52 teaching, 6 checkpoints) |
-| Words | 329 |
-| Phrases | 125 |
-| Grammar patterns | 29 |
-| Kanji introduced | 88 |
+| Chapters | 6 |
+| Lessons | 64 (57 teaching, 7 checkpoints) |
+| Words | 347 |
+| Phrases | 139 |
+| Grammar patterns | 34 |
+| Kanji introduced | 105 |
 
 ---
 
@@ -1079,11 +1079,106 @@ fails if this file is out of date. Book One is N5 internally; a learner never re
 
 ---
 
+## Chapter 6 — Asking someone to do something
+
+*Asking someone to do something*
+
+5 lessons · 18 words · 14 phrases
+
+### 58. Asking, the easy half
+
+**Lesson 1 of 5** · Asking someone to do something
+**Can do:** Ask someone to do something
+**Grammar:** `～てください` — Please do ~. Ichidan verbs drop る and add て.
+**New kanji:** 借 忘
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 借りる | かりる | to borrow |
+| 忘れる | わすれる | to forget, to leave behind |
+| 消える | きえる | to go out, to disappear |
+
+- 見てください。 — Please look.
+- 窓を開けてください。 — Please open the window.
+- 借りてもいいですか。 — May I borrow it?
+
+### 59. Verbs ending in ku and gu
+
+**Lesson 2 of 5** · Asking someone to do something
+**Can do:** Ask someone to hurry or slow down
+**Grammar:** `く → いて` — A verb ending in く takes いて; ぐ takes いで.
+**New kanji:** 泳 急 咲
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 泳ぐ | およぐ | to swim |
+| 急ぐ | いそぐ | to hurry |
+| 咲く | さく | to bloom, to flower |
+
+- ゆっくり歩いてください。 — Please walk slowly.
+- 急いでください。 — Please hurry.
+
+### 60. The big group
+
+**Lesson 3 of 5** · Asking someone to do something
+**Can do:** Ask someone to wait, sit or hold something
+**Grammar:** `う・つ・る → って` — The largest group — う, つ and る all become って.
+**New kanji:** 歌 待 持 売 取 走
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 歌う | うたう | to sing |
+| 待つ | まつ | to wait |
+| 持つ | もつ | to hold, to carry |
+| 売る | うる | to sell |
+| 取る | とる | to take, to pick up |
+| 走る | はしる | to run |
+
+- 待ってください。 — Please wait.
+- 手を洗ってください。 — Please wash your hands.
+- ここに座ってください。 — Please sit here.
+
+### 61. Verbs ending in mu, nu, bu and su
+
+**Lesson 4 of 5** · Asking someone to do something
+**Can do:** Ask to borrow or be lent something
+**Grammar:** `む・ぬ・ぶ → んで` — む, ぬ and ぶ all become んで; す becomes して.
+**New kanji:** 遊 呼 飛 死 貸 返
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 遊ぶ | あそぶ | to play, to spend time enjoyably |
+| 呼ぶ | よぶ | to call, to summon |
+| 飛ぶ | とぶ | to fly, to jump |
+| 死ぬ | しぬ | to die |
+| 貸す | かす | to lend |
+| 返す | かえす | to give back, to return something |
+
+- 呼んでください。 — Please call someone.
+- 貸してください。 — Please lend it to me.
+- 電気を消してください。 — Please turn off the light.
+
+### 62. What you are doing now
+
+**Lesson 5 of 5** · Asking someone to do something
+**Can do:** Say what you are doing and where you live
+**Grammar:** `～ています` — Doing it now, or doing it as a rule.
+
+- 会社で働いています。 — I work at a company.
+- 知っています。 — I know.
+- 何をしていますか。 — What are you doing?
+
+### 63. Recognition checkpoint — closes the chapter
+
+> A wide pass over everything the book has taught, this chapter included. Pick each word out of a line-up; anything you miss comes back sooner. It finishes when the remaining set empties — retry as often as you like, nothing is recorded.
+
+---
+
 ## Closing the book
 
 Belongs to no chapter — reviews every situation in the book rather than one chapter's worth.
 
-### 58. Production checkpoint
+### 64. Production checkpoint
 
 > No new material. Everything so far has asked you to recognise Japanese; this asks you to produce it. You will see an English meaning and write the Japanese, drawn from across every situation you have worked through. Kana or romaji both count — this is about recall, not spelling. Anything you do not get comes straight back, and the checkpoint ends when there is nothing left to write. There is no score and nothing is recorded; whatever you miss simply returns to your review queue sooner.
 
@@ -1092,7 +1187,7 @@ Belongs to no chapter — reviews every situation in the book rather than one ch
 ## Shelved — not on the ladder
 
 Built and tested, switched off behind `VITE_HANA_ENABLED` (DR-023). Filtered out of the
-ladder entirely, so the orders above run 1–58 with no gap.
+ladder entirely, so the orders above run 1–64 with no gap.
 
 - Cross-situation conversation — Conversation with Hana
 - Can-do checkpoint — Can-do review

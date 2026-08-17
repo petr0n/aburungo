@@ -24,6 +24,7 @@ import datesPhrasesRaw from "./phrases/dates.yaml";
 import relativeTimePhrasesRaw from "./phrases/relative-time.yaml";
 import familyPhrasesRaw from "./phrases/family.yaml";
 import homeWorkPhrasesRaw from "./phrases/home-work.yaml";
+import teFormPhrasesRaw from "./phrases/te-form.yaml";
 
 export const allPhrases: Phrase[] = [
   ...parsePhrases(transitRaw, "phrases/transit.yaml"),
@@ -39,6 +40,7 @@ export const allPhrases: Phrase[] = [
   ...parsePhrases(relativeTimePhrasesRaw, "phrases/relative-time.yaml"),
   ...parsePhrases(familyPhrasesRaw, "phrases/family.yaml"),
   ...parsePhrases(homeWorkPhrasesRaw, "phrases/home-work.yaml"),
+  ...parsePhrases(teFormPhrasesRaw, "phrases/te-form.yaml"),
 ];
 
 /** Lookup helper. O(n), fine for hundreds; reach for a Map if it grows large. */

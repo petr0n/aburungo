@@ -1,0 +1,227 @@
+# Chapter 6 vocabulary — verbs for the te-form (DR-027).
+#
+# This chapter is about a *form*, not a topic, so the vocabulary is chosen for
+# how each verb conjugates rather than for what it means. Each lesson takes one
+# group of the te-form rule and brings three to six new verbs that sit squarely
+# in it, so the rule is practised on fresh material instead of only on verbs the
+# learner already half-remembers.
+#
+# 死ぬ earns its place on grammatical grounds: it is the only ぬ verb in the
+# language, so the ぬ -> んで row of the table has exactly one example and it is
+# this one. Taught plainly, with no more weight than 飛ぶ.
+#
+# The te-form itself is never a vocabulary entry. It is a form of a verb, so it
+# lives in the grammar patterns and the phrases; adding 待って as a "word" would
+# also break the word card, which conjugates dictionary forms itself.
+#
+# content-source: training — headwords, readings, part of speech and
+#   transitivity verified against JMdict 3.6.2 on 2026-08-16, sequence numbers
+#   inline. All eighteen are flagged common in JMdict.
+# jlpt-source: training — JLPT level unverified (JMdict carries no JLPT data);
+#   all eighteen appear in both the Tanos and open-anki N5 reference lists
+
+# ── Ichidan: drop る, add て (Lesson 1) ────────────────────────────────────────
+
+- id: vocab.kariru
+  jlpt: N5
+  word_type: verb
+  verb_class: ru
+  theme: actions
+  japanese: 借りる
+  reading: かりる
+  romaji: kariru
+  english: to borrow
+  notes: Transitive (vt). Pairs with 貸す, to lend, two lessons later. JMdict seq 1323560.
+
+- id: vocab.wasureru
+  jlpt: N5
+  word_type: verb
+  verb_class: ru
+  theme: actions
+  japanese: 忘れる
+  reading: わすれる
+  romaji: wasureru
+  english: to forget, to leave behind
+  notes: Transitive (vt). Also used for leaving something somewhere by mistake. JMdict seq 1519210.
+
+- id: vocab.kieru
+  jlpt: N5
+  word_type: verb
+  verb_class: ru
+  theme: actions
+  japanese: 消える
+  reading: きえる
+  romaji: kieru
+  english: to go out, to disappear
+  notes: Intransitive (vi) — the light goes out. The pair of 消す, which you met last chapter. JMdict seq 1350040.
+
+# ── く and ぐ: いて and いで (Lesson 2) ─────────────────────────────────────────
+
+- id: vocab.oyogu
+  jlpt: N5
+  word_type: verb
+  verb_class: u
+  theme: actions
+  japanese: 泳ぐ
+  reading: およぐ
+  romaji: oyogu
+  english: to swim
+  notes: Intransitive (vi). A ぐ verb, so the te-form voices to 泳いで. JMdict seq 1174340.
+
+- id: vocab.isogu
+  jlpt: N5
+  word_type: verb
+  verb_class: u
+  theme: actions
+  japanese: 急ぐ
+  reading: いそぐ
+  romaji: isogu
+  english: to hurry
+  notes: 急いで on its own means "quickly" or "hurry up". JMdict seq 1228650.
+
+- id: vocab.saku
+  jlpt: N5
+  word_type: verb
+  verb_class: u
+  theme: actions
+  japanese: 咲く
+  reading: さく
+  romaji: saku
+  english: to bloom, to flower
+  notes: Intransitive (vi). Used of flowers only, not of people. JMdict seq 1297210.
+
+# ── う, つ and る: って (Lesson 3) ──────────────────────────────────────────────
+
+- id: vocab.utau
+  jlpt: N5
+  word_type: verb
+  verb_class: u
+  theme: actions
+  japanese: 歌う
+  reading: うたう
+  romaji: utau
+  english: to sing
+  notes: JMdict seq 1588120.
+
+- id: vocab.matsu
+  jlpt: N5
+  word_type: verb
+  verb_class: u
+  theme: actions
+  japanese: 待つ
+  reading: まつ
+  romaji: matsu
+  english: to wait
+  notes: 待ってください is one of the most useful sentences in the language. JMdict seq 1410590.
+
+- id: vocab.motsu
+  jlpt: N5
+  word_type: verb
+  verb_class: u
+  theme: actions
+  japanese: 持つ
+  reading: もつ
+  romaji: motsu
+  english: to hold, to carry
+  notes: Transitive (vt). The 持つ inside 持ってきてください, which you learned whole at the hotel. JMdict seq 1315720.
+
+- id: vocab.uru
+  jlpt: N5
+  word_type: verb
+  verb_class: u
+  theme: actions
+  japanese: 売る
+  reading: うる
+  romaji: uru
+  english: to sell
+  notes: Transitive (vt). The other side of 買う. JMdict seq 1473950.
+
+- id: vocab.toru
+  jlpt: N5
+  word_type: verb
+  verb_class: u
+  theme: actions
+  japanese: 取る
+  reading: とる
+  romaji: toru
+  english: to take, to pick up
+  notes: Transitive (vt). JMdict seq 1326980.
+
+- id: vocab.hashiru
+  jlpt: N5
+  word_type: verb
+  verb_class: u
+  theme: actions
+  japanese: 走る
+  reading: はしる
+  romaji: hashiru
+  english: to run
+  notes: Intransitive (vi). Ends in る but is a godan verb, so its te-form is 走って, not 走て. JMdict seq 1402540.
+
+# ── む, ぬ and ぶ: んで. す: して (Lesson 4) ────────────────────────────────────
+
+- id: vocab.asobu
+  jlpt: N5
+  word_type: verb
+  verb_class: u
+  theme: actions
+  japanese: 遊ぶ
+  reading: あそぶ
+  romaji: asobu
+  english: to play, to spend time enjoyably
+  notes: Intransitive (vi). Not only children's play — adults 遊ぶ when they go out. JMdict seq 1542160.
+
+- id: vocab.yobu
+  jlpt: N5
+  word_type: verb
+  verb_class: u
+  theme: actions
+  japanese: 呼ぶ
+  reading: よぶ
+  romaji: yobu
+  english: to call, to summon
+  notes: Transitive (vt). Calling a person or a taxi, not making a phone call. JMdict seq 1266440.
+
+- id: vocab.tobu
+  jlpt: N5
+  word_type: verb
+  verb_class: u
+  theme: actions
+  japanese: 飛ぶ
+  reading: とぶ
+  romaji: tobu
+  english: to fly, to jump
+  notes: Intransitive (vi). JMdict seq 1429700.
+
+- id: vocab.shinu
+  jlpt: N5
+  word_type: verb
+  verb_class: u
+  theme: actions
+  japanese: 死ぬ
+  reading: しぬ
+  romaji: shinu
+  english: to die
+  notes: Intransitive (vi). The only verb in Japanese ending in ぬ, which is why it is the single example of that row in the te-form table. JMdict seq 1310730.
+
+- id: vocab.kasu
+  jlpt: N5
+  word_type: verb
+  verb_class: u
+  theme: actions
+  japanese: 貸す
+  reading: かす
+  romaji: kasu
+  english: to lend
+  notes: Transitive (vt). The pair of 借りる from lesson one of this chapter. JMdict seq 1411160.
+
+- id: vocab.kaesu
+  jlpt: N5
+  word_type: verb
+  verb_class: u
+  theme: actions
+  japanese: 返す
+  reading: かえす
+  romaji: kaesu
+  english: to give back, to return something
+  notes: Transitive (vt). Not to be confused with 帰る, to go home — same reading in part, different verb. JMdict seq 1512130.
