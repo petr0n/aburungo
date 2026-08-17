@@ -1,11 +1,11 @@
 {
  "level": "N5",
- "generated": "2026-08-16",
+ "generated": "2026-08-17",
  "summary": {
   "reference": 809,
-  "taught": 329,
-  "covered": 314,
-  "missing": 495
+  "taught": 347,
+  "covered": 332,
+  "missing": 477
  },
  "missing": [
   {
@@ -52,16 +52,6 @@
    "written": "朝御飯",
    "reading": "あさごはん",
    "english": "breakfast",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "遊ぶ",
-   "reading": "あそぶ",
-   "english": "to play; to spend time pleasantly; to hang out",
    "sources": [
     "tanos",
     "open-anki"
@@ -269,16 +259,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "歌う",
-   "reading": "うたう",
-   "english": "to sing",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "生まれる",
    "reading": "うまれる",
    "english": "to be born",
@@ -292,16 +272,6 @@
    "written": "海",
    "reading": "うみ",
    "english": "sea, beach",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "売る",
-   "reading": "うる",
-   "english": "to sell (v.t.)",
    "sources": [
     "tanos",
     "open-anki"
@@ -499,16 +469,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "泳ぐ",
-   "reading": "およぐ",
-   "english": "to swim",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "音楽",
    "reading": "おんがく",
    "english": "Music",
@@ -579,16 +539,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "返す",
-   "reading": "かえす",
-   "english": "to return something",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "かかる",
    "reading": "かかる",
    "english": "it takes (amount of time, money) (v.i.)",
@@ -612,16 +562,6 @@
    "written": "傘",
    "reading": "かさ",
    "english": "umbrella, parasol",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "貸す",
-   "reading": "かす",
-   "english": "to lend",
    "sources": [
     "tanos",
     "open-anki"
@@ -699,16 +639,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "借りる",
-   "reading": "かりる",
-   "english": "to borrow, to owe",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "軽い",
    "reading": "かるい",
    "english": "light, non-serious, minor",
@@ -772,16 +702,6 @@
    "written": "黄色い",
    "reading": "きいろい",
    "english": "yellow",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "消える",
-   "reading": "きえる",
-   "english": "to vanish, to disappear",
    "sources": [
     "tanos",
     "open-anki"
@@ -1159,16 +1079,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "咲く",
-   "reading": "さく",
-   "english": "to bloom",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "作文",
    "reading": "さくぶん",
    "english": "essay; composition",
@@ -1292,16 +1202,6 @@
    "written": "自動車",
    "reading": "じどうしゃ",
    "english": "automobile",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "死ぬ",
-   "reading": "しぬ",
-   "english": "to die",
    "sources": [
     "tanos",
     "open-anki"
@@ -2039,16 +1939,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "飛ぶ",
-   "reading": "とぶ",
-   "english": "to fly, to hop",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "止まる",
    "reading": "とまる",
    "english": "to come to a halt",
@@ -2062,26 +1952,6 @@
    "written": "鳥",
    "reading": "とり",
    "english": "chicken (lit., bird)",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "取る",
-   "reading": "とる",
-   "english": "to take (a class); to get (a grade)",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "撮る",
-   "reading": "とる",
-   "english": "to take (a photo), to make (a film)",
    "sources": [
     "tanos",
     "open-anki"
@@ -2352,16 +2222,6 @@
    "written": "初めて",
    "reading": "はじめて",
    "english": "for the first time",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "走る",
-   "reading": "はしる",
-   "english": "to run",
    "sources": [
     "tanos",
     "open-anki"
@@ -2879,16 +2739,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "待つ",
-   "reading": "まつ",
-   "english": "to wait",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "マッチ",
    "reading": "まっち",
    "english": "match",
@@ -3069,16 +2919,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "持つ",
-   "reading": "もつ",
-   "english": "to hold, to carry; to possess",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "物",
    "reading": "もの",
    "english": "thing (concrete object)",
@@ -3239,16 +3079,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "呼ぶ",
-   "reading": "よぶ",
-   "english": "to call (one's name); to invite",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "弱い",
    "reading": "よわい",
    "english": "weak",
@@ -3362,16 +3192,6 @@
    "written": "若い",
    "reading": "わかい",
    "english": "young",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "忘れる",
-   "reading": "わすれる",
-   "english": "to forget",
    "sources": [
     "tanos",
     "open-anki"
@@ -5020,6 +4840,11 @@
    "id": "vocab.saizu",
    "japanese": "サイズ",
    "reading": "サイズ"
+  },
+  {
+   "id": "vocab.isogu",
+   "japanese": "急ぐ",
+   "reading": "いそぐ"
   },
   {
    "id": "vocab.made",
