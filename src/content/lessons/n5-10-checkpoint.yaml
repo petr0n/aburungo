@@ -1,4 +1,7 @@
-# N5 daily-loop lessons — the two Hana checkpoints (Units 45-46).
+# N5 daily-loop lessons — the two Hana checkpoints.
+#
+# No lesson numbers here on purpose: they move every time a chapter is added,
+# and stale numbers in a comment read like fact.
 #
 # Moved out of n5-08-integration.yaml by DR-019 so the days & dates lessons can sit
 # before it. Renumbered from 34-35; safe to renumber because no PathProgress rows
@@ -9,13 +12,14 @@
 # unscripted exchange, the other is the verification pass that closes the level.
 #
 # These sit *after* the recurring recognition checkpoints DR-021 placed on a ten-lesson cadence,
-# and after the production checkpoint at lesson 44. A recognition checkpoint consolidates; these
+# and after the production checkpoint that closes the book. A recognition checkpoint consolidates; these
 # two finish. Do not merge the concepts.
 #
 # **Both are gated behind `hanaEnabled` (DR-023) and are filtered out of the
 # ladder when it is off**, which is the shipped default — Hana is the only part
 # of the app that costs money per use. With the AI shelved the level ends at
-# lesson 44. Turning the flag on restores these two and the ladder runs to 46.
+# the production checkpoint. Turning the flag on restores these two, and the
+# ladder runs two lessons further.
 #
 # content-source: n/a — introduces no content, only re-presents taught items
 

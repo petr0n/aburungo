@@ -68,7 +68,7 @@ export const n5Lessons: Lesson[] = [
    * Filtering here rather than in LearnPage is what keeps the rest of the app
    * from needing to know Hana exists: the orchestrator, the step router, the
    * can-do helpers and the walkthrough all see one consistent ladder that
-   * simply ends at lesson 44. Gating further down would leave the lessons on the
+   * simply ends at the production checkpoint. Gating further down would leave the lessons on the
    * ladder as screens that apologise for themselves — the exact dead end
    * DR-022 was written to remove.
    *
