@@ -8,12 +8,12 @@ fails if this file is out of date. Book One is N5 internally; a learner never re
 
 | | |
 |---|---|
-| Chapters | 7 |
-| Lessons | 70 (62 teaching, 8 checkpoints) |
-| Words | 366 |
-| Phrases | 151 |
+| Chapters | 8 |
+| Lessons | 76 (67 teaching, 9 checkpoints) |
+| Words | 387 |
+| Phrases | 162 |
 | Grammar patterns | 34 |
-| Kanji introduced | 116 |
+| Kanji introduced | 135 |
 
 ---
 
@@ -1266,11 +1266,105 @@ fails if this file is out of date. Book One is N5 internally; a learner never re
 
 ---
 
+## Chapter 8 — Describing things and people
+
+*Describing things and people*
+
+5 lessons · 21 words · 11 phrases
+
+### 70. The body, and what hurts
+
+**Lesson 1 of 5** · Describing things and people
+**Can do:** Say which part of you hurts
+**New kanji:** 頭 目 耳 口 足 痛
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 頭 | あたま | head |
+| 目 | め | eye |
+| 耳 | みみ | ear |
+| 口 | くち | mouth |
+| 足 | あし | foot, leg |
+| 痛い | いたい | painful, sore |
+
+- 頭が痛いです。 — My head hurts.
+- 足が痛いです。 — My foot hurts.
+
+### 71. How you feel
+
+**Lesson 2 of 5** · Describing things and people
+**Can do:** Say you are busy, tired or unwell
+**New kanji:** 忙 眠 悪
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 忙しい | いそがしい | busy |
+| 眠い | ねむい | sleepy |
+| 悪い | わるい | bad |
+
+- 今日は忙しいです。 — I'm busy today.
+- 眠いです。 — I'm sleepy.
+
+### 72. Long and short, heavy and light
+
+**Lesson 3 of 5** · Describing things and people
+**Can do:** Describe the size and weight of things
+**New kanji:** 長 短 重 軽
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 長い | ながい | long |
+| 短い | みじかい | short |
+| 重い | おもい | heavy |
+| 軽い | かるい | light (in weight) |
+
+- この本は重いです。 — This book is heavy.
+- あの道は長いです。 — That road is long.
+
+### 73. Early and late
+
+**Lesson 4 of 5** · Describing things and people
+**Can do:** Say something is early, late or bright
+**New kanji:** 早 遅 明
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 早い | はやい | early, fast |
+| 遅い | おそい | slow, late |
+| 明るい | あかるい | bright, cheerful |
+
+- 電車は遅いです。 — The train is slow.
+- 早いですね。 — You're early, aren't you.
+
+### 74. Hard and easy, strong and weak
+
+**Lesson 5 of 5** · Describing things and people
+**Can do:** Say how hard something is
+**New kanji:** 難 易 強 弱 若
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 難しい | むずかしい | difficult |
+| 易しい | やさしい | easy |
+| 強い | つよい | strong |
+| 弱い | よわい | weak |
+| 若い | わかい | young |
+
+- 難しいです。 — It's difficult.
+- この本は易しいです。 — This book is easy.
+- あの人は若いです。 — That person is young.
+
+### 75. Recognition checkpoint — closes the chapter
+
+> A wide pass over everything the book has taught, this chapter included. Pick each word out of a line-up; anything you miss comes back sooner. It finishes when the remaining set empties — retry as often as you like, nothing is recorded.
+
+---
+
 ## Closing the book
 
 Belongs to no chapter — reviews every situation in the book rather than one chapter's worth.
 
-### 70. Production checkpoint
+### 76. Production checkpoint
 
 > No new material. Everything so far has asked you to recognise Japanese; this asks you to produce it. You will see an English meaning and write the Japanese, drawn from across every situation you have worked through. Kana or romaji both count — this is about recall, not spelling. Anything you do not get comes straight back, and the checkpoint ends when there is nothing left to write. There is no score and nothing is recorded; whatever you miss simply returns to your review queue sooner.
 
@@ -1279,7 +1373,7 @@ Belongs to no chapter — reviews every situation in the book rather than one ch
 ## Shelved — not on the ladder
 
 Built and tested, switched off behind `VITE_HANA_ENABLED` (DR-023). Filtered out of the
-ladder entirely, so the orders above run 1–70 with no gap.
+ladder entirely, so the orders above run 1–76 with no gap.
 
 - Cross-situation conversation — Conversation with Hana
 - Can-do checkpoint — Can-do review

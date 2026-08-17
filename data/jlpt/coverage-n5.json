@@ -3,24 +3,14 @@
  "generated": "2026-08-17",
  "summary": {
   "reference": 809,
-  "taught": 347,
-  "covered": 332,
-  "missing": 477
+  "taught": 366,
+  "covered": 349,
+  "missing": 460
  },
  "missing": [
   {
    "written": "青",
    "reading": "あお",
-   "english": "blue",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "青い",
-   "reading": "あおい",
    "english": "blue",
    "sources": [
     "tanos",
@@ -92,16 +82,6 @@
    "written": "後",
    "reading": "あと",
    "english": "afterwards (later); in the future; the rest; since then",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "あの",
-   "reading": "あの",
-   "english": "that over there; like that, that way; um...",
    "sources": [
     "tanos",
     "open-anki"
@@ -699,16 +679,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "黄色い",
-   "reading": "きいろい",
-   "english": "yellow",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "北",
    "reading": "きた",
    "english": "north",
@@ -969,26 +939,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "九つ",
-   "reading": "ここのつ",
-   "english": "nine things",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "こちら",
-   "reading": "こちら",
-   "english": "this person (polite); this way (polite)",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "こっち",
    "reading": "こっち",
    "english": "this person; this direction; this side",
@@ -1012,16 +962,6 @@
    "written": "言葉",
    "reading": "ことば",
    "english": "language; word(s); expression(s)",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "この",
-   "reading": "この",
-   "english": "this",
    "sources": [
     "tanos",
     "open-anki"
@@ -1479,16 +1419,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "その",
-   "reading": "その",
-   "english": "that",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "そば",
    "reading": "そば",
    "english": "near, close, beside; Japanese traditional buckwheat noodle",
@@ -1632,16 +1562,6 @@
    "written": "近い",
    "reading": "ちかい",
    "english": "near, close by, short",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "茶色",
-   "reading": "ちゃいろ",
-   "english": "brown",
    "sources": [
     "tanos",
     "open-anki"
@@ -1929,16 +1849,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "どの",
-   "reading": "どの",
-   "english": "which",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "止まる",
    "reading": "とまる",
    "english": "to come to a halt",
@@ -2012,16 +1922,6 @@
    "written": "夏休み",
    "reading": "なつやすみ",
    "english": "summer vacation",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "七つ",
-   "reading": "ななつ",
-   "english": "seven things",
    "sources": [
     "tanos",
     "open-anki"
@@ -2399,16 +2299,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "一人",
-   "reading": "ひとり",
-   "english": "one person",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "暇",
    "reading": "ひま",
    "english": "free time, leisure",
@@ -2492,16 +2382,6 @@
    "written": "豚肉",
    "reading": "ぶたにく",
    "english": "pork",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "二人",
-   "reading": "ふたり",
-   "english": "two people",
    "sources": [
     "tanos",
     "open-anki"
@@ -2789,16 +2669,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "緑",
-   "reading": "みどり",
-   "english": "green",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "皆さん",
    "reading": "みなさん",
    "english": "all of you, everyone",
@@ -2852,16 +2722,6 @@
    "written": "難しい",
    "reading": "むずかしい",
    "english": "difficult",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "六つ",
-   "reading": "むっつ",
-   "english": "six things",
    "sources": [
     "tanos",
     "open-anki"
@@ -2972,16 +2832,6 @@
    "written": "休み",
    "reading": "やすみ",
    "english": "holiday; day off; absence",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "八つ",
-   "reading": "やっつ",
-   "english": "eight things",
    "sources": [
     "tanos",
     "open-anki"
@@ -3955,15 +3805,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "～台",
-   "reading": "だい",
-   "english": "counter for vehicles; machines",
-   "sources": [
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "たいへん",
    "reading": "たいへん",
    "english": "",
@@ -4333,15 +4174,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "～枚",
-   "reading": "まい",
-   "english": "counter for flat things",
-   "sources": [
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "毎月",
    "reading": "まいげつ",
    "english": "",
@@ -4650,6 +4482,16 @@
    "id": "vocab.onegaishimasu",
    "japanese": "お願いします",
    "reading": "おねがいします"
+  },
+  {
+   "id": "vocab.too",
+   "japanese": "十",
+   "reading": "とお"
+  },
+  {
+   "id": "vocab.nannin",
+   "japanese": "何人",
+   "reading": "なんにん"
   },
   {
    "id": "vocab.youbi",

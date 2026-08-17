@@ -33,6 +33,7 @@ import n5FamilyRaw from "./n5-14-family.yaml";
 import n5HomeWorkRaw from "./n5-15-home-work.yaml";
 import n5TeFormRaw from "./n5-16-te-form.yaml";
 import n5CountingRaw from "./n5-17-counting.yaml";
+import n5DescribingRaw from "./n5-18-describing.yaml";
 
 const knownWordIds = new Set(allWords.map((w) => w.id));
 const knownPhraseIds = new Set(allPhrases.map((p) => p.id));
@@ -60,6 +61,7 @@ export const n5Lessons: Lesson[] = [
   ...parseLessons(n5HomeWorkRaw, "lessons/n5-15-home-work.yaml", knownWordIds, knownPhraseIds, knownPatternIds, n5ChapterIds),
   ...parseLessons(n5TeFormRaw, "lessons/n5-16-te-form.yaml", knownWordIds, knownPhraseIds, knownPatternIds, n5ChapterIds),
   ...parseLessons(n5CountingRaw, "lessons/n5-17-counting.yaml", knownWordIds, knownPhraseIds, knownPatternIds, n5ChapterIds),
+  ...parseLessons(n5DescribingRaw, "lessons/n5-18-describing.yaml", knownWordIds, knownPhraseIds, knownPatternIds, n5ChapterIds),
 ]
   .sort((a, b) => a.order - b.order)
   /**

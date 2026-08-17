@@ -1,0 +1,112 @@
+# Chapter 8 phrases — describing things and people (DR-029).
+#
+# Two shapes only, both long established: 〜が痛いです for the body, and
+# 〜は〜です for everything else. The new element in each sentence is the
+# adjective or body word itself, nothing more.
+#
+# この and あの come from the chapter immediately before this one, so the
+# demonstratives get used the lesson after they are taught rather than sitting
+# unused until something needs them.
+#
+# content-source: training — N5 canonical, pending Tatoeba verification.
+#   JMdict cannot verify composed sentences (only fixed expressions are
+#   headwords), so sentence checks need Tatoeba, not JMdict.
+# jlpt-source: training — JLPT level unverified
+
+# ── The body ──────────────────────────────────────────────────────────────────
+
+- id: desc.my-head-hurts
+  jlpt: N5
+  scenario: describing
+  japanese: 頭が痛いです。
+  reading: あたまがいたいです。
+  romaji: atama ga itai desu.
+  english: My head hurts.
+
+- id: desc.my-foot-hurts
+  jlpt: N5
+  scenario: describing
+  japanese: 足が痛いです。
+  reading: あしがいたいです。
+  romaji: ashi ga itai desu.
+  english: My foot hurts.
+
+# ── How you feel ──────────────────────────────────────────────────────────────
+
+- id: desc.im-busy-today
+  jlpt: N5
+  scenario: describing
+  japanese: 今日は忙しいです。
+  reading: きょうはいそがしいです。
+  romaji: kyou wa isogashii desu.
+  english: I'm busy today.
+
+- id: desc.im-sleepy
+  jlpt: N5
+  scenario: describing
+  japanese: 眠いです。
+  reading: ねむいです。
+  romaji: nemui desu.
+  english: I'm sleepy.
+
+# ── Long and short, heavy and light ───────────────────────────────────────────
+
+- id: desc.this-book-is-heavy
+  jlpt: N5
+  scenario: describing
+  japanese: この本は重いです。
+  reading: このほんはおもいです。
+  romaji: kono hon wa omoi desu.
+  english: This book is heavy.
+
+- id: desc.that-road-is-long
+  jlpt: N5
+  scenario: describing
+  japanese: あの道は長いです。
+  reading: あのみちはながいです。
+  romaji: ano michi wa nagai desu.
+  english: That road is long.
+
+# ── Early and late ────────────────────────────────────────────────────────────
+
+- id: desc.the-train-is-late
+  jlpt: N5
+  scenario: describing
+  japanese: 電車は遅いです。
+  reading: でんしゃはおそいです。
+  romaji: densha wa osoi desu.
+  english: The train is slow.
+
+- id: desc.its-early
+  jlpt: N5
+  scenario: describing
+  japanese: 早いですね。
+  reading: はやいですね。
+  romaji: hayai desu ne.
+  english: You're early, aren't you.
+
+# ── Hard and easy ─────────────────────────────────────────────────────────────
+
+- id: desc.its-difficult
+  jlpt: N5
+  scenario: describing
+  japanese: 難しいです。
+  reading: むずかしいです。
+  romaji: muzukashii desu.
+  english: It's difficult.
+
+- id: desc.this-book-is-easy
+  jlpt: N5
+  scenario: describing
+  japanese: この本は易しいです。
+  reading: このほんはやさしいです。
+  romaji: kono hon wa yasashii desu.
+  english: This book is easy.
+
+- id: desc.that-person-is-young
+  jlpt: N5
+  scenario: describing
+  japanese: あの人は若いです。
+  reading: あのひとはわかいです。
+  romaji: ano hito wa wakai desu.
+  english: That person is young.

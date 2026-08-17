@@ -24,6 +24,7 @@ import familyRaw from "./family.yaml";
 import homeWorkRaw from "./home-work.yaml";
 import teFormRaw from "./te-form.yaml";
 import countingRaw from "./counting.yaml";
+import describingRaw from "./describing.yaml";
 
 export const allWords: Word[] = [
   ...parseWords(basicsRaw, "vocabulary/basics.yaml"),
@@ -49,6 +50,7 @@ export const allWords: Word[] = [
   ...parseWords(homeWorkRaw, "vocabulary/home-work.yaml"),
   ...parseWords(teFormRaw, "vocabulary/te-form.yaml"),
   ...parseWords(countingRaw, "vocabulary/counting.yaml"),
+  ...parseWords(describingRaw, "vocabulary/describing.yaml"),
 ];
 
 // parseWords only rejects duplicate ids within a single file, so the same id in

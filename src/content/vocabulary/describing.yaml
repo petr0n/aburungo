@@ -1,0 +1,241 @@
+# Chapter 8 vocabulary — describing things and people (DR-029).
+#
+# The ladder already had 23 い-adjectives, which is why this chapter is not the
+# "adjectives chapter" it first looked like it should be. 大きい, 小さい, 新しい,
+# 古い, 高い and 安い were all long since taught. What was missing was the body,
+# and the *pairs* — the opposites that only make sense together.
+#
+# So they are taught together: 長い with 短い, 重い with 軽い, 強い with 弱い,
+# 早い with 遅い. Each pair is one idea with two ends, and splitting them across
+# lessons would teach half a concept twice.
+#
+# 痛い sits with the body words rather than with the other feelings, because
+# 頭が痛いです is the sentence the body vocabulary exists to build.
+#
+# Already taught and deliberately absent: 大きい, 小さい, 新しい, 古い, 高い,
+# 安い, 暑い, 寒い, 暖かい, 涼しい, いい, 面白い, 暗い, 手, 顔.
+#
+# content-source: training — headwords, readings and part of speech verified
+#   against JMdict 3.6.2 on 2026-08-17, sequence numbers inline, all twenty-one
+#   flagged common.
+# jlpt-source: training — JLPT level unverified
+
+# ── The body, and what hurts (Lesson 1) ───────────────────────────────────────
+
+- id: vocab.atama
+  jlpt: N5
+  word_type: noun
+  theme: body
+  japanese: 頭
+  reading: あたま
+  romaji: atama
+  english: head
+  notes: JMdict seq 1582310.
+
+- id: vocab.me
+  jlpt: N5
+  word_type: noun
+  theme: body
+  japanese: 目
+  reading: め
+  romaji: me
+  english: eye
+  notes: JMdict seq 1604890.
+
+- id: vocab.mimi
+  jlpt: N5
+  word_type: noun
+  theme: body
+  japanese: 耳
+  reading: みみ
+  romaji: mimi
+  english: ear
+  notes: JMdict seq 1317170.
+
+- id: vocab.kuchi
+  jlpt: N5
+  word_type: noun
+  theme: body
+  japanese: 口
+  reading: くち
+  romaji: kuchi
+  english: mouth
+  notes: JMdict seq 1275640.
+
+- id: vocab.ashi
+  jlpt: N5
+  word_type: noun
+  theme: body
+  japanese: 足
+  reading: あし
+  romaji: ashi
+  english: foot, leg
+  notes: One word covers both, where English splits them. JMdict seq 1404630.
+
+- id: vocab.itai
+  jlpt: N5
+  word_type: i-adj
+  theme: body
+  japanese: 痛い
+  reading: いたい
+  romaji: itai
+  english: painful, sore
+  notes: The part that hurts takes が — 頭が痛いです. Said alone, 痛い! is "ouch". JMdict seq 1432680.
+
+# ── How you feel (Lesson 2) ───────────────────────────────────────────────────
+
+- id: vocab.isogashii
+  jlpt: N5
+  word_type: i-adj
+  theme: feeling
+  japanese: 忙しい
+  reading: いそがしい
+  romaji: isogashii
+  english: busy
+  notes: JMdict seq 1519290.
+
+- id: vocab.nemui
+  jlpt: N5
+  word_type: i-adj
+  theme: feeling
+  japanese: 眠い
+  reading: ねむい
+  romaji: nemui
+  english: sleepy
+  notes: JMdict seq 1529330.
+
+- id: vocab.warui
+  jlpt: N5
+  word_type: i-adj
+  theme: feeling
+  japanese: 悪い
+  reading: わるい
+  romaji: warui
+  english: bad
+  notes: The opposite of いい. Also a casual apology, the way "my bad" works. JMdict seq 1151260.
+
+# ── Long and short, heavy and light (Lesson 3) ────────────────────────────────
+
+- id: vocab.nagai
+  jlpt: N5
+  word_type: i-adj
+  theme: quality
+  japanese: 長い
+  reading: ながい
+  romaji: nagai
+  english: long
+  notes: Length and duration both. JMdict seq 1429750.
+
+- id: vocab.mijikai
+  jlpt: N5
+  word_type: i-adj
+  theme: quality
+  japanese: 短い
+  reading: みじかい
+  romaji: mijikai
+  english: short
+  notes: The pair of 長い. Not used of people's height. JMdict seq 1418620.
+
+- id: vocab.omoi
+  jlpt: N5
+  word_type: i-adj
+  theme: quality
+  japanese: 重い
+  reading: おもい
+  romaji: omoi
+  english: heavy
+  notes: JMdict seq 1335750.
+
+- id: vocab.karui
+  jlpt: N5
+  word_type: i-adj
+  theme: quality
+  japanese: 軽い
+  reading: かるい
+  romaji: karui
+  english: light (in weight)
+  notes: Weight only — for brightness you want 明るい. JMdict seq 1252560.
+
+# ── Early and late, bright (Lesson 4) ─────────────────────────────────────────
+
+- id: vocab.hayai
+  jlpt: N5
+  word_type: i-adj
+  theme: quality
+  japanese: 早い
+  reading: はやい
+  romaji: hayai
+  english: early, fast
+  notes: Written 速い when it means fast rather than early. Same reading, and beginners are not expected to split them. JMdict seq 1404975.
+
+- id: vocab.osoi
+  jlpt: N5
+  word_type: i-adj
+  theme: quality
+  japanese: 遅い
+  reading: おそい
+  romaji: osoi
+  english: slow, late
+  notes: Covers both ends of 早い in one word. JMdict seq 1421970.
+
+- id: vocab.akarui
+  jlpt: N5
+  word_type: i-adj
+  theme: quality
+  japanese: 明るい
+  reading: あかるい
+  romaji: akarui
+  english: bright, cheerful
+  notes: The pair of 暗い, which you already know. Also used of a person's character. JMdict seq 1532350.
+
+# ── Hard and easy, strong and weak (Lesson 5) ─────────────────────────────────
+
+- id: vocab.muzukashii
+  jlpt: N5
+  word_type: i-adj
+  theme: quality
+  japanese: 難しい
+  reading: むずかしい
+  romaji: muzukashii
+  english: difficult
+  notes: JMdict seq 1460850.
+
+- id: vocab.yasashii
+  jlpt: N5
+  word_type: i-adj
+  theme: quality
+  japanese: 易しい
+  reading: やさしい
+  romaji: yasashii
+  english: easy
+  notes: There is a second やさしい, 優しい, meaning kind — same sound, different kanji and different word. JMdict seq 1157000.
+
+- id: vocab.tsuyoi
+  jlpt: N5
+  word_type: i-adj
+  theme: quality
+  japanese: 強い
+  reading: つよい
+  romaji: tsuyoi
+  english: strong
+  notes: JMdict seq 1236070.
+
+- id: vocab.yowai
+  jlpt: N5
+  word_type: i-adj
+  theme: quality
+  japanese: 弱い
+  reading: よわい
+  romaji: yowai
+  english: weak
+  notes: JMdict seq 1324520.
+
+- id: vocab.wakai
+  jlpt: N5
+  word_type: i-adj
+  theme: quality
+  japanese: 若い
+  reading: わかい
+  romaji: wakai
+  english: young
+  notes: JMdict seq 1324300.
