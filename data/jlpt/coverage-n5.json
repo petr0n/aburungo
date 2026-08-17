@@ -3,9 +3,9 @@
  "generated": "2026-08-17",
  "summary": {
   "reference": 809,
-  "taught": 366,
-  "covered": 349,
-  "missing": 460
+  "taught": 387,
+  "covered": 372,
+  "missing": 437
  },
  "missing": [
   {
@@ -42,16 +42,6 @@
    "written": "朝御飯",
    "reading": "あさごはん",
    "english": "breakfast",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "頭",
-   "reading": "あたま",
-   "english": "head",
    "sources": [
     "tanos",
     "open-anki"
@@ -132,26 +122,6 @@
    "written": "医者",
    "reading": "いしゃ",
    "english": "doctor; physician",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "忙しい",
-   "reading": "いそがしい",
-   "english": "busy (people, days)",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "痛い",
-   "reading": "いたい",
-   "english": "hurt; painful; sore",
    "sources": [
     "tanos",
     "open-anki"
@@ -359,16 +329,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "遅い",
-   "reading": "おそい",
-   "english": "slow; (to be) late",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "お手洗い",
    "reading": "おてあらい",
    "english": "toilet, restroom, bathroom (lit., a place to wash one's hands)",
@@ -432,16 +392,6 @@
    "written": "おまわりさん",
    "reading": "おまわりさん",
    "english": "policeman (friendly term)",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "重い",
-   "reading": "おもい",
-   "english": "heavy; serious",
    "sources": [
     "tanos",
     "open-anki"
@@ -619,16 +569,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "軽い",
-   "reading": "かるい",
-   "english": "light, non-serious, minor",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "カレー",
    "reading": "かれー",
    "english": "curry (abbr. for curry and rice)",
@@ -792,16 +732,6 @@
    "written": "薬",
    "reading": "くすり",
    "english": "medicine",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "口",
-   "reading": "くち",
-   "english": "job opening; mouth",
    "sources": [
     "tanos",
     "open-anki"
@@ -1609,16 +1539,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "強い",
-   "reading": "つよい",
-   "english": "strong, powerful",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "テープ",
    "reading": "てーぷ",
    "english": "tape",
@@ -1882,16 +1802,6 @@
    "written": "中",
    "reading": "なか",
    "english": "inside, middle, among",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "長い",
-   "reading": "ながい",
-   "english": "long, lengthy",
    "sources": [
     "tanos",
     "open-anki"
@@ -2172,26 +2082,6 @@
    "written": "話",
    "reading": "はなし",
    "english": "talk (chat), story",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "早い",
-   "reading": "はやい",
-   "english": "early",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "速い",
-   "reading": "はやい",
-   "english": "fast, quick",
    "sources": [
     "tanos",
     "open-anki"
@@ -2649,16 +2539,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "短い",
-   "reading": "みじかい",
-   "english": "short (length)",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "見せる",
    "reading": "みせる",
    "english": "to show, to display",
@@ -2689,16 +2569,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "耳",
-   "reading": "みみ",
-   "english": "ear",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "みんな",
    "reading": "みんな",
    "english": "all, everyone, everybody",
@@ -2719,29 +2589,9 @@
    "jmdictCommon": true
   },
   {
-   "written": "難しい",
-   "reading": "むずかしい",
-   "english": "difficult",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "村",
    "reading": "むら",
    "english": "village",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "目",
-   "reading": "め",
-   "english": "eye(s)",
    "sources": [
     "tanos",
     "open-anki"
@@ -2812,16 +2662,6 @@
    "written": "八百屋",
    "reading": "やおや",
    "english": "greengrocer",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "易しい",
-   "reading": "やさしい",
-   "english": "easy, plain, simple",
    "sources": [
     "tanos",
     "open-anki"
@@ -2929,16 +2769,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "弱い",
-   "reading": "よわい",
-   "english": "weak",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "ラジオ",
    "reading": "らじお",
    "english": "radio",
@@ -3039,16 +2869,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "若い",
-   "reading": "わかい",
-   "english": "young",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "私",
    "reading": "わたくし",
    "english": "I (formal), myself, private affairs",
@@ -3072,16 +2892,6 @@
    "written": "渡る",
    "reading": "わたる",
    "english": "to cross over, to go across",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "悪い",
-   "reading": "わるい",
-   "english": "bad, sinful; inferior",
    "sources": [
     "tanos",
     "open-anki"
@@ -3151,42 +2961,6 @@
    "written": "ああ",
    "reading": "ああ",
    "english": "Ah!, Oh!",
-   "sources": [
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "明い",
-   "reading": "あかるい",
-   "english": "",
-   "sources": [
-    "tanos"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "明るい",
-   "reading": "あかるい",
-   "english": "bright (in reference to personality or weather); cheerful",
-   "sources": [
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "足",
-   "reading": "あし",
-   "english": "",
-   "sources": [
-    "tanos"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "足; 脚",
-   "reading": "あし",
-   "english": "foot; leg",
    "sources": [
     "open-anki"
    ],
@@ -4517,6 +4291,11 @@
    "id": "vocab.nangatsu",
    "japanese": "何月",
    "reading": "なんがつ"
+  },
+  {
+   "id": "vocab.nemui",
+   "japanese": "眠い",
+   "reading": "ねむい"
   },
   {
    "id": "vocab.sugu",

@@ -12,7 +12,7 @@
 #   1  the body, and what hurts   頭が痛いです is what the body words are for
 #   2  how you feel               忙しい, 眠い, 悪い
 #   3  long and short, heavy and light
-#   4  early and late, bright     明るい pairs with the already-taught 暗い
+#   4  early, late and bright     明るい pairs with the already-taught 暗い
 #   5  hard and easy, strong and weak
 #
 # Deliberately deferred: そちら/あちら/どちら, which would finish the こちら set
@@ -91,7 +91,7 @@
   order: 73
   chapterId: n5.chapter-8
   situation: Describing things and people
-  title: Early and late
+  title: Early, late and bright
   canDo: Say something is early, late or bright
   wordIds:
     - vocab.hayai

@@ -1321,7 +1321,7 @@ fails if this file is out of date. Book One is N5 internally; a learner never re
 - この本は重いです。 — This book is heavy.
 - あの道は長いです。 — That road is long.
 
-### 73. Early and late
+### 73. Early, late and bright
 
 **Lesson 4 of 5** · Describing things and people
 **Can do:** Say something is early, late or bright
@@ -1333,7 +1333,7 @@ fails if this file is out of date. Book One is N5 internally; a learner never re
 | 遅い | おそい | slow, late |
 | 明るい | あかるい | bright, cheerful |
 
-- 電車は遅いです。 — The train is slow.
+- 電車は遅いです。 — The train is late.
 - 早いですね。 — You're early, aren't you.
 
 ### 74. Hard and easy, strong and weak
