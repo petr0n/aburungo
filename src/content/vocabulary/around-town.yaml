@@ -1,0 +1,250 @@
+# Chapter 9 vocabulary — around town (DR-030).
+#
+# The position words are the reason this chapter exists. 前, 後ろ and 隣 were
+# taught back in the directions lessons; 上, 下, 中, 外 and 間 never were, so the
+# learner could say "in front of the station" and not "inside the station" —
+# half a system, and the missing half is the more useful one.
+#
+# The こそあど set also finishes here. これ/それ/あれ/どれ came in Lesson 1 and
+# この/その/あの/どの in Chapter 7; そちら/あちら/どちら complete it beside こちら.
+# Chapter 8 deferred them on the grounds that they belong with pointing rather
+# than describing, and this is where pointing happens.
+#
+# Public buildings are deliberately absent: 駅, 学校, 病院, 銀行, 郵便局, 図書館
+# and 公園 are all long taught. Checking that first is what kept this chapter
+# from repeating a lesson the ladder already had.
+#
+# content-source: training — headwords, readings and part of speech verified
+#   against JMdict 3.6.2 on 2026-08-17, sequence numbers inline, all twenty-one
+#   flagged common.
+# jlpt-source: training — JLPT level unverified
+
+# ── Above, below, inside, outside (Lesson 1) ──────────────────────────────────
+
+- id: vocab.ue
+  jlpt: N5
+  word_type: noun
+  theme: position
+  japanese: 上
+  reading: うえ
+  romaji: ue
+  english: on, above
+  notes: A noun, not a preposition — 机の上, literally "the desk's above". JMdict seq 1352130.
+
+- id: vocab.shita
+  jlpt: N5
+  word_type: noun
+  theme: position
+  japanese: 下
+  reading: した
+  romaji: shita
+  english: under, below
+  notes: JMdict seq 1184140.
+
+- id: vocab.naka
+  jlpt: N5
+  word_type: noun
+  theme: position
+  japanese: 中
+  reading: なか
+  romaji: naka
+  english: inside, in
+  notes: Also "among" a group of people. JMdict seq 1423310.
+
+- id: vocab.soto
+  jlpt: N5
+  word_type: noun
+  theme: position
+  japanese: 外
+  reading: そと
+  romaji: soto
+  english: outside
+  notes: JMdict seq 1203250.
+
+- id: vocab.aida
+  jlpt: N5
+  word_type: noun
+  theme: position
+  japanese: 間
+  reading: あいだ
+  romaji: aida
+  english: between
+  notes: Takes two things joined by と — 駅と学校の間. Also a stretch of time. JMdict seq 1215230.
+
+# ── Near and far, and finishing the set (Lesson 2) ────────────────────────────
+
+- id: vocab.chikai
+  jlpt: N5
+  word_type: i-adj
+  theme: position
+  japanese: 近い
+  reading: ちかい
+  romaji: chikai
+  english: near, close
+  notes: The adjective. 近く, which you already know, is the noun — "the vicinity". JMdict seq 1242130.
+
+- id: vocab.tooi
+  jlpt: N5
+  word_type: i-adj
+  theme: position
+  japanese: 遠い
+  reading: とおい
+  romaji: tooi
+  english: far
+  notes: JMdict seq 1177800.
+
+- id: vocab.sochira
+  jlpt: N5
+  word_type: noun
+  theme: pointing
+  japanese: そちら
+  reading: そちら
+  romaji: sochira
+  english: that way, that one (polite)
+  notes: JMdict seq 1006780.
+
+- id: vocab.achira
+  jlpt: N5
+  word_type: noun
+  theme: pointing
+  japanese: あちら
+  reading: あちら
+  romaji: achira
+  english: that way over there (polite)
+  notes: JMdict seq 1483185.
+
+- id: vocab.dochira
+  jlpt: N5
+  word_type: noun
+  theme: pointing
+  japanese: どちら
+  reading: どちら
+  romaji: dochira
+  english: which way, which one (polite)
+  notes: Also the polite "which of the two", and how staff ask where you are from. JMdict seq 1189360.
+
+# ── Out of town (Lesson 3) ────────────────────────────────────────────────────
+
+- id: vocab.umi
+  jlpt: N5
+  word_type: noun
+  theme: nature
+  japanese: 海
+  reading: うみ
+  romaji: umi
+  english: sea, ocean
+  notes: JMdict seq 1201190.
+
+- id: vocab.yama
+  jlpt: N5
+  word_type: noun
+  theme: nature
+  japanese: 山
+  reading: やま
+  romaji: yama
+  english: mountain
+  notes: JMdict seq 1302680.
+
+- id: vocab.kawa
+  jlpt: N5
+  word_type: noun
+  theme: nature
+  japanese: 川
+  reading: かわ
+  romaji: kawa
+  english: river
+  notes: JMdict seq 1390020.
+
+- id: vocab.ike
+  jlpt: N5
+  word_type: noun
+  theme: nature
+  japanese: 池
+  reading: いけ
+  romaji: ike
+  english: pond
+  notes: JMdict seq 1421700.
+
+- id: vocab.ki
+  jlpt: N5
+  word_type: noun
+  theme: nature
+  japanese: 木
+  reading: き
+  romaji: ki
+  english: tree, wood
+  notes: The material as well as the plant. JMdict seq 1534520.
+
+- id: vocab.hana
+  jlpt: N5
+  word_type: noun
+  theme: nature
+  japanese: 花
+  reading: はな
+  romaji: hana
+  english: flower
+  notes: Same reading as 鼻, the nose — different kanji, and only context separates them in speech. JMdict seq 1194500.
+
+# ── Going somewhere (Lesson 4) ────────────────────────────────────────────────
+
+- id: vocab.tatemono
+  jlpt: N5
+  word_type: noun
+  theme: town
+  japanese: 建物
+  reading: たてもの
+  romaji: tatemono
+  english: building
+  notes: JMdict seq 1257540.
+
+- id: vocab.kaimono
+  jlpt: N5
+  word_type: noun
+  theme: town
+  japanese: 買い物
+  reading: かいもの
+  romaji: kaimono
+  english: shopping
+  notes: Takes する — 買い物をします. Built from 買う, which you already know. JMdict seq 1589730.
+
+- id: vocab.ryokou
+  jlpt: N5
+  word_type: noun
+  theme: town
+  japanese: 旅行
+  reading: りょこう
+  romaji: ryokou
+  english: trip, travel
+  notes: Also takes する. JMdict seq 1553170.
+
+- id: vocab.issho
+  jlpt: N5
+  word_type: noun
+  theme: town
+  japanese: 一緒
+  reading: いっしょ
+  romaji: issho
+  english: together
+  notes: Almost always 一緒に — 一緒に行きます, let's go together. JMdict seq 1163400.
+
+- id: vocab.noboru
+  jlpt: N5
+  word_type: verb
+  verb_class: u
+  theme: town
+  japanese: 登る
+  reading: のぼる
+  romaji: noboru
+  english: to climb
+  notes: Intransitive (vi). Takes に for what you climb — 山に登ります. JMdict seq 1352570.
+
+- id: vocab.wataru
+  jlpt: N5
+  word_type: verb
+  verb_class: u
+  theme: town
+  japanese: 渡る
+  reading: わたる
+  romaji: wataru
+  english: to cross
+  notes: Intransitive (vi), and it takes を for the thing crossed — 道を渡ります — which is unusual for an intransitive verb. JMdict seq 1444680.

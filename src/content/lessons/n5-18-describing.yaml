@@ -1,0 +1,143 @@
+# Chapter 8 — Describing things and people (DR-029).
+#
+# Not the "adjectives chapter" it first looked like it should be. The ladder
+# already had 23 い-adjectives -- 大きい, 小さい, 新しい, 古い, 高い, 安い and the
+# rest -- so the gap was narrower than the gap list suggested: the body, and the
+# opposite pairs.
+#
+# The pairs are the organising idea. 長い with 短い, 重い with 軽い, 早い with
+# 遅い, 強い with 弱い: each is one concept with two ends, and teaching half of
+# one is teaching half a concept. So they arrive together, two pairs per lesson.
+#
+#   1  the body, and what hurts   頭が痛いです is what the body words are for
+#   2  how you feel               忙しい, 眠い, 悪い
+#   3  long and short, heavy and light
+#   4  early, late and bright     明るい pairs with the already-taught 暗い
+#   5  hard and easy, strong and weak
+#
+# Deliberately deferred: そちら/あちら/どちら, which would finish the こちら set
+# from the previous chapter. They belong with pointing, not with describing, and
+# a chapter that stays one idea is worth more than a tidy loose end.
+#
+# content-source: n/a for this file -- it references vocabulary/describing.yaml
+#   and phrases/describing.yaml, whose own provenance markers apply.
+
+- id: n5.desc-body
+  order: 70
+  chapterId: n5.chapter-8
+  situation: Describing things and people
+  title: The body, and what hurts
+  canDo: Say which part of you hurts
+  wordIds:
+    - vocab.atama
+    - vocab.me
+    - vocab.mimi
+    - vocab.kuchi
+    - vocab.ashi
+    - vocab.itai
+  phraseIds:
+    - desc.my-head-hurts
+    - desc.my-foot-hurts
+  kanji:
+    - 頭
+    - 目
+    - 耳
+    - 口
+    - 足
+    - 痛
+  grammarNote: "The part that hurts takes が, not は: 頭が痛いです. That looks odd in English — \"as for my head, it is painful\" — but it is the ordinary pattern for anything you experience rather than choose. 痛い on its own, 痛い！, is what you say when you stub your toe. One word to watch: 足 covers both foot and leg, where English insists on two. Japanese draws the line at the hip, not the ankle."
+
+- id: n5.desc-feelings
+  order: 71
+  chapterId: n5.chapter-8
+  situation: Describing things and people
+  title: How you feel
+  canDo: Say you are busy, tired or unwell
+  wordIds:
+    - vocab.isogashii
+    - vocab.nemui
+    - vocab.warui
+  phraseIds:
+    - desc.im-busy-today
+    - desc.im-sleepy
+  kanji:
+    - 忙
+    - 眠
+    - 悪
+  grammarNote: "These describe you, so they take は for the topic and nothing else: 今日は忙しいです. 悪い is the opposite of いい, and it does the same double duty \"bad\" does in English — a bad film, a bad person, and, said quickly on its own, a casual apology. Note that 眠い means sleepy while 寝る means to sleep: one is how you feel, the other is what you do about it."
+
+- id: n5.desc-size
+  order: 72
+  chapterId: n5.chapter-8
+  situation: Describing things and people
+  title: Long and short, heavy and light
+  canDo: Describe the size and weight of things
+  wordIds:
+    - vocab.nagai
+    - vocab.mijikai
+    - vocab.omoi
+    - vocab.karui
+  phraseIds:
+    - desc.this-book-is-heavy
+    - desc.that-road-is-long
+  kanji:
+    - 長
+    - 短
+    - 重
+    - 軽
+  grammarNote: "Two pairs, taught as pairs because that is how they are used and how they are remembered. 長い and 短い cover length and also duration — a long road and a long day take the same word. 重い and 軽い are weight only; if you want a bright room, that is 明るい, next lesson. These attach straight to a noun with no help: 長い道, 重い本. That is what makes them い-adjectives, and it is why 茶色 and 緑 from last chapter needed の and these do not."
+
+- id: n5.desc-speed
+  order: 73
+  chapterId: n5.chapter-8
+  situation: Describing things and people
+  title: Early, late and bright
+  canDo: Say something is early, late or bright
+  wordIds:
+    - vocab.hayai
+    - vocab.osoi
+    - vocab.akarui
+  phraseIds:
+    - desc.the-train-is-late
+    - desc.its-early
+  kanji:
+    - 早
+    - 遅
+    - 明
+  grammarNote: "早い and 遅い are a pair covering two ideas each. 早い is both early and fast; 遅い is both late and slow. Japanese writes 速い when it specifically means fast rather than early, but the reading is identical and nobody expects a beginner to choose between them. 明るい completes a pair you already half-own: 暗い has been on the ladder since the weather lessons. Both also describe people — an 明るい person is cheerful."
+
+- id: n5.desc-difficulty
+  order: 74
+  chapterId: n5.chapter-8
+  situation: Describing things and people
+  title: Hard and easy, strong and weak
+  canDo: Say how hard something is
+  wordIds:
+    - vocab.muzukashii
+    - vocab.yasashii
+    - vocab.tsuyoi
+    - vocab.yowai
+    - vocab.wakai
+  phraseIds:
+    - desc.its-difficult
+    - desc.this-book-is-easy
+    - desc.that-person-is-young
+  kanji:
+    - 難
+    - 易
+    - 強
+    - 弱
+    - 若
+  grammarNote: "難しい and 易しい, 強い and 弱い — two more pairs, and one warning. There are two words pronounced やさしい: 易しい is easy, and 優しい is kind. Different kanji, different meanings, identical sound, and only context separates them. This lesson teaches the first. 若い rounds the chapter off, and note that Japanese uses it of things as well as people, much as English does with a young company."
+
+- id: n5.checkpoint-8
+  order: 75
+  chapterId: n5.chapter-8
+  situation: Integration & checkpoint
+  title: Chapter 8 checkpoint
+  canDo: Recognise everything taught so far
+  wordIds: []
+  phraseIds: []
+  kanji: []
+  checkpoint: recognition
+  grammarNote: "A wide pass over everything the book has taught, this chapter included. Pick each word out of a line-up; anything you miss comes back sooner. It finishes when the remaining set empties — retry as often as you like, nothing is recorded."
