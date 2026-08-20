@@ -24,15 +24,16 @@ Resequenced 2026-08-04 (DR-017).
 | | | |
 |---|---|---|
 | Server-durable learning state (DR-016) | done | IndexedDB alone could not survive Safari's ITP |
-| Grammar-in-context as first-class SRS items | done | PR #50; 39 patterns as of 2026-08-20 |
+| Grammar-in-context as first-class SRS items | done | PR #50; 42 patterns with Chapter 11 (unmerged at review time) |
 | ~~Scoped Hana~~ | **shelved (DR-023)** | built and tested, switched off; production checkpoint covers production practice instead |
 | Chapters, checkpoints on a cadence | done | DR-021, DR-024 |
-| Deepen Book One vocabulary | **in progress** | 423 words as of 2026-08-20, from a reference gap of 809 |
+| Deepen Book One vocabulary | **in progress** | 450 words with Chapter 11 (unmerged), from a reference gap of 809 |
 | Kanji component + mnemonic layer | **not started** | the largest remaining Book One gap |
 
 ### Finishing Book One
 
-1. **Two more chapters** — food, then people & clothes. Lands the book near the ~100 landing zone.
+1. **One more chapter** — people & clothes (food shipped as Chapter 11, DR-032, unmerged at
+   review time). Lands the book near the ~100 landing zone.
 2. **Kanji component + mnemonic layer.** Components from KANJIDIC2/KanjiVG, a mnemonic per kanji.
    Resolve authoring vs. licensed scheme (overarching plan §5.5). Optional handwriting via KanjiVG
    stroke order. **Build this before Book Two**, where kanji stop being learnable as flat shapes.
@@ -57,10 +58,11 @@ See [03-path-n4.md §0](03-path-n4.md).
 
 ## Phase 3 — Book Two
 
-Author the chapters, **rule chapters first** — plain form, joining sentences, wanting and
-intending, conditionals, giving and receiving. Book One's grammar patterns cover only 39 of its 76
-teaching lessons because situation chapters are word-shaped; Book Two's purpose is combining
-patterns, so it should invert that ratio.
+Author the chapters, **rule chapters first** — plain form, giving and receiving, joining
+sentences, wanting and intending, being able to, quoted speech, conditionals, per the
+dependency-ordered skeleton in [03 §4](03-path-n4.md). Book One's grammar patterns cover only 42
+of its 81 teaching lessons (with Chapter 11) because situation chapters are word-shaped; Book
+Two's purpose is combining patterns, so it should invert that ratio.
 
 Content sourcing stays training-canonical and marked, verified headword-by-headword against JMdict.
 First graded reading passages, once vocabulary is deep enough for i+1 to mean anything.
@@ -79,9 +81,10 @@ Content is **verified only** from here up. No training-canonical sentences.
 ## Phase 5 — Books Four and Five
 
 Extend Book Three's reading, mining and production machinery with harder, broader content and
-register/nuance grammar. Mostly content and levelling work, little new engine. Deliberately
-unplanned in detail — see [04b-path-n2-n1.md](04b-path-n2-n1.md), including the observation that
-**listening has no home anywhere in this plan.**
+register/nuance grammar. Mostly content and levelling work, little new engine. Planned to band
+level only — see [04b-path-n2-n1.md](04b-path-n2-n1.md). Listening now has a **floor** inside the
+books (library passages with pre-generated audio — [04 §5](04-path-n3.md), [04b §6](04b-path-n2-n1.md));
+unscripted real-speech listening remains the named ceiling.
 
 ---
 

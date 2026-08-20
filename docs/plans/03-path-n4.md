@@ -172,8 +172,9 @@ removes the crutch at the book boundary:
 The first real Tadoku taste, and deliberately a *shape*, not a library — the levelled library and
 mining are Book Three builds.
 
-- **Shape:** a handful of linked sentences at ~95% known items, read for flow, no dictionary, no
-  questions after. Read, not SRS'd.
+- **Shape:** a handful of linked sentences at ~98% known items — the unassisted-flow threshold
+  (Hu & Nation; see [04 §5](04-path-n3.md)), cheap to hit here since passages are authored against
+  the ladder — read for flow, no dictionary, no questions after. Read, not SRS'd.
 - **When:** from roughly chapter 4 on — a passage is pointless before joining-sentences exists,
   because a passage of single-clause sentences is just phrases stacked. One short passage near
   each chapter close from there.
@@ -244,7 +245,7 @@ at any level.
 
 ## 12. Build order
 
-1. Finish Book One (food chapter, people & clothes chapter)
+1. Finish Book One (people & clothes chapter; food shipped as Chapter 11, DR-032)
 2. Kanji component + mnemonic layer
 3. Multi-book support (§0a) and the Book-level difficulty shift (§0b) — recall default, romaji
    cut, frame-based produce beat
