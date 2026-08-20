@@ -266,3 +266,43 @@
   gloss: Doing it now, or doing it as a rule.
   phraseId: te.i-work-at-a-company
   blank: はたらいて
+
+# ── Chapter 10 — the past tense (DR-031) ─────────────────────────────────────
+# One pattern per form: the polite past, its negative, the copula past, the
+# i-adjective past, and the question that puts them to work. The blank is
+# matched against the phrase's reading, so these are kana.
+
+- id: grammar.n5-past-mashita
+  jlpt: N5
+  pattern: ～ました
+  gloss: Did ~. Swap ます for ました; every verb behaves the same way.
+  phraseId: past.i-read-a-book-last-night
+  blank: よみました
+
+- id: grammar.n5-past-masen-deshita
+  jlpt: N5
+  pattern: ～ませんでした
+  gloss: Did not ~. ません picks up でした behind it.
+  phraseId: past.i-did-not-go-to-work
+  blank: いきませんでした
+
+- id: grammar.n5-past-deshita
+  jlpt: N5
+  pattern: ～でした
+  gloss: Was ~. Nouns and na-adjectives swap です for でした.
+  phraseId: past.i-was-free-yesterday
+  blank: ひまでした
+
+- id: grammar.n5-past-katta
+  jlpt: N5
+  pattern: ～かったです
+  gloss: Was ~. An i-adjective drops い and takes かった — never でした.
+  phraseId: past.the-trip-was-fun
+  blank: たのしかったです
+
+- id: grammar.n5-past-dou
+  jlpt: N5
+  pattern: ～はどうでしたか
+  gloss: How was ~?
+  phraseId: past.how-was-the-trip
+  blank: どうでしたか

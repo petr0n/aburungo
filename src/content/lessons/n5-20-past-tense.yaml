@@ -1,0 +1,138 @@
+# Chapter 10 — Talking about yesterday (DR-031).
+#
+# The second chapter built around a rule rather than a place, and for the same
+# retroactive reason as the te-form. The ladder teaches 昨日, 先週, 先月 and
+# 去年, and carries five sentences that are already in the past tense --
+# どこから来ましたか, 先月日本へ行きました, ごちそうさまでした -- while no lesson
+# has ever said that ました is a tense. A learner has the time words and no verb
+# form to put behind them.
+#
+# Unlike the te-form there is no conjugation table to split, because the polite
+# past is uniform: every verb, without exception, swaps ます for ました. So the
+# lessons split by what you can say rather than by verb group.
+#
+#   1  what you did              ました, and the time words that were missing
+#   2  what you did not do       ませんでした, もう and まだ
+#   3  how it was                でした, for nouns and na-adjectives
+#   4  how it was, the other half  かったです -- the form that surprises people
+#   5  how was it?               どうでしたか, and the whole thing in use
+#
+# Lesson 5 depends on lessons 3 and 4, so this chapter must not be split by a
+# checkpoint -- the same constraint as the te-form chapter.
+#
+# content-source: n/a for this file -- it references vocabulary/past-tense.yaml
+#   and phrases/past-tense.yaml, whose own provenance markers apply.
+
+- id: n5.past-mashita
+  order: 81
+  chapterId: n5.chapter-10
+  situation: Talking about yesterday
+  title: What you did
+  canDo: Say what you did earlier today or last night
+  wordIds:
+    - vocab.kesa
+    - vocab.sakki
+    - vocab.yuube
+  phraseIds:
+    - past.i-ate-bread-this-morning
+    - past.i-met-the-teacher
+    - past.i-read-a-book-last-night
+  kanji:
+    - 朝
+    - 夜
+  patternId: grammar.n5-past-mashita
+  grammarNote: "This is the easiest conjugation in Japanese and it unlocks half of every conversation. Take the polite form you already use and swap ます for ました: 食べます → 食べました, 行きます → 行きました, します → しました. There are no groups and no exceptions — the irregulars come quietly along with everything else. You have been saying 先月日本へ行きました since the dates lessons without being told what the ました was doing. It was this. The time words arrive with it because a tense needs somewhere to put it: 昨日 and 一昨日 you have, and 今朝, さっき and 昨夜 are the three you reach for most. あさ and よる you have had since the transit lessons; the kanji 朝 and 夜 are new, and worth having here because 今朝 and 昨夜 are built out of them."
+
+- id: n5.past-negative
+  order: 82
+  chapterId: n5.chapter-10
+  situation: Talking about yesterday
+  title: What you did not do
+  canDo: Say what you did not do, and answer not yet
+  wordIds:
+    - vocab.nanimo
+    - vocab.mada
+    - vocab.mou
+  phraseIds:
+    - past.i-did-nothing-yesterday
+    - past.i-did-not-go-to-work
+    - past.have-you-eaten-yet
+    - past.not-yet
+  kanji: []
+  patternId: grammar.n5-past-masen-deshita
+  grammarNote: "The negative past looks long and is not complicated: ません simply picks up でした behind it. 行きません → 行きませんでした. Say it a few times and the ending stops feeling like four separate words. 何も means \"anything\" and only ever appears with a negative, the way English \"anything\" does in \"I didn't do anything\" — 何もしませんでした. もう and まだ are a pair worth learning together: もう食べましたか is \"have you eaten yet\", and まだです is the whole answer if you have not. まだ carries the \"not\" by itself, so you do not add one."
+
+- id: n5.past-deshita
+  order: 83
+  chapterId: n5.chapter-10
+  situation: Talking about yesterday
+  title: How it was
+  canDo: Say how something was, using nouns and na-adjectives
+  wordIds:
+    - vocab.hima
+    - vocab.taihen
+    - vocab.benri
+    - vocab.yuumei
+  phraseIds:
+    - past.i-was-free-yesterday
+    - past.last-week-was-hard
+    - past.that-shop-was-convenient
+    - past.it-was-not-quiet
+  kanji:
+    - 暇
+    - 変
+    - 便
+    - 利
+    - 有
+  patternId: grammar.n5-past-deshita
+  grammarNote: "です becomes でした, and that covers every noun and every na-adjective: 学生でした, 暇でした, 静かでした. The negative follows the same trick as the last lesson — じゃありません picks up でした: 静かじゃありませんでした. These four are na-adjectives, which means they need な to sit in front of a noun (有名な店) but nothing at all in front of です (この店は有名です). You already have 静か, にぎやか, きれい and 元気 in the same group. 大変 does double duty: as an adjective it means hard or tough, and in front of another adjective it means very."
+
+- id: n5.past-katta
+  order: 84
+  chapterId: n5.chapter-10
+  situation: Talking about yesterday
+  title: How it was, the other half
+  canDo: Say how something was, using i-adjectives
+  wordIds:
+    - vocab.tanoshii
+    - vocab.tsumaranai
+    - vocab.eiga
+  phraseIds:
+    - past.the-trip-was-fun
+    - past.the-film-was-boring
+    - past.it-was-hot-yesterday
+    - past.it-was-not-expensive
+  kanji:
+    - 楽
+    - 映
+    - 画
+  patternId: grammar.n5-past-katta
+  grammarNote: "Here is the one that catches everybody. An i-adjective does not take でした. 楽しいでした is wrong; the adjective itself changes: drop the い and add かった, then keep です for politeness. 楽しい → 楽しかったです, 暑い → 暑かったです, 高い → 高かったです. The negative is the same move on 〜くない: 高くない → 高くなかったです. Every i-adjective you own since the weather lessons now has a past. One warning: つまらない already ends in ない and is not a negative, so its past is つまらなかった — boring, not \"was not boring\"."
+
+- id: n5.past-dou
+  order: 85
+  chapterId: n5.chapter-10
+  situation: Talking about yesterday
+  title: How was it?
+  canDo: Ask how something was and answer
+  wordIds:
+    - vocab.dou
+  phraseIds:
+    - past.how-was-the-trip
+    - past.it-was-very-fun
+    - past.what-did-you-do-yesterday
+  kanji: []
+  patternId: grammar.n5-past-dou
+  grammarNote: "Two questions do most of the work of catching up with someone. 昨日は何をしましたか asks what you did; 〜はどうでしたか asks how it was. どう is the last member of the こそあど set you have been collecting — こう, そう, ああ, どう, this time asking after manner rather than a thing or a direction. The answers are the two forms from the last two lessons, and とても and あまり, which you already have, turn the volume up and down: とても楽しかったです, あまり楽しくなかったです. This lesson brings almost nothing new on purpose. It is the chapter, said out loud."
+
+- id: n5.checkpoint-10
+  order: 86
+  chapterId: n5.chapter-10
+  situation: Integration & checkpoint
+  title: Chapter 10 checkpoint
+  canDo: Recognise everything taught so far
+  wordIds: []
+  phraseIds: []
+  kanji: []
+  checkpoint: recognition
+  grammarNote: "A wide pass over everything the book has taught, this chapter included. Pick each word out of a line-up; anything you miss comes back sooner. It finishes when the remaining set empties — retry as often as you like, nothing is recorded."

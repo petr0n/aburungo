@@ -1,0 +1,177 @@
+# Chapter 10 vocabulary — talking about yesterday (DR-031).
+#
+# A rule chapter, so the word list is short on purpose. The chapter's job is the
+# past tense, and padding it with unrelated nouns is exactly what shrank the two
+# chapters before it. Every word here is either a time word the past tense needs
+# or an adjective whose past form is the point.
+#
+# The time words fill a real hole. 昨日, 先週, 先月 and 去年 have all been on the
+# ladder for a long time and the learner could not put a verb behind any of
+# them. 一昨日 was taught with the other relative-time words; さっき, 今朝 and
+# 昨夜 never were, and they are the ones you reach for most in conversation.
+#
+# あさ and よる are not here: they were taught in kana with the transit words, so
+# only their kanji is new, and that belongs on the lesson rather than in a second
+# entry for a word the learner already owns.
+#
+# 楽しい and つまらない are here rather than with the other adjectives because
+# 楽しかったです is the sentence the い-adjective past exists for -- it is how
+# anyone answers "how was it?".
+#
+# Already taught and deliberately absent: 一昨日, 昨日, 先週, 先月, 去年, あさ,
+# よる, 静か, にぎやか, きれい, 元気, 高い, 暑い, とても, あまり.
+#
+# content-source: training — headwords, readings and part of speech verified
+#   against JMdict 3.6.2 on 2026-08-20, sequence numbers inline, all fourteen
+#   flagged common.
+# jlpt-source: training — JLPT level unverified
+
+# ── When it happened (Lesson 1) ───────────────────────────────────────────────
+
+- id: vocab.kesa
+  jlpt: N5
+  word_type: noun
+  theme: time
+  japanese: 今朝
+  reading: けさ
+  romaji: kesa
+  english: this morning
+  notes: 今 plus 朝, but read けさ rather than いまあさ. JMdict seq 1579100.
+
+- id: vocab.sakki
+  jlpt: N5
+  word_type: noun
+  theme: time
+  japanese: さっき
+  reading: さっき
+  romaji: sakki
+  english: a moment ago, just now
+  notes: Written in kana. There is a 殺気 read さっき that means bloodlust, and nobody confuses them. JMdict seq 1005180.
+
+- id: vocab.yuube
+  jlpt: N5
+  word_type: noun
+  theme: time
+  japanese: 昨夜
+  reading: ゆうべ
+  romaji: yuube
+  english: last night
+  notes: 昨 plus 夜, the same 昨 as in 一昨日. Also read さくや, which is the newsreader's version. JMdict seq 1542640.
+
+# ── What you did not do (Lesson 2) ────────────────────────────────────────────
+
+- id: vocab.nanimo
+  jlpt: N5
+  word_type: adverb
+  theme: time
+  japanese: 何も
+  reading: なにも
+  romaji: nanimo
+  english: (not) anything, nothing
+  notes: Only ever used with a negative verb — 何もしませんでした. JMdict seq 1188490.
+
+- id: vocab.mada
+  jlpt: N5
+  word_type: adverb
+  theme: time
+  japanese: まだ
+  reading: まだ
+  romaji: mada
+  english: still, not yet
+  notes: Written in kana. JMdict seq 1527110.
+
+- id: vocab.mou
+  jlpt: N5
+  word_type: adverb
+  theme: time
+  japanese: もう
+  reading: もう
+  romaji: mou
+  english: already, yet
+  notes: The partner of まだ. Kana only — it has no kanji. JMdict seq 1012480.
+
+# ── How it was (Lesson 3) ─────────────────────────────────────────────────────
+
+- id: vocab.hima
+  jlpt: N5
+  word_type: na-adj
+  theme: quality
+  japanese: 暇
+  reading: ひま
+  romaji: hima
+  english: free, not busy
+  notes: The opposite of 忙しい, which you already know. Also a noun, meaning spare time. JMdict seq 1577280.
+
+- id: vocab.taihen
+  jlpt: N5
+  word_type: na-adj
+  theme: quality
+  japanese: 大変
+  reading: たいへん
+  romaji: taihen
+  english: hard, tough
+  notes: Also an adverb meaning very. 大変でした is what you say about a difficult week. JMdict seq 1415000.
+
+- id: vocab.benri
+  jlpt: N5
+  word_type: na-adj
+  theme: quality
+  japanese: 便利
+  reading: べんり
+  romaji: benri
+  english: convenient, handy
+  notes: JMdict seq 1512610.
+
+- id: vocab.yuumei
+  jlpt: N5
+  word_type: na-adj
+  theme: quality
+  japanese: 有名
+  reading: ゆうめい
+  romaji: yuumei
+  english: famous, well-known
+  notes: JMdict seq 1541620.
+
+# ── How it was, the other half (Lesson 4) ─────────────────────────────────────
+
+- id: vocab.tanoshii
+  jlpt: N5
+  word_type: i-adj
+  theme: quality
+  japanese: 楽しい
+  reading: たのしい
+  romaji: tanoshii
+  english: enjoyable, fun
+  notes: 楽しかったです is the standard answer to how something was. JMdict seq 1207240.
+
+- id: vocab.tsumaranai
+  jlpt: N5
+  word_type: i-adj
+  theme: quality
+  japanese: つまらない
+  reading: つまらない
+  romaji: tsumaranai
+  english: boring, dull
+  notes: Written in kana. It already looks like a negative and is not one — the past is つまらなかった. JMdict seq 1008190.
+
+- id: vocab.eiga
+  jlpt: N5
+  word_type: noun
+  theme: leisure
+  japanese: 映画
+  reading: えいが
+  romaji: eiga
+  english: film, movie
+  notes: JMdict seq 1173720.
+
+# ── Asking how it was (Lesson 5) ──────────────────────────────────────────────
+
+- id: vocab.dou
+  jlpt: N5
+  word_type: adverb
+  theme: pointing
+  japanese: どう
+  reading: どう
+  romaji: dou
+  english: how, in what way
+  notes: The ど of the こそあど set, asking after manner. Written in kana. JMdict seq 1008910.
