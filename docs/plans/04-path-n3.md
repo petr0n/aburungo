@@ -1,108 +1,142 @@
-# N3 Ladder — the flagship paid path ("the wall")
+# Book Three — the flagship ("the wall")
 
-**Tier:** Paid (the first paywall). **Goal:** carry the learner over **the intermediate wall** —
-the level where the most learners stall and quit — to where they can **read real Japanese for
-pleasure and hold a genuine conversation**. ~3,700 cumulative words, ~650 kanji, the connective
-grammar that turns sentences into discourse.
+**Tier:** Paid — the first paywall. **Status: not started.** Depends on Book Two, and on a content
+pipeline that does not exist yet.
 
-N3 is where AburunGo earns its money and its reputation. Beginners have many good free options;
-**almost nothing gets people *through* N3 well.** This path's whole design is aimed at the two
-things that kill intermediate learners: **the plateau** (progress feels invisible) and **the
-input cliff** (real Japanese is suddenly too hard). Same engine as before; this doc covers the N3
-shift and the retention machinery that matters most here.
+**Goal:** carry the learner over **the intermediate wall**, the level where most learners stall and
+quit, to where they can **read real Japanese for pleasure and hold a genuine conversation**.
+
+Book Three is where AburunGo earns its money and its reputation. Beginners have many good free
+options; **almost nothing gets people *through* the intermediate stretch well.** The whole design
+targets the two things that kill intermediate learners: **the plateau** (progress feels invisible)
+and **the input cliff** (real Japanese is suddenly too hard).
 
 ---
 
-## 1. Why N3 is different (and why it's the paid flagship)
+## 1. Why this book is different
 
-- **The plateau is psychological.** At N5/N4 every session unlocks an obvious new ability. At N3 the
-  gains are diffuse (broader vocab, faster reading) and *feel* like nothing. The path must
-  **manufacture visible progress** out of honest signals.
-- **The input cliff is real.** Native material is far above i+1 for an N3 learner. The path must
-  supply a **ladder of graded reading** that bridges textbook Japanese to real Japanese.
-- **Output must dominate.** Comprehension is no longer the bottleneck — *production* is. N3 sessions
-  tilt heavily toward speaking and writing.
+- **The plateau is psychological.** In Books One and Two every session unlocks an obvious new
+  ability. Here the gains are diffuse — broader vocabulary, faster reading — and *feel* like
+  nothing. The book must **manufacture visible progress out of honest signals**, which is a
+  narrow path to walk given the no-gamification rule: counters that reflect real ability, never
+  points that reward showing up.
+- **The input cliff is real.** Native material is far above i+1 at this level. The book must supply
+  a **ladder of graded reading** bridging textbook Japanese to real Japanese.
+- **Output must dominate.** Comprehension is no longer the bottleneck — production is.
 
-## 2. What changes from N4
+## 2. What changes from Book Two
 
-| Dimension | N4 | **N3** |
+| Dimension | Book Two | **Book Three** |
 |---|---|---|
-| Session balance | review + new + small output | **output- and reading-dominant**; new vocab via mining |
-| Vocab acquisition | curated unit lists | **sentence mining** — learner mines unknown words from readings into SRS |
-| Reading | short graded passages | **extensive reading (Tadoku)** — a leveled library, volume over analysis |
-| Grammar | patterns in isolation-ish | **connective/discourse** grammar (ところ、ように、せいで…) in real text |
-| Hana | bounded situations | **open conversation + discussion** of what you read; real correction |
-| Content source | training-canonical (marked) | **verified (Tatoeba/CC BY pipeline)** — see §6 |
-| Output grading | light re-modeling | **structured feedback** (what worked, one thing to fix) |
+| Session balance | review + new + small output | **reading- and output-dominant**; new vocabulary via mining |
+| Vocabulary | curated chapter lists | **sentence mining** — the learner takes unknown words from readings into SRS |
+| Reading | short graded passages | **extensive reading** — a levelled library, volume over analysis |
+| Grammar | patterns, combined | **connective and discourse** grammar in real text |
+| Content source | training-canonical (marked) | **verified only** — Tatoeba/CC BY pipeline |
+| Output grading | pattern-composition checkpoint | **structured self-review** against a model answer |
 
-## 3. The N3 daily loop — reading + production first
+## 3. Does the chapter structure survive?
 
-1. **Review (interleaved, cumulative):** now a large, well-mixed retrieval set — the consolidation
-   engine. Production-format by default.
-2. **Read (Tadoku):** a short passage from the **graded library** at ~95% known. Goal is *flow*, not
-   dissection — read it, get the gist, move on. This is the comprehensible-input core.
-3. **Mine:** the learner taps 1–3 genuinely-unknown items from the reading; these become SRS items
-   *in their original sentence context* (the research-backed "one unknown per sentence" atom).
-4. **Produce:** the day's centerpiece — write a few sentences *about* the reading, or a **Hana
-   discussion** ("what did you think of that story?") that demands real output. Hana gives structured
-   feedback.
-5. **Close:** progress shown as **reading volume + words mastered + conversation minutes** — concrete
-   counters that move every day even when "level" doesn't.
+**Partly, and this needs deciding before authoring.** Chapters exist to bound a run of lessons and
+place a checkpoint at a situation boundary. Book Three's vocabulary is too broad to pre-curate and
+comes largely from mining, so "the lessons in this chapter" stops being the unit of progress.
 
-## 4. Extensive reading — the new flagship feature
+The likely answer: chapters survive as **grammar and reading-level bands** rather than situations —
+a chapter is a set of connective patterns plus the reading level that exercises them, and its
+checkpoint asks the learner to read something they could not read at the start of it. That keeps
+the shrinking-set mastery gate intact while letting vocabulary arrive by mining.
 
-A **leveled reading library** is the heart of N3 (and the clearest differentiator). Principles from
-Tadoku research: many easy texts beat few hard ones; 95%+ known; no dictionary mid-read; volume
-builds fluency + motivation. Each text is tagged by the items/grammar it uses so the path can serve
-the learner something they're ~95% ready for, drawing on their actual SRS state. Mining links
-reading → SRS → review in one loop.
+This is the single biggest open question in this doc. Do not author Book Three content until it is
+answered, or the content will be shaped for a structure that turns out wrong.
 
-## 5. Sentence mining — vocab acquisition grows up
+## 4. The daily loop
 
-N3 vocab is too broad to fully pre-curate, so acquisition shifts to **learner-driven mining** from
-reading (and Hana transcripts): tap an unknown word, it enters SRS *with its sentence*, and recurs
-in review. This scales vocabulary far past any hand-authored list and keeps every item in context.
+1. **Review (interleaved, cumulative):** a large, well-mixed retrieval set — the consolidation
+   engine. Production formats by default.
+2. **Read:** a short passage from the levelled library at ~95% known. The goal is *flow*, not
+   dissection. This is the comprehensible-input core.
+3. **Mine:** the learner taps 1–3 genuinely unknown items from the reading; each enters SRS **in
+   its original sentence**, which is the research-backed "one unknown per sentence" atom.
+4. **Produce:** write a few sentences about the reading, checked against a model answer rather than
+   graded (see §7).
+5. **Close:** progress as **lines read, words mined and now recalled, passages now comprehensible**
+   — concrete counters that move daily even when "level" does not.
 
-## 6. Content source (per Q3)
+## 5. Extensive reading — the flagship feature
 
-N3 is the line where content must be **verified**. Before N3 ships, stand up the **Tatoeba (CC BY)
-ingestion + i+1 leveling pipeline**: filter sentences by known-item coverage, tag by grammar/kanji,
-and assemble the graded library + mining corpus from real, attributed sentences. No training-canonical
-sentences at N3+.
+A **levelled reading library** is the heart of this book and its clearest differentiator. The
+Tadoku principles: many easy texts beat few hard ones; 95%+ known; no dictionary mid-read; volume
+builds fluency and motivation. Each text is tagged by the items and grammar it uses, so the library
+can serve something the learner is ~95% ready for, drawn from their actual SRS state.
 
-## 7. Hana at N3 — conversation as a skill, not a demo
+**The "you can read this now" moment** belongs here: periodically resurface a text that was too
+hard weeks ago and let the learner feel it click. That is a true motivator built from a real
+signal, which is the only kind this product allows.
 
-Hana becomes a genuine **practice partner and tutor**: open-ended conversation, discussion of
-readings, and **structured correction** — after an exchange, a short "you communicated clearly; one
-thing to tighten: …". Conversation minutes are a headline progress counter. This is the output
-engine the rest of the market lacks.
+## 6. Sentence mining
 
-## 8. Retention design — the core of this path
+Vocabulary acquisition shifts from curated lists to **learner-driven mining**: tap an unknown word,
+it enters SRS with its sentence, and recurs in review. This scales past any hand-authored list and
+keeps every item in context. It also restores **agency** — choosing what to learn is what
+intermediate learners want and what a fixed list denies them.
 
-Everything here targets the plateau and the quit point:
+## 7. Production without Hana (DR-023)
 
-- **Manufacture visible progress from honest signals.** Headline counters that move daily: pages/
-  lines read, words mined→mastered, conversation minutes, % of a target text now comprehensible.
-  Never XP — always real ability metrics.
-- **The "you can read this now" moment.** Periodically resurface a text that was too hard a few weeks
-  ago and let the learner feel it click. Re-reading old-too-hard material is a powerful, true
-  motivator.
-- **Mining = agency.** Choosing what to learn (vs. a forced list) restores the autonomy intermediate
-  learners crave and keeps material personally relevant.
-- **Output proof beats passive grind.** A weekly "you held a 10-minute conversation about X" is a
-  concrete identity win ("I'm someone who can converse in Japanese").
-- **Calm, never punishing.** Especially at the wall, re-engagement must be kind: "3 readings waiting
-  when you're ready," not guilt.
+The previous version of this doc made Hana the output engine: open conversation, discussion of
+readings, structured correction after each exchange, conversation minutes as a headline counter.
+**All of that is blocked.** Hana is shelved behind `VITE_HANA_ENABLED` and this book cannot be
+planned on the assumption that decision reverses.
 
-## 9. Pricing rationale (for product, not content)
+That leaves a real hole, and it should be named rather than papered over: **conversation practice
+has no offline substitute.** Reading, mining, and written production all work without an API.
+Spoken back-and-forth does not.
 
-N3 is where the value is highest and alternatives are weakest, so it's the right first paywall. The
-learner arrives having used the full method free through N4 — they're paying to get *over the wall*,
-which is exactly when motivation and willingness-to-pay peak.
+The workable replacement for *written* output is **compose-then-compare**: the learner writes about
+the passage, then sees a model answer built from the same known items and marks their own against
+it. No API, no grading, and it exercises production honestly. It is not conversation, and this doc
+should not pretend it is.
 
-## 10. Build notes specific to N3
+**If the paid tier ever needs conversation to justify its price, that is the moment to revisit
+DR-023** — with a cost model, not a wish. A paid tier changes the economics that shelved Hana in
+the first place, and this is the one place in the plan where that argument is worth making.
 
-- **Heaviest new build:** the graded reading library + the Tatoeba ingestion/leveling pipeline +
-  in-text **mining → SRS** flow + Hana structured-feedback mode + the honest progress counters.
-- Reuses everything below it; N2/N1 then extend the same reading + mining + conversation machinery
-  with harder, broader content (outlined separately).
+## 8. Content source — the line where verified starts
+
+Book Three is where content must be **verified**. Before it ships, stand up the **Tatoeba (CC BY)
+ingestion and i+1 levelling pipeline**: filter sentences by known-item coverage, tag by grammar and
+kanji, assemble the library and the mining corpus from real, attributed sentences.
+
+**No training-canonical sentences at Book Three and above.** The N5 exemption exists because N5
+vocabulary is canonical and well documented; that argument does not extend upward.
+
+The raw material is already on disk — Tatoeba examples are embedded in
+`server/data/jmdict-examples-eng-3.6.2.json` with source ids. What is missing is the levelling
+pipeline, not the sentences.
+
+## 9. Retention design — the core of this book
+
+- **Manufacture visible progress from honest signals.** Counters that move daily: lines read, words
+  mined and now recalled, share of a target text now comprehensible. Real ability, never points.
+- **Mining is agency.** Personally relevant material beats a forced list at exactly the level where
+  motivation fails.
+- **Output as proof.** "I wrote a paragraph about what I read" is a concrete identity win that
+  recognition cannot supply.
+- **Calm, never punishing.** At the wall especially, re-engagement is informational: "3 readings
+  waiting when you're ready", not guilt.
+
+## 10. Pricing rationale
+
+This is where the value is highest and the alternatives weakest, so it is the right first paywall.
+The learner arrives having used the full method free through Book Two — they are paying to get
+*over the wall*, which is when motivation and willingness to pay peak.
+
+Enforcement is still aspirational: `isPaid` is stubbed false until payment is wired, and the `tier`
+field in user metadata holds the slot. Gated content shows a soft inline prompt, never a redirect.
+
+## 11. Build notes
+
+**The heaviest phase.** New builds: the levelled reading library, the Tatoeba ingestion and
+levelling pipeline, in-text mining → SRS, compose-then-compare, and the honest progress counters.
+Everything below it is reused.
+
+Open before authoring: the chapter question in §3.
