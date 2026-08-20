@@ -5,6 +5,13 @@ The evidence base for AburunGo's learning paths. Everything in the overarching p
 The goal the brief set is **retention** — knowledge that survives days, weeks, and months,
 and transfers to real speaking and reading. Sources are listed at the bottom.
 
+> **Status snapshot is stale (2026-08-20).** The "AburunGo status" column in §1 and the market-gap
+> framing in §3 predate Phase 1 shipping and DR-023. The daily loop, interleaved review, and the
+> Recognize→Recall→Produce gating all exist now — [99-roadmap.md](99-roadmap.md) is the live build
+> tracker — and **Hana is shelved** (DR-023): output practice runs through production checkpoints,
+> not conversation. The principles and evidence here still stand; the per-lever status readings and
+> the "Hana is the differentiator" framing do not.
+
 ---
 
 ## 1. The seven retention levers (what the science says)

@@ -10,13 +10,13 @@ level-setting, no scenario selection, no account required to start.
 - **Frictionless.** The app makes all content and sequencing decisions. Onboarding only captures
   the three preferences that affect session shape.
 - **Everyone starts at the beginning.** No level assessment, no placement test. All learners enter
-  at N5 Unit 1 (kana prerequisite first). Prior kana knowledge? The kana mini-ladder has a
+  at the start of Book One (kana prerequisite first). Prior kana knowledge? The kana mini-ladder has a
   test-out path — onboarding doesn't ask.
 - **No scenario selection.** The app provides a wide variety of real-life situations across the
   ladder. The learner doesn't choose; they encounter them in a sensible sequence.
 - **First can-do goal is automatic.** The app assigns the first can-do ("greet someone in
-  Japanese") from N5 Unit 1 — no learner choice. The goal is always the next concrete, reachable
-  thing on the ladder.
+  Japanese") from Book One's first situation — no learner choice. The goal is always the next
+  concrete, reachable thing on the ladder (can-dos derive from situations, per DR-022).
 - **All preferences are changeable at any time** in settings.
 
 ---
@@ -87,8 +87,8 @@ No choices. One sentence. Shown briefly before the session starts — not a scre
 ### 4. First session
 
 Begins immediately. The first session is the kana mini-ladder (hiragana) unless the learner
-tests out (available from within the session, not during onboarding). The N5 main ladder starts
-once kana is confirmed.
+tests out (available from within the session, not during onboarding). Book One's main ladder
+starts once kana is confirmed.
 
 ---
 
@@ -99,7 +99,7 @@ once kana is confirmed.
 | `intensity` | enum | `casual` / `intermediate` / `challenging` |
 | `session_end_check` | boolean | `true` / `false` |
 | `session_length` | enum | `short` / `medium` / `long` |
-| `can_do_goal` | auto-assigned | N5 Unit 1 can-do (first in ladder sequence) |
+| `can_do_goal` | auto-assigned | first can-do on Book One's ladder |
 
 These four values drive the orchestrator. All are stored in user preferences and editable in
 settings at any time.
