@@ -24,7 +24,7 @@
 # content-source: n/a — introduces no content, only re-presents taught items
 
 - id: n5.unit-38
-  order: 88
+  order: 94
   situation: Integration & checkpoint
   title: Cross-situation conversation
   canDo: Hold a longer exchange spanning two situations with no single-answer safety net
@@ -44,7 +44,7 @@
   grammarNote: "No new material. This is a live conversation with Hana across two of the situations you have already worked through — a cafe stop and then shopping on the same street, say — chosen from your own ladder. Nothing here has a single right answer and nothing is recorded or judged; the point is carrying one thread across a change of scene. Kanji listed above are review items carried over from earlier lessons, not new introductions."
 
 - id: n5.unit-39
-  order: 89
+  order: 95
   situation: Integration & checkpoint
   title: Can-do checkpoint
   canDo: Handle every situation on the ladder unaided

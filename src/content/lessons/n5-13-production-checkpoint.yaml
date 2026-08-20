@@ -22,7 +22,7 @@
 # content-source: n/a — introduces no content, only re-presents taught items
 
 - id: n5.checkpoint-production
-  order: 87
+  order: 93
   situation: Integration & checkpoint
   title: Write it from memory
   canDo: Produce the vocabulary and phrases from every situation, unprompted

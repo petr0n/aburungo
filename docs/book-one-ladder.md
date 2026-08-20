@@ -8,12 +8,12 @@ fails if this file is out of date. Book One is N5 internally; a learner never re
 
 | | |
 |---|---|
-| Chapters | 10 |
-| Lessons | 87 (76 teaching, 11 checkpoints) |
-| Words | 423 |
-| Phrases | 191 |
-| Grammar patterns | 39 |
-| Kanji introduced | 163 |
+| Chapters | 11 |
+| Lessons | 93 (81 teaching, 12 checkpoints) |
+| Words | 450 |
+| Phrases | 207 |
+| Grammar patterns | 42 |
+| Kanji introduced | 181 |
 
 ---
 
@@ -1542,11 +1542,119 @@ fails if this file is out of date. Book One is N5 internally; a learner never re
 
 ---
 
+## Chapter 11 — Meals & the kitchen
+
+*Meals and the kitchen*
+
+5 lessons · 27 words · 16 phrases
+
+### 87. The three meals
+
+**Lesson 1 of 5** · Meals and the kitchen
+**Can do:** Talk about breakfast, lunch and dinner
+**New kanji:** 晩 飯 夕
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 晩 | ばん | evening, night |
+| 朝ご飯 | あさごはん | breakfast |
+| 昼ご飯 | ひるごはん | lunch |
+| 晩ご飯 | ばんごはん | dinner, evening meal |
+| 夕方 | ゆうがた | early evening, dusk |
+
+- 朝ご飯を食べましたか。 — Did you eat breakfast?
+- 晩ご飯は何ですか。 — What is for dinner?
+- 夕方に帰ります。 — I go home in the early evening.
+
+### 88. Food, drink, and what you think of it
+
+**Lesson 2 of 5** · Meals and the kitchen
+**Can do:** Say what food you like and how something tastes
+**Grammar:** `verb stem + 物` — Makes a noun out of a verb — 食べる becomes 食べ物, the thing you eat.
+**New kanji:** 料 理
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 食べ物 | たべもの | food |
+| 飲み物 | のみもの | drink, beverage |
+| 料理 | りょうり | cooking, cuisine, a dish |
+| まずい | まずい | bad-tasting, unappetising |
+
+- 好きな食べ物は何ですか。 — What food do you like?
+- この料理はおいしいです。 — This dish is delicious.
+- あまりおいしくないです。 — It is not very good.
+
+### 89. What is for dinner
+
+**Lesson 3 of 5** · Meals and the kitchen
+**Can do:** Name the meats and order a dish
+**New kanji:** 肉 牛 豚 鳥 弁 当
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 牛肉 | ぎゅうにく | beef |
+| 豚肉 | ぶたにく | pork |
+| 鳥 | とり | bird; chicken (as food) |
+| カレー | カレー | curry |
+| そば | そば | soba, buckwheat noodles |
+| お弁当 | おべんとう | boxed lunch |
+
+- 牛肉を買いました。 — I bought beef.
+- カレーが好きです。 — I like curry.
+- そばを食べたいです。 — I want to eat soba.
+- お弁当を持ってきました。 — I brought a boxed lunch.
+
+### 90. Sugar, salt and tea
+
+**Lesson 4 of 5** · Meals and the kitchen
+**Can do:** Ask for what is missing from the table
+**Grammar:** `あまり～ないです` — Not very ~. The polite way to say something was bad.
+**New kanji:** 砂 糖 塩 紅 菓
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 砂糖 | さとう | sugar |
+| 塩 | しお | salt |
+| バター | バター | butter |
+| 紅茶 | こうちゃ | black tea |
+| お菓子 | おかし | sweets, snacks |
+
+- 砂糖を入れますか。 — Do you take sugar?
+- 紅茶をお願いします。 — Black tea, please.
+- 塩がありません。 — There is no salt.
+
+### 91. In the kitchen
+
+**Lesson 5 of 5** · Meals and the kitchen
+**Can do:** Name what is on the table and ask for a glass
+**Grammar:** `～杯` — Counter for cupfuls and bowlfuls. The sound changes at one, three and six.
+**New kanji:** 所 杯
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 台所 | だいどころ | kitchen |
+| テーブル | テーブル | table |
+| コップ | コップ | glass, tumbler |
+| スプーン | スプーン | spoon |
+| ナイフ | ナイフ | knife |
+| フォーク | フォーク | fork |
+| 杯 | はい | counter for cupfuls and bowlfuls |
+
+- 台所で料理を作ります。 — I cook in the kitchen.
+- 水を一杯ください。 — A glass of water, please.
+- スプーンをお願いします。 — A spoon, please.
+
+### 92. Recognition checkpoint — closes the chapter
+
+> A wide pass over everything the book has taught, this chapter included. Pick each word out of a line-up; anything you miss comes back sooner. It finishes when the remaining set empties — retry as often as you like, nothing is recorded.
+
+---
+
 ## Closing the book
 
 Belongs to no chapter — reviews every situation in the book rather than one chapter's worth.
 
-### 87. Production checkpoint
+### 93. Production checkpoint
 
 > No new material. Everything so far has asked you to recognise Japanese; this asks you to produce it. You will see an English meaning and write the Japanese, drawn from across every situation you have worked through. Kana or romaji both count — this is about recall, not spelling. Anything you do not get comes straight back, and the checkpoint ends when there is nothing left to write. There is no score and nothing is recorded; whatever you miss simply returns to your review queue sooner.
 
@@ -1555,7 +1663,7 @@ Belongs to no chapter — reviews every situation in the book rather than one ch
 ## Shelved — not on the ladder
 
 Built and tested, switched off behind `VITE_HANA_ENABLED` (DR-023). Filtered out of the
-ladder entirely, so the orders above run 1–87 with no gap.
+ladder entirely, so the orders above run 1–93 with no gap.
 
 - Cross-situation conversation — Conversation with Hana
 - Can-do checkpoint — Can-do review
