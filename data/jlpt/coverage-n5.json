@@ -1,11 +1,11 @@
 {
  "level": "N5",
- "generated": "2026-08-17",
+ "generated": "2026-08-20",
  "summary": {
   "reference": 809,
-  "taught": 409,
-  "covered": 396,
-  "missing": 413
+  "taught": 423,
+  "covered": 409,
+  "missing": 400
  },
  "missing": [
   {
@@ -192,16 +192,6 @@
    "written": "絵",
    "reading": "え",
    "english": "a painting; a picture; a drawing",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "映画",
-   "reading": "えいが",
-   "english": "movie, film",
    "sources": [
     "tanos",
     "open-anki"
@@ -722,16 +712,6 @@
    "written": "警官",
    "reading": "けいかん",
    "english": "police officer",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "今朝",
-   "reading": "けさ",
-   "english": "this morning",
    "sources": [
     "tanos",
     "open-anki"
@@ -1339,16 +1319,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "楽しい",
-   "reading": "たのしい",
-   "english": "enjoyable, fun",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "たばこ",
    "reading": "たばこ",
    "english": "tobacco, cigarettes",
@@ -1392,16 +1362,6 @@
    "written": "机",
    "reading": "つくえ",
    "english": "desk",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "つまらない",
-   "reading": "つまらない",
-   "english": "boring, dull; insignificant",
    "sources": [
     "tanos",
     "open-anki"
@@ -1522,16 +1482,6 @@
    "written": "ドア",
    "reading": "どあ",
    "english": "door (Western style)",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "どう",
-   "reading": "どう",
-   "english": "how, in what way",
    "sources": [
     "tanos",
     "open-anki"
@@ -2009,16 +1959,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "暇",
-   "reading": "ひま",
-   "english": "free time, leisure",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "病気",
    "reading": "びょうき",
    "english": "illness; sickness",
@@ -2189,16 +2129,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "便利",
-   "reading": "べんり",
-   "english": "convenient, handy",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "帽子",
    "reading": "ぼうし",
    "english": "hat; cap",
@@ -2302,16 +2232,6 @@
    "written": "また",
    "reading": "また",
    "english": "and; furthermore",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "まだ",
-   "reading": "まだ",
-   "english": "yet, still, besides",
    "sources": [
     "tanos",
     "open-anki"
@@ -2439,16 +2359,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "もう",
-   "reading": "もう",
-   "english": "already; again; more",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "物",
    "reading": "もの",
    "english": "thing (concrete object)",
@@ -2522,26 +2432,6 @@
    "written": "夕飯",
    "reading": "ゆうはん",
    "english": "dinner, supper, evening meal",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "昨夜",
-   "reading": "ゆうべ",
-   "english": "last night",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "有名",
-   "reading": "ゆうめい",
-   "english": "famous",
    "sources": [
     "tanos",
     "open-anki"
@@ -3338,24 +3228,6 @@
    "english": "",
    "sources": [
     "tanos"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "たいへん",
-   "reading": "たいへん",
-   "english": "",
-   "sources": [
-    "tanos"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "大変",
-   "reading": "たいへん",
-   "english": "very; difficult, hard",
-   "sources": [
-    "open-anki"
    ],
    "jmdictCommon": true
   },
@@ -4214,6 +4086,16 @@
    "id": "vocab.otoko-no-hito",
    "japanese": "男の人",
    "reading": "おとこのひと"
+  },
+  {
+   "id": "vocab.sakki",
+   "japanese": "さっき",
+   "reading": "さっき"
+  },
+  {
+   "id": "vocab.nanimo",
+   "japanese": "何も",
+   "reading": "なにも"
   },
   {
    "id": "vocab.choushoku",

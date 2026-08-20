@@ -1,0 +1,173 @@
+# Chapter 10 phrases — talking about yesterday (DR-031).
+#
+# The ladder already carries five sentences in the past tense — どこから来ました
+# か, アメリカから来ました, 先月日本へ行きました, 去年日本へ来ました,
+# ごちそうさまでした — and not one lesson ever said that ました is a tense. They
+# were memorised as lumps, the way 曲がってください was before the te-form
+# chapter. These sentences are the same shape, built deliberately.
+#
+# Every sentence uses one new element and nothing else new: the verbs, nouns and
+# adjectives are all long taught, so the only thing to work out is the ending.
+#
+# The negatives are deliberately plain. ませんでした and くなかったです are long
+# endings and the sentence around them is kept short so the ending is the part
+# that stands out.
+#
+# content-source: training — N5 canonical, pending Tatoeba verification.
+#   JMdict cannot verify composed sentences (only fixed expressions are
+#   headwords), so sentence checks need Tatoeba, not JMdict.
+# jlpt-source: training — JLPT level unverified
+
+# ── What you did ──────────────────────────────────────────────────────────────
+
+- id: past.i-ate-bread-this-morning
+  jlpt: N5
+  scenario: past
+  japanese: 今朝パンを食べました。
+  reading: けさパンをたべました。
+  romaji: kesa pan o tabemashita.
+  english: I ate bread this morning.
+
+- id: past.i-met-the-teacher
+  jlpt: N5
+  scenario: past
+  japanese: さっき先生に会いました。
+  reading: さっきせんせいにあいました。
+  romaji: sakki sensei ni aimashita.
+  english: I met the teacher a moment ago.
+
+- id: past.i-read-a-book-last-night
+  jlpt: N5
+  scenario: past
+  japanese: 昨夜本を読みました。
+  reading: ゆうべほんをよみました。
+  romaji: yuube hon o yomimashita.
+  english: I read a book last night.
+
+# ── What you did not do ───────────────────────────────────────────────────────
+
+- id: past.i-did-nothing-yesterday
+  jlpt: N5
+  scenario: past
+  japanese: 昨日は何もしませんでした。
+  reading: きのうはなにもしませんでした。
+  romaji: kinou wa nanimo shimasen deshita.
+  english: I did not do anything yesterday.
+
+- id: past.i-did-not-go-to-work
+  jlpt: N5
+  scenario: past
+  japanese: 会社へ行きませんでした。
+  reading: かいしゃへいきませんでした。
+  romaji: kaisha e ikimasen deshita.
+  english: I did not go to work.
+
+- id: past.have-you-eaten-yet
+  jlpt: N5
+  scenario: past
+  japanese: もう食べましたか。
+  reading: もうたべましたか。
+  romaji: mou tabemashita ka.
+  english: Have you eaten yet?
+
+- id: past.not-yet
+  jlpt: N5
+  scenario: past
+  japanese: いいえ、まだです。
+  reading: いいえ、まだです。
+  romaji: iie, mada desu.
+  english: No, not yet.
+
+# ── How it was: nouns and na-adjectives ───────────────────────────────────────
+
+- id: past.i-was-free-yesterday
+  jlpt: N5
+  scenario: past
+  japanese: 昨日は暇でした。
+  reading: きのうはひまでした。
+  romaji: kinou wa hima deshita.
+  english: I was free yesterday.
+
+- id: past.last-week-was-hard
+  jlpt: N5
+  scenario: past
+  japanese: 先週は大変でした。
+  reading: せんしゅうはたいへんでした。
+  romaji: senshuu wa taihen deshita.
+  english: Last week was hard.
+
+- id: past.that-shop-was-convenient
+  jlpt: N5
+  scenario: past
+  japanese: あの店は便利でした。
+  reading: あのみせはべんりでした。
+  romaji: ano mise wa benri deshita.
+  english: That shop was convenient.
+
+- id: past.it-was-not-quiet
+  jlpt: N5
+  scenario: past
+  japanese: 静かじゃありませんでした。
+  reading: しずかじゃありませんでした。
+  romaji: shizuka ja arimasen deshita.
+  english: It was not quiet.
+
+# ── How it was: i-adjectives ──────────────────────────────────────────────────
+
+- id: past.the-trip-was-fun
+  jlpt: N5
+  scenario: past
+  japanese: 旅行は楽しかったです。
+  reading: りょこうはたのしかったです。
+  romaji: ryokou wa tanoshikatta desu.
+  english: The trip was fun.
+
+- id: past.the-film-was-boring
+  jlpt: N5
+  scenario: past
+  japanese: 映画はつまらなかったです。
+  reading: えいがはつまらなかったです。
+  romaji: eiga wa tsumaranakatta desu.
+  english: The film was boring.
+
+- id: past.it-was-hot-yesterday
+  jlpt: N5
+  scenario: past
+  japanese: 昨日は暑かったです。
+  reading: きのうはあつかったです。
+  romaji: kinou wa atsukatta desu.
+  english: It was hot yesterday.
+
+- id: past.it-was-not-expensive
+  jlpt: N5
+  scenario: past
+  japanese: 高くなかったです。
+  reading: たかくなかったです。
+  romaji: takaku nakatta desu.
+  english: It was not expensive.
+
+# ── Asking how it was ─────────────────────────────────────────────────────────
+
+- id: past.how-was-the-trip
+  jlpt: N5
+  scenario: past
+  japanese: 旅行はどうでしたか。
+  reading: りょこうはどうでしたか。
+  romaji: ryokou wa dou deshita ka.
+  english: How was the trip?
+
+- id: past.it-was-very-fun
+  jlpt: N5
+  scenario: past
+  japanese: とても楽しかったです。
+  reading: とてもたのしかったです。
+  romaji: totemo tanoshikatta desu.
+  english: It was a lot of fun.
+
+- id: past.what-did-you-do-yesterday
+  jlpt: N5
+  scenario: past
+  japanese: 昨日は何をしましたか。
+  reading: きのうはなにをしましたか。
+  romaji: kinou wa nani o shimashita ka.
+  english: What did you do yesterday?

@@ -8,12 +8,12 @@ fails if this file is out of date. Book One is N5 internally; a learner never re
 
 | | |
 |---|---|
-| Chapters | 9 |
-| Lessons | 81 (71 teaching, 10 checkpoints) |
-| Words | 409 |
-| Phrases | 173 |
-| Grammar patterns | 34 |
-| Kanji introduced | 153 |
+| Chapters | 10 |
+| Lessons | 87 (76 teaching, 11 checkpoints) |
+| Words | 423 |
+| Phrases | 191 |
+| Grammar patterns | 39 |
+| Kanji introduced | 163 |
 
 ---
 
@@ -1445,11 +1445,108 @@ fails if this file is out of date. Book One is N5 internally; a learner never re
 
 ---
 
+## Chapter 10 — Talking about yesterday
+
+*Talking about yesterday*
+
+5 lessons · 14 words · 18 phrases
+
+### 81. What you did
+
+**Lesson 1 of 5** · Talking about yesterday
+**Can do:** Say what you did earlier today or last night
+**Grammar:** `～ました` — Did ~. Swap ます for ました; every verb behaves the same way.
+**New kanji:** 朝 夜
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 今朝 | けさ | this morning |
+| さっき | さっき | a moment ago, just now |
+| 昨夜 | ゆうべ | last night |
+
+- 今朝パンを食べました。 — I ate bread this morning.
+- さっき先生に会いました。 — I met the teacher a moment ago.
+- 昨夜本を読みました。 — I read a book last night.
+
+### 82. What you did not do
+
+**Lesson 2 of 5** · Talking about yesterday
+**Can do:** Say what you did not do, and answer not yet
+**Grammar:** `～ませんでした` — Did not ~. ません picks up でした behind it.
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 何も | なにも | (not) anything, nothing |
+| まだ | まだ | still, not yet |
+| もう | もう | already, yet |
+
+- 昨日は何もしませんでした。 — I did not do anything yesterday.
+- 会社へ行きませんでした。 — I did not go to work.
+- もう食べましたか。 — Have you eaten yet?
+- いいえ、まだです。 — No, not yet.
+
+### 83. How it was
+
+**Lesson 3 of 5** · Talking about yesterday
+**Can do:** Say how something was, using nouns and na-adjectives
+**Grammar:** `～でした` — Was ~. Nouns and na-adjectives swap です for でした.
+**New kanji:** 暇 変 便 利 有
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 暇 | ひま | free, not busy |
+| 大変 | たいへん | hard, tough |
+| 便利 | べんり | convenient, handy |
+| 有名 | ゆうめい | famous, well-known |
+
+- 昨日は暇でした。 — I was free yesterday.
+- 先週は大変でした。 — Last week was hard.
+- あの店は便利でした。 — That shop was convenient.
+- 静かじゃありませんでした。 — It was not quiet.
+
+### 84. How it was, the other half
+
+**Lesson 4 of 5** · Talking about yesterday
+**Can do:** Say how something was, using i-adjectives
+**Grammar:** `～かったです` — Was ~. An i-adjective drops い and takes かった — never でした.
+**New kanji:** 楽 映 画
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 楽しい | たのしい | enjoyable, fun |
+| つまらない | つまらない | boring, dull |
+| 映画 | えいが | film, movie |
+
+- 旅行は楽しかったです。 — The trip was fun.
+- 映画はつまらなかったです。 — The film was boring.
+- 昨日は暑かったです。 — It was hot yesterday.
+- 高くなかったです。 — It was not expensive.
+
+### 85. How was it?
+
+**Lesson 5 of 5** · Talking about yesterday
+**Can do:** Ask how something was and answer
+**Grammar:** `～はどうでしたか` — How was ~?
+
+| Word | Reading | Meaning |
+|---|---|---|
+| どう | どう | how, in what way |
+
+- 旅行はどうでしたか。 — How was the trip?
+- とても楽しかったです。 — It was a lot of fun.
+- 昨日は何をしましたか。 — What did you do yesterday?
+
+### 86. Recognition checkpoint — closes the chapter
+
+> A wide pass over everything the book has taught, this chapter included. Pick each word out of a line-up; anything you miss comes back sooner. It finishes when the remaining set empties — retry as often as you like, nothing is recorded.
+
+---
+
 ## Closing the book
 
 Belongs to no chapter — reviews every situation in the book rather than one chapter's worth.
 
-### 81. Production checkpoint
+### 87. Production checkpoint
 
 > No new material. Everything so far has asked you to recognise Japanese; this asks you to produce it. You will see an English meaning and write the Japanese, drawn from across every situation you have worked through. Kana or romaji both count — this is about recall, not spelling. Anything you do not get comes straight back, and the checkpoint ends when there is nothing left to write. There is no score and nothing is recorded; whatever you miss simply returns to your review queue sooner.
 
@@ -1458,7 +1555,7 @@ Belongs to no chapter — reviews every situation in the book rather than one ch
 ## Shelved — not on the ladder
 
 Built and tested, switched off behind `VITE_HANA_ENABLED` (DR-023). Filtered out of the
-ladder entirely, so the orders above run 1–81 with no gap.
+ladder entirely, so the orders above run 1–87 with no gap.
 
 - Cross-situation conversation — Conversation with Hana
 - Can-do checkpoint — Can-do review
