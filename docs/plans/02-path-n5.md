@@ -1,181 +1,165 @@
-# N5 Ladder — the foundation path
+# Book One — the foundation
 
-**Tier:** Guest + Free (fully playable without paying). **Goal:** the learner can read all kana
-fluently, handle survival situations in Japan (greetings, transit, food, shopping, hotel,
-directions), and has the vocabulary/kanji/grammar foundation of JLPT N5. This path's job is to
-**prove the method and build the habit** — it must feel rewarding fast, because most drop-off
-happens in week one.
+**Tier:** Guest + Free (fully playable without paying).
+**Status: built and shipping.** This doc is a record of what Book One *is*, not a plan for what it
+might be. The authority on its contents is [docs/book-one-ladder.md](../book-one-ladder.md), which
+is generated from `src/content/` by `pnpm ladder` and fails a test when stale. Numbers below carry
+a date because they move; the generated ladder never lies.
 
-This is the **template path**; N4/N3 docs describe how the engine's *emphasis* shifts, not a new
-engine. Engine details live in [01-overarching-plan.md](01-overarching-plan.md).
+**Goal:** the learner reads kana fluently, handles the situations a visitor actually meets, and
+comes out with the vocabulary, kanji and grammar foundation a reference would call JLPT N5.
+This book's job is to **prove the method and build the habit** — most drop-off happens in week one.
+
+Book One is the **template**. Books Two and up describe how the engine's *emphasis* shifts, not a
+new engine.
 
 ---
 
-## 1. Shape of the ladder
+## 1. Naming (DR-024)
+
+**Book → Chapter → Lesson.** A Book is what a reference calls a JLPT level; Book One is N5 and a
+learner never reads "N5". A Chapter is a named run of lessons ending in exactly one checkpoint,
+which is its last lesson. "Unit" and "sweep" are dead words — do not reintroduce either.
+
+The `jlpt` field stays in the data because the coverage tooling depends on it. It is plumbing,
+not a label.
+
+## 2. Shape of the book
 
 ```
-[ Kana mini-ladder ]  →  [ N5 Units 1 … ~35 ]  →  N5 "can-do" checkpoint  →  (N4 prompt)
-   hiragana, katakana        the main rail
-   (always free, never gated)
+[ Kana mini-ladder ]  →  [ Chapters 1 … 10 ]  →  production checkpoint  →  (Book Two prompt)
+   hiragana, katakana       each closing in its
+   (always free, never       own recognition
+    gated, pre-JLPT)         checkpoint
 ```
 
-- **Kana mini-ladder** is the prerequisite and stays separate (it's pre-JLPT and always free).
-  A learner who already reads kana can test out. The main rail assumes kana fluency so it can show
-  readings in kana, not romaji.
-- **~35 Units.** Each unit ≈ one guided session of *new* material; the whole level is a few weeks at
-  a sustainable pace.
-- The ladder ends in a **can-do checkpoint** (not an exam): a short mixed review + one Hana
-  situation that requires items from across the level. Passing it surfaces the N4 upgrade prompt.
+**As of 2026-08-20:** 87 lessons — 76 teaching, 11 checkpoints — across 10 chapters, covering 19
+situations. 423 words, 191 phrases, 39 grammar patterns, 163 kanji.
 
-The full unit-by-unit sequence is in [02b-n5-units.md](02b-n5-units.md).
+Pacing runs 5.7 words, 2.5 phrases and 2.3 kanji per teaching lesson. That is the honest rate at
+which a lesson can teach without becoming a list, and it is measured from the content rather than
+declared in advance.
 
-### N5 can-do moments (19 milestones)
+### Chapters
 
-The learner's progress is anchored to these 19 real-life abilities. Each is a milestone on the
-ladder — surfaced in the Close step and verified by the two-agent system (Hana + assessor) when
-the learner is ready to attempt it.
-
-**Greetings & basics**
-1. Greet someone — hello, good morning, goodbye, nice to meet you
-2. Introduce yourself — your name and where you're from
-3. Thank someone and respond when thanked
-4. Say you don't understand and ask someone to speak slowly
-
-**Food & drink**
-5. Order a drink at a café
-6. Order a meal at a restaurant
-7. Ask for the bill
-8. Ask what something is on a menu
-
-**Shopping**
-9. Ask how much something costs
-10. Buy something at a shop — point, ask the price, pay
-
-**Getting around**
-11. Buy a train ticket to a destination
-12. Ask which platform or exit to use
-13. Tell a taxi driver where you want to go
-
-**Hotel**
-14. Check into a hotel — give your name and confirm your reservation
-
-**Directions**
-15. Ask where something is (bathroom, exit, station) and understand a basic answer (left, right,
-    straight ahead)
-
-**Weather**
-16. Comment on the weather — "It's hot today, isn't it?" / "It's cold" (暑いですね / 寒いですね)
-17. Ask what the weather will be like — "What's the weather tomorrow?" (明日の天気は？)
-
-**Food preferences**
-18. Say what food you like or don't like — using すし、ごはん、ラーメン、たまご、やさい
-    (〜が好きです / 〜が嫌いです)
-19. Say what you want to eat — same vocabulary, pattern 〜が食べたいです
-    ("I want to eat ramen" / "I want to eat eggs")
-
-## 2. What's in a unit (N5 emphasis)
-
-A unit bundles a small, coherent batch that all reinforces each other:
-
-- **5–7 words** (from the existing JLPT-N5 vocabulary)
-- **1–2 kanji** (with radical/component breakdown + a mnemonic — see §5)
-- **1 grammar pattern** (e.g. ～です, ～を ください, ～は どこ ですか) taught via a verified example
-- **2–3 phrases** that *use* the unit's words + pattern (from the existing phrase corpus)
-- **A short reading**: 2–4 lines reusing this unit's items + earlier ones, at ~95% known
-- **An output beat**: a 3-turn Hana exchange scoped to the situation, or type-the-phrase
-
-Units are grouped into **practical situations** (Greetings, Getting Around, Eating, Shopping,
-Hotel, Directions) so the JLPT ladder still *feels* like "real-life Japanese," honoring the brand
-— the situation is the wrapper, JLPT level is the spine.
-
-## 3. The daily session, N5 flavor
-
-The shared 6-step session loop (review → new unit → integrate → produce → close → recognition
-pass), tuned for beginners. Session length and item count are driven by the learner's `intensity`
-and `session_length` preferences set during onboarding.
-
-1. **Review:** interleaved due items — words, kana, the odd kanji, a phrase. Empty on the first
-   session; grows as the SRS fills. Format rotates per item (flashcard one session, fill-in-blank
-   the next — never the same format twice in a row for the same item).
-2. **New unit:** introduce the 5–7 words with **audio + furigana**, the kanji with its mnemonic,
-   the grammar pattern with one worked example, then the phrases that combine them.
-3. **Integrate (scaffolded at N5):**
-   - *Early N5:* characters forming a word — see the kana making a real word
-   - *Mid N5:* new word in a short 2–3 word phrase
-   - *Late N5:* phrase in a sentence — cloze or short reading passage
-4. **Produce:** one output beat, forgiving and short at N5:
-   - *Early N5:* tap or type a single word
-   - *Mid N5:* type the phrase just learned
-   - *Late N5:* tiny scoped Hana exchange ("You're at a café. Order something to drink.")
-5. **Close:** progress toward the current can-do goal, brief summary of what was learned. No score,
-   no XP, no streak.
-6. **Recognition pass** *(only if `session_end_check = true`):* see English, tap the matching
-   Japanese tile from three options. Not a quiz — no right/wrong feedback, no judgment.
-
-## 4. Recognize → Recall → Produce at N5
-
-| Gate | N5 format | Notes |
+| # | Chapter | Shape |
 |---|---|---|
-| **Recognize** | flashcard front, multiple-choice meaning, audio→meaning | Lots of scaffolding; furigana on; generous |
-| **Recall** | type the reading (kana), fill-in-the-blank, say it (audio in) | The testing-effect workhorse; unlocks after a few correct Recognizes |
-| **Produce** | type the phrase, 3-turn Hana exchange, read-aloud | Light/forgiving feedback; the "I can use this" payoff |
+| 1 | Greetings & ordering | situation |
+| 2 | Shopping & getting around | situation |
+| 3 | Staying & finding your way | situation |
+| 4 | People, days & routines | situation |
+| 5 | Home, work & study | situation |
+| 6 | Asking someone to do something | **rule** — the te-form |
+| 7 | Choosing and counting | situation |
+| 8 | Describing things and people | situation |
+| 9 | Around town | situation |
+| 10 | Talking about yesterday | **rule** — the past tense |
 
-Beginners get more time in Recognize; the gate to Produce is gentle so early wins come fast.
+Chapter length varies from 4 to 13 teaching lessons **on purpose**. Padding a chapter to a round
+number would put a checkpoint mid-situation, which is exactly what DR-021 exists to prevent.
 
-## 5. Kanji at N5 (the new radical/mnemonic layer)
+**Two chapter shapes have emerged.** A *situation* chapter is organised around a place or a task
+and teaches the words it needs. A *rule* chapter is organised around a piece of grammar and teaches
+verbs that exercise it. Rule chapters pay a retroactive debt: the te-form chapter explained ten
+〜てください phrases the ladder had been carrying as memorised lumps, and the past-tense chapter did
+the same for five ました sentences. **Grammar is the binding constraint on this book, not
+vocabulary** — words and Tatoeba sentences are both oversupplied, grammar patterns exist in no
+dataset and must be authored. Only 39 of 76 teaching lessons carry a pattern; alternating rule
+chapters into the sequence is how that number moves.
 
-N5 has ~100 kanji — the ideal place to install the **component method** that pays off for the whole
-ladder. For each kanji: show its components (KANJIDIC2/KanjiVG already give these), a keyword per
-component, and a short vivid mnemonic story, *then* SRS it. Example shape (illustrative):
+### Can-do moments — derived, not declared
 
-> 川 ("river") — three flowing strokes like three streams of water. Reading: かわ.
+An earlier draft of this doc declared 19 fixed can-dos. **That list is gone** (DR-022). The can-do
+set is now the distinct situations of the lessons the learner has actually seen, so it grows with
+the content instead of going stale — the same computed-not-declared property DR-021 adopted for
+checkpoint positions. 76 distinct can-do lines exist today because there are 76 teaching lessons.
 
-Optional handwriting (stroke order from KanjiVG) adds motor memory for those who want it. (Mnemonic
-authoring/sourcing is an open decision — see overarching plan §5.5.)
+## 3. What a lesson contains
 
-## 6. Output with Hana at N5 — "scoped sessions"
+- **~6 words**, each with reading, romaji and a note on the trap it hides
+- **~2 kanji**, introduced on the lesson rather than in a silo
+- **a grammar pattern** on about half of them, taught through one sentence with a blank in it
+- **~3 phrases** that use the lesson's words
+- **a grammar note** — plain English, no jargon, explaining why the Japanese is shaped that way
 
-Hana already exists; the new piece is **scoping**. An N5 unit's output beat launches Hana with a
-system prompt constrained to: this situation, N5 grammar/vocab only, slow, lots of modeling. Hana
-gently corrects by re-modeling the right form rather than grading harshly. Because comprehension at
-N5 is fragile, these are *very* short (3–5 turns) and heavily scaffolded ("you can answer with just
-one word").
+Lessons are grouped into **situations** so the ladder feels like real-life Japanese, honouring the
+brand — the situation is the wrapper, the book is the spine.
 
-## 7. Worked example — Unit 4: "At the café"
+## 4. The daily session
 
-Using content already in the app (greetings + a café/restaurant slice):
+Review → new lesson → produce → recognition pass → close. Session length and item count follow
+the learner's `intensity` and `session_length` preferences from onboarding.
 
-- **Words:** コーヒー (coffee), みず (water), これ (this), おねがいします (please), いくら (how much)
-- **Kanji:** 水 (water) — components + mnemonic, reading みず
-- **Grammar:** ～を おねがいします ("…please")
-- **Phrases (existing, verified):** これを ください / メニューを おねがいします / おかいけい おねがいします
-- **Reading (assembled from known items):** a 3-line café exchange reusing the above
-- **Produce:** Hana — "You walk into a café. Order something to drink." Expected output uses
-  〜を おねがいします + a drink word. Hana models the polite form back.
-- **Review tomorrow:** these items interleave with Units 1–3 (greetings, basic は/です).
+1. **Review:** interleaved due items. Empty on the first session, grows as the SRS fills. Format
+   rotates per item — never the same format twice running for the same item.
+2. **New lesson:** the words with audio and reading, the kanji, the pattern with a worked example,
+   then the phrases that combine them.
+3. **Produce:** type the phrase, forgiving and short.
+4. **Recognition pass:** see English, tap the matching Japanese tile. Not a quiz — no right/wrong
+   theatre.
+5. **Close:** what was learned, and where the learner sits in the chapter. No score, no XP, no
+   streak.
 
-A learner finishes this unit able to *actually order a drink* — concrete, usable, motivating.
+## 5. Checkpoints (DR-021, DR-020, DR-023)
 
-## 8. Retention design specifics at N5
+Two kinds, and they are **not** the same thing:
 
-- **Front-load wins:** Unit 1 should produce a real "I said something in Japanese" moment within the
-  first session (a one-word Hana greeting). Early success drives habit.
-- **Interleave from day one:** even with little material, mix kana + words so the brain practices
-  discrimination.
-- **No punishment:** missed days = "reviews piled up," never lost streaks/progress. Re-engagement is
-  informational and kind.
-- **Audio everywhere:** beginners need the sound-to-symbol link; every item is playable.
+**Recognition checkpoints** close each chapter. They consolidate: a wide pass over everything the
+book has taught so far, recurring. Roughly every ten lessons, placed at the next *situation
+boundary* — never mid-situation, since a checkpoint between "at the café" and "how much & paying"
+consolidates nothing.
+
+**The production checkpoint** closes the book, once. Everything before it asks the learner to
+recognise Japanese; this asks them to produce it, from English, drawn across every situation.
+
+Both are **mastery gates, never grades**: the remaining set shrinks to zero as you work, retries
+are unlimited, nothing is recorded, and misses rejoin the SRS queue rather than being tallied.
+"3 more to place" is fine; "62%" is not.
+
+## 6. Kanji
+
+163 kanji introduced on the lessons that need them, with the component/mnemonic layer still to be
+built (`docs/plans/99-roadmap.md`). Stroke order via KanjiVG is bundled. The component method
+matters most from Book Two on, where kanji stop being learnable as flat shapes — installing it at
+Book One is an investment that pays out later.
+
+## 7. Production practice without Hana (DR-023)
+
+An earlier draft routed every output beat through Hana, a scoped AI conversation. **Hana is built,
+tested, and switched off** behind `VITE_HANA_ENABLED`, which defaults to off: the owner does not
+want a per-use API cost in an otherwise fixed-cost tool.
+
+The replacement is the **production checkpoint** — write each item from its English, no API
+involved. This is not a downgrade dressed up as a decision: production practice was the point, and
+typing from meaning tests recall harder than a conversation the learner can steer around what they
+do not know.
+
+Do not plan new work that depends on Hana without asking.
+
+## 8. Content coverage
+
+The N5 community reference lists 809 words. Book One teaches 423 words, 409 of which are on that
+list, leaving 400 of it missing — 257 of those attested by both reference lists and flagged common
+in JMdict, which is the queue worth authoring against. The other 14 are words the book needs and
+the list does not have, which is the normal direction of that disagreement. `node scripts/jlpt.mjs coverage n5` regenerates the gap file.
+
+The reference lists are **gap-finders, never authorities**: no official JLPT vocabulary list has
+existed since 2010, and taking a headword straight from one has already shipped a wrong form once
+(終る, which JMdict does not flag common; 終わる is the real word). Verify every headword against
+JMdict before it goes in.
+
+Remaining clusters for the finish: food, people & clothes. Either makes a clean chapter and lands
+the book near the endorsed ~100 landing zone — which is a landing zone, not a quota.
 
 ## 9. Free/paid
 
-Entirely free (guest can do a lot; a free account adds cross-device progress sync — the existing
-incentive). The N4 ladder is also free; the first paywall is N3. So a learner experiences the full
-method, for weeks, before ever being asked to pay.
+Entirely free. Guests get a lot; a free account adds cross-device progress sync. Book Two is also
+free; the first paywall is Book Three. A learner experiences the full method for weeks before being
+asked to pay.
 
-## 10. Build notes specific to N5
+## 10. What is still missing
 
-- Reuses existing kana, N5 words, N5 phrases, audio, Hana, FSRS.
-- New for N5: unit/ladder data model, the daily-loop orchestrator, kanji component+mnemonic layer,
-  N5 grammar patterns as items, scoped-Hana launch, short assembled readings.
-- Grammar + reading content sourcing must follow CLAUDE.md (verified or marked training-canonical;
-  see open decision in overarching plan §5).
+- **Kanji component + mnemonic layer** — kanji are introduced but not decomposed
+- **Graded reading** — no assembled passages yet
+- **Audio** — VOICEVOX pipeline not built; items are not yet playable
+- **~400 words** of the reference gap, and grammar patterns on the other half of the lessons

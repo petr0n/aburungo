@@ -1,82 +1,140 @@
-# N4 Ladder — the bridge path
+# Book Two — the bridge
 
-**Tier:** Free account. **Goal:** the learner moves from "survival phrases" to **building their own
-sentences** — combining grammar patterns, a working kanji habit (~300 total), and ~1,500 words —
-and can hold a simple, real conversation with Hana. N4 is the **bridge**: it's where recognition
-becomes production and where the learner stops reciting and starts *composing*.
+**Tier:** Free account. **Status: not started.** No content exists; `grep "jlpt: N4" src/content/`
+returns nothing.
 
-Same engine as [N5](02-path-n5.md); this doc covers only what **shifts**.
+**Goal:** the learner moves from survival phrases to **building their own sentences** — combining
+grammar patterns, a working kanji habit, and the vocabulary to say things Book One never covered.
+Book Two is the **bridge**: where recognition becomes production and the learner stops reciting and
+starts composing.
+
+Same engine as [Book One](02-path-n5.md); this doc covers only what **shifts**, plus the two pieces
+of groundwork that must land before any content is authored.
 
 ---
 
-## 1. What changes from N5
+## 0. Groundwork first — two things block this book
 
-| Dimension | N5 | **N4** |
+**(a) The app knows only one book.** `n5Lessons` is a hardcoded export in
+[src/content/lessons/index.ts](../../src/content/lessons/index.ts), referenced in eight places in
+[LearnPage.tsx](../../src/pages/LearnPage.tsx). There is no concept of "the book you are in", no
+book-to-book transition, and no per-book gating. Authoring Book Two content first and generalising
+afterwards means retrofitting two books instead of one — the same mistake as retrofitting chapters
+into a ladder that already had 64 lessons.
+
+What is needed is small: make the book a parameter rather than an import, give `Book` an id, order,
+title and chapter list, and let the orchestrator take one. `placeInChapter` and the chapter helpers
+are already pure functions taking lessons and chapters as arguments, so they generalise for free.
+
+**(b) The per-book difficulty shift does not exist.** Everything in §1 below — recall as the
+default, weaning off romaji, production-first formats — describes behaviour no code implements.
+Every card renders the same way at every level today. Decide whether the shift is a property of the
+Book (a field), of the lesson, or of the learner's progress, and build it once.
+
+Neither is large. Both are much larger after content exists.
+
+## 1. What changes from Book One
+
+| Dimension | Book One | **Book Two** |
 |---|---|---|
 | Default item gate | sits in Recognize longer | **Recall is the default**; Produce comes faster |
-| Grammar | single particles / です | **pattern combining** (て-form, plain form, conjunctions like から/ので) |
-| Kanji | ~100, mnemonics introduced | ~300; mnemonics now **load-bearing** — components from N5 recombine |
-| Reading | 2–4 assembled lines | **short graded passages** (5–8 lines), the first real Tadoku taste |
-| Hana | 3–5 turn scripted situations | **8–12 turns**, less scaffolding, learner initiates |
-| Output beat | type a phrase | **compose a sentence** from a pattern + chosen vocab |
-| Romaji | available | **weaned off**; kana + furigana only |
+| Grammar | one pattern, one shape | **pattern combining** — plain form, から/ので, conditionals |
+| Kanji | introduced per lesson, flat | components become **load-bearing**; parts recombine |
+| Reading | phrases only | **short graded passages**, the first real Tadoku taste |
+| Output beat | type the phrase | **compose a sentence** from a pattern + chosen vocabulary |
+| Romaji | shown | **weaned off** — kana and furigana only |
 
-The through-line: **interleaving and recombination**. N4 items are deliberately built from N5
-components (kanji radicals reused, particles recombined), so review naturally mixes old and new —
-the discrimination practice the research calls for.
+The through-line is **recombination**. Book Two items are deliberately built from Book One
+components — kanji radicals reused, particles recombined — so review naturally mixes old and new,
+which is the discrimination practice the research calls for.
 
-## 2. The daily loop, N4 flavor
+## 2. Chapter shape — expect more rule chapters
 
-- **Review** grows teeth: formats default to **recall/production** (type the reading, fill the
-  particle, conjugate the verb) rather than multiple choice. Interleaving now spans words + kanji +
-  **grammar patterns** + phrases from several past units.
-- **New unit** introduces a grammar pattern as a **first-class SRS item** — it'll come back for
-  review like any word, tested by "complete the sentence with the right form."
-- **Integrate** is a real short reading that reuses the pattern in context.
-- **Produce** steps up: the learner **composes** ("make a sentence using ～たいです and a food word"),
-  then optionally runs it past Hana, who re-models naturally.
+Book One ended up with two chapter shapes: *situation* chapters organised around a place, and
+*rule* chapters organised around a piece of grammar. Book One is mostly situations because a
+beginner needs somewhere to stand. **Book Two should invert that ratio.**
 
-## 3. Kanji at N4 — the method compounds
+The reason is measurable. Only 39 of Book One's 76 teaching lessons carry a grammar pattern,
+because situation chapters are word-shaped and add vocabulary without adding rules. Book Two's
+whole purpose is combining patterns, so a book of situation chapters would miss its own goal.
 
-This is where the radical/mnemonic investment pays off: ~300 kanji is unmanageable as flat shapes
-but tractable as **recombined components**. New kanji are introduced explicitly as "you already know
-these parts" (e.g. a known radical + a new one), reinforcing the system and making each new kanji
-cheaper than the last. Optional handwriting continues for those who want motor memory.
+The te-form and past-tense chapters are the working template: take one rule, split it by what the
+learner can *say* rather than by grammatical category, and bring fresh verbs that exercise each
+row. Both paid a retroactive debt for phrases the ladder was already carrying blind, and Book Two
+starts with the same debt — plain form in particular. Every verb card in Book One already shows a
+dictionary form (食べる, 待つ), so the learner has been reading plain form since the first lesson
+and has never been told it is a form, what its negative and past look like, or that it is what
+sits in front of half of Book Two's patterns.
 
-## 4. Grammar-in-context at N4 (the new building block, in earnest)
+Candidate rule chapters, in rough dependency order:
 
-N4 is where grammar-as-content earns its place. Each pattern is: a short plain-English gloss + a
-**verified or marked example sentence** + the SRS item (cloze/conjugation test). Patterns are taught
-*only* through sentences that reuse known vocab (i+1), never as abstract rules. Content sourcing per
-Q3: **training-canonical, marked `content-source: training`**, pending Tatoeba verification.
+1. **Plain form** — the dictionary/ない/た forms, the precondition for most of what follows
+2. **Joining sentences** — から, ので, けど, and て as a connector rather than a request
+3. **Wanting and intending** — 〜たい beyond the one pattern Book One has, 〜つもり, 〜ましょう
+4. **Being able to** — 〜ことができる, potential forms
+5. **Reported and quoted speech** — 〜と言いました, 〜と思います
+6. **Conditionals** — たら, ば, and when each is wrong
+7. **Giving and receiving** — あげる/くれる/もらう, the thing every course puts too late
 
-## 5. Hana at N4 — real but bounded conversation
+Situation chapters still belong, and should follow the Book One rule: check what is already taught
+before authoring, or a chapter shrinks from "adjectives" to "the body and the pairs" the hard way.
 
-Scoped sessions get longer and looser: the system prompt still caps at N4 grammar/vocab, but Hana
-now lets the learner **drive**, asks follow-ups, and corrects by re-modeling + a one-line "you could
-also say…". Situations become multi-step ("check into a hotel, then ask where breakfast is"). This
-is the first place a learner feels they're *actually conversing*.
+## 3. Checkpoints
 
-## 6. Retention specifics at N4 — beating the first plateau
+Unchanged in kind (DR-021): recognition checkpoints close chapters at situation boundaries on a
+~10-lesson cadence; one production checkpoint closes the book. What shifts is the **format inside
+them** — Book Two's recognition pass should lean on recall rather than tile-tap, and its production
+checkpoint should ask for a composed sentence rather than a remembered phrase.
 
-N4 is where the early-win dopamine fades and the grind shows. Countermeasures:
+Mastery gates, never grades (DR-020). That does not relax at any level.
 
-- **Make recombination visible:** "This kanji uses 木 (tree), which you learned in Unit 6" — show the
-  learner their knowledge compounding; it's intrinsically motivating (and true).
-- **Mixed cumulative reviews:** weekly the loop offers a slightly larger interleaved review across
-  the whole level so far — retrieval practice on a wide set, which is exactly what consolidates.
-- **Production as proof:** the "compose a sentence" beat gives a concrete "I made that" win that
-  recognition can't.
-- Still **no streak guilt** — re-engagement stays informational.
+## 4. Kanji — where the method compounds
+
+This is where a component layer pays for itself. Book Two's kanji load is unmanageable as flat
+shapes and tractable as **recombined parts**: new kanji are introduced as "you already know these
+pieces", which reinforces the system and makes each new kanji cheaper than the last.
+
+The component layer does not exist yet and is listed as Book One's main gap for this reason — it
+should be built during Book One's finish, not scrambled for here.
+
+## 5. Content sourcing
+
+Book Two words are marked `content-source: training` and verified headword-by-headword against
+JMdict for Applications 3.6.2, exactly as Book One's are. The community reference is a gap-finder,
+never an authority.
+
+`node scripts/jlpt.mjs coverage n4` works today — the tooling is level-agnostic. The N4 reference
+holds 770 words, 545 attested by both source lists. That is the authoring queue, not the syllabus.
+
+**Sentences remain the constraint.** JMdict cannot verify a composed sentence; only fixed
+expressions are headwords. `scripts/jlpt.mjs sentences` finds Tatoeba candidates whose every word
+is already taught, and Book One's experience is that it yields few enough to be a *checking* tool
+rather than a supply. Book Two sentences follow the same sanctioned path: training-canonical,
+marked, pending verification.
+
+## 6. Production practice — no Hana (DR-023)
+
+The previous version of this doc built its entire output story on Hana: 8–12 turn conversations,
+learner-initiated, with re-modelling correction. **Hana is shelved**, switched off behind
+`VITE_HANA_ENABLED`, and this book must not be planned around that decision reversing.
+
+The replacement is the same one Book One uses, scaled up. Where Book One's production checkpoint
+asks the learner to write a remembered phrase from its English, Book Two's asks them to **compose**:
+here is a pattern and a situation, write a sentence. That is a harder test than a steerable
+conversation, needs no API, and is the actual stated goal of the book.
+
+If Hana is ever switched back on, that is an *addition* to this, not the foundation of it.
 
 ## 7. Free/paid
 
-Free (free account). N4 is the **last free ladder**; finishing it is the natural moment to introduce
-N3 (paid) — the learner has now experienced the full method for many weeks and built real ability,
-which is the honest case for paying.
+Free, with an account. Book Two is the **last free book**; finishing it is the natural moment to
+introduce Book Three. The learner has by then used the full method for weeks and built real
+ability, which is the honest case for paying.
 
-## 8. Build notes specific to N4
+## 8. Build order
 
-- Leans hardest on the **grammar-in-context** building block and **production grading** (Hana).
-- Needs the kanji component layer to support "you already know these parts" framing.
-- First use of multi-line **graded reading** (still assembled/marked at N4).
+1. Finish Book One (food chapter, people & clothes chapter)
+2. Kanji component + mnemonic layer
+3. Multi-book support (§0a) and the difficulty shift (§0b)
+4. Author Book Two chapters, rule chapters first
+5. Graded reading passages, once there is enough vocabulary for i+1 to mean anything

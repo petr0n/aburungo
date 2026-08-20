@@ -1,132 +1,106 @@
 # Learning Paths — Build Roadmap
 
-Sequenced so each phase ships something usable and de-risks the next. **Decision (Q4): start with
-the N5 guided daily loop on existing content** — prove the engine cheaply on the free tier before
-building the N3 content pipeline.
+Sequenced so each phase ships something usable and de-risks the next.
 
-Guiding rule: **reuse, don't rebuild.** FSRS, the buckets, audio, Hana, progress, tiers, and
-furigana all already exist. Each phase adds the *connective tissue*, not new silos.
+Guiding rule: **reuse, don't rebuild.** FSRS, the buckets, audio, progress, tiers and furigana
+already exist. Each phase adds *connective tissue*, not new silos.
 
----
-
-## Already built (start line for Phase 1)
-
-These exist in the app today and do not need to be built:
-
-- **WordsPage** (`src/pages/WordsPage.tsx`) — browse, learn, drill, and recognition flow for vocabulary; tier-gated content; theme grouping
-- **RecognitionPass** (`src/components/RecognitionPass.tsx`) — tile-tap recognition screen (3 options, no judgment); queue + pool props; already wired into WordsPage
-- **Basics theme vocabulary** (`src/content/vocabulary/basics.yaml`) — 10 kana-only N5 words (pronouns + demonstratives) with theme field; establishes the YAML schema all vocabulary follows
-- **74 N5 words total** across `basics.yaml`, `adjectives.yaml`, `verbs.yaml`, `nouns.yaml` — ~117 more needed to complete the N5 unit map
-
-Phase 1 picks up from here. The loop orchestrator, unit data model, and session UI are what remain.
+Naming follows DR-024 — **Book → Chapter → Lesson**. Phases below were originally written against
+JLPT level names; Book One is N5, Book Two is N4, and so on.
 
 ---
 
-## Phase 1 — N5 guided daily loop (MVP)
+## Phase 1 — the guided daily loop — **DONE**
 
-**Goal:** a learner opens the app, taps **Today's session**, and gets one orchestrated N5 loop
-(review → new unit → integrate → produce → close) built entirely from content we already have.
-Validates the core "path" experience and the Recognize→Recall→Produce idea.
+A learner opens the app, taps **Today's session**, and gets one orchestrated loop built from
+existing content. Shipped: the lesson data model, the daily-loop orchestrator, `/learn`, the
+Recognize→Recall→Produce gating, and the honest close screen.
 
-**Build:**
-1. **Data model** (`src/types.ts` + content): `Path`, `Unit`, and per-user `PathProgress`. A Unit
-   references existing item ids (word ids, kanji, phrase ids) — it's an ordering layer, not new
-   content. Author N5 units by grouping the existing N5 words/kanji/phrases into ~35 ordered units
-   wrapped in the existing situations.
-2. **Daily-loop orchestrator** (`src/store/` + `src/srs/`): given PathProgress + FSRS due state,
-   assemble today's session = interleaved due review + next unit's new items + an integrate step
-   (cloze over today's items) + one produce beat. Pure/where possible; `now` passed in.
-3. **"Today's session" UI** (new page/route, e.g. `/learn`): the single guided flow with the
-   free-roam escape hatch (links into existing buckets remain).
-4. **Recognize→Recall→Produce gating:** reuse existing flashcard (recognize), fill-in-blank/type
-   (recall), and a minimal produce beat (type-the-phrase) — Hana scoping can be a fast-follow.
-5. **Honest close screen:** "learned today / due tomorrow / mastered" from existing progress stats.
-   No XP/streak mechanics.
+## Phase 2 — depth first — **mostly done**
 
-**Reuse:** FSRS, words/kana/phrases content, flashcard + fill-in-blank components, progress store,
-furigana, audio.
+**Goal:** make the teaching inside a lesson excellent before extending the ladder upward.
+Resequenced 2026-08-04 (DR-017).
 
-**Decision records to add** (`docs/decision-records.md`): DR for the Path/Unit data model; DR for
-the daily-loop orchestration + interleaving policy.
+| | | |
+|---|---|---|
+| Server-durable learning state (DR-016) | done | IndexedDB alone could not survive Safari's ITP |
+| Grammar-in-context as first-class SRS items | done | PR #50; 39 patterns as of 2026-08-20 |
+| ~~Scoped Hana~~ | **shelved (DR-023)** | built and tested, switched off; production checkpoint covers production practice instead |
+| Chapters, checkpoints on a cadence | done | DR-021, DR-024 |
+| Deepen Book One vocabulary | **in progress** | 423 words as of 2026-08-20, from a reference gap of 809 |
+| Kanji component + mnemonic layer | **not started** | the largest remaining Book One gap |
 
-**Done when:** a guest can complete several consecutive N5 daily sessions that feel like one coherent
-path, with reviews interleaving correctly and visible mastery.
+### Finishing Book One
 
----
+1. **Two more chapters** — food, then people & clothes. Lands the book near the ~100 landing zone.
+2. **Kanji component + mnemonic layer.** Components from KANJIDIC2/KanjiVG, a mnemonic per kanji.
+   Resolve authoring vs. licensed scheme (overarching plan §5.5). Optional handwriting via KanjiVG
+   stroke order. **Build this before Book Two**, where kanji stop being learnable as flat shapes.
+3. **VOICEVOX audio pipeline.** Vet voice licences, pre-generate locally via Podman, upload to
+   Supabase Storage. See `admin-dashboard-plan.md` for the multi-voice strategy.
 
-## Phase 2 — Depth first, then N4
+## Phase 2b — multi-book support — **not started, blocks Book Two**
 
-**Goal:** make the *teaching* inside a unit excellent, and extend the ladder to N4.
+The app knows exactly one book. `n5Lessons` is a hardcoded export referenced in eight places in
+`LearnPage.tsx`; there is no book-to-book transition and no per-book difficulty shift.
 
-**Resequenced 2026-08-04 (DR-017).** Grammar-in-context shipped (PR #50). The remaining order is:
+Two pieces, both small now and much larger after a second book's content exists:
 
-1. **Server-durable learning state (DR-016) — before any content work.** `PathProgress` and FSRS
-   state live in IndexedDB, which Safari's ITP deletes after 7 days without site interaction.
-   That destroys the accumulated FSRS model, not just ladder position, in exactly the scenario
-   SRS exists to survive. Content compounds on state that can currently vanish.
-2. **Deepen N5 vocabulary (189 → 400+).** N5 references cite ~800-900 words; the 35-unit ladder
-   being fully authored is not the same as N5 breadth. Author against the Tatoeba examples
-   already embedded in `server/data/jmdict-examples-eng-3.6.2.json` — no download needed.
-3. ~~**Scoped Hana**~~ — **built, then shelved (DR-023).** It works and is tested, but it is
-   switched off behind `VITE_HANA_ENABLED` (default off): the owner does not want a per-use API
-   cost in an otherwise fixed-cost tool. Production practice is covered instead by the
-   **production checkpoint** at unit 44 — write each item from its English — which needs no API.
-   Do not plan new work that depends on Hana without asking.
-4. **Kanji mnemonics last, integrated into vocabulary** rather than built as a standalone silo.
+1. **Make the book a parameter**, not an import. `Book` gets an id, order, title and chapter list;
+   the orchestrator takes one. The chapter helpers are already pure functions over lessons and
+   chapters, so they generalise for free.
+2. **The per-book difficulty shift.** Recall as the default gate, weaning off romaji,
+   production-first formats — all described in the Book Two plan, none implemented. Decide whether
+   it is a property of the Book, the lesson, or the learner's progress, and build it once.
 
-**Build:**
-- **Kanji component + mnemonic layer:** components from KANJIDIC2/KanjiVG; mnemonic per kanji
-  (resolve authoring vs. licensed scheme — overarching plan open decision §5.5). Optional handwriting
-  via KanjiVG stroke order.
-- **Grammar-in-context:** grammar patterns as first-class content + SRS items, taught via a verified
-  or marked example sentence; cloze/conjugation review format. Add FSRS support for pattern items.
-- **N4 ladder:** author N4 units; turn on the production-default gating and weaning off romaji.
-- **Scoped Hana (N5/N4):** launch a conversation constrained to a unit's items + JLPT level for the
-  produce beat.
+See [03-path-n4.md §0](03-path-n4.md).
 
-**Content source:** training-canonical, marked `content-source: training` (per Q3).
+## Phase 3 — Book Two
 
----
+Author the chapters, **rule chapters first** — plain form, joining sentences, wanting and
+intending, conditionals, giving and receiving. Book One's grammar patterns cover only 39 of its 76
+teaching lessons because situation chapters are word-shaped; Book Two's purpose is combining
+patterns, so it should invert that ratio.
 
-## Phase 3 — N3 paid flagship (the differentiator)
+Content sourcing stays training-canonical and marked, verified headword-by-headword against JMdict.
+First graded reading passages, once vocabulary is deep enough for i+1 to mean anything.
 
-**Goal:** the extensive-reading + mining + real-conversation machine that gets people over the wall.
-This is the heaviest phase and the paid value prop.
+## Phase 4 — Book Three, the paid flagship
 
-**Build:**
-- **Tatoeba ingestion + i+1 leveling pipeline** (server/seed): import CC BY sentences, tag by
-  item/grammar coverage, level by known-item %. Source of the graded library + mining corpus.
-- **Graded reading library + reader UI:** serve a learner texts at ~95% known from their SRS state;
-  read-for-flow UX.
-- **In-text sentence mining → SRS:** tap an unknown item, store it with its sentence, schedule it.
-- **Hana structured feedback mode:** open conversation + post-exchange "one thing to tighten."
-  **Blocked by DR-023** — Hana is shelved, so this whole line item is on hold until that
-  decision is revisited. Reading and mining below do not depend on it.
-- **Honest progress counters:** lines read, words mined→mastered, conversation minutes.
-- **Paywall:** N3 entry behind the existing tier/`isPaid` slot (soft prompt, preserved progress).
+**The heaviest phase.** New builds: the Tatoeba ingestion and i+1 levelling pipeline, the levelled
+reading library and reader UI, in-text mining → SRS, compose-then-compare production, and the
+honest progress counters. Then the paywall — flip the `isPaid` stub when payment is wired.
 
-**Content source:** verified only (Tatoeba). No training-canonical sentences at N3+.
+**Open before authoring:** whether chapters survive as grammar/reading bands when vocabulary
+arrives by mining rather than curation. See [04-path-n3.md §3](04-path-n3.md).
 
----
+Content is **verified only** from here up. No training-canonical sentences.
 
-## Phase 4 — N2 / N1 extension
+## Phase 5 — Books Four and Five
 
-Extend the Phase 3 reading + mining + conversation machinery with harder, broader content and
-discourse/nuance grammar. Mostly content + leveling work, little new engine. Outline once N3 is
-validated with real users.
+Extend Book Three's reading, mining and production machinery with harder, broader content and
+register/nuance grammar. Mostly content and levelling work, little new engine. Deliberately
+unplanned in detail — see [04b-path-n2-n1.md](04b-path-n2-n1.md), including the observation that
+**listening has no home anywhere in this plan.**
 
 ---
 
 ## Cross-cutting, anytime
 
-- **Telemetry for retention** (privacy-respecting): are people completing daily sessions? where do
-  they drop? Feeds the honest-progress design.
-- **Content QA:** the Tatoeba leveling and mnemonic quality both need review passes.
+- **Full FSRS source-of-truth for signed-in users.** Local Leitner still co-drives the queue and
+  new-card detection is local (DR-015). Add a server endpoint returning the reviewed/new card set,
+  then drop local Leitner for signed-in users. Guests stay local.
+- **Admin Phase 3** — feature flags, announcements, rate-limiting dashboard.
+- **Audio fill-in-the-blank** — Web Speech API for input, Whisper upgrade path. Warn before
+  shipping anything that triggers a microphone permission prompt.
+- **Apple Sign-In** — when the developer account exists.
+- **Mobile app** — React Native or PWA with offline support.
+- **Content QA** — levelling and mnemonic quality both need review passes.
 
 ---
 
 ## What this does *not* change
 
 The existing buckets and their standalone pages stay exactly as they are — the paths sit *on top*.
-A learner who just wants to drill flashcards or browse kanji still can; the path is the guided
+A learner who just wants to drill flashcards or browse kanji still can. The path is the guided
 default, not a cage.

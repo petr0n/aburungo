@@ -1,5 +1,10 @@
 # AburunGo UI — Design System Agent Brief
 
+> **Stale — historical (2026-08-20).** The UI this brief asked for shipped, and has been extended
+> many times since (chapters, checkpoints, the production checkpoint). Kept as a record of the
+> original brief. Do not hand it to an agent as a current spec — read `src/pages/LearnPage.tsx` and
+> the components it renders instead.
+
 Hand the whole of this file to an agent working in the **AburunGo design system repo**
 (`aburungo-design-system`, linked into the app as `link:../aburungo-design-system`).
 

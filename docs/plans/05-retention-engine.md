@@ -1,5 +1,10 @@
 # Keeping It Interesting (formerly "Retention Engine")
 
+> **Partly stale — read with care (2026-08-20).** Written before DR-020/021/022/023. Anything here
+> that routes engagement or output through **Hana** is blocked: Hana is shelved (DR-023). Anything
+> that reads as a score or a verdict is superseded by DR-020 — mastery gates are allowed, grades are
+> not. The motivation thinking survives; the mechanics need re-checking against the path docs.
+
 > **Scope recalibration (important):** AburunGo is being built **primarily as a personal learning
 > tool for a self-motivated learner**, not a commercial product. So this is **not** about fighting
 > churn, conversion, or willingness-to-pay. The question is narrower and nicer: *how does the app

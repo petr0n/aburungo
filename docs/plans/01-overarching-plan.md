@@ -1,5 +1,14 @@
 # Learning Paths — Overarching Plan
 
+> **Partly stale — read with care (2026-08-20).** This doc predates four decisions and has not
+> been rewritten: it says **"unit"** where the ladder now says **lesson** inside a **chapter**
+> (DR-024), it declares a fixed **can-do list** that is now derived from seen situations (DR-022),
+> and it builds the **produce beat on Hana**, which is shelved (DR-023) — production practice runs
+> through production checkpoints instead. Checkpoint placement follows DR-021, not what is written
+> here. The engine description is still broadly right; the vocabulary and the Hana passages are not.
+> The rewritten path docs ([02](02-path-n5.md), [03](03-path-n4.md), [04](04-path-n3.md)) supersede
+> this one wherever they disagree.
+
 **Spine: JLPT level ladders.** Each learning path is one JLPT level (N5 → N1). Every ladder runs
 the *same* retention engine; what changes between levels is the **content** and the **emphasis**
 (recognition-heavy at N5 → production/immersion-heavy at N3+). Grounded in
@@ -221,7 +230,7 @@ High-level tracking for the Learning Paths initiative. Check off items as they s
 - [x] Research foundations (`00-research-foundations.md`)
 - [x] Overarching plan — engine, session loop, gating, build inventory (`01-overarching-plan.md`)
 - [x] N5 path spec — can-do milestones, unit structure, daily session flavor (`02-path-n5.md`)
-- [x] N5 unit map — all 35 units across 8 situations (`02b-n5-units.md`)
+- [x] ~~N5 unit map~~ — superseded; the live map is the generated `docs/book-one-ladder.md`
 - [x] N4 path spec (`03-path-n4.md`)
 - [x] N3 path spec (`04-path-n3.md`)
 - [x] Retention engine — dimensions, mechanisms, rhythm (`05-retention-engine.md`)
