@@ -9,9 +9,10 @@ level-setting, no scenario selection, no account required to start.
 
 - **Frictionless.** The app makes all content and sequencing decisions. Onboarding only captures
   the three preferences that affect session shape.
-- **Everyone starts at the beginning.** No level assessment, no placement test. All learners enter
-  at the start of Book One (kana prerequisite first). Prior kana knowledge? The kana mini-ladder has a
-  test-out path — onboarding doesn't ask.
+- **Everyone starts at the beginning.** No level assessment, no placement test. All learners
+  enter at the start of Book One. Kana is not a gate: kana practice is a standalone, always-free
+  track, and Book One words carry romaji as the crutch — onboarding asks nothing about it. (If a
+  kana on-ramp is ever built, it slots after these questions, not as a new question.)
 - **No scenario selection.** The app provides a wide variety of real-life situations across the
   ladder. The learner doesn't choose; they encounter them in a sensible sequence.
 - **First can-do goal is automatic.** The app assigns the first can-do ("greet someone in
@@ -86,9 +87,8 @@ No choices. One sentence. Shown briefly before the session starts — not a scre
 
 ### 4. First session
 
-Begins immediately. The first session is the kana mini-ladder (hiragana) unless the learner
-tests out (available from within the session, not during onboarding). Book One's main ladder
-starts once kana is confirmed.
+Begins immediately with Book One's first lesson — there is no kana gate (see Principles). The
+close screen may point at the standalone kana practice track for learners who want it.
 
 ---
 

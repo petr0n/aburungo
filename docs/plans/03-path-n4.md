@@ -41,7 +41,9 @@ Neither is large. Both are much larger after content exists.
 The authority is the generated [docs/book-one-ladder.md](../book-one-ladder.md), which moves as
 Book One finishes; the numbers below are dated, not promised. **As of 2026-08-20:** 423 words
 (finishing toward ~800 against the reference gap), 163 kanji, 39 grammar patterns, and kana
-fluency guaranteed by the mini-ladder that gates the book.
+reading built by exposure — every ladder word shows kana — though **no kana gate exists**: kana
+practice is a standalone free track and romaji rides along as Book One's crutch (§6 is where
+that ends).
 
 Grammar actually in hand: です and its questions, ます／ました／ませんでした, でした and
 〜かったです, 〜てください with the verb groups sorted, 〜ています, 〜てもいいですか, one 〜たい
@@ -155,10 +157,10 @@ Book One shows romaji on word cards and its production checkpoint counts romaji 
 removes the crutch at the book boundary:
 
 - **Display: none.** No Book Two item ever renders romaji, and Book One items reviewed inside
-  Book Two drop theirs. Kana with furigana everywhere, per the furigana principle. The kana
-  mini-ladder is a hard prerequisite of Book One, so every Book Two learner already reads kana —
-  the crutch is removable by construction, and removing it is the point: every romaji glance is a
-  kana rep not taken.
+  Book Two drop theirs. Kana with furigana everywhere, per the furigana principle. A learner
+  arriving here has read kana beside every word for ninety-plus lessons, and the standalone kana
+  track covers remediation — the crutch is removable, and removing it is the point: every romaji
+  glance is a kana rep not taken.
 - **Input: romaji survives as a typing method only.** Typing "mizu" to produce みず is an IME, not
   reading; answer fields keep romaji→kana conversion indefinitely. What the learner reads, and
   what is checked, is kana. Book One's "kana or romaji both count" checkpoint note is a Book One

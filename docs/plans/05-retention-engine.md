@@ -64,7 +64,7 @@ The one-table truth, checked against the code. Detail in the numbered sections b
 | Recognition checkpoints closing each chapter (recurring) | **Built** — DR-020/021, `RecognitionCheckpoint` |
 | Production checkpoint closing the book (once) | **Built** — DR-023, `ProductionCheckpoint` |
 | Can-dos derived from situations seen | **Built** — DR-022, `src/srs/canDo.ts`; no checklist UI yet |
-| No-debt framing: no "overdue", no backlog counts, no lose-able streak | **Built** |
+| No-debt framing: no "overdue", no backlog counts; the profile "Day streak" is informational only (sync #4) | **Built** |
 | Two-agent can-do verification (Hana + assessor) | **Built but shelved** — DR-023, off behind `VITE_HANA_ENABLED` |
 | Format rotation across sessions (per item) | **Designed, not built** — reviews always resurface as flashcards |
 | Contextual variety (rotating example sentences) | **Designed, not built** — a word carries at most one example |
