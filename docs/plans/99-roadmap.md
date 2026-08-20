@@ -73,8 +73,8 @@ First graded reading passages, once vocabulary is deep enough for i+1 to mean an
 reading library and reader UI, in-text mining → SRS, compose-then-compare production, and the
 honest progress counters. Then the paywall — flip the `isPaid` stub when payment is wired.
 
-**Open before authoring:** whether chapters survive as grammar/reading bands when vocabulary
-arrives by mining rather than curation. See [04-path-n3.md §3](04-path-n3.md).
+**Decided (2026-08-20):** chapters survive as grammar/reading **bands** ([04 §3](04-path-n3.md)).
+Still open before authoring: the reading-library **text source** ([04 §5](04-path-n3.md)).
 
 Content is **verified only** from here up. No training-canonical sentences.
 

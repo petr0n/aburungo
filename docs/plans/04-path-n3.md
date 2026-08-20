@@ -46,8 +46,8 @@ only with the component layer built underneath it first.
 
 ## 3. Does the chapter structure survive?
 
-**Recommended answer: yes — as grammar and reading-level bands, not situations.** This still needs
-the owner's sign-off before any authoring, but it is no longer a coin flip.
+**Decided (owner sign-off, 2026-08-20): yes — chapters survive as grammar and reading-level
+bands, not situations.**
 
 Chapters exist to bound a run of lessons and place a checkpoint at a boundary (DR-021). Book
 Three's vocabulary is too broad to pre-curate and arrives by mining, so "the lessons in this
@@ -75,8 +75,7 @@ count decouples from word count. If the shape breaks anywhere it will be band gr
 chapter whose patterns are learned before its texts feel comfortable); let the levelling
 pipeline's behaviour on real text decide that, not this doc.
 
-Do not author Book Three content until the band model is confirmed — content shaped for the wrong
-structure is the expensive mistake here.
+With the band model locked, the one remaining pre-authoring blocker is the text source (§5).
 
 ## 4. The daily loop
 
@@ -206,4 +205,4 @@ state, progress, and both free books remain fully usable whether or not they eve
 ingestion and levelling pipeline, in-text mining → SRS, compose-then-compare, and the honest
 progress counters — then the paywall wiring when payment lands. Everything below it is reused.
 
-Open before authoring, both owner decisions: the band model in §3, and the text source in §5.
+Open before authoring: the text source (§5). The band model (§3) was signed off 2026-08-20.

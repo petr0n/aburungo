@@ -12,10 +12,9 @@ label — they read **Book Four** and **Book Five**; the `jlpt` field lives only
 **Sizing (owner directive, 2026-08-20):** each book targets ~10 chapters of ~10 lessons — a ~100
 teaching-lesson skeleton, same landing zone as every other book. This doc therefore gives each book
 its own section and a chapter-band skeleton at that size. It stops there on purpose: the bands are
-themes and registers, not situations or lesson lists, because Book Three's open chapter question
-([04 §3](04-path-n3.md)) decides what a "chapter" even *is* once vocabulary arrives by mining, and
-its levelling pipeline's behaviour on real learners is the input the real plans need. Detail below
-band level written now would be fiction.
+themes and registers, not situations or lesson lists: the band model is now locked
+([04 §3](04-path-n3.md), signed off 2026-08-20), but the levelling pipeline's behaviour on real
+learners is the input the real plans need. Detail below band level written now would be fiction.
 
 **What ~100 lessons can and cannot carry:** the lesson skeleton holds grammar, register and kanji
 teaching. It cannot hold the vocabulary — the gap is roughly 2,300 words from Book Three to Four
@@ -57,7 +56,7 @@ served by existing tools — the same argument that makes Book Three the flagshi
 
 ## 3. Book Four — chapter bands (provisional)
 
-Bands, not commitments; the Book Three §3 decision reshapes these. Checkpoints stay on the DR-021
+Bands, not commitments; Book Three's pipeline meeting real learners will reshape these. Checkpoints stay on the DR-021
 cadence at band boundaries, using Book Three's gate: *read something you could not read at the
 start of this band*. Gates, never grades (DR-020). One production checkpoint closes the book.
 
