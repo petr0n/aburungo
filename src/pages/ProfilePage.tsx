@@ -223,14 +223,14 @@ function SignedInView() {
                 <div key={script} className="flex flex-col gap-3 rounded-2xl border border-border bg-surface px-5 py-4">
                   <div className="flex items-center justify-between">
                     <p className="text-body font-medium text-fg capitalize">{script}</p>
-                    <p className="text-body-sm text-fg-subtle">{s.recalled} recalled / {total} total</p>
+                    <p className="text-body-sm text-fg-subtle">{s.recalled} correct / {total} total</p>
                   </div>
                   {s.seen > 0 ? (
                     <>
                       <TwoToneBar reviewed={s.recognized} mastered={s.recalled} total={total} />
                       <div className="flex items-center justify-between">
                         <p className="text-caption text-fg-faint">
-                          {s.recognized} recognized &middot; {s.recalled} recalled
+                          {s.recognized} recognized &middot; {s.recalled} correct
                         </p>
                         {resetting === script ? (
                           <ResetConfirm label={script} onConfirm={() => handleReset(script)} onCancel={() => setResetting(null)} />

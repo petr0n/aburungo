@@ -59,7 +59,7 @@ export function GrammarClozeCard({ pattern, phrase, showRomaji = true, onNext }:
           {phase === "result" && (
             <div className="flex flex-col gap-4">
               <AnswerResult
-                outcome={correct ? "recalled" : "review"}
+                outcome={correct ? "correct" : "review"}
                 userAnswer={correct ? undefined : userAnswer}
               >
                 <Furigana japanese={phrase.japanese} reading={phrase.reading} className="font-jp text-jp-lg text-fg" />

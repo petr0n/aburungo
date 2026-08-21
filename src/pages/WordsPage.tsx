@@ -243,7 +243,7 @@ export function WordsPage() {
   } else if (screen === "result") {
     content = (
       <div className="flex flex-col gap-6 py-4">
-        <ScoreCard correct={correctCount} total={queue.length} label="recalled">
+        <ScoreCard correct={correctCount} total={queue.length} label="correct">
           {missed.length > 0 && (
             <section>
               <p className="mb-3 text-body-sm font-medium text-fg-subtle">Worth another look · {missed.length}</p>
