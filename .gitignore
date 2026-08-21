@@ -59,6 +59,7 @@ supabase/.temp/
 # Aozora ingest: catalogue + downloaded texts, regenerable via pnpm aozora
 data/aozora/
 
-# Vocabulary authoring queue: regenerable from JMdict + the coverage report.
-# The YAML is scratch for pasting; the JSON is the queue itself and is kept.
-data/jlpt/candidates-*.yaml
+# Vocabulary authoring queues (data/jlpt/candidates-*) are committed, both
+# formats. They are regenerable, but the point is reading them on a device that
+# cannot run the generator -- so they live in the repo, not in a local scratch
+# file. Regenerate with `pnpm vocab candidates <level>`.
