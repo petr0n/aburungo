@@ -20,8 +20,8 @@ dead words. The `jlpt` field survives in the data because the coverage tooling n
 | [02b-n5-units.md](02b-n5-units.md) | ~~N5 unit map~~ | **superseded** by the generated ladder |
 | [03-path-n4.md](03-path-n4.md) | **Book Two** — the bridge to composing sentences (free) | not started |
 | [04-path-n3.md](04-path-n3.md) | **Book Three** — the paid flagship: reading, mining, output | not started |
-| [04b-path-n2-n1.md](04b-path-n2-n1.md) | **Books Four & Five** — the long tail; deliberately thin | not started |
-| [05-retention-engine.md](05-retention-engine.md) | Retention mechanics in detail | **partly stale** — see its banner |
+| [04b-path-n2-n1.md](04b-path-n2-n1.md) | **Books Four & Five** — the long tail; shaped to chapter bands, thin below band level | not started |
+| [05-retention-engine.md](05-retention-engine.md) | Retention mechanics — what's built vs designed | current — reality-checked 2026-08-20 |
 | [06-onboarding.md](06-onboarding.md) | Onboarding: 3 questions, first can-do goal, frictionless first session | current |
 | [07-session-loop-ui-prompt.md](07-session-loop-ui-prompt.md) | DS agent prompt for the session-loop UI | **stale** — the UI shipped |
 | [99-roadmap.md](99-roadmap.md) | Build sequencing across all books | current |

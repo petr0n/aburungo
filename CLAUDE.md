@@ -73,7 +73,7 @@ Check `MEMORY.md` there at the start of every conversation. Write updated memori
 
 ### SRS
 
-- **Algorithm:** FSRS via `ts-fsrs`. State per card: `stability`, `difficulty`, `due_at`, `last_review`, `reps`.
+- **Algorithm:** the `/learn` daily loop runs on **Leitner** (`src/srs/leitner.ts` — five boxes, 1/3/7/14/30 days, server-durable per DR-016/018). FSRS via `ts-fsrs` exists **server-side only** behind the legacy flashcard flow (state per card: `stability`, `difficulty`, `due_at`, `last_review`, `reps`); full FSRS source-of-truth for signed-in users is a standing roadmap item.
 - **Interface:** `Scheduler` in `src/types.ts` — keep function signatures stable so the algorithm is swappable.
 
 ### Learning Mechanics

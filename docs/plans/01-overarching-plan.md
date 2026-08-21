@@ -7,7 +7,9 @@
 > through production checkpoints instead. Checkpoint placement follows DR-021, not what is written
 > here. The engine description is still broadly right; the vocabulary and the Hana passages are not.
 > The rewritten path docs ([02](02-path-n5.md), [03](03-path-n4.md), [04](04-path-n3.md)) supersede
-> this one wherever they disagree.
+> this one wherever they disagree. The §6 build checklist is likewise frozen in time — Phase 1
+> items it shows unchecked have long since shipped. [99-roadmap.md](99-roadmap.md) is the live
+> build tracker.
 
 **Spine: JLPT level ladders.** Each learning path is one JLPT level (N5 → N1). Every ladder runs
 the *same* retention engine; what changes between levels is the **content** and the **emphasis**
