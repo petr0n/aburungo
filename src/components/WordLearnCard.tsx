@@ -16,10 +16,12 @@ type Props = {
   word: Word;
   index: number;
   total: number;
+  /** Off in a difficulty-shifted book (03 §6) — kana only. Defaults on. */
+  showRomaji?: boolean;
   onNext: () => void;
 };
 
-export function WordLearnCard({ word, index, total, onNext }: Props) {
+export function WordLearnCard({ word, index, total, showRomaji = true, onNext }: Props) {
   const typeLabel = WORD_TYPE_LABELS[word.wordType];
   const politeJapanese = word.verbClass !== undefined
     ? toPoliteJapanese(word.japanese, word.reading, word.verbClass)
@@ -71,7 +73,7 @@ export function WordLearnCard({ word, index, total, onNext }: Props) {
                   className="block text-center text-jp-display font-medium text-fg lg:text-jp-display-lg"
                 />
                 <p lang="ja" className="text-center text-body-sm text-fg-subtle" style={{ fontFamily: "var(--font-jp)" }}>
-                  {word.reading} · {word.romaji}
+                  {showRomaji ? `${word.reading} · ${word.romaji}` : word.reading}
                 </p>
               </>
             )}

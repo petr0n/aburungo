@@ -105,3 +105,51 @@ describe("ReviewStep", () => {
     expect(onDone).toHaveBeenCalledTimes(1);
   });
 });
+
+/**
+ * The per-book difficulty shift (03 §0b): review gates on recall — the learner
+ * types the item from its English instead of flipping and self-rating — and
+ * romaji display is cut while romaji *input* keeps converting, IME-style.
+ */
+describe("ReviewStep with the difficulty shift", () => {
+  beforeEach(() => recordRating.mockClear());
+  afterEach(cleanup);
+
+  const mizu = { ...word("vocab.mizu", "みず"), romaji: "mizu", english: "water" } as Word;
+
+  async function typeAnswer(user: ReturnType<typeof userEvent.setup>, romaji: string) {
+    await user.type(screen.getByPlaceholderText("Type romaji here…"), romaji);
+    await user.click(screen.getByRole("button", { name: "Check answer" }));
+    await user.click(await screen.findByRole("button", { name: "Next" }));
+  }
+
+  it("asks for a typed recall instead of a flip card", async () => {
+    const user = userEvent.setup();
+    render(<ReviewStep items={[mizu]} shifted onDone={() => {}} />);
+
+    expect(screen.queryByRole("button", { name: /Reveal/ })).toBeNull();
+    await typeAnswer(user, "mizu");
+
+    expect(recordRating).toHaveBeenCalledWith("vocab.mizu", "got-it", false);
+  });
+
+  it("records a typed miss as 'didnt'", async () => {
+    const user = userEvent.setup();
+    render(<ReviewStep items={[mizu]} shifted onDone={() => {}} />);
+
+    await typeAnswer(user, "ocha");
+    expect(recordRating).toHaveBeenCalledWith("vocab.mizu", "didnt", false);
+  });
+
+  it("never renders romaji, though typing romaji still converts", async () => {
+    const user = userEvent.setup();
+    render(<ReviewStep items={[mizu]} shifted onDone={() => {}} />);
+
+    await user.type(screen.getByPlaceholderText("Type romaji here…"), "mizu");
+    await user.click(screen.getByRole("button", { name: "Check answer" }));
+
+    // The result reveals the reading, never the card's romaji field.
+    expect(screen.getByText("Recalled!")).toBeTruthy();
+    expect(screen.queryByText("mizu")).toBeNull();
+  });
+});

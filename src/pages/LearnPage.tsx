@@ -19,7 +19,7 @@
  */
 import { useCallback, useEffect, useState } from "react";
 import type { Book, GrammarPattern, Phrase, ReviewRating, Lesson, Word } from "@/types";
-import { isGrammarPattern } from "@/types";
+import { isGrammarPattern, isWord } from "@/types";
 import { useAuth, useUserTier } from "@/store/auth";
 import { bookOne } from "@/content/books";
 import { chapterLabel, placeInChapter } from "@/content/chapters";
@@ -37,6 +37,8 @@ import { FlashCard, type FlashCardPhase } from "@/components/FlashCard";
 import { WordLearnCard } from "@/components/WordLearnCard";
 import { FillBlankCard } from "@/components/FillBlankCard";
 import { GrammarClozeCard } from "@/components/GrammarClozeCard";
+import { FrameComposeCard } from "@/components/FrameComposeCard";
+import { buildCompositionFrame } from "@/lib/composition";
 import { RecognitionPass } from "@/components/RecognitionPass";
 import { RecognitionCheckpoint } from "@/components/RecognitionCheckpoint";
 import { ProductionCheckpoint } from "@/components/ProductionCheckpoint";
@@ -70,10 +72,37 @@ function stepForLesson(lesson: Lesson): Step {
   return lesson.checkpoint === undefined ? "new-lesson" : CHECKPOINT_STEP[lesson.checkpoint];
 }
 
+/**
+ * Whether this session runs with the per-book difficulty shift (03 §0b) —
+ * recall as the review gate, the romaji cut, and the frame-based produce beat.
+ *
+ * A book carries the shift as a field. In dev builds `?shift=1` forces it on,
+ * so the Book Two behaviors are provable against Book One content before any
+ * Book Two content exists. Dev-only by design: production knows no override.
+ */
+function isShifted(book: Book): boolean {
+  if (book.difficultyShift) return true;
+  return import.meta.env.DEV && new URLSearchParams(window.location.search).get("shift") === "1";
+}
+
 // ── Review step — flip cards for already-seen items that are due ───────────────
 
-/** Exported for direct testing — see LearnPage.review.dom.test.tsx. */
-export function ReviewStep({ items, onDone }: { items: Array<Phrase | Word | GrammarPattern>; onDone: () => void }) {
+/**
+ * Exported for direct testing — see LearnPage.review.dom.test.tsx.
+ *
+ * `shifted` swaps the default gate from recognition to recall (03 §2): instead
+ * of flip-and-self-rate, the learner types the item from its English, and the
+ * checked result feeds the same Leitner rating the flip card's buttons do.
+ */
+export function ReviewStep({
+  items,
+  shifted = false,
+  onDone,
+}: {
+  items: Array<Phrase | Word | GrammarPattern>;
+  shifted?: boolean;
+  onDone: () => void;
+}) {
   const signedIn = useAuth((s) => s.user !== null);
   const [index, setIndex] = useState(0);
   const [phase, setPhase] = useState<FlashCardPhase>("entering");
@@ -122,6 +151,13 @@ export function ReviewStep({ items, onDone }: { items: Array<Phrase | Word | Gra
     advance();
   }
 
+  /** The recall gate: a checked typed answer maps onto the same binary rating. */
+  function handleRecallNext(correct: boolean) {
+    const item = items[index];
+    if (item !== undefined) void recordRating(item.id, correct ? "got-it" : "didnt", signedIn);
+    advance();
+  }
+
   if (current === null) return null;
 
   if (isGrammarPattern(current)) {
@@ -133,7 +169,25 @@ export function ReviewStep({ items, onDone }: { items: Array<Phrase | Word | Gra
           Review · {index + 1} / {items.length}
         </p>
         <ProgressBar value={(index + 1) / items.length} />
-        <GrammarClozeCard key={current.id} pattern={current} phrase={phrase} onNext={(correct) => void handleGrammarNext(correct)} />
+        <GrammarClozeCard
+          key={current.id}
+          pattern={current}
+          phrase={phrase}
+          showRomaji={!shifted}
+          onNext={(correct) => void handleGrammarNext(correct)}
+        />
+      </div>
+    );
+  }
+
+  if (shifted) {
+    return (
+      <div className="flex w-full flex-col gap-4 py-4">
+        <p className="text-body-sm text-fg-subtle">
+          Review · {index + 1} / {items.length}
+        </p>
+        <ProgressBar value={(index + 1) / items.length} />
+        <FillBlankCard key={current.id} card={current} showRomaji={false} onNext={(correct) => void handleRecallNext(correct)} />
       </div>
     );
   }
@@ -198,6 +252,7 @@ function NewLessonStep({
   words,
   phrases,
   pattern,
+  shifted,
   onDone,
 }: {
   book: Book;
@@ -205,6 +260,7 @@ function NewLessonStep({
   words: Word[];
   phrases: Phrase[];
   pattern: GrammarPattern | null;
+  shifted: boolean;
   onDone: () => void;
 }) {
   const [stage, setStage] = useState<"intro" | "words" | "phrases" | "grammar">("intro");
@@ -283,6 +339,7 @@ function NewLessonStep({
           word={word}
           index={index}
           total={words.length}
+          showRomaji={!shifted}
           onNext={() => {
             const next = index + 1;
             if (next >= words.length) {
@@ -371,7 +428,27 @@ function NewLessonStep({
 
 // ── Produce step — type what you just learned, forgiving feedback ──────────────
 
-function ProduceStep({ items, onDone }: { items: Array<Phrase | Word | GrammarPattern>; onDone: () => void }) {
+/**
+ * `shifted` turns the produce beat production-first (03 §8): phrases and the
+ * lesson's pattern become frame-based composition — the sentence as a frame
+ * with a slot, the learner picks a word and types the whole thing — instead of
+ * type-the-phrase. Frames are derived from the item's own phrase with the
+ * lesson's words as candidates; an item no frame can be derived for falls back
+ * to the typed card, romaji cut either way. Words stay typed recall — a single
+ * word has no frame to compose into.
+ */
+function ProduceStep({
+  items,
+  frameWords,
+  shifted,
+  onDone,
+}: {
+  items: Array<Phrase | Word | GrammarPattern>;
+  /** Candidate words for frame slots and options — the lesson's new words. */
+  frameWords: Word[];
+  shifted: boolean;
+  onDone: () => void;
+}) {
   const signedIn = useAuth((s) => s.user !== null);
   const [index, setIndex] = useState(0);
   const current = items[index];
@@ -391,27 +468,46 @@ function ProduceStep({ items, onDone }: { items: Array<Phrase | Word | GrammarPa
 
   if (current === undefined) return null;
 
-  if (isGrammarPattern(current)) {
-    const phrase = findPhrase(current.phraseId);
-    if (phrase === undefined) return null;
-    return (
-      <div className="flex w-full flex-col gap-4 py-4">
-        <p className="text-body-sm text-fg-subtle">
-          Try it · {index + 1} / {items.length}
-        </p>
-        <ProgressBar value={(index + 1) / items.length} />
-        <GrammarClozeCard key={current.id} pattern={current} phrase={phrase} onNext={(correct) => void handleNext(correct)} />
-      </div>
-    );
-  }
-
-  return (
-    <div className="flex w-full flex-col gap-4 py-4">
+  const header = (
+    <>
       <p className="text-body-sm text-fg-subtle">
         Try it · {index + 1} / {items.length}
       </p>
       <ProgressBar value={(index + 1) / items.length} />
-      <FillBlankCard key={current.id} card={current} onNext={(correct) => void handleNext(correct)} />
+    </>
+  );
+
+  if (isGrammarPattern(current)) {
+    const phrase = findPhrase(current.phraseId);
+    if (phrase === undefined) return null;
+    const frame = shifted ? buildCompositionFrame(phrase, frameWords) : null;
+    return (
+      <div className="flex w-full flex-col gap-4 py-4">
+        {header}
+        {frame !== null ? (
+          <FrameComposeCard key={current.id} frame={frame} patternLabel={current.pattern} onNext={(correct) => void handleNext(correct)} />
+        ) : (
+          <GrammarClozeCard
+            key={current.id}
+            pattern={current}
+            phrase={phrase}
+            showRomaji={!shifted}
+            onNext={(correct) => void handleNext(correct)}
+          />
+        )}
+      </div>
+    );
+  }
+
+  const frame = shifted && !isWord(current) ? buildCompositionFrame(current, frameWords) : null;
+  return (
+    <div className="flex w-full flex-col gap-4 py-4">
+      {header}
+      {frame !== null ? (
+        <FrameComposeCard key={current.id} frame={frame} onNext={(correct) => void handleNext(correct)} />
+      ) : (
+        <FillBlankCard key={current.id} card={current} showRomaji={!shifted} onNext={(correct) => void handleNext(correct)} />
+      )}
     </div>
   );
 }
@@ -500,6 +596,7 @@ function CloseStep({ book, session }: { book: Book; session: DailySession }) {
 export function LearnPage({ book = bookOne }: { book?: Book } = {}) {
   const tier = useUserTier();
   const userId = useAuth((s) => s.user?.id ?? null);
+  const shifted = isShifted(book);
 
   const [step, setStep] = useState<Step>("loading");
   const [session, setSession] = useState<DailySession | null>(null);
@@ -582,7 +679,7 @@ export function LearnPage({ book = bookOne }: { book?: Book } = {}) {
   if (step === "loading" || session === null) {
     content = <LoadingPlaceholder label="Preparing today's session…" />;
   } else if (step === "review") {
-    content = <ReviewStep items={session.reviewItems} onDone={afterReview} />;
+    content = <ReviewStep items={session.reviewItems} shifted={shifted} onDone={afterReview} />;
   } else if (step === "new-lesson" && session.lesson !== null) {
     content = (
       <NewLessonStep
@@ -591,6 +688,7 @@ export function LearnPage({ book = bookOne }: { book?: Book } = {}) {
         words={session.newWords}
         phrases={session.newPhrases}
         pattern={session.newGrammarPattern}
+        shifted={shifted}
         onDone={afterNewUnit}
       />
     );
@@ -619,6 +717,7 @@ export function LearnPage({ book = bookOne }: { book?: Book } = {}) {
         lesson={session.lesson}
         words={wordsForTier(tier).filter((w) => taughtWordIds.has(w.id))}
         phrases={phrasesForTier(tier).filter((p) => taughtPhraseIds.has(p.id))}
+        showRomaji={!shifted}
         onMissed={(item) => void demoteMissedWord(item.id, userId !== null)}
         onDone={() => void finishUnitAndClose()}
       />
@@ -657,6 +756,8 @@ export function LearnPage({ book = bookOne }: { book?: Book } = {}) {
     content = (
       <ProduceStep
         items={[...session.newWords, ...session.newPhrases, ...(session.newGrammarPattern ? [session.newGrammarPattern] : [])]}
+        frameWords={session.newWords}
+        shifted={shifted}
         onDone={afterProduce}
       />
     );

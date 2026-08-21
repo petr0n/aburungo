@@ -23,10 +23,16 @@ const WORD_TYPE_LABELS: Record<WordType, string> = {
 
 type Props = {
   card: Phrase | Word;
+  /**
+   * Whether the result reveals romaji. Defaults on; a difficulty-shifted book
+   * (03 §6) passes false — kana only, and every book's items obey the book
+   * the learner is in, not the book the item came from.
+   */
+  showRomaji?: boolean;
   onNext: (correct: boolean) => void;
 };
 
-export function FillBlankCard({ card, onNext }: Props) {
+export function FillBlankCard({ card, showRomaji = true, onNext }: Props) {
   const [phase, setPhase] = useState<Phase>("input");
   const [inputMode, setInputMode] = useState<InputMode>("text");
   const [correct, setCorrect] = useState(false);
@@ -83,7 +89,7 @@ export function FillBlankCard({ card, onNext }: Props) {
               </p>
             </>
           )}
-          <p className="text-body-sm italic text-fg-subtle">{card.romaji}</p>
+          {showRomaji && <p className="text-body-sm italic text-fg-subtle">{card.romaji}</p>}
         </AnswerResult>
 
         <Button type="button" onClick={handleNext} fullWidth>
