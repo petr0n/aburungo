@@ -260,7 +260,7 @@ function buildLevel(l) {
  * Reads the vocabulary YAML directly rather than importing the app, so this
  * stays a plain script with no build step and no bundler in the way.
  */
-function ourWords() {
+export function ourWords() {
   const dir = join(ROOT, "src/content/vocabulary");
   const out = [];
   for (const f of readdirSync(dir).filter((f) => f.endsWith(".yaml"))) {
@@ -282,6 +282,8 @@ function ourWords() {
       if (jl) cur.jlpt = jl[1];
       const wt = line.match(/^ {2}word_type: *(\S+)/);
       if (wt) cur.wordType = wt[1];
+      const th = line.match(/^ {2}theme: *(\S+)/);
+      if (th) cur.theme = th[1];
     }
   }
   return out.filter((w) => w.reading);
@@ -360,20 +362,20 @@ function coverage(l) {
  * script, and the lesson files are hand-written in a shape regular enough to
  * read without a YAML parser.
  */
-function ourLessons() {
+export function ourLessons() {
   const dir = join(ROOT, "src/content/lessons");
   const out = [];
   for (const f of readdirSync(dir).filter((f) => f.endsWith(".yaml"))) {
     let cur = null, list = null;
     for (const line of readFileSync(join(dir, f), "utf8").split("\n")) {
       const id = line.match(/^-\s+id:\s*(\S+)/);
-      if (id) { cur = { id: id[1], order: 0, wordIds: [], phraseIds: [] }; out.push(cur); list = null; continue; }
+      if (id) { cur = { id: id[1], order: 0, wordIds: [], phraseIds: [], kanji: [] }; out.push(cur); list = null; continue; }
       if (!cur) continue;
       const order = line.match(/^ {2}order: *(\d+)/);
       if (order) { cur.order = Number(order[1]); list = null; continue; }
       const cp = line.match(/^ {2}checkpoint: *(\S+)/);
       if (cp) { cur.checkpoint = cp[1]; list = null; continue; }
-      const key = line.match(/^ {2}(wordIds|phraseIds): *$/);
+      const key = line.match(/^ {2}(wordIds|phraseIds|kanji): *$/);
       if (key) { list = key[1]; continue; }
       if (line.match(/^ {2}\w+:/)) { list = null; continue; }
       const item = list && line.match(/^ {4}-\s*(\S+)/);
@@ -530,7 +532,7 @@ export const isPolite = (jpn) => POLITE_ENDING.test(jpn.trim());
  * as some other word's example sentence. A word with one coarse sense is
  * blocked whole, which is blunt, and deliberately so.
  */
-function jmdictExamples() {
+export function jmdictExamples() {
   const path = join(ROOT, "server/data/jmdict-examples-eng-3.6.2.json");
   if (!existsSync(path)) return null;
 
