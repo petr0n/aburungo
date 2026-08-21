@@ -35,7 +35,7 @@ jobs:
           # is required by the CLAUDE.md language rule ("recalled", not
           # "correct"), so bumping past that change needs that rule settled
           # first.
-          ref: da36cf5
+          ref: da36cf524a181fef80e40d7c7d779bc63fbd5ad8
 
       - uses: pnpm/action-setup@v4
         with:
