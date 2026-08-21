@@ -11,9 +11,10 @@
 #   4  sugar, salt and tea    what goes on the table
 #   5  in the kitchen         the room and what is in it, plus the 杯 counter
 #
-# Two rules ride along in a chapter that is otherwise word-shaped: the verb-plus-
-# 物 build, which the learner has already met once as 買い物 without being told
-# it was a pattern, and 杯, which extends the counters from Chapter 7.
+# Three rules ride along in a chapter that is otherwise word-shaped: the verb-
+# plus-物 build, which the learner has already met once as 買い物 without being
+# told it was a pattern; 杯, which extends the counters from Chapter 7; and
+# あまり～ないです, the polite way to say something tasted bad.
 #
 # Placed after the past tense on purpose. 朝ご飯を食べましたか is the first
 # ordinary question in the book a learner can both understand and take apart.
@@ -121,7 +122,7 @@
   chapterId: n5.chapter-11
   situation: Meals and the kitchen
   title: In the kitchen
-  canDo: Name what is on the table and ask for a glass
+  canDo: Name what is on the table and ask for a glass or chopsticks
   wordIds:
     - vocab.daidokoro
     - vocab.teeburu
@@ -129,6 +130,7 @@
     - vocab.supuun
     - vocab.naifu
     - vocab.fooku
+    - vocab.hashi-chopsticks
     - vocab.hai-counter
   phraseIds:
     - meals.i-cook-in-the-kitchen
@@ -136,9 +138,10 @@
     - meals.a-spoon-please
   kanji:
     - 所
+    - 箸
     - 杯
   patternId: grammar.n5-counter-hai
-  grammarNote: "Four of these are borrowed and nearly free. One is not quite what it looks like: コップ came from Dutch, not English, and it is a drinking glass — a teacup is カップ, a different word. Then a new counter. 杯 counts anything in a cup, glass or bowl, which makes it the one you use ordering drinks. Like the other counters, the sound changes at the awkward numbers: 一杯 いっぱい, 二杯 にはい, 三杯 さんばい, 六杯 ろっぱい. 水を一杯ください is how you ask for a glass of water, and it is the same shape as the counters you learned in the choosing and counting chapter."
+  grammarNote: "Four of these are borrowed and nearly free. One is not quite what it looks like: コップ came from Dutch, not English, and it is a drinking glass — a teacup is カップ, a different word. 箸 is the one you will actually use, and it is usually お箸 when you ask for a pair. Note the reading: はし is also 橋, a bridge, and 端, an edge. Japanese has a lot of these, and context does all the work. Then a new counter. 杯 counts anything in a cup, glass or bowl, which makes it the one you use ordering drinks. Like the other counters, the sound changes at the awkward numbers: 一杯 いっぱい, 二杯 にはい, 三杯 さんばい, 六杯 ろっぱい. 水を一杯ください is how you ask for a glass of water, and it is the same shape as the counters you learned in the choosing and counting chapter."
 
 - id: n5.checkpoint-11
   order: 92

@@ -14,13 +14,16 @@
 # trick that built 買い物 in the town chapter. Teaching them next to each other
 # is what turns a coincidence into a rule.
 #
+# 箸 was invisible until the coverage matcher stopped letting 橋 (はし, bridge) mask
+# it. A kitchen lesson with a fork and no chopsticks was the cost of that bug.
+#
 # Already taught and deliberately absent: ご飯, パン, お茶, 肉, 魚, 野菜, 果物,
 # たまご, すし, ラーメン, 天ぷら, おにぎり, 牛乳, ビール, ジュース, コーヒー,
 # おいしい, 甘い, 辛い, レストラン, メニュー, 注文, 席, 朝食.
 #
 # content-source: training — headwords, readings and part of speech verified
 #   against JMdict 3.6.2 on 2026-08-20, sequence numbers inline, all
-#   twenty-seven flagged common.
+#   twenty-eight flagged common.
 # jlpt-source: training — JLPT level unverified
 
 # ── The three meals (Lesson 1) ────────────────────────────────────────────────
@@ -292,6 +295,16 @@
   romaji: fooku
   english: fork
   notes: JMdict seq 1110110.
+
+- id: vocab.hashi-chopsticks
+  jlpt: N5
+  word_type: noun
+  theme: home
+  japanese: 箸
+  reading: はし
+  romaji: hashi
+  english: chopsticks
+  notes: Usually お箸 when you ask for them. Same reading as 橋, a bridge, and as 端, an edge — three different words and only context separates them. JMdict seq 1476410.
 
 - id: vocab.hai-counter
   jlpt: N5

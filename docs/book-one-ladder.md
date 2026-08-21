@@ -10,10 +10,10 @@ fails if this file is out of date. Book One is N5 internally; a learner never re
 |---|---|
 | Chapters | 11 |
 | Lessons | 93 (81 teaching, 12 checkpoints) |
-| Words | 450 |
+| Words | 451 |
 | Phrases | 207 |
 | Grammar patterns | 42 |
-| Kanji introduced | 181 |
+| Kanji introduced | 182 |
 
 ---
 
@@ -1546,7 +1546,7 @@ fails if this file is out of date. Book One is N5 internally; a learner never re
 
 *Meals and the kitchen*
 
-5 lessons · 27 words · 16 phrases
+5 lessons · 28 words · 16 phrases
 
 ### 87. The three meals
 
@@ -1626,9 +1626,9 @@ fails if this file is out of date. Book One is N5 internally; a learner never re
 ### 91. In the kitchen
 
 **Lesson 5 of 5** · Meals and the kitchen
-**Can do:** Name what is on the table and ask for a glass
+**Can do:** Name what is on the table and ask for a glass or chopsticks
 **Grammar:** `～杯` — Counter for cupfuls and bowlfuls. The sound changes at one, three and six.
-**New kanji:** 所 杯
+**New kanji:** 所 箸 杯
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -1638,6 +1638,7 @@ fails if this file is out of date. Book One is N5 internally; a learner never re
 | スプーン | スプーン | spoon |
 | ナイフ | ナイフ | knife |
 | フォーク | フォーク | fork |
+| 箸 | はし | chopsticks |
 | 杯 | はい | counter for cupfuls and bowlfuls |
 
 - 台所で料理を作ります。 — I cook in the kitchen.

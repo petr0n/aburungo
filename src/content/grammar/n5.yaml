@@ -308,8 +308,9 @@
   blank: どうでしたか
 
 # ── Chapter 11 — meals and the kitchen (DR-032) ──────────────────────────────
-# A situation chapter, so only two patterns, but both are real rules rather than
-# fixed expressions: the noun-from-verb build, and one more counter.
+# A situation chapter, but three patterns, and all three are real rules rather
+# than fixed expressions: the noun-from-verb build, one more counter, and the
+# polite way to say something tasted bad.
 
 - id: grammar.n5-mono-nominaliser
   jlpt: N5
