@@ -24,35 +24,34 @@ Resequenced 2026-08-04 (DR-017).
 | | | |
 |---|---|---|
 | Server-durable learning state (DR-016) | done | IndexedDB alone could not survive Safari's ITP |
-| Grammar-in-context as first-class SRS items | done | PR #50; 42 patterns with Chapter 11 (unmerged at review time) |
+| Grammar-in-context as first-class SRS items | done | PR #50; 42 patterns |
 | ~~Scoped Hana~~ | **shelved (DR-023)** | built and tested, switched off; production checkpoint covers production practice instead |
 | Chapters, checkpoints on a cadence | done | DR-021, DR-024 |
-| Deepen Book One vocabulary | **in progress** | 450 words with Chapter 11 (unmerged), from a reference gap of 809 |
+| Deepen Book One vocabulary | **in progress** | 451 words as of 2026-08-21, from a reference gap of 809 |
 | Kanji component + mnemonic layer | **not started** | the largest remaining Book One gap |
 
 ### Finishing Book One
 
-1. **One more chapter** — people & clothes (food shipped as Chapter 11, DR-032, unmerged at
-   review time). Lands the book near the ~100 landing zone.
+1. **One more chapter** — people & clothes (food shipped as Chapter 11, DR-032). Lands the book
+   near the ~100 landing zone.
 2. **Kanji component + mnemonic layer.** Components from KANJIDIC2/KanjiVG, a mnemonic per kanji.
    Resolve authoring vs. licensed scheme (overarching plan §5.5). Optional handwriting via KanjiVG
    stroke order. **Build this before Book Two**, where kanji stop being learnable as flat shapes.
 3. **VOICEVOX audio pipeline.** Vet voice licences, pre-generate locally via Podman, upload to
    Supabase Storage. See `admin-dashboard-plan.md` for the multi-voice strategy.
 
-## Phase 2b — multi-book support — **not started, blocks Book Two**
+## Phase 2b — multi-book support — **mostly done** (PR #90)
 
-The app knows exactly one book. `n5Lessons` is a hardcoded export referenced in eight places in
-`LearnPage.tsx`; there is no book-to-book transition and no per-book difficulty shift.
-
-Two pieces, both small now and much larger after a second book's content exists:
-
-1. **Make the book a parameter**, not an import. `Book` gets an id, order, title and chapter list;
-   the orchestrator takes one. The chapter helpers are already pure functions over lessons and
-   chapters, so they generalise for free.
-2. **The per-book difficulty shift.** Recall as the default gate, weaning off romaji,
-   production-first formats — all described in the Book Two plan, none implemented. Decide whether
-   it is a property of the Book, the lesson, or the learner's progress, and build it once.
+1. **Make the book a parameter** — **done.** `Book` carries id, order, title, chapters and
+   lessons; `bookOne` lives in `src/content/books.ts` and the orchestrator takes a book rather
+   than importing `n5Lessons`. Review eligibility spans prior books while new material stays
+   scoped to the current one, so Book One's items keep surfacing once Book Two opens.
+2. **The per-book difficulty shift** — **two of three built**, as a `Book` field. Recall as the
+   default review gate and the romaji display cut both work (provable against Book One via a
+   dev-only `?shift=1`). The production-first produce beat does **not** ship: frame-based
+   composition needs frames and their model sentences as *authored content* (03 §8), and an
+   attempt to derive them at runtime both broke on kana word boundaries and synthesised
+   unverified Japanese. It lands with Book Two's content, not with the field.
 
 See [03-path-n4.md §0](03-path-n4.md).
 
