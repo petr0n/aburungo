@@ -18,11 +18,11 @@
  * docs/plans/01-overarching-plan.md open decision #5).
  */
 import { useCallback, useEffect, useState } from "react";
-import type { GrammarPattern, Phrase, ReviewRating, Lesson, Word } from "@/types";
+import type { Book, GrammarPattern, Phrase, ReviewRating, Lesson, Word } from "@/types";
 import { isGrammarPattern } from "@/types";
 import { useAuth, useUserTier } from "@/store/auth";
-import { n5Lessons } from "@/content/lessons";
-import { n5Chapters, chapterLabel, placeInChapter } from "@/content/chapters";
+import { bookOne } from "@/content/books";
+import { chapterLabel, placeInChapter } from "@/content/chapters";
 import { wordsForTier } from "@/content/vocabulary";
 import { phrasesForTier } from "@/content";
 import { findPhrase } from "@/content";
@@ -44,8 +44,6 @@ import { LessonConversation } from "@/components/LessonConversation";
 import { CanDoCheckpoint } from "@/components/CanDoCheckpoint";
 import { Furigana } from "@/components/Furigana";
 import { LoadingPlaceholder, EmptyState, ProgressBar } from "aburungo-design-system";
-
-const PATH_ID = "n5";
 
 type Step =
   | "loading"
@@ -195,12 +193,14 @@ function PhraseIntroCard({ phrase, index, total, onNext }: { phrase: Phrase; ind
 }
 
 function NewLessonStep({
+  book,
   lesson,
   words,
   phrases,
   pattern,
   onDone,
 }: {
+  book: Book;
   lesson: Lesson;
   words: Word[];
   phrases: Phrase[];
@@ -209,7 +209,7 @@ function NewLessonStep({
 }) {
   const [stage, setStage] = useState<"intro" | "words" | "phrases" | "grammar">("intro");
   const [index, setIndex] = useState(0);
-  const placement = placeInChapter(lesson, n5Lessons, n5Chapters);
+  const placement = placeInChapter(lesson, book.lessons, book.chapters);
   const currentPhrase = stage === "phrases" ? phrases[index] : undefined;
 
   useEffect(() => {
@@ -442,8 +442,8 @@ async function demoteMissedWord(wordId: string, signedIn: boolean): Promise<void
  * you do it, which is the test CLAUDE.md sets for a gate rather than a grade.
  * Nothing here is a score, and there is no way to fall short of it.
  */
-function ChapterProgress({ lesson }: { lesson: Lesson }) {
-  const placement = placeInChapter(lesson, n5Lessons, n5Chapters);
+function ChapterProgress({ book, lesson }: { book: Book; lesson: Lesson }) {
+  const placement = placeInChapter(lesson, book.lessons, book.chapters);
   if (placement === null || placement.lessonNumber === null) return null;
 
   const { chapter, remaining } = placement;
@@ -461,7 +461,7 @@ function ChapterProgress({ lesson }: { lesson: Lesson }) {
   );
 }
 
-function CloseStep({ session }: { session: DailySession }) {
+function CloseStep({ book, session }: { book: Book; session: DailySession }) {
   const learnedCount = session.newWords.length + session.newPhrases.length + (session.newGrammarPattern !== null ? 1 : 0);
   return (
     <div className="flex w-full flex-col gap-6 py-8">
@@ -478,7 +478,7 @@ function CloseStep({ session }: { session: DailySession }) {
           <p className="text-body-sm text-fg-subtle">Reviewed {session.reviewItems.length} item(s)</p>
         )}
         {learnedCount > 0 && <p className="text-body-sm text-fg-subtle">Learned {learnedCount} new item(s)</p>}
-        {session.lesson !== null && <ChapterProgress lesson={session.lesson} />}
+        {session.lesson !== null && <ChapterProgress book={book} lesson={session.lesson} />}
       </div>
       <a
         href="/"
@@ -492,7 +492,12 @@ function CloseStep({ session }: { session: DailySession }) {
 
 // ── Page ─────────────────────────────────────────────────────────────────────
 
-export function LearnPage() {
+/**
+ * The book is a prop with Book One as its default (03 §0a): today's single
+ * route renders `<LearnPage />` unchanged, and Book Two becomes a call-site
+ * decision rather than a rewrite of this file.
+ */
+export function LearnPage({ book = bookOne }: { book?: Book } = {}) {
   const tier = useUserTier();
   const userId = useAuth((s) => s.user?.id ?? null);
 
@@ -512,14 +517,14 @@ export function LearnPage() {
     let cancelled = false;
     async function load() {
       const [progress, reviewStates] = await Promise.all([
-        getPathProgress(PATH_ID, userId !== null),
+        getPathProgress(book.id, userId !== null),
         hydrateFromServer(userId !== null),
       ]);
       if (cancelled) return;
       setSeenUnitIds(progress.seenLessonIds);
       const words = wordsForTier(tier);
       const phrases = phrasesForTier(tier);
-      const built = buildDailySession(n5Lessons, progress, words, phrases, allGrammarPatterns, reviewStates, Date.now());
+      const built = buildDailySession(book, progress, words, phrases, allGrammarPatterns, reviewStates, Date.now());
       setSession(built);
       if (built.reviewItems.length > 0) {
         setStep("review");
@@ -533,14 +538,14 @@ export function LearnPage() {
     return () => {
       cancelled = true;
     };
-  }, [tier, userId]);
+  }, [book, tier, userId]);
 
   const finishUnitAndClose = useCallback(async () => {
     if (session?.lesson != null) {
-      await markLessonSeen(PATH_ID, session.lesson.id, userId !== null);
+      await markLessonSeen(book.id, session.lesson.id, userId !== null);
     }
     setStep("close");
-  }, [session, userId]);
+  }, [book.id, session, userId]);
 
   function afterReview() {
     const lesson = session?.lesson ?? null;
@@ -581,6 +586,7 @@ export function LearnPage() {
   } else if (step === "new-lesson" && session.lesson !== null) {
     content = (
       <NewLessonStep
+        book={book}
         lesson={session.lesson}
         words={session.newWords}
         phrases={session.newPhrases}
@@ -593,7 +599,7 @@ export function LearnPage() {
     // Identical today, since lesson 42 sits last — but a checkpoint inserted
     // mid-ladder later must never quiz material the learner has not met.
     const taughtIds = new Set(
-      n5Lessons.filter((u) => u.order < (session.lesson?.order ?? 0)).flatMap((u) => u.wordIds),
+      book.lessons.filter((u) => u.order < (session.lesson?.order ?? 0)).flatMap((u) => u.wordIds),
     );
     content = (
       <RecognitionCheckpoint
@@ -605,7 +611,7 @@ export function LearnPage() {
     );
   } else if (step === "production" && session.lesson !== null) {
     // Words *and* phrases, both scoped to what was taught before this lesson.
-    const before = n5Lessons.filter((u) => u.order < (session.lesson?.order ?? 0));
+    const before = book.lessons.filter((u) => u.order < (session.lesson?.order ?? 0));
     const taughtWordIds = new Set(before.flatMap((u) => u.wordIds));
     const taughtPhraseIds = new Set(before.flatMap((u) => u.phraseIds));
     content = (
@@ -621,7 +627,7 @@ export function LearnPage() {
     content = (
       <LessonConversation
         lesson={session.lesson}
-        scope={buildCrossSituationScope(n5Lessons, seenLessonIds, wordsForTier(tier))}
+        scope={buildCrossSituationScope(book.lessons, seenLessonIds, wordsForTier(tier))}
         signedIn={userId !== null}
         onDone={() => void finishUnitAndClose()}
       />
@@ -631,14 +637,14 @@ export function LearnPage() {
     content = (
       <CanDoCheckpoint
         lesson={session.lesson}
-        situations={taughtSituations(n5Lessons, seenLessonIds)}
+        situations={taughtSituations(book.lessons, seenLessonIds)}
         verified={verifiedCanDos(seenLessonIds)}
-        scopeFor={(situation) => buildCanDoScope(n5Lessons, situation, words)}
+        scopeFor={(situation) => buildCanDoScope(book.lessons, situation, words)}
         signedIn={userId !== null}
         onVerified={(situation) => {
           const marker = canDoMarkerId(situation);
           setSeenUnitIds((prev) => (prev.includes(marker) ? prev : [...prev, marker]));
-          void markLessonSeen(PATH_ID, marker, userId !== null);
+          void markLessonSeen(book.id, marker, userId !== null);
         }}
         onComplete={() => void finishUnitAndClose()}
         // Deliberately does NOT mark the lesson seen. This is the last lesson on the
@@ -667,7 +673,7 @@ export function LearnPage() {
   } else if (step === "nothing-due") {
     content = <EmptyState message="All caught up!" description="Nothing due right now — check back later." />;
   } else {
-    content = <CloseStep session={session} />;
+    content = <CloseStep book={book} session={session} />;
   }
 
   return <PageShell>{content}</PageShell>;

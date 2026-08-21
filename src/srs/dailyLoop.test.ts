@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import type { GrammarPattern, PathProgress, Phrase, ReviewState, Lesson, Word } from "@/types";
+import type { Book, GrammarPattern, PathProgress, Phrase, ReviewState, Lesson, Word } from "@/types";
 import { buildDailySession } from "./dailyLoop";
 
 const NOW = Date.UTC(2026, 4, 16, 12, 0, 0);
@@ -63,11 +63,23 @@ const allWords = ["w1", "w2", "w3"].map(word);
 const allPhrases = ["p1", "p2"].map(phrase);
 const allPatterns = [grammarPattern("g1", "p1"), grammarPattern("g2", "p2")];
 
+/** The orchestrator takes a book, not a lesson list (03 §0a). */
+const bookOf = (bookLessons: readonly Lesson[]): Book => ({
+  id: "n5",
+  order: 1,
+  title: "Test book",
+  chapters: [],
+  lessons: bookLessons,
+  difficultyShift: false,
+});
+
+const book = bookOf(lessons);
+
 const emptyProgress: PathProgress = { pathId: "n5", seenLessonIds: [] };
 
 describe("buildDailySession", () => {
   it("returns the first lesson as new when nothing has been seen", () => {
-    const session = buildDailySession(lessons, emptyProgress, allWords, allPhrases, allPatterns, [], NOW);
+    const session = buildDailySession(book, emptyProgress, allWords, allPhrases, allPatterns, [], NOW);
 
     expect(session.lesson?.id).toBe("lesson-1");
     expect(session.newWords.map((w) => w.id)).toEqual(["w1", "w2"]);
@@ -77,7 +89,7 @@ describe("buildDailySession", () => {
 
   it("advances to the next unseen lesson", () => {
     const progress: PathProgress = { pathId: "n5", seenLessonIds: ["lesson-1"] };
-    const session = buildDailySession(lessons, progress, allWords, allPhrases, allPatterns, [], NOW);
+    const session = buildDailySession(book, progress, allWords, allPhrases, allPatterns, [], NOW);
 
     expect(session.lesson?.id).toBe("lesson-2");
     expect(session.newWords.map((w) => w.id)).toEqual(["w3"]);
@@ -85,7 +97,7 @@ describe("buildDailySession", () => {
 
   it("returns null lesson once every lesson has been seen", () => {
     const progress: PathProgress = { pathId: "n5", seenLessonIds: ["lesson-1", "lesson-2"] };
-    const session = buildDailySession(lessons, progress, allWords, allPhrases, allPatterns, [], NOW);
+    const session = buildDailySession(book, progress, allWords, allPhrases, allPatterns, [], NOW);
 
     expect(session.lesson).toBeNull();
     expect(session.newWords).toEqual([]);
@@ -101,7 +113,7 @@ describe("buildDailySession", () => {
       { phraseId: "p1", box: 2, dueAt: NOW + DAY_MS }, // not due yet
     ];
 
-    const session = buildDailySession(lessons, progress, allWords, allPhrases, allPatterns, reviewStates, NOW);
+    const session = buildDailySession(book, progress, allWords, allPhrases, allPatterns, reviewStates, NOW);
 
     expect(session.reviewItems.map((i) => i.id)).toEqual(["w2", "w1"]);
   });
@@ -113,7 +125,7 @@ describe("buildDailySession", () => {
       { phraseId: "w1", box: 3, dueAt: NOW - DAY_MS },
     ];
 
-    const session = buildDailySession(lessons, progress, allWords, allPhrases, allPatterns, reviewStates, NOW);
+    const session = buildDailySession(book, progress, allWords, allPhrases, allPatterns, reviewStates, NOW);
 
     expect(session.reviewItems.map((i) => i.id)).toEqual(["w1"]);
   });
@@ -125,7 +137,7 @@ describe("buildDailySession", () => {
       { phraseId: "g1", box: 2, dueAt: NOW - 2 * DAY_MS }, // due, older — should sort first
     ];
 
-    const session = buildDailySession(lessons, progress, allWords, allPhrases, allPatterns, reviewStates, NOW);
+    const session = buildDailySession(book, progress, allWords, allPhrases, allPatterns, reviewStates, NOW);
 
     expect(session.reviewItems.map((i) => i.id)).toEqual(["g1", "w1"]);
   });
@@ -134,27 +146,27 @@ describe("buildDailySession", () => {
     const progress: PathProgress = { pathId: "n5", seenLessonIds: [] };
     const reviewStates: ReviewState[] = [{ phraseId: "g1", box: 2, dueAt: NOW - DAY_MS }];
 
-    const session = buildDailySession(lessons, progress, allWords, allPhrases, allPatterns, reviewStates, NOW);
+    const session = buildDailySession(book, progress, allWords, allPhrases, allPatterns, reviewStates, NOW);
 
     expect(session.reviewItems).toEqual([]);
   });
 
   it("returns the next lesson's grammar pattern as newGrammarPattern", () => {
-    const session = buildDailySession(lessons, emptyProgress, allWords, allPhrases, allPatterns, [], NOW);
+    const session = buildDailySession(book, emptyProgress, allWords, allPhrases, allPatterns, [], NOW);
 
     expect(session.newGrammarPattern?.id).toBe("g1");
   });
 
   it("returns null newGrammarPattern when the next lesson has no patternId", () => {
     const unitsWithoutPattern: Lesson[] = [{ ...lessons[0]!, patternId: undefined }];
-    const session = buildDailySession(unitsWithoutPattern, emptyProgress, allWords, allPhrases, allPatterns, [], NOW);
+    const session = buildDailySession(bookOf(unitsWithoutPattern), emptyProgress, allWords, allPhrases, allPatterns, [], NOW);
 
     expect(session.newGrammarPattern).toBeNull();
   });
 
   it("returns null newGrammarPattern once every lesson has been seen", () => {
     const progress: PathProgress = { pathId: "n5", seenLessonIds: ["lesson-1", "lesson-2"] };
-    const session = buildDailySession(lessons, progress, allWords, allPhrases, allPatterns, [], NOW);
+    const session = buildDailySession(book, progress, allWords, allPhrases, allPatterns, [], NOW);
 
     expect(session.newGrammarPattern).toBeNull();
   });

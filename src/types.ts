@@ -155,6 +155,37 @@ export type Chapter = {
 };
 
 /**
+ * A book — the run of chapters an outside reference would call a JLPT level
+ * (DR-024: the learner reads "Book One", never "N5").
+ *
+ * The book is a *parameter*, not an import (03 §0a): the daily-loop
+ * orchestrator and LearnPage take one, so a second book is a new instance in
+ * src/content/books.ts rather than a second hardcoded ladder. `id` doubles as
+ * the PathProgress pathId, so Book One keeps the existing "n5" progress key.
+ */
+export type Book = {
+  /** Stable id, also the PathProgress pathId. Internal naming, e.g. "n5". */
+  id: string;
+  /** Position in the course, 1-indexed. */
+  order: number;
+  /** What the learner reads, e.g. "Book One". */
+  title: string;
+  chapters: readonly Chapter[];
+  /** The book's full lesson ladder, sorted ascending by `order`. */
+  lessons: readonly Lesson[];
+  /**
+   * The per-book difficulty shift (03 §0b). Off for Book One; on from Book Two.
+   *
+   * One field drives three behaviors:
+   * - recall is the default review gate (type it, not flip-and-rate)
+   * - romaji display is cut — no item in this book renders romaji, including
+   *   earlier books' items reviewed here; romaji→kana *input* conversion stays
+   * - the produce beat is frame-based composition rather than type-the-phrase
+   */
+  difficultyShift: boolean;
+};
+
+/**
  * A step on the guided N5 daily-loop ladder.
  *
  * Authored in YAML under src/content/lessons/*.yaml. A Lesson does not define new

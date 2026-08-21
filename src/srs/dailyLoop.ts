@@ -10,7 +10,7 @@
  * words and phrases, so reviewItems interleaves all three by due date (see
  * docs/superpowers/specs/2026-07-21-grammar-in-context-design.md).
  */
-import type { EpochMs, GrammarPattern, PathProgress, Phrase, ReviewState, Lesson, Word } from "@/types";
+import type { Book, EpochMs, GrammarPattern, PathProgress, Phrase, ReviewState, Lesson, Word } from "@/types";
 import { isDue } from "./leitner";
 
 export type DailySession = {
@@ -27,15 +27,16 @@ export type DailySession = {
 };
 
 /**
- * Build today's session from ordered lesson content, the learner's path
- * progress, the full word/phrase/pattern content pools, and per-item review
- * state.
+ * Build today's session from a book, the learner's path progress, the full
+ * word/phrase/pattern content pools, and per-item review state.
  *
- * `lessons` must be sorted ascending by `order` — parseLessons() guarantees this
- * for content loaded through content/lessons/index.ts.
+ * The book is a parameter, not an import (03 §0a) — the orchestrator serves
+ * whichever book it is handed. `book.lessons` must be sorted ascending by
+ * `order`; parseLessons() guarantees this for content loaded through
+ * content/lessons/index.ts.
  */
 export function buildDailySession(
-  lessons: readonly Lesson[],
+  book: Book,
   progress: PathProgress,
   allWords: readonly Word[],
   allPhrases: readonly Phrase[],
@@ -43,6 +44,7 @@ export function buildDailySession(
   reviewStates: readonly ReviewState[],
   now: EpochMs,
 ): DailySession {
+  const lessons: readonly Lesson[] = book.lessons;
   const seenLessonIds = new Set(progress.seenLessonIds);
   const nextUnit = lessons.find((u) => !seenLessonIds.has(u.id)) ?? null;
 
