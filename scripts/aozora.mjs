@@ -4,6 +4,7 @@
  *
  *   node scripts/aozora.mjs index        fetch + filter the catalogue -> data/aozora/manifest.json
  *   node scripts/aozora.mjs fetch [n]    download n works -> data/aozora/texts/<id>.txt
+ *   node scripts/aozora.mjs fetch [n] --juvenile   ...from the 童話 subset only
  *
  * Why a catalogue pass first. Aozora is ~19,500 works and only some are safe
  * or useful here, so the filter is the point of this script:
@@ -37,6 +38,26 @@ const INDEX_URL = "https://www.aozora.gr.jp/index_pages/list_person_all_extended
 /** Be a good citizen: one request a second, and never a bulk mirror by default. */
 const DELAY_MS = 1000;
 const DEFAULT_N = 25;
+
+/**
+ * Is this work classified as children's/juvenile literature?
+ *
+ * NDC prefixes the class with K for 児童書 -- "NDC K913" against "NDC 913".
+ * Checked against the whole catalogue: all 35 K-bearing values are K<digits>,
+ * so there is no adult class with a stray K to false-positive on.
+ *
+ * Measured, not assumed, and the assumption lost: against the 451 words taught
+ * today, juvenile works run a median 71.0% coverage against 69.6% for the rest
+ * -- 12 works versus 190, so the gap is inside the noise either way. 童話 is
+ * the traditional way into Japanese extensive reading, but Aozora's is pre-war
+ * children's literature, which is still literary. This flag narrows the
+ * catalogue; it does not lower the level. Aozora stays Book Four/Five
+ * material.
+ *
+ * The NDC field is kept regardless: slicing the catalogue by class (fiction,
+ * essays, poetry, juvenile) costs one field and saves re-downloading it.
+ */
+export const isJuvenile = (ndc) => /(^|\s)K\d/.test(ndc ?? "");
 
 /** RFC4180-ish: the catalogue quotes fields containing commas. */
 export function parseCsvLine(line) {
@@ -121,8 +142,8 @@ async function cmdIndex() {
   const lines = csv.split("\n");
   const hdr = parseCsvLine(lines[0].replace(/^﻿/, ""));
   const col = (name) => hdr.indexOf(name);
-  const [iId, iTitle, iOrtho, iCopy, iTxt, iFam, iGiven] = [
-    "作品ID", "作品名", "文字遣い種別", "作品著作権フラグ", "テキストファイルURL", "姓", "名",
+  const [iId, iTitle, iOrtho, iCopy, iTxt, iFam, iGiven, iNdc] = [
+    "作品ID", "作品名", "文字遣い種別", "作品著作権フラグ", "テキストファイルURL", "姓", "名", "分類番号",
   ].map(col);
 
   const works = [];
@@ -136,6 +157,9 @@ async function cmdIndex() {
       id: r[iId],
       title: r[iTitle],
       author: `${r[iFam] ?? ""}${r[iGiven] ?? ""}`.trim(),
+      // NDC class, kept so the catalogue can be sliced without re-downloading
+      // it -- juvenile vs fiction vs essays vs poetry.
+      ndc: (r[iNdc] ?? "").trim(),
       url: r[iTxt],
     });
   }
@@ -145,22 +169,34 @@ async function cmdIndex() {
     source: "Aozora Bunko (https://www.aozora.gr.jp)",
     licence: "public domain in Japan; 作品著作権フラグ = なし only",
     filters: { orthography: "新字新仮名", copyright: "なし" },
-    counts: { catalogue: lines.length - 1, usable: works.length },
+    counts: {
+      catalogue: lines.length - 1,
+      usable: works.length,
+      juvenile: works.filter((w) => isJuvenile(w.ndc)).length,
+    },
     works,
   };
   writeFileSync(join(OUT, "manifest.json"), JSON.stringify(manifest, null, 1));
-  console.log(`catalogue ${manifest.counts.catalogue} -> usable ${works.length}`);
+  console.log(
+    `catalogue ${manifest.counts.catalogue} -> usable ${works.length} (${manifest.counts.juvenile} juvenile)`,
+  );
   console.log(`-> data/aozora/manifest.json`);
 }
 
-async function cmdFetch(nArg) {
+async function cmdFetch(nArg, juvenileOnly) {
   const manifestPath = join(OUT, "manifest.json");
   if (!existsSync(manifestPath)) {
     console.error("no manifest -- run `pnpm aozora index` first");
     process.exit(1);
   }
-  const { works } = JSON.parse(readFileSync(manifestPath, "utf8"));
+  const all = JSON.parse(readFileSync(manifestPath, "utf8")).works;
+  if (juvenileOnly && !all.some((w) => "ndc" in w)) {
+    console.error("manifest predates --juvenile -- re-run `pnpm aozora index`");
+    process.exit(1);
+  }
+  const works = juvenileOnly ? all.filter((w) => isJuvenile(w.ndc)) : all;
   const n = Math.min(Number(nArg) || DEFAULT_N, works.length);
+  if (juvenileOnly) console.log(`juvenile subset: ${works.length} works`);
   const dir = join(OUT, "texts");
   mkdirSync(dir, { recursive: true });
 
@@ -188,8 +224,14 @@ async function cmdFetch(nArg) {
 const invokedDirectly = process.argv[1]?.endsWith("aozora.mjs") ?? false;
 const cmd = invokedDirectly ? process.argv[2] : "__imported__";
 if (cmd === "index") await cmdIndex();
-else if (cmd === "fetch") await cmdFetch(process.argv[3]);
+else if (cmd === "fetch") {
+  const args = process.argv.slice(3);
+  await cmdFetch(
+    args.find((a) => !a.startsWith("--")),
+    args.includes("--juvenile"),
+  );
+}
 else if (invokedDirectly) {
-  console.log("usage: node scripts/aozora.mjs <index|fetch [n]>");
+  console.log("usage: node scripts/aozora.mjs <index | fetch [n] [--juvenile]>");
   process.exit(1);
 }

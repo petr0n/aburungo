@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { cleanAozoraText, parseCsvLine } from "./aozora.mjs";
+import { cleanAozoraText, isJuvenile, parseCsvLine } from "./aozora.mjs";
 
 const FILE = `ウェストミンスター寺院
 ワシントン・アーヴィング　Washington Irving
@@ -59,5 +59,22 @@ describe("parseCsvLine", () => {
 
   it("unescapes doubled quotes", () => {
     expect(parseCsvLine('"he said ""hi""",x')).toEqual(['he said "hi"', "x"]);
+  });
+});
+
+describe("isJuvenile", () => {
+  it("matches the K-prefixed children's classes", () => {
+    expect(isJuvenile("NDC K913")).toBe(true);
+    expect(isJuvenile("NDC K912 K913")).toBe(true);
+  });
+
+  it("does not match adult classes", () => {
+    expect(isJuvenile("NDC 913")).toBe(false);
+    expect(isJuvenile("NDC 914")).toBe(false);
+  });
+
+  it("survives a missing classification", () => {
+    expect(isJuvenile("")).toBe(false);
+    expect(isJuvenile(undefined)).toBe(false);
   });
 });
