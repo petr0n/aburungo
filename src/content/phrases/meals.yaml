@@ -10,8 +10,13 @@
 # softened form is given alongside it rather than left to be discovered.
 #
 # content-source: training — N5 canonical, pending Tatoeba verification.
-#   JMdict cannot verify composed sentences (only fixed expressions are
-#   headwords), so sentence checks need Tatoeba, not JMdict.
+#   Sanctioned, not an oversight: CLAUDE.md allows N5 phrase content from
+#   training knowledge precisely because N5 vocabulary is canonical and
+#   well documented, so long as it carries this marker. Verified-only
+#   content starts at Book Three (docs/plans/04-path-n3.md section 8).
+#   Verification here needs Tatoeba rather than JMdict: JMdict headwords are
+#   words and fixed expressions, so it cannot attest a sentence either way.
+#   Every word used below is JMdict-verified individually.
 # jlpt-source: training — JLPT level unverified
 
 # ── The three meals ───────────────────────────────────────────────────────────
