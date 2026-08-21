@@ -34,7 +34,8 @@ jobs:
           # decision with a diff rather than a surprise. Note that 'recalled'
           # is required by the CLAUDE.md language rule ("recalled", not
           # "correct"), so bumping past that change needs that rule settled
-          # first.
+          # first. vercel.json pins the same sha in its installCommand --
+          # bump both together.
           ref: da36cf524a181fef80e40d7c7d779bc63fbd5ad8
 
       - uses: pnpm/action-setup@v4
