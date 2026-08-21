@@ -35,6 +35,11 @@ dist-ssr
 # Large data files (JMdict, Tatoeba, etc.) — download locally, do not commit
 server/data/
 
+# Reading-pipeline intermediates — several MB, regenerated from server/data
+# by `pnpm reading ingest|tag`. micro-readings.json stays committed.
+data/reading/corpus.json
+data/reading/tagged.json
+
 # Railway generates a local lockfile when building in the server/ subdirectory;
 # the root workspace pnpm-lock.yaml is authoritative
 server/pnpm-lock.yaml
