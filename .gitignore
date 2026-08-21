@@ -55,3 +55,6 @@ scripts/.walkthrough-out/
 # Rewritten on every CLI invocation, so tracking it dirties the tree on every
 # branch. No secrets: the anon key and project ref are public by design.
 supabase/.temp/
+
+# Aozora ingest: catalogue + downloaded texts, regenerable via pnpm aozora
+data/aozora/
