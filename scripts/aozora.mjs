@@ -59,6 +59,12 @@ const DEFAULT_N = 25;
  */
 export const isJuvenile = (ndc) => /(^|\s)K\d/.test(ndc ?? "");
 
+/** Requested work count, floored at 1 -- see the call site for why. */
+export function clampCount(arg) {
+  const n = Math.floor(Number(arg));
+  return Number.isFinite(n) && n > 0 ? n : DEFAULT_N;
+}
+
 /** RFC4180-ish: the catalogue quotes fields containing commas. */
 export function parseCsvLine(line) {
   const out = [];
@@ -131,7 +137,23 @@ async function download(url, dest) {
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
+/**
+ * Both commands shell out to unzip: the catalogue arrives as a zip and so does
+ * every work. Fail here with something actionable rather than letting execFile
+ * throw a bare ENOENT from three frames down.
+ */
+function requireUnzip() {
+  try {
+    execFileSync("unzip", ["-v"], { stdio: "ignore" });
+  } catch {
+    console.error("`unzip` not found on PATH -- required to read Aozora's zip files.");
+    console.error("  macOS: preinstalled   Debian/Ubuntu: apt install unzip   Alpine: apk add unzip");
+    process.exit(1);
+  }
+}
+
 async function cmdIndex() {
+  requireUnzip();
   mkdirSync(OUT, { recursive: true });
   const zip = join(OUT, "index.zip");
   process.stdout.write("fetching catalogue... ");
@@ -142,9 +164,18 @@ async function cmdIndex() {
   const lines = csv.split("\n");
   const hdr = parseCsvLine(lines[0].replace(/^﻿/, ""));
   const col = (name) => hdr.indexOf(name);
-  const [iId, iTitle, iOrtho, iCopy, iTxt, iFam, iGiven, iNdc] = [
-    "作品ID", "作品名", "文字遣い種別", "作品著作権フラグ", "テキストファイルURL", "姓", "名", "分類番号",
-  ].map(col);
+  // Validate before filtering. Unchecked, a renamed column makes indexOf return
+  // -1, every row reads undefined, every row fails the filter, and the run ends
+  // with a cheerful "usable 0" that looks like Aozora removed its whole
+  // catalogue rather than like this script broke.
+  const NEEDED = ["作品ID", "作品名", "文字遣い種別", "作品著作権フラグ", "テキストファイルURL", "姓", "名", "分類番号"];
+  const missingCols = NEEDED.filter((name) => col(name) === -1);
+  if (missingCols.length) {
+    console.error(`catalogue is missing expected column(s): ${missingCols.join(", ")}`);
+    console.error("Aozora changed its CSV shape -- update NEEDED in scripts/aozora.mjs to match.");
+    process.exit(1);
+  }
+  const [iId, iTitle, iOrtho, iCopy, iTxt, iFam, iGiven, iNdc] = NEEDED.map(col);
 
   const works = [];
   for (let i = 1; i < lines.length; i++) {
@@ -184,6 +215,7 @@ async function cmdIndex() {
 }
 
 async function cmdFetch(nArg, juvenileOnly) {
+  requireUnzip();
   const manifestPath = join(OUT, "manifest.json");
   if (!existsSync(manifestPath)) {
     console.error("no manifest -- run `pnpm aozora index` first");
@@ -195,7 +227,10 @@ async function cmdFetch(nArg, juvenileOnly) {
     process.exit(1);
   }
   const works = juvenileOnly ? all.filter((w) => isJuvenile(w.ndc)) : all;
-  const n = Math.min(Number(nArg) || DEFAULT_N, works.length);
+  // Clamp before slicing. `fetch -1` would otherwise slice(0, -1) -- every work
+  // but the last, ~11,000 downloads at a second apiece against an archive run
+  // by volunteers. A typo should not do that.
+  const n = Math.min(clampCount(nArg), works.length);
   if (juvenileOnly) console.log(`juvenile subset: ${works.length} works`);
   const dir = join(OUT, "texts");
   mkdirSync(dir, { recursive: true });

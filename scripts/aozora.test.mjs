@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { cleanAozoraText, isJuvenile, parseCsvLine } from "./aozora.mjs";
+import { cleanAozoraText, clampCount, isJuvenile, parseCsvLine } from "./aozora.mjs";
 
 const FILE = `ウェストミンスター寺院
 ワシントン・アーヴィング　Washington Irving
@@ -76,5 +76,27 @@ describe("isJuvenile", () => {
   it("survives a missing classification", () => {
     expect(isJuvenile("")).toBe(false);
     expect(isJuvenile(undefined)).toBe(false);
+  });
+});
+
+describe("clampCount", () => {
+  it("takes a sane count", () => {
+    expect(clampCount("200")).toBe(200);
+    expect(clampCount("1")).toBe(1);
+  });
+
+  it("refuses negatives -- slice(0, -1) would fetch the whole archive but one", () => {
+    expect(clampCount("-1")).toBe(25);
+    expect(clampCount("-9999")).toBe(25);
+  });
+
+  it("refuses zero, junk and nothing at all", () => {
+    expect(clampCount("0")).toBe(25);
+    expect(clampCount("abc")).toBe(25);
+    expect(clampCount(undefined)).toBe(25);
+  });
+
+  it("floors a fractional count rather than slicing on it", () => {
+    expect(clampCount("12.9")).toBe(12);
   });
 });
