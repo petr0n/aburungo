@@ -1,0 +1,6221 @@
+{
+ "level": "N5",
+ "generated": "2026-08-21",
+ "source": "JMdict for Applications 3.6.2 (CC BY 4.0); examples via Tatoeba (CC BY 2.0 FR)",
+ "note": "Authoring queue. Not content: theme and notes are TODO, and placement is an authoring decision.",
+ "counts": {
+  "missingInReference": 386,
+  "matchedInJmdict": 360,
+  "emitted": 360
+ },
+ "candidates": [
+  {
+   "written": "青",
+   "reading": "あお",
+   "romaji": "ao",
+   "wordType": "noun",
+   "english": "blue, azure, green, green light (traffic)",
+   "common": true,
+   "jmdictId": "1381380",
+   "example": {
+    "jpn": "信号が青に変わったわよ。",
+    "eng": "The traffic light turned green.",
+    "tatoeba": "145720"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "赤",
+   "reading": "あか",
+   "romaji": "aka",
+   "wordType": "noun",
+   "english": "red, crimson, scarlet, red-containing colour (e.g. brown, pink, orange)",
+   "common": true,
+   "jmdictId": "2013900",
+   "example": {
+    "jpn": "信号機が赤の間は道路を渡るな。",
+    "eng": "Don't cross the road when the signal is red.",
+    "tatoeba": "145704"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "上げる",
+   "reading": "あげる",
+   "romaji": "ageru",
+   "wordType": "verb",
+   "english": "to raise, to elevate, to move something (to a higher place), to put onto (e.g. a shelf)",
+   "common": true,
+   "jmdictId": "1352320",
+   "example": {
+    "jpn": "質問があれば右手を挙げて下さい。",
+    "eng": "If you have a question, please raise your right hand.",
+    "tatoeba": "149532"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "熱い",
+   "reading": "あつい",
+   "romaji": "atsui",
+   "wordType": "i-adjective",
+   "english": "hot (to the touch), passionate (feelings, etc.), ardent, hot (e.g. gaze)",
+   "common": true,
+   "jmdictId": "1467720",
+   "example": {
+    "jpn": "スープは熱いうちに召し上がって下さい。",
+    "eng": "Eat your soup while it is hot.",
+    "tatoeba": "215035"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "厚い",
+   "reading": "あつい",
+   "romaji": "atsui",
+   "wordType": "i-adjective",
+   "english": "thick, deep, heavy, kind",
+   "common": true,
+   "jmdictId": "1275320",
+   "example": {
+    "jpn": "氷は２インチの厚さだ。",
+    "eng": "The ice is two inches thick.",
+    "tatoeba": "85389"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "彼方",
+   "reading": "あっち",
+   "romaji": "acchi",
+   "wordType": "pronoun",
+   "english": "that way, that direction, over there, yonder",
+   "common": true,
+   "jmdictId": "1483185",
+   "example": {
+    "jpn": "あちらに着いたら手紙をください。",
+    "eng": "Please write to me when you get there.",
+    "tatoeba": "234350"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "後",
+   "reading": "あと",
+   "romaji": "ato",
+   "wordType": "noun",
+   "english": "behind, rear, after, later",
+   "common": true,
+   "jmdictId": "1269320",
+   "example": {
+    "jpn": "少女たちのうち一人が後に残された。",
+    "eng": "One of the girls was left behind.",
+    "tatoeba": "146735"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "アパート",
+   "reading": "アパート",
+   "romaji": "",
+   "wordType": "noun",
+   "english": "apartment building, apartment block, apartment house, apartment",
+   "common": true,
+   "jmdictId": "1017760",
+   "example": {
+    "jpn": "このアパートは６家族が暮らしている。",
+    "eng": "Six families live in this apartment house.",
+    "tatoeba": "224007"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "危ない",
+   "reading": "あぶない",
+   "romaji": "abunai",
+   "wordType": "i-adjective",
+   "english": "dangerous, risky, hazardous, perilous",
+   "common": true,
+   "jmdictId": "1218380",
+   "example": {
+    "jpn": "火は非常に危ない。",
+    "eng": "Fire is very dangerous.",
+    "tatoeba": "186727"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "飴",
+   "reading": "あめ",
+   "romaji": "ame",
+   "wordType": "noun",
+   "english": "(hard) candy, toffee, rice-sugar, sugar made from the starch of rice, potatoes, etc.",
+   "common": true,
+   "jmdictId": "1153520",
+   "example": {
+    "jpn": "息子は箱から飴を一つ取った。",
+    "eng": "My son took a candy from the box.",
+    "tatoeba": "139909"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "如何",
+   "reading": "いかが",
+   "romaji": "ikaga",
+   "wordType": "adverb",
+   "english": "how, in what way, how about, questionable",
+   "common": true,
+   "jmdictId": "2845606",
+   "example": {
+    "jpn": "コンタクトを入れるというのはいかがでしょう？",
+    "eng": "How about wearing contact lenses?",
+    "tatoeba": "74894"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "医者",
+   "reading": "いしゃ",
+   "romaji": "isha",
+   "wordType": "noun",
+   "english": "doctor, physician",
+   "common": true,
+   "jmdictId": "1159980",
+   "example": {
+    "jpn": "医者は彼の折れた足をついだ。",
+    "eng": "The doctor set his broken leg.",
+    "tatoeba": "190767"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "一日",
+   "reading": "いちにち",
+   "romaji": "ichinichi",
+   "wordType": "noun",
+   "english": "one day, all day (long), the whole day, from morning till night",
+   "common": true,
+   "jmdictId": "1576260",
+   "example": {
+    "jpn": "私は、月・水・金と一日おきに仕事をします。",
+    "eng": "I work every other day: Monday, Wednesday, and Friday.",
+    "tatoeba": "162270"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "犬",
+   "reading": "いぬ",
+   "romaji": "inu",
+   "wordType": "noun",
+   "english": "dog (Canis (lupus) familiaris), canine, squealer, rat",
+   "common": true,
+   "jmdictId": "1258330",
+   "example": {
+    "jpn": "彼女は吠える犬を怖がる。",
+    "eng": "She is afraid of barking dogs.",
+    "tatoeba": "86720"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "意味",
+   "reading": "いみ",
+   "romaji": "imi",
+   "wordType": "noun",
+   "english": "meaning, significance, sense",
+   "common": true,
+   "jmdictId": "1156800",
+   "example": {
+    "jpn": "その語にはいくつかの意味がある。",
+    "eng": "The word has several meanings.",
+    "tatoeba": "210824"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "嫌",
+   "reading": "いや",
+   "romaji": "iya",
+   "wordType": "na-adjective",
+   "english": "disliking, not wanting, unwilling (to do), reluctant",
+   "common": true,
+   "jmdictId": "1587610",
+   "example": {
+    "jpn": "彼の話し方が嫌なの。",
+    "eng": "I don't like his way of talking.",
+    "tatoeba": "115827"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "薄い",
+   "reading": "うすい",
+   "romaji": "usui",
+   "wordType": "i-adjective",
+   "english": "thin (of an object), pale, light, faint",
+   "common": true,
+   "jmdictId": "1475480",
+   "example": {
+    "jpn": "肉を薄く切りなさい。",
+    "eng": "Cut the meat into thin slices.",
+    "tatoeba": "122981"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "歌",
+   "reading": "うた",
+   "romaji": "uta",
+   "wordType": "noun",
+   "english": "song, singing, classical Japanese poem (esp. tanka), modern poetry",
+   "common": true,
+   "jmdictId": "1193180",
+   "example": {
+    "jpn": "この歌を聞くと私はいつも、学生時代を思い出す。",
+    "eng": "Whenever I hear this song, I am reminded of my school days.",
+    "tatoeba": "222762"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "生まれる",
+   "reading": "うまれる",
+   "romaji": "umareru",
+   "wordType": "verb",
+   "english": "to be born",
+   "common": true,
+   "jmdictId": "1378690",
+   "example": {
+    "jpn": "あなたは何座生まれですか。",
+    "eng": "What sign were you born under?",
+    "tatoeba": "232211"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "上着",
+   "reading": "うわぎ",
+   "romaji": "uwagi",
+   "wordType": "noun",
+   "english": "coat, jacket, outerwear, top",
+   "common": true,
+   "jmdictId": "1580340",
+   "example": {
+    "jpn": "男性の方は上着を着用してください。",
+    "eng": "Jackets are requested for men.",
+    "tatoeba": "127151"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "絵",
+   "reading": "え",
+   "romaji": "e",
+   "wordType": "noun",
+   "english": "picture, drawing, painting, sketch",
+   "common": true,
+   "jmdictId": "1202270",
+   "example": {
+    "jpn": "あの絵を壁に掛けなさい。",
+    "eng": "Hang that picture on the wall.",
+    "tatoeba": "231126"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "映画館",
+   "reading": "えいがかん",
+   "romaji": "eigakan",
+   "wordType": "noun",
+   "english": "movie theatre, movie theater, cinema",
+   "common": true,
+   "jmdictId": "1173750",
+   "example": {
+    "jpn": "その映画館は人々でいっぱいだった。",
+    "eng": "The cinema was filled with people.",
+    "tatoeba": "212218"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "ええ",
+   "reading": "ええ",
+   "romaji": "ee",
+   "wordType": "interjection",
+   "english": "yes, that is correct, right, um",
+   "common": true,
+   "jmdictId": "1001140",
+   "example": {
+    "jpn": "ええ、ほとんど私と同じくらいの背丈になっていますよ。",
+    "eng": "Yes, he's almost as tall as I am.",
+    "tatoeba": "228010"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "鉛筆",
+   "reading": "えんぴつ",
+   "romaji": "enpitsu",
+   "wordType": "noun",
+   "english": "(wooden) pencil",
+   "common": true,
+   "jmdictId": "1178590",
+   "example": {
+    "jpn": "ペンか鉛筆を持っていますか。",
+    "eng": "Do you have a pen or a pencil?",
+    "tatoeba": "196645"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "多い",
+   "reading": "おおい",
+   "romaji": "ooi",
+   "wordType": "i-adjective",
+   "english": "many, numerous, a lot, large amount of",
+   "common": true,
+   "jmdictId": "1407460",
+   "example": {
+    "jpn": "２０代の若い女性の中には、夏休みに海外旅行にでたいと思う人も多い。",
+    "eng": "Many young women in their 20s plan to go abroad during their summer holidays.",
+    "tatoeba": "235576"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "大きな",
+   "reading": "おおきな",
+   "romaji": "ookina",
+   "wordType": "noun",
+   "english": "big, large, great",
+   "common": true,
+   "jmdictId": "1412890",
+   "example": {
+    "jpn": "アメリカ人の中には大きな借金を抱えている人がいる。",
+    "eng": "Some Americans have grave debts.",
+    "tatoeba": "230118"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "大勢",
+   "reading": "おおぜい",
+   "romaji": "oozei",
+   "wordType": "noun",
+   "english": "crowd of people, great number of people, in great numbers",
+   "common": true,
+   "jmdictId": "1414220",
+   "example": {
+    "jpn": "そこには大勢の人がいた。",
+    "eng": "There was a large crowd there.",
+    "tatoeba": "213674"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "お手洗い",
+   "reading": "おてあらい",
+   "romaji": "otearai",
+   "wordType": "noun",
+   "english": "toilet, restroom, lavatory, bathroom",
+   "common": true,
+   "jmdictId": "1002100",
+   "example": {
+    "jpn": "お手洗いはどこですか。",
+    "eng": "Where's the restroom?",
+    "tatoeba": "227063"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "男",
+   "reading": "おとこ",
+   "romaji": "otoko",
+   "wordType": "noun",
+   "english": "man, male, fellow, guy",
+   "common": true,
+   "jmdictId": "1419990",
+   "example": {
+    "jpn": "彼は多分よい男であるかも知れない。",
+    "eng": "He may be a good man for all I know.",
+    "tatoeba": "102560"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "男の子",
+   "reading": "おとこのこ",
+   "romaji": "otokonoko",
+   "wordType": "expression",
+   "english": "boy, son, baby boy, young man",
+   "common": true,
+   "jmdictId": "1420010",
+   "example": {
+    "jpn": "あのハンサムな男の子を見て。",
+    "eng": "Look at that good-looking boy.",
+    "tatoeba": "231277"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "大人",
+   "reading": "おとな",
+   "romaji": "otona",
+   "wordType": "noun",
+   "english": "adult, grown-up",
+   "common": true,
+   "jmdictId": "1414170",
+   "example": {
+    "jpn": "大人だけこの映画が見える。",
+    "eng": "Only adults can see this film.",
+    "tatoeba": "137483"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "お風呂",
+   "reading": "おふろ",
+   "romaji": "ofuro",
+   "wordType": "noun",
+   "english": "bath",
+   "common": true,
+   "jmdictId": "2220600",
+   "example": {
+    "jpn": "私はほとんど毎日お風呂に入ります。",
+    "eng": "I take a bath almost every day.",
+    "tatoeba": "158918"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "お巡りさん",
+   "reading": "おまわりさん",
+   "romaji": "omawarisan",
+   "wordType": "noun",
+   "english": "police officer",
+   "common": true,
+   "jmdictId": "1002120",
+   "example": {
+    "jpn": "おまわりさんに車を片側に寄せるように合図された。",
+    "eng": "The patrolman motioned me to pull over.",
+    "tatoeba": "227505"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "音楽",
+   "reading": "おんがく",
+   "romaji": "ongaku",
+   "wordType": "noun",
+   "english": "music",
+   "common": true,
+   "jmdictId": "1183720",
+   "example": {
+    "jpn": "あの音楽は彼の気にさわる。",
+    "eng": "That music gets on his nerves.",
+    "tatoeba": "231187"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "女",
+   "reading": "おんな",
+   "romaji": "onna",
+   "wordType": "noun",
+   "english": "woman, female, female lover, girlfriend",
+   "common": true,
+   "jmdictId": "1344930",
+   "example": {
+    "jpn": "彼が戻ってきた時には、女は歩み去っていた。",
+    "eng": "When he came back, the woman had walked off.",
+    "tatoeba": "119438"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "女の子",
+   "reading": "おんなのこ",
+   "romaji": "onnanoko",
+   "wordType": "expression",
+   "english": "girl, daughter, baby girl, young woman",
+   "common": true,
+   "jmdictId": "1344970",
+   "example": {
+    "jpn": "その女の子達は、とても忙しい。",
+    "eng": "Those girls are very busy.",
+    "tatoeba": "209395"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "外国",
+   "reading": "がいこく",
+   "romaji": "gaikoku",
+   "wordType": "noun",
+   "english": "foreign country",
+   "common": true,
+   "jmdictId": "1203620",
+   "example": {
+    "jpn": "あなたは外国の本を持っていますか。",
+    "eng": "Do you have any foreign books?",
+    "tatoeba": "232163"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "外国人",
+   "reading": "がいこくじん",
+   "romaji": "gaikokujin",
+   "wordType": "noun",
+   "english": "foreigner, foreign citizen, foreign national, alien",
+   "common": true,
+   "jmdictId": "1203650",
+   "example": {
+    "jpn": "「居住外国人」とは、どういう意味ですか。",
+    "eng": "What does \"resident alien\" mean?",
+    "tatoeba": "236326"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "階段",
+   "reading": "かいだん",
+   "romaji": "kaidan",
+   "wordType": "noun",
+   "english": "stairs, stairway, staircase",
+   "common": true,
+   "jmdictId": "1203090",
+   "example": {
+    "jpn": "その階段を上ってはいけません。",
+    "eng": "You must not go up the stairs.",
+    "tatoeba": "211701"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "掛ける",
+   "reading": "かける",
+   "romaji": "kakeru",
+   "wordType": "verb",
+   "english": "to hang up (e.g. a coat, a picture on the wall), to let hang, to suspend (from), to hoist (e.g. sail)",
+   "common": true,
+   "jmdictId": "1207610",
+   "example": {
+    "jpn": "コートをハンガーに掛けておきなさい。",
+    "eng": "Put your coat on a hanger.",
+    "tatoeba": "224960"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "傘",
+   "reading": "かさ",
+   "romaji": "kasa",
+   "wordType": "noun",
+   "english": "umbrella, parasol, something shaped like an umbrella or a conical hat, shade (of a lamp)",
+   "common": true,
+   "jmdictId": "1301940",
+   "example": {
+    "jpn": "タクシーに傘を忘れてしまった。",
+    "eng": "I left my umbrella in the cab.",
+    "tatoeba": "203724"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "方",
+   "reading": "かた",
+   "romaji": "kata",
+   "wordType": "noun",
+   "english": "direction, way, person, lady",
+   "common": true,
+   "jmdictId": "1516925",
+   "example": {
+    "jpn": "グリーン夫人は、私の子供たちが歌を習っている方ですが、今度の日曜に独唱会を開く予定です。",
+    "eng": "Mrs. Green, from whom my children have lessons in singing, is to have a recital next Sunday.",
+    "tatoeba": "225511"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "家庭",
+   "reading": "かてい",
+   "romaji": "katei",
+   "wordType": "noun",
+   "english": "home, household, family, hearth",
+   "common": true,
+   "jmdictId": "1192280",
+   "example": {
+    "jpn": "食事は家庭で食べますか、外食ですか。",
+    "eng": "Do you eat at home or eat out?",
+    "tatoeba": "145834"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "花瓶",
+   "reading": "かびん",
+   "romaji": "kabin",
+   "wordType": "noun",
+   "english": "(flower) vase",
+   "common": true,
+   "jmdictId": "1194870",
+   "example": {
+    "jpn": "花びんは粉々になった。",
+    "eng": "The vase broke into fragments.",
+    "tatoeba": "186605"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "紙",
+   "reading": "かみ",
+   "romaji": "kami",
+   "wordType": "noun",
+   "english": "paper",
+   "common": true,
+   "jmdictId": "1311530",
+   "example": {
+    "jpn": "紙に線を１本引きなさい。",
+    "eng": "Draw a line on the paper.",
+    "tatoeba": "151212"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "カメラ",
+   "reading": "カメラ",
+   "romaji": "",
+   "wordType": "noun",
+   "english": "camera",
+   "common": true,
+   "jmdictId": "1038350",
+   "example": {
+    "jpn": "おじさんがぼくにカメラをくれました。",
+    "eng": "My uncle gave me a camera.",
+    "tatoeba": "227734"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "体",
+   "reading": "からだ",
+   "romaji": "karada",
+   "wordType": "noun",
+   "english": "body, torso, trunk, build",
+   "common": true,
+   "jmdictId": "1409140",
+   "example": {
+    "jpn": "カメレオンは周りの色に合わせて体色を変えることができる。",
+    "eng": "The chameleon can take on the colors of its background.",
+    "tatoeba": "226205"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "カレンダー",
+   "reading": "カレンダー",
+   "romaji": "",
+   "wordType": "noun",
+   "english": "calendar, calender (machine for flattening things)",
+   "common": true,
+   "jmdictId": "1039220",
+   "example": {
+    "jpn": "整えられた長机、いくつかのパイプ椅子、壁の掲示板にはカレンダーとプリント数枚が張られている。",
+    "eng": "There were long desks lined up, several pipe chairs, and stuck on the bulletin board were a calendar and several printouts.",
+    "tatoeba": "75519"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "漢字",
+   "reading": "かんじ",
+   "romaji": "kanji",
+   "wordType": "noun",
+   "english": "kanji, Chinese character",
+   "common": true,
+   "jmdictId": "1213170",
+   "example": {
+    "jpn": "漢字を書くときは点やはらいに気をつけて、なるべく早くていねいに書きましょう。",
+    "eng": "When drawing kanji be careful of dots and sweeps, write as carefully and quickly as possible.",
+    "tatoeba": "76263"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "黄色",
+   "reading": "きいろ",
+   "romaji": "kiiro",
+   "wordType": "noun",
+   "english": "yellow, amber",
+   "common": true,
+   "jmdictId": "1576760",
+   "example": {
+    "jpn": "床は緑色に塗られていたが、一方壁は黄色だった。",
+    "eng": "The floor was painted green, while the walls were yellow.",
+    "tatoeba": "146465"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "北",
+   "reading": "きた",
+   "romaji": "kita",
+   "wordType": "noun",
+   "english": "north, the North, northern territories, North Korea",
+   "common": true,
+   "jmdictId": "1520670",
+   "example": {
+    "jpn": "船はまっすぐ北に向かっている。",
+    "eng": "The ship is bearing due north.",
+    "tatoeba": "141143"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "ギター",
+   "reading": "ギター",
+   "romaji": "",
+   "wordType": "noun",
+   "english": "guitar",
+   "common": true,
+   "jmdictId": "1042820",
+   "example": {
+    "jpn": "私は彼にギターを弾いてもらいたい。",
+    "eng": "I want him to play the guitar.",
+    "tatoeba": "154265"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "汚い",
+   "reading": "きたない",
+   "romaji": "kitanai",
+   "wordType": "i-adjective",
+   "english": "dirty, filthy, foul, unclean",
+   "common": true,
+   "jmdictId": "1178940",
+   "example": {
+    "jpn": "ジャックは私に汚いいたずらをした。",
+    "eng": "Jack played a dirty trick on me.",
+    "tatoeba": "215815"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "喫茶店",
+   "reading": "きっさてん",
+   "romaji": "kissaten",
+   "wordType": "noun",
+   "english": "coffee shop, tearoom, coffee lounge, coffeehouse",
+   "common": true,
+   "jmdictId": "1226440",
+   "example": {
+    "jpn": "私たちは喫茶店で昼食をとった。",
+    "eng": "We ate lunch in a coffee lounge.",
+    "tatoeba": "165940"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "切手",
+   "reading": "きって",
+   "romaji": "kitte",
+   "wordType": "noun",
+   "english": "stamp (postage), merchandise certificate",
+   "common": true,
+   "jmdictId": "1385070",
+   "example": {
+    "jpn": "趣味は切手を集めることです。",
+    "eng": "My hobby is collecting stamps.",
+    "tatoeba": "163365"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "教室",
+   "reading": "きょうしつ",
+   "romaji": "kyoushitsu",
+   "wordType": "noun",
+   "english": "classroom, lecture room, department (in a university), class",
+   "common": true,
+   "jmdictId": "1237150",
+   "example": {
+    "jpn": "教室は生徒でいっぱいだった。",
+    "eng": "The classroom was full of pupils.",
+    "tatoeba": "180166"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "兄弟",
+   "reading": "きょうだい",
+   "romaji": "kyoudai",
+   "wordType": "noun",
+   "english": "brothers and sisters, siblings, half-siblings, step-siblings",
+   "common": true,
+   "jmdictId": "1249960",
+   "example": {
+    "jpn": "ライト兄弟はエンジンで動く飛行機を飛ばすことに成功した。",
+    "eng": "The Wright brothers succeeded in flying an airplane driven by an engine.",
+    "tatoeba": "192659"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "切る",
+   "reading": "きる",
+   "romaji": "kiru",
+   "wordType": "verb",
+   "english": "to cut, to cut through, to perform (surgery), to sever (connections, ties)",
+   "common": true,
+   "jmdictId": "1384830",
+   "example": {
+    "jpn": "２．大根は拍子木に切る。",
+    "eng": "2. Cut the daikon into long sticks.",
+    "tatoeba": "235603"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "着る",
+   "reading": "きる",
+   "romaji": "kiru",
+   "wordType": "verb",
+   "english": "to wear (from the shoulders down), to put on, to take (the blame, responsibility), to bear",
+   "common": true,
+   "jmdictId": "1423000",
+   "example": {
+    "jpn": "「あの赤い服を着るのはよしなさい」「なぜいけないの」",
+    "eng": "\"You had better not wear the red dress.\" \"Why not?\"",
+    "tatoeba": "237263"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "九",
+   "reading": "く",
+   "romaji": "ku",
+   "wordType": "noun",
+   "english": "nine, 9",
+   "common": true,
+   "jmdictId": "1578150",
+   "example": {
+    "jpn": "彼は「九時だ」と言った。",
+    "eng": "He said, \"It's nine o'clock.\"",
+    "tatoeba": "108121"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "薬",
+   "reading": "くすり",
+   "romaji": "kusuri",
+   "wordType": "noun",
+   "english": "medicine, pharmaceuticals, (legal) drugs, pill",
+   "common": true,
+   "jmdictId": "1538160",
+   "example": {
+    "jpn": "この薬を飲めば、あなたは頭痛が治るでしょう。",
+    "eng": "The medicine will cure your headache.",
+    "tatoeba": "219263"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "靴下",
+   "reading": "くつした",
+   "romaji": "kutsushita",
+   "wordType": "noun",
+   "english": "socks, sock, stockings, stocking",
+   "common": true,
+   "jmdictId": "1246740",
+   "example": {
+    "jpn": "この靴下の片方はどこだ。",
+    "eng": "Where is the mate to this sock?",
+    "tatoeba": "222242"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "曇る",
+   "reading": "くもる",
+   "romaji": "kumoru",
+   "wordType": "verb",
+   "english": "to get cloudy, to cloud over, to become overcast, to cloud up",
+   "common": true,
+   "jmdictId": "1457560",
+   "example": {
+    "jpn": "蒸気でメガネが曇ってしまった。",
+    "eng": "The steam has fogged my glasses.",
+    "tatoeba": "146006"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "暮らす",
+   "reading": "くらす",
+   "romaji": "kurasu",
+   "wordType": "verb",
+   "english": "to live (on, by, etc.), to lead a life, to get along, to get by",
+   "common": true,
+   "jmdictId": "1514940",
+   "example": {
+    "jpn": "１日１ドルでアメリカで暮らしていけると思いますか。",
+    "eng": "Do you think you can live on a dollar a day in America?",
+    "tatoeba": "235708"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "瓦",
+   "reading": "グラム",
+   "romaji": "",
+   "wordType": "noun",
+   "english": "gram, gramme",
+   "common": true,
+   "jmdictId": "1046810",
+   "example": {
+    "jpn": "このジャムの正味重量は２００グラムです。",
+    "eng": "The net weight of this jam is 200 grams.",
+    "tatoeba": "223687"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "黒",
+   "reading": "くろ",
+   "romaji": "kuro",
+   "wordType": "noun",
+   "english": "black, black stone, guilt, guilty person",
+   "common": true,
+   "jmdictId": "1287410",
+   "example": {
+    "jpn": "２匹犬を飼っているが、１匹は白でもう１匹は黒だ。",
+    "eng": "I have two dogs. One is white and the other black.",
+    "tatoeba": "235399"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "警官",
+   "reading": "けいかん",
+   "romaji": "keikan",
+   "wordType": "noun",
+   "english": "police officer, policeman, constable",
+   "common": true,
+   "jmdictId": "1252330",
+   "example": {
+    "jpn": "２０人の警官が現場に現れた。",
+    "eng": "Twenty police have arrived on the scene.",
+    "tatoeba": "235580"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "結構",
+   "reading": "けっこう",
+   "romaji": "kekkou",
+   "wordType": "na-adjective",
+   "english": "splendid, nice, wonderful, delightful",
+   "common": true,
+   "jmdictId": "1254760",
+   "example": {
+    "jpn": "好奇心がお旺盛なのは大変に結構なことである。",
+    "eng": "A healthy curiosity is truly a fine thing.",
+    "tatoeba": "74945"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "玄関",
+   "reading": "げんかん",
+   "romaji": "genkan",
+   "wordType": "noun",
+   "english": "entrance, front door, entryway, entranceway",
+   "common": true,
+   "jmdictId": "1263400",
+   "example": {
+    "jpn": "トムが玄関にいるのでなかに入るように言ってください。",
+    "eng": "Tom is at the door. Please ask him in.",
+    "tatoeba": "200215"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "交番",
+   "reading": "こうばん",
+   "romaji": "kouban",
+   "wordType": "noun",
+   "english": "police box, koban, small neighborhood police station, alternation",
+   "common": true,
+   "jmdictId": "1272500",
+   "example": {
+    "jpn": "向こうの交番で聞いてください。",
+    "eng": "Ask at the police station over there.",
+    "tatoeba": "173841"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "声",
+   "reading": "こえ",
+   "romaji": "koe",
+   "wordType": "noun",
+   "english": "voice, singing (of a bird), chirping (of an insect), hoot",
+   "common": true,
+   "jmdictId": "1380440",
+   "example": {
+    "jpn": "あなたの声が聞けてうれしいわ。",
+    "eng": "I am happy to hear your voice.",
+    "tatoeba": "1142225"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "コート",
+   "reading": "コート",
+   "romaji": "",
+   "wordType": "noun",
+   "english": "coat, coating",
+   "common": true,
+   "jmdictId": "1049000",
+   "example": {
+    "jpn": "あなたが家を出た後で、私はあなたのコートに気づきました。",
+    "eng": "I found your coat after you left the house.",
+    "tatoeba": "234118"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "此方",
+   "reading": "こっち",
+   "romaji": "kocchi",
+   "wordType": "pronoun",
+   "english": "this way, this direction, here, this (one)",
+   "common": true,
+   "jmdictId": "1004500",
+   "example": {
+    "jpn": "こちらへやってくる少年とその犬をごらんなさい。",
+    "eng": "Look at the boy and his dog that are coming this way.",
+    "tatoeba": "224144"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "言葉",
+   "reading": "ことば",
+   "romaji": "kotoba",
+   "wordType": "noun",
+   "english": "language, dialect, word, phrase",
+   "common": true,
+   "jmdictId": "1264540",
+   "example": {
+    "jpn": "「言葉の一面は、伝達しようとする意志である」と彼は言う。",
+    "eng": "\"One aspect of language is an intent to communicate,\" he says.",
+    "tatoeba": "236336"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "こんな",
+   "reading": "こんな",
+   "romaji": "konna",
+   "wordType": "noun",
+   "english": "this sort of, this kind of, like this, such",
+   "common": true,
+   "jmdictId": "1004880",
+   "example": {
+    "jpn": "こんな風に、彼は私を扱った。",
+    "eng": "This is the way he treated me.",
+    "tatoeba": "217315"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "今晩",
+   "reading": "こんばん",
+   "romaji": "konban",
+   "wordType": "noun",
+   "english": "tonight, this evening",
+   "common": true,
+   "jmdictId": "1289470",
+   "example": {
+    "jpn": "今晩は少し熱っぽいのです。",
+    "eng": "I feel a bit feverish tonight.",
+    "tatoeba": "171230"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "さあ",
+   "reading": "さあ",
+   "romaji": "saa",
+   "wordType": "interjection",
+   "english": "come (on), come now, come along, here",
+   "common": true,
+   "jmdictId": "1005110",
+   "example": {
+    "jpn": "さあ東京駅に着きました。",
+    "eng": "Here we were at Tokyo Station.",
+    "tatoeba": "216866"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "財布",
+   "reading": "さいふ",
+   "romaji": "saifu",
+   "wordType": "noun",
+   "english": "wallet, purse, coin purse, billfold",
+   "common": true,
+   "jmdictId": "1296970",
+   "example": {
+    "jpn": "あなたの財布は私のに似ている。",
+    "eng": "Your purse is similar to mine.",
+    "tatoeba": "233280"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "先",
+   "reading": "さき",
+   "romaji": "saki",
+   "wordType": "noun",
+   "english": "point, tip, end, nozzle",
+   "common": true,
+   "jmdictId": "1387210",
+   "example": {
+    "jpn": "鉛筆の先が丸くなった。",
+    "eng": "The point of the pencil has become dull.",
+    "tatoeba": "188626"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "作文",
+   "reading": "さくぶん",
+   "romaji": "sakubun",
+   "wordType": "noun",
+   "english": "writing (an essay, prose, etc.), composition, formal writing with little real meaning",
+   "common": true,
+   "jmdictId": "1297960",
+   "example": {
+    "jpn": "「友情」という題で作文を書きなさい。",
+    "eng": "Write an essay on \"Friendship\".",
+    "tatoeba": "236141"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "差す",
+   "reading": "さす",
+   "romaji": "sasu",
+   "wordType": "verb",
+   "english": "to shine, to be visible, to be tinged with, to rise (of water levels)",
+   "common": true,
+   "jmdictId": "1291330",
+   "example": {
+    "jpn": "ほお紅や口紅を差すだけで表情や笑顔がどんどん変わってくるんです。",
+    "eng": "Expressions and smiles change like that just from applying rouge and lipstick.",
+    "tatoeba": "74094"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "雑誌",
+   "reading": "ざっし",
+   "romaji": "zasshi",
+   "wordType": "noun",
+   "english": "magazine, journal, periodical",
+   "common": true,
+   "jmdictId": "1299400",
+   "example": {
+    "jpn": "その雑誌はどこで買えますか。",
+    "eng": "Where can I buy that magazine?",
+    "tatoeba": "210481"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "再来年",
+   "reading": "さらいねん",
+   "romaji": "sarainen",
+   "wordType": "noun",
+   "english": "year after next",
+   "common": true,
+   "jmdictId": "1293660",
+   "example": {
+    "jpn": "祖父は、再来年引退する予定です。",
+    "eng": "My grandfather is planning to retire the year after next.",
+    "tatoeba": "140720"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "四",
+   "reading": "し",
+   "romaji": "shi",
+   "wordType": "noun",
+   "english": "four, 4",
+   "common": true,
+   "jmdictId": "1579470",
+   "example": {
+    "jpn": "その湖は直径四マイルである。",
+    "eng": "The lake is four miles across.",
+    "tatoeba": "210847"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "然し",
+   "reading": "しかし",
+   "romaji": "shikashi",
+   "wordType": "noun",
+   "english": "however, but",
+   "common": true,
+   "jmdictId": "1505990",
+   "example": {
+    "jpn": "しかし、たいへん息子を欲しがっていました。",
+    "eng": "But he wanted a son very much.",
+    "tatoeba": "216338"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "辞書",
+   "reading": "じしょ",
+   "romaji": "jisho",
+   "wordType": "noun",
+   "english": "dictionary, lexicon, letter of resignation",
+   "common": true,
+   "jmdictId": "1318970",
+   "example": {
+    "jpn": "正確なつづりは辞書で調べなさい。",
+    "eng": "I refer you to the dictionary for the correct spelling.",
+    "tatoeba": "142976"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "七",
+   "reading": "しち",
+   "romaji": "shichi",
+   "wordType": "noun",
+   "english": "seven",
+   "common": true,
+   "jmdictId": "1319210",
+   "example": {
+    "jpn": "私は今朝7時に起きた。",
+    "eng": "I got up at seven this morning.",
+    "tatoeba": "156991"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "質問",
+   "reading": "しつもん",
+   "romaji": "shitsumon",
+   "wordType": "noun",
+   "english": "question, inquiry, enquiry",
+   "common": true,
+   "jmdictId": "1320760",
+   "example": {
+    "jpn": "その事故について彼に質問した。",
+    "eng": "I asked him about the accident.",
+    "tatoeba": "209899"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "自動車",
+   "reading": "じどうしゃ",
+   "romaji": "jidousha",
+   "wordType": "noun",
+   "english": "car, automobile, motorcar, motor vehicle",
+   "common": true,
+   "jmdictId": "1318400",
+   "example": {
+    "jpn": "私達はその自動車を12,000ドルで買った。",
+    "eng": "We bought the car for $12,000.",
+    "tatoeba": "151781"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "自分",
+   "reading": "じぶん",
+   "romaji": "jibun",
+   "wordType": "pronoun",
+   "english": "myself, yourself, oneself, himself",
+   "common": true,
+   "jmdictId": "1318610",
+   "example": {
+    "jpn": "矛盾する報告を受けて、その役員は自分の立場を考え直した。",
+    "eng": "Conflicting reports prompted the director to reconsider her position.",
+    "tatoeba": "80873"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "締める",
+   "reading": "しめる",
+   "romaji": "shimeru",
+   "wordType": "verb",
+   "english": "to tie, to fasten, to tighten, to wear (necktie, belt)",
+   "common": true,
+   "jmdictId": "1436570",
+   "example": {
+    "jpn": "離陸の際は、シートベルトを締めなくてはならない。",
+    "eng": "You must fasten your seat belts during take-off.",
+    "tatoeba": "78324"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "写真",
+   "reading": "しゃしん",
+   "romaji": "shashin",
+   "wordType": "noun",
+   "english": "photograph, photo, picture, photography",
+   "common": true,
+   "jmdictId": "1321900",
+   "example": {
+    "jpn": "あなたに何枚かの写真を見せましょう。",
+    "eng": "I will show you some pictures.",
+    "tatoeba": "233720"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "シャツ",
+   "reading": "シャツ",
+   "romaji": "",
+   "wordType": "noun",
+   "english": "shirt (undergarment), undershirt, singlet, shirt (outerwear; usu. with collar and buttons)",
+   "common": true,
+   "jmdictId": "1061520",
+   "example": {
+    "jpn": "あなたのシャツは洗う必要がある。",
+    "eng": "Your shirts need to be washed.",
+    "tatoeba": "233523"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "授業",
+   "reading": "じゅぎょう",
+   "romaji": "jugyou",
+   "wordType": "noun",
+   "english": "lesson, class, teaching, instruction",
+   "common": true,
+   "jmdictId": "1330290",
+   "example": {
+    "jpn": "それは授業の終わりだった。",
+    "eng": "That was the end of the class.",
+    "tatoeba": "205089"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "上手",
+   "reading": "じょうず",
+   "romaji": "jouzu",
+   "wordType": "na-adjective",
+   "english": "skillful, skilled, proficient, good (at)",
+   "common": true,
+   "jmdictId": "1353320",
+   "example": {
+    "jpn": "あなたは上手にバスケットボールができますか。",
+    "eng": "Do you play basketball well?",
+    "tatoeba": "231837"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "丈夫",
+   "reading": "じょうぶ",
+   "romaji": "joubu",
+   "wordType": "na-adjective",
+   "english": "healthy, robust, strong, solid",
+   "common": true,
+   "jmdictId": "1580480",
+   "example": {
+    "jpn": "彼は丈夫だったそうです。",
+    "eng": "He is said to have been strong.",
+    "tatoeba": "103983"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "食堂",
+   "reading": "しょくどう",
+   "romaji": "shokudou",
+   "wordType": "noun",
+   "english": "dining room, dining hall, cafeteria, canteen",
+   "common": true,
+   "jmdictId": "1358550",
+   "example": {
+    "jpn": "私達の家は食堂を含めて７部屋あります。",
+    "eng": "Our house has seven rooms including the dining room.",
+    "tatoeba": "151991"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "新聞",
+   "reading": "しんぶん",
+   "romaji": "shinbun",
+   "wordType": "noun",
+   "english": "newspaper",
+   "common": true,
+   "jmdictId": "1362360",
+   "example": {
+    "jpn": "ジョンのことが新聞に出ていた。",
+    "eng": "John was mentioned in the paper.",
+    "tatoeba": "215457"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "吸う",
+   "reading": "すう",
+   "romaji": "suu",
+   "wordType": "verb",
+   "english": "to breathe in, to inhale, to smoke (a cigarette, etc.), to suck",
+   "common": true,
+   "jmdictId": "1228260",
+   "example": {
+    "jpn": "教室でどうどうとタバコをすう高校生たちとそれを注意できない教師たちは罰を受けることになります。",
+    "eng": "High school students who flagrantly smoke in class and the teachers who can't caution them will be punished.",
+    "tatoeba": "76227"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "スカート",
+   "reading": "スカート",
+   "romaji": "",
+   "wordType": "noun",
+   "english": "skirt",
+   "common": true,
+   "jmdictId": "1067470",
+   "example": {
+    "jpn": "あなたのサロン風のスカートが好きです。",
+    "eng": "I like your sarong style skirt.",
+    "tatoeba": "233525"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "少ない",
+   "reading": "すくない",
+   "romaji": "sukunai",
+   "wordType": "i-adjective",
+   "english": "few, little, small (amount), low",
+   "common": true,
+   "jmdictId": "1348910",
+   "example": {
+    "jpn": "この病気に勝てる人は少ない。",
+    "eng": "Not many survive this disease.",
+    "tatoeba": "220108"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "直ぐに",
+   "reading": "すぐに",
+   "romaji": "suguni",
+   "wordType": "adverb",
+   "english": "immediately, right away, at once, instantly",
+   "common": true,
+   "jmdictId": "1430620",
+   "example": {
+    "jpn": "あなたはすぐに良くなるだろうと思います。",
+    "eng": "I hope you'll soon get well.",
+    "tatoeba": "232652"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "ストーブ",
+   "reading": "ストーブ",
+   "romaji": "",
+   "wordType": "noun",
+   "english": "(room) heater, stove",
+   "common": true,
+   "jmdictId": "1070790",
+   "example": {
+    "jpn": "彼はストーブで体を暖めた。",
+    "eng": "He warmed himself at the stove.",
+    "tatoeba": "113365"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "スポーツ",
+   "reading": "スポーツ",
+   "romaji": "",
+   "wordType": "noun",
+   "english": "sport, sports",
+   "common": true,
+   "jmdictId": "1073210",
+   "example": {
+    "jpn": "ところであなたはどんなスポーツが好きですか。",
+    "eng": "Well, what sports do you like?",
+    "tatoeba": "200846"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "洋袴",
+   "reading": "ズボン",
+   "romaji": "",
+   "wordType": "noun",
+   "english": "trousers, pants",
+   "common": true,
+   "jmdictId": "1074260",
+   "example": {
+    "jpn": "あなたは私のズボンをどうしたのですか。",
+    "eng": "What did you do with my pants?",
+    "tatoeba": "231957"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "生徒",
+   "reading": "せいと",
+   "romaji": "seito",
+   "wordType": "noun",
+   "english": "pupil, student, schoolchild",
+   "common": true,
+   "jmdictId": "1379380",
+   "example": {
+    "jpn": "あなたは何と賢い生徒なのでしょう。",
+    "eng": "What a clever student you are!",
+    "tatoeba": "232241"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "セーター",
+   "reading": "セーター",
+   "romaji": "",
+   "wordType": "noun",
+   "english": "sweater, jumper",
+   "common": true,
+   "jmdictId": "1074270",
+   "example": {
+    "jpn": "このセーターは洗っても大丈夫です。",
+    "eng": "This sweater will stand washing.",
+    "tatoeba": "223605"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "背広",
+   "reading": "せびろ",
+   "romaji": "sebiro",
+   "wordType": "noun",
+   "english": "business suit",
+   "common": true,
+   "jmdictId": "1472740",
+   "example": {
+    "jpn": "私は新しい背広を買った。",
+    "eng": "I bought a new suit of clothes.",
+    "tatoeba": "155725"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "狭い",
+   "reading": "せまい",
+   "romaji": "semai",
+   "wordType": "i-adjective",
+   "english": "narrow, confined, small, cramped",
+   "common": true,
+   "jmdictId": "1237680",
+   "example": {
+    "jpn": "この部屋は私たちにとって狭すぎる。",
+    "eng": "This room is too small for us.",
+    "tatoeba": "219999"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "０",
+   "reading": "ゼロ",
+   "romaji": "",
+   "wordType": "noun",
+   "english": "zero, 0, nought, nil",
+   "common": true,
+   "jmdictId": "2839962",
+   "example": {
+    "jpn": "ゼロという概念はヒンドゥー文化に由来している。",
+    "eng": "The concept of zero sprang from the Hindu culture.",
+    "tatoeba": "213989"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "洗濯",
+   "reading": "せんたく",
+   "romaji": "sentaku",
+   "wordType": "noun",
+   "english": "washing, laundry, relaxation, rejuvenation",
+   "common": true,
+   "jmdictId": "1390980",
+   "example": {
+    "jpn": "この綿のシャツは洗濯がよく効く。",
+    "eng": "This cotton shirt washes well.",
+    "tatoeba": "219459"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "其方",
+   "reading": "そっち",
+   "romaji": "socchi",
+   "wordType": "pronoun",
+   "english": "that way, that direction, there, that (one)",
+   "common": true,
+   "jmdictId": "1006780",
+   "example": {
+    "jpn": "そちらはセントラル自動車学校ではないんですか。",
+    "eng": "Isn't this Central Driving School?",
+    "tatoeba": "213474"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "其れから",
+   "reading": "それから",
+   "romaji": "sorekara",
+   "wordType": "expression",
+   "english": "and then, after that",
+   "common": true,
+   "jmdictId": "1006980",
+   "example": {
+    "jpn": "それから長い沈黙が続いた。",
+    "eng": "There followed a long silence.",
+    "tatoeba": "205915"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "其れでは",
+   "reading": "それでは",
+   "romaji": "soredeha",
+   "wordType": "noun",
+   "english": "well, ..., right, ..., now, ..., so",
+   "common": true,
+   "jmdictId": "1406050",
+   "example": {
+    "jpn": "それでは私の立つ瀬がない。",
+    "eng": "That would leave me in a fix.",
+    "tatoeba": "205754"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "大学",
+   "reading": "だいがく",
+   "romaji": "daigaku",
+   "wordType": "noun",
+   "english": "university, college, former imperial university of Japan (established under the ritsuryō system for the training of government administrators), the Great Learning (one of the Four Books)",
+   "common": true,
+   "jmdictId": "1413240",
+   "example": {
+    "jpn": "あなたは理科系の大学に進んだほうがいいよ。",
+    "eng": "You should go on to a technical college.",
+    "tatoeba": "231493"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "大使館",
+   "reading": "たいしかん",
+   "romaji": "taishikan",
+   "wordType": "noun",
+   "english": "embassy",
+   "common": true,
+   "jmdictId": "1413890",
+   "example": {
+    "jpn": "大使館は最高裁判所に隣接している。",
+    "eng": "The embassy is located next to the Supreme Court.",
+    "tatoeba": "137529"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "大好き",
+   "reading": "だいすき",
+   "romaji": "daisuki",
+   "wordType": "na-adjective",
+   "english": "liking very much, loving (something or someone), adoring, being very fond of",
+   "common": true,
+   "jmdictId": "1413660",
+   "example": {
+    "jpn": "こちらはケンです。彼は自分の犬が大好きです。",
+    "eng": "This is Ken. He really likes his dog.",
+    "tatoeba": "224155"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "大切",
+   "reading": "たいせつ",
+   "romaji": "taisetsu",
+   "wordType": "na-adjective",
+   "english": "important, significant, serious, crucial",
+   "common": true,
+   "jmdictId": "1414340",
+   "example": {
+    "jpn": "柔道では力より技のほうが大切である。",
+    "eng": "In judo, technique is more important than strength.",
+    "tatoeba": "147997"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "小さな",
+   "reading": "ちいさな",
+   "romaji": "chiisana",
+   "wordType": "noun",
+   "english": "small, little, tiny",
+   "common": true,
+   "jmdictId": "2136180",
+   "example": {
+    "jpn": "その犬は小さな男の子に向かって唸った。",
+    "eng": "The dog growled at a little boy.",
+    "tatoeba": "210970"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "一寸",
+   "reading": "ちょっと",
+   "romaji": "chotto",
+   "wordType": "adverb",
+   "english": "a little, a bit, slightly, just a minute",
+   "common": true,
+   "jmdictId": "1163940",
+   "example": {
+    "jpn": "この机は私にはちょっと低い。",
+    "eng": "This desk is a little low for me.",
+    "tatoeba": "222523"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "机",
+   "reading": "つくえ",
+   "romaji": "tsukue",
+   "wordType": "noun",
+   "english": "desk",
+   "common": true,
+   "jmdictId": "1220210",
+   "example": {
+    "jpn": "重荷で机がまた軋んだ。",
+    "eng": "The loaded desk groaned again.",
+    "tatoeba": "147976"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "冷たい",
+   "reading": "つめたい",
+   "romaji": "tsumetai",
+   "wordType": "i-adjective",
+   "english": "cold (to the touch), chilly, icy, freezing",
+   "common": true,
+   "jmdictId": "1556730",
+   "example": {
+    "jpn": "もう手が冷たくって。",
+    "eng": "My hand's getting too cold.",
+    "tatoeba": "194174"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "テープ",
+   "reading": "テープ",
+   "romaji": "",
+   "wordType": "noun",
+   "english": "tape",
+   "common": true,
+   "jmdictId": "1078750",
+   "example": {
+    "jpn": "君はそのコンサートをテープにとったか。",
+    "eng": "Did you tape that concert?",
+    "tatoeba": "177769"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "手紙",
+   "reading": "てがみ",
+   "romaji": "tegami",
+   "wordType": "noun",
+   "english": "letter, note",
+   "common": true,
+   "jmdictId": "1327720",
+   "example": {
+    "jpn": "ここにあなたあての手紙が何通かあります。",
+    "eng": "Here are some letters for you.",
+    "tatoeba": "224512"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "テスト",
+   "reading": "テスト",
+   "romaji": "",
+   "wordType": "noun",
+   "english": "test (of ability, knowledge, etc.), exam, examination, quiz",
+   "common": true,
+   "jmdictId": "1079760",
+   "example": {
+    "jpn": "私は数学のテストの結果に満足しています。",
+    "eng": "I am satisfied with the result of my math test.",
+    "tatoeba": "155612"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "では",
+   "reading": "では",
+   "romaji": "deha",
+   "wordType": "noun",
+   "english": "then, well, so, well then",
+   "common": true,
+   "jmdictId": "1008450",
+   "example": {
+    "jpn": "では今晩またね、さようなら。",
+    "eng": "See you tonight, then. Cheers!",
+    "tatoeba": "202137"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "デパート",
+   "reading": "デパート",
+   "romaji": "",
+   "wordType": "noun",
+   "english": "department store, department",
+   "common": true,
+   "jmdictId": "1083590",
+   "example": {
+    "jpn": "あのデパートで新しいコートを買いたい。",
+    "eng": "I would like to buy a new coat at that department store.",
+    "tatoeba": "155750"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "でも",
+   "reading": "でも",
+   "romaji": "demo",
+   "wordType": "noun",
+   "english": "but, however, though, nevertheless",
+   "common": true,
+   "jmdictId": "1008460",
+   "example": {
+    "jpn": "「そうしたわよ」彼女は文句を言った。「でも水なんかなかったわよ」",
+    "eng": "\"I did that,\" she complained, \"but there was no water in it!\"",
+    "tatoeba": "236545"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "テレビ",
+   "reading": "テレビ",
+   "romaji": "",
+   "wordType": "noun",
+   "english": "television, TV, TV program, TV programme",
+   "common": true,
+   "jmdictId": "1080510",
+   "example": {
+    "jpn": "あなたはどこでテレビを見ますか。",
+    "eng": "Where do you watch television?",
+    "tatoeba": "232489"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "戸",
+   "reading": "と",
+   "romaji": "to",
+   "wordType": "noun",
+   "english": "door (esp. Japanese-style), shutter, window shutter, entrance (to a home)",
+   "common": true,
+   "jmdictId": "1266970",
+   "example": {
+    "jpn": "誰かが戸をやかましくノックしている。",
+    "eng": "Someone is knocking loudly at the door.",
+    "tatoeba": "137092"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "ドア",
+   "reading": "ドア",
+   "romaji": "",
+   "wordType": "noun",
+   "english": "door",
+   "common": true,
+   "jmdictId": "1087820",
+   "example": {
+    "jpn": "このドアは書斎に通じている。",
+    "eng": "This door leads to the study.",
+    "tatoeba": "223480"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "如何して",
+   "reading": "どうして",
+   "romaji": "doushite",
+   "wordType": "adverb",
+   "english": "how, in what way, by what means, why",
+   "common": true,
+   "jmdictId": "1466940",
+   "example": {
+    "jpn": "そのニュースはどうして漏れたのだろう。",
+    "eng": "How did the news get out?",
+    "tatoeba": "212836"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "どうぞ",
+   "reading": "どうぞ",
+   "romaji": "douzo",
+   "wordType": "adverb",
+   "english": "please, kindly, pray, I beg (of you)",
+   "common": true,
+   "jmdictId": "1189130",
+   "example": {
+    "jpn": "写真をどうぞ見せて下さい。",
+    "eng": "Please show me your picture.",
+    "tatoeba": "149251"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "動物",
+   "reading": "どうぶつ",
+   "romaji": "doubutsu",
+   "wordType": "noun",
+   "english": "animal",
+   "common": true,
+   "jmdictId": "1451470",
+   "example": {
+    "jpn": "私はその動物の名前を知っている。",
+    "eng": "I know the name of this animal.",
+    "tatoeba": "159921"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "どうも",
+   "reading": "どうも",
+   "romaji": "doumo",
+   "wordType": "interjection",
+   "english": "thank you, thanks, much (thanks), very (sorry)",
+   "common": true,
+   "jmdictId": "1009000",
+   "example": {
+    "jpn": "お土産を頂いてご親切にどうも。",
+    "eng": "It is so nice of you to give me a present.",
+    "tatoeba": "226803"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "時計",
+   "reading": "とけい",
+   "romaji": "tokei",
+   "wordType": "noun",
+   "english": "clock, watch, timepiece",
+   "common": true,
+   "jmdictId": "1316140",
+   "example": {
+    "jpn": "あなたの時計では何時ですか。",
+    "eng": "What time is it by your watch?",
+    "tatoeba": "233246"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "所",
+   "reading": "ところ",
+   "romaji": "tokoro",
+   "wordType": "noun",
+   "english": "place, spot, scene, site",
+   "common": true,
+   "jmdictId": "1343100",
+   "example": {
+    "jpn": "さあ、今汲みなさい。そして宴会の世話役の所に持っていきなさい。",
+    "eng": "Now draw some out and take it to the master of the banquet.",
+    "tatoeba": "216936"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "年",
+   "reading": "とし",
+   "romaji": "toshi",
+   "wordType": "noun",
+   "english": "year, age, years, past one's prime",
+   "common": true,
+   "jmdictId": "1468060",
+   "example": {
+    "jpn": "一月は年の一番目の月です。",
+    "eng": "January is the first month of the year.",
+    "tatoeba": "190663"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "何方",
+   "reading": "どっち",
+   "romaji": "docchi",
+   "wordType": "pronoun",
+   "english": "which way, which direction, where, which one (esp. of two alternatives)",
+   "common": true,
+   "jmdictId": "1189360",
+   "example": {
+    "jpn": "あの〜郵便局はどちらでしょうか。",
+    "eng": "Uh..., where's the post office?",
+    "tatoeba": "231383"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "何方",
+   "reading": "どなた",
+   "romaji": "donata",
+   "wordType": "pronoun",
+   "english": "who",
+   "common": true,
+   "jmdictId": "1189370",
+   "example": {
+    "jpn": "「どなたですか」「お母さんよ」",
+    "eng": "\"Who is it?\" \"It's your mother.\"",
+    "tatoeba": "4914"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "止まる",
+   "reading": "とまる",
+   "romaji": "tomaru",
+   "wordType": "verb",
+   "english": "to stop (moving), to come to a stop, to stop (doing, working, being supplied), to come to a halt",
+   "common": true,
+   "jmdictId": "1310620",
+   "example": {
+    "jpn": "そして、電車はキーッという音を立てて止まった。",
+    "eng": "Then, the train screeched to a halt.",
+    "tatoeba": "213534"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "撮る",
+   "reading": "とる",
+   "romaji": "toru",
+   "wordType": "verb",
+   "english": "to take (a photograph), to record (audio or video), to film, to shoot",
+   "common": true,
+   "jmdictId": "1298790",
+   "example": {
+    "jpn": "これは私の妹を撮った写真です。",
+    "eng": "This is a picture of my sister.",
+    "tatoeba": "218296"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "鳴く",
+   "reading": "なく",
+   "romaji": "naku",
+   "wordType": "verb",
+   "english": "to make sound (of an animal), to call, to cry, to whine",
+   "common": true,
+   "jmdictId": "1532870",
+   "example": {
+    "jpn": "カエルが鳴いたら帰ろう。",
+    "eng": "Let's return when the frog croaks.",
+    "tatoeba": "226439"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "何故",
+   "reading": "なぜ",
+   "romaji": "naze",
+   "wordType": "adverb",
+   "english": "why, how, for what reason",
+   "common": true,
+   "jmdictId": "1577120",
+   "example": {
+    "jpn": "あなたはなぜ働いているの。",
+    "eng": "How come you're still working?",
+    "tatoeba": "232436"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "夏休み",
+   "reading": "なつやすみ",
+   "romaji": "natsuyasumi",
+   "wordType": "noun",
+   "english": "summer vacation, summer holiday",
+   "common": true,
+   "jmdictId": "1191420",
+   "example": {
+    "jpn": "この夏休みはどこかへ行くのですか。",
+    "eng": "Are you going away this summer?",
+    "tatoeba": "222855"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "並ぶ",
+   "reading": "ならぶ",
+   "romaji": "narabu",
+   "wordType": "verb",
+   "english": "to line up, to stand in a line, to rival, to match",
+   "common": true,
+   "jmdictId": "1508380",
+   "example": {
+    "jpn": "列に並んで長い間待たされた後、身分証明として正式な出生証明書が必要だといわれた。",
+    "eng": "After a long wait in line, she was told she should get a certified copy of her birth certificate as identification.",
+    "tatoeba": "77585"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "並べる",
+   "reading": "ならべる",
+   "romaji": "naraberu",
+   "wordType": "verb",
+   "english": "to line up, to set up, to arrange in a line, to enumerate",
+   "common": true,
+   "jmdictId": "1508390",
+   "example": {
+    "jpn": "メイドはテーブルにナイフとフォークを並べた。",
+    "eng": "The maid arranged the knives and forks on the table.",
+    "tatoeba": "194690"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "西",
+   "reading": "にし",
+   "romaji": "nishi",
+   "wordType": "noun",
+   "english": "west",
+   "common": true,
+   "jmdictId": "1380840",
+   "example": {
+    "jpn": "列車は西へ走っていた。",
+    "eng": "The train was hurrying west.",
+    "tatoeba": "77480"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "ニュース",
+   "reading": "ニュース",
+   "romaji": "",
+   "wordType": "noun",
+   "english": "news",
+   "common": true,
+   "jmdictId": "1091500",
+   "example": {
+    "jpn": "そのニュースに彼はびっくり仰天した。",
+    "eng": "The news took him by surprise.",
+    "tatoeba": "212843"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "庭",
+   "reading": "にわ",
+   "romaji": "niwa",
+   "wordType": "noun",
+   "english": "garden, yard, courtyard, field (of action)",
+   "common": true,
+   "jmdictId": "1436130",
+   "example": {
+    "jpn": "私たちの庭には２本の桜の木があります。",
+    "eng": "Our garden has two cherry trees.",
+    "tatoeba": "166847"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "脱ぐ",
+   "reading": "ぬぐ",
+   "romaji": "nugu",
+   "wordType": "verb",
+   "english": "to take off (clothes, shoes, etc.), to undress",
+   "common": true,
+   "jmdictId": "1416400",
+   "example": {
+    "jpn": "ここで靴を脱がなければなりませんか。",
+    "eng": "Do I have to take off my shoes here?",
+    "tatoeba": "224569"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "温い",
+   "reading": "ぬるい",
+   "romaji": "nurui",
+   "wordType": "i-adjective",
+   "english": "lukewarm, tepid, lenient",
+   "common": true,
+   "jmdictId": "1183300",
+   "example": {
+    "jpn": "このコーヒーはぬるいです。",
+    "eng": "This coffee is not hot enough.",
+    "tatoeba": "223801"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "ネクタイ",
+   "reading": "ネクタイ",
+   "romaji": "",
+   "wordType": "noun",
+   "english": "tie, necktie",
+   "common": true,
+   "jmdictId": "1092820",
+   "example": {
+    "jpn": "このネクタイはあなたのシャツによく似合ってますよ。",
+    "eng": "This tie goes with your shirt.",
+    "tatoeba": "223403"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "猫",
+   "reading": "ねこ",
+   "romaji": "neko",
+   "wordType": "noun",
+   "english": "cat (esp. the domestic cat, Felis catus), feline, shamisen, geisha",
+   "common": true,
+   "jmdictId": "1467640",
+   "example": {
+    "jpn": "あなたのサイトは、猫に興味のある人達にとって魅力的です。",
+    "eng": "Your site appeals to people who are interested in cats.",
+    "tatoeba": "233527"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "ノート",
+   "reading": "ノート",
+   "romaji": "",
+   "wordType": "noun",
+   "english": "notebook, copy-book, exercise book, note",
+   "common": true,
+   "jmdictId": "1093450",
+   "example": {
+    "jpn": "彼女は本の絵をノートに書き移した。",
+    "eng": "She transferred the picture in the book to her notebook.",
+    "tatoeba": "86681"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "歯",
+   "reading": "は",
+   "romaji": "ha",
+   "wordType": "noun",
+   "english": "tooth, teeth, tooth (of a comb, saw, etc.), cog",
+   "common": true,
+   "jmdictId": "1313000",
+   "example": {
+    "jpn": "その赤ちゃんは歯が生えはじめている。",
+    "eng": "The baby is cutting his teeth.",
+    "tatoeba": "208598"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "パーティー",
+   "reading": "パーティー",
+   "romaji": "",
+   "wordType": "noun",
+   "english": "party (social gathering), party (group of people participating in an activity, esp. mountain climbing), (political) party",
+   "common": true,
+   "jmdictId": "1100760",
+   "example": {
+    "jpn": "パーティーでは誰がホストを勤めるのですか。",
+    "eng": "Who will host the party?",
+    "tatoeba": "198514"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "灰皿",
+   "reading": "はいざら",
+   "romaji": "haizara",
+   "wordType": "noun",
+   "english": "ashtray",
+   "common": true,
+   "jmdictId": "1201940",
+   "example": {
+    "jpn": "その缶は灰皿の代わりになる。",
+    "eng": "The can will do for an ashtray.",
+    "tatoeba": "211587"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "葉書",
+   "reading": "はがき",
+   "romaji": "hagaki",
+   "wordType": "noun",
+   "english": "postcard, memo, note, card",
+   "common": true,
+   "jmdictId": "1546590",
+   "example": {
+    "jpn": "はがきにこの切手を貼って郵便箱に投函しなさい。",
+    "eng": "Put this stamp on the postcard and drop it in the mailbox.",
+    "tatoeba": "198303"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "掃く",
+   "reading": "はく",
+   "romaji": "haku",
+   "wordType": "verb",
+   "english": "to sweep, to brush, to clean, to gather silkworms",
+   "common": true,
+   "jmdictId": "1399760",
+   "example": {
+    "jpn": "お前は床を掃きさえすればよい。",
+    "eng": "You have only to sweep the floor.",
+    "tatoeba": "226930"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "箱",
+   "reading": "はこ",
+   "romaji": "hako",
+   "wordType": "noun",
+   "english": "box, case, chest, package",
+   "common": true,
+   "jmdictId": "1585650",
+   "example": {
+    "jpn": "その取っ手を右にねじると箱は開きます。",
+    "eng": "Twist that knob to the right and the box will open.",
+    "tatoeba": "209521"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "始まる",
+   "reading": "はじまる",
+   "romaji": "hajimaru",
+   "wordType": "verb",
+   "english": "to begin, to start, to commence, to happen (again)",
+   "common": true,
+   "jmdictId": "1307500",
+   "example": {
+    "jpn": "その試合は何時に始まりますか。",
+    "eng": "What time does the game start?",
+    "tatoeba": "210021"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "初めて",
+   "reading": "はじめて",
+   "romaji": "hajimete",
+   "wordType": "adverb",
+   "english": "for the first time, only after ... is it ..., only when ... do you ..., not until ... do you ...",
+   "common": true,
+   "jmdictId": "1342550",
+   "example": {
+    "jpn": "１６歳の時、初めてテニスをした。",
+    "eng": "When I was sixteen, I played tennis for the first time.",
+    "tatoeba": "235933"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "２０歳",
+   "reading": "はたち",
+   "romaji": "hatachi",
+   "wordType": "noun",
+   "english": "20 years old, twenty",
+   "common": true,
+   "jmdictId": "1600790",
+   "example": {
+    "jpn": "彼女は二十歳だと言ったが、それは嘘だった。",
+    "eng": "She said she was twenty years old, which was not true.",
+    "tatoeba": "87650"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "鼻",
+   "reading": "はな",
+   "romaji": "hana",
+   "wordType": "noun",
+   "english": "nose",
+   "common": true,
+   "jmdictId": "1486720",
+   "example": {
+    "jpn": "鼻が出ているよ。かみなさい。",
+    "eng": "Your nose is running. Blow it.",
+    "tatoeba": "85518"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "話",
+   "reading": "はなし",
+   "romaji": "hanashi",
+   "wordType": "noun",
+   "english": "talk, speech, chat, conversation",
+   "common": true,
+   "jmdictId": "1600900",
+   "example": {
+    "jpn": "人の話に水を差さないでくれ。",
+    "eng": "Don't throw a wet blanket over our conversation.",
+    "tatoeba": "144570"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "早い",
+   "reading": "はやい",
+   "romaji": "hayai",
+   "wordType": "i-adjective",
+   "english": "fast, quick, rapid, swift",
+   "common": true,
+   "jmdictId": "1404975",
+   "example": {
+    "jpn": "あれは世界で最も速い電車です。",
+    "eng": "That is the fastest train in the world.",
+    "tatoeba": "229691"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "張る",
+   "reading": "はる",
+   "romaji": "haru",
+   "wordType": "verb",
+   "english": "to stick, to paste, to affix, to stretch",
+   "common": true,
+   "jmdictId": "1427900",
+   "example": {
+    "jpn": "あなたの願書に最近の写真を貼りなさい。",
+    "eng": "Attach a recent photograph to your application form.",
+    "tatoeba": "233396"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "晴れる",
+   "reading": "はれる",
+   "romaji": "hareru",
+   "wordType": "verb",
+   "english": "to clear up, to clear away, to be sunny, to stop raining",
+   "common": true,
+   "jmdictId": "1376470",
+   "example": {
+    "jpn": "明日は晴れるだろう。",
+    "eng": "It will be fine tomorrow.",
+    "tatoeba": "234451"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "半",
+   "reading": "はん",
+   "romaji": "han",
+   "wordType": "noun",
+   "english": "half, semi-, partial, half-past",
+   "common": true,
+   "jmdictId": "1478750",
+   "example": {
+    "jpn": "半時間したら彼はここに来るでしょう。",
+    "eng": "He will be here in half an hour.",
+    "tatoeba": "121264"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "ハンカチ",
+   "reading": "ハンカチ",
+   "romaji": "",
+   "wordType": "noun",
+   "english": "handkerchief",
+   "common": true,
+   "jmdictId": "1096420",
+   "example": {
+    "jpn": "このハンカチはいくらですか。",
+    "eng": "How much is this handkerchief?",
+    "tatoeba": "223306"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "番号",
+   "reading": "ばんごう",
+   "romaji": "bangou",
+   "wordType": "noun",
+   "english": "number, series of digits",
+   "common": true,
+   "jmdictId": "1482290",
+   "example": {
+    "jpn": "ええ、じゃあ私の電話番号教えるね。",
+    "eng": "OK. Let me give you my number.",
+    "tatoeba": "228016"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "半分",
+   "reading": "はんぶん",
+   "romaji": "hanbun",
+   "wordType": "adverb",
+   "english": "half",
+   "common": true,
+   "jmdictId": "1479890",
+   "example": {
+    "jpn": "エミーはナプキンを半分に折りたたんだ。",
+    "eng": "Emmy folded the napkin in half.",
+    "tatoeba": "227942"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "東",
+   "reading": "ひがし",
+   "romaji": "higashi",
+   "wordType": "noun",
+   "english": "east",
+   "common": true,
+   "jmdictId": "1447440",
+   "example": {
+    "jpn": "名古屋は京都の東の方にある。",
+    "eng": "Nagoya is to the east of Kyoto.",
+    "tatoeba": "80804"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "弾く",
+   "reading": "ひく",
+   "romaji": "hiku",
+   "wordType": "verb",
+   "english": "to play (a stringed or keyboard instrument)",
+   "common": true,
+   "jmdictId": "1419370",
+   "example": {
+    "jpn": "誰かがピアノを弾いている。",
+    "eng": "Somebody is playing the piano.",
+    "tatoeba": "203238"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "低い",
+   "reading": "ひくい",
+   "romaji": "hikui",
+   "wordType": "i-adjective",
+   "english": "low (rank, degree, value, content, quality, etc.), low (position), close to the ground, short (height)",
+   "common": true,
+   "jmdictId": "1434180",
+   "example": {
+    "jpn": "この机は私にはちょっと低い。",
+    "eng": "This desk is a little low for me.",
+    "tatoeba": "222523"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "一月",
+   "reading": "ひとつき",
+   "romaji": "hitotsuki",
+   "wordType": "noun",
+   "english": "one month",
+   "common": true,
+   "jmdictId": "1162130",
+   "example": {
+    "jpn": "彼はひと月に１回散髪する。",
+    "eng": "He has his hair cut once a month.",
+    "tatoeba": "111121"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "病気",
+   "reading": "びょうき",
+   "romaji": "byouki",
+   "wordType": "noun",
+   "english": "illness (usu. excluding minor ailments, e.g. common cold), disease, sickness, bad habit",
+   "common": true,
+   "jmdictId": "1490230",
+   "example": {
+    "jpn": "あなたの病気がよくなることを願っています。",
+    "eng": "I hope you'll get well soon.",
+    "tatoeba": "233045"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "広い",
+   "reading": "ひろい",
+   "romaji": "hiroi",
+   "wordType": "i-adjective",
+   "english": "spacious, vast, wide",
+   "common": true,
+   "jmdictId": "1278410",
+   "example": {
+    "jpn": "ジョンソン氏の部屋は広かった。",
+    "eng": "Mr Johnson's was a large room.",
+    "tatoeba": "215496"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "フィルム",
+   "reading": "フィルム",
+   "romaji": "",
+   "wordType": "noun",
+   "english": "film",
+   "common": true,
+   "jmdictId": "1109380",
+   "example": {
+    "jpn": "このフィルムを現像してもらえますか。",
+    "eng": "Can I have this film developed?",
+    "tatoeba": "223254"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "封筒",
+   "reading": "ふうとう",
+   "romaji": "fuutou",
+   "wordType": "noun",
+   "english": "envelope",
+   "common": true,
+   "jmdictId": "1499690",
+   "example": {
+    "jpn": "だれがこの封筒を破って開けたのか。",
+    "eng": "Who has torn the envelope open?",
+    "tatoeba": "203217"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "プール",
+   "reading": "プール",
+   "romaji": "",
+   "wordType": "noun",
+   "english": "(swimming) pool, pool (cue sport), pooling (money, resources, etc.), pool (price ring)",
+   "common": true,
+   "jmdictId": "1115150",
+   "example": {
+    "jpn": "私はプールで泳ぐのは好きではない。",
+    "eng": "I don't like to swim in the pool.",
+    "tatoeba": "159022"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "吹く",
+   "reading": "ふく",
+   "romaji": "fuku",
+   "wordType": "verb",
+   "english": "to blow (of the wind), to blow (one's breath), to breathe out, to blow on (hot tea, candles, etc.)",
+   "common": true,
+   "jmdictId": "1370760",
+   "example": {
+    "jpn": "あの日は強い風が吹いていました。",
+    "eng": "There was a strong wind that day.",
+    "tatoeba": "230511"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "太い",
+   "reading": "ふとい",
+   "romaji": "futoi",
+   "wordType": "i-adjective",
+   "english": "fat, thick, deep (of a voice), thick",
+   "common": true,
+   "jmdictId": "1408180",
+   "example": {
+    "jpn": "彼は太い首をしている。",
+    "eng": "He has a thick neck.",
+    "tatoeba": "102554"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "降る",
+   "reading": "ふる",
+   "romaji": "furu",
+   "wordType": "verb",
+   "english": "to fall (of rain, snow, ash, etc.), to come down, to form (of frost), to beam down (of sunlight or moonlight)",
+   "common": true,
+   "jmdictId": "1282790",
+   "example": {
+    "jpn": "シカゴのあたりでは雨が降っていました。",
+    "eng": "It was raining around Chicago.",
+    "tatoeba": "216365"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "文章",
+   "reading": "ぶんしょう",
+   "romaji": "bunshou",
+   "wordType": "noun",
+   "english": "writing, composition, essay, article",
+   "common": true,
+   "jmdictId": "1505470",
+   "example": {
+    "jpn": "彼の文章はとても主観的だ。",
+    "eng": "His writing is very subjective.",
+    "tatoeba": "116191"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "頁",
+   "reading": "ページ",
+   "romaji": "",
+   "wordType": "noun",
+   "english": "page, nth page, page ...",
+   "common": true,
+   "jmdictId": "1120410",
+   "example": {
+    "jpn": "もう３ページ残っている。",
+    "eng": "I have three more pages to go.",
+    "tatoeba": "194523"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "下手",
+   "reading": "へた",
+   "romaji": "heta",
+   "wordType": "na-adjective",
+   "english": "unskillful, poor, awkward, imprudent",
+   "common": true,
+   "jmdictId": "1185200",
+   "example": {
+    "jpn": "彼はイギリス生まれだが、英語がとても下手である。",
+    "eng": "He comes from England, but is very poor at English.",
+    "tatoeba": "114691"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "ベッド",
+   "reading": "ベッド",
+   "romaji": "",
+   "wordType": "noun",
+   "english": "bed",
+   "common": true,
+   "jmdictId": "1119650",
+   "example": {
+    "jpn": "どんなベッドでもないよりはよい。",
+    "eng": "Any bed is better than no bed.",
+    "tatoeba": "199480"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "辺",
+   "reading": "へん",
+   "romaji": "hen",
+   "wordType": "noun",
+   "english": "area, vicinity, region, side",
+   "common": true,
+   "jmdictId": "1512070",
+   "example": {
+    "jpn": "正方形には四つの辺がある。",
+    "eng": "A square has four sides.",
+    "tatoeba": "142870"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "帽子",
+   "reading": "ぼうし",
+   "romaji": "boushi",
+   "wordType": "noun",
+   "english": "hat, cap, cap (move)",
+   "common": true,
+   "jmdictId": "1519170",
+   "example": {
+    "jpn": "この帽子は１０００円なら安い。",
+    "eng": "This hat is cheap at 1000 yen.",
+    "tatoeba": "219814"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "ボールペン",
+   "reading": "ボールペン",
+   "romaji": "",
+   "wordType": "noun",
+   "english": "ball-point pen",
+   "common": true,
+   "jmdictId": "1123590",
+   "example": {
+    "jpn": "ボールペンで申込書に記入しなさい。",
+    "eng": "Fill out the form in ballpoint.",
+    "tatoeba": "196457"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "ポケット",
+   "reading": "ポケット",
+   "romaji": "",
+   "wordType": "noun",
+   "english": "pocket",
+   "common": true,
+   "jmdictId": "1124970",
+   "example": {
+    "jpn": "ポケットに何を持っていますか。",
+    "eng": "What do you have in your pocket?",
+    "tatoeba": "232398"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "ポスト",
+   "reading": "ポスト",
+   "romaji": "",
+   "wordType": "noun",
+   "english": "postbox, mailbox, mail box, pillar box",
+   "common": true,
+   "jmdictId": "1125150",
+   "example": {
+    "jpn": "いったんポストに入れたものは、郵便局の所轄になる。",
+    "eng": "Once a thing is posted, it is in the care of the Post Office.",
+    "tatoeba": "228885"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "細い",
+   "reading": "ほそい",
+   "romaji": "hosoi",
+   "wordType": "i-adjective",
+   "english": "thin, slender, fine, unlucky",
+   "common": true,
+   "jmdictId": "1295510",
+   "example": {
+    "jpn": "彼は太っているくせに声は細い。",
+    "eng": "His voice is thin even though he is fat.",
+    "tatoeba": "102553"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "釦",
+   "reading": "ボタン",
+   "romaji": "",
+   "wordType": "noun",
+   "english": "button (clothing), push-button, button",
+   "common": true,
+   "jmdictId": "1123880",
+   "example": {
+    "jpn": "コートのボタンが取れてたんだ。",
+    "eng": "A button has come off my coat.",
+    "tatoeba": "224965"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "本棚",
+   "reading": "ほんだな",
+   "romaji": "hondana",
+   "wordType": "noun",
+   "english": "bookshelves, bookshelf, bookcase",
+   "common": true,
+   "jmdictId": "1522980",
+   "example": {
+    "jpn": "この本棚は組み立てが簡単です。",
+    "eng": "This bookcase is easy to assemble.",
+    "tatoeba": "219478"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "毎朝",
+   "reading": "まいあさ",
+   "romaji": "maiasa",
+   "wordType": "noun",
+   "english": "every morning",
+   "common": true,
+   "jmdictId": "1524700",
+   "example": {
+    "jpn": "私は毎朝六時に起きます。",
+    "eng": "I get up at six every morning.",
+    "tatoeba": "152733"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "毎晩",
+   "reading": "まいばん",
+   "romaji": "maiban",
+   "wordType": "noun",
+   "english": "every night",
+   "common": true,
+   "jmdictId": "1524730",
+   "example": {
+    "jpn": "私は毎晩家にいます。",
+    "eng": "I am at home every evening.",
+    "tatoeba": "152681"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "町",
+   "reading": "まち",
+   "romaji": "machi",
+   "wordType": "noun",
+   "english": "town, block, neighbourhood, neighborhood",
+   "common": true,
+   "jmdictId": "1603990",
+   "example": {
+    "jpn": "町が一面すっぽり雪をかぶった。",
+    "eng": "Snow completely covered the town.",
+    "tatoeba": "75868"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "燐寸",
+   "reading": "マッチ",
+   "romaji": "",
+   "wordType": "noun",
+   "english": "match (for lighting a fire)",
+   "common": true,
+   "jmdictId": "1128430",
+   "example": {
+    "jpn": "硫黄はマッチを作るのに使われる。",
+    "eng": "Sulfur is used to make matches.",
+    "tatoeba": "78218"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "万年筆",
+   "reading": "まんねんひつ",
+   "romaji": "mannenhitsu",
+   "wordType": "noun",
+   "english": "fountain pen",
+   "common": true,
+   "jmdictId": "1526360",
+   "example": {
+    "jpn": "新しい万年筆をなくしてしまった。",
+    "eng": "I have lost my new fountain pen.",
+    "tatoeba": "155723"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "磨く",
+   "reading": "みがく",
+   "romaji": "migaku",
+   "wordType": "verb",
+   "english": "to polish, to shine, to burnish, to scour",
+   "common": true,
+   "jmdictId": "1523940",
+   "example": {
+    "jpn": "弟は銀の食器類を磨いた。",
+    "eng": "My brother polished the silver.",
+    "tatoeba": "125434"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "見せる",
+   "reading": "みせる",
+   "romaji": "miseru",
+   "wordType": "verb",
+   "english": "to show, to display, to make (something or someone) look ..., to present an appearance of ...",
+   "common": true,
+   "jmdictId": "1259210",
+   "example": {
+    "jpn": "彼女は背を高く見せるためにハイヒールをはいている。",
+    "eng": "She wears high heels to make herself look taller.",
+    "tatoeba": "87558"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "皆さん",
+   "reading": "みなさん",
+   "romaji": "minasan",
+   "wordType": "noun",
+   "english": "all, everyone, everybody",
+   "common": true,
+   "jmdictId": "1202170",
+   "example": {
+    "jpn": "皆さんじっとしていてください。",
+    "eng": "Could you keep still, everyone?",
+    "tatoeba": "195074"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "南",
+   "reading": "みなみ",
+   "romaji": "minami",
+   "wordType": "noun",
+   "english": "south",
+   "common": true,
+   "jmdictId": "1459870",
+   "example": {
+    "jpn": "フランスは英国の南にある。",
+    "eng": "France is to the south of England.",
+    "tatoeba": "196997"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "皆",
+   "reading": "みんな",
+   "romaji": "minna",
+   "wordType": "noun",
+   "english": "everyone, everybody, all, everything",
+   "common": true,
+   "jmdictId": "1202150",
+   "example": {
+    "jpn": "生徒達はみんな家に帰りました。",
+    "eng": "All the students have gone home.",
+    "tatoeba": "142709"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "向こう",
+   "reading": "むこう",
+   "romaji": "mukou",
+   "wordType": "noun",
+   "english": "opposite side, other side, over there, ahead",
+   "common": true,
+   "jmdictId": "1277140",
+   "example": {
+    "jpn": "彼女は背が低すぎて塀の向こうがみえなかった。",
+    "eng": "She was too short to see over the fence.",
+    "tatoeba": "87561"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "村",
+   "reading": "むら",
+   "romaji": "mura",
+   "wordType": "noun",
+   "english": "village",
+   "common": true,
+   "jmdictId": "1406820",
+   "example": {
+    "jpn": "町は村よりも大きい。",
+    "eng": "Towns are larger than villages.",
+    "tatoeba": "126109"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "米",
+   "reading": "メートル",
+   "romaji": "",
+   "wordType": "noun",
+   "english": "metre (unit of length), meter, meter, gauge",
+   "common": true,
+   "jmdictId": "1132570",
+   "example": {
+    "jpn": "１マイルは約１６００メートルにあたる。",
+    "eng": "A mile is equal to about 1,600 meters.",
+    "tatoeba": "235825"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "眼鏡",
+   "reading": "メガネ",
+   "romaji": "",
+   "wordType": "noun",
+   "english": "glasses, eyeglasses, spectacles, judgment",
+   "common": true,
+   "jmdictId": "1577670",
+   "example": {
+    "jpn": "私はメガネがなくては読めない。",
+    "eng": "I cannot read without glasses.",
+    "tatoeba": "158805"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "物",
+   "reading": "もの",
+   "romaji": "mono",
+   "wordType": "noun",
+   "english": "thing, object, article, stuff",
+   "common": true,
+   "jmdictId": "1502390",
+   "example": {
+    "jpn": "遠まわしに物を言うな。",
+    "eng": "Don't beat around the bush.",
+    "tatoeba": "188666"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "門",
+   "reading": "もん",
+   "romaji": "mon",
+   "wordType": "noun",
+   "english": "gate, branch of learning based on the teachings of a single master, school, phylum",
+   "common": true,
+   "jmdictId": "1584800",
+   "example": {
+    "jpn": "２人の兵士が、門のところで見張りをしていた。",
+    "eng": "Two soldiers kept guard at the gate.",
+    "tatoeba": "235442"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "問題",
+   "reading": "もんだい",
+   "romaji": "mondai",
+   "wordType": "noun",
+   "english": "question (e.g. on a test), problem, problem (e.g. societal, political), question",
+   "common": true,
+   "jmdictId": "1536010",
+   "example": {
+    "jpn": "あなたはどのようにしてその問題を解いたのですか。",
+    "eng": "How did you solve the problem?",
+    "tatoeba": "232460"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "八百屋",
+   "reading": "やおや",
+   "romaji": "yaoya",
+   "wordType": "noun",
+   "english": "greengrocer, fruit and vegetable shop, jack of all trades",
+   "common": true,
+   "jmdictId": "1476960",
+   "example": {
+    "jpn": "その八百屋は客にとても親切だ。",
+    "eng": "The greengrocer is very kind to his customers.",
+    "tatoeba": "207193"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "休み",
+   "reading": "やすみ",
+   "romaji": "yasumi",
+   "wordType": "noun",
+   "english": "rest, recess, respite, vacation",
+   "common": true,
+   "jmdictId": "1227500",
+   "example": {
+    "jpn": "１０時４０分から１１時まで休み時間です。",
+    "eng": "We have a break from 10:40 to 11:00.",
+    "tatoeba": "236056"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "遣る",
+   "reading": "やる",
+   "romaji": "yaru",
+   "wordType": "verb",
+   "english": "to do, to undertake, to perform, to play (a game)",
+   "common": true,
+   "jmdictId": "1012980",
+   "example": {
+    "jpn": "ああ、君がやったんだね。",
+    "eng": "Aha, you did it, didn't you?",
+    "tatoeba": "234748"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "夕飯",
+   "reading": "ゆうはん",
+   "romaji": "yuuhan",
+   "wordType": "noun",
+   "english": "evening meal, dinner, supper",
+   "common": true,
+   "jmdictId": "1584910",
+   "example": {
+    "jpn": "私は昨日夕飯を作った。",
+    "eng": "I cooked supper last night.",
+    "tatoeba": "156721"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "洋服",
+   "reading": "ようふく",
+   "romaji": "youfuku",
+   "wordType": "noun",
+   "english": "Western-style clothes (cf. traditional Japanese clothes)",
+   "common": true,
+   "jmdictId": "1546020",
+   "example": {
+    "jpn": "お前に新しい洋服を作ってあげよう。",
+    "eng": "I will make a new suit for you.",
+    "tatoeba": "226963"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "欲",
+   "reading": "よく",
+   "romaji": "yoku",
+   "wordType": "noun",
+   "english": "greed, craving, desire, appetite",
+   "common": true,
+   "jmdictId": "1547320",
+   "example": {
+    "jpn": "彼は欲の少ない人だ。",
+    "eng": "He is a man of few wants.",
+    "tatoeba": "99167"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "横",
+   "reading": "よこ",
+   "romaji": "yoko",
+   "wordType": "noun",
+   "english": "horizontal (as opposed to vertical), side-to-side (as opposed to front-to-back), width, breadth",
+   "common": true,
+   "jmdictId": "1180570",
+   "example": {
+    "jpn": "母親は赤ん坊をベッドに横にした。",
+    "eng": "The mother laid her baby on the bed.",
+    "tatoeba": "82787"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "ラジオ",
+   "reading": "ラジオ",
+   "romaji": "",
+   "wordType": "noun",
+   "english": "radio",
+   "common": true,
+   "jmdictId": "1138860",
+   "example": {
+    "jpn": "そのニュースはラジオで聞いたよ。",
+    "eng": "I heard the news on the radio.",
+    "tatoeba": "212803"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "留学生",
+   "reading": "りゅうがくせい",
+   "romaji": "ryuugakusei",
+   "wordType": "noun",
+   "english": "overseas student, exchange student",
+   "common": true,
+   "jmdictId": "1552750",
+   "example": {
+    "jpn": "３人の中国人留学生がその大学に入学が許された。",
+    "eng": "Three Chinese students were admitted to the college.",
+    "tatoeba": "235285"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "冷蔵庫",
+   "reading": "れいぞうこ",
+   "romaji": "reizouko",
+   "wordType": "noun",
+   "english": "refrigerator, fridge",
+   "common": true,
+   "jmdictId": "1557110",
+   "example": {
+    "jpn": "うちの冷蔵庫は故障している。",
+    "eng": "Our refrigerator is out of order.",
+    "tatoeba": "228151"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "レコード",
+   "reading": "レコード",
+   "romaji": "",
+   "wordType": "noun",
+   "english": "(phonograph) record, record (esp. in sports), record (data structure)",
+   "common": true,
+   "jmdictId": "1144940",
+   "example": {
+    "jpn": "ＣＤはすっかりレコードに取って代わった。",
+    "eng": "Compact discs have entirely taken the place of phonograph records.",
+    "tatoeba": "234862"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "廊下",
+   "reading": "ろうか",
+   "romaji": "rouka",
+   "wordType": "noun",
+   "english": "corridor, hallway, passageway",
+   "common": true,
+   "jmdictId": "1560670",
+   "example": {
+    "jpn": "「学園の廊下で、濃厚なキスシーン・・・聞いたぞ聞いたぞ」「濃厚じゃなーい！話に尾ひれ付いてるって・・・」",
+    "eng": "\"A passionate kiss scene in a school corridor ... I've heard all about it!\" \"It wasn't passionate! That's an exaggeration...\"",
+    "tatoeba": "77000"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "Ｙシャツ",
+   "reading": "ワイシャツ",
+   "romaji": "",
+   "wordType": "noun",
+   "english": "(formal) shirt, dress shirt, business shirt, button-up shirt",
+   "common": true,
+   "jmdictId": "1148640",
+   "example": {
+    "jpn": "このワイシャツは首まわりが合わない。",
+    "eng": "This shirt doesn't fit me round the neck.",
+    "tatoeba": "222985"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "渡す",
+   "reading": "わたす",
+   "romaji": "watasu",
+   "wordType": "verb",
+   "english": "to ferry across (e.g. a river), to carry across, to traverse, to lay across",
+   "common": true,
+   "jmdictId": "1444610",
+   "example": {
+    "jpn": "走者がリレーでバトンを渡さなければなりません。",
+    "eng": "A runner must pass the baton in a relay race.",
+    "tatoeba": "192496"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "ああ",
+   "reading": "ああ",
+   "romaji": "aa",
+   "wordType": "adverb",
+   "english": "like that, so",
+   "common": true,
+   "jmdictId": "2085080",
+   "example": {
+    "jpn": "ある人はこうだと言い、またある人はああだと言う。",
+    "eng": "One man says this, another that.",
+    "tatoeba": "229847"
+   },
+   "sources": [
+    "open-anki"
+   ]
+  },
+  {
+   "written": "浴びる",
+   "reading": "あびる",
+   "romaji": "abiru",
+   "wordType": "verb",
+   "english": "to dash over oneself (e.g. water), to take (e.g. shower), to bask in (e.g. the sun), to bathe in",
+   "common": true,
+   "jmdictId": "1547450",
+   "example": {
+    "jpn": "屋根は日を浴びて輝いている。",
+    "eng": "The roof is shining in the sun.",
+    "tatoeba": "188430"
+   },
+   "sources": [
+    "tanos"
+   ]
+  },
+  {
+   "written": "浴びる",
+   "reading": "あびる",
+   "romaji": "abiru",
+   "wordType": "verb",
+   "english": "to dash over oneself (e.g. water), to take (e.g. shower), to bask in (e.g. the sun), to bathe in",
+   "common": true,
+   "jmdictId": "1547450",
+   "example": {
+    "jpn": "屋根は日を浴びて輝いている。",
+    "eng": "The roof is shining in the sun.",
+    "tatoeba": "188430"
+   },
+   "sources": [
+    "open-anki"
+   ]
+  },
+  {
+   "written": "椅子",
+   "reading": "いす",
+   "romaji": "isu",
+   "wordType": "noun",
+   "english": "chair, seat, stool, bench",
+   "common": true,
+   "jmdictId": "1157070",
+   "example": {
+    "jpn": "ちょっと椅子をずらしてくれない？",
+    "eng": "Could you move the chair a bit?",
+    "tatoeba": "202860"
+   },
+   "sources": [
+    "open-anki"
+   ]
+  },
+  {
+   "written": "一番",
+   "reading": "いちばん",
+   "romaji": "ichiban",
+   "wordType": "noun",
+   "english": "number one, first, first place, best",
+   "common": true,
+   "jmdictId": "1165970",
+   "example": {
+    "jpn": "このネクタイにしましょう、一番よさそうだから。",
+    "eng": "I will take this tie, as it seems to be the best.",
+    "tatoeba": "223406"
+   },
+   "sources": [
+    "tanos"
+   ]
+  },
+  {
+   "written": "一番",
+   "reading": "いちばん",
+   "romaji": "ichiban",
+   "wordType": "noun",
+   "english": "number one, first, first place, best",
+   "common": true,
+   "jmdictId": "1165970",
+   "example": {
+    "jpn": "このネクタイにしましょう、一番よさそうだから。",
+    "eng": "I will take this tie, as it seems to be the best.",
+    "tatoeba": "223406"
+   },
+   "sources": [
+    "open-anki"
+   ]
+  },
+  {
+   "written": "色々",
+   "reading": "いろいろ",
+   "romaji": "iroiro",
+   "wordType": "na-adjective",
+   "english": "various, a variety of, all sorts of, many (different)",
+   "common": true,
+   "jmdictId": "1587850",
+   "example": {
+    "jpn": "いろいろな国へ行ったがやっぱり日本が一番いい。",
+    "eng": "I've visited many countries, but I like Japan best of all.",
+    "tatoeba": "228437"
+   },
+   "sources": [
+    "tanos"
+   ]
+  },
+  {
+   "written": "色々",
+   "reading": "いろいろ",
+   "romaji": "iroiro",
+   "wordType": "na-adjective",
+   "english": "various, a variety of, all sorts of, many (different)",
+   "common": true,
+   "jmdictId": "1587850",
+   "example": {
+    "jpn": "いろいろな国へ行ったがやっぱり日本が一番いい。",
+    "eng": "I've visited many countries, but I like Japan best of all.",
+    "tatoeba": "228437"
+   },
+   "sources": [
+    "open-anki"
+   ]
+  },
+  {
+   "written": "家",
+   "reading": "うち",
+   "romaji": "uchi",
+   "wordType": "noun",
+   "english": "one's house, one's home, one's family, one's household",
+   "common": true,
+   "jmdictId": "1191740",
+   "example": {
+    "jpn": "家へついたら電話が鳴っていた。",
+    "eng": "The telephone was ringing when I got home.",
+    "tatoeba": "187003"
+   },
+   "sources": [
+    "open-anki"
+   ]
+  },
+  {
+   "written": "煩い",
+   "reading": "うるさい",
+   "romaji": "urusai",
+   "wordType": "i-adjective",
+   "english": "noisy, loud, annoying, troublesome",
+   "common": true,
+   "jmdictId": "1481920",
+   "example": {
+    "jpn": "隣の部屋がうるさいのです。",
+    "eng": "It's noisy next door.",
+    "tatoeba": "77761"
+   },
+   "sources": [
+    "tanos"
+   ]
+  },
+  {
+   "written": "煩い",
+   "reading": "うるさい",
+   "romaji": "urusai",
+   "wordType": "i-adjective",
+   "english": "noisy, loud, annoying, troublesome",
+   "common": true,
+   "jmdictId": "1481920",
+   "example": {
+    "jpn": "隣の部屋がうるさいのです。",
+    "eng": "It's noisy next door.",
+    "tatoeba": "77761"
+   },
+   "sources": [
+    "open-anki"
+   ]
+  },
+  {
+   "written": "緒",
+   "reading": "お",
+   "romaji": "o",
+   "wordType": "noun",
+   "english": "cord, strap, thong, string (of a musical instrument, bow, etc.)",
+   "common": true,
+   "jmdictId": "1343610",
+   "example": {
+    "jpn": "勝って兜の緒を締めよ。",
+    "eng": "You must keep up your guard even after a victory.",
+    "tatoeba": "147195"
+   },
+   "sources": [
+    "open-anki"
+   ]
+  },
+  {
+   "written": "一昨年",
+   "reading": "おととし",
+   "romaji": "ototoshi",
+   "wordType": "noun",
+   "english": "year before last",
+   "common": true,
+   "jmdictId": "1576060",
+   "example": {
+    "jpn": "彼女は、一昨年よりもはるかに暮らし向きがよい。",
+    "eng": "She's far better off than she was the year before last.",
+    "tatoeba": "93768"
+   },
+   "sources": [
+    "tanos"
+   ]
+  },
+  {
+   "written": "一昨年",
+   "reading": "おととし",
+   "romaji": "ototoshi",
+   "wordType": "noun",
+   "english": "year before last",
+   "common": true,
+   "jmdictId": "1576060",
+   "example": {
+    "jpn": "彼女は、一昨年よりもはるかに暮らし向きがよい。",
+    "eng": "She's far better off than she was the year before last.",
+    "tatoeba": "93768"
+   },
+   "sources": [
+    "open-anki"
+   ]
+  },
+  {
+   "written": "お腹",
+   "reading": "おなか",
+   "romaji": "onaka",
+   "wordType": "noun",
+   "english": "belly, abdomen, stomach",
+   "common": true,
+   "jmdictId": "1002610",
+   "example": {
+    "jpn": "いいえ、結構です。お腹が一杯ですから。",
+    "eng": "No, thank you. I've had enough.",
+    "tatoeba": "229459"
+   },
+   "sources": [
+    "tanos"
+   ]
+  },
+  {
+   "written": "お腹",
+   "reading": "おなか",
+   "romaji": "onaka",
+   "wordType": "noun",
+   "english": "belly, abdomen, stomach",
+   "common": true,
+   "jmdictId": "1002610",
+   "example": {
+    "jpn": "いいえ、結構です。お腹が一杯ですから。",
+    "eng": "No, thank you. I've had enough.",
+    "tatoeba": "229459"
+   },
+   "sources": [
+    "open-anki"
+   ]
+  },
+  {
+   "written": "回",
+   "reading": "かい",
+   "romaji": "kai",
+   "wordType": "counter",
+   "english": "counter for occurrences, a time, an instance, inning (baseball)",
+   "common": true,
+   "jmdictId": "1199330",
+   "example": {
+    "jpn": "新種の稲によっては年に２、３回収穫できる物もある。",
+    "eng": "Some new kinds of rice can be harvested two or three times a year.",
+    "tatoeba": "145265"
+   },
+   "sources": [
+    "open-anki"
+   ]
+  },
+  {
+   "written": "階",
+   "reading": "かい",
+   "romaji": "kai",
+   "wordType": "noun",
+   "english": "storey, story, floor, stairs",
+   "common": true,
+   "jmdictId": "1203020",
+   "example": {
+    "jpn": "それはもう一つ下の階ですよ。",
+    "eng": "That's one level down.",
+    "tatoeba": "205370"
+   },
+   "sources": [
+    "open-anki"
+   ]
+  },
+  {
+   "written": "掛ける",
+   "reading": "かける",
+   "romaji": "kakeru",
+   "wordType": "verb",
+   "english": "to hang up (e.g. a coat, a picture on the wall), to let hang, to suspend (from), to hoist (e.g. sail)",
+   "common": true,
+   "jmdictId": "1207610",
+   "example": {
+    "jpn": "コートをハンガーに掛けておきなさい。",
+    "eng": "Put your coat on a hanger.",
+    "tatoeba": "224960"
+   },
+   "sources": [
+    "open-anki"
+   ]
+  },
+  {
+   "written": "被る",
+   "reading": "かぶる",
+   "romaji": "kaburu",
+   "wordType": "verb",
+   "english": "to put on (one's head), to wear, to have on, to pull over (one's head)",
+   "common": true,
+   "jmdictId": "1484330",
+   "example": {
+    "jpn": "「白い帽子をかぶっている男の人は誰ですか」と私は彼女に言った。",
+    "eng": "I asked her who the man wearing the white hat was.",
+    "tatoeba": "236204"
+   },
+   "sources": [
+    "open-anki"
+   ]
+  },
+  {
+   "written": "がる",
+   "reading": "がる",
+   "romaji": "garu",
+   "wordType": "verb",
+   "english": "to show signs of being, to feel, to think, to behave as if one were",
+   "common": true,
+   "jmdictId": "1631750",
+   "example": {
+    "jpn": "私が早く去るので彼らは残念がった。",
+    "eng": "My leaving early made them feel sorry.",
+    "tatoeba": "167603"
+   },
+   "sources": [
+    "open-anki"
+   ]
+  },
+  {
+   "written": "川",
+   "reading": "かわ",
+   "romaji": "kawa",
+   "wordType": "noun",
+   "english": "river, stream, River, the ... river",
+   "common": true,
+   "jmdictId": "1390020",
+   "example": {
+    "jpn": "この川はあの川の３倍長い。",
+    "eng": "This river is three times longer than that one.",
+    "tatoeba": "220818"
+   },
+   "sources": [
+    "tanos"
+   ]
+  },
+  {
+   "written": "側",
+   "reading": "がわ",
+   "romaji": "gawa",
+   "wordType": "noun",
+   "english": "side (of something, or taking someone's side), part, (watch) case",
+   "common": true,
+   "jmdictId": "1581310",
+   "example": {
+    "jpn": "こちら側でかんでもいいですか。",
+    "eng": "Can I chew on this side?",
+    "tatoeba": "224142"
+   },
+   "sources": [
+    "open-anki"
+   ]
+  },
+  {
+   "written": "可愛い",
+   "reading": "かわいい",
+   "romaji": "kawaii",
+   "wordType": "i-adjective",
+   "english": "cute, adorable, charming, lovely",
+   "common": true,
+   "jmdictId": "1577200",
+   "example": {
+    "jpn": "この世にかわいい子はただ一人、母親にとってはそれはわが子。",
+    "eng": "There's only one pretty child in the world, and every mother has it.",
+    "tatoeba": "220945"
+   },
+   "sources": [
+    "tanos"
+   ]
+  },
+  {
+   "written": "可愛い",
+   "reading": "かわいい",
+   "romaji": "kawaii",
+   "wordType": "i-adjective",
+   "english": "cute, adorable, charming, lovely",
+   "common": true,
+   "jmdictId": "1577200",
+   "example": {
+    "jpn": "この世にかわいい子はただ一人、母親にとってはそれはわが子。",
+    "eng": "There's only one pretty child in the world, and every mother has it.",
+    "tatoeba": "220945"
+   },
+   "sources": [
+    "open-anki"
+   ]
+  },
+  {
+   "written": "瓩",
+   "reading": "キログラム",
+   "romaji": "",
+   "wordType": "noun",
+   "english": "kilogram, kilogramme",
+   "common": true,
+   "jmdictId": "1042620",
+   "example": {
+    "jpn": "私の体重は５８キログラムです。",
+    "eng": "My weight is 58 kilograms.",
+    "tatoeba": "163114"
+   },
+   "sources": [
+    "tanos"
+   ]
+  },
+  {
+   "written": "瓩",
+   "reading": "キログラム",
+   "romaji": "",
+   "wordType": "noun",
+   "english": "kilogram, kilogramme",
+   "common": true,
+   "jmdictId": "1042620",
+   "example": {
+    "jpn": "私の体重は５８キログラムです。",
+    "eng": "My weight is 58 kilograms.",
+    "tatoeba": "163114"
+   },
+   "sources": [
+    "tanos"
+   ]
+  },
+  {
+   "written": "粁",
+   "reading": "キロメートル",
+   "romaji": "",
+   "wordType": "noun",
+   "english": "kilometer, kilometre",
+   "common": true,
+   "jmdictId": "1042650",
+   "example": {
+    "jpn": "その湖は周囲が５キロメートルある。",
+    "eng": "The lake is five kilometers round.",
+    "tatoeba": "210850"
+   },
+   "sources": [
+    "tanos"
+   ]
+  },
+  {
+   "written": "粁",
+   "reading": "キロメートル",
+   "romaji": "",
+   "wordType": "noun",
+   "english": "kilometer, kilometre",
+   "common": true,
+   "jmdictId": "1042650",
+   "example": {
+    "jpn": "その湖は周囲が５キロメートルある。",
+    "eng": "The lake is five kilometers round.",
+    "tatoeba": "210850"
+   },
+   "sources": [
+    "tanos"
+   ]
+  },
+  {
+   "written": "結婚",
+   "reading": "けっこん",
+   "romaji": "kekkon",
+   "wordType": "noun",
+   "english": "marriage",
+   "common": true,
+   "jmdictId": "1254790",
+   "example": {
+    "jpn": "結婚の申し込みが殺到した。",
+    "eng": "Marriage proposals flooded in.",
+    "tatoeba": "175753"
+   },
+   "sources": [
+    "tanos"
+   ]
+  },
+  {
+   "written": "個",
+   "reading": "こ",
+   "romaji": "ko",
+   "wordType": "counter",
+   "english": "counter for (small) things or pieces, counter for military units, (an) individual, one person",
+   "common": true,
+   "jmdictId": "1264740",
+   "example": {
+    "jpn": "この懐中電灯は２個の電池が必要だ。",
+    "eng": "This flashlight needs two batteries.",
+    "tatoeba": "222655"
+   },
+   "sources": [
+    "open-anki"
+   ]
+  },
+  {
+   "written": "歳",
+   "reading": "さい",
+   "romaji": "sai",
+   "wordType": "counter",
+   "english": "... years old, age (of) ...",
+   "common": true,
+   "jmdictId": "1294940",
+   "example": {
+    "jpn": "「１７歳の時スクーナー船で地中海を航海したわ」彼女はゆっくりと注意深く言う。",
+    "eng": "\"I sailed around the Mediterranean in a schooner when I was seventeen,\" she recited slowly and carefully.",
+    "tatoeba": "237575"
+   },
+   "sources": [
+    "open-anki"
+   ]
+  },
+  {
+   "written": "冊",
+   "reading": "さつ",
+   "romaji": "satsu",
+   "wordType": "counter",
+   "english": "counter for books, volume",
+   "common": true,
+   "jmdictId": "1298520",
+   "example": {
+    "jpn": "ポール、8冊までなら借りられるからね。",
+    "eng": "Paul, we can borrow up to 8 books.",
+    "tatoeba": "75459"
+   },
+   "sources": [
+    "open-anki"
+   ]
+  },
+  {
+   "written": "時",
+   "reading": "じ",
+   "romaji": "ji",
+   "wordType": "noun",
+   "english": "hour, o'clock, (specified) time, when ...",
+   "common": true,
+   "jmdictId": "2020680",
+   "example": {
+    "jpn": "私は１０時ごろ寝ついた。",
+    "eng": "I went to sleep about 10 o'clock.",
+    "tatoeba": "162111"
+   },
+   "sources": [
+    "open-anki"
+   ]
+  },
+  {
+   "written": "じゃ",
+   "reading": "じゃ",
+   "romaji": "ja",
+   "wordType": "noun",
+   "english": "then, well, so, well then",
+   "common": true,
+   "jmdictId": "1005900",
+   "example": {
+    "jpn": "「安いですね。じゃあ10ヤードください」小娘が答えた。",
+    "eng": "\"That's cheap. I'll take ten yards,\" the girl answered.",
+    "tatoeba": "236405"
+   },
+   "sources": [
+    "tanos"
+   ]
+  },
+  {
+   "written": "蛇",
+   "reading": "じゃ",
+   "romaji": "ja",
+   "wordType": "noun",
+   "english": "snake, serpent, large snake",
+   "common": true,
+   "jmdictId": "1323350",
+   "example": {
+    "jpn": "「君はヘビが好きですか」「もちろん好きではありません」",
+    "eng": "\"Do you like snakes?\" \"Of course not.\"",
+    "tatoeba": "236347"
+   },
+   "sources": [
+    "tanos"
+   ]
+  },
+  {
+   "written": "じゃあ",
+   "reading": "じゃあ",
+   "romaji": "jaa",
+   "wordType": "noun",
+   "english": "then, well, so, well then",
+   "common": true,
+   "jmdictId": "1005900",
+   "example": {
+    "jpn": "「安いですね。じゃあ10ヤードください」小娘が答えた。",
+    "eng": "\"That's cheap. I'll take ten yards,\" the girl answered.",
+    "tatoeba": "236405"
+   },
+   "sources": [
+    "tanos"
+   ]
+  },
+  {
+   "written": "じゃあ",
+   "reading": "じゃあ",
+   "romaji": "jaa",
+   "wordType": "noun",
+   "english": "then, well, so, well then",
+   "common": true,
+   "jmdictId": "1005900",
+   "example": {
+    "jpn": "「安いですね。じゃあ10ヤードください」小娘が答えた。",
+    "eng": "\"That's cheap. I'll take ten yards,\" the girl answered.",
+    "tatoeba": "236405"
+   },
+   "sources": [
+    "tanos"
+   ]
+  },
+  {
+   "written": "醤油",
+   "reading": "しょうゆ",
+   "romaji": "shouyu",
+   "wordType": "noun",
+   "english": "soy sauce, soya sauce, shoyu",
+   "common": true,
+   "jmdictId": "1595020",
+   "example": {
+    "jpn": "同社は醤油その他の食品を生産する。",
+    "eng": "The company produces soy sauce and other food products.",
+    "tatoeba": "123656"
+   },
+   "sources": [
+    "tanos"
+   ]
+  },
+  {
+   "written": "醤油",
+   "reading": "しょうゆ",
+   "romaji": "shouyu",
+   "wordType": "noun",
+   "english": "soy sauce, soya sauce, shoyu",
+   "common": true,
+   "jmdictId": "1595020",
+   "example": {
+    "jpn": "同社は醤油その他の食品を生産する。",
+    "eng": "The company produces soy sauce and other food products.",
+    "tatoeba": "123656"
+   },
+   "sources": [
+    "open-anki"
+   ]
+  },
+  {
+   "written": "過ぎ",
+   "reading": "すぎ",
+   "romaji": "sugi",
+   "wordType": "noun",
+   "english": "past, after, too (much), over- (e.g. eating)",
+   "common": true,
+   "jmdictId": "1195960",
+   "example": {
+    "jpn": "１０時過ぎには電話をしないで下さい。",
+    "eng": "Don't call me up after ten o'clock.",
+    "tatoeba": "236041"
+   },
+   "sources": [
+    "open-anki"
+   ]
+  },
+  {
+   "written": "宛",
+   "reading": "ずつ",
+   "romaji": "zutsu",
+   "wordType": "noun",
+   "english": "apiece, each, at a time, piecemeal",
+   "common": true,
+   "jmdictId": "2006560",
+   "example": {
+    "jpn": "１つ１つの出願を１件ずつ考慮しなければならないだろう。",
+    "eng": "We will have to consider each application on a case-by-case basis.",
+    "tatoeba": "235852"
+   },
+   "sources": [
+    "open-anki"
+   ]
+  },
+  {
+   "written": "スリッパ",
+   "reading": "スリッパ",
+   "romaji": "",
+   "wordType": "noun",
+   "english": "slipper, slippers",
+   "common": true,
+   "jmdictId": "1073900",
+   "example": {
+    "jpn": "このスリッパに履きかえてください。",
+    "eng": "Please put on these slippers.",
+    "tatoeba": "223615"
+   },
+   "sources": [
+    "tanos"
+   ]
+  },
+  {
+   "written": "背",
+   "reading": "せ",
+   "romaji": "se",
+   "wordType": "noun",
+   "english": "back, reverse, rear side, back (e.g. of a chair)",
+   "common": true,
+   "jmdictId": "2147990",
+   "example": {
+    "jpn": "首や背に太陽が暑く照りつけた。",
+    "eng": "The sun beat down on our necks and backs.",
+    "tatoeba": "148429"
+   },
+   "sources": [
+    "tanos"
+   ]
+  },
+  {
+   "written": "石鹸",
+   "reading": "せっけん",
+   "romaji": "sekken",
+   "wordType": "noun",
+   "english": "soap",
+   "common": true,
+   "jmdictId": "1382590",
+   "example": {
+    "jpn": "ひげをそる前に石けんをつける。",
+    "eng": "I lather my face before shaving.",
+    "tatoeba": "197617"
+   },
+   "sources": [
+    "tanos"
+   ]
+  },
+  {
+   "written": "石鹸",
+   "reading": "せっけん",
+   "romaji": "sekken",
+   "wordType": "noun",
+   "english": "soap",
+   "common": true,
+   "jmdictId": "1382590",
+   "example": {
+    "jpn": "ひげをそる前に石けんをつける。",
+    "eng": "I lather my face before shaving.",
+    "tatoeba": "197617"
+   },
+   "sources": [
+    "open-anki"
+   ]
+  },
+  {
+   "written": "然うして",
+   "reading": "そうして",
+   "romaji": "soushite",
+   "wordType": "noun",
+   "english": "and, like that",
+   "common": true,
+   "jmdictId": "1612860",
+   "example": {
+    "jpn": "そうしてくれて君は親切ですね。",
+    "eng": "It is kind of you to do so.",
+    "tatoeba": "213882"
+   },
+   "sources": [
+    "tanos"
+   ]
+  },
+  {
+   "written": "然うして",
+   "reading": "そうして",
+   "romaji": "soushite",
+   "wordType": "noun",
+   "english": "and, like that",
+   "common": true,
+   "jmdictId": "1612860",
+   "example": {
+    "jpn": "そうしてくれて君は親切ですね。",
+    "eng": "It is kind of you to do so.",
+    "tatoeba": "213882"
+   },
+   "sources": [
+    "tanos"
+   ]
+  },
+  {
+   "written": "而して",
+   "reading": "そして",
+   "romaji": "soshite",
+   "wordType": "noun",
+   "english": "and, and then, thus, and now",
+   "common": true,
+   "jmdictId": "1006730",
+   "example": {
+    "jpn": "私は京都と、そして奈良にも訪れる計画を立てている。",
+    "eng": "I am planning to visit Kyoto, and Nara as well.",
+    "tatoeba": "157634"
+   },
+   "sources": [
+    "tanos"
+   ]
+  },
+  {
+   "written": "而して",
+   "reading": "そして",
+   "romaji": "soshite",
+   "wordType": "noun",
+   "english": "and, and then, thus, and now",
+   "common": true,
+   "jmdictId": "1006730",
+   "example": {
+    "jpn": "私は京都と、そして奈良にも訪れる計画を立てている。",
+    "eng": "I am planning to visit Kyoto, and Nara as well.",
+    "tatoeba": "157634"
+   },
+   "sources": [
+    "tanos"
+   ]
+  },
+  {
+   "written": "丈",
+   "reading": "だけ",
+   "romaji": "dake",
+   "wordType": "noun",
+   "english": "only, just, merely, simply",
+   "common": true,
+   "jmdictId": "1007340",
+   "example": {
+    "jpn": "来たのはメアリーだけだった。",
+    "eng": "No one came except Mary.",
+    "tatoeba": "78728"
+   },
+   "sources": [
+    "open-anki"
+   ]
+  },
+  {
+   "written": "多分",
+   "reading": "たぶん",
+   "romaji": "tabun",
+   "wordType": "adverb",
+   "english": "probably, likely, perhaps, maybe",
+   "common": true,
+   "jmdictId": "1407980",
+   "example": {
+    "jpn": "君にはたぶんみんなわかっていることでしょう。",
+    "eng": "I expect you know all about it.",
+    "tatoeba": "178680"
+   },
+   "sources": [
+    "open-anki"
+   ]
+  },
+  {
+   "written": "誰か",
+   "reading": "だれか",
+   "romaji": "dareka",
+   "wordType": "pronoun",
+   "english": "someone, somebody",
+   "common": true,
+   "jmdictId": "1416840",
+   "example": {
+    "jpn": "「誰か車の中にいるのですか」「トムがいます」",
+    "eng": "\"Who is in the car?\" \"Tom is.\"",
+    "tatoeba": "236233"
+   },
+   "sources": [
+    "tanos"
+   ]
+  },
+  {
+   "written": "誰か",
+   "reading": "だれか",
+   "romaji": "dareka",
+   "wordType": "pronoun",
+   "english": "someone, somebody",
+   "common": true,
+   "jmdictId": "1416840",
+   "example": {
+    "jpn": "「誰か車の中にいるのですか」「トムがいます」",
+    "eng": "\"Who is in the car?\" \"Tom is.\"",
+    "tatoeba": "236233"
+   },
+   "sources": [
+    "open-anki"
+   ]
+  },
+  {
+   "written": "段々",
+   "reading": "だんだん",
+   "romaji": "dandan",
+   "wordType": "adverb",
+   "english": "gradually, by degrees, little by little, more and more",
+   "common": true,
+   "jmdictId": "1597350",
+   "example": {
+    "jpn": "だんだん暖かくなります。",
+    "eng": "It will get warmer and warmer.",
+    "tatoeba": "203062"
+   },
+   "sources": [
+    "open-anki"
+   ]
+  },
+  {
+   "written": "茶碗",
+   "reading": "ちゃわん",
+   "romaji": "chawan",
+   "wordType": "noun",
+   "english": "rice bowl, tea cup, teacup",
+   "common": true,
+   "jmdictId": "1597530",
+   "example": {
+    "jpn": "彼は茶碗を床にたたきつけた。",
+    "eng": "He dashed the cup on the floor.",
+    "tatoeba": "102177"
+   },
+   "sources": [
+    "tanos"
+   ]
+  },
+  {
+   "written": "茶碗",
+   "reading": "ちゃわん",
+   "romaji": "chawan",
+   "wordType": "noun",
+   "english": "rice bowl, tea cup, teacup",
+   "common": true,
+   "jmdictId": "1597530",
+   "example": {
+    "jpn": "彼は茶碗を床にたたきつけた。",
+    "eng": "He dashed the cup on the floor.",
+    "tatoeba": "102177"
+   },
+   "sources": [
+    "open-anki"
+   ]
+  },
+  {
+   "written": "中",
+   "reading": "ちゅう",
+   "romaji": "chuu",
+   "wordType": "noun",
+   "english": "medium (size), average (grade, level, etc.), middle, in",
+   "common": true,
+   "jmdictId": "1620400",
+   "example": {
+    "jpn": "空気中のごく小さい粒子がガンのもとになり得る。",
+    "eng": "Tiny particles in the air can cause cancer.",
+    "tatoeba": "179369"
+   },
+   "sources": [
+    "open-anki"
+   ]
+  },
+  {
+   "written": "丁度",
+   "reading": "ちょうど",
+   "romaji": "choudo",
+   "wordType": "adverb",
+   "english": "exactly, precisely, just, right",
+   "common": true,
+   "jmdictId": "1427340",
+   "example": {
+    "jpn": "私達はちょうど食事を終えた所です。",
+    "eng": "We've just finished breakfast.",
+    "tatoeba": "151745"
+   },
+   "sources": [
+    "tanos"
+   ]
+  },
+  {
+   "written": "丁度",
+   "reading": "ちょうど",
+   "romaji": "choudo",
+   "wordType": "adverb",
+   "english": "exactly, precisely, just, right",
+   "common": true,
+   "jmdictId": "1427340",
+   "example": {
+    "jpn": "私達はちょうど食事を終えた所です。",
+    "eng": "We've just finished breakfast.",
+    "tatoeba": "151745"
+   },
+   "sources": [
+    "open-anki"
+   ]
+  },
+  {
+   "written": "度",
+   "reading": "ど",
+   "romaji": "do",
+   "wordType": "noun",
+   "english": "degree (angle, temperature, scale, etc.), counter for occurrences, strength (of glasses), glasses prescription",
+   "common": true,
+   "jmdictId": "1445160",
+   "example": {
+    "jpn": "水は摂氏０度で凍る。",
+    "eng": "Water freezes at 0 degrees Centigrade.",
+    "tatoeba": "143743"
+   },
+   "sources": [
+    "open-anki"
+   ]
+  },
+  {
+   "written": "時",
+   "reading": "とき",
+   "romaji": "toki",
+   "wordType": "noun",
+   "english": "time, hour, moment, occasion",
+   "common": true,
+   "jmdictId": "1315840",
+   "example": {
+    "jpn": "１２才の時彼は声変わりした。",
+    "eng": "His voice broke when he was twelve.",
+    "tatoeba": "235958"
+   },
+   "sources": [
+    "open-anki"
+   ]
+  },
+  {
+   "written": "鶏肉",
+   "reading": "とりにく",
+   "romaji": "toriniku",
+   "wordType": "noun",
+   "english": "chicken meat, fowl, poultry, bird meat",
+   "common": true,
+   "jmdictId": "1253020",
+   "example": {
+    "jpn": "鶏肉を３ポンド分ください。",
+    "eng": "I'd like three pounds of chicken.",
+    "tatoeba": "125767"
+   },
+   "sources": [
+    "tanos"
+   ]
+  },
+  {
+   "written": "鶏肉",
+   "reading": "とりにく",
+   "romaji": "toriniku",
+   "wordType": "noun",
+   "english": "chicken meat, fowl, poultry, bird meat",
+   "common": true,
+   "jmdictId": "1253020",
+   "example": {
+    "jpn": "鶏肉を３ポンド分ください。",
+    "eng": "I'd like three pounds of chicken.",
+    "tatoeba": "125767"
+   },
+   "sources": [
+    "open-anki"
+   ]
+  },
+  {
+   "written": "どんな",
+   "reading": "どんな",
+   "romaji": "donna",
+   "wordType": "noun",
+   "english": "what kind of, what sort of, what, no matter what (kind of)",
+   "common": true,
+   "jmdictId": "1009330",
+   "example": {
+    "jpn": "どんな所がお好きですか。",
+    "eng": "What kind of places do you like?",
+    "tatoeba": "199407"
+   },
+   "sources": [
+    "open-anki"
+   ]
+  },
+  {
+   "written": "等",
+   "reading": "など",
+   "romaji": "nado",
+   "wordType": "noun",
+   "english": "et cetera, etc., and the like, and so forth",
+   "common": true,
+   "jmdictId": "1582300",
+   "example": {
+    "jpn": "２、４、６などは偶数です。",
+    "eng": "Two, four, six, etc. are even numbers.",
+    "tatoeba": "235605"
+   },
+   "sources": [
+    "tanos"
+   ]
+  },
+  {
+   "written": "等",
+   "reading": "など",
+   "romaji": "nado",
+   "wordType": "noun",
+   "english": "et cetera, etc., and the like, and so forth",
+   "common": true,
+   "jmdictId": "1582300",
+   "example": {
+    "jpn": "２、４、６などは偶数です。",
+    "eng": "Two, four, six, etc. are even numbers.",
+    "tatoeba": "235605"
+   },
+   "sources": [
+    "open-anki"
+   ]
+  },
+  {
+   "written": "何",
+   "reading": "なん",
+   "romaji": "nan",
+   "wordType": "pronoun",
+   "english": "what, how many, many, a lot of",
+   "common": true,
+   "jmdictId": "2846738",
+   "example": {
+    "jpn": "何と言ったら良いか分かりません。",
+    "eng": "I don't know what I should say.",
+    "tatoeba": "4711"
+   },
+   "sources": [
+    "tanos"
+   ]
+  },
+  {
+   "written": "日",
+   "reading": "にち",
+   "romaji": "nichi",
+   "wordType": "noun",
+   "english": "Sunday, nth day (of the month), counter for days, Japan",
+   "common": true,
+   "jmdictId": "2083100",
+   "example": {
+    "jpn": "土日月の午前１０時半から午後４時まで開館。",
+    "eng": "Open from 10:30am to 4pm on Sat, Sun, and Mon.",
+    "tatoeba": "74691"
+   },
+   "sources": [
+    "open-anki"
+   ]
+  },
+  {
+   "written": "人",
+   "reading": "にん",
+   "romaji": "nin",
+   "wordType": "counter",
+   "english": "counter for people",
+   "common": true,
+   "jmdictId": "2149890",
+   "example": {
+    "jpn": "２００人の人が昨年コレラで死んだ。",
+    "eng": "Two hundred people died of cholera last year.",
+    "tatoeba": "235600"
+   },
+   "sources": [
+    "open-anki"
+   ]
+  },
+  {
+   "written": "年",
+   "reading": "ねん",
+   "romaji": "nen",
+   "wordType": "noun",
+   "english": "year, counter for years (e.g. of an era), grades (e.g. school), period of an apprentice's contract (usu. ten years)",
+   "common": true,
+   "jmdictId": "2084840",
+   "example": {
+    "jpn": "カレンダーの日付は１９６４年９月２３日でした。",
+    "eng": "The date on the calendar was September 23, 1964.",
+    "tatoeba": "226136"
+   },
+   "sources": [
+    "open-anki"
+   ]
+  },
+  {
+   "written": "始め",
+   "reading": "はじめ",
+   "romaji": "hajime",
+   "wordType": "noun",
+   "english": "beginning, start, outset, opening",
+   "common": true,
+   "jmdictId": "1342540",
+   "example": {
+    "jpn": "旅行の初めの二日間は雨降りだった。",
+    "eng": "The first two days of my trip were rainy.",
+    "tatoeba": "162444"
+   },
+   "sources": [
+    "tanos"
+   ]
+  },
+  {
+   "written": "始め",
+   "reading": "はじめ",
+   "romaji": "hajime",
+   "wordType": "noun",
+   "english": "beginning, start, outset, opening",
+   "common": true,
+   "jmdictId": "1342540",
+   "example": {
+    "jpn": "旅行の初めの二日間は雨降りだった。",
+    "eng": "The first two days of my trip were rainy.",
+    "tatoeba": "162444"
+   },
+   "sources": [
+    "tanos"
+   ]
+  },
+  {
+   "written": "始め",
+   "reading": "はじめ",
+   "romaji": "hajime",
+   "wordType": "noun",
+   "english": "beginning, start, outset, opening",
+   "common": true,
+   "jmdictId": "1342540",
+   "example": {
+    "jpn": "旅行の初めの二日間は雨降りだった。",
+    "eng": "The first two days of my trip were rainy.",
+    "tatoeba": "162444"
+   },
+   "sources": [
+    "open-anki"
+   ]
+  },
+  {
+   "written": "番",
+   "reading": "ばん",
+   "romaji": "ban",
+   "wordType": "noun",
+   "english": "number (in a series), (one's) turn, watch, guard",
+   "common": true,
+   "jmdictId": "2022640",
+   "example": {
+    "jpn": "私の自宅の電話番号は市外局番が２０１で１２３ー４５６７番です。",
+    "eng": "My home phone number is, area code two-oh-one, one-two-three, four-five-six-seven.",
+    "tatoeba": "163470"
+   },
+   "sources": [
+    "open-anki"
+   ]
+  },
+  {
+   "written": "匹",
+   "reading": "ひき",
+   "romaji": "hiki",
+   "wordType": "counter",
+   "english": "counter for small animals, counter for rolls of cloth (two han in size), counter for horses, roll of cloth",
+   "common": true,
+   "jmdictId": "1583370",
+   "example": {
+    "jpn": "私たちは１匹の犬と１匹の猫を飼っている。",
+    "eng": "We own a dog and a cat.",
+    "tatoeba": "166694"
+   },
+   "sources": [
+    "open-anki"
+   ]
+  },
+  {
+   "written": "本当",
+   "reading": "ほんとう",
+   "romaji": "hontou",
+   "wordType": "noun",
+   "english": "truth, reality, actuality, fact",
+   "common": true,
+   "jmdictId": "1523060",
+   "example": {
+    "jpn": "その悪い知らせは残念ながら本当だ。",
+    "eng": "The bad news is unfortunately true.",
+    "tatoeba": "212401"
+   },
+   "sources": [
+    "open-anki"
+   ]
+  },
+  {
+   "written": "毎月",
+   "reading": "まいげつ",
+   "romaji": "maigetsu",
+   "wordType": "adverb",
+   "english": "every month, each month, monthly",
+   "common": true,
+   "jmdictId": "1584350",
+   "example": {
+    "jpn": "私は両親には必ず毎月手紙を書きます。",
+    "eng": "I never fail to write to my parents every month.",
+    "tatoeba": "152325"
+   },
+   "sources": [
+    "tanos"
+   ]
+  },
+  {
+   "written": "毎年",
+   "reading": "まいねん",
+   "romaji": "mainen",
+   "wordType": "adverb",
+   "english": "every year, yearly, annually",
+   "common": true,
+   "jmdictId": "1584360",
+   "example": {
+    "jpn": "彼は毎年軽井沢へ行く。",
+    "eng": "He goes to Karuizawa every year.",
+    "tatoeba": "99770"
+   },
+   "sources": [
+    "tanos"
+   ]
+  },
+  {
+   "written": "丸い",
+   "reading": "まるい",
+   "romaji": "marui",
+   "wordType": "i-adjective",
+   "english": "round, circular, spherical, curved",
+   "common": true,
+   "jmdictId": "1604230",
+   "example": {
+    "jpn": "コロンブスは地球が丸いと信じていた。",
+    "eng": "Columbus believed that the earth was round.",
+    "tatoeba": "217547"
+   },
+   "sources": [
+    "tanos"
+   ]
+  },
+  {
+   "written": "丸い",
+   "reading": "まるい",
+   "romaji": "marui",
+   "wordType": "i-adjective",
+   "english": "round, circular, spherical, curved",
+   "common": true,
+   "jmdictId": "1604230",
+   "example": {
+    "jpn": "コロンブスは地球が丸いと信じていた。",
+    "eng": "Columbus believed that the earth was round.",
+    "tatoeba": "217547"
+   },
+   "sources": [
+    "tanos"
+   ]
+  },
+  {
+   "written": "丸い",
+   "reading": "まるい",
+   "romaji": "marui",
+   "wordType": "i-adjective",
+   "english": "round, circular, spherical, curved",
+   "common": true,
+   "jmdictId": "1604230",
+   "example": {
+    "jpn": "コロンブスは地球が丸いと信じていた。",
+    "eng": "Columbus believed that the earth was round.",
+    "tatoeba": "217547"
+   },
+   "sources": [
+    "open-anki"
+   ]
+  },
+  {
+   "written": "もしもし",
+   "reading": "もしもし",
+   "romaji": "moshimoshi",
+   "wordType": "interjection",
+   "english": "hello (e.g. on phone), excuse me! (when calling out to someone)",
+   "common": true,
+   "jmdictId": "1012550",
+   "example": {
+    "jpn": "もしもし、後藤さんのお宅ですか。",
+    "eng": "Hello. Is this the Gotos' residence?",
+    "tatoeba": "193807"
+   },
+   "sources": [
+    "open-anki"
+   ]
+  },
+  {
+   "written": "八",
+   "reading": "や",
+   "romaji": "ya",
+   "wordType": "noun",
+   "english": "eight, 8",
+   "common": true,
+   "jmdictId": "1583090",
+   "example": {
+    "jpn": "会は八時に解散した。",
+    "eng": "The meeting broke up at eight.",
+    "tatoeba": "185431"
+   },
+   "sources": [
+    "open-anki"
+   ]
+  },
+  {
+   "written": "行く",
+   "reading": "ゆく",
+   "romaji": "yuku",
+   "wordType": "verb",
+   "english": "to go, to move (towards), to head (towards), to leave (for)",
+   "common": true,
+   "jmdictId": "1578850",
+   "example": {
+    "jpn": "お母さん、泳ぎに行ってもいい？",
+    "eng": "Can I go swimming, Mother?",
+    "tatoeba": "226648"
+   },
+   "sources": [
+    "tanos"
+   ]
+  },
+  {
+   "written": "より",
+   "reading": "より",
+   "romaji": "yori",
+   "wordType": "noun",
+   "english": "than, rather than, instead of, over",
+   "common": true,
+   "jmdictId": "1013190",
+   "example": {
+    "jpn": "柔道では力より技のほうが大切である。",
+    "eng": "In judo, technique is more important than strength.",
+    "tatoeba": "147997"
+   },
+   "sources": [
+    "tanos"
+   ]
+  },
+  {
+   "written": "字引",
+   "reading": "じびき",
+   "romaji": "jibiki",
+   "wordType": "noun",
+   "english": "dictionary",
+   "common": true,
+   "jmdictId": "1315140",
+   "example": null,
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "白",
+   "reading": "しろ",
+   "romaji": "shiro",
+   "wordType": "noun",
+   "english": "white, innocence, innocent person, blank space",
+   "common": true,
+   "jmdictId": "1474900",
+   "example": null,
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "煙草",
+   "reading": "タバコ",
+   "romaji": "",
+   "wordType": "noun",
+   "english": "tobacco, cigarette, cigar, tobacco plant (Nicotiana tabacum)",
+   "common": true,
+   "jmdictId": "1597150",
+   "example": null,
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "股",
+   "reading": "また",
+   "romaji": "mata",
+   "wordType": "noun",
+   "english": "groin, thigh, crotch, crutch",
+   "common": true,
+   "jmdictId": "1267460",
+   "example": null,
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "零",
+   "reading": "れい",
+   "romaji": "rei",
+   "wordType": "noun",
+   "english": "zero, nought",
+   "common": true,
+   "jmdictId": "1557630",
+   "example": null,
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "岐路",
+   "reading": "きろ",
+   "romaji": "kiro",
+   "wordType": "noun",
+   "english": "forked road, crossroads",
+   "common": true,
+   "jmdictId": "1219840",
+   "example": null,
+   "sources": [
+    "tanos"
+   ]
+  },
+  {
+   "written": "岐路",
+   "reading": "きろ",
+   "romaji": "kiro",
+   "wordType": "noun",
+   "english": "forked road, crossroads",
+   "common": true,
+   "jmdictId": "1219840",
+   "example": null,
+   "sources": [
+    "tanos"
+   ]
+  },
+  {
+   "written": "岐路",
+   "reading": "きろ",
+   "romaji": "kiro",
+   "wordType": "noun",
+   "english": "forked road, crossroads",
+   "common": true,
+   "jmdictId": "1219840",
+   "example": null,
+   "sources": [
+    "tanos"
+   ]
+  },
+  {
+   "written": "五",
+   "reading": "ご",
+   "romaji": "go",
+   "wordType": "noun",
+   "english": "five, 5",
+   "common": true,
+   "jmdictId": "1268060",
+   "example": null,
+   "sources": [
+    "open-anki"
+   ]
+  },
+  {
+   "written": "週刊",
+   "reading": "しゅうかん",
+   "romaji": "shuukan",
+   "wordType": "noun",
+   "english": "weekly publication",
+   "common": true,
+   "jmdictId": "1333460",
+   "example": null,
+   "sources": [
+    "open-anki"
+   ]
+  },
+  {
+   "written": "人",
+   "reading": "じん",
+   "romaji": "jin",
+   "wordType": "noun",
+   "english": "-ian (e.g. Italian), -ite (e.g. Tokyoite), -er (e.g. performer, etc.), person working with ...",
+   "common": true,
+   "jmdictId": "1366410",
+   "example": null,
+   "sources": [
+    "open-anki"
+   ]
+  },
+  {
+   "written": "背",
+   "reading": "せい",
+   "romaji": "sei",
+   "wordType": "noun",
+   "english": "height, stature",
+   "common": true,
+   "jmdictId": "1472650",
+   "example": null,
+   "sources": [
+    "open-anki"
+   ]
+  },
+  {
+   "written": "ない",
+   "reading": "ない",
+   "romaji": "nai",
+   "wordType": "noun",
+   "english": "not",
+   "common": true,
+   "jmdictId": "2257550",
+   "example": null,
+   "sources": [
+    "open-anki"
+   ]
+  },
+  {
+   "written": "平仮名",
+   "reading": "ひらがな",
+   "romaji": "hiragana",
+   "wordType": "noun",
+   "english": "hiragana, cursive Japanese syllabary used primarily for native Japanese words (esp. function words, inflections, etc.)",
+   "common": true,
+   "jmdictId": "1507090",
+   "example": null,
+   "sources": [
+    "open-anki"
+   ]
+  },
+  {
+   "written": "本島",
+   "reading": "ほんとう",
+   "romaji": "hontou",
+   "wordType": "noun",
+   "english": "main island, this island",
+   "common": true,
+   "jmdictId": "1523040",
+   "example": null,
+   "sources": [
+    "tanos"
+   ]
+  },
+  {
+   "written": "宵",
+   "reading": "よい",
+   "romaji": "yoi",
+   "wordType": "noun",
+   "english": "evening, early night hours",
+   "common": true,
+   "jmdictId": "1347600",
+   "example": null,
+   "sources": [
+    "tanos"
+   ]
+  },
+  {
+   "written": "宵",
+   "reading": "よい",
+   "romaji": "yoi",
+   "wordType": "noun",
+   "english": "evening, early night hours",
+   "common": true,
+   "jmdictId": "1347600",
+   "example": null,
+   "sources": [
+    "tanos"
+   ]
+  },
+  {
+   "written": "ラジカセ",
+   "reading": "ラジカセ",
+   "romaji": "",
+   "wordType": "noun",
+   "english": "radio-cassette player",
+   "common": true,
+   "jmdictId": "1138960",
+   "example": null,
+   "sources": [
+    "tanos"
+   ]
+  },
+  {
+   "written": "片仮名",
+   "reading": "カタカナ",
+   "romaji": "",
+   "wordType": "noun",
+   "english": "katakana, angular Japanese syllabary used primarily for loanwords",
+   "common": true,
+   "jmdictId": "1511600",
+   "example": null,
+   "sources": [
+    "open-anki"
+   ]
+  },
+  {
+   "written": "架かる",
+   "reading": "かかる",
+   "romaji": "kakaru",
+   "wordType": "verb",
+   "english": "to span, to bridge, to cross, to straddle",
+   "common": false,
+   "jmdictId": "1193110",
+   "example": {
+    "jpn": "池には橋がかかっている。",
+    "eng": "There is a bridge over the pond.",
+    "tatoeba": "126791"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "お酒",
+   "reading": "おさけ",
+   "romaji": "osake",
+   "wordType": "noun",
+   "english": "alcohol, sake",
+   "common": false,
+   "jmdictId": "1329015",
+   "example": {
+    "jpn": "夫はたまに御酒をたしなみます。",
+    "eng": "My husband enjoys his glass once in a while.",
+    "tatoeba": "84998"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "お皿",
+   "reading": "おさら",
+   "romaji": "osara",
+   "wordType": "noun",
+   "english": "plate, dish",
+   "common": false,
+   "jmdictId": "1299685",
+   "example": {
+    "jpn": "給仕は新しいお皿を持ってきた。",
+    "eng": "The waiter brought a new plate.",
+    "tatoeba": "182363"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "テープレコーダー",
+   "reading": "テープレコーダー",
+   "romaji": "",
+   "wordType": "noun",
+   "english": "tape recorder",
+   "common": false,
+   "jmdictId": "1078810",
+   "example": {
+    "jpn": "このテープレコーダーは新しくない。",
+    "eng": "This tape recorder is not new.",
+    "tatoeba": "223518"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "伯母さん",
+   "reading": "おばさん",
+   "romaji": "obasan",
+   "wordType": "noun",
+   "english": "aunt",
+   "common": false,
+   "jmdictId": "2261500",
+   "example": {
+    "jpn": "叔母さんを訪ねた時はすごいごちそうだったね。",
+    "eng": "What a feast we had when we visited my aunt!",
+    "tatoeba": "227572"
+   },
+   "sources": [
+    "tanos"
+   ]
+  },
+  {
+   "written": "伯母さん",
+   "reading": "おばさん",
+   "romaji": "obasan",
+   "wordType": "noun",
+   "english": "aunt",
+   "common": false,
+   "jmdictId": "2261500",
+   "example": {
+    "jpn": "叔母さんを訪ねた時はすごいごちそうだったね。",
+    "eng": "What a feast we had when we visited my aunt!",
+    "tatoeba": "227572"
+   },
+   "sources": [
+    "tanos"
+   ]
+  },
+  {
+   "written": "伯母さん",
+   "reading": "おばさん",
+   "romaji": "obasan",
+   "wordType": "noun",
+   "english": "aunt",
+   "common": false,
+   "jmdictId": "2261500",
+   "example": {
+    "jpn": "叔母さんを訪ねた時はすごいごちそうだったね。",
+    "eng": "What a feast we had when we visited my aunt!",
+    "tatoeba": "227572"
+   },
+   "sources": [
+    "open-anki"
+   ]
+  },
+  {
+   "written": "割賦",
+   "reading": "かっぷ",
+   "romaji": "kappu",
+   "wordType": "noun",
+   "english": "allotment, quota, payment in installments, payment in instalments",
+   "common": false,
+   "jmdictId": "1577520",
+   "example": null,
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "殺陣",
+   "reading": "たて",
+   "romaji": "tate",
+   "wordType": "noun",
+   "english": "sword fight (in a film, play, etc.), stage combat, fight scene",
+   "common": false,
+   "jmdictId": "1299150",
+   "example": null,
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "出切る",
+   "reading": "できる",
+   "romaji": "dekiru",
+   "wordType": "verb",
+   "english": "to be out of, to have no more at hand",
+   "common": false,
+   "jmdictId": "1339500",
+   "example": null,
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "ＰＥＴ",
+   "reading": "ペット",
+   "romaji": "",
+   "wordType": "noun",
+   "english": "polyethylene terephthalate, PET, positron emission tomography, PET",
+   "common": false,
+   "jmdictId": "2189230",
+   "example": null,
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "ＰＥＮ",
+   "reading": "ペン",
+   "romaji": "",
+   "wordType": "noun",
+   "english": "International Association of Poets, Playwrights, Editors, Essayists and Novelists, PEN",
+   "common": false,
+   "jmdictId": "5000059",
+   "example": null,
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "リッパ",
+   "reading": "リッパ",
+   "romaji": "",
+   "wordType": "noun",
+   "english": "seam ripper, ripper (bulldozer attachment), ripper (software), rip saw (machine)",
+   "common": false,
+   "jmdictId": "2021190",
+   "example": null,
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "私",
+   "reading": "わたくし",
+   "romaji": "watakushi",
+   "wordType": "pronoun",
+   "english": "I, me, personal (affairs, etc.), private",
+   "common": false,
+   "jmdictId": "2842390",
+   "example": null,
+   "sources": [
+    "tanos",
+    "open-anki"
+   ]
+  },
+  {
+   "written": "イス",
+   "reading": "イス",
+   "romaji": "",
+   "wordType": "noun",
+   "english": "swords (suit)",
+   "common": false,
+   "jmdictId": "2848719",
+   "example": null,
+   "sources": [
+    "tanos"
+   ]
+  },
+  {
+   "written": "伯父さん",
+   "reading": "おじさん",
+   "romaji": "ojisan",
+   "wordType": "noun",
+   "english": "uncle, old man, mister, manybar goatfish (Parupeneus multifasciatus)",
+   "common": false,
+   "jmdictId": "2261490",
+   "example": null,
+   "sources": [
+    "tanos"
+   ]
+  },
+  {
+   "written": "伯父さん",
+   "reading": "おじさん",
+   "romaji": "ojisan",
+   "wordType": "noun",
+   "english": "uncle, old man, mister, manybar goatfish (Parupeneus multifasciatus)",
+   "common": false,
+   "jmdictId": "2261490",
+   "example": null,
+   "sources": [
+    "tanos"
+   ]
+  },
+  {
+   "written": "佳月",
+   "reading": "かげつ",
+   "romaji": "kagetsu",
+   "wordType": "noun",
+   "english": "good month, bright moon",
+   "common": false,
+   "jmdictId": "1189730",
+   "example": null,
+   "sources": [
+    "open-anki"
+   ]
+  },
+  {
+   "written": "裁ち",
+   "reading": "たち",
+   "romaji": "tachi",
+   "wordType": "noun",
+   "english": "cutting, cut",
+   "common": false,
+   "jmdictId": "1295950",
+   "example": null,
+   "sources": [
+    "open-anki"
+   ]
+  },
+  {
+   "written": "タブン",
+   "reading": "タブン",
+   "romaji": "",
+   "wordType": "noun",
+   "english": "tabun (nerve agent)",
+   "common": false,
+   "jmdictId": "2198520",
+   "example": null,
+   "sources": [
+    "tanos"
+   ]
+  },
+  {
+   "written": "だんだん",
+   "reading": "だんだん",
+   "romaji": "dandan",
+   "wordType": "interjection",
+   "english": "thank you",
+   "common": false,
+   "jmdictId": "2546180",
+   "example": null,
+   "sources": [
+    "tanos"
+   ]
+  },
+  {
+   "written": "ＮａＮ",
+   "reading": "ナン",
+   "romaji": "",
+   "wordType": "noun",
+   "english": "not a number, NaN",
+   "common": false,
+   "jmdictId": "2599470",
+   "example": null,
+   "sources": [
+    "open-anki"
+   ]
+  },
+  {
+   "written": "俸",
+   "reading": "ほう",
+   "romaji": "hou",
+   "wordType": "noun",
+   "english": "salary",
+   "common": false,
+   "jmdictId": "1515270",
+   "example": null,
+   "sources": [
+    "tanos"
+   ]
+  },
+  {
+   "written": "ほう",
+   "reading": "ほう",
+   "romaji": "hou",
+   "wordType": "interjection",
+   "english": "oh, ho, exclamation of surprise, admiration, etc., hoo (owl call)",
+   "common": false,
+   "jmdictId": "2771030",
+   "example": null,
+   "sources": [
+    "tanos"
+   ]
+  },
+  {
+   "written": "縒り",
+   "reading": "より",
+   "romaji": "yori",
+   "wordType": "noun",
+   "english": "twist, ply",
+   "common": false,
+   "jmdictId": "1955670",
+   "example": null,
+   "sources": [
+    "tanos"
+   ]
+  },
+  {
+   "written": "伯父さん",
+   "reading": "おじさん",
+   "romaji": "ojisan",
+   "wordType": "noun",
+   "english": "uncle, old man, mister, manybar goatfish (Parupeneus multifasciatus)",
+   "common": false,
+   "jmdictId": "2261490",
+   "example": null,
+   "sources": [
+    "open-anki"
+   ]
+  },
+  {
+   "written": "ラジオカセット",
+   "reading": "ラジオカセット",
+   "romaji": "",
+   "wordType": "noun",
+   "english": "radio-cassette, tape recorder",
+   "common": false,
+   "jmdictId": "1138900",
+   "example": null,
+   "sources": [
+    "tanos"
+   ]
+  }
+ ]
+}

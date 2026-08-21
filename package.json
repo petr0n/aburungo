@@ -22,7 +22,9 @@
     "jlpt:coverage": "node scripts/jlpt.mjs coverage",
     "jlpt:sentences": "node scripts/jlpt.mjs sentences",
     "ladder": "node scripts/ladder.mjs",
-    "reading": "node scripts/reading.mjs"
+    "reading": "node scripts/reading.mjs",
+    "aozora": "node scripts/aozora.mjs",
+    "vocab": "node scripts/vocab.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.105.4",
