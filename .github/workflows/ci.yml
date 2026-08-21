@@ -25,6 +25,17 @@ jobs:
         with:
           repository: petr0n/aburungo-design-system
           path: aburungo-design-system
+          # Pinned deliberately. Unpinned, this step took the design system's
+          # default branch, so a merge in that repo could turn this repo's CI
+          # red with no commit here -- which is exactly what happened on
+          # 2026-08-21, when the design system dropped 'recalled' from
+          # AnswerOutcome and three untouched files here stopped compiling.
+          # Bump this ref on purpose, as its own PR, so the upgrade is a
+          # decision with a diff rather than a surprise. Note that 'recalled'
+          # is required by the CLAUDE.md language rule ("recalled", not
+          # "correct"), so bumping past that change needs that rule settled
+          # first.
+          ref: da36cf5
 
       - uses: pnpm/action-setup@v4
         with:
