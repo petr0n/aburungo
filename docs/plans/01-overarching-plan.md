@@ -27,13 +27,14 @@ the *same* retention engine; what changes between levels is the **content** and 
 
 > **Assessment principle — feedback through what you see next, not what you scored.** A score is
 > a reward loop: it creates anxiety on bad sessions and a dopamine hit on good ones. AburunGo
-> shows counts ("7 recalled") as a momentary reflection, never a percentage, grade, or pass/fail
+> shows counts ("7 correct") as a momentary reflection, never a percentage, grade, or pass/fail
 > verdict. The real feedback signal is the SRS queue — words a learner struggled with surface
 > sooner. That is invisible to the user by design. Assessment lives in lightweight **recognition
 > passes** (tap the matching Japanese tile from 3 options) and SRS re-surfacing; not timed tests
 > or scored quizzes. **Skip is always available** on every assessment screen — it is the relief
 > valve for learners who do not want to be quizzed. The app never tells a learner they failed.
-> Language: "recalled" not "correct", "worth another look" not "missed".
+> Language: a judged answer reads "Correct" or "Not quite" (changed 2026-08-21, see CLAUDE.md);
+> never "missed". The ban on aggregate verdicts above is unchanged.
 
 > **Furigana principle — kanji is never a wall outside explicit kanji learning.** All Japanese
 > text containing kanji must display furigana (via `<ruby>`) everywhere except the `/kanji` route

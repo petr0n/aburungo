@@ -160,12 +160,12 @@ Practical Japanese for English speakers. Focused on real-life situations with sp
 - **Furigana everywhere outside kanji-learning paths.** Any Japanese text containing kanji must use the `<Furigana>` component (renders `<ruby>`) so learners are never blocked by an unfamiliar character. This applies to: word tiles, learn cards, drill cards, flashcards, fill-in-the-blank, phrase displays, result/review screens, conversation history. Pure-kana text passes through unchanged — the component handles this automatically.
 - **Furigana off in kanji-learning paths.** The `/kanji` route and any future explicit kanji-reading exercises must not show furigana — the point of those screens is to read the character.
 - **Use `<Furigana>` not raw `<ruby>`.** Segmentation logic lives in `src/lib/furigana.ts`; the component is `src/components/Furigana.tsx`. Never inline a `<ruby>` tag manually.
-- **Assessment language is non-judgmental.** Use "recalled" not "correct", "worth another look" not "missed", "review again" not "retest". A score is a momentary reflection, never a grade. See assessment principles below.
+- **Assessment language is non-judgmental.** A judged answer reads "Correct" or "Not quite" (changed 2026-08-21); avoid "missed" and "retest" -- prefer "review again". A score is a momentary reflection, never a grade. See assessment principles below.
 
 ## Assessment principles (non-negotiable)
 
 - **No exams or drills.** The app never tells a learner they failed. Assessment lives in lightweight recognition passes (tap-to-match from 3 options) and SRS re-surfacing.
-- **Scores are reflection, not judgment.** Show counts ("7 recalled") but never percentages, pass/fail verdicts, or persistent grades. The real feedback is what the SRS surfaces next — not a number.
+- **Scores are reflection, not judgment.** Show counts ("7 correct") but never percentages, pass/fail verdicts, or persistent grades. The real feedback is what the SRS surfaces next — not a number.
 - **Skip is always available.** Every assessment screen must have a visible skip/pass option. It is the relief valve for users who do not want to be quizzed.
 - **The SRS queue is the signal.** Words a learner struggled with surface again sooner — that is the feedback mechanism, invisible to the user. Do not surface SRS state as a score.
 
