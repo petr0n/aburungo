@@ -176,11 +176,15 @@ export type Book = {
   /**
    * The per-book difficulty shift (03 §0b). Off for Book One; on from Book Two.
    *
-   * One field drives three behaviors:
+   * Two of the three behaviors §0b names are wired to this field:
    * - recall is the default review gate (type it, not flip-and-rate)
    * - romaji display is cut — no item in this book renders romaji, including
    *   earlier books' items reviewed here; romaji→kana *input* conversion stays
-   * - the produce beat is frame-based composition rather than type-the-phrase
+   *
+   * The third, the production-first produce beat, is not: frame-based
+   * composition needs frames and their model sentences as authored content
+   * (03 §8), and deriving them at runtime fabricates Japanese. It lands with
+   * Book Two's content, not with this field.
    */
   difficultyShift: boolean;
 };

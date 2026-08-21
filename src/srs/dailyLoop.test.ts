@@ -170,4 +170,67 @@ describe("buildDailySession", () => {
 
     expect(session.newGrammarPattern).toBeNull();
   });
+
+  describe("across books", () => {
+    // A learner in Book Two still owes reviews on Book One's items. Scoping
+    // review to the current book would strand them the day the new book opens.
+    const laterLesson: Lesson = {
+      id: "b2-lesson-1",
+      order: 1,
+      situation: "s",
+      title: "t",
+      canDo: "c",
+      wordIds: ["w9"],
+      phraseIds: [],
+      kanji: [],
+      grammarNote: "g",
+    };
+    const bookTwo: Book = { ...bookOf([laterLesson]), id: "n4", order: 2, difficultyShift: true };
+    const due = (id: string): ReviewState => ({ phraseId: id, box: 2, dueAt: NOW - DAY_MS });
+
+    it("surfaces a due item from an earlier book", () => {
+      const session = buildDailySession(
+        bookTwo,
+        { pathId: "n4", seenLessonIds: [] },
+        [...allWords, word("w9")],
+        allPhrases,
+        allPatterns,
+        [due("w1")],
+        NOW,
+        [{ book, progress: { pathId: "n5", seenLessonIds: ["lesson-1"] } }],
+      );
+
+      expect(session.reviewItems.map((i) => i.id)).toEqual(["w1"]);
+    });
+
+    it("still withholds an earlier book's unseen items", () => {
+      const session = buildDailySession(
+        bookTwo,
+        { pathId: "n4", seenLessonIds: [] },
+        [...allWords, word("w9")],
+        allPhrases,
+        allPatterns,
+        [due("w3")],
+        NOW,
+        [{ book, progress: { pathId: "n5", seenLessonIds: ["lesson-1"] } }],
+      );
+
+      expect(session.reviewItems).toEqual([]);
+    });
+
+    it("takes new material from the current book only", () => {
+      const session = buildDailySession(
+        bookTwo,
+        { pathId: "n4", seenLessonIds: [] },
+        [...allWords, word("w9")],
+        allPhrases,
+        allPatterns,
+        [],
+        NOW,
+        [{ book, progress: { pathId: "n5", seenLessonIds: [] } }],
+      );
+
+      expect(session.lesson?.id).toBe("b2-lesson-1");
+    });
+  });
 });

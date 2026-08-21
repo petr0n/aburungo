@@ -19,3 +19,11 @@ export const bookOne: Book = {
   lessons: n5Lessons,
   difficultyShift: false,
 };
+
+/** Every book, in ladder order. Book Two joins here when its content exists. */
+export const books: readonly Book[] = [bookOne];
+
+/** The books before this one — whose items keep coming back for review. */
+export function priorBooks(book: Book): readonly Book[] {
+  return books.filter((b) => b.order < book.order);
+}

@@ -19,9 +19,9 @@
  */
 import { useCallback, useEffect, useState } from "react";
 import type { Book, GrammarPattern, Phrase, ReviewRating, Lesson, Word } from "@/types";
-import { isGrammarPattern, isWord } from "@/types";
+import { isGrammarPattern } from "@/types";
 import { useAuth, useUserTier } from "@/store/auth";
-import { bookOne } from "@/content/books";
+import { bookOne, priorBooks } from "@/content/books";
 import { chapterLabel, placeInChapter } from "@/content/chapters";
 import { wordsForTier } from "@/content/vocabulary";
 import { phrasesForTier } from "@/content";
@@ -37,8 +37,6 @@ import { FlashCard, type FlashCardPhase } from "@/components/FlashCard";
 import { WordLearnCard } from "@/components/WordLearnCard";
 import { FillBlankCard } from "@/components/FillBlankCard";
 import { GrammarClozeCard } from "@/components/GrammarClozeCard";
-import { FrameComposeCard } from "@/components/FrameComposeCard";
-import { buildCompositionFrame } from "@/lib/composition";
 import { RecognitionPass } from "@/components/RecognitionPass";
 import { RecognitionCheckpoint } from "@/components/RecognitionCheckpoint";
 import { ProductionCheckpoint } from "@/components/ProductionCheckpoint";
@@ -74,7 +72,8 @@ function stepForLesson(lesson: Lesson): Step {
 
 /**
  * Whether this session runs with the per-book difficulty shift (03 §0b) —
- * recall as the review gate, the romaji cut, and the frame-based produce beat.
+ * recall as the review gate and the romaji cut. The third behavior §0b names,
+ * the production-first produce beat, waits on authored frames (see ProduceStep).
  *
  * A book carries the shift as a field. In dev builds `?shift=1` forces it on,
  * so the Book Two behaviors are provable against Book One content before any
@@ -429,23 +428,26 @@ function NewLessonStep({
 // ── Produce step — type what you just learned, forgiving feedback ──────────────
 
 /**
- * `shifted` turns the produce beat production-first (03 §8): phrases and the
- * lesson's pattern become frame-based composition — the sentence as a frame
- * with a slot, the learner picks a word and types the whole thing — instead of
- * type-the-phrase. Frames are derived from the item's own phrase with the
- * lesson's words as candidates; an item no frame can be derived for falls back
- * to the typed card, romaji cut either way. Words stay typed recall — a single
- * word has no frame to compose into.
+ * `shifted` cuts romaji from the produce beat (03 §6). It does *not* yet make
+ * the beat production-first: frame-based composition (03 §8) needs frames and
+ * their model sentences as **authored content**, which §8 requires and Book Two
+ * does not have yet.
+ *
+ * An earlier revision derived frames at runtime by finding a lesson word inside
+ * a phrase's reading and offering same-word-type substitutes. Both halves were
+ * wrong. Kana has no word boundaries, so substring matching split きれい in half
+ * to slot き (はなは＿れいです). And substituting an unattested word synthesises
+ * a sentence nobody verified, which is the fabricated-Japanese rule in CLAUDE.md
+ * and the reason §8 calls frames authored content in the first place. Deriving
+ * them cannot be made safe; they have to be written down. Restore
+ * FrameComposeCard from git history when Book Two authors frames to feed it.
  */
 function ProduceStep({
   items,
-  frameWords,
   shifted,
   onDone,
 }: {
   items: Array<Phrase | Word | GrammarPattern>;
-  /** Candidate words for frame slots and options — the lesson's new words. */
-  frameWords: Word[];
   shifted: boolean;
   onDone: () => void;
 }) {
@@ -480,34 +482,24 @@ function ProduceStep({
   if (isGrammarPattern(current)) {
     const phrase = findPhrase(current.phraseId);
     if (phrase === undefined) return null;
-    const frame = shifted ? buildCompositionFrame(phrase, frameWords) : null;
     return (
       <div className="flex w-full flex-col gap-4 py-4">
         {header}
-        {frame !== null ? (
-          <FrameComposeCard key={current.id} frame={frame} patternLabel={current.pattern} onNext={(correct) => void handleNext(correct)} />
-        ) : (
-          <GrammarClozeCard
-            key={current.id}
-            pattern={current}
-            phrase={phrase}
-            showRomaji={!shifted}
-            onNext={(correct) => void handleNext(correct)}
-          />
-        )}
+        <GrammarClozeCard
+          key={current.id}
+          pattern={current}
+          phrase={phrase}
+          showRomaji={!shifted}
+          onNext={(correct) => void handleNext(correct)}
+        />
       </div>
     );
   }
 
-  const frame = shifted && !isWord(current) ? buildCompositionFrame(current, frameWords) : null;
   return (
     <div className="flex w-full flex-col gap-4 py-4">
       {header}
-      {frame !== null ? (
-        <FrameComposeCard key={current.id} frame={frame} onNext={(correct) => void handleNext(correct)} />
-      ) : (
-        <FillBlankCard key={current.id} card={current} showRomaji={!shifted} onNext={(correct) => void handleNext(correct)} />
-      )}
+      <FillBlankCard key={current.id} card={current} showRomaji={!shifted} onNext={(correct) => void handleNext(correct)} />
     </div>
   );
 }
@@ -613,15 +605,20 @@ export function LearnPage({ book = bookOne }: { book?: Book } = {}) {
     // Re-runs on tier/userId change (e.g. guest -> signed-in on sign-up mid-session).
     let cancelled = false;
     async function load() {
-      const [progress, reviewStates] = await Promise.all([
+      // Earlier books' progress rides along so their due items keep surfacing
+      // here (03 §6) — review is cumulative, new material is not.
+      const earlier = priorBooks(book);
+      const [progress, reviewStates, ...earlierProgress] = await Promise.all([
         getPathProgress(book.id, userId !== null),
         hydrateFromServer(userId !== null),
+        ...earlier.map((b) => getPathProgress(b.id, userId !== null)),
       ]);
       if (cancelled) return;
       setSeenUnitIds(progress.seenLessonIds);
       const words = wordsForTier(tier);
       const phrases = phrasesForTier(tier);
-      const built = buildDailySession(book, progress, words, phrases, allGrammarPatterns, reviewStates, Date.now());
+      const prior = earlier.map((b, i) => ({ book: b, progress: earlierProgress[i] }));
+      const built = buildDailySession(book, progress, words, phrases, allGrammarPatterns, reviewStates, Date.now(), prior);
       setSession(built);
       if (built.reviewItems.length > 0) {
         setStep("review");
@@ -756,7 +753,6 @@ export function LearnPage({ book = bookOne }: { book?: Book } = {}) {
     content = (
       <ProduceStep
         items={[...session.newWords, ...session.newPhrases, ...(session.newGrammarPattern ? [session.newGrammarPattern] : [])]}
-        frameWords={session.newWords}
         shifted={shifted}
         onDone={afterProduce}
       />

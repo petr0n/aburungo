@@ -13,6 +13,12 @@
 import type { Book, EpochMs, GrammarPattern, PathProgress, Phrase, ReviewState, Lesson, Word } from "@/types";
 import { isDue } from "./leitner";
 
+/** A book the learner has already worked through, with its own progress row. */
+export type BookProgress = {
+  book: Book;
+  progress: PathProgress;
+};
+
 export type DailySession = {
   /** The next not-yet-introduced lesson, or null once every lesson has been seen. */
   lesson: Lesson | null;
@@ -43,17 +49,26 @@ export function buildDailySession(
   allPatterns: readonly GrammarPattern[],
   reviewStates: readonly ReviewState[],
   now: EpochMs,
+  prior: readonly BookProgress[] = [],
 ): DailySession {
   const lessons: readonly Lesson[] = book.lessons;
   const seenLessonIds = new Set(progress.seenLessonIds);
   const nextUnit = lessons.find((u) => !seenLessonIds.has(u.id)) ?? null;
 
+  // New material is this book's alone; review is cumulative across every book
+  // the learner has worked through. Scoping review to the current book would
+  // strand Book One's items the day Book Two opens — the learner would stop
+  // seeing the foundation exactly when they started building on it — and the
+  // romaji cut on "earlier books' items reviewed here" would never fire.
   const seenItemIds = new Set<string>();
-  for (const lesson of lessons) {
-    if (!seenLessonIds.has(lesson.id)) continue;
-    for (const id of lesson.wordIds) seenItemIds.add(id);
-    for (const id of lesson.phraseIds) seenItemIds.add(id);
-    if (lesson.patternId !== undefined) seenItemIds.add(lesson.patternId);
+  for (const { book: b, progress: p } of [...prior, { book, progress }]) {
+    const seen = new Set(p.seenLessonIds);
+    for (const lesson of b.lessons) {
+      if (!seen.has(lesson.id)) continue;
+      for (const id of lesson.wordIds) seenItemIds.add(id);
+      for (const id of lesson.phraseIds) seenItemIds.add(id);
+      if (lesson.patternId !== undefined) seenItemIds.add(lesson.patternId);
+    }
   }
 
   const wordById = new Map(allWords.map((w) => [w.id, w]));
