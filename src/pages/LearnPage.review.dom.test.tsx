@@ -149,7 +149,7 @@ describe("ReviewStep with the difficulty shift", () => {
     await user.click(screen.getByRole("button", { name: "Check answer" }));
 
     // The result reveals the reading, never the card's romaji field.
-    expect(screen.getByText("Recalled!")).toBeTruthy();
+    expect(screen.getByText("Correct")).toBeTruthy();
     expect(screen.queryByText("mizu")).toBeNull();
   });
 });

@@ -234,7 +234,8 @@ reading or meaning) rather than tile-tap, and its production checkpoint asks for
 sentence rather than a remembered phrase (§8).
 
 Mastery gates, never grades (DR-020): the remaining set shrinks to zero, retries are unlimited,
-nothing is recorded, misses rejoin the SRS queue. "Recalled", never "correct". That does not relax
+nothing is recorded, misses rejoin the SRS queue. A judged answer reads "Correct" or "Not quite"
+(changed 2026-08-21, see CLAUDE.md); what stays banned is the aggregate verdict. That does not relax
 at any level.
 
 ## 11. Open questions for the owner

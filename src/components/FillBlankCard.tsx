@@ -67,7 +67,7 @@ export function FillBlankCard({ card, showRomaji = true, onNext }: Props) {
     phase === "result" ? (
       <div className="flex flex-col gap-4">
         <AnswerResult
-          outcome={correct ? "recalled" : "review"}
+          outcome={correct ? "correct" : "review"}
           userAnswer={correct ? undefined : userAnswer}
         >
           {politeJapanese !== null ? (

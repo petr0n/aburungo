@@ -356,7 +356,7 @@ export function KanaPracticePage() {
                 if (answered !== null) {
                   if (choice === currentCard.romaji) {
                     cls = "border-success-500 bg-success-bg text-success-fg";
-                    mark = "recalled";
+                    mark = "correct";
                   } else if (choice === selectedChoice) {
                     cls = "border-error-500 bg-error-bg text-error-fg";
                     mark = "review";

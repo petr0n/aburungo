@@ -31,12 +31,11 @@ jobs:
           # 2026-08-21, when the design system dropped 'recalled' from
           # AnswerOutcome and three untouched files here stopped compiling.
           # Bump this ref on purpose, as its own PR, so the upgrade is a
-          # decision with a diff rather than a surprise. Note that 'recalled'
-          # is required by the CLAUDE.md language rule ("recalled", not
-          # "correct"), so bumping past that change needs that rule settled
-          # first. vercel.json pins the same sha in its installCommand --
-          # bump both together.
-          ref: da36cf524a181fef80e40d7c7d779bc63fbd5ad8
+          # decision with a diff rather than a surprise: a design-system
+          # change can alter learner-facing copy, which is a product call
+          # before it is a version bump. scripts/vercel-install.sh pins the
+          # same sha for Vercel builds -- move the two together.
+          ref: 6cc617bce893c78f5c274ab7d3c2981964e048bb
 
       - uses: pnpm/action-setup@v4
         with:
