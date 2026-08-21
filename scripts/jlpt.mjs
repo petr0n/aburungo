@@ -118,6 +118,30 @@ export function normReading(s) {
     .trim();
 }
 
+const HAS_KANJI = /[\u4e00-\u9faf]/;
+
+/**
+ * Do two surface forms plausibly write the same word?
+ *
+ * Coverage matches on the reading (see normReading), which is right for
+ * spelling variants — the app teaches あさ, the reference writes 朝 — and wrong
+ * for homophones. Adding 晩 (ばん, evening) silently marked the reference entry
+ * ～番 (ばん, the ordinal counter) as covered, hiding a real gap. Copilot caught
+ * that on PR #88.
+ *
+ * The rule that separates the two cases: if either side is written without
+ * kanji, the reading is all we have and a match stands. If both sides carry
+ * kanji, they must share at least one — 昼御飯 and 昼ご飯 do, 晩 and ～番 do not.
+ */
+export function writtenCompatible(refWritten, ourWritten) {
+  const a = (refWritten ?? "").replace(/[\s・･〜～]/g, "");
+  const b = (ourWritten ?? "").replace(/[\s・･〜～]/g, "");
+  if (!a || !b) return true;
+  if (!HAS_KANJI.test(a) || !HAS_KANJI.test(b)) return true;
+  const aKanji = new Set(a.match(/[\u4e00-\u9faf]/g) ?? []);
+  return (b.match(/[\u4e00-\u9faf]/g) ?? []).some((c) => aKanji.has(c));
+}
+
 const readJson = (p) => JSON.parse(readFileSync(p, "utf8"));
 const level = (arg) => {
   const l = (arg ?? "").toLowerCase();
@@ -302,7 +326,7 @@ function coverage(l) {
 
   const covered = [], missing = [];
   for (const e of ref.entries) {
-    const hits = oursByReading.get(e.reading) ?? [];
+    const hits = (oursByReading.get(e.reading) ?? []).filter((w) => writtenCompatible(e.written, w.japanese));
     (hits.length ? covered : missing).push(e);
   }
 

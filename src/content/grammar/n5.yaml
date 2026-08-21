@@ -306,3 +306,29 @@
   gloss: How was ~?
   phraseId: past.how-was-the-trip
   blank: どうでしたか
+
+# ── Chapter 11 — meals and the kitchen (DR-032) ──────────────────────────────
+# A situation chapter, but three patterns, and all three are real rules rather
+# than fixed expressions: the noun-from-verb build, one more counter, and the
+# polite way to say something tasted bad.
+
+- id: grammar.n5-mono-nominaliser
+  jlpt: N5
+  pattern: verb stem + 物
+  gloss: Makes a noun out of a verb — 食べる becomes 食べ物, the thing you eat.
+  phraseId: meals.whats-your-favourite-food
+  blank: たべもの
+
+- id: grammar.n5-counter-hai
+  jlpt: N5
+  pattern: ～杯
+  gloss: Counter for cupfuls and bowlfuls. The sound changes at one, three and six.
+  phraseId: meals.a-glass-of-water-please
+  blank: いっぱい
+
+- id: grammar.n5-amari-nai
+  jlpt: N5
+  pattern: あまり～ないです
+  gloss: Not very ~. The polite way to say something was bad.
+  phraseId: meals.its-not-very-good
+  blank: おいしくないです

@@ -1,0 +1,158 @@
+# Chapter 11 phrases — meals and the kitchen (DR-032).
+#
+# The chapter arrives after the past tense, so these are the first phrases free
+# to use it without being memorised lumps: 朝ご飯を食べましたか is an ordinary
+# question a learner can now take apart. Two of the sentences here exist partly
+# to give ました somewhere ordinary to live.
+#
+# あまりおいしくないです is deliberate. まずい is taught in the same lesson and
+# is blunter than a beginner usually wants to be about someone's cooking, so the
+# softened form is given alongside it rather than left to be discovered.
+#
+# content-source: training — N5 canonical, pending Tatoeba verification.
+#   Sanctioned, not an oversight: CLAUDE.md allows N5 phrase content from
+#   training knowledge precisely because N5 vocabulary is canonical and
+#   well documented, so long as it carries this marker. Verified-only
+#   content starts at Book Three (docs/plans/04-path-n3.md section 8).
+#   Verification here needs Tatoeba rather than JMdict: JMdict headwords are
+#   words and fixed expressions, so it cannot attest a sentence either way.
+#   Every word used below is JMdict-verified individually.
+# jlpt-source: training — JLPT level unverified
+
+# ── The three meals ───────────────────────────────────────────────────────────
+
+- id: meals.did-you-eat-breakfast
+  jlpt: N5
+  scenario: meals
+  japanese: 朝ご飯を食べましたか。
+  reading: あさごはんをたべましたか。
+  romaji: asagohan o tabemashita ka.
+  english: Did you eat breakfast?
+
+- id: meals.whats-for-dinner
+  jlpt: N5
+  scenario: meals
+  japanese: 晩ご飯は何ですか。
+  reading: ばんごはんはなんですか。
+  romaji: bangohan wa nan desu ka.
+  english: What is for dinner?
+
+- id: meals.i-go-home-in-the-evening
+  jlpt: N5
+  scenario: meals
+  japanese: 夕方に帰ります。
+  reading: ゆうがたにかえります。
+  romaji: yuugata ni kaerimasu.
+  english: I go home in the early evening.
+
+# ── Food, drink, and what you think of it ─────────────────────────────────────
+
+- id: meals.whats-your-favourite-food
+  jlpt: N5
+  scenario: meals
+  japanese: 好きな食べ物は何ですか。
+  reading: すきなたべものはなんですか。
+  romaji: suki na tabemono wa nan desu ka.
+  english: What food do you like?
+
+- id: meals.this-dish-is-delicious
+  jlpt: N5
+  scenario: meals
+  japanese: この料理はおいしいです。
+  reading: このりょうりはおいしいです。
+  romaji: kono ryouri wa oishii desu.
+  english: This dish is delicious.
+
+- id: meals.its-not-very-good
+  jlpt: N5
+  scenario: meals
+  japanese: あまりおいしくないです。
+  reading: あまりおいしくないです。
+  romaji: amari oishikunai desu.
+  english: It is not very good.
+
+# ── What is for dinner ────────────────────────────────────────────────────────
+
+- id: meals.i-bought-beef
+  jlpt: N5
+  scenario: meals
+  japanese: 牛肉を買いました。
+  reading: ぎゅうにくをかいました。
+  romaji: gyuuniku o kaimashita.
+  english: I bought beef.
+
+- id: meals.i-like-curry
+  jlpt: N5
+  scenario: meals
+  japanese: カレーが好きです。
+  reading: カレーがすきです。
+  romaji: karee ga suki desu.
+  english: I like curry.
+
+- id: meals.i-want-to-eat-soba
+  jlpt: N5
+  scenario: meals
+  japanese: そばを食べたいです。
+  reading: そばをたべたいです。
+  romaji: soba o tabetai desu.
+  english: I want to eat soba.
+
+- id: meals.i-brought-a-bento
+  jlpt: N5
+  scenario: meals
+  japanese: お弁当を持ってきました。
+  reading: おべんとうをもってきました。
+  romaji: obentou o motte kimashita.
+  english: I brought a boxed lunch.
+
+# ── Sugar, salt and tea ───────────────────────────────────────────────────────
+
+- id: meals.do-you-take-sugar
+  jlpt: N5
+  scenario: meals
+  japanese: 砂糖を入れますか。
+  reading: さとうをいれますか。
+  romaji: satou o iremasu ka.
+  english: Do you take sugar?
+
+- id: meals.black-tea-please
+  jlpt: N5
+  scenario: meals
+  japanese: 紅茶をお願いします。
+  reading: こうちゃをおねがいします。
+  romaji: koucha o onegaishimasu.
+  english: Black tea, please.
+
+- id: meals.there-is-no-salt
+  jlpt: N5
+  scenario: meals
+  japanese: 塩がありません。
+  reading: しおがありません。
+  romaji: shio ga arimasen.
+  english: There is no salt.
+
+# ── In the kitchen ────────────────────────────────────────────────────────────
+
+- id: meals.i-cook-in-the-kitchen
+  jlpt: N5
+  scenario: meals
+  japanese: 台所で料理を作ります。
+  reading: だいどころでりょうりをつくります。
+  romaji: daidokoro de ryouri o tsukurimasu.
+  english: I cook in the kitchen.
+
+- id: meals.a-glass-of-water-please
+  jlpt: N5
+  scenario: meals
+  japanese: 水を一杯ください。
+  reading: みずをいっぱいください。
+  romaji: mizu o ippai kudasai.
+  english: A glass of water, please.
+
+- id: meals.a-spoon-please
+  jlpt: N5
+  scenario: meals
+  japanese: スプーンをお願いします。
+  reading: スプーンをおねがいします。
+  romaji: supuun o onegaishimasu.
+  english: A spoon, please.

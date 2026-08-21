@@ -1,11 +1,11 @@
 {
  "level": "N5",
- "generated": "2026-08-20",
+ "generated": "2026-08-21",
  "summary": {
   "reference": 809,
-  "taught": 423,
-  "covered": 409,
-  "missing": 400
+  "taught": 451,
+  "covered": 423,
+  "missing": 386
  },
  "missing": [
   {
@@ -39,9 +39,19 @@
    "jmdictCommon": true
   },
   {
-   "written": "朝御飯",
-   "reading": "あさごはん",
-   "english": "breakfast",
+   "written": "熱い",
+   "reading": "あつい",
+   "english": "hot (objects)",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "厚い",
+   "reading": "あつい",
+   "english": "kind, warm(hearted), thick, deep",
    "sources": [
     "tanos",
     "open-anki"
@@ -82,6 +92,16 @@
    "written": "危ない",
    "reading": "あぶない",
    "english": "dangerous, critical",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "飴",
+   "reading": "あめ",
+   "english": "(hard) candy",
    "sources": [
     "tanos",
     "open-anki"
@@ -259,16 +279,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "お菓子",
-   "reading": "おかし",
-   "english": "confections, sweets, snack",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "お手洗い",
    "reading": "おてあらい",
    "english": "toilet, restroom, bathroom (lit., a place to wash one's hands)",
@@ -312,16 +322,6 @@
    "written": "お風呂",
    "reading": "おふろ",
    "english": "a bath",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "お弁当",
-   "reading": "おべんとう",
-   "english": "a boxed lunch",
    "sources": [
     "tanos",
     "open-anki"
@@ -499,16 +499,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "カレー",
-   "reading": "かれー",
-   "english": "curry (abbr. for curry and rice)",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "カレンダー",
    "reading": "かれんだー",
    "english": "calendar",
@@ -582,16 +572,6 @@
    "written": "切手",
    "reading": "きって",
    "english": "postal (postage) stamps",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "牛肉",
-   "reading": "ぎゅうにく",
-   "english": "beef",
    "sources": [
     "tanos",
     "open-anki"
@@ -739,16 +719,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "紅茶",
-   "reading": "こうちゃ",
-   "english": "black tea",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "交番",
    "reading": "こうばん",
    "english": "police box",
@@ -782,16 +752,6 @@
    "written": "こっち",
    "reading": "こっち",
    "english": "this person; this direction; this side",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "コップ",
-   "reading": "こっぷ",
-   "english": "a tumbler; a glass",
    "sources": [
     "tanos",
     "open-anki"
@@ -889,16 +849,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "砂糖",
-   "reading": "さとう",
-   "english": "sugar",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "さ来年",
    "reading": "さらいねん",
    "english": "year after next",
@@ -912,16 +862,6 @@
    "written": "四",
    "reading": "し",
    "english": "four",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "塩",
-   "reading": "しお",
-   "english": "salt",
    "sources": [
     "tanos",
     "open-anki"
@@ -992,6 +932,16 @@
    "written": "自分",
    "reading": "じぶん",
    "english": "myself, oneself",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "締める",
+   "reading": "しめる",
+   "english": "to tie, to fasten, to tighten",
    "sources": [
     "tanos",
     "open-anki"
@@ -1129,16 +1079,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "スプーン",
-   "reading": "すぷーん",
-   "english": "spoon",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "スポーツ",
    "reading": "すぽーつ",
    "english": "sport(s)",
@@ -1229,16 +1169,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "そば",
-   "reading": "そば",
-   "english": "near, close, beside; Japanese traditional buckwheat noodle",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "それから",
    "reading": "それから",
    "english": "and then, after that",
@@ -1299,16 +1229,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "台所",
-   "reading": "だいどころ",
-   "english": "kitchen",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "たて",
    "reading": "たて",
    "english": "length, height",
@@ -1322,16 +1242,6 @@
    "written": "たばこ",
    "reading": "たばこ",
    "english": "tobacco, cigarettes",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "食べ物",
-   "reading": "たべもの",
-   "english": "food",
    "sources": [
     "tanos",
     "open-anki"
@@ -1382,16 +1292,6 @@
    "written": "テープ",
    "reading": "てーぷ",
    "english": "tape",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "テーブル",
-   "reading": "てーぶる",
-   "english": "table",
    "sources": [
     "tanos",
     "open-anki"
@@ -1589,19 +1489,9 @@
    "jmdictCommon": true
   },
   {
-   "written": "鳥",
-   "reading": "とり",
-   "english": "chicken (lit., bird)",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "ナイフ",
-   "reading": "ないふ",
-   "english": "knife",
+   "written": "撮る",
+   "reading": "とる",
+   "english": "to take (a photo), to make (a film)",
    "sources": [
     "tanos",
     "open-anki"
@@ -1739,16 +1629,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "飲み物",
-   "reading": "のみもの",
-   "english": "drink, beverage",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "歯",
    "reading": "は",
    "english": "tooth",
@@ -1829,16 +1709,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "バター",
-   "reading": "ばたー",
-   "english": "butter",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "二十歳",
    "reading": "はたち",
    "english": "20 years old",
@@ -1849,9 +1719,39 @@
    "jmdictCommon": true
   },
   {
+   "written": "鼻",
+   "reading": "はな",
+   "english": "nose",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
    "written": "話",
    "reading": "はなし",
    "english": "talk (chat), story",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "速い",
+   "reading": "はやい",
+   "english": "fast, quick",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "貼る",
+   "reading": "はる",
+   "english": "to post; to paste; to attach",
    "sources": [
     "tanos",
     "open-anki"
@@ -1879,16 +1779,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "晩",
-   "reading": "ばん",
-   "english": "evening",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "ハンカチ",
    "reading": "はんかち",
    "english": "handkerchief",
@@ -1909,16 +1799,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "晩御飯",
-   "reading": "ばんごはん",
-   "english": "dinner, evening meal",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "半分",
    "reading": "はんぶん",
    "english": "half",
@@ -1932,6 +1812,16 @@
    "written": "東",
    "reading": "ひがし",
    "english": "east",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "弾く",
+   "reading": "ひく",
+   "english": "to play (a string instrument or piano)",
    "sources": [
     "tanos",
     "open-anki"
@@ -1962,16 +1852,6 @@
    "written": "病気",
    "reading": "びょうき",
    "english": "illness; sickness",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "昼御飯",
-   "reading": "ひるごはん",
-   "english": "lunch, midday meal",
    "sources": [
     "tanos",
     "open-anki"
@@ -2019,19 +1899,9 @@
    "jmdictCommon": true
   },
   {
-   "written": "フォーク",
-   "reading": "ふぉーく",
-   "english": "fork",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "豚肉",
-   "reading": "ぶたにく",
-   "english": "pork",
+   "written": "吹く",
+   "reading": "ふく",
+   "english": "to blow (wind, etc.)",
    "sources": [
     "tanos",
     "open-anki"
@@ -2212,16 +2082,6 @@
    "written": "毎晩",
    "reading": "まいばん",
    "english": "every night",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "まずい",
-   "reading": "まずい",
-   "english": "terrible (in reference to food), unappetizing, unpleasant (taste)",
    "sources": [
     "tanos",
     "open-anki"
@@ -2419,16 +2279,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "夕方",
-   "reading": "ゆうがた",
-   "english": "late afternoon (typically just before dinner time), evening",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "夕飯",
    "reading": "ゆうはん",
    "english": "dinner, supper, evening meal",
@@ -2492,16 +2342,6 @@
    "written": "留学生",
    "reading": "りゅうがくせい",
    "english": "international student",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "料理",
-   "reading": "りょうり",
-   "english": "cooking; cuisine",
    "sources": [
     "tanos",
     "open-anki"
@@ -2872,6 +2712,15 @@
    "jmdictCommon": true
   },
   {
+   "written": "河",
+   "reading": "かわ",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
    "written": "～側",
    "reading": "がわ",
    "english": "~ side",
@@ -2983,6 +2832,15 @@
    "written": "～個",
    "reading": "こ",
    "english": "counter for small items (e.g., fruits, cups)",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "～語",
+   "reading": "ご",
+   "english": "word, language",
    "sources": [
     "open-anki"
    ],

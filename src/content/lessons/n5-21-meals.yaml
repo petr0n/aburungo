@@ -1,0 +1,156 @@
+# Chapter 11 — Meals and the kitchen (DR-032).
+#
+# A strange hole to have left this long. The ladder could order in a restaurant
+# from its second chapter, and could not say breakfast, lunch, dinner, or the
+# word for food itself. This is the largest cluster left in the gap list and the
+# most obviously missing.
+#
+#   1  the three meals        one new word, 晩, and a compound pattern
+#   2  food and drink         食べ物 and 飲み物, and how they are built
+#   3  what is for dinner     the meats, and three dishes
+#   4  sugar, salt and tea    what goes on the table
+#   5  in the kitchen         the room and what is in it, plus the 杯 counter
+#
+# Three rules ride along in a chapter that is otherwise word-shaped: the verb-
+# plus-物 build, which the learner has already met once as 買い物 without being
+# told it was a pattern; 杯, which extends the counters from Chapter 7; and
+# あまり～ないです, the polite way to say something tasted bad.
+#
+# Placed after the past tense on purpose. 朝ご飯を食べましたか is the first
+# ordinary question in the book a learner can both understand and take apart.
+#
+# content-source: n/a for this file -- it references vocabulary/meals.yaml and
+#   phrases/meals.yaml, whose own provenance markers apply.
+
+- id: n5.meals-three
+  order: 87
+  chapterId: n5.chapter-11
+  situation: Meals and the kitchen
+  title: The three meals
+  canDo: Talk about breakfast, lunch and dinner
+  wordIds:
+    - vocab.ban
+    - vocab.asagohan
+    - vocab.hirugohan
+    - vocab.bangohan
+    - vocab.yuugata
+  phraseIds:
+    - meals.did-you-eat-breakfast
+    - meals.whats-for-dinner
+    - meals.i-go-home-in-the-evening
+  kanji:
+    - 晩
+    - 飯
+    - 夕
+  grammarNote: "Five words, one of which is new. 朝, 昼 and ご飯 you have had for a long time, and the three meals are simply those words stuck to ご飯: 朝ご飯, 昼ご飯, 晩ご飯. Only 晩 is new, and it overlaps 夜, which you also know — 夜 is the time of day, 晩 is the evening as an occasion, which is why the meal takes 晩. 夕方 is the stretch before it, roughly three to six. One note on register: 朝食 is on your ladder already and is the written word, the one on a hotel sign. 朝ご飯 is what people say."
+
+- id: n5.meals-food-drink
+  order: 88
+  chapterId: n5.chapter-11
+  situation: Meals and the kitchen
+  title: Food, drink, and what you think of it
+  canDo: Say what food you like and how something tastes
+  wordIds:
+    - vocab.tabemono
+    - vocab.nomimono
+    - vocab.ryouri
+    - vocab.mazui
+  phraseIds:
+    - meals.whats-your-favourite-food
+    - meals.this-dish-is-delicious
+    - meals.its-not-very-good
+  kanji:
+    - 料
+    - 理
+  patternId: grammar.n5-mono-nominaliser
+  grammarNote: "食べ物 is 食べる with 物 on the end — an eating thing. 飲み物 is the same move on 飲む. So is 買い物, which you learned in the town chapter without being told it was a pattern, and now you have three of them. Take a verb, cut it back to its stem, add 物, and you have the noun. It does not work on every verb, but when you meet a long word ending in 物 it is worth looking for the verb inside. 料理 is different — it is a noun that takes する: 料理をします is to cook, and 料理 on its own is the finished dish. Then a word of warning about まずい: it is accurate and it is rude. Say あまりおいしくないです about someone's cooking."
+
+- id: n5.meals-dinner
+  order: 89
+  chapterId: n5.chapter-11
+  situation: Meals and the kitchen
+  title: What is for dinner
+  canDo: Name the meats and order a dish
+  wordIds:
+    - vocab.gyuuniku
+    - vocab.butaniku
+    - vocab.tori
+    - vocab.karee
+    - vocab.soba
+    - vocab.obentou
+  phraseIds:
+    - meals.i-bought-beef
+    - meals.i-like-curry
+    - meals.i-want-to-eat-soba
+    - meals.i-brought-a-bento
+  kanji:
+    - 肉
+    - 牛
+    - 豚
+    - 鳥
+    - 弁
+    - 当
+  grammarNote: "肉 is meat, and the meats are the animal stuck in front of it: 牛肉, 豚肉. You have met 牛 before inside 牛乳, cow's milk. 鳥 is the odd one — it means bird, and on a menu it means chicken, the same shortening English does when it puts \"duck\" on a menu rather than \"duck meat\". The three dishes are worth knowing as things, not just words. カレー is Japanese curry, which is mild and thick and eaten with rice, not the Indian dish the name suggests. そば is buckwheat noodles, written in kana, and there is a second そば meaning \"beside\" that only context separates. お弁当 is a packed meal in a box, sold at every station."
+
+- id: n5.meals-table
+  order: 90
+  chapterId: n5.chapter-11
+  situation: Meals and the kitchen
+  title: Sugar, salt and tea
+  canDo: Ask for what is missing from the table
+  wordIds:
+    - vocab.satou
+    - vocab.shio
+    - vocab.bataa
+    - vocab.koucha
+    - vocab.okashi
+  phraseIds:
+    - meals.do-you-take-sugar
+    - meals.black-tea-please
+    - meals.there-is-no-salt
+  kanji:
+    - 砂
+    - 糖
+    - 塩
+    - 紅
+    - 菓
+  patternId: grammar.n5-amari-nai
+  grammarNote: "紅茶 is the one to look at twice. It is literally \"crimson tea\", and it means black tea — the English name describes the leaves, the Japanese one describes the drink. お茶 on its own is green tea, so these are two different orders rather than a general word and a specific one. お菓子 is wider than it looks: biscuits, cake, crisps, anything eaten between meals. For the rest, 砂糖を入れますか uses 入れる, which you have, and the polite refusal you already know is いいえ、けっこうです."
+
+- id: n5.meals-kitchen
+  order: 91
+  chapterId: n5.chapter-11
+  situation: Meals and the kitchen
+  title: In the kitchen
+  canDo: Name what is on the table and ask for a glass or chopsticks
+  wordIds:
+    - vocab.daidokoro
+    - vocab.teeburu
+    - vocab.koppu
+    - vocab.supuun
+    - vocab.naifu
+    - vocab.fooku
+    - vocab.hashi-chopsticks
+    - vocab.hai-counter
+  phraseIds:
+    - meals.i-cook-in-the-kitchen
+    - meals.a-glass-of-water-please
+    - meals.a-spoon-please
+  kanji:
+    - 所
+    - 箸
+    - 杯
+  patternId: grammar.n5-counter-hai
+  grammarNote: "Four of these are borrowed and nearly free. One is not quite what it looks like: コップ came from Dutch, not English, and it is a drinking glass — a teacup is カップ, a different word. 箸 is the one you will actually use, and it is usually お箸 when you ask for a pair. Note the reading: はし is also 橋, a bridge, and 端, an edge. Japanese has a lot of these, and context does all the work. Then a new counter. 杯 counts anything in a cup, glass or bowl, which makes it the one you use ordering drinks. Like the other counters, the sound changes at the awkward numbers: 一杯 いっぱい, 二杯 にはい, 三杯 さんばい, 六杯 ろっぱい. 水を一杯ください is how you ask for a glass of water, and it is the same shape as the counters you learned in the choosing and counting chapter."
+
+- id: n5.checkpoint-11
+  order: 92
+  chapterId: n5.chapter-11
+  situation: Integration & checkpoint
+  title: Chapter 11 checkpoint
+  canDo: Recognise everything taught so far
+  wordIds: []
+  phraseIds: []
+  kanji: []
+  checkpoint: recognition
+  grammarNote: "A wide pass over everything the book has taught, this chapter included. Pick each word out of a line-up; anything you miss comes back sooner. It finishes when the remaining set empties — retry as often as you like, nothing is recorded."

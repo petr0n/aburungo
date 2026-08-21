@@ -1,0 +1,317 @@
+# Chapter 11 vocabulary — meals and the kitchen (DR-032).
+#
+# The largest cluster left in the N5 gap list, and a strange hole in a ladder
+# that has been able to order in a restaurant since its second chapter. The
+# learner could say コーヒーをお願いします and could not say breakfast, lunch,
+# dinner, or the word for food itself.
+#
+# The three meals are taught as one system rather than three words. 朝ご飯,
+# 昼ご飯 and 晩ご飯 are 朝, 昼 and 晩 stuck to ご飯, all of which the learner
+# already has except 晩 -- so the lesson is really teaching one word and a
+# pattern, which is why it can afford five entries.
+#
+# 食べ物 and 飲み物 are the same trick on verbs the learner owns, and the same
+# trick that built 買い物 in the town chapter. Teaching them next to each other
+# is what turns a coincidence into a rule.
+#
+# 箸 was invisible until the coverage matcher stopped letting 橋 (はし, bridge) mask
+# it. A kitchen lesson with a fork and no chopsticks was the cost of that bug.
+#
+# Already taught and deliberately absent: ご飯, パン, お茶, 肉, 魚, 野菜, 果物,
+# たまご, すし, ラーメン, 天ぷら, おにぎり, 牛乳, ビール, ジュース, コーヒー,
+# おいしい, 甘い, 辛い, レストラン, メニュー, 注文, 席, 朝食.
+#
+# content-source: training — headwords, readings and part of speech verified
+#   against JMdict 3.6.2 on 2026-08-20, sequence numbers inline, all
+#   twenty-eight flagged common.
+# jlpt-source: training — JLPT level unverified
+
+# ── The three meals (Lesson 1) ────────────────────────────────────────────────
+
+- id: vocab.ban
+  jlpt: N5
+  word_type: noun
+  theme: time
+  japanese: 晩
+  reading: ばん
+  romaji: ban
+  english: evening, night
+  notes: Overlaps 夜, which you know. 夜 is the time of day; 晩 is the evening as an occasion, which is why the meal is 晩ご飯. JMdict seq 1482110.
+
+- id: vocab.asagohan
+  jlpt: N5
+  word_type: noun
+  theme: food
+  japanese: 朝ご飯
+  reading: あさごはん
+  romaji: asagohan
+  english: breakfast
+  notes: 朝 plus ご飯. The spoken word; 朝食, which you know, is the written and formal one. JMdict seq 1586330.
+
+- id: vocab.hirugohan
+  jlpt: N5
+  word_type: noun
+  theme: food
+  japanese: 昼ご飯
+  reading: ひるごはん
+  romaji: hirugohan
+  english: lunch
+  notes: JMdict seq 1602340.
+
+- id: vocab.bangohan
+  jlpt: N5
+  word_type: noun
+  theme: food
+  japanese: 晩ご飯
+  reading: ばんごはん
+  romaji: bangohan
+  english: dinner, evening meal
+  notes: JMdict seq 1601340.
+
+- id: vocab.yuugata
+  jlpt: N5
+  word_type: noun
+  theme: time
+  japanese: 夕方
+  reading: ゆうがた
+  romaji: yuugata
+  english: early evening, dusk
+  notes: Roughly three to six, before 晩 proper. JMdict seq 1542790.
+
+# ── Food, drink, and what you think of it (Lesson 2) ──────────────────────────
+
+- id: vocab.tabemono
+  jlpt: N5
+  word_type: noun
+  theme: food
+  japanese: 食べ物
+  reading: たべもの
+  romaji: tabemono
+  english: food
+  notes: 食べる plus 物 — literally "eating thing". JMdict seq 1358340.
+
+- id: vocab.nomimono
+  jlpt: N5
+  word_type: noun
+  theme: food
+  japanese: 飲み物
+  reading: のみもの
+  romaji: nomimono
+  english: drink, beverage
+  notes: The same build on 飲む. JMdict seq 1600430.
+
+- id: vocab.ryouri
+  jlpt: N5
+  word_type: noun
+  theme: food
+  japanese: 料理
+  reading: りょうり
+  romaji: ryouri
+  english: cooking, cuisine, a dish
+  notes: Takes する — 料理をします is to cook. Also the finished dish itself. JMdict seq 1554310.
+
+- id: vocab.mazui
+  jlpt: N5
+  word_type: i-adj
+  theme: food
+  japanese: まずい
+  reading: まずい
+  romaji: mazui
+  english: bad-tasting, unappetising
+  notes: Written in kana. The opposite of おいしい, and blunt enough that people soften it — say あまりおいしくないです about someone's cooking. JMdict seq 1495000.
+
+# ── What is for dinner (Lesson 3) ─────────────────────────────────────────────
+
+- id: vocab.gyuuniku
+  jlpt: N5
+  word_type: noun
+  theme: food
+  japanese: 牛肉
+  reading: ぎゅうにく
+  romaji: gyuuniku
+  english: beef
+  notes: 牛 (cow) plus 肉 (meat), which you already know from 牛乳. JMdict seq 1231580.
+
+- id: vocab.butaniku
+  jlpt: N5
+  word_type: noun
+  theme: food
+  japanese: 豚肉
+  reading: ぶたにく
+  romaji: butaniku
+  english: pork
+  notes: JMdict seq 1457440.
+
+- id: vocab.tori
+  jlpt: N5
+  word_type: noun
+  theme: food
+  japanese: 鳥
+  reading: とり
+  romaji: tori
+  english: bird; chicken (as food)
+  notes: The animal first, but on a menu とり means chicken — the same shortening English does with "duck". JMdict seq 1430250.
+
+- id: vocab.karee
+  jlpt: N5
+  word_type: noun
+  theme: food
+  japanese: カレー
+  reading: カレー
+  romaji: karee
+  english: curry
+  notes: Japanese curry, which is its own thing — mild, thick and eaten with rice. JMdict seq 1039140.
+
+- id: vocab.soba
+  jlpt: N5
+  word_type: noun
+  theme: food
+  japanese: そば
+  reading: そば
+  romaji: soba
+  english: soba, buckwheat noodles
+  notes: Written in kana. There is a second そば meaning "beside", and only context separates them. JMdict seq 1238460.
+
+- id: vocab.obentou
+  jlpt: N5
+  word_type: noun
+  theme: food
+  japanese: お弁当
+  reading: おべんとう
+  romaji: obentou
+  english: boxed lunch
+  notes: A packed meal in a box, bought or made. Sold at every station and convenience store. JMdict seq 1513065.
+
+# ── Sugar, salt and tea (Lesson 4) ────────────────────────────────────────────
+
+- id: vocab.satou
+  jlpt: N5
+  word_type: noun
+  theme: food
+  japanese: 砂糖
+  reading: さとう
+  romaji: satou
+  english: sugar
+  notes: JMdict seq 1291600.
+
+- id: vocab.shio
+  jlpt: N5
+  word_type: noun
+  theme: food
+  japanese: 塩
+  reading: しお
+  romaji: shio
+  english: salt
+  notes: JMdict seq 1576630.
+
+- id: vocab.bataa
+  jlpt: N5
+  word_type: noun
+  theme: food
+  japanese: バター
+  reading: バター
+  romaji: bataa
+  english: butter
+  notes: JMdict seq 1098620.
+
+- id: vocab.koucha
+  jlpt: N5
+  word_type: noun
+  theme: food
+  japanese: 紅茶
+  reading: こうちゃ
+  romaji: koucha
+  english: black tea
+  notes: Literally "crimson tea". お茶 on its own means green tea, so the two are different orders, not a general and a specific. JMdict seq 1280770.
+
+- id: vocab.okashi
+  jlpt: N5
+  word_type: noun
+  theme: food
+  japanese: お菓子
+  reading: おかし
+  romaji: okashi
+  english: sweets, snacks
+  notes: Covers biscuits, cake and crisps alike — anything eaten between meals. JMdict seq 1001710.
+
+# ── In the kitchen (Lesson 5) ─────────────────────────────────────────────────
+
+- id: vocab.daidokoro
+  jlpt: N5
+  word_type: noun
+  theme: home
+  japanese: 台所
+  reading: だいどころ
+  romaji: daidokoro
+  english: kitchen
+  notes: JMdict seq 1412640.
+
+- id: vocab.teeburu
+  jlpt: N5
+  word_type: noun
+  theme: home
+  japanese: テーブル
+  reading: テーブル
+  romaji: teeburu
+  english: table
+  notes: JMdict seq 1078630.
+
+- id: vocab.koppu
+  jlpt: N5
+  word_type: noun
+  theme: home
+  japanese: コップ
+  reading: コップ
+  romaji: koppu
+  english: glass, tumbler
+  notes: From Dutch, not English — it is a drinking glass, not a teacup. JMdict seq 1050390.
+
+- id: vocab.supuun
+  jlpt: N5
+  word_type: noun
+  theme: home
+  japanese: スプーン
+  reading: スプーン
+  romaji: supuun
+  english: spoon
+  notes: JMdict seq 1072590.
+
+- id: vocab.naifu
+  jlpt: N5
+  word_type: noun
+  theme: home
+  japanese: ナイフ
+  reading: ナイフ
+  romaji: naifu
+  english: knife
+  notes: JMdict seq 1089890.
+
+- id: vocab.fooku
+  jlpt: N5
+  word_type: noun
+  theme: home
+  japanese: フォーク
+  reading: フォーク
+  romaji: fooku
+  english: fork
+  notes: JMdict seq 1110110.
+
+- id: vocab.hashi-chopsticks
+  jlpt: N5
+  word_type: noun
+  theme: home
+  japanese: 箸
+  reading: はし
+  romaji: hashi
+  english: chopsticks
+  notes: Usually お箸 when you ask for them. Same reading as 橋, a bridge, and as 端, an edge — three different words and only context separates them. JMdict seq 1476410.
+
+- id: vocab.hai-counter
+  jlpt: N5
+  word_type: counter
+  theme: food
+  japanese: 杯
+  reading: はい
+  romaji: hai
+  english: counter for cupfuls and bowlfuls
+  notes: Nothing to do with はい meaning yes, which is why the id carries a suffix. For anything in a cup, glass or bowl. The sound changes — 一杯 いっぱい, 三杯 さんばい, 六杯 ろっぱい. JMdict seq 2019640.
