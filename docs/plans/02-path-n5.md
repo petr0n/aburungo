@@ -38,9 +38,8 @@ always-free bucket, and every word on the ladder carries romaji as the crutch fo
 arrive before finishing it. There is no kana on-ramp from `/learn` today — an earlier draft drew a
 "kana mini-ladder" at the head of this diagram that was never built.
 
-**As of 2026-08-20** (including Chapter 11, landed on `feature/chapter-11-meals`, not yet merged):
-93 lessons — 81 teaching, 12 checkpoints — across 11 chapters, covering 20 situations. 450 words,
-207 phrases, 42 grammar patterns, 181 kanji.
+**As of 2026-08-21**, with Chapter 11 merged: 93 lessons — 81 teaching, 12 checkpoints — across
+11 chapters, covering 20 situations. 451 words, 207 phrases, 42 grammar patterns, 182 kanji.
 
 Pacing runs 5.6 words, 2.6 phrases and 2.2 kanji per teaching lesson. That is the honest rate at
 which a lesson can teach without becoming a list, and it is measured from the content rather than
@@ -157,12 +156,12 @@ are unlimited, nothing is recorded, and misses rejoin the SRS queue rather than 
 
 ## 6. Kanji
 
-181 kanji introduced on the lessons that need them, with the component/mnemonic layer still to be
+182 kanji introduced on the lessons that need them, with the component/mnemonic layer still to be
 built (`docs/plans/99-roadmap.md`). Stroke order via KanjiVG is bundled. The component method
 matters most from Book Two on, where kanji stop being learnable as flat shapes — installing it at
 Book One is an investment that pays out later.
 
-Note the count honestly: 181 is well past the ~100 kanji a typical N5 reference lists. That is a
+Note the count honestly: 182 is well past the ~100 kanji a typical N5 reference lists. That is a
 deliberate consequence of introducing kanji where the lesson needs them (料 and 理 arrive with
 料理, not in a silo) rather than a scope error — but it raises the stakes on the mnemonic layer,
 because the book is already asking for more raw shapes than the flat-memorisation method
@@ -183,9 +182,12 @@ Do not plan new work that depends on Hana without asking.
 
 ## 8. Content coverage
 
-The N5 community reference lists 809 words. Book One teaches 450 words covering 436 of that list,
-leaving 373 of it missing — 231 of those attested by both reference lists and flagged common in
-JMdict, which is the queue worth authoring against. 56 taught words are ones the book needs and
+The N5 community reference lists 809 words. Book One teaches 451 words covering 423 of that list,
+leaving 386 of it missing — 241 of those attested by both reference lists and flagged common in
+JMdict, which is the queue worth authoring against. The gap grew rather than shrank when Chapter
+11 landed: the same PR fixed a homophone bug that had been marking reference entries covered on a
+bare reading match (adding 晩 silently "covered" ～番), so the current figure is the first honest
+one. 56 taught words are ones the book needs and
 the list does not have (何曜日, またね, お願いします — compounds and set phrases a situation
 demands), which is the normal direction of that disagreement. `node scripts/jlpt.mjs coverage n5`
 regenerates the gap file.
@@ -197,9 +199,9 @@ JMdict before it goes in.
 
 The food cluster — the largest hole in the gap list — shipped as Chapter 11 (DR-032). The one
 remaining cluster planned for the finish is **people & clothes**. Be honest about what that
-closes: a chapter is ~27 words, so the book will finish with roughly 350 reference words untaught,
-~200 of them common. Either that remainder is Book Two's opening inventory and review fodder — the
-defensible reading, since 450 situation-anchored words beat 800 list-marched ones for a first book
+closes: a chapter is ~27 words, so the book will finish with roughly 360 reference words untaught,
+~215 of them common. Either that remainder is Book Two's opening inventory and review fodder — the
+defensible reading, since 451 situation-anchored words beat 800 list-marched ones for a first book
 — or it demands more chapters than the current plan holds (see the sizing note in §2). That is an
 owner call, not a drift to paper over.
 
@@ -211,9 +213,8 @@ asked to pay.
 
 ## 10. What is still missing
 
-- **Merging Chapter 11** — landed on `feature/chapter-11-meals` (DR-032), not yet on `main`
 - **The people & clothes chapter** — the last planned chapter; closes the book at ~12 chapters
-- **Kanji component + mnemonic layer** — kanji are introduced but not decomposed, and at 181
+- **Kanji component + mnemonic layer** — kanji are introduced but not decomposed, and at 182
   shapes the flat method is already past its comfortable ceiling (§6)
 - **Graded reading** — no assembled passages yet
 - **Audio** — VOICEVOX pipeline not built; items are not yet playable

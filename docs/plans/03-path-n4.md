@@ -14,27 +14,29 @@ the N4 book, and a learner never reads that — the `jlpt` field lives only in t
 
 ---
 
-## 0. Groundwork first — two things block this book
+## 0. Groundwork — built, except the produce beat (PR #90)
 
-**(a) The app knows only one book.** `n5Lessons` is a hardcoded export in
-[src/content/lessons/index.ts](../../src/content/lessons/index.ts), referenced in eight places in
-[LearnPage.tsx](../../src/pages/LearnPage.tsx). There is no concept of "the book you are in", no
-book-to-book transition, and no per-book gating. Authoring Book Two content first and generalising
-afterwards means retrofitting two books instead of one — the same mistake as retrofitting chapters
-into a ladder that already had 64 lessons.
+Both blockers this section originally described are resolved; what is left is content-shaped, not
+engine-shaped.
 
-What is needed is small: make the book a parameter rather than an import, give `Book` an id, order,
-title and chapter list, and let the orchestrator take one. `placeInChapter` and the chapter helpers
-are already pure functions taking lessons and chapters as arguments, so they generalise for free.
+**(a) The book is a parameter — done.** `Book` carries id, order, title, chapters and lessons;
+`bookOne` lives in [src/content/books.ts](../../src/content/books.ts) and the daily-loop
+orchestrator takes a book rather than importing `n5Lessons`. Adding Book Two is a new `Book`
+instance plus its content, not a refactor. Review eligibility deliberately spans **every book the
+learner has worked through** while new material stays scoped to the current one — otherwise Book
+One's items would go silent the day this book opened, which is the opposite of what §2 wants.
 
-**(b) The per-book difficulty shift does not exist.** Everything in §2 below — recall as the
-default, the romaji cut, production-first formats — describes behaviour no code implements.
-Every card renders the same way at every level today. The open decision is whether the shift is a
-property of the Book (a field), of the lesson, or of the learner's progress. **Recommended: a Book
-field.** The shift is this book's premise, not a per-lesson nuance; a per-learner override can be
-added later if testing demands one, and a field is the cheapest thing that can ship.
+**(b) The difficulty shift is a `Book` field — two of three behaviours built.** Recall as the
+default review gate and the romaji display cut both work, and are provable against Book One
+content today via a dev-only `?shift=1`. Romaji→kana *input* conversion is untouched, per §6.
 
-Neither is large. Both are much larger after content exists.
+**What is not built: the production-first produce beat.** Frame-based composition needs frames and
+their model sentences as **authored content**, which §8 has always said. An attempt to derive them
+at runtime failed twice over: kana has no word boundaries, so matching a word inside a phrase's
+reading split words in half (き lifted out of the middle of きれい), and offering same-word-type
+substitutes synthesised sentences nobody verified — the fabricated-Japanese rule. The lesson is
+that this beat is gated on authoring, not on engineering: **author the frames alongside the
+chapters** (§4) rather than expecting the engine to produce them.
 
 ## 1. The starting point — what a Book One graduate actually knows
 
@@ -249,9 +251,9 @@ at any level.
 
 1. Finish Book One (people & clothes chapter; food shipped as Chapter 11, DR-032)
 2. Kanji component + mnemonic layer
-3. Multi-book support (§0a) and the Book-level difficulty shift (§0b) — recall default, romaji
-   cut, frame-based produce beat
+3. ~~Multi-book support and the Book-level difficulty shift~~ — **done** (§0, PR #90), except the
+   produce beat, which moves into step 4 because it is authoring work
 4. Author Book Two chapters, rule chapters first, in skeleton order (§4) — plain form before
-   anything that stands on it
+   anything that stands on it — **authoring each lesson's composition frame alongside it** (§0, §8)
 5. Graded passages from mid-book on, once joining-sentences has shipped and vocabulary is deep
    enough for i+1 to mean anything
