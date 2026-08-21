@@ -12,6 +12,8 @@ type Props = {
   phrases: Phrase[];
   /** Reported per miss so the caller can return the item to the SRS queue. */
   onMissed?: (item: Word | Phrase) => void;
+  /** Passed through to the answer cards. Off in a difficulty-shifted book (03 §6). */
+  showRomaji?: boolean;
   onDone: () => void;
 };
 
@@ -32,7 +34,7 @@ type Props = {
  * against the reading, so kana and romaji both count; the point is recall, not
  * orthography.
  */
-export function ProductionCheckpoint({ lesson, words, phrases, onMissed, onDone }: Props) {
+export function ProductionCheckpoint({ lesson, words, phrases, onMissed, showRomaji = true, onDone }: Props) {
   const [started, setStarted] = useState(false);
   const [round, setRound] = useState<Array<Word | Phrase>>(() => buildProductionQueue(words, phrases));
   const [index, setIndex] = useState(0);
@@ -120,7 +122,7 @@ export function ProductionCheckpoint({ lesson, words, phrases, onMissed, onDone 
         </p>
         <p className="text-body-sm text-fg-subtle">{left === 1 ? "1 more to write" : `${left} to write`}</p>
       </div>
-      <FillBlankCard key={`${roundNumber}-${current.id}`} card={current} onNext={handleNext} />
+      <FillBlankCard key={`${roundNumber}-${current.id}`} card={current} showRomaji={showRomaji} onNext={handleNext} />
     </div>
   );
 }

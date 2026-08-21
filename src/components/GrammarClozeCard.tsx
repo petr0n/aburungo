@@ -10,10 +10,12 @@ type Phase = "input" | "result";
 type Props = {
   pattern: GrammarPattern;
   phrase: Phrase;
+  /** Off in a difficulty-shifted book (03 §6) — kana only. Defaults on. */
+  showRomaji?: boolean;
   onNext: (correct: boolean) => void;
 };
 
-export function GrammarClozeCard({ pattern, phrase, onNext }: Props) {
+export function GrammarClozeCard({ pattern, phrase, showRomaji = true, onNext }: Props) {
   const [phase, setPhase] = useState<Phase>("input");
   const [correct, setCorrect] = useState(false);
   const [userAnswer, setUserAnswer] = useState("");
@@ -61,7 +63,7 @@ export function GrammarClozeCard({ pattern, phrase, onNext }: Props) {
                 userAnswer={correct ? undefined : userAnswer}
               >
                 <Furigana japanese={phrase.japanese} reading={phrase.reading} className="font-jp text-jp-lg text-fg" />
-                <p className="text-body-sm italic text-fg-subtle">{phrase.romaji}</p>
+                {showRomaji && <p className="text-body-sm italic text-fg-subtle">{phrase.romaji}</p>}
               </AnswerResult>
 
               <Button type="button" onClick={handleNext} fullWidth>
