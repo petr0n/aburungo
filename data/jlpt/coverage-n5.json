@@ -1,11 +1,11 @@
 {
  "level": "N5",
- "generated": "2026-08-20",
+ "generated": "2026-08-21",
  "summary": {
   "reference": 809,
-  "taught": 450,
-  "covered": 436,
-  "missing": 373
+  "taught": 451,
+  "covered": 423,
+  "missing": 386
  },
  "missing": [
   {
@@ -32,6 +32,26 @@
    "written": "上げる",
    "reading": "あげる",
    "english": "to raise, to lift",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "熱い",
+   "reading": "あつい",
+   "english": "hot (objects)",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "厚い",
+   "reading": "あつい",
+   "english": "kind, warm(hearted), thick, deep",
    "sources": [
     "tanos",
     "open-anki"
@@ -72,6 +92,16 @@
    "written": "危ない",
    "reading": "あぶない",
    "english": "dangerous, critical",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "飴",
+   "reading": "あめ",
+   "english": "(hard) candy",
    "sources": [
     "tanos",
     "open-anki"
@@ -909,6 +939,16 @@
    "jmdictCommon": true
   },
   {
+   "written": "締める",
+   "reading": "しめる",
+   "english": "to tie, to fasten, to tighten",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
    "written": "写真",
    "reading": "しゃしん",
    "english": "a picture; a photograph",
@@ -1449,6 +1489,16 @@
    "jmdictCommon": true
   },
   {
+   "written": "撮る",
+   "reading": "とる",
+   "english": "to take (a photo), to make (a film)",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
    "written": "鳴く",
    "reading": "なく",
    "english": "to make sound (animal)",
@@ -1669,9 +1719,39 @@
    "jmdictCommon": true
   },
   {
+   "written": "鼻",
+   "reading": "はな",
+   "english": "nose",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
    "written": "話",
    "reading": "はなし",
    "english": "talk (chat), story",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "速い",
+   "reading": "はやい",
+   "english": "fast, quick",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "貼る",
+   "reading": "はる",
+   "english": "to post; to paste; to attach",
    "sources": [
     "tanos",
     "open-anki"
@@ -1732,6 +1812,16 @@
    "written": "東",
    "reading": "ひがし",
    "english": "east",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "弾く",
+   "reading": "ひく",
+   "english": "to play (a string instrument or piano)",
    "sources": [
     "tanos",
     "open-anki"
@@ -1802,6 +1892,16 @@
    "written": "プール",
    "reading": "ぷーる",
    "english": "swimming pool",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "吹く",
+   "reading": "ふく",
+   "english": "to blow (wind, etc.)",
    "sources": [
     "tanos",
     "open-anki"
@@ -2612,6 +2712,15 @@
    "jmdictCommon": true
   },
   {
+   "written": "河",
+   "reading": "かわ",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
    "written": "～側",
    "reading": "がわ",
    "english": "~ side",
@@ -2723,6 +2832,15 @@
    "written": "～個",
    "reading": "こ",
    "english": "counter for small items (e.g., fruits, cups)",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "～語",
+   "reading": "ご",
+   "english": "word, language",
    "sources": [
     "open-anki"
    ],
@@ -3236,6 +3354,15 @@
    "written": "初め; 始め",
    "reading": "はじめ",
    "english": "beginning, start",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "～番",
+   "reading": "ばん",
+   "english": "~st; ~th best",
    "sources": [
     "open-anki"
    ],

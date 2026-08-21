@@ -8,6 +8,7 @@
 import { describe, it, expect } from "vitest";
 import {
   normReading, searchStem, conjugationStem, runCovered, uncoveredRuns, segmentationVocab, isPolite,
+  writtenCompatible,
 } from "./jlpt.mjs";
 
 describe("normReading", () => {
@@ -134,5 +135,42 @@ describe("isPolite", () => {
     for (const s of ["好きにしろよ。", "すごいじゃん。", "もうだめだ。", "白黒つけろ。"]) {
       expect(isPolite(s)).toBe(false);
     }
+  });
+});
+
+/**
+ * Every case here is a real pair from the N5 reference. The homophone cases were
+ * all silently counted as covered until PR #88 -- adding 晩 hid ～番, and the
+ * regeneration revealed thirteen more the tool had been masking for months.
+ */
+describe("writtenCompatible", () => {
+  it("matches a kanji reference against a kana-only teaching form", () => {
+    // The original reason coverage keys on the reading: the app teaches あさ.
+    expect(writtenCompatible("朝", "あさ")).toBe(true);
+    expect(writtenCompatible("夜", "よる")).toBe(true);
+  });
+
+  it("matches spelling variants of the same word", () => {
+    expect(writtenCompatible("昼御飯", "昼ご飯")).toBe(true);
+    expect(writtenCompatible("朝御飯", "朝ご飯")).toBe(true);
+  });
+
+  it("separates homophones written with different kanji", () => {
+    expect(writtenCompatible("～番", "晩")).toBe(false);   // ordinal counter vs evening
+    expect(writtenCompatible("箸", "橋")).toBe(false);     // chopsticks vs bridge
+    expect(writtenCompatible("鼻", "花")).toBe(false);     // nose vs flower
+    expect(writtenCompatible("熱い", "暑い")).toBe(false); // hot to touch vs hot weather
+    expect(writtenCompatible("撮る", "取る")).toBe(false); // to photograph vs to take
+    expect(writtenCompatible("～語", "五")).toBe(false);   // language suffix vs five
+  });
+
+  it("keeps kana-written homophones matching, since the reading is all there is", () => {
+    expect(writtenCompatible("そば", "そば")).toBe(true);
+    expect(writtenCompatible("カレー", "カレー")).toBe(true);
+  });
+
+  it("treats a missing side as compatible rather than inventing a gap", () => {
+    expect(writtenCompatible("", "晩")).toBe(true);
+    expect(writtenCompatible("晩", undefined)).toBe(true);
   });
 });
