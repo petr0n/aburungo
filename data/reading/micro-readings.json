@@ -1,0 +1,951 @@
+{
+ "generated": "2026-08-21",
+ "stopgap": "This is 04-path-n3.md section 5 option (c), the labelled stopgap: thematically clustered verbatim Tatoeba sentences at a shared coverage band. Thematic neighbours, NOT coherent texts — the reader UI must not dress these up as stories. Replace with licensed graded readers or levelled Aozora texts when the section 5 text-source decision lands.",
+ "attribution": {
+  "source": "Tatoeba (https://tatoeba.org), via jmdict-examples-eng-3.6.2",
+  "licence": "CC BY 2.0 FR",
+  "note": "Each sentence carries its Tatoeba sentence id (tatoebaId). Sentences are verbatim; this pipeline selects and groups, never composes or edits."
+ },
+ "knownSet": "full taught inventory at generation time",
+ "bands": {
+  "90": "coverage in [0.90, 0.95) — typically one unknown token, mining material",
+  "95": "coverage in [0.95, 1) — long sentences with one unknown; sparse until the taught inventory grows",
+  "100": "every token known — flow material"
+ },
+ "counts": {
+  "readings": 11,
+  "byBand": {
+   "90": 7,
+   "100": 4
+  },
+  "eligibleSentences": 72
+ },
+ "readings": [
+  {
+   "id": "reading.basics-90-1",
+   "theme": "basics",
+   "band": "90",
+   "passageCoverage": 0.9123,
+   "sentences": [
+    {
+     "jpn": "とても暗いので私は本が読めない。",
+     "eng": "It is too dark for me to read.",
+     "tatoebaId": "200638",
+     "coverage": 0.9,
+     "unknownRuns": [
+      "暗い"
+     ],
+     "vocabIds": [
+      "vocab.totemo",
+      "vocab.watashitachi",
+      "vocab.hon",
+      "vocab.yomu",
+      "vocab.me"
+     ],
+     "grammarIds": []
+    },
+    {
+     "jpn": "これとあれはどういう関係があるの。",
+     "eng": "How is this connected to that?",
+     "tatoebaId": "218747",
+     "coverage": 0.9,
+     "unknownRuns": [
+      "関係"
+     ],
+     "vocabIds": [
+      "vocab.kore",
+      "vocab.are",
+      "vocab.dou",
+      "vocab.iu",
+      "vocab.aru"
+     ],
+     "grammarIds": []
+    },
+    {
+     "jpn": "これは私が長い間欲しかったものだ。",
+     "eng": "This is what I've long wanted.",
+     "tatoebaId": "218338",
+     "coverage": 0.9,
+     "unknownRuns": [
+      "長い間欲"
+     ],
+     "vocabIds": [
+      "vocab.kore",
+      "vocab.watashitachi"
+     ],
+     "grammarIds": []
+    },
+    {
+     "jpn": "あなたは私が信用できるたった一人の人です。",
+     "eng": "You're the only person that I can trust.",
+     "tatoebaId": "231980",
+     "coverage": 0.9286,
+     "unknownRuns": [
+      "信用"
+     ],
+     "vocabIds": [
+      "vocab.anata",
+      "vocab.watashitachi",
+      "vocab.ki",
+      "vocab.hitori",
+      "vocab.hito"
+     ],
+     "grammarIds": [
+      "grammar.n5-unit-1"
+     ]
+    },
+    {
+     "jpn": "あなたは私と対等で私より下でも上でもない。",
+     "eng": "You are my equal; not my inferior or superior.",
+     "tatoebaId": "231971",
+     "coverage": 0.9231,
+     "unknownRuns": [
+      "対等"
+     ],
+     "vocabIds": [
+      "vocab.anata",
+      "vocab.watashitachi",
+      "vocab.shita",
+      "vocab.ue"
+     ],
+     "grammarIds": []
+    }
+   ]
+  },
+  {
+   "id": "reading.family-100-1",
+   "theme": "family",
+   "band": "100",
+   "passageCoverage": 1,
+   "sentences": [
+    {
+     "jpn": "お勤めはどちらですか。",
+     "eng": "Who do you work for?",
+     "tatoebaId": "227297",
+     "coverage": 1,
+     "unknownRuns": [],
+     "vocabIds": [
+      "vocab.onegaishimasu",
+      "vocab.otousan",
+      "vocab.okaasan",
+      "vocab.oniisan",
+      "vocab.oneesan",
+      "vocab.okaikei",
+      "vocab.ocha",
+      "vocab.okane",
+      "vocab.tsutomeru",
+      "vocab.dochira"
+     ],
+     "grammarIds": [
+      "grammar.n5-unit-1"
+     ]
+    },
+    {
+     "jpn": "おや、今朝は早いですね。",
+     "eng": "Oh, you are early this morning.",
+     "tatoebaId": "227486",
+     "coverage": 1,
+     "unknownRuns": [],
+     "vocabIds": [
+      "vocab.onegaishimasu",
+      "vocab.otousan",
+      "vocab.okaasan",
+      "vocab.oniisan",
+      "vocab.oneesan",
+      "vocab.okaikei",
+      "vocab.ocha",
+      "vocab.okane",
+      "vocab.kesa",
+      "vocab.hayai"
+     ],
+     "grammarIds": [
+      "grammar.n5-unit-1",
+      "grammar.n5-unit-2",
+      "grammar.n5-unit-27"
+     ]
+    },
+    {
+     "jpn": "トイレお借りできますか。",
+     "eng": "May I use your toilet?",
+     "tatoebaId": "201738",
+     "coverage": 1,
+     "unknownRuns": [],
+     "vocabIds": [
+      "vocab.toire",
+      "vocab.onegaishimasu",
+      "vocab.otousan",
+      "vocab.okaasan",
+      "vocab.oniisan",
+      "vocab.oneesan",
+      "vocab.okaikei",
+      "vocab.ocha",
+      "vocab.okane",
+      "vocab.kariru",
+      "vocab.ki"
+     ],
+     "grammarIds": []
+    }
+   ]
+  },
+  {
+   "id": "reading.family-90-1",
+   "theme": "family",
+   "band": "90",
+   "passageCoverage": 0.9184,
+   "sentences": [
+    {
+     "jpn": "おや、床屋へ行ってきたのだね。",
+     "eng": "Oh, you've been to the barbershop.",
+     "tatoebaId": "227485",
+     "coverage": 0.9091,
+     "unknownRuns": [
+      "床屋"
+     ],
+     "vocabIds": [
+      "vocab.onegaishimasu",
+      "vocab.otousan",
+      "vocab.okaasan",
+      "vocab.oniisan",
+      "vocab.oneesan",
+      "vocab.okaikei",
+      "vocab.ocha",
+      "vocab.okane",
+      "vocab.iku",
+      "vocab.ki"
+     ],
+     "grammarIds": []
+    },
+    {
+     "jpn": "電話には出なかったからメールしておきました。",
+     "eng": "He didn't answer the phone, so I left him an email.",
+     "tatoebaId": "449040",
+     "coverage": 0.9167,
+     "unknownRuns": [
+      "メールし"
+     ],
+     "vocabIds": [
+      "vocab.denwa",
+      "vocab.ni",
+      "vocab.dasu",
+      "vocab.dekakeru",
+      "vocab.deru",
+      "vocab.naka",
+      "vocab.te",
+      "vocab.onegaishimasu",
+      "vocab.otousan",
+      "vocab.okaasan",
+      "vocab.oniisan",
+      "vocab.oneesan",
+      "vocab.okaikei",
+      "vocab.ocha",
+      "vocab.okane",
+      "vocab.ki"
+     ],
+     "grammarIds": [
+      "grammar.n5-past-mashita"
+     ]
+    },
+    {
+     "jpn": "「長い１日だったのでお疲れでしょう」「いいえ、全然」",
+     "eng": "\"You must be tired after a long day.\" \"No, not in the least.\"",
+     "tatoebaId": "236907",
+     "coverage": 0.9,
+     "unknownRuns": [
+      "全然"
+     ],
+     "vocabIds": [
+      "vocab.nagai",
+      "vocab.nichiyoubi",
+      "vocab.nihon",
+      "vocab.onegaishimasu",
+      "vocab.otousan",
+      "vocab.okaasan",
+      "vocab.oniisan",
+      "vocab.oneesan",
+      "vocab.okaikei",
+      "vocab.ocha",
+      "vocab.okane",
+      "vocab.tsukareru",
+      "vocab.iie"
+     ],
+     "grammarIds": []
+    },
+    {
+     "jpn": "２本も飲めなかったから、１本はあなたに残しておきました。",
+     "eng": "I couldn't drink both bottles, so I left one for you.",
+     "tatoebaId": "235392",
+     "coverage": 0.9375,
+     "unknownRuns": [
+      "残し"
+     ],
+     "vocabIds": [
+      "vocab.hon",
+      "vocab.nomitai",
+      "vocab.nomu",
+      "vocab.me",
+      "vocab.naka",
+      "vocab.anata",
+      "vocab.ni",
+      "vocab.te",
+      "vocab.onegaishimasu",
+      "vocab.otousan",
+      "vocab.okaasan",
+      "vocab.oniisan",
+      "vocab.oneesan",
+      "vocab.okaikei",
+      "vocab.ocha",
+      "vocab.okane",
+      "vocab.ki"
+     ],
+     "grammarIds": [
+      "grammar.n5-past-mashita"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "reading.home-100-1",
+   "theme": "home",
+   "band": "100",
+   "passageCoverage": 1,
+   "sentences": [
+    {
+     "jpn": "目やにが出ます。",
+     "eng": "I have mucus coming out of my eyes.",
+     "tatoebaId": "79951",
+     "coverage": 1,
+     "unknownRuns": [],
+     "vocabIds": [
+      "vocab.me",
+      "vocab.ni",
+      "vocab.dasu",
+      "vocab.dekakeru",
+      "vocab.deru"
+     ],
+     "grammarIds": []
+    },
+    {
+     "jpn": "疲れて足が重かった。",
+     "eng": "My legs were leaden from fatigue.",
+     "tatoebaId": "85884",
+     "coverage": 1,
+     "unknownRuns": [],
+     "vocabIds": [
+      "vocab.tsukareru",
+      "vocab.te",
+      "vocab.ashi",
+      "vocab.omoi"
+     ],
+     "grammarIds": []
+    },
+    {
+     "jpn": "右耳からうみが出ます。",
+     "eng": "Pus is coming out of my right ear.",
+     "tatoebaId": "189909",
+     "coverage": 1,
+     "unknownRuns": [],
+     "vocabIds": [
+      "vocab.migi",
+      "vocab.mimi",
+      "vocab.umi",
+      "vocab.dasu",
+      "vocab.dekakeru",
+      "vocab.deru"
+     ],
+     "grammarIds": []
+    },
+    {
+     "jpn": "電気を消すのを忘れないで。",
+     "eng": "Don't forget to turn the light off.",
+     "tatoebaId": "124838",
+     "coverage": 1,
+     "unknownRuns": [],
+     "vocabIds": [
+      "vocab.denki",
+      "vocab.kesu",
+      "vocab.wasureru"
+     ],
+     "grammarIds": []
+    },
+    {
+     "jpn": "顔はともかく、気立てはとてもいい子だよ。",
+     "eng": "Looks aside, she is very good-natured.",
+     "tatoebaId": "183637",
+     "coverage": 1,
+     "unknownRuns": [],
+     "vocabIds": [
+      "vocab.kao",
+      "vocab.kaku",
+      "vocab.kion",
+      "vocab.tatsu",
+      "vocab.te",
+      "vocab.totemo",
+      "vocab.ii",
+      "vocab.kodomo"
+     ],
+     "grammarIds": []
+    }
+   ]
+  },
+  {
+   "id": "reading.home-90-1",
+   "theme": "home",
+   "band": "90",
+   "passageCoverage": 0.9074,
+   "sentences": [
+    {
+     "jpn": "猫が私の手につめを立てた。",
+     "eng": "The cat dug its claws into my hand.",
+     "tatoebaId": "121993",
+     "coverage": 0.9167,
+     "unknownRuns": [
+      "猫"
+     ],
+     "vocabIds": [
+      "vocab.watashitachi",
+      "vocab.te",
+      "vocab.ni",
+      "vocab.tsu-counter",
+      "vocab.me",
+      "vocab.tatsu"
+     ],
+     "grammarIds": []
+    },
+    {
+     "jpn": "歌を歌って生計を立てている。",
+     "eng": "He makes his living by singing.",
+     "tatoebaId": "186782",
+     "coverage": 0.9,
+     "unknownRuns": [
+      "生計"
+     ],
+     "vocabIds": [
+      "vocab.utau",
+      "vocab.tatsu",
+      "vocab.te",
+      "vocab.iru"
+     ],
+     "grammarIds": []
+    },
+    {
+     "jpn": "彼女は晴れ着を着て出かけた。",
+     "eng": "She was off in her Sunday best.",
+     "tatoebaId": "88380",
+     "coverage": 0.9,
+     "unknownRuns": [
+      "彼"
+     ],
+     "vocabIds": [
+      "vocab.onna-no-hito",
+      "vocab.hare",
+      "vocab.tsuku",
+      "vocab.te",
+      "vocab.dekakeru"
+     ],
+     "grammarIds": []
+    },
+    {
+     "jpn": "部屋の除湿のため窓を開けた。",
+     "eng": "I opened the windows to remove the damp from the room.",
+     "tatoebaId": "84186",
+     "coverage": 0.9,
+     "unknownRuns": [
+      "除湿"
+     ],
+     "vocabIds": [
+      "vocab.heya",
+      "vocab.me",
+      "vocab.mado",
+      "vocab.akeru"
+     ],
+     "grammarIds": []
+    },
+    {
+     "jpn": "私は父が洗車するのを手伝った。",
+     "eng": "I helped my father wash his car.",
+     "tatoebaId": "153022",
+     "coverage": 0.9167,
+     "unknownRuns": [
+      "伝"
+     ],
+     "vocabIds": [
+      "vocab.watashitachi",
+      "vocab.chichi",
+      "vocab.arau",
+      "vocab.kuruma",
+      "vocab.suru",
+      "vocab.te"
+     ],
+     "grammarIds": []
+    }
+   ]
+  },
+  {
+   "id": "reading.nature-90-1",
+   "theme": "nature",
+   "band": "90",
+   "passageCoverage": 0.9167,
+   "sentences": [
+    {
+     "jpn": "探検家が山中の道なき道を行った。",
+     "eng": "The explorer pushed his way through the trackless mountain region.",
+     "tatoebaId": "391896",
+     "coverage": 0.9231,
+     "unknownRuns": [
+      "探検"
+     ],
+     "vocabIds": [
+      "vocab.kazoku",
+      "vocab.ie",
+      "vocab.yama",
+      "vocab.naka",
+      "vocab.michi",
+      "vocab.ki",
+      "vocab.iku"
+     ],
+     "grammarIds": []
+    },
+    {
+     "jpn": "ロビンは眠っているときはかわいい。",
+     "eng": "Robin looks very cute when he's sleeping.",
+     "tatoebaId": "192167",
+     "coverage": 0.9,
+     "unknownRuns": [
+      "ロビン"
+     ],
+     "vocabIds": [
+      "vocab.nemui",
+      "vocab.iru",
+      "vocab.ki",
+      "vocab.kawa",
+      "vocab.ii"
+     ],
+     "grammarIds": []
+    },
+    {
+     "jpn": "この次来るときは、花を持ってきてあげよう。",
+     "eng": "Next time I come, I'll bring you some flowers.",
+     "tatoebaId": "221566",
+     "coverage": 0.9231,
+     "unknownRuns": [
+      "あげ"
+     ],
+     "vocabIds": [
+      "vocab.kono",
+      "vocab.tsugi",
+      "vocab.kuru",
+      "vocab.ki",
+      "vocab.hana",
+      "vocab.mottekuru",
+      "vocab.te"
+     ],
+     "grammarIds": []
+    }
+   ]
+  },
+  {
+   "id": "reading.numbers-90-1",
+   "theme": "numbers",
+   "band": "90",
+   "passageCoverage": 0.9063,
+   "sentences": [
+    {
+     "jpn": "指輪はどこにも見つからなかった。",
+     "eng": "The ring was not to be found anywhere.",
+     "tatoebaId": "168224",
+     "coverage": 0.9,
+     "unknownRuns": [
+      "指輪"
+     ],
+     "vocabIds": [
+      "vocab.doko",
+      "vocab.ni",
+      "vocab.miru",
+      "vocab.tsu-counter",
+      "vocab.naka"
+     ],
+     "grammarIds": []
+    },
+    {
+     "jpn": "夏はいつもマイアミに行ったものだ。",
+     "eng": "During summers, I used to go to Miami.",
+     "tatoebaId": "187211",
+     "coverage": 0.9091,
+     "unknownRuns": [
+      "マイアミ"
+     ],
+     "vocabIds": [
+      "vocab.natsu",
+      "vocab.hai",
+      "vocab.tsu-counter",
+      "vocab.ni",
+      "vocab.iku"
+     ],
+     "grammarIds": []
+    },
+    {
+     "jpn": "その会社には会社の付属病院が３つある。",
+     "eng": "The company has three hospitals of its own.",
+     "tatoebaId": "211859",
+     "coverage": 0.9091,
+     "unknownRuns": [
+      "付属"
+     ],
+     "vocabIds": [
+      "vocab.sono",
+      "vocab.kaisha",
+      "vocab.ni",
+      "vocab.byouin",
+      "vocab.tsu-counter",
+      "vocab.aru"
+     ],
+     "grammarIds": []
+    }
+   ]
+  },
+  {
+   "id": "reading.time-100-1",
+   "theme": "time",
+   "band": "100",
+   "passageCoverage": 1,
+   "sentences": [
+    {
+     "jpn": "だから何なの？",
+     "eng": "So what?",
+     "tatoebaId": "203825",
+     "coverage": 1,
+     "unknownRuns": [],
+     "vocabIds": [
+      "vocab.nannin",
+      "vocab.nanyoubi",
+      "vocab.nannichi",
+      "vocab.nangatsu",
+      "vocab.nani",
+      "vocab.nan-en",
+      "vocab.nankai",
+      "vocab.nanimo",
+      "vocab.nanban",
+      "vocab.nanji"
+     ],
+     "grammarIds": []
+    },
+    {
+     "jpn": "１０月３日です。",
+     "eng": "It's the third of October.",
+     "tatoebaId": "236068",
+     "coverage": 1,
+     "unknownRuns": [],
+     "vocabIds": [
+      "vocab.getsuyoubi",
+      "vocab.gatsu",
+      "vocab.nichiyoubi",
+      "vocab.nihon"
+     ],
+     "grammarIds": []
+    },
+    {
+     "jpn": "そらバスが来た。",
+     "eng": "Here's the bus.",
+     "tatoebaId": "205974",
+     "coverage": 1,
+     "unknownRuns": [],
+     "vocabIds": [
+      "vocab.sora",
+      "vocab.basu",
+      "vocab.raishuu",
+      "vocab.raigetsu",
+      "vocab.rainen",
+      "vocab.kuru"
+     ],
+     "grammarIds": []
+    },
+    {
+     "jpn": "三日から五日で。",
+     "eng": "Maybe three to five days.",
+     "tatoebaId": "169490",
+     "coverage": 1,
+     "unknownRuns": [],
+     "vocabIds": [
+      "vocab.mikka",
+      "vocab.itsuka"
+     ],
+     "grammarIds": []
+    },
+    {
+     "jpn": "月が雲の上に出た。",
+     "eng": "The moon rose above the clouds.",
+     "tatoebaId": "175683",
+     "coverage": 1,
+     "unknownRuns": [],
+     "vocabIds": [
+      "vocab.getsuyoubi",
+      "vocab.gatsu",
+      "vocab.kumo",
+      "vocab.ue",
+      "vocab.ni",
+      "vocab.dasu",
+      "vocab.dekakeru",
+      "vocab.deru"
+     ],
+     "grammarIds": []
+    }
+   ]
+  },
+  {
+   "id": "reading.time-100-2",
+   "theme": "time",
+   "band": "100",
+   "passageCoverage": 1,
+   "sentences": [
+    {
+     "jpn": "１０時までに来ます。",
+     "eng": "I'll come by 10.",
+     "tatoebaId": "236043",
+     "coverage": 1,
+     "unknownRuns": [],
+     "vocabIds": [
+      "vocab.jikan",
+      "vocab.made",
+      "vocab.ni",
+      "vocab.raishuu",
+      "vocab.raigetsu",
+      "vocab.rainen",
+      "vocab.kuru"
+     ],
+     "grammarIds": []
+    },
+    {
+     "jpn": "私は今朝7時に起きた。",
+     "eng": "I got up at seven this morning.",
+     "tatoebaId": "156991",
+     "coverage": 1,
+     "unknownRuns": [],
+     "vocabIds": [
+      "vocab.watashitachi",
+      "vocab.kesa",
+      "vocab.jikan",
+      "vocab.ni",
+      "vocab.okiru"
+     ],
+     "grammarIds": []
+    },
+    {
+     "jpn": "その会は十時に終わった。",
+     "eng": "The party ended at ten o'clock.",
+     "tatoebaId": "211902",
+     "coverage": 1,
+     "unknownRuns": [],
+     "vocabIds": [
+      "vocab.sono",
+      "vocab.kaisha",
+      "vocab.au",
+      "vocab.too",
+      "vocab.tooka",
+      "vocab.juuyokka",
+      "vocab.jikan",
+      "vocab.ni",
+      "vocab.owaru"
+     ],
+     "grammarIds": []
+    },
+    {
+     "jpn": "それから先の話を聞きたい。",
+     "eng": "I'd like to know the rest of the story.",
+     "tatoebaId": "205916",
+     "coverage": 1,
+     "unknownRuns": [],
+     "vocabIds": [
+      "vocab.sore",
+      "vocab.sensei",
+      "vocab.senshuu",
+      "vocab.sengetsu",
+      "vocab.hanasu",
+      "vocab.kiku",
+      "vocab.ki"
+     ],
+     "grammarIds": []
+    }
+   ]
+  },
+  {
+   "id": "reading.time-90-1",
+   "theme": "time",
+   "band": "90",
+   "passageCoverage": 0.9107,
+   "sentences": [
+    {
+     "jpn": "あの日は強い風が吹いていました。",
+     "eng": "There was a strong wind that day.",
+     "tatoebaId": "230511",
+     "coverage": 0.9,
+     "unknownRuns": [
+      "吹い"
+     ],
+     "vocabIds": [
+      "vocab.ano",
+      "vocab.nichiyoubi",
+      "vocab.nihon",
+      "vocab.tsuyoi",
+      "vocab.furo",
+      "vocab.kaze",
+      "vocab.te",
+      "vocab.ima",
+      "vocab.shita"
+     ],
+     "grammarIds": [
+      "grammar.n5-past-mashita"
+     ]
+    },
+    {
+     "jpn": "二本の道はそこでクロスしている。",
+     "eng": "The two roads cross there.",
+     "tatoebaId": "75827",
+     "coverage": 0.9,
+     "unknownRuns": [
+      "クロスし"
+     ],
+     "vocabIds": [
+      "vocab.futari",
+      "vocab.futsuka",
+      "vocab.hatsuka",
+      "vocab.ni",
+      "vocab.hon",
+      "vocab.michi",
+      "vocab.soko",
+      "vocab.te",
+      "vocab.iru"
+     ],
+     "grammarIds": []
+    },
+    {
+     "jpn": "武は来るには来たが、すぐ帰った。",
+     "eng": "Takeshi did come, but didn't stay long.",
+     "tatoebaId": "84267",
+     "coverage": 0.9091,
+     "unknownRuns": [
+      "武"
+     ],
+     "vocabIds": [
+      "vocab.kuru",
+      "vocab.ni",
+      "vocab.raishuu",
+      "vocab.raigetsu",
+      "vocab.rainen",
+      "vocab.sugu",
+      "vocab.kaeru"
+     ],
+     "grammarIds": []
+    },
+    {
+     "jpn": "その事故は去年の今日、起きたのだ。",
+     "eng": "The accident happened a year ago today.",
+     "tatoebaId": "209845",
+     "coverage": 0.9,
+     "unknownRuns": [
+      "事故"
+     ],
+     "vocabIds": [
+      "vocab.sono",
+      "vocab.kyonen",
+      "vocab.kyou",
+      "vocab.okiru"
+     ],
+     "grammarIds": []
+    },
+    {
+     "jpn": "私は彼が来るのを今か今かと待っている。",
+     "eng": "I expect him to come every moment.",
+     "tatoebaId": "154375",
+     "coverage": 0.9333,
+     "unknownRuns": [
+      "彼"
+     ],
+     "vocabIds": [
+      "vocab.watashitachi",
+      "vocab.kuru",
+      "vocab.ima",
+      "vocab.kyou",
+      "vocab.kesa",
+      "vocab.konshuu",
+      "vocab.kongetsu",
+      "vocab.kotoshi",
+      "vocab.matsu",
+      "vocab.iru"
+     ],
+     "grammarIds": []
+    }
+   ]
+  },
+  {
+   "id": "reading.time-90-2",
+   "theme": "time",
+   "band": "90",
+   "passageCoverage": 0.9143,
+   "sentences": [
+    {
+     "jpn": "旅行で使ったお金、全部説明がつきますか。",
+     "eng": "Can you account for all the money you spent on your trip?",
+     "tatoebaId": "78184",
+     "coverage": 0.9167,
+     "unknownRuns": [
+      "説"
+     ],
+     "vocabIds": [
+      "vocab.ryokou",
+      "vocab.tsukau",
+      "vocab.okane",
+      "vocab.zenbu",
+      "vocab.akarui",
+      "vocab.ashita",
+      "vocab.asatte",
+      "vocab.gatsu",
+      "vocab.ki"
+     ],
+     "grammarIds": []
+    },
+    {
+     "jpn": "この仕事は何が何だかさっぱり分からないわ。",
+     "eng": "I can't make heads or tails of this assignment.",
+     "tatoebaId": "221818",
+     "coverage": 0.9,
+     "unknownRuns": [
+      "何だかさっぱり"
+     ],
+     "vocabIds": [
+      "vocab.kono",
+      "vocab.shigoto",
+      "vocab.nannin",
+      "vocab.nanyoubi",
+      "vocab.nannichi",
+      "vocab.nangatsu",
+      "vocab.nani",
+      "vocab.nan-en",
+      "vocab.nankai",
+      "vocab.nanimo",
+      "vocab.nanban",
+      "vocab.nanji",
+      "vocab.fun"
+     ],
+     "grammarIds": []
+    },
+    {
+     "jpn": "「もう少しで時間ぎれだからね」と先生は言った。",
+     "eng": "\"You are almost out of time\", said the teacher.",
+     "tatoebaId": "236425",
+     "coverage": 0.9231,
+     "unknownRuns": [
+      "ぎれ"
+     ],
+     "vocabIds": [
+      "vocab.mou",
+      "vocab.sukoshi",
+      "vocab.jikan",
+      "vocab.sensei",
+      "vocab.iu"
+     ],
+     "grammarIds": []
+    }
+   ]
+  }
+ ]
+}
