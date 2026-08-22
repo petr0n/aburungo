@@ -1,0 +1,7304 @@
+{
+ "level": "N4",
+ "generated": "2026-08-21",
+ "summary": {
+  "reference": 770,
+  "taught": 451,
+  "covered": 19,
+  "missing": 751
+ },
+ "missing": [
+  {
+   "written": "合う",
+   "reading": "あう",
+   "english": "to fit, to match",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "赤ん坊",
+   "reading": "あかんぼう",
+   "english": "baby",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "空く",
+   "reading": "あく",
+   "english": "to open, to become empty (vacant)",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "アクセサリー",
+   "reading": "あくせさりー",
+   "english": "accessory",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "あげる",
+   "reading": "あげる",
+   "english": "to give",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "浅い",
+   "reading": "あさい",
+   "english": "shallow, superficial",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "味",
+   "reading": "あじ",
+   "english": "flavor, taste",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "アジア",
+   "reading": "あじあ",
+   "english": "Asia",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "明日",
+   "reading": "あす",
+   "english": "tomorrow",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "遊び",
+   "reading": "あそび",
+   "english": "play",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "集める",
+   "reading": "あつめる",
+   "english": "to collect, to gather (v.t.), to assemble",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "アナウンサー",
+   "reading": "あなうんさー",
+   "english": "announcer",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "アフリカ",
+   "reading": "あふりか",
+   "english": "Africa",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "アメリカ",
+   "reading": "あめりか",
+   "english": "America, U.S.A.",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "謝る",
+   "reading": "あやまる",
+   "english": "to apologize",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "アルコール",
+   "reading": "あるこーる",
+   "english": "alcohol",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "アルバイト",
+   "reading": "あるばいと",
+   "english": "part-time job",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "安心",
+   "reading": "あんしん",
+   "english": "peace of mind, relief",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "安全",
+   "reading": "あんぜん",
+   "english": "safety, security",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "あんな",
+   "reading": "あんな",
+   "english": "such, like that",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "以下",
+   "reading": "いか",
+   "english": "less than, below",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "以外",
+   "reading": "いがい",
+   "english": "other than, with the exception of, excepting",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "医学",
+   "reading": "いがく",
+   "english": "medical science",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "生きる",
+   "reading": "いきる",
+   "english": "to live",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "意見",
+   "reading": "いけん",
+   "english": "opinion, view, idea",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "石",
+   "reading": "いし",
+   "english": "stone",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "いじめる",
+   "reading": "いじめる",
+   "english": "to bully, to torment",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "以上",
+   "reading": "いじょう",
+   "english": "more than; this is all",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "致す",
+   "reading": "いたす",
+   "english": "-- extra-modest expression for する --",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "一度",
+   "reading": "いちど",
+   "english": "once, one time",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "一生懸命",
+   "reading": "いっしょうけんめい",
+   "english": "very hard (as in \"to work hard\"), with utmost effort",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "糸",
+   "reading": "いと",
+   "english": "thread",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "以内",
+   "reading": "いない",
+   "english": "within, less (no more) than",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "田舎",
+   "reading": "いなか",
+   "english": "rural, countryside",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "祈る",
+   "reading": "いのる",
+   "english": "to pray; to wish",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "いらっしゃる",
+   "reading": "いらっしゃる",
+   "english": "-- honorific expression for いく, くる, and いる --",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "植える",
+   "reading": "うえる",
+   "english": "to plant",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "うかがう",
+   "reading": "うかがう",
+   "english": "to ask",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "受付",
+   "reading": "うけつけ",
+   "english": "reception(ist) desk",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "受ける",
+   "reading": "うける",
+   "english": "to take (an examination, interview, etc.); to receive",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "動く",
+   "reading": "うごく",
+   "english": "to move",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "打つ",
+   "reading": "うつ",
+   "english": "to hit, to strike",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "美しい",
+   "reading": "うつくしい",
+   "english": "beautiful, lovely",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "写す",
+   "reading": "うつす",
+   "english": "to copy (v.t.); to photograph",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "移る",
+   "reading": "うつる",
+   "english": "to move (from a house); to transfer (from a department); to shift",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "腕",
+   "reading": "うで",
+   "english": "arm (in reference to body)",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "うまい",
+   "reading": "うまい",
+   "english": "delicious; skillful; fortunate",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "裏",
+   "reading": "うら",
+   "english": "reverse side, back",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "売り場",
+   "reading": "うりば",
+   "english": "place where things are sold",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "うん",
+   "reading": "うん",
+   "english": "yes (informal), all right (ok)",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "運転手",
+   "reading": "うんてんしゅ",
+   "english": "driver (by occupation)",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "エスカレーター",
+   "reading": "えすかれーたー",
+   "english": "escalator",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "枝",
+   "reading": "えだ",
+   "english": "branch, twig",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "選ぶ",
+   "reading": "えらぶ",
+   "english": "to choose; to select",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "お祝い",
+   "reading": "おいわい",
+   "english": "congratulation, celebration",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "オートバイ",
+   "reading": "おーとばい",
+   "english": "motorcycle (lit: auto-bi(ke))",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "おかしい",
+   "reading": "おかしい",
+   "english": "strange; odd; funny",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "億",
+   "reading": "おく",
+   "english": "hundred million",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "屋上",
+   "reading": "おくじょう",
+   "english": "rooftop",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "贈り物",
+   "reading": "おくりもの",
+   "english": "a gift; a present",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "送る",
+   "reading": "おくる",
+   "english": "to send, to dispatch",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "遅れる",
+   "reading": "おくれる",
+   "english": "to (be) become late",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "行う",
+   "reading": "おこなう",
+   "english": "to carry out; to conduct (typically used in written language)",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "怒る",
+   "reading": "おこる",
+   "english": "to get angry; to scold angrily",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "押し入れ",
+   "reading": "おしいれ",
+   "english": "closet",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "お嬢さん",
+   "reading": "おじょうさん",
+   "english": "(someone's) daughter (polite)",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "お宅",
+   "reading": "おたく",
+   "english": "(someone else's) house; home -- polite word for 家 (いえ) --",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "落る",
+   "reading": "おちる",
+   "english": "to fall, to drop",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "おっしゃる",
+   "reading": "おっしゃる",
+   "english": "-- honorific expression for いう --",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "夫",
+   "reading": "おっと",
+   "english": "husband",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "おつり",
+   "reading": "おつり",
+   "english": "change; balance of money returned to the purchaser",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "音",
+   "reading": "おと",
+   "english": "sound, note",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "落す",
+   "reading": "おとす",
+   "english": "to drop, to lose",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "踊り",
+   "reading": "おどり",
+   "english": "dance",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "踊る",
+   "reading": "おどる",
+   "english": "to dance",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "驚く",
+   "reading": "おどろく",
+   "english": "to be surprised, to be astonished",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "お土産",
+   "reading": "おみやげ",
+   "english": "souvenir",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "思い出す",
+   "reading": "おもいだす",
+   "english": "to recall, to remember",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "思う",
+   "reading": "おもう",
+   "english": "to think, to feel",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "おもちゃ",
+   "reading": "おもちゃ",
+   "english": "a toy",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "表",
+   "reading": "おもて",
+   "english": "surface; front; outside",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "親",
+   "reading": "おや",
+   "english": "a parent",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "折る",
+   "reading": "おる",
+   "english": "to snap, to break; to bend",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "お礼",
+   "reading": "おれい",
+   "english": "expression of gratitude; thanking; gift of appreciation; bow",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "折れる",
+   "reading": "おれる",
+   "english": "to break, to be folded, to give in; to turn (a corner)",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "終わり",
+   "reading": "おわり",
+   "english": "end",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "カーテン",
+   "reading": "かーてん",
+   "english": "curtain",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "海岸",
+   "reading": "かいがん",
+   "english": "coast, seashore",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "会議",
+   "reading": "かいぎ",
+   "english": "business meeting; conference",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "会議室",
+   "reading": "かいぎしつ",
+   "english": "conference room",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "会場",
+   "reading": "かいじょう",
+   "english": "venue, meeting place",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "会話",
+   "reading": "かいわ",
+   "english": "conversation",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "帰り",
+   "reading": "かえり",
+   "english": "return, coming back",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "変える",
+   "reading": "かえる",
+   "english": "to change, to alter, to vary",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "科学",
+   "reading": "かがく",
+   "english": "science",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "鏡",
+   "reading": "かがみ",
+   "english": "mirror",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "飾る",
+   "reading": "かざる",
+   "english": "to decorate, to adorn",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "火事",
+   "reading": "かじ",
+   "english": "fire",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "ガス",
+   "reading": "がす",
+   "english": "gas",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "ガソリン",
+   "reading": "がそりん",
+   "english": "gasoline, petrol",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "ガソリンスタンド",
+   "reading": "がそりんすたんど",
+   "english": "gas station, service station",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "形",
+   "reading": "かたち",
+   "english": "shape",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "片付ける",
+   "reading": "かたづける",
+   "english": "to (clean) tidy up (v.t.), to put away",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "課長",
+   "reading": "かちょう",
+   "english": "section manager",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "勝つ",
+   "reading": "かつ",
+   "english": "to win",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "家内",
+   "reading": "かない",
+   "english": "(one's own) wife",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "悲しい",
+   "reading": "かなしい",
+   "english": "sad, sorrowful",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "必ず",
+   "reading": "かならず",
+   "english": "surely, certainly",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "彼女",
+   "reading": "かのじょ",
+   "english": "girlfriend; she",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "壁",
+   "reading": "かべ",
+   "english": "wall",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "髪",
+   "reading": "かみ",
+   "english": "hair",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "噛む",
+   "reading": "かむ",
+   "english": "to bite, to chew",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "通う",
+   "reading": "かよう",
+   "english": "to go back and forth; to commute",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "ガラス",
+   "reading": "がらす",
+   "english": "glass, pane",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "彼",
+   "reading": "かれ",
+   "english": "he, boyfriend",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "彼ら",
+   "reading": "かれら",
+   "english": "they (usually male)",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "乾く",
+   "reading": "かわく",
+   "english": "to get dry",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "代わり",
+   "reading": "かわり",
+   "english": "substitute, replacement",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "変わる",
+   "reading": "かわる",
+   "english": "to change (v.i.), to be transformed, to vary",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "考える",
+   "reading": "かんがえる",
+   "english": "to think (about); to consider",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "関係",
+   "reading": "かんけい",
+   "english": "relation(ship), connection",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "看護婦",
+   "reading": "かんごふ",
+   "english": "(female) nurse",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "簡単",
+   "reading": "かんたん",
+   "english": "simple",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "気",
+   "reading": "き",
+   "english": "spirit, mood",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "機会",
+   "reading": "きかい",
+   "english": "chance, opportunity",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "危険",
+   "reading": "きけん",
+   "english": "danger, risk, hazard",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "聞こえる",
+   "reading": "きこえる",
+   "english": "to be heard, to be audible",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "汽車",
+   "reading": "きしゃ",
+   "english": "train (steam)",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "技術",
+   "reading": "ぎじゅつ",
+   "english": "technique, technology, skill",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "季節",
+   "reading": "きせつ",
+   "english": "season (in reference to weather)",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "規則",
+   "reading": "きそく",
+   "english": "rule, regulation",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "きっと",
+   "reading": "きっと",
+   "english": "surely, definitely, undoubtedly, certainly",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "絹",
+   "reading": "きぬ",
+   "english": "silk",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "厳しい",
+   "reading": "きびしい",
+   "english": "hard; rigorous; strict",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "気分",
+   "reading": "きぶん",
+   "english": "feeling, mood",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "君",
+   "reading": "きみ",
+   "english": "you (informal for men)",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "決める",
+   "reading": "きめる",
+   "english": "to decide (v.t.)",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "気持ち",
+   "reading": "きもち",
+   "english": "feeling, sensation, mood",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "着物",
+   "reading": "きもの",
+   "english": "kimono; Japanese traditional dress",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "客",
+   "reading": "きゃく",
+   "english": "guest, customer",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "急行",
+   "reading": "きゅうこう",
+   "english": "express train or bus",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "教育",
+   "reading": "きょういく",
+   "english": "education",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "教会",
+   "reading": "きょうかい",
+   "english": "church",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "競争",
+   "reading": "きょうそう",
+   "english": "competition, contest",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "興味",
+   "reading": "きょうみ",
+   "english": "interest (in something)",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "近所",
+   "reading": "きんじょ",
+   "english": "neighborhood",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "具合",
+   "reading": "ぐあい",
+   "english": "condition, state, health",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "空気",
+   "reading": "くうき",
+   "english": "air, atmosphere",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "空港",
+   "reading": "くうこう",
+   "english": "airport",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "草",
+   "reading": "くさ",
+   "english": "grass",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "くださる",
+   "reading": "くださる",
+   "english": "(hon.) to give, to confer",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "首",
+   "reading": "くび",
+   "english": "neck",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "比べる",
+   "reading": "くらべる",
+   "english": "to compare",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "くれる",
+   "reading": "くれる",
+   "english": "to give, to do for",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "暮れる",
+   "reading": "くれる",
+   "english": "to get dark, to come to an end",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "毛",
+   "reading": "け",
+   "english": "hair, fur",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "経済",
+   "reading": "けいざい",
+   "english": "economics, finance, economy",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "警察",
+   "reading": "けいさつ",
+   "english": "police; police station",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "ケーキ",
+   "reading": "けーき",
+   "english": "cake",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "景色",
+   "reading": "けしき",
+   "english": "scenery, landscape",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "消しゴム",
+   "reading": "けしごむ",
+   "english": "eraser",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "下宿",
+   "reading": "げしゅく",
+   "english": "lodging, boarding house",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "決して",
+   "reading": "けっして",
+   "english": "never",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "原因",
+   "reading": "げんいん",
+   "english": "cause, origin, source",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "研究",
+   "reading": "けんきゅう",
+   "english": "study, research, investigation",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "研究室",
+   "reading": "けんきゅうしつ",
+   "english": "the professor's office; laboratory",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "見物",
+   "reading": "けんぶつ",
+   "english": "sightseeing",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "子",
+   "reading": "こ",
+   "english": "child",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "こう",
+   "reading": "こう",
+   "english": "like this, this way",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "郊外",
+   "reading": "こうがい",
+   "english": "suburb, outskirts",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "講義",
+   "reading": "こうぎ",
+   "english": "a lecture",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "工業",
+   "reading": "こうぎょう",
+   "english": "(manufacturing) industry",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "高校生",
+   "reading": "こうこうせい",
+   "english": "high school student",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "工場",
+   "reading": "こうじょう",
+   "english": "factory",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "校長",
+   "reading": "こうちょう",
+   "english": "principal, headmaster",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "交通",
+   "reading": "こうつう",
+   "english": "traffic, transportation",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "講堂",
+   "reading": "こうどう",
+   "english": "auditorium",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "公務員",
+   "reading": "こうむいん",
+   "english": "government worker, public servant",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "国際",
+   "reading": "こくさい",
+   "english": "international",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "心",
+   "reading": "こころ",
+   "english": "heart, mind",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "ご存じ",
+   "reading": "ごぞんじ",
+   "english": "knowing, acquaintance",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "答",
+   "reading": "こたえ",
+   "english": "answer, response",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "ごちそう",
+   "reading": "ごちそう",
+   "english": "feast, treating (someone)",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "小鳥",
+   "reading": "ことり",
+   "english": "small bird",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "細かい",
+   "reading": "こまかい",
+   "english": "small; fine, minute",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "ごみ",
+   "reading": "ごみ",
+   "english": "trash, garbage",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "込む",
+   "reading": "こむ",
+   "english": "to be crowded",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "米",
+   "reading": "こめ",
+   "english": "uncooked rice",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "これから",
+   "reading": "これから",
+   "english": "from now on, after this",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "怖い",
+   "reading": "こわい",
+   "english": "scary, frightening",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "壊す",
+   "reading": "こわす",
+   "english": "to break, to break down",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "壊れる",
+   "reading": "こわれる",
+   "english": "to be broken, to break",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "コンサート",
+   "reading": "こんさーと",
+   "english": "concert",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "今度",
+   "reading": "こんど",
+   "english": "now, this time, near future, one of these days, next time",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "今夜",
+   "reading": "こんや",
+   "english": "this evening, tonight",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "最近",
+   "reading": "さいきん",
+   "english": "recently, nowadays, in recent years, most recent, latest",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "最後",
+   "reading": "さいご",
+   "english": "last, end",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "最初",
+   "reading": "さいしょ",
+   "english": "beginning, first",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "坂",
+   "reading": "さか",
+   "english": "slope, hill",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "探す",
+   "reading": "さがす",
+   "english": "to search, to seek, to look for",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "下る",
+   "reading": "さがる",
+   "english": "to descend, to drop, to fall",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "盛ん",
+   "reading": "さかん",
+   "english": "prosperous, active, thriving",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "下げる",
+   "reading": "さげる",
+   "english": "to lower (v.t.); to hang",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "差し上げる",
+   "reading": "さしあげる",
+   "english": "-- humble expression for あげる --",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "寂しい",
+   "reading": "さびしい",
+   "english": "lonely, lonesome",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "サラダ",
+   "reading": "さらだ",
+   "english": "salad",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "騒ぐ",
+   "reading": "さわぐ",
+   "english": "to make noise, to clamor",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "触る",
+   "reading": "さわる",
+   "english": "to touch, to feel",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "産業",
+   "reading": "さんぎょう",
+   "english": "industry",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "サンダル",
+   "reading": "さんだる",
+   "english": "sandal",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "サンドイッチ",
+   "reading": "さんどいっち",
+   "english": "sandwich",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "残念",
+   "reading": "ざんねん",
+   "english": "regret; regrettable",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "市",
+   "reading": "し",
+   "english": "city",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "字",
+   "reading": "じ",
+   "english": "letter; character",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "試合",
+   "reading": "しあい",
+   "english": "match, game, competition",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "仕方",
+   "reading": "しかた",
+   "english": "way (of doing something)",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "試験",
+   "reading": "しけん",
+   "english": "an exam",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "事故",
+   "reading": "じこ",
+   "english": "accident",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "地震",
+   "reading": "じしん",
+   "english": "earthquake",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "時代",
+   "reading": "じだい",
+   "english": "age, period, epoch, era",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "下着",
+   "reading": "したぎ",
+   "english": "underwear",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "しっかり",
+   "reading": "しっかり",
+   "english": "firmly, steady",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "失敗",
+   "reading": "しっぱい",
+   "english": "failure, mistake",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "辞典",
+   "reading": "じてん",
+   "english": "encyclopedia, reference book",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "品物",
+   "reading": "しなもの",
+   "english": "goods",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "しばらく",
+   "reading": "しばらく",
+   "english": "little while",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "島",
+   "reading": "しま",
+   "english": "island",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "市民",
+   "reading": "しみん",
+   "english": "citizen",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "事務所",
+   "reading": "じむしょ",
+   "english": "office",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "社会",
+   "reading": "しゃかい",
+   "english": "society",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "社長",
+   "reading": "しゃちょう",
+   "english": "president of a company",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "ジャム",
+   "reading": "じゃむ",
+   "english": "jam",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "自由",
+   "reading": "じゆう",
+   "english": "freedom",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "習慣",
+   "reading": "しゅうかん",
+   "english": "custom (in reference to culture)",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "住所",
+   "reading": "じゅうしょ",
+   "english": "address; place of residence",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "柔道",
+   "reading": "じゅうどう",
+   "english": "judo",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "十分",
+   "reading": "じゅうぶん",
+   "english": "enough",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "趣味",
+   "reading": "しゅみ",
+   "english": "hobby; pastime",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "紹介",
+   "reading": "しょうかい",
+   "english": "an introduction",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "小学校",
+   "reading": "しょうがっこう",
+   "english": "elementary school",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "小説",
+   "reading": "しょうせつ",
+   "english": "novel",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "将来",
+   "reading": "しょうらい",
+   "english": "(in the) future; prospects",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "食料品",
+   "reading": "しょくりょうひん",
+   "english": "foodstuff, groceries",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "女性",
+   "reading": "じょせい",
+   "english": "woman",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "知らせる",
+   "reading": "しらせる",
+   "english": "to notify",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "調べる",
+   "reading": "しらべる",
+   "english": "to check; to look up; to inquire; to search",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "人口",
+   "reading": "じんこう",
+   "english": "population",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "神社",
+   "reading": "じんじゃ",
+   "english": "Shinto shrine",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "親切",
+   "reading": "しんせつ",
+   "english": "kindness",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "新聞社",
+   "reading": "しんぶんしゃ",
+   "english": "newspaper company",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "水泳",
+   "reading": "すいえい",
+   "english": "swimming",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "水道",
+   "reading": "すいどう",
+   "english": "water service, water line",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "数学",
+   "reading": "すうがく",
+   "english": "mathematics",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "スーツ",
+   "reading": "すーつ",
+   "english": "suit",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "スーツケース",
+   "reading": "すーつけーす",
+   "english": "suitcase",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "過ぎる",
+   "reading": "すぎる",
+   "english": "to exceed, to go beyond",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "スクリーン",
+   "reading": "すくりーん",
+   "english": "screen",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "凄い",
+   "reading": "すごい",
+   "english": "terrific, great",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "進む",
+   "reading": "すすむ",
+   "english": "to advance, to proceed",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "すっかり",
+   "reading": "すっかり",
+   "english": "all, completely",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "すっと",
+   "reading": "すっと",
+   "english": "straight, quickly",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "ステーキ",
+   "reading": "すてーき",
+   "english": "steak",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "捨てる",
+   "reading": "すてる",
+   "english": "throw away (trash), dump, discard",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "ステレオ",
+   "reading": "すてれお",
+   "english": "stereo",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "砂",
+   "reading": "すな",
+   "english": "sand",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "滑る",
+   "reading": "すべる",
+   "english": "to slide, to slip",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "隅",
+   "reading": "すみ",
+   "english": "corner",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "済む",
+   "reading": "すむ",
+   "english": "to finish, to end",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "すり",
+   "reading": "すり",
+   "english": "pickpocket",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "すると",
+   "reading": "すると",
+   "english": "and, then",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "政治",
+   "reading": "せいじ",
+   "english": "politics",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "西洋",
+   "reading": "せいよう",
+   "english": "the West, Western countries",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "世界",
+   "reading": "せかい",
+   "english": "world",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "説明",
+   "reading": "せつめい",
+   "english": "explanation",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "背中",
+   "reading": "せなか",
+   "english": "back (of body)",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "線",
+   "reading": "せん",
+   "english": "line, wire",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "戦争",
+   "reading": "せんそう",
+   "english": "war",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "先輩",
+   "reading": "せんぱい",
+   "english": "senior members of a group",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "そう",
+   "reading": "そう",
+   "english": "really, (is that) so; yes, right",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "育てる",
+   "reading": "そだてる",
+   "english": "to raise (v.t.); to bring up",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "卒業",
+   "reading": "そつぎょう",
+   "english": "graduation",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "祖父",
+   "reading": "そふ",
+   "english": "grandfather",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "ソフト",
+   "reading": "そふと",
+   "english": "soft; soft hat; software",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "祖母",
+   "reading": "そぼ",
+   "english": "grandmother",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "それで",
+   "reading": "それで",
+   "english": "and (conj.), thereupon, because of that",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "それに",
+   "reading": "それに",
+   "english": "moreover; besides",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "それほど",
+   "reading": "それほど",
+   "english": "to that degree; extent",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "そろそろ",
+   "reading": "そろそろ",
+   "english": "gradually, soon",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "そんな",
+   "reading": "そんな",
+   "english": "such, like that, that sort of",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "そんなに",
+   "reading": "そんなに",
+   "english": "so much, like that",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "大学生",
+   "reading": "だいがくせい",
+   "english": "college student, university student",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "大事",
+   "reading": "だいじ",
+   "english": "important, valuable, serious matter",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "大体",
+   "reading": "だいたい",
+   "english": "approximately; in most cases; in general; to begin with (same as もともと)",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "タイプ",
+   "reading": "たいぷ",
+   "english": "type, style",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "大分",
+   "reading": "だいぶ",
+   "english": "fairly well, to a large extent, considerably, pretty much",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "台風",
+   "reading": "たいふう",
+   "english": "typhoon",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "倒れる",
+   "reading": "たおれる",
+   "english": "to collapse, to break down",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "だから",
+   "reading": "だから",
+   "english": "so; therefore",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "確か",
+   "reading": "たしか",
+   "english": "if I remember correctly; certain, definite",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "足す",
+   "reading": "たす",
+   "english": "to add (numbers)",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "訪ねる",
+   "reading": "たずねる",
+   "english": "to visit",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "尋ねる",
+   "reading": "たずねる",
+   "english": "to inquire (same as 質問する)",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "正しい",
+   "reading": "ただしい",
+   "english": "correct",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "畳",
+   "reading": "たたみ",
+   "english": "tatami mat (Japanese straw mat)",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "立てる",
+   "reading": "たてる",
+   "english": "to stand (something) up, to erect (something)",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "建てる",
+   "reading": "たてる",
+   "english": "to build",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "例えば",
+   "reading": "たとえば",
+   "english": "for example, e.g.",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "棚",
+   "reading": "たな",
+   "english": "shelves, rack",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "楽しみ",
+   "reading": "たのしみ",
+   "english": "pleasure, joy",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "楽む",
+   "reading": "たのしむ",
+   "english": "to enjoy",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "たまに",
+   "reading": "たまに",
+   "english": "occasionally",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "為",
+   "reading": "ため",
+   "english": "good, advantage, in order to",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "だめ",
+   "reading": "だめ",
+   "english": "useless, no good, hopeless",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "足りる",
+   "reading": "たりる",
+   "english": "to be sufficient; to be enough",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "男性",
+   "reading": "だんせい",
+   "english": "man; male",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "暖房",
+   "reading": "だんぼう",
+   "english": "heating",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "血",
+   "reading": "ち",
+   "english": "blood",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "力",
+   "reading": "ちから",
+   "english": "strength, power",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "ちっとも",
+   "reading": "ちっとも",
+   "english": "not at all (neg. verb)",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "注意",
+   "reading": "ちゅうい",
+   "english": "caution, attention",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "中学校",
+   "reading": "ちゅうがっこう",
+   "english": "junior high school pupil",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "注射",
+   "reading": "ちゅうしゃ",
+   "english": "injection",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "駐車場",
+   "reading": "ちゅうしゃじょう",
+   "english": "parking lot",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "地理",
+   "reading": "ちり",
+   "english": "geography",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "捕まえる",
+   "reading": "つかまえる",
+   "english": "to catch, to arrest",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "都合",
+   "reading": "つごう",
+   "english": "circumstances, convenience",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "伝える",
+   "reading": "つたえる",
+   "english": "to convey (a message); to tell, to report",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "続く",
+   "reading": "つづく",
+   "english": "to be continued",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "続ける",
+   "reading": "つづける",
+   "english": "to continue, to keep up",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "包む",
+   "reading": "つつむ",
+   "english": "to wrap, to cover",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "妻",
+   "reading": "つま",
+   "english": "wife (humble)",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "つもり",
+   "reading": "つもり",
+   "english": "intention, plan",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "釣る",
+   "reading": "つる",
+   "english": "to fish",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "連れる",
+   "reading": "つれる",
+   "english": "to lead, to take (a person)",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "丁寧",
+   "reading": "ていねい",
+   "english": "polite, courteous, careful",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "テキスト",
+   "reading": "てきすと",
+   "english": "text; text book",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "適当",
+   "reading": "てきとう",
+   "english": "fitness, suitability",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "できるだけ",
+   "reading": "できるだけ",
+   "english": "if at all possible, as much as possible",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "手伝う",
+   "reading": "てつだう",
+   "english": "to help",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "テニス",
+   "reading": "てにす",
+   "english": "tennis",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "手袋",
+   "reading": "てぶくろ",
+   "english": "glove(s)",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "寺",
+   "reading": "てら",
+   "english": "Buddhist temple",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "点",
+   "reading": "てん",
+   "english": "mark, score, grade; point, dot",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "店員",
+   "reading": "てんいん",
+   "english": "clerk; shop-employee",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "天気予報",
+   "reading": "てんきよほう",
+   "english": "weather forecast",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "電灯",
+   "reading": "でんとう",
+   "english": "electric light",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "電報",
+   "reading": "でんぽう",
+   "english": "telegram",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "展覧会",
+   "reading": "てんらんかい",
+   "english": "exhibition",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "都",
+   "reading": "と",
+   "english": "metropolitan",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "道具",
+   "reading": "どうぐ",
+   "english": "tool",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "とうとう",
+   "reading": "とうとう",
+   "english": "finally, at last",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "動物園",
+   "reading": "どうぶつえん",
+   "english": "zoo",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "遠く",
+   "reading": "とおく",
+   "english": "far away, distant",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "通る",
+   "reading": "とおる",
+   "english": "to pass (by), to go through",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "特に",
+   "reading": "とくに",
+   "english": "particularly",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "特別",
+   "reading": "とくべつ",
+   "english": "special",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "途中",
+   "reading": "とちゅう",
+   "english": "on the way, midway",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "特急",
+   "reading": "とっきゅう",
+   "english": "limited express (train faster than an express)",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "届ける",
+   "reading": "とどける",
+   "english": "to deliver (v.t.)",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "泊まる",
+   "reading": "とまる",
+   "english": "to stay (over night) (v.i.)",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "取り替える",
+   "reading": "とりかえる",
+   "english": "to exchange, to replace",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "泥棒",
+   "reading": "どろぼう",
+   "english": "thief; burglar",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "どんどん",
+   "reading": "どんどん",
+   "english": "quickly and steadily; at a rapid pace",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "直す",
+   "reading": "なおす",
+   "english": "to correct (v.t.); to fix",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "直る",
+   "reading": "なおる",
+   "english": "to be fixed",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "治る",
+   "reading": "なおる",
+   "english": "to get better; to recover from illness (v.i.)",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "中々",
+   "reading": "なかなか",
+   "english": "very, considerably, quite",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "泣く",
+   "reading": "なく",
+   "english": "to cry",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "無くなる",
+   "reading": "なくなる",
+   "english": "to disappear, to get lost",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "亡くなる",
+   "reading": "なくなる",
+   "english": "to pass away",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "投げる",
+   "reading": "なげる",
+   "english": "to pitch, to cast away",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "なさる",
+   "reading": "なさる",
+   "english": "-- honorific expression for する --",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "なるべく",
+   "reading": "なるべく",
+   "english": "if possible, as much as possible",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "なるほど",
+   "reading": "なるほど",
+   "english": "I see; I now understand",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "慣れる",
+   "reading": "なれる",
+   "english": "to grow accustomed to",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "苦い",
+   "reading": "にがい",
+   "english": "bitter",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "逃げる",
+   "reading": "にげる",
+   "english": "to escape, to run away",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "日記",
+   "reading": "にっき",
+   "english": "diary, journal",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "似る",
+   "reading": "にる",
+   "english": "to resemble, to be similar",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "人形",
+   "reading": "にんぎょう",
+   "english": "doll, figure",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "盗む",
+   "reading": "ぬすむ",
+   "english": "to steal; to rob",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "塗る",
+   "reading": "ぬる",
+   "english": "to paint, to plaster",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "熱",
+   "reading": "ねつ",
+   "english": "fever, temperature",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "寝坊",
+   "reading": "ねぼう",
+   "english": "sleeping in late",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "眠る",
+   "reading": "ねむる",
+   "english": "to sleep",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "残る",
+   "reading": "のこる",
+   "english": "to remain (v.i.), to be left",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "乗り換える",
+   "reading": "のりかえる",
+   "english": "to transfer (trains), to change (bus, train, etc.)",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "乗り物",
+   "reading": "のりもの",
+   "english": "vehicle",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "葉",
+   "reading": "は",
+   "english": "leaf",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "場合",
+   "reading": "ばあい",
+   "english": "case, situation",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "倍",
+   "reading": "ばい",
+   "english": "double",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "歯医者",
+   "reading": "はいしゃ",
+   "english": "dentist",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "運ぶ",
+   "reading": "はこぶ",
+   "english": "to transport, to carry",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "始める",
+   "reading": "はじめる",
+   "english": "to start, to begin",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "場所",
+   "reading": "ばしょ",
+   "english": "place, location",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "はず",
+   "reading": "はず",
+   "english": "it should be so",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "恥ずかしい",
+   "reading": "はずかしい",
+   "english": "ashamed, embarrassed",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "パソコン",
+   "reading": "ぱそこん",
+   "english": "(personal) computer",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "発音",
+   "reading": "はつおん",
+   "english": "pronunciation",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "はっきり",
+   "reading": "はっきり",
+   "english": "clearly, distinctly",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "花見",
+   "reading": "はなみ",
+   "english": "cherry-blossom viewing",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "林",
+   "reading": "はやし",
+   "english": "woods, forest",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "払う",
+   "reading": "はらう",
+   "english": "to pay",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "番組",
+   "reading": "ばんぐみ",
+   "english": "broadcast program",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "反対",
+   "reading": "はんたい",
+   "english": "oppose, opposition, resistance",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "日",
+   "reading": "ひ",
+   "english": "sun, sunshine, day",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "火",
+   "reading": "ひ",
+   "english": "fire",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "ピアノ",
+   "reading": "ぴあの",
+   "english": "piano",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "冷える",
+   "reading": "ひえる",
+   "english": "to grow cold, to cool down",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "光",
+   "reading": "ひかり",
+   "english": "light",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "光る",
+   "reading": "ひかる",
+   "english": "to shine, to glitter",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "引き出し",
+   "reading": "ひきだし",
+   "english": "drawer",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "ひげ",
+   "reading": "ひげ",
+   "english": "beard",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "飛行場",
+   "reading": "ひこうじょう",
+   "english": "airport",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "久しぶり",
+   "reading": "ひさしぶり",
+   "english": "it has been a long time; for the first time in a long time",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "美術館",
+   "reading": "びじゅつかん",
+   "english": "art gallery, art museum",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "非常に",
+   "reading": "ひじょうに",
+   "english": "extremely; very",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "引っ越す",
+   "reading": "ひっこす",
+   "english": "to move to a new place of residence",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "必要",
+   "reading": "ひつよう",
+   "english": "necessary",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "ひどい",
+   "reading": "ひどい",
+   "english": "terrible, awful, unfair, cruel",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "開く",
+   "reading": "ひらく",
+   "english": "to open; to hold (an event)",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "ビル",
+   "reading": "びる",
+   "english": "(abbr.) building",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "昼間",
+   "reading": "ひるま",
+   "english": "daytime, during the day",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "昼休み",
+   "reading": "ひるやすみ",
+   "english": "lunch break, noon recess",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "拾う",
+   "reading": "ひろう",
+   "english": "to pick up (something), to find",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "ファックス",
+   "reading": "ふぁっくす",
+   "english": "fax",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "増える",
+   "reading": "ふえる",
+   "english": "to increase, to multiply",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "深い",
+   "reading": "ふかい",
+   "english": "deep, profound",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "複雑",
+   "reading": "ふくざつ",
+   "english": "complexity, complication",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "復習",
+   "reading": "ふくしゅう",
+   "english": "review (of lessons), revision",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "部長",
+   "reading": "ぶちょう",
+   "english": "department (division) manager",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "普通",
+   "reading": "ふつう",
+   "english": "common; usual",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "ぶどう",
+   "reading": "ぶどう",
+   "english": "grapes",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "太る",
+   "reading": "ふとる",
+   "english": "to gain weight",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "布団",
+   "reading": "ふとん",
+   "english": "futon",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "舟",
+   "reading": "ふね",
+   "english": "ship, boat",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "不便",
+   "reading": "ふべん",
+   "english": "inconvenience",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "踏む",
+   "reading": "ふむ",
+   "english": "to step on, to tread on",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "プレゼント",
+   "reading": "ぷれぜんと",
+   "english": "present, gift",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "文化",
+   "reading": "ぶんか",
+   "english": "culture",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "文学",
+   "reading": "ぶんがく",
+   "english": "literature",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "文法",
+   "reading": "ぶんぽう",
+   "english": "grammar",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "別",
+   "reading": "べつ",
+   "english": "distinction, different",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "ベル",
+   "reading": "べる",
+   "english": "bell",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "変",
+   "reading": "へん",
+   "english": "strange, odd",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "返事",
+   "reading": "へんじ",
+   "english": "reply, answer",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "貿易",
+   "reading": "ぼうえき",
+   "english": "trade",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "法律",
+   "reading": "ほうりつ",
+   "english": "law",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "僕",
+   "reading": "ぼく",
+   "english": "I (used by men towards those of equal or lower status)",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "星",
+   "reading": "ほし",
+   "english": "star",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "ほとんど",
+   "reading": "ほとんど",
+   "english": "mostly, almost",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "翻訳",
+   "reading": "ほんやく",
+   "english": "translation",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "参る",
+   "reading": "まいる",
+   "english": "humble expression for 行く and 来る",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "負ける",
+   "reading": "まける",
+   "english": "to lose (a game) (v.i.), to be defeated",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "まず",
+   "reading": "まず",
+   "english": "first (of all), to start with",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "または",
+   "reading": "または",
+   "english": "or, otherwise",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "間違える",
+   "reading": "まちがえる",
+   "english": "to make a mistake",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "間に合う",
+   "reading": "まにあう",
+   "english": "to be in time for",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "周り",
+   "reading": "まわり",
+   "english": "surroundings",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "漫画",
+   "reading": "まんが",
+   "english": "comic (book), cartoon",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "真中",
+   "reading": "まんなか",
+   "english": "middle, center",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "見える",
+   "reading": "みえる",
+   "english": "to be visible; -- polite verb meaning 来る (くる) --",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "湖",
+   "reading": "みずうみ",
+   "english": "lake",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "味噌",
+   "reading": "みそ",
+   "english": "miso, bean paste",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "見つかる",
+   "reading": "みつかる",
+   "english": "to be found (v.i.), to be discovered",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "見つける",
+   "reading": "みつける",
+   "english": "to discover, to find (v.t.)",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "皆",
+   "reading": "みな",
+   "english": "everyone",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "港",
+   "reading": "みなと",
+   "english": "harbor, port",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "向かう",
+   "reading": "むかう",
+   "english": "to face, to go towards",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "迎える",
+   "reading": "むかえる",
+   "english": "to welcome; to meet; to greet",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "昔",
+   "reading": "むかし",
+   "english": "old days; past",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "虫",
+   "reading": "むし",
+   "english": "insect",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "息子",
+   "reading": "むすこ",
+   "english": "(humble) son",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "娘",
+   "reading": "むすめ",
+   "english": "daughter (humble)",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "無理",
+   "reading": "むり",
+   "english": "unreasonable, impossible",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "召し上がる",
+   "reading": "めしあがる",
+   "english": "-- honorific form of 食べる (たべる) and 飲む (のむ) --",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "珍しい",
+   "reading": "めずらしい",
+   "english": "unusual, rare",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "申し上げる",
+   "reading": "もうしあげる",
+   "english": "(humble)to say, to tell",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "申す",
+   "reading": "もうす",
+   "english": "-- extra-modest (humble) expression for 言う (いう) --",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "もし",
+   "reading": "もし",
+   "english": "if",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "もちろん",
+   "reading": "もちろん",
+   "english": "certainly, of course",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "戻る",
+   "reading": "もどる",
+   "english": "to return (v.i.); to come back",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "木綿",
+   "reading": "もめん",
+   "english": "cotton",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "もらう",
+   "reading": "もらう",
+   "english": "to receive",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "森",
+   "reading": "もり",
+   "english": "forest",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "焼く",
+   "reading": "やく",
+   "english": "to bake, to grill",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "約束",
+   "reading": "やくそく",
+   "english": "arrangement, appointment, promise",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "役に立つ",
+   "reading": "やくにたつ",
+   "english": "to be helpful, to be useful",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "焼ける",
+   "reading": "やける",
+   "english": "to burn, to be roasted",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "優しい",
+   "reading": "やさしい",
+   "english": "kind (person), gentle (person), easy (problem)",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "痩せる",
+   "reading": "やせる",
+   "english": "to lose weight",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "やっと",
+   "reading": "やっと",
+   "english": "at last, finally",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "止む",
+   "reading": "やむ",
+   "english": "to cease, to stop",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "止める",
+   "reading": "やめる",
+   "english": "to end, to stop",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "柔らかい",
+   "reading": "やわらかい",
+   "english": "soft (in reference to texture), tender",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "湯",
+   "reading": "ゆ",
+   "english": "hot water",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "輸入",
+   "reading": "ゆにゅう",
+   "english": "import",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "指",
+   "reading": "ゆび",
+   "english": "finger",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "指輪",
+   "reading": "ゆびわ",
+   "english": "(finger) ring",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "夢",
+   "reading": "ゆめ",
+   "english": "a dream",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "揺れる",
+   "reading": "ゆれる",
+   "english": "to shake, to sway",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "用",
+   "reading": "よう",
+   "english": "errand, task, business (to take care of)",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "用意",
+   "reading": "ようい",
+   "english": "preparation",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "用事",
+   "reading": "ようじ",
+   "english": "business to take care of; tasks; errands",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "汚れる",
+   "reading": "よごれる",
+   "english": "to become dirty",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "予習",
+   "reading": "よしゅう",
+   "english": "preparation of lessons (for class)",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "予定",
+   "reading": "よてい",
+   "english": "plans, arrangement, schedule",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "喜ぶ",
+   "reading": "よろこぶ",
+   "english": "to rejoice, to be delighted, to be glad",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "よろしい",
+   "reading": "よろしい",
+   "english": "(hon.) good, OK, all right",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "理由",
+   "reading": "りゆう",
+   "english": "reason",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "利用",
+   "reading": "りよう",
+   "english": "use, utilization",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "両方",
+   "reading": "りょうほう",
+   "english": "both sides, both parties",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "旅館",
+   "reading": "りょかん",
+   "english": "a Japanese inn",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "留守",
+   "reading": "るす",
+   "english": "absence; not at home",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "冷房",
+   "reading": "れいぼう",
+   "english": "cooling, air conditioning",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "歴史",
+   "reading": "れきし",
+   "english": "history",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "レジ",
+   "reading": "れじ",
+   "english": "register",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "連絡",
+   "reading": "れんらく",
+   "english": "communication, contact, connection",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "ワープロ",
+   "reading": "わーぷろ",
+   "english": "word processor",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "沸かす",
+   "reading": "わかす",
+   "english": "to boil",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "別れる",
+   "reading": "わかれる",
+   "english": "to part from, to separate",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "沸く",
+   "reading": "わく",
+   "english": "to boil, to grow hot",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "訳",
+   "reading": "わけ",
+   "english": "reason; explanation",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "忘れ物",
+   "reading": "わすれもの",
+   "english": "lost article, something forgotten",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "笑う",
+   "reading": "わらう",
+   "english": "to laugh, to smile",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "割合",
+   "reading": "わりあい",
+   "english": "rate, ratio, percentage",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "割れる",
+   "reading": "われる",
+   "english": "to break",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "あ",
+   "reading": "あ",
+   "english": "Ah",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": false
+  },
+  {
+   "written": "おいでになる",
+   "reading": "おいでになる",
+   "english": "(hon.) to be",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": false
+  },
+  {
+   "written": "お祭り",
+   "reading": "おまつり",
+   "english": "festival",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": false
+  },
+  {
+   "written": "お見舞い",
+   "reading": "おみまい",
+   "english": "calling on someone who is ill, visit",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": false
+  },
+  {
+   "written": "もうすぐ",
+   "reading": "もうすぐ",
+   "english": "very soon; in a few moments; days",
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "jmdictCommon": false
+  },
+  {
+   "written": "ああ",
+   "reading": "ああ",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "あいさつ",
+   "reading": "あいさつ",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "挨拶",
+   "reading": "あいさつする",
+   "english": "greet(ing)",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "あかちゃん",
+   "reading": "あかちゃん",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "赤ちゃん",
+   "reading": "あかちゃん",
+   "english": "baby, infant",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "上る",
+   "reading": "あがる",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "上がる",
+   "reading": "あがる",
+   "english": "to rise, to go up",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "集る",
+   "reading": "あつまる",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "集まる",
+   "reading": "あつまる",
+   "english": "to gather (v.i.), to collect",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "案内",
+   "reading": "あんない",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "案内",
+   "reading": "あんないする",
+   "english": "information, guidance",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "いただく",
+   "reading": "いただく",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "いっぱい",
+   "reading": "いっぱい",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "一杯",
+   "reading": "いっぱい",
+   "english": "full, to the utmost",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "～員",
+   "reading": "いん",
+   "english": "member of ~",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "伺う",
+   "reading": "うかがう",
+   "english": "humble form of 行く (いく), 聞く (きく) and 来る (くる)",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "うそ",
+   "reading": "うそ",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "嘘",
+   "reading": "うそ",
+   "english": "lie",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "うち",
+   "reading": "うち",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "内",
+   "reading": "うち",
+   "english": "within, inside",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "うれしい",
+   "reading": "うれしい",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "嬉しい",
+   "reading": "うれしい",
+   "english": "to be happy; to be glad",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "運転",
+   "reading": "うんてん",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "運転",
+   "reading": "うんてんする",
+   "english": "driving",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "運動",
+   "reading": "うんどう",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "運動",
+   "reading": "うんどうする",
+   "english": "exercise",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "遠慮",
+   "reading": "えんりょ",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "遠慮",
+   "reading": "えんりょする",
+   "english": "restraint, reserve, hesitate",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "オーバー",
+   "reading": "おーばー",
+   "english": "overcoat; over, exceeding, exaggeration",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "お・金持ち",
+   "reading": "おかねもち",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "～おき",
+   "reading": "おき",
+   "english": "after every ~",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "起す",
+   "reading": "おこす",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "起こす",
+   "reading": "おこす",
+   "english": "to wake (someone) up",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "おる",
+   "reading": "おる",
+   "english": "-- extra-modest expression for いる --",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "～家",
+   "reading": "か",
+   "english": "person who is specialized in ~",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "～会",
+   "reading": "かい",
+   "english": "~ meeting",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "～学部",
+   "reading": "がくぶ",
+   "english": "department of a university",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "掛ける",
+   "reading": "かける",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "堅",
+   "reading": "かたい",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "硬",
+   "reading": "かたい",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "固い",
+   "reading": "かたい",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "堅; 硬; 固い",
+   "reading": "かたい",
+   "english": "solid, hard, firm",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "かっこう",
+   "reading": "かっこう",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "格好",
+   "reading": "かっこう",
+   "english": "appearance, manner, shape, form, posture",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "お・金持ち",
+   "reading": "かねもち",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "お金持ち",
+   "reading": "かねもち;おかねもち",
+   "english": "rich person",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "かまう",
+   "reading": "かまう",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "頑張る",
+   "reading": "がんばる",
+   "english": "to try one's best, to try hard, to persist",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "決る",
+   "reading": "きまる",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "決まる",
+   "reading": "きまる",
+   "english": "to be set; fixed (v.i.)",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "～区",
+   "reading": "く",
+   "english": "~ district, ~ ward, ~ borough",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "君",
+   "reading": "くん",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "～君",
+   "reading": "くん",
+   "english": "Mr. (junior) ~, master ~",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "計画",
+   "reading": "けいかく",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "計画",
+   "reading": "けいかくする",
+   "english": "plan, project, schedule",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "経験",
+   "reading": "けいけん",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "経験",
+   "reading": "けいけんする",
+   "english": "experience",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "けが",
+   "reading": "けが",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "けれど",
+   "reading": "けれど",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "けれども",
+   "reading": "けれど",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "けれど",
+   "reading": "けれども",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "けれども",
+   "reading": "けれども",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "～軒",
+   "reading": "けん",
+   "english": "counter for houses",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "けんか",
+   "reading": "けんか",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "御～",
+   "reading": "ご",
+   "english": "honorable ~",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "高校",
+   "reading": "こうこう",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "高等学校",
+   "reading": "こうとうがっこう",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "～ございます",
+   "reading": "ございます",
+   "english": "to be (polite), to exist",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "御主人",
+   "reading": "ごしゅじん",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "ご主人",
+   "reading": "ごしゅじん",
+   "english": "(your, her) husband",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "故障",
+   "reading": "こしょう",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "故障",
+   "reading": "こしょうする",
+   "english": "breakdown",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "こと",
+   "reading": "こと",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "事",
+   "reading": "こと",
+   "english": "thing(s), matter(s), fact",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "このあいだ",
+   "reading": "このあいだ",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "この間",
+   "reading": "このあいだ",
+   "english": "the other day, recently",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "このごろ",
+   "reading": "このごろ",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "この頃",
+   "reading": "このごろ",
+   "english": "these days, nowadays",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "ごらんになる",
+   "reading": "ごらんになる",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "コンピュータ",
+   "reading": "こんぴゅーた",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "コンピューター",
+   "reading": "こんぴゅーた",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "コンピュータ",
+   "reading": "こんぴゅーたー",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "コンピューター",
+   "reading": "こんぴゅーたー",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "～様",
+   "reading": "さま",
+   "english": "Mr., Mrs., Ms.",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "さ来月",
+   "reading": "さらいげつ",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "再来月",
+   "reading": "さらいげつ",
+   "english": "the month after next",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "さ来週",
+   "reading": "さらいしゅう",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "再来週",
+   "reading": "さらいしゅう",
+   "english": "the week after next",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "しかる",
+   "reading": "しかる",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "叱る",
+   "reading": "しかる",
+   "english": "to scold",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "～式",
+   "reading": "しき",
+   "english": "~ ceremony; ~ style",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "支度",
+   "reading": "したく",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "支度",
+   "reading": "したくする",
+   "english": "preparation",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "失礼",
+   "reading": "しつれい",
+   "english": "discourtesy, impoliteness; Excuse me",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "じゃま",
+   "reading": "じゃま",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "邪魔",
+   "reading": "じゃま",
+   "english": "hindrance, intrusion",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "出席",
+   "reading": "しゅっせき",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "出席",
+   "reading": "しゅっせきする",
+   "english": "attendance",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "出発",
+   "reading": "しゅっぱつ",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "出発",
+   "reading": "しゅっぱつする",
+   "english": "departure",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "準備",
+   "reading": "じゅんび",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "準備",
+   "reading": "じゅんびする",
+   "english": "prepare",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "正月",
+   "reading": "しょうがつ",
+   "english": "New Year, New Year's Day",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "招待",
+   "reading": "しょうたい",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "招待",
+   "reading": "しょうたいする",
+   "english": "invitation",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "承知",
+   "reading": "しょうち",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "承知",
+   "reading": "しょうちする",
+   "english": "consent, acceptance",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "食事",
+   "reading": "しょくじ",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "食事",
+   "reading": "しょくじする",
+   "english": "meal",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "心配",
+   "reading": "しんぱい",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "心配",
+   "reading": "しんぱいする",
+   "english": "worry, concern",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "ずいぶん",
+   "reading": "ずいぶん",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "随分",
+   "reading": "ずいぶん",
+   "english": "extremely",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "すく",
+   "reading": "すく",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "空く",
+   "reading": "すく",
+   "english": "to be empty (in reference to people), to be less crowded",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "すばらしい",
+   "reading": "すばらしい",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "素晴らしい",
+   "reading": "すばらしい",
+   "english": "wonderful; terrific",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "～製",
+   "reading": "せい",
+   "english": "made in ~",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "生活",
+   "reading": "せいかつ",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "生活",
+   "reading": "せいかつする",
+   "english": "living, life; to live",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "生産",
+   "reading": "せいさん",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "生産",
+   "reading": "せいさんする",
+   "english": "production; to produce",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "ぜひ",
+   "reading": "ぜひ",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "是非",
+   "reading": "ぜひ",
+   "english": "certainly, by all means; without fail",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "世話",
+   "reading": "せわ",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "世話",
+   "reading": "せわする",
+   "english": "looking after; to look after",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "専門",
+   "reading": "せんもん",
+   "english": "major; speciality",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "相談",
+   "reading": "そうだん",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "相談",
+   "reading": "そうだんする",
+   "english": "consultation",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "～代",
+   "reading": "だい",
+   "english": "~ age; period",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "退院",
+   "reading": "たいいん",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "退院",
+   "reading": "たいいんする",
+   "english": "leaving hospital",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "たいてい",
+   "reading": "たいてい",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "大抵",
+   "reading": "たいてい",
+   "english": "generally, usually",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "建て",
+   "reading": "だて",
+   "english": "~ storied, separate housing",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "チェック",
+   "reading": "ちぇっく",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "ちゃん",
+   "reading": "ちゃん",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "～ちゃん",
+   "reading": "ちゃん",
+   "english": "suffix for familiar (female) person",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "～町",
+   "reading": "ちょう",
+   "english": "the town of ~",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "つき",
+   "reading": "つき",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "～月",
+   "reading": "つき",
+   "english": "month",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "月",
+   "reading": "つき",
+   "english": "moon",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "付く",
+   "reading": "つく",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "点く",
+   "reading": "つく",
+   "english": "to be started, to be switched on",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "～続ける",
+   "reading": "つづける",
+   "english": "to continue doing ~",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "通り",
+   "reading": "とおり",
+   "english": "~ Street, ~ Avenue",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "とこや",
+   "reading": "とこや",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "床屋",
+   "reading": "とこや",
+   "english": "barber's (shop)",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "におい",
+   "reading": "におい",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "匂い",
+   "reading": "におい",
+   "english": "odor, smell",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "二階建て",
+   "reading": "にかいだて",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "～にくい",
+   "reading": "にくい",
+   "english": "difficult to do ~",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "入院",
+   "reading": "にゅういん",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "入院",
+   "reading": "にゅういんする",
+   "english": "hospitalization",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "入学",
+   "reading": "にゅうがく",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "入学",
+   "reading": "にゅうがくする",
+   "english": "entry to school or university",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "ぬれる",
+   "reading": "ぬれる",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "濡れる",
+   "reading": "ぬれる",
+   "english": "to get wet",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "ねだん",
+   "reading": "ねだん",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "値段",
+   "reading": "ねだん",
+   "english": "price",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "ねっしん",
+   "reading": "ねっしん",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "熱心",
+   "reading": "ねっしん",
+   "english": "enthusiasm",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "のど",
+   "reading": "のど",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "喉",
+   "reading": "のど",
+   "english": "throat",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "パート",
+   "reading": "ぱーと",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "拝見",
+   "reading": "はいけん",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "拝見",
+   "reading": "はいけんする",
+   "english": "(humble) (polite) seeing, look at",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "～ばかり",
+   "reading": "ばかり",
+   "english": "just did ~, only",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "～始める",
+   "reading": "はじめる",
+   "english": "to start doing ~",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "パパ",
+   "reading": "ぱぱ",
+   "english": "papa, daddy",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "ハンドバッグ",
+   "reading": "はんどばっぐ",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "ハンバーグ",
+   "reading": "はんばーぐ",
+   "english": "hamburger steak",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "引き出す",
+   "reading": "ひきだす",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "びっくり",
+   "reading": "びっくり",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "放送",
+   "reading": "ほうそう",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "放送",
+   "reading": "ほうそうする",
+   "english": "broadcasting",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "ほど",
+   "reading": "ほど",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "程",
+   "reading": "ほど",
+   "english": "degree, extent",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "ほめる",
+   "reading": "ほめる",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "褒める",
+   "reading": "ほめる",
+   "english": "to praise; to say nice things",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "まじめ",
+   "reading": "まじめ",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "真面目",
+   "reading": "まじめ",
+   "english": "diligent, serious",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "～まま",
+   "reading": "まま",
+   "english": "as it is",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "回る",
+   "reading": "まわる",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "もっとも",
+   "reading": "もっとも",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "最も",
+   "reading": "もっとも",
+   "english": "most",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "やはり",
+   "reading": "やっぱり",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "やっぱり",
+   "reading": "やっぱり",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "やはり",
+   "reading": "やはり",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "やっぱり",
+   "reading": "やはり",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "輸出",
+   "reading": "ゆしゅつ",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "輸出",
+   "reading": "ゆしゅつする",
+   "english": "export",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "様",
+   "reading": "よう",
+   "english": "way, manner, kind",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "レポート",
+   "reading": "りぽーと",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "リポート",
+   "reading": "りぽーと",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "レポート",
+   "reading": "れぽーと",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "リポート",
+   "reading": "れぽーと",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "いただく",
+   "reading": "頂く",
+   "english": "-- extra-modest expression for たべる and のむ; humble expression for もらう --",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": true
+  },
+  {
+   "written": "～(て) しまう",
+   "reading": "(て)しまう",
+   "english": "to end up ~",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": false
+  },
+  {
+   "written": "～(に) ついて",
+   "reading": "(に)ついて",
+   "english": "about, concerning",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": false
+  },
+  {
+   "written": "～(に) よると",
+   "reading": "(に)よると",
+   "english": "according to ~",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": false
+  },
+  {
+   "written": "いくら～ても",
+   "reading": "いくらても",
+   "english": "however much one may ~",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": false
+  },
+  {
+   "written": "おかげ",
+   "reading": "おかげ",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": false
+  },
+  {
+   "written": "お陰",
+   "reading": "おかげ",
+   "english": "thanks or owing to",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": false
+  },
+  {
+   "written": "お子さん",
+   "reading": "おこさん",
+   "english": "(someone else's) child (polite)",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": false
+  },
+  {
+   "written": "泳ぎ方",
+   "reading": "およぎかた",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": false
+  },
+  {
+   "written": "けがする",
+   "reading": "けがする",
+   "english": "injury (to animate object), hurt",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": false
+  },
+  {
+   "written": "けれど; けれども",
+   "reading": "けれど;けれども",
+   "english": "but, although",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": false
+  },
+  {
+   "written": "けんかする",
+   "reading": "けんかする",
+   "english": "quarrel",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": false
+  },
+  {
+   "written": "高校; 高等学校",
+   "reading": "こうこう;こうとうがっこう",
+   "english": "high school; senior high school",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": false
+  },
+  {
+   "written": "コンピュータ; コンピューター",
+   "reading": "こんぴゅーた;こんぴゅーたー",
+   "english": "computer",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": false
+  },
+  {
+   "written": "スーパー (マーケット)",
+   "reading": "すーぱー(まーけっと)",
+   "english": "supermarket",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": false
+  },
+  {
+   "written": "チェックする",
+   "reading": "ちぇっくする",
+   "english": "check",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": false
+  },
+  {
+   "written": "パート (タイム)",
+   "reading": "ぱーと(たいむ)",
+   "english": "part time (esp. female part time employees)",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": false
+  },
+  {
+   "written": "びっくりする",
+   "reading": "びっくりする",
+   "english": "to be surprised",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": false
+  },
+  {
+   "written": "降り出す",
+   "reading": "ふりだす",
+   "english": "",
+   "sources": [
+    "tanos"
+   ],
+   "jmdictCommon": false
+  },
+  {
+   "written": "回る、回す",
+   "reading": "まわる、まわす",
+   "english": "to go around, to revolve",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": false
+  },
+  {
+   "written": "やはり; やっぱり",
+   "reading": "やはり;やっぱり",
+   "english": "as I thought, absolutely",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": false
+  },
+  {
+   "written": "レポート; リポート",
+   "reading": "れぽーと;りぽーと",
+   "english": "report",
+   "sources": [
+    "open-anki"
+   ],
+   "jmdictCommon": false
+  }
+ ],
+ "inAppNotInReference": []
+}
