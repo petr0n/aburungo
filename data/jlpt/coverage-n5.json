@@ -1,33 +1,13 @@
 {
  "level": "N5",
- "generated": "2026-08-21",
+ "generated": "2026-08-22",
  "summary": {
   "reference": 809,
-  "taught": 451,
-  "covered": 423,
-  "missing": 386
+  "taught": 484,
+  "covered": 457,
+  "missing": 352
  },
  "missing": [
-  {
-   "written": "青",
-   "reading": "あお",
-   "english": "blue",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "赤",
-   "reading": "あか",
-   "english": "red",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
   {
    "written": "上げる",
    "reading": "あげる",
@@ -199,16 +179,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "上着",
-   "reading": "うわぎ",
-   "english": "coat, jacket",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "絵",
    "reading": "え",
    "english": "a painting; a picture; a drawing",
@@ -269,39 +239,9 @@
    "jmdictCommon": true
   },
   {
-   "written": "大勢",
-   "reading": "おおぜい",
-   "english": "great number of people",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "お手洗い",
    "reading": "おてあらい",
    "english": "toilet, restroom, bathroom (lit., a place to wash one's hands)",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "男",
-   "reading": "おとこ",
-   "english": "man, male",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "男の子",
-   "reading": "おとこのこ",
-   "english": "boy",
    "sources": [
     "tanos",
     "open-anki"
@@ -349,26 +289,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "女",
-   "reading": "おんな",
-   "english": "woman, female",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "女の子",
-   "reading": "おんなのこ",
-   "english": "girl",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "外国",
    "reading": "がいこく",
    "english": "foreign country; abroad",
@@ -402,26 +322,6 @@
    "written": "かかる",
    "reading": "かかる",
    "english": "it takes (amount of time, money) (v.i.)",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "かける",
-   "reading": "かける",
-   "english": "to dial/call (e.g., phone); to sit down",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "傘",
-   "reading": "かさ",
-   "english": "umbrella, parasol",
    "sources": [
     "tanos",
     "open-anki"
@@ -489,16 +389,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "体",
-   "reading": "からだ",
-   "english": "body; health",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "カレンダー",
    "reading": "かれんだー",
    "english": "calendar",
@@ -512,16 +402,6 @@
    "written": "漢字",
    "reading": "かんじ",
    "english": "kanji; Chinese character",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "黄色",
-   "reading": "きいろ",
-   "english": "yellow",
    "sources": [
     "tanos",
     "open-anki"
@@ -609,16 +489,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "着る",
-   "reading": "きる",
-   "english": "to put on (clothes above your waist); to wear",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "九",
    "reading": "く",
    "english": "nine",
@@ -632,16 +502,6 @@
    "written": "薬",
    "reading": "くすり",
    "english": "medicine",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "靴下",
-   "reading": "くつした",
-   "english": "socks",
    "sources": [
     "tanos",
     "open-anki"
@@ -672,16 +532,6 @@
    "written": "グラム",
    "reading": "ぐらむ",
    "english": "gram",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "黒",
-   "reading": "くろ",
-   "english": "black",
    "sources": [
     "tanos",
     "open-anki"
@@ -732,16 +582,6 @@
    "written": "声",
    "reading": "こえ",
    "english": "voice",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "コート",
-   "reading": "こーと",
-   "english": "coat; court (e.g., tennis)",
    "sources": [
     "tanos",
     "open-anki"
@@ -939,29 +779,9 @@
    "jmdictCommon": true
   },
   {
-   "written": "締める",
-   "reading": "しめる",
-   "english": "to tie, to fasten, to tighten",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "写真",
    "reading": "しゃしん",
    "english": "a picture; a photograph",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "シャツ",
-   "reading": "しゃつ",
-   "english": "shirt",
    "sources": [
     "tanos",
     "open-anki"
@@ -989,29 +809,9 @@
    "jmdictCommon": true
   },
   {
-   "written": "丈夫",
-   "reading": "じょうぶ",
-   "english": "strong, solid, durable",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "食堂",
    "reading": "しょくどう",
    "english": "cafeteria, dining hall",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "白",
-   "reading": "しろ",
-   "english": "white",
    "sources": [
     "tanos",
     "open-anki"
@@ -1032,16 +832,6 @@
    "written": "吸う",
    "reading": "すう",
    "english": "to breathe in, to suck",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "スカート",
-   "reading": "すかーと",
-   "english": "skirt",
    "sources": [
     "tanos",
     "open-anki"
@@ -1089,29 +879,9 @@
    "jmdictCommon": true
   },
   {
-   "written": "ズボン",
-   "reading": "ずぼん",
-   "english": "trousers",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "生徒",
    "reading": "せいと",
    "english": "student; pupil",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "セーター",
-   "reading": "せーたー",
-   "english": "sweater",
    "sources": [
     "tanos",
     "open-anki"
@@ -1579,29 +1349,9 @@
    "jmdictCommon": true
   },
   {
-   "written": "脱ぐ",
-   "reading": "ぬぐ",
-   "english": "to take off (clothes)",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "温い",
    "reading": "ぬるい",
    "english": "lukewarm",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "ネクタイ",
-   "reading": "ねくたい",
-   "english": "tie, necktie",
    "sources": [
     "tanos",
     "open-anki"
@@ -1622,16 +1372,6 @@
    "written": "ノート",
    "reading": "のーと",
    "english": "notebook",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "歯",
-   "reading": "は",
-   "english": "tooth",
    "sources": [
     "tanos",
     "open-anki"
@@ -1662,16 +1402,6 @@
    "written": "葉書",
    "reading": "はがき",
    "english": "postcard",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "はく",
-   "reading": "はく",
-   "english": "to put on (items below your waist)",
    "sources": [
     "tanos",
     "open-anki"
@@ -1712,16 +1442,6 @@
    "written": "二十歳",
    "reading": "はたち",
    "english": "20 years old",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "鼻",
-   "reading": "はな",
-   "english": "nose",
    "sources": [
     "tanos",
     "open-anki"
@@ -1909,16 +1629,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "太い",
-   "reading": "ふとい",
-   "english": "fat, thick",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "降る",
    "reading": "ふる",
    "english": "to precipitate, to fall (e.g., rain, snow, etc.)",
@@ -1999,16 +1709,6 @@
    "jmdictCommon": true
   },
   {
-   "written": "帽子",
-   "reading": "ぼうし",
-   "english": "hat; cap",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
    "written": "ボールペン",
    "reading": "ぼーるぺん",
    "english": "ball-point pen",
@@ -2032,16 +1732,6 @@
    "written": "ポスト",
    "reading": "ぽすと",
    "english": "mailbox; post, position",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "細い",
-   "reading": "ほそい",
-   "english": "thin, slender, fine",
    "sources": [
     "tanos",
     "open-anki"
@@ -2202,16 +1892,6 @@
    "written": "メートル",
    "reading": "めーとる",
    "english": "meter",
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "眼鏡",
-   "reading": "めがね",
-   "english": "eye glasses",
    "sources": [
     "tanos",
     "open-anki"
@@ -2679,24 +2359,6 @@
    "written": "～か月",
    "reading": "かげつ",
    "english": "(number of) months",
-   "sources": [
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "掛ける",
-   "reading": "かける",
-   "english": "to put on (e.g., glasses); to hang (e.g., on a wall)",
-   "sources": [
-    "open-anki"
-   ],
-   "jmdictCommon": true
-  },
-  {
-   "written": "かぶる",
-   "reading": "かぶる",
-   "english": "to wear, to put on (e.g., a hat on the head)",
    "sources": [
     "open-anki"
    ],

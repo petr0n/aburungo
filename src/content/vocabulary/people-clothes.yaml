@@ -1,0 +1,381 @@
+# Chapter 12 vocabulary — people and what they wear.
+#
+# The last chapter of Book One, and the last cluster the plan named. The ladder
+# could describe a thing since Chapter 8 -- long, heavy, cheap, delicious -- and
+# could not say man, woman, shirt, or what colour anything was.
+#
+# The chapter's reason to exist is the wearing verbs. English puts on one verb
+# and hangs everything off it; Japanese picks the verb by where the thing lands
+# on the body. 着る above the waist, はく below it, かぶる on the head, かける
+# for glasses, 締める for a tie, さす for an umbrella. That cannot be taught as
+# a note attached to one word -- it needs enough garments on the ground for the
+# split to be visible, which is why three lessons of clothes come before the
+# verbs are named as a system.
+#
+# Colours arrive twice on purpose. 赤い, 白い, 黒い, 青い and 黄色い were taught
+# as adjectives in the shopping and counting chapters. The nouns are a separate
+# entry each, because 赤 and 赤い behave differently in a sentence and the
+# learner will meet both on the same day: 赤いかばん and かばんは赤です.
+#
+# Written forms follow what a reader actually meets. はく, かぶる and めがね go
+# in kana even though JMdict flags 履く, 被る and 眼鏡 common, because that is
+# how they are written where a beginner meets them. 上着 and 着る cost no new
+# kanji at all -- 上 and 着 have both been on the ladder since the transit
+# chapter.
+#
+# Already taught and deliberately absent: 服, 靴, サイズ, 人, 子供, 手, 足,
+# 目, 耳, 口, 頭, 顔, 若い, きれい, 赤い, 白い, 黒い, 青い, 黄色い, 茶色, 緑,
+# 長い, 短い, 太る is not on the ladder at all.
+#
+# content-source: training — headwords, readings and part of speech verified
+#   against JMdict 3.6.2 on 2026-08-22, sequence numbers inline, all
+#   thirty-three flagged common.
+# jlpt-source: training — JLPT level unverified
+
+# ── Men, women, boys, girls (Lesson 1) ────────────────────────────────────────
+
+- id: vocab.otoko
+  jlpt: N5
+  word_type: noun
+  theme: people
+  japanese: 男
+  reading: おとこ
+  romaji: otoko
+  english: man
+  notes: Bare 男 is blunt — it is the word a police report uses. In conversation say 男の人. JMdict seq 1419990.
+
+- id: vocab.onna
+  jlpt: N5
+  word_type: noun
+  theme: people
+  japanese: 女
+  reading: おんな
+  romaji: onna
+  english: woman
+  notes: Same warning as 男 — 女の人 is the ordinary way to say it about someone present. JMdict seq 1344930.
+
+- id: vocab.otokonoko
+  jlpt: N5
+  word_type: noun
+  theme: people
+  japanese: 男の子
+  reading: おとこのこ
+  romaji: otokonoko
+  english: boy
+  notes: Literally "male child". No bluntness problem here — 男の子 is the normal word. JMdict seq 1420010.
+
+- id: vocab.onnanoko
+  jlpt: N5
+  word_type: noun
+  theme: people
+  japanese: 女の子
+  reading: おんなのこ
+  romaji: onnanoko
+  english: girl
+  notes: Built the same way as 男の子, on 子 from 子供. JMdict seq 1344970.
+
+- id: vocab.oozei
+  jlpt: N5
+  word_type: noun
+  theme: people
+  japanese: 大勢
+  reading: おおぜい
+  romaji: oozei
+  english: a lot of people, a crowd
+  notes: Counts people only. たくさん covers everything else, and using it for people is not wrong — 大勢 is just what a native speaker reaches for. JMdict seq 1414220.
+
+# ── What you wear on top (Lesson 2) ───────────────────────────────────────────
+
+- id: vocab.shatsu
+  jlpt: N5
+  word_type: noun
+  theme: clothes
+  japanese: シャツ
+  reading: シャツ
+  romaji: shatsu
+  english: shirt
+  notes: From English, but it leans towards an undershirt or a T-shirt. A dress shirt is ワイシャツ, which came from "white shirt". JMdict seq 1061520.
+
+- id: vocab.seetaa
+  jlpt: N5
+  word_type: noun
+  theme: clothes
+  japanese: セーター
+  reading: セーター
+  romaji: seetaa
+  english: sweater, jumper
+  notes: JMdict seq 1074270.
+
+- id: vocab.uwagi
+  jlpt: N5
+  word_type: noun
+  theme: clothes
+  japanese: 上着
+  reading: うわぎ
+  romaji: uwagi
+  english: jacket, outer layer
+  notes: 上 and 着 are both already on your ladder — the upper thing you wear. Covers a suit jacket or any outer layer, not a winter coat, which is コート. JMdict seq 1580340.
+
+- id: vocab.kooto
+  jlpt: N5
+  word_type: noun
+  theme: clothes
+  japanese: コート
+  reading: コート
+  romaji: kooto
+  english: coat
+  notes: Also a tennis court, from a different English word entirely. Context does all the work. JMdict seq 1049000.
+
+- id: vocab.kiru-wear
+  jlpt: N5
+  word_type: verb
+  verb_class: ru
+  theme: clothes
+  japanese: 着る
+  reading: きる
+  romaji: kiru
+  english: to wear, to put on (upper body)
+  notes: Anything that goes on over the shoulders. Same reading as 切る, to cut, and the kanji is the one from 着きます, to arrive. Ichidan, so the te-form is 着て. JMdict seq 1423000.
+
+# ── And what you pull on (Lesson 3) ───────────────────────────────────────────
+
+- id: vocab.zubon
+  jlpt: N5
+  word_type: noun
+  theme: clothes
+  japanese: ズボン
+  reading: ズボン
+  romaji: zubon
+  english: trousers, pants
+  notes: From French jupon, not English, which is why it does not sound like anything you know. JMdict seq 1074260.
+
+- id: vocab.sukaato
+  jlpt: N5
+  word_type: noun
+  theme: clothes
+  japanese: スカート
+  reading: スカート
+  romaji: sukaato
+  english: skirt
+  notes: JMdict seq 1067470.
+
+- id: vocab.kutsushita
+  jlpt: N5
+  word_type: noun
+  theme: clothes
+  japanese: 靴下
+  reading: くつした
+  romaji: kutsushita
+  english: socks
+  notes: 靴 shoes plus 下 under — the thing under your shoes. 下 you have had since the directions chapter. JMdict seq 1246740.
+
+- id: vocab.haku
+  jlpt: N5
+  word_type: verb
+  verb_class: u
+  theme: clothes
+  japanese: はく
+  reading: はく
+  romaji: haku
+  english: to wear, to put on (lower body)
+  notes: Trousers, skirts, socks, shoes. Written 履く or 穿く, but kana is what you will see. Godan, so the te-form is はいて. JMdict seq 1607260.
+
+- id: vocab.nugu
+  jlpt: N5
+  word_type: verb
+  verb_class: u
+  theme: clothes
+  japanese: 脱ぐ
+  reading: ぬぐ
+  romaji: nugu
+  english: to take off (clothes, shoes)
+  notes: One verb for taking anything off, whichever verb put it on. Godan ending in ぐ, so the te-form is 脱いで. JMdict seq 1416400.
+
+# ── Hat, glasses, tie, umbrella (Lesson 4) ────────────────────────────────────
+
+- id: vocab.boushi
+  jlpt: N5
+  word_type: noun
+  theme: clothes
+  japanese: 帽子
+  reading: ぼうし
+  romaji: boushi
+  english: hat, cap
+  notes: Covers both, with no separate word for a cap. JMdict seq 1519170.
+
+- id: vocab.megane
+  jlpt: N5
+  word_type: noun
+  theme: clothes
+  japanese: めがね
+  reading: めがね
+  romaji: megane
+  english: glasses
+  notes: Written 眼鏡 or メガネ just as often. Always plural in English, always singular here. JMdict seq 1577670.
+
+- id: vocab.nekutai
+  jlpt: N5
+  word_type: noun
+  theme: clothes
+  japanese: ネクタイ
+  reading: ネクタイ
+  romaji: nekutai
+  english: necktie
+  notes: Never shortened to タイ. JMdict seq 1092820.
+
+- id: vocab.kasa
+  jlpt: N5
+  word_type: noun
+  theme: clothes
+  japanese: 傘
+  reading: かさ
+  romaji: kasa
+  english: umbrella
+  notes: The kanji is a picture of one. JMdict seq 1301940.
+
+- id: vocab.kaburu
+  jlpt: N5
+  word_type: verb
+  verb_class: u
+  theme: clothes
+  japanese: かぶる
+  reading: かぶる
+  romaji: kaburu
+  english: to wear, to put on (head)
+  notes: Hats, helmets, hoods — anything that comes down over your head. Written 被る, but kana is normal. Godan, te-form かぶって. JMdict seq 1484330.
+
+- id: vocab.kakeru
+  jlpt: N5
+  word_type: verb
+  verb_class: ru
+  theme: clothes
+  japanese: かける
+  reading: かける
+  romaji: kakeru
+  english: to put on (glasses), to hang
+  notes: One of the busiest verbs in the language — it also hangs a coat on a hook, sits you down, and makes a phone call. Here it is the verb for glasses, because they hook over your ears. Ichidan, te-form かけて. JMdict seq 1207610.
+
+- id: vocab.shimeru-tie
+  jlpt: N5
+  word_type: verb
+  verb_class: ru
+  theme: clothes
+  japanese: 締める
+  reading: しめる
+  romaji: shimeru
+  english: to fasten, to tie
+  notes: A tie, a belt, a seatbelt — anything you tighten around yourself. Same reading as 閉める, to close a door, and the two are easy to mix up. Ichidan, te-form 締めて. JMdict seq 1436570.
+
+# ── Colour as a thing (Lesson 5) ──────────────────────────────────────────────
+
+- id: vocab.kuro
+  jlpt: N5
+  word_type: noun
+  theme: colour
+  japanese: 黒
+  reading: くろ
+  romaji: kuro
+  english: black
+  notes: The colour itself, where 黒い describes something that has it. JMdict seq 1287410.
+
+- id: vocab.shiro
+  jlpt: N5
+  word_type: noun
+  theme: colour
+  japanese: 白
+  reading: しろ
+  romaji: shiro
+  english: white
+  notes: Pairs with 白い the same way. JMdict seq 1474900.
+
+- id: vocab.aka
+  jlpt: N5
+  word_type: noun
+  theme: colour
+  japanese: 赤
+  reading: あか
+  romaji: aka
+  english: red
+  notes: Also the red of a traffic light. JMdict seq 2013900.
+
+- id: vocab.ao
+  jlpt: N5
+  word_type: noun
+  theme: colour
+  japanese: 青
+  reading: あお
+  romaji: ao
+  english: blue
+  notes: Stretches over some of what English calls green — a green traffic light is 青, and so is unripe fruit. JMdict seq 1381380.
+
+- id: vocab.kiiro
+  jlpt: N5
+  word_type: noun
+  theme: colour
+  japanese: 黄色
+  reading: きいろ
+  romaji: kiiro
+  english: yellow
+  notes: Built with 色, colour, which also sits inside 茶色 from the counting chapter. JMdict seq 1576760.
+
+# ── Build and body (Lesson 6) ─────────────────────────────────────────────────
+
+- id: vocab.karada
+  jlpt: N5
+  word_type: noun
+  theme: body
+  japanese: 体
+  reading: からだ
+  romaji: karada
+  english: body
+  notes: Also health — 体にいい means good for you. JMdict seq 1409140.
+
+- id: vocab.ha
+  jlpt: N5
+  word_type: noun
+  theme: body
+  japanese: 歯
+  reading: は
+  romaji: ha
+  english: tooth, teeth
+  notes: One syllable, and a homophone of 葉 a leaf and 刃 a blade, so it almost always arrives attached to something — 歯がいたいです. JMdict seq 1313000.
+
+- id: vocab.hana-nose
+  jlpt: N5
+  word_type: noun
+  theme: body
+  japanese: 鼻
+  reading: はな
+  romaji: hana
+  english: nose
+  notes: Identical in sound to 花, a flower, which is already on your ladder. The kanji keep them apart and speech does not. JMdict seq 1486720.
+
+- id: vocab.futoi
+  jlpt: N5
+  word_type: i-adj
+  theme: body
+  japanese: 太い
+  reading: ふとい
+  romaji: futoi
+  english: thick, wide
+  notes: Used of tree trunks, pens, lines and voices. Said of a person it is as rude as it is in English, so it is not the word for describing someone. JMdict seq 1408180.
+
+- id: vocab.hosoi
+  jlpt: N5
+  word_type: i-adj
+  theme: body
+  japanese: 細い
+  reading: ほそい
+  romaji: hosoi
+  english: thin, narrow
+  notes: The opposite of 太い, and the word for a narrow road. Not the same as 短い, short in length. JMdict seq 1295510.
+
+- id: vocab.joubu
+  jlpt: N5
+  word_type: na-adj
+  theme: body
+  japanese: 丈夫
+  reading: じょうぶ
+  romaji: joubu
+  english: healthy, sturdy
+  notes: Works on people and on things — a healthy body and a bag that will not tear. 大丈夫, the word you already use for "it's fine", is this word with 大 on the front. JMdict seq 1580480.

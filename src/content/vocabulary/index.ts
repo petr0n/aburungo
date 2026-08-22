@@ -28,6 +28,7 @@ import describingRaw from "./describing.yaml";
 import aroundTownRaw from "./around-town.yaml";
 import pastTenseRaw from "./past-tense.yaml";
 import mealsRaw from "./meals.yaml";
+import peopleClothesRaw from "./people-clothes.yaml";
 
 export const allWords: Word[] = [
   ...parseWords(basicsRaw, "vocabulary/basics.yaml"),
@@ -57,6 +58,7 @@ export const allWords: Word[] = [
   ...parseWords(aroundTownRaw, "vocabulary/around-town.yaml"),
   ...parseWords(pastTenseRaw, "vocabulary/past-tense.yaml"),
   ...parseWords(mealsRaw, "vocabulary/meals.yaml"),
+  ...parseWords(peopleClothesRaw, "vocabulary/people-clothes.yaml"),
 ];
 
 // parseWords only rejects duplicate ids within a single file, so the same id in
