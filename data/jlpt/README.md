@@ -121,7 +121,17 @@ tool that guessed them would be manufacturing content. The JMdict sequence
 number is pre-written into `notes` so the citation survives even if nothing else
 is edited.
 
-Two things the queue does so a paste does not collide:
+The headword shown is a kanji form **JMdict flags common**, or the kana when no
+form is. Without that rule the queue proposed 洋袴 for ズボン, 亜米利加 for
+アメリカ and 塵 for ゴミ -- real dictionary entries, and not what anybody writes.
+
+Where the reference list itself writes a word in kana it carries no written form
+to match on, and a homophone group then has to be split some other way. The
+queue splits it on the gloss the list carries: はく glossed "to put on (items
+below your waist)" is 履く, not 掃く. Roughly one N5 reference row in six is
+written in kana, so this decides more of the queue than it looks like.
+
+Two more things the queue does so a paste does not collide:
 
 - **One row per JMdict entry.** Tanos lists 集る where open-anki lists 集まる:
   same reading, same sequence number, one word. The sources merge onto the
@@ -136,8 +146,8 @@ As generated (2026-08-22):
 
 | Level | Rows | With a Tatoeba example |
 |---|---|---|
-| N5 | 328 | 294 |
-| N4 | 661 | 642 |
+| N5 | 328 | 299 |
+| N4 | 660 | 643 |
 
 Provenance on those files: level membership from Tanos (CC BY) and
 open-anki-jlpt-decks (MIT), glosses and parts of speech from JMdict for

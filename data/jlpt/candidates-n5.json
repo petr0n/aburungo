@@ -124,7 +124,7 @@
    "id": "vocab.atsui-thick"
   },
   {
-   "written": "彼方",
+   "written": "あっち",
    "reading": "あっち",
    "romaji": "acchi",
    "wordType": "noun",
@@ -885,6 +885,29 @@
    "id": "vocab.kaidan"
   },
   {
+   "written": "掛かる",
+   "reading": "かかる",
+   "romaji": "kakaru",
+   "wordType": "verb",
+   "pos": [
+    "v5r",
+    "vi"
+   ],
+   "english": "to take (a resource, e.g. time or money), to hang, to come into view, to arrive",
+   "common": true,
+   "jmdictId": "1207590",
+   "example": {
+    "jpn": "あれだけのコインを収集するのにどれだけの年月がかかりましたか。",
+    "eng": "How long did it take you to collect so many coins?",
+    "tatoeba": "229759"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "id": "vocab.kakaru"
+  },
+  {
    "written": "掛ける",
    "reading": "かける",
    "romaji": "kakeru",
@@ -1442,7 +1465,7 @@
    "id": "vocab.kurasu"
   },
   {
-   "written": "瓦",
+   "written": "グラム",
    "reading": "グラム",
    "romaji": "guramu",
    "wordType": "noun",
@@ -1619,7 +1642,7 @@
    "id": "vocab.kooto"
   },
   {
-   "written": "此方",
+   "written": "こっち",
    "reading": "こっち",
    "romaji": "kocchi",
    "wordType": "noun",
@@ -1888,7 +1911,7 @@
    "id": "vocab.shi"
   },
   {
-   "written": "然し",
+   "written": "しかし",
    "reading": "しかし",
    "romaji": "shikashi",
    "wordType": "noun",
@@ -2337,7 +2360,7 @@
    "id": "vocab.supootsu"
   },
   {
-   "written": "洋袴",
+   "written": "ズボン",
    "reading": "ズボン",
    "romaji": "zubon",
    "wordType": "noun",
@@ -2493,7 +2516,7 @@
    "id": "vocab.sentaku"
   },
   {
-   "written": "其方",
+   "written": "そっち",
    "reading": "そっち",
    "romaji": "socchi",
    "wordType": "noun",
@@ -2515,7 +2538,7 @@
    "id": "vocab.socchi"
   },
   {
-   "written": "其れから",
+   "written": "それから",
    "reading": "それから",
    "romaji": "sorekara",
    "wordType": "noun",
@@ -2537,7 +2560,7 @@
    "id": "vocab.sorekara"
   },
   {
-   "written": "其れでは",
+   "written": "それでは",
    "reading": "それでは",
    "romaji": "soredeha",
    "wordType": "noun",
@@ -2647,6 +2670,28 @@
    "id": "vocab.taisetsu"
   },
   {
+   "written": "縦",
+   "reading": "たて",
+   "romaji": "tate",
+   "wordType": "noun",
+   "pos": [
+    "n"
+   ],
+   "english": "the vertical, height, front-to-back, length",
+   "common": true,
+   "jmdictId": "1335640",
+   "example": {
+    "jpn": "テーブルを縦一列に並べなさい。",
+    "eng": "Put the tables end to end.",
+    "tatoeba": "202374"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "id": "vocab.tate"
+  },
+  {
    "written": "小さな",
    "reading": "ちいさな",
    "romaji": "chiisana",
@@ -2669,7 +2714,7 @@
    "id": "vocab.chiisana"
   },
   {
-   "written": "一寸",
+   "written": "ちょっと",
    "reading": "ちょっと",
    "romaji": "chotto",
    "wordType": "adverb",
@@ -2777,6 +2822,29 @@
     "open-anki"
    ],
    "id": "vocab.tegami"
+  },
+  {
+   "written": "出来る",
+   "reading": "できる",
+   "romaji": "dekiru",
+   "wordType": "verb",
+   "pos": [
+    "v1",
+    "vi"
+   ],
+   "english": "to be able to do, to be possible, to be permitted (to do), to be good at",
+   "common": true,
+   "jmdictId": "1340450",
+   "example": {
+    "jpn": "申し訳ないけど長居できないんですよ。",
+    "eng": "I'm sorry, I can't stay long.",
+    "tatoeba": "4951"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "id": "vocab.dekiru"
   },
   {
    "written": "テスト",
@@ -2935,7 +3003,7 @@
    "id": "vocab.doa"
   },
   {
-   "written": "如何して",
+   "written": "どうして",
    "reading": "どうして",
    "romaji": "doushite",
    "wordType": "adverb",
@@ -3091,7 +3159,7 @@
    "id": "vocab.toshi"
   },
   {
-   "written": "何方",
+   "written": "どっち",
    "reading": "どっち",
    "romaji": "docchi",
    "wordType": "noun",
@@ -3559,7 +3627,7 @@
    "id": "vocab.hagaki"
   },
   {
-   "written": "掃く",
+   "written": "履く",
    "reading": "はく",
    "romaji": "haku",
    "wordType": "verb",
@@ -3567,13 +3635,13 @@
     "v5k",
     "vt"
    ],
-   "english": "to sweep, to brush, to clean, to gather silkworms",
+   "english": "to put on (lower-body clothing, e.g. pants, skirt, footwear), to wear, to affix (a sword to one's hip), to affix (a bowstring to a bow)",
    "common": true,
-   "jmdictId": "1399760",
+   "jmdictId": "1607260",
    "example": {
-    "jpn": "お前は床を掃きさえすればよい。",
-    "eng": "You have only to sweep the floor.",
-    "tatoeba": "226930"
+    "jpn": "この靴はきつすぎてはけない。",
+    "eng": "These shoes are too tight to get into.",
+    "tatoeba": "222263"
    },
    "sources": [
     "tanos",
@@ -3650,7 +3718,7 @@
    "id": "vocab.hajimete"
   },
   {
-   "written": "２０歳",
+   "written": "二十歳",
    "reading": "はたち",
    "romaji": "hatachi",
    "wordType": "noun",
@@ -4363,7 +4431,7 @@
    "id": "vocab.hosoi"
   },
   {
-   "written": "釦",
+   "written": "ボタン",
    "reading": "ボタン",
    "romaji": "botan",
    "wordType": "noun",
@@ -4453,6 +4521,28 @@
    "id": "vocab.maiban"
   },
   {
+   "written": "また",
+   "reading": "また",
+   "romaji": "mata",
+   "wordType": "adverb",
+   "pos": [
+    "adv"
+   ],
+   "english": "again, once more, once again, another time",
+   "common": true,
+   "jmdictId": "1524930",
+   "example": {
+    "jpn": "また会えて嬉しいよ。",
+    "eng": "Nice to see you again!",
+    "tatoeba": "195461"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "id": "vocab.mata"
+  },
+  {
    "written": "町",
    "reading": "まち",
    "romaji": "machi",
@@ -4475,7 +4565,7 @@
    "id": "vocab.machi"
   },
   {
-   "written": "燐寸",
+   "written": "マッチ",
    "reading": "マッチ",
    "romaji": "macchi",
    "wordType": "noun",
@@ -4677,7 +4767,7 @@
    "id": "vocab.mura"
   },
   {
-   "written": "米",
+   "written": "メートル",
    "reading": "メートル",
    "romaji": "meetoru",
    "wordType": "noun",
@@ -4831,7 +4921,7 @@
    "id": "vocab.yasumi"
   },
   {
-   "written": "遣る",
+   "written": "やる",
    "reading": "やる",
    "romaji": "yaru",
    "wordType": "verb",
@@ -4898,21 +4988,20 @@
    "id": "vocab.youfuku"
   },
   {
-   "written": "欲",
+   "written": "良く",
    "reading": "よく",
    "romaji": "yoku",
-   "wordType": "noun",
+   "wordType": "adverb",
    "pos": [
-    "n",
-    "n-suf"
+    "adv"
    ],
-   "english": "greed, craving, desire, appetite",
+   "english": "nicely, properly, well, skillfully",
    "common": true,
-   "jmdictId": "1547320",
+   "jmdictId": "1605870",
    "example": {
-    "jpn": "彼は欲の少ない人だ。",
-    "eng": "He is a man of few wants.",
-    "tatoeba": "99167"
+    "jpn": "そのプロジェクトはよく計画されていて興味深いが、当面の利益には大した結果をもたらさないと見られている。",
+    "eng": "The project is well-planned and interesting, but its immediate impact on the bottom line is not considered substantial.",
+    "tatoeba": "212661"
    },
    "sources": [
     "tanos",
@@ -4963,6 +5052,28 @@
     "open-anki"
    ],
    "id": "vocab.rajio"
+  },
+  {
+   "written": "立派",
+   "reading": "りっぱ",
+   "romaji": "rippa",
+   "wordType": "na-adj",
+   "pos": [
+    "adj-na"
+   ],
+   "english": "splendid, fine, handsome, elegant",
+   "common": true,
+   "jmdictId": "1551790",
+   "example": {
+    "jpn": "私たちの学校には立派な図書館があります。",
+    "eng": "We have a nice school library.",
+    "tatoeba": "167040"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "id": "vocab.rippa"
   },
   {
    "written": "留学生",
@@ -5101,17 +5212,17 @@
    "written": "ああ",
    "reading": "ああ",
    "romaji": "aa",
-   "wordType": "adverb",
+   "wordType": "interjection",
    "pos": [
-    "adv"
+    "int"
    ],
-   "english": "like that, so",
+   "english": "ah!, oh!, alas!, yes",
    "common": true,
-   "jmdictId": "2085080",
+   "jmdictId": "1565440",
    "example": {
-    "jpn": "ある人はこうだと言い、またある人はああだと言う。",
-    "eng": "One man says this, another that.",
-    "tatoeba": "229847"
+    "jpn": "ああ悲しい。",
+    "eng": "Ah, me!",
+    "tatoeba": "234699"
    },
    "sources": [
     "open-anki"
@@ -5470,7 +5581,7 @@
    "id": "vocab.kawaii"
   },
   {
-   "written": "瓩",
+   "written": "キログラム",
    "reading": "キログラム",
    "romaji": "kiroguramu",
    "wordType": "noun",
@@ -5491,7 +5602,7 @@
    "id": "vocab.kiroguramu"
   },
   {
-   "written": "粁",
+   "written": "キロメートル",
    "reading": "キロメートル",
    "romaji": "kiromeetoru",
    "wordType": "noun",
@@ -5705,7 +5816,7 @@
    "id": "vocab.sugi"
   },
   {
-   "written": "宛",
+   "written": "ずつ",
    "reading": "ずつ",
    "romaji": "zutsu",
    "wordType": "noun",
@@ -5790,7 +5901,7 @@
    "id": "vocab.sekken"
   },
   {
-   "written": "然うして",
+   "written": "そうして",
    "reading": "そうして",
    "romaji": "soushite",
    "wordType": "noun",
@@ -5811,7 +5922,7 @@
    "id": "vocab.soushite"
   },
   {
-   "written": "而して",
+   "written": "そして",
    "reading": "そして",
    "romaji": "soshite",
    "wordType": "noun",
@@ -6067,6 +6178,27 @@
     "open-anki"
    ],
    "id": "vocab.donna"
+  },
+  {
+   "written": "無い",
+   "reading": "ない",
+   "romaji": "nai",
+   "wordType": "i-adj",
+   "pos": [
+    "adj-i"
+   ],
+   "english": "nonexistent, not being (there), unowned, not had",
+   "common": true,
+   "jmdictId": "1529520",
+   "example": {
+    "jpn": "２つの意見に大した差はない。",
+    "eng": "There is not much difference between the two opinions.",
+    "tatoeba": "235545"
+   },
+   "sources": [
+    "open-anki"
+   ],
+   "id": "vocab.nai"
   },
   {
    "written": "等",
@@ -6470,24 +6602,6 @@
    "id": "vocab.tabako"
   },
   {
-   "written": "股",
-   "reading": "また",
-   "romaji": "mata",
-   "wordType": "noun",
-   "pos": [
-    "n"
-   ],
-   "english": "groin, thigh, crotch, crutch",
-   "common": true,
-   "jmdictId": "1267460",
-   "example": null,
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "id": "vocab.mata"
-  },
-  {
    "written": "零",
    "reading": "れい",
    "romaji": "rei",
@@ -6592,24 +6706,6 @@
    "id": "vocab.sei"
   },
   {
-   "written": "ない",
-   "reading": "ない",
-   "romaji": "nai",
-   "wordType": "noun",
-   "pos": [
-    "aux-adj",
-    "suf"
-   ],
-   "english": "not",
-   "common": true,
-   "jmdictId": "2257550",
-   "example": null,
-   "sources": [
-    "open-anki"
-   ],
-   "id": "vocab.nai"
-  },
-  {
    "written": "平仮名",
    "reading": "ひらがな",
    "romaji": "hiragana",
@@ -6678,7 +6774,7 @@
    "id": "vocab.rajikase"
   },
   {
-   "written": "片仮名",
+   "written": "カタカナ",
    "reading": "カタカナ",
    "romaji": "katakana",
    "wordType": "noun",
@@ -6695,30 +6791,7 @@
    "id": "vocab.katakana"
   },
   {
-   "written": "架かる",
-   "reading": "かかる",
-   "romaji": "kakaru",
-   "wordType": "verb",
-   "pos": [
-    "v5r",
-    "vi"
-   ],
-   "english": "to span, to bridge, to cross, to straddle",
-   "common": false,
-   "jmdictId": "1193110",
-   "example": {
-    "jpn": "池には橋がかかっている。",
-    "eng": "There is a bridge over the pond.",
-    "tatoeba": "126791"
-   },
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "id": "vocab.kakaru"
-  },
-  {
-   "written": "お酒",
+   "written": "おさけ",
    "reading": "おさけ",
    "romaji": "osake",
    "wordType": "noun",
@@ -6740,7 +6813,7 @@
    "id": "vocab.osake"
   },
   {
-   "written": "お皿",
+   "written": "おさら",
    "reading": "おさら",
    "romaji": "osara",
    "wordType": "noun",
@@ -6784,7 +6857,7 @@
    "id": "vocab.teepurekoodaa"
   },
   {
-   "written": "伯母さん",
+   "written": "おばさん",
    "reading": "おばさん",
    "romaji": "obasan",
    "wordType": "noun",
@@ -6806,7 +6879,7 @@
    "id": "vocab.obasan"
   },
   {
-   "written": "割賦",
+   "written": "かっぷ",
    "reading": "かっぷ",
    "romaji": "kappu",
    "wordType": "noun",
@@ -6824,44 +6897,7 @@
    "id": "vocab.kappu"
   },
   {
-   "written": "殺陣",
-   "reading": "たて",
-   "romaji": "tate",
-   "wordType": "noun",
-   "pos": [
-    "n"
-   ],
-   "english": "sword fight (in a film, play, etc.), stage combat, fight scene",
-   "common": false,
-   "jmdictId": "1299150",
-   "example": null,
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "id": "vocab.tate"
-  },
-  {
-   "written": "出切る",
-   "reading": "できる",
-   "romaji": "dekiru",
-   "wordType": "verb",
-   "pos": [
-    "v5r",
-    "vt"
-   ],
-   "english": "to be out of, to have no more at hand",
-   "common": false,
-   "jmdictId": "1339500",
-   "example": null,
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "id": "vocab.dekiru"
-  },
-  {
-   "written": "ＰＥＴ",
+   "written": "ペット",
    "reading": "ペット",
    "romaji": "petto",
    "wordType": "noun",
@@ -6879,7 +6915,7 @@
    "id": "vocab.petto"
   },
   {
-   "written": "ＰＥＮ",
+   "written": "ペン",
    "reading": "ペン",
    "romaji": "pen",
    "wordType": "noun",
@@ -6897,25 +6933,7 @@
    "id": "vocab.pen"
   },
   {
-   "written": "リッパ",
-   "reading": "リッパ",
-   "romaji": "rippa",
-   "wordType": "noun",
-   "pos": [
-    "n"
-   ],
-   "english": "seam ripper, ripper (bulldozer attachment), ripper (software), rip saw (machine)",
-   "common": false,
-   "jmdictId": "2021190",
-   "example": null,
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "id": "vocab.rippa"
-  },
-  {
-   "written": "私",
+   "written": "わたくし",
    "reading": "わたくし",
    "romaji": "watakushi",
    "wordType": "noun",
@@ -6950,7 +6968,7 @@
    "id": "vocab.isu-swords"
   },
   {
-   "written": "伯父さん",
+   "written": "おじさん",
    "reading": "おじさん",
    "romaji": "ojisan",
    "wordType": "noun",
@@ -6968,7 +6986,7 @@
    "id": "vocab.ojisan"
   },
   {
-   "written": "佳月",
+   "written": "かげつ",
    "reading": "かげつ",
    "romaji": "kagetsu",
    "wordType": "noun",
@@ -6985,7 +7003,7 @@
    "id": "vocab.kagetsu"
   },
   {
-   "written": "裁ち",
+   "written": "たち",
    "reading": "たち",
    "romaji": "tachi",
    "wordType": "noun",
@@ -7036,7 +7054,7 @@
    "id": "vocab.dandan-thank-you"
   },
   {
-   "written": "ＮａＮ",
+   "written": "ナン",
    "reading": "ナン",
    "romaji": "nan",
    "wordType": "noun",
@@ -7053,7 +7071,7 @@
    "id": "vocab.nan-not-a"
   },
   {
-   "written": "俸",
+   "written": "ほう",
    "reading": "ほう",
    "romaji": "hou",
    "wordType": "noun",
@@ -7087,7 +7105,7 @@
    "id": "vocab.hou-oh"
   },
   {
-   "written": "縒り",
+   "written": "より",
    "reading": "より",
    "romaji": "yori",
    "wordType": "noun",

@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { assignIds, roughRomaji, wordTypeFor } from "./vocab.mjs";
+import { assignIds, bestByGloss, roughRomaji, wordTypeFor } from "./vocab.mjs";
 
 describe("wordTypeFor", () => {
   it("maps JMdict parts of speech onto the app's word_type", () => {
@@ -85,5 +85,32 @@ describe("assignIds", () => {
     const ids = assignIds([card("あつい", "hot"), card("あつい", "hot")], new Set(["vocab.atsui-hot"])).map((c) => c.id);
     expect(new Set(ids).size).toBe(2);
     expect(ids).not.toContain("vocab.atsui-hot");
+  });
+});
+
+describe("bestByGloss", () => {
+  const hit = (allGlosses, common = true) => ({ allGlosses, common });
+
+  it("picks the homophone the reference list actually means", () => {
+    const sweep = hit(["to sweep", "to brush", "to gather"]);
+    const wear = hit(["to put on (lower-body clothing)", "to wear"]);
+    expect(bestByGloss([sweep, wear], "to put on (items below your waist)")).toBe(wear);
+  });
+
+  it("reads senses past the four a card shows", () => {
+    const ageruUp = hit(["to raise", "to elevate", "to fly (a kite)", "to praise", "to give"]);
+    const ageruCite = hit(["to raise", "to lift up", "to give (an example)", "to cite"]);
+    expect(bestByGloss([ageruUp, ageruCite], "to give")).toBe(ageruUp);
+  });
+
+  it("takes the reference's senses in the order it lists them", () => {
+    const coat = hit(["coat", "coating"]);
+    const court = hit(["court (e.g. tennis, basketball)", "tennis court"]);
+    expect(bestByGloss([coat, court], "coat; court (e.g., tennis)")).toBe(coat);
+  });
+
+  it("declines to guess when nothing overlaps", () => {
+    expect(bestByGloss([hit(["to sweep"])], "to put on")).toBeUndefined();
+    expect(bestByGloss([hit(["to sweep"])], "")).toBeUndefined();
   });
 });

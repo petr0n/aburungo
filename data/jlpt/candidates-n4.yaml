@@ -82,7 +82,7 @@
   jlpt: N4
   word_type: noun
   theme: TODO
-  japanese: 亜細亜
+  japanese: アジア
   reading: アジア
   romaji: ajia
   english: Asia
@@ -137,7 +137,7 @@
   jlpt: N4
   word_type: noun
   theme: TODO
-  japanese: 阿弗利加
+  japanese: アフリカ
   reading: アフリカ
   romaji: afurika
   english: Africa
@@ -148,7 +148,7 @@
   jlpt: N4
   word_type: noun
   theme: TODO
-  japanese: 亜米利加
+  japanese: アメリカ
   reading: アメリカ
   romaji: amerika
   english: (United States of) America, United States, US, USA
@@ -390,7 +390,7 @@
   jlpt: N4
   word_type: verb
   theme: TODO
-  japanese: 居らっしゃる
+  japanese: いらっしゃる
   reading: いらっしゃる
   romaji: irassharu
   english: to come, to go, to be (somewhere), to be (doing)
@@ -407,6 +407,17 @@
   english: to plant, to grow, to raise, to insert
   notes: "TODO. JMdict seq 1357250. JMdict pos: v1/vt."
   # example: 私は庭にバラを植えた。 — I planted roses in the garden. (Tatoeba 154971)
+
+- id: vocab.ukagau
+  jlpt: N4
+  word_type: verb
+  theme: TODO
+  japanese: 伺う
+  reading: うかがう
+  romaji: ukagau
+  english: to call on someone, to call at a place, to pay a visit, to wait on someone
+  notes: "TODO. JMdict seq 1305700. JMdict pos: v5u/vt."
+  # example: 病気のため本日はうかがうことができませんでした。 — On account of illness, I couldn't call on you today. (Tatoeba 85264)
 
 - id: vocab.uketsuke
   jlpt: N4
@@ -599,7 +610,7 @@
   jlpt: N4
   word_type: i-adj
   theme: TODO
-  japanese: 可笑しい
+  japanese: おかしい
   reading: おかしい
   romaji: okashii
   english: funny, amusing, comical, laughable
@@ -1061,7 +1072,7 @@
   jlpt: N4
   word_type: noun
   theme: TODO
-  japanese: 瓦斯
+  japanese: ガス
   reading: ガス
   romaji: gasu
   english: gas (as a fuel), gas (state of matter), poison gas, dense fog
@@ -1226,7 +1237,7 @@
   jlpt: N4
   word_type: noun
   theme: TODO
-  japanese: 硝子
+  japanese: ガラス
   reading: ガラス
   romaji: garasu
   english: glass, pane
@@ -1422,14 +1433,14 @@
 
 - id: vocab.kitto
   jlpt: N4
-  word_type: noun
+  word_type: adverb
   theme: TODO
-  japanese: キット
-  reading: キット
+  japanese: きっと
+  reading: きっと
   romaji: kitto
-  english: kit
-  notes: "TODO. JMdict seq 1041200. JMdict pos: n."
-  # example: 配線を間違えないように注意してキットを組み立てた。 — I built the kit taking care not to make mistakes in the wiring. (Tatoeba 121531)
+  english: surely, undoubtedly, almost certainly, most likely (e.g. 90 percent)
+  notes: "TODO. JMdict seq 1003430. JMdict pos: adv."
+  # example: でもよー、オラのおとうさんは良い気しねーよ、きっと。 — But I don't think Dad would like me to. (Tatoeba 202091)
 
 - id: vocab.kinu
   jlpt: N4
@@ -1655,7 +1666,7 @@
   jlpt: N4
   word_type: verb
   theme: TODO
-  japanese: 呉れる
+  japanese: くれる
   reading: くれる
   romaji: kureru
   english: to give, to let (one) have, to give, to do for one
@@ -1820,7 +1831,7 @@
   jlpt: N4
   word_type: adverb
   theme: TODO
-  japanese: 斯う
+  japanese: こう
   reading: こう
   romaji: kou
   english: in this way, like this, so, thus
@@ -2007,7 +2018,7 @@
   jlpt: N4
   word_type: noun
   theme: TODO
-  japanese: 塵
+  japanese: ゴミ
   reading: ゴミ
   romaji: gomi
   english: rubbish, trash, garbage, refuse
@@ -2040,7 +2051,7 @@
   jlpt: N4
   word_type: noun
   theme: TODO
-  japanese: 此れから
+  japanese: これから
   reading: これから
   romaji: korekara
   english: from now on, after this, in the future, in future
@@ -2403,7 +2414,7 @@
   jlpt: N4
   word_type: adverb
   theme: TODO
-  japanese: 確り
+  japanese: しっかり
   reading: しっかり
   romaji: shikkari
   english: tightly (holding on), firmly, securely, strongly (built)
@@ -2920,12 +2931,12 @@
   jlpt: N4
   word_type: noun
   theme: TODO
-  japanese: 修理
+  japanese: すり
   reading: すり
   romaji: suri
-  english: repair, mending, fixing, servicing
-  notes: "TODO. JMdict seq 1332400. JMdict pos: n/vs/vt."
-  # example: その車は修理する価値がない。 — The car isn't worth repairing. (Tatoeba 209561)
+  english: pickpocket
+  notes: "TODO. JMdict seq 1567450. JMdict pos: n."
+  # example: すりは人ごみの中に消えた。 — The pickpocket disappeared into the crowd. (Tatoeba 214107)
 
 - id: vocab.suruto
   jlpt: N4
@@ -3028,14 +3039,14 @@
 
 - id: vocab.sou
   jlpt: N4
-  word_type: na-adj
+  word_type: adverb
   theme: TODO
   japanese: そう
   reading: そう
   romaji: sou
-  english: appearing that, seeming that, looking like, having the appearance of
-  notes: "TODO. JMdict seq 1006610. JMdict pos: aux/adj-na."
-  # example: まもなく雨が降りそうだ。 — It is going to rain soon. (Tatoeba 195298)
+  english: in that way, thus, such, so
+  notes: "TODO. JMdict seq 2137720. JMdict pos: adv."
+  # example: もう私は大人だから、そうは考えない。 — Now that I'm a grownup, I think otherwise. (Tatoeba 194183)
 
 - id: vocab.sodateru
   jlpt: N4
@@ -3096,7 +3107,7 @@
   jlpt: N4
   word_type: noun
   theme: TODO
-  japanese: 其れで
+  japanese: それで
   reading: それで
   romaji: sorede
   english: so, therefore, and, (and) then
@@ -3107,7 +3118,7 @@
   jlpt: N4
   word_type: noun
   theme: TODO
-  japanese: 其れに
+  japanese: それに
   reading: それに
   romaji: soreni
   english: besides, in addition, also, moreover
@@ -3382,7 +3393,7 @@
   jlpt: N4
   word_type: adverb
   theme: TODO
-  japanese: 偶に
+  japanese: たまに
   reading: たまに
   romaji: tamani
   english: occasionally, once in a while, now and then
@@ -3470,7 +3481,7 @@
   jlpt: N4
   word_type: adverb
   theme: TODO
-  japanese: 些とも
+  japanese: ちっとも
   reading: ちっとも
   romaji: chittomo
   english: (not) at all, (not) a bit, (not) in the least, (not) in the slightest
@@ -3613,7 +3624,7 @@
   jlpt: N4
   word_type: noun
   theme: TODO
-  japanese: 積もり
+  japanese: つもり
   reading: つもり
   romaji: tsumori
   english: intention, plan, purpose, expectation
@@ -3811,7 +3822,7 @@
   jlpt: N4
   word_type: adverb
   theme: TODO
-  japanese: 到頭
+  japanese: とうとう
   reading: とうとう
   romaji: toutou
   english: finally, at last, in the end, ultimately
@@ -4042,7 +4053,7 @@
   jlpt: N4
   word_type: verb
   theme: TODO
-  japanese: 為さる
+  japanese: なさる
   reading: なさる
   romaji: nasaru
   english: to do
@@ -4064,7 +4075,7 @@
   jlpt: N4
   word_type: interjection
   theme: TODO
-  japanese: 成る程
+  japanese: なるほど
   reading: なるほど
   romaji: naruhodo
   english: "I see, that's right, indeed"
@@ -4302,6 +4313,17 @@
   notes: "TODO. JMdict seq 1355850. JMdict pos: n."
   # example: このソファーは場所を取りすぎる。 — This sofa takes too much room. (Tatoeba 223590)
 
+- id: vocab.hazu
+  jlpt: N4
+  word_type: noun
+  theme: TODO
+  japanese: 筈
+  reading: はず
+  romaji: hazu
+  english: should (be), bound (to be), expected (to be), must (be)
+  notes: "TODO. JMdict seq 1476430. JMdict pos: aux."
+  # example: その飛行機は今ごろは関西空港に当然着いているはずだ。 — The plane should have arrived at Kansai Airport by now. (Tatoeba 237397)
+
 - id: vocab.hazukashii
   jlpt: N4
   word_type: i-adj
@@ -4467,6 +4489,17 @@
   notes: "TODO. JMdict seq 1601650. JMdict pos: n."
   # example: きれいなタオルは引き出しにありますよ。 — The clean towels are in the drawer. (Tatoeba 225748)
 
+- id: vocab.hige
+  jlpt: N4
+  word_type: noun
+  theme: TODO
+  japanese: 髭
+  reading: ひげ
+  romaji: hige
+  english: moustache, mustache, beard, whiskers
+  notes: "TODO. JMdict seq 1601810. JMdict pos: n."
+  # example: お父さんがバスルームでひげを剃っている。 — Dad is shaving in the bathroom. (Tatoeba 226759)
+
 - id: vocab.hikoujou
   jlpt: N4
   word_type: noun
@@ -4592,7 +4625,7 @@
   jlpt: N4
   word_type: noun
   theme: TODO
-  japanese: ＦＡＸ
+  japanese: ファックス
   reading: ファックス
   romaji: fakkusu
   english: fax, facsimile, fax machine
@@ -5171,6 +5204,17 @@
   notes: "TODO. JMdict seq 1363090. JMdict pos: v5s/vt."
   # example: こちらはスミスと申します。ジョンソンさんはおいででしょうか。 — This is Mr Smith speaking. Is Mr Johnson in? (Tatoeba 224154)
 
+- id: vocab.moshi
+  jlpt: N4
+  word_type: adverb
+  theme: TODO
+  japanese: 若し
+  reading: もし
+  romaji: moshi
+  english: if, in case, supposing
+  notes: "TODO. JMdict seq 1012500. JMdict pos: adv."
+  # example: 彼を批判する人は、もしあってもごくわずかさ。 — Few, if any, will criticize him. (Tatoeba 95789)
+
 - id: vocab.mochiron
   jlpt: N4
   word_type: adverb
@@ -5296,7 +5340,7 @@
   jlpt: N4
   word_type: adverb
   theme: TODO
-  japanese: 漸と
+  japanese: やっと
   reading: やっと
   romaji: yatto
   english: at last, finally, barely, narrowly
@@ -5692,12 +5736,12 @@
   jlpt: N4
   word_type: interjection
   theme: TODO
-  japanese: あ
-  reading: あ
+  japanese: あ〜
+  reading: あ〜
   romaji: a
-  english: ah, oh, hey!
-  notes: "TODO. JMdict seq 2394370. JMdict pos: int."
-  # example: あっ、いけない！忘れるところだった！ — Oh, no! I almost forgot! (Tatoeba 234348)
+  english: ah!, oh!, alas!, yes
+  notes: "TODO. JMdict seq 1565440. JMdict pos: int."
+  # example: ああ悲しい。 — Ah, me! (Tatoeba 234699)
 
 - id: vocab.aa
   jlpt: N4
@@ -5791,23 +5835,12 @@
   jlpt: N4
   word_type: noun
   theme: TODO
-  japanese: ＩＮ
+  japanese: イン
   reading: イン
   romaji: in
   english: in (of a ball; in tennis, etc.), inside the line, in, inside
   notes: "TODO. JMdict seq 1022130. JMdict pos: n."
   # example: 打球がインかアウトかを判定するのは難しいことが多い。 — It is often difficult to see if a ball is in or out. (Tatoeba 138024)
-
-- id: vocab.ukagau-call-on
-  jlpt: N4
-  word_type: verb
-  theme: TODO
-  japanese: 伺う
-  reading: うかがう
-  romaji: ukagau
-  english: to call on someone, to call at a place, to pay a visit, to wait on someone
-  notes: "TODO. JMdict seq 1305700. JMdict pos: v5u/vt."
-  # example: 病気のため本日はうかがうことができませんでした。 — On account of illness, I couldn't call on you today. (Tatoeba 85264)
 
 - id: vocab.uso
   jlpt: N4
@@ -6132,7 +6165,7 @@
   jlpt: N4
   word_type: noun
   theme: TODO
-  japanese: 御座います
+  japanese: ございます
   reading: ございます
   romaji: gozaimasu
   english: to be, to exist, to be (doing), did
@@ -6726,7 +6759,7 @@
   jlpt: N4
   word_type: noun
   theme: TODO
-  japanese: 許り
+  japanese: ばかり
   reading: ばかり
   romaji: bakari
   english: only, merely, nothing but, no more than
@@ -6825,7 +6858,7 @@
   jlpt: N4
   word_type: noun
   theme: TODO
-  japanese: 儘
+  japanese: まま
   reading: まま
   romaji: mama
   english: as (it is), remaining (in a state), keeping (the same), leaving (unchanged)
@@ -6858,7 +6891,7 @@
   jlpt: N4
   word_type: adverb
   theme: TODO
-  japanese: 矢っ張り
+  japanese: やっぱり
   reading: やっぱり
   romaji: yappari
   english: as expected, sure enough, just as one thought, after all (is said and done)
@@ -6869,7 +6902,7 @@
   jlpt: N4
   word_type: adverb
   theme: TODO
-  japanese: 矢張り
+  japanese: やはり
   reading: やはり
   romaji: yahari
   english: as expected, sure enough, just as one thought, after all (is said and done)
@@ -7003,50 +7036,28 @@
   jlpt: N4
   word_type: verb
   theme: TODO
-  japanese: 吃驚
+  japanese: びっくり
   reading: びっくり
   romaji: bikkuri
   english: to be surprised, to be amazed, to be frightened, to be astonished
   notes: "TODO. JMdict seq 1226360. JMdict pos: vs/vi/adv."
 
-- id: vocab.ukagau-peep
-  jlpt: N4
-  word_type: verb
-  theme: TODO
-  japanese: 窺う
-  reading: うかがう
-  romaji: ukagau
-  english: "to peep (through), to peek, to examine (esp. covertly), to await (one's chance)"
-  notes: "TODO. JMdict seq 1172230. JMdict pos: v5u/vt."
-  # example: 彼女の悲しそうな顔には哀願の様子がうかがえる。 — There is a look of appeal on her sad face. (Tatoeba 94060)
-
 - id: vocab.to
   jlpt: N4
   word_type: noun
   theme: TODO
-  japanese: 都
+  japanese: と
   reading: と
   romaji: to
   english: Metropolis (of Tokyo), (Tokyo) Metropolitan District, metropolitan prefecture, counter for cities and towns
   notes: "TODO. JMdict seq 1621470. JMdict pos: n."
   # example: 「都庁舎でもらえますよ」と係員が付け加えた。 — "You can get it at the Metropolitan Government Office," the clerk added. (Tatoeba 236216)
 
-- id: vocab.hige
-  jlpt: N4
-  word_type: noun
-  theme: TODO
-  japanese: 卑下
-  reading: ひげ
-  romaji: hige
-  english: self-abasement, self-depreciation, humility
-  notes: "TODO. JMdict seq 1482700. JMdict pos: n/vs/vt."
-  # example: 卑下も自慢のうち。 — Too much humility is pride. (Tatoeba 121160)
-
 - id: vocab.oideninaru
   jlpt: N4
   word_type: noun
   theme: TODO
-  japanese: お出でになる
+  japanese: おいでになる
   reading: おいでになる
   romaji: oideninaru
   english: to be, to come, to go
@@ -7057,7 +7068,7 @@
   jlpt: N4
   word_type: noun
   theme: TODO
-  japanese: お見舞い
+  japanese: おみまい
   reading: おみまい
   romaji: omimai
   english: "visit (to someone affected by illness or misfortune), call, inquiry (about someone's health), expression of sympathy"
@@ -7068,7 +7079,7 @@
   jlpt: N4
   word_type: noun
   theme: TODO
-  japanese: もう直ぐ
+  japanese: もうすぐ
   reading: もうすぐ
   romaji: mousugu
   english: soon, shortly, before long, nearly
@@ -7079,7 +7090,7 @@
   jlpt: N4
   word_type: noun
   theme: TODO
-  japanese: 家
+  japanese: か
   reading: か
   romaji: ka
   english: -ist, -er
@@ -7090,7 +7101,7 @@
   jlpt: N4
   word_type: counter
   theme: TODO
-  japanese: 軒
+  japanese: けん
   reading: けん
   romaji: ken
   english: counter for buildings (esp. houses), suffix for a pen name, stage name, etc.
@@ -7101,7 +7112,7 @@
   jlpt: N4
   word_type: verb
   theme: TODO
-  japanese: 好く
+  japanese: すく
   reading: すく
   romaji: suku
   english: to like, to love, to be fond of
@@ -7112,7 +7123,7 @@
   jlpt: N4
   word_type: noun
   theme: TODO
-  japanese: 代
+  japanese: だい
   reading: だい
   romaji: dai
   english: charge, cost, price, generation
@@ -7123,7 +7134,7 @@
   jlpt: N4
   word_type: noun
   theme: TODO
-  japanese: お陰
+  japanese: おかげ
   reading: おかげ
   romaji: okage
   english: grace (of God), benevolence (of Buddha), blessing, assistance
@@ -7134,7 +7145,7 @@
   jlpt: N4
   word_type: noun
   theme: TODO
-  japanese: お子さん
+  japanese: おこさん
   reading: おこさん
   romaji: okosan
   english: child
@@ -7145,7 +7156,7 @@
   jlpt: N4
   word_type: noun
   theme: TODO
-  japanese: 泳ぎ方
+  japanese: およぎかた
   reading: およぎかた
   romaji: oyogikata
   english: way of swimming
@@ -7156,48 +7167,28 @@
   jlpt: N4
   word_type: verb
   theme: TODO
-  japanese: 降り出す
+  japanese: ふりだす
   reading: ふりだす
   romaji: furidasu
   english: to begin to rain, to begin to snow
   notes: "TODO. JMdict seq 1282770. JMdict pos: v5s/vi."
   # example: その上雨が降り出している。 — Besides, it's starting to rain. (Tatoeba 208980)
 
-- id: vocab.hazu
-  jlpt: N4
-  word_type: noun
-  theme: TODO
-  japanese: ハズ
-  reading: ハズ
-  romaji: hazu
-  english: husband, hubby
-  notes: "TODO. JMdict seq 2463700. JMdict pos: n."
-
 - id: vocab.pasokon
   jlpt: N4
   word_type: noun
   theme: TODO
-  japanese: パソ婚
+  japanese: パソこん
   reading: パソこん
   romaji: pasokon
   english: marriage between two people who met over the Internet
   notes: "TODO. JMdict seq 2223560. JMdict pos: n."
 
-- id: vocab.moshi
-  jlpt: N4
-  word_type: interjection
-  theme: TODO
-  japanese: もし
-  reading: もし
-  romaji: moshi
-  english: excuse me! (when calling out to someone)
-  notes: "TODO. JMdict seq 2607730. JMdict pos: int."
-
 - id: vocab.omatsuri
   jlpt: N4
   word_type: noun
   theme: TODO
-  japanese: お祭り
+  japanese: おまつり
   reading: おまつり
   romaji: omatsuri
   english: festival, feast, carnival, matsuri
@@ -7207,7 +7198,7 @@
   jlpt: N4
   word_type: noun
   theme: TODO
-  japanese: 各校
+  japanese: かっこう
   reading: かっこう
   romaji: kakkou
   english: each school
@@ -7237,7 +7228,7 @@
   jlpt: N4
   word_type: noun
   theme: TODO
-  japanese: 建て
+  japanese: だて
   reading: だて
   romaji: date
   english: indicates storeys, structures, or materials used in a building, indicates denomination
@@ -7247,7 +7238,7 @@
   jlpt: N4
   word_type: noun
   theme: TODO
-  japanese: 町
+  japanese: ちょう
   reading: ちょう
   romaji: chou
   english: town, block, neighbourhood, neighborhood
