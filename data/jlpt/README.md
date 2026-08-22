@@ -59,6 +59,7 @@ CC BY requires attribution. Both apply:
 | `raw/<source>-<level>.csv` | exactly as downloaded, so a re-merge needs no network |
 | `reference-<level>.json` | merged entries with per-word source attestation |
 | `coverage-<level>.json` | the gap list, ranked |
+| `candidates-<level>.{json,yaml}` | the authoring queue: the gap list joined to JMdict |
 
 As built (2026-08-16):
 
@@ -93,7 +94,7 @@ chopsticks are different words), so the key is reading **plus** written form.
 them:
 
 1. **Both lists, and common in JMdict** — the safest candidates to author next.
-   396 of N5's missing words are here.
+   241 of N5's missing words are here, and 527 of N4's.
 2. Everything in between.
 3. **One list only, and not common** — check before spending a lesson slot.
    15 of N5's.
@@ -101,6 +102,47 @@ them:
 `inAppNotInReference` is the other direction: words we tag at this level that no
 list mentions. Not necessarily wrong — situational vocabulary an exam-oriented
 list would not carry is exactly what this app should have — but worth reading.
+
+## The authoring queue
+
+`coverage` says which reference words are missing. It does not say enough to
+author one -- no part of speech, no real gloss, no example sentence. `pnpm vocab
+candidates <level>` joins the gap to JMdict and writes both a JSON record and
+paste-ready YAML:
+
+```
+pnpm vocab candidates n5 --limit 9999
+pnpm vocab candidates n4 --common --with-example
+```
+
+`theme` and `notes` come out as TODO on purpose. Those are the author's
+judgement -- this app's own grouping, and the trap worth warning about -- and a
+tool that guessed them would be manufacturing content. The JMdict sequence
+number is pre-written into `notes` so the citation survives even if nothing else
+is edited.
+
+Two things the queue does so a paste does not collide:
+
+- **One row per JMdict entry.** Tanos lists 集る where open-anki lists 集まる:
+  same reading, same sequence number, one word. The sources merge onto the
+  surviving row rather than emitting it twice.
+- **Every id is unique, against its siblings and against the ladder.** Homophones
+  are real words and both stay -- 着る and 切る become `vocab.kiru-wear` and
+  `vocab.kiru-cut`, following the convention the shipped content already uses
+  (`vocab.atsui-hot`, `vocab.hashi-chopsticks`). An id already spent in
+  `src/content/vocabulary/` gets dodged the same way.
+
+As generated (2026-08-22):
+
+| Level | Rows | With a Tatoeba example |
+|---|---|---|
+| N5 | 328 | 294 |
+| N4 | 661 | 642 |
+
+Provenance on those files: level membership from Tanos (CC BY) and
+open-anki-jlpt-decks (MIT), glosses and parts of speech from JMdict for
+Applications 3.6.2 (CC BY 4.0), examples from Tatoeba (CC BY 2.0 FR) with
+sentence ids kept.
 
 ## Finding sentences to teach
 

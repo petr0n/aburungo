@@ -1,12 +1,13 @@
 {
  "level": "N5",
- "generated": "2026-08-21",
- "source": "JMdict for Applications 3.6.2 (CC BY 4.0); examples via Tatoeba (CC BY 2.0 FR)",
+ "generated": "2026-08-22",
+ "source": "JMdict for Applications 3.6.2 (CC BY 4.0); examples via Tatoeba (CC BY 2.0 FR); level membership via Tanos JLPT lists (CC BY) and open-anki-jlpt-decks (MIT)",
  "note": "Authoring queue. Not content: theme and notes are TODO, and placement is an authoring decision.",
  "counts": {
   "missingInReference": 386,
   "matchedInJmdict": 360,
-  "emitted": 360
+  "uniqueEntries": 328,
+  "emitted": 328
  },
  "candidates": [
   {
@@ -14,6 +15,10 @@
    "reading": "あお",
    "romaji": "ao",
    "wordType": "noun",
+   "pos": [
+    "n",
+    "adj-no"
+   ],
    "english": "blue, azure, green, green light (traffic)",
    "common": true,
    "jmdictId": "1381380",
@@ -25,13 +30,18 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.ao"
   },
   {
    "written": "赤",
    "reading": "あか",
    "romaji": "aka",
    "wordType": "noun",
+   "pos": [
+    "n",
+    "adj-no"
+   ],
    "english": "red, crimson, scarlet, red-containing colour (e.g. brown, pink, orange)",
    "common": true,
    "jmdictId": "2013900",
@@ -43,13 +53,18 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.aka"
   },
   {
    "written": "上げる",
    "reading": "あげる",
    "romaji": "ageru",
    "wordType": "verb",
+   "pos": [
+    "v1",
+    "vt"
+   ],
    "english": "to raise, to elevate, to move something (to a higher place), to put onto (e.g. a shelf)",
    "common": true,
    "jmdictId": "1352320",
@@ -61,13 +76,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.ageru"
   },
   {
    "written": "熱い",
    "reading": "あつい",
    "romaji": "atsui",
-   "wordType": "i-adjective",
+   "wordType": "i-adj",
+   "pos": [
+    "adj-i"
+   ],
    "english": "hot (to the touch), passionate (feelings, etc.), ardent, hot (e.g. gaze)",
    "common": true,
    "jmdictId": "1467720",
@@ -79,13 +98,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.atsui-hot-2"
   },
   {
    "written": "厚い",
    "reading": "あつい",
    "romaji": "atsui",
-   "wordType": "i-adjective",
+   "wordType": "i-adj",
+   "pos": [
+    "adj-i"
+   ],
    "english": "thick, deep, heavy, kind",
    "common": true,
    "jmdictId": "1275320",
@@ -97,13 +120,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.atsui-thick"
   },
   {
    "written": "彼方",
    "reading": "あっち",
    "romaji": "acchi",
-   "wordType": "pronoun",
+   "wordType": "noun",
+   "pos": [
+    "pn"
+   ],
    "english": "that way, that direction, over there, yonder",
    "common": true,
    "jmdictId": "1483185",
@@ -115,13 +142,18 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.acchi"
   },
   {
    "written": "後",
    "reading": "あと",
    "romaji": "ato",
    "wordType": "noun",
+   "pos": [
+    "n",
+    "adj-no"
+   ],
    "english": "behind, rear, after, later",
    "common": true,
    "jmdictId": "1269320",
@@ -133,13 +165,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.ato"
   },
   {
    "written": "アパート",
    "reading": "アパート",
-   "romaji": "",
+   "romaji": "apaato",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "apartment building, apartment block, apartment house, apartment",
    "common": true,
    "jmdictId": "1017760",
@@ -151,13 +187,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.apaato"
   },
   {
    "written": "危ない",
    "reading": "あぶない",
    "romaji": "abunai",
-   "wordType": "i-adjective",
+   "wordType": "i-adj",
+   "pos": [
+    "adj-i"
+   ],
    "english": "dangerous, risky, hazardous, perilous",
    "common": true,
    "jmdictId": "1218380",
@@ -169,13 +209,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.abunai"
   },
   {
    "written": "飴",
    "reading": "あめ",
    "romaji": "ame",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "(hard) candy, toffee, rice-sugar, sugar made from the starch of rice, potatoes, etc.",
    "common": true,
    "jmdictId": "1153520",
@@ -187,13 +231,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.ame-x"
   },
   {
    "written": "如何",
    "reading": "いかが",
    "romaji": "ikaga",
    "wordType": "adverb",
+   "pos": [
+    "adv"
+   ],
    "english": "how, in what way, how about, questionable",
    "common": true,
    "jmdictId": "2845606",
@@ -205,13 +253,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.ikaga"
   },
   {
    "written": "医者",
    "reading": "いしゃ",
    "romaji": "isha",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "doctor, physician",
    "common": true,
    "jmdictId": "1159980",
@@ -223,13 +275,18 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.isha"
   },
   {
    "written": "一日",
    "reading": "いちにち",
    "romaji": "ichinichi",
    "wordType": "noun",
+   "pos": [
+    "n",
+    "adv"
+   ],
    "english": "one day, all day (long), the whole day, from morning till night",
    "common": true,
    "jmdictId": "1576260",
@@ -241,13 +298,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.ichinichi"
   },
   {
    "written": "犬",
    "reading": "いぬ",
    "romaji": "inu",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "dog (Canis (lupus) familiaris), canine, squealer, rat",
    "common": true,
    "jmdictId": "1258330",
@@ -259,13 +320,19 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.inu"
   },
   {
    "written": "意味",
    "reading": "いみ",
    "romaji": "imi",
    "wordType": "noun",
+   "pos": [
+    "n",
+    "vs",
+    "vt"
+   ],
    "english": "meaning, significance, sense",
    "common": true,
    "jmdictId": "1156800",
@@ -277,13 +344,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.imi"
   },
   {
    "written": "嫌",
    "reading": "いや",
    "romaji": "iya",
-   "wordType": "na-adjective",
+   "wordType": "na-adj",
+   "pos": [
+    "adj-na"
+   ],
    "english": "disliking, not wanting, unwilling (to do), reluctant",
    "common": true,
    "jmdictId": "1587610",
@@ -295,13 +366,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.iya"
   },
   {
    "written": "薄い",
    "reading": "うすい",
    "romaji": "usui",
-   "wordType": "i-adjective",
+   "wordType": "i-adj",
+   "pos": [
+    "adj-i"
+   ],
    "english": "thin (of an object), pale, light, faint",
    "common": true,
    "jmdictId": "1475480",
@@ -313,13 +388,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.usui"
   },
   {
    "written": "歌",
    "reading": "うた",
    "romaji": "uta",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "song, singing, classical Japanese poem (esp. tanka), modern poetry",
    "common": true,
    "jmdictId": "1193180",
@@ -331,13 +410,18 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.uta"
   },
   {
    "written": "生まれる",
    "reading": "うまれる",
    "romaji": "umareru",
    "wordType": "verb",
+   "pos": [
+    "v1",
+    "vi"
+   ],
    "english": "to be born",
    "common": true,
    "jmdictId": "1378690",
@@ -349,13 +433,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.umareru"
   },
   {
    "written": "上着",
    "reading": "うわぎ",
    "romaji": "uwagi",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "coat, jacket, outerwear, top",
    "common": true,
    "jmdictId": "1580340",
@@ -367,13 +455,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.uwagi"
   },
   {
    "written": "絵",
    "reading": "え",
    "romaji": "e",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "picture, drawing, painting, sketch",
    "common": true,
    "jmdictId": "1202270",
@@ -385,13 +477,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.e"
   },
   {
    "written": "映画館",
    "reading": "えいがかん",
    "romaji": "eigakan",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "movie theatre, movie theater, cinema",
    "common": true,
    "jmdictId": "1173750",
@@ -403,13 +499,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.eigakan"
   },
   {
    "written": "ええ",
    "reading": "ええ",
    "romaji": "ee",
    "wordType": "interjection",
+   "pos": [
+    "int"
+   ],
    "english": "yes, that is correct, right, um",
    "common": true,
    "jmdictId": "1001140",
@@ -421,13 +521,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.ee"
   },
   {
    "written": "鉛筆",
    "reading": "えんぴつ",
    "romaji": "enpitsu",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "(wooden) pencil",
    "common": true,
    "jmdictId": "1178590",
@@ -439,13 +543,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.enpitsu"
   },
   {
    "written": "多い",
    "reading": "おおい",
    "romaji": "ooi",
-   "wordType": "i-adjective",
+   "wordType": "i-adj",
+   "pos": [
+    "adj-i"
+   ],
    "english": "many, numerous, a lot, large amount of",
    "common": true,
    "jmdictId": "1407460",
@@ -457,13 +565,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.ooi"
   },
   {
    "written": "大きな",
    "reading": "おおきな",
    "romaji": "ookina",
    "wordType": "noun",
+   "pos": [
+    "adj-pn"
+   ],
    "english": "big, large, great",
    "common": true,
    "jmdictId": "1412890",
@@ -475,13 +587,18 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.ookina"
   },
   {
    "written": "大勢",
    "reading": "おおぜい",
    "romaji": "oozei",
    "wordType": "noun",
+   "pos": [
+    "n",
+    "adj-no"
+   ],
    "english": "crowd of people, great number of people, in great numbers",
    "common": true,
    "jmdictId": "1414220",
@@ -493,13 +610,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.oozei"
   },
   {
    "written": "お手洗い",
    "reading": "おてあらい",
    "romaji": "otearai",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "toilet, restroom, lavatory, bathroom",
    "common": true,
    "jmdictId": "1002100",
@@ -511,13 +632,18 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.otearai"
   },
   {
    "written": "男",
    "reading": "おとこ",
    "romaji": "otoko",
    "wordType": "noun",
+   "pos": [
+    "n",
+    "n-pref"
+   ],
    "english": "man, male, fellow, guy",
    "common": true,
    "jmdictId": "1419990",
@@ -529,13 +655,18 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.otoko"
   },
   {
    "written": "男の子",
    "reading": "おとこのこ",
    "romaji": "otokonoko",
-   "wordType": "expression",
+   "wordType": "noun",
+   "pos": [
+    "exp",
+    "n"
+   ],
    "english": "boy, son, baby boy, young man",
    "common": true,
    "jmdictId": "1420010",
@@ -547,13 +678,19 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.otokonoko"
   },
   {
    "written": "大人",
    "reading": "おとな",
    "romaji": "otona",
    "wordType": "noun",
+   "pos": [
+    "n",
+    "adj-no",
+    "adj-na"
+   ],
    "english": "adult, grown-up",
    "common": true,
    "jmdictId": "1414170",
@@ -565,13 +702,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.otona"
   },
   {
    "written": "お風呂",
    "reading": "おふろ",
    "romaji": "ofuro",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "bath",
    "common": true,
    "jmdictId": "2220600",
@@ -583,13 +724,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.ofuro"
   },
   {
    "written": "お巡りさん",
    "reading": "おまわりさん",
    "romaji": "omawarisan",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "police officer",
    "common": true,
    "jmdictId": "1002120",
@@ -601,13 +746,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.omawarisan"
   },
   {
    "written": "音楽",
    "reading": "おんがく",
    "romaji": "ongaku",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "music",
    "common": true,
    "jmdictId": "1183720",
@@ -619,13 +768,18 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.ongaku"
   },
   {
    "written": "女",
    "reading": "おんな",
    "romaji": "onna",
    "wordType": "noun",
+   "pos": [
+    "n",
+    "n-pref"
+   ],
    "english": "woman, female, female lover, girlfriend",
    "common": true,
    "jmdictId": "1344930",
@@ -637,13 +791,18 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.onna"
   },
   {
    "written": "女の子",
    "reading": "おんなのこ",
    "romaji": "onnanoko",
-   "wordType": "expression",
+   "wordType": "noun",
+   "pos": [
+    "exp",
+    "n"
+   ],
    "english": "girl, daughter, baby girl, young woman",
    "common": true,
    "jmdictId": "1344970",
@@ -655,13 +814,18 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.onnanoko"
   },
   {
    "written": "外国",
    "reading": "がいこく",
    "romaji": "gaikoku",
    "wordType": "noun",
+   "pos": [
+    "n",
+    "adj-no"
+   ],
    "english": "foreign country",
    "common": true,
    "jmdictId": "1203620",
@@ -673,13 +837,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.gaikoku"
   },
   {
    "written": "外国人",
    "reading": "がいこくじん",
    "romaji": "gaikokujin",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "foreigner, foreign citizen, foreign national, alien",
    "common": true,
    "jmdictId": "1203650",
@@ -691,13 +859,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.gaikokujin"
   },
   {
    "written": "階段",
    "reading": "かいだん",
    "romaji": "kaidan",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "stairs, stairway, staircase",
    "common": true,
    "jmdictId": "1203090",
@@ -709,13 +881,18 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.kaidan"
   },
   {
    "written": "掛ける",
    "reading": "かける",
    "romaji": "kakeru",
    "wordType": "verb",
+   "pos": [
+    "v1",
+    "vt"
+   ],
    "english": "to hang up (e.g. a coat, a picture on the wall), to let hang, to suspend (from), to hoist (e.g. sail)",
    "common": true,
    "jmdictId": "1207610",
@@ -727,13 +904,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.kakeru"
   },
   {
    "written": "傘",
    "reading": "かさ",
    "romaji": "kasa",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "umbrella, parasol, something shaped like an umbrella or a conical hat, shade (of a lamp)",
    "common": true,
    "jmdictId": "1301940",
@@ -745,13 +926,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.kasa"
   },
   {
    "written": "方",
    "reading": "かた",
    "romaji": "kata",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "direction, way, person, lady",
    "common": true,
    "jmdictId": "1516925",
@@ -763,13 +948,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.kata"
   },
   {
    "written": "家庭",
    "reading": "かてい",
    "romaji": "katei",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "home, household, family, hearth",
    "common": true,
    "jmdictId": "1192280",
@@ -781,13 +970,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.katei"
   },
   {
    "written": "花瓶",
    "reading": "かびん",
    "romaji": "kabin",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "(flower) vase",
    "common": true,
    "jmdictId": "1194870",
@@ -799,13 +992,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.kabin"
   },
   {
    "written": "紙",
    "reading": "かみ",
    "romaji": "kami",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "paper",
    "common": true,
    "jmdictId": "1311530",
@@ -817,13 +1014,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.kami"
   },
   {
    "written": "カメラ",
    "reading": "カメラ",
-   "romaji": "",
+   "romaji": "kamera",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "camera",
    "common": true,
    "jmdictId": "1038350",
@@ -835,13 +1036,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.kamera"
   },
   {
    "written": "体",
    "reading": "からだ",
    "romaji": "karada",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "body, torso, trunk, build",
    "common": true,
    "jmdictId": "1409140",
@@ -853,13 +1058,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.karada"
   },
   {
    "written": "カレンダー",
    "reading": "カレンダー",
-   "romaji": "",
+   "romaji": "karendaa",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "calendar, calender (machine for flattening things)",
    "common": true,
    "jmdictId": "1039220",
@@ -871,13 +1080,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.karendaa"
   },
   {
    "written": "漢字",
    "reading": "かんじ",
    "romaji": "kanji",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "kanji, Chinese character",
    "common": true,
    "jmdictId": "1213170",
@@ -889,13 +1102,19 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.kanji"
   },
   {
    "written": "黄色",
    "reading": "きいろ",
    "romaji": "kiiro",
    "wordType": "noun",
+   "pos": [
+    "n",
+    "adj-no",
+    "adj-na"
+   ],
    "english": "yellow, amber",
    "common": true,
    "jmdictId": "1576760",
@@ -907,13 +1126,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.kiiro"
   },
   {
    "written": "北",
    "reading": "きた",
    "romaji": "kita",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "north, the North, northern territories, North Korea",
    "common": true,
    "jmdictId": "1520670",
@@ -925,13 +1148,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.kita"
   },
   {
    "written": "ギター",
    "reading": "ギター",
-   "romaji": "",
+   "romaji": "gitaa",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "guitar",
    "common": true,
    "jmdictId": "1042820",
@@ -943,13 +1170,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.gitaa"
   },
   {
    "written": "汚い",
    "reading": "きたない",
    "romaji": "kitanai",
-   "wordType": "i-adjective",
+   "wordType": "i-adj",
+   "pos": [
+    "adj-i"
+   ],
    "english": "dirty, filthy, foul, unclean",
    "common": true,
    "jmdictId": "1178940",
@@ -961,13 +1192,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.kitanai"
   },
   {
    "written": "喫茶店",
    "reading": "きっさてん",
    "romaji": "kissaten",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "coffee shop, tearoom, coffee lounge, coffeehouse",
    "common": true,
    "jmdictId": "1226440",
@@ -979,13 +1214,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.kissaten"
   },
   {
    "written": "切手",
    "reading": "きって",
    "romaji": "kitte",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "stamp (postage), merchandise certificate",
    "common": true,
    "jmdictId": "1385070",
@@ -997,13 +1236,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.kitte"
   },
   {
    "written": "教室",
    "reading": "きょうしつ",
    "romaji": "kyoushitsu",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "classroom, lecture room, department (in a university), class",
    "common": true,
    "jmdictId": "1237150",
@@ -1015,13 +1258,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.kyoushitsu"
   },
   {
    "written": "兄弟",
    "reading": "きょうだい",
    "romaji": "kyoudai",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "brothers and sisters, siblings, half-siblings, step-siblings",
    "common": true,
    "jmdictId": "1249960",
@@ -1033,13 +1280,18 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.kyoudai"
   },
   {
    "written": "切る",
    "reading": "きる",
    "romaji": "kiru",
    "wordType": "verb",
+   "pos": [
+    "v5r",
+    "vt"
+   ],
    "english": "to cut, to cut through, to perform (surgery), to sever (connections, ties)",
    "common": true,
    "jmdictId": "1384830",
@@ -1051,13 +1303,18 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.kiru-cut"
   },
   {
    "written": "着る",
    "reading": "きる",
    "romaji": "kiru",
    "wordType": "verb",
+   "pos": [
+    "v1",
+    "vt"
+   ],
    "english": "to wear (from the shoulders down), to put on, to take (the blame, responsibility), to bear",
    "common": true,
    "jmdictId": "1423000",
@@ -1069,13 +1326,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.kiru-wear"
   },
   {
    "written": "九",
    "reading": "く",
    "romaji": "ku",
    "wordType": "noun",
+   "pos": [
+    "num"
+   ],
    "english": "nine, 9",
    "common": true,
    "jmdictId": "1578150",
@@ -1087,13 +1348,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.ku"
   },
   {
    "written": "薬",
    "reading": "くすり",
    "romaji": "kusuri",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "medicine, pharmaceuticals, (legal) drugs, pill",
    "common": true,
    "jmdictId": "1538160",
@@ -1105,13 +1370,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.kusuri"
   },
   {
    "written": "靴下",
    "reading": "くつした",
    "romaji": "kutsushita",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "socks, sock, stockings, stocking",
    "common": true,
    "jmdictId": "1246740",
@@ -1123,13 +1392,18 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.kutsushita"
   },
   {
    "written": "曇る",
    "reading": "くもる",
    "romaji": "kumoru",
    "wordType": "verb",
+   "pos": [
+    "v5r",
+    "vi"
+   ],
    "english": "to get cloudy, to cloud over, to become overcast, to cloud up",
    "common": true,
    "jmdictId": "1457560",
@@ -1141,13 +1415,18 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.kumoru"
   },
   {
    "written": "暮らす",
    "reading": "くらす",
    "romaji": "kurasu",
    "wordType": "verb",
+   "pos": [
+    "v5s",
+    "vi"
+   ],
    "english": "to live (on, by, etc.), to lead a life, to get along, to get by",
    "common": true,
    "jmdictId": "1514940",
@@ -1159,13 +1438,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.kurasu"
   },
   {
    "written": "瓦",
    "reading": "グラム",
-   "romaji": "",
+   "romaji": "guramu",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "gram, gramme",
    "common": true,
    "jmdictId": "1046810",
@@ -1177,13 +1460,18 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.guramu"
   },
   {
    "written": "黒",
    "reading": "くろ",
    "romaji": "kuro",
    "wordType": "noun",
+   "pos": [
+    "n",
+    "adj-no"
+   ],
    "english": "black, black stone, guilt, guilty person",
    "common": true,
    "jmdictId": "1287410",
@@ -1195,13 +1483,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.kuro"
   },
   {
    "written": "警官",
    "reading": "けいかん",
    "romaji": "keikan",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "police officer, policeman, constable",
    "common": true,
    "jmdictId": "1252330",
@@ -1213,13 +1505,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.keikan"
   },
   {
    "written": "結構",
    "reading": "けっこう",
    "romaji": "kekkou",
-   "wordType": "na-adjective",
+   "wordType": "na-adj",
+   "pos": [
+    "adj-na"
+   ],
    "english": "splendid, nice, wonderful, delightful",
    "common": true,
    "jmdictId": "1254760",
@@ -1231,13 +1527,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.kekkou"
   },
   {
    "written": "玄関",
    "reading": "げんかん",
    "romaji": "genkan",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "entrance, front door, entryway, entranceway",
    "common": true,
    "jmdictId": "1263400",
@@ -1249,13 +1549,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.genkan"
   },
   {
    "written": "交番",
    "reading": "こうばん",
    "romaji": "kouban",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "police box, koban, small neighborhood police station, alternation",
    "common": true,
    "jmdictId": "1272500",
@@ -1267,13 +1571,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.kouban"
   },
   {
    "written": "声",
    "reading": "こえ",
    "romaji": "koe",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "voice, singing (of a bird), chirping (of an insect), hoot",
    "common": true,
    "jmdictId": "1380440",
@@ -1285,13 +1593,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.koe"
   },
   {
    "written": "コート",
    "reading": "コート",
-   "romaji": "",
+   "romaji": "kooto",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "coat, coating",
    "common": true,
    "jmdictId": "1049000",
@@ -1303,13 +1615,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.kooto"
   },
   {
    "written": "此方",
    "reading": "こっち",
    "romaji": "kocchi",
-   "wordType": "pronoun",
+   "wordType": "noun",
+   "pos": [
+    "pn"
+   ],
    "english": "this way, this direction, here, this (one)",
    "common": true,
    "jmdictId": "1004500",
@@ -1321,13 +1637,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.kocchi"
   },
   {
    "written": "言葉",
    "reading": "ことば",
    "romaji": "kotoba",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "language, dialect, word, phrase",
    "common": true,
    "jmdictId": "1264540",
@@ -1339,13 +1659,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.kotoba"
   },
   {
    "written": "こんな",
    "reading": "こんな",
    "romaji": "konna",
    "wordType": "noun",
+   "pos": [
+    "adj-pn"
+   ],
    "english": "this sort of, this kind of, like this, such",
    "common": true,
    "jmdictId": "1004880",
@@ -1357,13 +1681,18 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.konna"
   },
   {
    "written": "今晩",
    "reading": "こんばん",
    "romaji": "konban",
    "wordType": "noun",
+   "pos": [
+    "n",
+    "adv"
+   ],
    "english": "tonight, this evening",
    "common": true,
    "jmdictId": "1289470",
@@ -1375,13 +1704,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.konban"
   },
   {
    "written": "さあ",
    "reading": "さあ",
    "romaji": "saa",
    "wordType": "interjection",
+   "pos": [
+    "int"
+   ],
    "english": "come (on), come now, come along, here",
    "common": true,
    "jmdictId": "1005110",
@@ -1393,13 +1726,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.saa"
   },
   {
    "written": "財布",
    "reading": "さいふ",
    "romaji": "saifu",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "wallet, purse, coin purse, billfold",
    "common": true,
    "jmdictId": "1296970",
@@ -1411,13 +1748,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.saifu"
   },
   {
    "written": "先",
    "reading": "さき",
    "romaji": "saki",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "point, tip, end, nozzle",
    "common": true,
    "jmdictId": "1387210",
@@ -1429,13 +1770,19 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.saki"
   },
   {
    "written": "作文",
    "reading": "さくぶん",
    "romaji": "sakubun",
    "wordType": "noun",
+   "pos": [
+    "n",
+    "vs",
+    "vi"
+   ],
    "english": "writing (an essay, prose, etc.), composition, formal writing with little real meaning",
    "common": true,
    "jmdictId": "1297960",
@@ -1447,13 +1794,18 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.sakubun"
   },
   {
    "written": "差す",
    "reading": "さす",
    "romaji": "sasu",
    "wordType": "verb",
+   "pos": [
+    "v5s",
+    "vi"
+   ],
    "english": "to shine, to be visible, to be tinged with, to rise (of water levels)",
    "common": true,
    "jmdictId": "1291330",
@@ -1465,13 +1817,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.sasu"
   },
   {
    "written": "雑誌",
    "reading": "ざっし",
    "romaji": "zasshi",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "magazine, journal, periodical",
    "common": true,
    "jmdictId": "1299400",
@@ -1483,13 +1839,18 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.zasshi"
   },
   {
    "written": "再来年",
    "reading": "さらいねん",
    "romaji": "sarainen",
    "wordType": "noun",
+   "pos": [
+    "n",
+    "adv"
+   ],
    "english": "year after next",
    "common": true,
    "jmdictId": "1293660",
@@ -1501,13 +1862,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.sarainen"
   },
   {
    "written": "四",
    "reading": "し",
    "romaji": "shi",
    "wordType": "noun",
+   "pos": [
+    "num"
+   ],
    "english": "four, 4",
    "common": true,
    "jmdictId": "1579470",
@@ -1519,13 +1884,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.shi"
   },
   {
    "written": "然し",
    "reading": "しかし",
    "romaji": "shikashi",
    "wordType": "noun",
+   "pos": [
+    "conj"
+   ],
    "english": "however, but",
    "common": true,
    "jmdictId": "1505990",
@@ -1537,13 +1906,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.shikashi"
   },
   {
    "written": "辞書",
    "reading": "じしょ",
    "romaji": "jisho",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "dictionary, lexicon, letter of resignation",
    "common": true,
    "jmdictId": "1318970",
@@ -1555,13 +1928,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.jisho"
   },
   {
    "written": "七",
    "reading": "しち",
    "romaji": "shichi",
    "wordType": "noun",
+   "pos": [
+    "num"
+   ],
    "english": "seven",
    "common": true,
    "jmdictId": "1319210",
@@ -1573,13 +1950,21 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.shichi"
   },
   {
    "written": "質問",
    "reading": "しつもん",
    "romaji": "shitsumon",
    "wordType": "noun",
+   "pos": [
+    "n",
+    "vs",
+    "vt",
+    "vi",
+    "adj-no"
+   ],
    "english": "question, inquiry, enquiry",
    "common": true,
    "jmdictId": "1320760",
@@ -1591,13 +1976,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.shitsumon"
   },
   {
    "written": "自動車",
    "reading": "じどうしゃ",
    "romaji": "jidousha",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "car, automobile, motorcar, motor vehicle",
    "common": true,
    "jmdictId": "1318400",
@@ -1609,13 +1998,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.jidousha"
   },
   {
    "written": "自分",
    "reading": "じぶん",
    "romaji": "jibun",
-   "wordType": "pronoun",
+   "wordType": "noun",
+   "pos": [
+    "pn"
+   ],
    "english": "myself, yourself, oneself, himself",
    "common": true,
    "jmdictId": "1318610",
@@ -1627,13 +2020,18 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.jibun"
   },
   {
    "written": "締める",
    "reading": "しめる",
    "romaji": "shimeru",
    "wordType": "verb",
+   "pos": [
+    "v1",
+    "vt"
+   ],
    "english": "to tie, to fasten, to tighten, to wear (necktie, belt)",
    "common": true,
    "jmdictId": "1436570",
@@ -1645,13 +2043,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.shimeru-tie"
   },
   {
    "written": "写真",
    "reading": "しゃしん",
    "romaji": "shashin",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "photograph, photo, picture, photography",
    "common": true,
    "jmdictId": "1321900",
@@ -1663,13 +2065,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.shashin"
   },
   {
    "written": "シャツ",
    "reading": "シャツ",
-   "romaji": "",
+   "romaji": "shatsu",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "shirt (undergarment), undershirt, singlet, shirt (outerwear; usu. with collar and buttons)",
    "common": true,
    "jmdictId": "1061520",
@@ -1681,13 +2087,19 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.shatsu"
   },
   {
    "written": "授業",
    "reading": "じゅぎょう",
    "romaji": "jugyou",
    "wordType": "noun",
+   "pos": [
+    "n",
+    "vs",
+    "vi"
+   ],
    "english": "lesson, class, teaching, instruction",
    "common": true,
    "jmdictId": "1330290",
@@ -1699,13 +2111,18 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.jugyou"
   },
   {
    "written": "上手",
    "reading": "じょうず",
    "romaji": "jouzu",
-   "wordType": "na-adjective",
+   "wordType": "na-adj",
+   "pos": [
+    "adj-na",
+    "n"
+   ],
    "english": "skillful, skilled, proficient, good (at)",
    "common": true,
    "jmdictId": "1353320",
@@ -1717,13 +2134,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.jouzu"
   },
   {
    "written": "丈夫",
    "reading": "じょうぶ",
    "romaji": "joubu",
-   "wordType": "na-adjective",
+   "wordType": "na-adj",
+   "pos": [
+    "adj-na"
+   ],
    "english": "healthy, robust, strong, solid",
    "common": true,
    "jmdictId": "1580480",
@@ -1735,13 +2156,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.joubu"
   },
   {
    "written": "食堂",
    "reading": "しょくどう",
    "romaji": "shokudou",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "dining room, dining hall, cafeteria, canteen",
    "common": true,
    "jmdictId": "1358550",
@@ -1753,13 +2178,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.shokudou"
   },
   {
    "written": "新聞",
    "reading": "しんぶん",
    "romaji": "shinbun",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "newspaper",
    "common": true,
    "jmdictId": "1362360",
@@ -1771,13 +2200,18 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.shinbun"
   },
   {
    "written": "吸う",
    "reading": "すう",
    "romaji": "suu",
    "wordType": "verb",
+   "pos": [
+    "v5u",
+    "vt"
+   ],
    "english": "to breathe in, to inhale, to smoke (a cigarette, etc.), to suck",
    "common": true,
    "jmdictId": "1228260",
@@ -1789,13 +2223,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.suu"
   },
   {
    "written": "スカート",
    "reading": "スカート",
-   "romaji": "",
+   "romaji": "sukaato",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "skirt",
    "common": true,
    "jmdictId": "1067470",
@@ -1807,13 +2245,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.sukaato"
   },
   {
    "written": "少ない",
    "reading": "すくない",
    "romaji": "sukunai",
-   "wordType": "i-adjective",
+   "wordType": "i-adj",
+   "pos": [
+    "adj-i"
+   ],
    "english": "few, little, small (amount), low",
    "common": true,
    "jmdictId": "1348910",
@@ -1825,13 +2267,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.sukunai"
   },
   {
    "written": "直ぐに",
    "reading": "すぐに",
    "romaji": "suguni",
    "wordType": "adverb",
+   "pos": [
+    "adv"
+   ],
    "english": "immediately, right away, at once, instantly",
    "common": true,
    "jmdictId": "1430620",
@@ -1843,13 +2289,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.suguni"
   },
   {
    "written": "ストーブ",
    "reading": "ストーブ",
-   "romaji": "",
+   "romaji": "sutoobu",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "(room) heater, stove",
    "common": true,
    "jmdictId": "1070790",
@@ -1861,13 +2311,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.sutoobu"
   },
   {
    "written": "スポーツ",
    "reading": "スポーツ",
-   "romaji": "",
+   "romaji": "supootsu",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "sport, sports",
    "common": true,
    "jmdictId": "1073210",
@@ -1879,13 +2333,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.supootsu"
   },
   {
    "written": "洋袴",
    "reading": "ズボン",
-   "romaji": "",
+   "romaji": "zubon",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "trousers, pants",
    "common": true,
    "jmdictId": "1074260",
@@ -1897,13 +2355,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.zubon"
   },
   {
    "written": "生徒",
    "reading": "せいと",
    "romaji": "seito",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "pupil, student, schoolchild",
    "common": true,
    "jmdictId": "1379380",
@@ -1915,13 +2377,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.seito"
   },
   {
    "written": "セーター",
    "reading": "セーター",
-   "romaji": "",
+   "romaji": "seetaa",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "sweater, jumper",
    "common": true,
    "jmdictId": "1074270",
@@ -1933,13 +2399,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.seetaa"
   },
   {
    "written": "背広",
    "reading": "せびろ",
    "romaji": "sebiro",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "business suit",
    "common": true,
    "jmdictId": "1472740",
@@ -1951,13 +2421,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.sebiro"
   },
   {
    "written": "狭い",
    "reading": "せまい",
    "romaji": "semai",
-   "wordType": "i-adjective",
+   "wordType": "i-adj",
+   "pos": [
+    "adj-i"
+   ],
    "english": "narrow, confined, small, cramped",
    "common": true,
    "jmdictId": "1237680",
@@ -1969,13 +2443,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.semai"
   },
   {
    "written": "０",
    "reading": "ゼロ",
-   "romaji": "",
+   "romaji": "zero",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "zero, 0, nought, nil",
    "common": true,
    "jmdictId": "2839962",
@@ -1987,13 +2465,19 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.zero"
   },
   {
    "written": "洗濯",
    "reading": "せんたく",
    "romaji": "sentaku",
    "wordType": "noun",
+   "pos": [
+    "n",
+    "vs",
+    "vt"
+   ],
    "english": "washing, laundry, relaxation, rejuvenation",
    "common": true,
    "jmdictId": "1390980",
@@ -2005,13 +2489,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.sentaku"
   },
   {
    "written": "其方",
    "reading": "そっち",
    "romaji": "socchi",
-   "wordType": "pronoun",
+   "wordType": "noun",
+   "pos": [
+    "pn"
+   ],
    "english": "that way, that direction, there, that (one)",
    "common": true,
    "jmdictId": "1006780",
@@ -2023,13 +2511,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.socchi"
   },
   {
    "written": "其れから",
    "reading": "それから",
    "romaji": "sorekara",
-   "wordType": "expression",
+   "wordType": "noun",
+   "pos": [
+    "exp"
+   ],
    "english": "and then, after that",
    "common": true,
    "jmdictId": "1006980",
@@ -2041,13 +2533,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.sorekara"
   },
   {
    "written": "其れでは",
    "reading": "それでは",
    "romaji": "soredeha",
    "wordType": "noun",
+   "pos": [
+    "conj"
+   ],
    "english": "well, ..., right, ..., now, ..., so",
    "common": true,
    "jmdictId": "1406050",
@@ -2059,13 +2555,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.soredeha"
   },
   {
    "written": "大学",
    "reading": "だいがく",
    "romaji": "daigaku",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "university, college, former imperial university of Japan (established under the ritsuryō system for the training of government administrators), the Great Learning (one of the Four Books)",
    "common": true,
    "jmdictId": "1413240",
@@ -2077,13 +2577,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.daigaku"
   },
   {
    "written": "大使館",
    "reading": "たいしかん",
    "romaji": "taishikan",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "embassy",
    "common": true,
    "jmdictId": "1413890",
@@ -2095,13 +2599,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.taishikan"
   },
   {
    "written": "大好き",
    "reading": "だいすき",
    "romaji": "daisuki",
-   "wordType": "na-adjective",
+   "wordType": "na-adj",
+   "pos": [
+    "adj-na"
+   ],
    "english": "liking very much, loving (something or someone), adoring, being very fond of",
    "common": true,
    "jmdictId": "1413660",
@@ -2113,13 +2621,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.daisuki"
   },
   {
    "written": "大切",
    "reading": "たいせつ",
    "romaji": "taisetsu",
-   "wordType": "na-adjective",
+   "wordType": "na-adj",
+   "pos": [
+    "adj-na"
+   ],
    "english": "important, significant, serious, crucial",
    "common": true,
    "jmdictId": "1414340",
@@ -2131,13 +2643,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.taisetsu"
   },
   {
    "written": "小さな",
    "reading": "ちいさな",
    "romaji": "chiisana",
    "wordType": "noun",
+   "pos": [
+    "adj-pn"
+   ],
    "english": "small, little, tiny",
    "common": true,
    "jmdictId": "2136180",
@@ -2149,13 +2665,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.chiisana"
   },
   {
    "written": "一寸",
    "reading": "ちょっと",
    "romaji": "chotto",
    "wordType": "adverb",
+   "pos": [
+    "adv"
+   ],
    "english": "a little, a bit, slightly, just a minute",
    "common": true,
    "jmdictId": "1163940",
@@ -2167,13 +2687,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.chotto"
   },
   {
    "written": "机",
    "reading": "つくえ",
    "romaji": "tsukue",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "desk",
    "common": true,
    "jmdictId": "1220210",
@@ -2185,13 +2709,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.tsukue"
   },
   {
    "written": "冷たい",
    "reading": "つめたい",
    "romaji": "tsumetai",
-   "wordType": "i-adjective",
+   "wordType": "i-adj",
+   "pos": [
+    "adj-i"
+   ],
    "english": "cold (to the touch), chilly, icy, freezing",
    "common": true,
    "jmdictId": "1556730",
@@ -2203,13 +2731,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.tsumetai"
   },
   {
    "written": "テープ",
    "reading": "テープ",
-   "romaji": "",
+   "romaji": "teepu",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "tape",
    "common": true,
    "jmdictId": "1078750",
@@ -2221,13 +2753,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.teepu"
   },
   {
    "written": "手紙",
    "reading": "てがみ",
    "romaji": "tegami",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "letter, note",
    "common": true,
    "jmdictId": "1327720",
@@ -2239,13 +2775,19 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.tegami"
   },
   {
    "written": "テスト",
    "reading": "テスト",
-   "romaji": "",
+   "romaji": "tesuto",
    "wordType": "noun",
+   "pos": [
+    "n",
+    "vs",
+    "vt"
+   ],
    "english": "test (of ability, knowledge, etc.), exam, examination, quiz",
    "common": true,
    "jmdictId": "1079760",
@@ -2257,13 +2799,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.tesuto"
   },
   {
    "written": "では",
    "reading": "では",
    "romaji": "deha",
    "wordType": "noun",
+   "pos": [
+    "conj"
+   ],
    "english": "then, well, so, well then",
    "common": true,
    "jmdictId": "1008450",
@@ -2275,13 +2821,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.deha"
   },
   {
    "written": "デパート",
    "reading": "デパート",
-   "romaji": "",
+   "romaji": "depaato",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "department store, department",
    "common": true,
    "jmdictId": "1083590",
@@ -2293,13 +2843,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.depaato"
   },
   {
    "written": "でも",
    "reading": "でも",
    "romaji": "demo",
    "wordType": "noun",
+   "pos": [
+    "conj"
+   ],
    "english": "but, however, though, nevertheless",
    "common": true,
    "jmdictId": "1008460",
@@ -2311,13 +2865,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.demo"
   },
   {
    "written": "テレビ",
    "reading": "テレビ",
-   "romaji": "",
+   "romaji": "terebi",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "television, TV, TV program, TV programme",
    "common": true,
    "jmdictId": "1080510",
@@ -2329,13 +2887,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.terebi"
   },
   {
    "written": "戸",
    "reading": "と",
    "romaji": "to",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "door (esp. Japanese-style), shutter, window shutter, entrance (to a home)",
    "common": true,
    "jmdictId": "1266970",
@@ -2347,13 +2909,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.to"
   },
   {
    "written": "ドア",
    "reading": "ドア",
-   "romaji": "",
+   "romaji": "doa",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "door",
    "common": true,
    "jmdictId": "1087820",
@@ -2365,13 +2931,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.doa"
   },
   {
    "written": "如何して",
    "reading": "どうして",
    "romaji": "doushite",
    "wordType": "adverb",
+   "pos": [
+    "adv"
+   ],
    "english": "how, in what way, by what means, why",
    "common": true,
    "jmdictId": "1466940",
@@ -2383,13 +2953,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.doushite"
   },
   {
    "written": "どうぞ",
    "reading": "どうぞ",
    "romaji": "douzo",
    "wordType": "adverb",
+   "pos": [
+    "adv"
+   ],
    "english": "please, kindly, pray, I beg (of you)",
    "common": true,
    "jmdictId": "1189130",
@@ -2401,13 +2975,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.douzo"
   },
   {
    "written": "動物",
    "reading": "どうぶつ",
    "romaji": "doubutsu",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "animal",
    "common": true,
    "jmdictId": "1451470",
@@ -2419,13 +2997,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.doubutsu"
   },
   {
    "written": "どうも",
    "reading": "どうも",
    "romaji": "doumo",
    "wordType": "interjection",
+   "pos": [
+    "int"
+   ],
    "english": "thank you, thanks, much (thanks), very (sorry)",
    "common": true,
    "jmdictId": "1009000",
@@ -2437,13 +3019,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.doumo"
   },
   {
    "written": "時計",
    "reading": "とけい",
    "romaji": "tokei",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "clock, watch, timepiece",
    "common": true,
    "jmdictId": "1316140",
@@ -2455,13 +3041,19 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.tokei"
   },
   {
    "written": "所",
    "reading": "ところ",
    "romaji": "tokoro",
    "wordType": "noun",
+   "pos": [
+    "n",
+    "adv",
+    "suf"
+   ],
    "english": "place, spot, scene, site",
    "common": true,
    "jmdictId": "1343100",
@@ -2473,13 +3065,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.tokoro"
   },
   {
    "written": "年",
    "reading": "とし",
    "romaji": "toshi",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "year, age, years, past one's prime",
    "common": true,
    "jmdictId": "1468060",
@@ -2491,13 +3087,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.toshi"
   },
   {
    "written": "何方",
    "reading": "どっち",
    "romaji": "docchi",
-   "wordType": "pronoun",
+   "wordType": "noun",
+   "pos": [
+    "pn"
+   ],
    "english": "which way, which direction, where, which one (esp. of two alternatives)",
    "common": true,
    "jmdictId": "1189360",
@@ -2509,13 +3109,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.docchi"
   },
   {
    "written": "何方",
    "reading": "どなた",
    "romaji": "donata",
-   "wordType": "pronoun",
+   "wordType": "noun",
+   "pos": [
+    "pn"
+   ],
    "english": "who",
    "common": true,
    "jmdictId": "1189370",
@@ -2527,13 +3131,18 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.donata"
   },
   {
    "written": "止まる",
    "reading": "とまる",
    "romaji": "tomaru",
    "wordType": "verb",
+   "pos": [
+    "v5r",
+    "vi"
+   ],
    "english": "to stop (moving), to come to a stop, to stop (doing, working, being supplied), to come to a halt",
    "common": true,
    "jmdictId": "1310620",
@@ -2545,13 +3154,18 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.tomaru"
   },
   {
    "written": "撮る",
    "reading": "とる",
    "romaji": "toru",
    "wordType": "verb",
+   "pos": [
+    "v5r",
+    "vt"
+   ],
    "english": "to take (a photograph), to record (audio or video), to film, to shoot",
    "common": true,
    "jmdictId": "1298790",
@@ -2563,13 +3177,18 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.toru-take"
   },
   {
    "written": "鳴く",
    "reading": "なく",
    "romaji": "naku",
    "wordType": "verb",
+   "pos": [
+    "v5k",
+    "vi"
+   ],
    "english": "to make sound (of an animal), to call, to cry, to whine",
    "common": true,
    "jmdictId": "1532870",
@@ -2581,13 +3200,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.naku"
   },
   {
    "written": "何故",
    "reading": "なぜ",
    "romaji": "naze",
    "wordType": "adverb",
+   "pos": [
+    "adv"
+   ],
    "english": "why, how, for what reason",
    "common": true,
    "jmdictId": "1577120",
@@ -2599,13 +3222,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.naze"
   },
   {
    "written": "夏休み",
    "reading": "なつやすみ",
    "romaji": "natsuyasumi",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "summer vacation, summer holiday",
    "common": true,
    "jmdictId": "1191420",
@@ -2617,13 +3244,18 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.natsuyasumi"
   },
   {
    "written": "並ぶ",
    "reading": "ならぶ",
    "romaji": "narabu",
    "wordType": "verb",
+   "pos": [
+    "v5b",
+    "vi"
+   ],
    "english": "to line up, to stand in a line, to rival, to match",
    "common": true,
    "jmdictId": "1508380",
@@ -2635,13 +3267,18 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.narabu"
   },
   {
    "written": "並べる",
    "reading": "ならべる",
    "romaji": "naraberu",
    "wordType": "verb",
+   "pos": [
+    "v1",
+    "vt"
+   ],
    "english": "to line up, to set up, to arrange in a line, to enumerate",
    "common": true,
    "jmdictId": "1508390",
@@ -2653,13 +3290,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.naraberu"
   },
   {
    "written": "西",
    "reading": "にし",
    "romaji": "nishi",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "west",
    "common": true,
    "jmdictId": "1380840",
@@ -2671,13 +3312,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.nishi"
   },
   {
    "written": "ニュース",
    "reading": "ニュース",
-   "romaji": "",
+   "romaji": "nyuusu",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "news",
    "common": true,
    "jmdictId": "1091500",
@@ -2689,13 +3334,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.nyuusu"
   },
   {
    "written": "庭",
    "reading": "にわ",
    "romaji": "niwa",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "garden, yard, courtyard, field (of action)",
    "common": true,
    "jmdictId": "1436130",
@@ -2707,13 +3356,18 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.niwa"
   },
   {
    "written": "脱ぐ",
    "reading": "ぬぐ",
    "romaji": "nugu",
    "wordType": "verb",
+   "pos": [
+    "v5g",
+    "vt"
+   ],
    "english": "to take off (clothes, shoes, etc.), to undress",
    "common": true,
    "jmdictId": "1416400",
@@ -2725,13 +3379,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.nugu"
   },
   {
    "written": "温い",
    "reading": "ぬるい",
    "romaji": "nurui",
-   "wordType": "i-adjective",
+   "wordType": "i-adj",
+   "pos": [
+    "adj-i"
+   ],
    "english": "lukewarm, tepid, lenient",
    "common": true,
    "jmdictId": "1183300",
@@ -2743,13 +3401,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.nurui"
   },
   {
    "written": "ネクタイ",
    "reading": "ネクタイ",
-   "romaji": "",
+   "romaji": "nekutai",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "tie, necktie",
    "common": true,
    "jmdictId": "1092820",
@@ -2761,13 +3423,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.nekutai"
   },
   {
    "written": "猫",
    "reading": "ねこ",
    "romaji": "neko",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "cat (esp. the domestic cat, Felis catus), feline, shamisen, geisha",
    "common": true,
    "jmdictId": "1467640",
@@ -2779,13 +3445,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.neko"
   },
   {
    "written": "ノート",
    "reading": "ノート",
-   "romaji": "",
+   "romaji": "nooto",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "notebook, copy-book, exercise book, note",
    "common": true,
    "jmdictId": "1093450",
@@ -2797,13 +3467,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.nooto"
   },
   {
    "written": "歯",
    "reading": "は",
    "romaji": "ha",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "tooth, teeth, tooth (of a comb, saw, etc.), cog",
    "common": true,
    "jmdictId": "1313000",
@@ -2815,13 +3489,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.ha"
   },
   {
    "written": "パーティー",
    "reading": "パーティー",
-   "romaji": "",
+   "romaji": "paatii",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "party (social gathering), party (group of people participating in an activity, esp. mountain climbing), (political) party",
    "common": true,
    "jmdictId": "1100760",
@@ -2833,13 +3511,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.paatii"
   },
   {
    "written": "灰皿",
    "reading": "はいざら",
    "romaji": "haizara",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "ashtray",
    "common": true,
    "jmdictId": "1201940",
@@ -2851,13 +3533,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.haizara"
   },
   {
    "written": "葉書",
    "reading": "はがき",
    "romaji": "hagaki",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "postcard, memo, note, card",
    "common": true,
    "jmdictId": "1546590",
@@ -2869,13 +3555,18 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.hagaki"
   },
   {
    "written": "掃く",
    "reading": "はく",
    "romaji": "haku",
    "wordType": "verb",
+   "pos": [
+    "v5k",
+    "vt"
+   ],
    "english": "to sweep, to brush, to clean, to gather silkworms",
    "common": true,
    "jmdictId": "1399760",
@@ -2887,13 +3578,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.haku"
   },
   {
    "written": "箱",
    "reading": "はこ",
    "romaji": "hako",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "box, case, chest, package",
    "common": true,
    "jmdictId": "1585650",
@@ -2905,13 +3600,18 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.hako"
   },
   {
    "written": "始まる",
    "reading": "はじまる",
    "romaji": "hajimaru",
    "wordType": "verb",
+   "pos": [
+    "v5r",
+    "vi"
+   ],
    "english": "to begin, to start, to commence, to happen (again)",
    "common": true,
    "jmdictId": "1307500",
@@ -2923,13 +3623,18 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.hajimaru"
   },
   {
    "written": "初めて",
    "reading": "はじめて",
    "romaji": "hajimete",
    "wordType": "adverb",
+   "pos": [
+    "adv",
+    "adj-no"
+   ],
    "english": "for the first time, only after ... is it ..., only when ... do you ..., not until ... do you ...",
    "common": true,
    "jmdictId": "1342550",
@@ -2941,13 +3646,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.hajimete"
   },
   {
    "written": "２０歳",
    "reading": "はたち",
    "romaji": "hatachi",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "20 years old, twenty",
    "common": true,
    "jmdictId": "1600790",
@@ -2959,13 +3668,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.hatachi"
   },
   {
    "written": "鼻",
    "reading": "はな",
    "romaji": "hana",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "nose",
    "common": true,
    "jmdictId": "1486720",
@@ -2977,13 +3690,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.hana-nose"
   },
   {
    "written": "話",
    "reading": "はなし",
    "romaji": "hanashi",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "talk, speech, chat, conversation",
    "common": true,
    "jmdictId": "1600900",
@@ -2995,13 +3712,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.hanashi"
   },
   {
    "written": "早い",
    "reading": "はやい",
    "romaji": "hayai",
-   "wordType": "i-adjective",
+   "wordType": "i-adj",
+   "pos": [
+    "adj-i"
+   ],
    "english": "fast, quick, rapid, swift",
    "common": true,
    "jmdictId": "1404975",
@@ -3013,13 +3734,18 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.hayai-fast"
   },
   {
    "written": "張る",
    "reading": "はる",
    "romaji": "haru",
    "wordType": "verb",
+   "pos": [
+    "v5r",
+    "vt"
+   ],
    "english": "to stick, to paste, to affix, to stretch",
    "common": true,
    "jmdictId": "1427900",
@@ -3031,13 +3757,18 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.haru-stick"
   },
   {
    "written": "晴れる",
    "reading": "はれる",
    "romaji": "hareru",
    "wordType": "verb",
+   "pos": [
+    "v1",
+    "vi"
+   ],
    "english": "to clear up, to clear away, to be sunny, to stop raining",
    "common": true,
    "jmdictId": "1376470",
@@ -3049,13 +3780,18 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.hareru"
   },
   {
    "written": "半",
    "reading": "はん",
    "romaji": "han",
    "wordType": "noun",
+   "pos": [
+    "n-pref",
+    "n"
+   ],
    "english": "half, semi-, partial, half-past",
    "common": true,
    "jmdictId": "1478750",
@@ -3067,13 +3803,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.han"
   },
   {
    "written": "ハンカチ",
    "reading": "ハンカチ",
-   "romaji": "",
+   "romaji": "hankachi",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "handkerchief",
    "common": true,
    "jmdictId": "1096420",
@@ -3085,13 +3825,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.hankachi"
   },
   {
    "written": "番号",
    "reading": "ばんごう",
    "romaji": "bangou",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "number, series of digits",
    "common": true,
    "jmdictId": "1482290",
@@ -3103,13 +3847,18 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.bangou"
   },
   {
    "written": "半分",
    "reading": "はんぶん",
    "romaji": "hanbun",
    "wordType": "adverb",
+   "pos": [
+    "adv",
+    "n"
+   ],
    "english": "half",
    "common": true,
    "jmdictId": "1479890",
@@ -3121,13 +3870,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.hanbun"
   },
   {
    "written": "東",
    "reading": "ひがし",
    "romaji": "higashi",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "east",
    "common": true,
    "jmdictId": "1447440",
@@ -3139,13 +3892,18 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.higashi"
   },
   {
    "written": "弾く",
    "reading": "ひく",
    "romaji": "hiku",
    "wordType": "verb",
+   "pos": [
+    "v5k",
+    "vt"
+   ],
    "english": "to play (a stringed or keyboard instrument)",
    "common": true,
    "jmdictId": "1419370",
@@ -3157,13 +3915,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.hiku-play"
   },
   {
    "written": "低い",
    "reading": "ひくい",
    "romaji": "hikui",
-   "wordType": "i-adjective",
+   "wordType": "i-adj",
+   "pos": [
+    "adj-i"
+   ],
    "english": "low (rank, degree, value, content, quality, etc.), low (position), close to the ground, short (height)",
    "common": true,
    "jmdictId": "1434180",
@@ -3175,13 +3937,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.hikui"
   },
   {
    "written": "一月",
    "reading": "ひとつき",
    "romaji": "hitotsuki",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "one month",
    "common": true,
    "jmdictId": "1162130",
@@ -3193,13 +3959,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.hitotsuki"
   },
   {
    "written": "病気",
    "reading": "びょうき",
    "romaji": "byouki",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "illness (usu. excluding minor ailments, e.g. common cold), disease, sickness, bad habit",
    "common": true,
    "jmdictId": "1490230",
@@ -3211,13 +3981,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.byouki"
   },
   {
    "written": "広い",
    "reading": "ひろい",
    "romaji": "hiroi",
-   "wordType": "i-adjective",
+   "wordType": "i-adj",
+   "pos": [
+    "adj-i"
+   ],
    "english": "spacious, vast, wide",
    "common": true,
    "jmdictId": "1278410",
@@ -3229,13 +4003,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.hiroi"
   },
   {
    "written": "フィルム",
    "reading": "フィルム",
-   "romaji": "",
+   "romaji": "firumu",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "film",
    "common": true,
    "jmdictId": "1109380",
@@ -3247,13 +4025,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.firumu"
   },
   {
    "written": "封筒",
    "reading": "ふうとう",
    "romaji": "fuutou",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "envelope",
    "common": true,
    "jmdictId": "1499690",
@@ -3265,13 +4047,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.fuutou"
   },
   {
    "written": "プール",
    "reading": "プール",
-   "romaji": "",
+   "romaji": "puuru",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "(swimming) pool, pool (cue sport), pooling (money, resources, etc.), pool (price ring)",
    "common": true,
    "jmdictId": "1115150",
@@ -3283,13 +4069,18 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.puuru"
   },
   {
    "written": "吹く",
    "reading": "ふく",
    "romaji": "fuku",
    "wordType": "verb",
+   "pos": [
+    "v5k",
+    "vi"
+   ],
    "english": "to blow (of the wind), to blow (one's breath), to breathe out, to blow on (hot tea, candles, etc.)",
    "common": true,
    "jmdictId": "1370760",
@@ -3301,13 +4092,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.fuku-blow"
   },
   {
    "written": "太い",
    "reading": "ふとい",
    "romaji": "futoi",
-   "wordType": "i-adjective",
+   "wordType": "i-adj",
+   "pos": [
+    "adj-i"
+   ],
    "english": "fat, thick, deep (of a voice), thick",
    "common": true,
    "jmdictId": "1408180",
@@ -3319,13 +4114,18 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.futoi"
   },
   {
    "written": "降る",
    "reading": "ふる",
    "romaji": "furu",
    "wordType": "verb",
+   "pos": [
+    "v5r",
+    "vi"
+   ],
    "english": "to fall (of rain, snow, ash, etc.), to come down, to form (of frost), to beam down (of sunlight or moonlight)",
    "common": true,
    "jmdictId": "1282790",
@@ -3337,13 +4137,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.furu"
   },
   {
    "written": "文章",
    "reading": "ぶんしょう",
    "romaji": "bunshou",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "writing, composition, essay, article",
    "common": true,
    "jmdictId": "1505470",
@@ -3355,13 +4159,18 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.bunshou"
   },
   {
    "written": "頁",
    "reading": "ページ",
-   "romaji": "",
+   "romaji": "peeji",
    "wordType": "noun",
+   "pos": [
+    "n",
+    "ctr"
+   ],
    "english": "page, nth page, page ...",
    "common": true,
    "jmdictId": "1120410",
@@ -3373,13 +4182,18 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.peeji"
   },
   {
    "written": "下手",
    "reading": "へた",
    "romaji": "heta",
-   "wordType": "na-adjective",
+   "wordType": "na-adj",
+   "pos": [
+    "adj-na",
+    "n"
+   ],
    "english": "unskillful, poor, awkward, imprudent",
    "common": true,
    "jmdictId": "1185200",
@@ -3391,13 +4205,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.heta"
   },
   {
    "written": "ベッド",
    "reading": "ベッド",
-   "romaji": "",
+   "romaji": "beddo",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "bed",
    "common": true,
    "jmdictId": "1119650",
@@ -3409,13 +4227,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.beddo"
   },
   {
    "written": "辺",
    "reading": "へん",
    "romaji": "hen",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "area, vicinity, region, side",
    "common": true,
    "jmdictId": "1512070",
@@ -3427,13 +4249,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.hen"
   },
   {
    "written": "帽子",
    "reading": "ぼうし",
    "romaji": "boushi",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "hat, cap, cap (move)",
    "common": true,
    "jmdictId": "1519170",
@@ -3445,13 +4271,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.boushi"
   },
   {
    "written": "ボールペン",
    "reading": "ボールペン",
-   "romaji": "",
+   "romaji": "boorupen",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "ball-point pen",
    "common": true,
    "jmdictId": "1123590",
@@ -3463,13 +4293,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.boorupen"
   },
   {
    "written": "ポケット",
    "reading": "ポケット",
-   "romaji": "",
+   "romaji": "poketto",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "pocket",
    "common": true,
    "jmdictId": "1124970",
@@ -3481,13 +4315,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.poketto"
   },
   {
    "written": "ポスト",
    "reading": "ポスト",
-   "romaji": "",
+   "romaji": "posuto",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "postbox, mailbox, mail box, pillar box",
    "common": true,
    "jmdictId": "1125150",
@@ -3499,13 +4337,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.posuto"
   },
   {
    "written": "細い",
    "reading": "ほそい",
    "romaji": "hosoi",
-   "wordType": "i-adjective",
+   "wordType": "i-adj",
+   "pos": [
+    "adj-i"
+   ],
    "english": "thin, slender, fine, unlucky",
    "common": true,
    "jmdictId": "1295510",
@@ -3517,13 +4359,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.hosoi"
   },
   {
    "written": "釦",
    "reading": "ボタン",
-   "romaji": "",
+   "romaji": "botan",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "button (clothing), push-button, button",
    "common": true,
    "jmdictId": "1123880",
@@ -3535,13 +4381,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.botan"
   },
   {
    "written": "本棚",
    "reading": "ほんだな",
    "romaji": "hondana",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "bookshelves, bookshelf, bookcase",
    "common": true,
    "jmdictId": "1522980",
@@ -3553,13 +4403,18 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.hondana"
   },
   {
    "written": "毎朝",
    "reading": "まいあさ",
    "romaji": "maiasa",
    "wordType": "noun",
+   "pos": [
+    "n",
+    "adv"
+   ],
    "english": "every morning",
    "common": true,
    "jmdictId": "1524700",
@@ -3571,13 +4426,18 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.maiasa"
   },
   {
    "written": "毎晩",
    "reading": "まいばん",
    "romaji": "maiban",
    "wordType": "noun",
+   "pos": [
+    "n",
+    "adv"
+   ],
    "english": "every night",
    "common": true,
    "jmdictId": "1524730",
@@ -3589,13 +4449,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.maiban"
   },
   {
    "written": "町",
    "reading": "まち",
    "romaji": "machi",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "town, block, neighbourhood, neighborhood",
    "common": true,
    "jmdictId": "1603990",
@@ -3607,13 +4471,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.machi"
   },
   {
    "written": "燐寸",
    "reading": "マッチ",
-   "romaji": "",
+   "romaji": "macchi",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "match (for lighting a fire)",
    "common": true,
    "jmdictId": "1128430",
@@ -3625,13 +4493,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.macchi"
   },
   {
    "written": "万年筆",
    "reading": "まんねんひつ",
    "romaji": "mannenhitsu",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "fountain pen",
    "common": true,
    "jmdictId": "1526360",
@@ -3643,13 +4515,18 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.mannenhitsu"
   },
   {
    "written": "磨く",
    "reading": "みがく",
    "romaji": "migaku",
    "wordType": "verb",
+   "pos": [
+    "v5k",
+    "vt"
+   ],
    "english": "to polish, to shine, to burnish, to scour",
    "common": true,
    "jmdictId": "1523940",
@@ -3661,13 +4538,18 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.migaku"
   },
   {
    "written": "見せる",
    "reading": "みせる",
    "romaji": "miseru",
    "wordType": "verb",
+   "pos": [
+    "v1",
+    "vt"
+   ],
    "english": "to show, to display, to make (something or someone) look ..., to present an appearance of ...",
    "common": true,
    "jmdictId": "1259210",
@@ -3679,13 +4561,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.miseru"
   },
   {
    "written": "皆さん",
    "reading": "みなさん",
    "romaji": "minasan",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "all, everyone, everybody",
    "common": true,
    "jmdictId": "1202170",
@@ -3697,13 +4583,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.minasan"
   },
   {
    "written": "南",
    "reading": "みなみ",
    "romaji": "minami",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "south",
    "common": true,
    "jmdictId": "1459870",
@@ -3715,13 +4605,19 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.minami"
   },
   {
    "written": "皆",
    "reading": "みんな",
    "romaji": "minna",
    "wordType": "noun",
+   "pos": [
+    "n",
+    "pn",
+    "adv"
+   ],
    "english": "everyone, everybody, all, everything",
    "common": true,
    "jmdictId": "1202150",
@@ -3733,13 +4629,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.minna"
   },
   {
    "written": "向こう",
    "reading": "むこう",
    "romaji": "mukou",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "opposite side, other side, over there, ahead",
    "common": true,
    "jmdictId": "1277140",
@@ -3751,13 +4651,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.mukou"
   },
   {
    "written": "村",
    "reading": "むら",
    "romaji": "mura",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "village",
    "common": true,
    "jmdictId": "1406820",
@@ -3769,13 +4673,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.mura"
   },
   {
    "written": "米",
    "reading": "メートル",
-   "romaji": "",
+   "romaji": "meetoru",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "metre (unit of length), meter, meter, gauge",
    "common": true,
    "jmdictId": "1132570",
@@ -3787,13 +4695,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.meetoru"
   },
   {
    "written": "眼鏡",
    "reading": "メガネ",
-   "romaji": "",
+   "romaji": "megane",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "glasses, eyeglasses, spectacles, judgment",
    "common": true,
    "jmdictId": "1577670",
@@ -3805,13 +4717,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.megane"
   },
   {
    "written": "物",
    "reading": "もの",
    "romaji": "mono",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "thing, object, article, stuff",
    "common": true,
    "jmdictId": "1502390",
@@ -3823,13 +4739,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.mono"
   },
   {
    "written": "門",
    "reading": "もん",
    "romaji": "mon",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "gate, branch of learning based on the teachings of a single master, school, phylum",
    "common": true,
    "jmdictId": "1584800",
@@ -3841,13 +4761,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.mon"
   },
   {
    "written": "問題",
    "reading": "もんだい",
    "romaji": "mondai",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "question (e.g. on a test), problem, problem (e.g. societal, political), question",
    "common": true,
    "jmdictId": "1536010",
@@ -3859,13 +4783,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.mondai"
   },
   {
    "written": "八百屋",
    "reading": "やおや",
    "romaji": "yaoya",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "greengrocer, fruit and vegetable shop, jack of all trades",
    "common": true,
    "jmdictId": "1476960",
@@ -3877,13 +4805,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.yaoya"
   },
   {
    "written": "休み",
    "reading": "やすみ",
    "romaji": "yasumi",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "rest, recess, respite, vacation",
    "common": true,
    "jmdictId": "1227500",
@@ -3895,13 +4827,18 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.yasumi"
   },
   {
    "written": "遣る",
    "reading": "やる",
    "romaji": "yaru",
    "wordType": "verb",
+   "pos": [
+    "v5r",
+    "vt"
+   ],
    "english": "to do, to undertake, to perform, to play (a game)",
    "common": true,
    "jmdictId": "1012980",
@@ -3913,13 +4850,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.yaru"
   },
   {
    "written": "夕飯",
    "reading": "ゆうはん",
    "romaji": "yuuhan",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "evening meal, dinner, supper",
    "common": true,
    "jmdictId": "1584910",
@@ -3931,13 +4872,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.yuuhan"
   },
   {
    "written": "洋服",
    "reading": "ようふく",
    "romaji": "youfuku",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "Western-style clothes (cf. traditional Japanese clothes)",
    "common": true,
    "jmdictId": "1546020",
@@ -3949,13 +4894,18 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.youfuku"
   },
   {
    "written": "欲",
    "reading": "よく",
    "romaji": "yoku",
    "wordType": "noun",
+   "pos": [
+    "n",
+    "n-suf"
+   ],
    "english": "greed, craving, desire, appetite",
    "common": true,
    "jmdictId": "1547320",
@@ -3967,13 +4917,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.yoku"
   },
   {
    "written": "横",
    "reading": "よこ",
    "romaji": "yoko",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "horizontal (as opposed to vertical), side-to-side (as opposed to front-to-back), width, breadth",
    "common": true,
    "jmdictId": "1180570",
@@ -3985,13 +4939,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.yoko"
   },
   {
    "written": "ラジオ",
    "reading": "ラジオ",
-   "romaji": "",
+   "romaji": "rajio",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "radio",
    "common": true,
    "jmdictId": "1138860",
@@ -4003,13 +4961,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.rajio"
   },
   {
    "written": "留学生",
    "reading": "りゅうがくせい",
    "romaji": "ryuugakusei",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "overseas student, exchange student",
    "common": true,
    "jmdictId": "1552750",
@@ -4021,13 +4983,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.ryuugakusei"
   },
   {
    "written": "冷蔵庫",
    "reading": "れいぞうこ",
    "romaji": "reizouko",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "refrigerator, fridge",
    "common": true,
    "jmdictId": "1557110",
@@ -4039,13 +5005,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.reizouko"
   },
   {
    "written": "レコード",
    "reading": "レコード",
-   "romaji": "",
+   "romaji": "rekoodo",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "(phonograph) record, record (esp. in sports), record (data structure)",
    "common": true,
    "jmdictId": "1144940",
@@ -4057,13 +5027,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.rekoodo"
   },
   {
    "written": "廊下",
    "reading": "ろうか",
    "romaji": "rouka",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "corridor, hallway, passageway",
    "common": true,
    "jmdictId": "1560670",
@@ -4075,13 +5049,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.rouka"
   },
   {
    "written": "Ｙシャツ",
    "reading": "ワイシャツ",
-   "romaji": "",
+   "romaji": "waishatsu",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "(formal) shirt, dress shirt, business shirt, button-up shirt",
    "common": true,
    "jmdictId": "1148640",
@@ -4093,13 +5071,18 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.waishatsu"
   },
   {
    "written": "渡す",
    "reading": "わたす",
    "romaji": "watasu",
    "wordType": "verb",
+   "pos": [
+    "v5s",
+    "vt"
+   ],
    "english": "to ferry across (e.g. a river), to carry across, to traverse, to lay across",
    "common": true,
    "jmdictId": "1444610",
@@ -4111,13 +5094,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.watasu"
   },
   {
    "written": "ああ",
    "reading": "ああ",
    "romaji": "aa",
    "wordType": "adverb",
+   "pos": [
+    "adv"
+   ],
    "english": "like that, so",
    "common": true,
    "jmdictId": "2085080",
@@ -4128,13 +5115,18 @@
    },
    "sources": [
     "open-anki"
-   ]
+   ],
+   "id": "vocab.aa"
   },
   {
    "written": "浴びる",
    "reading": "あびる",
    "romaji": "abiru",
    "wordType": "verb",
+   "pos": [
+    "v1",
+    "vt"
+   ],
    "english": "to dash over oneself (e.g. water), to take (e.g. shower), to bask in (e.g. the sun), to bathe in",
    "common": true,
    "jmdictId": "1547450",
@@ -4144,31 +5136,19 @@
     "tatoeba": "188430"
    },
    "sources": [
-    "tanos"
-   ]
-  },
-  {
-   "written": "浴びる",
-   "reading": "あびる",
-   "romaji": "abiru",
-   "wordType": "verb",
-   "english": "to dash over oneself (e.g. water), to take (e.g. shower), to bask in (e.g. the sun), to bathe in",
-   "common": true,
-   "jmdictId": "1547450",
-   "example": {
-    "jpn": "屋根は日を浴びて輝いている。",
-    "eng": "The roof is shining in the sun.",
-    "tatoeba": "188430"
-   },
-   "sources": [
+    "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.abiru"
   },
   {
    "written": "椅子",
    "reading": "いす",
    "romaji": "isu",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "chair, seat, stool, bench",
    "common": true,
    "jmdictId": "1157070",
@@ -4179,13 +5159,18 @@
    },
    "sources": [
     "open-anki"
-   ]
+   ],
+   "id": "vocab.isu-chair"
   },
   {
    "written": "一番",
    "reading": "いちばん",
    "romaji": "ichiban",
    "wordType": "noun",
+   "pos": [
+    "n",
+    "adj-no"
+   ],
    "english": "number one, first, first place, best",
    "common": true,
    "jmdictId": "1165970",
@@ -4195,31 +5180,20 @@
     "tatoeba": "223406"
    },
    "sources": [
-    "tanos"
-   ]
-  },
-  {
-   "written": "一番",
-   "reading": "いちばん",
-   "romaji": "ichiban",
-   "wordType": "noun",
-   "english": "number one, first, first place, best",
-   "common": true,
-   "jmdictId": "1165970",
-   "example": {
-    "jpn": "このネクタイにしましょう、一番よさそうだから。",
-    "eng": "I will take this tie, as it seems to be the best.",
-    "tatoeba": "223406"
-   },
-   "sources": [
+    "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.ichiban"
   },
   {
    "written": "色々",
    "reading": "いろいろ",
    "romaji": "iroiro",
-   "wordType": "na-adjective",
+   "wordType": "na-adj",
+   "pos": [
+    "adj-na",
+    "adj-no"
+   ],
    "english": "various, a variety of, all sorts of, many (different)",
    "common": true,
    "jmdictId": "1587850",
@@ -4229,31 +5203,19 @@
     "tatoeba": "228437"
    },
    "sources": [
-    "tanos"
-   ]
-  },
-  {
-   "written": "色々",
-   "reading": "いろいろ",
-   "romaji": "iroiro",
-   "wordType": "na-adjective",
-   "english": "various, a variety of, all sorts of, many (different)",
-   "common": true,
-   "jmdictId": "1587850",
-   "example": {
-    "jpn": "いろいろな国へ行ったがやっぱり日本が一番いい。",
-    "eng": "I've visited many countries, but I like Japan best of all.",
-    "tatoeba": "228437"
-   },
-   "sources": [
+    "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.iroiro"
   },
   {
    "written": "家",
    "reading": "うち",
    "romaji": "uchi",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "one's house, one's home, one's family, one's household",
    "common": true,
    "jmdictId": "1191740",
@@ -4264,13 +5226,17 @@
    },
    "sources": [
     "open-anki"
-   ]
+   ],
+   "id": "vocab.uchi"
   },
   {
    "written": "煩い",
    "reading": "うるさい",
    "romaji": "urusai",
-   "wordType": "i-adjective",
+   "wordType": "i-adj",
+   "pos": [
+    "adj-i"
+   ],
    "english": "noisy, loud, annoying, troublesome",
    "common": true,
    "jmdictId": "1481920",
@@ -4280,31 +5246,19 @@
     "tatoeba": "77761"
    },
    "sources": [
-    "tanos"
-   ]
-  },
-  {
-   "written": "煩い",
-   "reading": "うるさい",
-   "romaji": "urusai",
-   "wordType": "i-adjective",
-   "english": "noisy, loud, annoying, troublesome",
-   "common": true,
-   "jmdictId": "1481920",
-   "example": {
-    "jpn": "隣の部屋がうるさいのです。",
-    "eng": "It's noisy next door.",
-    "tatoeba": "77761"
-   },
-   "sources": [
+    "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.urusai"
   },
   {
    "written": "緒",
    "reading": "お",
    "romaji": "o",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "cord, strap, thong, string (of a musical instrument, bow, etc.)",
    "common": true,
    "jmdictId": "1343610",
@@ -4315,13 +5269,18 @@
    },
    "sources": [
     "open-anki"
-   ]
+   ],
+   "id": "vocab.o"
   },
   {
    "written": "一昨年",
    "reading": "おととし",
    "romaji": "ototoshi",
    "wordType": "noun",
+   "pos": [
+    "n",
+    "adv"
+   ],
    "english": "year before last",
    "common": true,
    "jmdictId": "1576060",
@@ -4331,31 +5290,19 @@
     "tatoeba": "93768"
    },
    "sources": [
-    "tanos"
-   ]
-  },
-  {
-   "written": "一昨年",
-   "reading": "おととし",
-   "romaji": "ototoshi",
-   "wordType": "noun",
-   "english": "year before last",
-   "common": true,
-   "jmdictId": "1576060",
-   "example": {
-    "jpn": "彼女は、一昨年よりもはるかに暮らし向きがよい。",
-    "eng": "She's far better off than she was the year before last.",
-    "tatoeba": "93768"
-   },
-   "sources": [
+    "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.ototoshi"
   },
   {
    "written": "お腹",
    "reading": "おなか",
    "romaji": "onaka",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "belly, abdomen, stomach",
    "common": true,
    "jmdictId": "1002610",
@@ -4365,31 +5312,19 @@
     "tatoeba": "229459"
    },
    "sources": [
-    "tanos"
-   ]
-  },
-  {
-   "written": "お腹",
-   "reading": "おなか",
-   "romaji": "onaka",
-   "wordType": "noun",
-   "english": "belly, abdomen, stomach",
-   "common": true,
-   "jmdictId": "1002610",
-   "example": {
-    "jpn": "いいえ、結構です。お腹が一杯ですから。",
-    "eng": "No, thank you. I've had enough.",
-    "tatoeba": "229459"
-   },
-   "sources": [
+    "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.onaka"
   },
   {
    "written": "回",
    "reading": "かい",
    "romaji": "kai",
    "wordType": "counter",
+   "pos": [
+    "ctr"
+   ],
    "english": "counter for occurrences, a time, an instance, inning (baseball)",
    "common": true,
    "jmdictId": "1199330",
@@ -4400,13 +5335,18 @@
    },
    "sources": [
     "open-anki"
-   ]
+   ],
+   "id": "vocab.kai-counter-for"
   },
   {
    "written": "階",
    "reading": "かい",
    "romaji": "kai",
    "wordType": "noun",
+   "pos": [
+    "n",
+    "n-suf"
+   ],
    "english": "storey, story, floor, stairs",
    "common": true,
    "jmdictId": "1203020",
@@ -4417,30 +5357,18 @@
    },
    "sources": [
     "open-anki"
-   ]
-  },
-  {
-   "written": "掛ける",
-   "reading": "かける",
-   "romaji": "kakeru",
-   "wordType": "verb",
-   "english": "to hang up (e.g. a coat, a picture on the wall), to let hang, to suspend (from), to hoist (e.g. sail)",
-   "common": true,
-   "jmdictId": "1207610",
-   "example": {
-    "jpn": "コートをハンガーに掛けておきなさい。",
-    "eng": "Put your coat on a hanger.",
-    "tatoeba": "224960"
-   },
-   "sources": [
-    "open-anki"
-   ]
+   ],
+   "id": "vocab.kai-storey"
   },
   {
    "written": "被る",
    "reading": "かぶる",
    "romaji": "kaburu",
    "wordType": "verb",
+   "pos": [
+    "v5r",
+    "vt"
+   ],
    "english": "to put on (one's head), to wear, to have on, to pull over (one's head)",
    "common": true,
    "jmdictId": "1484330",
@@ -4451,13 +5379,18 @@
    },
    "sources": [
     "open-anki"
-   ]
+   ],
+   "id": "vocab.kaburu"
   },
   {
    "written": "がる",
    "reading": "がる",
    "romaji": "garu",
    "wordType": "verb",
+   "pos": [
+    "suf",
+    "v5r"
+   ],
    "english": "to show signs of being, to feel, to think, to behave as if one were",
    "common": true,
    "jmdictId": "1631750",
@@ -4468,13 +5401,17 @@
    },
    "sources": [
     "open-anki"
-   ]
+   ],
+   "id": "vocab.garu"
   },
   {
    "written": "川",
    "reading": "かわ",
    "romaji": "kawa",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "river, stream, River, the ... river",
    "common": true,
    "jmdictId": "1390020",
@@ -4485,13 +5422,18 @@
    },
    "sources": [
     "tanos"
-   ]
+   ],
+   "id": "vocab.kawa-river"
   },
   {
    "written": "側",
    "reading": "がわ",
    "romaji": "gawa",
    "wordType": "noun",
+   "pos": [
+    "n",
+    "suf"
+   ],
    "english": "side (of something, or taking someone's side), part, (watch) case",
    "common": true,
    "jmdictId": "1581310",
@@ -4502,13 +5444,17 @@
    },
    "sources": [
     "open-anki"
-   ]
+   ],
+   "id": "vocab.gawa"
   },
   {
    "written": "可愛い",
    "reading": "かわいい",
    "romaji": "kawaii",
-   "wordType": "i-adjective",
+   "wordType": "i-adj",
+   "pos": [
+    "adj-i"
+   ],
    "english": "cute, adorable, charming, lovely",
    "common": true,
    "jmdictId": "1577200",
@@ -4518,31 +5464,19 @@
     "tatoeba": "220945"
    },
    "sources": [
-    "tanos"
-   ]
-  },
-  {
-   "written": "可愛い",
-   "reading": "かわいい",
-   "romaji": "kawaii",
-   "wordType": "i-adjective",
-   "english": "cute, adorable, charming, lovely",
-   "common": true,
-   "jmdictId": "1577200",
-   "example": {
-    "jpn": "この世にかわいい子はただ一人、母親にとってはそれはわが子。",
-    "eng": "There's only one pretty child in the world, and every mother has it.",
-    "tatoeba": "220945"
-   },
-   "sources": [
+    "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.kawaii"
   },
   {
    "written": "瓩",
    "reading": "キログラム",
-   "romaji": "",
+   "romaji": "kiroguramu",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "kilogram, kilogramme",
    "common": true,
    "jmdictId": "1042620",
@@ -4553,30 +5487,17 @@
    },
    "sources": [
     "tanos"
-   ]
-  },
-  {
-   "written": "瓩",
-   "reading": "キログラム",
-   "romaji": "",
-   "wordType": "noun",
-   "english": "kilogram, kilogramme",
-   "common": true,
-   "jmdictId": "1042620",
-   "example": {
-    "jpn": "私の体重は５８キログラムです。",
-    "eng": "My weight is 58 kilograms.",
-    "tatoeba": "163114"
-   },
-   "sources": [
-    "tanos"
-   ]
+   ],
+   "id": "vocab.kiroguramu"
   },
   {
    "written": "粁",
    "reading": "キロメートル",
-   "romaji": "",
+   "romaji": "kiromeetoru",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "kilometer, kilometre",
    "common": true,
    "jmdictId": "1042650",
@@ -4587,30 +5508,19 @@
    },
    "sources": [
     "tanos"
-   ]
-  },
-  {
-   "written": "粁",
-   "reading": "キロメートル",
-   "romaji": "",
-   "wordType": "noun",
-   "english": "kilometer, kilometre",
-   "common": true,
-   "jmdictId": "1042650",
-   "example": {
-    "jpn": "その湖は周囲が５キロメートルある。",
-    "eng": "The lake is five kilometers round.",
-    "tatoeba": "210850"
-   },
-   "sources": [
-    "tanos"
-   ]
+   ],
+   "id": "vocab.kiromeetoru"
   },
   {
    "written": "結婚",
    "reading": "けっこん",
    "romaji": "kekkon",
    "wordType": "noun",
+   "pos": [
+    "n",
+    "vs",
+    "vi"
+   ],
    "english": "marriage",
    "common": true,
    "jmdictId": "1254790",
@@ -4621,13 +5531,17 @@
    },
    "sources": [
     "tanos"
-   ]
+   ],
+   "id": "vocab.kekkon"
   },
   {
    "written": "個",
    "reading": "こ",
    "romaji": "ko",
    "wordType": "counter",
+   "pos": [
+    "ctr"
+   ],
    "english": "counter for (small) things or pieces, counter for military units, (an) individual, one person",
    "common": true,
    "jmdictId": "1264740",
@@ -4638,13 +5552,17 @@
    },
    "sources": [
     "open-anki"
-   ]
+   ],
+   "id": "vocab.ko"
   },
   {
    "written": "歳",
    "reading": "さい",
    "romaji": "sai",
    "wordType": "counter",
+   "pos": [
+    "ctr"
+   ],
    "english": "... years old, age (of) ...",
    "common": true,
    "jmdictId": "1294940",
@@ -4655,13 +5573,17 @@
    },
    "sources": [
     "open-anki"
-   ]
+   ],
+   "id": "vocab.sai"
   },
   {
    "written": "冊",
    "reading": "さつ",
    "romaji": "satsu",
    "wordType": "counter",
+   "pos": [
+    "ctr"
+   ],
    "english": "counter for books, volume",
    "common": true,
    "jmdictId": "1298520",
@@ -4672,13 +5594,17 @@
    },
    "sources": [
     "open-anki"
-   ]
+   ],
+   "id": "vocab.satsu"
   },
   {
    "written": "時",
    "reading": "じ",
    "romaji": "ji",
    "wordType": "noun",
+   "pos": [
+    "suf"
+   ],
    "english": "hour, o'clock, (specified) time, when ...",
    "common": true,
    "jmdictId": "2020680",
@@ -4689,13 +5615,17 @@
    },
    "sources": [
     "open-anki"
-   ]
+   ],
+   "id": "vocab.ji"
   },
   {
    "written": "じゃ",
    "reading": "じゃ",
    "romaji": "ja",
    "wordType": "noun",
+   "pos": [
+    "conj"
+   ],
    "english": "then, well, so, well then",
    "common": true,
    "jmdictId": "1005900",
@@ -4706,13 +5636,17 @@
    },
    "sources": [
     "tanos"
-   ]
+   ],
+   "id": "vocab.ja-then"
   },
   {
    "written": "蛇",
    "reading": "じゃ",
    "romaji": "ja",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "snake, serpent, large snake",
    "common": true,
    "jmdictId": "1323350",
@@ -4723,47 +5657,17 @@
    },
    "sources": [
     "tanos"
-   ]
-  },
-  {
-   "written": "じゃあ",
-   "reading": "じゃあ",
-   "romaji": "jaa",
-   "wordType": "noun",
-   "english": "then, well, so, well then",
-   "common": true,
-   "jmdictId": "1005900",
-   "example": {
-    "jpn": "「安いですね。じゃあ10ヤードください」小娘が答えた。",
-    "eng": "\"That's cheap. I'll take ten yards,\" the girl answered.",
-    "tatoeba": "236405"
-   },
-   "sources": [
-    "tanos"
-   ]
-  },
-  {
-   "written": "じゃあ",
-   "reading": "じゃあ",
-   "romaji": "jaa",
-   "wordType": "noun",
-   "english": "then, well, so, well then",
-   "common": true,
-   "jmdictId": "1005900",
-   "example": {
-    "jpn": "「安いですね。じゃあ10ヤードください」小娘が答えた。",
-    "eng": "\"That's cheap. I'll take ten yards,\" the girl answered.",
-    "tatoeba": "236405"
-   },
-   "sources": [
-    "tanos"
-   ]
+   ],
+   "id": "vocab.ja-snake"
   },
   {
    "written": "醤油",
    "reading": "しょうゆ",
    "romaji": "shouyu",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "soy sauce, soya sauce, shoyu",
    "common": true,
    "jmdictId": "1595020",
@@ -4773,31 +5677,20 @@
     "tatoeba": "123656"
    },
    "sources": [
-    "tanos"
-   ]
-  },
-  {
-   "written": "醤油",
-   "reading": "しょうゆ",
-   "romaji": "shouyu",
-   "wordType": "noun",
-   "english": "soy sauce, soya sauce, shoyu",
-   "common": true,
-   "jmdictId": "1595020",
-   "example": {
-    "jpn": "同社は醤油その他の食品を生産する。",
-    "eng": "The company produces soy sauce and other food products.",
-    "tatoeba": "123656"
-   },
-   "sources": [
+    "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.shouyu"
   },
   {
    "written": "過ぎ",
    "reading": "すぎ",
    "romaji": "sugi",
    "wordType": "noun",
+   "pos": [
+    "n",
+    "n-suf"
+   ],
    "english": "past, after, too (much), over- (e.g. eating)",
    "common": true,
    "jmdictId": "1195960",
@@ -4808,13 +5701,17 @@
    },
    "sources": [
     "open-anki"
-   ]
+   ],
+   "id": "vocab.sugi"
   },
   {
    "written": "宛",
    "reading": "ずつ",
    "romaji": "zutsu",
    "wordType": "noun",
+   "pos": [
+    "suf"
+   ],
    "english": "apiece, each, at a time, piecemeal",
    "common": true,
    "jmdictId": "2006560",
@@ -4825,13 +5722,17 @@
    },
    "sources": [
     "open-anki"
-   ]
+   ],
+   "id": "vocab.zutsu"
   },
   {
    "written": "スリッパ",
    "reading": "スリッパ",
-   "romaji": "",
+   "romaji": "surippa",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "slipper, slippers",
    "common": true,
    "jmdictId": "1073900",
@@ -4842,13 +5743,17 @@
    },
    "sources": [
     "tanos"
-   ]
+   ],
+   "id": "vocab.surippa"
   },
   {
    "written": "背",
    "reading": "せ",
    "romaji": "se",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "back, reverse, rear side, back (e.g. of a chair)",
    "common": true,
    "jmdictId": "2147990",
@@ -4859,13 +5764,17 @@
    },
    "sources": [
     "tanos"
-   ]
+   ],
+   "id": "vocab.se"
   },
   {
    "written": "石鹸",
    "reading": "せっけん",
    "romaji": "sekken",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "soap",
    "common": true,
    "jmdictId": "1382590",
@@ -4875,31 +5784,19 @@
     "tatoeba": "197617"
    },
    "sources": [
-    "tanos"
-   ]
-  },
-  {
-   "written": "石鹸",
-   "reading": "せっけん",
-   "romaji": "sekken",
-   "wordType": "noun",
-   "english": "soap",
-   "common": true,
-   "jmdictId": "1382590",
-   "example": {
-    "jpn": "ひげをそる前に石けんをつける。",
-    "eng": "I lather my face before shaving.",
-    "tatoeba": "197617"
-   },
-   "sources": [
+    "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.sekken"
   },
   {
    "written": "然うして",
    "reading": "そうして",
    "romaji": "soushite",
    "wordType": "noun",
+   "pos": [
+    "conj"
+   ],
    "english": "and, like that",
    "common": true,
    "jmdictId": "1612860",
@@ -4910,30 +5807,17 @@
    },
    "sources": [
     "tanos"
-   ]
-  },
-  {
-   "written": "然うして",
-   "reading": "そうして",
-   "romaji": "soushite",
-   "wordType": "noun",
-   "english": "and, like that",
-   "common": true,
-   "jmdictId": "1612860",
-   "example": {
-    "jpn": "そうしてくれて君は親切ですね。",
-    "eng": "It is kind of you to do so.",
-    "tatoeba": "213882"
-   },
-   "sources": [
-    "tanos"
-   ]
+   ],
+   "id": "vocab.soushite"
   },
   {
    "written": "而して",
    "reading": "そして",
    "romaji": "soshite",
    "wordType": "noun",
+   "pos": [
+    "conj"
+   ],
    "english": "and, and then, thus, and now",
    "common": true,
    "jmdictId": "1006730",
@@ -4944,30 +5828,17 @@
    },
    "sources": [
     "tanos"
-   ]
-  },
-  {
-   "written": "而して",
-   "reading": "そして",
-   "romaji": "soshite",
-   "wordType": "noun",
-   "english": "and, and then, thus, and now",
-   "common": true,
-   "jmdictId": "1006730",
-   "example": {
-    "jpn": "私は京都と、そして奈良にも訪れる計画を立てている。",
-    "eng": "I am planning to visit Kyoto, and Nara as well.",
-    "tatoeba": "157634"
-   },
-   "sources": [
-    "tanos"
-   ]
+   ],
+   "id": "vocab.soshite"
   },
   {
    "written": "丈",
    "reading": "だけ",
    "romaji": "dake",
    "wordType": "noun",
+   "pos": [
+    "prt"
+   ],
    "english": "only, just, merely, simply",
    "common": true,
    "jmdictId": "1007340",
@@ -4978,13 +5849,17 @@
    },
    "sources": [
     "open-anki"
-   ]
+   ],
+   "id": "vocab.dake"
   },
   {
    "written": "多分",
    "reading": "たぶん",
    "romaji": "tabun",
    "wordType": "adverb",
+   "pos": [
+    "adv"
+   ],
    "english": "probably, likely, perhaps, maybe",
    "common": true,
    "jmdictId": "1407980",
@@ -4995,13 +5870,17 @@
    },
    "sources": [
     "open-anki"
-   ]
+   ],
+   "id": "vocab.tabun-probably"
   },
   {
    "written": "誰か",
    "reading": "だれか",
    "romaji": "dareka",
-   "wordType": "pronoun",
+   "wordType": "noun",
+   "pos": [
+    "pn"
+   ],
    "english": "someone, somebody",
    "common": true,
    "jmdictId": "1416840",
@@ -5011,31 +5890,20 @@
     "tatoeba": "236233"
    },
    "sources": [
-    "tanos"
-   ]
-  },
-  {
-   "written": "誰か",
-   "reading": "だれか",
-   "romaji": "dareka",
-   "wordType": "pronoun",
-   "english": "someone, somebody",
-   "common": true,
-   "jmdictId": "1416840",
-   "example": {
-    "jpn": "「誰か車の中にいるのですか」「トムがいます」",
-    "eng": "\"Who is in the car?\" \"Tom is.\"",
-    "tatoeba": "236233"
-   },
-   "sources": [
+    "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.dareka"
   },
   {
    "written": "段々",
    "reading": "だんだん",
    "romaji": "dandan",
    "wordType": "adverb",
+   "pos": [
+    "adv",
+    "adv-to"
+   ],
    "english": "gradually, by degrees, little by little, more and more",
    "common": true,
    "jmdictId": "1597350",
@@ -5046,13 +5914,17 @@
    },
    "sources": [
     "open-anki"
-   ]
+   ],
+   "id": "vocab.dandan-gradually"
   },
   {
    "written": "茶碗",
    "reading": "ちゃわん",
    "romaji": "chawan",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "rice bowl, tea cup, teacup",
    "common": true,
    "jmdictId": "1597530",
@@ -5062,31 +5934,19 @@
     "tatoeba": "102177"
    },
    "sources": [
-    "tanos"
-   ]
-  },
-  {
-   "written": "茶碗",
-   "reading": "ちゃわん",
-   "romaji": "chawan",
-   "wordType": "noun",
-   "english": "rice bowl, tea cup, teacup",
-   "common": true,
-   "jmdictId": "1597530",
-   "example": {
-    "jpn": "彼は茶碗を床にたたきつけた。",
-    "eng": "He dashed the cup on the floor.",
-    "tatoeba": "102177"
-   },
-   "sources": [
+    "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.chawan"
   },
   {
    "written": "中",
    "reading": "ちゅう",
    "romaji": "chuu",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "medium (size), average (grade, level, etc.), middle, in",
    "common": true,
    "jmdictId": "1620400",
@@ -5097,13 +5957,17 @@
    },
    "sources": [
     "open-anki"
-   ]
+   ],
+   "id": "vocab.chuu"
   },
   {
    "written": "丁度",
    "reading": "ちょうど",
    "romaji": "choudo",
    "wordType": "adverb",
+   "pos": [
+    "adv"
+   ],
    "english": "exactly, precisely, just, right",
    "common": true,
    "jmdictId": "1427340",
@@ -5113,31 +5977,20 @@
     "tatoeba": "151745"
    },
    "sources": [
-    "tanos"
-   ]
-  },
-  {
-   "written": "丁度",
-   "reading": "ちょうど",
-   "romaji": "choudo",
-   "wordType": "adverb",
-   "english": "exactly, precisely, just, right",
-   "common": true,
-   "jmdictId": "1427340",
-   "example": {
-    "jpn": "私達はちょうど食事を終えた所です。",
-    "eng": "We've just finished breakfast.",
-    "tatoeba": "151745"
-   },
-   "sources": [
+    "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.choudo"
   },
   {
    "written": "度",
    "reading": "ど",
    "romaji": "do",
    "wordType": "noun",
+   "pos": [
+    "n",
+    "n-suf"
+   ],
    "english": "degree (angle, temperature, scale, etc.), counter for occurrences, strength (of glasses), glasses prescription",
    "common": true,
    "jmdictId": "1445160",
@@ -5148,13 +6001,17 @@
    },
    "sources": [
     "open-anki"
-   ]
+   ],
+   "id": "vocab.do"
   },
   {
    "written": "時",
    "reading": "とき",
    "romaji": "toki",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "time, hour, moment, occasion",
    "common": true,
    "jmdictId": "1315840",
@@ -5165,13 +6022,17 @@
    },
    "sources": [
     "open-anki"
-   ]
+   ],
+   "id": "vocab.toki"
   },
   {
    "written": "鶏肉",
    "reading": "とりにく",
    "romaji": "toriniku",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "chicken meat, fowl, poultry, bird meat",
    "common": true,
    "jmdictId": "1253020",
@@ -5181,31 +6042,19 @@
     "tatoeba": "125767"
    },
    "sources": [
-    "tanos"
-   ]
-  },
-  {
-   "written": "鶏肉",
-   "reading": "とりにく",
-   "romaji": "toriniku",
-   "wordType": "noun",
-   "english": "chicken meat, fowl, poultry, bird meat",
-   "common": true,
-   "jmdictId": "1253020",
-   "example": {
-    "jpn": "鶏肉を３ポンド分ください。",
-    "eng": "I'd like three pounds of chicken.",
-    "tatoeba": "125767"
-   },
-   "sources": [
+    "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.toriniku"
   },
   {
    "written": "どんな",
    "reading": "どんな",
    "romaji": "donna",
    "wordType": "noun",
+   "pos": [
+    "adj-pn"
+   ],
    "english": "what kind of, what sort of, what, no matter what (kind of)",
    "common": true,
    "jmdictId": "1009330",
@@ -5216,13 +6065,17 @@
    },
    "sources": [
     "open-anki"
-   ]
+   ],
+   "id": "vocab.donna"
   },
   {
    "written": "等",
    "reading": "など",
    "romaji": "nado",
    "wordType": "noun",
+   "pos": [
+    "prt"
+   ],
    "english": "et cetera, etc., and the like, and so forth",
    "common": true,
    "jmdictId": "1582300",
@@ -5232,31 +6085,19 @@
     "tatoeba": "235605"
    },
    "sources": [
-    "tanos"
-   ]
-  },
-  {
-   "written": "等",
-   "reading": "など",
-   "romaji": "nado",
-   "wordType": "noun",
-   "english": "et cetera, etc., and the like, and so forth",
-   "common": true,
-   "jmdictId": "1582300",
-   "example": {
-    "jpn": "２、４、６などは偶数です。",
-    "eng": "Two, four, six, etc. are even numbers.",
-    "tatoeba": "235605"
-   },
-   "sources": [
+    "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.nado"
   },
   {
    "written": "何",
    "reading": "なん",
    "romaji": "nan",
-   "wordType": "pronoun",
+   "wordType": "noun",
+   "pos": [
+    "pn"
+   ],
    "english": "what, how many, many, a lot of",
    "common": true,
    "jmdictId": "2846738",
@@ -5267,13 +6108,17 @@
    },
    "sources": [
     "tanos"
-   ]
+   ],
+   "id": "vocab.nan-what"
   },
   {
    "written": "日",
    "reading": "にち",
    "romaji": "nichi",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "Sunday, nth day (of the month), counter for days, Japan",
    "common": true,
    "jmdictId": "2083100",
@@ -5284,13 +6129,17 @@
    },
    "sources": [
     "open-anki"
-   ]
+   ],
+   "id": "vocab.nichi"
   },
   {
    "written": "人",
    "reading": "にん",
    "romaji": "nin",
    "wordType": "counter",
+   "pos": [
+    "ctr"
+   ],
    "english": "counter for people",
    "common": true,
    "jmdictId": "2149890",
@@ -5301,13 +6150,17 @@
    },
    "sources": [
     "open-anki"
-   ]
+   ],
+   "id": "vocab.nin"
   },
   {
    "written": "年",
    "reading": "ねん",
    "romaji": "nen",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "year, counter for years (e.g. of an era), grades (e.g. school), period of an apprentice's contract (usu. ten years)",
    "common": true,
    "jmdictId": "2084840",
@@ -5318,13 +6171,18 @@
    },
    "sources": [
     "open-anki"
-   ]
+   ],
+   "id": "vocab.nen"
   },
   {
    "written": "始め",
    "reading": "はじめ",
    "romaji": "hajime",
    "wordType": "noun",
+   "pos": [
+    "n",
+    "adv"
+   ],
    "english": "beginning, start, outset, opening",
    "common": true,
    "jmdictId": "1342540",
@@ -5334,48 +6192,20 @@
     "tatoeba": "162444"
    },
    "sources": [
-    "tanos"
-   ]
-  },
-  {
-   "written": "始め",
-   "reading": "はじめ",
-   "romaji": "hajime",
-   "wordType": "noun",
-   "english": "beginning, start, outset, opening",
-   "common": true,
-   "jmdictId": "1342540",
-   "example": {
-    "jpn": "旅行の初めの二日間は雨降りだった。",
-    "eng": "The first two days of my trip were rainy.",
-    "tatoeba": "162444"
-   },
-   "sources": [
-    "tanos"
-   ]
-  },
-  {
-   "written": "始め",
-   "reading": "はじめ",
-   "romaji": "hajime",
-   "wordType": "noun",
-   "english": "beginning, start, outset, opening",
-   "common": true,
-   "jmdictId": "1342540",
-   "example": {
-    "jpn": "旅行の初めの二日間は雨降りだった。",
-    "eng": "The first two days of my trip were rainy.",
-    "tatoeba": "162444"
-   },
-   "sources": [
+    "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.hajime"
   },
   {
    "written": "番",
    "reading": "ばん",
    "romaji": "ban",
    "wordType": "noun",
+   "pos": [
+    "n",
+    "n-suf"
+   ],
    "english": "number (in a series), (one's) turn, watch, guard",
    "common": true,
    "jmdictId": "2022640",
@@ -5386,13 +6216,17 @@
    },
    "sources": [
     "open-anki"
-   ]
+   ],
+   "id": "vocab.ban-number"
   },
   {
    "written": "匹",
    "reading": "ひき",
    "romaji": "hiki",
    "wordType": "counter",
+   "pos": [
+    "ctr"
+   ],
    "english": "counter for small animals, counter for rolls of cloth (two han in size), counter for horses, roll of cloth",
    "common": true,
    "jmdictId": "1583370",
@@ -5403,13 +6237,19 @@
    },
    "sources": [
     "open-anki"
-   ]
+   ],
+   "id": "vocab.hiki"
   },
   {
    "written": "本当",
    "reading": "ほんとう",
    "romaji": "hontou",
    "wordType": "noun",
+   "pos": [
+    "n",
+    "adj-no",
+    "adj-na"
+   ],
    "english": "truth, reality, actuality, fact",
    "common": true,
    "jmdictId": "1523060",
@@ -5420,13 +6260,18 @@
    },
    "sources": [
     "open-anki"
-   ]
+   ],
+   "id": "vocab.hontou-truth"
   },
   {
    "written": "毎月",
    "reading": "まいげつ",
    "romaji": "maigetsu",
    "wordType": "adverb",
+   "pos": [
+    "adv",
+    "n"
+   ],
    "english": "every month, each month, monthly",
    "common": true,
    "jmdictId": "1584350",
@@ -5437,13 +6282,18 @@
    },
    "sources": [
     "tanos"
-   ]
+   ],
+   "id": "vocab.maigetsu"
   },
   {
    "written": "毎年",
    "reading": "まいねん",
    "romaji": "mainen",
    "wordType": "adverb",
+   "pos": [
+    "adv",
+    "n"
+   ],
    "english": "every year, yearly, annually",
    "common": true,
    "jmdictId": "1584360",
@@ -5454,13 +6304,17 @@
    },
    "sources": [
     "tanos"
-   ]
+   ],
+   "id": "vocab.mainen"
   },
   {
    "written": "丸い",
    "reading": "まるい",
    "romaji": "marui",
-   "wordType": "i-adjective",
+   "wordType": "i-adj",
+   "pos": [
+    "adj-i"
+   ],
    "english": "round, circular, spherical, curved",
    "common": true,
    "jmdictId": "1604230",
@@ -5470,48 +6324,19 @@
     "tatoeba": "217547"
    },
    "sources": [
-    "tanos"
-   ]
-  },
-  {
-   "written": "丸い",
-   "reading": "まるい",
-   "romaji": "marui",
-   "wordType": "i-adjective",
-   "english": "round, circular, spherical, curved",
-   "common": true,
-   "jmdictId": "1604230",
-   "example": {
-    "jpn": "コロンブスは地球が丸いと信じていた。",
-    "eng": "Columbus believed that the earth was round.",
-    "tatoeba": "217547"
-   },
-   "sources": [
-    "tanos"
-   ]
-  },
-  {
-   "written": "丸い",
-   "reading": "まるい",
-   "romaji": "marui",
-   "wordType": "i-adjective",
-   "english": "round, circular, spherical, curved",
-   "common": true,
-   "jmdictId": "1604230",
-   "example": {
-    "jpn": "コロンブスは地球が丸いと信じていた。",
-    "eng": "Columbus believed that the earth was round.",
-    "tatoeba": "217547"
-   },
-   "sources": [
+    "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.marui"
   },
   {
    "written": "もしもし",
    "reading": "もしもし",
    "romaji": "moshimoshi",
    "wordType": "interjection",
+   "pos": [
+    "int"
+   ],
    "english": "hello (e.g. on phone), excuse me! (when calling out to someone)",
    "common": true,
    "jmdictId": "1012550",
@@ -5522,13 +6347,17 @@
    },
    "sources": [
     "open-anki"
-   ]
+   ],
+   "id": "vocab.moshimoshi"
   },
   {
    "written": "八",
    "reading": "や",
    "romaji": "ya",
    "wordType": "noun",
+   "pos": [
+    "num"
+   ],
    "english": "eight, 8",
    "common": true,
    "jmdictId": "1583090",
@@ -5539,13 +6368,18 @@
    },
    "sources": [
     "open-anki"
-   ]
+   ],
+   "id": "vocab.ya"
   },
   {
    "written": "行く",
    "reading": "ゆく",
    "romaji": "yuku",
    "wordType": "verb",
+   "pos": [
+    "v5k-s",
+    "vi"
+   ],
    "english": "to go, to move (towards), to head (towards), to leave (for)",
    "common": true,
    "jmdictId": "1578850",
@@ -5556,13 +6390,17 @@
    },
    "sources": [
     "tanos"
-   ]
+   ],
+   "id": "vocab.yuku"
   },
   {
    "written": "より",
    "reading": "より",
    "romaji": "yori",
    "wordType": "noun",
+   "pos": [
+    "prt"
+   ],
    "english": "than, rather than, instead of, over",
    "common": true,
    "jmdictId": "1013190",
@@ -5573,13 +6411,17 @@
    },
    "sources": [
     "tanos"
-   ]
+   ],
+   "id": "vocab.yori-than"
   },
   {
    "written": "字引",
    "reading": "じびき",
    "romaji": "jibiki",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "dictionary",
    "common": true,
    "jmdictId": "1315140",
@@ -5587,13 +6429,18 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.jibiki"
   },
   {
    "written": "白",
    "reading": "しろ",
    "romaji": "shiro",
    "wordType": "noun",
+   "pos": [
+    "n",
+    "adj-no"
+   ],
    "english": "white, innocence, innocent person, blank space",
    "common": true,
    "jmdictId": "1474900",
@@ -5601,13 +6448,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.shiro"
   },
   {
    "written": "煙草",
    "reading": "タバコ",
-   "romaji": "",
+   "romaji": "tabako",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "tobacco, cigarette, cigar, tobacco plant (Nicotiana tabacum)",
    "common": true,
    "jmdictId": "1597150",
@@ -5615,13 +6466,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.tabako"
   },
   {
    "written": "股",
    "reading": "また",
    "romaji": "mata",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "groin, thigh, crotch, crutch",
    "common": true,
    "jmdictId": "1267460",
@@ -5629,13 +6484,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.mata"
   },
   {
    "written": "零",
    "reading": "れい",
    "romaji": "rei",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "zero, nought",
    "common": true,
    "jmdictId": "1557630",
@@ -5643,195 +6502,207 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.rei"
   },
   {
    "written": "岐路",
    "reading": "きろ",
    "romaji": "kiro",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "forked road, crossroads",
    "common": true,
    "jmdictId": "1219840",
    "example": null,
    "sources": [
     "tanos"
-   ]
-  },
-  {
-   "written": "岐路",
-   "reading": "きろ",
-   "romaji": "kiro",
-   "wordType": "noun",
-   "english": "forked road, crossroads",
-   "common": true,
-   "jmdictId": "1219840",
-   "example": null,
-   "sources": [
-    "tanos"
-   ]
-  },
-  {
-   "written": "岐路",
-   "reading": "きろ",
-   "romaji": "kiro",
-   "wordType": "noun",
-   "english": "forked road, crossroads",
-   "common": true,
-   "jmdictId": "1219840",
-   "example": null,
-   "sources": [
-    "tanos"
-   ]
+   ],
+   "id": "vocab.kiro"
   },
   {
    "written": "五",
    "reading": "ご",
    "romaji": "go",
    "wordType": "noun",
+   "pos": [
+    "num"
+   ],
    "english": "five, 5",
    "common": true,
    "jmdictId": "1268060",
    "example": null,
    "sources": [
     "open-anki"
-   ]
+   ],
+   "id": "vocab.go-five"
   },
   {
    "written": "週刊",
    "reading": "しゅうかん",
    "romaji": "shuukan",
    "wordType": "noun",
+   "pos": [
+    "n",
+    "adj-no"
+   ],
    "english": "weekly publication",
    "common": true,
    "jmdictId": "1333460",
    "example": null,
    "sources": [
     "open-anki"
-   ]
+   ],
+   "id": "vocab.shuukan"
   },
   {
    "written": "人",
    "reading": "じん",
    "romaji": "jin",
    "wordType": "noun",
+   "pos": [
+    "suf"
+   ],
    "english": "-ian (e.g. Italian), -ite (e.g. Tokyoite), -er (e.g. performer, etc.), person working with ...",
    "common": true,
    "jmdictId": "1366410",
    "example": null,
    "sources": [
     "open-anki"
-   ]
+   ],
+   "id": "vocab.jin"
   },
   {
    "written": "背",
    "reading": "せい",
    "romaji": "sei",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "height, stature",
    "common": true,
    "jmdictId": "1472650",
    "example": null,
    "sources": [
     "open-anki"
-   ]
+   ],
+   "id": "vocab.sei"
   },
   {
    "written": "ない",
    "reading": "ない",
    "romaji": "nai",
    "wordType": "noun",
+   "pos": [
+    "aux-adj",
+    "suf"
+   ],
    "english": "not",
    "common": true,
    "jmdictId": "2257550",
    "example": null,
    "sources": [
     "open-anki"
-   ]
+   ],
+   "id": "vocab.nai"
   },
   {
    "written": "平仮名",
    "reading": "ひらがな",
    "romaji": "hiragana",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "hiragana, cursive Japanese syllabary used primarily for native Japanese words (esp. function words, inflections, etc.)",
    "common": true,
    "jmdictId": "1507090",
    "example": null,
    "sources": [
     "open-anki"
-   ]
+   ],
+   "id": "vocab.hiragana"
   },
   {
    "written": "本島",
    "reading": "ほんとう",
    "romaji": "hontou",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "main island, this island",
    "common": true,
    "jmdictId": "1523040",
    "example": null,
    "sources": [
     "tanos"
-   ]
+   ],
+   "id": "vocab.hontou-main-island"
   },
   {
    "written": "宵",
    "reading": "よい",
    "romaji": "yoi",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "evening, early night hours",
    "common": true,
    "jmdictId": "1347600",
    "example": null,
    "sources": [
     "tanos"
-   ]
-  },
-  {
-   "written": "宵",
-   "reading": "よい",
-   "romaji": "yoi",
-   "wordType": "noun",
-   "english": "evening, early night hours",
-   "common": true,
-   "jmdictId": "1347600",
-   "example": null,
-   "sources": [
-    "tanos"
-   ]
+   ],
+   "id": "vocab.yoi"
   },
   {
    "written": "ラジカセ",
    "reading": "ラジカセ",
-   "romaji": "",
+   "romaji": "rajikase",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "radio-cassette player",
    "common": true,
    "jmdictId": "1138960",
    "example": null,
    "sources": [
     "tanos"
-   ]
+   ],
+   "id": "vocab.rajikase"
   },
   {
    "written": "片仮名",
    "reading": "カタカナ",
-   "romaji": "",
+   "romaji": "katakana",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "katakana, angular Japanese syllabary used primarily for loanwords",
    "common": true,
    "jmdictId": "1511600",
    "example": null,
    "sources": [
     "open-anki"
-   ]
+   ],
+   "id": "vocab.katakana"
   },
   {
    "written": "架かる",
    "reading": "かかる",
    "romaji": "kakaru",
    "wordType": "verb",
+   "pos": [
+    "v5r",
+    "vi"
+   ],
    "english": "to span, to bridge, to cross, to straddle",
    "common": false,
    "jmdictId": "1193110",
@@ -5843,13 +6714,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.kakaru"
   },
   {
    "written": "お酒",
    "reading": "おさけ",
    "romaji": "osake",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "alcohol, sake",
    "common": false,
    "jmdictId": "1329015",
@@ -5861,13 +6736,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.osake"
   },
   {
    "written": "お皿",
    "reading": "おさら",
    "romaji": "osara",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "plate, dish",
    "common": false,
    "jmdictId": "1299685",
@@ -5879,13 +6758,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.osara"
   },
   {
    "written": "テープレコーダー",
    "reading": "テープレコーダー",
-   "romaji": "",
+   "romaji": "teepurekoodaa",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "tape recorder",
    "common": false,
    "jmdictId": "1078810",
@@ -5897,13 +6780,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.teepurekoodaa"
   },
   {
    "written": "伯母さん",
    "reading": "おばさん",
    "romaji": "obasan",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "aunt",
    "common": false,
    "jmdictId": "2261500",
@@ -5913,48 +6800,19 @@
     "tatoeba": "227572"
    },
    "sources": [
-    "tanos"
-   ]
-  },
-  {
-   "written": "伯母さん",
-   "reading": "おばさん",
-   "romaji": "obasan",
-   "wordType": "noun",
-   "english": "aunt",
-   "common": false,
-   "jmdictId": "2261500",
-   "example": {
-    "jpn": "叔母さんを訪ねた時はすごいごちそうだったね。",
-    "eng": "What a feast we had when we visited my aunt!",
-    "tatoeba": "227572"
-   },
-   "sources": [
-    "tanos"
-   ]
-  },
-  {
-   "written": "伯母さん",
-   "reading": "おばさん",
-   "romaji": "obasan",
-   "wordType": "noun",
-   "english": "aunt",
-   "common": false,
-   "jmdictId": "2261500",
-   "example": {
-    "jpn": "叔母さんを訪ねた時はすごいごちそうだったね。",
-    "eng": "What a feast we had when we visited my aunt!",
-    "tatoeba": "227572"
-   },
-   "sources": [
+    "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.obasan"
   },
   {
    "written": "割賦",
    "reading": "かっぷ",
    "romaji": "kappu",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "allotment, quota, payment in installments, payment in instalments",
    "common": false,
    "jmdictId": "1577520",
@@ -5962,13 +6820,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.kappu"
   },
   {
    "written": "殺陣",
    "reading": "たて",
    "romaji": "tate",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "sword fight (in a film, play, etc.), stage combat, fight scene",
    "common": false,
    "jmdictId": "1299150",
@@ -5976,13 +6838,18 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.tate"
   },
   {
    "written": "出切る",
    "reading": "できる",
    "romaji": "dekiru",
    "wordType": "verb",
+   "pos": [
+    "v5r",
+    "vt"
+   ],
    "english": "to be out of, to have no more at hand",
    "common": false,
    "jmdictId": "1339500",
@@ -5990,13 +6857,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.dekiru"
   },
   {
    "written": "ＰＥＴ",
    "reading": "ペット",
-   "romaji": "",
+   "romaji": "petto",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "polyethylene terephthalate, PET, positron emission tomography, PET",
    "common": false,
    "jmdictId": "2189230",
@@ -6004,13 +6875,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.petto"
   },
   {
    "written": "ＰＥＮ",
    "reading": "ペン",
-   "romaji": "",
+   "romaji": "pen",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "International Association of Poets, Playwrights, Editors, Essayists and Novelists, PEN",
    "common": false,
    "jmdictId": "5000059",
@@ -6018,13 +6893,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.pen"
   },
   {
    "written": "リッパ",
    "reading": "リッパ",
-   "romaji": "",
+   "romaji": "rippa",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "seam ripper, ripper (bulldozer attachment), ripper (software), rip saw (machine)",
    "common": false,
    "jmdictId": "2021190",
@@ -6032,13 +6911,17 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.rippa"
   },
   {
    "written": "私",
    "reading": "わたくし",
    "romaji": "watakushi",
-   "wordType": "pronoun",
+   "wordType": "noun",
+   "pos": [
+    "pn"
+   ],
    "english": "I, me, personal (affairs, etc.), private",
    "common": false,
    "jmdictId": "2842390",
@@ -6046,176 +6929,196 @@
    "sources": [
     "tanos",
     "open-anki"
-   ]
+   ],
+   "id": "vocab.watakushi"
   },
   {
    "written": "イス",
    "reading": "イス",
-   "romaji": "",
+   "romaji": "isu",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "swords (suit)",
    "common": false,
    "jmdictId": "2848719",
    "example": null,
    "sources": [
     "tanos"
-   ]
+   ],
+   "id": "vocab.isu-swords"
   },
   {
    "written": "伯父さん",
    "reading": "おじさん",
    "romaji": "ojisan",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "uncle, old man, mister, manybar goatfish (Parupeneus multifasciatus)",
    "common": false,
    "jmdictId": "2261490",
    "example": null,
    "sources": [
-    "tanos"
-   ]
-  },
-  {
-   "written": "伯父さん",
-   "reading": "おじさん",
-   "romaji": "ojisan",
-   "wordType": "noun",
-   "english": "uncle, old man, mister, manybar goatfish (Parupeneus multifasciatus)",
-   "common": false,
-   "jmdictId": "2261490",
-   "example": null,
-   "sources": [
-    "tanos"
-   ]
+    "tanos",
+    "open-anki"
+   ],
+   "id": "vocab.ojisan"
   },
   {
    "written": "佳月",
    "reading": "かげつ",
    "romaji": "kagetsu",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "good month, bright moon",
    "common": false,
    "jmdictId": "1189730",
    "example": null,
    "sources": [
     "open-anki"
-   ]
+   ],
+   "id": "vocab.kagetsu"
   },
   {
    "written": "裁ち",
    "reading": "たち",
    "romaji": "tachi",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "cutting, cut",
    "common": false,
    "jmdictId": "1295950",
    "example": null,
    "sources": [
     "open-anki"
-   ]
+   ],
+   "id": "vocab.tachi"
   },
   {
    "written": "タブン",
    "reading": "タブン",
-   "romaji": "",
+   "romaji": "tabun",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "tabun (nerve agent)",
    "common": false,
    "jmdictId": "2198520",
    "example": null,
    "sources": [
     "tanos"
-   ]
+   ],
+   "id": "vocab.tabun-tabun"
   },
   {
    "written": "だんだん",
    "reading": "だんだん",
    "romaji": "dandan",
    "wordType": "interjection",
+   "pos": [
+    "int"
+   ],
    "english": "thank you",
    "common": false,
    "jmdictId": "2546180",
    "example": null,
    "sources": [
     "tanos"
-   ]
+   ],
+   "id": "vocab.dandan-thank-you"
   },
   {
    "written": "ＮａＮ",
    "reading": "ナン",
-   "romaji": "",
+   "romaji": "nan",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "not a number, NaN",
    "common": false,
    "jmdictId": "2599470",
    "example": null,
    "sources": [
     "open-anki"
-   ]
+   ],
+   "id": "vocab.nan-not-a"
   },
   {
    "written": "俸",
    "reading": "ほう",
    "romaji": "hou",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "salary",
    "common": false,
    "jmdictId": "1515270",
    "example": null,
    "sources": [
     "tanos"
-   ]
+   ],
+   "id": "vocab.hou-salary"
   },
   {
    "written": "ほう",
    "reading": "ほう",
    "romaji": "hou",
    "wordType": "interjection",
+   "pos": [
+    "int"
+   ],
    "english": "oh, ho, exclamation of surprise, admiration, etc., hoo (owl call)",
    "common": false,
    "jmdictId": "2771030",
    "example": null,
    "sources": [
     "tanos"
-   ]
+   ],
+   "id": "vocab.hou-oh"
   },
   {
    "written": "縒り",
    "reading": "より",
    "romaji": "yori",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "twist, ply",
    "common": false,
    "jmdictId": "1955670",
    "example": null,
    "sources": [
     "tanos"
-   ]
-  },
-  {
-   "written": "伯父さん",
-   "reading": "おじさん",
-   "romaji": "ojisan",
-   "wordType": "noun",
-   "english": "uncle, old man, mister, manybar goatfish (Parupeneus multifasciatus)",
-   "common": false,
-   "jmdictId": "2261490",
-   "example": null,
-   "sources": [
-    "open-anki"
-   ]
+   ],
+   "id": "vocab.yori-twist"
   },
   {
    "written": "ラジオカセット",
    "reading": "ラジオカセット",
-   "romaji": "",
+   "romaji": "rajiokasetto",
    "wordType": "noun",
+   "pos": [
+    "n"
+   ],
    "english": "radio-cassette, tape recorder",
    "common": false,
    "jmdictId": "1138900",
    "example": null,
    "sources": [
     "tanos"
-   ]
+   ],
+   "id": "vocab.rajiokasetto"
   }
  ]
 }
