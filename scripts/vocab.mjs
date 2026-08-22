@@ -229,7 +229,7 @@ const glossWords = (english) =>
       .filter((w) => w.length > 1 && !STOPWORDS.has(w)),
   );
 
-export function bestByGloss(hits, english) {
+function bestByOneSense(hits, english) {
   const want = glossWords(english);
   if (!want.size) return undefined;
   let best;
@@ -244,6 +244,18 @@ export function bestByGloss(hits, english) {
     }
   }
   return bestScore > 0 ? best : undefined;
+}
+
+export function bestByGloss(hits, english) {
+  // The reference glosses a word sense by sense, most central first: コート is
+  // "coat; court (e.g., tennis)". Read them in that order, or the longer second
+  // sense outvotes the first and the queue offers a tennis court to a chapter
+  // about clothes.
+  for (const sense of (english ?? "").split(";")) {
+    const pick = bestByOneSense(hits, sense);
+    if (pick) return pick;
+  }
+  return undefined;
 }
 
 const yamlStr = (s) => (/[:#'"\n]/.test(s) ? JSON.stringify(s) : s);

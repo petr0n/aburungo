@@ -1627,13 +1627,13 @@
    "pos": [
     "n"
    ],
-   "english": "court (e.g. tennis, basketball, volleyball)",
+   "english": "coat, coating",
    "common": true,
-   "jmdictId": "2842174",
+   "jmdictId": "1049000",
    "example": {
-    "jpn": "ウィンブルドンには、センターコートを含めて１８の芝生コートがある。",
-    "eng": "Wimbledon has eighteen grass courts, including the Center Court.",
-    "tatoeba": "228321"
+    "jpn": "あなたが家を出た後で、私はあなたのコートに気づきました。",
+    "eng": "I found your coat after you left the house.",
+    "tatoeba": "234118"
    },
    "sources": [
     "tanos",

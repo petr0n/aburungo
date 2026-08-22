@@ -103,6 +103,12 @@ describe("bestByGloss", () => {
     expect(bestByGloss([ageruUp, ageruCite], "to give")).toBe(ageruUp);
   });
 
+  it("takes the reference's senses in the order it lists them", () => {
+    const coat = hit(["coat", "coating"]);
+    const court = hit(["court (e.g. tennis, basketball)", "tennis court"]);
+    expect(bestByGloss([coat, court], "coat; court (e.g., tennis)")).toBe(coat);
+  });
+
   it("declines to guess when nothing overlaps", () => {
     expect(bestByGloss([hit(["to sweep"])], "to put on")).toBeUndefined();
     expect(bestByGloss([hit(["to sweep"])], "")).toBeUndefined();

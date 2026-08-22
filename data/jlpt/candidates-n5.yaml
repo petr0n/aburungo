@@ -800,9 +800,9 @@
   japanese: コート
   reading: コート
   romaji: kooto
-  english: court (e.g. tennis, basketball, volleyball)
-  notes: "TODO. JMdict seq 2842174. JMdict pos: n."
-  # example: ウィンブルドンには、センターコートを含めて１８の芝生コートがある。 — Wimbledon has eighteen grass courts, including the Center Court. (Tatoeba 228321)
+  english: coat, coating
+  notes: "TODO. JMdict seq 1049000. JMdict pos: n."
+  # example: あなたが家を出た後で、私はあなたのコートに気づきました。 — I found your coat after you left the house. (Tatoeba 234118)
 
 - id: vocab.kocchi
   jlpt: N5
