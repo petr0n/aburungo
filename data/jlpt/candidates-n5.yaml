@@ -60,7 +60,7 @@
   jlpt: N5
   word_type: noun
   theme: TODO
-  japanese: 彼方
+  japanese: あっち
   reading: あっち
   romaji: acchi
   english: that way, that direction, over there, yonder
@@ -430,6 +430,17 @@
   notes: "TODO. JMdict seq 1203090. JMdict pos: n."
   # example: その階段を上ってはいけません。 — You must not go up the stairs. (Tatoeba 211701)
 
+- id: vocab.kakaru
+  jlpt: N5
+  word_type: verb
+  theme: TODO
+  japanese: 掛かる
+  reading: かかる
+  romaji: kakaru
+  english: to take (a resource, e.g. time or money), to hang, to come into view, to arrive
+  notes: "TODO. JMdict seq 1207590. JMdict pos: v5r/vi."
+  # example: あれだけのコインを収集するのにどれだけの年月がかかりましたか。 — How long did it take you to collect so many coins? (Tatoeba 229759)
+
 - id: vocab.kakeru
   jlpt: N5
   word_type: verb
@@ -709,7 +720,7 @@
   jlpt: N5
   word_type: noun
   theme: TODO
-  japanese: 瓦
+  japanese: グラム
   reading: グラム
   romaji: guramu
   english: gram, gramme
@@ -789,15 +800,15 @@
   japanese: コート
   reading: コート
   romaji: kooto
-  english: coat, coating
-  notes: "TODO. JMdict seq 1049000. JMdict pos: n."
-  # example: あなたが家を出た後で、私はあなたのコートに気づきました。 — I found your coat after you left the house. (Tatoeba 234118)
+  english: court (e.g. tennis, basketball, volleyball)
+  notes: "TODO. JMdict seq 2842174. JMdict pos: n."
+  # example: ウィンブルドンには、センターコートを含めて１８の芝生コートがある。 — Wimbledon has eighteen grass courts, including the Center Court. (Tatoeba 228321)
 
 - id: vocab.kocchi
   jlpt: N5
   word_type: noun
   theme: TODO
-  japanese: 此方
+  japanese: こっち
   reading: こっち
   romaji: kocchi
   english: this way, this direction, here, this (one)
@@ -929,7 +940,7 @@
   jlpt: N5
   word_type: noun
   theme: TODO
-  japanese: 然し
+  japanese: しかし
   reading: しかし
   romaji: shikashi
   english: however, but
@@ -1149,7 +1160,7 @@
   jlpt: N5
   word_type: noun
   theme: TODO
-  japanese: 洋袴
+  japanese: ズボン
   reading: ズボン
   romaji: zubon
   english: trousers, pants
@@ -1226,7 +1237,7 @@
   jlpt: N5
   word_type: noun
   theme: TODO
-  japanese: 其方
+  japanese: そっち
   reading: そっち
   romaji: socchi
   english: that way, that direction, there, that (one)
@@ -1237,7 +1248,7 @@
   jlpt: N5
   word_type: noun
   theme: TODO
-  japanese: 其れから
+  japanese: それから
   reading: それから
   romaji: sorekara
   english: and then, after that
@@ -1248,7 +1259,7 @@
   jlpt: N5
   word_type: noun
   theme: TODO
-  japanese: 其れでは
+  japanese: それでは
   reading: それでは
   romaji: soredeha
   english: well, ..., right, ..., now, ..., so
@@ -1299,6 +1310,17 @@
   notes: "TODO. JMdict seq 1414340. JMdict pos: adj-na."
   # example: 柔道では力より技のほうが大切である。 — In judo, technique is more important than strength. (Tatoeba 147997)
 
+- id: vocab.tate
+  jlpt: N5
+  word_type: noun
+  theme: TODO
+  japanese: 縦
+  reading: たて
+  romaji: tate
+  english: the vertical, height, front-to-back, length
+  notes: "TODO. JMdict seq 1335640. JMdict pos: n."
+  # example: テーブルを縦一列に並べなさい。 — Put the tables end to end. (Tatoeba 202374)
+
 - id: vocab.chiisana
   jlpt: N5
   word_type: noun
@@ -1314,7 +1336,7 @@
   jlpt: N5
   word_type: adverb
   theme: TODO
-  japanese: 一寸
+  japanese: ちょっと
   reading: ちょっと
   romaji: chotto
   english: a little, a bit, slightly, just a minute
@@ -1364,6 +1386,17 @@
   english: letter, note
   notes: "TODO. JMdict seq 1327720. JMdict pos: n."
   # example: ここにあなたあての手紙が何通かあります。 — Here are some letters for you. (Tatoeba 224512)
+
+- id: vocab.dekiru
+  jlpt: N5
+  word_type: verb
+  theme: TODO
+  japanese: 出来る
+  reading: できる
+  romaji: dekiru
+  english: to be able to do, to be possible, to be permitted (to do), to be good at
+  notes: "TODO. JMdict seq 1340450. JMdict pos: v1/vi."
+  # example: 申し訳ないけど長居できないんですよ。 — I'm sorry, I can't stay long. (Tatoeba 4951)
 
 - id: vocab.tesuto
   jlpt: N5
@@ -1446,7 +1479,7 @@
   jlpt: N5
   word_type: adverb
   theme: TODO
-  japanese: 如何して
+  japanese: どうして
   reading: どうして
   romaji: doushite
   english: how, in what way, by what means, why
@@ -1523,7 +1556,7 @@
   jlpt: N5
   word_type: noun
   theme: TODO
-  japanese: 何方
+  japanese: どっち
   reading: どっち
   romaji: docchi
   english: which way, which direction, where, which one (esp. of two alternatives)
@@ -1754,12 +1787,12 @@
   jlpt: N5
   word_type: verb
   theme: TODO
-  japanese: 掃く
+  japanese: 履く
   reading: はく
   romaji: haku
-  english: to sweep, to brush, to clean, to gather silkworms
-  notes: "TODO. JMdict seq 1399760. JMdict pos: v5k/vt."
-  # example: お前は床を掃きさえすればよい。 — You have only to sweep the floor. (Tatoeba 226930)
+  english: "to put on (lower-body clothing, e.g. pants, skirt, footwear), to wear, to affix (a sword to one's hip), to affix (a bowstring to a bow)"
+  notes: "TODO. JMdict seq 1607260. JMdict pos: v5k/vt."
+  # example: この靴はきつすぎてはけない。 — These shoes are too tight to get into. (Tatoeba 222263)
 
 - id: vocab.hako
   jlpt: N5
@@ -1798,7 +1831,7 @@
   jlpt: N5
   word_type: noun
   theme: TODO
-  japanese: ２０歳
+  japanese: 二十歳
   reading: はたち
   romaji: hatachi
   english: 20 years old, twenty
@@ -2150,7 +2183,7 @@
   jlpt: N5
   word_type: noun
   theme: TODO
-  japanese: 釦
+  japanese: ボタン
   reading: ボタン
   romaji: botan
   english: button (clothing), push-button, button
@@ -2190,6 +2223,17 @@
   notes: "TODO. JMdict seq 1524730. JMdict pos: n/adv."
   # example: 私は毎晩家にいます。 — I am at home every evening. (Tatoeba 152681)
 
+- id: vocab.mata
+  jlpt: N5
+  word_type: adverb
+  theme: TODO
+  japanese: また
+  reading: また
+  romaji: mata
+  english: again, once more, once again, another time
+  notes: "TODO. JMdict seq 1524930. JMdict pos: adv."
+  # example: また会えて嬉しいよ。 — Nice to see you again! (Tatoeba 195461)
+
 - id: vocab.machi
   jlpt: N5
   word_type: noun
@@ -2205,7 +2249,7 @@
   jlpt: N5
   word_type: noun
   theme: TODO
-  japanese: 燐寸
+  japanese: マッチ
   reading: マッチ
   romaji: macchi
   english: match (for lighting a fire)
@@ -2304,7 +2348,7 @@
   jlpt: N5
   word_type: noun
   theme: TODO
-  japanese: 米
+  japanese: メートル
   reading: メートル
   romaji: meetoru
   english: metre (unit of length), meter, meter, gauge
@@ -2381,7 +2425,7 @@
   jlpt: N5
   word_type: verb
   theme: TODO
-  japanese: 遣る
+  japanese: やる
   reading: やる
   romaji: yaru
   english: to do, to undertake, to perform, to play (a game)
@@ -2412,14 +2456,14 @@
 
 - id: vocab.yoku
   jlpt: N5
-  word_type: noun
+  word_type: adverb
   theme: TODO
-  japanese: 欲
+  japanese: 良く
   reading: よく
   romaji: yoku
-  english: greed, craving, desire, appetite
-  notes: "TODO. JMdict seq 1547320. JMdict pos: n/n-suf."
-  # example: 彼は欲の少ない人だ。 — He is a man of few wants. (Tatoeba 99167)
+  english: nicely, properly, well, skillfully
+  notes: "TODO. JMdict seq 1605870. JMdict pos: adv."
+  # example: そのプロジェクトはよく計画されていて興味深いが、当面の利益には大した結果をもたらさないと見られている。 — The project is well-planned and interesting, but its immediate impact on the bottom line is not considered substantial. (Tatoeba 212661)
 
 - id: vocab.yoko
   jlpt: N5
@@ -2442,6 +2486,17 @@
   english: radio
   notes: "TODO. JMdict seq 1138860. JMdict pos: n."
   # example: そのニュースはラジオで聞いたよ。 — I heard the news on the radio. (Tatoeba 212803)
+
+- id: vocab.rippa
+  jlpt: N5
+  word_type: na-adj
+  theme: TODO
+  japanese: 立派
+  reading: りっぱ
+  romaji: rippa
+  english: splendid, fine, handsome, elegant
+  notes: "TODO. JMdict seq 1551790. JMdict pos: adj-na."
+  # example: 私たちの学校には立派な図書館があります。 — We have a nice school library. (Tatoeba 167040)
 
 - id: vocab.ryuugakusei
   jlpt: N5
@@ -2511,14 +2566,14 @@
 
 - id: vocab.aa
   jlpt: N5
-  word_type: adverb
+  word_type: interjection
   theme: TODO
   japanese: ああ
   reading: ああ
   romaji: aa
-  english: like that, so
-  notes: "TODO. JMdict seq 2085080. JMdict pos: adv."
-  # example: ある人はこうだと言い、またある人はああだと言う。 — One man says this, another that. (Tatoeba 229847)
+  english: ah!, oh!, alas!, yes
+  notes: "TODO. JMdict seq 1565440. JMdict pos: int."
+  # example: ああ悲しい。 — Ah, me! (Tatoeba 234699)
 
 - id: vocab.abiru
   jlpt: N5
@@ -2700,7 +2755,7 @@
   jlpt: N5
   word_type: noun
   theme: TODO
-  japanese: 瓩
+  japanese: キログラム
   reading: キログラム
   romaji: kiroguramu
   english: kilogram, kilogramme
@@ -2711,7 +2766,7 @@
   jlpt: N5
   word_type: noun
   theme: TODO
-  japanese: 粁
+  japanese: キロメートル
   reading: キロメートル
   romaji: kiromeetoru
   english: kilometer, kilometre
@@ -2821,7 +2876,7 @@
   jlpt: N5
   word_type: noun
   theme: TODO
-  japanese: 宛
+  japanese: ずつ
   reading: ずつ
   romaji: zutsu
   english: apiece, each, at a time, piecemeal
@@ -2865,7 +2920,7 @@
   jlpt: N5
   word_type: noun
   theme: TODO
-  japanese: 然うして
+  japanese: そうして
   reading: そうして
   romaji: soushite
   english: and, like that
@@ -2876,7 +2931,7 @@
   jlpt: N5
   word_type: noun
   theme: TODO
-  japanese: 而して
+  japanese: そして
   reading: そして
   romaji: soshite
   english: and, and then, thus, and now
@@ -3003,6 +3058,17 @@
   english: what kind of, what sort of, what, no matter what (kind of)
   notes: "TODO. JMdict seq 1009330. JMdict pos: adj-pn."
   # example: どんな所がお好きですか。 — What kind of places do you like? (Tatoeba 199407)
+
+- id: vocab.nai
+  jlpt: N5
+  word_type: i-adj
+  theme: TODO
+  japanese: 無い
+  reading: ない
+  romaji: nai
+  english: nonexistent, not being (there), unowned, not had
+  notes: "TODO. JMdict seq 1529520. JMdict pos: adj-i."
+  # example: ２つの意見に大した差はない。 — There is not much difference between the two opinions. (Tatoeba 235545)
 
 - id: vocab.nado
   jlpt: N5
@@ -3210,16 +3276,6 @@
   english: tobacco, cigarette, cigar, tobacco plant (Nicotiana tabacum)
   notes: "TODO. JMdict seq 1597150. JMdict pos: n."
 
-- id: vocab.mata
-  jlpt: N5
-  word_type: noun
-  theme: TODO
-  japanese: 股
-  reading: また
-  romaji: mata
-  english: groin, thigh, crotch, crutch
-  notes: "TODO. JMdict seq 1267460. JMdict pos: n."
-
 - id: vocab.rei
   jlpt: N5
   word_type: noun
@@ -3280,16 +3336,6 @@
   english: height, stature
   notes: "TODO. JMdict seq 1472650. JMdict pos: n."
 
-- id: vocab.nai
-  jlpt: N5
-  word_type: noun
-  theme: TODO
-  japanese: ない
-  reading: ない
-  romaji: nai
-  english: not
-  notes: "TODO. JMdict seq 2257550. JMdict pos: aux-adj/suf."
-
 - id: vocab.hiragana
   jlpt: N5
   word_type: noun
@@ -3334,28 +3380,17 @@
   jlpt: N5
   word_type: noun
   theme: TODO
-  japanese: 片仮名
+  japanese: カタカナ
   reading: カタカナ
   romaji: katakana
   english: katakana, angular Japanese syllabary used primarily for loanwords
   notes: "TODO. JMdict seq 1511600. JMdict pos: n."
 
-- id: vocab.kakaru
-  jlpt: N5
-  word_type: verb
-  theme: TODO
-  japanese: 架かる
-  reading: かかる
-  romaji: kakaru
-  english: to span, to bridge, to cross, to straddle
-  notes: "TODO. JMdict seq 1193110. JMdict pos: v5r/vi."
-  # example: 池には橋がかかっている。 — There is a bridge over the pond. (Tatoeba 126791)
-
 - id: vocab.osake
   jlpt: N5
   word_type: noun
   theme: TODO
-  japanese: お酒
+  japanese: おさけ
   reading: おさけ
   romaji: osake
   english: alcohol, sake
@@ -3366,7 +3401,7 @@
   jlpt: N5
   word_type: noun
   theme: TODO
-  japanese: お皿
+  japanese: おさら
   reading: おさら
   romaji: osara
   english: plate, dish
@@ -3388,7 +3423,7 @@
   jlpt: N5
   word_type: noun
   theme: TODO
-  japanese: 伯母さん
+  japanese: おばさん
   reading: おばさん
   romaji: obasan
   english: aunt
@@ -3399,37 +3434,17 @@
   jlpt: N5
   word_type: noun
   theme: TODO
-  japanese: 割賦
+  japanese: かっぷ
   reading: かっぷ
   romaji: kappu
   english: allotment, quota, payment in installments, payment in instalments
   notes: "TODO. JMdict seq 1577520. JMdict pos: n."
 
-- id: vocab.tate
-  jlpt: N5
-  word_type: noun
-  theme: TODO
-  japanese: 殺陣
-  reading: たて
-  romaji: tate
-  english: sword fight (in a film, play, etc.), stage combat, fight scene
-  notes: "TODO. JMdict seq 1299150. JMdict pos: n."
-
-- id: vocab.dekiru
-  jlpt: N5
-  word_type: verb
-  theme: TODO
-  japanese: 出切る
-  reading: できる
-  romaji: dekiru
-  english: to be out of, to have no more at hand
-  notes: "TODO. JMdict seq 1339500. JMdict pos: v5r/vt."
-
 - id: vocab.petto
   jlpt: N5
   word_type: noun
   theme: TODO
-  japanese: ＰＥＴ
+  japanese: ペット
   reading: ペット
   romaji: petto
   english: polyethylene terephthalate, PET, positron emission tomography, PET
@@ -3439,27 +3454,17 @@
   jlpt: N5
   word_type: noun
   theme: TODO
-  japanese: ＰＥＮ
+  japanese: ペン
   reading: ペン
   romaji: pen
   english: International Association of Poets, Playwrights, Editors, Essayists and Novelists, PEN
   notes: "TODO. JMdict seq 5000059. JMdict pos: n."
 
-- id: vocab.rippa
-  jlpt: N5
-  word_type: noun
-  theme: TODO
-  japanese: リッパ
-  reading: リッパ
-  romaji: rippa
-  english: seam ripper, ripper (bulldozer attachment), ripper (software), rip saw (machine)
-  notes: "TODO. JMdict seq 2021190. JMdict pos: n."
-
 - id: vocab.watakushi
   jlpt: N5
   word_type: noun
   theme: TODO
-  japanese: 私
+  japanese: わたくし
   reading: わたくし
   romaji: watakushi
   english: I, me, personal (affairs, etc.), private
@@ -3479,7 +3484,7 @@
   jlpt: N5
   word_type: noun
   theme: TODO
-  japanese: 伯父さん
+  japanese: おじさん
   reading: おじさん
   romaji: ojisan
   english: uncle, old man, mister, manybar goatfish (Parupeneus multifasciatus)
@@ -3489,7 +3494,7 @@
   jlpt: N5
   word_type: noun
   theme: TODO
-  japanese: 佳月
+  japanese: かげつ
   reading: かげつ
   romaji: kagetsu
   english: good month, bright moon
@@ -3499,7 +3504,7 @@
   jlpt: N5
   word_type: noun
   theme: TODO
-  japanese: 裁ち
+  japanese: たち
   reading: たち
   romaji: tachi
   english: cutting, cut
@@ -3529,7 +3534,7 @@
   jlpt: N5
   word_type: noun
   theme: TODO
-  japanese: ＮａＮ
+  japanese: ナン
   reading: ナン
   romaji: nan
   english: not a number, NaN
@@ -3539,7 +3544,7 @@
   jlpt: N5
   word_type: noun
   theme: TODO
-  japanese: 俸
+  japanese: ほう
   reading: ほう
   romaji: hou
   english: salary
@@ -3559,7 +3564,7 @@
   jlpt: N5
   word_type: noun
   theme: TODO
-  japanese: 縒り
+  japanese: より
   reading: より
   romaji: yori
   english: twist, ply

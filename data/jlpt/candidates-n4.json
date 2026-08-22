@@ -6,8 +6,8 @@
  "counts": {
   "missingInReference": 751,
   "matchedInJmdict": 707,
-  "uniqueEntries": 661,
-  "emitted": 661
+  "uniqueEntries": 660,
+  "emitted": 660
  },
  "candidates": [
   {
@@ -168,7 +168,7 @@
    "id": "vocab.aji"
   },
   {
-   "written": "亜細亜",
+   "written": "アジア",
    "reading": "アジア",
    "romaji": "ajia",
    "wordType": "noun",
@@ -280,7 +280,7 @@
    "id": "vocab.anaunsaa"
   },
   {
-   "written": "阿弗利加",
+   "written": "アフリカ",
    "reading": "アフリカ",
    "romaji": "afurika",
    "wordType": "noun",
@@ -302,7 +302,7 @@
    "id": "vocab.afurika"
   },
   {
-   "written": "亜米利加",
+   "written": "アメリカ",
    "reading": "アメリカ",
    "romaji": "amerika",
    "wordType": "noun",
@@ -804,7 +804,7 @@
    "id": "vocab.inoru"
   },
   {
-   "written": "居らっしゃる",
+   "written": "いらっしゃる",
    "reading": "いらっしゃる",
    "romaji": "irassharu",
    "wordType": "verb",
@@ -848,6 +848,29 @@
     "open-anki"
    ],
    "id": "vocab.ueru"
+  },
+  {
+   "written": "伺う",
+   "reading": "うかがう",
+   "romaji": "ukagau",
+   "wordType": "verb",
+   "pos": [
+    "v5u",
+    "vt"
+   ],
+   "english": "to call on someone, to call at a place, to pay a visit, to wait on someone",
+   "common": true,
+   "jmdictId": "1305700",
+   "example": {
+    "jpn": "病気のため本日はうかがうことができませんでした。",
+    "eng": "On account of illness, I couldn't call on you today.",
+    "tatoeba": "85264"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "id": "vocab.ukagau"
   },
   {
    "written": "受付",
@@ -1230,7 +1253,7 @@
    "id": "vocab.ootobai"
   },
   {
-   "written": "可笑しい",
+   "written": "おかしい",
    "reading": "おかしい",
    "romaji": "okashii",
    "wordType": "i-adj",
@@ -2174,7 +2197,7 @@
    "id": "vocab.kaji"
   },
   {
-   "written": "瓦斯",
+   "written": "ガス",
    "reading": "ガス",
    "romaji": "gasu",
    "wordType": "noun",
@@ -2508,7 +2531,7 @@
    "id": "vocab.kayou"
   },
   {
-   "written": "硝子",
+   "written": "ガラス",
    "reading": "ガラス",
    "romaji": "garasu",
    "wordType": "noun",
@@ -2914,20 +2937,20 @@
    "id": "vocab.kisoku"
   },
   {
-   "written": "キット",
-   "reading": "キット",
+   "written": "きっと",
+   "reading": "きっと",
    "romaji": "kitto",
-   "wordType": "noun",
+   "wordType": "adverb",
    "pos": [
-    "n"
+    "adv"
    ],
-   "english": "kit",
+   "english": "surely, undoubtedly, almost certainly, most likely (e.g. 90 percent)",
    "common": true,
-   "jmdictId": "1041200",
+   "jmdictId": "1003430",
    "example": {
-    "jpn": "配線を間違えないように注意してキットを組み立てた。",
-    "eng": "I built the kit taking care not to make mistakes in the wiring.",
-    "tatoeba": "121531"
+    "jpn": "でもよー、オラのおとうさんは良い気しねーよ、きっと。",
+    "eng": "But I don't think Dad would like me to.",
+    "tatoeba": "202091"
    },
    "sources": [
     "tanos",
@@ -3388,7 +3411,7 @@
    "id": "vocab.kuraberu"
   },
   {
-   "written": "呉れる",
+   "written": "くれる",
    "reading": "くれる",
    "romaji": "kureru",
    "wordType": "verb",
@@ -3729,7 +3752,7 @@
    "id": "vocab.ko"
   },
   {
-   "written": "斯う",
+   "written": "こう",
    "reading": "こう",
    "romaji": "kou",
    "wordType": "adverb",
@@ -4109,7 +4132,7 @@
    "id": "vocab.komakai"
   },
   {
-   "written": "塵",
+   "written": "ゴミ",
    "reading": "ゴミ",
    "romaji": "gomi",
    "wordType": "noun",
@@ -4176,7 +4199,7 @@
    "id": "vocab.kome"
   },
   {
-   "written": "此れから",
+   "written": "これから",
    "reading": "これから",
    "romaji": "korekara",
    "wordType": "noun",
@@ -4923,7 +4946,7 @@
    "id": "vocab.shitagi"
   },
   {
-   "written": "確り",
+   "written": "しっかり",
    "reading": "しっかり",
    "romaji": "shikkari",
    "wordType": "adverb",
@@ -5981,22 +6004,20 @@
    "id": "vocab.sumu-finish"
   },
   {
-   "written": "修理",
+   "written": "すり",
    "reading": "すり",
    "romaji": "suri",
    "wordType": "noun",
    "pos": [
-    "n",
-    "vs",
-    "vt"
+    "n"
    ],
-   "english": "repair, mending, fixing, servicing",
+   "english": "pickpocket",
    "common": true,
-   "jmdictId": "1332400",
+   "jmdictId": "1567450",
    "example": {
-    "jpn": "その車は修理する価値がない。",
-    "eng": "The car isn't worth repairing.",
-    "tatoeba": "209561"
+    "jpn": "すりは人ごみの中に消えた。",
+    "eng": "The pickpocket disappeared into the crowd.",
+    "tatoeba": "214107"
    },
    "sources": [
     "tanos",
@@ -6212,18 +6233,17 @@
    "written": "そう",
    "reading": "そう",
    "romaji": "sou",
-   "wordType": "na-adj",
+   "wordType": "adverb",
    "pos": [
-    "aux",
-    "adj-na"
+    "adv"
    ],
-   "english": "appearing that, seeming that, looking like, having the appearance of",
+   "english": "in that way, thus, such, so",
    "common": true,
-   "jmdictId": "1006610",
+   "jmdictId": "2137720",
    "example": {
-    "jpn": "まもなく雨が降りそうだ。",
-    "eng": "It is going to rain soon.",
-    "tatoeba": "195298"
+    "jpn": "もう私は大人だから、そうは考えない。",
+    "eng": "Now that I'm a grownup, I think otherwise.",
+    "tatoeba": "194183"
    },
    "sources": [
     "tanos",
@@ -6346,7 +6366,7 @@
    "id": "vocab.sobo"
   },
   {
-   "written": "其れで",
+   "written": "それで",
    "reading": "それで",
    "romaji": "sorede",
    "wordType": "noun",
@@ -6368,7 +6388,7 @@
    "id": "vocab.sorede"
   },
   {
-   "written": "其れに",
+   "written": "それに",
    "reading": "それに",
    "romaji": "soreni",
    "wordType": "noun",
@@ -6927,7 +6947,7 @@
    "id": "vocab.tanoshimu"
   },
   {
-   "written": "偶に",
+   "written": "たまに",
    "reading": "たまに",
    "romaji": "tamani",
    "wordType": "adverb",
@@ -7109,7 +7129,7 @@
    "id": "vocab.chikara"
   },
   {
-   "written": "些とも",
+   "written": "ちっとも",
    "reading": "ちっとも",
    "romaji": "chittomo",
    "wordType": "adverb",
@@ -7404,7 +7424,7 @@
    "id": "vocab.tsuma"
   },
   {
-   "written": "積もり",
+   "written": "つもり",
    "reading": "つもり",
    "romaji": "tsumori",
    "wordType": "noun",
@@ -7807,7 +7827,7 @@
    "id": "vocab.dougu"
   },
   {
-   "written": "到頭",
+   "written": "とうとう",
    "reading": "とうとう",
    "romaji": "toutou",
    "wordType": "adverb",
@@ -8288,7 +8308,7 @@
    "id": "vocab.nageru"
   },
   {
-   "written": "為さる",
+   "written": "なさる",
    "reading": "なさる",
    "romaji": "nasaru",
    "wordType": "verb",
@@ -8333,7 +8353,7 @@
    "id": "vocab.narubeku"
   },
   {
-   "written": "成る程",
+   "written": "なるほど",
    "reading": "なるほど",
    "romaji": "naruhodo",
    "wordType": "interjection",
@@ -8833,6 +8853,28 @@
    "id": "vocab.basho"
   },
   {
+   "written": "筈",
+   "reading": "はず",
+   "romaji": "hazu",
+   "wordType": "noun",
+   "pos": [
+    "aux"
+   ],
+   "english": "should (be), bound (to be), expected (to be), must (be)",
+   "common": true,
+   "jmdictId": "1476430",
+   "example": {
+    "jpn": "その飛行機は今ごろは関西空港に当然着いているはずだ。",
+    "eng": "The plane should have arrived at Kansai Airport by now.",
+    "tatoeba": "237397"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "id": "vocab.hazu"
+  },
+  {
    "written": "恥ずかしい",
    "reading": "はずかしい",
    "romaji": "hazukashii",
@@ -9174,6 +9216,28 @@
    "id": "vocab.hikidashi"
   },
   {
+   "written": "髭",
+   "reading": "ひげ",
+   "romaji": "hige",
+   "wordType": "noun",
+   "pos": [
+    "n"
+   ],
+   "english": "moustache, mustache, beard, whiskers",
+   "common": true,
+   "jmdictId": "1601810",
+   "example": {
+    "jpn": "お父さんがバスルームでひげを剃っている。",
+    "eng": "Dad is shaving in the bathroom.",
+    "tatoeba": "226759"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "id": "vocab.hige"
+  },
+  {
    "written": "飛行場",
    "reading": "ひこうじょう",
    "romaji": "hikoujou",
@@ -9423,7 +9487,7 @@
    "id": "vocab.hirou"
   },
   {
-   "written": "ＦＡＸ",
+   "written": "ファックス",
    "reading": "ファックス",
    "romaji": "fakkusu",
    "wordType": "noun",
@@ -10624,6 +10688,28 @@
    "id": "vocab.mousu"
   },
   {
+   "written": "若し",
+   "reading": "もし",
+   "romaji": "moshi",
+   "wordType": "adverb",
+   "pos": [
+    "adv"
+   ],
+   "english": "if, in case, supposing",
+   "common": true,
+   "jmdictId": "1012500",
+   "example": {
+    "jpn": "彼を批判する人は、もしあってもごくわずかさ。",
+    "eng": "Few, if any, will criticize him.",
+    "tatoeba": "95789"
+   },
+   "sources": [
+    "tanos",
+    "open-anki"
+   ],
+   "id": "vocab.moshi"
+  },
+  {
    "written": "勿論",
    "reading": "もちろん",
    "romaji": "mochiron",
@@ -10874,7 +10960,7 @@
    "id": "vocab.yaseru"
   },
   {
-   "written": "漸と",
+   "written": "やっと",
    "reading": "やっと",
    "romaji": "yatto",
    "wordType": "adverb",
@@ -11696,20 +11782,20 @@
    "id": "vocab.wareru"
   },
   {
-   "written": "あ",
-   "reading": "あ",
+   "written": "あ〜",
+   "reading": "あ〜",
    "romaji": "a",
    "wordType": "interjection",
    "pos": [
     "int"
    ],
-   "english": "ah, oh, hey!",
+   "english": "ah!, oh!, alas!, yes",
    "common": true,
-   "jmdictId": "2394370",
+   "jmdictId": "1565440",
    "example": {
-    "jpn": "あっ、いけない！忘れるところだった！",
-    "eng": "Oh, no! I almost forgot!",
-    "tatoeba": "234348"
+    "jpn": "ああ悲しい。",
+    "eng": "Ah, me!",
+    "tatoeba": "234699"
    },
    "sources": [
     "tanos",
@@ -11897,7 +11983,7 @@
    "id": "vocab.ippai-one-cup"
   },
   {
-   "written": "ＩＮ",
+   "written": "イン",
    "reading": "イン",
    "romaji": "in",
    "wordType": "noun",
@@ -11916,28 +12002,6 @@
     "open-anki"
    ],
    "id": "vocab.in"
-  },
-  {
-   "written": "伺う",
-   "reading": "うかがう",
-   "romaji": "ukagau",
-   "wordType": "verb",
-   "pos": [
-    "v5u",
-    "vt"
-   ],
-   "english": "to call on someone, to call at a place, to pay a visit, to wait on someone",
-   "common": true,
-   "jmdictId": "1305700",
-   "example": {
-    "jpn": "病気のため本日はうかがうことができませんでした。",
-    "eng": "On account of illness, I couldn't call on you today.",
-    "tatoeba": "85264"
-   },
-   "sources": [
-    "open-anki"
-   ],
-   "id": "vocab.ukagau-call-on"
   },
   {
    "written": "嘘",
@@ -12581,7 +12645,7 @@
    "id": "vocab.koutougakkou"
   },
   {
-   "written": "御座います",
+   "written": "ございます",
    "reading": "ございます",
    "romaji": "gozaimasu",
    "wordType": "noun",
@@ -13790,7 +13854,7 @@
    "id": "vocab.haiken"
   },
   {
-   "written": "許り",
+   "written": "ばかり",
    "reading": "ばかり",
    "romaji": "bakari",
    "wordType": "noun",
@@ -13988,7 +14052,7 @@
    "id": "vocab.majime"
   },
   {
-   "written": "儘",
+   "written": "まま",
    "reading": "まま",
    "romaji": "mama",
    "wordType": "noun",
@@ -14054,7 +14118,7 @@
    "id": "vocab.mottomo"
   },
   {
-   "written": "矢っ張り",
+   "written": "やっぱり",
    "reading": "やっぱり",
    "romaji": "yappari",
    "wordType": "adverb",
@@ -14075,7 +14139,7 @@
    "id": "vocab.yappari"
   },
   {
-   "written": "矢張り",
+   "written": "やはり",
    "reading": "やはり",
    "romaji": "yahari",
    "wordType": "adverb",
@@ -14325,7 +14389,7 @@
    "id": "vocab.nikaidate"
   },
   {
-   "written": "吃驚",
+   "written": "びっくり",
    "reading": "びっくり",
    "romaji": "bikkuri",
    "wordType": "verb",
@@ -14344,30 +14408,7 @@
    "id": "vocab.bikkuri"
   },
   {
-   "written": "窺う",
-   "reading": "うかがう",
-   "romaji": "ukagau",
-   "wordType": "verb",
-   "pos": [
-    "v5u",
-    "vt"
-   ],
-   "english": "to peep (through), to peek, to examine (esp. covertly), to await (one's chance)",
-   "common": false,
-   "jmdictId": "1172230",
-   "example": {
-    "jpn": "彼女の悲しそうな顔には哀願の様子がうかがえる。",
-    "eng": "There is a look of appeal on her sad face.",
-    "tatoeba": "94060"
-   },
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "id": "vocab.ukagau-peep"
-  },
-  {
-   "written": "都",
+   "written": "と",
    "reading": "と",
    "romaji": "to",
    "wordType": "noun",
@@ -14389,31 +14430,7 @@
    "id": "vocab.to"
   },
   {
-   "written": "卑下",
-   "reading": "ひげ",
-   "romaji": "hige",
-   "wordType": "noun",
-   "pos": [
-    "n",
-    "vs",
-    "vt"
-   ],
-   "english": "self-abasement, self-depreciation, humility",
-   "common": false,
-   "jmdictId": "1482700",
-   "example": {
-    "jpn": "卑下も自慢のうち。",
-    "eng": "Too much humility is pride.",
-    "tatoeba": "121160"
-   },
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "id": "vocab.hige"
-  },
-  {
-   "written": "お出でになる",
+   "written": "おいでになる",
    "reading": "おいでになる",
    "romaji": "oideninaru",
    "wordType": "noun",
@@ -14436,7 +14453,7 @@
    "id": "vocab.oideninaru"
   },
   {
-   "written": "お見舞い",
+   "written": "おみまい",
    "reading": "おみまい",
    "romaji": "omimai",
    "wordType": "noun",
@@ -14458,7 +14475,7 @@
    "id": "vocab.omimai"
   },
   {
-   "written": "もう直ぐ",
+   "written": "もうすぐ",
    "reading": "もうすぐ",
    "romaji": "mousugu",
    "wordType": "noun",
@@ -14481,7 +14498,7 @@
    "id": "vocab.mousugu"
   },
   {
-   "written": "家",
+   "written": "か",
    "reading": "か",
    "romaji": "ka",
    "wordType": "noun",
@@ -14502,7 +14519,7 @@
    "id": "vocab.ka"
   },
   {
-   "written": "軒",
+   "written": "けん",
    "reading": "けん",
    "romaji": "ken",
    "wordType": "counter",
@@ -14524,7 +14541,7 @@
    "id": "vocab.ken"
   },
   {
-   "written": "好く",
+   "written": "すく",
    "reading": "すく",
    "romaji": "suku",
    "wordType": "verb",
@@ -14546,7 +14563,7 @@
    "id": "vocab.suku-like"
   },
   {
-   "written": "代",
+   "written": "だい",
    "reading": "だい",
    "romaji": "dai",
    "wordType": "noun",
@@ -14568,7 +14585,7 @@
    "id": "vocab.dai-charge"
   },
   {
-   "written": "お陰",
+   "written": "おかげ",
    "reading": "おかげ",
    "romaji": "okage",
    "wordType": "noun",
@@ -14590,7 +14607,7 @@
    "id": "vocab.okage"
   },
   {
-   "written": "お子さん",
+   "written": "おこさん",
    "reading": "おこさん",
    "romaji": "okosan",
    "wordType": "noun",
@@ -14611,7 +14628,7 @@
    "id": "vocab.okosan"
   },
   {
-   "written": "泳ぎ方",
+   "written": "およぎかた",
    "reading": "およぎかた",
    "romaji": "oyogikata",
    "wordType": "noun",
@@ -14632,7 +14649,7 @@
    "id": "vocab.oyogikata"
   },
   {
-   "written": "降り出す",
+   "written": "ふりだす",
    "reading": "ふりだす",
    "romaji": "furidasu",
    "wordType": "verb",
@@ -14654,25 +14671,7 @@
    "id": "vocab.furidasu"
   },
   {
-   "written": "ハズ",
-   "reading": "ハズ",
-   "romaji": "hazu",
-   "wordType": "noun",
-   "pos": [
-    "n"
-   ],
-   "english": "husband, hubby",
-   "common": false,
-   "jmdictId": "2463700",
-   "example": null,
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "id": "vocab.hazu"
-  },
-  {
-   "written": "パソ婚",
+   "written": "パソこん",
    "reading": "パソこん",
    "romaji": "pasokon",
    "wordType": "noun",
@@ -14690,25 +14689,7 @@
    "id": "vocab.pasokon"
   },
   {
-   "written": "もし",
-   "reading": "もし",
-   "romaji": "moshi",
-   "wordType": "interjection",
-   "pos": [
-    "int"
-   ],
-   "english": "excuse me! (when calling out to someone)",
-   "common": false,
-   "jmdictId": "2607730",
-   "example": null,
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "id": "vocab.moshi"
-  },
-  {
-   "written": "お祭り",
+   "written": "おまつり",
    "reading": "おまつり",
    "romaji": "omatsuri",
    "wordType": "noun",
@@ -14726,7 +14707,7 @@
    "id": "vocab.omatsuri"
   },
   {
-   "written": "各校",
+   "written": "かっこう",
    "reading": "かっこう",
    "romaji": "kakkou",
    "wordType": "noun",
@@ -14777,7 +14758,7 @@
    "id": "vocab.koto-particle-indicating"
   },
   {
-   "written": "建て",
+   "written": "だて",
    "reading": "だて",
    "romaji": "date",
    "wordType": "noun",
@@ -14794,7 +14775,7 @@
    "id": "vocab.date"
   },
   {
-   "written": "町",
+   "written": "ちょう",
    "reading": "ちょう",
    "romaji": "chou",
    "wordType": "noun",

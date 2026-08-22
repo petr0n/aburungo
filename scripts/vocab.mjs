@@ -87,9 +87,17 @@ function lookupFromDict(wanted) {
         const hit = {
           id: e.id,
           kanji,
+          // The headword to show. A kanji form JMdict does not flag common is
+          // usually one nobody writes: 嗚呼 for ああ, 掏摸 for すり. Those belong
+          // in the dictionary, not at the top of a card.
+          written: (e.kanji ?? []).find((k) => k.common)?.text ?? r,
           kana: r,
           pos: sense?.partOfSpeech ?? [],
           glosses: (e.sense ?? []).flatMap((s) => (s.gloss ?? []).map((g) => g.text)).slice(0, 4),
+          // Disambiguation reads every sense; the display keeps four. Scoring on
+          // the truncated list picked 挙げる over 上げる for "to give", because
+          // 上げる carries that sense below the cut.
+          allGlosses: (e.sense ?? []).flatMap((s) => (s.gloss ?? []).map((g) => g.text)),
           common: [...(e.kana ?? []), ...(e.kanji ?? [])].some((f) => f.common),
           example: example
             ? {
@@ -204,6 +212,40 @@ export function assignIds(cards, taken = new Set()) {
   return cards;
 }
 
+/**
+ * The reference lists write a fair number of entries in kana only -- はく glossed
+ * "to put on (items below your waist)" -- and a kana form cannot pick between
+ * 履く, 穿く and 掃く. Written-form matching has nothing to work with there, so
+ * fall back to the meaning the list itself carries: the entry whose JMdict
+ * glosses share the most words with it. Without this the queue proposed 掃く,
+ * to sweep, for the word the list means as "to wear".
+ */
+const STOPWORDS = new Set(["to", "a", "an", "the", "of", "on", "in", "e", "g", "etc", "or", "and", "be", "it", "one", "s"]);
+const glossWords = (english) =>
+  new Set(
+    (english ?? "")
+      .toLowerCase()
+      .split(/[^a-z]+/)
+      .filter((w) => w.length > 1 && !STOPWORDS.has(w)),
+  );
+
+export function bestByGloss(hits, english) {
+  const want = glossWords(english);
+  if (!want.size) return undefined;
+  let best;
+  let bestScore = 0;
+  for (const h of hits) {
+    const mine = glossWords(h.allGlosses.join(" "));
+    let score = 0;
+    for (const w of want) if (mine.has(w)) score++;
+    if (score > bestScore || (score === bestScore && score > 0 && !best?.common && h.common)) {
+      best = h;
+      bestScore = score;
+    }
+  }
+  return bestScore > 0 ? best : undefined;
+}
+
 const yamlStr = (s) => (/[:#'"\n]/.test(s) ? JSON.stringify(s) : s);
 
 function candidates(level, opts) {
@@ -227,16 +269,22 @@ function candidates(level, opts) {
     // shares the kanji 赤 and sorts earlier in the dictionary. Copper, not red.
     // So: exact written form wins, loose compatibility is only the fallback.
     // Same family of bug as 晩 masking ～番 in the coverage report.
+    // A kana-written reference row has no written form to match on, and
+    // writtenCompatible waves everything through when either side lacks kanji,
+    // so it would take whichever homophone the dictionary happened to list
+    // first. Ask the gloss instead before falling back to that.
     const hit =
       hits.find((h) => h.kanji.includes(m.written)) ??
-      (m.written === m.reading ? hits.find((h) => h.kanji.length === 0) : undefined) ??
-      hits.find((h) => h.kanji.some((k) => writtenCompatible(m.written, k))) ??
+      (m.written === m.reading
+        ? bestByGloss(hits, m.english) ?? hits.find((h) => h.kanji.length === 0)
+        : hits.find((h) => h.kanji.some((k) => writtenCompatible(m.written, k)))) ??
+      bestByGloss(hits, m.english) ??
       hits[0];
     if (!hit) continue;
     if (opts.common && !hit.common) continue;
     if (opts.withExample && !hit.example) continue;
     out.push({
-      written: hit.kanji[0] ?? hit.kana,
+      written: hit.written,
       reading: hit.kana,
       romaji: roughRomaji(hit.kana),
       wordType: wordTypeFor(hit.pos),
