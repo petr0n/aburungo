@@ -1,28 +1,6 @@
 # Authoring queue for N5 -- paste into a lesson's vocabulary file and edit.
 # theme and notes are TODO by design. Source: JMdict for Applications 3.6.2.
 
-- id: vocab.ao
-  jlpt: N5
-  word_type: noun
-  theme: TODO
-  japanese: 青
-  reading: あお
-  romaji: ao
-  english: blue, azure, green, green light (traffic)
-  notes: "TODO. JMdict seq 1381380. JMdict pos: n/adj-no."
-  # example: 信号が青に変わったわよ。 — The traffic light turned green. (Tatoeba 145720)
-
-- id: vocab.aka
-  jlpt: N5
-  word_type: noun
-  theme: TODO
-  japanese: 赤
-  reading: あか
-  romaji: aka
-  english: red, crimson, scarlet, red-containing colour (e.g. brown, pink, orange)
-  notes: "TODO. JMdict seq 2013900. JMdict pos: n/adj-no."
-  # example: 信号機が赤の間は道路を渡るな。 — Don't cross the road when the signal is red. (Tatoeba 145704)
-
 - id: vocab.ageru
   jlpt: N5
   word_type: verb
@@ -210,17 +188,6 @@
   notes: "TODO. JMdict seq 1378690. JMdict pos: v1/vi."
   # example: あなたは何座生まれですか。 — What sign were you born under? (Tatoeba 232211)
 
-- id: vocab.uwagi
-  jlpt: N5
-  word_type: noun
-  theme: TODO
-  japanese: 上着
-  reading: うわぎ
-  romaji: uwagi
-  english: coat, jacket, outerwear, top
-  notes: "TODO. JMdict seq 1580340. JMdict pos: n."
-  # example: 男性の方は上着を着用してください。 — Jackets are requested for men. (Tatoeba 127151)
-
 - id: vocab.e
   jlpt: N5
   word_type: noun
@@ -287,17 +254,6 @@
   notes: "TODO. JMdict seq 1412890. JMdict pos: adj-pn."
   # example: アメリカ人の中には大きな借金を抱えている人がいる。 — Some Americans have grave debts. (Tatoeba 230118)
 
-- id: vocab.oozei
-  jlpt: N5
-  word_type: noun
-  theme: TODO
-  japanese: 大勢
-  reading: おおぜい
-  romaji: oozei
-  english: crowd of people, great number of people, in great numbers
-  notes: "TODO. JMdict seq 1414220. JMdict pos: n/adj-no."
-  # example: そこには大勢の人がいた。 — There was a large crowd there. (Tatoeba 213674)
-
 - id: vocab.otearai
   jlpt: N5
   word_type: noun
@@ -308,28 +264,6 @@
   english: toilet, restroom, lavatory, bathroom
   notes: "TODO. JMdict seq 1002100. JMdict pos: n."
   # example: お手洗いはどこですか。 — Where's the restroom? (Tatoeba 227063)
-
-- id: vocab.otoko
-  jlpt: N5
-  word_type: noun
-  theme: TODO
-  japanese: 男
-  reading: おとこ
-  romaji: otoko
-  english: man, male, fellow, guy
-  notes: "TODO. JMdict seq 1419990. JMdict pos: n/n-pref."
-  # example: 彼は多分よい男であるかも知れない。 — He may be a good man for all I know. (Tatoeba 102560)
-
-- id: vocab.otokonoko
-  jlpt: N5
-  word_type: noun
-  theme: TODO
-  japanese: 男の子
-  reading: おとこのこ
-  romaji: otokonoko
-  english: boy, son, baby boy, young man
-  notes: "TODO. JMdict seq 1420010. JMdict pos: exp/n."
-  # example: あのハンサムな男の子を見て。 — Look at that good-looking boy. (Tatoeba 231277)
 
 - id: vocab.otona
   jlpt: N5
@@ -375,28 +309,6 @@
   notes: "TODO. JMdict seq 1183720. JMdict pos: n."
   # example: あの音楽は彼の気にさわる。 — That music gets on his nerves. (Tatoeba 231187)
 
-- id: vocab.onna
-  jlpt: N5
-  word_type: noun
-  theme: TODO
-  japanese: 女
-  reading: おんな
-  romaji: onna
-  english: woman, female, female lover, girlfriend
-  notes: "TODO. JMdict seq 1344930. JMdict pos: n/n-pref."
-  # example: 彼が戻ってきた時には、女は歩み去っていた。 — When he came back, the woman had walked off. (Tatoeba 119438)
-
-- id: vocab.onnanoko
-  jlpt: N5
-  word_type: noun
-  theme: TODO
-  japanese: 女の子
-  reading: おんなのこ
-  romaji: onnanoko
-  english: girl, daughter, baby girl, young woman
-  notes: "TODO. JMdict seq 1344970. JMdict pos: exp/n."
-  # example: その女の子達は、とても忙しい。 — Those girls are very busy. (Tatoeba 209395)
-
 - id: vocab.gaikoku
   jlpt: N5
   word_type: noun
@@ -440,28 +352,6 @@
   english: to take (a resource, e.g. time or money), to hang, to come into view, to arrive
   notes: "TODO. JMdict seq 1207590. JMdict pos: v5r/vi."
   # example: あれだけのコインを収集するのにどれだけの年月がかかりましたか。 — How long did it take you to collect so many coins? (Tatoeba 229759)
-
-- id: vocab.kakeru
-  jlpt: N5
-  word_type: verb
-  theme: TODO
-  japanese: 掛ける
-  reading: かける
-  romaji: kakeru
-  english: to hang up (e.g. a coat, a picture on the wall), to let hang, to suspend (from), to hoist (e.g. sail)
-  notes: "TODO. JMdict seq 1207610. JMdict pos: v1/vt."
-  # example: コートをハンガーに掛けておきなさい。 — Put your coat on a hanger. (Tatoeba 224960)
-
-- id: vocab.kasa
-  jlpt: N5
-  word_type: noun
-  theme: TODO
-  japanese: 傘
-  reading: かさ
-  romaji: kasa
-  english: umbrella, parasol, something shaped like an umbrella or a conical hat, shade (of a lamp)
-  notes: "TODO. JMdict seq 1301940. JMdict pos: n."
-  # example: タクシーに傘を忘れてしまった。 — I left my umbrella in the cab. (Tatoeba 203724)
 
 - id: vocab.kata
   jlpt: N5
@@ -518,17 +408,6 @@
   notes: "TODO. JMdict seq 1038350. JMdict pos: n."
   # example: おじさんがぼくにカメラをくれました。 — My uncle gave me a camera. (Tatoeba 227734)
 
-- id: vocab.karada
-  jlpt: N5
-  word_type: noun
-  theme: TODO
-  japanese: 体
-  reading: からだ
-  romaji: karada
-  english: body, torso, trunk, build
-  notes: "TODO. JMdict seq 1409140. JMdict pos: n."
-  # example: カメレオンは周りの色に合わせて体色を変えることができる。 — The chameleon can take on the colors of its background. (Tatoeba 226205)
-
 - id: vocab.karendaa
   jlpt: N5
   word_type: noun
@@ -550,17 +429,6 @@
   english: kanji, Chinese character
   notes: "TODO. JMdict seq 1213170. JMdict pos: n."
   # example: 漢字を書くときは点やはらいに気をつけて、なるべく早くていねいに書きましょう。 — When drawing kanji be careful of dots and sweeps, write as carefully and quickly as possible. (Tatoeba 76263)
-
-- id: vocab.kiiro
-  jlpt: N5
-  word_type: noun
-  theme: TODO
-  japanese: 黄色
-  reading: きいろ
-  romaji: kiiro
-  english: yellow, amber
-  notes: "TODO. JMdict seq 1576760. JMdict pos: n/adj-no/adj-na."
-  # example: 床は緑色に塗られていたが、一方壁は黄色だった。 — The floor was painted green, while the walls were yellow. (Tatoeba 146465)
 
 - id: vocab.kita
   jlpt: N5
@@ -639,7 +507,7 @@
   notes: "TODO. JMdict seq 1249960. JMdict pos: n."
   # example: ライト兄弟はエンジンで動く飛行機を飛ばすことに成功した。 — The Wright brothers succeeded in flying an airplane driven by an engine. (Tatoeba 192659)
 
-- id: vocab.kiru-cut
+- id: vocab.kiru
   jlpt: N5
   word_type: verb
   theme: TODO
@@ -649,17 +517,6 @@
   english: to cut, to cut through, to perform (surgery), to sever (connections, ties)
   notes: "TODO. JMdict seq 1384830. JMdict pos: v5r/vt."
   # example: ２．大根は拍子木に切る。 — 2. Cut the daikon into long sticks. (Tatoeba 235603)
-
-- id: vocab.kiru-wear
-  jlpt: N5
-  word_type: verb
-  theme: TODO
-  japanese: 着る
-  reading: きる
-  romaji: kiru
-  english: to wear (from the shoulders down), to put on, to take (the blame, responsibility), to bear
-  notes: "TODO. JMdict seq 1423000. JMdict pos: v1/vt."
-  # example: 「あの赤い服を着るのはよしなさい」「なぜいけないの」 — "You had better not wear the red dress." "Why not?" (Tatoeba 237263)
 
 - id: vocab.ku
   jlpt: N5
@@ -682,17 +539,6 @@
   english: medicine, pharmaceuticals, (legal) drugs, pill
   notes: "TODO. JMdict seq 1538160. JMdict pos: n."
   # example: この薬を飲めば、あなたは頭痛が治るでしょう。 — The medicine will cure your headache. (Tatoeba 219263)
-
-- id: vocab.kutsushita
-  jlpt: N5
-  word_type: noun
-  theme: TODO
-  japanese: 靴下
-  reading: くつした
-  romaji: kutsushita
-  english: socks, sock, stockings, stocking
-  notes: "TODO. JMdict seq 1246740. JMdict pos: n."
-  # example: この靴下の片方はどこだ。 — Where is the mate to this sock? (Tatoeba 222242)
 
 - id: vocab.kumoru
   jlpt: N5
@@ -726,17 +572,6 @@
   english: gram, gramme
   notes: "TODO. JMdict seq 1046810. JMdict pos: n."
   # example: このジャムの正味重量は２００グラムです。 — The net weight of this jam is 200 grams. (Tatoeba 223687)
-
-- id: vocab.kuro
-  jlpt: N5
-  word_type: noun
-  theme: TODO
-  japanese: 黒
-  reading: くろ
-  romaji: kuro
-  english: black, black stone, guilt, guilty person
-  notes: "TODO. JMdict seq 1287410. JMdict pos: n/adj-no."
-  # example: ２匹犬を飼っているが、１匹は白でもう１匹は黒だ。 — I have two dogs. One is white and the other black. (Tatoeba 235399)
 
 - id: vocab.keikan
   jlpt: N5
@@ -792,17 +627,6 @@
   english: voice, singing (of a bird), chirping (of an insect), hoot
   notes: "TODO. JMdict seq 1380440. JMdict pos: n."
   # example: あなたの声が聞けてうれしいわ。 — I am happy to hear your voice. (Tatoeba 1142225)
-
-- id: vocab.kooto
-  jlpt: N5
-  word_type: noun
-  theme: TODO
-  japanese: コート
-  reading: コート
-  romaji: kooto
-  english: coat, coating
-  notes: "TODO. JMdict seq 1049000. JMdict pos: n."
-  # example: あなたが家を出た後で、私はあなたのコートに気づきました。 — I found your coat after you left the house. (Tatoeba 234118)
 
 - id: vocab.kocchi
   jlpt: N5
@@ -1002,17 +826,6 @@
   notes: "TODO. JMdict seq 1318610. JMdict pos: pn."
   # example: 矛盾する報告を受けて、その役員は自分の立場を考え直した。 — Conflicting reports prompted the director to reconsider her position. (Tatoeba 80873)
 
-- id: vocab.shimeru-tie
-  jlpt: N5
-  word_type: verb
-  theme: TODO
-  japanese: 締める
-  reading: しめる
-  romaji: shimeru
-  english: to tie, to fasten, to tighten, to wear (necktie, belt)
-  notes: "TODO. JMdict seq 1436570. JMdict pos: v1/vt."
-  # example: 離陸の際は、シートベルトを締めなくてはならない。 — You must fasten your seat belts during take-off. (Tatoeba 78324)
-
 - id: vocab.shashin
   jlpt: N5
   word_type: noun
@@ -1023,17 +836,6 @@
   english: photograph, photo, picture, photography
   notes: "TODO. JMdict seq 1321900. JMdict pos: n."
   # example: あなたに何枚かの写真を見せましょう。 — I will show you some pictures. (Tatoeba 233720)
-
-- id: vocab.shatsu
-  jlpt: N5
-  word_type: noun
-  theme: TODO
-  japanese: シャツ
-  reading: シャツ
-  romaji: shatsu
-  english: shirt (undergarment), undershirt, singlet, shirt (outerwear; usu. with collar and buttons)
-  notes: "TODO. JMdict seq 1061520. JMdict pos: n."
-  # example: あなたのシャツは洗う必要がある。 — Your shirts need to be washed. (Tatoeba 233523)
 
 - id: vocab.jugyou
   jlpt: N5
@@ -1056,17 +858,6 @@
   english: skillful, skilled, proficient, good (at)
   notes: "TODO. JMdict seq 1353320. JMdict pos: adj-na/n."
   # example: あなたは上手にバスケットボールができますか。 — Do you play basketball well? (Tatoeba 231837)
-
-- id: vocab.joubu
-  jlpt: N5
-  word_type: na-adj
-  theme: TODO
-  japanese: 丈夫
-  reading: じょうぶ
-  romaji: joubu
-  english: healthy, robust, strong, solid
-  notes: "TODO. JMdict seq 1580480. JMdict pos: adj-na."
-  # example: 彼は丈夫だったそうです。 — He is said to have been strong. (Tatoeba 103983)
 
 - id: vocab.shokudou
   jlpt: N5
@@ -1100,17 +891,6 @@
   english: to breathe in, to inhale, to smoke (a cigarette, etc.), to suck
   notes: "TODO. JMdict seq 1228260. JMdict pos: v5u/vt."
   # example: 教室でどうどうとタバコをすう高校生たちとそれを注意できない教師たちは罰を受けることになります。 — High school students who flagrantly smoke in class and the teachers who can't caution them will be punished. (Tatoeba 76227)
-
-- id: vocab.sukaato
-  jlpt: N5
-  word_type: noun
-  theme: TODO
-  japanese: スカート
-  reading: スカート
-  romaji: sukaato
-  english: skirt
-  notes: "TODO. JMdict seq 1067470. JMdict pos: n."
-  # example: あなたのサロン風のスカートが好きです。 — I like your sarong style skirt. (Tatoeba 233525)
 
 - id: vocab.sukunai
   jlpt: N5
@@ -1156,17 +936,6 @@
   notes: "TODO. JMdict seq 1073210. JMdict pos: n."
   # example: ところであなたはどんなスポーツが好きですか。 — Well, what sports do you like? (Tatoeba 200846)
 
-- id: vocab.zubon
-  jlpt: N5
-  word_type: noun
-  theme: TODO
-  japanese: ズボン
-  reading: ズボン
-  romaji: zubon
-  english: trousers, pants
-  notes: "TODO. JMdict seq 1074260. JMdict pos: n."
-  # example: あなたは私のズボンをどうしたのですか。 — What did you do with my pants? (Tatoeba 231957)
-
 - id: vocab.seito
   jlpt: N5
   word_type: noun
@@ -1177,17 +946,6 @@
   english: pupil, student, schoolchild
   notes: "TODO. JMdict seq 1379380. JMdict pos: n."
   # example: あなたは何と賢い生徒なのでしょう。 — What a clever student you are! (Tatoeba 232241)
-
-- id: vocab.seetaa
-  jlpt: N5
-  word_type: noun
-  theme: TODO
-  japanese: セーター
-  reading: セーター
-  romaji: seetaa
-  english: sweater, jumper
-  notes: "TODO. JMdict seq 1074270. JMdict pos: n."
-  # example: このセーターは洗っても大丈夫です。 — This sweater will stand washing. (Tatoeba 223605)
 
 - id: vocab.sebiro
   jlpt: N5
@@ -1684,17 +1442,6 @@
   notes: "TODO. JMdict seq 1436130. JMdict pos: n."
   # example: 私たちの庭には２本の桜の木があります。 — Our garden has two cherry trees. (Tatoeba 166847)
 
-- id: vocab.nugu
-  jlpt: N5
-  word_type: verb
-  theme: TODO
-  japanese: 脱ぐ
-  reading: ぬぐ
-  romaji: nugu
-  english: to take off (clothes, shoes, etc.), to undress
-  notes: "TODO. JMdict seq 1416400. JMdict pos: v5g/vt."
-  # example: ここで靴を脱がなければなりませんか。 — Do I have to take off my shoes here? (Tatoeba 224569)
-
 - id: vocab.nurui
   jlpt: N5
   word_type: i-adj
@@ -1705,17 +1452,6 @@
   english: lukewarm, tepid, lenient
   notes: "TODO. JMdict seq 1183300. JMdict pos: adj-i."
   # example: このコーヒーはぬるいです。 — This coffee is not hot enough. (Tatoeba 223801)
-
-- id: vocab.nekutai
-  jlpt: N5
-  word_type: noun
-  theme: TODO
-  japanese: ネクタイ
-  reading: ネクタイ
-  romaji: nekutai
-  english: tie, necktie
-  notes: "TODO. JMdict seq 1092820. JMdict pos: n."
-  # example: このネクタイはあなたのシャツによく似合ってますよ。 — This tie goes with your shirt. (Tatoeba 223403)
 
 - id: vocab.neko
   jlpt: N5
@@ -1738,17 +1474,6 @@
   english: notebook, copy-book, exercise book, note
   notes: "TODO. JMdict seq 1093450. JMdict pos: n."
   # example: 彼女は本の絵をノートに書き移した。 — She transferred the picture in the book to her notebook. (Tatoeba 86681)
-
-- id: vocab.ha
-  jlpt: N5
-  word_type: noun
-  theme: TODO
-  japanese: 歯
-  reading: は
-  romaji: ha
-  english: tooth, teeth, tooth (of a comb, saw, etc.), cog
-  notes: "TODO. JMdict seq 1313000. JMdict pos: n."
-  # example: その赤ちゃんは歯が生えはじめている。 — The baby is cutting his teeth. (Tatoeba 208598)
 
 - id: vocab.paatii
   jlpt: N5
@@ -1782,17 +1507,6 @@
   english: postcard, memo, note, card
   notes: "TODO. JMdict seq 1546590. JMdict pos: n."
   # example: はがきにこの切手を貼って郵便箱に投函しなさい。 — Put this stamp on the postcard and drop it in the mailbox. (Tatoeba 198303)
-
-- id: vocab.haku
-  jlpt: N5
-  word_type: verb
-  theme: TODO
-  japanese: 履く
-  reading: はく
-  romaji: haku
-  english: "to put on (lower-body clothing, e.g. pants, skirt, footwear), to wear, to affix (a sword to one's hip), to affix (a bowstring to a bow)"
-  notes: "TODO. JMdict seq 1607260. JMdict pos: v5k/vt."
-  # example: この靴はきつすぎてはけない。 — These shoes are too tight to get into. (Tatoeba 222263)
 
 - id: vocab.hako
   jlpt: N5
@@ -1837,17 +1551,6 @@
   english: 20 years old, twenty
   notes: "TODO. JMdict seq 1600790. JMdict pos: n."
   # example: 彼女は二十歳だと言ったが、それは嘘だった。 — She said she was twenty years old, which was not true. (Tatoeba 87650)
-
-- id: vocab.hana-nose
-  jlpt: N5
-  word_type: noun
-  theme: TODO
-  japanese: 鼻
-  reading: はな
-  romaji: hana
-  english: nose
-  notes: "TODO. JMdict seq 1486720. JMdict pos: n."
-  # example: 鼻が出ているよ。かみなさい。 — Your nose is running. Blow it. (Tatoeba 85518)
 
 - id: vocab.hanashi
   jlpt: N5
@@ -2047,17 +1750,6 @@
   notes: "TODO. JMdict seq 1370760. JMdict pos: v5k/vi."
   # example: あの日は強い風が吹いていました。 — There was a strong wind that day. (Tatoeba 230511)
 
-- id: vocab.futoi
-  jlpt: N5
-  word_type: i-adj
-  theme: TODO
-  japanese: 太い
-  reading: ふとい
-  romaji: futoi
-  english: fat, thick, deep (of a voice), thick
-  notes: "TODO. JMdict seq 1408180. JMdict pos: adj-i."
-  # example: 彼は太い首をしている。 — He has a thick neck. (Tatoeba 102554)
-
 - id: vocab.furu
   jlpt: N5
   word_type: verb
@@ -2124,17 +1816,6 @@
   notes: "TODO. JMdict seq 1512070. JMdict pos: n."
   # example: 正方形には四つの辺がある。 — A square has four sides. (Tatoeba 142870)
 
-- id: vocab.boushi
-  jlpt: N5
-  word_type: noun
-  theme: TODO
-  japanese: 帽子
-  reading: ぼうし
-  romaji: boushi
-  english: hat, cap, cap (move)
-  notes: "TODO. JMdict seq 1519170. JMdict pos: n."
-  # example: この帽子は１０００円なら安い。 — This hat is cheap at 1000 yen. (Tatoeba 219814)
-
 - id: vocab.boorupen
   jlpt: N5
   word_type: noun
@@ -2167,17 +1848,6 @@
   english: postbox, mailbox, mail box, pillar box
   notes: "TODO. JMdict seq 1125150. JMdict pos: n."
   # example: いったんポストに入れたものは、郵便局の所轄になる。 — Once a thing is posted, it is in the care of the Post Office. (Tatoeba 228885)
-
-- id: vocab.hosoi
-  jlpt: N5
-  word_type: i-adj
-  theme: TODO
-  japanese: 細い
-  reading: ほそい
-  romaji: hosoi
-  english: thin, slender, fine, unlucky
-  notes: "TODO. JMdict seq 1295510. JMdict pos: adj-i."
-  # example: 彼は太っているくせに声は細い。 — His voice is thin even though he is fat. (Tatoeba 102553)
 
 - id: vocab.botan
   jlpt: N5
@@ -2354,17 +2024,6 @@
   english: metre (unit of length), meter, meter, gauge
   notes: "TODO. JMdict seq 1132570. JMdict pos: n."
   # example: １マイルは約１６００メートルにあたる。 — A mile is equal to about 1,600 meters. (Tatoeba 235825)
-
-- id: vocab.megane
-  jlpt: N5
-  word_type: noun
-  theme: TODO
-  japanese: 眼鏡
-  reading: メガネ
-  romaji: megane
-  english: glasses, eyeglasses, spectacles, judgment
-  notes: "TODO. JMdict seq 1577670. JMdict pos: n."
-  # example: 私はメガネがなくては読めない。 — I cannot read without glasses. (Tatoeba 158805)
 
 - id: vocab.mono
   jlpt: N5
@@ -2695,17 +2354,6 @@
   english: storey, story, floor, stairs
   notes: "TODO. JMdict seq 1203020. JMdict pos: n/n-suf."
   # example: それはもう一つ下の階ですよ。 — That's one level down. (Tatoeba 205370)
-
-- id: vocab.kaburu
-  jlpt: N5
-  word_type: verb
-  theme: TODO
-  japanese: 被る
-  reading: かぶる
-  romaji: kaburu
-  english: "to put on (one's head), to wear, to have on, to pull over (one's head)"
-  notes: "TODO. JMdict seq 1484330. JMdict pos: v5r/vt."
-  # example: 「白い帽子をかぶっている男の人は誰ですか」と私は彼女に言った。 — I asked her who the man wearing the white hat was. (Tatoeba 236204)
 
 - id: vocab.garu
   jlpt: N5
@@ -3255,16 +2903,6 @@
   romaji: jibiki
   english: dictionary
   notes: "TODO. JMdict seq 1315140. JMdict pos: n."
-
-- id: vocab.shiro
-  jlpt: N5
-  word_type: noun
-  theme: TODO
-  japanese: 白
-  reading: しろ
-  romaji: shiro
-  english: white, innocence, innocent person, blank space
-  notes: "TODO. JMdict seq 1474900. JMdict pos: n/adj-no."
 
 - id: vocab.tabako
   jlpt: N5

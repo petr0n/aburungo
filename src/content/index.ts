@@ -30,6 +30,7 @@ import describingPhrasesRaw from "./phrases/describing.yaml";
 import aroundTownPhrasesRaw from "./phrases/around-town.yaml";
 import pastTensePhrasesRaw from "./phrases/past-tense.yaml";
 import mealsPhrasesRaw from "./phrases/meals.yaml";
+import peopleClothesPhrasesRaw from "./phrases/people-clothes.yaml";
 
 export const allPhrases: Phrase[] = [
   ...parsePhrases(transitRaw, "phrases/transit.yaml"),
@@ -51,6 +52,7 @@ export const allPhrases: Phrase[] = [
   ...parsePhrases(aroundTownPhrasesRaw, "phrases/around-town.yaml"),
   ...parsePhrases(pastTensePhrasesRaw, "phrases/past-tense.yaml"),
   ...parsePhrases(mealsPhrasesRaw, "phrases/meals.yaml"),
+  ...parsePhrases(peopleClothesPhrasesRaw, "phrases/people-clothes.yaml"),
 ];
 
 /** Lookup helper. O(n), fine for hundreds; reach for a Map if it grows large. */

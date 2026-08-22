@@ -1,0 +1,175 @@
+# Chapter 12 — people and what they wear. Closes Book One.
+#
+# The last cluster the plan named, and the one that finishes the book. The
+# ladder could describe a thing from Chapter 8 and could not say man, woman,
+# shirt, or what colour anything was.
+#
+#   1  men, women, boys, girls   the people words, and why 男 alone is blunt
+#   2  what you wear on top      着る, and wearing as a state
+#   3  and what you pull on      はく and 脱ぐ, and shoes off at the door
+#   4  hat, glasses, tie         one verb per thing worn
+#   5  colour as a thing         赤 next to 赤い, taught five chapters apart
+#   6  build and body            what is left of the body, and 丈夫
+#
+# Three lessons of garments come before the verbs are named as a system, on
+# purpose. 着る／はく／かぶる is the trap every English speaker walks into, and
+# it is not visible until there is enough on the ground to sort.
+#
+# ています carries this chapter. The te-form chapter built it for what you are
+# doing now; here it does the other job it has, the state something is in --
+# 帽子をかぶっています is what someone has on, not what they are in the act of
+# doing. This is the chapter where that pays off.
+#
+# content-source: n/a for this file -- it references vocabulary/people-clothes.yaml
+#   and phrases/people-clothes.yaml, whose own provenance markers apply.
+
+- id: n5.people-who
+  order: 93
+  chapterId: n5.chapter-12
+  situation: People and what they wear
+  title: Men, women, boys, girls
+  canDo: Say who was there
+  wordIds:
+    - vocab.otoko
+    - vocab.onna
+    - vocab.otokonoko
+    - vocab.onnanoko
+    - vocab.oozei
+  phraseIds:
+    - people.who-is-that-man
+    - people.three-girls
+    - people.a-lot-of-people-were-there
+  kanji:
+    - 男
+    - 女
+    - 勢
+  grammarNote: "Five words, and one warning that matters more than any of them. 男 and 女 on their own are blunt — they are the words a police report uses, and pointing at someone with them is not how anyone speaks. Add 人: 男の人, 女の人. That の is the same の you have been joining nouns with since 私の. Children escape the problem entirely, because 男の子 and 女の子 are already built that way — 子 is the one from 子供. Then 大勢, which counts people and nothing else. たくさん would not be wrong for a crowd, but 大勢 is what a native speaker reaches for, and it takes の before the noun: 大勢の人."
+
+- id: n5.people-tops
+  order: 94
+  chapterId: n5.chapter-12
+  situation: People and what they wear
+  title: What you wear on top
+  canDo: Say what someone has on
+  wordIds:
+    - vocab.shatsu
+    - vocab.seetaa
+    - vocab.uwagi
+    - vocab.kooto
+    - vocab.kiru-wear
+  phraseIds:
+    - people.wearing-a-sweater
+    - people.nice-jacket
+    - people.will-you-wear-a-coat
+  kanji: []
+  grammarNote: "着る covers anything that goes on over your shoulders, and it costs you no new kanji: 着 is the character from 着きます, to arrive, and 上着 is simply 上 and 着 together — the upper thing you wear. Now the part that trips people up. セーターを着ます is the moment you put it on. セーターを着ています is what you have on right now, and it is almost always the sentence you want. Wearing is a state in Japanese, not an act, so the ています you built in the asking chapter is doing a second job here: not \"I am in the middle of putting on a sweater\" but \"I have a sweater on\". Three of the four garments are borrowed words, and シャツ is the one to watch — it leans towards an undershirt, while a dress shirt is ワイシャツ, from \"white shirt\"."
+
+- id: n5.people-bottoms
+  order: 95
+  chapterId: n5.chapter-12
+  situation: People and what they wear
+  title: And what you pull on
+  canDo: Say what you put on and take off
+  wordIds:
+    - vocab.zubon
+    - vocab.sukaato
+    - vocab.kutsushita
+    - vocab.haku
+    - vocab.nugu
+  phraseIds:
+    - people.i-put-on-socks
+    - people.wearing-a-skirt
+    - people.take-your-shoes-off-here
+  kanji:
+    - 靴
+    - 脱
+  patternId: grammar.n5-clothing-verbs
+  grammarNote: "English puts on everything with one verb. Japanese picks the verb by where the thing lands. 着る was the shoulders down; はく is the waist down — trousers, skirts, socks, and the 靴 you have had since the shopping chapter. 靴下 is those two words stacked: shoes, under. はく is written 履く or 穿く and you will mostly see it in kana. It is godan, so the te-form is はいて, where 着る gives 着て. Coming off, all of this collapses back to one verb: 脱ぐ takes off anything, whatever put it on. You will use it on the first day you visit someone's home, because shoes come off at the door — ここで靴を脱ぎます is not an instruction anyone will need to give you twice."
+
+- id: n5.people-accessories
+  order: 96
+  chapterId: n5.chapter-12
+  situation: People and what they wear
+  title: Hat, glasses, tie, umbrella
+  canDo: Describe what someone is wearing, head to foot
+  wordIds:
+    - vocab.boushi
+    - vocab.megane
+    - vocab.nekutai
+    - vocab.kasa
+    - vocab.kaburu
+    - vocab.kakeru
+    - vocab.shimeru-tie
+  phraseIds:
+    - people.wearing-a-hat
+    - people.i-wear-glasses
+    - people.i-put-on-a-tie
+    - people.do-you-have-an-umbrella
+  kanji:
+    - 帽
+    - 傘
+  grammarNote: "Three more verbs, one per thing. かぶる is anything that comes down over your head, so it takes 帽子. かける takes めがね, because glasses hook over your ears — and かける is one of the busiest verbs in the language, hanging a coat, sitting you down, making a phone call. 締める is what you tighten around yourself: a tie, a belt, a seatbelt. Watch its twin — 閉める, same reading, closes a door. The umbrella has its own verb too, 傘をさす, but it is not on your ladder and you can get through the rain without it: 傘を持っていますか asks whether someone has one with them, which is the question that actually gets asked. All of these take ています for the state, exactly as 着る did — 帽子をかぶっている人 is the person in the hat."
+
+- id: n5.people-colours
+  order: 97
+  chapterId: n5.chapter-12
+  situation: People and what they wear
+  title: Colour as a thing
+  canDo: Say what colour something is, both ways
+  wordIds:
+    - vocab.kuro
+    - vocab.shiro
+    - vocab.aka
+    - vocab.ao
+    - vocab.kiiro
+  phraseIds:
+    - people.that-car-is-white
+    - people.a-red-and-black-bag
+    - people.i-like-blue
+  kanji:
+    - 黒
+    - 白
+    - 赤
+    - 色
+  patternId: grammar.n5-colour-noun
+  grammarNote: "You already own 赤い, 白い, 黒い, 青い and 黄色い — they arrived in the shopping and counting chapters as adjectives. Here are the same five as nouns, and the difference is what they can do in a sentence. 赤いかばん describes the bag. かばんは赤です names the colour. Attach a colour noun to another noun and it needs の, exactly like 茶色 and 緑 already did: 赤のかばん. Two of them stretch further than their English translations. 青 covers some of what English calls green — a green traffic light is 青, and so is unripe fruit. And 黄色 is built from 色, the character for colour, which has been hiding inside 茶色 since you learned it."
+
+- id: n5.people-body
+  order: 98
+  chapterId: n5.chapter-12
+  situation: People and what they wear
+  title: Build and body
+  canDo: Say how you feel and what something is like
+  wordIds:
+    - vocab.karada
+    - vocab.ha
+    - vocab.hana-nose
+    - vocab.futoi
+    - vocab.hosoi
+    - vocab.joubu
+  phraseIds:
+    - people.my-tooth-hurts
+    - people.this-road-is-narrow
+    - people.that-tree-is-thick
+    - people.im-in-good-health
+  kanji:
+    - 体
+    - 歯
+    - 鼻
+    - 太
+    - 細
+    - 丈
+    - 夫
+  grammarNote: "頭, 目, 耳, 口 and 足 came in the describing chapter; these three finish the set. Both of the new ones are homophones of words you already have — 歯 sounds like 花's neighbour 葉, a leaf, and 鼻 is identical to 花, a flower. Speech does not separate them and context always does, which is why 歯 almost never appears alone: 歯がいたいです. 太い and 細い are a pair, and they are about width, not length — a thick tree trunk, a narrow road. Do not aim 太い at a person; it is as rude in Japanese as it is in English. 丈夫 works on bodies and on objects alike, a healthy person and a bag that will not tear, and you have been saying it since your first week without knowing: 大丈夫 is this word with 大 in front."
+
+- id: n5.checkpoint-12
+  order: 99
+  chapterId: n5.chapter-12
+  situation: Integration & checkpoint
+  title: Chapter 12 checkpoint
+  canDo: Recognise everything taught so far
+  wordIds: []
+  phraseIds: []
+  kanji: []
+  checkpoint: recognition
+  grammarNote: "A wide pass over everything the book has taught, this chapter included. Pick each word out of a line-up; anything you miss comes back sooner. It finishes when the remaining set empties — retry as often as you like, nothing is recorded."

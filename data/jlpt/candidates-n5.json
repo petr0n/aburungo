@@ -4,58 +4,12 @@
  "source": "JMdict for Applications 3.6.2 (CC BY 4.0); examples via Tatoeba (CC BY 2.0 FR); level membership via Tanos JLPT lists (CC BY) and open-anki-jlpt-decks (MIT)",
  "note": "Authoring queue. Not content: theme and notes are TODO, and placement is an authoring decision.",
  "counts": {
-  "missingInReference": 386,
-  "matchedInJmdict": 360,
-  "uniqueEntries": 328,
-  "emitted": 328
+  "missingInReference": 352,
+  "matchedInJmdict": 326,
+  "uniqueEntries": 295,
+  "emitted": 295
  },
  "candidates": [
-  {
-   "written": "青",
-   "reading": "あお",
-   "romaji": "ao",
-   "wordType": "noun",
-   "pos": [
-    "n",
-    "adj-no"
-   ],
-   "english": "blue, azure, green, green light (traffic)",
-   "common": true,
-   "jmdictId": "1381380",
-   "example": {
-    "jpn": "信号が青に変わったわよ。",
-    "eng": "The traffic light turned green.",
-    "tatoeba": "145720"
-   },
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "id": "vocab.ao"
-  },
-  {
-   "written": "赤",
-   "reading": "あか",
-   "romaji": "aka",
-   "wordType": "noun",
-   "pos": [
-    "n",
-    "adj-no"
-   ],
-   "english": "red, crimson, scarlet, red-containing colour (e.g. brown, pink, orange)",
-   "common": true,
-   "jmdictId": "2013900",
-   "example": {
-    "jpn": "信号機が赤の間は道路を渡るな。",
-    "eng": "Don't cross the road when the signal is red.",
-    "tatoeba": "145704"
-   },
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "id": "vocab.aka"
-  },
   {
    "written": "上げる",
    "reading": "あげる",
@@ -437,28 +391,6 @@
    "id": "vocab.umareru"
   },
   {
-   "written": "上着",
-   "reading": "うわぎ",
-   "romaji": "uwagi",
-   "wordType": "noun",
-   "pos": [
-    "n"
-   ],
-   "english": "coat, jacket, outerwear, top",
-   "common": true,
-   "jmdictId": "1580340",
-   "example": {
-    "jpn": "男性の方は上着を着用してください。",
-    "eng": "Jackets are requested for men.",
-    "tatoeba": "127151"
-   },
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "id": "vocab.uwagi"
-  },
-  {
    "written": "絵",
    "reading": "え",
    "romaji": "e",
@@ -591,29 +523,6 @@
    "id": "vocab.ookina"
   },
   {
-   "written": "大勢",
-   "reading": "おおぜい",
-   "romaji": "oozei",
-   "wordType": "noun",
-   "pos": [
-    "n",
-    "adj-no"
-   ],
-   "english": "crowd of people, great number of people, in great numbers",
-   "common": true,
-   "jmdictId": "1414220",
-   "example": {
-    "jpn": "そこには大勢の人がいた。",
-    "eng": "There was a large crowd there.",
-    "tatoeba": "213674"
-   },
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "id": "vocab.oozei"
-  },
-  {
    "written": "お手洗い",
    "reading": "おてあらい",
    "romaji": "otearai",
@@ -634,52 +543,6 @@
     "open-anki"
    ],
    "id": "vocab.otearai"
-  },
-  {
-   "written": "男",
-   "reading": "おとこ",
-   "romaji": "otoko",
-   "wordType": "noun",
-   "pos": [
-    "n",
-    "n-pref"
-   ],
-   "english": "man, male, fellow, guy",
-   "common": true,
-   "jmdictId": "1419990",
-   "example": {
-    "jpn": "彼は多分よい男であるかも知れない。",
-    "eng": "He may be a good man for all I know.",
-    "tatoeba": "102560"
-   },
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "id": "vocab.otoko"
-  },
-  {
-   "written": "男の子",
-   "reading": "おとこのこ",
-   "romaji": "otokonoko",
-   "wordType": "noun",
-   "pos": [
-    "exp",
-    "n"
-   ],
-   "english": "boy, son, baby boy, young man",
-   "common": true,
-   "jmdictId": "1420010",
-   "example": {
-    "jpn": "あのハンサムな男の子を見て。",
-    "eng": "Look at that good-looking boy.",
-    "tatoeba": "231277"
-   },
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "id": "vocab.otokonoko"
   },
   {
    "written": "大人",
@@ -772,52 +635,6 @@
    "id": "vocab.ongaku"
   },
   {
-   "written": "女",
-   "reading": "おんな",
-   "romaji": "onna",
-   "wordType": "noun",
-   "pos": [
-    "n",
-    "n-pref"
-   ],
-   "english": "woman, female, female lover, girlfriend",
-   "common": true,
-   "jmdictId": "1344930",
-   "example": {
-    "jpn": "彼が戻ってきた時には、女は歩み去っていた。",
-    "eng": "When he came back, the woman had walked off.",
-    "tatoeba": "119438"
-   },
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "id": "vocab.onna"
-  },
-  {
-   "written": "女の子",
-   "reading": "おんなのこ",
-   "romaji": "onnanoko",
-   "wordType": "noun",
-   "pos": [
-    "exp",
-    "n"
-   ],
-   "english": "girl, daughter, baby girl, young woman",
-   "common": true,
-   "jmdictId": "1344970",
-   "example": {
-    "jpn": "その女の子達は、とても忙しい。",
-    "eng": "Those girls are very busy.",
-    "tatoeba": "209395"
-   },
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "id": "vocab.onnanoko"
-  },
-  {
    "written": "外国",
    "reading": "がいこく",
    "romaji": "gaikoku",
@@ -906,51 +723,6 @@
     "open-anki"
    ],
    "id": "vocab.kakaru"
-  },
-  {
-   "written": "掛ける",
-   "reading": "かける",
-   "romaji": "kakeru",
-   "wordType": "verb",
-   "pos": [
-    "v1",
-    "vt"
-   ],
-   "english": "to hang up (e.g. a coat, a picture on the wall), to let hang, to suspend (from), to hoist (e.g. sail)",
-   "common": true,
-   "jmdictId": "1207610",
-   "example": {
-    "jpn": "コートをハンガーに掛けておきなさい。",
-    "eng": "Put your coat on a hanger.",
-    "tatoeba": "224960"
-   },
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "id": "vocab.kakeru"
-  },
-  {
-   "written": "傘",
-   "reading": "かさ",
-   "romaji": "kasa",
-   "wordType": "noun",
-   "pos": [
-    "n"
-   ],
-   "english": "umbrella, parasol, something shaped like an umbrella or a conical hat, shade (of a lamp)",
-   "common": true,
-   "jmdictId": "1301940",
-   "example": {
-    "jpn": "タクシーに傘を忘れてしまった。",
-    "eng": "I left my umbrella in the cab.",
-    "tatoeba": "203724"
-   },
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "id": "vocab.kasa"
   },
   {
    "written": "方",
@@ -1063,28 +835,6 @@
    "id": "vocab.kamera"
   },
   {
-   "written": "体",
-   "reading": "からだ",
-   "romaji": "karada",
-   "wordType": "noun",
-   "pos": [
-    "n"
-   ],
-   "english": "body, torso, trunk, build",
-   "common": true,
-   "jmdictId": "1409140",
-   "example": {
-    "jpn": "カメレオンは周りの色に合わせて体色を変えることができる。",
-    "eng": "The chameleon can take on the colors of its background.",
-    "tatoeba": "226205"
-   },
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "id": "vocab.karada"
-  },
-  {
    "written": "カレンダー",
    "reading": "カレンダー",
    "romaji": "karendaa",
@@ -1127,30 +877,6 @@
     "open-anki"
    ],
    "id": "vocab.kanji"
-  },
-  {
-   "written": "黄色",
-   "reading": "きいろ",
-   "romaji": "kiiro",
-   "wordType": "noun",
-   "pos": [
-    "n",
-    "adj-no",
-    "adj-na"
-   ],
-   "english": "yellow, amber",
-   "common": true,
-   "jmdictId": "1576760",
-   "example": {
-    "jpn": "床は緑色に塗られていたが、一方壁は黄色だった。",
-    "eng": "The floor was painted green, while the walls were yellow.",
-    "tatoeba": "146465"
-   },
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "id": "vocab.kiiro"
   },
   {
    "written": "北",
@@ -1327,30 +1053,7 @@
     "tanos",
     "open-anki"
    ],
-   "id": "vocab.kiru-cut"
-  },
-  {
-   "written": "着る",
-   "reading": "きる",
-   "romaji": "kiru",
-   "wordType": "verb",
-   "pos": [
-    "v1",
-    "vt"
-   ],
-   "english": "to wear (from the shoulders down), to put on, to take (the blame, responsibility), to bear",
-   "common": true,
-   "jmdictId": "1423000",
-   "example": {
-    "jpn": "「あの赤い服を着るのはよしなさい」「なぜいけないの」",
-    "eng": "\"You had better not wear the red dress.\" \"Why not?\"",
-    "tatoeba": "237263"
-   },
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "id": "vocab.kiru-wear"
+   "id": "vocab.kiru"
   },
   {
    "written": "九",
@@ -1395,28 +1098,6 @@
     "open-anki"
    ],
    "id": "vocab.kusuri"
-  },
-  {
-   "written": "靴下",
-   "reading": "くつした",
-   "romaji": "kutsushita",
-   "wordType": "noun",
-   "pos": [
-    "n"
-   ],
-   "english": "socks, sock, stockings, stocking",
-   "common": true,
-   "jmdictId": "1246740",
-   "example": {
-    "jpn": "この靴下の片方はどこだ。",
-    "eng": "Where is the mate to this sock?",
-    "tatoeba": "222242"
-   },
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "id": "vocab.kutsushita"
   },
   {
    "written": "曇る",
@@ -1485,29 +1166,6 @@
     "open-anki"
    ],
    "id": "vocab.guramu"
-  },
-  {
-   "written": "黒",
-   "reading": "くろ",
-   "romaji": "kuro",
-   "wordType": "noun",
-   "pos": [
-    "n",
-    "adj-no"
-   ],
-   "english": "black, black stone, guilt, guilty person",
-   "common": true,
-   "jmdictId": "1287410",
-   "example": {
-    "jpn": "２匹犬を飼っているが、１匹は白でもう１匹は黒だ。",
-    "eng": "I have two dogs. One is white and the other black.",
-    "tatoeba": "235399"
-   },
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "id": "vocab.kuro"
   },
   {
    "written": "警官",
@@ -1618,28 +1276,6 @@
     "open-anki"
    ],
    "id": "vocab.koe"
-  },
-  {
-   "written": "コート",
-   "reading": "コート",
-   "romaji": "kooto",
-   "wordType": "noun",
-   "pos": [
-    "n"
-   ],
-   "english": "coat, coating",
-   "common": true,
-   "jmdictId": "1049000",
-   "example": {
-    "jpn": "あなたが家を出た後で、私はあなたのコートに気づきました。",
-    "eng": "I found your coat after you left the house.",
-    "tatoeba": "234118"
-   },
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "id": "vocab.kooto"
   },
   {
    "written": "こっち",
@@ -2047,29 +1683,6 @@
    "id": "vocab.jibun"
   },
   {
-   "written": "締める",
-   "reading": "しめる",
-   "romaji": "shimeru",
-   "wordType": "verb",
-   "pos": [
-    "v1",
-    "vt"
-   ],
-   "english": "to tie, to fasten, to tighten, to wear (necktie, belt)",
-   "common": true,
-   "jmdictId": "1436570",
-   "example": {
-    "jpn": "離陸の際は、シートベルトを締めなくてはならない。",
-    "eng": "You must fasten your seat belts during take-off.",
-    "tatoeba": "78324"
-   },
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "id": "vocab.shimeru-tie"
-  },
-  {
    "written": "写真",
    "reading": "しゃしん",
    "romaji": "shashin",
@@ -2090,28 +1703,6 @@
     "open-anki"
    ],
    "id": "vocab.shashin"
-  },
-  {
-   "written": "シャツ",
-   "reading": "シャツ",
-   "romaji": "shatsu",
-   "wordType": "noun",
-   "pos": [
-    "n"
-   ],
-   "english": "shirt (undergarment), undershirt, singlet, shirt (outerwear; usu. with collar and buttons)",
-   "common": true,
-   "jmdictId": "1061520",
-   "example": {
-    "jpn": "あなたのシャツは洗う必要がある。",
-    "eng": "Your shirts need to be washed.",
-    "tatoeba": "233523"
-   },
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "id": "vocab.shatsu"
   },
   {
    "written": "授業",
@@ -2159,28 +1750,6 @@
     "open-anki"
    ],
    "id": "vocab.jouzu"
-  },
-  {
-   "written": "丈夫",
-   "reading": "じょうぶ",
-   "romaji": "joubu",
-   "wordType": "na-adj",
-   "pos": [
-    "adj-na"
-   ],
-   "english": "healthy, robust, strong, solid",
-   "common": true,
-   "jmdictId": "1580480",
-   "example": {
-    "jpn": "彼は丈夫だったそうです。",
-    "eng": "He is said to have been strong.",
-    "tatoeba": "103983"
-   },
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "id": "vocab.joubu"
   },
   {
    "written": "食堂",
@@ -2248,28 +1817,6 @@
     "open-anki"
    ],
    "id": "vocab.suu"
-  },
-  {
-   "written": "スカート",
-   "reading": "スカート",
-   "romaji": "sukaato",
-   "wordType": "noun",
-   "pos": [
-    "n"
-   ],
-   "english": "skirt",
-   "common": true,
-   "jmdictId": "1067470",
-   "example": {
-    "jpn": "あなたのサロン風のスカートが好きです。",
-    "eng": "I like your sarong style skirt.",
-    "tatoeba": "233525"
-   },
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "id": "vocab.sukaato"
   },
   {
    "written": "少ない",
@@ -2360,28 +1907,6 @@
    "id": "vocab.supootsu"
   },
   {
-   "written": "ズボン",
-   "reading": "ズボン",
-   "romaji": "zubon",
-   "wordType": "noun",
-   "pos": [
-    "n"
-   ],
-   "english": "trousers, pants",
-   "common": true,
-   "jmdictId": "1074260",
-   "example": {
-    "jpn": "あなたは私のズボンをどうしたのですか。",
-    "eng": "What did you do with my pants?",
-    "tatoeba": "231957"
-   },
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "id": "vocab.zubon"
-  },
-  {
    "written": "生徒",
    "reading": "せいと",
    "romaji": "seito",
@@ -2402,28 +1927,6 @@
     "open-anki"
    ],
    "id": "vocab.seito"
-  },
-  {
-   "written": "セーター",
-   "reading": "セーター",
-   "romaji": "seetaa",
-   "wordType": "noun",
-   "pos": [
-    "n"
-   ],
-   "english": "sweater, jumper",
-   "common": true,
-   "jmdictId": "1074270",
-   "example": {
-    "jpn": "このセーターは洗っても大丈夫です。",
-    "eng": "This sweater will stand washing.",
-    "tatoeba": "223605"
-   },
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "id": "vocab.seetaa"
   },
   {
    "written": "背広",
@@ -3428,29 +2931,6 @@
    "id": "vocab.niwa"
   },
   {
-   "written": "脱ぐ",
-   "reading": "ぬぐ",
-   "romaji": "nugu",
-   "wordType": "verb",
-   "pos": [
-    "v5g",
-    "vt"
-   ],
-   "english": "to take off (clothes, shoes, etc.), to undress",
-   "common": true,
-   "jmdictId": "1416400",
-   "example": {
-    "jpn": "ここで靴を脱がなければなりませんか。",
-    "eng": "Do I have to take off my shoes here?",
-    "tatoeba": "224569"
-   },
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "id": "vocab.nugu"
-  },
-  {
    "written": "温い",
    "reading": "ぬるい",
    "romaji": "nurui",
@@ -3471,28 +2951,6 @@
     "open-anki"
    ],
    "id": "vocab.nurui"
-  },
-  {
-   "written": "ネクタイ",
-   "reading": "ネクタイ",
-   "romaji": "nekutai",
-   "wordType": "noun",
-   "pos": [
-    "n"
-   ],
-   "english": "tie, necktie",
-   "common": true,
-   "jmdictId": "1092820",
-   "example": {
-    "jpn": "このネクタイはあなたのシャツによく似合ってますよ。",
-    "eng": "This tie goes with your shirt.",
-    "tatoeba": "223403"
-   },
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "id": "vocab.nekutai"
   },
   {
    "written": "猫",
@@ -3537,28 +2995,6 @@
     "open-anki"
    ],
    "id": "vocab.nooto"
-  },
-  {
-   "written": "歯",
-   "reading": "は",
-   "romaji": "ha",
-   "wordType": "noun",
-   "pos": [
-    "n"
-   ],
-   "english": "tooth, teeth, tooth (of a comb, saw, etc.), cog",
-   "common": true,
-   "jmdictId": "1313000",
-   "example": {
-    "jpn": "その赤ちゃんは歯が生えはじめている。",
-    "eng": "The baby is cutting his teeth.",
-    "tatoeba": "208598"
-   },
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "id": "vocab.ha"
   },
   {
    "written": "パーティー",
@@ -3625,29 +3061,6 @@
     "open-anki"
    ],
    "id": "vocab.hagaki"
-  },
-  {
-   "written": "履く",
-   "reading": "はく",
-   "romaji": "haku",
-   "wordType": "verb",
-   "pos": [
-    "v5k",
-    "vt"
-   ],
-   "english": "to put on (lower-body clothing, e.g. pants, skirt, footwear), to wear, to affix (a sword to one's hip), to affix (a bowstring to a bow)",
-   "common": true,
-   "jmdictId": "1607260",
-   "example": {
-    "jpn": "この靴はきつすぎてはけない。",
-    "eng": "These shoes are too tight to get into.",
-    "tatoeba": "222263"
-   },
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "id": "vocab.haku"
   },
   {
    "written": "箱",
@@ -3738,28 +3151,6 @@
     "open-anki"
    ],
    "id": "vocab.hatachi"
-  },
-  {
-   "written": "鼻",
-   "reading": "はな",
-   "romaji": "hana",
-   "wordType": "noun",
-   "pos": [
-    "n"
-   ],
-   "english": "nose",
-   "common": true,
-   "jmdictId": "1486720",
-   "example": {
-    "jpn": "鼻が出ているよ。かみなさい。",
-    "eng": "Your nose is running. Blow it.",
-    "tatoeba": "85518"
-   },
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "id": "vocab.hana-nose"
   },
   {
    "written": "話",
@@ -4164,28 +3555,6 @@
    "id": "vocab.fuku-blow"
   },
   {
-   "written": "太い",
-   "reading": "ふとい",
-   "romaji": "futoi",
-   "wordType": "i-adj",
-   "pos": [
-    "adj-i"
-   ],
-   "english": "fat, thick, deep (of a voice), thick",
-   "common": true,
-   "jmdictId": "1408180",
-   "example": {
-    "jpn": "彼は太い首をしている。",
-    "eng": "He has a thick neck.",
-    "tatoeba": "102554"
-   },
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "id": "vocab.futoi"
-  },
-  {
    "written": "降る",
    "reading": "ふる",
    "romaji": "furu",
@@ -4321,28 +3690,6 @@
    "id": "vocab.hen"
   },
   {
-   "written": "帽子",
-   "reading": "ぼうし",
-   "romaji": "boushi",
-   "wordType": "noun",
-   "pos": [
-    "n"
-   ],
-   "english": "hat, cap, cap (move)",
-   "common": true,
-   "jmdictId": "1519170",
-   "example": {
-    "jpn": "この帽子は１０００円なら安い。",
-    "eng": "This hat is cheap at 1000 yen.",
-    "tatoeba": "219814"
-   },
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "id": "vocab.boushi"
-  },
-  {
    "written": "ボールペン",
    "reading": "ボールペン",
    "romaji": "boorupen",
@@ -4407,28 +3754,6 @@
     "open-anki"
    ],
    "id": "vocab.posuto"
-  },
-  {
-   "written": "細い",
-   "reading": "ほそい",
-   "romaji": "hosoi",
-   "wordType": "i-adj",
-   "pos": [
-    "adj-i"
-   ],
-   "english": "thin, slender, fine, unlucky",
-   "common": true,
-   "jmdictId": "1295510",
-   "example": {
-    "jpn": "彼は太っているくせに声は細い。",
-    "eng": "His voice is thin even though he is fat.",
-    "tatoeba": "102553"
-   },
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "id": "vocab.hosoi"
   },
   {
    "written": "ボタン",
@@ -4787,28 +4112,6 @@
     "open-anki"
    ],
    "id": "vocab.meetoru"
-  },
-  {
-   "written": "眼鏡",
-   "reading": "メガネ",
-   "romaji": "megane",
-   "wordType": "noun",
-   "pos": [
-    "n"
-   ],
-   "english": "glasses, eyeglasses, spectacles, judgment",
-   "common": true,
-   "jmdictId": "1577670",
-   "example": {
-    "jpn": "私はメガネがなくては読めない。",
-    "eng": "I cannot read without glasses.",
-    "tatoeba": "158805"
-   },
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "id": "vocab.megane"
   },
   {
    "written": "物",
@@ -5470,28 +4773,6 @@
     "open-anki"
    ],
    "id": "vocab.kai-storey"
-  },
-  {
-   "written": "被る",
-   "reading": "かぶる",
-   "romaji": "kaburu",
-   "wordType": "verb",
-   "pos": [
-    "v5r",
-    "vt"
-   ],
-   "english": "to put on (one's head), to wear, to have on, to pull over (one's head)",
-   "common": true,
-   "jmdictId": "1484330",
-   "example": {
-    "jpn": "「白い帽子をかぶっている男の人は誰ですか」と私は彼女に言った。",
-    "eng": "I asked her who the man wearing the white hat was.",
-    "tatoeba": "236204"
-   },
-   "sources": [
-    "open-anki"
-   ],
-   "id": "vocab.kaburu"
   },
   {
    "written": "がる",
@@ -6563,25 +5844,6 @@
     "open-anki"
    ],
    "id": "vocab.jibiki"
-  },
-  {
-   "written": "白",
-   "reading": "しろ",
-   "romaji": "shiro",
-   "wordType": "noun",
-   "pos": [
-    "n",
-    "adj-no"
-   ],
-   "english": "white, innocence, innocent person, blank space",
-   "common": true,
-   "jmdictId": "1474900",
-   "example": null,
-   "sources": [
-    "tanos",
-    "open-anki"
-   ],
-   "id": "vocab.shiro"
   },
   {
    "written": "煙草",
