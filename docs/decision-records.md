@@ -1011,11 +1011,49 @@ With the flag on, 46 units.
 
 ---
 
-> **DR-024 through DR-032 are referenced but unwritten.** The code and plan documents cite them
-> — DR-024 for the Book/Chapter/Lesson naming, DR-032 for Chapter 11, others in between — and
-> they were decided without being logged here. They are not filled in retroactively from memory;
-> a reconstructed record is worse than an admitted gap. Numbering continues past them so no
-> record claims a number something else already refers to.
+## DR-024 — Book / Chapter / Lesson; the learner never reads a JLPT level
+
+**Date:** 2026-08-16 (applied), recorded 2026-08-22
+**Status:** Active
+
+**Note on this record:** written after the fact. The decision was made and applied across the
+code and the plans without being logged, and this entry documents the convention as it is
+actually implemented — verifiable in `src/types.ts`, the content files and CLAUDE.md — rather
+than reconstructing a deliberation nobody wrote down.
+
+**Context:**
+The ladder was built as a flat list of "units" with periodic "sweeps", named after the JLPT
+levels the content was drawn from. Three problems compounded. A flat list of 93 units gave a
+learner no sense of place. "Sweep" and "unit" were internal words that had leaked into the
+interface. And naming a level at the learner — "N5 unit 12" — sold an exam this app is not
+built to prepare anyone for.
+
+**Decision:**
+**Book → Chapter → Lesson.** A book is a volume, a chapter is a run of lessons around one arc,
+a lesson is one sitting. **A learner never reads "N5"** or any other level; they read "Book
+One". **"Unit" and "sweep" are dead words** in anything a learner sees.
+
+The `jlpt` field survives in the data because the coverage and queue tooling is built on it.
+Its scope is the dataset, not the interface.
+
+**Consequences:**
+- Internal identifiers kept their `n5` prefixes — lesson filenames, chapter ids, and the
+  `PathProgress` key. Renaming those would break persisted progress for no learner-visible
+  gain, so the convention governs what is *displayed*, not what is *stored*.
+- Superseded in part by DR-033, which ends the level's authority over what a book contains.
+  The naming rule itself stands unchanged.
+
+---
+
+> **DR-025 through DR-032 were never decisions.** They are chapter serial numbers: one per
+> chapter from 4 (family) through 11 (meals), stamped into that chapter's own YAML headers as a
+> provenance tag and incremented by copying the previous chapter's header. Nothing outside those
+> files cites DR-025 through DR-031. The tags have been removed from the content in favour of
+> naming the chapter, and Chapter 12 was authored without one.
+>
+> The numbers are not reused. They appear in merged commit subjects — `feat(content): meals and
+> the kitchen (Chapter 11, DR-032)` — so a new record claiming one of them would be a worse
+> ambiguity than a gap in the sequence.
 
 ---
 

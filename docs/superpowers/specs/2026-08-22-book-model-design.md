@@ -199,12 +199,23 @@ book.
 Grammar remains the binding constraint, as it was for Book One: words are oversupplied and
 patterns must be authored.
 
-## DR-033
+## DR-033, and the numbering gap
 
-This is a decision record. `docs/decision-records.md` currently ends at DR-023 while the code
-and plans reference DR-024 through DR-032, so this is written as **DR-033** — continuing the
-referenced sequence rather than reusing a number something else already claims. The 024–032 gap
-is noted in the file as still unwritten rather than quietly filled.
+This is a decision record, written as **DR-033**. `docs/decision-records.md` ended at DR-023
+while the code and plans cited DR-024 through DR-032, and those turned out to be two different
+things:
+
+- **DR-024 was a real decision nobody logged** — Book → Chapter → Lesson naming, cited in
+  `src/types.ts`, two test files and six plan documents. It is now written, marked as recorded
+  after the fact from the convention as implemented rather than reconstructed as a
+  deliberation.
+- **DR-025 through DR-032 were never decisions.** They are chapter serial numbers, one per
+  chapter from 4 through 11, stamped into that chapter's own YAML headers and incremented by
+  copying the previous header. Nothing outside those files cited DR-025 through DR-031. The
+  tags are removed in favour of naming the chapter; Chapter 12 was authored without one.
+
+The numbers are not reused, because they appear in merged commit subjects. A record claiming
+one of them would be a worse ambiguity than a gap.
 
 ## Verification
 
@@ -221,5 +232,5 @@ is noted in the file as still unwritten rather than quietly filled.
 - Authoring any of Book Two's content
 - Specifying the `reading` and `fluency` stages beyond their names
 - Renaming lesson files or chapter ids
-- Writing DR-024 through DR-032
+- Reconstructing the deliberation behind DR-024, beyond recording the convention as built
 - The kanji component/mnemonic layer, which `02` names as the largest risk to Book One working

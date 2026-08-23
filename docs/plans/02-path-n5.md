@@ -197,7 +197,7 @@ existed since 2010, and taking a headword straight from one has already shipped 
 (終る, which JMdict does not flag common; 終わる is the real word). Verify every headword against
 JMdict before it goes in.
 
-The food cluster — the largest hole in the gap list — shipped as Chapter 11 (DR-032). The one
+The food cluster — the largest hole in the gap list — shipped as Chapter 11. The one
 remaining cluster planned for the finish is **people & clothes**. Be honest about what that
 closes: a chapter is ~27 words, so the book will finish with roughly 360 reference words untaught,
 ~215 of them common. Either that remainder is Book Two's opening inventory and review fodder — the
