@@ -32,7 +32,7 @@ Resequenced 2026-08-04 (DR-017).
 
 ### Finishing Book One
 
-1. **One more chapter** — people & clothes (food shipped as Chapter 11, Chapter 11). Lands the book
+1. **One more chapter** — people & clothes (food shipped as Chapter 11). Lands the book
    near the ~100 landing zone.
 2. **Kanji component + mnemonic layer.** Components from KANJIDIC2/KanjiVG, a mnemonic per kanji.
    Resolve authoring vs. licensed scheme (overarching plan §5.5). Optional handwriting via KanjiVG
