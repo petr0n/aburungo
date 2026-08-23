@@ -1008,3 +1008,97 @@ With the flag on, 46 units.
   screen that cannot work.
 - **No live Anthropic call was ever made.** The integration was built, tested against mocks, and
   shelved without spending anything.
+
+---
+
+> **DR-024 through DR-032 are referenced but unwritten.** The code and plan documents cite them
+> — DR-024 for the Book/Chapter/Lesson naming, DR-032 for Chapter 11, others in between — and
+> they were decided without being logged here. They are not filled in retroactively from memory;
+> a reconstructed record is worse than an admitted gap. Numbering continues past them so no
+> record claims a number something else already refers to.
+
+---
+
+## DR-033 — A book is a volume, not a JLPT level
+
+**Date:** 2026-08-22
+**Status:** Approved; design at
+`docs/superpowers/specs/2026-08-22-book-model-design.md`, implementation pending
+
+**Context:**
+Book One shipped as "the N5 book" and closed 352 words short of the 809-word community
+reference. That left one question the plans could not answer, and both available answers were
+bad. Teaching the remainder meant roughly seven more chapters and a nineteen-chapter book.
+Declaring the book finished left its defining premise — *it is the N5 book* — visibly false.
+
+The premise was the problem. **No official JLPT vocabulary list has existed since 2010.** The
+two community lists this repo merges disagree on about a quarter of every level, and taking a
+headword straight from one has already shipped a wrong form (終る, where 終わる is the real
+word). `data/jlpt/README.md` has called those lists gap-finders rather than authorities since
+they were added; organising the course around them contradicted that in the one place it
+mattered most, by letting a reconstruction of an exam syllabus decide where a book ends.
+
+A second measurement forced the timing. Book One's chapters 1–5 average 10.4 teaching lessons
+and its chapters 6–12 average 5.0, so the back half of the book fires a consolidation
+checkpoint every five lessons where DR-021 asks for roughly ten. The plan's "chapter length
+varies on purpose" line had been covering for a real drift.
+
+**Decision:**
+
+**A book is a volume of a coherent shape.** About ten chapters of about ten teaching lessons —
+roughly 100 teaching lessons, landing near 570 words at Book One's measured pace of 5.7 words
+per lesson. A recognition checkpoint closes every chapter; a production checkpoint closes the
+book. A chapter deviates when the learning says so: seven is fine when the situation is worth
+seven. The shape is a target to author toward, never a quota to pad to, and it is not
+retrofitted against situations that already shipped.
+
+This is not a second cadence rule. Chapters of ~10 teaching lessons, each closed by a
+checkpoint, *are* DR-021's "roughly every ten teaching lessons, at a situation boundary."
+Authoring toward ten corrects the drift measured above without adding anything to enforce.
+
+**A book ends where an arc of situations ends**, near 100 teaching lessons — not at a level
+line, and not when a word counter trips. The word count is an outcome of the shape, which is
+why it is stated as "near 570" rather than as a budget.
+
+**Stages carry difficulty, not levels.** A book declares a stage: `foundation` (Book One —
+romaji on, recognition-led), `building` (Book Two onward — romaji cut, typing the default review
+gate), `reading` (the i+1 band model and reading library), `fluency` (listening floor,
+unassisted native material). The last two are named now and specified when a book reaches them;
+detailing them today would be fiction about books that do not exist. The difficulty shift stays
+at Book Two, because its trigger was never the level — it was having finished a whole book.
+
+**Tiers gate on book order**, not on JLPT: guest gets Book One, a free account gets Books One
+through Four, paid gets everything. This roughly preserves today's reach — a guest had N5's 809
+reference words and gets Book One's 484 taught ones.
+
+**JLPT stays as word metadata and gates nothing.** The coverage and queue tooling is built on
+it, the reference data is organised by it, and none of that was ever wrong. What ends is its
+authority over what a book is. The learner never read the letters and still will not.
+
+**There will be more than five books.** The reference corpus is 9,985 words across the five
+levels, which at ~570 a book implies somewhere near seventeen. That is arithmetic, not a plan,
+and it is deliberately not written into the plans as a target.
+
+**Consequences:**
+- **Book One's taught content does not change.** This changes what a book *means*, not what
+  Book One *teaches*. `docs/book-one-ladder.md` regenerating byte-identical is the proof, and
+  its committed-file test already enforces it.
+- **`Book.id` and the persisted `pathId` split.** Book One's progress key stays `"n5"` forever
+  — it is the primary key of every progress row, local in Dexie and remote — while the book's
+  id becomes `book-1`. A `progressKey` field carries the legacy string so the type stops
+  claiming a book is a level.
+- **`difficultyShift` is replaced by `stage`.** A boolean named for one of its effects could not
+  carry a third behaviour without a second boolean.
+- **Tier filtering needs an item→book index.** Today it reads each item's own `jlpt` tag; book
+  order is a property of the lessons that teach an item, not of the item. Content no book
+  teaches — browse-only entries the ladder never references — is treated as Book One rather
+  than hidden, because silently removing content that is visible today would be the worse
+  failure.
+- **The level-named plan documents are renamed**, and the design work inside `04` and `04b`
+  survives intact: a band model and a listening floor describe where a learner is, not which
+  exam they are sitting.
+- **The question of who owns the 352 remaining N5 reference words dissolves.** They are Book
+  Two's raw material — situations Book One never staged — rather than a debt against a
+  syllabus.
+- **Lesson filenames and chapter ids keep their `n5` prefixes** as legacy naming. Renaming them
+  churns every content file and risks the same class of key breakage for no gain.
