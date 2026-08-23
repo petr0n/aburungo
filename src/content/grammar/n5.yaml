@@ -227,7 +227,7 @@
   phraseId: food-preferences.not-at-all
   blank: たべません
 
-# ── Chapter 6 — the te-form (DR-027) ─────────────────────────────────────────
+# ── Chapter 6 — the te-form ─────────────────────────────────────────
 # One pattern per conjugation group, each blanking the te-form itself out of a
 # sentence from that group. The blank is matched against the phrase's reading,
 # so these are kana.
@@ -267,7 +267,7 @@
   phraseId: te.i-work-at-a-company
   blank: はたらいて
 
-# ── Chapter 10 — the past tense (DR-031) ─────────────────────────────────────
+# ── Chapter 10 — the past tense ─────────────────────────────────────
 # One pattern per form: the polite past, its negative, the copula past, the
 # i-adjective past, and the question that puts them to work. The blank is
 # matched against the phrase's reading, so these are kana.
@@ -307,7 +307,7 @@
   phraseId: past.how-was-the-trip
   blank: どうでしたか
 
-# ── Chapter 11 — meals and the kitchen (DR-032) ──────────────────────────────
+# ── Chapter 11 — meals and the kitchen ──────────────────────────────
 # A situation chapter, but three patterns, and all three are real rules rather
 # than fixed expressions: the noun-from-verb build, one more counter, and the
 # polite way to say something tasted bad.

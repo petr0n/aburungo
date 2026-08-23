@@ -250,7 +250,7 @@ at any level.
 
 ## 12. Build order
 
-1. Finish Book One (people & clothes chapter; food shipped as Chapter 11, DR-032)
+1. Finish Book One (people & clothes chapter; food shipped as Chapter 11)
 2. Kanji component + mnemonic layer
 3. ~~Multi-book support and the Book-level difficulty shift~~ — **done** (§0, PR #90), except the
    produce beat, which moves into step 4 because it is authoring work

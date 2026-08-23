@@ -198,13 +198,13 @@ existed since 2010, and taking a headword straight from one has already shipped 
 (終る, which JMdict does not flag common; 終わる is the real word). Verify every headword against
 JMdict before it goes in.
 
-The food cluster — the largest hole in the gap list — shipped as Chapter 11 (DR-032), and
-**people & clothes** closed the book as Chapter 12. Be honest about what that closed: 33 words,
-and the book finishes with 352 reference words untaught, 209 of them attested by both lists and
-common. Either that remainder is Book Two's opening inventory and review fodder — the defensible
-reading, since 484 situation-anchored words beat 800 list-marched ones for a first book — or it
-demands more chapters than this plan holds (see the sizing note in §2). **That is still an open
-owner call**, and closing the planned chapters did not settle it.
+The food cluster — the largest hole in the gap list — shipped as Chapter 11, and **people &
+clothes** closed the book as Chapter 12. Be honest about what that closed: 33 words, and the book
+finishes with 352 reference words untaught, 209 of them attested by both reference lists and
+flagged common. That remainder is **Book Two's raw material** — situations Book One never staged
+— rather than a debt against a syllabus. DR-033 settled it by ending a level's claim on what a
+book contains, so the question of whether Book One should keep going until it has taught the list
+no longer has a subject.
 
 ## 9. Free/paid
 
