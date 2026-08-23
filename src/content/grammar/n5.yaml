@@ -332,3 +332,22 @@
   gloss: Not very ~. The polite way to say something was bad.
   phraseId: meals.its-not-very-good
   blank: おいしくないです
+
+# ── Chapter 12 — people and what they wear ───────────────────────────────────
+# Two rules in a chapter that is mostly nouns. One is the verb that changes with
+# where a garment lands on the body; the other is a distinction the learner has
+# been half-using since the shopping chapter without it being named.
+
+- id: grammar.n5-clothing-verbs
+  jlpt: N5
+  pattern: 着る／はく／かぶる
+  gloss: The verb for wearing changes with where the thing goes — shoulders down, waist down, or on your head.
+  phraseId: people.wearing-a-skirt
+  blank: はいて
+
+- id: grammar.n5-colour-noun
+  jlpt: N5
+  pattern: 赤 and 赤い
+  gloss: A colour is a noun and an adjective — 赤いかばん describes the bag, かばんは赤です names the colour.
+  phraseId: people.that-car-is-white
+  blank: しろ

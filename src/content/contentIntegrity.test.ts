@@ -23,6 +23,19 @@ describe("content integrity", () => {
     expect(dupes).toEqual([]);
   });
 
+  it("has no duplicate phrase ids across files", () => {
+    // The word version of this check has existed since vocab.asa; the phrase
+    // version did not, and a duplicate id would make findPhrase return whichever
+    // file loaded first. Every chapter adds a phrase file, so the odds only grow.
+    const seen = new Set<string>();
+    const dupes: string[] = [];
+    for (const p of allPhrases) {
+      if (seen.has(p.id)) dupes.push(p.id);
+      seen.add(p.id);
+    }
+    expect(dupes).toEqual([]);
+  });
+
   it("has no lesson referencing a word that does not exist", () => {
     const ids = new Set(allWords.map((w) => w.id));
     const dangling: string[] = [];

@@ -1,0 +1,198 @@
+# Chapter 12 phrases — people and what they wear.
+#
+# The chapter sits after the te-form chapter and the past tense, so these are
+# free to use ています, which matters more here than anywhere else in the book:
+# wearing is a state in Japanese, not an act. セーターを着ます is the moment you
+# put it on. セーターを着ています is what you have on right now, and it is the
+# sentence a learner actually needs.
+#
+# 傘 is taught with 持っています rather than its own verb. The collocation is
+# 傘をさす, but さす is not on the ladder and pulling it in for one phrase would
+# buy a whole verb to spend on an umbrella; the grammar note names it instead.
+#
+# content-source: training — N5 canonical, pending Tatoeba verification.
+#   Sanctioned by CLAUDE.md, which allows N5 phrase content from training
+#   knowledge because N5 vocabulary is canonical and well documented, so long
+#   as it carries this marker. Verified-only content starts at Book Three
+#   (docs/plans/04-path-n3.md section 8).
+#
+#   Not for want of trying: `node scripts/jlpt.mjs sentences n5 --polite
+#   --for 男,女,着る,はく,帽子,...` was run against the 25,983-pair Tatoeba
+#   corpus on 2026-08-22 and returned nothing usable for this chapter. What
+#   comes back for these words is adult and ungraded -- そのズボンは大きすぎます
+#   needs すぎる, このセーターは洗っても大丈夫です needs ても, both N4. The
+#   corpus is a Book Three resource; at Book One it can attest a word but not
+#   a sentence. Every word used below is JMdict-verified individually.
+# jlpt-source: training — JLPT level unverified
+
+# ── Men, women, boys, girls ───────────────────────────────────────────────────
+
+- id: people.who-is-that-man
+  jlpt: N5
+  scenario: people
+  japanese: あの男の人はだれですか。
+  reading: あのおとこのひとはだれですか。
+  romaji: ano otoko no hito wa dare desu ka.
+  english: Who is that man?
+
+- id: people.three-girls
+  jlpt: N5
+  scenario: people
+  japanese: 女の子が三人います。
+  reading: おんなのこがさんにんいます。
+  romaji: onna no ko ga sannin imasu.
+  english: There are three girls.
+
+- id: people.a-lot-of-people-were-there
+  jlpt: N5
+  scenario: people
+  japanese: 大勢の人がいました。
+  reading: おおぜいのひとがいました。
+  romaji: oozei no hito ga imashita.
+  english: There were a lot of people.
+
+# ── What you wear on top ──────────────────────────────────────────────────────
+
+- id: people.wearing-a-sweater
+  jlpt: N5
+  scenario: people
+  japanese: 今日はセーターを着ています。
+  reading: きょうはセーターをきています。
+  romaji: kyou wa seetaa o kite imasu.
+  english: I am wearing a sweater today.
+
+- id: people.nice-jacket
+  jlpt: N5
+  scenario: people
+  japanese: その上着はいいですね。
+  reading: そのうわぎはいいですね。
+  romaji: sono uwagi wa ii desu ne.
+  english: That jacket is nice.
+
+- id: people.will-you-wear-a-coat
+  jlpt: N5
+  scenario: people
+  japanese: コートを着ますか。
+  reading: コートをきますか。
+  romaji: kooto o kimasu ka.
+  english: Are you going to wear a coat?
+
+# ── And what you pull on ──────────────────────────────────────────────────────
+
+- id: people.i-put-on-socks
+  jlpt: N5
+  scenario: people
+  japanese: 靴下をはきます。
+  reading: くつしたをはきます。
+  romaji: kutsushita o hakimasu.
+  english: I put on socks.
+
+- id: people.wearing-a-skirt
+  jlpt: N5
+  scenario: people
+  japanese: スカートをはいています。
+  reading: スカートをはいています。
+  romaji: sukaato o haite imasu.
+  english: She is wearing a skirt.
+
+- id: people.take-your-shoes-off-here
+  jlpt: N5
+  scenario: people
+  japanese: ここで靴を脱ぎます。
+  reading: ここでくつをぬぎます。
+  romaji: koko de kutsu o nugimasu.
+  english: You take your shoes off here.
+
+# ── Hat, glasses, tie, umbrella ───────────────────────────────────────────────
+
+- id: people.wearing-a-hat
+  jlpt: N5
+  scenario: people
+  japanese: 帽子をかぶっています。
+  reading: ぼうしをかぶっています。
+  romaji: boushi o kabutte imasu.
+  english: He is wearing a hat.
+
+- id: people.i-wear-glasses
+  jlpt: N5
+  scenario: people
+  japanese: めがねをかけています。
+  reading: めがねをかけています。
+  romaji: megane o kakete imasu.
+  english: I wear glasses.
+
+- id: people.i-put-on-a-tie
+  jlpt: N5
+  scenario: people
+  japanese: ネクタイを締めます。
+  reading: ネクタイをしめます。
+  romaji: nekutai o shimemasu.
+  english: I put on a tie.
+
+- id: people.do-you-have-an-umbrella
+  jlpt: N5
+  scenario: people
+  japanese: 傘を持っていますか。
+  reading: かさをもっていますか。
+  romaji: kasa o motte imasu ka.
+  english: Do you have an umbrella with you?
+
+# ── Colour as a thing ─────────────────────────────────────────────────────────
+
+- id: people.that-car-is-white
+  jlpt: N5
+  scenario: people
+  japanese: その車は白です。
+  reading: そのくるまはしろです。
+  romaji: sono kuruma wa shiro desu.
+  english: That car is white.
+
+- id: people.a-red-and-black-bag
+  jlpt: N5
+  scenario: people
+  japanese: 赤と黒のかばんです。
+  reading: あかとくろのかばんです。
+  romaji: aka to kuro no kaban desu.
+  english: It is a red and black bag.
+
+- id: people.i-like-blue
+  jlpt: N5
+  scenario: people
+  japanese: 青が好きです。
+  reading: あおがすきです。
+  romaji: ao ga suki desu.
+  english: I like blue.
+
+# ── Build and body ────────────────────────────────────────────────────────────
+
+- id: people.my-tooth-hurts
+  jlpt: N5
+  scenario: people
+  japanese: 歯がいたいです。
+  reading: はがいたいです。
+  romaji: ha ga itai desu.
+  english: My tooth hurts.
+
+- id: people.this-road-is-narrow
+  jlpt: N5
+  scenario: people
+  japanese: この道は細いです。
+  reading: このみちはほそいです。
+  romaji: kono michi wa hosoi desu.
+  english: This road is narrow.
+
+- id: people.that-tree-is-thick
+  jlpt: N5
+  scenario: people
+  japanese: あの木は太いです。
+  reading: あのきはふといです。
+  romaji: ano ki wa futoi desu.
+  english: That tree is thick.
+
+- id: people.im-in-good-health
+  jlpt: N5
+  scenario: people
+  japanese: 体が丈夫です。
+  reading: からだがじょうぶです。
+  romaji: karada ga joubu desu.
+  english: I am in good health.

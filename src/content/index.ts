@@ -30,6 +30,7 @@ import describingPhrasesRaw from "./phrases/describing.yaml";
 import aroundTownPhrasesRaw from "./phrases/around-town.yaml";
 import pastTensePhrasesRaw from "./phrases/past-tense.yaml";
 import mealsPhrasesRaw from "./phrases/meals.yaml";
+import peopleClothesPhrasesRaw from "./phrases/people-clothes.yaml";
 
 export const allPhrases: Phrase[] = [
   ...parsePhrases(transitRaw, "phrases/transit.yaml"),
@@ -51,7 +52,21 @@ export const allPhrases: Phrase[] = [
   ...parsePhrases(aroundTownPhrasesRaw, "phrases/around-town.yaml"),
   ...parsePhrases(pastTensePhrasesRaw, "phrases/past-tense.yaml"),
   ...parsePhrases(mealsPhrasesRaw, "phrases/meals.yaml"),
+  ...parsePhrases(peopleClothesPhrasesRaw, "phrases/people-clothes.yaml"),
 ];
+
+// parsePhrases only rejects duplicate ids within a single file, so the same id in
+// two files would slip through and findPhrase would silently return whichever
+// loaded first. The word collection has had this guard since vocab.asa was added
+// to basics-2.yaml while it already existed in transit.yaml; phrases never got it,
+// and this file gains a new phrase file every chapter.
+const seenPhraseIds = new Set<string>();
+for (const p of allPhrases) {
+  if (seenPhraseIds.has(p.id)) {
+    throw new Error(`phrases: duplicate phrase id "${p.id}" across files`);
+  }
+  seenPhraseIds.add(p.id);
+}
 
 /** Lookup helper. O(n), fine for hundreds; reach for a Map if it grows large. */
 export function findPhrase(id: string): Phrase | undefined {

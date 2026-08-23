@@ -8,12 +8,12 @@ fails if this file is out of date. Book One is N5 internally; a learner never re
 
 | | |
 |---|---|
-| Chapters | 11 |
-| Lessons | 93 (81 teaching, 12 checkpoints) |
-| Words | 451 |
-| Phrases | 207 |
-| Grammar patterns | 42 |
-| Kanji introduced | 182 |
+| Chapters | 12 |
+| Lessons | 100 (87 teaching, 13 checkpoints) |
+| Words | 484 |
+| Phrases | 227 |
+| Grammar patterns | 44 |
+| Kanji introduced | 200 |
 
 ---
 
@@ -1651,11 +1651,137 @@ fails if this file is out of date. Book One is N5 internally; a learner never re
 
 ---
 
+## Chapter 12 — People & what they wear
+
+*People and what they wear*
+
+6 lessons · 33 words · 20 phrases
+
+### 93. Men, women, boys, girls
+
+**Lesson 1 of 6** · People and what they wear
+**Can do:** Say who was there
+**New kanji:** 男 女 勢
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 男 | おとこ | man |
+| 女 | おんな | woman |
+| 男の子 | おとこのこ | boy |
+| 女の子 | おんなのこ | girl |
+| 大勢 | おおぜい | a lot of people, a crowd |
+
+- あの男の人はだれですか。 — Who is that man?
+- 女の子が三人います。 — There are three girls.
+- 大勢の人がいました。 — There were a lot of people.
+
+### 94. What you wear on top
+
+**Lesson 2 of 6** · People and what they wear
+**Can do:** Say what someone has on
+
+| Word | Reading | Meaning |
+|---|---|---|
+| シャツ | シャツ | shirt |
+| セーター | セーター | sweater, jumper |
+| 上着 | うわぎ | jacket, outer layer |
+| コート | コート | coat |
+| 着る | きる | to wear, to put on (upper body) |
+
+- 今日はセーターを着ています。 — I am wearing a sweater today.
+- その上着はいいですね。 — That jacket is nice.
+- コートを着ますか。 — Are you going to wear a coat?
+
+### 95. And what you pull on
+
+**Lesson 3 of 6** · People and what they wear
+**Can do:** Say what you put on and take off
+**Grammar:** `着る／はく／かぶる` — The verb for wearing changes with where the thing goes — shoulders down, waist down, or on your head.
+**New kanji:** 靴 脱
+
+| Word | Reading | Meaning |
+|---|---|---|
+| ズボン | ズボン | trousers, pants |
+| スカート | スカート | skirt |
+| 靴下 | くつした | socks |
+| はく | はく | to wear, to put on (lower body) |
+| 脱ぐ | ぬぐ | to take off (clothes, shoes) |
+
+- 靴下をはきます。 — I put on socks.
+- スカートをはいています。 — She is wearing a skirt.
+- ここで靴を脱ぎます。 — You take your shoes off here.
+
+### 96. Hat, glasses, tie, umbrella
+
+**Lesson 4 of 6** · People and what they wear
+**Can do:** Describe what someone is wearing, head to foot
+**New kanji:** 帽 傘
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 帽子 | ぼうし | hat, cap |
+| めがね | めがね | glasses |
+| ネクタイ | ネクタイ | necktie |
+| 傘 | かさ | umbrella |
+| かぶる | かぶる | to wear, to put on (head) |
+| かける | かける | to put on (glasses), to hang |
+| 締める | しめる | to fasten, to tie |
+
+- 帽子をかぶっています。 — He is wearing a hat.
+- めがねをかけています。 — I wear glasses.
+- ネクタイを締めます。 — I put on a tie.
+- 傘を持っていますか。 — Do you have an umbrella with you?
+
+### 97. Colour as a thing
+
+**Lesson 5 of 6** · People and what they wear
+**Can do:** Say what colour something is, both ways
+**Grammar:** `赤 and 赤い` — A colour is a noun and an adjective — 赤いかばん describes the bag, かばんは赤です names the colour.
+**New kanji:** 黒 白 赤 色
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 黒 | くろ | black |
+| 白 | しろ | white |
+| 赤 | あか | red |
+| 青 | あお | blue |
+| 黄色 | きいろ | yellow |
+
+- その車は白です。 — That car is white.
+- 赤と黒のかばんです。 — It is a red and black bag.
+- 青が好きです。 — I like blue.
+
+### 98. Build and body
+
+**Lesson 6 of 6** · People and what they wear
+**Can do:** Say how you feel and what something is like
+**New kanji:** 体 歯 鼻 太 細 丈 夫
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 体 | からだ | body |
+| 歯 | は | tooth, teeth |
+| 鼻 | はな | nose |
+| 太い | ふとい | thick, wide |
+| 細い | ほそい | thin, narrow |
+| 丈夫 | じょうぶ | healthy, sturdy |
+
+- 歯がいたいです。 — My tooth hurts.
+- この道は細いです。 — This road is narrow.
+- あの木は太いです。 — That tree is thick.
+- 体が丈夫です。 — I am in good health.
+
+### 99. Recognition checkpoint — closes the chapter
+
+> A wide pass over everything the book has taught, this chapter included. Pick each word out of a line-up; anything you miss comes back sooner. It finishes when the remaining set empties — retry as often as you like, nothing is recorded.
+
+---
+
 ## Closing the book
 
 Belongs to no chapter — reviews every situation in the book rather than one chapter's worth.
 
-### 93. Production checkpoint
+### 100. Production checkpoint
 
 > No new material. Everything so far has asked you to recognise Japanese; this asks you to produce it. You will see an English meaning and write the Japanese, drawn from across every situation you have worked through. Kana or romaji both count — this is about recall, not spelling. Anything you do not get comes straight back, and the checkpoint ends when there is nothing left to write. There is no score and nothing is recorded; whatever you miss simply returns to your review queue sooner.
 
@@ -1664,7 +1790,7 @@ Belongs to no chapter — reviews every situation in the book rather than one ch
 ## Shelved — not on the ladder
 
 Built and tested, switched off behind `VITE_HANA_ENABLED` (DR-023). Filtered out of the
-ladder entirely, so the orders above run 1–93 with no gap.
+ladder entirely, so the orders above run 1–100 with no gap.
 
 - Cross-situation conversation — Conversation with Hana
 - Can-do checkpoint — Can-do review

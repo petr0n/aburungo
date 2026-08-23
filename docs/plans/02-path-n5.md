@@ -38,10 +38,11 @@ always-free bucket, and every word on the ladder carries romaji as the crutch fo
 arrive before finishing it. There is no kana on-ramp from `/learn` today — an earlier draft drew a
 "kana mini-ladder" at the head of this diagram that was never built.
 
-**As of 2026-08-21**, with Chapter 11 merged: 93 lessons — 81 teaching, 12 checkpoints — across
-11 chapters, covering 20 situations. 451 words, 207 phrases, 42 grammar patterns, 182 kanji.
+**As of 2026-08-22**, with Chapter 12 merged and the book closed: 100 lessons — 87 teaching,
+13 checkpoints — across 12 chapters, covering 22 situations. 484 words, 227 phrases, 44 grammar
+patterns, 200 kanji.
 
-Pacing runs 5.6 words, 2.6 phrases and 2.2 kanji per teaching lesson. That is the honest rate at
+Pacing runs 5.7 words, 2.6 phrases and 2.4 kanji per teaching lesson. That is the honest rate at
 which a lesson can teach without becoming a list, and it is measured from the content rather than
 declared in advance.
 
@@ -60,6 +61,7 @@ declared in advance.
 | 9 | Around town | situation |
 | 10 | Talking about yesterday | **rule** — the past tense |
 | 11 | Meals & the kitchen | situation |
+| 12 | People & what they wear | situation |
 
 Chapter length varies from 4 to 13 teaching lessons **on purpose**. Padding a chapter to a round
 number would put a checkpoint mid-situation, which is exactly what DR-021 exists to prevent.
@@ -70,7 +72,7 @@ verbs that exercise it. Rule chapters pay a retroactive debt: the te-form chapte
 〜てください phrases the ladder had been carrying as memorised lumps, and the past-tense chapter did
 the same for five ました sentences. **Grammar is the binding constraint on this book, not
 vocabulary** — words and Tatoeba sentences are both oversupplied, grammar patterns exist in no
-dataset and must be authored. Only 42 of 81 teaching lessons carry a pattern. Two things move that
+dataset and must be authored. Only 44 of 87 teaching lessons carry a pattern. Two things move that
 number: alternating rule chapters into the sequence, and letting small rules ride on situation
 chapters — Chapter 11 carries three (verb-stem + 物, the 〜杯 counter, あまり〜ないです) inside an
 otherwise word-shaped chapter.
@@ -82,12 +84,11 @@ one new thing on top of taught ground, and sequencing is how that is engineered.
 
 ### Sizing against the ~10 × ~10 shape
 
-The endorsed target is ~10 chapters of ~10 lessons — ~100 teaching lessons per book. Where this
-book actually lands: **11 chapters shipped, 12 planned; 81 teaching lessons shipped, ~86 after
-people & clothes (~99 lessons total with checkpoints).** Chapters run over the target count while
-lessons-per-chapter run under it — the average is ~7 teaching lessons, and the chapters authored
-since the cadence landed (6 through 11) run 4–5. The two errors roughly cancel: the finished book
-lands within ~15% of ~100 teaching lessons.
+The endorsed target is ~10 chapters of ~10 lessons — ~100 teaching lessons per book. Where the
+finished book landed: **12 chapters, 87 teaching lessons, 100 lessons in total with checkpoints.**
+Chapters run over the target count while lessons-per-chapter run under it — the average is ~7
+teaching lessons, and the chapters authored since the cadence landed (6 through 12) run 4–6. The
+two errors roughly cancel: the book closed within ~15% of ~100 teaching lessons.
 
 That is the landing zone working as intended, not a miss to repair. Stretching chapters toward ten
 lessons would mean padding situations, which DR-021 forbids; cutting chapters to hit ten would
@@ -97,11 +98,11 @@ mechanism is **more chapters drawn from the coverage queue (§8)**, not longer o
 ### Can-do moments — derived, not declared
 
 An earlier draft of this doc declared 19 fixed can-dos. **That list is gone** (DR-022). The can-do
-set is now **the distinct situations of the lessons the learner has actually seen** — 20 today —
+set is now **the distinct situations of the lessons the learner has actually seen** — 22 today —
 computed by `taughtSituations` in `src/srs/canDo.ts`, so it grows with the content instead of
 going stale: the same computed-not-declared property DR-021 adopted for checkpoint positions.
 Separately, every teaching lesson carries its own one-line can-do ("Order a drink") shown on the
-lesson — 81 lines, 73 distinct, because adjacent lessons in one scene legitimately share one. The
+lesson — 87 lines, 79 distinct, because adjacent lessons in one scene legitimately share one. The
 per-lesson line is presentation; the situation set is the model.
 
 ## 3. What a lesson contains
@@ -156,12 +157,12 @@ are unlimited, nothing is recorded, and misses rejoin the SRS queue rather than 
 
 ## 6. Kanji
 
-182 kanji introduced on the lessons that need them, with the component/mnemonic layer still to be
+200 kanji introduced on the lessons that need them, with the component/mnemonic layer still to be
 built (`docs/plans/99-roadmap.md`). Stroke order via KanjiVG is bundled. The component method
 matters most from Book Two on, where kanji stop being learnable as flat shapes — installing it at
 Book One is an investment that pays out later.
 
-Note the count honestly: 182 is well past the ~100 kanji a typical N5 reference lists. That is a
+Note the count honestly: 200 is double the ~100 kanji a typical N5 reference lists. That is a
 deliberate consequence of introducing kanji where the lesson needs them (料 and 理 arrive with
 料理, not in a silo) rather than a scope error — but it raises the stakes on the mnemonic layer,
 because the book is already asking for more raw shapes than the flat-memorisation method
@@ -182,12 +183,12 @@ Do not plan new work that depends on Hana without asking.
 
 ## 8. Content coverage
 
-The N5 community reference lists 809 words. Book One teaches 451 words covering 423 of that list,
-leaving 386 of it missing — 241 of those attested by both reference lists and flagged common in
+The N5 community reference lists 809 words. Book One teaches 484 words covering 457 of that list,
+leaving 352 of it missing — 209 of those attested by both reference lists and flagged common in
 JMdict, which is the queue worth authoring against. The gap grew rather than shrank when Chapter
 11 landed: the same PR fixed a homophone bug that had been marking reference entries covered on a
-bare reading match (adding 晩 silently "covered" ～番), so the current figure is the first honest
-one. 56 taught words are ones the book needs and
+bare reading match (adding 晩 silently "covered" ～番), so figures from that point on are the first
+honest ones. 56 taught words are ones the book needs and
 the list does not have (何曜日, またね, お願いします — compounds and set phrases a situation
 demands), which is the normal direction of that disagreement. `node scripts/jlpt.mjs coverage n5`
 regenerates the gap file.
@@ -197,13 +198,13 @@ existed since 2010, and taking a headword straight from one has already shipped 
 (終る, which JMdict does not flag common; 終わる is the real word). Verify every headword against
 JMdict before it goes in.
 
-The food cluster — the largest hole in the gap list — shipped as Chapter 11. The one
-remaining cluster planned for the finish is **people & clothes**. Be honest about what that
-closes: a chapter is ~27 words, so the book will finish with roughly 360 reference words untaught,
-~215 of them common. Either that remainder is Book Two's opening inventory and review fodder — the
-defensible reading, since 451 situation-anchored words beat 800 list-marched ones for a first book
-— or it demands more chapters than the current plan holds (see the sizing note in §2). That is an
-owner call, not a drift to paper over.
+The food cluster — the largest hole in the gap list — shipped as Chapter 11, and **people &
+clothes** closed the book as Chapter 12. Be honest about what that closed: 33 words, and the book
+finishes with 352 reference words untaught, 209 of them attested by both reference lists and
+flagged common. That remainder is **Book Two's raw material** — situations Book One never staged
+— rather than a debt against a syllabus. DR-033 settled it by ending a level's claim on what a
+book contains, so the question of whether Book One should keep going until it has taught the list
+no longer has a subject.
 
 ## 9. Free/paid
 
@@ -213,11 +214,14 @@ asked to pay.
 
 ## 10. What is still missing
 
-- **The people & clothes chapter** — the last planned chapter; closes the book at ~12 chapters
-- **Kanji component + mnemonic layer** — kanji are introduced but not decomposed, and at 182
-  shapes the flat method is already past its comfortable ceiling (§6)
+Every chapter this plan named is now shipped. What is left is not content the book is short of —
+it is the layers underneath it.
+
+- **Kanji component + mnemonic layer** — kanji are introduced but not decomposed, and at 200
+  shapes the flat method is well past its comfortable ceiling (§6). This is now the largest
+  single risk to the book actually working
 - **Graded reading** — no assembled passages yet
 - **Audio** — VOICEVOX pipeline not built; items are not yet playable
-- **~373 words** of the reference gap (§8 — an owner call on whether Book One or Book Two owns
-  it), and grammar patterns on the 39 of 81 teaching lessons that carry none — reference N5
-  grammar inventories run 50–80 patterns depending on how they count; 42 shipped
+- **352 words** of the reference gap (§8 — an owner call on whether Book One or Book Two owns
+  it), and grammar patterns on the 43 of 87 teaching lessons that carry none — reference N5
+  grammar inventories run 50–80 patterns depending on how they count; 44 shipped
