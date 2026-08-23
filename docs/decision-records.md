@@ -1047,8 +1047,8 @@ Its scope is the dataset, not the interface.
 
 > **DR-025 through DR-032 were never decisions.** They are chapter serial numbers, stamped into
 > that chapter's own YAML headers as a provenance tag and incremented by copying the previous
-> chapter's header. Nothing outside those files ever cited them, and no decision was made under
-> any of them:
+> chapter's header. No decision was ever made under any of them, and until the tags were removed
+> nothing outside those chapters' own files cited one:
 >
 > | Tag | Was really |
 > |---|---|
