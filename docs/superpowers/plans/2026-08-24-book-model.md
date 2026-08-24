@@ -176,7 +176,7 @@ git commit -m "refactor(types): a book declares a stage"
 - Modify: `src/types.ts` (the `Book` type)
 - Modify: `src/content/books.ts`
 - Modify: `src/content/books.test.ts`
-- Modify: `src/pages/LearnPage.tsx:612`, `:639`, `:642`, `:743`
+- Modify: `src/pages/LearnPage.tsx:612`, `:614`, `:639`, `:642`, `:743`
 - Modify: `src/srs/dailyLoop.test.ts:69`
 
 **Interfaces:**
@@ -238,10 +238,19 @@ In `src/content/books.ts`, replace the `id` line and its comment:
 
 - [ ] **Step 5: Point the progress calls at the key, not the id**
 
-In `src/pages/LearnPage.tsx`, four sites. Line 612:
+In `src/pages/LearnPage.tsx`, **five** sites — four calls and one dependency array. Line 612:
 
 ```ts
         getPathProgress(book.progressKey, userId !== null),
+```
+
+Line 614, the prior-books fetch. This one is dormant — `priorBooks(bookOne)` is empty, so the
+map never runs — and it is the most dangerous line in the file for exactly that reason: nothing
+you can run today will catch it, and it fires the moment Book Two exists and Book One becomes a
+prior book, reading every learner's Book One progress as empty.
+
+```ts
+        ...earlier.map((b) => getPathProgress(b.progressKey, userId !== null)),
 ```
 
 Line 639:
@@ -266,9 +275,12 @@ Verify you got all four:
 
 ```bash
 grep -n 'getPathProgress\|markLessonSeen' src/pages/LearnPage.tsx
+grep -rn '\bbook\.id\b\|\bb\.id\b' src/ || echo "none"
 ```
 
-Expected: every call passes `book.progressKey`. **No call may pass `book.id`** — that is the bug this task exists to prevent.
+Expected: five lines from the first grep — the import, and four calls all passing a
+`progressKey`. The second must print `none`. **No call may pass `book.id` or `b.id`** — that is
+the bug this task exists to prevent, and neither the compiler nor any test can catch it.
 
 - [ ] **Step 6: Update the test fixture**
 
@@ -288,7 +300,7 @@ Expected: all pass.
 
 ```bash
 git add src/types.ts src/content/books.ts src/content/books.test.ts src/pages/LearnPage.tsx src/srs/dailyLoop.test.ts
-git commit -m "refactor(types): split the progress key from the book id"
+git commit -m "refactor(types): split progress key from book id"
 ```
 
 ---
@@ -751,9 +763,13 @@ First run on a machine needs `pnpm exec playwright install chromium`. Do not run
 
 ```bash
 grep -n 'getPathProgress\|markLessonSeen' src/pages/LearnPage.tsx
+grep -rn '\bbook\.id\b\|\bb\.id\b' src/ || echo "none"
 ```
 
-Expected: every call passes `book.progressKey`. If any passes `book.id`, learners' progress is orphaned on deploy — fix before opening the PR.
+Expected: five lines from the first — the import plus four calls, every one passing a
+`progressKey` — and `none` from the second. If any call passes `book.id` or `b.id`, learners'
+progress is orphaned on deploy. The prior-books call on line 614 is the one to check hardest:
+it is dormant while there is one book, so nothing you can run proves it right.
 
 - [ ] **Step 4: Open the PR**
 
