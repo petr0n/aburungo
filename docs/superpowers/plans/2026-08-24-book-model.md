@@ -317,6 +317,7 @@ Tiers gate on which book teaches an item, not on the item's JLPT tag.
 - Modify: `src/content/index.ts` — delete `TIER_LEVELS` and `phrasesForTier`
 - Modify: `src/content/vocabulary/index.ts` — delete `TIER_LEVELS` and `wordsForTier`
 - Modify: `src/pages/FlashcardPage.tsx:5-6`, `src/pages/PracticePage.tsx:6-7`, `src/pages/LearnPage.tsx:26-27`, `src/pages/WordsPage.tsx:4`
+- Modify: `src/types.ts` (Step 5), `src/store/session.ts:6` (a doc comment pointing at the old home)
 
 **Interfaces:**
 - Consumes: `books` from `@/content/books` (Task 2 shape).
@@ -563,7 +564,10 @@ grep -rn 'TIER_LEVELS' src || echo "clean"
 grep -rn 'ForTier' src | grep -v 'content/access'
 ```
 
-Expected: `clean`, and every remaining `ForTier` line either imports from `@/content/access` or is a call site inside a page.
+Expected: `clean`, and every remaining `ForTier` line is either an import from `@/content/access`
+or a call site inside a page — with one exception you must fix rather than ignore.
+`src/store/session.ts:6` carries a doc comment reading "see phrasesForTier() in
+src/content/index.ts", which stops being true at Step 6. Repoint it to `src/content/access.ts`.
 
 - [ ] **Step 9: Verify**
 
@@ -581,8 +585,8 @@ Expected: no output.
 - [ ] **Step 10: Commit**
 
 ```bash
-git add src/content/access.ts src/content/access.test.ts src/content/index.ts src/content/vocabulary/index.ts src/pages/FlashcardPage.tsx src/pages/PracticePage.tsx src/pages/LearnPage.tsx src/pages/WordsPage.tsx
-git commit -m "feat(content): gate tiers on the book, not the level"
+git add src/content/access.ts src/content/access.test.ts src/content/index.ts src/content/vocabulary/index.ts src/types.ts src/store/session.ts src/pages/FlashcardPage.tsx src/pages/PracticePage.tsx src/pages/LearnPage.tsx src/pages/WordsPage.tsx
+git commit -m "feat(content): gate tiers on the book, not level"
 ```
 
 ---
