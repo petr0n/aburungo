@@ -11,8 +11,9 @@ import { n5Lessons } from "@/content/lessons";
 import { n5Chapters } from "@/content/chapters";
 
 export const bookOne: Book = {
-  // Also the PathProgress pathId — must stay "n5" so existing progress keeps.
-  id: "n5",
+  id: "book-1",
+  // Frozen: every PathProgress row, local and remote, is keyed on this string.
+  progressKey: "n5",
   order: 1,
   title: "Book One",
   chapters: n5Chapters,

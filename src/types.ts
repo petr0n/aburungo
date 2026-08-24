@@ -174,8 +174,17 @@ export type Stage = "foundation" | "building" | "reading" | "fluency";
  * reads "Book One", never "N5" (DR-024).
  */
 export type Book = {
-  /** Stable id, also the PathProgress pathId. Internal naming, e.g. "n5". */
+  /** Stable id, e.g. "book-1". Internal naming; the learner reads `title`. */
   id: string;
+  /**
+   * The PathProgress key, persisted in Dexie and server-side.
+   *
+   * Book One's is "n5" forever: it is the primary key of every existing
+   * progress row, local and remote, and renaming it orphans them. Books from
+   * Two on use their own id. Never derive this from `id` — the whole point is
+   * that they are allowed to disagree.
+   */
+  progressKey: string;
   /** Position in the course, 1-indexed. */
   order: number;
   /** What the learner reads, e.g. "Book One". */

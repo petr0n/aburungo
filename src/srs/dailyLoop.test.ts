@@ -66,6 +66,7 @@ const allPatterns = [grammarPattern("g1", "p1"), grammarPattern("g2", "p2")];
 /** The orchestrator takes a book, not a lesson list (03 §0a). */
 const bookOf = (bookLessons: readonly Lesson[]): Book => ({
   id: "n5",
+  progressKey: "n5",
   order: 1,
   title: "Test book",
   chapters: [],

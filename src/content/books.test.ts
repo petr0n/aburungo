@@ -4,8 +4,18 @@ import { n5Lessons } from "./lessons";
 import { n5Chapters } from "./chapters";
 
 describe("bookOne", () => {
-  it("keeps the existing PathProgress pathId so no learner loses progress", () => {
-    expect(bookOne.id).toBe("n5");
+  it("has an id that does not claim the book is a JLPT level (DR-033)", () => {
+    expect(bookOne.id).toBe("book-1");
+  });
+
+  it("keeps the persisted progress key so no learner loses progress", () => {
+    // "n5" is the primary key of every PathProgress row, in Dexie and on the
+    // server. It is frozen regardless of what the book is called.
+    expect(bookOne.progressKey).toBe("n5");
+  });
+
+  it("gives every book a progress key", () => {
+    for (const b of books) expect(b.progressKey.length).toBeGreaterThan(0);
   });
 
   it("is the first book and reads as 'Book One', never 'N5' (DR-024)", () => {
