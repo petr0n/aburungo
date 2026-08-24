@@ -29,11 +29,19 @@ Check `MEMORY.md` there at the start of every conversation. Write updated memori
 
 | Tier | Auth required | Content | Features |
 |------|--------------|---------|----------|
-| Guest | None | JLPT N5 | Fill-in-blank, Flashcards, Kana practice, Kanji browse |
-| Free account | Sign-up (free) | N5 + N4 | Same as guest + progress sync across devices |
-| Paid | Subscription | N5–N1 | All features + Conversation with Hana |
+| Guest | None | Book One | Fill-in-blank, Flashcards, Kana practice, Kanji browse |
+| Free account | Sign-up (free) | Books One through Four | Same as guest + progress sync across devices |
+| Paid | Subscription | Every book | All features + Conversation with Hana |
 
-- Kana practice (hiragana/katakana) is fully free — it is pre-JLPT and prerequisite to all levels.
+- Kana practice (hiragana/katakana) is fully free — it is the prerequisite to every book.
+- **Taught content gates on book order, not on JLPT level (DR-033).** A book is a volume of the
+  course, not a level. `TIER_BOOK_LIMIT` in `src/content/access.ts` holds the limits: an item's
+  gate is the order of the first book that teaches it, and an item no book teaches reads as Book
+  One rather than disappearing from browse. The `jlpt` field stays in the content because the
+  coverage tooling depends on it, and gates nothing there.
+- Kanji browse is the one surface still filtered by JLPT tab (`TIER_MAX_JLPT` in
+  `src/pages/KanjiPage.tsx`): it browses the whole KANJIDIC2 set, most of which no book teaches, so
+  book order has nothing to say about it.
 - **Conversation with Hana is shelved (DR-023).** Built, tested, and switched off behind
   `VITE_HANA_ENABLED`, which defaults to off — the owner does not want a per-use API cost in a
   fixed-cost tool. Do not enable it, re-add it to the nav, or build new features that depend on

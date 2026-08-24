@@ -71,7 +71,8 @@ export function buildMarkdown() {
   w("phrases each one teaches.");
   w();
   w("**Generated — do not edit.** Run `pnpm ladder` after any content change; `pnpm test`");
-  w("fails if this file is out of date. Book One is N5 internally; a learner never reads that.");
+  w("fails if this file is out of date. Book One's ids carry a legacy `n5` prefix; a learner");
+  w("never reads it.");
   w();
   w("| | |");
   w("|---|---|");

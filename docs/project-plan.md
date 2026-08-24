@@ -8,11 +8,13 @@ Practical Japanese for English speakers. Focused on real-life situations with sp
 
 | Tier | Auth | Content | Features |
 |---|---|---|---|
-| Guest | None | JLPT N5 | Fill-in-blank, Flashcards, Kana practice, Kanji browse (N5 only) |
-| Free account | Sign-up (free) | N5 + N4 | Same + progress sync across devices |
-| Paid | Subscription | N5–N1 | All features + Conversation with Hana |
+| Guest | None | Book One | Fill-in-blank, Flashcards, Kana practice, Kanji browse (N5 tab only) |
+| Free account | Sign-up (free) | Books One through Four | Same + progress sync across devices |
+| Paid | Subscription | Every book | All features + Conversation with Hana |
 
-- Kana (hiragana / katakana) is always fully free — it is pre-JLPT.
+- Kana (hiragana / katakana) is always fully free — it is the prerequisite to every book.
+- Taught content gates on book order, not JLPT level (DR-033). A book is a volume of the course.
+  Kanji browse still filters by JLPT tab — it covers KANJIDIC2, not a book's contents.
 - Conversation with Hana is paid-only because it carries a real Anthropic API cost.
 - Paywall enforcement is stubbed; any authenticated user is treated as free tier until payment is wired. The `UserTier` type in `src/types.ts` carries the slot.
 - See [decision-records.md](decision-records.md) for the rationale behind this model.

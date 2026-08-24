@@ -5,8 +5,9 @@ Sequenced so each phase ships something usable and de-risks the next.
 Guiding rule: **reuse, don't rebuild.** FSRS, the buckets, audio, progress, tiers and furigana
 already exist. Each phase adds *connective tissue*, not new silos.
 
-Naming follows DR-024 — **Book → Chapter → Lesson**. Phases below were originally written against
-JLPT level names; Book One is N5, Book Two is N4, and so on.
+Naming follows DR-024 — **Book → Chapter → Lesson**. The phases below predate DR-033 and were
+written against JLPT level names. Read a level name as the book that phase is about, and read every
+book number here as a volume of the course — never a level.
 
 ---
 

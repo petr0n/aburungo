@@ -74,8 +74,9 @@ rather than ship seven disconnected tools.
   material must be sourced (Tatoeba sentences, graded readers) or assembled from verified atoms,
   never invented.
 - **Touch-first, mobile-first**, 44px targets, no hover-only affordances.
-- **Tiered access.** Guest = N5, free = N5+N4, paid = N3–N1 + Hana. Paths are "mostly paid," so
-  most live in the paid tier, with a free on-ramp.
+- **Tiered access.** Gated by book order, not by level (DR-033): guest = Book One, free = Books
+  One through Four, paid = every book. Hana is shelved (DR-023) and stays paid-only if it returns.
+  The ladder is "mostly paid," so most books live in the paid tier, with a free on-ramp.
 
 ---
 
