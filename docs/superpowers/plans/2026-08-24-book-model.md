@@ -89,7 +89,35 @@ In `src/types.ts`, delete the whole `difficultyShift` field including its doc co
   stage: Stage;
 ```
 
-- [ ] **Step 5: Update the book**
+- [ ] **Step 5: Retire the two comments that call a book a level**
+
+Still in `src/types.ts`. The header comment on `Book` currently opens "A book — the run of
+chapters an outside reference would call a JLPT level". That is the sentence DR-033 exists to
+retire, and it sits on the type this task is changing. Replace the whole comment with:
+
+```ts
+/**
+ * A book — a volume of the course (DR-033).
+ *
+ * Not a JLPT level: about ten chapters of about ten teaching lessons, ending
+ * where an arc of situations ends rather than where a reference list runs out.
+ * The `jlpt` tags on content stay as they are, because the coverage tooling
+ * depends on them, but they no longer say what a book contains. The learner
+ * reads "Book One", never "N5" (DR-024).
+ */
+```
+
+The `Chapter` comment above it makes the same claim in its last paragraph. Replace that
+paragraph — the one beginning "Chapters group lessons" — with:
+
+```ts
+ * Chapters group lessons; a *book* groups chapters. A book is a volume of a
+ * coherent shape rather than a JLPT level (DR-033): the `jlpt` tags on content
+ * stay as they are, useful and depended on by the coverage tooling, but they no
+ * longer decide what a book holds. A learner reads "Book One", not "N5".
+```
+
+- [ ] **Step 6: Update the book**
 
 In `src/content/books.ts`, replace `difficultyShift: false,` with:
 
@@ -97,7 +125,7 @@ In `src/content/books.ts`, replace `difficultyShift: false,` with:
   stage: "foundation",
 ```
 
-- [ ] **Step 6: Update the one runtime consumer**
+- [ ] **Step 7: Update the one runtime consumer**
 
 In `src/pages/LearnPage.tsx:83`, inside `isShifted`:
 
@@ -105,7 +133,7 @@ In `src/pages/LearnPage.tsx:83`, inside `isShifted`:
   if (book.stage !== "foundation") return true;
 ```
 
-- [ ] **Step 7: Update the two test fixtures**
+- [ ] **Step 8: Update the two test fixtures**
 
 In `src/srs/dailyLoop.test.ts:73`, in `bookOf`, replace `difficultyShift: false,` with `stage: "foundation",`.
 
@@ -115,12 +143,21 @@ At `:188`, replace the `bookTwo` line with:
     const bookTwo: Book = { ...bookOf([laterLesson]), id: "n4", order: 2, stage: "building" };
 ```
 
-- [ ] **Step 8: Verify**
+- [ ] **Step 9: Verify**
 
 Run: `pnpm build && pnpm test && pnpm lint`
 Expected: build succeeds (`tsc -b` proves no `difficultyShift` reference survives), all tests pass.
 
-- [ ] **Step 9: Commit**
+Then confirm no comment still calls a book a level:
+
+```bash
+grep -n 'JLPT level' src/types.ts
+```
+
+Expected: only the `JlptLevel` type's own one-line comment. Any hit inside the `Book` or
+`Chapter` comment means Step 5 was missed.
+
+- [ ] **Step 10: Commit**
 
 ```bash
 git add src/types.ts src/content/books.ts src/content/books.test.ts src/pages/LearnPage.tsx src/srs/dailyLoop.test.ts
@@ -449,13 +486,45 @@ export function phrasesForTier(tier: UserTier): Phrase[] {
 Run: `pnpm test -- src/content/access.test.ts`
 Expected: PASS, 8 tests.
 
-- [ ] **Step 5: Delete the old gating**
+- [ ] **Step 5: Retire the two comments that say JLPT drives access**
+
+In `src/types.ts`, the `UserTier` comment lists levels per tier and `Phrase.jlpt` opens "JLPT
+difficulty level. Drives access tier gating". Both become false the moment this task lands.
+
+Replace the `UserTier` comment with:
+
+```ts
+/**
+ * Access tier for a user session.
+ *
+ * Gates on book order, not on a JLPT level (DR-033) — see src/content/access.ts.
+ *
+ * guest      — unauthenticated; Book One
+ * free       — signed-in free account; Books One through Four
+ * paid       — subscriber; every book, plus Conversation
+ */
+```
+
+Replace the `Phrase.jlpt` comment with:
+
+```ts
+  /**
+   * JLPT level of the phrase. Metadata only: the coverage and queue tooling in
+   * scripts/ is built on it, and it no longer gates access (DR-033 — gating
+   * reads book order, see src/content/access.ts). Omit only for content that
+   * predates JLPT tagging; treat as N5 until resolved.
+   */
+```
+
+`Word.jlpt` in the same file carries no comment, so there is nothing to correct there.
+
+- [ ] **Step 6: Delete the old gating**
 
 In `src/content/index.ts`, delete the `TIER_LEVELS` constant, its doc comment (the block starting `Allowed JLPT levels per user tier.`), and the `phrasesForTier` function. Remove `JlptLevel` and `UserTier` from that file's type imports **only if nothing else there uses them** — check with `grep -n 'JlptLevel\|UserTier' src/content/index.ts` before editing the import line.
 
 In `src/content/vocabulary/index.ts`, delete the same three things and run the same check.
 
-- [ ] **Step 6: Repoint the four consumers**
+- [ ] **Step 7: Repoint the four consumers**
 
 `src/pages/FlashcardPage.tsx`, replace lines 5-6:
 
@@ -473,7 +542,7 @@ import { phrasesForTier, wordsForTier } from "@/content/access";
 import { wordsForTier } from "@/content/access";
 ```
 
-- [ ] **Step 7: Verify nothing still imports the old names from the old places**
+- [ ] **Step 8: Verify nothing still imports the old names from the old places**
 
 ```bash
 grep -rn 'TIER_LEVELS' src || echo "clean"
@@ -482,12 +551,20 @@ grep -rn 'ForTier' src | grep -v 'content/access'
 
 Expected: `clean`, and every remaining `ForTier` line either imports from `@/content/access` or is a call site inside a page.
 
-- [ ] **Step 8: Verify**
+- [ ] **Step 9: Verify**
 
 Run: `pnpm build && pnpm test && pnpm lint`
 Expected: all pass. `tsc -b` proves no stale import survived.
 
-- [ ] **Step 9: Commit**
+Then confirm no comment still says a level gates access:
+
+```bash
+grep -n 'Drives access\|N5 content only\|N5 + N4' src/types.ts
+```
+
+Expected: no output.
+
+- [ ] **Step 10: Commit**
 
 ```bash
 git add src/content/access.ts src/content/access.test.ts src/content/index.ts src/content/vocabulary/index.ts src/pages/FlashcardPage.tsx src/pages/PracticePage.tsx src/pages/LearnPage.tsx src/pages/WordsPage.tsx
@@ -560,8 +637,11 @@ Expected: each line names a new path and otherwise reads exactly as before. Wher
 
 - [ ] **Step 6: Verify**
 
-Run: `pnpm test && pnpm lint`
-Expected: all pass. `scripts/decisionRecords.test.mjs` scans these files, so a mangled DR citation surfaces here.
+Run: `pnpm build && pnpm test && pnpm lint`
+Expected: all pass. `pnpm build` is the typecheck gate and the Global Constraints require it before
+every commit — these are docs, but `scripts/*.mjs` and two content YAML files carry links this task
+rewrote. `scripts/decisionRecords.test.mjs` scans these files, so a mangled DR citation surfaces
+here too.
 
 - [ ] **Step 7: Commit**
 
@@ -631,8 +711,8 @@ Expected: `clean` for both. Any hit is a claim this task exists to retire.
 
 - [ ] **Step 5: Verify**
 
-Run: `pnpm test && pnpm lint`
-Expected: all pass.
+Run: `pnpm build && pnpm test && pnpm lint`
+Expected: all pass. Docs-only changes still run the full gate, per the Global Constraints.
 
 - [ ] **Step 6: Commit**
 
