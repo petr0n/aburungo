@@ -1045,11 +1045,25 @@ Its scope is the dataset, not the interface.
 
 ---
 
-> **DR-025 through DR-032 were never decisions.** They are chapter serial numbers: one per
-> chapter from 4 (family) through 11 (meals), stamped into that chapter's own YAML headers as a
-> provenance tag and incremented by copying the previous chapter's header. Nothing outside those
-> files cites DR-025 through DR-031. The tags have been removed from the content in favour of
-> naming the chapter, and Chapter 12 was authored without one.
+> **DR-025 through DR-032 were never decisions.** They are chapter serial numbers, stamped into
+> that chapter's own YAML headers as a provenance tag and incremented by copying the previous
+> chapter's header. No decision was ever made under any of them, and until the tags were removed
+> nothing outside those chapters' own files cited one:
+>
+> | Tag | Was really |
+> |---|---|
+> | DR-025 | Chapter 4 — people & family |
+> | DR-026 | Chapter 5 — home, work & study |
+> | DR-027 | Chapter 6 — the te-form |
+> | DR-028 | Chapter 7 — choosing and counting |
+> | DR-029 | Chapter 8 — describing things and people |
+> | DR-030 | Chapter 9 — around town |
+> | DR-031 | Chapter 10 — talking about yesterday |
+> | DR-032 | Chapter 11 — meals and the kitchen |
+>
+> The tags have been removed from the content in favour of naming the chapter, and Chapter 12 was
+> authored without one. `scripts/decisionRecords.test.mjs` now fails if any file cites a number
+> this file does not account for.
 >
 > The numbers are not reused. They appear in merged commit subjects — `feat(content): meals and
 > the kitchen (Chapter 11, DR-032)` — so a new record claiming one of them would be a worse
