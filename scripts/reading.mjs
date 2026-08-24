@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Tatoeba ingestion + i+1 levelling pipeline (docs/plans/04-path-n3.md §8).
+ * Tatoeba ingestion + i+1 levelling pipeline (docs/plans/04-stage-reading.md §8).
  *
  *   node scripts/reading.mjs ingest   extract Tatoeba pairs -> data/reading/corpus.json
  *   node scripts/reading.mjs tag      level + tag the corpus -> data/reading/tagged.json
@@ -267,7 +267,7 @@ function micro() {
   write("micro-readings.json", {
     generated: new Date().toISOString().slice(0, 10),
     stopgap:
-      "This is 04-path-n3.md section 5 option (c), the labelled stopgap: thematically clustered verbatim Tatoeba sentences at a shared coverage band. Thematic neighbours, NOT coherent texts — the reader UI must not dress these up as stories. Replace with licensed graded readers or levelled Aozora texts when the section 5 text-source decision lands.",
+      "This is 04-stage-reading.md section 5 option (c), the labelled stopgap: thematically clustered verbatim Tatoeba sentences at a shared coverage band. Thematic neighbours, NOT coherent texts — the reader UI must not dress these up as stories. Replace with licensed graded readers or levelled Aozora texts when the section 5 text-source decision lands.",
     attribution: ATTRIBUTION,
     knownSet: "full taught inventory at generation time",
     bands: {

@@ -14,7 +14,7 @@
 #   Sanctioned by CLAUDE.md, which allows N5 phrase content from training
 #   knowledge because N5 vocabulary is canonical and well documented, so long
 #   as it carries this marker. Verified-only content starts at Book Three
-#   (docs/plans/04-path-n3.md section 8).
+#   (docs/plans/04-stage-reading.md section 8).
 #
 #   Not for want of trying: `node scripts/jlpt.mjs sentences n5 --polite
 #   --for 男,女,着る,はく,帽子,...` was run against the 25,983-pair Tatoeba

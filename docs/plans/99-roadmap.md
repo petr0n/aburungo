@@ -53,13 +53,13 @@ Resequenced 2026-08-04 (DR-017).
    attempt to derive them at runtime both broke on kana word boundaries and synthesised
    unverified Japanese. It lands with Book Two's content, not with the field.
 
-See [03-path-n4.md §0](03-path-n4.md).
+See [03-book-two.md §0](03-book-two.md).
 
 ## Phase 3 — Book Two
 
 Author the chapters, **rule chapters first** — plain form, giving and receiving, joining
 sentences, wanting and intending, being able to, quoted speech, conditionals, per the
-dependency-ordered skeleton in [03 §4](03-path-n4.md). Book One's grammar patterns cover only 42
+dependency-ordered skeleton in [03 §4](03-book-two.md). Book One's grammar patterns cover only 42
 of its 81 teaching lessons (with Chapter 11) because situation chapters are word-shaped; Book
 Two's purpose is combining patterns, so it should invert that ratio.
 
@@ -72,8 +72,8 @@ First graded reading passages, once vocabulary is deep enough for i+1 to mean an
 reading library and reader UI, in-text mining → SRS, compose-then-compare production, and the
 honest progress counters. Then the paywall — flip the `isPaid` stub when payment is wired.
 
-**Decided (2026-08-20):** chapters survive as grammar/reading **bands** ([04 §3](04-path-n3.md)).
-Still open before authoring: the reading-library **text source** ([04 §5](04-path-n3.md)).
+**Decided (2026-08-20):** chapters survive as grammar/reading **bands** ([04 §3](04-stage-reading.md)).
+Still open before authoring: the reading-library **text source** ([04 §5](04-stage-reading.md)).
 
 Content is **verified only** from here up. No training-canonical sentences.
 
@@ -81,8 +81,8 @@ Content is **verified only** from here up. No training-canonical sentences.
 
 Extend Book Three's reading, mining and production machinery with harder, broader content and
 register/nuance grammar. Mostly content and levelling work, little new engine. Planned to band
-level only — see [04b-path-n2-n1.md](04b-path-n2-n1.md). Listening now has a **floor** inside the
-books (library passages with pre-generated audio — [04 §5](04-path-n3.md), [04b §6](04b-path-n2-n1.md));
+level only — see [04b-stage-fluency.md](04b-stage-fluency.md). Listening now has a **floor** inside the
+books (library passages with pre-generated audio — [04 §5](04-stage-reading.md), [04b §6](04b-stage-fluency.md));
 unscripted real-speech listening remains the named ceiling.
 
 ---

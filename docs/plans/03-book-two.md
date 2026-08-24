@@ -8,7 +8,7 @@ grammar patterns, a working kanji habit, and the vocabulary to say things Book O
 Book Two is the **bridge**: where recognition becomes production and the learner stops reciting and
 starts composing.
 
-Same engine as [Book One](02-path-n5.md); this doc covers only what **shifts**, plus the two pieces
+Same engine as [Book One](02-book-one.md); this doc covers only what **shifts**, plus the two pieces
 of groundwork that must land before any content is authored. Naming per DR-024: internally this is
 the N4 book, and a learner never reads that — the `jlpt` field lives only in the data.
 
@@ -177,7 +177,7 @@ The first real Tadoku taste, and deliberately a *shape*, not a library — the l
 mining are Book Three builds.
 
 - **Shape:** a handful of linked sentences at ~98% known items — the unassisted-flow threshold
-  (Hu & Nation; see [04 §5](04-path-n3.md)), cheap to hit here since passages are authored against
+  (Hu & Nation; see [04 §5](04-stage-reading.md)), cheap to hit here since passages are authored against
   the ladder — read for flow, no dictionary, no questions after. Read, not SRS'd.
 - **When:** from roughly chapter 4 on — a passage is pointless before joining-sentences exists,
   because a passage of single-clause sentences is just phrases stacked. One short passage near

@@ -88,7 +88,7 @@ Practical Japanese for English speakers. Focused on real-life situations with sp
 2. **Finish Book One, then multi-book support, then Book Two content** — in that order. The app
    knows exactly one book (`n5Lessons` is a hardcoded export used in eight places in `LearnPage.tsx`),
    so authoring a second book's content first means retrofitting two. See `docs/plans/99-roadmap.md`
-   Phase 2b and `docs/plans/03-path-n4.md` §0.
+   Phase 2b and `docs/plans/03-book-two.md` §0.
 3. **VOICEVOX audio pipeline** — vet voice licenses, pre-generate TTS locally via Podman, upload to Supabase Storage (see `admin-dashboard-plan.md` for multi-voice strategy)
 4. **Admin Phase 2** — log viewer (pino ring buffer), learning analytics, content audit (see `admin-dashboard-plan.md`)
 5. **Paywall / payment integration** — flip `isPaid` check in `useUserTier()` when Stripe/RevenueCat is wired; slot in `UserTier` type is ready

@@ -11,6 +11,6 @@ and stayed wrong for months.
 from `src/content/` by `pnpm ladder`. Every chapter, lesson, word, phrase and checkpoint, in order.
 A test fails if either file is out of date, so it cannot drift.
 
-For Book One's design rationale rather than its contents, see [02-path-n5.md](02-path-n5.md).
+For Book One's design rationale rather than its contents, see [02-book-one.md](02-book-one.md).
 
 The original text is in git history if it is ever wanted: `git log --follow docs/plans/02b-n5-units.md`.

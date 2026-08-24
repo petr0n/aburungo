@@ -216,6 +216,6 @@ with zero changes) and gain `newGrammarPattern ? 1 : 0` folded into the learned 
   Phase 2 items, separate specs.
 - Conjugation-drill review format (te-form, plain-form) — N5 patterns are all
   particle/copula shaped and fit cloze; conjugation drilling is an N4-era concern per
-  `docs/plans/03-path-n4.md` and will need its own review-format design when N4 arrives.
+  `docs/plans/03-book-two.md` and will need its own review-format design when N4 arrives.
 - Server-side sync of grammar-pattern review state for signed-in users — inherits the same
   guest-local-only scope cut already made for `PathProgress` and words/phrases.

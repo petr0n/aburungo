@@ -16,11 +16,11 @@ dead words. The `jlpt` field survives in the data because the coverage tooling n
 |---|---|---|
 | [00-research-foundations.md](00-research-foundations.md) | The evidence base: retention levers, market gaps, design principles, with sources | current |
 | [01-overarching-plan.md](01-overarching-plan.md) | The shared engine: the daily loop, Recognize→Recall→Produce, gating, build inventory | **partly stale** — see its banner |
-| [02-path-n5.md](02-path-n5.md) | **Book One** — the foundation (free) | **built and shipping** |
+| [02-book-one.md](02-book-one.md) | **Book One** — the foundation (free) | **built and shipping** |
 | [02b-n5-units.md](02b-n5-units.md) | ~~N5 unit map~~ | **superseded** by the generated ladder |
-| [03-path-n4.md](03-path-n4.md) | **Book Two** — the bridge to composing sentences (free) | not started |
-| [04-path-n3.md](04-path-n3.md) | **Book Three** — the paid flagship: reading, mining, output | not started |
-| [04b-path-n2-n1.md](04b-path-n2-n1.md) | **Books Four & Five** — the long tail; shaped to chapter bands, thin below band level | not started |
+| [03-book-two.md](03-book-two.md) | **Book Two** — the bridge to composing sentences (free) | not started |
+| [04-stage-reading.md](04-stage-reading.md) | **Book Three** — the paid flagship: reading, mining, output | not started |
+| [04b-stage-fluency.md](04b-stage-fluency.md) | **Books Four & Five** — the long tail; shaped to chapter bands, thin below band level | not started |
 | [05-retention-engine.md](05-retention-engine.md) | Retention mechanics — what's built vs designed | current — reality-checked 2026-08-20 |
 | [06-onboarding.md](06-onboarding.md) | Onboarding: 3 questions, first can-do goal, frictionless first session | current |
 | [07-session-loop-ui-prompt.md](07-session-loop-ui-prompt.md) | DS agent prompt for the session-loop UI | **stale** — the UI shipped |

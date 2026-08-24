@@ -1,7 +1,7 @@
 # Reading-corpus shopping brief
 
 What to look for when sourcing coherent Japanese texts for Book Three's reading library.
-This serves the open decision in [docs/plans/04-path-n3.md §5](plans/04-path-n3.md) — the last
+This serves the open decision in [docs/plans/04-stage-reading.md §5](plans/04-stage-reading.md) — the last
 pre-authoring blocker now that the band model is signed off (2026-08-20).
 
 **The thing being bought:** ~100+ short, coherent Japanese texts (stories/articles, roughly

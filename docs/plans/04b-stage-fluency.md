@@ -2,7 +2,7 @@
 
 **Tier:** Paid. **Status: not started.**
 
-**Goal:** extend the reading, mining and production machinery of [Book Three](04-path-n3.md) with
+**Goal:** extend the reading, mining and production machinery of [Book Three](04-stage-reading.md) with
 harder and broader content, plus the register and nuance grammar that separates "can read the
 news" from "can read a novel".
 
@@ -13,7 +13,7 @@ label — they read **Book Four** and **Book Five**; the `jlpt` field lives only
 teaching-lesson skeleton, same landing zone as every other book. This doc therefore gives each book
 its own section and a chapter-band skeleton at that size. It stops there on purpose: the bands are
 themes and registers, not situations or lesson lists: the band model is now locked
-([04 §3](04-path-n3.md), signed off 2026-08-20), but the levelling pipeline's behaviour on real
+([04 §3](04-stage-reading.md), signed off 2026-08-20), but the levelling pipeline's behaviour on real
 learners is the input the real plans need. Detail below band level written now would be fiction.
 
 **What ~100 lessons can and cannot carry:** the lesson skeleton holds grammar, register and kanji

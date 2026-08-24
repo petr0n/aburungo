@@ -6,7 +6,7 @@
 > and it builds the **produce beat on Hana**, which is shelved (DR-023) — production practice runs
 > through production checkpoints instead. Checkpoint placement follows DR-021, not what is written
 > here. The engine description is still broadly right; the vocabulary and the Hana passages are not.
-> The rewritten path docs ([02](02-path-n5.md), [03](03-path-n4.md), [04](04-path-n3.md)) supersede
+> The rewritten path docs ([02](02-book-one.md), [03](03-book-two.md), [04](04-stage-reading.md)) supersede
 > this one wherever they disagree. The §6 build checklist is likewise frozen in time — Phase 1
 > items it shows unchecked have long since shipped. [99-roadmap.md](99-roadmap.md) is the live
 > build tracker.
@@ -215,9 +215,10 @@ These are sequenced in `99-roadmap.md` (to be written once the paths are locked)
    scheme/license one. (Resolve before the kanji layer build.)
 6. **Build sequencing / MVP** — what ships first (see `99-roadmap.md`).
 
-Paths specced: **N5** (`02-path-n5.md`, template), **N4** (`03-path-n4.md`), **N3**
-(`04-path-n3.md`, paid flagship). N2/N1 extend the N3 reading+mining+conversation machinery with
-harder content — to be outlined once N3 is validated.
+Books specced: **Book One** (`02-book-one.md`, template), **Book Two** (`03-book-two.md`),
+**Book Three** (`04-stage-reading.md`, paid flagship). Books Four and Five extend Book Three's
+reading+mining+conversation machinery with harder content — to be outlined once Book Three is
+validated.
 
 ---
 
@@ -232,10 +233,10 @@ High-level tracking for the Learning Paths initiative. Check off items as they s
 ### Planning (this doc set)
 - [x] Research foundations (`00-research-foundations.md`)
 - [x] Overarching plan — engine, session loop, gating, build inventory (`01-overarching-plan.md`)
-- [x] N5 path spec — can-do milestones, unit structure, daily session flavor (`02-path-n5.md`)
+- [x] Book One path spec — can-do milestones, unit structure, daily session flavor (`02-book-one.md`)
 - [x] ~~N5 unit map~~ — superseded; the live map is the generated `docs/book-one-ladder.md`
-- [x] N4 path spec (`03-path-n4.md`)
-- [x] N3 path spec (`04-path-n3.md`)
+- [x] Book Two path spec (`03-book-two.md`)
+- [x] Book Three path spec (`04-stage-reading.md`)
 - [x] Retention engine — dimensions, mechanisms, rhythm (`05-retention-engine.md`)
 - [x] Onboarding flow — 3 questions, first can-do goal, session entry (`06-onboarding.md`)
 - [x] Session loop UI — DS agent prompt for 7-screen session flow (`07-session-loop-ui-prompt.md`)
