@@ -749,12 +749,29 @@ Then update the bullets under it: the line about kana being free stays; add one 
 
 - [ ] **Step 4: Verify nothing still says a book is a level**
 
+Both greps need the same exclusions Task 4's does, and one more: this plan quotes the sentences
+it orders deleted, the spec's tables record the before state, and DR-033 describes the old reach
+in the past tense. Those are records, not claims, and rewriting them is the self-corrupting sweep
+Task 4 warns about.
+
 ```bash
-git grep -I -n -iE 'Book (One|Two|Three|Four|Five) is (N[1-5]|the N[1-5])' || echo "clean"
-git grep -I -n -E 'guest.*N5|free.*N5 \+ N4' docs CLAUDE.md || echo "clean"
+EX=(':(exclude)docs/superpowers/plans/2026-08-24-book-model.md'
+    ':(exclude)docs/superpowers/specs/2026-08-22-book-model-design.md'
+    ':(exclude)docs/decision-records.md')
+git grep -I -n -iE 'Book (One|Two|Three|Four|Five) is (N[1-5]|the N[1-5])' -- . "${EX[@]}" || echo "clean"
+git grep -I -n -E 'guest.*N5|free.*N5 \+ N4' -- docs CLAUDE.md "${EX[@]}" || echo "clean"
 ```
 
-Expected: `clean` for both. Any hit is a claim this task exists to retire.
+Expected: `clean` for both. Use `:(exclude)` rather than the `:!` shorthand — the short form does
+not expand reliably through a shell variable in zsh.
+
+Then run them unscoped and read every hit. Each must be a record of what the old model said, never
+a live claim. Three live claims sit outside this task's file list and must be fixed:
+`scripts/ladder.mjs` (the generated ladder header), `docs/plans/02-book-one.md` (its opening
+definition), and `docs/project-plan.md` (a second tier table duplicating CLAUDE.md's). Fixing the
+ladder header means `pnpm ladder` regenerates `docs/book-one-ladder.md` — that is allowed here,
+because the constraint protects Book One's *taught content*, and only the generated header prose
+moves.
 
 - [ ] **Step 5: Verify**
 
