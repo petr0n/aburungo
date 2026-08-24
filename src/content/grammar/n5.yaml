@@ -1,7 +1,7 @@
 # N5 grammar patterns — retrofit of Lesson grammarNotes into first-class,
 # reviewable GrammarPattern items. See
 # docs/superpowers/specs/2026-07-21-grammar-in-context-design.md for the
-# design and docs/plans/02b-n5-lessons.md for the source lesson map. Each
+# design and docs/plans/02b-n5-units.md for the source lesson map. Each
 # pattern references an existing phrase rather than composing new Japanese
 # content — no new example sentences are authored here.
 # content-source: training — N5 canonical, pending Tatoeba verification.

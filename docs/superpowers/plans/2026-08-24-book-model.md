@@ -609,8 +609,12 @@ Four filenames still assert that a book is a level.
 - [ ] **Step 1: List every file that links to the old names**
 
 ```bash
-grep -rlE '02-path-n5|03-path-n4|04-path-n3|04b-path-n2-n1' docs CLAUDE.md src scripts
+git grep -I -l -E '02-path-n5|03-path-n4|04-path-n3|04b-path-n2-n1'
 ```
+
+Grep the whole repository, not a hand-picked set of directories: `data/reading/micro-readings.json`
+and `server/src/services/conversationPrompt.ts` both carry these links and sit outside
+`docs`/`src`/`scripts`.
 
 Expected, at time of writing: `docs/project-plan.md`, `docs/text-source-brief.md`, `docs/plans/01-overarching-plan.md`, `docs/plans/02b-n5-units.md`, `docs/plans/03-path-n4.md`, `docs/plans/04b-path-n2-n1.md`, `docs/plans/99-roadmap.md`, `docs/plans/README.md`, both files under `docs/superpowers/specs/`, `src/content/phrases/meals.yaml`, `src/content/phrases/people-clothes.yaml`, `scripts/aozora.mjs`, `scripts/reading.mjs`, `scripts/levelling.mjs`.
 
@@ -627,21 +631,40 @@ git mv docs/plans/04b-path-n2-n1.md docs/plans/04b-stage-fluency.md
 
 - [ ] **Step 3: Rewrite every link**
 
+**Two files must be excluded, and blindly rewriting them is the trap this step exists to warn
+about.** This plan and the design spec both name the old paths *as rename records* — the spec has a
+`| Today | Becomes |` table whose left column is the old name by definition, and this task's own
+body lists the `git mv` sources. Rewriting them produces
+`git mv docs/plans/02-book-one.md docs/plans/02-book-one.md` and a table reading
+`| 04b-stage-fluency.md | 04b-stage-fluency.md |` — the same class of damage as the
+"Chapter 11, Chapter 11" lines a sweep left in the roadmap two days ago.
+
 ```bash
-git grep -I -l -E '02-path-n5|03-path-n4|04-path-n3|04b-path-n2-n1' | while read -r f; do
+git grep -I -l -E '02-path-n5|03-path-n4|04-path-n3|04b-path-n2-n1' \
+  -- ':!docs/superpowers/plans/2026-08-24-book-model.md' \
+     ':!docs/superpowers/specs/2026-08-22-book-model-design.md' | while read -r f; do
   perl -pi -e 's/04b-path-n2-n1/04b-stage-fluency/g; s/04-path-n3/04-stage-reading/g; s/03-path-n4/03-book-two/g; s/02-path-n5/02-book-one/g' "$f"
 done
 ```
 
 The order matters: `04b-path-n2-n1` is rewritten before `04-path-n3` so the longer pattern wins.
 
+The design spec has exactly one *link* to update, in the `reading` and `fluency` stage paragraph.
+Edit that line by hand and leave the table alone. If you script it, bind the line-number guard to
+a block — `if ($. == N) { s/…/…/g; s/…/…/g }` — because in `perl -pi -e 's/…/…/g if $. == N'` the
+modifier applies only to the last statement and the rest run on every line.
+
 - [ ] **Step 4: Verify no reference to an old name survives**
 
 ```bash
-git grep -I -n -E '02-path-n5|03-path-n4|04-path-n3|04b-path-n2-n1' || echo "clean"
+git grep -I -n -E '02-path-n5|03-path-n4|04-path-n3|04b-path-n2-n1' \
+  -- ':!docs/superpowers/plans/2026-08-24-book-model.md' \
+     ':!docs/superpowers/specs/2026-08-22-book-model-design.md' || echo "clean"
 ```
 
-Expected: `clean`.
+Expected: `clean`. Run it unscoped too: every surviving hit must be inside those two files and must
+be a rename *record* — a `git mv` source or the left column of the spec's mapping table — never a
+link someone could follow.
 
 - [ ] **Step 5: Check the prose still reads correctly**
 
@@ -651,7 +674,13 @@ The renames change filenames, not sentences. Read every changed line:
 git diff -U0 | grep '^+' | grep -v '^+++'
 ```
 
-Expected: each line names a new path and otherwise reads exactly as before. Where a sentence describes a document *as* a level — "see the N3 path doc" — fix the sentence to name the stage instead. Do not leave a sentence that says "level" pointing at a file named "stage".
+Expected: each line names a new path and otherwise reads exactly as before. Where a sentence
+describes a document *as* a level — `**N3** (04-stage-reading.md, paid flagship)`, or a checklist
+item reading `N3 path spec` — fix the label to name the book or stage. Do not leave a sentence
+that says "level" pointing at a file named "stage". `01-overarching-plan.md` has several of these.
+
+Fix the document *references*; do not rewrite that document's level vocabulary wholesale. It is
+banner-flagged as superseded and its premise is the level model — reworking it is Task 5's job.
 
 - [ ] **Step 6: Verify**
 
