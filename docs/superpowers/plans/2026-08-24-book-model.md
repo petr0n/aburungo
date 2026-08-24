@@ -151,17 +151,19 @@ Expected: build succeeds (`tsc -b` proves no `difficultyShift` reference survive
 Then confirm no comment still calls a book a level:
 
 ```bash
-grep -n 'JLPT level' src/types.ts
+grep -n 'call a JLPT level' src/types.ts
 ```
 
-Expected: only the `JlptLevel` type's own one-line comment. Any hit inside the `Book` or
-`Chapter` comment means Step 5 was missed.
+Expected: no output. Grep for the affirmative claim, not the bare phrase "JLPT level" — the
+replacement comments this task writes all *deny* that a book is a level ("Not a JLPT level",
+"rather than a JLPT level", "what a JLPT level used to carry"), so a bare-phrase grep matches
+the fix and can never pass.
 
 - [ ] **Step 10: Commit**
 
 ```bash
 git add src/types.ts src/content/books.ts src/content/books.test.ts src/pages/LearnPage.tsx src/srs/dailyLoop.test.ts
-git commit -m "refactor(types): a book declares a stage, not a boolean"
+git commit -m "refactor(types): a book declares a stage"
 ```
 
 ---

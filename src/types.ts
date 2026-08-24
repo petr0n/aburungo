@@ -190,7 +190,8 @@ export type Book = {
    * - romaji display is cut — no item in this book renders romaji, including
    *   earlier books' items reviewed here; romaji-to-kana *input* conversion stays
    *
-   * The third behaviour 03 named, the production-first produce beat, is not
+   * The third behaviour Book Two's plan names, the production-first produce
+   * beat, is not
    * wired here: frame-based composition needs frames and their model sentences
    * as authored content, and deriving them at runtime fabricates Japanese.
    */
