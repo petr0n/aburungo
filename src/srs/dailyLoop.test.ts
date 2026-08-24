@@ -70,7 +70,7 @@ const bookOf = (bookLessons: readonly Lesson[]): Book => ({
   title: "Test book",
   chapters: [],
   lessons: bookLessons,
-  difficultyShift: false,
+  stage: "foundation",
 });
 
 const book = bookOf(lessons);
@@ -185,7 +185,7 @@ describe("buildDailySession", () => {
       kanji: [],
       grammarNote: "g",
     };
-    const bookTwo: Book = { ...bookOf([laterLesson]), id: "n4", order: 2, difficultyShift: true };
+    const bookTwo: Book = { ...bookOf([laterLesson]), id: "n4", order: 2, stage: "building" };
     const due = (id: string): ReviewState => ({ phraseId: id, box: 2, dueAt: NOW - DAY_MS });
 
     it("surfaces a due item from an earlier book", () => {

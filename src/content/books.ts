@@ -17,7 +17,7 @@ export const bookOne: Book = {
   title: "Book One",
   chapters: n5Chapters,
   lessons: n5Lessons,
-  difficultyShift: false,
+  stage: "foundation",
 };
 
 /** Every book, in ladder order. Book Two joins here when its content exists. */

@@ -141,10 +141,10 @@ export function isGrammarPattern(item: Phrase | Word | GrammarPattern): item is 
  * must be contiguous in `order` and the last one must be the checkpoint, both
  * enforced in src/content/contentIntegrity.test.ts.
  *
- * Chapters group lessons; a *book* groups chapters and is what an outside
- * reference would call a JLPT level. The `jlpt` tags on content stay as they
- * are — useful, and the coverage tooling depends on them — but a learner reads
- * "Book One", not "N5".
+ * Chapters group lessons; a *book* groups chapters. A book is a volume of a
+ * coherent shape rather than a JLPT level (DR-033): the `jlpt` tags on content
+ * stay as they are, useful and depended on by the coverage tooling, but they no
+ * longer decide what a book holds. A learner reads "Book One", not "N5".
  */
 export type Chapter = {
   id: string;
@@ -155,13 +155,23 @@ export type Chapter = {
 };
 
 /**
- * A book — the run of chapters an outside reference would call a JLPT level
- * (DR-024: the learner reads "Book One", never "N5").
+ * How hard a book asks the learner to work (DR-033).
  *
- * The book is a *parameter*, not an import (03 §0a): the daily-loop
- * orchestrator and LearnPage take one, so a second book is a new instance in
- * src/content/books.ts rather than a second hardcoded ladder. `id` doubles as
- * the PathProgress pathId, so Book One keeps the existing "n5" progress key.
+ * This is what a JLPT level used to carry. A book declares its stage and the
+ * behaviours follow; `reading` and `fluency` are named so the design work in
+ * docs/plans has somewhere to attach, and are specified when a book reaches
+ * them.
+ */
+export type Stage = "foundation" | "building" | "reading" | "fluency";
+
+/**
+ * A book — a volume of the course (DR-033).
+ *
+ * Not a JLPT level: about ten chapters of about ten teaching lessons, ending
+ * where an arc of situations ends rather than where a reference list runs out.
+ * The `jlpt` tags on content stay as they are, because the coverage tooling
+ * depends on them, but they no longer say what a book contains. The learner
+ * reads "Book One", never "N5" (DR-024).
  */
 export type Book = {
   /** Stable id, also the PathProgress pathId. Internal naming, e.g. "n5". */
@@ -174,19 +184,17 @@ export type Book = {
   /** The book's full lesson ladder, sorted ascending by `order`. */
   lessons: readonly Lesson[];
   /**
-   * The per-book difficulty shift (03 §0b). Off for Book One; on from Book Two.
-   *
-   * Two of the three behaviors §0b names are wired to this field:
+   * The stage this book belongs to (DR-033). Two behaviours key off anything
+   * past `foundation`:
    * - recall is the default review gate (type it, not flip-and-rate)
    * - romaji display is cut — no item in this book renders romaji, including
-   *   earlier books' items reviewed here; romaji→kana *input* conversion stays
+   *   earlier books' items reviewed here; romaji-to-kana *input* conversion stays
    *
-   * The third, the production-first produce beat, is not: frame-based
-   * composition needs frames and their model sentences as authored content
-   * (03 §8), and deriving them at runtime fabricates Japanese. It lands with
-   * Book Two's content, not with this field.
+   * The third behaviour 03 named, the production-first produce beat, is not
+   * wired here: frame-based composition needs frames and their model sentences
+   * as authored content, and deriving them at runtime fabricates Japanese.
    */
-  difficultyShift: boolean;
+  stage: Stage;
 };
 
 /**

@@ -18,8 +18,8 @@ describe("bookOne", () => {
     expect(bookOne.chapters).toBe(n5Chapters);
   });
 
-  it("does not carry the difficulty shift — Book One keeps its defaults (03 §0b)", () => {
-    expect(bookOne.difficultyShift).toBe(false);
+  it("is a foundation book — romaji stays, recognition is the default gate", () => {
+    expect(bookOne.stage).toBe("foundation");
   });
 
   it("has nothing before it, so its sessions review its own items only", () => {

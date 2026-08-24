@@ -80,7 +80,7 @@ function stepForLesson(lesson: Lesson): Step {
  * Book Two content exists. Dev-only by design: production knows no override.
  */
 function isShifted(book: Book): boolean {
-  if (book.difficultyShift) return true;
+  if (book.stage !== "foundation") return true;
   return import.meta.env.DEV && new URLSearchParams(window.location.search).get("shift") === "1";
 }
 
