@@ -3,8 +3,7 @@ import { FillBlankScreen } from "@/components/FillBlankScreen";
 import { FeedbackSheet } from "@/components/FeedbackSheet";
 import { PageShell, SectionNav } from "@/components/PageShell";
 import { ProgressWidget } from "@/components/ProgressWidget";
-import { phrasesForTier } from "@/content";
-import { wordsForTier } from "@/content/vocabulary";
+import { phrasesForTier, wordsForTier } from "@/content/access";
 import { useUserTier } from "@/store/auth";
 
 type ContentMode = "words" | "phrases";

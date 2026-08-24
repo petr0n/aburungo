@@ -21,9 +21,11 @@ export type JlptLevel = "N5" | "N4" | "N3" | "N2" | "N1";
 /**
  * Access tier for a user session.
  *
- * guest      — unauthenticated; N5 content only
- * free       — signed-in free account; N5 + N4
- * paid       — subscriber; all content + Conversation
+ * Gates on book order, not on a JLPT level (DR-033) — see src/content/access.ts.
+ *
+ * guest      — unauthenticated; Book One
+ * free       — signed-in free account; Books One through Four
+ * paid       — subscriber; every book, plus Conversation
  */
 export type UserTier = "guest" | "free" | "paid";
 
@@ -51,11 +53,10 @@ export type Phrase = {
   /** Authoring notes — usage, register, common mistakes. Not used by SRS. */
   notes?: string;
   /**
-   * JLPT difficulty level. Drives access tier gating:
-   *   N5 — guest (no account)
-   *   N4 — free account
-   *   N3/N2/N1 — paid
-   * Omit only for content that predates JLPT tagging; treat as N5 until resolved.
+   * JLPT level of the phrase. Metadata only: the coverage and queue tooling in
+   * scripts/ is built on it, and it no longer gates access (DR-033 — gating
+   * reads book order, see src/content/access.ts). Omit only for content that
+   * predates JLPT tagging; treat as N5 until resolved.
    */
   jlpt?: JlptLevel;
 };

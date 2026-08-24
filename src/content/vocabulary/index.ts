@@ -1,4 +1,4 @@
-import type { JlptLevel, Word, UserTier } from "@/types";
+import type { Word } from "@/types";
 import { parseWords } from "./schema";
 
 import basicsRaw from "./basics.yaml";
@@ -90,15 +90,4 @@ export function wordsByTheme(): Map<string, Word[]> {
     }
   }
   return map;
-}
-
-const TIER_LEVELS: Record<UserTier, Set<JlptLevel>> = {
-  guest: new Set(["N5"]),
-  free: new Set(["N5", "N4"]),
-  paid: new Set(["N5", "N4", "N3", "N2", "N1"]),
-};
-
-export function wordsForTier(tier: UserTier): Word[] {
-  const allowed = TIER_LEVELS[tier];
-  return allWords.filter((w) => allowed.has(w.jlpt ?? "N5"));
 }

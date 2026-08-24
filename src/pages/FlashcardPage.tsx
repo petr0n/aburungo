@@ -2,8 +2,7 @@ import { useState, useMemo } from "react";
 import { FlashcardScreen } from "@/components/FlashcardScreen";
 import { PageShell, SectionNav } from "@/components/PageShell";
 import { ProgressWidget } from "@/components/ProgressWidget";
-import { phrasesForTier } from "@/content";
-import { wordsForTier } from "@/content/vocabulary";
+import { phrasesForTier, wordsForTier } from "@/content/access";
 import { useUserTier } from "@/store/auth";
 
 type ContentMode = "words" | "phrases";
