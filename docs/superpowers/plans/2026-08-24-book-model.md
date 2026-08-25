@@ -766,9 +766,21 @@ Expected: `clean` for both. Use `:(exclude)` rather than the `:!` shorthand — 
 not expand reliably through a shell variable in zsh.
 
 Then run them unscoped and read every hit. Each must be a record of what the old model said, never
-a live claim. Three live claims sit outside this task's file list and must be fixed:
-`scripts/ladder.mjs` (the generated ladder header), `docs/plans/02-book-one.md` (its opening
-definition), and `docs/project-plan.md` (a second tier table duplicating CLAUDE.md's). Fixing the
+a live claim.
+
+**The greps do not catch every phrasing.** Both require the literal word "is", so
+`AburunGo · Book One · internally N5` — the HTML ladder's header, `scripts/ladder.mjs:374` —
+passes them while saying exactly what this task retires. Grep for the bare level names too and
+read the hits:
+
+```bash
+git grep -I -n -E 'Book One[^.]{0,30}N5' -- . "${EX[@]}" || echo "clean"
+```
+
+Four live claims sit outside this task's file list and must be fixed:
+`scripts/ladder.mjs` — **both** of them, the markdown header near line 73 and the HTML `eyebrow`
+near line 374 — `docs/plans/02-book-one.md` (its opening definition), and `docs/project-plan.md`
+(a second tier table duplicating CLAUDE.md's). Fixing the
 ladder header means `pnpm ladder` regenerates `docs/book-one-ladder.md` — that is allowed here,
 because the constraint protects Book One's *taught content*, and only the generated header prose
 moves.
@@ -818,7 +830,7 @@ grep -rn '\bbook\.id\b\|\bb\.id\b' src/ || echo "none"
 
 Expected: five lines from the first — the import plus four calls, every one passing a
 `progressKey` — and `none` from the second. If any call passes `book.id` or `b.id`, learners'
-progress is orphaned on deploy. The prior-books call on line 614 is the one to check hardest:
+progress is orphaned on deploy. The prior-books call on line 613 is the one to check hardest:
 it is dormant while there is one book, so nothing you can run proves it right.
 
 - [ ] **Step 4: Open the PR**
