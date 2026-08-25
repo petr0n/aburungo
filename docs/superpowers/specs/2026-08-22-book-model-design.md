@@ -86,7 +86,7 @@ does it now: a named phase that a book declares itself in.
 
 `reading` and `fluency` are **named now and specified when a book reaches them.** Detailing
 them today would be writing fiction about books that do not exist. Naming them now is what
-gives `04-path-n3.md` and `04b-path-n2-n1.md` somewhere to reattach: their design work — the
+gives `04-stage-reading.md` and `04b-stage-fluency.md` somewhere to reattach: their design work — the
 band model, the text-source brief, the listening floor — is about where a learner *is*, not
 which exam level they are on, and it survives this change intact.
 

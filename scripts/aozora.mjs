@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Aozora Bunko ingestion (docs/plans/04-path-n3.md §5 text source).
+ * Aozora Bunko ingestion (docs/plans/04-stage-reading.md §5 text source).
  *
  *   node scripts/aozora.mjs index        fetch + filter the catalogue -> data/aozora/manifest.json
  *   node scripts/aozora.mjs fetch [n]    download n works -> data/aozora/texts/<id>.txt

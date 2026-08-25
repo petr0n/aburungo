@@ -5,7 +5,7 @@
  *
  * ── How coverage works, and what it honestly is ───────────────────────────
  * The flow target for extensive reading is ~98% known tokens (Hu & Nation;
- * docs/plans/04-path-n3.md §5). That research counts *running words*, function
+ * docs/plans/04-stage-reading.md §5). That research counts *running words*, function
  * words included, so structural machinery (particles, polite endings) counts
  * in the denominator here too — a learner who can read は and ます is exactly
  * what "function words are known" means at this level.

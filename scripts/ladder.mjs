@@ -71,7 +71,8 @@ export function buildMarkdown() {
   w("phrases each one teaches.");
   w();
   w("**Generated — do not edit.** Run `pnpm ladder` after any content change; `pnpm test`");
-  w("fails if this file is out of date. Book One is N5 internally; a learner never reads that.");
+  w("fails if this file is out of date. Book One's ids carry a legacy `n5` prefix; a learner");
+  w("never reads it.");
   w();
   w("| | |");
   w("|---|---|");
@@ -370,7 +371,7 @@ code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.92em;color:var
 <body>
 <div class="wrap">
 <header class="book">
-  <p class="eyebrow">AburunGo · Book One · internally N5</p>
+  <p class="eyebrow">AburunGo · Book One · legacy id prefix n5</p>
   <h1>Book One Ladder</h1>
   <p class="sub">Every chapter, lesson and checkpoint a learner meets, in order. Expand any lesson for
     the words and phrases it teaches. Generated from <code>src/content/</code> by <code>pnpm ladder</code>,

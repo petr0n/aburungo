@@ -4,7 +4,8 @@ Every chapter, lesson and checkpoint a learner meets, in order, with the words a
 phrases each one teaches.
 
 **Generated — do not edit.** Run `pnpm ladder` after any content change; `pnpm test`
-fails if this file is out of date. Book One is N5 internally; a learner never reads that.
+fails if this file is out of date. Book One's ids carry a legacy `n5` prefix; a learner
+never reads it.
 
 | | |
 |---|---|

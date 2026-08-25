@@ -8,11 +8,13 @@ Practical Japanese for English speakers. Focused on real-life situations with sp
 
 | Tier | Auth | Content | Features |
 |---|---|---|---|
-| Guest | None | JLPT N5 | Fill-in-blank, Flashcards, Kana practice, Kanji browse (N5 only) |
-| Free account | Sign-up (free) | N5 + N4 | Same + progress sync across devices |
-| Paid | Subscription | N5–N1 | All features + Conversation with Hana |
+| Guest | None | Book One | Fill-in-blank, Flashcards, Kana practice, Kanji browse (N5 tab only) |
+| Free account | Sign-up (free) | Books One through Four | Same + progress sync across devices |
+| Paid | Subscription | Every book | All features + Conversation with Hana |
 
-- Kana (hiragana / katakana) is always fully free — it is pre-JLPT.
+- Kana (hiragana / katakana) is always fully free — it is the prerequisite to every book.
+- Taught content gates on book order, not JLPT level (DR-033). A book is a volume of the course.
+  Kanji browse still filters by JLPT tab — it covers KANJIDIC2, not a book's contents.
 - Conversation with Hana is paid-only because it carries a real Anthropic API cost.
 - Paywall enforcement is stubbed; any authenticated user is treated as free tier until payment is wired. The `UserTier` type in `src/types.ts` carries the slot.
 - See [decision-records.md](decision-records.md) for the rationale behind this model.
@@ -88,7 +90,7 @@ Practical Japanese for English speakers. Focused on real-life situations with sp
 2. **Finish Book One, then multi-book support, then Book Two content** — in that order. The app
    knows exactly one book (`n5Lessons` is a hardcoded export used in eight places in `LearnPage.tsx`),
    so authoring a second book's content first means retrofitting two. See `docs/plans/99-roadmap.md`
-   Phase 2b and `docs/plans/03-path-n4.md` §0.
+   Phase 2b and `docs/plans/03-book-two.md` §0.
 3. **VOICEVOX audio pipeline** — vet voice licenses, pre-generate TTS locally via Podman, upload to Supabase Storage (see `admin-dashboard-plan.md` for multi-voice strategy)
 4. **Admin Phase 2** — log viewer (pino ring buffer), learning analytics, content audit (see `admin-dashboard-plan.md`)
 5. **Paywall / payment integration** — flip `isPaid` check in `useUserTier()` when Stripe/RevenueCat is wired; slot in `UserTier` type is ready

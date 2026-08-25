@@ -8,7 +8,7 @@
  * The validator (parsePhrases) throws at module-load time on bad data, so a
  * broken phrase fails `npm run build` instead of breaking the live app.
  */
-import type { JlptLevel, Phrase, UserTier } from "@/types";
+import type { Phrase } from "@/types";
 import { parsePhrases } from "./schema";
 
 import transitRaw from "./phrases/transit.yaml";
@@ -76,24 +76,4 @@ export function findPhrase(id: string): Phrase | undefined {
 /** Set of unique scenarios present in the content — for filtering UI later. */
 export function listScenarios(): string[] {
   return Array.from(new Set(allPhrases.map((p) => p.scenario)));
-}
-
-/**
- * Allowed JLPT levels per user tier.
- *
- *   guest  → N5 only (no account)
- *   free   → N5 + N4 (free account)
- *   paid   → all levels
- *
- * Phrases without a jlpt tag are treated as N5 (legacy content).
- */
-const TIER_LEVELS: Record<UserTier, Set<JlptLevel>> = {
-  guest: new Set(["N5"]),
-  free: new Set(["N5", "N4"]),
-  paid: new Set(["N5", "N4", "N3", "N2", "N1"]),
-};
-
-export function phrasesForTier(tier: UserTier): Phrase[] {
-  const allowed = TIER_LEVELS[tier];
-  return allPhrases.filter((p) => allowed.has(p.jlpt ?? "N5"));
 }

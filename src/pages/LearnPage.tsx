@@ -23,8 +23,7 @@ import { isGrammarPattern } from "@/types";
 import { useAuth, useUserTier } from "@/store/auth";
 import { bookOne, priorBooks } from "@/content/books";
 import { chapterLabel, placeInChapter } from "@/content/chapters";
-import { wordsForTier } from "@/content/vocabulary";
-import { phrasesForTier } from "@/content";
+import { phrasesForTier, wordsForTier } from "@/content/access";
 import { findPhrase } from "@/content";
 import { getPathProgress, markLessonSeen } from "@/db/pathProgressStore";
 import { buildCanDoScope, buildCrossSituationScope, canDoMarkerId, taughtSituations, verifiedCanDos } from "@/srs/canDo";
@@ -80,7 +79,7 @@ function stepForLesson(lesson: Lesson): Step {
  * Book Two content exists. Dev-only by design: production knows no override.
  */
 function isShifted(book: Book): boolean {
-  if (book.difficultyShift) return true;
+  if (book.stage !== "foundation") return true;
   return import.meta.env.DEV && new URLSearchParams(window.location.search).get("shift") === "1";
 }
 
@@ -609,9 +608,9 @@ export function LearnPage({ book = bookOne }: { book?: Book } = {}) {
       // here (03 §6) — review is cumulative, new material is not.
       const earlier = priorBooks(book);
       const [progress, reviewStates, ...earlierProgress] = await Promise.all([
-        getPathProgress(book.id, userId !== null),
+        getPathProgress(book.progressKey, userId !== null),
         hydrateFromServer(userId !== null),
-        ...earlier.map((b) => getPathProgress(b.id, userId !== null)),
+        ...earlier.map((b) => getPathProgress(b.progressKey, userId !== null)),
       ]);
       if (cancelled) return;
       setSeenUnitIds(progress.seenLessonIds);
@@ -636,10 +635,10 @@ export function LearnPage({ book = bookOne }: { book?: Book } = {}) {
 
   const finishUnitAndClose = useCallback(async () => {
     if (session?.lesson != null) {
-      await markLessonSeen(book.id, session.lesson.id, userId !== null);
+      await markLessonSeen(book.progressKey, session.lesson.id, userId !== null);
     }
     setStep("close");
-  }, [book.id, session, userId]);
+  }, [book.progressKey, session, userId]);
 
   function afterReview() {
     const lesson = session?.lesson ?? null;
@@ -740,7 +739,7 @@ export function LearnPage({ book = bookOne }: { book?: Book } = {}) {
         onVerified={(situation) => {
           const marker = canDoMarkerId(situation);
           setSeenUnitIds((prev) => (prev.includes(marker) ? prev : [...prev, marker]));
-          void markLessonSeen(book.id, marker, userId !== null);
+          void markLessonSeen(book.progressKey, marker, userId !== null);
         }}
         onComplete={() => void finishUnitAndClose()}
         // Deliberately does NOT mark the lesson seen. This is the last lesson on the

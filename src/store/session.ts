@@ -3,7 +3,7 @@
  *
  * Progress is persisted locally via IndexedDB (Dexie). The session is built
  * from a caller-supplied phrase list so tier filtering happens outside this
- * store — see phrasesForTier() in src/content/index.ts.
+ * store — see phrasesForTier() in src/content/access.ts.
  *
  * For authenticated users, each rating is also fire-and-forget posted to the
  * server so progress syncs across devices. Guests stay local-only.

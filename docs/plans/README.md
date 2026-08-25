@@ -3,12 +3,15 @@
 Research-grounded plan turning AburunGo's buckets (words, characters, phrases, flashcards, audio)
 into retention-optimised **learning paths**, without replacing those buckets.
 
-**Spine:** a ladder of **Books**, each what a reference would call a JLPT level, all running one
-shared retention engine. Emphasis shifts from recognition (Book One) to production and immersion
-(Book Three up). Free through Book Two, paid from Book Three.
+**Spine:** a ladder of **Books**, each a volume of a coherent shape rather than a JLPT level
+(DR-033), all running one shared retention engine. Emphasis shifts from recognition (Book One) to
+production and immersion (Book Three up). Tiers gate on book order: a guest gets Book One, a free
+account Books One through Four, paid gets everything.
 
 **Naming (DR-024):** Book → Chapter → Lesson. A learner never reads "N5". "Unit" and "sweep" are
-dead words. The `jlpt` field survives in the data because the coverage tooling needs it.
+dead words. A book is a volume, not a level (DR-033) — the rule for its shape lives in
+[01-overarching-plan.md](01-overarching-plan.md). The `jlpt` field survives in the data because the
+coverage tooling needs it, and gates nothing.
 
 ## Documents
 
@@ -16,11 +19,11 @@ dead words. The `jlpt` field survives in the data because the coverage tooling n
 |---|---|---|
 | [00-research-foundations.md](00-research-foundations.md) | The evidence base: retention levers, market gaps, design principles, with sources | current |
 | [01-overarching-plan.md](01-overarching-plan.md) | The shared engine: the daily loop, Recognize→Recall→Produce, gating, build inventory | **partly stale** — see its banner |
-| [02-path-n5.md](02-path-n5.md) | **Book One** — the foundation (free) | **built and shipping** |
+| [02-book-one.md](02-book-one.md) | **Book One** — the foundation (free) | **built and shipping** |
 | [02b-n5-units.md](02b-n5-units.md) | ~~N5 unit map~~ | **superseded** by the generated ladder |
-| [03-path-n4.md](03-path-n4.md) | **Book Two** — the bridge to composing sentences (free) | not started |
-| [04-path-n3.md](04-path-n3.md) | **Book Three** — the paid flagship: reading, mining, output | not started |
-| [04b-path-n2-n1.md](04b-path-n2-n1.md) | **Books Four & Five** — the long tail; shaped to chapter bands, thin below band level | not started |
+| [03-book-two.md](03-book-two.md) | **Book Two** — the bridge to composing sentences (free) | not started |
+| [04-stage-reading.md](04-stage-reading.md) | **Book Three** — the flagship: reading, mining, output | not started |
+| [04b-stage-fluency.md](04b-stage-fluency.md) | **Books Four & Five** — the long tail; shaped to chapter bands, thin below band level | not started |
 | [05-retention-engine.md](05-retention-engine.md) | Retention mechanics — what's built vs designed | current — reality-checked 2026-08-20 |
 | [06-onboarding.md](06-onboarding.md) | Onboarding: 3 questions, first can-do goal, frictionless first session | current |
 | [07-session-loop-ui-prompt.md](07-session-loop-ui-prompt.md) | DS agent prompt for the session-loop UI | **stale** — the UI shipped |
@@ -33,7 +36,7 @@ memory, then a plan. Nothing here outranks the content tree.
 
 ## Decisions locked
 
-- **Q1 — Spine:** Book ladders, one per JLPT level.
+- **Q1 — Spine:** a ladder of books, each a volume rather than a JLPT level (DR-033).
 - **Q2 — Session model:** guided default plus free roam. One "Today's session" button; nothing
   locked away.
 - **Q3 — Content sourcing:** training-canonical marked content through Book Two; verified only
@@ -42,7 +45,7 @@ memory, then a plan. Nothing here outranks the content tree.
 
 ## What has changed since these docs were first written
 
-Four decisions reshaped the plans and are reflected in the rewritten path docs:
+Five decisions reshaped the plans and are reflected in the rewritten path docs:
 
 - **DR-021** — checkpoints run on a cadence at situation boundaries, not at a declared "mid-way".
 - **DR-020** — mastery gates are allowed, grades are not. A number that shrinks to zero is a gate;
@@ -52,3 +55,7 @@ Four decisions reshaped the plans and are reflected in the rewritten path docs:
 - **DR-023** — **Hana is shelved.** Every path doc originally routed production practice through
   Hana; all of them now route it through production checkpoints instead. Do not plan work that
   depends on Hana without asking.
+- **DR-033** — **a book is a volume, not a JLPT level.** About ten chapters of about ten teaching
+  lessons, ending where an arc of situations ends. Difficulty rides on a stage the book declares,
+  and tiers gate on book order. See *What a book is* in
+  [01-overarching-plan.md](01-overarching-plan.md).

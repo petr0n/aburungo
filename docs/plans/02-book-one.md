@@ -17,12 +17,13 @@ new engine.
 
 ## 1. Naming (DR-024)
 
-**Book → Chapter → Lesson.** A Book is what a reference calls a JLPT level; Book One is N5 and a
-learner never reads "N5". A Chapter is a named run of lessons ending in exactly one checkpoint,
-which is its last lesson. "Unit" and "sweep" are dead words — do not reintroduce either.
+**Book → Chapter → Lesson.** A Book is a volume of the course, not a JLPT level (DR-033); Book
+One's ids and filenames carry a legacy `n5` prefix and a learner never reads it. A Chapter is a
+named run of lessons ending in exactly one checkpoint, which is its last lesson. "Unit" and "sweep"
+are dead words — do not reintroduce either.
 
 The `jlpt` field stays in the data because the coverage tooling depends on it. It is plumbing,
-not a label.
+not a label, and it gates nothing.
 
 ## 2. Shape of the book
 

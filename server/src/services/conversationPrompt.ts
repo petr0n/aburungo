@@ -20,7 +20,7 @@ export type ScopeWord = {
  * Constrains a session to one unit's situation and vocabulary.
  *
  * `maxTurns` is short by design. Comprehension at N5 is fragile, so the plan
- * (docs/plans/02-path-n5.md §6) calls for 3-5 turn exchanges that are heavily
+ * (docs/plans/02-book-one.md §6) calls for 3-5 turn exchanges that are heavily
  * scaffolded rather than open-ended chat.
  */
 export type ConversationScope = {

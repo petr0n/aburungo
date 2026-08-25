@@ -1,20 +1,23 @@
 # Learning Paths — Overarching Plan
 
-> **Partly stale — read with care (2026-08-20).** This doc predates four decisions and has not
+> **Partly stale — read with care (2026-08-24).** This doc predates five decisions and has not
 > been rewritten: it says **"unit"** where the ladder now says **lesson** inside a **chapter**
 > (DR-024), it declares a fixed **can-do list** that is now derived from seen situations (DR-022),
 > and it builds the **produce beat on Hana**, which is shelved (DR-023) — production practice runs
-> through production checkpoints instead. Checkpoint placement follows DR-021, not what is written
-> here. The engine description is still broadly right; the vocabulary and the Hana passages are not.
-> The rewritten path docs ([02](02-path-n5.md), [03](03-path-n4.md), [04](04-path-n3.md)) supersede
+> through production checkpoints instead. Its spine of **one path per JLPT level** is gone: a book
+> is a volume and difficulty rides on a stage (DR-033), and the rule that replaced it is in *What a
+> book is* below — read it before the numbered sections, which still assume levels.
+> Checkpoint placement follows DR-021, not what is written here. The engine description is still
+> broadly right; the vocabulary and the Hana passages are not.
+> The rewritten path docs ([02](02-book-one.md), [03](03-book-two.md), [04](04-stage-reading.md)) supersede
 > this one wherever they disagree. The §6 build checklist is likewise frozen in time — Phase 1
 > items it shows unchecked have long since shipped. [99-roadmap.md](99-roadmap.md) is the live
 > build tracker.
 
-**Spine: JLPT level ladders.** Each learning path is one JLPT level (N5 → N1). Every ladder runs
-the *same* retention engine; what changes between levels is the **content** and the **emphasis**
-(recognition-heavy at N5 → production/immersion-heavy at N3+). Grounded in
-[00-research-foundations.md](00-research-foundations.md).
+**Spine: a ladder of books.** Each book is a volume of the course, not a JLPT level (DR-033).
+Every book runs the *same* retention engine; what changes between books is the **content** and the
+**emphasis** (recognition-heavy in Book One → production/immersion-heavy from Book Three).
+Grounded in [00-research-foundations.md](00-research-foundations.md).
 
 > **Core principle — AburunGo is NOT a JLPT test-prep app.** We *borrow ideas* from the JLPT
 > framework (sensible difficulty ordering, i+1 sequencing, a content scaffold our data already
@@ -51,6 +54,60 @@ the *same* retention engine; what changes between levels is the **content** and 
 
 ---
 
+## What a book is
+
+A book is a **volume of a coherent shape**, not a JLPT level (DR-033). The reference lists stay
+exactly what `data/jlpt/README.md` has always called them — gap-finders — and stop deciding where
+a book ends. The reasoning is in DR-033 and in
+[the book-model design](../superpowers/specs/2026-08-22-book-model-design.md); what follows is the
+rule.
+
+**Shape.** About ten chapters of about ten teaching lessons — roughly 100 teaching lessons, which
+at Book One's measured pace of 5.7 words per teaching lesson lands near **570 words**. A chapter
+deviates when the learning says so: seven lessons is fine when the situation is worth seven. Ten is
+the target to author toward, never a quota to pad to, and the shape is not retrofitted against
+situations that have already shipped.
+
+**This is not a second cadence rule.** A recognition checkpoint closes every chapter, so chapters
+of ~10 teaching lessons *are* DR-021's "roughly every ten teaching lessons, at a situation
+boundary". Authoring toward ten is how that cadence gets met, not a rule competing with it.
+
+**Boundary.** A book ends where an arc of situations ends, somewhere near 100 teaching lessons —
+not at a level line, and not when a word counter trips. The word count is an *outcome* of the
+shape, which is why it reads "near 570" rather than as a budget.
+
+**Sequence.** What orders content is what already orders chapters: grammar dependency first,
+situation arcs second, reference lists only as gap-finders. Book Two opens on the N5 remainder
+because those words are genuinely next for a learner who has finished Book One, not because a level
+says so.
+
+**Stages.** Difficulty behaviour has to attach to something, and a level was doing that job. A
+**stage** does it now — a named phase a book declares itself in:
+
+| Stage | Books | What it means |
+|---|---|---|
+| `foundation` | One | Romaji crutch on, recognition-led review, everything scaffolded |
+| `building` | Two onward | Romaji cut, typing is the default review gate, production checkpoints |
+| `reading` | later | The i+1 band model and the reading library switch on |
+| `fluency` | later | Listening floor, unassisted native material |
+
+`reading` and `fluency` are **named now and specified when a book reaches them** — detailing them
+today would be writing fiction about books that do not exist. Naming them is what gives
+[04-stage-reading.md](04-stage-reading.md) and [04b-stage-fluency.md](04b-stage-fluency.md)
+somewhere to attach: a band model and a listening floor describe where a learner *is*, not which
+exam they are sitting. The difficulty shift stays at Book Two, because its trigger was never the
+level — it was having finished a whole book.
+
+**Book One is where the pace figure comes from**, and it does not change to fit the shape: 12
+chapters, 87 teaching lessons and 13 checkpoints across 22 situations, teaching 484 words and 200
+kanji. The generated [book-one-ladder.md](../book-one-ladder.md) is the authority on its contents.
+
+The `jlpt` tags stay in the content, because the coverage and queue tooling is built on them and
+the reference data is organised by them. What ends is their authority over what a book holds — and
+the learner never reads the letters either way (DR-024).
+
+---
+
 ## 1. The ladder, mapped to tiers
 
 | Path | Tier | Rough scope | Emphasis shift |
@@ -61,7 +118,12 @@ the *same* retention engine; what changes between levels is the **content** and 
 | **N2 Ladder** | Paid | ~6,000 words, ~1,000 kanji, nuanced grammar, native-ish input | Produce → Immerse. Volume reading + discussion with Hana. |
 | **N1 Ladder** | Paid | ~10,000+ words, ~2,000 kanji, abstract/formal register | Immerse → Refine. Near-native output, nuance, idiom. |
 
-"Mostly paid" = N3–N1 are the paid heart; N5/N4 are the free on-ramp that proves the method.
+> **Tiers no longer read this table.** Access gates on book order (DR-033): a guest gets Book One,
+> a free account Books One through Four, paid gets everything. The rows above are the emphasis
+> shift, which survives the change; their level names do not.
+
+"Mostly paid" = the later books are the paid heart; the free books are the on-ramp that proves the
+method.
 
 ---
 
@@ -215,9 +277,10 @@ These are sequenced in `99-roadmap.md` (to be written once the paths are locked)
    scheme/license one. (Resolve before the kanji layer build.)
 6. **Build sequencing / MVP** — what ships first (see `99-roadmap.md`).
 
-Paths specced: **N5** (`02-path-n5.md`, template), **N4** (`03-path-n4.md`), **N3**
-(`04-path-n3.md`, paid flagship). N2/N1 extend the N3 reading+mining+conversation machinery with
-harder content — to be outlined once N3 is validated.
+Books specced: **Book One** (`02-book-one.md`, template), **Book Two** (`03-book-two.md`),
+**Book Three** (`04-stage-reading.md`, the `reading` stage). Books Four and Five extend Book Three's
+reading+mining+conversation machinery with harder content — to be outlined once Book Three is
+validated.
 
 ---
 
@@ -232,10 +295,10 @@ High-level tracking for the Learning Paths initiative. Check off items as they s
 ### Planning (this doc set)
 - [x] Research foundations (`00-research-foundations.md`)
 - [x] Overarching plan — engine, session loop, gating, build inventory (`01-overarching-plan.md`)
-- [x] N5 path spec — can-do milestones, unit structure, daily session flavor (`02-path-n5.md`)
+- [x] Book One path spec — can-do milestones, unit structure, daily session flavor (`02-book-one.md`)
 - [x] ~~N5 unit map~~ — superseded; the live map is the generated `docs/book-one-ladder.md`
-- [x] N4 path spec (`03-path-n4.md`)
-- [x] N3 path spec (`04-path-n3.md`)
+- [x] Book Two path spec (`03-book-two.md`)
+- [x] Book Three path spec (`04-stage-reading.md`)
 - [x] Retention engine — dimensions, mechanisms, rhythm (`05-retention-engine.md`)
 - [x] Onboarding flow — 3 questions, first can-do goal, session entry (`06-onboarding.md`)
 - [x] Session loop UI — DS agent prompt for 7-screen session flow (`07-session-loop-ui-prompt.md`)

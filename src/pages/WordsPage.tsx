@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect, type ReactNode } from "react";
 import type { Word } from "@/types";
 import { useAuth, useUserTier } from "@/store/auth";
-import { wordsForTier } from "@/content/vocabulary";
+import { wordsForTier } from "@/content/access";
 import { recordReview } from "@/db/reviewStore";
 import { WordDrillCard, type DrillPhase } from "@/components/WordDrillCard";
 import { WordLearnCard } from "@/components/WordLearnCard";
