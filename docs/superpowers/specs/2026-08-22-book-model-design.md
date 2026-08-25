@@ -96,9 +96,11 @@ crutch, not a worse one.
 
 ## How many books
 
-Unknown, deliberately. The reference corpus across all five levels is 9,985 words, which at
-~570 a book implies somewhere around seventeen. That number is arithmetic, not a plan, and it
-should not appear in the plan docs as a target.
+Not fixed, and deliberately absent from the plan docs. What is fixed is the endpoint: the
+course runs to roughly N2 (DR-034). N5 through N2 is 6,105 reference words, which at ~570 a
+book is around eleven — a ceiling rather than a target, since the reference lists find gaps
+rather than set the syllabus. Books are specified one ahead, each authored against the
+measured pace of the one before it.
 
 ## Code changes
 

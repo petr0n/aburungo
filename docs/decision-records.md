@@ -1127,9 +1127,9 @@ reference words and gets Book One's 484 taught ones.
 it, the reference data is organised by it, and none of that was ever wrong. What ends is its
 authority over what a book is. The learner never read the letters and still will not.
 
-**There will be more than five books.** The reference corpus is 9,985 words across the five
-levels, which at ~570 a book implies somewhere near seventeen. That is arithmetic, not a plan,
-and it is deliberately not written into the plans as a target.
+**There will be more than five books**, because a level is not book-sized: N5 is 1.4 books
+and N1 is 6.8. How many there are in total follows from where the course ends, which DR-034
+settles.
 
 **Consequences:**
 - **Book One's taught content does not change.** This changes what a book *means*, not what
@@ -1154,3 +1154,56 @@ and it is deliberately not written into the plans as a target.
   syllabus.
 - **Lesson filenames and chapter ids keep their `n5` prefixes** as legacy naming. Renaming them
   churns every content file and risks the same class of key breakage for no gain.
+
+---
+
+## DR-034 — The course ends at N2
+
+**Date:** 2026-08-24
+**Status:** Approved
+
+**Context:**
+DR-033 took the level line away from the book boundary and left nothing in its place. The
+question it opened was not "how many books" but "how far does the app go" — and without an
+answer, every plan document either invented a number or avoided the subject. DR-033 itself did
+both: it recorded that the five levels hold 9,985 reference words, "somewhere near seventeen"
+books at Book One's pace. That figure was arithmetic on a premise the same record rejects,
+since it assumes teaching a reference list DR-033 calls a gap-finder rather than a syllabus.
+
+The levels are wildly unequal, which is why no book count could be inferred from them: N5 is
+809 words and N4 is 770, but N3 is 2,347, N2 is 2,179, and N1 is 3,880. At ~570 words a book
+that is 1.4, 1.4, 4.1, 3.8 and 6.8 books respectively.
+
+**Decision:**
+**The course's endpoint is a capability, not a book count: a learner who finishes AburunGo can
+operate in Japanese at roughly N2.** Reading native material with effort, handling work and
+daily life unassisted, following unscripted speech.
+
+**N1 is out of scope**, on the product's own terms rather than as a compromise. Its distinctive
+vocabulary is largely literary, formal-written and low-frequency; an app organised around
+real-life situations has no situation that reaches most of it. Adding it would mean 3,880 words
+selected by an exam's tail rather than by anything a learner does.
+
+**The book count is a consequence and stays out of the plans.** N5 through N2 is 6,105
+reference words, which at ~570 a book is roughly eleven — and that is a ceiling, not a target,
+because the reference lists find gaps rather than set the syllabus. Book One taught 484 words
+and touched 457 of N5's 809; the rest are Book Two's raw material where a situation calls for
+them and nobody's debt where it does not.
+
+**Books are specified one ahead, not all at once.** A book's shape is authored against the
+measured pace of the book before it — Book One's 5.7 words per teaching lesson and its chapter
+drift from 10.4 lessons to 5.0 were both only knowable after building it. Specifying Book Seven
+today would be fiction. What is maintained globally is coverage, not plans: `scripts/jlpt.mjs`
+already reports what is taught against each reference level, which is what keeps consecutive
+books from overlapping or leaving a hole.
+
+**Consequences:**
+- **The "seventeen books" line is struck** from DR-033 and from
+  `docs/superpowers/specs/2026-08-22-book-model-design.md`. It read as a roadmap and was a
+  division sum.
+- **`data/jlpt/reference-n1.json` stays.** It costs nothing, and coverage tooling that reports
+  an out-of-scope level is more useful than tooling that cannot see it.
+- **The stage ladder is unchanged.** `foundation` → `building` → `reading` → `fluency` still
+  describes the whole course; `fluency` now tops out at N2-ish rather than being open-ended.
+- **Nothing in the app changes.** No code, no content, no tier limits. This records where the
+  course stops so the plan documents can stop implying otherwise.

@@ -9,8 +9,12 @@ Book Two is the **bridge**: where recognition becomes production and the learner
 starts composing.
 
 Same engine as [Book One](02-book-one.md); this doc covers only what **shifts**, plus the two pieces
-of groundwork that must land before any content is authored. Naming per DR-024: internally this is
-the N4 book, and a learner never reads that — the `jlpt` field lives only in the data.
+of groundwork that must land before any content is authored.
+
+**This is not "the N4 book" (DR-033).** Book Two is a volume of about ten chapters and a hundred
+teaching lessons, landing near 570 words — a shape, not a level. The N4 reference is a gap-finder
+for the authoring queue and gates nothing. The `jlpt` field stays in the data as word metadata, the
+learner never reads a level, and the course as a whole runs to roughly N2 (DR-034).
 
 ---
 
@@ -19,16 +23,23 @@ the N4 book, and a learner never reads that — the `jlpt` field lives only in t
 Both blockers this section originally described are resolved; what is left is content-shaped, not
 engine-shaped.
 
-**(a) The book is a parameter — done.** `Book` carries id, order, title, chapters and lessons;
-`bookOne` lives in [src/content/books.ts](../../src/content/books.ts) and the daily-loop
+**(a) The book is a parameter — done.** `Book` carries id, `progressKey`, order, title, chapters,
+lessons and `stage`; `bookOne` lives in [src/content/books.ts](../../src/content/books.ts) and the daily-loop
 orchestrator takes a book rather than importing `n5Lessons`. Adding Book Two is a new `Book`
 instance plus its content, not a refactor. Review eligibility deliberately spans **every book the
 learner has worked through** while new material stays scoped to the current one — otherwise Book
 One's items would go silent the day this book opened, which is the opposite of what §2 wants.
 
-**(b) The difficulty shift is a `Book` field — two of three behaviours built.** Recall as the
-default review gate and the romaji display cut both work, and are provable against Book One
-content today via a dev-only `?shift=1`. Romaji→kana *input* conversion is untouched, per §6.
+**`progressKey` is not `id` (DR-033).** Book One's id is `book-1` and its progress key is the legacy
+`"n5"` — the primary key of every PathProgress row, in Dexie and on the server. Book Two picks its
+own key once and freezes it. Passing `book.id` where a progress key belongs typechecks, passes every
+test, and orphans learner progress on deploy.
+
+**(b) The difficulty shift is the `stage` field — two of three behaviours built.** Book One is
+`foundation`; Book Two is the first `building` book, and `stage` is what carries the shift now that
+a boolean could not hold a third behaviour (DR-033). Recall as the default review gate and the
+romaji display cut both work, and are provable against Book One content today via a dev-only
+`?shift=1`. Romaji→kana *input* conversion is untouched, per §6.
 
 **What is not built: the production-first produce beat.** Frame-based composition needs frames and
 their model sentences as **authored content**, which §8 has always said. An attempt to derive them
@@ -40,12 +51,15 @@ chapters** (§4) rather than expecting the engine to produce them.
 
 ## 1. The starting point — what a Book One graduate actually knows
 
-The authority is the generated [docs/book-one-ladder.md](../book-one-ladder.md), which moves as
-Book One finishes; the numbers below are dated, not promised. **As of 2026-08-20:** 423 words
-(finishing toward ~800 against the reference gap), 163 kanji, 39 grammar patterns, and kana
-reading built by exposure — every ladder word shows kana — though **no kana gate exists**: kana
-practice is a standalone free track and romaji rides along as Book One's crutch (§6 is where
-that ends).
+The authority is the generated [docs/book-one-ladder.md](../book-one-ladder.md). **Book One is
+finished as of 2026-08-24:** 12 chapters, 100 lessons (87 teaching, 13 checkpoints), **484 words,
+227 phrases, 44 grammar patterns, 200 kanji** across 22 situations. Kana reading is built by
+exposure — every ladder word shows kana — though **no kana gate exists**: kana practice is a
+standalone free track and romaji rides along as Book One's crutch (§6 is where that ends).
+
+The 484 words touch 457 of the N5 reference's 809. The remainder is not a debt (DR-033):
+those words are Book Two's raw material where a situation calls for them, and nobody's problem where
+it does not.
 
 Grammar actually in hand: です and its questions, ます／ました／ませんでした, でした and
 〜かったです, 〜てください with the verb groups sorted, 〜ています, 〜てもいいですか, one 〜たい
@@ -78,15 +92,20 @@ components — kanji parts reused, patterns stacked, verbs the learner already o
 forms they don't — so review naturally mixes old and new, which is the discrimination practice the
 research calls for.
 
-## 3. Scope — the conventional N4 line
+## 3. Scope — the volume, measured against the reference
 
-- **Words:** the N4 community reference holds 770 words, 545 attested by both source lists — the
-  authoring queue, not the syllabus (`node scripts/jlpt.mjs coverage n4` works today; the tooling
-  is level-agnostic). On top of a finished Book One that lands cumulative vocabulary near the
-  conventional **~1,500-word** N4 line. A landing zone, not a quota.
-- **Kanji:** the conventional cumulative line is **~300**; Book One ships 163, so Book Two carries
-  roughly 140 new. At Book One's measured 2.3 kanji per teaching lesson, ~100 lessons hold that
-  with room to spare — the constraint is component and mnemonic quality (§5), never count.
+The size comes from the shape, not from a level (DR-033): ~10 chapters, ~100 teaching lessons,
+**near 570 words** at Book One's measured 5.7 words per teaching lesson. The reference numbers below
+say where that lands a learner; they do not set the target.
+
+- **Words:** ~570 new, taking cumulative vocabulary to **roughly 1,050**. The N4 community reference
+  holds 770 words, 545 attested by both source lists — an authoring queue to draw from, never a
+  syllabus to exhaust (`node scripts/jlpt.mjs coverage n4` works today; the tooling is
+  level-agnostic). Book Two will not clear it, and does not need to.
+- **Kanji:** Book One ships 200 at a measured 2.3 per teaching lesson, so ~100 lessons hold **roughly
+  200 more** without straining — putting cumulative kanji near 400, past the conventional ~300 line.
+  The real constraint is component and mnemonic quality (§5), never count; author to what the
+  components support and let the total fall where it falls.
 - **Grammar:** the N4 core — the plain-form family and its payoff patterns, sentence connectors,
   giving and receiving, wanting and intending, potential, quoted speech, conditionals. §4 maps it
   onto chapters and names what is left over, so anything cut is cut consciously.
@@ -97,7 +116,7 @@ Book One ended up with two chapter shapes: *situation* chapters organised around
 *rule* chapters organised around a piece of grammar. Book One is mostly situations because a
 beginner needs somewhere to stand. **Book Two inverts the ratio.**
 
-The reason is measurable. Only 39 of Book One's 76 teaching lessons carry a grammar pattern,
+The reason is measurable. Only 44 of Book One's 87 teaching lessons carry a grammar pattern,
 because situation chapters are word-shaped and add vocabulary without adding rules. Book Two's
 whole purpose is combining patterns, so a book of situation chapters would miss its own goal.
 
@@ -146,12 +165,13 @@ above are candidates, pending that check.
 
 ## 5. Kanji — where the method compounds
 
-This is where a component layer pays for itself. Book Two's ~140 new kanji are unmanageable as
+This is where a component layer pays for itself. Book Two's ~200 new kanji are unmanageable as
 flat shapes and tractable as **recombined parts**: new kanji are introduced as "you already know
 these pieces", which reinforces the system and makes each new kanji cheaper than the last.
 
-The component layer does not exist yet and is listed as Book One's main gap for this reason — it
-should be built during Book One's finish, not scrambled for here.
+The component layer does not exist yet. It was listed as Book One's main gap and Book One shipped
+without it, so it is now **Book Two's first build** (§12) — 200 kanji already carry no
+decomposition, and Book Two roughly doubles that.
 
 ## 6. Romaji ends here
 
@@ -250,8 +270,9 @@ at any level.
 
 ## 12. Build order
 
-1. Finish Book One (people & clothes chapter; food shipped as Chapter 11)
-2. Kanji component + mnemonic layer
+1. ~~Finish Book One~~ — **done** (people & clothes shipped as Chapter 12, closing the book at 100
+   lessons)
+2. Kanji component + mnemonic layer — now the first build, and the largest single risk (§5)
 3. ~~Multi-book support and the Book-level difficulty shift~~ — **done** (§0, PR #90), except the
    produce beat, which moves into step 4 because it is authoring work
 4. Author Book Two chapters, rule chapters first, in skeleton order (§4) — plain form before
