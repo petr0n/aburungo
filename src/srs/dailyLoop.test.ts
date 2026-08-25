@@ -63,9 +63,15 @@ const allWords = ["w1", "w2", "w3"].map(word);
 const allPhrases = ["p1", "p2"].map(phrase);
 const allPatterns = [grammarPattern("g1", "p1"), grammarPattern("g2", "p2")];
 
-/** The orchestrator takes a book, not a lesson list (03 §0a). */
+/**
+ * The orchestrator takes a book, not a lesson list (03 §0a).
+ *
+ * `id` and `progressKey` differ here exactly as they do in production: Book One
+ * is `book-1` and keys its progress on the legacy `n5`. A fixture that let them
+ * match would stay green while a caller read the wrong persisted row.
+ */
 const bookOf = (bookLessons: readonly Lesson[]): Book => ({
-  id: "n5",
+  id: "book-1",
   progressKey: "n5",
   order: 1,
   title: "Test book",
@@ -186,13 +192,20 @@ describe("buildDailySession", () => {
       kanji: [],
       grammarNote: "g",
     };
-    const bookTwo: Book = { ...bookOf([laterLesson]), id: "n4", order: 2, stage: "building" };
+    // Its own key, not Book One's — a later book must not read Book One's row.
+    const bookTwo: Book = {
+      ...bookOf([laterLesson]),
+      id: "book-2",
+      progressKey: "book-2",
+      order: 2,
+      stage: "building",
+    };
     const due = (id: string): ReviewState => ({ phraseId: id, box: 2, dueAt: NOW - DAY_MS });
 
     it("surfaces a due item from an earlier book", () => {
       const session = buildDailySession(
         bookTwo,
-        { pathId: "n4", seenLessonIds: [] },
+        { pathId: bookTwo.progressKey, seenLessonIds: [] },
         [...allWords, word("w9")],
         allPhrases,
         allPatterns,
@@ -207,7 +220,7 @@ describe("buildDailySession", () => {
     it("still withholds an earlier book's unseen items", () => {
       const session = buildDailySession(
         bookTwo,
-        { pathId: "n4", seenLessonIds: [] },
+        { pathId: bookTwo.progressKey, seenLessonIds: [] },
         [...allWords, word("w9")],
         allPhrases,
         allPatterns,
@@ -222,7 +235,7 @@ describe("buildDailySession", () => {
     it("takes new material from the current book only", () => {
       const session = buildDailySession(
         bookTwo,
-        { pathId: "n4", seenLessonIds: [] },
+        { pathId: bookTwo.progressKey, seenLessonIds: [] },
         [...allWords, word("w9")],
         allPhrases,
         allPatterns,
