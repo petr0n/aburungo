@@ -83,7 +83,7 @@ Two things matter for sequencing:
 | Default item gate | sits in Recognize longer | **Recall is the default**; Produce comes faster |
 | Grammar | one pattern, one shape | **pattern combining** — plain form, から/ので, conditionals |
 | Kanji | introduced per lesson, flat | components become **load-bearing**; parts recombine |
-| Reading | phrases only | **short graded passages**, the first real Tadoku taste (§7) |
+| Reading | phrases only | **themed sets of cited sentences** at ~98% coverage (§7) |
 | Output beat | type the phrase | **frame-based composition** — a pattern plus chosen words (§8) |
 | Romaji | shown | **cut at the book boundary** — kana and furigana only (§6) |
 
@@ -136,13 +136,13 @@ that spacing is the consolidation, not a concession.
 | 1 | Plain form | rule | dictionary／ない／た／なかった as forms; だ; the payoffs needing nothing else — 〜たことがある, 〜たり〜たり, 〜ないでください. Reuses Book One's te-form verb groups |
 | 2 | Giving & receiving | rule | あげる／くれる／もらう, then 〜てあげる／〜てくれる／〜てもらう |
 | 3 | Joining sentences | rule | から, ので, けど, て as a connector; 〜ながら, 〜とき. The first multi-clause sentences |
-| 4 | Situation A | situation | candidate: **feeling ill & the doctor** — builds on Book One's body-and-pain lessons |
+| 4 | **Feeling ill & the doctor** | situation | Book One teaches 痛い and 頭; this adds 病気, お腹 and the symptom vocabulary. Explaining what hurts is the first thing that genuinely needs chapter 3's multi-clause sentences |
 | 5 | Wanting & intending | rule | 〜たい beyond Book One's one pattern, 〜がほしい, 〜つもり, 〜ましょう／〜ませんか |
 | 6 | Being able to | rule | potential forms, 〜ことができる; 〜やすい／〜にくい |
-| 7 | Reported & quoted speech | rule | 〜と言っていました, 〜と思います — plain form's biggest payoff |
-| 8 | Situation B | situation | candidate: **making plans with friends** — invitations exercise chapter 5 |
+| 7 | Reported & quoted speech | rule | 〜と言っていました, 〜と思います — plain form's biggest payoff. Carries **passive as recognition only** (below) |
+| 8 | **Making plans with friends** | situation | Book One teaches 友達 and 会う; this adds 約束 and the invitation register. Invitations exercise chapter 5's 〜ましょう／〜ませんか immediately |
 | 9 | Conditionals | rule | たら, ば, と — and when each is wrong |
-| 10 | Situation C | situation | candidate: **trouble — lost, forgotten, broken** — builds on 無くす／困る from Book One; closes into the production checkpoint |
+| 10 | **Trouble — lost, forgotten, broken** | situation | builds on 無くす／困る from Book One's home & work chapter. Trouble forces past tense plus a reason clause — the exact combination the book is built to produce; closes into the production checkpoint |
 
 **Giving and receiving is pulled early on purpose.** An earlier draft of this doc called it "the
 thing every course puts too late" and then listed it last — convention masquerading as dependency.
@@ -156,12 +156,19 @@ implicit the moment 〜とき is taught), obligation and permission (〜なけ�
 〜てしまう), passive, causative, appearance and hearsay (〜そう, 〜らしい), comparisons
 (より／のほうが). Some fold into the skeleton at authoring time — noun modification belongs
 inside or right after chapter 3, advice rides with conditionals, te-helpers extend chapter 2's
-te-form territory, and situation lessons can carry patterns exactly as Book One's do. Passive and
-causative are the heavy pair and need an owner call (§11).
+te-form territory, and situation lessons can carry patterns exactly as Book One's do.
+
+**Passive and causative split** (decided 2026-08-24). Both are heavy, and Book Two already carries
+seven rule chapters against three breathers. **Passive enters chapter 7 as recognition only** — read
+it, never build it — hooked on 〜と言われています, which is the highest-frequency passive in written
+Japanese and sits naturally beside 〜と言っていました. That is what stops §7's themed sets, and the
+reading stage after them, landing on a learner who cannot parse a passive sentence. **Causative, and
+production of both, open the next book.** Neither costs a chapter slot here.
 
 Situation chapters still follow the Book One rule: check what is already taught before authoring,
-or a chapter shrinks from "adjectives" to "the body and the pairs" the hard way. The candidates
-above are candidates, pending that check.
+or a chapter shrinks from "adjectives" to "the body and the pairs" the hard way. The three above
+were checked against Book One's content on 2026-08-24 — every one has a footing in words already
+taught, and the new vocabulary each brings is named in the table.
 
 ## 5. Kanji — where the method compounds
 
@@ -191,22 +198,43 @@ removes the crutch at the book boundary:
   Book-level shift, §0b) and the kana prerequisite makes a taper pointless. If testing shows real
   distress, the fallback is a per-learner "show romaji" override, off by default — not a schedule.
 
-## 7. First graded passages
+## 7. Themed reading sets — not passages
 
-The first real Tadoku taste, and deliberately a *shape*, not a library — the levelled library and
-mining are Book Three builds.
+**Decided 2026-08-24, and the name is the decision.** An earlier draft of this section asked for
+"graded passages": a handful of *linked* sentences read for flow, the first real Tadoku taste. Book
+Two cannot honestly ship that, and saying so is cheaper than pretending.
 
-- **Shape:** a handful of linked sentences at ~98% known items — the unassisted-flow threshold
-  (Hu & Nation; see [04 §5](04-stage-reading.md)), cheap to hit here since passages are authored against
-  the ladder — read for flow, no dictionary, no questions after. Read, not SRS'd.
-- **When:** from roughly chapter 4 on — a passage is pointless before joining-sentences exists,
-  because a passage of single-clause sentences is just phrases stacked. One short passage near
-  each chapter close from there.
-- **Levelling:** by construction, not by pipeline — author each passage against the ladder so it
-  uses only items taught by that point. That is what makes i+1 mean something here; the Tatoeba
-  i+1 pipeline stays a Book Three build.
-- **Sourcing:** as §9 — training-canonical, marked, pending verification, with
-  `scripts/jlpt.mjs sentences` as the checking tool for what Tatoeba can attest.
+The reason is the corpus. The i+1 pipeline already exists —
+[scripts/reading.mjs](../../scripts/reading.mjs), with a committed dev set in
+`data/reading/micro-readings.json` — and its own header states the limit plainly: what it produces
+are "thematic neighbours, **NOT** coherent texts", and the reader UI "must not dress these up as
+stories." Verbatim Tatoeba sentences carry attribution and zero fabrication; what they cannot carry
+is a through-line. The only way to get coherent prose at this level is to author it, and a
+multi-sentence authored passage is the largest fabricated surface in the project — precisely what
+CLAUDE.md's no-fabricated-sentences rule exists to prevent. The N5 phrase exemption does not reach
+Book Two.
+
+So Book Two ships what the corpus can attest, under its real name:
+
+- **Shape:** a themed set of real, cited Tatoeba sentences at a shared coverage band — every one
+  attributed by sentence id. Read for volume and recognition, no dictionary, no questions after.
+  Read, not SRS'd. Presented as a set of related sentences, never as a story.
+- **Band:** the unassisted-flow threshold is ~98% known items (Hu & Nation; see
+  [04 §5](04-stage-reading.md)), which lands in the pipeline's `95` band (coverage in [0.95, 1)) and
+  above. Book Two draws from `95` and `100`; the `90` band is mining material — one unknown token by
+  design — and stays out.
+- **When:** from roughly chapter 4 on, once joining-sentences exists — before that the eligible
+  sentences are single-clause and the set is just phrases stacked. One set near each chapter close.
+- **Yield is the open risk.** At Book One's 484 words the pipeline found 72 eligible sentences
+  across the whole corpus, clustering into 11 sets. Book Two roughly doubles the taught inventory,
+  which should raise that sharply — but it is a measurement, not a promise. Re-run
+  `node scripts/reading.mjs tag` once chapter 3 ships and size the feature against the answer.
+- **Sourcing:** verbatim and cited. No authored connectives, no bridging prose (both were
+  considered and rejected — mixed-provenance text is the hardest kind to audit later).
+
+**The first true extensive reading moves to the reading stage**, where licensed graded readers or
+levelled Aozora texts are the source and the text-source decision in [04 §5](04-stage-reading.md)
+lands. That is a real cost of this decision: a learner arrives there having read sets, not stories.
 
 ## 8. Production practice — no Hana (DR-023)
 
@@ -258,15 +286,22 @@ nothing is recorded, misses rejoin the SRS queue. A judged answer reads "Correct
 (changed 2026-08-21, see CLAUDE.md); what stays banned is the aggregate verdict. That does not relax
 at any level.
 
-## 11. Open questions for the owner
+## 11. Owner decisions — all three settled 2026-08-24
 
-1. **Situation chapters:** which three? Candidates in §4 (doctor, making plans, trouble); others
-   that fit the brand: phone & messages, post office and bank errands.
-2. **Passive and causative:** conventionally N4, and the heaviest leftovers. Late Book Two rule
-   chapter (displacing a situation chapter), or first rule band of Book Three?
-3. **Graded passages sourcing comfort:** Q3 sanctions training-canonical short readings at this
-   level, but a multi-sentence passage is a bigger authored surface than a phrase. Comfortable, or
-   should passages wait for the Tatoeba pipeline to be pulled earlier?
+1. **Situation chapters: doctor, making plans, trouble** — the three the skeleton drafted, now
+   confirmed and detailed in §4. Errands (post office & bank) and phone & messages were the
+   alternatives and were not taken; both remain available if a chapter has to be swapped during
+   authoring.
+2. **Passive rides into chapter 7 as recognition only; causative and production of both open the
+   next book** (§4). Neither displaces a situation chapter, and the reading surface in §7 does not
+   inherit a learner who cannot parse a passive.
+3. **Book Two ships themed sets of cited Tatoeba sentences, not authored passages** (§7). The name
+   changed with the decision. Authoring coherent prose, and a Tatoeba-plus-authored-bridges hybrid,
+   were both considered and rejected — the first is the largest fabricated surface in the project,
+   the second is the hardest to audit. First true extensive reading moves to the reading stage.
+
+**Nothing is blocking authoring.** The remaining risk is the kanji component layer (§5, §12) and
+the §7 yield measurement, both of which are build work rather than decisions.
 
 ## 12. Build order
 
@@ -277,5 +312,6 @@ at any level.
    produce beat, which moves into step 4 because it is authoring work
 4. Author Book Two chapters, rule chapters first, in skeleton order (§4) — plain form before
    anything that stands on it — **authoring each lesson's composition frame alongside it** (§0, §8)
-5. Graded passages from mid-book on, once joining-sentences has shipped and vocabulary is deep
-   enough for i+1 to mean anything
+5. Themed reading sets from mid-book on (§7), once joining-sentences has shipped. Re-run
+   `node scripts/reading.mjs tag` at that point and size the feature against the measured yield
+   rather than against the 11 sets Book One's inventory produced
