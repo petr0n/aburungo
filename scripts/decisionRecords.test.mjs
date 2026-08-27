@@ -81,9 +81,10 @@ describe("decision records", () => {
 
   it("scans the file types that actually carry citations", () => {
     // Regression guard on the guard: this failed to look at .html and .sql
-    // while both cited real records.
+    // while both cited real records. The .html check went with the generated
+    // book map page (replaced by the bookmap/ SPA, whose .tsx citations the
+    // src scan already covers); .sql still only appears in migrations.
     const extensions = new Set(citations().map(({ path }) => path.split(".").pop()));
-    expect(extensions).toContain("html");
     expect(extensions).toContain("sql");
   });
 });
