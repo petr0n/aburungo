@@ -164,6 +164,24 @@ export function isKanji(item: Phrase | Word | GrammarPattern | Kanji): item is K
 }
 
 /**
+ * One visual component of a kanji, with the keyword the learner reads.
+ *
+ * Authored in src/content/kanji/components.yaml. An annotation on a kanji, not
+ * a reviewable item: no id, no ReviewState, no place in the daily loop. A
+ * component worth reviewing is a kanji worth teaching.
+ */
+export type KanjiComponent = {
+  glyph: string;
+  keyword: string;
+  /**
+   * Optional shape description, for radical-only forms where a keyword alone
+   * leaves the learner wondering what they are looking at. Components that are
+   * themselves kanji need no note.
+   */
+  note?: string;
+};
+
+/**
  * A named run of lessons ending in a checkpoint.
  *
  * The unit of commitment a learner actually feels: a ladder of fifty lessons is

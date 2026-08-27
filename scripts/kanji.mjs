@@ -2,7 +2,8 @@
 /**
  * Kanji content generator (docs/superpowers/specs/2026-08-24-kanji-in-the-ladder-design.md).
  *
- *   node scripts/kanji.mjs build   fetch KANJIDIC2 -> src/content/kanji/kanji.yaml
+ *   node scripts/kanji.mjs build        fetch KANJIDIC2 -> src/content/kanji/kanji.yaml
+ *   node scripts/kanji.mjs decompose   fetch KRADFILE -> src/content/kanji/decomposition.json
  *
  * Scope is derived: every character in every lesson's `kanji:` array, and
  * nothing else. Rerun after any lesson adds or drops a character —
@@ -90,6 +91,43 @@ async function build() {
   console.log(`wrote ${entries.length} entries to src/content/kanji/kanji.yaml`);
 }
 
+const KRAD = "https://raw.githubusercontent.com/hoffmannjp/krad-unicode/master/krad.json";
+const DECOMP_OUT = join(ROOT, "src/content/kanji/decomposition.json");
+
+async function decompose() {
+  const characters = taughtCharacters();
+  if (characters.length === 0) throw new Error("no kanji found in src/content/lessons — refusing to write an empty file");
+
+  const res = await fetch(KRAD);
+  if (!res.ok) throw new Error(`KRADFILE fetch failed: HTTP ${res.status}`);
+  const raw = await res.json();
+  const byLiteral = new Map(raw.map((e) => [e.literal, e.components]));
+
+  const map = {};
+  const missing = [];
+  for (const c of characters) {
+    const parts = byLiteral.get(c);
+    if (parts === undefined) { missing.push(c); continue; }
+    // Drop self-reference: KRADFILE gives 水 -> ["水"], and "水 is made of 水"
+    // is noise. Such kanji end up with an empty list and render no row.
+    map[c] = parts.filter((p) => p !== c);
+  }
+  if (missing.length > 0) throw new Error(`not in KRADFILE: ${missing.join(" ")}`);
+
+  const out = {
+    _source: "KRADFILE via hoffmannjp/krad-unicode",
+    _licence: "CC BY-SA 4.0, (c) James William Breen and The Electronic Dictionary Research and Development Group",
+    map,
+  };
+  writeFileSync(DECOMP_OUT, JSON.stringify(out, null, 2) + "\n");
+
+  const comps = new Set(Object.values(map).flat());
+  const empty = Object.values(map).filter((v) => v.length === 0).length;
+  console.log(`wrote ${Object.keys(map).length} entries to src/content/kanji/decomposition.json`);
+  console.log(`  ${comps.size} distinct components, ${empty} kanji with no component row`);
+}
+
 const cmd = process.argv[2];
 if (cmd === "build") await build();
-else if (cmd !== undefined) { console.error(`unknown command: ${cmd}`); process.exit(1); }
+else if (cmd === "decompose") await decompose();
+else { console.error(`usage: kanji.mjs build|decompose`); process.exit(1); }
