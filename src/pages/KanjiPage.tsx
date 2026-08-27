@@ -2,7 +2,7 @@ import { useState, useEffect, useRef, type ReactNode } from "react";
 import { LoadingPlaceholder, ProgressBar, ScoreCard } from "aburungo-design-system";
 import { fetchKanjiList, fetchDueKanji, submitKanjiReview } from "@/api/kanji";
 import type { KanjiEntry } from "@/api/kanji";
-import { KanjiDrillCard, type DrillPhase } from "@/components/KanjiDrillCard";
+import { KanjiDrillCard, KunReadings, type DrillPhase } from "@/components/KanjiDrillCard";
 import { useUserTier } from "@/store/auth";
 import { PageShell } from "@/components/PageShell";
 import { ProgressWidget } from "@/components/ProgressWidget";
@@ -19,24 +19,6 @@ const TIER_MAX_JLPT: Record<string, number> = {
 };
 
 // --- Browse helpers ---
-
-function parseKun(raw: string): { reading: string; okurigana: string } {
-  const [reading, okurigana = ""] = raw.split(".");
-  return { reading, okurigana };
-}
-
-function KunReading({ kanji, raw }: { kanji: string; raw: string }) {
-  const { reading, okurigana } = parseKun(raw);
-  return (
-    <span>
-      <ruby style={{ fontFamily: "var(--font-jp)" }}>
-        {kanji}
-        <rt className="text-caption text-fg-subtle">{reading}</rt>
-      </ruby>
-      {okurigana && <span style={{ fontFamily: "var(--font-jp)" }}>{okurigana}</span>}
-    </span>
-  );
-}
 
 function shuffle<T>(arr: T[]): T[] {
   const a = [...arr];
@@ -128,13 +110,8 @@ function BrowseScreen({ jlpt, onJlptChange, kanji, loading, selected, onSelect, 
               {selected.kunReadings.length > 0 && (
                 <div className="mb-3">
                   <span className="text-caption font-medium text-fg-subtle">Kun: </span>
-                  <span className="text-body-sm text-fg">
-                    {selected.kunReadings.map((r, i) => (
-                      <span key={r}>
-                        {i > 0 && "、"}
-                        <KunReading kanji={selected.character} raw={r} />
-                      </span>
-                    ))}
+                  <span className="inline-flex flex-wrap gap-x-3 gap-y-1 text-body-sm text-fg">
+                    <KunReadings kanji={selected.character} readings={selected.kunReadings} />
                   </span>
                 </div>
               )}

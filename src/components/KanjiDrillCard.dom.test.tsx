@@ -53,4 +53,16 @@ describe("KanjiDrillCard with ladder content", () => {
     expect(screen.getByText("スイ")).toBeTruthy();
     expect(screen.getByText("みず")).toBeTruthy();
   });
+
+  // A refactor once dropped this silently: without lang="ja" a browser may
+  // resolve Han characters to Chinese glyph forms, and nothing else in the
+  // suite would have noticed.
+  it("marks kun readings as Japanese so Han glyphs resolve correctly", () => {
+    const { container } = render(
+      <KanjiDrillCard kanji={water} phase="revealed" onReveal={noop} onRate={noop} onEntered={noop} onExited={noop} />,
+    );
+    const ruby = container.querySelector("ruby");
+    expect(ruby).not.toBeNull();
+    expect(ruby?.getAttribute("lang")).toBe("ja");
+  });
 });

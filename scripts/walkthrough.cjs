@@ -215,6 +215,13 @@ async function verifyKanjiSeeding(browser) {
     }
     await page.waitForTimeout(300);
   }
+  if (guard >= 60) {
+    await ctx.close();
+    // Without this, a teach loop that never reaches the produce step falls
+    // through to the read-back and reports "no review state was written" —
+    // blaming the seeding for a navigation failure.
+    throw new Error("KANJI CHECK: never reached the produce step — the teach loop stalled");
+  }
   await page.waitForTimeout(800);
 
   const row = await page.evaluate(

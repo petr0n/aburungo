@@ -67,11 +67,15 @@ function KunReading({ kanji, raw }: KunReadingProps) {
   const { reading, okurigana } = parseKun(raw);
   return (
     <span>
-      <ruby style={{ fontFamily: "var(--font-jp)" }}>
+      <ruby lang="ja" style={{ fontFamily: "var(--font-jp)" }}>
         {kanji}
         <rt className="text-caption text-fg-subtle">{reading}</rt>
       </ruby>
-      {okurigana && <span style={{ fontFamily: "var(--font-jp)" }}>{okurigana}</span>}
+      {okurigana && (
+        <span lang="ja" style={{ fontFamily: "var(--font-jp)" }}>
+          {okurigana}
+        </span>
+      )}
     </span>
   );
 }
