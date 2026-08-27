@@ -2,7 +2,7 @@
 import { describe, expect, it, afterEach } from "vitest";
 import { render, screen, cleanup } from "@testing-library/react";
 import { KanjiIntroCard } from "./KanjiIntroCard";
-import type { Kanji } from "@/types";
+import type { Kanji, KanjiPiece } from "@/types";
 
 const water: Kanji = {
   id: "kanji.水", character: "水", meanings: ["water"], allMeanings: ["water"],
@@ -71,5 +71,61 @@ describe("KanjiIntroCard reading notation", () => {
   it("caps the list so an 18-reading entry cannot bury the card", () => {
     const { container } = render(<KanjiIntroCard kanji={life} />);
     expect(container.querySelectorAll("ruby").length).toBe(6);
+  });
+});
+
+/**
+ * The component row. One keyword serves every kanji that uses a glyph, so the
+ * heading claims visual presence ("shapes in this kanji") rather than
+ * composition — KRADFILE is a radical lookup file, not an etymology, and 鳥's
+ * only piece is ⺣ "fire" where those strokes are tail feathers.
+ */
+const pieces: KanjiPiece[] = [
+  { glyph: "日", keyword: "sun", state: "taught" },
+  { glyph: "⺡", keyword: "water", note: "the flowing form of 水", state: "met" },
+  { glyph: "寸", keyword: "thumb", state: "new" },
+];
+
+describe("KanjiIntroCard component row", () => {
+  afterEach(cleanup);
+
+  it("shows each piece with its keyword", () => {
+    render(<KanjiIntroCard kanji={water} pieces={pieces} />);
+    expect(screen.getByText("sun")).toBeTruthy();
+    // Twice: the kanji's own meaning, and ⺡'s keyword.
+    expect(screen.getAllByText("water").length).toBe(2);
+    expect(screen.getByText("thumb")).toBeTruthy();
+  });
+
+  it("says you know the pieces you were taught", () => {
+    render(<KanjiIntroCard kanji={water} pieces={pieces} />);
+    expect(screen.getByText(/you know this/i)).toBeTruthy();
+  });
+
+  it("says you have seen a met piece, without claiming you know it", () => {
+    render(<KanjiIntroCard kanji={water} pieces={pieces} />);
+    expect(screen.getByText(/you've seen this/i)).toBeTruthy();
+  });
+
+  it("gives a new piece no label, since its keyword is the introduction", () => {
+    const { container } = render(<KanjiIntroCard kanji={water} pieces={[pieces[2]]} />);
+    const text = container.textContent ?? "";
+    expect(text).toContain("thumb");
+    expect(text).not.toMatch(/you know this|you've seen this|\bnew\b/i);
+  });
+
+  it("renders the note that stops a keyword misleading", () => {
+    render(<KanjiIntroCard kanji={water} pieces={pieces} />);
+    expect(screen.getByText("the flowing form of 水")).toBeTruthy();
+  });
+
+  it("renders no component row at all when there are no pieces", () => {
+    render(<KanjiIntroCard kanji={water} pieces={[]} />);
+    expect(screen.queryByText(/shapes in this kanji/i)).toBeNull();
+  });
+
+  it("renders without a pieces prop, since the row is additive", () => {
+    render(<KanjiIntroCard kanji={water} />);
+    expect(screen.getAllByText("水").length).toBeGreaterThan(0);
   });
 });

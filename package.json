@@ -25,7 +25,8 @@
     "bookmap": "vite bookmap --open",
     "reading": "node scripts/reading.mjs",
     "aozora": "node scripts/aozora.mjs",
-    "vocab": "node scripts/vocab.mjs"
+    "vocab": "node scripts/vocab.mjs",
+    "kanji": "node scripts/kanji.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.105.4",

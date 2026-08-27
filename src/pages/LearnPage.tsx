@@ -31,7 +31,7 @@ import { getOne, upsertSynced, hydrateFromServer, recordRating, recordReview } f
 import { schedule } from "@/srs/leitner";
 import { buildDailySession, type DailySession } from "@/srs/dailyLoop";
 import { allGrammarPatterns } from "@/content/grammar";
-import { allKanji } from "@/content/kanji";
+import { allKanji, piecesByCharacter } from "@/content/kanji";
 import { PageShell } from "@/components/PageShell";
 import { FlashCard, type FlashCardPhase } from "@/components/FlashCard";
 import { WordLearnCard } from "@/components/WordLearnCard";
@@ -339,7 +339,7 @@ function NewLessonStep({
             <p className="text-body-sm font-medium text-fg-subtle">New kanji today</p>
             <div className="flex flex-col gap-2">
               {newKanji.map((k) => (
-                <KanjiIntroCard key={k.id} kanji={k} />
+                <KanjiIntroCard key={k.id} kanji={k} pieces={piecesByCharacter.get(k.character)} />
               ))}
             </div>
           </div>

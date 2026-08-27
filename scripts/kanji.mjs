@@ -4,6 +4,7 @@
  *
  *   node scripts/kanji.mjs build        fetch KANJIDIC2 -> src/content/kanji/kanji.yaml
  *   node scripts/kanji.mjs decompose   fetch KRADFILE -> src/content/kanji/decomposition.json
+ *   node scripts/kanji.mjs gaps        advisory report on the decomposition
  *
  * Scope is derived: every character in every lesson's `kanji:` array, and
  * nothing else. Rerun after any lesson adds or drops a character —
@@ -144,7 +145,42 @@ async function decompose() {
   console.log(`  ${comps.size} distinct components, ${empty} kanji with no component row`);
 }
 
+/**
+ * Advisory report for an author. Never exits non-zero: a lesson introducing a
+ * kanji whose shapes are all new is a legitimate authoring choice, and
+ * components never reorder lessons (spec decision 4).
+ */
+async function gaps() {
+  const decomp = JSON.parse(readFileSync(DECOMP_OUT, "utf8")).map;
+  const taught = new Set(Object.keys(decomp));
+
+  console.log("# Kanji whose components are all new at introduction\n");
+  const seen = new Set();
+  const met = new Set();
+  for (const c of taughtCharacters()) {
+    const parts = decomp[c] ?? [];
+    const known = parts.filter((p) => seen.has(p) || met.has(p));
+    if (parts.length > 0 && known.length === 0) console.log(`  ${c} — ${parts.join(" ")}`);
+    seen.add(c);
+    for (const p of parts) met.add(p);
+  }
+
+  console.log("\n# Decompositions worth an author's eye\n");
+  for (const [c, parts] of Object.entries(decomp)) {
+    // KRADFILE is built for radical lookup, not teaching. Long lists and
+    // near-duplicate parts (母 beside 毋) are where it misleads.
+    if (parts.length >= 5) console.log(`  ${c} — ${parts.length} parts: ${parts.join(" ")}`);
+  }
+
+  const used = new Set(Object.values(decomp).flat());
+  console.log(`\n# Totals\n`);
+  console.log(`  ${taught.size} kanji, ${used.size} distinct components`);
+  console.log(`  ${[...used].filter((g) => taught.has(g)).length} components are themselves taught kanji`);
+  console.log(`  ${Object.values(decomp).filter((v) => v.length === 0).length} kanji render no component row`);
+}
+
 const cmd = process.argv[2];
 if (cmd === "build") await build();
 else if (cmd === "decompose") await decompose();
-else { console.error(`usage: kanji.mjs build|decompose`); process.exit(1); }
+else if (cmd === "gaps") await gaps();
+else { console.error(`usage: kanji.mjs build|decompose|gaps`); process.exit(1); }

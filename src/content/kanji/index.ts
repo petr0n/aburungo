@@ -1,4 +1,7 @@
-import type { Kanji, KanjiComponent } from "@/types";
+import type { Kanji, KanjiComponent, KanjiPiece } from "@/types";
+import { n5Lessons } from "@/content/lessons";
+import { buildPieceIndex } from "./pieces";
+import decomposition from "./decomposition.json";
 import { parseKanji } from "./schema";
 import { parseComponents } from "./componentSchema";
 import kanjiRaw from "./kanji.yaml";
@@ -14,4 +17,20 @@ export const allComponents: readonly KanjiComponent[] = parseComponents(componen
 /** The intro card looks a component up by the glyph KRADFILE gave it. */
 export const componentByGlyph: ReadonlyMap<string, KanjiComponent> = new Map(
   allComponents.map((c) => [c.glyph, c]),
+);
+
+/**
+ * Every taught kanji's shapes, resolved to taught / met / new as of the moment
+ * that kanji is introduced. `n5Lessons` is the shipping ladder — the order the
+ * learner actually walks, which is what the states are relative to.
+ *
+ * The annotation is a checked assignment, not a cast: a JSON import is typed
+ * with literal keys and no index signature.
+ */
+const decompositionMap: Readonly<Record<string, readonly string[]>> = decomposition.map;
+
+export const piecesByCharacter: ReadonlyMap<string, KanjiPiece[]> = buildPieceIndex(
+  n5Lessons,
+  decompositionMap,
+  allComponents,
 );
