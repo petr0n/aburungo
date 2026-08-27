@@ -42,6 +42,16 @@ describe("kanji decomposition", () => {
     expect(leaked).toEqual([]);
   });
 
+  it("drops the elements that are spurious for one host kanji", () => {
+    // 毋 is real in 毎 and 海, but it is 母's entire row -- "mother is made
+    // of: do not". ⺭ is real in 社, but 杯 is 木 + 不 and has no altar in it.
+    const perKanjiDrop: Record<string, string[]> = { "母": ["毋"], "杯": ["⺭"] };
+    const leaked = Object.entries(perKanjiDrop)
+      .filter(([c, drops]) => map[c].some((p) => drops.includes(p)))
+      .map(([c]) => c);
+    expect(leaked).toEqual([]);
+  });
+
   it("carries its licence attribution, which regeneration must not drop", () => {
     expect(decomposition._licence).toContain("CC BY-SA");
     expect(decomposition._source).toContain("KRADFILE");

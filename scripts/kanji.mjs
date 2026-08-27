@@ -100,6 +100,13 @@ const KRAD = "https://raw.githubusercontent.com/hoffmannjp/krad-unicode/master/k
 // not contain, and a learner would build a memory on it. Dropping them loses
 // a true part of the kanji, which is better than showing a false one.
 const STAND_INS = new Set(["乞", "隶"]);
+
+// krad-unicode also lists an element that is right for other kanji but
+// spurious for one host: 毋 is real in 毎 and 海 yet is 母's whole component
+// row, which would read "mother is made of: do not"; ⺭ is real in 社 but in
+// 杯 (木 + 不) it stands in for stroke groups. Global exclusion would break
+// the legitimate uses, so these drop per kanji.
+const PER_KANJI_DROP = { "母": ["毋"], "杯": ["⺭"] };
 const DECOMP_OUT = join(ROOT, "src/content/kanji/decomposition.json");
 
 async function decompose() {
@@ -119,7 +126,8 @@ async function decompose() {
     // Drop self-reference: KRADFILE gives 水 -> ["水"], and "水 is made of 水"
     // is noise. Such kanji end up with an empty list and render no row. The
     // stand-in glyphs above go the same way.
-    map[c] = parts.filter((p) => p !== c && !STAND_INS.has(p));
+    const dropped = PER_KANJI_DROP[c] ?? [];
+    map[c] = parts.filter((p) => p !== c && !STAND_INS.has(p) && !dropped.includes(p));
   }
   if (missing.length > 0) throw new Error(`not in KRADFILE: ${missing.join(" ")}`);
 
