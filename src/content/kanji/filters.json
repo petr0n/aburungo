@@ -1,0 +1,10 @@
+{
+  "_note": "What `node scripts/kanji.mjs decompose` drops out of KRADFILE. Read by the generator and by decomposition.test.ts, so an entry added here is guarded the moment it is applied. The reasoning for each entry is in scripts/kanji.mjs.",
+  "standIns": ["乞", "隶"],
+  "perKanjiDrop": {
+    "母": ["毋"],
+    "杯": ["⺭"],
+    "口": ["囗"],
+    "八": ["ハ"]
+  }
+}

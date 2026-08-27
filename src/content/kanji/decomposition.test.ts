@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { allKanji } from "./index";
 import decomposition from "./decomposition.json";
+import filters from "./filters.json";
 
 describe("kanji decomposition", () => {
   // Annotated (not cast): decomposition.json is inferred as a literal object
@@ -37,23 +38,43 @@ describe("kanji decomposition", () => {
     // krad-unicode borrows 乞 for the unencoded 𠂉 and 隶 for 彔, so those
     // glyphs name a piece the kanji does not contain. The generator drops
     // them; this keeps a regeneration from quietly letting them back in.
-    const standIns = ["乞", "隶"];
-    const leaked = characters.filter((c) => map[c].some((p) => standIns.includes(p)));
+    const leaked = characters.filter((c) => map[c].some((p) => filters.standIns.includes(p)));
     expect(leaked).toEqual([]);
   });
 
   it("drops the elements that are spurious for one host kanji", () => {
     // 毋 is real in 毎 and 海, but it is 母's entire row -- "mother is made
     // of: do not". ⺭ is real in 社, but 杯 is 木 + 不 and has no altar in it.
-    const perKanjiDrop: Record<string, string[]> = { "母": ["毋"], "杯": ["⺭"] };
-    const leaked = Object.entries(perKanjiDrop)
-      .filter(([c, drops]) => map[c].some((p) => drops.includes(p)))
+    // 囗 and ハ are the same shape as their host at another codepoint, which
+    // the generator's self-reference check compares past.
+    const drops: Record<string, string[]> = filters.perKanjiDrop;
+    const leaked = Object.entries(drops)
+      .filter(([c, dropped]) => map[c].some((p) => dropped.includes(p)))
       .map(([c]) => c);
     expect(leaked).toEqual([]);
   });
 
+  it("keeps the drop table honest, so neither guard above passes vacuously", () => {
+    // Both tests above read src/content/kanji/filters.json, the same file the
+    // generator reads, so adding a drop guards it in one edit. What is left
+    // to catch is an emptied table, or a host key that matches no kanji and
+    // so drops nothing while looking like it does.
+    expect(filters.standIns.length).toBeGreaterThan(0);
+    const hosts = Object.keys(filters.perKanjiDrop);
+    expect(hosts.length).toBeGreaterThan(0);
+    expect(hosts.filter((c) => map[c] === undefined)).toEqual([]);
+  });
+
   it("carries its licence attribution, which regeneration must not drop", () => {
-    expect(decomposition._licence).toContain("CC BY-SA");
+    // The immediate source is krad-unicode, whose LICENSE is 3.0 Unported.
+    // Naming 4.0 here asserted something false about the source, so the
+    // version, the conversion credit, the modification notice and the
+    // outbound grant are all pinned.
     expect(decomposition._source).toContain("KRADFILE");
+    expect(decomposition._source).toContain("krad-unicode");
+    expect(decomposition._licence).toContain("CC BY-SA 3.0");
+    expect(decomposition._licence).toContain("creativecommons.org/licenses/by-sa/3.0/");
+    expect(decomposition._licence).toContain("offered under CC BY-SA 4.0");
+    expect(decomposition._modifications).toContain("self-references dropped");
   });
 });

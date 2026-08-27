@@ -107,6 +107,7 @@ Check `MEMORY.md` there at the start of every conversation. Write updated memori
 | Example sentences    | Tatoeba TSV download + `jpn_indices.csv`   | CC BY 2.0 FR          |
 | Kanji (~2136 Joyo)   | KANJIDIC2 / KanjiAPI.dev                   | CC BY-SA 4.0          |
 | Stroke order SVGs    | KanjiVG (bundled)                          | CC BY-SA 3.0          |
+| Kanji components     | KRADFILE via krad-unicode                  | CC BY-SA 3.0          |
 | TTS audio (static)   | VOICEVOX (self-hosted, pre-generated)      | Per-voice terms       |
 | TTS audio (dynamic)  | Google Neural2 / Azure Nanami              | Paid                  |
 | STT                  | Web Speech API (V1) → OpenAI Whisper API   | Free / $0.006/min     |

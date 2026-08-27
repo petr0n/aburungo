@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { allKanji, kanjiByCharacter } from "./index";
+import { allKanji, kanjiByCharacter, piecesByCharacter } from "./index";
 import { kanjiId, isKanji, isGrammarPattern } from "@/types";
 
 /**
@@ -50,6 +50,17 @@ describe("kanji content scope", () => {
   it("has no entry that no lesson teaches", () => {
     const orphans = allKanji.filter((k) => !taught.has(k.character)).map((k) => k.character);
     expect(orphans).toEqual([]);
+  });
+
+  it("resolves component states for every character, gated lessons included", () => {
+    // piecesByCharacter is built from n5Lessons, which drops Hana lessons
+    // while the AI is shelved (DR-023) -- the same hazard this file globs raw
+    // YAML to avoid. A gated lesson introducing a character no other lesson
+    // teaches would leave it with no component row, and only with Hana off,
+    // which is the default and so the quiet case.
+    const missing = allKanji.filter((k) => !piecesByCharacter.has(k.character)).map((k) => k.character);
+    expect(missing).toEqual([]);
+    expect(piecesByCharacter.size).toBe(allKanji.length);
   });
 
   it("gives every entry the id the ladder will look it up by", () => {

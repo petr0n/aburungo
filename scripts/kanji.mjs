@@ -55,13 +55,13 @@ function taughtCharacters() {
 }
 
 /**
- * The same characters in the order a learner actually meets them. Filename
- * order is not lesson order: n5.yaml holds orders 1-3 but sorts last, because
- * "-" (0x2D) sorts before "." (0x2E). Anything reasoning about what is known
+ * The lessons in the order a learner actually walks them. Filename order is
+ * not lesson order: n5.yaml holds orders 1-3 but sorts last, because "-"
+ * (0x2D) sorts before "." (0x2E). Anything reasoning about what is known
  * *yet* must use this, not taughtCharacters().
  */
-function taughtInLessonOrder() {
-  return [...new Set([...lessonKanji()].sort((a, b) => a.order - b.order).flatMap((l) => l.kanji))];
+function lessonsInOrder() {
+  return [...lessonKanji()].sort((a, b) => a.order - b.order);
 }
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -121,20 +121,31 @@ async function build() {
 
 const KRAD = "https://raw.githubusercontent.com/hoffmannjp/krad-unicode/master/krad.json";
 
-// krad-unicode stand-ins: glyphs it borrows for elements it has no codepoint
+// Both filter tables live in src/content/kanji/filters.json, because
+// decomposition.test.ts guards them and a table copied into two files gets
+// edited in one. The reasoning stays here, next to where it is applied.
+//
+// Stand-ins are glyphs krad-unicode borrows for elements it has no codepoint
 // for. 乞 stands for the unencoded 𠂉 (the slant over a level stroke atop 矢,
 // 竹 and 攵) and appears in 14 of our kanji, none of which contain 乞 "beg";
 // 隶 stands for 彔 in 緑. Rendering either would name a piece the kanji does
 // not contain, and a learner would build a memory on it. Dropping them loses
 // a true part of the kanji, which is better than showing a false one.
-const STAND_INS = new Set(["乞", "隶"]);
-
-// krad-unicode also lists an element that is right for other kanji but
-// spurious for one host: 毋 is real in 毎 and 海 yet is 母's whole component
-// row, which would read "mother is made of: do not"; ⺭ is real in 社 but in
-// 杯 (木 + 不) it stands in for stroke groups. Global exclusion would break
-// the legitimate uses, so these drop per kanji.
-const PER_KANJI_DROP = { "母": ["毋"], "杯": ["⺭"] };
+//
+// Per-kanji drops are elements that are right for other kanji but wrong for
+// one host, so global exclusion would break the legitimate uses:
+//   母 -> 毋   real in 毎 and 海, but it is 母's whole row: "mother is 毋".
+//   杯 -> ⺭   real in 社, but 杯 is 木 + 不 and has no altar in it.
+//   口 -> 囗   the same square at two sizes (U+53E3, U+56D7), one drawn
+//              larger than the other and indistinguishable at caption size.
+//              囗 stays legitimate in 国, 四 and 困.
+//   八 -> ハ   krad-unicode names 八's own shape with the katakana glyph, so
+//              the card read "ハ two strokes apart, the shape of 八".
+// The codepoint check below catches only a literal self-reference; these two
+// are the same shape at a different codepoint, so they drop by name.
+const FILTERS = JSON.parse(readFileSync(join(ROOT, "src/content/kanji/filters.json"), "utf8"));
+const STAND_INS = new Set(FILTERS.standIns);
+const PER_KANJI_DROP = FILTERS.perKanjiDrop;
 const DECOMP_OUT = join(ROOT, "src/content/kanji/decomposition.json");
 
 async function decompose() {
@@ -159,9 +170,22 @@ async function decompose() {
   }
   if (missing.length > 0) throw new Error(`not in KRADFILE: ${missing.join(" ")}`);
 
+  // BY-SA 3.0 s3(a) requires an adaptation to say it is one, and the
+  // immediate source is the krad-unicode conversion, whose LICENSE is 3.0
+  // Unported -- not the 4.0 the upstream EDRDG page offers. s4(b) permits
+  // licensing the adaptation under a later version, which is what the
+  // outbound grant does, so a downstream reader has one licence to read.
   const out = {
-    _source: "KRADFILE via hoffmannjp/krad-unicode",
-    _licence: "CC BY-SA 4.0, (c) James William Breen and The Electronic Dictionary Research and Development Group",
+    _source:
+      "KRADFILE, (c) James William Breen and The Electronic Dictionary Research and Development Group, " +
+      "via the Unicode conversion krad-unicode by hoffmannjp (https://github.com/hoffmannjp/krad-unicode)",
+    _licence:
+      "Source licensed CC BY-SA 3.0 Unported (https://creativecommons.org/licenses/by-sa/3.0/). " +
+      "This table is a modified adaptation, offered under CC BY-SA 4.0 " +
+      "(https://creativecommons.org/licenses/by-sa/4.0/) as BY-SA 3.0 section 4(b) permits.",
+    _modifications:
+      "Scoped to the characters this course teaches; self-references dropped; krad-unicode stand-in " +
+      "glyphs dropped; per-kanji spurious elements dropped (see src/content/kanji/filters.json).",
     map,
   };
   writeFileSync(DECOMP_OUT, JSON.stringify(out, null, 2) + "\n");
@@ -182,14 +206,27 @@ async function gaps() {
   const taught = new Set(Object.keys(decomp));
 
   console.log("# Kanji whose components are all new at introduction\n");
+  const introduced = new Set();
   const seen = new Set();
   const met = new Set();
-  for (const c of taughtInLessonOrder()) {
-    const parts = decomp[c] ?? [];
-    const known = parts.filter((p) => seen.has(p) || met.has(p));
-    if (parts.length > 0 && known.length === 0) console.log(`  ${c} — ${parts.join(" ")}`);
-    seen.add(c);
-    for (const p of parts) met.add(p);
+  for (const lesson of lessonsInOrder()) {
+    // Snapshot per lesson, exactly as src/content/kanji/pieces.ts does: a
+    // lesson's intro cards are all on screen at once, so a kanji introduced
+    // beside this one is not something the learner already knows. Counting
+    // it would hide the gap the report exists to show.
+    const knownSeen = new Set(seen);
+    const knownMet = new Set(met);
+    for (const c of lesson.kanji) {
+      const parts = decomp[c] ?? [];
+      // First introduction only -- fifteen characters are listed twice.
+      if (!introduced.has(c)) {
+        const known = parts.filter((p) => knownSeen.has(p) || knownMet.has(p));
+        if (parts.length > 0 && known.length === 0) console.log(`  ${c} — ${parts.join(" ")}`);
+        introduced.add(c);
+      }
+      seen.add(c);
+      for (const p of parts) met.add(p);
+    }
   }
 
   console.log("\n# Decompositions worth an author's eye\n");
