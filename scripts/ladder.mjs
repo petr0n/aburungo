@@ -1,9 +1,16 @@
 #!/usr/bin/env node
 /**
- * Generate the book map: every chapter, lesson, checkpoint, word and phrase.
+ * Generate the book map: every book, chapter, lesson, checkpoint, word and phrase.
  *
- *   node scripts/ladder.mjs            write docs/book-one-ladder.{md,html}
- *   node scripts/ladder.mjs --check    exit 1 if either file is out of date
+ *   node scripts/ladder.mjs            write docs/<book>-ladder.{md,html} for every book
+ *   node scripts/ladder.mjs --check    exit 1 if any file is out of date
+ *
+ * Books are discovered from src/content/chapters/*.yaml — one file per book,
+ * lessons attached to a book by the prefix on their chapterId (or their own id,
+ * for the checkpoints that close a book). A new book renders nothing until it
+ * has a BOOKS entry below: generation throws instead, which fails `pnpm test`,
+ * so new content cannot land without appearing on the map. Each book's HTML
+ * page links to every other book's, so the map is one browsable set.
  *
  * Two formats from one pass. The Markdown renders on GitHub and diffs
  * meaningfully in a content PR; the HTML is the one to actually read, with each
@@ -25,11 +32,19 @@ import { fileURLToPath } from "node:url";
 import yaml from "js-yaml";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
-const DEST = join(ROOT, "docs/book-one-ladder.md");
-const DEST_HTML = join(ROOT, "docs/book-one-ladder.html");
+
+/**
+ * Title and order for each book, keyed by the id prefix its chapters carry.
+ * Deliberately the only hand-written piece: a chapters file whose prefix has
+ * no entry here makes generation throw, so a new book cannot land invisible.
+ */
+const BOOKS = {
+  n5: { order: 1, title: "Book One" },
+};
 
 const loadDir = (dir) =>
-  readdirSync(join(ROOT, "src/content", dir))
+  readdirSync(join(ROOT, "src/content", dir), { recursive: true })
+    .map(String)
     .filter((f) => f.endsWith(".yaml"))
     .flatMap((f) => {
       const parsed = yaml.load(readFileSync(join(ROOT, "src/content", dir, f), "utf8"));
@@ -47,40 +62,83 @@ const CHECKPOINT_LABEL = {
 const isShelved = (l) => l.checkpoint === "conversation" || l.checkpoint === "can-do";
 
 function readContent() {
-  const lessons = loadDir("lessons").sort((a, b) => a.order - b.order);
-  const chapters = yaml.load(readFileSync(join(ROOT, "src/content/chapters/n5.yaml"), "utf8"));
   const words = new Map(loadDir("vocabulary").map((w) => [w.id, w]));
   const phrases = new Map(loadDir("phrases").map((p) => [p.id, p]));
   const patterns = new Map(loadDir("grammar").map((g) => [g.id, g]));
 
-  return { lessons, chapters, words, phrases, patterns };
+  const books = readdirSync(join(ROOT, "src/content/chapters"))
+    .filter((f) => f.endsWith(".yaml"))
+    .map((f) => {
+      const chapters = yaml.load(readFileSync(join(ROOT, "src/content/chapters", f), "utf8"));
+      const prefixes = [...new Set(chapters.map((c) => c.id.split(".")[0]))];
+      if (prefixes.length !== 1) {
+        throw new Error(`chapters/${f}: chapter ids mix prefixes (${prefixes.join(", ")})`);
+      }
+      const key = prefixes[0];
+      const meta = BOOKS[key];
+      if (!meta) {
+        throw new Error(
+          `chapters/${f}: no BOOKS entry for id prefix "${key}" — add the book's title and order to BOOKS in scripts/ladder.mjs so the book map renders it`,
+        );
+      }
+      const slug = meta.title.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+      return { key, ...meta, slug, chapters, lessons: [] };
+    })
+    .sort((a, b) => a.order - b.order);
+
+  const byKey = new Map(books.map((b) => [b.key, b]));
+  for (const lesson of loadDir("lessons").sort((a, b) => a.order - b.order)) {
+    const key = (lesson.chapterId ?? lesson.id).split(".")[0];
+    const book = byKey.get(key);
+    if (!book) {
+      throw new Error(`lesson "${lesson.id}": id prefix "${key}" matches no book — the book map cannot place it`);
+    }
+    book.lessons.push(lesson);
+  }
+
+  return { books, words, phrases, patterns };
 }
 
-export function buildMarkdown() {
-  const { lessons, chapters, words, phrases, patterns } = readContent();
+/** Unique word/phrase/pattern ids a book's lessons reach — its content, counted. */
+function bookCounts(lessons) {
+  return {
+    words: new Set(lessons.flatMap((l) => l.wordIds ?? [])).size,
+    phrases: new Set(lessons.flatMap((l) => l.phraseIds ?? [])).size,
+    patterns: new Set(lessons.flatMap((l) => (l.patternId ? [l.patternId] : []))).size,
+  };
+}
+
+function buildMarkdown(book, ctx) {
+  const { lessons, chapters, title } = book;
+  const { words, phrases, patterns } = ctx;
   const shipping = lessons.filter((l) => !isShelved(l));
   const teaching = shipping.filter((l) => !l.checkpoint);
   const kanji = new Set(shipping.flatMap((l) => l.kanji ?? []));
+  const counts = bookCounts(lessons);
 
   const out = [];
   const w = (line = "") => out.push(line);
 
-  w("# Book One");
+  w(`# ${title}`);
   w();
   w("Every chapter, lesson and checkpoint a learner meets, in order, with the words and");
   w("phrases each one teaches.");
   w();
   w("**Generated — do not edit.** Run `pnpm ladder` after any content change; `pnpm test`");
-  w("fails if this file is out of date. Book One's ids carry a legacy `n5` prefix; a learner");
+  w(`fails if this file is out of date. Ids carry the book's \`${book.key}\` prefix; a learner`);
   w("never reads it.");
   w();
+  if (ctx.books.length > 1) {
+    w(ctx.books.map((b) => (b.key === book.key ? `**${b.title}**` : `[${b.title}](${b.slug}-ladder.md)`)).join(" · "));
+    w();
+  }
   w("| | |");
   w("|---|---|");
   w(`| Chapters | ${chapters.length} |`);
   w(`| Lessons | ${shipping.length} (${teaching.length} teaching, ${shipping.length - teaching.length} checkpoints) |`);
-  w(`| Words | ${words.size} |`);
-  w(`| Phrases | ${phrases.size} |`);
-  w(`| Grammar patterns | ${patterns.size} |`);
+  w(`| Words | ${counts.words} |`);
+  w(`| Phrases | ${counts.phrases} |`);
+  w(`| Grammar patterns | ${counts.patterns} |`);
   w(`| Kanji introduced | ${kanji.size} |`);
   w();
 
@@ -192,11 +250,13 @@ const esc = (v) =>
  * whole book at a glance and expands to the words and phrases on demand. No
  * script, so it works from a file:// URL and inside GitHub's raw view.
  */
-export function buildHtml() {
-  const { lessons, chapters, words, phrases, patterns } = readContent();
+function buildHtml(book, ctx) {
+  const { lessons, chapters, title } = book;
+  const { words, phrases, patterns } = ctx;
   const shipping = lessons.filter((l) => !isShelved(l));
   const teaching = shipping.filter((l) => !l.checkpoint);
   const kanji = new Set(shipping.flatMap((l) => l.kanji ?? []));
+  const counts = bookCounts(lessons);
 
   const lessonBlock = (lesson, n, total) => {
     if (lesson.checkpoint) {
@@ -271,13 +331,20 @@ export function buildHtml() {
     .filter(isShelved)
     .map((l) => `<li><span class="ord">${l.order}</span><span>${esc(l.title)} — ${esc(CHECKPOINT_LABEL[l.checkpoint])}</span></li>`)
     .join("");
+  const bookNav = ctx.books
+    .map((b) =>
+      b.key === book.key
+        ? `<span class="bk bk--on" aria-current="page">${esc(b.title)}</span>`
+        : `<a class="bk" href="${b.slug}-ladder.html">${esc(b.title)}</a>`,
+    )
+    .join("");
 
   return `<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Book One Ladder</title>
+<title>${esc(title)} Ladder</title>
 <style>
 :root{
   --paper:#F7F6F1; --card:#FFFDF8; --ink:#2D2D2D; --ink-2:#57534C; --ink-3:#6B665E;
@@ -304,6 +371,10 @@ export function buildHtml() {
 body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.5;-webkit-text-size-adjust:100%}
 .wrap{max-width:920px;margin:0 auto;padding:clamp(20px,5vw,56px) clamp(14px,4vw,32px) 72px}
 header.book{border-bottom:2px solid var(--ink);padding-bottom:22px;margin-bottom:34px}
+nav.bks{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 16px}
+.bk{font-size:12px;letter-spacing:.04em;padding:4px 12px;border:1px solid var(--line-2);border-radius:99px;text-decoration:none;color:var(--ink-2);min-height:28px;display:inline-flex;align-items:center}
+a.bk:hover{border-color:var(--ai);color:var(--ai)}
+.bk--on{background:var(--ai-soft);border-color:var(--ai);color:var(--ai);font-weight:600}
 .eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3);margin:0 0 10px}
 h1{font-family:var(--serif);font-weight:600;font-size:clamp(30px,6vw,46px);line-height:1.08;margin:0 0 6px;text-wrap:balance;letter-spacing:-.01em}
 .sub{margin:0;color:var(--ink-2);max-width:62ch}
@@ -371,8 +442,9 @@ code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.92em;color:var
 <body>
 <div class="wrap">
 <header class="book">
-  <p class="eyebrow">AburunGo · Book One · legacy id prefix n5</p>
-  <h1>Book One Ladder</h1>
+  <nav class="bks" aria-label="Books">${bookNav}</nav>
+  <p class="eyebrow">AburunGo · ${esc(title)} · id prefix ${esc(book.key)}</p>
+  <h1>${esc(title)} Ladder</h1>
   <p class="sub">Every chapter, lesson and checkpoint a learner meets, in order. Expand any lesson for
     the words and phrases it teaches. Generated from <code>src/content/</code> by <code>pnpm ladder</code>,
     so it is what the app ships — not a plan of what it might.</p>
@@ -380,27 +452,27 @@ code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.92em;color:var
     <div><b>${shipping.length}</b><span>lessons</span></div>
     <div><b>${chapters.length}</b><span>chapters</span></div>
     <div><b>${shipping.length - teaching.length}</b><span>checkpoints</span></div>
-    <div><b>${words.size}</b><span>words</span></div>
-    <div><b>${phrases.size}</b><span>phrases</span></div>
-    <div><b>${patterns.size}</b><span>patterns</span></div>
+    <div><b>${counts.words}</b><span>words</span></div>
+    <div><b>${counts.phrases}</b><span>phrases</span></div>
+    <div><b>${counts.patterns}</b><span>patterns</span></div>
     <div><b>${kanji.size}</b><span>kanji</span></div>
   </div>
 </header>
 
 ${chapterBlocks}
 
-<section class="closers">
+${closers ? `<section class="closers">
   <h3>Closing the book</h3>
   <p>Belongs to no chapter: it reviews every situation in the book rather than one chapter's worth.</p>
   <ol class="rows">${closers}</ol>
-</section>
+</section>` : ""}
 
-<section class="shelf">
+${shelvedRows ? `<section class="shelf">
   <h3>Shelved — not on the ladder</h3>
   <ul>${shelvedRows}</ul>
   <p style="margin-top:8px">Built and tested, switched off behind <code>VITE_HANA_ENABLED</code> (DR-023).
     Filtered out of the ladder entirely, so orders run 1–${shipping.length} with no gap.</p>
-</section>
+</section>` : ""}
 
 <footer>Chapter length varies on purpose. Padding a chapter to a round number would put a checkpoint
 mid-situation, which is what DR-021 exists to prevent.</footer>
@@ -410,14 +482,20 @@ mid-situation, which is what DR-021 exists to prevent.</footer>
 `;
 }
 
-// Guarded so importing buildMarkdown for the staleness test does not rewrite
-// the file the test is about to compare against.
+/** Every file the map is made of — one Markdown and one HTML page per book. */
+export function buildOutputs() {
+  const ctx = readContent();
+  return ctx.books.flatMap((book) => [
+    { path: join(ROOT, "docs", `${book.slug}-ladder.md`), name: `docs/${book.slug}-ladder.md`, text: buildMarkdown(book, ctx) },
+    { path: join(ROOT, "docs", `${book.slug}-ladder.html`), name: `docs/${book.slug}-ladder.html`, text: buildHtml(book, ctx) },
+  ]);
+}
+
+// Guarded so importing buildOutputs for the staleness test does not rewrite
+// the files the test is about to compare against.
 const invokedDirectly = process.argv[1]?.endsWith("ladder.mjs") ?? false;
 if (invokedDirectly) {
-  const outputs = [
-    { path: DEST, name: "docs/book-one-ladder.md", text: buildMarkdown() },
-    { path: DEST_HTML, name: "docs/book-one-ladder.html", text: buildHtml() },
-  ];
+  const outputs = buildOutputs();
   if (process.argv.includes("--check")) {
     const stale = outputs.filter((o) => {
       try {

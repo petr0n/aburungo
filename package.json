@@ -22,6 +22,7 @@
     "jlpt:coverage": "node scripts/jlpt.mjs coverage",
     "jlpt:sentences": "node scripts/jlpt.mjs sentences",
     "ladder": "node scripts/ladder.mjs",
+    "ladder:open": "node scripts/ladder.mjs && open docs/book-one-ladder.html",
     "reading": "node scripts/reading.mjs",
     "aozora": "node scripts/aozora.mjs",
     "vocab": "node scripts/vocab.mjs"
