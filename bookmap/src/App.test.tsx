@@ -12,17 +12,20 @@ import { books } from "@/content/books";
 describe("book map SPA", () => {
   afterEach(cleanup);
 
-  it("opens on the first book with every chapter on the page", () => {
-    render(<App />);
+  it("opens on the first book with every chapter and lesson on the page", () => {
+    // Single-pass DOM reads compared as whole arrays: per-lesson getAllByText
+    // walks the full 100-lesson tree each time and blew CI's 5s test timeout.
+    const { container } = render(<App />);
     const bookOne = books[0];
     expect(screen.getByRole("heading", { level: 1 }).textContent).toBe(`${bookOne.title} Ladder`);
-    for (const chapter of bookOne.chapters) {
-      expect(screen.getByRole("heading", { level: 2, name: chapter.title })).toBeTruthy();
-    }
-    // Every shipped lesson is in the ladder, teaching rows and checkpoints alike.
-    for (const lesson of bookOne.lessons.filter((l) => !l.checkpoint)) {
-      expect(screen.getAllByText(lesson.title).length).toBeGreaterThan(0);
-    }
+
+    const chapterHeadings = [...container.querySelectorAll("section.chapter h2")].map((el) => el.textContent);
+    expect(chapterHeadings).toEqual(bookOne.chapters.map((c) => c.title));
+
+    // Every shipped teaching lesson, in ladder order; checkpoints render as
+    // .cp-title rows, so .title is exactly the teaching set.
+    const lessonTitles = [...container.querySelectorAll(".row .title")].map((el) => el.textContent);
+    expect(lessonTitles).toEqual(bookOne.lessons.filter((l) => !l.checkpoint).map((l) => l.title));
   });
 
   it("offers one book chip per book and one rail jump per chapter", () => {
