@@ -1,13 +1,45 @@
 import { describe, expect, it } from "vitest";
-import { n5Lessons } from "@/content/lessons";
 import { allKanji, kanjiByCharacter } from "./index";
 import { kanjiId, isKanji, isGrammarPattern } from "@/types";
 
-describe("kanji content scope", () => {
-  const taught = new Set(n5Lessons.flatMap((l) => l.kanji));
+/**
+ * Every character any lesson file declares — derived the way the generator
+ * derives it (scripts/kanji.mjs), straight off the raw YAML.
+ *
+ * Deliberately not `n5Lessons`: that list is the *shipping ladder*, filtered by
+ * `hanaEnabled` (DR-023), so conversation and can-do checkpoints drop out of it
+ * — n5.unit-38 declares 9 kanji and is absent whenever Hana is off, which is
+ * the default. Checking the generator's output against a smaller set would make
+ * "no entry that no lesson teaches" fail on a correct change the moment a gated
+ * lesson is the only one teaching a character, and would make what this file
+ * checks depend on VITE_HANA_ENABLED. Globbing also picks up N4+ lesson files
+ * without anyone remembering to add them here.
+ */
+const lessonFiles = import.meta.glob("../lessons/*.yaml", { eager: true, import: "default" });
 
+const taught = new Set<string>();
+for (const entries of Object.values(lessonFiles)) {
+  if (!Array.isArray(entries)) continue;
+  for (const entry of entries) {
+    if (typeof entry !== "object" || entry === null || !("kanji" in entry)) continue;
+    const { kanji } = entry;
+    if (!Array.isArray(kanji)) continue;
+    for (const c of kanji) if (typeof c === "string") taught.add(c);
+  }
+}
+
+describe("kanji content scope", () => {
   it("has characters to check, so the assertions below cannot pass vacuously", () => {
     expect(taught.size).toBeGreaterThan(0);
+  });
+
+  it("reads every lesson file, not just the ones the shipping ladder keeps", () => {
+    // n5-10-checkpoint.yaml holds n5.unit-38, the conversation checkpoint that
+    // drops out of n5Lessons while Hana is off. If the glob stops matching it,
+    // `taught` silently narrows and this file goes back to testing the ladder.
+    const names = Object.keys(lessonFiles);
+    expect(names.length).toBeGreaterThan(20);
+    expect(names.some((n) => n.endsWith("n5-10-checkpoint.yaml"))).toBe(true);
   });
 
   it("has an entry for every character a lesson teaches", () => {

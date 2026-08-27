@@ -15,7 +15,8 @@ import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 import { render, screen, cleanup } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { MemoryRouter } from "react-router";
-import type { Kanji, Word } from "@/types";
+import type { Kanji, ReviewState, Word } from "@/types";
+import { n5Lessons } from "@/content/lessons";
 import type { DailySession } from "@/srs/dailyLoop";
 
 const recordRating = vi.fn<(id: string, rating: string, signedIn: boolean) => Promise<void>>(
@@ -25,11 +26,14 @@ const recordReview = vi.fn<(id: string, correct: boolean, signedIn: boolean) => 
   () => Promise.resolve(),
 );
 
+const getOne = vi.fn<(id: string) => Promise<ReviewState | undefined>>(() => Promise.resolve(undefined));
+const upsertSynced = vi.fn<(state: ReviewState, signedIn: boolean) => Promise<void>>(() => Promise.resolve());
+
 vi.mock("@/db/reviewStore", () => ({
   recordRating: (id: string, rating: string, signedIn: boolean) => recordRating(id, rating, signedIn),
   recordReview: (id: string, correct: boolean, signedIn: boolean) => recordReview(id, correct, signedIn),
-  getOne: vi.fn(() => Promise.resolve(undefined)),
-  upsertSynced: vi.fn(() => Promise.resolve()),
+  getOne: (id: string) => getOne(id),
+  upsertSynced: (state: ReviewState, signedIn: boolean) => upsertSynced(state, signedIn),
   hydrateFromServer: vi.fn(() => Promise.resolve([])),
 }));
 
@@ -290,5 +294,77 @@ describe("LearnPage hands due kanji to the review step", () => {
     expect(await screen.findByText("Review · 1 / 1")).toBeTruthy();
     expect(screen.getByRole("button", { name: /Reveal/ })).toBeTruthy();
     expect(screen.getAllByText("水").length).toBeGreaterThan(0);
+  });
+});
+
+/**
+ * The bug the four task-scoped reviews could not see: kanji were never written
+ * to the SRS store at all, so `kanji.日` never became due and KanjiDrillCard was
+ * dead code in the shipped app.
+ *
+ * `produceItems` is what creates a first ReviewState for words, phrases and
+ * patterns, and kanji are correctly absent from it — the produce step asks the
+ * learner to type the item, and kanji are recognition-only. The seed therefore
+ * has to happen when the lesson's introduction is done, which is what these
+ * two assertions pin. The end-to-end proof lives in scripts/walkthrough.cjs,
+ * where nothing is mocked.
+ */
+const [firstLesson] = n5Lessons;
+if (firstLesson === undefined) throw new Error("the N5 ladder is empty — this test has nothing to teach");
+
+describe("LearnPage seeds a review state for newly introduced kanji", () => {
+
+  beforeEach(() => {
+    getOne.mockClear();
+    upsertSynced.mockClear();
+    getOne.mockResolvedValue(undefined);
+    buildDailySession.mockReturnValue({
+      lesson: firstLesson,
+      reviewItems: [],
+      // No words or phrases, so the intro hands straight off and the session
+      // never reaches the produce step — exactly the case where a seed that
+      // lived inside the produce branch would silently do nothing.
+      newWords: [],
+      newPhrases: [],
+      newGrammarPattern: null,
+      newKanji: [mizuKanji],
+    });
+  });
+  afterEach(cleanup);
+
+  it("writes a box-1 state so the kanji is due tomorrow", async () => {
+    const user = userEvent.setup();
+    render(
+      <MemoryRouter>
+        <LearnPage />
+      </MemoryRouter>,
+    );
+
+    await user.click(await screen.findByRole("button", { name: "Start" }));
+
+    // "didnt" is deliberate: box 1, due in a day. "got-it" would put a kanji
+    // the learner has only just met into box 2, three days out.
+    await vi.waitFor(() =>
+      expect(upsertSynced).toHaveBeenCalledWith(
+        expect.objectContaining({ phraseId: "kanji.水", box: 1 }),
+        false,
+      ),
+    );
+  });
+
+  it("leaves a kanji that is already progressing where it is", async () => {
+    // 27 characters are taught by more than one lesson (日 by four). Without the
+    // getOne guard, meeting one again knocks it back to box 1.
+    getOne.mockResolvedValue({ phraseId: "kanji.水", box: 4, dueAt: Date.now() + 1000 });
+    const user = userEvent.setup();
+    render(
+      <MemoryRouter>
+        <LearnPage />
+      </MemoryRouter>,
+    );
+
+    await user.click(await screen.findByRole("button", { name: "Start" }));
+    await vi.waitFor(() => expect(getOne).toHaveBeenCalledWith("kanji.水"));
+    expect(upsertSynced).not.toHaveBeenCalled();
   });
 });

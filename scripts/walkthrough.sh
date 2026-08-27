@@ -15,6 +15,11 @@ PORT=4173
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$ROOT"
 
+# A git worktree has no .env.local (it is gitignored). Without it src/lib/supabase.ts
+# throws at module scope, and Playwright surfaces that as "promise was garbage
+# collected" — a misdiagnosis that costs ~15 minutes. Fail with the real reason.
+[ -f .env.local ] || { echo "no .env.local — copy it from the main checkout" >&2; exit 1; }
+
 # A leftover preview from an earlier run holds the port, --strictPort then
 # refuses to start, and the walkthrough silently drives the STALE bundle and
 # reports a pass. Free the port first rather than trusting it is free.

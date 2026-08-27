@@ -37,9 +37,28 @@ type Props = {
   onExited: () => void;
 };
 
+/**
+ * KANJIDIC2 kun readings are lexicographic notation, not Japanese: a dot splits
+ * the reading from its okurigana, and a leading or trailing hyphen marks an
+ * affix form. 38 of the 200 ladder entries carry one or the other, and a
+ * learner must never be shown either — "なま-" is not a word.
+ */
+const stripAffix = (raw: string): string => raw.replace(/^-|-$/g, "");
+
 function parseKun(raw: string): { reading: string; okurigana: string } {
-  const [reading, okurigana = ""] = raw.split(".");
+  const [reading = "", okurigana = ""] = stripAffix(raw).split(".");
   return { reading, okurigana };
+}
+
+/**
+ * The readable display slice, shared by the drill card and the intro card.
+ *
+ * Deduped because stripping the affix marker collapses pairs the dictionary
+ * lists separately (生 carries both "なま" and "なま-"), and capped because 生 has
+ * 18 kun readings — an uncapped list buries the card on a phone.
+ */
+function kunDisplay(raw: readonly string[]): string[] {
+  return [...new Set(raw.map(stripAffix))].slice(0, 6);
 }
 
 type KunReadingProps = { kanji: string; raw: string };
@@ -54,6 +73,24 @@ function KunReading({ kanji, raw }: KunReadingProps) {
       </ruby>
       {okurigana && <span style={{ fontFamily: "var(--font-jp)" }}>{okurigana}</span>}
     </span>
+  );
+}
+
+/**
+ * The readable kun list, shared by the drill card and the intro card so the
+ * introduction and the review of a character read identically.
+ *
+ * A component rather than a plain helper because that is the only export shape
+ * that keeps both surfaces on one implementation without breaking fast refresh.
+ * The caller supplies the wrapping layout.
+ */
+export function KunReadings({ kanji, readings }: { kanji: string; readings: readonly string[] }) {
+  return (
+    <>
+      {kunDisplay(readings).map((r) => (
+        <KunReading key={r} kanji={kanji} raw={r} />
+      ))}
+    </>
   );
 }
 
@@ -125,9 +162,7 @@ export function KanjiDrillCard({ kanji, phase, onReveal, onRate, onEntered, onEx
                 <div>
                   <p className="mb-1 text-caption font-medium uppercase tracking-wider text-fg-subtle">Kun</p>
                   <div className="flex flex-wrap gap-x-3 gap-y-1">
-                    {kunReadings.slice(0, 6).map((r) => (
-                      <KunReading key={r} kanji={kanji.character} raw={r} />
-                    ))}
+                    <KunReadings kanji={kanji.character} readings={kunReadings} />
                   </div>
                 </div>
               )}

@@ -1,4 +1,5 @@
 import type { Kanji } from "@/types";
+import { KunReadings } from "./KanjiDrillCard";
 
 type Props = { kanji: Kanji };
 
@@ -8,6 +9,12 @@ type Props = { kanji: Kanji };
  * Presentation only — no rating. An introduction is not a review; the item's
  * first review arrives on its own schedule via the daily loop. No JLPT level
  * is shown: the learner never reads one (DR-024).
+ *
+ * Kun readings go through the drill card's shared helpers rather than being
+ * printed raw. This is the first thing a beginner sees for a new character, on
+ * a phone: 生 lists 18 kun readings in KANJIDIC2 notation, which rendered here
+ * as a wall of dots and hyphens (`い.きる、…、なま-、-う`). The intro and the
+ * review of the same character now read identically.
  */
 export function KanjiIntroCard({ kanji }: Props) {
   return (
@@ -34,9 +41,10 @@ export function KanjiIntroCard({ kanji }: Props) {
           </p>
         )}
         {kanji.kun.length > 0 && (
-          <p className="text-body-sm text-fg-subtle">
-            Kun: <span lang="ja" style={{ fontFamily: "var(--font-jp)" }}>{kanji.kun.join("、")}</span>
-          </p>
+          <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1 text-body-sm text-fg-subtle">
+            <span>Kun:</span>
+            <KunReadings kanji={kanji.character} readings={kanji.kun} />
+          </div>
         )}
       </div>
     </div>

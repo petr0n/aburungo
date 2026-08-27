@@ -181,6 +181,70 @@ async function verifyReviewStep(browser) {
 }
 
 /**
+ * Kanji get their first ReviewState from one place only: afterNewUnit in
+ * LearnPage. The produce step, which is what seeds words, phrases and grammar
+ * patterns, deliberately excludes them — kanji are recognition-only, so a
+ * learner is never asked to type one.
+ *
+ * That makes this the one check that can catch the whole feature going inert.
+ * jsdom cannot: those tests mock the daily loop and inject the very ReviewState
+ * production has to create, so they pass with nothing writing a row at all.
+ * Drive a real lesson and read the row back out of IndexedDB.
+ *
+ * n5.unit-1 teaches 日, so a fresh profile meets a kanji lesson immediately.
+ */
+async function verifyKanjiSeeding(browser) {
+  const ctx = await browser.newContext({ viewport: { width: 420, height: 900 } });
+  const page = await ctx.newPage();
+  await page.goto(`${BASE}/learn`, { waitUntil: "networkidle" });
+  await page.waitForTimeout(800);
+
+  if (!(await visible(page, "text=New kanji today"))) {
+    await ctx.close();
+    throw new Error("KANJI CHECK: the first lesson teaches 日 but no kanji intro card appeared");
+  }
+  await clickWhenReady(page, "button:has-text('Start')", "Start (kanji seeding)");
+
+  // The seed lands when the teach stages hand off, which is the moment the
+  // produce step opens. No need to finish the session.
+  let guard = 0;
+  while (guard < 60 && (await detectNewUnitTerminal(page)) === null) {
+    guard++;
+    if (await visible(page, "button:has-text('Got it')")) {
+      await clickWhenReady(page, "button:has-text('Got it')", "Got it (kanji seeding)");
+    }
+    await page.waitForTimeout(300);
+  }
+  await page.waitForTimeout(800);
+
+  const row = await page.evaluate(
+    () =>
+      new Promise((resolve) => {
+        const req = indexedDB.open("aburungo");
+        req.onsuccess = () => {
+          const get = req.result
+            .transaction("reviewStates", "readonly")
+            .objectStore("reviewStates")
+            .get("kanji.日");
+          get.onsuccess = () => resolve(get.result || "missing");
+        };
+      }),
+  );
+  await ctx.close();
+
+  if (row === "missing") {
+    throw new Error(
+      "KANJI CHECK: taught a lesson that introduces 日 and no kanji.日 review state was written — " +
+        "kanji never enter the SRS queue, so the drill card is dead code",
+    );
+  }
+  if (row.box !== 1) throw new Error(`KANJI CHECK: kanji.日 seeded in box ${row.box}, expected 1`);
+  const days = Math.round((row.dueAt - Date.now()) / 86400000);
+  if (days !== 1) throw new Error(`KANJI CHECK: kanji.日 due in ${days} day(s), expected 1`);
+  log(`  kanji seeding OK — kanji.日 written in box ${row.box}, due in ${days} day`);
+}
+
+/**
  * The end-of-ladder checkpoint (unit 42) is a mastery gate, not a teach step:
  * rounds of recognition repeat until nothing is left to place. It has no
  * words/phrases/grammar stages, so the normal stage loop would never find a
@@ -334,6 +398,8 @@ async function main() {
   const browser = await chromium.launch({ args: ["--no-sandbox"] });
   log("=== Pre-flight: review step ===");
   await verifyReviewStep(browser);
+  log("=== Pre-flight: kanji seeding ===");
+  await verifyKanjiSeeding(browser);
 
   const context = await browser.newContext({ viewport: { width: 420, height: 900 } });
   const page = await context.newPage();

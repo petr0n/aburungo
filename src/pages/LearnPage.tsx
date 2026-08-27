@@ -549,6 +549,34 @@ async function demoteMissedWord(wordId: string, signedIn: boolean): Promise<void
   await upsertSynced(schedule(existing, "didnt", Date.now(), wordId), signedIn);
 }
 
+/**
+ * Give every kanji this lesson introduced its first ReviewState, so it becomes
+ * due at all.
+ *
+ * Nothing else creates one. Words, phrases and patterns get theirs from the
+ * produce step, and kanji are deliberately absent from `produceItems` because
+ * they are recognition-only (spec decision 4) — the learner is never asked to
+ * write one. Without this seed the intro card is the last time a character is
+ * ever seen: buildDailySession derives reviewItems by filtering existing
+ * ReviewStates, so a kanji with no row never surfaces, on day 1 or day 300.
+ *
+ * "didnt" is the correct first rating, not a placeholder: box 1, due in a day
+ * — which is what "introduced today, first review tomorrow" means. "got-it"
+ * would start it in box 2 / three days, treating an introduction as a passed
+ * review.
+ *
+ * The getOne guard is load-bearing: 27 characters are taught by more than one
+ * lesson (日 by four), and a re-introduction must not knock a kanji that is
+ * already progressing back to box 1.
+ */
+async function seedNewKanji(kanji: Kanji[], signedIn: boolean): Promise<void> {
+  for (const k of kanji) {
+    if ((await getOne(k.id)) === undefined) {
+      await upsertSynced(schedule(undefined, "didnt", Date.now(), k.id), signedIn);
+    }
+  }
+}
+
 // ── Close step ───────────────────────────────────────────────────────────────
 
 /**
@@ -682,6 +710,8 @@ export function LearnPage({ book = bookOne }: { book?: Book } = {}) {
   // so an inline function here would re-fire that effect on every render.
   const afterNewUnit = useCallback(() => {
     if (session === null) return;
+    // Before the branch, so it runs whether or not this lesson has produce items.
+    void seedNewKanji(session.newKanji, userId !== null);
     const produceItems = [...session.newWords, ...session.newPhrases, ...(session.newGrammarPattern ? [session.newGrammarPattern] : [])];
     if (produceItems.length > 0) {
       setStep("produce");
@@ -690,7 +720,7 @@ export function LearnPage({ book = bookOne }: { book?: Book } = {}) {
     } else {
       void finishUnitAndClose();
     }
-  }, [session, finishUnitAndClose]);
+  }, [session, userId, finishUnitAndClose]);
 
   function afterProduce() {
     if (session !== null && session.newWords.length > 0) {
