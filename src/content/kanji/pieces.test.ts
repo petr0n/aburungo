@@ -55,6 +55,27 @@ describe("buildPieceIndex", () => {
     expect(index.get("明")?.[0]?.state).toBe("taught");
   });
 
+  it("keeps first-introduction states when a lesson re-lists a character", () => {
+    // Fifteen ladder characters appear in more than one lesson. The index has
+    // one entry per character and LearnPage renders it at every introduction,
+    // so a later lesson must not overwrite what the first card said.
+    const lessons = [
+      lesson("l1", 1, ["明"]),
+      lesson("l2", 2, ["日"]),
+      lesson("l3", 3, ["明"]),
+    ];
+    const index = buildPieceIndex(lessons, { 明: ["日", "月"], 日: [] }, components);
+    expect(index.get("明")?.find((p) => p.glyph === "日")?.state).toBe("new");
+  });
+
+  it("still counts a re-listed character as taught for later kanji", () => {
+    // Only the index write is guarded -- taught/met accumulation stays
+    // unconditional, so a repeat listing cannot un-teach a shape.
+    const lessons = [lesson("l1", 1, ["日"]), lesson("l2", 2, ["日"]), lesson("l3", 3, ["明"])];
+    const index = buildPieceIndex(lessons, { 日: [], 明: ["日", "月"] }, components);
+    expect(index.get("明")?.find((p) => p.glyph === "日")?.state).toBe("taught");
+  });
+
   it("gives a kanji with no components an empty list, not undefined", () => {
     const index = buildPieceIndex([lesson("l1", 1, ["水"])], { 水: [] }, components);
     expect(index.get("水")).toEqual([]);

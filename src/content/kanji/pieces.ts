@@ -34,7 +34,12 @@ export function buildPieceIndex(
         const state = taught.has(glyph) ? "taught" : met.has(glyph) ? "met" : "new";
         pieces.push({ ...component, state });
       }
-      index.set(character, pieces);
+      // First introduction wins. Fifteen characters are listed by more than
+      // one lesson (the day kanji by four), and LearnPage renders this single
+      // entry at every introduction -- including the first. Overwriting would
+      // make the earliest card claim "you know this" about a shape the learner
+      // will not be taught for another eighty lessons.
+      if (!index.has(character)) index.set(character, pieces);
 
       // Only after resolving: a kanji is not a known piece of itself.
       taught.add(character);
