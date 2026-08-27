@@ -1,4 +1,3 @@
-import type { KanjiEntry } from "@/api/kanji";
 import { FlipCard } from "aburungo-design-system";
 import type { FlipCardPhase } from "aburungo-design-system";
 
@@ -8,8 +7,29 @@ function toFlipPhase(p: DrillPhase): FlipCardPhase {
   return p === "revealed" ? "idle" : p;
 }
 
+/**
+ * The minimum a drill card needs, satisfied by both the server's KanjiEntry
+ * (src/api/kanji.ts) and the ladder's Kanji (src/types.ts). The two disagree
+ * on reading field names, so both are accepted and normalised below.
+ *
+ * jlptLevel is optional on purpose: ladder content omits it, so the badge
+ * disappears without a conditional. The learner never reads a level (DR-024);
+ * KanjiPage is the one surface that legitimately shows one.
+ */
+export type DrillableKanji = {
+  character: string;
+  meanings: string[];
+  onReadings?: string[];
+  kunReadings?: string[];
+  on?: string[];
+  kun?: string[];
+  jlptLevel?: number | null;
+  strokeCount?: number | null;
+  strokes?: number | null;
+};
+
 type Props = {
-  kanji: KanjiEntry;
+  kanji: DrillableKanji;
   phase: DrillPhase;
   onReveal: () => void;
   onRate: (correct: boolean) => void;
@@ -41,6 +61,9 @@ export function KanjiDrillCard({ kanji, phase, onReveal, onRate, onEntered, onEx
   const isFlipped = phase === "revealed" || phase === "exiting";
   const primaryMeaning = kanji.meanings[0] ?? "";
   const otherMeanings = kanji.meanings.slice(1, 4);
+  const onReadings = kanji.onReadings ?? kanji.on ?? [];
+  const kunReadings = kanji.kunReadings ?? kanji.kun ?? [];
+  const strokeCount = kanji.strokeCount ?? kanji.strokes ?? null;
 
   return (
     <FlipCard
@@ -90,25 +113,25 @@ export function KanjiDrillCard({ kanji, phase, onReveal, onRate, onEntered, onEx
                 <p className="text-body font-semibold text-fg">{primaryMeaning}</p>
                 {otherMeanings.length > 0 && <p className="text-body-sm text-fg-subtle">{otherMeanings.join(", ")}</p>}
               </div>
-              {kanji.onReadings.length > 0 && (
+              {onReadings.length > 0 && (
                 <div>
                   <p className="mb-1 text-caption font-medium uppercase tracking-wider text-fg-subtle">On</p>
                   <p className="text-body text-fg" style={{ fontFamily: "var(--font-jp)" }}>
-                    {kanji.onReadings.join("、")}
+                    {onReadings.join("、")}
                   </p>
                 </div>
               )}
-              {kanji.kunReadings.length > 0 && (
+              {kunReadings.length > 0 && (
                 <div>
                   <p className="mb-1 text-caption font-medium uppercase tracking-wider text-fg-subtle">Kun</p>
                   <div className="flex flex-wrap gap-x-3 gap-y-1">
-                    {kanji.kunReadings.slice(0, 6).map((r) => (
+                    {kunReadings.slice(0, 6).map((r) => (
                       <KunReading key={r} kanji={kanji.character} raw={r} />
                     ))}
                   </div>
                 </div>
               )}
-              {kanji.strokeCount != null && <p className="text-body-sm text-fg-subtle">{kanji.strokeCount} strokes</p>}
+              {strokeCount !== null && <p className="text-body-sm text-fg-subtle">{strokeCount} strokes</p>}
             </div>
             <div className="mt-auto flex gap-3 pt-2">
               <button

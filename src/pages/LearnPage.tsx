@@ -14,9 +14,8 @@
  * Scope note: review-step ratings persist to local Leitner state only (no
  * server sync yet) — full FSRS source-of-truth for signed-in users is
  * tracked separately in docs/todo.md. Kanji introduced by a lesson are
- * rendered on KanjiIntroCard in the new-lesson step, but this page does not
- * yet render or record a *review* for them — that lands in the next task
- * (see docs/plans/01-overarching-plan.md open decision #5).
+ * shown on KanjiIntroCard in the new-lesson step and come back through the
+ * review step on KanjiDrillCard, recognition only.
  */
 import { useCallback, useEffect, useState } from "react";
 import type { Book, GrammarPattern, Kanji, Phrase, ReviewRating, Lesson, Word } from "@/types";
@@ -45,6 +44,7 @@ import { LessonConversation } from "@/components/LessonConversation";
 import { CanDoCheckpoint } from "@/components/CanDoCheckpoint";
 import { Furigana } from "@/components/Furigana";
 import { KanjiIntroCard } from "@/components/KanjiIntroCard";
+import { KanjiDrillCard } from "@/components/KanjiDrillCard";
 import { LoadingPlaceholder, EmptyState, ProgressBar } from "aburungo-design-system";
 
 type Step =
@@ -100,7 +100,7 @@ export function ReviewStep({
   shifted = false,
   onDone,
 }: {
-  items: Array<Phrase | Word | GrammarPattern>;
+  items: Array<Phrase | Word | GrammarPattern | Kanji>;
   shifted?: boolean;
   onDone: () => void;
 }) {
@@ -129,7 +129,7 @@ export function ReviewStep({
   function handleRate(rating: ReviewRating) {
     const item = items[index];
     if (item !== undefined) {
-      setStaged(!isGrammarPattern(item) ? item : null);
+      setStaged(!isGrammarPattern(item) && !isKanji(item) ? item : null);
       void recordRating(item.id, rating, signedIn);
     }
     advance();
@@ -152,6 +152,17 @@ export function ReviewStep({
     advance();
   }
 
+  /**
+   * Recognition only (DR-024, spec decision 4): the learner reads the
+   * character and judges their own recall. There is no path here that asks
+   * them to produce one.
+   */
+  function handleKanjiNext(correct: boolean) {
+    const item = items[index];
+    if (item !== undefined) void recordReview(item.id, correct, signedIn);
+    advance();
+  }
+
   /** The recall gate: a checked typed answer maps onto the same binary rating. */
   function handleRecallNext(correct: boolean) {
     const item = items[index];
@@ -160,6 +171,26 @@ export function ReviewStep({
   }
 
   if (current === null) return null;
+
+  if (isKanji(current)) {
+    return (
+      <div className="flex w-full flex-col gap-4 py-4">
+        <p className="text-body-sm text-fg-subtle">
+          Review · {index + 1} / {items.length}
+        </p>
+        <ProgressBar value={(index + 1) / items.length} />
+        <KanjiDrillCard
+          key={current.id}
+          kanji={current}
+          phase={phase}
+          onReveal={() => setPhase("revealed")}
+          onRate={(correct) => handleKanjiNext(correct)}
+          onEntered={() => setPhase("idle")}
+          onExited={() => {}}
+        />
+      </div>
+    );
+  }
 
   if (isGrammarPattern(current)) {
     const phrase = findPhrase(current.phraseId);
@@ -673,11 +704,7 @@ export function LearnPage({ book = bookOne }: { book?: Book } = {}) {
   if (step === "loading" || session === null) {
     content = <LoadingPlaceholder label="Preparing today's session…" />;
   } else if (step === "review") {
-    // ReviewStep does not render kanji cards yet (that's the next task) — a
-    // Kanji ReviewState never exists in practice today since nothing records
-    // one, but the filter keeps the type honest as soon as one does.
-    const reviewable = session.reviewItems.filter((i): i is Phrase | Word | GrammarPattern => !isKanji(i));
-    content = <ReviewStep items={reviewable} shifted={shifted} onDone={afterReview} />;
+    content = <ReviewStep items={session.reviewItems} shifted={shifted} onDone={afterReview} />;
   } else if (step === "new-lesson" && session.lesson !== null) {
     content = (
       <NewLessonStep

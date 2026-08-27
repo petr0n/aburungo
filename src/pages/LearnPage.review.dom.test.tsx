@@ -14,7 +14,9 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 import { render, screen, cleanup } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import type { Word } from "@/types";
+import { MemoryRouter } from "react-router";
+import type { Kanji, Word } from "@/types";
+import type { DailySession } from "@/srs/dailyLoop";
 
 const recordRating = vi.fn<(id: string, rating: string, signedIn: boolean) => Promise<void>>(
   () => Promise.resolve(),
@@ -36,7 +38,23 @@ vi.mock("@/store/auth", () => ({
   useUserTier: () => "guest",
 }));
 
-const { ReviewStep } = await import("./LearnPage");
+/**
+ * LearnPage itself is rendered further down, to prove kanji survive the trip
+ * from the built session into ReviewStep. Its two Dexie-backed stores and the
+ * session builder are stubbed so the assertion is about dispatch, nothing else.
+ */
+vi.mock("@/db/pathProgressStore", () => ({
+  getPathProgress: vi.fn(() => Promise.resolve({ pathId: "book-one", seenLessonIds: [] })),
+  markLessonSeen: vi.fn(() => Promise.resolve({ pathId: "book-one", seenLessonIds: [] })),
+}));
+
+const buildDailySession = vi.fn<() => DailySession>();
+
+vi.mock("@/srs/dailyLoop", () => ({
+  buildDailySession: () => buildDailySession(),
+}));
+
+const { ReviewStep, LearnPage } = await import("./LearnPage");
 
 function word(id: string, japanese: string): Word {
   return {
@@ -151,5 +169,126 @@ describe("ReviewStep with the difficulty shift", () => {
     // The result reveals the reading, never the card's romaji field.
     expect(screen.getByText("Correct")).toBeTruthy();
     expect(screen.queryByText("mizu")).toBeNull();
+  });
+});
+
+const mizuKanji: Kanji = {
+  id: "kanji.水",
+  character: "水",
+  meanings: ["water"],
+  allMeanings: ["water"],
+  on: ["スイ"],
+  kun: ["みず"],
+  strokes: 4,
+};
+
+/** FlipCard's rotation is the only observable difference between its faces. */
+function flipTransform(): string {
+  const el = document.querySelector<HTMLElement>('[style*="preserve-3d"]');
+  return el?.style.transform ?? "";
+}
+
+describe("ReviewStep with a due kanji", () => {
+  beforeEach(() => {
+    recordRating.mockClear();
+    recordReview.mockClear();
+  });
+  afterEach(cleanup);
+
+  it("drills the character rather than falling through to a flashcard", async () => {
+    const user = userEvent.setup();
+    render(<ReviewStep items={[mizuKanji]} onDone={() => {}} />);
+
+    await user.click(screen.getByRole("button", { name: /Reveal/ }));
+    expect(screen.getByText("water")).toBeTruthy();
+    // Recognition only: nothing here asks the learner to produce a character.
+    expect(screen.queryByPlaceholderText("Type romaji here…")).toBeNull();
+  });
+
+  it("actually turns the card over when Reveal is pressed", async () => {
+    const user = userEvent.setup();
+    render(<ReviewStep items={[mizuKanji]} onDone={() => {}} />);
+
+    // FlipCard keeps both faces mounted and hides one with a CSS rotation, so
+    // "the meaning is in the DOM" proves nothing — only the transform does.
+    // Narrowing the review step's phase to entering/idle on the way into the
+    // card leaves it face-up forever while every text assertion still passes.
+    expect(flipTransform()).toContain("rotateY(0deg)");
+    await user.click(screen.getByRole("button", { name: /Reveal/ }));
+    expect(flipTransform()).toContain("rotateY(180deg)");
+  });
+
+  it("records the rating against the kanji id and advances", async () => {
+    const user = userEvent.setup();
+    const onDone = vi.fn();
+    render(<ReviewStep items={[mizuKanji]} onDone={onDone} />);
+
+    await user.click(screen.getByRole("button", { name: /Reveal/ }));
+    await user.click(screen.getByRole("button", { name: /Got it/ }));
+
+    expect(recordReview).toHaveBeenCalledWith("kanji.水", true, false);
+    // If onRate never reached advance(), the whole daily loop deadlocks here.
+    expect(onDone).toHaveBeenCalledTimes(1);
+  });
+
+  it("still drills, not types, under the recall shift", async () => {
+    const user = userEvent.setup();
+    render(<ReviewStep items={[mizuKanji]} shifted onDone={() => {}} />);
+
+    // The kanji guard has to run before the shifted branch: FillBlankCard reads
+    // romaji and english off the card, which a Kanji does not carry, and the
+    // learner must never be asked to produce a character (DR-024).
+    expect(screen.queryByPlaceholderText("Type romaji here…")).toBeNull();
+    await user.click(screen.getByRole("button", { name: /Reveal/ }));
+    expect(screen.getByText("water")).toBeTruthy();
+  });
+
+  it("keeps a kanji out of the flashcard staging path", async () => {
+    const user = userEvent.setup();
+    render(<ReviewStep items={[mizuKanji]} onDone={() => {}} />);
+
+    await user.click(screen.getByRole("button", { name: /Reveal/ }));
+    await user.click(screen.getByRole("button", { name: /Didn't know/ }));
+
+    // Staging a kanji would re-render it through FlashCard, which reads
+    // fields it does not have.
+    expect(recordRating).not.toHaveBeenCalled();
+    expect(recordReview).toHaveBeenCalledWith("kanji.水", false, false);
+  });
+});
+
+/**
+ * The one assertion that fails if the review step's kanji filter comes back.
+ *
+ * LearnPage briefly stripped kanji out of session.reviewItems before handing
+ * them to ReviewStep, as scaffolding while the card could not yet accept them.
+ * A filtered array stays assignable to the widened prop, so neither the build
+ * nor the type-checker notices if it survives — only a rendered kanji does.
+ */
+describe("LearnPage hands due kanji to the review step", () => {
+  beforeEach(() => {
+    recordReview.mockClear();
+    buildDailySession.mockReturnValue({
+      lesson: null,
+      reviewItems: [mizuKanji],
+      newWords: [],
+      newPhrases: [],
+      newGrammarPattern: null,
+      newKanji: [],
+    });
+  });
+  afterEach(cleanup);
+
+  it("renders the kanji drill card for a due kanji", async () => {
+    render(
+      <MemoryRouter>
+        <LearnPage />
+      </MemoryRouter>,
+    );
+
+    // Under the filter this said "Review · 1 / 0" at best and rendered nothing.
+    expect(await screen.findByText("Review · 1 / 1")).toBeTruthy();
+    expect(screen.getByRole("button", { name: /Reveal/ })).toBeTruthy();
+    expect(screen.getAllByText("水").length).toBeGreaterThan(0);
   });
 });
