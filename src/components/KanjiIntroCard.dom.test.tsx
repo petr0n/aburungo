@@ -89,6 +89,13 @@ const pieces: KanjiPiece[] = [
 describe("KanjiIntroCard component row", () => {
   afterEach(cleanup);
 
+  it("heads the row with visual presence, not composition", () => {
+    // Pinned deliberately: "made of" would be false wherever one keyword
+    // serves a glyph that plays a different role in this host.
+    render(<KanjiIntroCard kanji={water} pieces={pieces} />);
+    expect(screen.getByText(/shapes in this kanji/i)).toBeTruthy();
+  });
+
   it("shows each piece with its keyword", () => {
     render(<KanjiIntroCard kanji={water} pieces={pieces} />);
     expect(screen.getByText("sun")).toBeTruthy();

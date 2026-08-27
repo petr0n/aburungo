@@ -68,7 +68,12 @@ export function KanjiIntroCard({ kanji, pieces }: Props) {
                 <span className="text-fg">{p.keyword}</span>
                 {p.state === "taught" && <span className="text-caption text-fg-subtle">you know this</span>}
                 {p.state === "met" && <span className="text-caption text-fg-subtle">you've seen this</span>}
-                {p.note !== undefined && <span className="text-caption text-fg-subtle">{p.note}</span>}
+                {/* Own line: 73 of the 129 components carry a note, and inline it
+                    ran on into the state label as "water you've seen this the
+                    flowing form of 水". basis-full breaks the flex-wrap row. */}
+                {p.note !== undefined && (
+                  <span className="basis-full pl-6 text-caption italic text-fg-subtle">{p.note}</span>
+                )}
               </li>
             ))}
           </ul>
