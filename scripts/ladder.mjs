@@ -61,6 +61,31 @@ const CHECKPOINT_LABEL = {
 /** Hana is shelved (DR-023), so its lessons are not part of the shipped ladder. */
 const isShelved = (l) => l.checkpoint === "conversation" || l.checkpoint === "can-do";
 
+/**
+ * Colour and font values from the design system, read from the linked
+ * aburungo-design-system package at build time rather than copied by hand:
+ * the page cannot drift from the ADS, and a repaint there makes the committed
+ * map stale, which `pnpm test` reports until `pnpm ladder` reruns.
+ */
+function readTokens() {
+  const css = readFileSync(join(ROOT, "node_modules/aburungo-design-system/src/tokens.css"), "utf8");
+  const token = (name) => {
+    const m = css.match(new RegExp(`${name}:\\s*([^;]+);`));
+    if (!m) throw new Error(`design-system tokens.css has no ${name} — the book map palette maps to a token that no longer exists`);
+    return m[1].trim();
+  };
+  const color = (ramp) => token(`--color-${ramp}`);
+  return {
+    paper: color("stone-50"), card: color("stone-0"),
+    ink: color("stone-800"), ink2: color("stone-600"), ink3: color("stone-500"),
+    line: color("stone-200"), line2: color("stone-300"),
+    ai: color("ai-500"), aiSoft: color("ai-50"),
+    rok: color("rokusho-500"), rokDeep: color("rokusho-700"), rokSoft: color("rokusho-50"),
+    ogon: color("ogon-700"), ogonSoft: color("ogon-50"), ogonLine: color("ogon-200"),
+    sans: token("--font-sans"), jp: token("--font-jp"), mono: token("--font-mono"),
+  };
+}
+
 function readContent() {
   const words = new Map(loadDir("vocabulary").map((w) => [w.id, w]));
   const phrases = new Map(loadDir("phrases").map((p) => [p.id, p]));
@@ -96,7 +121,7 @@ function readContent() {
     book.lessons.push(lesson);
   }
 
-  return { books, words, phrases, patterns };
+  return { books, words, phrases, patterns, tokens: readTokens() };
 }
 
 /** Unique word/phrase/pattern ids a book's lessons reach — its content, counted. */
@@ -240,11 +265,13 @@ const esc = (v) =>
 /**
  * The readable version.
  *
- * Palette and type come from the Zuihoden design system in
- * aburungo-design-system/src/tokens.css rather than being invented here: warm
- * paper and sumi ink, Ai-iro for structure, Rokusho for checkpoints, Ogon for
- * kanji chips. Akane is deliberately unused -- it is reserved for the brand mark
- * and errors, and a chapter heading is neither.
+ * Palette and type are the Zuihoden design system's, read from the linked
+ * package's tokens.css by readTokens(): warm paper and sumi ink, Ai-iro for
+ * structure, Rokusho for checkpoints, Ogon for kanji chips. Akane is
+ * deliberately unused -- it is reserved for the brand mark and errors, and a
+ * chapter heading is neither. The ADS defines no dark theme and no serif, so
+ * this page has neither: light always, Noto Sans for Latin, the jp stack for
+ * Japanese.
  *
  * Each lesson's content sits behind a native <details>, so the page opens as the
  * whole book at a glance and expands to the words and phrases on demand. No
@@ -252,7 +279,7 @@ const esc = (v) =>
  */
 function buildHtml(book, ctx) {
   const { lessons, chapters, title } = book;
-  const { words, phrases, patterns } = ctx;
+  const { words, phrases, patterns, tokens: t } = ctx;
   const shipping = lessons.filter((l) => !isShelved(l));
   const teaching = shipping.filter((l) => !l.checkpoint);
   const kanji = new Set(shipping.flatMap((l) => l.kanji ?? []));
@@ -347,25 +374,13 @@ function buildHtml(book, ctx) {
 <title>${esc(title)} Ladder</title>
 <style>
 :root{
-  --paper:#F7F6F1; --card:#FFFDF8; --ink:#2D2D2D; --ink-2:#57534C; --ink-3:#6B665E;
-  --line:#E2DED2; --line-2:#CFC9B9;
-  --ai:#1F3A66; --ai-soft:#eff3f9; --rok:#4F9C8D; --rok-deep:#33685e; --rok-soft:#eef6f4;
-  --ogon:#8a6a2b; --ogon-soft:#fbf6ea; --ogon-line:#ecd9a5;
-  --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Times New Roman",serif;
-  --sans:ui-sans-serif,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-  --jp:"Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP","Yu Gothic",sans-serif;
-}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --paper:#14140f; --card:#1c1b17; --ink:#EFEDE5; --ink-2:#CFC9B9; --ink-3:#A4A4A4;
-  --line:#33322c; --line-2:#403D38;
-  --ai:#8fa5c7; --ai-soft:#101d34; --rok:#85bfb3; --rok-deep:#b3d7cf; --rok-soft:#18322d;
-  --ogon:#dfc074; --ogon-soft:#2a2313; --ogon-line:#654d1f;
-}}
-:root[data-theme="dark"]{
-  --paper:#14140f; --card:#1c1b17; --ink:#EFEDE5; --ink-2:#CFC9B9; --ink-3:#A4A4A4;
-  --line:#33322c; --line-2:#403D38;
-  --ai:#8fa5c7; --ai-soft:#101d34; --rok:#85bfb3; --rok-deep:#b3d7cf; --rok-soft:#18322d;
-  --ogon:#dfc074; --ogon-soft:#2a2313; --ogon-line:#654d1f;
+  --paper:${t.paper}; --card:${t.card}; --ink:${t.ink}; --ink-2:${t.ink2}; --ink-3:${t.ink3};
+  --line:${t.line}; --line-2:${t.line2};
+  --ai:${t.ai}; --ai-soft:${t.aiSoft}; --rok:${t.rok}; --rok-deep:${t.rokDeep}; --rok-soft:${t.rokSoft};
+  --ogon:${t.ogon}; --ogon-soft:${t.ogonSoft}; --ogon-line:${t.ogonLine};
+  --sans:${t.sans};
+  --jp:${t.jp};
+  --mono:${t.mono};
 }
 *{box-sizing:border-box}
 body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.5;-webkit-text-size-adjust:100%}
@@ -376,17 +391,17 @@ nav.bks{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 16px}
 a.bk:hover{border-color:var(--ai);color:var(--ai)}
 .bk--on{background:var(--ai-soft);border-color:var(--ai);color:var(--ai);font-weight:600}
 .eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3);margin:0 0 10px}
-h1{font-family:var(--serif);font-weight:600;font-size:clamp(30px,6vw,46px);line-height:1.08;margin:0 0 6px;text-wrap:balance;letter-spacing:-.01em}
+h1{font-family:var(--sans);font-weight:700;font-size:clamp(30px,6vw,46px);line-height:1.08;margin:0 0 6px;text-wrap:balance;letter-spacing:-.01em}
 .sub{margin:0;color:var(--ink-2);max-width:62ch}
 .totals{display:flex;flex-wrap:wrap;gap:8px 26px;margin-top:20px;font-variant-numeric:tabular-nums}
 .totals div{display:flex;flex-direction:column}
-.totals b{font-family:var(--serif);font-size:24px;font-weight:600;line-height:1.1}
+.totals b{font-family:var(--sans);font-size:24px;font-weight:600;line-height:1.1}
 .totals span{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
 .chapter{background:var(--card);border:1px solid var(--line);border-radius:12px;margin-bottom:26px;overflow:hidden}
 .ch-head{display:flex;align-items:flex-start;gap:16px;padding:18px 20px;border-bottom:1px solid var(--line);background:var(--ai-soft)}
-.ch-num{font-family:var(--serif);font-size:38px;line-height:.9;font-weight:600;color:var(--ai);min-width:34px}
+.ch-num{font-family:var(--sans);font-size:38px;line-height:.9;font-weight:600;color:var(--ai);min-width:34px}
 .ch-meta{flex:1 1 auto;min-width:0}
-.ch-meta h2{font-family:var(--serif);font-size:21px;font-weight:600;margin:0 0 3px;letter-spacing:-.01em}
+.ch-meta h2{font-family:var(--sans);font-size:21px;font-weight:600;margin:0 0 3px;letter-spacing:-.01em}
 .sits{margin:0;font-size:12.5px;color:var(--ink-3)}
 .ch-stats{display:flex;flex-direction:column;align-items:flex-end;gap:1px;font-size:12px;color:var(--ink-3);font-variant-numeric:tabular-nums;white-space:nowrap}
 .ch-stats b{color:var(--ink);font-weight:600}
@@ -398,7 +413,7 @@ ol.rows{list-style:none;margin:0;padding:0}
 .head{display:flex;gap:9px;align-items:baseline;flex-wrap:wrap}
 .n{font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--ai);font-weight:600}
 .sit{font-size:11.5px;color:var(--ink-3)}
-.title{font-family:var(--serif);font-size:17px;font-weight:600;line-height:1.25}
+.title{font-family:var(--sans);font-size:17px;font-weight:600;line-height:1.25}
 .cando{font-size:13px;color:var(--ink-2)}
 .pat{font-size:12.5px;color:var(--ogon);margin-top:2px}
 .pat span{font-family:var(--jp)}
@@ -424,18 +439,18 @@ p.kanji{display:flex;gap:4px;flex-wrap:wrap;margin:0 0 8px}
 p.note{margin:0;font-size:12.5px;color:var(--ink-2);background:var(--paper);border-left:2px solid var(--line-2);padding:8px 10px;border-radius:0 6px 6px 0}
 .row--cp{background:var(--rok-soft);border-top:2px solid var(--rok);align-items:center}
 .cp-body{flex:1 1 auto;min-width:0;display:flex;flex-direction:column;gap:1px}
-.cp-title{font-family:var(--serif);font-size:16px;font-weight:600;color:var(--rok-deep)}
+.cp-title{font-family:var(--sans);font-size:16px;font-weight:600;color:var(--rok-deep)}
 .cp-note{font-size:12.5px;color:var(--ink-2)}
 .cp-tag{font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--rok-deep);border:1px solid var(--rok);border-radius:99px;padding:3px 9px;white-space:nowrap;flex:0 0 auto}
 section.closers{background:var(--card);border:1px solid var(--line-2);border-radius:12px;padding:4px 0;margin-bottom:26px}
-.closers h3,.shelf h3{font-family:var(--serif);font-size:15px;margin:14px 20px 2px;font-weight:600}
+.closers h3,.shelf h3{font-family:var(--sans);font-size:15px;margin:14px 20px 2px;font-weight:600}
 .closers p,.shelf p{margin:0 20px 8px;font-size:12.5px;color:var(--ink-3);max-width:64ch}
 .closers ol{list-style:none;margin:0;padding:0}
 .shelf{border:1px dashed var(--line-2);border-radius:12px;padding:4px 0 12px;opacity:.75}
 .shelf ul{list-style:none;margin:0;padding:0 20px}
 .shelf li{display:flex;gap:14px;font-size:13px;color:var(--ink-3);padding:3px 0}
 footer{margin-top:30px;font-size:12px;color:var(--ink-3);border-top:1px solid var(--line);padding-top:14px}
-code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.92em;color:var(--ink-2)}
+code{font-family:var(--mono);font-size:.92em;color:var(--ink-2)}
 @media (max-width:620px){.ch-head{flex-wrap:wrap}.ch-stats{flex-direction:row;gap:12px;align-items:flex-start}.detail{overflow-x:auto}}
 </style>
 </head>
