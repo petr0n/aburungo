@@ -13,13 +13,13 @@
  *
  * Scope note: review-step ratings persist to local Leitner state only (no
  * server sync yet) — full FSRS source-of-truth for signed-in users is
- * tracked separately in docs/todo.md. Kanji introduced by a lesson flow
- * through the daily-loop orchestrator (reviewItems/newKanji) but this page
- * does not yet render or record a review for them (see
- * docs/plans/01-overarching-plan.md open decision #5).
+ * tracked separately in docs/todo.md. Kanji introduced by a lesson are
+ * rendered on KanjiIntroCard in the new-lesson step, but this page does not
+ * yet render or record a *review* for them — that lands in the next task
+ * (see docs/plans/01-overarching-plan.md open decision #5).
  */
 import { useCallback, useEffect, useState } from "react";
-import type { Book, GrammarPattern, Phrase, ReviewRating, Lesson, Word } from "@/types";
+import type { Book, GrammarPattern, Kanji, Phrase, ReviewRating, Lesson, Word } from "@/types";
 import { isGrammarPattern, isKanji } from "@/types";
 import { useAuth, useUserTier } from "@/store/auth";
 import { bookOne, priorBooks } from "@/content/books";
@@ -44,6 +44,7 @@ import { ProductionCheckpoint } from "@/components/ProductionCheckpoint";
 import { LessonConversation } from "@/components/LessonConversation";
 import { CanDoCheckpoint } from "@/components/CanDoCheckpoint";
 import { Furigana } from "@/components/Furigana";
+import { KanjiIntroCard } from "@/components/KanjiIntroCard";
 import { LoadingPlaceholder, EmptyState, ProgressBar } from "aburungo-design-system";
 
 type Step =
@@ -252,6 +253,7 @@ function NewLessonStep({
   words,
   phrases,
   pattern,
+  newKanji,
   shifted,
   onDone,
 }: {
@@ -260,6 +262,7 @@ function NewLessonStep({
   words: Word[];
   phrases: Phrase[];
   pattern: GrammarPattern | null;
+  newKanji: Kanji[];
   shifted: boolean;
   onDone: () => void;
 }) {
@@ -300,19 +303,12 @@ function NewLessonStep({
         <div className="rounded-2xl border border-border bg-surface p-4">
           <p className="text-body text-fg">{lesson.grammarNote}</p>
         </div>
-        {lesson.kanji.length > 0 && (
+        {newKanji.length > 0 && (
           <div className="flex flex-col gap-2">
             <p className="text-body-sm font-medium text-fg-subtle">New kanji today</p>
-            <div className="flex gap-2">
-              {lesson.kanji.map((k) => (
-                <span
-                  key={k}
-                  lang="ja"
-                  className="flex h-14 w-14 items-center justify-center rounded-xl border border-border bg-surface text-jp-lg"
-                  style={{ fontFamily: "var(--font-jp)" }}
-                >
-                  {k}
-                </span>
+            <div className="flex flex-col gap-2">
+              {newKanji.map((k) => (
+                <KanjiIntroCard key={k.id} kanji={k} />
               ))}
             </div>
           </div>
@@ -690,6 +686,7 @@ export function LearnPage({ book = bookOne }: { book?: Book } = {}) {
         words={session.newWords}
         phrases={session.newPhrases}
         pattern={session.newGrammarPattern}
+        newKanji={session.newKanji}
         shifted={shifted}
         onDone={afterNewUnit}
       />
