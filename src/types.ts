@@ -125,8 +125,42 @@ export type GrammarPattern = {
 };
 
 /** Type guard — distinguishes GrammarPattern from Phrase/Word in a mixed review queue. */
-export function isGrammarPattern(item: Phrase | Word | GrammarPattern): item is GrammarPattern {
+export function isGrammarPattern(item: Phrase | Word | GrammarPattern | Kanji): item is GrammarPattern {
   return "blank" in item;
+}
+
+/**
+ * A kanji the ladder introduces and the learner reviews.
+ *
+ * Distinct from the server's KanjiEntry (src/api/kanji.ts), which serves the
+ * JLPT-filtered browse page. This is static content scoped to characters some
+ * lesson teaches: the learn flow makes no network calls for lesson content,
+ * and it is not going to start.
+ *
+ * Recognition only, permanently — a review shows the character and asks for
+ * meaning and reading. Producing a character is handwriting, which is out of
+ * scope, and typing one needs an IME that would answer the question.
+ */
+export type Kanji = {
+  /** "kanji.水" — the ReviewState key. Built by kanjiId(). */
+  id: string;
+  character: string;
+  /** Display slice, at most four. */
+  meanings: string[];
+  /** Every meaning KANJIDIC2 carries, for search and for component keywords. */
+  allMeanings: string[];
+  on: string[];
+  kun: string[];
+  strokes: number | null;
+};
+
+/** The ReviewState key for a kanji. Lessons store bare characters. */
+export function kanjiId(character: string): string {
+  return `kanji.${character}`;
+}
+
+export function isKanji(item: Phrase | Word | GrammarPattern | Kanji): item is Kanji {
+  return "character" in item;
 }
 
 /**
