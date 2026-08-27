@@ -20,21 +20,48 @@ const API = "https://kanjiapi.dev/v1/kanji";
 const BATCH = 20;
 const DELAY_MS = 300;
 
-/** Every character any lesson introduces, in first-taught order. */
-function taughtCharacters() {
+/**
+ * Every lesson that lists kanji, as `{ order, kanji }`, in filename order.
+ * A top-level `- id:` starts a new lesson, so `order:` and `kanji:` are bound
+ * to the right lesson whichever comes first in the file.
+ */
+function lessonKanji() {
   const dir = join(ROOT, "src/content/lessons");
-  const seen = new Set();
+  const lessons = [];
+  let current = null;
   for (const f of readdirSync(dir).filter((f) => f.endsWith(".yaml")).sort()) {
     const text = readFileSync(join(dir, f), "utf8");
     let inKanji = false;
     for (const line of text.split("\n")) {
+      if (/^- id:/.test(line)) { current = { order: Infinity, kanji: [] }; lessons.push(current); inKanji = false; continue; }
+      const order = line.match(/^ {2}order:\s*(\d+)\s*$/);
+      if (order !== null && current !== null) { current.order = Number(order[1]); inKanji = false; continue; }
       if (/^ {2}kanji:\s*$/.test(line)) { inKanji = true; continue; }
       const item = line.match(/^ {4}- (.+?)\s*$/);
-      if (inKanji && item) { seen.add(item[1]); continue; }
+      if (inKanji && item && current !== null) { current.kanji.push(item[1]); continue; }
       if (!/^\s*$/.test(line)) inKanji = false;
     }
   }
-  return [...seen];
+  return lessons;
+}
+
+/**
+ * Every character any lesson introduces, in filename order. This is what the
+ * generators write with, and their output ordering must not churn — the
+ * `build` and `decompose` files are diffed on regeneration.
+ */
+function taughtCharacters() {
+  return [...new Set(lessonKanji().flatMap((l) => l.kanji))];
+}
+
+/**
+ * The same characters in the order a learner actually meets them. Filename
+ * order is not lesson order: n5.yaml holds orders 1-3 but sorts last, because
+ * "-" (0x2D) sorts before "." (0x2E). Anything reasoning about what is known
+ * *yet* must use this, not taughtCharacters().
+ */
+function taughtInLessonOrder() {
+  return [...new Set([...lessonKanji()].sort((a, b) => a.order - b.order).flatMap((l) => l.kanji))];
 }
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -157,7 +184,7 @@ async function gaps() {
   console.log("# Kanji whose components are all new at introduction\n");
   const seen = new Set();
   const met = new Set();
-  for (const c of taughtCharacters()) {
+  for (const c of taughtInLessonOrder()) {
     const parts = decomp[c] ?? [];
     const known = parts.filter((p) => seen.has(p) || met.has(p));
     if (parts.length > 0 && known.length === 0) console.log(`  ${c} — ${parts.join(" ")}`);
