@@ -92,6 +92,14 @@ async function build() {
 }
 
 const KRAD = "https://raw.githubusercontent.com/hoffmannjp/krad-unicode/master/krad.json";
+
+// krad-unicode stand-ins: glyphs it borrows for elements it has no codepoint
+// for. 乞 stands for the unencoded 𠂉 (the slant over a level stroke atop 矢,
+// 竹 and 攵) and appears in 14 of our kanji, none of which contain 乞 "beg";
+// 隶 stands for 彔 in 緑. Rendering either would name a piece the kanji does
+// not contain, and a learner would build a memory on it. Dropping them loses
+// a true part of the kanji, which is better than showing a false one.
+const STAND_INS = new Set(["乞", "隶"]);
 const DECOMP_OUT = join(ROOT, "src/content/kanji/decomposition.json");
 
 async function decompose() {
@@ -109,8 +117,9 @@ async function decompose() {
     const parts = byLiteral.get(c);
     if (parts === undefined) { missing.push(c); continue; }
     // Drop self-reference: KRADFILE gives 水 -> ["水"], and "水 is made of 水"
-    // is noise. Such kanji end up with an empty list and render no row.
-    map[c] = parts.filter((p) => p !== c);
+    // is noise. Such kanji end up with an empty list and render no row. The
+    // stand-in glyphs above go the same way.
+    map[c] = parts.filter((p) => p !== c && !STAND_INS.has(p));
   }
   if (missing.length > 0) throw new Error(`not in KRADFILE: ${missing.join(" ")}`);
 

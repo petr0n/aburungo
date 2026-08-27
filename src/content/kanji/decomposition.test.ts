@@ -33,6 +33,15 @@ describe("kanji decomposition", () => {
     expect(selfReferencing).toEqual([]);
   });
 
+  it("never lists a krad-unicode stand-in glyph", () => {
+    // krad-unicode borrows 乞 for the unencoded 𠂉 and 隶 for 彔, so those
+    // glyphs name a piece the kanji does not contain. The generator drops
+    // them; this keeps a regeneration from quietly letting them back in.
+    const standIns = ["乞", "隶"];
+    const leaked = characters.filter((c) => map[c].some((p) => standIns.includes(p)));
+    expect(leaked).toEqual([]);
+  });
+
   it("carries its licence attribution, which regeneration must not drop", () => {
     expect(decomposition._licence).toContain("CC BY-SA");
     expect(decomposition._source).toContain("KRADFILE");
