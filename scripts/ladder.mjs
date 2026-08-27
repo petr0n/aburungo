@@ -2,20 +2,20 @@
 /**
  * Generate the book map: every book, chapter, lesson, checkpoint, word and phrase.
  *
- *   node scripts/ladder.mjs            write docs/<book>-ladder.{md,html} for every book
+ *   node scripts/ladder.mjs            write docs/<book>-ladder.md for every book
  *   node scripts/ladder.mjs --check    exit 1 if any file is out of date
  *
  * Books are discovered from src/content/chapters/*.yaml — one file per book,
  * lessons attached to a book by the prefix on their chapterId (or their own id,
  * for the checkpoints that close a book). A new book renders nothing until it
  * has a BOOKS entry below: generation throws instead, which fails `pnpm test`,
- * so new content cannot land without appearing on the map. Each book's HTML
- * page links to every other book's, so the map is one browsable set.
+ * so new content cannot land without appearing on the map.
  *
- * Two formats from one pass. The Markdown renders on GitHub and diffs
- * meaningfully in a content PR; the HTML is the one to actually read, with each
- * lesson's words and phrases behind a native <details> so the whole book still
- * fits on one screen at a glance.
+ * This writes the diff-able record only. The browsable map is the bookmap/
+ * SPA (`pnpm bookmap`), which renders the app's own content modules and so
+ * cannot go stale; the Markdown here is what renders on GitHub and shows a
+ * readable diff in a content PR. It also lists the shelved Hana checkpoints,
+ * which the SPA never sees — the app's modules filter them out (DR-023).
  *
  * Generated, never hand-written. docs/plans/02b-n5-units.md is what happens
  * otherwise: authored when the ladder had 35 units, still saying so long after
@@ -61,31 +61,6 @@ const CHECKPOINT_LABEL = {
 /** Hana is shelved (DR-023), so its lessons are not part of the shipped ladder. */
 const isShelved = (l) => l.checkpoint === "conversation" || l.checkpoint === "can-do";
 
-/**
- * Colour and font values from the design system, read from the linked
- * aburungo-design-system package at build time rather than copied by hand:
- * the page cannot drift from the ADS, and a repaint there makes the committed
- * map stale, which `pnpm test` reports until `pnpm ladder` reruns.
- */
-function readTokens() {
-  const css = readFileSync(join(ROOT, "node_modules/aburungo-design-system/src/tokens.css"), "utf8");
-  const token = (name) => {
-    const m = css.match(new RegExp(`${name}:\\s*([^;]+);`));
-    if (!m) throw new Error(`design-system tokens.css has no ${name} — the book map palette maps to a token that no longer exists`);
-    return m[1].trim();
-  };
-  const color = (ramp) => token(`--color-${ramp}`);
-  return {
-    paper: color("stone-50"), card: color("stone-0"),
-    ink: color("stone-800"), ink2: color("stone-600"), ink3: color("stone-500"),
-    line: color("stone-200"), line2: color("stone-300"),
-    ai: color("ai-500"), aiSoft: color("ai-50"),
-    rok: color("rokusho-500"), rokDeep: color("rokusho-700"), rokSoft: color("rokusho-50"),
-    ogon: color("ogon-700"), ogonSoft: color("ogon-50"), ogonLine: color("ogon-200"),
-    sans: token("--font-sans"), jp: token("--font-jp"), mono: token("--font-mono"),
-  };
-}
-
 function readContent() {
   const words = new Map(loadDir("vocabulary").map((w) => [w.id, w]));
   const phrases = new Map(loadDir("phrases").map((p) => [p.id, p]));
@@ -121,7 +96,7 @@ function readContent() {
     book.lessons.push(lesson);
   }
 
-  return { books, words, phrases, patterns, tokens: readTokens() };
+  return { books, words, phrases, patterns };
 }
 
 /** Unique word/phrase/pattern ids a book's lessons reach — its content, counted. */
@@ -257,253 +232,15 @@ function buildMarkdown(book, ctx) {
   return out.join("\n");
 }
 
-// ── HTML ──────────────────────────────────────────────────────────────────────
 
-const esc = (v) =>
-  String(v ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
-
-/**
- * The readable version.
- *
- * Palette and type are the Zuihoden design system's, read from the linked
- * package's tokens.css by readTokens(): warm paper and sumi ink, Ai-iro for
- * structure, Rokusho for checkpoints, Ogon for kanji chips. Akane is
- * deliberately unused -- it is reserved for the brand mark and errors, and a
- * chapter heading is neither. The ADS defines no dark theme and no serif, so
- * this page has neither: light always, Noto Sans for Latin, the jp stack for
- * Japanese.
- *
- * Each lesson's content sits behind a native <details>, so the page opens as the
- * whole book at a glance and expands to the words and phrases on demand. No
- * script, so it works from a file:// URL and inside GitHub's raw view.
- */
-function buildHtml(book, ctx) {
-  const { lessons, chapters, title } = book;
-  const { words, phrases, patterns, tokens: t } = ctx;
-  const shipping = lessons.filter((l) => !isShelved(l));
-  const teaching = shipping.filter((l) => !l.checkpoint);
-  const kanji = new Set(shipping.flatMap((l) => l.kanji ?? []));
-  const counts = bookCounts(lessons);
-
-  const lessonBlock = (lesson, n, total) => {
-    if (lesson.checkpoint) {
-      return `<li class="row row--cp">
-      <span class="ord">${lesson.order}</span>
-      <span class="cp-body">
-        <span class="cp-title">${esc(CHECKPOINT_LABEL[lesson.checkpoint])}</span>
-        <span class="cp-note">${esc(lesson.canDo)}</span>
-      </span>
-      <span class="cp-tag">${lesson.chapterId === undefined ? "closes the book" : "closes the chapter"}</span>
-    </li>`;
-    }
-    const wordRows = (lesson.wordIds ?? [])
-      .map((id) => words.get(id))
-      .filter(Boolean)
-      .map((word) => `<tr><td lang="ja">${esc(word.japanese)}</td><td lang="ja">${esc(word.reading)}</td><td>${esc(word.english)}</td></tr>`)
-      .join("");
-    const phraseRows = (lesson.phraseIds ?? [])
-      .map((id) => phrases.get(id))
-      .filter(Boolean)
-      .map((phrase) => `<li><span lang="ja">${esc(phrase.japanese)}</span> <em>${esc(phrase.english)}</em></li>`)
-      .join("");
-    const pattern = lesson.patternId ? patterns.get(lesson.patternId) : null;
-
-    return `<li class="row">
-      <span class="ord">${lesson.order}</span>
-      <div class="body">
-        <span class="head"><span class="n">Lesson ${n} of ${total}</span><span class="sit">${esc(lesson.situation)}</span></span>
-        <span class="title">${esc(lesson.title)}</span>
-        <span class="cando">${esc(lesson.canDo)}</span>
-        ${pattern ? `<span class="pat"><span lang="ja">${esc(pattern.pattern)}</span> — ${esc(pattern.gloss)}</span>` : ""}
-        <details>
-          <summary>${(lesson.wordIds ?? []).length} words · ${(lesson.phraseIds ?? []).length} phrases${(lesson.kanji ?? []).length ? ` · ${lesson.kanji.length} kanji` : ""}</summary>
-          <div class="detail">
-            ${wordRows ? `<table><thead><tr><th>Word</th><th>Reading</th><th>Meaning</th></tr></thead><tbody>${wordRows}</tbody></table>` : ""}
-            ${phraseRows ? `<ul class="phrases">${phraseRows}</ul>` : ""}
-            ${(lesson.kanji ?? []).length ? `<p class="kanji">${lesson.kanji.map((k) => `<span class="k" lang="ja">${esc(k)}</span>`).join("")}</p>` : ""}
-            <p class="note">${esc(lesson.grammarNote)}</p>
-          </div>
-        </details>
-      </div>
-    </li>`;
-  };
-
-  const chapterBlocks = chapters
-    .map((chapter) => {
-      const own = shipping.filter((l) => l.chapterId === chapter.id);
-      const chapterTeaching = own.filter((l) => !l.checkpoint);
-      const situations = [...new Set(chapterTeaching.map((l) => l.situation))];
-      let n = 0;
-      const rows = own.map((l) => lessonBlock(l, l.checkpoint ? null : (n += 1), chapterTeaching.length)).join("");
-      return `<section class="chapter" aria-labelledby="ch${chapter.order}">
-    <header class="ch-head">
-      <span class="ch-num">${chapter.order}</span>
-      <span class="ch-meta">
-        <h2 id="ch${chapter.order}">${esc(chapter.title)}</h2>
-        <p class="sits">${situations.map(esc).join(" · ")}</p>
-      </span>
-      <span class="ch-stats">
-        <span><b>${chapterTeaching.length}</b> lessons</span>
-        <span><b>${chapterTeaching.reduce((a, l) => a + (l.wordIds ?? []).length, 0)}</b> words</span>
-        <span><b>${chapterTeaching.reduce((a, l) => a + (l.phraseIds ?? []).length, 0)}</b> phrases</span>
-      </span>
-    </header>
-    <ol class="rows">${rows}</ol>
-  </section>`;
-    })
-    .join("\n");
-
-  const closers = shipping.filter((l) => l.chapterId === undefined).map((l) => lessonBlock(l, null, 0)).join("");
-  const shelvedRows = lessons
-    .filter(isShelved)
-    .map((l) => `<li><span class="ord">${l.order}</span><span>${esc(l.title)} — ${esc(CHECKPOINT_LABEL[l.checkpoint])}</span></li>`)
-    .join("");
-  const bookNav = ctx.books
-    .map((b) =>
-      b.key === book.key
-        ? `<span class="bk bk--on" aria-current="page">${esc(b.title)}</span>`
-        : `<a class="bk" href="${b.slug}-ladder.html">${esc(b.title)}</a>`,
-    )
-    .join("");
-
-  return `<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>${esc(title)} Ladder</title>
-<style>
-:root{
-  --paper:${t.paper}; --card:${t.card}; --ink:${t.ink}; --ink-2:${t.ink2}; --ink-3:${t.ink3};
-  --line:${t.line}; --line-2:${t.line2};
-  --ai:${t.ai}; --ai-soft:${t.aiSoft}; --rok:${t.rok}; --rok-deep:${t.rokDeep}; --rok-soft:${t.rokSoft};
-  --ogon:${t.ogon}; --ogon-soft:${t.ogonSoft}; --ogon-line:${t.ogonLine};
-  --sans:${t.sans};
-  --jp:${t.jp};
-  --mono:${t.mono};
-}
-*{box-sizing:border-box}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.5;-webkit-text-size-adjust:100%}
-.wrap{max-width:920px;margin:0 auto;padding:clamp(20px,5vw,56px) clamp(14px,4vw,32px) 72px}
-header.book{border-bottom:2px solid var(--ink);padding-bottom:22px;margin-bottom:34px}
-nav.bks{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 16px}
-.bk{font-size:12px;letter-spacing:.04em;padding:4px 12px;border:1px solid var(--line-2);border-radius:99px;text-decoration:none;color:var(--ink-2);min-height:28px;display:inline-flex;align-items:center}
-a.bk:hover{border-color:var(--ai);color:var(--ai)}
-.bk--on{background:var(--ai-soft);border-color:var(--ai);color:var(--ai);font-weight:600}
-.eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3);margin:0 0 10px}
-h1{font-family:var(--sans);font-weight:700;font-size:clamp(30px,6vw,46px);line-height:1.08;margin:0 0 6px;text-wrap:balance;letter-spacing:-.01em}
-.sub{margin:0;color:var(--ink-2);max-width:62ch}
-.totals{display:flex;flex-wrap:wrap;gap:8px 26px;margin-top:20px;font-variant-numeric:tabular-nums}
-.totals div{display:flex;flex-direction:column}
-.totals b{font-family:var(--sans);font-size:24px;font-weight:600;line-height:1.1}
-.totals span{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
-.chapter{background:var(--card);border:1px solid var(--line);border-radius:12px;margin-bottom:26px;overflow:hidden}
-.ch-head{display:flex;align-items:flex-start;gap:16px;padding:18px 20px;border-bottom:1px solid var(--line);background:var(--ai-soft)}
-.ch-num{font-family:var(--sans);font-size:38px;line-height:.9;font-weight:600;color:var(--ai);min-width:34px}
-.ch-meta{flex:1 1 auto;min-width:0}
-.ch-meta h2{font-family:var(--sans);font-size:21px;font-weight:600;margin:0 0 3px;letter-spacing:-.01em}
-.sits{margin:0;font-size:12.5px;color:var(--ink-3)}
-.ch-stats{display:flex;flex-direction:column;align-items:flex-end;gap:1px;font-size:12px;color:var(--ink-3);font-variant-numeric:tabular-nums;white-space:nowrap}
-.ch-stats b{color:var(--ink);font-weight:600}
-ol.rows{list-style:none;margin:0;padding:0}
-.row{display:flex;gap:14px;padding:13px 20px;border-bottom:1px solid var(--line);align-items:flex-start}
-.row:last-child{border-bottom:0}
-.ord{font-variant-numeric:tabular-nums;font-size:12px;color:var(--ink-3);min-width:22px;padding-top:3px;text-align:right;flex:0 0 auto}
-.body{flex:1 1 auto;min-width:0;display:flex;flex-direction:column;gap:2px}
-.head{display:flex;gap:9px;align-items:baseline;flex-wrap:wrap}
-.n{font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--ai);font-weight:600}
-.sit{font-size:11.5px;color:var(--ink-3)}
-.title{font-family:var(--sans);font-size:17px;font-weight:600;line-height:1.25}
-.cando{font-size:13px;color:var(--ink-2)}
-.pat{font-size:12.5px;color:var(--ogon);margin-top:2px}
-.pat span{font-family:var(--jp)}
-details{margin-top:7px}
-summary{cursor:pointer;font-size:11.5px;color:var(--ink-3);font-variant-numeric:tabular-nums;
-  list-style:none;display:inline-flex;align-items:center;gap:5px;padding:3px 9px;border:1px solid var(--line-2);border-radius:99px;min-height:26px}
-summary::-webkit-details-marker{display:none}
-summary::before{content:"+";font-weight:600;color:var(--ai)}
-details[open] summary::before{content:"−"}
-summary:hover{color:var(--ink-2)}
-.detail{padding:10px 0 4px}
-.detail table{border-collapse:collapse;width:100%;font-size:13px;margin-bottom:8px}
-.detail th{text-align:left;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);font-weight:600;padding:3px 8px 3px 0;border-bottom:1px solid var(--line)}
-.detail td{padding:4px 8px 4px 0;border-bottom:1px solid var(--line);vertical-align:top}
-.detail td:first-child{font-family:var(--jp);font-size:15px;white-space:nowrap}
-.detail td:nth-child(2){font-family:var(--jp);color:var(--ink-3);white-space:nowrap}
-ul.phrases{list-style:none;margin:0 0 8px;padding:0;font-size:13px}
-ul.phrases li{padding:3px 0;border-bottom:1px solid var(--line)}
-ul.phrases span{font-family:var(--jp);font-size:15px}
-ul.phrases em{color:var(--ink-2);font-style:normal}
-p.kanji{display:flex;gap:4px;flex-wrap:wrap;margin:0 0 8px}
-.k{font-family:var(--jp);font-size:14px;line-height:1;padding:5px 6px;border-radius:4px;background:var(--ogon-soft);border:1px solid var(--ogon-line)}
-p.note{margin:0;font-size:12.5px;color:var(--ink-2);background:var(--paper);border-left:2px solid var(--line-2);padding:8px 10px;border-radius:0 6px 6px 0}
-.row--cp{background:var(--rok-soft);border-top:2px solid var(--rok);align-items:center}
-.cp-body{flex:1 1 auto;min-width:0;display:flex;flex-direction:column;gap:1px}
-.cp-title{font-family:var(--sans);font-size:16px;font-weight:600;color:var(--rok-deep)}
-.cp-note{font-size:12.5px;color:var(--ink-2)}
-.cp-tag{font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--rok-deep);border:1px solid var(--rok);border-radius:99px;padding:3px 9px;white-space:nowrap;flex:0 0 auto}
-section.closers{background:var(--card);border:1px solid var(--line-2);border-radius:12px;padding:4px 0;margin-bottom:26px}
-.closers h3,.shelf h3{font-family:var(--sans);font-size:15px;margin:14px 20px 2px;font-weight:600}
-.closers p,.shelf p{margin:0 20px 8px;font-size:12.5px;color:var(--ink-3);max-width:64ch}
-.closers ol{list-style:none;margin:0;padding:0}
-.shelf{border:1px dashed var(--line-2);border-radius:12px;padding:4px 0 12px;opacity:.75}
-.shelf ul{list-style:none;margin:0;padding:0 20px}
-.shelf li{display:flex;gap:14px;font-size:13px;color:var(--ink-3);padding:3px 0}
-footer{margin-top:30px;font-size:12px;color:var(--ink-3);border-top:1px solid var(--line);padding-top:14px}
-code{font-family:var(--mono);font-size:.92em;color:var(--ink-2)}
-@media (max-width:620px){.ch-head{flex-wrap:wrap}.ch-stats{flex-direction:row;gap:12px;align-items:flex-start}.detail{overflow-x:auto}}
-</style>
-</head>
-<body>
-<div class="wrap">
-<header class="book">
-  <nav class="bks" aria-label="Books">${bookNav}</nav>
-  <p class="eyebrow">AburunGo · ${esc(title)} · id prefix ${esc(book.key)}</p>
-  <h1>${esc(title)} Ladder</h1>
-  <p class="sub">Every chapter, lesson and checkpoint a learner meets, in order. Expand any lesson for
-    the words and phrases it teaches. Generated from <code>src/content/</code> by <code>pnpm ladder</code>,
-    so it is what the app ships — not a plan of what it might.</p>
-  <div class="totals">
-    <div><b>${shipping.length}</b><span>lessons</span></div>
-    <div><b>${chapters.length}</b><span>chapters</span></div>
-    <div><b>${shipping.length - teaching.length}</b><span>checkpoints</span></div>
-    <div><b>${counts.words}</b><span>words</span></div>
-    <div><b>${counts.phrases}</b><span>phrases</span></div>
-    <div><b>${counts.patterns}</b><span>patterns</span></div>
-    <div><b>${kanji.size}</b><span>kanji</span></div>
-  </div>
-</header>
-
-${chapterBlocks}
-
-${closers ? `<section class="closers">
-  <h3>Closing the book</h3>
-  <p>Belongs to no chapter: it reviews every situation in the book rather than one chapter's worth.</p>
-  <ol class="rows">${closers}</ol>
-</section>` : ""}
-
-${shelvedRows ? `<section class="shelf">
-  <h3>Shelved — not on the ladder</h3>
-  <ul>${shelvedRows}</ul>
-  <p style="margin-top:8px">Built and tested, switched off behind <code>VITE_HANA_ENABLED</code> (DR-023).
-    Filtered out of the ladder entirely, so orders run 1–${shipping.length} with no gap.</p>
-</section>` : ""}
-
-<footer>Chapter length varies on purpose. Padding a chapter to a round number would put a checkpoint
-mid-situation, which is what DR-021 exists to prevent.</footer>
-</div>
-</body>
-</html>
-`;
-}
-
-/** Every file the map is made of — one Markdown and one HTML page per book. */
+/** Every file the map is made of — one Markdown record per book. */
 export function buildOutputs() {
   const ctx = readContent();
-  return ctx.books.flatMap((book) => [
-    { path: join(ROOT, "docs", `${book.slug}-ladder.md`), name: `docs/${book.slug}-ladder.md`, text: buildMarkdown(book, ctx) },
-    { path: join(ROOT, "docs", `${book.slug}-ladder.html`), name: `docs/${book.slug}-ladder.html`, text: buildHtml(book, ctx) },
-  ]);
+  return ctx.books.map((book) => ({
+    path: join(ROOT, "docs", `${book.slug}-ladder.md`),
+    name: `docs/${book.slug}-ladder.md`,
+    text: buildMarkdown(book, ctx),
+  }));
 }
 
 // Guarded so importing buildOutputs for the staleness test does not rewrite
