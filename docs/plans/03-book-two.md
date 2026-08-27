@@ -176,9 +176,19 @@ This is where a component layer pays for itself. Book Two's ~200 new kanji are u
 flat shapes and tractable as **recombined parts**: new kanji are introduced as "you already know
 these pieces", which reinforces the system and makes each new kanji cheaper than the last.
 
-The component layer does not exist yet. It was listed as Book One's main gap and Book One shipped
-without it, so it is now **Book Two's first build** (§12) — 200 kanji already carry no
-decomposition, and Book Two roughly doubles that.
+The component layer does not exist yet, and neither does the surface it would sit on. Specced
+2026-08-24 in two documents, in this order:
+
+1. [Kanji in the ladder](../superpowers/specs/2026-08-24-kanji-in-the-ladder-design.md) — the
+   prerequisite. Book One's 200 kanji are **displayed once and never reviewed**: `lesson.kanji`
+   appears nowhere in `src/store/` or `src/srs/`, and the session queue's type cannot hold a
+   kanji. They are introduced as bare glyphs carrying no meaning or reading.
+2. [The component layer](../superpowers/specs/2026-08-24-kanji-components-design.md) — KRADFILE
+   decomposition, ~253 authored component keywords, no per-kanji mnemonics, Book One backfilled,
+   and lesson ordering left alone.
+
+**Until the first of those ships, the kanji arithmetic in §3 overstates what a Book One graduate
+knows** — 200 kanji were shown, not taught. Both remain Book Two's first build (§12).
 
 ## 6. Romaji ends here
 
@@ -350,7 +360,10 @@ at any level.
 
 1. ~~Finish Book One~~ — **done** (people & clothes shipped as Chapter 12, closing the book at 100
    lessons)
-2. Kanji component + mnemonic layer — now the first build, and the largest single risk (§5)
+2. Kanji in the ladder, then the component layer (§5) — the first build and the largest single
+   risk. The prerequisite is not the component layer itself: lesson kanji are currently displayed
+   and never reviewed, so they must become real items before anything can claim their pieces are
+   known
 3. ~~Multi-book support and the Book-level difficulty shift~~ — **done** (§0, PR #90), except the
    produce beat, which moves into step 4 because it is authoring work
 4. Author Book Two chapters, rule chapters first, in skeleton order (§4) — plain form before
