@@ -19,8 +19,17 @@ and readings, they enter the review queue, and `KanjiIntroCard` exists.
 All four were settled with the owner on 2026-08-24.
 
 **1. Component keywords only. No per-kanji mnemonics.**
-Each *component* gets one English keyword; no kanji gets an authored story. 時 shows as sun +
-temple, and the composition is the memory aid. The alternative — a written mnemonic per kanji — is
+Each *component* gets one English keyword; no kanji gets an authored story; the composition is the
+memory aid.
+
+> **Corrected 2026-08-27, after inspecting the real KRADFILE.** This section originally read
+> "時 shows as sun + temple" and put the authoring job at ~253 keywords. Both were wrong. KRADFILE
+> decomposes to *primitives*, not intermediate kanji: 時 gives 寸 土 日, and 寺 never appears.
+> And Book One's 200 kanji draw on only **131** distinct components once self-references are
+> dropped — 24 of them themselves taught kanji, 107 radical-only. 31 kanji decompose to nothing
+> but themselves and render no component row at all. The data is also lookup-oriented and
+> sometimes misleading: 海 comes back as ⺡ 母 毋 乞, listing two near-duplicate parts and one
+> that is not really there. The gaps report surfaces those rather than cleaning them. The alternative — a written mnemonic per kanji — is
 roughly 400 pieces of original prose today and another ~570 every book after, permanently. The two
 best-known keyword sets, Heisig's and WaniKani's, are copyrighted, so nothing can be adapted and
 every line would be fresh work. Keywords are ~253 words written once and reused by every book
