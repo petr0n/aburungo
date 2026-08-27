@@ -1,0 +1,216 @@
+# Kanji in the ladder — design
+
+**Date:** 2026-08-24
+**Status:** Approved, implementation pending
+**Prerequisite for:** [2026-08-24-kanji-components-design.md](2026-08-24-kanji-components-design.md)
+
+## The problem
+
+Book One's ladder introduces 200 kanji across 87 teaching lessons. None of them is taught.
+
+`LearnPage` renders a lesson's kanji as bare glyphs in bordered boxes —
+[LearnPage.tsx:301-315](../../../src/pages/LearnPage.tsx#L301-L315) — carrying no meaning, no
+reading, and no interaction. Verified 2026-08-24:
+
+| Check | Result |
+|---|---|
+| `lesson.kanji` referenced in `src/store/` or `src/srs/` | **nowhere** |
+| `SessionState.queue` type | `Array<Phrase \| Word>` — kanji cannot enter it |
+| `DailySession.reviewItems` type | `Array<Phrase \| Word \| GrammarPattern>` — no kanji |
+| `KanjiDrillCard` callers | `KanjiPage` only, never the ladder |
+
+So a learner who finishes Book One has *seen* 200 kanji once each, on the screen that introduces
+a lesson, and has never been asked to recall one. Kanji drilling does exist — `KanjiPage` with
+server-side FSRS state — but it is a separate browse surface with its own set, filtered by JLPT
+tab, unconnected to the ladder.
+
+This invalidates arithmetic already written into the Book Two plan. `03-book-two.md` §3 sizes Book
+Two's kanji against "Book One ships 200 at a measured 2.3 per teaching lesson", and §5 argues each
+new kanji is cheaper because its pieces are known. Both stand on 200 kanji that were displayed,
+not taught. The component layer specced separately cannot honestly say "you already know these
+pieces" until this is fixed, which is why it is gated behind this document.
+
+## The precedent
+
+This exact problem was solved once already, for grammar patterns, in
+[2026-07-21-grammar-in-context-design.md](2026-07-21-grammar-in-context-design.md). A
+`GrammarPattern` is a fourth kind of thing that a lesson introduces and the learner reviews, and
+it was added without inventing a second scheduling concept:
+
+1. A domain type in `src/types.ts` with a structural type guard (`isGrammarPattern`, which tests
+   `"blank" in item`).
+2. Inclusion in `DailySession.reviewItems`, interleaved by due date through the same
+   `ReviewState`/`isDue` mechanism as words and phrases.
+3. A dispatch in `ReviewStep` — `if (isGrammarPattern(current))` renders `GrammarClozeCard`
+   instead of the flashcard.
+4. Ratings through the existing `recordReview(item.id, correct, signedIn)`.
+
+Kanji follow the same four steps. Nothing here is novel; the work is that it was skipped.
+
+## Decisions
+
+**1. Kanji become a domain type, and lesson YAML does not change.**
+A lesson keeps declaring bare characters (`kanji: [水]`). The new content file is keyed by
+character, so the 22 existing lesson files are untouched and `docs/book-one-ladder.md` regenerates
+byte-identical — which its existing staleness test proves rather than asserts.
+
+**2. Kanji content is static and client-side, generated not authored.**
+The learn flow makes zero network calls for lesson content; words, phrases and patterns are all
+static YAML. Adding a fetch mid-lesson would introduce a failure mode where a lesson half-renders,
+for data measured in kilobytes. The server's kanji table stays where it is and keeps serving
+`KanjiPage`.
+
+Kanji readings and meanings are dictionary data, so they are **generated** from KANJIDIC2 —
+`scripts/kanji.mjs build` — scoped to characters some lesson actually teaches, and committed. This
+follows `scripts/vocab.mjs`, which likewise stores a display slice of glosses separately from the
+full set.
+
+**3. No new scheduling concept.** Kanji ride the existing Leitner `ReviewState` keyed by item id,
+exactly as grammar patterns do. `src/srs/` stays pure and `now` stays a parameter.
+
+**4. Recognition only, permanently.** A kanji review shows the character and asks for the meaning
+and reading. It never asks the learner to produce a character: production is handwriting, which is
+out of scope for this app, and typing one requires an IME that would be answering the question.
+This is a stated limit, not an omission — the `building` stage's recall gate (03 §2) applies to
+words and phrases, and kanji are exempt by nature.
+
+**5. Reuse `KanjiDrillCard`; do not build a second kanji card.**
+It already renders a character, its primary and secondary meanings, and on/kun readings with
+okurigana split, and it already exposes `onRate(correct)`. It reads only `character`, `meanings`,
+`onReadings` and `kunReadings` from its prop. Its prop type widens to that structural minimum so
+both the ladder and `KanjiPage` can call it.
+
+**6. `KanjiPage` is out of scope.** It stays a JLPT-filtered browse surface over the whole
+KANJIDIC2 set with its own server-side FSRS state. Unifying the two review paths is a real
+question and a separate one; this document does not answer it. See *Deliberately not solved*.
+
+## Data
+
+### `src/content/kanji/kanji.yaml` — generated, committed
+
+```yaml
+# Generated by `node scripts/kanji.mjs build`. Do not edit.
+# Source: KANJIDIC2 via kanjiapi.dev. KANJIDIC2 is CC BY-SA 4.0,
+# (c) Electronic Dictionary Research and Development Group.
+
+- character: 水
+  meanings: [water]
+  allMeanings: [water]
+  on: [スイ]
+  kun: [みず]
+  strokes: 4
+```
+
+`meanings` is the display slice (first four); `allMeanings` keeps the full set for search and for
+the component keywords in the follow-on spec. Same split `scripts/vocab.mjs` uses for glosses, and
+for the same reason: the display list must be short and the full list must not be lost.
+
+**Scope is derived, never listed.** The generator reads every `kanji:` array from
+`src/content/lessons/*.yaml` and emits exactly those characters. A generator that is handed a list
+of what to include has a hole in it the day a lesson adds a character.
+
+### `src/types.ts`
+
+```ts
+export type Kanji = {
+  /** "kanji.水" — the ReviewState key. */
+  id: string;
+  character: string;
+  /** Display slice, at most four. */
+  meanings: string[];
+  /** Every meaning KANJIDIC2 carries, for search and component keywords. */
+  allMeanings: string[];
+  on: string[];
+  kun: string[];
+  strokes: number | null;
+};
+
+export function isKanji(item: Phrase | Word | GrammarPattern | Kanji): item is Kanji {
+  return "character" in item;
+}
+```
+
+`"character"` is unique across the four item types — `Word` and `Phrase` carry `japanese`,
+`GrammarPattern` carries `blank` — so the guard is structurally sound and needs no discriminant
+field. The four guards are mutually exclusive, so dispatch order in `ReviewStep` does not matter.
+
+## Flow
+
+**Introduction**, replacing the bare-glyph block in the new-lesson step:
+
+```
+Lesson intro  →  grammar note  →  KanjiIntroCard per new kanji  →  words  →  phrases
+```
+
+`KanjiIntroCard` is presentation only: the character large, its meanings and readings, stroke
+count. No rating — an introduction is not a review, and the item's first review arrives on its own
+schedule. It is the one genuinely new component, and it is deliberately thin so the follow-on
+component layer has somewhere to land.
+
+**Review**, in `ReviewStep`:
+
+```ts
+if (isKanji(current)) {
+  return <KanjiDrillCard kanji={current} phase={phase}
+           onRate={(correct) => handleKanjiNext(correct)} ... />;
+}
+```
+
+`handleKanjiNext` mirrors the existing `handleGrammarNext` exactly — one line calling
+`recordReview(item.id, correct, signedIn)`, then `advance()`.
+
+**Orchestration**, in `buildDailySession`:
+
+- `DailySession.reviewItems` widens to `Array<Phrase | Word | GrammarPattern | Kanji>`.
+- `DailySession` gains `newKanji: Kanji[]`, the kanji the next lesson introduces, in lesson order.
+- Kanji from *seen* lessons join `reviewItems` by due date through the same `isDue` filter, so
+  they interleave with words, phrases and patterns rather than clustering.
+- Review remains cumulative across every book worked through, unchanged.
+
+The signature gains one pool parameter, `allKanji: readonly Kanji[]`, alongside the existing word,
+phrase and pattern pools.
+
+## Testing
+
+The risk here is a test that passes because it iterates over nothing. Each of these is written to
+fail if the wiring is absent:
+
+- **Every taught character resolves.** Collect every character in every lesson's `kanji:` array,
+  assert each has an entry in `kanji.yaml`. Count the characters first and assert the count is
+  non-zero, so an empty collection cannot pass the test.
+- **The generated file is not stale.** Regenerate in-memory and compare, exactly as
+  `book-one-ladder.md`'s test does.
+- **Kanji reach `reviewItems`.** Build a session from a fixture book whose seen lessons teach a
+  kanji with a due `ReviewState`, and assert that kanji is in `reviewItems`. This is the test that
+  would have caught the current hole, so it is written against a fixture rather than real content,
+  which today would make it vacuous in the opposite direction.
+- **Kanji reach `newKanji`.** Same fixture, unseen lesson.
+- **The guard is exclusive.** `isKanji` returns false for a `Word`, a `Phrase` and a
+  `GrammarPattern`; the other three guards return false for a `Kanji`.
+- **The ladder is unchanged.** `docs/book-one-ladder.md` regenerates byte-identical — the existing
+  committed-file test covers this, and it must stay green without being touched.
+- **Walkthrough.** `pnpm walkthrough` drives every lesson to "All caught up". Kanji entering the
+  queue changes session length, so this is the check that the loop still terminates.
+
+## Consequences
+
+- **Book One gains 200 reviewable items** without adding a word to the ladder. Sessions get
+  longer; the walkthrough is how that gets measured rather than guessed.
+- **The Book Two plan's kanji arithmetic becomes true.** §3 and §5 of `03-book-two.md` can stand
+  as written once this ships; until then both overstate what a Book One graduate knows.
+- **`docs/book-one-ladder.md` does not change.** The generator reads lesson kanji lists, which are
+  untouched.
+- **Two kanji review paths exist**, the ladder's and `KanjiPage`'s, with separate state. This is a
+  known duplication, accepted for now and named below.
+
+## Deliberately not solved
+
+- **Unifying ladder kanji with `KanjiPage`'s FSRS state.** The ladder uses local Leitner keyed by
+  item id; `KanjiPage` uses server FSRS keyed by card UUID. Merging them is the same
+  Leitner-versus-FSRS question the whole app carries (DR-001) and is not made easier by answering
+  it for kanji first.
+- **Stroke order.** KanjiVG is listed in CLAUDE.md as bundled and is not actually in the repo. A
+  real gap, unrelated to whether kanji are reviewed.
+- **Handwriting or production.** Out of scope by decision 4.
+- **Backfilling review state.** A learner mid-Book-One meets the new kanji items as new. There is
+  no history to migrate, since none was ever recorded.
