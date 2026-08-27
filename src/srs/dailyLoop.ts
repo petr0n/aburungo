@@ -10,7 +10,8 @@
  * words and phrases, so reviewItems interleaves all three by due date (see
  * docs/superpowers/specs/2026-07-21-grammar-in-context-design.md).
  */
-import type { Book, EpochMs, GrammarPattern, PathProgress, Phrase, ReviewState, Lesson, Word } from "@/types";
+import type { Book, EpochMs, GrammarPattern, Kanji, PathProgress, Phrase, ReviewState, Lesson, Word } from "@/types";
+import { kanjiId } from "@/types";
 import { isDue } from "./leitner";
 
 /** A book the learner has already worked through, with its own progress row. */
@@ -22,14 +23,16 @@ export type BookProgress = {
 export type DailySession = {
   /** The next not-yet-introduced lesson, or null once every lesson has been seen. */
   lesson: Lesson | null;
-  /** Due items (words, phrases, and grammar patterns) from seen lessons, oldest-due first. */
-  reviewItems: Array<Phrase | Word | GrammarPattern>;
+  /** Due items (words, phrases, grammar patterns, and kanji) from seen lessons, oldest-due first. */
+  reviewItems: Array<Phrase | Word | GrammarPattern | Kanji>;
   /** This session's new-lesson words, in lesson order. Empty once `lesson` is null. */
   newWords: Word[];
   /** This session's new-lesson phrases, in lesson order. Empty once `lesson` is null. */
   newPhrases: Phrase[];
   /** The pattern the next lesson introduces, or null. */
   newGrammarPattern: GrammarPattern | null;
+  /** This session's new-lesson kanji, in lesson order. Empty once `lesson` is null. */
+  newKanji: Kanji[];
 };
 
 /**
@@ -47,6 +50,7 @@ export function buildDailySession(
   allWords: readonly Word[],
   allPhrases: readonly Phrase[],
   allPatterns: readonly GrammarPattern[],
+  allKanji: readonly Kanji[],
   reviewStates: readonly ReviewState[],
   now: EpochMs,
   prior: readonly BookProgress[] = [],
@@ -68,12 +72,14 @@ export function buildDailySession(
       for (const id of lesson.wordIds) seenItemIds.add(id);
       for (const id of lesson.phraseIds) seenItemIds.add(id);
       if (lesson.patternId !== undefined) seenItemIds.add(lesson.patternId);
+      for (const c of lesson.kanji) seenItemIds.add(kanjiId(c));
     }
   }
 
   const wordById = new Map(allWords.map((w) => [w.id, w]));
   const phraseById = new Map(allPhrases.map((p) => [p.id, p]));
   const patternById = new Map(allPatterns.map((p) => [p.id, p]));
+  const kanjiById = new Map(allKanji.map((k) => [k.id, k]));
 
   // reviewStates has one row per phraseId when it comes from IndexedDB (Dexie's
   // primary key enforces it), but this is a pure function — a future caller
@@ -88,13 +94,16 @@ export function buildDailySession(
       seenReviewIds.add(s.phraseId);
       return true;
     })
-    .map((s) => wordById.get(s.phraseId) ?? phraseById.get(s.phraseId) ?? patternById.get(s.phraseId))
-    .filter((item): item is Phrase | Word | GrammarPattern => item !== undefined);
+    .map((s) => wordById.get(s.phraseId) ?? phraseById.get(s.phraseId) ?? patternById.get(s.phraseId) ?? kanjiById.get(s.phraseId))
+    .filter((item): item is Phrase | Word | GrammarPattern | Kanji => item !== undefined);
 
   const newWords = nextUnit === null ? [] : nextUnit.wordIds.map((id) => wordById.get(id)).filter((w): w is Word => w !== undefined);
   const newPhrases =
     nextUnit === null ? [] : nextUnit.phraseIds.map((id) => phraseById.get(id)).filter((p): p is Phrase => p !== undefined);
   const newGrammarPattern = nextUnit?.patternId !== undefined ? (patternById.get(nextUnit.patternId) ?? null) : null;
+  const kanjiByCharacter = new Map(allKanji.map((k) => [k.character, k]));
+  const newKanji =
+    nextUnit === null ? [] : nextUnit.kanji.map((c) => kanjiByCharacter.get(c)).filter((k): k is Kanji => k !== undefined);
 
-  return { lesson: nextUnit, reviewItems, newWords, newPhrases, newGrammarPattern };
+  return { lesson: nextUnit, reviewItems, newWords, newPhrases, newGrammarPattern, newKanji };
 }

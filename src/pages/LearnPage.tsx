@@ -13,13 +13,14 @@
  *
  * Scope note: review-step ratings persist to local Leitner state only (no
  * server sync yet) — full FSRS source-of-truth for signed-in users is
- * tracked separately in docs/todo.md. Kanji introduced by a lesson are shown
- * informationally only, not yet scheduled through SRS (see
+ * tracked separately in docs/todo.md. Kanji introduced by a lesson flow
+ * through the daily-loop orchestrator (reviewItems/newKanji) but this page
+ * does not yet render or record a review for them (see
  * docs/plans/01-overarching-plan.md open decision #5).
  */
 import { useCallback, useEffect, useState } from "react";
 import type { Book, GrammarPattern, Phrase, ReviewRating, Lesson, Word } from "@/types";
-import { isGrammarPattern } from "@/types";
+import { isGrammarPattern, isKanji } from "@/types";
 import { useAuth, useUserTier } from "@/store/auth";
 import { bookOne, priorBooks } from "@/content/books";
 import { chapterLabel, placeInChapter } from "@/content/chapters";
@@ -31,6 +32,7 @@ import { getOne, upsertSynced, hydrateFromServer, recordRating, recordReview } f
 import { schedule } from "@/srs/leitner";
 import { buildDailySession, type DailySession } from "@/srs/dailyLoop";
 import { allGrammarPatterns } from "@/content/grammar";
+import { allKanji } from "@/content/kanji";
 import { PageShell } from "@/components/PageShell";
 import { FlashCard, type FlashCardPhase } from "@/components/FlashCard";
 import { WordLearnCard } from "@/components/WordLearnCard";
@@ -617,7 +619,7 @@ export function LearnPage({ book = bookOne }: { book?: Book } = {}) {
       const words = wordsForTier(tier);
       const phrases = phrasesForTier(tier);
       const prior = earlier.map((b, i) => ({ book: b, progress: earlierProgress[i] }));
-      const built = buildDailySession(book, progress, words, phrases, allGrammarPatterns, reviewStates, Date.now(), prior);
+      const built = buildDailySession(book, progress, words, phrases, allGrammarPatterns, allKanji, reviewStates, Date.now(), prior);
       setSession(built);
       if (built.reviewItems.length > 0) {
         setStep("review");
@@ -675,7 +677,11 @@ export function LearnPage({ book = bookOne }: { book?: Book } = {}) {
   if (step === "loading" || session === null) {
     content = <LoadingPlaceholder label="Preparing today's session…" />;
   } else if (step === "review") {
-    content = <ReviewStep items={session.reviewItems} shifted={shifted} onDone={afterReview} />;
+    // ReviewStep does not render kanji cards yet (that's the next task) — a
+    // Kanji ReviewState never exists in practice today since nothing records
+    // one, but the filter keeps the type honest as soon as one does.
+    const reviewable = session.reviewItems.filter((i): i is Phrase | Word | GrammarPattern => !isKanji(i));
+    content = <ReviewStep items={reviewable} shifted={shifted} onDone={afterReview} />;
   } else if (step === "new-lesson" && session.lesson !== null) {
     content = (
       <NewLessonStep
