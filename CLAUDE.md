@@ -23,6 +23,12 @@ Check `MEMORY.md` there at the start of every conversation. Write updated memori
 - **No fabricated Japanese sentences.** Do not invent novel Japanese phrases or sentences. All Japanese sentence content must come from JMdict/Tatoeba/KANJIDIC2 or a verified source — never composed from scratch.
 - **JLPT level assignments** may be applied from training knowledge to well-established vocabulary. N5 and N4 vocabulary is canonical and consistent across all references. Mark any training-derived JLPT classification with `# jlpt-source: training` in YAML until the JMdict seed is complete and levels can be verified against the dataset.
 - **N5 phrase content** may be added from training knowledge given the canonical, well-documented nature of N5 vocabulary. N4+ new phrases must eventually be verified against JMdict. Mark with `# content-source: training` in YAML until then.
+- **Content ships with the book map.** `pnpm ladder` renders every book to
+  `docs/<book>-ladder.{md,html}` — the reviewable outline of chapters, lessons, words and phrases
+  (`pnpm ladder:open` to view; each book's page links to the others). Any change under
+  `src/content/` must regenerate these files in the same commit — `pnpm test` fails while they are
+  stale, and a new book's chapters file makes generation throw until the book gets a `BOOKS` entry
+  in `scripts/ladder.mjs`, so no book content can land off the map.
 - **Content changes require source citation in the commit message.** Any commit that adds or modifies Japanese content must name the source (e.g. "Source: JMdict for Applications, entry seq 1234567", "Source: Tatoeba sentence #98765", or "Source: training/N5 canonical — pending JMdict verification"). A commit without a source citation on content changes must be rejected.
 
 ## Access tiers
@@ -133,6 +139,8 @@ pnpm lint            eslint
 pnpm test            vitest, one shot
 pnpm test:watch      vitest, watch mode
 pnpm walkthrough     drive every /learn unit end-to-end in headless Chromium
+pnpm ladder          regenerate the book map: docs/<book>-ladder.{md,html}, every book
+pnpm ladder:open     regenerate the book map and open it in the browser
 ```
 
 `pnpm walkthrough` builds, serves the static bundle on :4173, and walks the whole ladder
