@@ -182,6 +182,18 @@ export type KanjiComponent = {
 };
 
 /**
+ * What the learner already knows about one piece of a kanji, at the moment
+ * that kanji is introduced. Derived from lesson order — never stored.
+ *
+ * "met" is what makes this layer honest without distorting the curriculum:
+ * ⺡ is never taught as a kanji and never will be, but by its third appearance
+ * the learner has met it three times and the card can say so.
+ */
+export type ComponentState = "taught" | "met" | "new";
+
+export type KanjiPiece = KanjiComponent & { state: ComponentState };
+
+/**
  * A named run of lessons ending in a checkpoint.
  *
  * The unit of commitment a learner actually feels: a ladder of fifty lessons is
