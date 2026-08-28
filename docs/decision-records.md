@@ -1256,13 +1256,17 @@ than instead of it.
 
 **Consequences:**
 - **The ceiling moves from 600 items to 4,800**, which covers roughly through Book Four.
-- **The extended ladder does nothing for a learner's first six months.** Simulated at 80%
-  accuracy, the two ladders are indistinguishable at day 90 (109 vs 110) and only separate
-  decisively after a year (44 vs 118 at day 365). Early load is box 1-4 churn plus new material,
-  neither of which the top interval touches. **A beginner's ~110-item daily queue is a separate,
-  unsolved problem** — capping makes it worse and gating stalls progress, so it needs a different
-  kind of answer, designed against real usage rather than simulation. It must not be presented as
-  fixed by this.
+- **The gain is smallest early and largest late, and "late" arrives inside Book One.** The two
+  ladders are near-identical at day 90 (109 vs 110) and separate from there. Over Book One's 87
+  teaching lessons at 80% accuracy: at 7 lessons/week the book takes 2.9 months and the learner
+  sees ~1% relief; at 4 lessons/week it takes 5.1 months and the queue at the book's end falls
+  from 99 to 67; at 3 lessons/week it takes 6.8 months and falls from 83 to 58. **So a beginner
+  at a realistic pace ends Book One with a queue about a third lighter** - which is the heaviest
+  it ever gets, at the moment they would open Book Two. Only a lesson-a-day sprinter sees nothing.
+- **The early-months load remains a separate, unsolved problem** - roughly 50-100 items a day
+  through Book One. Capping makes it worse and gating stalls progress, so it needs a different
+  kind of answer designed against real usage rather than simulation. It is smaller than a
+  two-book simulation suggests, but it is not fixed by this.
 - **DR-001 is corrected on one point.** It says the Leitner-to-FSRS swap is "a single-file swap
   with no caller updates" because `Scheduler` keeps the interface stable. That is not true:
   `ReviewState` hardcodes `box: LeitnerBox` and is the Dexie primary store, so a real swap

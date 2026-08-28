@@ -64,8 +64,8 @@ carefully rather than under pressure.
 
 ## What this does not fix, stated plainly
 
-**The extended ladder does nothing for a learner's first six months.** Simulated at 80% accuracy
-across two books of material:
+**The extended ladder helps least early and most late — but "late" arrives inside Book One at a
+realistic pace.** Simulated at 80% accuracy across two books of material:
 
 | Day | Current ladder | Extended ladder |
 |---|---|---|
@@ -75,14 +75,28 @@ across two books of material:
 | 547 | 107 | **19** |
 | 730 | 131 | **32** |
 
-Peak load falls from 182 to 148, but the two curves are indistinguishable until roughly month
-six and only separate decisively after a year. Early load is driven by box 1–4 churn and by new
-material arriving, neither of which the top interval touches.
+Peak load falls from 182 to 148. The curves are close for the first three months and separate
+from there, because early load is box 1–4 churn plus new material arriving, neither of which the
+top interval touches.
 
-**So a beginner's daily queue of roughly 110 items is a separate, unsolved problem.** It is not
-addressed here, it is not addressed by capping (see above), and it should not be presented as
-solved. What this design fixes is the ceiling: the state where the app cannot hold its own
-curriculum no matter what the learner does.
+**Where that lands depends entirely on pace, and Book One is a beginner's book.** Simulated over
+Book One's 87 teaching lessons:
+
+| Pace | Book One takes | Average daily queue | Queue at the book's end |
+|---|---|---|---|
+| 7 lessons/week | 2.9 months | 68 → 67 (1%) | 103 → 101 |
+| 4 lessons/week | 5.1 months | 52 → 49 (6%) | 99 → **67** |
+| 3 lessons/week | 6.8 months | 46 → 41 (11%) | 83 → **58** |
+
+At three or four lessons a week — the realistic case — a beginner's queue **at the end of Book
+One is about a third lighter**, and that is the heaviest it ever gets: the moment they would open
+Book Two carrying the largest backlog they have had. Only a learner sprinting a lesson a day sees
+no benefit, and that is the three-month path rather than the normal one.
+
+**The early-months load is still a real and separate problem.** Roughly 50–100 items a day during
+Book One is not comfortable, it is not addressed here, and it is not addressed by capping (see
+above). But it is smaller than the raw two-book simulation suggests, and it should not be
+described as untouched by this change.
 
 ## Code changes
 
@@ -148,11 +162,13 @@ the only version of this fix that touches no persisted shape.
   `server/services/progress.ts` and `kanji.ts` with four-grade ratings, while `/learn` runs local
   Leitner with binary ratings and never reads server due state. This design does not unify them;
   DR-035 records it as the known state and FSRS as where it resolves.
-- **A beginner's early review load is untouched**, as set out above.
+- **A beginner's load improves modestly through Book One and substantially at its end** — about
+  a third lighter at the book's close at a realistic pace, as set out above. The early months
+  remain uncomfortable and unaddressed.
 
 ## Deliberately not solved
 
-- **The early-months load** (~110 items/day at peak). Capping makes it worse; gating new material
+- **The early-months load** (roughly 50–100 items/day through Book One). Capping makes it worse; gating new material
   stalls progress. It needs a different kind of answer — probably session-level, possibly just
   accepting it — and it should be designed against real usage rather than simulation.
 - **Retirement.** Revisit once intervals are long enough that the top box means something.
