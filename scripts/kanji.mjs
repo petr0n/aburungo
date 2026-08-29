@@ -170,7 +170,7 @@ async function decompose() {
   }
   if (missing.length > 0) throw new Error(`not in KRADFILE: ${missing.join(" ")}`);
 
-  // BY-SA 3.0 s3(a) requires an adaptation to say it is one, and the
+  // BY-SA 3.0 s3(b) requires an adaptation to say it is one, and the
   // immediate source is the krad-unicode conversion, whose LICENSE is 3.0
   // Unported -- not the 4.0 the upstream EDRDG page offers. s4(b) permits
   // licensing the adaptation under a later version, which is what the
@@ -178,7 +178,8 @@ async function decompose() {
   const out = {
     _source:
       "KRADFILE, (c) James William Breen and The Electronic Dictionary Research and Development Group, " +
-      "via the Unicode conversion krad-unicode by hoffmannjp (https://github.com/hoffmannjp/krad-unicode)",
+      "https://www.edrdg.org/krad/kradinf.html, via the Unicode conversion krad-unicode by hoffmannjp " +
+      "(https://github.com/hoffmannjp/krad-unicode)",
     _licence:
       "Source licensed CC BY-SA 3.0 Unported (https://creativecommons.org/licenses/by-sa/3.0/). " +
       "This table is a modified adaptation, offered under CC BY-SA 4.0 " +
