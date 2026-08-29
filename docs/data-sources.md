@@ -136,7 +136,7 @@ scoped to the characters `src/content/lessons/*.yaml` actually teach.
 **License:** CC BY-SA **3.0 Unported** (not 4.0 — krad-unicode ships the 3.0 LICENSE, and that is
 the copy this repo derives from). BY-SA 3.0 §4(b) permits licensing an adaptation under a later
 version, so the generated table carries an outbound CC BY-SA 4.0 grant, the krad-unicode credit,
-and the §3(a) notice of what was modified. **This is the first share-alike source displayed to
+and the §3(b) notice of what was modified. **This is the first share-alike source displayed to
 learners** — every other CC BY-SA file in the repo is reference data. Share-alike attaches to the
 derived table, not to the app: keywords are original work in a separate file
 (`components.yaml`), and Creative Commons treats a collection as not reaching the surrounding
