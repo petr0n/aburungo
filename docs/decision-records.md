@@ -1207,3 +1207,77 @@ books from overlapping or leaving a hole.
   describes the whole course; `fluency` now tops out at N2-ish rather than being open-ended.
 - **Nothing in the app changes.** No code, no content, no tier limits. This records where the
   course stops so the plan documents can stop implying otherwise.
+
+---
+
+## DR-035 — Extend the Leitner ladder; FSRS before 5,000 items
+
+**Date:** 2026-08-28
+**Status:** Approved; design at
+`docs/superpowers/specs/2026-08-28-srs-graduation-design.md`, implementation pending
+
+**Context:**
+Leitner's top box is 30 days and nothing graduates past it, so every item the learner has ever
+met returns twelve times a year, forever. The steady-state daily review load is **corpus / 30**,
+permanently, and it does not depend on how well the learner performs: a perfect answer at box 5
+schedules another box-5 review.
+
+| Corpus | Items | Reviews/day, forever |
+|---|---|---|
+| Book One only | 955 | 32 |
+| Books One + Two | ~1,900 | 63 |
+| The N2 endpoint (DR-034) | ~10,000 | 333 |
+
+At a tolerable 20 reviews a day the app sustains **600 items**. Book One alone is 955. The app is
+already past its own ceiling, and DR-034 commits the course to sixteen times it.
+
+Three remedies were simulated first, and the way each failed is what located the real constraint.
+**Capping the review queue is catastrophic** — intake is ~11 items per lesson-day and clearing a
+fixed 30 cannot keep pace once failures recycle, so the backlog reaches 1,679 and never recovers,
+where uncapped it self-limits around 100-180. **Capping plus pausing new lessons stalls instead**
+— 60 of 174 lessons in 400 days. **Retirement** was set aside on judgment: asserting a learner
+will never forget an item is far too strong while the top interval is 30 days, and a wrong call
+is invisible because the item simply never returns.
+
+**Decision:**
+
+**The Leitner ladder gains three boxes: 60, 120 and 240 days.** The sustainable corpus at 20
+reviews a day rises from 600 to **4,800**, and the N2-endpoint floor falls from 333 reviews a day
+to 42.
+
+**This is a runway extension, not the destination.** The client moves to **FSRS before the corpus
+passes roughly 5,000 items** — somewhere in Book Five. Extending the ladder buys the time to do
+that migration deliberately instead of under pressure.
+
+**It is chosen because it touches no persisted shape.** `reviewStates` stores `box` as a number,
+so every existing row stays valid and simply becomes eligible to climb further. No migration, no
+reset, no lost progress. That is the entire argument for doing it before the FSRS work rather
+than instead of it.
+
+**Consequences:**
+- **The ceiling moves from 600 items to 4,800**, which covers roughly through Book Four.
+- **The gain is smallest early and largest late, and "late" arrives inside Book One.** The two
+  ladders are near-identical at day 90 (109 vs 110) and separate from there. Over Book One's 87
+  teaching lessons at 80% accuracy: at 7 lessons/week the book takes 2.9 months and the learner
+  sees ~1% relief; at 4 lessons/week it takes 5.1 months and the queue at the book's end falls
+  from 99 to 67; at 3 lessons/week it takes 6.8 months and falls from 83 to 58. **So a beginner
+  at a realistic pace ends Book One with a queue about a third lighter** - which is the heaviest
+  it ever gets, at the moment they would open Book Two. Only a lesson-a-day sprinter sees nothing.
+- **The early-months load remains a separate, unsolved problem** - roughly 50-100 items a day
+  through Book One. Capping makes it worse and gating stalls progress, so it needs a different
+  kind of answer designed against real usage rather than simulation. It is smaller than a
+  two-book simulation suggests, but it is not fixed by this.
+- **DR-001 is corrected on one point.** It says the Leitner-to-FSRS swap is "a single-file swap
+  with no caller updates" because `Scheduler` keeps the interface stable. That is not true:
+  `ReviewState` hardcodes `box: LeitnerBox` and is the Dexie primary store, so a real swap
+  reshapes a persisted type and touches `dailyLoop`, `reviewStore` and every caller. The
+  interface is stable; the state is not. This ladder extension is cheap precisely because it
+  changes the durations and not the shape.
+- **The two-scheduler split stands, and is now recorded rather than incidental.** `ts-fsrs` 4.4.0
+  already runs server-side in `server/services/progress.ts` and `kanji.ts` with four-grade
+  ratings, while `/learn` runs local Leitner with binary `"got-it" | "didnt"` and never reads
+  server due state. One learner, two schedulers, two states. It resolves in the FSRS migration.
+- **Retirement is deferred, not rejected.** It becomes reasonable once reaching the top box
+  means something.
+- **Per-item difficulty remains absent.** Fixed intervals treat every item alike; that is the
+  substantive thing FSRS buys and no ladder can.
