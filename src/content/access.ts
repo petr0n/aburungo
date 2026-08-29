@@ -55,13 +55,26 @@ export function reachable(bookOrder: number | undefined, tier: UserTier): boolea
   return (bookOrder ?? 1) <= TIER_BOOK_LIMIT[tier];
 }
 
-// Built once: the content tree is static after module load.
-const bookOrderByItemId = bookOrderIndex(books);
+/**
+ * Built once, on first use rather than at module load.
+ *
+ * Not eager: `books.ts` imports `reachable` from here, so the two modules are
+ * a cycle, and whichever loads second hands the other a half-built namespace.
+ * Reading `books` at module-eval time crashed with "source is not iterable"
+ * the moment anything imported `books.ts` first — which `LearnPage.tsx` does.
+ * The content tree is still static; only the moment it is walked has moved.
+ */
+let bookOrderByItemId: Map<string, number> | null = null;
+
+function bookOrderOf(id: string): number | undefined {
+  bookOrderByItemId ??= bookOrderIndex(books);
+  return bookOrderByItemId.get(id);
+}
 
 export function wordsForTier(tier: UserTier): Word[] {
-  return allWords.filter((w) => reachable(bookOrderByItemId.get(w.id), tier));
+  return allWords.filter((w) => reachable(bookOrderOf(w.id), tier));
 }
 
 export function phrasesForTier(tier: UserTier): Phrase[] {
-  return allPhrases.filter((p) => reachable(bookOrderByItemId.get(p.id), tier));
+  return allPhrases.filter((p) => reachable(bookOrderOf(p.id), tier));
 }

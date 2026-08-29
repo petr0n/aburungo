@@ -18,12 +18,13 @@
  * review step on KanjiDrillCard, recognition only.
  */
 import { useCallback, useEffect, useState } from "react";
-import type { Book, GrammarPattern, Kanji, Phrase, ReviewRating, Lesson, Word } from "@/types";
+import { Link } from "react-router";
+import type { Book, GrammarPattern, Kanji, Phrase, ReviewRating, Lesson, UserTier, Word } from "@/types";
 import { isGrammarPattern, isKanji } from "@/types";
 import { useAuth, useUserTier } from "@/store/auth";
-import { bookOne, priorBooks } from "@/content/books";
+import { bookOne, books, currentBook, priorBooks } from "@/content/books";
 import { chapterLabel, placeInChapter } from "@/content/chapters";
-import { phrasesForTier, wordsForTier } from "@/content/access";
+import { phrasesForTier, reachable, wordsForTier } from "@/content/access";
 import { findPhrase } from "@/content";
 import { getPathProgress, markLessonSeen } from "@/db/pathProgressStore";
 import { buildCanDoScope, buildCrossSituationScope, canDoMarkerId, taughtSituations, verifiedCanDos } from "@/srs/canDo";
@@ -605,6 +606,34 @@ function ChapterProgress({ book, lesson }: { book: Book; lesson: Lesson }) {
   );
 }
 
+/**
+ * What sits under "All caught up!" when the learner has finished their last
+ * reachable book and another book exists behind the tier gate.
+ *
+ * A soft inline prompt, never a redirect (CLAUDE.md) — the learner stays on
+ * the page they are on. Finishing a book is stated as a fact, not celebrated:
+ * no unlock, no badge, no urgency. Rendered only when the caller has
+ * established there is a gated `next` — the usual case has nothing to say.
+ */
+function NextBookNote({ book, next, tier }: { book: Book; next: Book; tier: UserTier }) {
+  return (
+    <p className="text-body-sm text-fg-subtle">
+      You have reached the end of {book.title}. {next.title} carries on from here —{" "}
+      {tier === "guest" ? (
+        <>
+          <Link to="/" className="font-medium text-fg underline">
+            a free account
+          </Link>{" "}
+          opens it, and keeps your progress across devices.
+        </>
+      ) : (
+        <>it comes with a subscription.</>
+      )}{" "}
+      Your reviews keep running either way.
+    </p>
+  );
+}
+
 function CloseStep({ book, session }: { book: Book; session: DailySession }) {
   const learnedCount = session.newWords.length + session.newPhrases.length + (session.newGrammarPattern !== null ? 1 : 0);
   return (
@@ -637,13 +666,21 @@ function CloseStep({ book, session }: { book: Book; session: DailySession }) {
 // ── Page ─────────────────────────────────────────────────────────────────────
 
 /**
- * The book is a prop with Book One as its default (03 §0a): today's single
- * route renders `<LearnPage />` unchanged, and Book Two becomes a call-site
- * decision rather than a rewrite of this file.
+ * The book is a prop, but no longer defaulted to Book One (03 §0a): the
+ * default is derived in `load()` from the learner's progress across every
+ * book, so finishing Book One hands them on to Book Two. `<LearnPage />` with
+ * no prop is the app's only call site; the prop stays as an override for
+ * tests and any future route that pins a book.
  */
-export function LearnPage({ book = bookOne }: { book?: Book } = {}) {
+export function LearnPage({ book: pinnedBook }: { book?: Book } = {}) {
   const tier = useUserTier();
   const userId = useAuth((s) => s.user?.id ?? null);
+  /**
+   * Which book this session is for. Held in state because it is not known
+   * until progress has been read; the loading placeholder covers the gap, so
+   * nothing book-dependent renders against the initial guess.
+   */
+  const [book, setBook] = useState<Book>(pinnedBook ?? bookOne);
   const shifted = isShifted(book);
 
   const [step, setStep] = useState<Step>("loading");
@@ -661,20 +698,31 @@ export function LearnPage({ book = bookOne }: { book?: Book } = {}) {
     // Re-runs on tier/userId change (e.g. guest -> signed-in on sign-up mid-session).
     let cancelled = false;
     async function load() {
-      // Earlier books' progress rides along so their due items keep surfacing
-      // here (03 §6) — review is cumulative, new material is not.
-      const earlier = priorBooks(book);
-      const [progress, reviewStates, ...earlierProgress] = await Promise.all([
-        getPathProgress(book.progressKey, userId !== null),
-        hydrateFromServer(userId !== null),
-        ...earlier.map((b) => getPathProgress(b.progressKey, userId !== null)),
+      const signedIn = userId !== null;
+      /**
+       * Every book's progress, not just this one's, because which book "this
+       * one" is falls out of the answer. That is `books.length` local Dexie
+       * reads — two today, a dozen eventually, and all of them cheap.
+       */
+      const [reviewStates, ...rows] = await Promise.all([
+        hydrateFromServer(signedIn),
+        ...books.map((b) => getPathProgress(b.progressKey, signedIn)),
       ]);
       if (cancelled) return;
+      // Zipped by position, not by the returned `pathId`: the row is what the
+      // store echoed back, and the key we asked on is what we know.
+      const seenByKey = new Map(books.map((b, i) => [b.progressKey, rows[i]?.seenLessonIds ?? []]));
+      const active = pinnedBook ?? currentBook(books, seenByKey, tier);
+      const progressFor = (b: Book) => ({ pathId: b.progressKey, seenLessonIds: seenByKey.get(b.progressKey) ?? [] });
+      const progress = progressFor(active);
+      setBook(active);
       setSeenUnitIds(progress.seenLessonIds);
       const words = wordsForTier(tier);
       const phrases = phrasesForTier(tier);
-      const prior = earlier.map((b, i) => ({ book: b, progress: earlierProgress[i] }));
-      const built = buildDailySession(book, progress, words, phrases, allGrammarPatterns, allKanji, reviewStates, Date.now(), prior);
+      // Earlier books' progress rides along so their due items keep surfacing
+      // here (03 §6) — review is cumulative, new material is not.
+      const prior = priorBooks(active).map((b) => ({ book: b, progress: progressFor(b) }));
+      const built = buildDailySession(active, progress, words, phrases, allGrammarPatterns, allKanji, reviewStates, Date.now(), prior);
       setSession(built);
       if (built.reviewItems.length > 0) {
         setStep("review");
@@ -688,7 +736,9 @@ export function LearnPage({ book = bookOne }: { book?: Book } = {}) {
     return () => {
       cancelled = true;
     };
-  }, [book, tier, userId]);
+    // `book` is deliberately absent: this effect sets it, and depending on it
+    // would re-run the load forever.
+  }, [pinnedBook, tier, userId]);
 
   const finishUnitAndClose = useCallback(async () => {
     if (session?.lesson != null) {
@@ -827,7 +877,21 @@ export function LearnPage({ book = bookOne }: { book?: Book } = {}) {
       />
     );
   } else if (step === "nothing-due") {
-    content = <EmptyState message="All caught up!" description="Nothing due right now — check back later." />;
+    const nextBook = books.find((b) => b.order > book.order);
+    content = (
+      <EmptyState
+        message="All caught up!"
+        description="Nothing due right now — check back later."
+        action={
+          // Only when a further book exists and this tier cannot reach it. A
+          // reachable next book is not a prompt: `currentBook` would already
+          // have put the learner in it.
+          nextBook !== undefined && !reachable(nextBook.order, tier) ? (
+            <NextBookNote book={book} next={nextBook} tier={tier} />
+          ) : undefined
+        }
+      />
+    );
   } else {
     content = <CloseStep book={book} session={session} />;
   }
