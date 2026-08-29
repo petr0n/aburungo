@@ -11,9 +11,12 @@ structural template: [book-two-chapter-01.md](book-two-chapter-01.md) (a *rule* 
 is a *situation* chapter, so the shape carries over and the content does not).
 
 **Shape landed: 10 teaching lessons + 1 recognition checkpoint, then the book's production
-checkpoint.** New words: **8**. New phrases: **32**. New kanji: **~7 candidates**, final call at
+checkpoint.** New words: **7**. New phrases: **32**. New kanji: **~7 candidates**, final call at
 authoring. This is the last chapter in the book, and it is deliberately the leanest on new
-vocabulary of Book Two's three situation chapters — see §5.
+vocabulary of Book Two's three situation chapters — see §5. **手伝う, originally proposed here too,
+is chapter 2's word** (Giving & receiving, lesson 6) — an independent collision between the two
+chapter designs, resolved in chapter 2's favour since a favour verb belongs there and chapter 2
+comes first. Lesson 7 below reuses it rather than reintroducing it; see the note there.
 
 ---
 
@@ -47,7 +50,7 @@ closed Book One.
 #    5  it's broken                  壊れています, the clothing chapter's state
 #                                     use of ています redirected onto objects
 #    6  and now it doesn't work      て-chains into 使えません -- zero new words
-#    7  asking for help              手伝う, 直す, chapter 2 stacked on chapter 6
+#    7  asking for help              直す new, 手伝う reused from chapter 2, both stacked on chapter 6
 #    8  what you need now            てほしい／がほしい on what chapter 7 broke
 #    9  what you think happened      交番; と思います wrapped around plain past
 #   10  if it turns up               番号; 見つかったら closes the loop lesson 3
@@ -136,13 +139,15 @@ though that pair itself is not yet taught.
 
 **What is genuinely missing**, checked against JMdict-shaped candidates: a word for *wallet*
 (財布), a verb for *turning up / being found* (見つかる) and its natural partner *to search*
-(探す), a verb for *being broken* (壊れる), a verb for *to help* (手伝う), a verb *to fix*
-(直す), a noun for the practical, non-dramatic place a lost-item report actually happens in Japan
-(交番, a police box — not 警察, a police station, which reads as the crime-drama register the plan
-rules out), and a noun for *number* (番号, needed to leave a phone number, and built on the 番
-kanji the learner already has from 何番).
+(探す), a verb for *being broken* (壊れる), a verb *to fix* (直す), a noun for the practical,
+non-dramatic place a lost-item report actually happens in Japan (交番, a police box — not 警察, a
+police station, which reads as the crime-drama register the plan rules out), and a noun for
+*number* (番号, needed to leave a phone number, and built on the 番 kanji the learner already has
+from 何番). A verb *to help* (手伝う) is also genuinely missing from Book One, but not from Book
+Two: it collided with an independent proposal in chapter 2 (Giving & receiving), which owns the
+introduction — see lesson 7.
 
-**The chapter is what remains after that subtraction: 8 new words, not 25.** Every lesson below
+**The chapter is what remains after that subtraction: 7 new words, not 25.** Every lesson below
 names which side of the ledger it draws from.
 
 ---
@@ -282,26 +287,34 @@ names which side of the ledger it draws from.
 - **Title:** Asking for help
 - **Can-do:** Ask someone for help
 - **Teaches:** the favour-asking register — Chapter 2's giving-and-receiving (〜てもらえますか)
-  stacked on Chapter 6's potential — applied first to a new verb, 手伝う (to help), then to an
+  stacked on Chapter 6's potential — applied first to 手伝う (to help, taught in Book Two chapter 2
+  and reused here rather than reintroduced — see the collision note below), then to an
   already-known one, 教える (to tell, to show), so the learner sees the frame is general rather
-  than tied to the new word. Also introduces 直す (to fix, to repair) as the second new verb,
+  than tied to any one word. Also introduces 直す (to fix, to repair) as this lesson's one new verb,
   since "could you fix it" (直してもらえますか) is the collocation this trouble chapter actually
   needs — repair, not generic help, is what lesson 8 stands on.
 - **Exercises (existing ids):** `vocab.tanomu` 頼む as a named contrast in the grammarNote — the
   simpler, already-known "to ask for/request" verb, next to the more indirect てもらえますか the
   learner is about to prefer; `vocab.oshieru` 教える, exercised directly in a phrase.
-- **Exercises (earlier Book Two chapters):** Chapter 2 (giving and receiving, 〜てもらう／〜てくれる)
-  and Chapter 6 (potential, もらえますか as a request built on potential ability) — the first time
-  this chapter stacks two rule chapters explicitly inside one construction rather than one chapter
-  per clause.
-- **New vocabulary:** **2** — 手伝う (to help) and 直す (to fix, to repair). Book One never supplied
-  either; 頼む covers "ask for" but not "help," and nothing in Book One repairs anything.
+- **Exercises (earlier Book Two chapters):** Chapter 2 (giving and receiving, 〜てもらう／〜てくれる
+  — and, specifically, 手伝う itself, taught in chapter 2's lesson 6) and Chapter 6 (potential,
+  もらえますか as a request built on potential ability) — the first time this chapter stacks two
+  rule chapters explicitly inside one construction rather than one chapter per clause. **手伝う was
+  independently proposed as new vocabulary by this chapter's own first draft; the collision with
+  chapter 2's proposal was resolved in chapter 2's favour, since a favour verb belongs with
+  giving-and-receiving and chapter 2 comes first.** Reusing it here is not a shortfall against the
+  chapter's original word count — it is exactly the designed repetition this whole reuse-field
+  exercise exists to make visible: a word taught four chapters earlier, doing real work in a new
+  situation.
+- **New vocabulary:** **1** — 直す (to fix, to repair). Book One never supplied a repair verb.
+  頼む covers "ask for" but not "help," which is why 手伝う (now chapter 2's word, reused above)
+  was wanted here in the first place.
 - **New phrases:** 4. This is the chapter's other register lesson (after lesson 1), and per Chapter
   1's own precedent for register lessons, each should be an **independent single utterance, not a
   dialogue**: one もらえますか request with 手伝う, one with 直す, one くれますか variant, one plain
   friend-register version.
-- **Depends on:** loosely lesson 5/6 (直す answers what 6 broke). Hard prerequisite: Chapter 2 and
-  Chapter 6 both authored.
+- **Depends on:** loosely lesson 5/6 (直す answers what 6 broke). Hard prerequisite: Chapter 2
+  (now including 手伝う itself, not only its grammar) and Chapter 6, both authored.
 
 ### Lesson 8 — What you need now
 
@@ -391,11 +404,11 @@ names which side of the ledger it draws from.
 |---|---|---|
 | Teaching lessons | 10 | on target (03 §4) |
 | Checkpoints | 1 (recognition) | one per chapter (DR-021), plus the book's production checkpoint outside this chapter |
-| New words | **8** | 0.8/lesson vs. chapter 1's 1.2/lesson — leaner still, see below |
-| New verbs | **6** (見つかる, 探す, 壊れる, 手伝う, 直す, and 財布/番号 are nouns) | deliberate |
+| New words | **7** | ~0.7/lesson vs. chapter 1's 1.2/lesson — leaner still, see below |
+| New verbs | **4** (見つかる, 探す, 壊れる, 直す; 財布, 交番, 番号 are nouns; 手伝う is reused from chapter 2, not counted here) | deliberate |
 | New phrases | **32** | 3.2/lesson, in line with both chapter 1 (~3.4) and the people-clothes chapter (~3.3) |
 | New grammar patterns worth an id | 2 (`grammar.b2-trouble-reason`, `grammar.b2-trouble-te-chain-potential`) | the rest are reuse |
-| New kanji (candidates) | **~7** (財, 布, 壊, 伝, 直, 交, 号) | 0.7/lesson — see note |
+| New kanji (candidates) | **~6** (財, 布, 壊, 直, 交, 号) | 0.6/lesson — see note; 伝 (手伝う's kanji) now belongs to chapter 2 |
 
 **Why a situation chapter comes in this lean.** Book Two's other two situation chapters (feeling
 ill, making plans) each add vocabulary to a domain the learner has no footing in. This chapter is
@@ -405,9 +418,12 @@ situation chapter is normally where new nouns arrive; this one is where old noun
 for something. Padding it to a Book One-style ~33 words (Chapter 12's count) would mean inventing
 trouble vocabulary nobody asked for — a second wallet-shaped word, a second way to say broken — at
 the exact moment the task is proving the learner can combine four books' worth of material on real
-sentences. The 8 that remain (財布, 見つかる, 探す, 壊れる, 手伝う, 直す, 交番, 番号) were each kept
+sentences. The 7 that remain (財布, 見つかる, 探す, 壊れる, 直す, 交番, 番号) were each kept
 because a specific lesson's phrase cannot be sourced without it, not because the chapter needed a
-round number.
+round number. An eighth candidate, 手伝う, was kept for the same reason right up until the collision
+with chapter 2's independent proposal surfaced — it did not drop because the chapter had too many
+words, it dropped because chapter 2 already teaches it and lesson 7 needed the verb, not a second
+introduction of it.
 
 **Kanji note, same shape as Chapter 1's §6.** At ~0.7 new kanji per lesson this chapter runs well
 under Book One's 2.3/lesson measured average, for the identical reason Chapter 1 flagged: a chapter
@@ -430,14 +446,14 @@ lesson itself lives in its own file (e.g. `src/content/lessons/b2-11-production-
 
 **What it should draw on:**
 
-- **Situations, primarily from this chapter's inventory.** The 8 new words plus the 19 Book One
-  words the inventory pass surfaced in §3 give a self-contained trouble domain: a lost wallet, a
-  bag that won't turn up, a phone that broke, a key left on a train, asking a stranger for help,
-  leaving a number at a police box. Each checkpoint prompt should present a **situation description
-  in English** (never a Japanese sentence to reproduce) plus a **named pattern or pattern pair**,
-  and let the learner choose from a small candidate vocabulary set — the same mechanically
-  checkable frame model the per-lesson produce beat already uses (§8), just requiring two patterns
-  stacked rather than one.
+- **Situations, primarily from this chapter's inventory.** The 7 new words plus the 19 Book One
+  words the inventory pass surfaced in §3 (plus 手伝う, reused from chapter 2) give a self-contained
+  trouble domain: a lost wallet, a bag that won't turn up, a phone that broke, a key left on a
+  train, asking a stranger for help, leaving a number at a police box. Each checkpoint prompt
+  should present a **situation description in English** (never a Japanese sentence to reproduce)
+  plus a **named pattern or pattern pair**, and let the learner choose from a small candidate
+  vocabulary set — the same mechanically checkable frame model the per-lesson produce beat already
+  uses (§8), just requiring two patterns stacked rather than one.
 - **Patterns, from across the whole book.** Because this chapter's own design is "combine, don't
   add," it touches all seven rule chapters that precede it. The checkpoint's prompt pool should
   include **at minimum one prompt anchored to each**: Chapter 1 (plain past + だ), Chapter 2
@@ -466,10 +482,11 @@ This document does not compose the prompts themselves — that is authored conte
 
 ## 7. Authoring checklist
 
-1. **Sourcing.** All 8 new words marked `content-source: training`, verified headword-by-headword
+1. **Sourcing.** All 7 new words marked `content-source: training`, verified headword-by-headword
    against JMdict for Applications 3.6.2, with `# jlpt-source: training` where a level is asserted
    ([03 §9](03-book-two.md), CLAUDE.md). All 32 phrases are composed sentences and follow the
-   sanctioned path: training-canonical, marked, pending Tatoeba verification.
+   sanctioned path: training-canonical, marked, pending Tatoeba verification. 手伝う needs no fresh
+   sourcing pass here — it is verified and sourced as part of chapter 2's own content.
 2. **Commit messages** on every content commit must name the source, or the commit is rejected.
 3. **No dialogue in lesson 7.** Four independent single utterances, exactly as Chapter 1's own
    register lesson required — never a scripted exchange.

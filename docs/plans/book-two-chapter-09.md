@@ -151,6 +151,9 @@ following the same convention chapter 6 used for chapter 1's こと before chapt
   `vocab.kau` 買う, `vocab.tenki` 天気, `vocab.ii` いい, `vocab.gakusei` 学生 — one verb-based, one
   い-adjective-based, and one noun-based (だったら) hypothetical, so the "everything collapses to
   the same shape" claim is shown, not just told.
+- **Exercises (earlier Book Two chapters):** Chapter 1 lessons 4 through 6 (なかった's
+  い-adjective link, た, and だ／だった) — たら is built directly from chapter 1's plain-past table
+  across every word type.
 - **New vocabulary:** none.
 - **New phrases:** 3. One verb たら hypothetical (built on `vocab.aru` or a similarly owned verb);
   one い-adjective たら hypothetical (安かったら or equivalent); one noun/な-adjective たら
@@ -176,6 +179,9 @@ following the same convention chapter 6 used for chapter 1's こと before chapt
   than chapter 3's, since chapter 3 will not know this form exists yet.
 - **Exercises (existing ids):** `vocab.ie` 家, `vocab.kaeru` 帰る, `vocab.tsuku` 着く — paired with
   Book One's 〜てください (`grammar.n5-te-ichidan` family) for the request-combination phrase.
+- **Exercises (earlier Book Two chapters):** Chapter 3 (とき) — contrasted directly in the
+  grammarNote so the two competing "when"s don't blur: とき marks a time a state holds, while
+  たら's "when" implies the first clause's completion makes the second relevant.
 - **New vocabulary:** none.
 - **New phrases:** 3. One たら clause with a request or suggestion in the main clause (the
   compatibility point that lesson 4 will lean on); one discovery-reading たら with a past-tense main
@@ -197,6 +203,8 @@ following the same convention chapter 6 used for chapter 1's こと before chapt
   already sitting in Book One's vocabulary, so the textbook と example needs no new noun for
   "button" or "door"; `vocab.haru` 春, `vocab.naru` なる, `vocab.hana` 花, `vocab.saku` 咲く —
   spring-becomes-flowers-bloom, the other textbook と example, also fully owned.
+- **Exercises (earlier Book Two chapters):** Chapter 1 lesson 1 (the dictionary form, named)
+  — と attaches to it directly, with no conjugation needed.
 - **New vocabulary:** none.
 - **New phrases:** 4. One mechanical cause-and-effect (押す／開く); one seasonal or habitual natural
   pattern (春／なる／咲く); one repeated-habit statement carrying a frequency sense. The fourth item
@@ -217,6 +225,8 @@ following the same convention chapter 6 used for chapter 1's こと before chapt
   therefore must take たら — so lesson 3's restriction is seen working, not just repeated as a rule.
 - **Exercises (existing ids):** reuse of lessons 1–3 — `vocab.osu` 押す, `vocab.aku` 開く,
   `vocab.jikan` 時間, `vocab.kaeru` 帰る.
+- **Exercises (earlier Book Two chapters):** None beyond this chapter's own lessons 1
+  through 3 — a dedicated contrast lesson between them.
 - **New vocabulary:** none.
 - **New phrases:** 4 — two matched pairs, as described above. **Each pair must be two independently
   sourced sentences, not one sentence edited to produce its "partner."** [03 §7](03-book-two.md)'s
@@ -240,6 +250,9 @@ following the same convention chapter 6 used for chapter 1's こと before chapt
   `vocab.au` 会う (the う-ending verb, shown regular here on purpose — a direct callback to chapter
   1's う→わ exception for ない, so the learner sees ば does not repeat it), `vocab.taberu` 食べる,
   `vocab.suru` する, `vocab.kuru` 来る.
+- **Exercises (earlier Book Two chapters):** Chapter 1 lesson 3 (the う→わ exception under ない)
+  — 会う is shown regular under ば (買えば, not 買わる) as a direct callback showing ば does not
+  repeat that exception.
 - **New vocabulary:** none.
 - **New phrases:** 4 — one per conjugation class (godan, ichidan, する, 来る), plain mechanical
   demonstrations of the form with no flavour attached yet.
@@ -261,6 +274,8 @@ following the same convention chapter 6 used for chapter 1's こと before chapt
 - **Exercises (existing ids):** `vocab.takai` 高い, `vocab.yasui` 安い, `vocab.ii` いい,
   `vocab.genki` 元気, `vocab.gakusei` 学生, `vocab.isogu` 急ぐ (reused for a general-truth-shaped
   statement).
+- **Exercises (earlier Book Two chapters):** Chapter 1 lesson 4 (the かった stem) — reused
+  unchanged for い-adjectives' ければ conjugation under ば.
 - **New vocabulary:** none.
 - **New phrases:** 4 — one い-adjective ば; one よければ specifically (いい's irregular); one なら
   with a noun or な-adjective; one general-truth or proverb-flavoured statement built from owned
@@ -283,6 +298,8 @@ following the same convention chapter 6 used for chapter 1's こと before chapt
   both dedicated contrast lessons rather than covering all three pairings.
 - **Exercises (existing ids):** reuse of lessons 1, 5 and 6 — `vocab.takai` 高い, `vocab.yasui` 安い,
   `vocab.isogu` 急ぐ, `vocab.jikan` 時間, `vocab.kaeru` 帰る.
+- **Exercises (earlier Book Two chapters):** None beyond this chapter's own lessons 1, 2, 5
+  and 6 — a dedicated contrast lesson between them, mirroring lesson 4's shape.
 - **New vocabulary:** none.
 - **New phrases:** 4 — two matched pairs, same sourcing constraint as lesson 4: each half
   independently sourced, never one sentence edited into its partner.
@@ -303,6 +320,9 @@ following the same convention chapter 6 used for chapter 1's こと before chapt
   here rather than anywhere earlier.
 - **Exercises (existing ids):** `vocab.tsukareru` 疲れる, `vocab.yasumu` 休む, `vocab.taberu` 食べる,
   `vocab.nomu` 飲む.
+- **Exercises (earlier Book Two chapters):** Chapter 1 lessons 3 and 5 (ない and た) —
+  〜たほうがいい／〜ないほうがいい are built directly from both; loosely this chapter's own lesson 1 (たら)
+  for the combination phrase.
 - **New vocabulary:** **1** — ほう (方), the head noun of the pattern, with no independent life
   outside it. Kept in kana rather than given the 方 kanji — the same treatment chapter 1 gave こと,
   a grammatical noun this common conventionally staying in hiragana even where a kanji exists.
@@ -326,6 +346,8 @@ following the same convention chapter 6 used for chapter 1's こと before chapt
 - **Exercises (existing ids):** the chapter's full working set — `vocab.osu` 押す, `vocab.aku` 開く,
   `vocab.jikan` 時間, `vocab.kaeru` 帰る, `vocab.isogu` 急ぐ, `vocab.takai` 高い,
   `vocab.tsukareru` 疲れる, `vocab.yasumu` 休む.
+- **Exercises (earlier Book Two chapters):** None beyond this chapter's own lessons 1
+  through 8 — the capstone draws on all of them without adding new earlier-chapter material.
 - **New vocabulary:** none.
 - **New phrases:** 5. Three parallel situations, each correctly resolved by a *different* one of
   the three forms, so all three appear used correctly inside the same lesson rather than only

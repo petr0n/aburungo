@@ -146,6 +146,8 @@ that is a real cost rather than a rounding error.
   (reservation), already on the ladder — one less kanji to learn cold.
 - **Exercises (existing ids):** `vocab.tomodachi` 友達, `vocab.au` 会う, `vocab.hima` 暇,
   `vocab.isogashii` 忙しい, `vocab.suru` する.
+- **Exercises (earlier Book Two chapters):** None — depends on nothing new in Book Two;
+  opens the chapter.
 - **New vocabulary:** **1** — 約束 (やくそく). Verify against JMdict at authoring;
   `content-source: training` until then.
 - **New phrases:** 3. One stating the learner has plans with a friend; one asking whether someone
@@ -164,6 +166,8 @@ that is a real cost rather than a rounding error.
   correct aimed at anyone — a friend included — while the casual form in lesson 3 is not.
 - **Exercises (existing ids):** `vocab.tomodachi` 友達, `vocab.issho` 一緒, `vocab.taberu` 食べる,
   `vocab.miru` 見る, `vocab.asobu` 遊ぶ.
+- **Exercises (earlier Book Two chapters):** Chapter 5 (〜ませんか／〜ましょう) — the chapter's reason
+  for its placement, put to its first social use.
 - **New vocabulary:** **1** — 週末 (しゅうまつ, weekend). Earns its place because it is the
   single most natural time-frame for a friend invitation and, per §3, is the one time word Book
   One's otherwise-complete set is missing. Verify against JMdict; `content-source: training`.
@@ -185,6 +189,9 @@ that is a real cost rather than a rounding error.
 - **Exercises (existing ids):** `vocab.iku` 行く, `vocab.taberu` 食べる, `vocab.miru` 見る,
   `vocab.asobu` 遊ぶ — the same small verb set as lesson 2, deliberately, so the register contrast
   is heard on identical material rather than different vocabulary.
+- **Exercises (earlier Book Two chapters):** Chapter 1 lessons 2 and 3 (plain negative) and
+  lesson 7 (the casual question, dropped か and rising intonation) — 行かない？ is that register
+  aimed for the first time at a specific invitation rather than a general fact.
 - **New vocabulary:** none.
 - **New phrases:** 3, chosen to cover both an ichidan and a godan verb so the ない-form recombination
   is visible across the table chapter 1 built, not just one row.
@@ -204,6 +211,9 @@ that is a real cost rather than a rounding error.
   backwards often enough to be worth flagging explicitly rather than leaving to context.
 - **Exercises (existing ids):** `vocab.daijoubu` 大丈夫, `vocab.gomennasai` ごめんなさい,
   `vocab.isogashii` 忙しい, `vocab.hima` 暇, `vocab.au` 会う.
+- **Exercises (earlier Book Two chapters):** Chapter 1 lesson 7 (うん／ううん) and Chapter 3
+  (から／ので) — casual accept/decline reuse the former, both registers' reasons reuse the
+  latter.
 - **New vocabulary:** none.
 - **New phrases:** 5 — polite accept, polite decline with a から／ので reason, casual accept, casual
   decline with a reason, and one demonstrating 大丈夫 used as a decline so the trap is shown in a
@@ -224,6 +234,8 @@ that is a real cost rather than a rounding error.
   an abstract drill.
 - **Exercises (existing ids):** `vocab.ii` いい, `vocab.warui` 悪い, `vocab.getsuyoubi`〜`vocab.doyoubi`
   (any two days), `vocab.raishuu` 来週.
+- **Exercises (earlier Book Two chapters):** None beyond this chapter's own lesson 4 —
+  negotiates what happens after a decline, in the same conversation.
 - **New vocabulary:** **1** — 都合 (つごう). Verify against JMdict; `content-source: training`.
 - **New phrases:** 4 — asking 都合はどうですか, stating 都合がいいです, stating 都合が悪いです
   paired with a proposed alternative day, and one recombining 週末 from lesson 2.
@@ -239,6 +251,8 @@ that is a real cost rather than a rounding error.
   reusing chapter 5's 〜ましょうか to propose a place the same way lesson 2 proposed an activity.
 - **Exercises (existing ids):** `vocab.doko` どこ, `vocab.eki` 駅, `vocab.kouen` 公園, `vocab.ie` 家,
   `vocab.mise` 店, `vocab.au` 会う.
+- **Exercises (earlier Book Two chapters):** Chapter 5 (〜ましょうか) — reused here for a place
+  instead of an activity, the same way this chapter's own lesson 2 used it for an activity.
 - **New vocabulary:** none.
 - **New phrases:** 3 — proposing a place with 〜ましょうか, asking どこで会いますか, confirming a
   specific place from the set above.
@@ -258,6 +272,10 @@ that is a real cost rather than a rounding error.
   chapter 8 does not depend on either.
 - **Exercises (existing ids):** `vocab.wakaru` わかる, `vocab.matane` またね, `vocab.au` 会う,
   `vocab.yakusoku` 約束 (closing the loop opened in lesson 1).
+- **Exercises (earlier Book Two chapters):** Optional only, not required — the grammarNote
+  notes that a learner holding Chapter 6 (potential, 来られる？) or Chapter 7 (quoted speech,
+  〜と言っていた) can extend the confirmation further, but this chapter does not depend on either
+  and no phrase requires them.
 - **New vocabulary:** none.
 - **New phrases:** 3 — polite confirmation, casual confirmation, and a closing exchange ending in
   またね.

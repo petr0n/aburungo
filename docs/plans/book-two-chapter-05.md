@@ -122,6 +122,8 @@ which exists in Book One and has never appeared in a phrase.
 - **Exercises (existing ids):** `vocab.taberu` 食べる, `vocab.nomu` 飲む, `vocab.iku` 行く,
   `vocab.kau` 買う, `vocab.oyogu` 泳ぐ, `vocab.miru` 見る, `vocab.suru` する, `vocab.kuru` 来る,
   `vocab.au` 会う.
+- **Exercises (earlier Book Two chapters):** None — depends on nothing in Book Two; たい
+  attaches to the ます-stem the learner has had since Book One's first lesson.
 - **New vocabulary:** none. State it directly, chapter-1 style: `vocab.tabetai` and `vocab.nomitai`
   are not being taught here, they are being explained.
 - **New phrases:** 4. One ichidan, one godan (an ending not covered by the existing たべたい／のみたい
@@ -141,6 +143,8 @@ which exists in Book One and has never appeared in a phrase.
 - **Exercises (existing ids):** `vocab.taberu` 食べる, `vocab.iku` 行く, `vocab.kau` 買う,
   `vocab.kinou` 昨日 (the past-time anchor). `vocab.takai` 高い is named in the grammarNote as the
   rule's original example, not exercised as a new phrase target here.
+- **Exercises (earlier Book Two chapters):** None — reconjugates this chapter's own lesson 1
+  with Book One's い-adjective past rule.
 - **New vocabulary:** none.
 - **New phrases:** 4 — one たくない, one たかった (a genuinely new communicative move: "I wanted
   to…", a mild-regret register English speakers reach for constantly), one たくなかった, one that
@@ -161,6 +165,8 @@ which exists in Book One and has never appeared in a phrase.
   — this lesson is the payoff, not new material.
 - **Exercises (existing ids):** `vocab.hoshii` ほしい, `vocab.okane` お金, `vocab.jikan` 時間,
   `vocab.kuruma` 車, `vocab.hon` 本.
+- **Exercises (earlier Book Two chapters):** None — contrasts against this chapter's own
+  lessons 1 and 2.
 - **New vocabulary:** none.
 - **New phrases:** 3 — one affirmative with a concrete thing, one negative (欲しくないです), one
   that pairs a wanted thing against a lesson-1 wanted action in the same sentence so the boundary is
@@ -181,6 +187,8 @@ which exists in Book One and has never appeared in a phrase.
   needs on arrival.
 - **Exercises (existing ids):** `vocab.nani` 何, `vocab.taberu` 食べる, `vocab.nomu` 飲む,
   `vocab.hoshii` ほしい, `vocab.tomodachi` 友達.
+- **Exercises (earlier Book Two chapters):** None — turns this chapter's own lessons 1 and 3
+  into questions.
 - **New vocabulary:** none.
 - **New phrases:** 3 — one 何＋たい question, one 何＋ほしい question, one answer to either, sourced
   as an independent single utterance, not a scripted exchange (see chapter 1's lesson 7 rule and §7
@@ -198,6 +206,8 @@ which exists in Book One and has never appeared in a phrase.
   chapter 1 itself to stand directly on the plain non-past form.
 - **Exercises (existing ids):** `vocab.iku` 行く, `vocab.kau` 買う, `vocab.au` 会う,
   `vocab.rainen` 来年, `vocab.raishuu` 来週.
+- **Exercises (earlier Book Two chapters):** Chapter 1 (the lesson naming the plain
+  dictionary form) — a hard dependency; つもり sits directly on the plain non-past.
 - **New vocabulary:** **1** — つもり (a formal-noun-like word, kana-only; state it plainly, the way
   chapter 1 states its zero-word lessons — this is the one word the whole chapter structurally
   needs).
@@ -223,6 +233,9 @@ which exists in Book One and has never appeared in a phrase.
 - **Exercises (existing ids):** `vocab.iku` 行く, `vocab.kaeru` 帰る (the godan る trap, echoing
   chapter 1's recurring warning that a verb ending in る is not automatically ichidan), `vocab.au`
   会う.
+- **Exercises (earlier Book Two chapters):** Chapter 1 lesson 6 (だ／でした) — the same です→でした
+  swap, now applied to つもり; chapter 1's ない lessons are named only for an alternate form in
+  the grammarNote, not exercised in a phrase.
 - **New vocabulary:** none.
 - **New phrases:** 3 — one つもりはない, one つもりでした, one that contrasts the two in sequence
   (had planned to, no longer intends to) — still each a single sourced sentence, never an authored
@@ -240,6 +253,7 @@ which exists in Book One and has never appeared in a phrase.
   is the natural partner word and belongs here for that reason.
 - **Exercises (existing ids):** `vocab.iku` 行く, `vocab.taberu` 食べる, `vocab.yasumu` 休む,
   `vocab.issho` 一緒, `vocab.nichiyoubi` 日曜日.
+- **Exercises (earlier Book Two chapters):** None — built entirely on Book One's ます-stem.
 - **New vocabulary:** none.
 - **New phrases:** 4. Chapter 8 stands on this pattern directly, so it needs range: one with 一緒に,
   one with a time word, one plain proposal, one response accepting it — a single independent
@@ -258,6 +272,8 @@ which exists in Book One and has never appeared in a phrase.
   same room lesson 7 got, not less.
 - **Exercises (existing ids):** `vocab.iku` 行く, `vocab.taberu` 食べる, `vocab.miru` 見る,
   `vocab.eiga` 映画, `vocab.nichiyoubi` 日曜日.
+- **Exercises (earlier Book Two chapters):** None — read directly against this chapter's own
+  lesson 7.
 - **New vocabulary:** none.
 - **New phrases:** 4 — one a direct twin of a lesson 7 phrase (same verb, both forms, so the
   contrast is reviewable rather than asserted, mirroring chapter 1 lesson 10's pairing against its

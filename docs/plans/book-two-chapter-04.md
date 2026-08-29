@@ -143,6 +143,9 @@ every existing chapter title ("People and what they wear", "Meals and the kitche
   itself, 気分 a passing feeling — English "well" blurs all three where Japanese keeps them apart.
 - **Exercises (existing ids):** `vocab.genki` 元気, `vocab.daijoubu` 大丈夫, `vocab.warui` 悪い,
   `vocab.naru` なる.
+- **Exercises (earlier Book Two chapters):** Chapter 1 lesson 7 — the register frame (plain
+  with friends, polite with strangers, when in doubt polite) that sets this whole chapter's
+  default to です／ます.
 - **New vocabulary:** **2** — 病気 (びょうき, illness/sickness) and 気分 (きぶん, feeling/mood). Both
   nouns. Mark `content-source: training`, pending JMdict verification at authoring ([03 §9](03-book-two.md)).
 - **New phrases:** 3. One stating you got sick (病気になる, past); one saying you don't feel well
@@ -160,6 +163,8 @@ every existing chapter title ("People and what they wear", "Meals and the kitche
   take one — the same kind of fixed-prefix note Book One gave お茶 and お弁当.
 - **Exercises (existing ids):** `vocab.atama` 頭, `vocab.ashi` 足, `vocab.ha` 歯, `vocab.itai` 痛い,
   and the が-marking pattern from `n5.desc-body`.
+- **Exercises (earlier Book Two chapters):** None — built entirely on Book One's
+  `n5.desc-body` が-marking pattern.
 - **New vocabulary:** **2** — お腹 (おなか, stomach/belly) and 喉 (のど, throat). Both nouns, both
   body parts. 喉's kanji is uncommon at this level; author may keep it kana-only, matching how Book
   One left several words in kana (はく, かぶる).
@@ -181,6 +186,8 @@ every existing chapter title ("People and what they wear", "Meals and the kitche
   One flagged for 歯／葉 and 鼻／花.
 - **Exercises (existing ids):** `vocab.kaze` 風 (for the contrast), `vocab.hiku` 引く,
   `vocab.aru` ある (existence pattern).
+- **Exercises (earlier Book Two chapters):** None — built entirely on Book One's あります
+  existence pattern and 引く.
 - **New vocabulary:** **2** — 熱 (ねつ, fever) and 風邪 (かぜ, a cold). Both nouns.
 - **New phrases:** 3. One stating a fever (熱があります); one stating "I caught a cold"
   (風邪を引きました, past); one negated, to show the pattern isn't fixed to the affirmative
@@ -201,6 +208,9 @@ every existing chapter title ("People and what they wear", "Meals and the kitche
   way the plain-form pilot's lesson 5 said out loud it was collecting a debt paid earlier.
 - **Exercises (existing ids):** `vocab.itsu` いつ, symptom vocabulary from lessons 1–3, chapter 3's
   connector patterns (external).
+- **Exercises (earlier Book Two chapters):** Chapter 3 (から／ので and て as connectors) — a
+  symptom sentence placed in front of a reason clause, this chapter's one hard external Book
+  Two dependency.
 - **New vocabulary:** **1** — 咳 (せき, cough). Noun. Kanji optional, commonly written in kana.
 - **New phrases:** 4. One stating a cough; one giving duration with いつから／から; **at least two**
   combining a symptom with a reason clause (e.g. a symptom plus its consequence), since this is the
@@ -222,6 +232,8 @@ every existing chapter title ("People and what they wear", "Meals and the kitche
   the directions chapter.
 - **Exercises (existing ids):** `vocab.dou` どう, `vocab.suru` する (past), `vocab.sensei` 先生,
   `vocab.byouin` 病院, plus lesson 4's reason-clause sentences.
+- **Exercises (earlier Book Two chapters):** Chapter 3, carried forward from lesson 4 — the
+  learner answers どうしましたか using lesson 4's reason-clause sentences.
 - **New vocabulary:** **1** — 医者 (いしゃ, doctor). Noun. Note the more polite spoken form お医者さん
   in the grammarNote rather than teaching it as a second word.
 - **New phrases:** 4. One どうしましたか question; two or three patient answers that each combine a
@@ -246,6 +258,8 @@ every existing chapter title ("People and what they wear", "Meals and the kitche
 - **Exercises (existing ids):** `vocab.yasumu` 休む, `vocab.nomu` 飲む, `vocab.yoyaku` 予約,
   `vocab.denwa` 電話, `vocab.suru` する, the Book One ～てください pattern (`grammar.n5-te-ichidan`
   and siblings).
+- **Exercises (earlier Book Two chapters):** None — built entirely on Book One's てください
+  request pattern, 飲む, 予約 and する.
 - **New vocabulary:** **1**, optionally 2 — 薬 (くすり, medicine), noun. Optional: 薬局 (やっきょく,
   pharmacy), take only if a sourced phrase needs it — do not add it to hit a round number.
 - **New phrases:** 4. One instruction to rest; one instruction to take medicine; one booking an
@@ -265,6 +279,8 @@ every existing chapter title ("People and what they wear", "Meals and the kitche
   said what hurt (2–4), saw the doctor (5–6), now recovering (7).
 - **Exercises (existing ids):** `vocab.ii` いい, `vocab.warui` 悪い, `vocab.genki` 元気,
   `vocab.naru` なる.
+- **Exercises (earlier Book Two chapters):** None — mirrors this chapter's own lesson 1
+  (noun＋になる), not any earlier chapter.
 - **New vocabulary:** **0.** Every word in this lesson is reused; only the construction is new.
   State that in the grammarNote as a deliberate mirror of lesson 1, not an oversight.
 - **New phrases:** 3. One getting better; one getting worse; one closing reassurance reusing 元気に
