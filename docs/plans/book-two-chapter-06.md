@@ -115,6 +115,9 @@ id yet — cited by word, not by fabricated id, until chapter 1 ships.
   production, the same register call chapter 1 made for だ's dropping behaviour.
 - **Exercises (existing ids):** `vocab.taberu` 食べる, `vocab.miru` 見る, `vocab.kariru` 借りる,
   `vocab.oboeru` 覚える, `vocab.okiru` 起きる, `vocab.suru` する, `vocab.kuru` 来る.
+- **Exercises (earlier Book Two chapters):** Chapter 1 (plain/dictionary form and the
+  ichidan/godan class distinction); loosely chapter 5's たい, named only as a contrast in the
+  grammarNote, not a hard dependency.
 - **New vocabulary:** none. All 24 ichidan verbs and both irregulars are already owned; できる is
   taught as part of the pattern, the same way 行った was not counted as new vocabulary in chapter 1.
 - **New phrases:** 3. One ichidan ability statement, one with できる, one with 来られる so the
@@ -139,6 +142,9 @@ id yet — cited by word, not by fabricated id, until chapter 1 ships.
   呼ぶ (ぶ), `vocab.yomu` 読む (む), `vocab.kau` 買う (う, the ない-exception that isn't one here),
   `vocab.kaeru` 帰る and `vocab.hashiru` 走る (the godan-る trap). `vocab.aru` ある named as the
   exception, not exercised.
+- **Exercises (earlier Book Two chapters):** Chapter 1's ない rule, contrasted directly — う
+  takes no exception under potential (買える, not the わ that ない forces), and the godan-る trap
+  chapter 1 flagged returns here.
 - **New vocabulary:** none. Book One's 60 godan verbs cover all eight endings, ぬ included.
 - **New phrases:** 4 — the biggest mechanical lesson, one per row family, one of them built on the
   godan-る trap so it is seen in a sentence rather than only in the table.
@@ -162,6 +168,9 @@ id yet — cited by word, not by fabricated id, until chapter 1 ships.
   `vocab.oyogu` 泳ぐ, `vocab.yomu` 読む with `vocab.hon` 本, `vocab.tsukau` 使う, adverbs
   `vocab.sukoshi` 少し and `vocab.zenzen` ぜんぜん to soften or sharpen an ability statement, and
   `vocab.mada` まだ for "can't yet".
+- **Exercises (earlier Book Two chapters):** Chapter 1 lessons 2 and 4 — 話せる conjugates
+  through chapter 1's ない (lesson 2) and なかった (lesson 4) rules unchanged, named rather than
+  re-taught.
 - **New vocabulary:** none.
 - **New phrases:** 4 — one が-marked affirmative, one negative, one question, one using ぜんぜん or
   まだ so the sentence carries more than a bare capability claim.
@@ -182,6 +191,8 @@ id yet — cited by word, not by fabricated id, until chapter 1 ships.
 - **Exercises (existing ids):** `vocab.eigo` 英語, `vocab.ryouri` 料理, `vocab.shigoto` 仕事, with
   `vocab.sukoshi` 少し and `vocab.zenzen` ぜんぜん carried over from lesson 3 so the two
   "できる" lessons read as one family rather than two unrelated patterns.
+- **Exercises (earlier Book Two chapters):** None — builds only on this chapter's own lesson
+  1 (できる).
 - **New vocabulary:** none.
 - **New phrases:** 3 — one affirmative, one negative, one question.
 - **Depends on:** lesson 1 (できる is introduced there). Not on lessons 2–3 — noun + できる needs
@@ -203,6 +214,8 @@ id yet — cited by word, not by fabricated id, until chapter 1 ships.
 - **Exercises (existing ids):** `vocab.oyogu` 泳ぐ, `vocab.yomu` 読む, `vocab.tsukau` 使う,
   `vocab.miru` 見る — reused from lessons 1–3 so the "same verb, other construction" contrast is
   visible rather than asserted.
+- **Exercises (earlier Book Two chapters):** Chapter 1 lesson 8 (こと) — a hard prerequisite;
+  ことができる reuses the nominaliser in its second job.
 - **New vocabulary:** none. こと is Chapter 1's, not this chapter's — do not double-count it in
   either chapter's totals.
 - **New phrases:** 3 — one affirmative, one negative, one that pairs directly against one of
@@ -227,6 +240,8 @@ id yet — cited by word, not by fabricated id, until chapter 1 ships.
   `vocab.kaban` かばん, `vocab.aruku` 歩く with `vocab.kutsu` 靴, `vocab.wakaru` わかる (わかりやすい
   ／わかりにくい, a genuinely common pair, for an example with no object noun at all), and
   `vocab.yasui` 安い cited directly for the reading-collision trap.
+- **Exercises (earlier Book Two chapters):** Chapter 1 lesson 4 — やすい／にくい inflect like
+  い-adjectives by the same rule that turned ない into なかった.
 - **New vocabulary:** none.
 - **New phrases:** 4 — one やすい, one にくい, one past tense (やすかった or にくかった) so the
   い-adjective link is shown rather than asserted, one that pairs a sentence using 安い against one

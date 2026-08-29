@@ -134,6 +134,9 @@ them over new material.
   `vocab.samui` 寒い, `vocab.isogashii` 忙しい (i-adjectives); `vocab.shizuka` 静か,
   `vocab.hima` 暇 (na-adjectives, exercising the だから attachment); `vocab.gakusei` 学生,
   `vocab.ame` 雨 (nouns, same だから attachment).
+- **Exercises (earlier Book Two chapters):** Chapter 1 (plain form generally, and
+  specifically lesson 6's だ for the na-adjective/noun case) — から's reason sense attaches to
+  the same plain predicate chapter 1 built.
 - **New vocabulary:** none.
 - **New phrases:** 3 — one verb + から reason, one i-adjective + から reason, one だから reason built
   on a na-adjective or noun, so the chapter 1 だ callback is demonstrated rather than asserted. Each
@@ -155,6 +158,8 @@ them over new material.
   understand"), `vocab.tsukareru` 疲れる; `vocab.samui` 寒い, `vocab.chikai` 近い;
   `vocab.shizuka` 静か, `vocab.benri` 便利 (the なので attachment); `vocab.gakusei` 学生,
   `vocab.byouin` 病院 (noun + なので).
+- **Exercises (earlier Book Two chapters):** Chapter 1 lesson 6 (だ) — な replaces だ before
+  ので, the direct collision this lesson is built to teach.
 - **New vocabulary:** none.
 - **New phrases:** 4 — one verb + ので, one i-adjective + ので, one na-adjective + なので, one noun +
   なので. Pair the na-adjective or noun phrase against lesson 1's だから phrase in review so the
@@ -175,6 +180,8 @@ them over new material.
 - **Exercises (existing ids):** `vocab.takai` 高い, `vocab.oishii` おいしい (i-adjectives, both
   registers); `vocab.suki` 好き (na-adjective, だけど and ですけど); `vocab.wakaru` わかる (verb,
   plain and polite).
+- **Exercises (earlier Book Two chapters):** Chapter 1 lesson 6 (だ) — だけど reuses it for the
+  na-adjective/noun case, the same way lesson 1 did for から.
 - **New vocabulary:** none.
 - **New phrases:** 3 — one plain contrast (adjective or verb + けど), one polite contrast
   (です／ますけど), one だけど built on a na-adjective, closing the lesson 1 callback.
@@ -198,6 +205,8 @@ them over new material.
   `vocab.oyogu` 泳ぐ, `vocab.matsu` 待つ, `vocab.nomu` 飲む, `vocab.hanasu` 話す — one verb from
   each te-form group, so the whole conjugation table is seen doing this new job, not only its
   easiest rows.
+- **Exercises (earlier Book Two chapters):** Chapter 1 lesson 9 (たり) — contrasted directly:
+  たり lists representative, unordered examples, while て here reports a real sequence.
 - **New vocabulary:** none.
 - **New phrases:** 4 — two same-subject action sequences (each pairing two verbs from different
   te-form groups, in order), and at least one phrase deliberately built to pair against a chapter 1
@@ -224,6 +233,8 @@ them over new material.
   `vocab.taberu` 食べる, `vocab.yomu` 読む with `vocab.hon` 本 as the second clause's object, so it
   reads as a real clause rather than a bare verb; `vocab.utau` 歌う, `vocab.aruku` 歩く — the same
   two verbs lesson 4 chained with て, reused here with ながら so the difference is felt, not told.
+- **Exercises (earlier Book Two chapters):** Chapter 1 lesson 9 (たり), continuing lesson 4's
+  three-way contrast — て, ながら and たり as three different relationships between two verbs.
 - **New vocabulary:** none.
 - **New phrases:** 3 — two simultaneous-action pairs from different exercise sets, and one built as
   the direct ながら counterpart of a lesson 4 て phrase using the same two verbs, for the reason
@@ -251,6 +262,9 @@ them over new material.
   `vocab.tsuku` 着く with `vocab.ie` 家 (past clause); `vocab.samui` 寒い (i-adjective);
   `vocab.shizuka` 静か (na-adjective, なとき); `vocab.kodomo` 子供 (noun, のとき — the most common
   shape of this pattern in ordinary speech).
+- **Exercises (earlier Book Two chapters):** Chapter 1 in full — とき takes a plain-form
+  clause built from chapter 1's conjugation work, plus lessons 1 through 3's だ／な attachment
+  table.
 - **New vocabulary:** **1** — とき itself, as a standalone noun.
 - **New phrases:** 5 — one non-past verb clause, one past verb clause (shown as a pair, so the tense
   heuristic is demonstrated rather than asserted), one i-adjective clause, one na-adjective clause,
@@ -283,6 +297,9 @@ them over new material.
   is built to produce; `vocab.mise` 店, modified by a negative clause built on `vocab.takai` 高い,
   exercising chapter 1's plain negative inside a modifier rather than as a sentence's main predicate;
   `vocab.tomodachi` 友達, modified by a past clause built on `vocab.au` 会う.
+- **Exercises (earlier Book Two chapters):** Chapter 1's plain form generally, and
+  specifically its plain negative (lessons 2 and 3) — exercised here inside a noun-modifying
+  clause rather than as a sentence's main predicate.
 - **New vocabulary:** none.
 - **New phrases:** 5 — one per exercise above, each specified by the clause type it must carry (past
   verb, non-past verb with an object, 〜ている, plain negative, another past verb), so the five

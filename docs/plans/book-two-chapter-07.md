@@ -146,6 +146,10 @@ same instruction chapter 1 followed, and this chapter needs almost none.
   exception is drilled a second time in a new context), `vocab.samui` 寒い (い-adjective clause,
   which needs no conversion at all — Book One taught adjectives in plain form from day one, a fact
   worth naming out loud here since it is one less thing this lesson has to build).
+- **Exercises (earlier Book Two chapters):** All of Chapter 1's form lessons (1 through 5) —
+  the dictionary form, both ない halves, なかった and た all slot directly in front of と. This
+  chapter's hardest dependency, and the reason the plan calls it plain form's biggest
+  payoff.
 - **New vocabulary:** none.
 - **New phrases:** 4 — one per plain-form shape (dictionary, た, ない, い-adjective), all reporting
   someone else's words, never the speaker's own (that register nuance is chapter 1 lesson 7's
@@ -171,6 +175,8 @@ same instruction chapter 1 followed, and this chapter needs almost none.
   `vocab.takai` 高い, to show the contrast directly rather than by assertion.
   Nouns and な-adjectives with だ: `vocab.suki` 好き and `vocab.kirai` きらい, both na-adjectives, are
   strong candidates too since they recombine naturally into lesson 6's opinion phrases later.
+- **Exercises (earlier Book Two chapters):** Chapter 1 lesson 6 (だ) — the direct exception
+  to だ's usual dropping: here it cannot be dropped, and です cannot replace it.
 - **New vocabulary:** none.
 - **New phrases:** 3 — one noun clause, one な-adjective clause, one past-tense copula (だった)
   under と, to show the rule holds across tense as well as polarity.
@@ -193,6 +199,8 @@ same instruction chapter 1 followed, and this chapter needs almost none.
   言っていました as a synonym for 言いました.
 - **Exercises (existing ids):** `vocab.iu` 言う; topics — `vocab.ashita` 明日, `vocab.shigoto` 仕事,
   `vocab.isogashii` 忙しい, `vocab.ryokou` 旅行.
+- **Exercises (earlier Book Two chapters):** Chapter 1 lesson 5 (た) — supplies the
+  plain-past swap inside 言っていました, alongside Book One's ている.
 - **New vocabulary:** none.
 - **New phrases:** 4 — one about a plan or intention someone mentioned, one about a state or fact
   someone described, one negative (〜ないと言っていました, recombining chapter 1's ない a second time
@@ -217,6 +225,8 @@ same instruction chapter 1 followed, and this chapter needs almost none.
   owned rather than presented as a stray new form; `vocab.yuumei` 有名 (な-adjective, so one phrase
   can recombine lesson 2's だ rule inside a passive sentence — 有名 + だ + と言われています — showing
   the rule survives yet another layer).
+- **Exercises (earlier Book Two chapters):** None beyond this chapter's own lesson 3 —
+  reuses its ている＋と frame and introduces no earlier-chapter material of its own.
 - **New vocabulary:** none. **No new grammar pattern — see §5.2.**
 - **New phrases:** 2, deliberately fewer than every other lesson in the chapter. Exposure, not
   drilling, is the point: one about a well-known fact or common belief (な-adjective clause, showing
@@ -240,6 +250,8 @@ same instruction chapter 1 followed, and this chapter needs almost none.
   with that later, heavier grammar when it is eventually authored.
 - **Exercises (existing ids):** `vocab.kiku` 聞く; topics — `vocab.ame` 雨, `vocab.tenki` 天気,
   `vocab.raishuu` 来週.
+- **Exercises (earlier Book Two chapters):** None beyond this chapter's own lesson 1 — slots
+  聞く into the と frame lesson 1 built.
 - **New vocabulary:** none.
 - **New phrases:** 3 — one about news or weather heard secondhand, one about someone else's plan
   heard through a third party, one using ています for an ongoing "I've heard/I understand that..."
@@ -260,6 +272,8 @@ same instruction chapter 1 followed, and this chapter needs almost none.
 - **Exercises (existing ids):** i-adjective opinion `vocab.takai` 高い, `vocab.omoshiroi` 面白い;
   na-adjective/noun opinion (だ recombination) `vocab.suki` 好き, `vocab.yuumei` 有名; verb-clause
   opinion `vocab.iku` 行く.
+- **Exercises (earlier Book Two chapters):** Chapter 1 lesson 3 (the わ exception) and lesson
+  5 (て→た) — 思う conjugates through both at no extra cost, since it ends in う like 買う and 会う.
 - **New vocabulary:** **1 — 思う** (verb, u-class, "to think, to believe"). Verify against JMdict for
   Applications at authoring; flag `# jlpt-source: training` per CLAUDE.md until verified.
 - **New kanji:** **1 — 思**, tied to this lesson. Confirmed absent from every existing Book One word
@@ -287,6 +301,9 @@ same instruction chapter 1 followed, and this chapter needs almost none.
   `vocab.kuru` 来る (ichidan-irregular ない, chapter 1 lesson 2's easy half), `vocab.wakaru` わかる
   (godan ない, chapter 1 lesson 3), `vocab.aru` ある (the outright exception, ある → ない, also
   chapter 1 lesson 3 — reused a second time in this chapter after lesson 1).
+- **Exercises (earlier Book Two chapters):** Chapter 1 lessons 2 and 3 (both ない halves) and
+  lesson 4 (なかった) — the negative goes in the embedded clause, built entirely from chapter
+  1's negative forms.
 - **New vocabulary:** none.
 - **New phrases:** 3 — one negating a verb clause, one negating ある specifically (so the outright
   exception is seen in a real sentence rather than only as a rule), one using なかった so the past
@@ -308,6 +325,8 @@ same instruction chapter 1 followed, and this chapter needs almost none.
   opinion you have held for a while rather than one you are forming on the spot.
 - **Exercises (existing ids):** `vocab.omou` 思う; topics — `vocab.shigoto` 仕事,
   `vocab.daijoubu` 大丈夫, `vocab.genki` 元気.
+- **Exercises (earlier Book Two chapters):** Chapter 1 lesson 5 (た) — the same dependency
+  shape as lesson 3, one verb later.
 - **New vocabulary:** none.
 - **New phrases:** 3 — one ongoing personal stance ("I've been thinking that..."), one showing a
   change of mind or realization (と思っていましたが..., contrasting past belief with present fact —
@@ -337,6 +356,9 @@ same instruction chapter 1 followed, and this chapter needs almost none.
   earlier in the chapter — `vocab.ashita` 明日, `vocab.tenki` 天気, `vocab.isogashii` 忙しい,
   `vocab.yuumei` 有名 — so the chapter's own material recombines with itself at the close, the same
   way chapter 1's checkpoint reused its own verbs.
+- **Exercises (earlier Book Two chapters):** None beyond this chapter's own report and
+  opinion families (lessons 3 or 5, and 6 or 8) — the capstone pairs them without adding new
+  earlier-chapter material.
 - **New vocabulary:** none.
 - **New phrases:** 3, each pairing a report clause and an opinion clause on a shared topic as two
   independently sourced sentences, not a dialogue.

@@ -2,7 +2,7 @@
 
 **Status: design, not content.** This document specifies every lesson in the chapter in enough
 detail that authoring the YAML is mechanical. **No Japanese sentence is composed here.** Words and
-verb forms are cited by id from Book One's inventory (or from the chapter's own three new verbs);
+verb forms are cited by id from Book One's inventory (or from the chapter's own four new verbs);
 every example *sentence* is a requirement on a later authoring pass, which follows
 [03 §9](03-book-two.md) sourcing.
 
@@ -10,10 +10,11 @@ Source brief: [03-book-two.md](03-book-two.md) §1, §2, §4, §9, §10. Sibling
 [book-two-chapter-01.md](book-two-chapter-01.md), the pilot this one matches. Working template for
 a rule chapter: [`src/content/lessons/n5-16-te-form.yaml`](../../src/content/lessons/n5-16-te-form.yaml).
 
-**Shape landed: 9 teaching lessons + 1 recognition checkpoint.** New words: **3, unconditionally**
-(あげる, もらう, くれる — the chapter's own subject, not padding), plus **0–2 favor verbs** pending
-the owner's fresh-verbs call (§6). New phrases: **~29**. New kanji: **0**, or **1** under the
-fresh-verb variant — see §4 and §7.
+**Shape landed: 9 teaching lessons + 1 recognition checkpoint.** New words: **4, unconditionally**
+(あげる, もらう, くれる — the chapter's own subject, not padding — plus 手伝う, settled unconditional
+by the chapter 10 collision resolved in lesson 6 and §6 below), plus **0–1 favor verb** (見せる)
+pending the owner's fresh-verbs call (§6). New phrases: **~29**. New kanji: **1** (伝, from 手伝う,
+now unconditional) — see §4 and §7.
 
 ---
 
@@ -112,7 +113,7 @@ assigned when the book is assembled, per [03 §0a](03-book-two.md) — not this 
 ## 3. The lessons
 
 Every `wordIds` entry below is a real Book One id from the manifest, or one of this chapter's own
-three new verbs once they exist. **Prefer Book One material for everything except the verbs the
+four new verbs once they exist. **Prefer Book One material for everything except the verbs the
 chapter is actually about.**
 
 ### Lesson 1 — Giving something to someone
@@ -131,6 +132,8 @@ chapter is actually about.**
   `vocab.kodomo` 子供 as recipients — all people a learner can give to without the caution above
   applying; `vocab.hana` 花, `vocab.hon` 本, `vocab.okashi` お菓子, `vocab.kutsushita` 靴下 as
   things given; `vocab.tanjoubi` 誕生日 to give the exchange a reason.
+- **Exercises (earlier Book Two chapters):** None — depends on nothing in Book Two; built
+  from は／に／を and polite verb conjugation, in hand since Book One's first lesson.
 - **New vocabulary:** **1** — あげる. Unavoidable; it is the lesson.
 - **New phrases:** 3. One giving 花 to a friend for a stated reason (誕生日); one giving something
   to a younger sibling; one negative or question, so the form is seen inflected and not only in
@@ -150,6 +153,8 @@ chapter is actually about.**
   direction — receiving from a teacher or a stranger is unmarked, unlike giving to one.
 - **Exercises (existing ids):** `vocab.tomodachi` 友達, `vocab.haha` 母, `vocab.dare` 誰 (for
   「誰から」questions), `vocab.hon` 本, `vocab.tanjoubi` 誕生日.
+- **Exercises (earlier Book Two chapters):** None — から here extends Book One's
+  greetings-chapter usage from places to people; no Book Two chapter is drawn on.
 - **New vocabulary:** **1** — もらう.
 - **New phrases:** 3. One receiving from a friend; one receiving from a family member marked with
   に rather than から, so both markers are seen; one だれから question.
@@ -169,6 +174,8 @@ chapter is actually about.**
 - **Exercises (existing ids):** `vocab.tomodachi` 友達, `vocab.haha` 母, `vocab.chichi` 父,
   `vocab.sensei` 先生, `vocab.hon` 本, `vocab.kasa` 傘 (an umbrella lent in the rain is a familiar
   enough scene to carry the sentence).
+- **Exercises (earlier Book Two chapters):** None — contrasts only against this chapter's
+  own lessons 1 and 2.
 - **New vocabulary:** **1** — くれる.
 - **New phrases:** 4 — the largest allotment of the base-verb trio, because this is where the
   chapter's real cost sits. One from a friend; one from a family member; one **deliberate minimal
@@ -191,6 +198,8 @@ chapter is actually about.**
 - **Exercises (existing ids):** reuses lessons 1–3's set so the contrast lands on familiar material
   — `vocab.tomodachi` 友達, `vocab.haha` 母, `vocab.imouto` 妹, `vocab.sensei` 先生, `vocab.hon` 本,
   `vocab.hana` 花.
+- **Exercises (earlier Book Two chapters):** None — contrasts only against this chapter's
+  own lessons 1 through 3.
 - **New vocabulary:** none.
 - **New phrases:** 3, all minimal pairs — each pair holds the people and the object constant and
   changes only the direction, so the correct verb is forced by the situation rather than
@@ -210,6 +219,8 @@ chapter is actually about.**
   cheaply because the pieces are already in hand.
 - **Exercises (existing ids):** `vocab.kasu` 貸す, `vocab.kariru` 借りる, `vocab.kaesu` 返す,
   `vocab.kasa` 傘, `vocab.hon` 本, `vocab.okane` お金 — all classic loan objects, all owned.
+- **Exercises (earlier Book Two chapters):** None — the boundary drawn is against 貸す／借りる／返す,
+  taught in Book One's te-form chapter, not against any earlier Book Two chapter.
 - **New vocabulary:** none. **New kanji:** none — 貸, 借 and 返 were all introduced in Book One's
   te-form chapter (`n5-16-te-form.yaml`).
 - **New phrases:** 3. One contrastive pair on the same object — asking to borrow it versus asking
@@ -226,15 +237,21 @@ chapter is actually about.**
   app is built); what is new is that the thing changing hands is an action rather than an object,
   and the same caution from lesson 1 carries over unchanged — offering 手伝ってあげます to a
   teacher has the same presumptuous edge as offering them a gift with あげる.
-- **Exercises (existing ids, no-fresh-verb default):** `vocab.oshieru` 教える, `vocab.tsukuru` 作る,
+- **Exercises (existing ids):** `vocab.oshieru` 教える, `vocab.tsukuru` 作る,
   `vocab.kau` 買う, `vocab.motsu` 持つ — all already own their kanji and all read naturally as a
   favour done for someone (teaching someone something, making something for them, buying something
   for them, carrying something for them).
-- **New vocabulary:** 0, or **1** (手伝う, "to help" — the canonical example verb for this exact
-  pattern in nearly every textbook) if fresh verbs are sanctioned. See §6.
+- **Exercises (earlier Book Two chapters):** None — 手伝う is introduced here, not reused from
+  anywhere earlier.
+- **New vocabulary:** **1 — 手伝う** ("to help," てつだう), settled unconditional. This is decoupled
+  from §6's general fresh-verbs question: chapter 10 (Trouble) independently proposed the same word
+  for its own favour-asking lesson, and the collision is resolved by having chapter 2 own the
+  introduction — a favour verb belongs with giving-and-receiving, and chapter 2 comes first. That
+  downstream need is what makes 手伝う worth teaching regardless of how §6 eventually resolves for
+  見せる, the chapter's other, still-conditional candidate. See §6.
 - **New phrases:** 3.
 - **Depends on:** lesson 1; Book One's `grammar.n5-te-ichidan` (教える) and `n5-te-tte` (作る, 買う,
-  持つ, and 手伝う if brought in) for the te-form itself. Worth a targeted re-surfacing of those
+  持つ, 手伝う) for the te-form itself. Worth a targeted re-surfacing of those
   patterns before this lesson, the same recommendation chapter 1 makes before its own plain-past
   lesson.
 
@@ -250,6 +267,8 @@ chapter is actually about.**
   of this pattern since lesson one without a name for it.
 - **Exercises (existing ids):** `vocab.oshieru` 教える, `vocab.tsukuru` 作る, `vocab.kasu` 貸す
   (貸してくれる — lending as a favour, a direct callback to lesson 5), `vocab.matsu` 待つ.
+- **Exercises (earlier Book Two chapters):** None — built on Book One's te-form patterns and
+  this chapter's own lessons 3 and 6.
 - **New vocabulary:** 0, or **1** (見せる, "to show" — 見せてくれる is the other canonical example
   alongside 手伝ってくれる) if fresh verbs are sanctioned. See §6.
 - **New phrases:** 3.
@@ -269,6 +288,9 @@ chapter is actually about.**
   〜ましょう／〜ませんか, which has not been taught yet and is not needed here.
 - **Exercises (existing ids):** the same favour verbs as lesson 7 — `vocab.oshieru` 教える,
   `vocab.tsukuru` 作る, `vocab.matsu` 待つ, `vocab.kasu` 貸す.
+- **Exercises (earlier Book Two chapters):** None — explicitly needs no chapter 5 material:
+  ます-form and ません-form questions are Book One's basic polite paradigm, not chapter 5's
+  〜ましょう／〜ませんか, which has not been taught yet and is not needed here.
 - **New vocabulary:** none.
 - **New phrases:** 4 — the chapter's payoff deserves solid coverage: one 〜てくれますか request;
   one 〜てくれませんか request; one paired against an existing `phrases/te-form.yaml`
@@ -289,6 +311,8 @@ chapter is actually about.**
   is chapter 6's material, not this chapter's. Naming that link now costs nothing and saves chapter
   6 from having to rediscover it.
 - **Exercises (existing ids):** `vocab.oshieru` 教える, `vocab.tsukuru` 作る, `vocab.kasu` 貸す.
+- **Exercises (earlier Book Two chapters):** None — flags forward to chapter 6's もらえる rather
+  than drawing on any earlier chapter.
 - **New vocabulary:** none (見せる, if brought in lesson 7 under the fresh-verb variant, is reused
   here rather than reintroduced).
 - **New phrases:** 3.
@@ -315,11 +339,11 @@ chapter is actually about.**
 |---|---|---|
 | Teaching lessons | 9 | slightly under the ~10 target (03 §4) — argued in §5.1 |
 | Checkpoints | 1 | one per chapter (DR-021) |
-| New words | **3** unconditional + **0–2** decision-dependent | far under 5.7/lesson, and unlike chapter 1's, all 3 unconditional words *are* the chapter's subject, not overhead |
-| New verbs | **3** (the chapter itself) + **0–2** favour verbs | see §6 |
+| New words | **4** unconditional + **0–1** decision-dependent | far under 5.7/lesson; 3 of the 4 unconditional words *are* the chapter's subject, and the 4th (手伝う) is unconditional because chapter 10 needs it, not because it is overhead |
+| New verbs | **4** (the chapter itself, 手伝う now settled) + **0–1** favour verb (見せる) | see §6 |
 | New phrases | **~29** | 3.2/lesson, in line with chapter 1's rule-chapter rate |
 | New grammar patterns | 9 | one per teaching lesson |
-| New kanji | **0**, or **1** (伝, from 手伝う) under the fresh-verb variant | far under the book's 2.3/lesson measured rate — see §7 |
+| New kanji | **1** (伝, from 手伝う, now unconditional) | far under the book's 2.3/lesson measured rate — see §7 |
 
 ---
 
@@ -377,28 +401,32 @@ link explicitly (§3) so it is a planned sequel rather than a gap chapter 6 has 
 ## 6. Open, deferred by the owner — sensitivity to the fresh-verbs decision
 
 [03 §4](03-book-two.md) defers, once, whether Book Two's rule chapters bring fresh verbs the way
-the te-form chapter did, or drill only Book One's 87. Not re-litigated here. This chapter's design
-**is mildly sensitive** to the answer, but less than a conjugation-table chapter would be, and the
-reason is structural: the te-form chapter needed fresh verbs because its rule is per-group — each
-lesson drills one row of a conjugation table, and a thin row (ぐ, ぬ, ぶ) needed supplying. Nothing
-here is per-group. The favour patterns (lessons 6, 7, 9) need verbs that make a natural favour, not
-verbs that fill a linguistic slot, and Book One already supplies six of them with their kanji
-already introduced: `vocab.oshieru` 教える, `vocab.tsukuru` 作る, `vocab.kau` 買う, `vocab.motsu` 持
-つ, `vocab.matsu` 待つ, `vocab.kasu` 貸す (the last a direct callback to lesson 5). The chapter ships
-completely on owned material if the answer is no.
+the te-form chapter did, or drill only Book One's 87. Not re-litigated here. **手伝う is no longer
+part of that question.** See lesson 6: chapter 10 (Trouble) independently proposed the same word,
+unconditionally, for its own favour-asking lesson. The collision is resolved by having chapter 2
+own the introduction, so 手伝う is taught here regardless of how this deferred question resolves —
+its inclusion follows from chapter 10's downstream need, not from this chapter's own fresh-verbs
+call. What remains genuinely open is narrower than before: only **見せる**, the chapter's other,
+still-optional favour verb.
 
-**If fresh verbs are sanctioned,** the one verb worth bringing is **手伝う** (to help, てつだう) — it
-is the example verb nearly every textbook reaches for first in this exact grammar point, and its
-absence from Book One is a real gap rather than an oversight to route around. A
-distant second candidate is **見せる** (to show), which pairs naturally with 見せてくれる /
-見せてもらう. Bringing 手伝う adds one new kanji (伝 — 手 is already known); 見せる adds none (見 is
-already known from 見る). Total under this variant: 2 new words, 1 new kanji, placed in lessons 6
-and 7 respectively and reused without reintroduction in lesson 9.
+This chapter's design **is mildly sensitive** to the remaining question, but less than a
+conjugation-table chapter would be, and the reason is structural: the te-form chapter needed fresh
+verbs because its rule is per-group — each lesson drills one row of a conjugation table, and a thin
+row (ぐ, ぬ, ぶ) needed supplying. Nothing here is per-group. The favour patterns (lessons 6, 7, 9)
+need verbs that make a natural favour, not verbs that fill a linguistic slot, and Book One already
+supplies six of them with their kanji already introduced: `vocab.oshieru` 教える, `vocab.tsukuru` 作
+る, `vocab.kau` 買う, `vocab.motsu` 持つ, `vocab.matsu` 待つ, `vocab.kasu` 貸す (the last a direct
+callback to lesson 5). The chapter ships completely on owned material plus 手伝う either way.
 
-**If fresh verbs are not sanctioned,** the chapter ships on 3 new words and 0 new kanji — the
-starkest data point yet for chapter 1's §6 observation that a rule chapter reusing owned vocabulary
-structurally underdelivers against the book's kanji budget. That is this chapter's contribution to
-the same measurement, not a new argument.
+**If 見せる is also sanctioned,** it pairs naturally with 見せてくれる / 見せてもらう in lesson 7,
+adds no new kanji (見 is already known from 見る), and is reused without reintroduction in lesson 9.
+Total under this variant: 5 new words (the 4 unconditional plus 見せる), still 1 new kanji.
+
+**If 見せる is not sanctioned,** the chapter ships on 4 new words and 1 new kanji (伝) — no longer
+the zero-kanji data point chapter 1's §6 observation could once point to, since 手伝う's settlement
+now guarantees this chapter at least one. The underlying observation — a rule chapter reusing owned
+vocabulary structurally underdelivers against the book's kanji budget — still holds for the rest of
+the chapter's material, just not for lesson 6 anymore.
 
 ---
 
@@ -419,18 +447,19 @@ mention that もらえる closes a loop this chapter deliberately left open. Not
 chapter — lesson 9's grammarNote already names the link — but worth carrying into chapter 6's own
 design pass as a named dependency rather than rediscovering it there.
 
-**This chapter is another zero-kanji data point for chapter 1's §6 flag**, and a starker one: at
-best (fresh verbs sanctioned) it contributes 1 new kanji against a ~23-kanji-per-chapter share of
-the book's ~200-kanji budget; at worst (no fresh verbs) it contributes 0. Flagging alongside chapter
-1's, not re-arguing it — the fix chapter 1 already proposed (measure the budget after several
-chapters ship rather than force kanji into chapters that have none to give) applies here unchanged.
+**This chapter is another low-kanji data point for chapter 1's §6 flag**, though less stark than it
+would have been before the 手伝う collision was settled: it now contributes at least 1 new kanji
+(伝) against a ~23-kanji-per-chapter share of the book's ~200-kanji budget, and at most 1 either way
+(見せる adds none). Flagging alongside chapter 1's, not re-arguing it — the fix chapter 1 already
+proposed (measure the budget after several chapters ship rather than force kanji into chapters that
+have none to give) applies here unchanged.
 
 ---
 
 ## 8. Authoring checklist
 
-1. **Sourcing.** The 3 unconditional words (あげる, もらう, くれる), plus 0–2 favour verbs if
-   sanctioned, marked `content-source: training`, verified headword-by-headword against JMdict for
+1. **Sourcing.** The 4 unconditional words (あげる, もらう, くれる, 手伝う), plus 0–1 favour verb
+   (見せる) if sanctioned, marked `content-source: training`, verified headword-by-headword against JMdict for
    Applications 3.6.2, `# jlpt-source: training` where a level is asserted
    ([03 §9](03-book-two.md), CLAUDE.md). All ~29 phrases are composed sentences: training-canonical,
    marked, pending Tatoeba verification, same as chapter 1.

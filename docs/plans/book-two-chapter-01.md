@@ -118,6 +118,8 @@ material** — the chapter's whole emotional payload is "you already own these".
 - **Exercises (existing ids):** `vocab.kaku` 書く, `vocab.matsu` 待つ, `vocab.nomu` 飲む,
   `vocab.kaeru` 帰る, `vocab.taberu` 食べる, `vocab.miru` 見る, `vocab.suru` する, `vocab.kuru` 来る.
   Deliberately one from each class, all of them among the most-seen verbs in Book One.
+- **Exercises (earlier Book Two chapters):** None — this is Book Two's opening chapter;
+  there is no earlier Book Two material yet to draw on.
 - **New vocabulary:** none. State that in the grammarNote, as `n5.te-imasu` does — "this lesson
   teaches no new words on purpose" is the point being made, not an apology.
 - **New phrases:** 3. One plain-form statement about a habit; one about a plan; one where the plain
@@ -137,6 +139,8 @@ material** — the chapter's whole emotional payload is "you already own these".
 - **Exercises (existing ids):** `vocab.taberu` 食べる, `vocab.miru` 見る, `vocab.neru` 寝る,
   `vocab.okiru` 起きる, `vocab.wasureru` 忘れる, `vocab.oboeru` 覚える, `vocab.deru` 出る,
   `vocab.suru` する, `vocab.kuru` 来る.
+- **Exercises (earlier Book Two chapters):** None — this is Book Two's opening chapter;
+  there is no earlier Book Two material yet to draw on.
 - **New vocabulary:** none. All 24 ichidan verbs and all 3 irregulars are already owned.
 - **New phrases:** 3. One everyday refusal, one habitual negative, one with する.
 - **Depends on:** lesson 1 (the form is named there). Mirrors `n5.te-ichidan` deliberately — same
@@ -157,6 +161,8 @@ material** — the chapter's whole emotional payload is "you already own these".
   `vocab.kaeru` 帰る (godan る trap), `vocab.kau` 買う and `vocab.au` 会う (the わ exception),
   `vocab.aru` ある (the outright exception). Add `vocab.hashiru` 走る and `vocab.wakaru` わかる if
   the lesson wants more of the trap.
+- **Exercises (earlier Book Two chapters):** None — this is Book Two's opening chapter;
+  there is no earlier Book Two material yet to draw on.
 - **New vocabulary:** none. Book One's 60 godan verbs cover every one of the eight endings, ぬ
   included (死ぬ is the only ぬ verb in the language, as the te-form chapter already told them).
 - **New phrases:** 4 — this is the biggest form lesson and carries the two exceptions. One should
@@ -176,6 +182,8 @@ material** — the chapter's whole emotional payload is "you already own these".
   material — `vocab.taberu` 食べる, `vocab.iku` 行く, `vocab.wakaru` わかる, `vocab.aru` ある,
   `vocab.suru` する. Pair with `vocab.takai` 高い and `vocab.samui` 寒い to make the い-adjective
   link visible.
+- **Exercises (earlier Book Two chapters):** None — this is Book Two's opening chapter;
+  there is no earlier Book Two material yet to draw on.
 - **New vocabulary:** none.
 - **New phrases:** 3. At least one should place なかった against a Book One time word
   (`vocab.kinou` 昨日, `vocab.kyonen` 去年) so the plain past lands where the polite past already
@@ -196,6 +204,8 @@ material** — the chapter's whole emotional payload is "you already own these".
   `vocab.matsu` 待つ / `vocab.kau` 買う / `vocab.toru` 取る (う・つ・る), `vocab.nomu` 飲む /
   `vocab.yobu` 呼ぶ / `vocab.shinu` 死ぬ (む・ぬ・ぶ), `vocab.hanasu` 話す (す), `vocab.iku` 行く
   (the exception), `vocab.suru` する and `vocab.kuru` 来る.
+- **Exercises (earlier Book Two chapters):** None — this is Book Two's opening chapter;
+  there is no earlier Book Two material yet to draw on.
 - **New vocabulary:** none, and this is the strongest place in the chapter to say so.
 - **New phrases:** 4. Lessons 8 and 9 both stand on this form, so it needs enough sentences to be
   solid before they arrive.
@@ -218,6 +228,8 @@ material** — the chapter's whole emotional payload is "you already own these".
   `vocab.tomodachi` 友達, `vocab.nihon` 日本; な-adjectives `vocab.genki` 元気, `vocab.hima` 暇,
   `vocab.yuumei` 有名, `vocab.shizuka` 静か; い-adjectives for the negative rule `vocab.takai` 高い,
   `vocab.omoshiroi` 面白い, `vocab.samui` 寒い.
+- **Exercises (earlier Book Two chapters):** None — this is Book Two's opening chapter;
+  there is no earlier Book Two material yet to draw on.
 - **New vocabulary:** none.
 - **New phrases:** 4 — one noun, one な-adjective, one past (だった), one negative (じゃない). The
   い-adjective rule is taught as a prohibition in the grammarNote and needs no phrase of its own.
@@ -237,6 +249,8 @@ material** — the chapter's whole emotional payload is "you already own these".
 - **Exercises (existing ids):** `vocab.hai` はい and `vocab.iie` いいえ as the polite counterparts;
   `vocab.tomodachi` 友達, `vocab.sensei` 先生 as the register anchors; verbs already drilled —
   `vocab.iku` 行く, `vocab.taberu` 食べる, `vocab.miru` 見る.
+- **Exercises (earlier Book Two chapters):** None — this is Book Two's opening chapter;
+  there is no earlier Book Two material yet to draw on.
 - **New vocabulary:** **2** — うん (yes, casual) and ううん (no, casual). Both are interjections; the
   file already has 9, so the type is established.
 - **New phrases:** 4. These must be **single utterances, not a dialogue.** A multi-turn authored
@@ -260,6 +274,8 @@ material** — the chapter's whole emotional payload is "you already own these".
   `vocab.au` 会う, `vocab.noboru` 登る, `vocab.oyogu` 泳ぐ, with the nouns already owned —
   `vocab.nihon` 日本, `vocab.sushi` すし, `vocab.eiga` 映画, `vocab.yama` 山, `vocab.umi` 海,
   `vocab.ryokou` 旅行.
+- **Exercises (earlier Book Two chapters):** None — this is Book Two's opening chapter;
+  there is no earlier Book Two material yet to draw on.
 - **New vocabulary:** **3** — こと (the nominaliser, written kana; Book One handled 物 as
   `grammar.n5-mono-nominaliser` and never introduced こと), 一度 (once) and the counter 回, which
   the pattern needs to say how many times. Verify all three against JMdict at authoring.
@@ -277,6 +293,8 @@ material** — the chapter's whole emotional payload is "you already own these".
 - **Exercises (existing ids):** `vocab.yomu` 読む, `vocab.miru` 見る, `vocab.kaku` 書く,
   `vocab.arau` 洗う, `vocab.yasumu` 休む, `vocab.asobu` 遊ぶ, `vocab.utau` 歌う, with
   `vocab.kaimono` 買い物, `vocab.ryouri` 料理, `vocab.shigoto` 仕事 as the nouns.
+- **Exercises (earlier Book Two chapters):** None — this is Book Two's opening chapter;
+  there is no earlier Book Two material yet to draw on.
 - **New vocabulary:** **0–2.** Book One's leisure and chore nouns are thin (買い物, 料理, 仕事 and
   little else), so authoring may want one or two of 掃除 / 洗濯 / 音楽. Take them only if a sourced
   sentence needs them — do not pad to a number.
@@ -295,6 +313,8 @@ material** — the chapter's whole emotional payload is "you already own these".
 - **Exercises (existing ids)** — all owned, chosen so both ない halves are exercised:
   `vocab.wasureru` 忘れる and `vocab.akeru` 開ける (ichidan), `vocab.osu` 押す, `vocab.hashiru` 走る,
   `vocab.hairu` 入る, `vocab.kesu` 消す (godan, る-trap included), `vocab.suru` する.
+- **Exercises (earlier Book Two chapters):** None — this is Book Two's opening chapter;
+  there is no earlier Book Two material yet to draw on.
 - **New vocabulary:** none.
 - **New phrases:** 3. Pair at least one against its Book One 〜てください counterpart in
   `phrases/te-form.yaml` so the twin relationship is reviewable rather than asserted.
