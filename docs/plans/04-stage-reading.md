@@ -1,32 +1,48 @@
-# Book Three — the flagship ("the wall")
+# The reading stage — the wall
 
-**Tier:** Paid — the first paywall. **Status: not started.** Depends on Book Two, and on a content
+**Stage:** `reading` (DR-033). **Status: not started.** Depends on Book Two, and on a content
 pipeline that does not exist yet.
 
 **Goal:** carry the learner over **the intermediate wall**, the level where most learners stall and
 quit, to where they can **read real Japanese for pleasure and hold a genuine conversation**.
 
-Book Three is where AburunGo earns its money and its reputation. Beginners have many good free
-options; **almost nothing gets people *through* the intermediate stretch well.** The whole design
+This is where AburunGo does the work almost nothing else does well: beginners have many good free
+options; **almost nothing gets people *through* the intermediate stretch.** The whole design
 targets the two things that kill intermediate learners: **the plateau** (progress feels invisible)
 and **the input cliff** (real Japanese is suddenly too hard).
 
+**This is not "Book Three" (DR-033).** A book is a volume; a stage is a difficulty band; they are
+no longer the same axis. Book Two is `building`; whichever book comes after it opens the `reading`
+stage — but whether the stage needs one book or several is unsettled, and the two ways of counting
+disagree. By word exposure it looks large: a reference would call the stage's target JLPT N3
+(2,347 words), which at Book One's measured ~570 words a book is roughly four books' worth. By
+taught lesson count it looks like one: §3 finds ~100 connective patterns fits the standard
+10-chapter, ~100-lesson shape exactly, because mining moves vocabulary out of lessons and into the
+reading library — lesson count decouples from word count. Both readings can be true at once: one
+book's worth of taught grammar, sitting on top of a reading library sized for several. This
+document describes **the stage**, not a numbered book, and does not resolve which reading is
+right — DR-034 leaves book count to be "specified one ahead, not all at once."
+
+**Tier:** unsettled — see §10. Not "the first paywall": Book Two is already free, and the free
+tier reaches two books past it before the paywall arrives (`TIER_BOOK_LIMIT.free = 4`,
+`src/content/access.ts`).
+
 ---
 
-## 1. Why this book is different
+## 1. Why this stage is different
 
 - **The plateau is psychological.** In Books One and Two every session unlocks an obvious new
   ability. Here the gains are diffuse — broader vocabulary, faster reading — and *feel* like
-  nothing. The book must **manufacture visible progress out of honest signals**, which is a
+  nothing. The stage must **manufacture visible progress out of honest signals**, which is a
   narrow path to walk given the no-gamification rule: counters that reflect real ability, never
   points that reward showing up.
-- **The input cliff is real.** Native material is far above i+1 at this level. The book must supply
-  a **ladder of graded reading** bridging textbook Japanese to real Japanese.
+- **The input cliff is real.** Native material is far above i+1 at this level. The stage must
+  supply a **ladder of graded reading** bridging textbook Japanese to real Japanese.
 - **Output must dominate.** Comprehension is no longer the bottleneck — production is.
 
 ## 2. What changes from Book Two
 
-| Dimension | Book Two | **Book Three** |
+| Dimension | Book Two (`building`) | **This stage (`reading`)** |
 |---|---|---|
 | Session balance | review + new + small output | **reading- and output-dominant**; new vocabulary via mining |
 | Vocabulary | curated chapter lists | **sentence mining** — the learner takes unknown words from readings into SRS |
@@ -49,8 +65,8 @@ only with the component layer built underneath it first.
 **Decided (owner sign-off, 2026-08-20): yes — chapters survive as grammar and reading-level
 bands, not situations.**
 
-Chapters exist to bound a run of lessons and place a checkpoint at a boundary (DR-021). Book
-Three's vocabulary is too broad to pre-curate and arrives by mining, so "the lessons in this
+Chapters exist to bound a run of lessons and place a checkpoint at a boundary (DR-021). This
+stage's vocabulary is too broad to pre-curate and arrives by mining, so "the lessons in this
 chapter" can no longer be a word list. But the connective grammar set is finite and must be
 authored anyway, which makes it the natural spine:
 
@@ -59,12 +75,13 @@ authored anyway, which makes it the natural spine:
   readings at that band.
 - **The checkpoint stays a shrinking-set gate** (DR-020): the band's patterns in production
   formats, plus one honest test no earlier book could offer — **a gate text the learner could not
-  have read at the start of the chapter**, now readable. Band boundaries are this book's situation
-  boundaries; DR-021's cadence maps onto them unchanged. The book still closes with one production
-  checkpoint — consolidation recurring, completion once.
-- **Can-dos keep the computed-not-declared property** (DR-022), rederived for a reading book: from
-  passages actually read and patterns actually produced, not from situations, which this book no
-  longer has.
+  have read at the start of the chapter**, now readable. Band boundaries are this stage's
+  situation boundaries; DR-021's cadence maps onto them unchanged. Each book this stage turns out
+  to need still closes with one production checkpoint (DR-033) — consolidation recurring,
+  completion once.
+- **Can-dos keep the computed-not-declared property** (DR-022), rederived for a book in this
+  stage: from passages actually read and patterns actually produced, not from situations, which
+  books in this stage no longer have.
 
 **Does the ~10 chapters × ~10 lessons shape hold?** For grammar, yes — ~100 connective patterns is
 10 bands of ~10 single-pattern lessons, and the shape falls out rather than being imposed. For
@@ -92,9 +109,9 @@ With the band model locked, the one remaining pre-authoring blocker is the text 
 5. **Close:** progress as **lines read, words mined and now recalled, passages now comprehensible**
    — concrete counters that move daily even when "level" does not.
 
-## 5. Extensive reading — the flagship feature
+## 5. Extensive reading — the centerpiece
 
-A **levelled reading library** is the heart of this book and its clearest differentiator. The
+A **levelled reading library** is the heart of this stage and its clearest differentiator. The
 Tadoku principles: many easy texts beat few hard ones; no dictionary mid-read; volume builds
 fluency and motivation. **The flow target is ~98% known**, not the often-quoted 95% — the research
 (Hu & Nation) puts unassisted comprehension at ~98% coverage, and 95% sounds generous but is one
@@ -132,7 +149,7 @@ intermediate learners want and what a fixed list denies them.
 
 The previous version of this doc made Hana the output engine: open conversation, discussion of
 readings, structured correction after each exchange, conversation minutes as a headline counter.
-**All of that is blocked.** Hana is shelved behind `VITE_HANA_ENABLED` and this book cannot be
+**All of that is blocked.** Hana is shelved behind `VITE_HANA_ENABLED` and this stage cannot be
 planned on the assumption that decision reverses.
 
 That leaves a real hole, and it should be named rather than papered over: **conversation practice
@@ -150,19 +167,19 @@ Free-form writing about a passage can sit alongside, but it gets self-review pro
 model answer. No API, no grading, and it exercises production honestly. It is not conversation,
 and this doc should not pretend it is.
 
-**If the paid tier ever needs conversation to justify its price, that is the moment to revisit
+**If a paid tier ever needs conversation to justify its price, that is the moment to revisit
 DR-023** — with a cost model, not a wish. A paid tier changes the economics that shelved Hana in
 the first place, and this is the one place in the plan where that argument is worth making.
 
 ## 8. Content source — the line where verified starts
 
-Book Three is where content must be **verified**. Before it ships, stand up the **Tatoeba (CC BY)
-ingestion and i+1 levelling pipeline**: filter sentences by known-item coverage, tag by grammar
-and kanji, and assemble the **mining corpus and the compose-then-compare pool** from real,
-attributed sentences. Coherent library *texts* come from the §5 text-source decision — the
-pipeline levels them, it cannot conjure them.
+The reading stage is where content must be **verified**. Before this stage ships, stand up the
+**Tatoeba (CC BY) ingestion and i+1 levelling pipeline**: filter sentences by known-item coverage,
+tag by grammar and kanji, and assemble the **mining corpus and the compose-then-compare pool**
+from real, attributed sentences. Coherent library *texts* come from the §5 text-source decision —
+the pipeline levels them, it cannot conjure them.
 
-**No training-canonical sentences at Book Three and above, and no generated sentences ever
+**No training-canonical sentences at the reading stage and above, and no generated sentences ever
 stored.** The N5 exemption exists because N5 vocabulary is canonical and well documented; that
 argument does not extend upward.
 
@@ -171,7 +188,7 @@ The sentence raw material already exists locally — Tatoeba examples are embedd
 `scripts/jlpt.mjs` errors helpfully when it is absent). What is missing is the levelling pipeline,
 not the sentences.
 
-## 9. Retention design — the core of this book
+## 9. Retention design — the core of this stage
 
 - **Manufacture visible progress from honest signals.** Counters that move daily: lines read, words
   mined and now recalled, share of a target text now comprehensible. Real ability, never points.
@@ -180,24 +197,34 @@ not the sentences.
 - **Output as proof.** "I wrote a paragraph about what I read" is a concrete identity win that
   recognition cannot supply.
 - **Schedule the "you can read this now" moment (§5); do not leave it to chance.** It is the
-  single strongest honest signal this book has against the plateau — the orchestrator should
+  single strongest honest signal this stage has against the plateau — the orchestrator should
   resurface a formerly-too-hard text on a cadence, roughly whenever the SRS state says one has
   newly crossed the ~98% line.
 - **Calm, never punishing.** At the wall especially, re-engagement is informational: "3 readings
   waiting when you're ready", not guilt.
 
-## 10. Pricing rationale
+## 10. Tier and paywall — unsettled, not "the first paywall"
 
-This is where the value is highest and the alternatives weakest, so it is the right first paywall.
-The learner arrives having used the full method free through Book Two — they are paying to get
-*over the wall*, which is when motivation and willingness to pay peak.
+**This stage does not open the paywall.** Tiers gate on book order, not on stage
+(`TIER_BOOK_LIMIT` in `src/content/access.ts` — `guest: 1, free: 4, paid: Infinity`; CLAUDE.md's
+access table gives a free account Books One through Four). Book Two is already free and is order
+2, so two more free-tier book slots (orders 3 and 4) sit ahead of the paywall regardless of which
+stage they carry. If this stage needs more than two books to finish — plausible, per the
+word-count math in the intro above — the free/paid line falls *inside* it rather than at a stage
+boundary.
 
-Enforcement is still aspirational: `isPaid` is stubbed false until payment is wired, and the `tier`
-field in user metadata holds the slot. Gated content shows a **soft inline prompt, never a
-redirect**, and it appears where Book Three would begin — at the close of Book Two and on Book
-Three's door — described in terms of what the book *does* (read real Japanese, mine your own
-vocabulary), never in terms of what is locked. **Everything the learner built stays theirs:** SRS
-state, progress, and both free books remain fully usable whether or not they ever pay.
+**Where exactly is not decided, and this document does not decide it.** The previous version of
+this doc called this stage "the first paywall" and argued the case for it on value and
+alternatives; that argument may still be right for some future book, but pinning it to this stage
+was an artifact of the old one-book-one-level model, not a pricing decision anyone made. It is
+worth revisiting once book order and stage are both far enough along to know which book actually
+lands past order 4.
+
+Enforcement is still aspirational wherever the line ends up: `isPaid` is stubbed false until
+payment is wired, and the `tier` field in user metadata holds the slot. Wherever it lands, gated
+content shows a **soft inline prompt, never a redirect**, described in terms of what the next book
+*does*, never in terms of what is locked. **Everything the learner built stays theirs:** SRS state
+and progress remain fully usable whether or not the learner ever pays.
 
 ## 11. Build notes
 
