@@ -178,7 +178,8 @@ async function decompose() {
   const out = {
     _source:
       "KRADFILE, (c) James William Breen and The Electronic Dictionary Research and Development Group, " +
-      "via the Unicode conversion krad-unicode by hoffmannjp (https://github.com/hoffmannjp/krad-unicode)",
+      "https://www.edrdg.org/krad/kradinf.html, via the Unicode conversion krad-unicode by hoffmannjp " +
+      "(https://github.com/hoffmannjp/krad-unicode)",
     _licence:
       "Source licensed CC BY-SA 3.0 Unported (https://creativecommons.org/licenses/by-sa/3.0/). " +
       "This table is a modified adaptation, offered under CC BY-SA 4.0 " +
