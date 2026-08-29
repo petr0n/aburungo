@@ -1,0 +1,23 @@
+# Book Two chapters.
+#
+# One chapter, because one chapter has content. Nine more are designed and none
+# of them are authored yet, and a chapter declared here shows up on the ladder
+# and in the book map whether or not any lesson points at it — an entry the
+# learner can reach and find empty. Each joins this file as its lessons land.
+#
+# Holding them back is also what keeps the schema's "order runs 1..N with no
+# gap" check honest: the gap it exists to catch is a chapter accidentally
+# skipped, not a chapter not yet written.
+#
+# The boundary rule is Book One's, unchanged (DR-021): a chapter closes on a
+# checkpoint placed where a body of related situations ends, not on a count.
+# Chapter 1 runs ten teaching lessons because that is what plain form and its
+# three payoffs take — the forms depend on each other, so a checkpoint dropped
+# partway through would consolidate half a conjugation table.
+#
+# content-source: n/a — this file names and orders existing lessons; it adds no
+#   Japanese content of its own.
+
+- id: b2.chapter-1
+  order: 1
+  title: Talking like a friend

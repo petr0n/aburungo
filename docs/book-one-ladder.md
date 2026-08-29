@@ -7,6 +7,8 @@ phrases each one teaches.
 fails if this file is out of date. Ids carry the book's `n5` prefix; a learner
 never reads it.
 
+**Book One** · [Book Two](book-two-ladder.md)
+
 | | |
 |---|---|
 | Chapters | 12 |

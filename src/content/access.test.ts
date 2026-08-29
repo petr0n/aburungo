@@ -1,8 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { bookOrderIndex, reachable, phrasesForTier, wordsForTier } from "./access";
 import type { Book, Lesson } from "@/types";
-import { allWords } from "./vocabulary";
-import { allPhrases } from "./index";
+import { bookOne, bookTwo } from "./books";
 
 const lesson = (id: string, wordIds: string[], phraseIds: string[] = []): Lesson => ({
   id,
@@ -69,11 +68,35 @@ describe("reachable", () => {
   });
 });
 
+/**
+ * Gating against the tree the app actually ships.
+ *
+ * These were a tautology while Book One was the whole course: every tier saw
+ * everything, so the assertions passed however wrong the predicate was. Book
+ * Two is the first content a guest must not reach, which is what makes them
+ * mean something.
+ */
 describe("the shipped content", () => {
-  it("reaches every tier, because one book is all there is", () => {
-    // Not a claim that gating works — it cannot be, with a single book. It is
-    // a guard that nothing in Book One became unreachable to a guest.
-    expect(wordsForTier("guest")).toHaveLength(allWords.length);
-    expect(phrasesForTier("guest")).toHaveLength(allPhrases.length);
+  const taughtBy = (book: Book) => book.lessons.flatMap((l) => [...l.wordIds, ...l.phraseIds]);
+  const bookOneTaught = new Set(taughtBy(bookOne));
+  // Book Two re-lists Book One's verbs on purpose — the ladder's only way to
+  // repeat a word in the lesson that conjugates it — so what it *introduces* is
+  // the smaller set, and the only set gating should hold back.
+  const bookTwoIntroduces = [...new Set(taughtBy(bookTwo))].filter((id) => !bookOneTaught.has(id));
+
+  const guestVisible = () => new Set([...wordsForTier("guest"), ...phrasesForTier("guest")].map((x) => x.id));
+
+  it("has something for Book Two to gate, so the check below cannot pass empty", () => {
+    expect(bookTwoIntroduces.length).toBeGreaterThan(0);
+  });
+
+  it("leaves everything Book One teaches within a guest's reach", () => {
+    const visible = guestVisible();
+    expect([...bookOneTaught].filter((id) => !visible.has(id))).toEqual([]);
+  });
+
+  it("holds back what only Book Two teaches", () => {
+    const visible = guestVisible();
+    expect(bookTwoIntroduces.filter((id) => visible.has(id))).toEqual([]);
   });
 });

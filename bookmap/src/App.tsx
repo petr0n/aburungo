@@ -1,6 +1,6 @@
 import { useState } from "react";
 import type { Book, Lesson } from "@/types";
-import { displayBooks } from "./shell";
+import { books } from "@/content/books";
 import { allWords } from "@/content/vocabulary";
 import { allPhrases } from "@/content";
 import { allGrammarPatterns } from "@/content/grammar";
@@ -126,8 +126,12 @@ function ChapterSection({ book, chapter }: { book: Book; chapter: Book["chapters
 }
 
 export function App() {
-  const [bookId, setBookId] = useState(displayBooks[0].id);
-  const book = displayBooks.find((b) => b.id === bookId) ?? displayBooks[0];
+  const [bookId, setBookId] = useState(books[0].id);
+  const book = books.find((b) => b.id === bookId) ?? books[0];
+  // Read off the content, not off the book: `progressKey` is the persisted key
+  // and is allowed to differ from the prefix the ids carry — Book Two's are
+  // "book-2" and "b2". Printing the key here would label the wrong string.
+  const idPrefix = book.chapters[0]?.id.split(".")[0];
 
   // book.lessons is already the shipped ladder: the app's own content modules
   // filter the Hana-gated checkpoints out behind VITE_HANA_ENABLED (DR-023).
@@ -148,8 +152,8 @@ export function App() {
       <ChapterNav key={book.id} chapters={book.chapters} />
       <div className="wrap">
         <header className="book">
-          <BookNav books={displayBooks} current={book} onSelect={selectBook} />
-          <p className="eyebrow">AburunGo · {book.title}{book.lessons.length > 0 && ` · id prefix ${book.progressKey}`}</p>
+          <BookNav books={books} current={book} onSelect={selectBook} />
+          <p className="eyebrow">AburunGo · {book.title}{idPrefix !== undefined && ` · id prefix ${idPrefix}`}</p>
           <h1>{book.title} Ladder</h1>
           <p className="sub">
             Every chapter, lesson and checkpoint a learner meets, in order. Expand any lesson for
@@ -171,8 +175,8 @@ export function App() {
           <section className="empty">
             <h3>Nothing on the ladder yet</h3>
             <p>
-              {book.title} is a shell: its chapters and lessons appear here the moment they land
-              in <code>src/content/</code>. The plan lives in <code>docs/plans/03-book-two.md</code>.
+              {book.title} has no chapters yet: they appear here the moment they land in{" "}
+              <code>src/content/</code>.
             </p>
           </section>
         )}

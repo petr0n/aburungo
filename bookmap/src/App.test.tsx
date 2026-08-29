@@ -8,7 +8,6 @@ import { afterEach, describe, expect, it } from "vitest";
 import { cleanup, fireEvent, render, screen, within } from "@testing-library/react";
 import { App } from "./App";
 import { books } from "@/content/books";
-import { displayBooks } from "./shell";
 
 describe("book map SPA", () => {
   afterEach(cleanup);
@@ -32,21 +31,32 @@ describe("book map SPA", () => {
   it("offers one book chip per book and one rail jump per chapter", () => {
     render(<App />);
     const bookNav = screen.getByRole("navigation", { name: "Books" });
-    expect(within(bookNav).getAllByRole("button")).toHaveLength(displayBooks.length);
+    expect(within(bookNav).getAllByRole("button")).toHaveLength(books.length);
     const rail = screen.getByRole("navigation", { name: "Chapters" });
     expect(within(rail).getAllByRole("button")).toHaveLength(books[0].chapters.length);
   });
 
-  it("switches to the Book Two shell and back", () => {
-    // The shell is bookmap-only scaffolding (see shell.ts); this pins that it
-    // is reachable from the nav and honest about being empty.
-    render(<App />);
-    fireEvent.click(screen.getByRole("button", { name: "Book Two" }));
-    expect(screen.getByRole("heading", { level: 1 }).textContent).toBe("Book Two Ladder");
-    expect(screen.getByText("Nothing on the ladder yet")).toBeTruthy();
-    // No chapters means no rail and no chapter sections.
-    expect(screen.queryByRole("navigation", { name: "Chapters" })).toBeNull();
-    fireEvent.click(screen.getByRole("button", { name: "Book One" }));
+  it("switches to Book Two and back, rendering each book's own ladder", () => {
+    // Book Two replaced a hand-written shell here. Switching is what proves the
+    // page renders whichever book the nav selects rather than Book One's
+    // content under another title.
+    const { container } = render(<App />);
+    const bookTwo = books[1];
+
+    fireEvent.click(screen.getByRole("button", { name: bookTwo.title }));
+    expect(screen.getByRole("heading", { level: 1 }).textContent).toBe(`${bookTwo.title} Ladder`);
+    const chapterHeadings = [...container.querySelectorAll("section.chapter h2")].map((el) => el.textContent);
+    expect(chapterHeadings).toEqual(bookTwo.chapters.map((c) => c.title));
+
+    fireEvent.click(screen.getByRole("button", { name: books[0].title }));
     expect(screen.getByRole("heading", { level: 1 }).textContent).toBe(`${books[0].title} Ladder`);
+  });
+
+  it("labels a book by the prefix its ids carry, not by its progress key", () => {
+    // These are the same string for Book One and differ for Book Two
+    // ("b2" against "book-2"), so this only became checkable now.
+    render(<App />);
+    fireEvent.click(screen.getByRole("button", { name: books[1].title }));
+    expect(screen.getByText(/id prefix b2$/)).toBeTruthy();
   });
 });

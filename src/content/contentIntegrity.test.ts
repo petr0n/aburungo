@@ -11,6 +11,18 @@ import { allWords } from "./vocabulary";
 import { allPhrases } from "./index";
 import { n5Lessons } from "./lessons";
 import { n5Chapters, placeInChapter } from "./chapters";
+import { books } from "./books";
+
+/**
+ * Every shipped lesson, across every book.
+ *
+ * The cross-reference checks below have to run on this rather than on
+ * `n5Lessons`: the collections they check (`allWords`, `allPhrases`) are one
+ * flat list for the whole course, so scoping the ladder side to one book turns
+ * "no orphaned content" into "no orphaned content Book One happens to teach" —
+ * and every word Book Two brought would have read as an orphan.
+ */
+const allLessons = books.flatMap((b) => b.lessons);
 
 describe("content integrity", () => {
   it("has no duplicate word ids across files", () => {
@@ -39,7 +51,7 @@ describe("content integrity", () => {
   it("has no lesson referencing a word that does not exist", () => {
     const ids = new Set(allWords.map((w) => w.id));
     const dangling: string[] = [];
-    for (const u of n5Lessons) {
+    for (const u of allLessons) {
       for (const id of u.wordIds) if (!ids.has(id)) dangling.push(`${u.id} -> ${id}`);
     }
     expect(dangling).toEqual([]);
@@ -52,7 +64,7 @@ describe("content integrity", () => {
     // sourced, and a learner simply never met them. The word version of this
     // check existed; the phrase version did not, which is exactly why it went
     // unnoticed while the word orphans got fixed twice.
-    const taught = new Set(n5Lessons.flatMap((l) => l.phraseIds));
+    const taught = new Set(allLessons.flatMap((l) => l.phraseIds));
     const orphans = allPhrases.filter((p) => !taught.has(p.id)).map((p) => p.id);
     expect(orphans).toEqual([]);
   });
@@ -60,7 +72,7 @@ describe("content integrity", () => {
   it("teaches every word somewhere in the ladder", () => {
     // A word no lesson references is content the learner never meets. 41 words
     // sat orphaned this way before the depth pass.
-    const taught = new Set(n5Lessons.flatMap((u) => u.wordIds));
+    const taught = new Set(allLessons.flatMap((u) => u.wordIds));
     const orphans = allWords.filter((w) => !taught.has(w.id)).map((w) => w.id);
     expect(orphans).toEqual([]);
   });

@@ -40,6 +40,7 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
  */
 const BOOKS = {
   n5: { order: 1, title: "Book One" },
+  b2: { order: 2, title: "Book Two" },
 };
 
 const loadDir = (dir) =>

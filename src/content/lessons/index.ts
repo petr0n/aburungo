@@ -1,8 +1,10 @@
 /**
  * Compiles lesson YAML into a single typed, validated, order-sorted list.
  *
- * Add a new lesson file by creating src/content/lessons/<path>.yaml and pushing
- * it into `n5Lessons` below (or a new export, for N4+ ladders later).
+ * One export per book, because a book's ladder is its own: `n5Lessons` is Book
+ * One's and `b2Lessons` is Book Two's. Add a lesson file by creating
+ * src/content/lessons/<path>.yaml and pushing it into the export for the book
+ * whose chapters it belongs to.
  */
 import type { Lesson } from "@/types";
 import { hanaEnabled } from "@/config";
@@ -10,7 +12,7 @@ import { parseLessons } from "./schema";
 import { allWords } from "@/content/vocabulary";
 import { allPhrases } from "@/content/index";
 import { allGrammarPatterns } from "@/content/grammar";
-import { n5ChapterIds } from "@/content/chapters";
+import { n5ChapterIds, b2ChapterIds } from "@/content/chapters";
 
 import n5Raw from "./n5.yaml";
 import n5GreetingsContRaw from "./n5-01-greetings-cont.yaml";
@@ -38,6 +40,7 @@ import n5AroundTownRaw from "./n5-19-around-town.yaml";
 import n5PastTenseRaw from "./n5-20-past-tense.yaml";
 import n5MealsRaw from "./n5-21-meals.yaml";
 import n5PeopleClothesRaw from "./n5-22-people-clothes.yaml";
+import b2PlainFormRaw from "./b2-01-plain-form.yaml";
 
 const knownWordIds = new Set(allWords.map((w) => w.id));
 const knownPhraseIds = new Set(allPhrases.map((p) => p.id));
@@ -87,6 +90,23 @@ export const n5Lessons: Lesson[] = [
    */
   .filter((u) => hanaEnabled || (u.checkpoint !== "conversation" && u.checkpoint !== "can-do"));
 
+/**
+ * Book Two, chapter 1. Orders continue Book One's rather than restarting: they
+ * are global across the course, because scripts/kanji.mjs sorts every lesson
+ * file by `order` with no idea which book a lesson came from.
+ *
+ * No Hana filter here, unlike n5Lessons: nothing in this book is gated on the
+ * shelved AI. Add one if that ever changes.
+ */
+export const b2Lessons: Lesson[] = parseLessons(
+  b2PlainFormRaw,
+  "lessons/b2-01-plain-form.yaml",
+  knownWordIds,
+  knownPhraseIds,
+  knownPatternIds,
+  b2ChapterIds,
+);
+
 export function findLesson(id: string): Lesson | undefined {
-  return n5Lessons.find((u) => u.id === id);
+  return [...n5Lessons, ...b2Lessons].find((u) => u.id === id);
 }

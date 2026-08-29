@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
-import { bookOne, books, priorBooks } from "./books";
-import { n5Lessons } from "./lessons";
-import { n5Chapters } from "./chapters";
+import { bookOne, bookTwo, books, priorBooks } from "./books";
+import { n5Lessons, b2Lessons } from "./lessons";
+import { n5Chapters, b2Chapters } from "./chapters";
 
 describe("bookOne", () => {
   it("has an id that does not claim the book is a JLPT level (DR-033)", () => {
@@ -36,7 +36,51 @@ describe("bookOne", () => {
     expect(priorBooks(bookOne)).toEqual([]);
   });
 
-  it("is the whole ladder until Book Two's content exists", () => {
-    expect(books).toEqual([bookOne]);
+});
+
+describe("bookTwo", () => {
+  it("has an id that does not claim the book is a JLPT level (DR-033)", () => {
+    expect(bookTwo.id).toBe("book-2");
+  });
+
+  it("keys progress on the book, not on a level", () => {
+    // Frozen from the moment this ships: the first learner to open Book Two
+    // writes a PathProgress row on this string. "n4" would key progress on a
+    // JLPT level, which is the thing DR-033 stopped a book from being; Book
+    // One's "n5" survives only because it predates the decision.
+    expect(bookTwo.progressKey).toBe("book-2");
+  });
+
+  it("is the second book and reads as 'Book Two', never 'N4' (DR-024)", () => {
+    expect(bookTwo.order).toBe(2);
+    expect(bookTwo.title).toBe("Book Two");
+  });
+
+  it("wraps its own ladder and chapter list without copying", () => {
+    expect(bookTwo.lessons).toBe(b2Lessons);
+    expect(bookTwo.chapters).toBe(b2Chapters);
+  });
+
+  it("is a building book — romaji is cut, recall is the default gate", () => {
+    expect(bookTwo.stage).toBe("building");
+  });
+
+  it("carries Book One behind it, so its sessions keep surfacing Book One items", () => {
+    expect(priorBooks(bookTwo)).toEqual([bookOne]);
+  });
+});
+
+describe("the course", () => {
+  it("runs Book One then Book Two", () => {
+    expect(books).toEqual([bookOne, bookTwo]);
+  });
+
+  it("gives every book a distinct progress key", () => {
+    const keys = books.map((b) => b.progressKey);
+    expect(new Set(keys).size).toBe(keys.length);
+  });
+
+  it("orders books 1..N with no gap", () => {
+    expect(books.map((b) => b.order)).toEqual(books.map((_, i) => i + 1));
   });
 });
