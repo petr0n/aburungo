@@ -490,6 +490,9 @@ never reached.
 
 ## 6a. Open, deferred by the owner — fresh verbs (not re-litigated here)
 
+> **Settled 2026-08-29 — no fresh verbs.** The reuse-only variant below is the one that ships. The policy and its reasoning are in [03 §4](03-book-two.md); this section is kept for the analysis that informed it.
+
+
 Whether Book Two's rule chapters bring fresh verbs (te-form style) or drill only Book One's 87 verbs
 (chapter 1's style) is one decision for all seven rule chapters, deferred by the owner. Not argued
 here.

@@ -165,6 +165,33 @@ Japanese and sits naturally beside 〜と言っていました. That is what sto
 reading stage after them, landing on a learner who cannot parse a passive sentence. **Causative, and
 production of both, open the next book.** Neither costs a chapter slot here.
 
+**Rule chapters bring no fresh verbs** (decided 2026-08-29). They drill the 87 verbs Book One
+already teaches, every one tagged with its `verb_class`.
+
+The te-form chapter is this book's template and made the opposite call, so the reason it does not
+transfer matters. That chapter's rule is **per-group** — each lesson taught one row of a
+conjugation table, and a row needs verbs sitting in it — and at that point in Book One the ぐ, ぬ
+and ぶ endings were thinly covered, so the chapter had to supply them. Neither condition survives.
+Book Two's rules attach **uniformly**: ない is one rule across all eight godan endings, and から,
+ので, けど, ながら and とき attach to the plain form with no ending-specific behaviour. And the
+coverage gap has closed — る 46, く 11, う 8, す 7, む 5, つ 3, ぐ 3, ぶ 3, ぬ 1, where ぬ is a
+one-verb class in the language rather than a hole in the content.
+
+The positive reason is §2's own through-line. Recombination means *verbs the learner already owns,
+conjugated into forms they don't*. A learner conjugating unfamiliar verbs is not recombining
+anything, and it would specifically dilute chapter 1, whose payload is that the shape they have
+been reading for a hundred lessons is a form with a family.
+
+It is also the book's only mechanism for **contextual** repetition. The SRS re-surfaces an item as
+the same card; a rule chapter is where an owned verb comes back doing new work. Book One managed
+that for 11 of its 484 words. Spending seven rule chapters on owned verbs is what makes Book Two
+different.
+
+The cost, accepted knowingly: chapter 5 argued that after four chapters of the same 87 verbs,
+"this rule works on any verb" is a stronger demonstration on unfamiliar material. That is real, and
+it is the smaller loss. It would also have lifted the book's very low new-kanji count — which is a
+symptom of the same choice, not an independent argument for reversing it.
+
 Situation chapters still follow the Book One rule: check what is already taught before authoring,
 or a chapter shrinks from "adjectives" to "the body and the pairs" the hard way. The three above
 were checked against Book One's content on 2026-08-24 — every one has a footing in words already

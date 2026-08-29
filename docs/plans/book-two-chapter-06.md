@@ -359,6 +359,9 @@ wants the chapter tighter: **removing lesson 4 takes this chapter to 5 teaching 
 
 ## 6. Sensitivity to the open verb-scope question
 
+> **Settled 2026-08-29 — no fresh verbs.** The reuse-only variant below is the one that ships. The policy and its reasoning are in [03 §4](03-book-two.md); this section is kept for the analysis that informed it.
+
+
 **This design is somewhat sensitive to it, less than a fresh-material chapter would be, and the
 sensitivity is concentrated in one place.**
 

@@ -478,8 +478,13 @@ fresh kanji. So §6's claim that rule chapters structurally cannot meet 03 §3's
 does not hold as stated: this chapter's shortfall follows from §5.3's own choice to bring no
 verbs, rather than from anything about rule chapters.
 
-Accepted as written for now. Revisit before authoring, and settle it for the other six rule
-chapters at the same time — it is one decision, not seven.
+**Settled 2026-08-29: no fresh verbs, in this chapter or any rule chapter.** §5.3's argument
+stands, and the evidence that closed it came from the other chapters — chapter 6 verified that
+every godan ending is now populated (る 46, く 11, う 8, す 7, む 5, つ 3, ぐ 3, ぶ 3, ぬ 1), so the
+coverage gap that forced the te-form chapter's hand no longer exists. Chapter 5's staleness
+counter-argument was weighed and accepted as the smaller cost. The policy and its full reasoning
+are in [03 §4](03-book-two.md); this section is kept because it is where the question was first
+raised.
 
 ## 7. Authoring checklist
 

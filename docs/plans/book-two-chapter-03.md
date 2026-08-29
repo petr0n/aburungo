@@ -423,6 +423,9 @@ One's `n5-04-transit.yaml`. This chapter could ship with `kanji: []` on every le
 
 ### 5.5 Sensitivity to the deferred fresh-verbs question
 
+> **Settled 2026-08-29 — no fresh verbs.** The reuse-only variant below is the one that ships. The policy and its reasoning are in [03 §4](03-book-two.md); this section is kept for the analysis that informed it.
+
+
 **This chapter is not sensitive to it, and that is worth stating plainly rather than assuming.**
 The open question — whether Book Two's rule chapters bring fresh verbs, as the te-form chapter did,
 or drill only Book One's 87 — matters most where a rule has verb-group structure a fresh verb is

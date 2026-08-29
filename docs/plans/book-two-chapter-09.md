@@ -400,6 +400,9 @@ hypothesis). That is a named leftover, and a real one — worth flagging to the 
 
 ### 5.2 Fresh verbs — sensitivity flagged, not argued
 
+> **Settled 2026-08-29 — no fresh verbs.** The reuse-only variant below is the one that ships. The policy and its reasoning are in [03 §4](03-book-two.md); this section is kept for the analysis that informed it.
+
+
 The open owner decision — whether Book Two's rule chapters bring fresh verbs, as the te-form
 chapter did, or drill only Book One's 87 — is one decision for all seven rule chapters, and this
 document does not re-argue it. This chapter's design is **moderately sensitive** to the answer:

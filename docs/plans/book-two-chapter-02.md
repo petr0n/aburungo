@@ -400,6 +400,9 @@ link explicitly (§3) so it is a planned sequel rather than a gap chapter 6 has 
 
 ## 6. Open, deferred by the owner — sensitivity to the fresh-verbs decision
 
+> **Settled 2026-08-29 — no fresh verbs.** The reuse-only variant below is the one that ships. The policy and its reasoning are in [03 §4](03-book-two.md); this section is kept for the analysis that informed it.
+
+
 [03 §4](03-book-two.md) defers, once, whether Book Two's rule chapters bring fresh verbs the way
 the te-form chapter did, or drill only Book One's 87. Not re-litigated here. **手伝う is no longer
 part of that question.** See lesson 6: chapter 10 (Trouble) independently proposed the same word,

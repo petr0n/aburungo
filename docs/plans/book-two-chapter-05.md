@@ -352,6 +352,9 @@ vocabulary, so it is the chapter's one genuinely new word.
 
 ### 5.3 Sensitivity to the fresh-verbs decision (deferred, not re-litigated)
 
+> **Settled 2026-08-29 — no fresh verbs.** The reuse-only variant below is the one that ships. The policy and its reasoning are in [03 §4](03-book-two.md); this section is kept for the analysis that informed it.
+
+
 This chapter's design **is** sensitive to whether Book Two's rule chapters bring fresh verbs, more
 than chapter 1's was, and it is worth naming precisely where.
 
