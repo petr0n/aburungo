@@ -1,0 +1,93 @@
+# Book Two, Chapter 1 vocabulary — the words the payoffs need.
+#
+# A rule chapter about verbs that brings no verbs. That is the point of the
+# chapter: every verb it conjugates is one the learner already owns, so the
+# discovery is "the shape I have been reading is a form with a family" rather
+# than "here are more words". Bringing fresh verbs would dilute exactly that.
+#
+# So the six words here are not there to exercise the rule. They are the words
+# the payoff patterns cannot be phrased without:
+#
+#   こと, 一度, 回   〜たことがある needs a nominaliser and a way to count
+#   うん, ううん      the casual answers, which replace はい and いいえ
+#   音楽             〜たり〜たり lists leisure, and the ladder's leisure nouns
+#                    are thin -- 買い物, 料理, 仕事 and little else
+#
+# 一度 is not a duplicate of もういちど. That entry is written in kana and means
+# "one more time"; this one is written 一度 and means "once, on one occasion",
+# which is what the experience pattern counts with.
+#
+# content-source: training — headwords, readings, part of speech and glosses
+#   verified against JMdict for Applications 3.6.2 on 2026-08-29, sequence
+#   numbers inline. All six are flagged common in JMdict.
+# jlpt-source: training — JLPT level unverified (JMdict carries no JLPT data).
+#   音楽 appears in both reference lists at N5; 一度, うん and こと in both at N4;
+#   回 as a counter at N5 in open-anki and as a bare noun at N3 in Tanos, and it
+#   is tagged here for the counter use the chapter teaches. ううん appears in
+#   neither list and is tagged to match うん, its own pair.
+
+# ── The experience pattern (Lesson 8) ─────────────────────────────────────────
+
+- id: vocab.koto
+  jlpt: N4
+  word_type: noun
+  theme: basics
+  japanese: こと
+  reading: こと
+  romaji: koto
+  english: thing, matter
+  notes: Written in kana in this use, though it has the kanji 事 you know from 仕事. It turns a whole action into a noun — 食べたこと is "the eating of it", which is what 〜たことがある is counting. JMdict seq 1313580.
+
+- id: vocab.ichido
+  jlpt: N4
+  word_type: adverb
+  theme: time
+  japanese: 一度
+  reading: いちど
+  romaji: ichido
+  english: once, one time
+  notes: The 度 is a count of occasions. Not the もういちど you say when you did not catch something — that one is written in kana and means "one more time". JMdict seq 1576250.
+
+- id: vocab.kai
+  jlpt: N5
+  word_type: counter
+  theme: counting
+  japanese: 回
+  reading: かい
+  romaji: kai
+  english: times (counter for occurrences)
+  notes: 二回, 三回, 四回 are plain. One, six, eight and ten double the k — いっかい, ろっかい, はっかい, じゅっかい — the same sound change you met on 階, the floors of a building. JMdict seq 1199330.
+
+# ── Answering a friend (Lesson 7) ─────────────────────────────────────────────
+
+- id: vocab.un
+  jlpt: N4
+  word_type: interjection
+  theme: basics
+  japanese: うん
+  reading: うん
+  romaji: un
+  english: yes (casual)
+  notes: What はい becomes between friends. Said to a stranger it is too familiar, so the rule is the same as the whole chapter's — when in doubt, はい. JMdict seq 1001090.
+
+- id: vocab.uun
+  jlpt: N4
+  word_type: interjection
+  theme: basics
+  japanese: ううん
+  reading: ううん
+  romaji: uun
+  english: no (casual)
+  notes: One kana longer than うん and the opposite answer, which is why it is worth saying slowly at first. The length is the whole difference. JMdict seq 2002400.
+
+# ── Listing what you do (Lesson 9) ────────────────────────────────────────────
+
+- id: vocab.ongaku
+  jlpt: N5
+  word_type: noun
+  theme: leisure
+  japanese: 音楽
+  reading: おんがく
+  romaji: ongaku
+  english: music
+  notes: The verb is 聞く, which you have as "to listen, to ask" — 音楽を聞く is how you say you listen to music. JMdict seq 1183720.

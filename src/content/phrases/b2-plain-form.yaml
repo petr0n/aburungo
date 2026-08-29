@@ -1,0 +1,319 @@
+# Book Two, Chapter 1 phrases — plain form, said out loud.
+#
+# Every sentence here is built from verbs and nouns the ladder already teaches,
+# conjugated into forms it never did. That is the chapter's whole payload, so
+# the sentences are deliberately plain: no new words carrying the interest, just
+# the form doing the work.
+#
+# Several are the exact twins of sentences the learner already has in polite
+# form, and they are chosen that way so the pairing is reviewable rather than
+# asserted -- 昨夜本を読んだ against 昨夜本を読みました, 昨日は暇だった against
+# 昨日は暇でした, 窓を開けないでください against 窓を開けてください.
+#
+# The register lesson's four sentences are four independent utterances. They are
+# not an exchange and must not be authored into one: a scripted dialogue is
+# multi-sentence composed text, which is the surface the content rules exist to
+# keep out.
+#
+# content-source: training — N5/N4 canonical, pending Tatoeba verification.
+#   JMdict cannot verify composed sentences (only fixed expressions are
+#   headwords), so sentence checks need Tatoeba, not JMdict. The shapes were
+#   checked against the Tatoeba-sourced examples bundled with JMdict for
+#   Applications 3.6.2 on 2026-08-29 -- 「英国へ行ったことがありますか。」and
+#   「私は彼に会ったことがある。」attest the experience pattern, 「息を深く吸ったり
+#   吐いたりしてください。」the listing pattern -- but no sentence below is a
+#   verbatim quotation, so none carries a Tatoeba id.
+# jlpt-source: training — the level marks the band this chapter sits in.
+
+# ── The form, named ───────────────────────────────────────────────────────────
+
+- id: plain.i-drink-coffee-every-day
+  jlpt: N4
+  scenario: casual
+  japanese: 毎日コーヒーを飲む。
+  reading: まいにちコーヒーをのむ。
+  romaji: mainichi koohii o nomu.
+  english: I drink coffee every day.
+
+- id: plain.im-seeing-a-film-tomorrow
+  jlpt: N4
+  scenario: casual
+  japanese: 明日、映画を見る。
+  reading: あした、えいがをみる。
+  romaji: ashita, eiga o miru.
+  english: I'm going to see a film tomorrow.
+
+# ── ない, the easy half ───────────────────────────────────────────────────────
+
+- id: plain.im-not-going-out-today
+  jlpt: N4
+  scenario: casual
+  japanese: 今日は出かけない。
+  reading: きょうはでかけない。
+  romaji: kyou wa dekakenai.
+  english: I'm not going out today.
+
+- id: plain.i-dont-eat-breakfast
+  jlpt: N4
+  scenario: casual
+  japanese: 朝ご飯は食べない。
+  reading: あさごはんはたべない。
+  romaji: asagohan wa tabenai.
+  english: I don't eat breakfast.
+
+- id: plain.i-do-nothing-on-sundays
+  jlpt: N4
+  scenario: casual
+  japanese: 日曜日は何もしない。
+  reading: にちようびはなにもしない。
+  romaji: nichiyoubi wa nanimo shinai.
+  english: I don't do anything on Sundays.
+
+# ── ない, the rest ────────────────────────────────────────────────────────────
+
+- id: plain.i-dont-drink-coffee
+  jlpt: N4
+  scenario: casual
+  japanese: コーヒーは飲まない。
+  reading: コーヒーはのまない。
+  romaji: koohii wa nomanai.
+  english: I don't drink coffee.
+
+- id: plain.im-not-buying-anything-today
+  jlpt: N4
+  scenario: casual
+  japanese: 今日は何も買わない。
+  reading: きょうはなにもかわない。
+  romaji: kyou wa nanimo kawanai.
+  english: I'm not buying anything today.
+
+- id: plain.i-dont-have-time
+  jlpt: N4
+  scenario: casual
+  japanese: 時間がない。
+  reading: じかんがない。
+  romaji: jikan ga nai.
+  english: I don't have time.
+
+- id: plain.im-not-going-to-work-tomorrow
+  jlpt: N4
+  scenario: casual
+  japanese: 明日は会社に行かない。
+  reading: あしたはかいしゃにいかない。
+  romaji: ashita wa kaisha ni ikanai.
+  english: I'm not going to work tomorrow.
+
+# ── なかった ─────────────────────────────────────────────────────────────────
+
+- id: plain.i-didnt-eat-anything-yesterday
+  jlpt: N4
+  scenario: casual
+  japanese: 昨日は何も食べなかった。
+  reading: きのうはなにもたべなかった。
+  romaji: kinou wa nanimo tabenakatta.
+  english: I didn't eat anything yesterday.
+
+- id: plain.i-didnt-go-to-japan-last-year
+  jlpt: N4
+  scenario: casual
+  japanese: 去年は日本に行かなかった。
+  reading: きょねんはにほんにいかなかった。
+  romaji: kyonen wa nihon ni ikanakatta.
+  english: I didn't go to Japan last year.
+
+- id: plain.i-didnt-have-any-money
+  jlpt: N4
+  scenario: casual
+  japanese: お金がなかった。
+  reading: おかねがなかった。
+  romaji: okane ga nakatta.
+  english: I didn't have any money.
+
+# ── た ───────────────────────────────────────────────────────────────────────
+
+- id: plain.i-read-a-book-last-night
+  jlpt: N4
+  scenario: casual
+  japanese: 昨夜本を読んだ。
+  reading: ゆうべほんをよんだ。
+  romaji: yuube hon o yonda.
+  english: I read a book last night.
+
+- id: plain.i-met-a-friend
+  jlpt: N4
+  scenario: casual
+  japanese: 友達に会った。
+  reading: ともだちにあった。
+  romaji: tomodachi ni atta.
+  english: I met a friend.
+
+- id: plain.i-watched-a-film
+  jlpt: N4
+  scenario: casual
+  japanese: 映画を見た。
+  reading: えいがをみた。
+  romaji: eiga o mita.
+  english: I watched a film.
+
+- id: plain.i-went-to-school
+  jlpt: N4
+  scenario: casual
+  japanese: 学校に行った。
+  reading: がっこうにいった。
+  romaji: gakkou ni itta.
+  english: I went to school.
+
+# ── だ ───────────────────────────────────────────────────────────────────────
+
+- id: plain.im-a-student
+  jlpt: N4
+  scenario: casual
+  japanese: 私は学生だ。
+  reading: わたしはがくせいだ。
+  romaji: watashi wa gakusei da.
+  english: I'm a student.
+
+- id: plain.its-quiet-here
+  jlpt: N4
+  scenario: casual
+  japanese: ここは静かだ。
+  reading: ここはしずかだ。
+  romaji: koko wa shizuka da.
+  english: It's quiet here.
+
+- id: plain.i-was-free-yesterday
+  jlpt: N4
+  scenario: casual
+  japanese: 昨日は暇だった。
+  reading: きのうはひまだった。
+  romaji: kinou wa hima datta.
+  english: I was free yesterday.
+
+- id: plain.that-person-isnt-a-teacher
+  jlpt: N4
+  scenario: casual
+  japanese: あの人は先生じゃない。
+  reading: あのひとはせんせいじゃない。
+  romaji: ano hito wa sensei ja nai.
+  english: That person isn't a teacher.
+
+# ── Talking like a friend ─────────────────────────────────────────────────────
+# Four separate things a person might say, not four turns of one conversation.
+
+- id: plain.are-you-busy-today
+  jlpt: N4
+  scenario: casual
+  japanese: 今日、忙しい？
+  reading: きょう、いそがしい？
+  romaji: kyou, isogashii?
+  english: Busy today?
+
+- id: plain.yes-got-it
+  jlpt: N4
+  scenario: casual
+  japanese: うん、わかった。
+  reading: うん、わかった。
+  romaji: un, wakatta.
+  english: Yeah, got it.
+
+- id: plain.no-im-not-going
+  jlpt: N4
+  scenario: casual
+  japanese: ううん、行かない。
+  reading: ううん、いかない。
+  romaji: uun, ikanai.
+  english: No, I'm not going.
+
+- id: plain.im-meeting-a-friend-tomorrow
+  jlpt: N4
+  scenario: casual
+  japanese: 明日、友達に会う。
+  reading: あした、ともだちにあう。
+  romaji: ashita, tomodachi ni au.
+  english: I'm meeting a friend tomorrow.
+
+# ── Things you have done ──────────────────────────────────────────────────────
+
+- id: plain.ive-been-to-japan-once
+  jlpt: N4
+  scenario: casual
+  japanese: 日本に一度行ったことがあります。
+  reading: にほんにいちどいったことがあります。
+  romaji: nihon ni ichido itta koto ga arimasu.
+  english: I have been to Japan once.
+
+- id: plain.ive-never-swum-in-the-sea
+  jlpt: N4
+  scenario: casual
+  japanese: 海で泳いだことがない。
+  reading: うみでおよいだことがない。
+  romaji: umi de oyoida koto ga nai.
+  english: I have never swum in the sea.
+
+- id: plain.have-you-ever-eaten-sushi
+  jlpt: N4
+  scenario: casual
+  japanese: すしを食べたことがありますか。
+  reading: すしをたべたことがありますか。
+  romaji: sushi o tabeta koto ga arimasu ka.
+  english: Have you ever eaten sushi?
+
+- id: plain.ive-climbed-the-mountain-twice
+  jlpt: N4
+  scenario: casual
+  japanese: 山に二回登ったことがあります。
+  reading: やまににかいのぼったことがあります。
+  romaji: yama ni nikai nobotta koto ga arimasu.
+  english: I have climbed the mountain twice.
+
+# ── Doing this and that ───────────────────────────────────────────────────────
+
+- id: plain.on-sundays-i-read-and-listen-to-music
+  jlpt: N4
+  scenario: casual
+  japanese: 日曜日は本を読んだり音楽を聞いたりします。
+  reading: にちようびはほんをよんだりおんがくをきいたりします。
+  romaji: nichiyoubi wa hon o yondari ongaku o kiitari shimasu.
+  english: On Sundays I read, listen to music, that sort of thing.
+
+- id: plain.on-saturdays-i-shop-and-cook
+  jlpt: N4
+  scenario: casual
+  japanese: 土曜日は買い物をしたり料理をしたりします。
+  reading: どようびはかいものをしたりりょうりをしたりします。
+  romaji: doyoubi wa kaimono o shitari ryouri o shitari shimasu.
+  english: On Saturdays I shop, cook, that sort of thing.
+
+- id: plain.do-you-see-friends-and-watch-films
+  jlpt: N4
+  scenario: casual
+  japanese: 友達と遊んだり映画を見たりしますか。
+  reading: ともだちとあそんだりえいがをみたりしますか。
+  romaji: tomodachi to asondari eiga o mitari shimasu ka.
+  english: Do you see friends, watch films, that sort of thing?
+
+# ── Asking someone not to ─────────────────────────────────────────────────────
+
+- id: plain.please-dont-open-the-window
+  jlpt: N4
+  scenario: casual
+  japanese: 窓を開けないでください。
+  reading: まどをあけないでください。
+  romaji: mado o akenaide kudasai.
+  english: Please don't open the window.
+
+- id: plain.please-dont-forget
+  jlpt: N4
+  scenario: casual
+  japanese: 忘れないでください。
+  reading: わすれないでください。
+  romaji: wasurenaide kudasai.
+  english: Please don't forget.
+
+- id: plain.please-dont-run-here
+  jlpt: N4
+  scenario: casual
+  japanese: ここで走らないでください。
+  reading: ここではしらないでください。
+  romaji: koko de hashiranaide kudasai.
+  english: Please don't run here.

@@ -1,0 +1,344 @@
+# Chapter 1 — Talking like a friend.
+#
+# The book opens on a debt, not on new material. Every verb card in Book One
+# shows a dictionary form -- 食べる, 待つ, 帰る -- so the learner has been
+# reading plain form since the first lesson and has never been told it is a
+# form, that it has a negative and a past, or that it sits in front of half of
+# what Book Two teaches. A whole book of recognition and nothing built on it.
+# This chapter is that debt paid, the same way the te-form and past-tense
+# chapters paid theirs.
+#
+# The split is uneven on purpose, because the four forms are not equally hard.
+#
+# た costs one lesson because the te-form chapter already paid for it. That
+# chapter sorted godan verbs into く→いて, う・つ・る→って and む・ぬ・ぶ・す→んで.
+# た is that same table with て→た and で→だ, 行った exception included. A learner
+# who did the te-form chapter gets the entire plain past for the price of one
+# rule.
+#
+# ない costs two, and they are not the te-form's two. ない ignores the te-form
+# grouping entirely: every godan verb moves its last sound to the あ row, one
+# rule for all eight endings, which is why the godan half is a single lesson
+# rather than three. What it does have is two exceptions the te-form never
+# mentioned -- う becomes わない, not あない, and ある becomes ない outright --
+# so those get the room the groups do not need.
+#
+# だ gets its own lesson because dropping ます without it leaves a learner
+# saying 学生です to a friend: half-plain, which is worse than either register.
+# And the lesson after it is where the forms stop being a table -- when to use
+# them, and the うん / ううん that go with them.
+#
+# The three payoff patterns take a lesson each. They are cheap to build and not
+# cheap to use, and this chapter splits by what a learner can say, not by what
+# a rule costs to state.
+#
+#    1  the form, named        dictionary form is a form; plain and polite
+#    2  ない, the easy half    ichidan, する, 来る
+#    3  ない, godan            the あ row; う→わない and ある→ない
+#    4  なかった               ない inflects like an い-adjective
+#    5  た                     the te-form table, one substitution
+#    6  だ                     です／でした／じゃない, unpoliced
+#    7  talking like a friend  register, dropped か, うん and ううん
+#    8  ～たことがある          experience, not a past event
+#    9  ～たり～たり           listing what you do, and the する at the end
+#   10  ～ないでください        the twin of Book One's ～てください
+#
+# Lessons 8, 9 and 10 depend on 3 and 5, and lesson 7 depends on 6, so this
+# chapter must not be split by a checkpoint -- the same constraint as the
+# te-form and past-tense chapters.
+#
+# `wordIds` here is mostly Book One's own ids, which is unusual and deliberate.
+# The chapter brings no verbs, so re-listing an owned verb in the lesson that
+# conjugates it is the only mechanism the ladder has for contextual repetition
+# -- the same thing Book One does for the handful of words it teaches twice --
+# and it is what gives this chapter's checkpoint something to recognise, since
+# a checkpoint quizzes the wordIds of the lessons before it inside its own book.
+#
+# The `kanji:` arrays are empty and should not stay that way. This chapter's
+# new words bring three characters no lesson teaches yet -- 度 and 回 with 一度
+# and the counter, 音 with 音楽; 楽 and 事 are already taught, so こと and 音楽
+# cost less than they look. Three is a fraction of what a situation chapter
+# brings, and that is the honest consequence of a chapter that teaches no new
+# verbs rather than something to pad.
+#
+# They are held back because a character in a lesson's array must also have a
+# row in the generated kanji set, in its decomposition, and in the component
+# layer -- and the component layer is built from the *registered* ladder, so it
+# cannot resolve a lesson that is not wired in yet. Adding them here turns
+# src/content/kanji/scope.test.ts red. When this file is wired into the lessons
+# index and the book: put 度 and 回 on the experience lesson and 音 on the
+# listing lesson, then rerun `node scripts/kanji.mjs build` and `decompose`.
+# Both were verified to work for these three -- kanjiapi.dev has all three, and
+# every component they decompose into already has a keyword.
+#
+# content-source: n/a for this file -- it references vocabulary/b2-plain-form.yaml
+#   and phrases/b2-plain-form.yaml, whose own provenance markers apply.
+
+- id: b2.plain-dictionary
+  order: 103
+  chapterId: b2.chapter-1
+  situation: Talking like a friend
+  title: The form you have been reading
+  canDo: Recognise the plain form of any verb you know, and say which register you are in
+  wordIds:
+    - vocab.kaku
+    - vocab.matsu
+    - vocab.nomu
+    - vocab.kaeru
+    - vocab.taberu
+    - vocab.miru
+    - vocab.suru
+    - vocab.kuru
+  phraseIds:
+    - plain.i-drink-coffee-every-day
+    - plain.im-seeing-a-film-tomorrow
+  kanji: []
+  patternId: grammar.b2-plain-dictionary
+  grammarNote: "You have been reading this form since your first verb card. 食べる, 待つ, 帰る — that is not just how a word is listed in a dictionary, it is a tense: the plain non-past, and the casual twin of ます. To get from one to the other, move the sound in front of ます from the い row to the う row. 書きます → 書く, 待ちます → 待つ, 飲みます → 飲む. An ichidan verb simply puts る back: 食べます → 食べる. する and 来る stand on their own. Polite is what you already have. Plain is what goes to friends, to family, and to yourself — and, the half that matters most, it is what sits in front of other grammar. The last three lessons of this chapter attach to the plain form and not to ます, and so does most of what comes after them. This lesson teaches no new words on purpose. Every verb in it is one you already own."
+
+- id: b2.plain-nai-ichidan
+  order: 104
+  chapterId: b2.chapter-1
+  situation: Talking like a friend
+  title: Saying you don't, the easy half
+  canDo: Say you do not do something, casually, with ichidan verbs
+  wordIds:
+    - vocab.taberu
+    - vocab.miru
+    - vocab.neru
+    - vocab.okiru
+    - vocab.wasureru
+    - vocab.oboeru
+    - vocab.deru
+    - vocab.suru
+    - vocab.kuru
+  phraseIds:
+    - plain.im-not-going-out-today
+    - plain.i-dont-eat-breakfast
+    - plain.i-do-nothing-on-sundays
+  kanji: []
+  patternId: grammar.b2-plain-nai-ichidan
+  grammarNote: "The plain negative starts the same way the te-form did — with the easy half. An ichidan verb drops る and adds ない: 食べる → 食べない, 見る → 見ない, 忘れる → 忘れない. The two irregulars come free again: する → しない. 来る is the one to watch, because the reading moves. 来ない is こない, not くない, and it is the only place in the language where that character changes its sound to make a negative. Say it out loud a few times now and it will stay put. Godan verbs are the other half, and unlike the te-form they take one lesson, not three."
+
+- id: b2.plain-nai-godan
+  order: 105
+  chapterId: b2.chapter-1
+  situation: Talking like a friend
+  title: Saying you don't, the rest
+  canDo: Say you do not do something, casually, with any verb
+  wordIds:
+    - vocab.kaku
+    - vocab.isogu
+    - vocab.hanasu
+    - vocab.matsu
+    - vocab.shinu
+    - vocab.yobu
+    - vocab.yomu
+    - vocab.kaeru
+    - vocab.kau
+    - vocab.au
+    - vocab.aru
+    - vocab.hashiru
+  phraseIds:
+    - plain.i-dont-drink-coffee
+    - plain.im-not-buying-anything-today
+    - plain.i-dont-have-time
+    - plain.im-not-going-to-work-tomorrow
+  kanji: []
+  patternId: grammar.b2-plain-nai-godan
+  grammarNote: "Here the te-form's three groups collapse into one rule: move the last sound to the あ row and add ない. 書く → 書かない, 急ぐ → 急がない, 話す → 話さない, 待つ → 待たない, 死ぬ → 死なない, 呼ぶ → 呼ばない, 読む → 読まない, 帰る → 帰らない. Eight endings, one move. Two verbs refuse. A verb ending in う takes わない, not あない — 買う → 買わない, 会う → 会わない — and ある has no negative of its own at all: it simply becomes ない, never あらない. The trap from the te-form chapter is still live here, so keep watching for it: a verb ending in る is not automatically ichidan. 帰る → 帰らない and 走る → 走らない, because both are godan."
+
+- id: b2.plain-nakatta
+  order: 106
+  chapterId: b2.chapter-1
+  situation: Talking like a friend
+  title: Saying you didn't
+  canDo: Say what you did not do, casually
+  wordIds:
+    - vocab.taberu
+    - vocab.iku
+    - vocab.wakaru
+    - vocab.aru
+    - vocab.suru
+    - vocab.takai
+    - vocab.samui
+  phraseIds:
+    - plain.i-didnt-eat-anything-yesterday
+    - plain.i-didnt-go-to-japan-last-year
+    - plain.i-didnt-have-any-money
+  kanji: []
+  patternId: grammar.b2-plain-nakatta
+  grammarNote: "This is the cheapest lesson in the chapter, and you paid for it in Book One without being told. ない ends in い and behaves like any other い-adjective, so its past is the かった rule you already have from 高い → 高かった and 寒い → 寒かった. Drop the い, add かった: 食べない → 食べなかった, 行かない → 行かなかった, わからない → わからなかった, ない → なかった. There is no exception anywhere in this one — every verb in the language, both classes and both irregulars, negates and then inflects exactly this way. What Book One never said is that the かった rule generalises. It does, and this is where it pays."
+
+- id: b2.plain-ta
+  order: 107
+  chapterId: b2.chapter-1
+  situation: Talking like a friend
+  title: Saying you did
+  canDo: Say what you did, casually, with any verb
+  wordIds:
+    - vocab.taberu
+    - vocab.kaku
+    - vocab.oyogu
+    - vocab.matsu
+    - vocab.kau
+    - vocab.toru
+    - vocab.nomu
+    - vocab.yobu
+    - vocab.shinu
+    - vocab.hanasu
+    - vocab.iku
+    - vocab.suru
+    - vocab.kuru
+  phraseIds:
+    - plain.i-read-a-book-last-night
+    - plain.i-met-a-friend
+    - plain.i-watched-a-film
+    - plain.i-went-to-school
+  kanji: []
+  patternId: grammar.b2-plain-ta
+  grammarNote: "This lesson is short because you already did the work. Take the te-form of any verb and swap て for た, で for だ. That is the entire plain past. 食べて → 食べた, 書いて → 書いた, 泳いで → 泳いだ, 待って → 待った, 買って → 買った, 飲んで → 飲んだ, 呼んで → 呼んだ, 話して → 話した. The one exception you already learned stays the one exception: 行って → 行った. する → した, 来て → 来た. Nothing new is being asked of you here — three lessons of sorting verbs into groups in the te-form chapter bought the whole past tense, and this is where you collect. If the te-form feels rusty, it is worth a moment before the next lesson, because two of the three patterns that close this chapter are built on た."
+
+- id: b2.plain-da
+  order: 108
+  chapterId: b2.chapter-1
+  situation: Talking like a friend
+  title: Sentences without です
+  canDo: Say what something is, casually
+  wordIds:
+    - vocab.gakusei
+    - vocab.sensei
+    - vocab.tomodachi
+    - vocab.nihon
+    - vocab.genki
+    - vocab.hima
+    - vocab.yuumei
+    - vocab.shizuka
+    - vocab.takai
+    - vocab.omoshiroi
+    - vocab.samui
+  phraseIds:
+    - plain.im-a-student
+    - plain.its-quiet-here
+    - plain.i-was-free-yesterday
+    - plain.that-person-isnt-a-teacher
+  kanji: []
+  patternId: grammar.b2-plain-da
+  grammarNote: "Verbs are not the whole of casual speech. です has a plain form too, and it is だ. Four shapes, and you own all four already in their polite dress: です → だ, でした → だった, じゃないです → じゃない, じゃなかったです → じゃなかった. Two things about だ are genuinely new. It is dropped constantly in speech — before ね and よ, and in questions, where 学生だ？ sounds blunt and 学生？ is what people say — so hearing no だ does not mean the sentence was polite. And it never follows an い-adjective. 高いです becomes 高い and stops there; 高いだ is wrong. な-adjectives and nouns take it, い-adjectives stand alone. Get this one wrong and you get the half-plain sentence that gives a learner away: ます dropped, です kept."
+
+- id: b2.plain-casual
+  order: 109
+  chapterId: b2.chapter-1
+  situation: Talking like a friend
+  title: Talking like a friend
+  canDo: Hold a short casual exchange without ます or です
+  wordIds:
+    - vocab.un
+    - vocab.uun
+    - vocab.hai
+    - vocab.iie
+    - vocab.tomodachi
+    - vocab.sensei
+    - vocab.iku
+    - vocab.taberu
+    - vocab.miru
+  phraseIds:
+    - plain.are-you-busy-today
+    - plain.yes-got-it
+    - plain.no-im-not-going
+    - plain.im-meeting-a-friend-tomorrow
+  kanji: []
+  patternId: grammar.b2-plain-casual
+  grammarNote: "Now the part no conjugation table can tell you: where these forms land. Plain form goes to friends, to family, and to people younger or junior to you. Polite goes to everyone else — and when you are not sure, polite. The two mistakes are not the same size: plain form aimed at a stranger is a real error, while polite form aimed at a friend is only a little stiff, and people will simply tell you to relax. Two habits come with the register. A plain question drops か and rises at the end instead — 行く？ not 行くか — and か on a plain sentence sounds brusque rather than polite. And はい and いいえ become うん and ううん, which differ by one kana and mean opposite things, so they are worth saying slowly until they are steady."
+
+- id: b2.ta-koto-ga-aru
+  order: 110
+  chapterId: b2.chapter-1
+  situation: Talking like a friend
+  title: Things you have done
+  canDo: Say whether you have ever done something
+  wordIds:
+    - vocab.koto
+    - vocab.ichido
+    - vocab.kai
+    - vocab.iku
+    - vocab.taberu
+    - vocab.miru
+    - vocab.au
+    - vocab.noboru
+    - vocab.oyogu
+    - vocab.nihon
+    - vocab.sushi
+    - vocab.eiga
+    - vocab.yama
+    - vocab.umi
+    - vocab.ryokou
+  phraseIds:
+    - plain.ive-been-to-japan-once
+    - plain.ive-never-swum-in-the-sea
+    - plain.have-you-ever-eaten-sushi
+    - plain.ive-climbed-the-mountain-twice
+  kanji: []
+  patternId: grammar.b2-ta-koto-ga-aru
+  grammarNote: "The form is one line: plain past + ことがある. 行ったことがある, 食べたことがある. Polite, it is ことがあります, and you will want that version with a stranger. The concept is the lesson. English uses the same past tense for two different things — \"I went to Japan\" is an event that happened, \"I have been to Japan\" is an experience you carry — and Japanese does not. 日本に行きました is a trip you took, on a day, and it invites the question when. 日本に行ったことがあります is a thing you have done at some point in your life, and the when is not the point. Reach for 行きました when you mean the second and you will be understood, but you will have said something slightly different from what you meant. For never, the ある becomes ない: 食べたことがない. To count, put 一度 or 二回 in front of the verb."
+
+- id: b2.tari-tari
+  order: 111
+  chapterId: b2.chapter-1
+  situation: Talking like a friend
+  title: Doing this and that
+  canDo: List a couple of things you do, without listing all of them
+  wordIds:
+    - vocab.ongaku
+    - vocab.yomu
+    - vocab.miru
+    - vocab.kaku
+    - vocab.arau
+    - vocab.yasumu
+    - vocab.asobu
+    - vocab.utau
+    - vocab.kiku
+    - vocab.kaimono
+    - vocab.ryouri
+    - vocab.shigoto
+  phraseIds:
+    - plain.on-sundays-i-read-and-listen-to-music
+    - plain.on-saturdays-i-shop-and-cook
+    - plain.do-you-see-friends-and-watch-films
+  kanji: []
+  patternId: grammar.b2-tari-tari
+  grammarNote: "Take the plain past, add り, do it twice, and finish with する: 読んだり音楽を聞いたりします. The する at the end is the trap, because nothing in the pattern looks like it needs a verb of its own — but the たり forms are not the sentence's verb, they are a list, and する is what makes the list into a sentence. Two more things worth having straight. This lists things that are representative, not sequential: it means \"I read, listen to music, that sort of thing\", not \"I read and then listened to music\". Sequence is て's job, and て as a connector is coming. And two items is the natural number rather than a limit — one たり on its own is fine and implies there is more, three is possible and starts to sound like a list."
+
+- id: b2.nai-de-kudasai
+  order: 112
+  chapterId: b2.chapter-1
+  situation: Talking like a friend
+  title: Asking someone not to
+  canDo: Ask someone not to do something
+  wordIds:
+    - vocab.wasureru
+    - vocab.akeru
+    - vocab.osu
+    - vocab.hashiru
+    - vocab.hairu
+    - vocab.kesu
+    - vocab.suru
+  phraseIds:
+    - plain.please-dont-open-the-window
+    - plain.please-dont-forget
+    - plain.please-dont-run-here
+  kanji: []
+  patternId: grammar.b2-nai-de-kudasai
+  grammarNote: "You have had 〜てください since the te-form chapter. This is its twin: put the ない form where the te-form went, add で, and keep ください. 開けてください → 開けないでください, 忘れないでください, 押さないでください, 消さないでください, 走らないでください. The form costs nothing. What is worth knowing is how it lands. It is a request, not a prohibition — softer than the English \"don't\", closer to \"please don't\" said kindly — and it is the ordinary, polite way to stop someone doing something. You have been able to ask for anything since the te-form chapter and have had no way at all to ask for something to stop. Now you do."
+
+- id: b2.checkpoint-1
+  order: 113
+  chapterId: b2.chapter-1
+  situation: Integration & checkpoint
+  title: Chapter 1 checkpoint
+  canDo: Recognise everything taught so far
+  wordIds: []
+  phraseIds: []
+  kanji: []
+  checkpoint: recognition
+  grammarNote: "A wide pass over everything this chapter has taught. Type the reading or the meaning rather than picking it out of a line-up — you have the forms now, so the ask goes up a step. Anything you miss comes back sooner. It finishes when the remaining set empties; retry as often as you like, nothing is recorded."
