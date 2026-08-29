@@ -67,11 +67,12 @@ Two's purpose is combining patterns, so it should invert that ratio.
 Content sourcing stays training-canonical and marked, verified headword-by-headword against JMdict.
 First graded reading passages, once vocabulary is deep enough for i+1 to mean anything.
 
-## Phase 4 — Book Three, the paid flagship
+## Phase 4 — Book Three
 
 **The heaviest phase.** New builds: the Tatoeba ingestion and i+1 levelling pipeline, the levelled
 reading library and reader UI, in-text mining → SRS, compose-then-compare production, and the
-honest progress counters. Then the paywall — flip the `isPaid` stub when payment is wired.
+honest progress counters. Book Three is free content — DR-033 puts the paywall at Book Five, a
+free account reaches Books One through Four — so it does not touch payment.
 
 **Decided (2026-08-20):** chapters survive as grammar/reading **bands** ([04 §3](04-stage-reading.md)).
 Still open before authoring: the reading-library **text source** ([04 §5](04-stage-reading.md)).
@@ -85,6 +86,9 @@ register/nuance grammar. Mostly content and levelling work, little new engine. P
 level only — see [04b-stage-fluency.md](04b-stage-fluency.md). Listening now has a **floor** inside the
 books (library passages with pre-generated audio — [04 §5](04-stage-reading.md), [04b §6](04b-stage-fluency.md));
 unscripted real-speech listening remains the named ceiling.
+
+**Book Five is the first paid content** (DR-033: a free account's reach stops at Book Four).
+Flip the `isPaid` stub when payment is wired, before Book Five ships.
 
 ---
 
