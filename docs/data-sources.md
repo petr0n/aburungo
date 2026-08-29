@@ -192,7 +192,7 @@ POST /synthesis?speaker={style_id}  (body: AudioQuery) → WAV audio
 
 **Firefox:** Not a V1 concern. Show a graceful "microphone not supported" message and move on.
 
-**Upgrade path:** `gpt-4o-transcribe` (see section 8) when mobile support or higher accuracy is needed.
+**Upgrade path:** `gpt-4o-transcribe` (see section 9) when mobile support or higher accuracy is needed.
 
 ---
 
