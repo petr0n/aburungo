@@ -39,7 +39,7 @@ describe("schedule", () => {
     expect(result.dueAt).toBe(NOW + BOX_DURATION_DAYS[4] * DAY_MS);
   });
 
-  it("caps box at 5 even when the learner keeps getting it right", () => {
+  it("advances a persisted box-5 row to box 6 (DR-035: 5 is no longer the top)", () => {
     const current: ReviewState = {
       phraseId: "phrase-d",
       box: 5,
@@ -48,8 +48,8 @@ describe("schedule", () => {
 
     const result = schedule(current, "got-it", NOW, "phrase-d");
 
-    expect(result.box).toBe(5);
-    expect(result.dueAt).toBe(NOW + BOX_DURATION_DAYS[5] * DAY_MS);
+    expect(result.box).toBe(6);
+    expect(result.dueAt).toBe(NOW + BOX_DURATION_DAYS[6] * DAY_MS);
   });
 
   it("resets to box 1 on a miss, regardless of current box", () => {
@@ -118,5 +118,66 @@ describe("one /learn session over a brand-new word", () => {
 
     expect(afterMissedRecognition.box).toBe(1);
     expect(afterMissedRecognition.dueAt).toBe(NOW + BOX_DURATION_DAYS[1] * DAY_MS);
+  });
+});
+
+/**
+ * DR-035: the ladder extends from 5 boxes to 8 (30-day top interval → 240)
+ * so items can graduate instead of returning forever at corpus ÷ 30. See
+ * docs/superpowers/specs/2026-08-28-srs-graduation-design.md.
+ */
+describe("ladder extension (DR-035: boxes 6-8)", () => {
+  it("gives every box in BOX_DURATION_DAYS a strictly longer duration than the last", () => {
+    // Deliberately not a hardcoded [1,3,7,...] list: Record<LeitnerBox, number>
+    // already forces the compiler to reject a missing or extra box, so the
+    // runtime property worth guarding is monotonicity, over whatever boxes
+    // the table actually has — this keeps working if LeitnerBox widens again.
+    const boxesInOrder = Object.entries(BOX_DURATION_DAYS)
+      .map(([box, days]) => ({ box: Number(box), days }))
+      .sort((a, b) => a.box - b.box);
+
+    expect(boxesInOrder.length).toBeGreaterThan(0);
+    for (let i = 1; i < boxesInOrder.length; i++) {
+      expect(boxesInOrder[i].days).toBeGreaterThan(boxesInOrder[i - 1].days);
+    }
+  });
+
+  it("climbs a fresh item past box 5 to box 8 with a 240-day interval", () => {
+    // This is the behaviour that did not exist under the old 5-box ladder —
+    // see the "prove it can fail" run in the report.
+    let state: ReviewState = schedule(undefined, "got-it", NOW, "phrase-climb");
+    for (let i = 0; i < 6; i++) {
+      state = schedule(state, "got-it", NOW, "phrase-climb");
+    }
+
+    expect(state.box).toBe(8);
+    expect(state.dueAt).toBe(NOW + BOX_DURATION_DAYS[8] * DAY_MS);
+  });
+
+  it("stays at box 8 on got-it once already at the top (no overflow to 9)", () => {
+    const current: ReviewState = {
+      phraseId: "phrase-top",
+      box: 8,
+      dueAt: NOW - DAY_MS,
+    };
+
+    const result = schedule(current, "got-it", NOW, "phrase-top");
+
+    expect(result.box).toBe(8);
+    expect(result.dueAt).toBe(NOW + BOX_DURATION_DAYS[8] * DAY_MS);
+  });
+
+  it("drops to box 1 on a miss from every box, including 6, 7 and 8", () => {
+    const boxes = [1, 2, 3, 4, 5, 6, 7, 8] as const;
+
+    for (const box of boxes) {
+      const phraseId = `phrase-miss-${box}`;
+      const current: ReviewState = { phraseId, box, dueAt: NOW - DAY_MS };
+
+      const result = schedule(current, "didnt", NOW, phraseId);
+
+      expect(result.box).toBe(1);
+      expect(result.dueAt).toBe(NOW + BOX_DURATION_DAYS[1] * DAY_MS);
+    }
   });
 });

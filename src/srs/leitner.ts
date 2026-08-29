@@ -7,7 +7,7 @@
  *
  * Rules:
  *   - New phrase (no state)              → box 1, due now.
- *   - Got it                             → box+1 (capped at 5), due in N days.
+ *   - Got it                             → box+1 (capped at 8), due in N days.
  *   - Didn't                             → box 1, due in 1 day.
  *
  * Day durations per box are deliberately on the gentle side — this app is for
@@ -27,9 +27,12 @@ export const BOX_DURATION_DAYS: Readonly<Record<LeitnerBox, number>> = {
   3: 7,
   4: 14,
   5: 30,
+  6: 60,
+  7: 120,
+  8: 240,
 };
 
-const MAX_BOX: LeitnerBox = 5;
+const MAX_BOX: LeitnerBox = 8;
 const MIN_BOX: LeitnerBox = 1;
 
 function nextBox(current: LeitnerBox): LeitnerBox {

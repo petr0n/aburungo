@@ -352,8 +352,13 @@ export type PathProgress = {
   seenLessonIds: string[];
 };
 
-/** Leitner boxes 1–5. Box 1 = seen tomorrow, box 5 = seen in a month-ish. */
-export type LeitnerBox = 1 | 2 | 3 | 4 | 5;
+/**
+ * Leitner boxes 1–8. Box 1 = seen tomorrow, box 8 = seen in eight months-ish.
+ * Extended from 1–5 per DR-035: the old top box (30 days) never let an item
+ * graduate, so review load was corpus ÷ 30 forever. See
+ * docs/superpowers/specs/2026-08-28-srs-graduation-design.md.
+ */
+export type LeitnerBox = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
 
 /**
  * Per-phrase review state, persisted in IndexedDB.
