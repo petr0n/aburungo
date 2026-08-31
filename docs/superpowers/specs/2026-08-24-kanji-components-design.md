@@ -29,11 +29,12 @@ memory aid.
 > dropped — 24 of them themselves taught kanji, 107 radical-only. 31 kanji decompose to nothing
 > but themselves and render no component row at all. The data is also lookup-oriented and
 > sometimes misleading: 海 comes back as ⺡ 母 毋 乞, listing two near-duplicate parts and one
-> that is not really there. The gaps report surfaces those rather than cleaning them. The alternative — a written mnemonic per kanji — is
-roughly 400 pieces of original prose today and another ~570 every book after, permanently. The two
-best-known keyword sets, Heisig's and WaniKani's, are copyrighted, so nothing can be adapted and
-every line would be fresh work. Keywords are ~253 words written once and reused by every book
-forever.
+> that is not really there. The gaps report surfaces those rather than cleaning them.
+
+The alternative — a written mnemonic per kanji — is roughly 400 pieces of original prose today and
+another ~570 every book after, permanently. The two best-known keyword sets, Heisig's and
+WaniKani's, are copyrighted, so nothing can be adapted and every line would be fresh work. Keywords
+are 129 words written once and reused by every book forever.
 
 Learner-authored mnemonics were considered. The generation effect is real, but it needs storage, a
 UI and a text-entry moment, and it asks for effort exactly when the learner is already loaded.
@@ -41,13 +42,15 @@ Available later as an addition; not the foundation.
 
 **2. KRADFILE is the decomposition source.**
 6,355 kanji decomposed into 253 visual components — flat, purpose-built, kanji in and component
-list out. Its 253 elements land almost exactly on the keyword budget. KANJIDIC2, already in the
+list out. Book One's 200 kanji draw on 129 of those 253. KANJIDIC2, already in the
 repo's data path, carries only a single *classifying* radical per kanji, which is a different
 thing and insufficient. KanjiVG carries recursive decomposition but its groupings are drawn for
 stroke order rather than for teaching, and it costs XML parsing and a tree where a list suffices.
 
-**Licensing.** KRADFILE is copyright Jim Breen and the EDRDG under the EDRDG Licence, CC BY-SA
-4.0. Share-alike attaches to adaptations of the work, so the derived decomposition table ships
+**Licensing.** KRADFILE is copyright Jim Breen and the EDRDG. The immediate source, the
+`hoffmannjp/krad-unicode` conversion, ships **CC BY-SA 3.0 Unported** — this section originally
+said 4.0, which was wrong; the derived table is relicensed to 4.0 outbound as BY-SA 3.0 §4(b)
+permits. Share-alike attaches to adaptations of the work, so the derived decomposition table ships
 under CC BY-SA with attribution. Creative Commons explicitly permits collections, so it does not
 reach the application code. This is the standard reading and what comparable dictionaries do; it
 is a judgment call and is recorded here as one. Note the contrast with CLAUDE.md's dictionary
@@ -76,7 +79,7 @@ away.
 
 ## Data
 
-### `src/content/kanji/components.yaml` — authored, ~253 entries
+### `src/content/kanji/components.yaml` — authored, 129 entries
 
 The entire authoring job for this layer, shared by every book.
 
@@ -106,7 +109,8 @@ node scripts/kanji.mjs decompose
 ```
 
 Reads KRADFILE, scopes to characters some lesson teaches, emits character → component list with a
-CC BY-SA 4.0 attribution header. Same subcommand pattern as `scripts/jlpt.mjs` and
+a CC BY-SA attribution header naming the 3.0 source and the outbound grant. Same subcommand
+pattern as `scripts/jlpt.mjs` and
 `scripts/reading.mjs`, and the same script the prerequisite spec adds `build` to.
 
 **Scope is derived, never listed** — the generator reads every `kanji:` array in
@@ -190,7 +194,8 @@ Written so each fails if the wiring is absent, rather than passing over an empty
 
 ## Consequences
 
-- **~253 keywords to write**, once, reused by every book. The radical-only half is the slow half.
+- **129 keywords to write**, once, reused by every book. 24 are themselves taught kanji and are
+  quick; the 105 radical-only forms are the slow half.
 - **Book Two's §5 becomes true.** New kanji can honestly be introduced as recombined parts,
   because Book One's 200 were both taught and decomposed.
 - **A second CC BY-SA data file enters the repo**, alongside whatever the prerequisite's KANJIDIC2
