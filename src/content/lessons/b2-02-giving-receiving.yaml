@@ -1,0 +1,318 @@
+# Chapter 2 — Giving & receiving.
+#
+# English has one verb for this and hands out the direction with a preposition:
+# I give it TO you, you give it TO me. Japanese has three verbs, and the
+# direction is not optional decoration -- it is which verb you reach for.
+# あげる is a gift moving away from the speaker's side. もらう is a gift
+# arriving on the speaker's side, named from the receiver's point of view.
+# くれる is the same arrival, except someone else is the grammatical subject --
+# a friend, a stranger, your own mother can all "kureru" something to you, and
+# the verb exists only to mark that the benefit landed on you. Mixing these up
+# is not a minor accent; あげる where くれる belongs describes the exchange
+# from the wrong side of the table.
+#
+# This chapter is placed second, not last, because nothing in it is blocked.
+# It needs polite verb forms, which every lesson since day one has used, and
+# the te-form, which Book One's chapter 6 already paid for in full --
+# grammar.n5-te-ichidan, n5-te-tte and n5-te-nde cover every verb this
+# chapter touches (nothing here ends in く or ぐ, so n5-te-ku never comes up).
+# It does not need plain form, even though it sits directly after the chapter
+# that teaches it. That adjacency is convenient, not load-bearing: every
+# sentence in this chapter can be built entirely in polite register, and
+# none of it is revisited later as a dependency for chapter 1.
+#
+# There is also a debt here, smaller than chapter 1's but the same shape. The
+# learner has typed ください at the end of a request since chapter 1's
+# greetings lesson (ひとつください), first as a bare noun-plus-kudasai and
+# constantly since te-form arrived. ください is not a magic politeness word --
+# it is the imperative of くださる, the honorific stand-in for くれる. Every
+# 見てください the learner has ever typed already said, structurally, "kindly
+# let the seeing be given to me." This chapter is where that finally gets to
+# mean something, in lesson 7.
+#
+# The split: three base verbs, one lesson to force the choice between them,
+# one lesson to fence off a neighbouring confusion that is not this chapter's
+# territory, then the three payoff patterns with the request register --
+# named in the book plan as the reason this chapter exists at all -- pulled
+# out as its own lesson rather than folded into a statement lesson.
+#
+#   1  あげる                   giving, from the speaker's side
+#   2  もらう                   receiving, named from the speaker's side too
+#   3  くれる                   receiving, but someone else is the subject
+#   4  choosing the right one   the same event, told from either side
+#   5  not the same as lending  貸す／借りる／返す already exist and are not this
+#   6  ～てあげる                doing something for someone, as a favour
+#   7  ～てくれる                someone doing something for you, unprompted --
+#                               ください, named at last
+#   8  asking for the favour    ～てくれますか／～てくれませんか
+#   9  ～てもらう                getting someone to do it for you
+#
+# あげる and もらう share a subject before くれる breaks the pattern, the same
+# easy-half-first shape as chapter 1's ない split. Lessons 6-9 depend on 1-3;
+# lesson 8 depends on 7; lesson 9 does not depend on 8. This chapter must not
+# be split by a checkpoint before lesson 9, the same constraint as chapter 1
+# and the te-form chapter.
+#
+# Re-surface the te-form patterns before lesson 6. grammar.n5-te-ichidan
+# (教える), n5-te-tte (作る, 待つ, 手伝う) and n5-te-nde (貸す, which is the す row
+# of that lesson) are hard prerequisites for lessons 6, 7, 8 and 9 -- the same
+# recommendation chapter 1 makes before its plain-past lesson, for the same
+# reason.
+#
+# Lessons 7 and 9 are written as a mirror. 母がお弁当を作ってくれました and
+# 母にお弁当を作ってもらいました are one event described twice, and so are the
+# other two pairs. Keep them paired if these lessons are ever edited: the
+# mirror is what makes lesson 9's difficulty visible rather than asserted.
+#
+# The `kanji:` arrays are empty and should not stay that way. 手伝う brings 伝,
+# which no lesson teaches yet (手 is already taught). One character is the whole
+# kanji yield of this chapter, which is the honest consequence of a rule chapter
+# built almost entirely on owned vocabulary -- the same low-kanji data point
+# chapter 1 flagged, not something to pad.
+#
+# It is held back for the reason chapter 1's is: a character in a lesson's array
+# must also have a row in the generated kanji set, in its decomposition, and in
+# the component layer, and the component layer is built from the *registered*
+# ladder, so it cannot resolve a lesson that is not wired in yet. Adding 伝 here
+# turns src/content/kanji/scope.test.ts red. When this file is wired into the
+# lessons index and the book: put 伝 on the favour lesson (b2.giving-te-ageru),
+# then rerun `node scripts/kanji.mjs build` and `decompose`. One thing to expect
+# rather than discover -- 伝 decomposes into ⺅ and 云, and while ⺅ already has a
+# keyword in src/content/kanji/components.yaml, 云 does not. That keyword has to
+# be written by hand in the same pass or components.test.ts will fail.
+#
+# content-source: n/a for this file -- it references
+#   vocabulary/b2-02-giving-receiving.yaml and phrases/b2-02-giving-receiving.yaml,
+#   whose own provenance markers apply.
+
+- id: b2.giving-ageru
+  order: 114
+  chapterId: b2.chapter-2
+  situation: Giving & receiving
+  title: Giving something to someone
+  canDo: Say that you give something to someone
+  wordIds:
+    - vocab.ageru
+    - vocab.tomodachi
+    - vocab.imouto
+    - vocab.otouto
+    - vocab.kodomo
+    - vocab.hana
+    - vocab.hon
+    - vocab.okashi
+    - vocab.kutsushita
+    - vocab.tanjoubi
+  phraseIds:
+    - giving.i-gave-a-friend-flowers
+    - giving.ill-give-my-sister-sweets
+    - giving.what-will-you-give-for-the-birthday
+  kanji: []
+  patternId: grammar.b2-giving-ageru
+  grammarNote: "English uses one verb for this and puts the direction in a preposition — I give it to you, you give it to me. Japanese uses three verbs and the direction is which one you pick. This is the first of them. あげる is for a gift moving away from you, and the shape around it is one you have had since your first lesson: the giver takes は, the person receiving takes に, the thing takes を, and あげます closes the sentence. 友達に花をあげました. The giver is the subject, so あげる is what you reach for whenever you are the one doing the giving. Write it in kana. It does have a kanji, 上げる, but that spelling belongs to a different あげる — to raise, to lift — built on the 上 you already know as \"on, above\", and writing 上げる here is writing the wrong word. One caution, worth taking seriously even though nothing about it is ungrammatical: do not aim あげる at someone clearly above you. 先生にあげます reads as presumptuous, the same register instinct that makes plain form wrong for a stranger. There is a more careful word for that direction, and it is not this chapter's job. To a friend, a younger sibling or a child, あげる is exactly right."
+
+- id: b2.giving-morau
+  order: 115
+  chapterId: b2.chapter-2
+  situation: Giving & receiving
+  title: Receiving something from someone
+  canDo: Say that you received something from someone
+  wordIds:
+    - vocab.morau
+    - vocab.tomodachi
+    - vocab.haha
+    - vocab.dare
+    - vocab.hon
+    - vocab.tanjoubi
+    - vocab.okane
+  phraseIds:
+    - giving.i-got-a-book-from-a-friend
+    - giving.i-got-money-from-my-mother
+    - giving.who-did-you-get-it-from
+  kanji: []
+  patternId: grammar.b2-giving-morau
+  grammarNote: "もらう is named from the same side of the table as あげる. You are still the subject of your own sentence — the difference is that the thing is coming towards you rather than away. 友達から本をもらいました. The person it came from takes から, or に, and the two are interchangeable here; から makes the source a little more explicit and に is a little more compact, and neither is more polite than the other. から is not new. You have marked a starting point with it since どこから来ましたか and アメリカから来ました in your very first chapter, and this is the same particle doing the same job with a person instead of a place. Unlike あげる, もらう carries no caution in any direction. Receiving from a teacher, a boss or a complete stranger is completely unmarked — 先生にもらいました is ordinary Japanese, where 先生にあげました is not. The reason is the same one that made あげる delicate: あげる puts you in the position of the giver, and もらう does not. To ask who something came from, put 誰 in the から slot: 誰からもらいましたか."
+
+- id: b2.giving-kureru
+  order: 116
+  chapterId: b2.chapter-2
+  situation: Giving & receiving
+  title: When someone gives it to you
+  canDo: Say that someone gave you something
+  wordIds:
+    - vocab.kureru
+    - vocab.tomodachi
+    - vocab.haha
+    - vocab.chichi
+    - vocab.sensei
+    - vocab.watashi
+    - vocab.hon
+    - vocab.kasa
+    - vocab.okashi
+  phraseIds:
+    - giving.a-friend-gave-me-flowers
+    - giving.my-mother-gave-me-sweets
+    - giving.my-teacher-gave-me-an-umbrella
+    - giving.who-gave-it-to-you
+  kanji: []
+  patternId: grammar.b2-giving-kureru
+  grammarNote: "The form is not the hard part of this lesson. The perspective is. くれる breaks the pattern the last two lessons set up: the subject is no longer you. Someone else does the giving — 友達が花をくれました, 先生が私に傘をくれました — and what makes it くれる rather than another あげる is that the benefit lands on you, or on your side of the table, where your own family counts as your side. That is the entire job of the verb. Everything else about it is ordinary: the giver takes が, you take に if you are mentioned at all, and you very often are not, because くれる already says the gift came to you and repeating 私に is redundant. Two things follow that are worth having straight. The caution from あげる does not run in reverse — a teacher giving something to you via くれる is completely ordinary, because you are not the one claiming the giver's position. Spoken about a teacher you want to sound deferential toward, くれました becomes くださいました; that is the same verb wearing its honorific coat, and lesson 7 is where it gets its name. And くれる is written in kana; the くれる you may meet spelled 暮れる is a different verb entirely, meaning to get dark. If あげる and くれる feel like the same event, that is because they are. The next lesson is about choosing between them."
+
+- id: b2.giving-choose
+  order: 117
+  chapterId: b2.chapter-2
+  situation: Giving & receiving
+  title: Choosing the right one
+  canDo: Pick the right giving verb for who is on each side of an exchange
+  wordIds:
+    - vocab.ageru
+    - vocab.morau
+    - vocab.kureru
+    - vocab.tomodachi
+    - vocab.haha
+    - vocab.imouto
+    - vocab.sensei
+    - vocab.hon
+    - vocab.hana
+  phraseIds:
+    - giving.i-gave-my-mother-a-book
+    - giving.my-mother-gave-me-a-book
+    - giving.i-got-a-book-from-my-mother
+  kanji: []
+  patternId: grammar.b2-giving-choose
+  grammarNote: "No new form in this lesson. What is new is that one event can be told from either side of the table, and which side you take decides the verb. Three sentences, one book, the same two people: 母に本をあげました, 母が本をくれました, 母に本をもらいました. The first is you handing it over. The second and the third are the same handover coming the other way, described first from your mother's side and then from yours. Nothing in the vocabulary tells you which is right — only the situation does, which is why this is the lesson people get wrong. Run it as a procedure rather than a rule. Are you the one giving? あげる. Are you the one receiving, and telling it as your own action? もらう. Is someone else giving, and does it land on you? くれる. The particles are the tell: が in front of the other person means the benefit is coming to you, so the verb is くれる; に in front of them means either you gave to them (あげる) or you took from them (もらう), and only the verb separates those two. The single most common mistake is あげる where くれる belongs. It is grammatical, and it makes you the giver in a sentence where you were the one who received."
+
+- id: b2.giving-not-lending
+  order: 118
+  chapterId: b2.chapter-2
+  situation: Giving & receiving
+  title: Not the same as lending
+  canDo: Ask to borrow something without accidentally asking to keep it
+  wordIds:
+    - vocab.kasu
+    - vocab.kariru
+    - vocab.kaesu
+    - vocab.morau
+    - vocab.kasa
+    - vocab.hon
+    - vocab.okane
+    - vocab.ashita
+  phraseIds:
+    - giving.please-lend-me-an-umbrella
+    - giving.please-give-me-an-umbrella
+    - giving.ill-return-the-book-tomorrow
+  kanji: []
+  patternId: grammar.b2-giving-not-lending
+  grammarNote: "This lesson teaches nothing new. It draws a line, because the words on both sides of it are already yours and English keeps them uncomfortably close. 貸す, 借りる and 返す came with the te-form chapter, and they are about a thing that goes back. あげる, もらう and くれる are about a thing that does not. Put the two requests next to each other and the difference is a whole verb: 傘を貸してください asks to borrow an umbrella, and 傘をください asks to be given one. Reach for the second when you meant the first and you have asked a stranger to hand over their umbrella for good. The same trap sits on the receiving side — 借りました is what you did with a library book, もらいました is what you did with a present, and if you say もらいました about the library book you have said you kept it. The loop closes with 返す: 明日、本を返します is the sentence that makes it a loan out loud. A useful check before you speak: if the thing is coming back, no verb from this chapter belongs in the sentence."
+
+- id: b2.giving-te-ageru
+  order: 119
+  chapterId: b2.chapter-2
+  situation: Giving & receiving
+  title: Doing something for someone
+  canDo: Offer to do something for someone, as a favour
+  wordIds:
+    - vocab.tetsudau
+    - vocab.ageru
+    - vocab.oshieru
+    - vocab.tsukuru
+    - vocab.kau
+    - vocab.motsu
+    - vocab.shukudai
+    - vocab.eigo
+    - vocab.obentou
+    - vocab.imouto
+    - vocab.otouto
+  phraseIds:
+    - giving.i-helped-my-sister-with-her-homework
+    - giving.i-taught-my-friend-english
+    - giving.i-made-my-brother-a-lunch
+  kanji: []
+  patternId: grammar.b2-giving-te-ageru
+  grammarNote: "The three verbs have a second life, and this is the first of them. Put a verb in its te-form and add あげる, and what changes hands is no longer an object but the action itself: 教えてあげました, 作ってあげました, 手伝ってあげました. The form costs you nothing — it is the te-form you sorted into groups in Book One with あげる on the end, and あげる is ichidan, so it inflects exactly as it did in the first lesson of this chapter. What is new is the meaning. 作りました is that you made something. 作ってあげました is that you made it for someone, and the sentence now says so. The caution from that first lesson comes across unchanged and gets sharper here, because a favour is a more personal thing to claim than a gift. 手伝ってあげます said to a teacher or a boss has the same presumptuous edge as offering them a present with あげる — it announces that you are doing them a kindness. To a friend, a sibling or a child it is warm and completely ordinary. When you are unsure, drop the あげる: 手伝います on its own is a plain offer to help and is safe everywhere."
+
+- id: b2.giving-te-kureru
+  order: 120
+  chapterId: b2.chapter-2
+  situation: Giving & receiving
+  title: When someone does something for you
+  canDo: Say that someone did something for you, as a favour
+  wordIds:
+    - vocab.kureru
+    - vocab.oshieru
+    - vocab.tsukuru
+    - vocab.kasu
+    - vocab.matsu
+    - vocab.haha
+    - vocab.tomodachi
+    - vocab.sensei
+    - vocab.kasa
+    - vocab.obentou
+    - vocab.eigo
+  phraseIds:
+    - giving.my-mother-made-me-a-lunch
+    - giving.a-friend-lent-me-an-umbrella
+    - giving.my-teacher-taught-me-english
+  kanji: []
+  patternId: grammar.b2-giving-te-kureru
+  grammarNote: "Te-form plus くれる, and it does for actions what くれる did for objects: someone else performs it, and it lands on you. 母がお弁当を作ってくれました, 友達が傘を貸してくれました, 先生が英語を教えてくれました. Without the くれる each of those is a bare report of what someone did. With it, the sentence says the doing was for your benefit, and leaving it out where it belongs makes ordinary Japanese sound oddly flat — 母がお弁当を作りました is a fact about your mother, not a kindness done to you. Now the part you have been owed since your very first request. ください is not a magic politeness word. It is the imperative of くださる, which is the polite form of this exact verb, くれる. Every 見てください and 待ってください you have ever typed already had this pattern inside it, saying — underneath — kindly do the looking as a favour to me. You have been using half of this grammar since day one without a name for it. The other half, asking for the favour outright, is the next lesson."
+
+- id: b2.giving-te-kureru-request
+  order: 121
+  chapterId: b2.chapter-2
+  situation: Giving & receiving
+  title: Asking for the favour
+  canDo: Ask someone, gently, to do something for you
+  wordIds:
+    - vocab.kureru
+    - vocab.tetsudau
+    - vocab.oshieru
+    - vocab.tsukuru
+    - vocab.matsu
+    - vocab.kasu
+    - vocab.kasa
+    - vocab.eigo
+  phraseIds:
+    - giving.will-you-wait-for-me
+    - giving.could-you-lend-me-an-umbrella
+    - giving.could-you-teach-me-english
+    - giving.will-you-help-me
+  kanji: []
+  patternId: grammar.b2-giving-te-kureru-request
+  grammarNote: "Turn the last lesson's statement into a question and you have a request that is not ～てください. 待ってくれますか. 手伝ってくれますか. Nothing here is new: ます-form questions have been yours since your first lesson, and this is that question asked of ～てくれる. Then make the question negative and it gets softer, which is the part that looks backwards in English. 傘を貸してくれませんか is more polite than 傘を貸してくれますか, not less, and the reason is that a negative question leaves room for the answer to be no. You are asking whether someone might not do it, which is a smaller thing to put on them than asking whether they will. English does the same thing with \"couldn't you\" and \"would you mind\". Set these against what you already have. 待ってください is a request you make of someone who is expected to comply — a shop assistant, a waiter. 待ってくれますか asks a person. 貸してください and 傘を貸してくれませんか are the same request at two different distances, and the second is the one to reach for with someone you do not know well or are asking a real favour of."
+
+- id: b2.giving-te-morau
+  order: 122
+  chapterId: b2.chapter-2
+  situation: Giving & receiving
+  title: Having someone do it for you
+  canDo: Say that you got someone to do something for you
+  wordIds:
+    - vocab.morau
+    - vocab.oshieru
+    - vocab.tsukuru
+    - vocab.kasu
+    - vocab.sensei
+    - vocab.tomodachi
+    - vocab.haha
+    - vocab.eigo
+    - vocab.kasa
+    - vocab.obentou
+  phraseIds:
+    - giving.i-had-my-teacher-teach-me-english
+    - giving.i-got-a-friend-to-lend-me-an-umbrella
+    - giving.i-had-my-mother-make-a-lunch
+  kanji: []
+  patternId: grammar.b2-giving-te-morau
+  grammarNote: "The last of the three, and the one that takes a moment to settle, because the subject of the sentence is not the person doing the action. 先生に英語を教えてもらいました means you got your teacher to teach you English. You are the subject; your teacher did the teaching; the verb belongs to them and the sentence is built from your side. 教えてもらいました is \"I got taught\", never \"I taught\". Compare it against the last lesson and the two stop competing. 先生が英語を教えてくれました and 先生に英語を教えてもらいました report the same afternoon. The first credits the teacher, with が on them; the second is about you receiving it, with に on them. Both are natural, and the difference is only where the sentence stands. One thing to expect but not yet build: the natural next step is ～てもらえますか, could I get you to do this, which in service and formal situations is the most common polite request of all. It needs もらえる, the potential form of もらう, and potential forms arrive later in this book. When they do, this pattern is waiting for them."
+
+- id: b2.checkpoint-2
+  order: 123
+  chapterId: b2.chapter-2
+  situation: Integration & checkpoint
+  title: Chapter 2 checkpoint
+  canDo: Recognise everything taught so far
+  wordIds: []
+  phraseIds: []
+  kanji: []
+  checkpoint: recognition
+  grammarNote: "A wide pass over everything this chapter has taught. Type the reading or the meaning rather than picking it out of a line-up. Anything you miss comes back sooner. It finishes when the remaining set empties; retry as often as you like, nothing is recorded."

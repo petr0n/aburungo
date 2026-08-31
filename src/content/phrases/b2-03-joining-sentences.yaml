@@ -1,0 +1,273 @@
+# Book Two, Chapter 3 phrases — two ideas, one sentence.
+#
+# Every sentence below is two clauses where the learner has only ever produced
+# one, and every word in them is one Book One already teaches -- 時 is the
+# chapter's single new word and the only thing here that is not review. That is
+# the chapter's shape on purpose: the interest is in the join, so nothing else
+# should be competing for attention.
+#
+# Four sentences are built as halves of a pair, so a contrast the grammarNotes
+# claim is checkable in review rather than only asserted:
+#
+#   ごはんを食べて、本を読んだ      against  ごはんを食べながら、本を読みます
+#   昨日は本を読んで、音楽を聞いた  against  chapter 1's 本を読んだり音楽を聞いたり
+#
+# Sequence, simultaneity, and a representative list -- the same two verbs each
+# time, so the connector is the only thing that moved.
+#
+# 時 is written in kanji here rather than in kana. Both are current Japanese and
+# kana is common for the bound use, but 時 is already a taught character (Book
+# One's transit chapter) and the Tatoeba sentences bundled with JMdict write it
+# this way. のる and わかる stay in kana, matching their own word cards.
+#
+# These are independent utterances. Several would sit naturally next to each
+# other in a conversation and none of them is one: a scripted exchange is
+# multi-sentence composed text, which is the surface the content rules exist to
+# keep out.
+#
+# content-source: training — N5/N4 canonical, pending Tatoeba verification.
+#   JMdict cannot verify a composed sentence (only fixed expressions are
+#   headwords), so the shapes were checked against the Tatoeba-sourced examples
+#   bundled with JMdict for Applications 3.6.2 on 2026-08-31 -- 「とても寒いから
+#   スケートが出来るよ。」and「彼はコチコチの会社人間だから。」attest から and a
+#   bare だから answer, 「背が低いので、丈は短めで…」and「ベジタリアンなので、
+#   できればお肉は遠慮したい。」attest ので and なので, 「欠点があるけどやはり彼
+#   が好きです。」attests けど, 「私はパイプを吹かしながら座っていた。」and
+#   「彼らはコーヒーを飲みながら…」attest ながら on the ます-stem, 「１２才の時
+#   彼は声変わりした。」and「車を運転する時はいくら注意してもしすぎることは
+#   ない。」attest both noun+の+時 and plain-verb+時, and 「その本は布教用に買った
+#   本ですから。」, 「こうすれば話す人に付いて行けるのです。」and「中国やチベット
+#   の山に住んでいる白黒の熊はパンダと呼ばれている。」attest noun-modifying
+#   clauses on a past verb, a non-past verb and 〜ている. No sentence below is a
+#   verbatim quotation, so none carries a Tatoeba id.
+# jlpt-source: training — the level marks the band this chapter sits in.
+
+# ── Saying why, casually ──────────────────────────────────────────────────────
+
+- id: join.im-tired-so-im-going-home
+  jlpt: N4
+  scenario: casual
+  japanese: 疲れたから、帰る。
+  reading: つかれたから、かえる。
+  romaji: tsukareta kara, kaeru.
+  english: I'm tired, so I'm going home.
+
+- id: join.im-busy-so-im-not-going
+  jlpt: N4
+  scenario: casual
+  japanese: 今日は忙しいから、行かない。
+  reading: きょうはいそがしいから、いかない。
+  romaji: kyou wa isogashii kara, ikanai.
+  english: I'm busy today, so I'm not going.
+
+- id: join.because-its-raining
+  jlpt: N4
+  scenario: casual
+  japanese: 雨だから。
+  reading: あめだから。
+  romaji: ame da kara.
+  english: Because it's raining.
+
+# ── Saying why, more carefully ────────────────────────────────────────────────
+
+- id: join.im-tired-so-ill-take-today-off
+  jlpt: N4
+  scenario: polite
+  japanese: 疲れたので、今日は休みます。
+  reading: つかれたので、きょうはやすみます。
+  romaji: tsukareta node, kyou wa yasumimasu.
+  english: I'm tired, so I'll take today off.
+
+- id: join.the-station-is-close-so-ill-walk
+  jlpt: N4
+  scenario: polite
+  japanese: 駅が近いので、歩きます。
+  reading: えきがちかいので、あるきます。
+  romaji: eki ga chikai node, arukimasu.
+  english: The station is close, so I'll walk.
+
+- id: join.its-quiet-so-i-like-it-here
+  jlpt: N4
+  scenario: polite
+  japanese: 静かなので、ここが好きです。
+  reading: しずかなので、ここがすきです。
+  romaji: shizuka na node, koko ga suki desu.
+  english: It's quiet, so I like it here.
+
+- id: join.im-a-student-so-i-dont-have-money
+  jlpt: N4
+  scenario: polite
+  japanese: 学生なので、お金がありません。
+  reading: がくせいなので、おかねがありません。
+  romaji: gakusei na node, okane ga arimasen.
+  english: I'm a student, so I don't have any money.
+
+# ── Saying "but" ──────────────────────────────────────────────────────────────
+
+- id: join.expensive-but-good
+  jlpt: N4
+  scenario: casual
+  japanese: この店は高いけど、おいしい。
+  reading: このみせはたかいけど、おいしい。
+  romaji: kono mise wa takai kedo, oishii.
+  english: This shop is expensive, but the food's good.
+
+- id: join.difficult-but-interesting
+  jlpt: N4
+  scenario: polite
+  japanese: 難しいですけど、面白いです。
+  reading: むずかしいですけど、おもしろいです。
+  romaji: muzukashii desu kedo, omoshiroi desu.
+  english: It's difficult, but it's interesting.
+
+- id: join.i-like-it-but-im-not-buying-it
+  jlpt: N4
+  scenario: casual
+  japanese: 好きだけど、買わない。
+  reading: すきだけど、かわない。
+  romaji: suki da kedo, kawanai.
+  english: I like it, but I'm not going to buy it.
+
+# ── Doing one thing, then another ─────────────────────────────────────────────
+
+- id: join.i-swam-and-went-home
+  jlpt: N4
+  scenario: casual
+  japanese: 海で泳いで、家に帰った。
+  reading: うみでおよいで、いえにかえった。
+  romaji: umi de oyoide, ie ni kaetta.
+  english: I swam in the sea and went home.
+
+- id: join.i-walked-to-the-station-and-took-the-train
+  jlpt: N4
+  scenario: casual
+  japanese: 駅まで歩いて、電車にのった。
+  reading: えきまであるいて、でんしゃにのった。
+  romaji: eki made aruite, densha ni notta.
+  english: I walked to the station and got on the train.
+
+- id: join.i-read-a-book-and-listened-to-music
+  jlpt: N4
+  scenario: casual
+  japanese: 昨日は本を読んで、音楽を聞いた。
+  reading: きのうはほんをよんで、おんがくをきいた。
+  romaji: kinou wa hon o yonde, ongaku o kiita.
+  english: Yesterday I read a book and then listened to music.
+
+- id: join.i-ate-and-then-read-a-book
+  jlpt: N4
+  scenario: casual
+  japanese: ご飯を食べて、本を読んだ。
+  reading: ごはんをたべて、ほんをよんだ。
+  romaji: gohan o tabete, hon o yonda.
+  english: I ate, and then read a book.
+
+# ── Doing two things at once ──────────────────────────────────────────────────
+
+- id: join.we-talked-while-walking
+  jlpt: N4
+  scenario: polite
+  japanese: 駅まで歩きながら話しました。
+  reading: えきまであるきながらはなしました。
+  romaji: eki made arukinagara hanashimashita.
+  english: We talked while we walked to the station.
+
+- id: join.i-read-while-i-eat
+  jlpt: N4
+  scenario: polite
+  japanese: ご飯を食べながら、本を読みます。
+  reading: ごはんをたべながら、ほんをよみます。
+  romaji: gohan o tabenagara, hon o yomimasu.
+  english: I read a book while I eat.
+
+- id: join.i-cook-while-listening-to-music
+  jlpt: N4
+  scenario: polite
+  japanese: 音楽を聞きながら料理をします。
+  reading: おんがくをききながらりょうりをします。
+  romaji: ongaku o kikinagara ryouri o shimasu.
+  english: I cook while listening to music.
+
+# ── Saying when ───────────────────────────────────────────────────────────────
+
+- id: join.when-i-get-on-the-bus
+  jlpt: N4
+  scenario: polite
+  japanese: バスにのる時、切符を買います。
+  reading: バスにのるとき、きっぷをかいます。
+  romaji: basu ni noru toki, kippu o kaimasu.
+  english: When I get on the bus, I buy a ticket.
+
+- id: join.when-i-get-home-ill-call
+  jlpt: N4
+  scenario: polite
+  japanese: 家に着いた時、電話します。
+  reading: いえについたとき、でんわします。
+  romaji: ie ni tsuita toki, denwa shimasu.
+  english: When I get home, I'll call.
+
+- id: join.when-its-cold-i-close-the-window
+  jlpt: N4
+  scenario: polite
+  japanese: 寒い時、窓を閉めます。
+  reading: さむいとき、まどをしめます。
+  romaji: samui toki, mado o shimemasu.
+  english: When it's cold, I close the window.
+
+- id: join.when-its-quiet-i-read
+  jlpt: N4
+  scenario: polite
+  japanese: 静かな時、本を読みます。
+  reading: しずかなとき、ほんをよみます。
+  romaji: shizuka na toki, hon o yomimasu.
+  english: When it's quiet, I read.
+
+- id: join.when-i-was-a-child
+  jlpt: N4
+  scenario: polite
+  japanese: 子供の時、この公園で遊びました。
+  reading: こどものとき、このこうえんであそびました。
+  romaji: kodomo no toki, kono kouen de asobimashita.
+  english: When I was a child, I played in this park.
+
+# ── The book, the person, the place ───────────────────────────────────────────
+
+- id: join.the-book-i-bought-yesterday
+  jlpt: N4
+  scenario: polite
+  japanese: 昨日買った本は面白かったです。
+  reading: きのうかったほんはおもしろかったです。
+  romaji: kinou katta hon wa omoshirokatta desu.
+  english: The book I bought yesterday was interesting.
+
+- id: join.someone-who-speaks-english
+  jlpt: N4
+  scenario: polite
+  japanese: 英語を話す人はいますか。
+  reading: えいごをはなすひとはいますか。
+  romaji: eigo o hanasu hito wa imasu ka.
+  english: Is there anyone who speaks English?
+
+- id: join.the-house-i-live-in
+  jlpt: N4
+  scenario: polite
+  japanese: 私が住んでいる家は駅から近いです。
+  reading: わたしがすんでいるいえはえきからちかいです。
+  romaji: watashi ga sunde iru ie wa eki kara chikai desu.
+  english: The house I live in is close to the station.
+
+- id: join.a-shop-thats-not-expensive
+  jlpt: N4
+  scenario: polite
+  japanese: 高くない店を教えてください。
+  reading: たかくないみせをおしえてください。
+  romaji: takakunai mise o oshiete kudasai.
+  english: Please tell me about a shop that isn't expensive.
+
+- id: join.the-friend-i-met-last-year
+  jlpt: N4
+  scenario: polite
+  japanese: 去年会った友達に電話しました。
+  reading: きょねんあったともだちにでんわしました。
+  romaji: kyonen atta tomodachi ni denwa shimashita.
+  english: I called the friend I met last year.

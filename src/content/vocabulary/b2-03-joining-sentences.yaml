@@ -1,0 +1,37 @@
+# Book Two, Chapter 3 vocabulary — one word, because the chapter is machinery.
+#
+# Everything this chapter teaches is a way of joining words the learner already
+# owns. から, ので, けど, て and ながら are particles and forms, not vocabulary,
+# and lesson 7's noun-modifying clauses are a slot rather than a word. Checking
+# the chapter's example phrases word by word against the manifest found exactly
+# one gap: とき itself.
+#
+# It has to be a real word rather than a bound piece of a pattern, because
+# lesson 7 immediately generalises away from it. A learner who only ever met
+# とき glued to a clause would have no way to hear that lesson 7 is the same
+# move with the とき removed.
+#
+# The learner already has its sound, folded inside ときどき ("sometimes"), and
+# already has its kanji: 時 is taught in Book One's transit chapter, on 何時.
+# So this word costs a gloss and nothing else -- it brings no new character.
+#
+# content-source: training — headword, reading, part of speech and gloss
+#   verified against JMdict for Applications 3.6.2 on 2026-08-31, sequence
+#   number inline. Both 時 and とき are flagged common in JMdict.
+# jlpt-source: training — JLPT level unverified (JMdict carries no JLPT data).
+#   open-anki lists ～時 (とき) at N5; Tanos does not list the bare noun at any
+#   level, carrying only 時間, 時々 and 時計 at N5 and 時代 at N4. Tagged N5 to
+#   match the one list that has it, and because the learner meets it here on
+#   top of Book One's own 時.
+
+# ── Saying when (Lesson 6) ────────────────────────────────────────────────────
+
+- id: vocab.toki
+  jlpt: N5
+  word_type: noun
+  theme: time
+  japanese: 時
+  reading: とき
+  romaji: toki
+  english: time, moment, occasion
+  notes: The same 時 you read in 何時, said とき rather than じ. On its own it is an ordinary noun meaning a moment or an occasion, and that is why a sentence can sit in front of it — 子供の時 is "the time of being a child". You have had its sound since ときどき. JMdict seq 1315840.

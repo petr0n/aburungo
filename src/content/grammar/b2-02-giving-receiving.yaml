@@ -1,0 +1,82 @@
+# Book Two, Chapter 2 grammar patterns — three verbs and their payoffs.
+#
+# One pattern per teaching lesson, each blanking the verb out of a sentence from
+# that lesson. The blank is matched against the phrase's reading, so these are
+# kana.
+#
+# The base-verb patterns blank the whole polite verb rather than a suffix,
+# because the verb is the choice this chapter is about — a blank that left
+# あげ／もらい／くれ showing would give the answer away. The favour patterns blank
+# the te-form and the auxiliary together for the same reason.
+#
+# The choosing pattern blanks くれました on a sentence whose only clue is the が
+# marking its subject. That is deliberate: nothing in ははがほんを points at a
+# verb, so the direction has to be read off the particles.
+#
+# content-source: n/a for this file — every pattern references an existing
+#   phrase from phrases/b2-02-giving-receiving.yaml rather than composing new
+#   Japanese.
+# jlpt-source: training — the level marks the band this chapter sits in.
+
+- id: grammar.b2-giving-ageru
+  jlpt: N4
+  pattern: "だれに なにを あげます"
+  gloss: You do the giving, and the gift moves away from you. Write it in kana, not 上げる.
+  phraseId: giving.i-gave-a-friend-flowers
+  blank: あげました
+
+- id: grammar.b2-giving-morau
+  jlpt: N4
+  pattern: "だれから／だれに なにを もらいます"
+  gloss: You do the receiving. The person it came from takes から or に.
+  phraseId: giving.i-got-a-book-from-a-friend
+  blank: もらいました
+
+- id: grammar.b2-giving-kureru
+  jlpt: N4
+  pattern: "だれが なにを くれます"
+  gloss: Someone else gives, and it lands on you. The subject is no longer you.
+  phraseId: giving.a-friend-gave-me-flowers
+  blank: くれました
+
+- id: grammar.b2-giving-choose
+  jlpt: N4
+  pattern: "あげる／もらう／くれる"
+  gloss: The particles say who is on each side. が before the giver means it came to you.
+  phraseId: giving.my-mother-gave-me-a-book
+  blank: くれました
+
+- id: grammar.b2-giving-not-lending
+  jlpt: N4
+  pattern: "貸す／借りる／返す ≠ あげる／もらう"
+  gloss: Lending is temporary and giving is not. 貸してください keeps it a loan.
+  phraseId: giving.please-lend-me-an-umbrella
+  blank: かして
+
+- id: grammar.b2-giving-te-ageru
+  jlpt: N4
+  pattern: "～てあげます"
+  gloss: Doing something for someone as a favour. The same caution as あげる applies.
+  phraseId: giving.i-taught-my-friend-english
+  blank: おしえてあげました
+
+- id: grammar.b2-giving-te-kureru
+  jlpt: N4
+  pattern: "～てくれます"
+  gloss: Someone does it for you, unasked. This is the くれる inside every ください.
+  phraseId: giving.my-mother-made-me-a-lunch
+  blank: つくってくれました
+
+- id: grammar.b2-giving-te-kureru-request
+  jlpt: N4
+  pattern: "～てくれますか／～てくれませんか"
+  gloss: Asking for the favour. The negative question is the softer of the two.
+  phraseId: giving.could-you-lend-me-an-umbrella
+  blank: かしてくれませんか
+
+- id: grammar.b2-giving-te-morau
+  jlpt: N4
+  pattern: "～てもらいます"
+  gloss: You got someone to do it. Your sentence, their action — the giver takes に.
+  phraseId: giving.i-had-my-teacher-teach-me-english
+  blank: おしえてもらいました
