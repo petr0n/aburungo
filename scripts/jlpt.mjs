@@ -308,6 +308,12 @@ export function ourWords() {
       if (wt) cur.wordType = wt[1];
       const th = line.match(/^ {2}theme: *(\S+)/);
       if (th) cur.theme = th[1];
+      // Gloss and verb class are unused by coverage, and are what the content
+      // manifest exists to hand an author (scripts/manifest.mjs).
+      const en = line.match(/^ {2}english: *(.+?) *$/);
+      if (en) cur.english = en[1];
+      const vc = line.match(/^ {2}verb_class: *(\S+)/);
+      if (vc) cur.verbClass = vc[1];
     }
   }
   return out.filter((w) => w.reading);
