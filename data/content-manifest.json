@@ -383,7 +383,7 @@
   },
   {
    "id": "vocab.koto",
-   "file": "b2-plain-form.yaml",
+   "file": "b2-01-plain-form.yaml",
    "jlpt": "N4",
    "wordType": "noun",
    "theme": "basics",
@@ -393,7 +393,7 @@
   },
   {
    "id": "vocab.ichido",
-   "file": "b2-plain-form.yaml",
+   "file": "b2-01-plain-form.yaml",
    "jlpt": "N4",
    "wordType": "adverb",
    "theme": "time",
@@ -403,7 +403,7 @@
   },
   {
    "id": "vocab.kai",
-   "file": "b2-plain-form.yaml",
+   "file": "b2-01-plain-form.yaml",
    "jlpt": "N5",
    "wordType": "counter",
    "theme": "counting",
@@ -413,7 +413,7 @@
   },
   {
    "id": "vocab.un",
-   "file": "b2-plain-form.yaml",
+   "file": "b2-01-plain-form.yaml",
    "jlpt": "N4",
    "wordType": "interjection",
    "theme": "basics",
@@ -423,7 +423,7 @@
   },
   {
    "id": "vocab.uun",
-   "file": "b2-plain-form.yaml",
+   "file": "b2-01-plain-form.yaml",
    "jlpt": "N4",
    "wordType": "interjection",
    "theme": "basics",
@@ -433,7 +433,7 @@
   },
   {
    "id": "vocab.ongaku",
-   "file": "b2-plain-form.yaml",
+   "file": "b2-01-plain-form.yaml",
    "jlpt": "N5",
    "wordType": "noun",
    "theme": "leisure",
@@ -5099,7 +5099,7 @@
   },
   {
    "id": "plain.i-drink-coffee-every-day",
-   "file": "b2-plain-form.yaml",
+   "file": "b2-01-plain-form.yaml",
    "jlpt": "N4",
    "scenario": "casual",
    "japanese": "毎日コーヒーを飲む。",
@@ -5108,7 +5108,7 @@
   },
   {
    "id": "plain.im-seeing-a-film-tomorrow",
-   "file": "b2-plain-form.yaml",
+   "file": "b2-01-plain-form.yaml",
    "jlpt": "N4",
    "scenario": "casual",
    "japanese": "明日、映画を見る。",
@@ -5117,7 +5117,7 @@
   },
   {
    "id": "plain.im-not-going-out-today",
-   "file": "b2-plain-form.yaml",
+   "file": "b2-01-plain-form.yaml",
    "jlpt": "N4",
    "scenario": "casual",
    "japanese": "今日は出かけない。",
@@ -5126,7 +5126,7 @@
   },
   {
    "id": "plain.i-dont-eat-breakfast",
-   "file": "b2-plain-form.yaml",
+   "file": "b2-01-plain-form.yaml",
    "jlpt": "N4",
    "scenario": "casual",
    "japanese": "朝ご飯は食べない。",
@@ -5135,7 +5135,7 @@
   },
   {
    "id": "plain.i-do-nothing-on-sundays",
-   "file": "b2-plain-form.yaml",
+   "file": "b2-01-plain-form.yaml",
    "jlpt": "N4",
    "scenario": "casual",
    "japanese": "日曜日は何もしない。",
@@ -5144,7 +5144,7 @@
   },
   {
    "id": "plain.i-dont-drink-coffee",
-   "file": "b2-plain-form.yaml",
+   "file": "b2-01-plain-form.yaml",
    "jlpt": "N4",
    "scenario": "casual",
    "japanese": "コーヒーは飲まない。",
@@ -5153,7 +5153,7 @@
   },
   {
    "id": "plain.im-not-buying-anything-today",
-   "file": "b2-plain-form.yaml",
+   "file": "b2-01-plain-form.yaml",
    "jlpt": "N4",
    "scenario": "casual",
    "japanese": "今日は何も買わない。",
@@ -5162,7 +5162,7 @@
   },
   {
    "id": "plain.i-dont-have-time",
-   "file": "b2-plain-form.yaml",
+   "file": "b2-01-plain-form.yaml",
    "jlpt": "N4",
    "scenario": "casual",
    "japanese": "時間がない。",
@@ -5171,7 +5171,7 @@
   },
   {
    "id": "plain.im-not-going-to-work-tomorrow",
-   "file": "b2-plain-form.yaml",
+   "file": "b2-01-plain-form.yaml",
    "jlpt": "N4",
    "scenario": "casual",
    "japanese": "明日は会社に行かない。",
@@ -5180,7 +5180,7 @@
   },
   {
    "id": "plain.i-didnt-eat-anything-yesterday",
-   "file": "b2-plain-form.yaml",
+   "file": "b2-01-plain-form.yaml",
    "jlpt": "N4",
    "scenario": "casual",
    "japanese": "昨日は何も食べなかった。",
@@ -5189,7 +5189,7 @@
   },
   {
    "id": "plain.i-didnt-go-to-japan-last-year",
-   "file": "b2-plain-form.yaml",
+   "file": "b2-01-plain-form.yaml",
    "jlpt": "N4",
    "scenario": "casual",
    "japanese": "去年は日本に行かなかった。",
@@ -5198,7 +5198,7 @@
   },
   {
    "id": "plain.i-didnt-have-any-money",
-   "file": "b2-plain-form.yaml",
+   "file": "b2-01-plain-form.yaml",
    "jlpt": "N4",
    "scenario": "casual",
    "japanese": "お金がなかった。",
@@ -5207,7 +5207,7 @@
   },
   {
    "id": "plain.i-read-a-book-last-night",
-   "file": "b2-plain-form.yaml",
+   "file": "b2-01-plain-form.yaml",
    "jlpt": "N4",
    "scenario": "casual",
    "japanese": "昨夜本を読んだ。",
@@ -5216,7 +5216,7 @@
   },
   {
    "id": "plain.i-met-a-friend",
-   "file": "b2-plain-form.yaml",
+   "file": "b2-01-plain-form.yaml",
    "jlpt": "N4",
    "scenario": "casual",
    "japanese": "友達に会った。",
@@ -5225,7 +5225,7 @@
   },
   {
    "id": "plain.i-watched-a-film",
-   "file": "b2-plain-form.yaml",
+   "file": "b2-01-plain-form.yaml",
    "jlpt": "N4",
    "scenario": "casual",
    "japanese": "映画を見た。",
@@ -5234,7 +5234,7 @@
   },
   {
    "id": "plain.i-went-to-school",
-   "file": "b2-plain-form.yaml",
+   "file": "b2-01-plain-form.yaml",
    "jlpt": "N4",
    "scenario": "casual",
    "japanese": "学校に行った。",
@@ -5243,7 +5243,7 @@
   },
   {
    "id": "plain.im-a-student",
-   "file": "b2-plain-form.yaml",
+   "file": "b2-01-plain-form.yaml",
    "jlpt": "N4",
    "scenario": "casual",
    "japanese": "私は学生だ。",
@@ -5252,7 +5252,7 @@
   },
   {
    "id": "plain.its-quiet-here",
-   "file": "b2-plain-form.yaml",
+   "file": "b2-01-plain-form.yaml",
    "jlpt": "N4",
    "scenario": "casual",
    "japanese": "ここは静かだ。",
@@ -5261,7 +5261,7 @@
   },
   {
    "id": "plain.i-was-free-yesterday",
-   "file": "b2-plain-form.yaml",
+   "file": "b2-01-plain-form.yaml",
    "jlpt": "N4",
    "scenario": "casual",
    "japanese": "昨日は暇だった。",
@@ -5270,7 +5270,7 @@
   },
   {
    "id": "plain.that-person-isnt-a-teacher",
-   "file": "b2-plain-form.yaml",
+   "file": "b2-01-plain-form.yaml",
    "jlpt": "N4",
    "scenario": "casual",
    "japanese": "あの人は先生じゃない。",
@@ -5279,7 +5279,7 @@
   },
   {
    "id": "plain.are-you-busy-today",
-   "file": "b2-plain-form.yaml",
+   "file": "b2-01-plain-form.yaml",
    "jlpt": "N4",
    "scenario": "casual",
    "japanese": "今日、忙しい？",
@@ -5288,7 +5288,7 @@
   },
   {
    "id": "plain.yes-got-it",
-   "file": "b2-plain-form.yaml",
+   "file": "b2-01-plain-form.yaml",
    "jlpt": "N4",
    "scenario": "casual",
    "japanese": "うん、わかった。",
@@ -5297,7 +5297,7 @@
   },
   {
    "id": "plain.no-im-not-going",
-   "file": "b2-plain-form.yaml",
+   "file": "b2-01-plain-form.yaml",
    "jlpt": "N4",
    "scenario": "casual",
    "japanese": "ううん、行かない。",
@@ -5306,7 +5306,7 @@
   },
   {
    "id": "plain.im-meeting-a-friend-tomorrow",
-   "file": "b2-plain-form.yaml",
+   "file": "b2-01-plain-form.yaml",
    "jlpt": "N4",
    "scenario": "casual",
    "japanese": "明日、友達に会う。",
@@ -5315,7 +5315,7 @@
   },
   {
    "id": "plain.ive-been-to-japan-once",
-   "file": "b2-plain-form.yaml",
+   "file": "b2-01-plain-form.yaml",
    "jlpt": "N4",
    "scenario": "casual",
    "japanese": "日本に一度行ったことがあります。",
@@ -5324,7 +5324,7 @@
   },
   {
    "id": "plain.ive-never-swum-in-the-sea",
-   "file": "b2-plain-form.yaml",
+   "file": "b2-01-plain-form.yaml",
    "jlpt": "N4",
    "scenario": "casual",
    "japanese": "海で泳いだことがない。",
@@ -5333,7 +5333,7 @@
   },
   {
    "id": "plain.have-you-ever-eaten-sushi",
-   "file": "b2-plain-form.yaml",
+   "file": "b2-01-plain-form.yaml",
    "jlpt": "N4",
    "scenario": "casual",
    "japanese": "すしを食べたことがありますか。",
@@ -5342,7 +5342,7 @@
   },
   {
    "id": "plain.ive-climbed-the-mountain-twice",
-   "file": "b2-plain-form.yaml",
+   "file": "b2-01-plain-form.yaml",
    "jlpt": "N4",
    "scenario": "casual",
    "japanese": "山に二回登ったことがあります。",
@@ -5351,7 +5351,7 @@
   },
   {
    "id": "plain.on-sundays-i-read-and-listen-to-music",
-   "file": "b2-plain-form.yaml",
+   "file": "b2-01-plain-form.yaml",
    "jlpt": "N4",
    "scenario": "casual",
    "japanese": "日曜日は本を読んだり音楽を聞いたりします。",
@@ -5360,7 +5360,7 @@
   },
   {
    "id": "plain.on-saturdays-i-shop-and-cook",
-   "file": "b2-plain-form.yaml",
+   "file": "b2-01-plain-form.yaml",
    "jlpt": "N4",
    "scenario": "casual",
    "japanese": "土曜日は買い物をしたり料理をしたりします。",
@@ -5369,7 +5369,7 @@
   },
   {
    "id": "plain.do-you-see-friends-and-watch-films",
-   "file": "b2-plain-form.yaml",
+   "file": "b2-01-plain-form.yaml",
    "jlpt": "N4",
    "scenario": "casual",
    "japanese": "友達と遊んだり映画を見たりしますか。",
@@ -5378,7 +5378,7 @@
   },
   {
    "id": "plain.please-dont-open-the-window",
-   "file": "b2-plain-form.yaml",
+   "file": "b2-01-plain-form.yaml",
    "jlpt": "N4",
    "scenario": "casual",
    "japanese": "窓を開けないでください。",
@@ -5387,7 +5387,7 @@
   },
   {
    "id": "plain.please-dont-forget",
-   "file": "b2-plain-form.yaml",
+   "file": "b2-01-plain-form.yaml",
    "jlpt": "N4",
    "scenario": "casual",
    "japanese": "忘れないでください。",
@@ -5396,7 +5396,7 @@
   },
   {
    "id": "plain.please-dont-run-here",
-   "file": "b2-plain-form.yaml",
+   "file": "b2-01-plain-form.yaml",
    "jlpt": "N4",
    "scenario": "casual",
    "japanese": "ここで走らないでください。",
@@ -7351,7 +7351,7 @@
  "grammar": [
   {
    "id": "grammar.b2-plain-dictionary",
-   "file": "b2-plain-form.yaml",
+   "file": "b2-01-plain-form.yaml",
    "jlpt": "N4",
    "pattern": "dictionary form = plain non-past",
    "gloss": "The form on every verb card is a tense — the casual twin of ます.",
@@ -7359,7 +7359,7 @@
   },
   {
    "id": "grammar.b2-plain-nai-ichidan",
-   "file": "b2-plain-form.yaml",
+   "file": "b2-01-plain-form.yaml",
    "jlpt": "N4",
    "pattern": "る → ない",
    "gloss": "An ichidan verb drops る and adds ない. する → しない, 来る → こない.",
@@ -7367,7 +7367,7 @@
   },
   {
    "id": "grammar.b2-plain-nai-godan",
-   "file": "b2-plain-form.yaml",
+   "file": "b2-01-plain-form.yaml",
    "jlpt": "N4",
    "pattern": "godan → あ row + ない",
    "gloss": "One rule for all eight endings — く→かない, む→まない. う→わない, and ある→ない.",
@@ -7375,7 +7375,7 @@
   },
   {
    "id": "grammar.b2-plain-nakatta",
-   "file": "b2-plain-form.yaml",
+   "file": "b2-01-plain-form.yaml",
    "jlpt": "N4",
    "pattern": "ない → なかった",
    "gloss": "ない is an i-adjective, so the plain past is the かった rule you already have.",
@@ -7383,7 +7383,7 @@
   },
   {
    "id": "grammar.b2-plain-ta",
-   "file": "b2-plain-form.yaml",
+   "file": "b2-01-plain-form.yaml",
    "jlpt": "N4",
    "pattern": "て → た",
    "gloss": "The plain past is the te-form with て swapped for た, で for だ.",
@@ -7391,7 +7391,7 @@
   },
   {
    "id": "grammar.b2-plain-da",
-   "file": "b2-plain-form.yaml",
+   "file": "b2-01-plain-form.yaml",
    "jlpt": "N4",
    "pattern": "です → だ",
    "gloss": "The plain copula. だった, じゃない, じゃなかった — and never after an i-adjective.",
@@ -7399,7 +7399,7 @@
   },
   {
    "id": "grammar.b2-plain-casual",
-   "file": "b2-plain-form.yaml",
+   "file": "b2-01-plain-form.yaml",
    "jlpt": "N4",
    "pattern": "うん／ううん",
    "gloss": "The casual yes and no. A plain question drops か and rises instead.",
@@ -7407,7 +7407,7 @@
   },
   {
    "id": "grammar.b2-ta-koto-ga-aru",
-   "file": "b2-plain-form.yaml",
+   "file": "b2-01-plain-form.yaml",
    "jlpt": "N4",
    "pattern": "～たことがある",
    "gloss": "Have ever done it — an experience, not an event that happened.",
@@ -7415,7 +7415,7 @@
   },
   {
    "id": "grammar.b2-tari-tari",
-   "file": "b2-plain-form.yaml",
+   "file": "b2-01-plain-form.yaml",
    "jlpt": "N4",
    "pattern": "～たり～たり + する",
    "gloss": "Some of the things you do, not all of them and not in order. It ends in する.",
@@ -7423,7 +7423,7 @@
   },
   {
    "id": "grammar.b2-nai-de-kudasai",
-   "file": "b2-plain-form.yaml",
+   "file": "b2-01-plain-form.yaml",
    "jlpt": "N4",
    "pattern": "～ないでください",
    "gloss": "Please don't — the ない form in the slot where ～てください takes the te-form.",

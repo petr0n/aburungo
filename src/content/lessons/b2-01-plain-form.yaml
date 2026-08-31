@@ -71,8 +71,8 @@
 # Both were verified to work for these three -- kanjiapi.dev has all three, and
 # every component they decompose into already has a keyword.
 #
-# content-source: n/a for this file -- it references vocabulary/b2-plain-form.yaml
-#   and phrases/b2-plain-form.yaml, whose own provenance markers apply.
+# content-source: n/a for this file -- it references vocabulary/b2-01-plain-form.yaml
+#   and phrases/b2-01-plain-form.yaml, whose own provenance markers apply.
 
 - id: b2.plain-dictionary
   order: 103

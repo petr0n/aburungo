@@ -80,6 +80,12 @@ chapter is wrong, say so — it is a plan, not scripture, and being told is more
 agreed with. Past breakdowns correctly caught that a chapter's blurb never mentioned the doctor,
 and that a stated word budget could not be met.
 
+## File naming
+
+Your document is `docs/plans/book-N-chapter-NN.md` — the book and the chapter, so a reviewer knows
+its context from the filename. The content authored from it uses the matching stem
+`b<book>-<chapter>-<slug>.yaml` in every content directory.
+
 ## Report back
 
 Under 15 lines: status, lesson count with a one-line reason, what the inventory pass found already

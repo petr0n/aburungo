@@ -11,13 +11,13 @@ import { parseGrammarPatterns } from "./schema";
 import { allPhrases } from "@/content/index";
 
 import n5Raw from "./n5.yaml";
-import b2PlainFormRaw from "./b2-plain-form.yaml";
+import b2PlainFormRaw from "./b2-01-plain-form.yaml";
 
 const phrasesById = new Map(allPhrases.map((p) => [p.id, p]));
 
 export const allGrammarPatterns: GrammarPattern[] = [
   ...parseGrammarPatterns(n5Raw, "grammar/n5.yaml", phrasesById),
-  ...parseGrammarPatterns(b2PlainFormRaw, "grammar/b2-plain-form.yaml", phrasesById),
+  ...parseGrammarPatterns(b2PlainFormRaw, "grammar/b2-01-plain-form.yaml", phrasesById),
 ];
 
 export function findGrammarPattern(id: string): GrammarPattern | undefined {

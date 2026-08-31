@@ -53,6 +53,21 @@ Watch for homophones. A kana headword can match a completely different entry —
 zither, before someone noticed it should be 事. Confirm the gloss matches the sense you mean, and
 report it when the sense you want is not JMdict's first.
 
+## File naming
+
+**Every file you create is named for the book and chapter it belongs to**, in every content
+directory, so a reviewer reading a filename knows its context without opening it:
+
+```
+src/content/vocabulary/b2-04-doctor.yaml
+src/content/phrases/b2-04-doctor.yaml
+src/content/grammar/b2-04-doctor.yaml
+src/content/lessons/b2-04-doctor.yaml
+```
+
+`b<book>-<chapter, two digits>-<slug>`. The same stem across all four directories. Book One's
+existing files predate this convention and are not yours to rename.
+
 ## Never touch these
 
 - **`src/content/*/index.ts`.** Registration is a consolidation pass someone runs by hand. Index

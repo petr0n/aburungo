@@ -10,7 +10,7 @@
 # the form buys -- experience, listing, and the negative request.
 #
 # content-source: n/a for this file — every pattern references an existing
-#   phrase from phrases/b2-plain-form.yaml rather than composing new Japanese.
+#   phrase from phrases/b2-01-plain-form.yaml rather than composing new Japanese.
 # jlpt-source: training — the level marks the band this chapter sits in.
 
 - id: grammar.b2-plain-dictionary
