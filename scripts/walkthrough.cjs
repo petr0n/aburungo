@@ -15,12 +15,15 @@ const CLICK_TIMEOUT_RETRY = 20000;
 // lesson it saw, reporting ladderEndReached=false with nothing actually broken.
 // Keep it comfortably above the lesson count; per-step guards catch real stalls,
 // so a generous cap costs nothing.
-// COVERAGE LIMIT: this driver runs as a guest, and useUserTier() returns "guest"
-// whenever there is no Supabase session. TIER_BOOK_LIMIT caps a guest at Book One,
-// so currentBook() keeps the run inside Book One and the ladder ends at "All caught
-// up" after ~100 sessions. Book Two onward is never driven. Verified 2026-09-01:
-// currentBook with every Book One lesson seen returns Book One for a guest and Book
-// Two for free/paid. To cover Book Two the driver needs a signed-in session.
+// COVERAGE depends on who is walking. useUserTier() returns "guest" whenever there
+// is no Supabase session, and TIER_BOOK_LIMIT caps a guest at Book One — so a
+// credential-less run keeps currentBook() inside Book One and ends at "All caught
+// up" after ~100 sessions, never touching Book Two. Verified 2026-09-01: currentBook
+// with every Book One lesson seen returns Book One for a guest, Book Two for free.
+//
+// Set WALKTHROUGH_EMAIL and WALKTHROUGH_PASSWORD to sign in first, which lifts the
+// run to "free" and reaches Book Four. Without them the run still works and still
+// passes; it just covers less, and says so in the summary.
 const MAX_SESSIONS = process.env.MAX_SESSIONS ? parseInt(process.env.MAX_SESSIONS, 10) : 200;
 
 let currentPage = null;
@@ -43,6 +46,51 @@ async function visible(page, sel) {
   const loc = page.locator(sel);
   if ((await loc.count()) === 0) return false;
   return loc.first().isVisible().catch(() => false);
+}
+
+/**
+ * Sign in, if credentials were supplied, so the walk covers more than Book One.
+ *
+ * A guest reaches Book One and stops; any signed-in user is "free" and reaches
+ * Book Four (useUserTier in src/store/auth.ts, TIER_BOOK_LIMIT in
+ * src/content/access.ts). So this is the difference between verifying ~100
+ * lessons and verifying all of them.
+ *
+ * Credentials come from the environment, never from a file in the repo, and are
+ * never logged. With none set the run proceeds as a guest exactly as before —
+ * the summary records which happened, so a green result cannot be mistaken for
+ * coverage it did not have.
+ */
+async function signInIfConfigured(page) {
+  const email = process.env.WALKTHROUGH_EMAIL;
+  const password = process.env.WALKTHROUGH_PASSWORD;
+  if (!email || !password) {
+    log("No WALKTHROUGH_EMAIL/WALKTHROUGH_PASSWORD — walking as a guest (Book One only).");
+    return false;
+  }
+
+  log(`Signing in as ${email} to reach past Book One...`);
+  await page.goto(`${BASE}/`, { waitUntil: "networkidle" });
+
+  if (!(await visible(page, "#auth-email"))) {
+    throw new Error("sign-in requested but the auth form is not on / — has the landing page changed?");
+  }
+  await page.fill("#auth-email", email);
+  await page.fill("#auth-password", password);
+  await page.click('button[type="submit"]:has-text("Sign in")');
+
+  // The form clears on success and surfaces an inline error on failure. Waiting
+  // for the field to disappear distinguishes the two without reading the DOM for
+  // anything that might contain the password.
+  for (let i = 0; i < 40; i++) {
+    if (!(await visible(page, "#auth-email"))) {
+      log("  signed in.");
+      return true;
+    }
+    await page.waitForTimeout(250);
+  }
+  const err = await page.locator('[role="alert"], .text-danger-fg').first().textContent().catch(() => null);
+  throw new Error(`sign-in did not complete${err ? `: ${err.trim()}` : " (no error shown — is Supabase awake?)"}`);
 }
 
 async function clickWhenReady(page, sel, label) {
@@ -434,6 +482,8 @@ async function main() {
     log(`PAGE ERROR: ${String(err)}`);
   });
 
+  const signedIn = await signInIfConfigured(page);
+
   let sessionIndex = 0;
   let grammarClozeCount = 0;
   let allCaughtUpReached = false;
@@ -607,10 +657,12 @@ async function main() {
   }
 
   log(
-    `=== SUMMARY: sessionsCompleted=${results.sessionsCompleted}, ladderEndReached=${ladderEndReached}, ` +
+    `=== SUMMARY: walkedAs=${signedIn ? "signed-in (reaches Book Four)" : "GUEST (Book One only)"}, ` +
+      `sessionsCompleted=${results.sessionsCompleted}, ladderEndReached=${ladderEndReached}, ` +
       `allCaughtUpReached=${allCaughtUpReached}, grammarClozeCardsSeen=${grammarClozeCount}, ` +
       `consoleErrors=${results.consoleErrors.length}, pageErrors=${results.pageErrors.length} ===`,
   );
+  results.walkedAs = signedIn ? "signed-in" : "guest";
   results.ladderEndReached = ladderEndReached;
   results.allCaughtUpReached = allCaughtUpReached;
   results.grammarClozeCardsSeen = grammarClozeCount;

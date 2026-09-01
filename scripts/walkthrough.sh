@@ -8,6 +8,11 @@
 # exactly like an app defect and cost ~15 minutes. A preview bundle ships no
 # HMR client, so a concurrent edit by another agent cannot perturb the run.
 #
+# A guest reaches Book One and stops there, so a plain run verifies ~100 lessons
+# and none of Book Two. Put WALKTHROUGH_EMAIL and WALKTHROUGH_PASSWORD in
+# .env.local (gitignored) and the driver signs in first, which lifts it to the
+# free tier and reaches Book Four. The summary line says which way it walked.
+#
 # Usage:  pnpm walkthrough
 set -euo pipefail
 
@@ -47,5 +52,14 @@ if ! curl -fsS -o /dev/null "http://localhost:$PORT/"; then
   echo "preview server never came up on $PORT" >&2
   exit 1
 fi
+
+# Credentials live in .env.local, which is gitignored. Read only the two keys we
+# want, so nothing else in that file leaks into the driver's environment. An
+# existing WALKTHROUGH_EMAIL in the shell wins, for a one-off run as someone else.
+if [ -z "${WALKTHROUGH_EMAIL:-}" ]; then
+  WALKTHROUGH_EMAIL="$(sed -n 's/^WALKTHROUGH_EMAIL=//p' .env.local | tr -d '"' | head -1)"
+  WALKTHROUGH_PASSWORD="$(sed -n 's/^WALKTHROUGH_PASSWORD=//p' .env.local | tr -d '"' | head -1)"
+fi
+export WALKTHROUGH_EMAIL WALKTHROUGH_PASSWORD
 
 BASE="http://localhost:$PORT" node scripts/walkthrough.cjs
