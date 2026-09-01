@@ -59,7 +59,19 @@
   reading: やくそく
   romaji: yakusoku
   english: arrangement, plans with someone
-  notes: An arrangement made with another person, so it always implies a second party — this is JMdict's second sense, "appointment; engagement; date". Its first sense is "promise; agreement; one's word", and both live in the same word, which is why breaking a 約束 sounds heavier in Japanese than breaking "plans" does in English. You have it with ある (約束があります) and you make it with する (約束します), so no new verb is needed. The 約 is the one already on your ladder in 予約, a reservation. JMdict seq 1538130.
+  notes: An arrangement made with another person, so it always implies a second party — this is JMdict's second sense, "appointment; engagement; date". Its first sense is "promise; agreement; one's word", and both live in the same word, which is why breaking a 約束 sounds heavier in Japanese than breaking "plans" does in English. You have it with ある (約束があります) and you make it with を plus する (会う約束をしました), so no new verb is needed. JMdict marks the verb use on the first sense only, so a bare 約束します means to promise, not to make plans. The 約 is the one already on your ladder in 予約, a reservation. JMdict seq 1538130.
+
+- id: vocab.chotto
+  # jlpt-source: training
+  jlpt: N5
+  word_type: adverb
+  theme: daily-life
+  japanese: ちょっと
+  reading: ちょっと
+  romaji: chotto
+  english: a little; (trailing off) sorry, no
+  notes: You already met it as "a little" in ちょっと見てもいいですか. This chapter needs its other job, which JMdict lists as a sense of its own — 明日はちょっと…, trailed off and left unfinished, is a refusal, and everyone hears it as one. Nothing follows the ちょっと; that is the point. Japanese declines by making the reason sound too awkward to say out loud, and finishing the sentence would be blunter than the situation wants. JMdict seq 1163940, sense 6.
+  # content-source: training
 
 # ── Would you like to? (Lesson 2) ─────────────────────────────────────────────
 

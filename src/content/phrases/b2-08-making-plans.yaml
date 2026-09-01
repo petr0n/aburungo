@@ -85,7 +85,7 @@
   reading: しゅうまつ、いっしょにごはんをたべませんか。
   romaji: shuumatsu, issho ni gohan o tabemasen ka.
   english: Would you like to get something to eat together this weekend?
-  notes: ご飯を食べる is the ordinary way to say "have a meal", not specifically rice. 一緒に is what makes this read as an invitation rather than a question about the other person's eating habits.
+  notes: ご飯を食べる is the ordinary way to say "have a meal", not specifically rice. 一緒に says together outright; ませんか is what makes it an invitation.
 
 - id: plans.lets-meet-on-saturday-next-week
   jlpt: N4
@@ -242,7 +242,7 @@
   reading: どこであいましょうか。
   romaji: doko de aimashou ka.
   english: Where shall we meet?
-  notes: で, not に. 会う takes に for the person you meet and で for the place you meet them in.
+  notes: で, not に. 会う takes に (or と) for the person you meet and で for the place you meet them in.
 
 - id: plans.lets-meet-at-the-station
   jlpt: N4
