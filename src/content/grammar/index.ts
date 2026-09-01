@@ -14,6 +14,13 @@ import n5Raw from "./n5.yaml";
 import b2PlainFormRaw from "./b2-01-plain-form.yaml";
 import b2GivingReceivingRaw from "./b2-02-giving-receiving.yaml";
 import b2JoiningSentencesRaw from "./b2-03-joining-sentences.yaml";
+import b2DoctorRaw from "./b2-04-doctor.yaml";
+import b2DecidingRaw from "./b2-05-deciding.yaml";
+import b2PotentialRaw from "./b2-06-potential.yaml";
+import b2QuotedSpeechRaw from "./b2-07-quoted-speech.yaml";
+import b2MakingPlansRaw from "./b2-08-making-plans.yaml";
+import b2ConditionalsRaw from "./b2-09-conditionals.yaml";
+import b2TroubleRaw from "./b2-10-trouble.yaml";
 
 const phrasesById = new Map(allPhrases.map((p) => [p.id, p]));
 
@@ -22,6 +29,13 @@ export const allGrammarPatterns: GrammarPattern[] = [
   ...parseGrammarPatterns(b2PlainFormRaw, "grammar/b2-01-plain-form.yaml", phrasesById),
   ...parseGrammarPatterns(b2GivingReceivingRaw, "grammar/b2-02-giving-receiving.yaml", phrasesById),
   ...parseGrammarPatterns(b2JoiningSentencesRaw, "grammar/b2-03-joining-sentences.yaml", phrasesById),
+  ...parseGrammarPatterns(b2DoctorRaw, "grammar/b2-04-doctor.yaml", phrasesById),
+  ...parseGrammarPatterns(b2DecidingRaw, "grammar/b2-05-deciding.yaml", phrasesById),
+  ...parseGrammarPatterns(b2PotentialRaw, "grammar/b2-06-potential.yaml", phrasesById),
+  ...parseGrammarPatterns(b2QuotedSpeechRaw, "grammar/b2-07-quoted-speech.yaml", phrasesById),
+  ...parseGrammarPatterns(b2MakingPlansRaw, "grammar/b2-08-making-plans.yaml", phrasesById),
+  ...parseGrammarPatterns(b2ConditionalsRaw, "grammar/b2-09-conditionals.yaml", phrasesById),
+  ...parseGrammarPatterns(b2TroubleRaw, "grammar/b2-10-trouble.yaml", phrasesById),
 ];
 
 export function findGrammarPattern(id: string): GrammarPattern | undefined {

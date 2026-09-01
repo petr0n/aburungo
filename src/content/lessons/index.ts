@@ -43,6 +43,13 @@ import n5PeopleClothesRaw from "./n5-22-people-clothes.yaml";
 import b2PlainFormRaw from "./b2-01-plain-form.yaml";
 import b2GivingReceivingRaw from "./b2-02-giving-receiving.yaml";
 import b2JoiningSentencesRaw from "./b2-03-joining-sentences.yaml";
+import b2DoctorRaw from "./b2-04-doctor.yaml";
+import b2DecidingRaw from "./b2-05-deciding.yaml";
+import b2PotentialRaw from "./b2-06-potential.yaml";
+import b2QuotedSpeechRaw from "./b2-07-quoted-speech.yaml";
+import b2MakingPlansRaw from "./b2-08-making-plans.yaml";
+import b2ConditionalsRaw from "./b2-09-conditionals.yaml";
+import b2TroubleRaw from "./b2-10-trouble.yaml";
 
 const knownWordIds = new Set(allWords.map((w) => w.id));
 const knownPhraseIds = new Set(allPhrases.map((p) => p.id));
@@ -106,6 +113,13 @@ export const b2Lessons: Lesson[] = [
   ...parseLessons(b2PlainFormRaw, "lessons/b2-01-plain-form.yaml", knownWordIds, knownPhraseIds, knownPatternIds, b2ChapterIds),
   ...parseLessons(b2GivingReceivingRaw, "lessons/b2-02-giving-receiving.yaml", knownWordIds, knownPhraseIds, knownPatternIds, b2ChapterIds),
   ...parseLessons(b2JoiningSentencesRaw, "lessons/b2-03-joining-sentences.yaml", knownWordIds, knownPhraseIds, knownPatternIds, b2ChapterIds),
+  ...parseLessons(b2DoctorRaw, "lessons/b2-04-doctor.yaml", knownWordIds, knownPhraseIds, knownPatternIds, b2ChapterIds),
+  ...parseLessons(b2DecidingRaw, "lessons/b2-05-deciding.yaml", knownWordIds, knownPhraseIds, knownPatternIds, b2ChapterIds),
+  ...parseLessons(b2PotentialRaw, "lessons/b2-06-potential.yaml", knownWordIds, knownPhraseIds, knownPatternIds, b2ChapterIds),
+  ...parseLessons(b2QuotedSpeechRaw, "lessons/b2-07-quoted-speech.yaml", knownWordIds, knownPhraseIds, knownPatternIds, b2ChapterIds),
+  ...parseLessons(b2MakingPlansRaw, "lessons/b2-08-making-plans.yaml", knownWordIds, knownPhraseIds, knownPatternIds, b2ChapterIds),
+  ...parseLessons(b2ConditionalsRaw, "lessons/b2-09-conditionals.yaml", knownWordIds, knownPhraseIds, knownPatternIds, b2ChapterIds),
+  ...parseLessons(b2TroubleRaw, "lessons/b2-10-trouble.yaml", knownWordIds, knownPhraseIds, knownPatternIds, b2ChapterIds),
 ].sort((a, b) => a.order - b.order);
 
 export function findLesson(id: string): Lesson | undefined {

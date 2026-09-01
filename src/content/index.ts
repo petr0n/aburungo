@@ -34,6 +34,13 @@ import peopleClothesPhrasesRaw from "./phrases/people-clothes.yaml";
 import b2PlainFormPhrasesRaw from "./phrases/b2-01-plain-form.yaml";
 import b2GivingReceivingPhrasesRaw from "./phrases/b2-02-giving-receiving.yaml";
 import b2JoiningSentencesPhrasesRaw from "./phrases/b2-03-joining-sentences.yaml";
+import b2DoctorPhrasesRaw from "./phrases/b2-04-doctor.yaml";
+import b2DecidingPhrasesRaw from "./phrases/b2-05-deciding.yaml";
+import b2PotentialPhrasesRaw from "./phrases/b2-06-potential.yaml";
+import b2QuotedSpeechPhrasesRaw from "./phrases/b2-07-quoted-speech.yaml";
+import b2MakingPlansPhrasesRaw from "./phrases/b2-08-making-plans.yaml";
+import b2ConditionalsPhrasesRaw from "./phrases/b2-09-conditionals.yaml";
+import b2TroublePhrasesRaw from "./phrases/b2-10-trouble.yaml";
 
 export const allPhrases: Phrase[] = [
   ...parsePhrases(transitRaw, "phrases/transit.yaml"),
@@ -59,6 +66,13 @@ export const allPhrases: Phrase[] = [
   ...parsePhrases(b2PlainFormPhrasesRaw, "phrases/b2-01-plain-form.yaml"),
   ...parsePhrases(b2GivingReceivingPhrasesRaw, "phrases/b2-02-giving-receiving.yaml"),
   ...parsePhrases(b2JoiningSentencesPhrasesRaw, "phrases/b2-03-joining-sentences.yaml"),
+  ...parsePhrases(b2DoctorPhrasesRaw, "phrases/b2-04-doctor.yaml"),
+  ...parsePhrases(b2DecidingPhrasesRaw, "phrases/b2-05-deciding.yaml"),
+  ...parsePhrases(b2PotentialPhrasesRaw, "phrases/b2-06-potential.yaml"),
+  ...parsePhrases(b2QuotedSpeechPhrasesRaw, "phrases/b2-07-quoted-speech.yaml"),
+  ...parsePhrases(b2MakingPlansPhrasesRaw, "phrases/b2-08-making-plans.yaml"),
+  ...parsePhrases(b2ConditionalsPhrasesRaw, "phrases/b2-09-conditionals.yaml"),
+  ...parsePhrases(b2TroublePhrasesRaw, "phrases/b2-10-trouble.yaml"),
 ];
 
 // parsePhrases only rejects duplicate ids within a single file, so the same id in

@@ -32,6 +32,13 @@ import peopleClothesRaw from "./people-clothes.yaml";
 import b2PlainFormRaw from "./b2-01-plain-form.yaml";
 import b2GivingReceivingRaw from "./b2-02-giving-receiving.yaml";
 import b2JoiningSentencesRaw from "./b2-03-joining-sentences.yaml";
+import b2DoctorRaw from "./b2-04-doctor.yaml";
+import b2DecidingRaw from "./b2-05-deciding.yaml";
+import b2PotentialRaw from "./b2-06-potential.yaml";
+import b2QuotedSpeechRaw from "./b2-07-quoted-speech.yaml";
+import b2MakingPlansRaw from "./b2-08-making-plans.yaml";
+import b2ConditionalsRaw from "./b2-09-conditionals.yaml";
+import b2TroubleRaw from "./b2-10-trouble.yaml";
 
 export const allWords: Word[] = [
   ...parseWords(basicsRaw, "vocabulary/basics.yaml"),
@@ -65,6 +72,13 @@ export const allWords: Word[] = [
   ...parseWords(b2PlainFormRaw, "vocabulary/b2-01-plain-form.yaml"),
   ...parseWords(b2GivingReceivingRaw, "vocabulary/b2-02-giving-receiving.yaml"),
   ...parseWords(b2JoiningSentencesRaw, "vocabulary/b2-03-joining-sentences.yaml"),
+  ...parseWords(b2DoctorRaw, "vocabulary/b2-04-doctor.yaml"),
+  ...parseWords(b2DecidingRaw, "vocabulary/b2-05-deciding.yaml"),
+  ...parseWords(b2PotentialRaw, "vocabulary/b2-06-potential.yaml"),
+  ...parseWords(b2QuotedSpeechRaw, "vocabulary/b2-07-quoted-speech.yaml"),
+  ...parseWords(b2MakingPlansRaw, "vocabulary/b2-08-making-plans.yaml"),
+  ...parseWords(b2ConditionalsRaw, "vocabulary/b2-09-conditionals.yaml"),
+  ...parseWords(b2TroubleRaw, "vocabulary/b2-10-trouble.yaml"),
 ];
 
 // parseWords only rejects duplicate ids within a single file, so the same id in
