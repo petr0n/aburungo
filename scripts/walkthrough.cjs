@@ -310,9 +310,14 @@ async function handleCheckpointIfPresent(page, sessionIndex) {
  *    never "みずをください". JP-keyboard mode takes the kana reading verbatim.
  * 2. **Verbs render "reading · politeReading" in one node.** Scraping it whole
  *    types both forms. Only the plain form before the separator is the answer.
+ *
+ * Detected on the counter ("3 to write" / "1 more to write"), not on the bare
+ * words "to write": that gloss belongs to 書く, and Book Two's first lesson
+ * puts it on an intro card. Matching the gloss called that teaching lesson a
+ * production checkpoint and stalled the run on its first session.
  */
 async function handleProductionCheckpointIfPresent(page, sessionIndex) {
-  if (!(await visible(page, "text=to write"))) return false;
+  if (!(await visible(page, "text=/(\\d+ to write|more to write)/"))) return false;
   log(`  production checkpoint detected (session ${sessionIndex})`);
 
   const answers = new Map();
@@ -320,7 +325,7 @@ async function handleProductionCheckpointIfPresent(page, sessionIndex) {
 
   while (guard < 200) {
     guard++;
-    if (!(await visible(page, "text=to write"))) break; // round(s) done, unit closed
+    if (!(await visible(page, "text=/(\\d+ to write|more to write)/"))) break; // round(s) done, unit closed
 
     const prompt = await page.locator("p.text-heading").first().textContent().catch(() => null);
     if (prompt === null) break;
