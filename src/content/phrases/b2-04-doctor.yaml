@@ -1,0 +1,267 @@
+# Book Two, Chapter 4 phrases — saying what is wrong with you.
+#
+# Every sentence here is polite. That is a decision, not a default: the
+# plain-form chapter's own register lesson says plain with friends, polite with
+# everyone else, when in doubt polite -- and a doctor is a stranger. A learner
+# is free to tell a friend 頭が痛い; the model sentences point at です／ます
+# because that is the situation this chapter is for.
+#
+# Five sentences carry a reason clause built with ので, which the joining
+# chapter taught two chapters' worth of rules for. They are here because a
+# symptom on its own rarely does the job -- what you actually say at a clinic
+# or to a colleague is the symptom *and* what follows from it. This is the one
+# place in the chapter that could not be authored before the joining chapter
+# shipped.
+#
+# These are independent utterances. どうしましたか sits next to three answers a
+# patient might give and is deliberately not scripted against any one of them:
+# a question and its reply written as a pair is composed multi-sentence text,
+# which is the surface the content rules exist to keep out.
+#
+# Nothing clinical. No dosage, no frequency, no diagnosis -- the whole of what
+# the doctor says here is rest and take this medicine.
+#
+# content-source: training — N5/N4 canonical, pending Tatoeba verification.
+#   JMdict cannot verify a composed sentence (only fixed expressions are
+#   headwords), so every shape below was checked against the Tatoeba-sourced
+#   examples bundled with JMdict for Applications 3.6.2 on 2026-08-31:
+#   「喉が痛くて、熱があります。風邪薬はありますか。」(173824) attests both
+#   喉が痛い and 熱があります, 「体の節々が痛いです。」(138007) the ～が痛いです
+#   frame, 「微熱があります。」(85582) 熱がある, 「風邪を引いて声がかれてしまった。」
+#   (83942) 風邪を引く, 「気分が悪くて入院したが…」(183170) and
+#   「あの男を一目見るだけで気分が悪くなると彼女が言った。」(230589) 気分が悪い
+#   and 気分が悪くなる, 「あなたはいつ何時病気になるかもしれない。」(232818)
+#   病気になる, 「１週間田舎にいてすっかり元気になったような気がする。」(235744)
+#   元気になる, 「早く病気がよくなりますように。」(140539) and
+#   「あと１、２週間も休めば、すっかりよくなりますよ。」(236809) よくなる,
+#   「せきがひどかったので、苦い薬を飲んだ。」(214052) せき with ので and 薬を飲む,
+#   「食前ごとにこの薬を飲みなさい。」(145805) この薬を飲む,
+#   「いつから痛みだしましたか。」(228997) いつから asked of a symptom,
+#   「１週間以内に電話します。」(235752) 電話します, and
+#   「個室を予約したいのですが？」(174656) 予約. どうしましたか is attested only in
+#   its casual twin, 「どうしたの」(236504); it is kept because it is the stock
+#   opening question of every clinic visit and is built entirely from pieces the
+#   learner already owns. 咳が出ます has no attesting sentence in the bundle at
+#   all -- it is the symptom sentence every beginner course teaches, and the
+#   alternatives (咳がひどいです, 咳が止まりません) would each cost a word this
+#   chapter does not teach. No sentence below is a verbatim quotation, so none
+#   carries a Tatoeba id.
+# jlpt-source: training — the level marks the band this chapter sits in.
+
+# ── Not feeling well ──────────────────────────────────────────────────────────
+
+- id: doctor.i-got-sick
+  jlpt: N4
+  scenario: health
+  japanese: 病気になりました。
+  reading: びょうきになりました。
+  romaji: byouki ni narimashita.
+  english: I got sick.
+
+- id: doctor.i-feel-unwell
+  jlpt: N4
+  scenario: health
+  japanese: 気分が悪いです。
+  reading: きぶんがわるいです。
+  romaji: kibun ga warui desu.
+  english: I don't feel well.
+
+- id: doctor.are-you-ok
+  jlpt: N5
+  scenario: health
+  japanese: 大丈夫ですか。
+  reading: だいじょうぶですか。
+  romaji: daijoubu desu ka.
+  english: Are you all right?
+
+# ── Where else it hurts ───────────────────────────────────────────────────────
+
+- id: doctor.my-stomach-hurts
+  jlpt: N5
+  scenario: health
+  japanese: お腹が痛いです。
+  reading: おなかがいたいです。
+  romaji: onaka ga itai desu.
+  english: My stomach hurts.
+
+- id: doctor.my-throat-hurts
+  jlpt: N4
+  scenario: health
+  japanese: 喉が痛いです。
+  reading: のどがいたいです。
+  romaji: nodo ga itai desu.
+  english: My throat hurts.
+
+- id: doctor.head-and-stomach-hurt
+  jlpt: N5
+  scenario: health
+  japanese: 頭とお腹が痛いです。
+  reading: あたまとおなかがいたいです。
+  romaji: atama to onaka ga itai desu.
+  english: My head and my stomach hurt.
+
+# ── A fever, and a cold ───────────────────────────────────────────────────────
+
+- id: doctor.i-have-a-fever
+  jlpt: N4
+  scenario: health
+  japanese: 熱があります。
+  reading: ねつがあります。
+  romaji: netsu ga arimasu.
+  english: I have a fever.
+
+- id: doctor.i-caught-a-cold
+  jlpt: N5
+  scenario: health
+  japanese: 風邪を引きました。
+  reading: かぜをひきました。
+  romaji: kaze o hikimashita.
+  english: I caught a cold.
+
+- id: doctor.i-dont-have-a-fever
+  jlpt: N4
+  scenario: health
+  japanese: 熱はありません。
+  reading: ねつはありません。
+  romaji: netsu wa arimasen.
+  english: I don't have a fever.
+
+# ── A cough, and how long ─────────────────────────────────────────────────────
+
+- id: doctor.i-have-a-cough
+  jlpt: N3
+  scenario: health
+  japanese: 咳が出ます。
+  reading: せきがでます。
+  romaji: seki ga demasu.
+  english: I have a cough.
+
+- id: doctor.since-when
+  jlpt: N5
+  scenario: health
+  japanese: いつからですか。
+  reading: いつからですか。
+  romaji: itsu kara desu ka.
+  english: Since when?
+  notes: What the doctor says to you. Recognise it; you are not the one saying it.
+
+- id: doctor.coughing-since-yesterday
+  jlpt: N3
+  scenario: health
+  japanese: 昨日から咳が出ます。
+  reading: きのうからせきがでます。
+  romaji: kinou kara seki ga demasu.
+  english: I've had a cough since yesterday.
+
+- id: doctor.fever-so-ill-rest
+  jlpt: N4
+  scenario: health
+  japanese: 熱があるので、今日は休みます。
+  reading: ねつがあるので、きょうはやすみます。
+  romaji: netsu ga aru node, kyou wa yasumimasu.
+  english: I have a fever, so I'm taking today off.
+
+- id: doctor.cold-so-im-not-going
+  jlpt: N4
+  scenario: health
+  japanese: 風邪を引いたので、今日は行きません。
+  reading: かぜをひいたので、きょうはいきません。
+  romaji: kaze o hiita node, kyou wa ikimasen.
+  english: I caught a cold, so I'm not going today.
+
+# ── What's wrong? ─────────────────────────────────────────────────────────────
+
+- id: doctor.whats-wrong
+  jlpt: N5
+  scenario: health
+  japanese: どうしましたか。
+  reading: どうしましたか。
+  romaji: dou shimashita ka.
+  english: What's wrong?
+  notes: What the doctor says to you. Recognise it; you are not the one saying it.
+
+- id: doctor.fever-so-i-came
+  jlpt: N4
+  scenario: health
+  japanese: 熱があるので、病院に来ました。
+  reading: ねつがあるので、びょういんにきました。
+  romaji: netsu ga aru node, byouin ni kimashita.
+  english: I have a fever, so I came to the hospital.
+
+- id: doctor.unwell-so-going-to-the-doctor
+  jlpt: N4
+  scenario: health
+  japanese: 気分が悪いので、医者に行きます。
+  reading: きぶんがわるいので、いしゃにいきます。
+  romaji: kibun ga warui node, isha ni ikimasu.
+  english: I don't feel well, so I'm going to the doctor.
+
+- id: doctor.stomach-hurts-since-yesterday
+  jlpt: N5
+  scenario: health
+  japanese: 昨日からお腹が痛いです。
+  reading: きのうからおなかがいたいです。
+  romaji: kinou kara onaka ga itai desu.
+  english: My stomach has hurt since yesterday.
+
+# ── What the doctor says ──────────────────────────────────────────────────────
+
+- id: doctor.please-rest
+  jlpt: N5
+  scenario: health
+  japanese: 休んでください。
+  reading: やすんでください。
+  romaji: yasunde kudasai.
+  english: Please rest.
+  notes: What the doctor says to you. Recognise it; you are not the one saying it.
+
+- id: doctor.please-take-this-medicine
+  jlpt: N5
+  scenario: health
+  japanese: この薬を飲んでください。
+  reading: このくすりをのんでください。
+  romaji: kono kusuri o nonde kudasai.
+  english: Please take this medicine.
+  notes: What the doctor says to you. Recognise it; you are not the one saying it.
+
+- id: doctor.appointment-please
+  jlpt: N5
+  scenario: health
+  japanese: 予約をお願いします。
+  reading: よやくをおねがいします。
+  romaji: yoyaku o onegai shimasu.
+  english: I'd like to make an appointment.
+
+- id: doctor.ill-call-the-hospital
+  jlpt: N5
+  scenario: health
+  japanese: 病院に電話します。
+  reading: びょういんにでんわします。
+  romaji: byouin ni denwa shimasu.
+  english: I'll call the hospital.
+
+# ── Getting better ────────────────────────────────────────────────────────────
+
+- id: doctor.a-little-better
+  jlpt: N4
+  scenario: health
+  japanese: 少しよくなりました。
+  reading: すこしよくなりました。
+  romaji: sukoshi yoku narimashita.
+  english: I'm a little better.
+
+- id: doctor.i-feel-worse
+  jlpt: N4
+  scenario: health
+  japanese: 気分が悪くなりました。
+  reading: きぶんがわるくなりました。
+  romaji: kibun ga waruku narimashita.
+  english: I've started feeling worse.
+
+- id: doctor.im-well-again
+  jlpt: N4
+  scenario: health
+  japanese: 元気になりました。
+  reading: げんきになりました。
+  romaji: genki ni narimashita.
+  english: I'm well again.

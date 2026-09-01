@@ -1,0 +1,61 @@
+# Book Two, Chapter 9 grammar patterns — the three conditionals and the advice.
+#
+# Six patterns for nine teaching lessons, and the shortfall is the chapter's
+# design rather than an omission: three of its lessons introduce no form at all.
+# Their whole content is choosing between forms already taught, so there is
+# nothing for a pattern to blank out -- the thing being practised is the
+# decision, not a slot.
+#
+# たら gets two, because it does two jobs that fail in different ways: the
+# hypothetical "if", and a "when" that competes with 時 from the
+# joining-sentences chapter. ば gets two, one for verbs and one for adjectives
+# and nouns. と and 〜たほうがいい get one each.
+#
+# The blank is matched against the phrase's reading, so these are kana.
+#
+# content-source: n/a for this file — every pattern references an existing
+#   phrase from phrases/b2-09-conditionals.yaml rather than composing new
+#   Japanese.
+# jlpt-source: training — the level marks the band this chapter sits in.
+
+- id: grammar.b2-cond-tara-if
+  jlpt: N4
+  pattern: "plain past + ら"
+  gloss: If — the plain past plus ら, on verbs, adjectives and nouns alike.
+  phraseId: cond.if-i-have-time-ill-go
+  blank: あったら
+
+- id: grammar.b2-cond-tara-when
+  jlpt: N4
+  pattern: "～たら (when)"
+  gloss: Once that has happened — and unlike 時, the happening is what makes the rest possible.
+  phraseId: cond.when-you-get-home-please-call
+  blank: かえったら
+
+- id: grammar.b2-cond-to
+  jlpt: N4
+  pattern: "dictionary form + と"
+  gloss: Whenever this, automatically that. Never a request or a plan after it.
+  phraseId: cond.press-it-and-it-opens
+  blank: おすと
+
+- id: grammar.b2-cond-ba-verbs
+  jlpt: N4
+  pattern: "godan → え row + ば"
+  gloss: 書けば, 読めば, 食べれば, すれば, 来れば. No exceptions — 買えば, あれば.
+  phraseId: cond.if-you-read-the-book-youll-understand
+  blank: よめば
+
+- id: grammar.b2-cond-ba-adj-noun
+  jlpt: N4
+  pattern: "い → ければ / noun + なら"
+  gloss: 高ければ, and いい's irregular よければ. Nouns take なら, never ば.
+  phraseId: cond.if-the-weather-is-good-ill-climb-the-mountain
+  blank: よければ
+
+- id: grammar.b2-cond-hougaii
+  jlpt: N4
+  pattern: "～たほうがいい"
+  gloss: You'd better — past for the advice, plain ない for the warning against.
+  phraseId: cond.if-youre-tired-you-should-rest
+  blank: やすんだほうがいい

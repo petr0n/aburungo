@@ -1,0 +1,45 @@
+# Book Two, Chapter 7 vocabulary — the one word the pattern cannot be built without.
+#
+# One word, and it is not a design choice. The rest of this chapter runs on
+# verbs the ladder already owns: 言う has been on a card since Book One's home
+# & work lessons, 聞く since its verbs set, and both slot into the quotation
+# frame with no new material at all. 思う has no such predecessor. There is no
+# way to say what you think in this pattern family without it, so the chapter
+# either brings it or does not exist.
+#
+# Its absence from Book One is worth naming rather than papering over. 思う is
+# among the most common verbs in the language and Book One's inventory does not
+# contain it, because Book One had nowhere to put a verb whose entire job is
+# heading a quoted clause -- and that clause is plain form, which Book One never
+# taught. The gap closes here, in the first chapter that has a slot for it.
+#
+# Its conjugation costs nothing. 思う ends in う, so it takes the same わ
+# exception the plain-negative godan lesson drilled on 買う and 会う (思わない,
+# never 思あない), and the same て→た swap the plain-past lesson taught
+# (思って → 思った). A learner arriving here already owns every form of it.
+#
+# content-source: training — headword, reading, part of speech and gloss
+#   verified against JMdict for Applications 3.6.2 on 2026-08-31: sequence
+#   1589350, kanji 思う (flagged common), kana おもう (flagged common), sense [1]
+#   v5u/vt "to think; to consider; to believe; to reckon". The gloss below is
+#   sense [1] only -- the entry carries eight senses, and the one this chapter
+#   teaches is the first. The example sentence is Tatoeba, quoted verbatim with
+#   its id, not composed.
+# jlpt-source: training — JMdict carries no JLPT data. 思う appears at N4 on
+#   both reference lists in data/jlpt (tanos and open-anki agree), and is
+#   tagged N4 here to match.
+
+- id: vocab.omou
+  jlpt: N4
+  word_type: verb
+  verb_class: u
+  theme: communication
+  japanese: 思う
+  reading: おもう
+  romaji: omou
+  english: to think, to believe
+  notes: "A godan verb ending in う, so the negative takes わ — 思わない, never 思あない, the same exception as 買う and 会う. In this book it always comes with a と-clause: what you think goes in front of it as a plain-form clause closed by と, so the sentence is 高いと思います, not 高いを思います. And the negative usually belongs in that clause rather than on 思う itself — 高くないと思います rather than 高いと思いません. With は it flips: そうは思いません and 〜とは思いません are the normal way to disagree politely. JMdict seq 1589350, sense 1."
+  example:
+    japanese: 晴れだと思うよ。
+    english: I think it will be sunny.
+    tatoeba_id: "143025"

@@ -1,0 +1,324 @@
+# Book Two, Chapter 7 phrases — what somebody else said, and what you think.
+#
+# Every sentence below is a plain-form clause with と stapled to the end of it
+# and a reporting or thinking verb closing the sentence. The clause is the part
+# the learner already owns -- 行く, 食べた, 買わない, 寒い, 学生だ are all forms
+# the plain-form chapter built -- so nothing here is competing with the one
+# thing the chapter is teaching, which is what goes after the clause.
+#
+# The two families are kept visibly apart, because English blurs them and
+# Japanese does not. 言う and 聞く always point at a source outside the speaker,
+# so every report sentence has a third person as its subject: 友達は, 先生は,
+# 母は. 思う always points at the speaker's own head, so no opinion sentence has
+# one. That split is the chapter's whole pedagogical claim, and it is visible in
+# the sentences rather than only asserted in a note.
+#
+# Several sentences are built as halves of a pair, so a contrast the grammar
+# notes claim is checkable in review rather than taken on trust:
+#
+#   友達は寒いと言いました              against  友達は学生だと言いました
+#     -- an i-adjective clause takes no だ, a noun clause cannot drop it
+#   この本は面白いと思います            against  この仕事は面白いと思っています
+#     -- a judgement formed now against a stance held for a while
+#   この山は有名だと言われています      against  魚は体にいいと言われています
+#     -- だ survives inside the passive, and is still wrong after an i-adjective
+#
+# The three sentences that close the chapter each carry a report and an opinion
+# joined by けど, which the joining chapter already taught. They are single
+# utterances, not exchanges: a scripted back-and-forth is multi-sentence
+# composed text, which is the surface the content rules exist to keep out, and
+# a chapter about people reporting what other people said is the likeliest
+# place in the book to drift into one.
+#
+# ---------------------------------------------------------------------------
+# BLOCKED, READ BEFORE WIRING: quote.this-mountain-is-said-to-be-famous and
+# quote.fish-is-said-to-be-good-for-you are recognition-only content. Book Two
+# is a `shifted` book, so a Phrase in it routes to the typed FillBlankCard, and
+# these two must never be typed -- producing れる/られる is next book's work, and
+# the chapter design (book-two-chapter-07.md §5.2) makes recognition-only the
+# binding condition on teaching the passive here at all. The engine primitive
+# that would express this (`recognitionOnly?: boolean` on Phrase, checked in
+# ReviewStep ahead of the shifted branch, exactly as isKanji is checked today)
+# does not exist yet -- verified absent from src/ on 2026-08-31. Until it lands,
+# the passive lesson is authored but not safe to ship.
+# ---------------------------------------------------------------------------
+#
+# content-source: training — N5/N4 canonical, pending Tatoeba verification.
+#   JMdict cannot verify a composed sentence (only fixed expressions are
+#   headwords), so every shape below was checked against the Tatoeba-sourced
+#   examples bundled with JMdict for Applications 3.6.2 on 2026-08-31 --
+#   「スミスさんが「海兵隊は必要ない」と言いました。」and「下院議員は支出に歯止め
+#   をかけると言いました。」attest と言いました on a quoted clause,「私の祖母は、
+#   口癖のように１００歳まで生きると言っていましたが、８５歳で亡くなりました。」
+#   と言っていました,「気象庁は今晩雨が降ると言っている。」a weather report under
+#   と言っている,「彼は重病だと言われている。」and「彼女はウーマンリブ運動の指導者
+#   だと言われている。」noun／な-adjective + だ inside the passive,「フランス人は
+#   芸術を愛好すると言われている。」a verb clause inside it,「カールがドイツに移り
+#   住むと聞いた時には驚いた。」and「ジョンの両親は彼の乗った飛行機が定刻どおりだ
+#   と聞いてほっとしているようだった。」と聞く on a verb clause and on だ,
+#   「デスクトップにショートカットを作成しておいたほうが、いろいろ便利だと思います。」
+#   and「自分自身でするべきだと思いますよ。」だと思います,「彼らの計画はうまく
+#   いかないと思う。」and「これは生物の学習法としてはあまりよくないと思う。」the
+#   negative sitting in the clause rather than on 思う,「ちょっときつく言い過ぎた
+#   かな、とずっと思っています。」と思っています, and「津山一高い山は滝山だと思って
+#   いました。」と思っていました. No sentence below is a verbatim quotation, so
+#   none carries a Tatoeba id.
+# jlpt-source: training — the level marks the band this chapter sits in.
+
+# ── What was said ─────────────────────────────────────────────────────────────
+
+- id: quote.my-friend-said-theyre-going-tomorrow
+  jlpt: N4
+  scenario: quoting
+  japanese: 友達は明日行くと言いました。
+  reading: ともだちはあしたいくといいました。
+  romaji: tomodachi wa ashita iku to iimashita.
+  english: My friend said they're going tomorrow.
+
+- id: quote.my-friend-said-they-ate-sushi
+  jlpt: N4
+  scenario: quoting
+  japanese: 友達はすしを食べたと言いました。
+  reading: ともだちはすしをたべたといいました。
+  romaji: tomodachi wa sushi o tabeta to iimashita.
+  english: My friend said they ate sushi.
+
+- id: quote.my-friend-said-theyre-not-buying-anything
+  jlpt: N4
+  scenario: quoting
+  japanese: 友達は何も買わないと言いました。
+  reading: ともだちはなにもかわないといいました。
+  romaji: tomodachi wa nanimo kawanai to iimashita.
+  english: My friend said they're not buying anything.
+
+- id: quote.my-friend-said-its-cold
+  jlpt: N4
+  scenario: quoting
+  japanese: 友達は寒いと言いました。
+  reading: ともだちはさむいといいました。
+  romaji: tomodachi wa samui to iimashita.
+  english: My friend said it's cold.
+
+# ── The word you can't leave out ──────────────────────────────────────────────
+
+- id: quote.my-friend-said-theyre-a-student
+  jlpt: N4
+  scenario: quoting
+  japanese: 友達は学生だと言いました。
+  reading: ともだちはがくせいだといいました。
+  romaji: tomodachi wa gakusei da to iimashita.
+  english: My friend said they're a student.
+
+- id: quote.the-teacher-said-its-fine
+  jlpt: N4
+  scenario: quoting
+  japanese: 先生は大丈夫だと言いました。
+  reading: せんせいはだいじょうぶだといいました。
+  romaji: sensei wa daijoubu da to iimashita.
+  english: The teacher said it's fine.
+
+- id: quote.my-friend-said-they-were-well
+  jlpt: N4
+  scenario: quoting
+  japanese: 友達は元気だったと言いました。
+  reading: ともだちはげんきだったといいました。
+  romaji: tomodachi wa genki datta to iimashita.
+  english: My friend said they were well.
+
+# ── What they've been saying ──────────────────────────────────────────────────
+
+- id: quote.my-friend-was-saying-theyre-going-on-a-trip
+  jlpt: N4
+  scenario: quoting
+  japanese: 友達は明日旅行に行くと言っていました。
+  reading: ともだちはあしたりょこうにいくといっていました。
+  romaji: tomodachi wa ashita ryokou ni iku to itte imashita.
+  english: My friend was saying they're going on a trip tomorrow.
+
+- id: quote.the-teacher-was-saying-work-is-busy
+  jlpt: N4
+  scenario: quoting
+  japanese: 先生は仕事が忙しいと言っていました。
+  reading: せんせいはしごとがいそがしいといっていました。
+  romaji: sensei wa shigoto ga isogashii to itte imashita.
+  english: The teacher was saying work is busy.
+
+- id: quote.my-friend-was-saying-theyre-not-coming
+  jlpt: N4
+  scenario: quoting
+  japanese: 友達は今日は来ないと言っていました。
+  reading: ともだちはきょうはこないといっていました。
+  romaji: tomodachi wa kyou wa konai to itte imashita.
+  english: My friend was saying they're not coming today.
+
+- id: quote.my-mother-was-saying-it-will-rain
+  jlpt: N4
+  scenario: quoting
+  japanese: 母は明日は雨だと言っていました。
+  reading: はははあしたはあめだといっていました。
+  romaji: haha wa ashita wa ame da to itte imashita.
+  english: My mother was saying it's going to rain tomorrow.
+
+# ── They say... (recognition only — see the blocked note above) ───────────────
+
+- id: quote.this-mountain-is-said-to-be-famous
+  jlpt: N4
+  scenario: quoting
+  japanese: この山は有名だと言われています。
+  reading: このやまはゆうめいだといわれています。
+  romaji: kono yama wa yuumei da to iwarete imasu.
+  english: This mountain is said to be famous.
+  # Passive: the chapter teaches れる/られる for reading only, so the produce
+  #   step must never ask a learner to type this back.
+  recognitionOnly: true
+  notes: Recognition only. Read it and understand it; you are not asked to build it. The passive form 言われる is next book's material — what matters here is noticing that the person who said it has disappeared from the sentence, and that だ survives after a な-adjective even under this extra layer.
+
+- id: quote.fish-is-said-to-be-good-for-you
+  jlpt: N4
+  scenario: quoting
+  japanese: 魚は体にいいと言われています。
+  reading: さかなはからだにいいといわれています。
+  romaji: sakana wa karada ni ii to iwarete imasu.
+  english: Fish is said to be good for you.
+  # Passive: the chapter teaches れる/られる for reading only, so the produce
+  #   step must never ask a learner to type this back.
+  recognitionOnly: true
+  notes: Recognition only, the same as its neighbour. Here the quoted clause ends in an i-adjective, so there is no だ — the rule you learned for と holds unchanged inside the passive.
+
+# ── So I heard ────────────────────────────────────────────────────────────────
+
+- id: quote.i-heard-it-will-rain-tomorrow
+  jlpt: N4
+  scenario: quoting
+  japanese: 明日は雨だと聞きました。
+  reading: あしたはあめだとききました。
+  romaji: ashita wa ame da to kikimashita.
+  english: I heard it's going to rain tomorrow.
+
+- id: quote.i-heard-the-teacher-is-going-on-a-trip
+  jlpt: N4
+  scenario: quoting
+  japanese: 先生は来週旅行に行くと聞きました。
+  reading: せんせいはらいしゅうりょこうにいくとききました。
+  romaji: sensei wa raishuu ryokou ni iku to kikimashita.
+  english: I heard the teacher is going on a trip next week.
+
+- id: quote.i-hear-that-shop-is-expensive
+  jlpt: N4
+  scenario: quoting
+  japanese: あの店は高いと聞いています。
+  reading: あのみせはたかいときいています。
+  romaji: ano mise wa takai to kiite imasu.
+  english: I hear that shop is expensive.
+
+# ── What I think ──────────────────────────────────────────────────────────────
+
+- id: quote.i-think-this-book-is-interesting
+  jlpt: N4
+  scenario: quoting
+  japanese: この本は面白いと思います。
+  reading: このほんはおもしろいとおもいます。
+  romaji: kono hon wa omoshiroi to omoimasu.
+  english: I think this book is interesting.
+
+- id: quote.i-think-my-friend-likes-sushi
+  jlpt: N4
+  scenario: quoting
+  japanese: 友達はすしが好きだと思います。
+  reading: ともだちはすしがすきだとおもいます。
+  romaji: tomodachi wa sushi ga suki da to omoimasu.
+  english: I think my friend likes sushi.
+
+- id: quote.i-think-my-friend-will-come-tomorrow
+  jlpt: N4
+  scenario: quoting
+  japanese: 友達は明日来ると思います。
+  reading: ともだちはあしたくるとおもいます。
+  romaji: tomodachi wa ashita kuru to omoimasu.
+  english: I think my friend will come tomorrow.
+
+- id: quote.i-think-the-teacher-will-go-too
+  jlpt: N4
+  scenario: quoting
+  japanese: 先生も行くと思います。
+  reading: せんせいもいくとおもいます。
+  romaji: sensei mo iku to omoimasu.
+  english: I think the teacher will go too.
+
+# ── Saying you don't think so ─────────────────────────────────────────────────
+
+- id: quote.i-dont-think-my-friend-understands
+  jlpt: N4
+  scenario: quoting
+  japanese: 友達は英語がわからないと思います。
+  reading: ともだちはえいごがわからないとおもいます。
+  romaji: tomodachi wa eigo ga wakaranai to omoimasu.
+  english: I don't think my friend understands.
+
+- id: quote.i-dont-think-theres-time
+  jlpt: N4
+  scenario: quoting
+  japanese: 時間がないと思います。
+  reading: じかんがないとおもいます。
+  romaji: jikan ga nai to omoimasu.
+  english: I don't think there's time.
+
+- id: quote.i-dont-think-my-friend-came-yesterday
+  jlpt: N4
+  scenario: quoting
+  japanese: 友達は昨日来なかったと思います。
+  reading: ともだちはきのうこなかったとおもいます。
+  romaji: tomodachi wa kinou konakatta to omoimasu.
+  english: I don't think my friend came yesterday.
+
+# ── What I've been thinking ───────────────────────────────────────────────────
+
+- id: quote.ive-come-to-think-this-work-is-interesting
+  jlpt: N4
+  scenario: quoting
+  japanese: この仕事は面白いと思っています。
+  reading: このしごとはおもしろいとおもっています。
+  romaji: kono shigoto wa omoshiroi to omotte imasu.
+  english: I think this work is interesting, and have for a while.
+
+- id: quote.i-thought-work-would-be-fine
+  jlpt: N4
+  scenario: quoting
+  japanese: 仕事は大丈夫だと思っていました。
+  reading: しごとはだいじょうぶだとおもっていました。
+  romaji: shigoto wa daijoubu da to omotte imashita.
+  english: I thought work was going to be fine.
+
+- id: quote.i-believe-my-friend-is-well
+  jlpt: N4
+  scenario: quoting
+  japanese: 友達は元気だと思っています。
+  reading: ともだちはげんきだとおもっています。
+  romaji: tomodachi wa genki da to omotte imasu.
+  english: I believe my friend is doing well.
+
+# ── Passing it on ─────────────────────────────────────────────────────────────
+
+- id: quote.i-heard-rain-but-i-think-it-will-be-fine
+  jlpt: N4
+  scenario: quoting
+  japanese: 明日は雨だと聞きましたけど、大丈夫だと思います。
+  reading: あしたはあめだとききましたけど、だいじょうぶだとおもいます。
+  romaji: ashita wa ame da to kikimashita kedo, daijoubu da to omoimasu.
+  english: I heard it's going to rain tomorrow, but I think it'll be fine.
+
+- id: quote.my-friend-said-theyre-busy-but-i-think-theyll-come
+  jlpt: N4
+  scenario: quoting
+  japanese: 友達は忙しいと言っていましたけど、明日は来ると思います。
+  reading: ともだちはいそがしいといっていましたけど、あしたはくるとおもいます。
+  romaji: tomodachi wa isogashii to itte imashita kedo, ashita wa kuru to omoimasu.
+  english: My friend said they're busy, but I think they'll come tomorrow.
+
+- id: quote.my-friend-said-that-shop-is-famous-but-i-wont-go
+  jlpt: N4
+  scenario: quoting
+  japanese: 友達はあの店が有名だと言っていましたけど、私は行かないと思います。
+  reading: ともだちはあのみせがゆうめいだといっていましたけど、わたしはいかないとおもいます。
+  romaji: tomodachi wa ano mise ga yuumei da to itte imashita kedo, watashi wa ikanai to omoimasu.
+  english: My friend said that shop is famous, but I don't think I'll go.

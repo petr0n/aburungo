@@ -251,12 +251,15 @@ that is a real cost rather than a rounding error.
   reusing chapter 5's 〜ましょうか to propose a place the same way lesson 2 proposed an activity.
 - **Exercises (existing ids):** `vocab.doko` どこ, `vocab.eki` 駅, `vocab.kouen` 公園, `vocab.ie` 家,
   `vocab.mise` 店, `vocab.au` 会う.
-- **Exercises (earlier Book Two chapters):** Chapter 5 (〜ましょうか) — reused here for a place
-  instead of an activity, the same way this chapter's own lesson 2 used it for an activity.
+- **Exercises (earlier Book Two chapters):** Chapter 5's ましょう and ませんか. **Not ましょうか —
+  chapter 5 does not teach it.** Its lesson 7 note *names* ましょうか in passing, but ships no
+  phrase and no pattern id for it, and chapter 5's own breakdown never promised one. So this
+  chapter must teach ましょうか itself, in its lesson 2, before reusing it here. Budget a phrase
+  and a pattern for it rather than assuming an id that does not exist.
 - **New vocabulary:** none.
 - **New phrases:** 3 — proposing a place with 〜ましょうか, asking どこで会いますか, confirming a
   specific place from the set above.
-- **Depends on:** lesson 2's ましょうか pattern, reused here for place instead of activity.
+- **Depends on:** lesson 2's ましょうか pattern — which lesson 2 must introduce, since chapter 5 leaves it untaught.
 
 ### Lesson 7 — Confirming the plan
 

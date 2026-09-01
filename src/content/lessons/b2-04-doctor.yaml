@@ -1,0 +1,231 @@
+# Chapter 4 — Feeling ill and the doctor.
+#
+# Book One already did more of this chapter's work than the plan credits.
+# 頭が痛いです has been on the ladder since the describing chapter, and 疲れる,
+# 休む, 寝る, 元気, 大丈夫 and 丈夫 came in alongside it -- a whole register of
+# feeling-unwell and getting-better vocabulary, built for a different purpose
+# and sitting here unused. This chapter's job is narrower than "the body and
+# illness": it is the handful of words that register cannot reach on its own
+# -- naming the sickness, not just its symptom -- plus the doctor's half of
+# the conversation, which nothing in Book One touches at all.
+#
+#   1  not feeling well      病気, 気分, and noun or na-adj + に + なる -- to become
+#   2  where else it hurts   お腹, 喉, on the が痛いです pattern you already own
+#   3  a fever, and a cold   熱, 風邪, and the 風／風邪 near-homophone
+#   4  a cough, and how long 咳, いつから, and the first sentence that needs
+#                            the joining chapter's connectors to say what it means
+#   5  what's wrong?         医者, and どうしましたか built from words you have
+#   6  what the doctor says  薬, てください and 飲む recombined, then booking
+#   7  getting better        い-adjective+くなる, the mirror of the first lesson
+#
+# Register default: polite. A doctor is a stranger, and the plain-form
+# chapter's own register rule -- plain with friends, polite with everyone else,
+# when in doubt polite -- points this chapter at です／ます even though plain
+# form now exists on the ladder. Practising plain form here is not wrong; the
+# model sentences default polite because the situation calls for it.
+#
+# Two idioms carry real weight and both recombine an owned verb instead of
+# teaching a new one: 風邪を引く, to catch a cold, built on 引く (already
+# known as "to pull"); and 薬を飲む, to take medicine, built on 飲む (already
+# known as "to drink"). Neither needs more than the one line that names the
+# reuse -- this is what the book's recombination through-line looks like
+# from inside a situation chapter rather than a rule chapter.
+#
+# The cough lesson depends on the joining chapter's grammar for its reason
+# clause, and the doctor's-question lesson depends on those sentences to answer
+# with. Both are hard dependencies -- this chapter could not be authored ahead
+# of the joining chapter, unlike the plain-form chapter that opened this book.
+#
+# Two words arrive under an id that is not their plain romaji, because a Book
+# One homophone already holds it: 風邪 is vocab.kaze-cold (vocab.kaze is the
+# wind) and 咳 is vocab.seki-cough (vocab.seki is a seat). Both collisions are
+# taught rather than hidden -- they are exactly the kind of pair that catches a
+# learner out in speech.
+#
+# The `kanji:` arrays carry seven characters and not nine. 気 and 風 come back
+# inside 病気, 気分 and 風邪 without costing a slot, since the weather chapter
+# already taught them -- the same exclusion the tops-and-trousers lesson made
+# for 着. 喉 and 咳 are written in kanji on their word cards and in the phrases,
+# and are deliberately not in a `kanji:` array: they are for recognising on a
+# clinic sign, where のど and せき are just as common, and the chapter has
+# enough characters to teach without them.
+#
+# content-source: n/a for this file -- it references vocabulary/b2-04-doctor.yaml
+#   and phrases/b2-04-doctor.yaml, whose own provenance markers apply.
+
+- id: b2.ill-not-feeling-well
+  order: 132
+  chapterId: b2.chapter-4
+  situation: Feeling ill and the doctor
+  title: Not feeling well
+  canDo: Say that you're sick, or that you're fine
+  wordIds:
+    - vocab.byouki
+    - vocab.kibun
+    - vocab.naru
+    - vocab.warui
+    - vocab.genki
+    - vocab.daijoubu
+  phraseIds:
+    - doctor.i-got-sick
+    - doctor.i-feel-unwell
+    - doctor.are-you-ok
+  kanji:
+    - 病
+  patternId: grammar.b2-naru-noun
+  grammarNote: "English says \"well\" for three things Japanese keeps apart, and this lesson is mostly about not mixing them up. 元気 is ongoing health and energy — how you are in general, which is why お母さんは元気ですか asks after someone's life and not their afternoon. 病気 is an actual illness, the thing you have; a cold is not usually called 病気, so save it for something that keeps you in bed. 気分 is how you feel at this moment, and it can pass by evening. The new construction is なる, to become, which you already own as a verb. A noun or a な-adjective takes に in front of it: 病気になりました, I got sick. 元気になりました, I got well. That に is not optional and it is not は or が — it marks the state you end up in. い-adjectives do this differently, and that half closes the chapter. One more thing you already have: 気分が悪いです takes が for exactly the reason 頭が痛いです does. The thing you experience rather than choose is marked が. And 大丈夫 does double duty here — 大丈夫ですか to someone who looks unwell, 大丈夫です to wave off the concern. Everything in this chapter is polite, because the person you are most likely to say it to is a stranger in a white coat."
+
+- id: b2.ill-where-else
+  order: 133
+  chapterId: b2.chapter-4
+  situation: Feeling ill and the doctor
+  title: Where else it hurts
+  canDo: Say your stomach or throat hurts
+  wordIds:
+    - vocab.onaka
+    - vocab.nodo
+    - vocab.itai
+    - vocab.atama
+    - vocab.ashi
+    - vocab.ha
+    - vocab.karada
+  phraseIds:
+    - doctor.my-stomach-hurts
+    - doctor.my-throat-hurts
+    - doctor.head-and-stomach-hurt
+  kanji:
+    - 腹
+  grammarNote: "No new grammar at all in this lesson, and that is the point of it. You built 頭が痛いです in the describing chapter, and the pattern takes any body part you can name: お腹が痛いです, 喉が痛いです. The part that hurts takes が. Two notes on the new words. お腹 keeps its お — always, the way お茶 and お弁当 keep theirs. 頭, 足, 歯 and 鼻 never take one, so this is a fixed piece of this word rather than a politeness you can add or drop, and 腹 on its own is blunt enough that you do not want it by accident. 喉 you will meet written both ways: 喉 on a clinic sign, のど on a box of lozenges, both perfectly ordinary. And two parts at once join with と, the same と that puts 駅と学校 side by side: 頭とお腹が痛いです."
+
+- id: b2.ill-fever-cold
+  order: 134
+  chapterId: b2.chapter-4
+  situation: Feeling ill and the doctor
+  title: A fever, and a cold
+  canDo: Say you have a fever or caught a cold
+  wordIds:
+    - vocab.netsu
+    - vocab.kaze-cold
+    - vocab.kaze
+    - vocab.hiku
+    - vocab.aru
+  phraseIds:
+    - doctor.i-have-a-fever
+    - doctor.i-caught-a-cold
+    - doctor.i-dont-have-a-fever
+  kanji:
+    - 熱
+    - 邪
+  grammarNote: "A fever is something that exists rather than something you hold — 熱があります, built on the あります you have been using since things were in bags and on tables, and not on a verb of having. Turn it round and the particle usually moves — 熱はありません — because a negative sentence tends to take は where the positive took が, marking the thing you are ruling out. は in front of あります is a shape you have seen before, in ～はありますか. A cold works differently again. 風邪 pairs with 引く, the verb you know as to pull, in a fixed collocation: 風邪を引きました, I caught a cold. There is no other verb for it, and the pair has to be learned as a pair — which costs you a collocation, not a new verb. Now the trap this lesson is really for. 風 is wind, from the weather chapter. 風邪 is a cold. Both are said かぜ, both start with the same character, and only what follows tells them apart — 風がつよいです is a windy day, the sentence you already have from the weather chapter, 風邪を引きました is a week indoors. The pair is read かぜ as a unit rather than character by character, so 邪 will not help you hear it either. Book One flagged 歯 against 葉 and 鼻 against 花 for the same reason; this is that list getting longer, and context is what does the work every time."
+
+- id: b2.ill-cough-how-long
+  order: 135
+  chapterId: b2.chapter-4
+  situation: Feeling ill and the doctor
+  title: A cough, and how long
+  canDo: Describe a cough, and say how long you've felt this way
+  wordIds:
+    - vocab.seki
+    - vocab.seki-cough
+    - vocab.deru
+    - vocab.itsu
+    - vocab.kinou
+    - vocab.kyou
+    - vocab.yasumu
+    - vocab.iku
+    - vocab.netsu
+    - vocab.kaze-cold
+  phraseIds:
+    - doctor.i-have-a-cough
+    - doctor.since-when
+    - doctor.coughing-since-yesterday
+    - doctor.fever-so-ill-rest
+    - doctor.cold-so-im-not-going
+  kanji: []
+  grammarNote: "A cough is not something you have, it is something that comes out: 咳が出ます, using the 出る you know from leaving a place. Said aloud it is the same せき as 席, a seat — nothing but the sentence around it separates the two, and in a clinic nobody will mishear you. Then the question you will be asked. から has meant \"from\" since アメリカから来ました, and marking a starting point in time is the same job: 昨日から咳が出ます, I have had a cough since yesterday. Notice the Japanese verb stays in the plain present. It started yesterday and it is still happening, and for a symptom that keeps recurring Japanese uses the ordinary non-past where English reaches for \"have had\". That is this verb, not a general rule — for an ongoing action it is 〜ています, so 昨日から日本語を勉強しています, never 勉強します. いつからですか — since when — is the doctor's half of that. And here is where this chapter collects a debt from the joining chapter. A symptom on its own rarely says enough; what you actually need is the symptom and what follows from it. ので attaches to a plain form, exactly as you learned it: 熱があるので、今日は休みます. 風邪を引いたので、今日は行きません. The plain form goes in front — ある, not あります; 引いた, not 引きました — and the politeness lives on the last verb of the sentence. That is the whole rule, unchanged; only the vocabulary in front of it is new."
+
+- id: b2.ill-whats-wrong
+  order: 136
+  chapterId: b2.chapter-4
+  situation: Feeling ill and the doctor
+  title: What's wrong?
+  canDo: Understand "what's wrong?" and explain your symptoms
+  wordIds:
+    - vocab.isha
+    - vocab.dou
+    - vocab.suru
+    - vocab.sensei
+    - vocab.byouin
+    - vocab.kuru
+    - vocab.kibun
+    - vocab.onaka
+    - vocab.itai
+    - vocab.netsu
+    - vocab.kinou
+  phraseIds:
+    - doctor.whats-wrong
+    - doctor.fever-so-i-came
+    - doctor.unwell-so-going-to-the-doctor
+    - doctor.stomach-hurts-since-yesterday
+  kanji:
+    - 医
+    - 者
+  patternId: grammar.b2-doushimashita
+  grammarNote: "どうしましたか is the first thing a doctor says to you, and there is not one new word in it. どう, how, from the past-tense chapter. した, the plain past of する. か, the question particle you have had since the first week. Literally it asks what happened, and it is what anyone says to someone who looks unwell or upset — not a medical phrase, just the one you will hear in a clinic most often. Answer it with what you built in the last lesson: 熱があるので、病院に来ました. 昨日からお腹が痛いです. A symptom, and either how long it has gone on or what you did about it. Two words for the doctor, and they are not interchangeable. 医者 is the person; 病院 is the building, which you have been able to name since the directions chapter without ever having a sentence to put it in. Talking about a doctor, お医者さん is the softer everyday form and worth recognising. Speaking to one, you use neither — you call them 先生, the same word you already have for a teacher, and 医者さん without the お is not said. That is the same register instinct as everything else in this chapter: to a stranger doing a job, the polite form, every time."
+
+- id: b2.ill-doctor-says
+  order: 137
+  chapterId: b2.chapter-4
+  situation: Feeling ill and the doctor
+  title: What the doctor says
+  canDo: Understand simple instructions, and say you'll book a visit
+  wordIds:
+    - vocab.kusuri
+    - vocab.yasumu
+    - vocab.nomu
+    - vocab.yoyaku
+    - vocab.denwa
+    - vocab.suru
+    - vocab.byouin
+    - vocab.kono
+  phraseIds:
+    - doctor.please-rest
+    - doctor.please-take-this-medicine
+    - doctor.appointment-please
+    - doctor.ill-call-the-hospital
+  kanji:
+    - 薬
+  grammarNote: "This lesson brings one word and no grammar whatsoever, which is worth saying out loud rather than apologising for. 休んでください and この薬を飲んでください are the ～てください you built in the te-form chapter, with 休む and 飲む dropped into it unchanged. What is new is the collocation: medicine is drunk in Japanese, 薬を飲む, whether it is a syrup or a tablet you swallow dry. That is the second idiom in this chapter riding on a verb you already own, after 風邪を引く, and it is the whole reason 薬 costs so little to learn. Booking is the same story. 予約 has been a noun since the hotel chapter, する turns a noun into a verb the way 買い物をします and 宿題をします already do, and 予約します is the result. At a reception desk you are more likely to say 予約をお願いします — the お願いします you have used for a menu, a taxi and a check-in, doing the same job here. 電話します works the same way on 電話. Nothing here is a prescription: how much and how often is a conversation this book does not teach, and it is not something to guess at."
+
+- id: b2.ill-getting-better
+  order: 138
+  chapterId: b2.chapter-4
+  situation: Feeling ill and the doctor
+  title: Getting better
+  canDo: Say you're getting better or worse
+  wordIds:
+    - vocab.ii
+    - vocab.warui
+    - vocab.genki
+    - vocab.naru
+    - vocab.kibun
+    - vocab.sukoshi
+  phraseIds:
+    - doctor.a-little-better
+    - doctor.i-feel-worse
+    - doctor.im-well-again
+  kanji: []
+  patternId: grammar.b2-naru-i-adj
+  grammarNote: "The chapter opened with 病気になりました and closes with the other half of that rule. A noun or a な-adjective takes に before なる — you have had that since the first lesson here. An い-adjective cannot: it drops its final い and takes く instead. 悪い becomes 悪くなる, 痛い becomes 痛くなる, 高い becomes 高くなる. 気分が悪くなりました — I started feeling worse. One irregular, and it is the one you want most: いい becomes よく, not いく, so getting better is よくなりました. That く is not quite new either. You have said it once already, inside あまりおいしくないです — the same く, with ない on the end instead of なる. This is the shape that lets an adjective attach to a verb at all, and なる is only the first place you will need it. No new words in this lesson on purpose. Every piece of it — いい, 悪い, 元気, なる, 少し — you already had; only the joint between them is new. And with 元気になりました you can close the story this chapter tells: got sick, said what hurt, saw the doctor, got better."
+
+- id: b2.checkpoint-4
+  order: 139
+  chapterId: b2.chapter-4
+  situation: Integration & checkpoint
+  title: Chapter 4 checkpoint
+  canDo: Recognise everything taught so far
+  wordIds: []
+  phraseIds: []
+  kanji: []
+  checkpoint: recognition
+  grammarNote: "A wide pass over everything this chapter has taught. Type the reading or the meaning rather than picking it out of a line-up. Two pairs are worth slowing down for as they come round — 風 against 風邪, and 席 against 咳 — since each pair sounds identical and only the sentence around it says which one you are looking at. Anything you miss comes back sooner. It finishes when the remaining set empties; retry as often as you like, nothing is recorded."

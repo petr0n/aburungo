@@ -116,9 +116,12 @@ which exists in Book One and has never appeared in a phrase.
   泳ぎます → 泳ぎたい (godan, spanning endings); 見ます → 見たい (ichidan, already the same stem
   that builds て/た); irregulars する → したい and 来ます → 来たい — flag that 来たい reads きたい,
   not くたい, the same reading trap chapter 1's lesson 2 names for 来ない. Carry forward が: the
-  thing or action wanted is marked with が, not を — the same が that already marks what is liked
+  thing or action wanted is normally marked with が — the same が that already marks what is liked
   or disliked (`grammar.n5-unit-30`) and the が that was already sitting in front of ラーメン and 水
-  in unit 31's own phrases.
+  in that lesson's own phrases. **Do not teach が as the only option.** を is also grammatical and
+  the learner already owns a phrase using it — `phrases/meals.yaml:95` ships そばを食べたいです —
+  so a flat "not を" contradicts their own deck. Teach が as the default and name を as the other
+  option, not as an error.
 - **Exercises (existing ids):** `vocab.taberu` 食べる, `vocab.nomu` 飲む, `vocab.iku` 行く,
   `vocab.kau` 買う, `vocab.oyogu` 泳ぐ, `vocab.miru` 見る, `vocab.suru` する, `vocab.kuru` 来る,
   `vocab.au` 会う.

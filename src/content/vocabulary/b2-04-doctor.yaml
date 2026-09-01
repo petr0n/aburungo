@@ -1,0 +1,149 @@
+# Book Two, Chapter 4 vocabulary — nine words, because Book One already had the rest.
+#
+# The inventory pass before authoring found that the describing chapter and the
+# home-and-work chapter between them already teach eight body parts, 痛い with
+# its が-marking rule, and a whole feeling-unwell register -- 元気, 大丈夫, 丈夫,
+# 疲れる, 眠い, 悪い, 休む, 寝る -- built for other purposes and sitting here on
+# topic and unused. 病院 has been taught since the directions chapter and has
+# never appeared in a sentence. So this file carries only what that register
+# cannot reach: the sickness itself, two more body parts, three symptoms, the
+# doctor and what they give you.
+#
+# Two words needed an id that is not their plain romaji, because the romaji was
+# already taken by a homophone Book One teaches:
+#
+#   風邪 かぜ (a cold)   -> vocab.kaze-cold,  since vocab.kaze is 風, wind
+#   咳   せき (a cough)  -> vocab.seki-cough, since vocab.seki is 席, a seat
+#
+# Both follow vocab.hana-nose, which Book One disambiguated the same way against
+# 花. Both collisions are also teaching material, and the lessons say so rather
+# than hiding them.
+#
+# 喉 and 咳 keep their kanji headwords -- JMdict flags both forms common and both
+# characters are jōyō -- but neither is listed in a lesson's `kanji:` array. They
+# are for recognising on a clinic sign or a medicine box, where they are as often
+# written のど and せき, and the chapter has seven characters to teach already.
+#
+# content-source: training — headword, reading, part of speech and gloss
+#   verified against JMdict for Applications 3.6.2 on 2026-08-31, sequence
+#   numbers inline. All nine are flagged common in JMdict. The three example
+#   sentences are Tatoeba, quoted verbatim with their ids, not composed.
+# jlpt-source: training — JLPT level unverified (JMdict carries no JLPT data).
+#   Levels follow data/jlpt/reference-*.json: 病気, お腹, 風邪, 医者 and 薬 at N5
+#   (tanos and open-anki), 気分, 熱 and 喉 at N4, 咳 at N3 on both lists. 咳 is
+#   kept at its real level rather than nudged into this book's band; the learner
+#   never reads a level, and the coverage tooling should not be told a lie.
+
+# ── Not feeling well (Lesson 1) ───────────────────────────────────────────────
+
+- id: vocab.byouki
+  jlpt: N5
+  word_type: noun
+  theme: health
+  japanese: 病気
+  reading: びょうき
+  romaji: byouki
+  english: illness, sickness
+  notes: An actual illness. JMdict glosses it "illness (usu. excluding minor ailments, e.g. common cold)" — a cold is 風邪, not 病気, and calling one 病気 sounds graver than you mean. The 気 is the one from 天気 and 元気. JMdict seq 1490230.
+
+- id: vocab.kibun
+  jlpt: N4
+  word_type: noun
+  theme: health
+  japanese: 気分
+  reading: きぶん
+  romaji: kibun
+  english: feeling, mood
+  notes: How you feel at this moment, not how healthy you are in general — that is 元気. 気分が悪い is the ordinary way to say you feel unwell or queasy; for being in a bad temper, Japanese normally reaches for 機嫌が悪い instead. Its characters are the 気 of 天気 and 元気, and the 分 you already read on a clock. JMdict seq 1222590.
+
+# ── Where else it hurts (Lesson 2) ────────────────────────────────────────────
+
+- id: vocab.onaka
+  jlpt: N5
+  word_type: noun
+  theme: body
+  japanese: お腹
+  reading: おなか
+  romaji: onaka
+  english: stomach, belly
+  notes: The お is part of the word and never comes off, the way it never comes off お茶 or お弁当 — 頭, 足, 歯 and 鼻 take no such prefix. JMdict tags the whole word polite; the bare 腹 is blunt. JMdict seq 1002610.
+
+- id: vocab.nodo
+  jlpt: N4
+  word_type: noun
+  theme: body
+  japanese: 喉
+  reading: のど
+  romaji: nodo
+  english: throat
+  notes: Written のど at least as often as 喉 — medicine packaging uses both. JMdict seq 1600280.
+
+# ── A fever, and a cold (Lesson 3) ────────────────────────────────────────────
+
+- id: vocab.netsu
+  jlpt: N4
+  word_type: noun
+  theme: health
+  japanese: 熱
+  reading: ねつ
+  romaji: netsu
+  english: fever, temperature
+  notes: One word for both heat and a fever — JMdict lists heat first and fever second, which is why 熱 turns up on a stove as well as in a clinic. You do not "have" it with 持つ; it exists, 熱があります. JMdict seq 1467710.
+  example:
+    japanese: 微熱があります。
+    english: I have a slight fever.
+    tatoeba_id: "85582"
+
+- id: vocab.kaze-cold
+  jlpt: N5
+  word_type: noun
+  theme: health
+  japanese: 風邪
+  reading: かぜ
+  romaji: kaze
+  english: a cold
+  notes: The same sound as 風, wind, and the same first character — different word. The pair is read かぜ as a unit rather than character by character, which is why 邪 gives you nothing to hang the reading on. You catch one with 引く, not with a verb of getting. The id is vocab.kaze-cold because vocab.kaze is already the wind. JMdict seq 1583720.
+  example:
+    japanese: ただの風邪でしょう。
+    english: You probably just have a cold.
+    tatoeba_id: "203635"
+
+# ── A cough, and how long (Lesson 4) ──────────────────────────────────────────
+
+- id: vocab.seki-cough
+  jlpt: N3
+  word_type: noun
+  theme: health
+  japanese: 咳
+  reading: せき
+  romaji: seki
+  english: cough
+  notes: Said the same as 席, a seat, and written differently — nothing but context separates them in speech. Often written せき in kana. A cough is something that comes out rather than something you have — 咳が出ます. The id is vocab.seki-cough because vocab.seki is already the seat. JMdict seq 1204300.
+  example:
+    japanese: せきがひどかったので、苦い薬を飲んだ。
+    english: I had a bad cough, so I took the bitter medicine.
+    tatoeba_id: "214052"
+
+# ── What's wrong? (Lesson 5) ──────────────────────────────────────────────────
+
+- id: vocab.isha
+  jlpt: N5
+  word_type: noun
+  theme: health
+  japanese: 医者
+  reading: いしゃ
+  romaji: isha
+  english: doctor, physician
+  notes: The person, where 病院 is the building. Talking about one, お医者さん is the softer everyday form; speaking to one, you call them 先生, the same word you already have for a teacher, and never 医者さん. JMdict seq 1159980.
+
+# ── What the doctor says (Lesson 6) ───────────────────────────────────────────
+
+- id: vocab.kusuri
+  jlpt: N5
+  word_type: noun
+  theme: health
+  japanese: 薬
+  reading: くすり
+  romaji: kusuri
+  english: medicine
+  notes: Taken with 飲む, to drink, whether it is a liquid or a tablet — 薬を飲む is the fixed way to say it. JMdict seq 1538160.
