@@ -12,12 +12,16 @@ import { allPhrases } from "@/content/index";
 
 import n5Raw from "./n5.yaml";
 import b2PlainFormRaw from "./b2-01-plain-form.yaml";
+import b2GivingReceivingRaw from "./b2-02-giving-receiving.yaml";
+import b2JoiningSentencesRaw from "./b2-03-joining-sentences.yaml";
 
 const phrasesById = new Map(allPhrases.map((p) => [p.id, p]));
 
 export const allGrammarPatterns: GrammarPattern[] = [
   ...parseGrammarPatterns(n5Raw, "grammar/n5.yaml", phrasesById),
   ...parseGrammarPatterns(b2PlainFormRaw, "grammar/b2-01-plain-form.yaml", phrasesById),
+  ...parseGrammarPatterns(b2GivingReceivingRaw, "grammar/b2-02-giving-receiving.yaml", phrasesById),
+  ...parseGrammarPatterns(b2JoiningSentencesRaw, "grammar/b2-03-joining-sentences.yaml", phrasesById),
 ];
 
 export function findGrammarPattern(id: string): GrammarPattern | undefined {

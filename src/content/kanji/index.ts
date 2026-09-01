@@ -1,5 +1,5 @@
 import type { Kanji, KanjiComponent, KanjiPiece } from "@/types";
-import { n5Lessons } from "@/content/lessons";
+import { books } from "@/content/books";
 import { buildPieceIndex } from "./pieces";
 import decomposition from "./decomposition.json";
 import { parseKanji } from "./schema";
@@ -21,8 +21,12 @@ export const componentByGlyph: ReadonlyMap<string, KanjiComponent> = new Map(
 
 /**
  * Every taught kanji's shapes, resolved to taught / met / new as of the moment
- * that kanji is introduced. `n5Lessons` is the shipping ladder — the order the
- * learner actually walks, which is what the states are relative to.
+ * that kanji is introduced. Every book's lessons, because the whole course is
+ * the ladder the learner actually walks and the states are relative to that:
+ * scoping this to Book One left Book Two's first taught character (伝, on
+ * b2.giving-te-ageru) with no component row at all, which scope.test.ts caught.
+ * Orders are global across books, and buildPieceIndex sorts by order, so the
+ * concatenation walks in the learner's order.
  *
  * The annotation is a checked assignment, not a cast: a JSON import is typed
  * with literal keys and no index signature.
@@ -30,7 +34,7 @@ export const componentByGlyph: ReadonlyMap<string, KanjiComponent> = new Map(
 const decompositionMap: Readonly<Record<string, readonly string[]>> = decomposition.map;
 
 export const piecesByCharacter: ReadonlyMap<string, KanjiPiece[]> = buildPieceIndex(
-  n5Lessons,
+  books.flatMap((b) => b.lessons),
   decompositionMap,
   allComponents,
 );

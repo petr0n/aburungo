@@ -2,6 +2,12 @@
 # Source: KANJIDIC2 via kanjiapi.dev. KANJIDIC2 is CC BY-SA 4.0,
 # (c) Electronic Dictionary Research and Development Group.
 
+- character: "伝"
+  meanings: ["transmit", "go along", "walk along", "follow"]
+  allMeanings: ["transmit", "go along", "walk along", "follow", "report", "communicate", "legend", "tradition"]
+  on: ["デン", "テン"]
+  kun: ["つた.わる", "つた.える", "つた.う", "つだ.う", "-づた.い", "つて"]
+  strokes: 6
 - character: "国"
   meanings: ["country"]
   allMeanings: ["country"]

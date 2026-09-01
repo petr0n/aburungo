@@ -51,6 +51,12 @@ export function parsePhrase(raw: unknown, source: string): Phrase {
   if (!isOptionalString(o.notes)) {
     throw new PhraseSchemaError(`${source}: entry "${String(o.id)}" has invalid notes`, raw);
   }
+  if (o.recognitionOnly !== undefined && typeof o.recognitionOnly !== "boolean") {
+    throw new PhraseSchemaError(
+      `${source}: entry "${String(o.id)}" has invalid recognitionOnly "${String(o.recognitionOnly)}" — must be true or false`,
+      raw,
+    );
+  }
   if (o.jlpt !== undefined && (typeof o.jlpt !== "string" || !JLPT_LEVELS.has(o.jlpt))) {
     throw new PhraseSchemaError(
       `${source}: entry "${String(o.id)}" has invalid jlpt "${String(o.jlpt)}" — must be N5/N4/N3/N2/N1`,
@@ -68,6 +74,7 @@ export function parsePhrase(raw: unknown, source: string): Phrase {
     audioUrl: o.audioUrl as string | undefined,
     notes: o.notes as string | undefined,
     jlpt: o.jlpt as JlptLevel | undefined,
+    recognitionOnly: o.recognitionOnly as boolean | undefined,
   };
 }
 

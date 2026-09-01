@@ -64,22 +64,12 @@
 # other two pairs. Keep them paired if these lessons are ever edited: the
 # mirror is what makes lesson 9's difficulty visible rather than asserted.
 #
-# The `kanji:` arrays are empty and should not stay that way. 手伝う brings 伝,
-# which no lesson teaches yet (手 is already taught). One character is the whole
-# kanji yield of this chapter, which is the honest consequence of a rule chapter
+# 手伝う brings 伝, the one character this chapter teaches (手 was already
+# taught). It sits on the favour lesson, b2.giving-te-ageru, which is where
+# 手伝う first appears. One character is the honest yield of a rule chapter
 # built almost entirely on owned vocabulary -- the same low-kanji data point
-# chapter 1 flagged, not something to pad.
-#
-# It is held back for the reason chapter 1's is: a character in a lesson's array
-# must also have a row in the generated kanji set, in its decomposition, and in
-# the component layer, and the component layer is built from the *registered*
-# ladder, so it cannot resolve a lesson that is not wired in yet. Adding 伝 here
-# turns src/content/kanji/scope.test.ts red. When this file is wired into the
-# lessons index and the book: put 伝 on the favour lesson (b2.giving-te-ageru),
-# then rerun `node scripts/kanji.mjs build` and `decompose`. One thing to expect
-# rather than discover -- 伝 decomposes into ⺅ and 云, and while ⺅ already has a
-# keyword in src/content/kanji/components.yaml, 云 does not. That keyword has to
-# be written by hand in the same pass or components.test.ts will fail.
+# chapter 1 flagged, not something to pad. Every other lesson here keeps an
+# empty array because it introduces no character of its own.
 #
 # content-source: n/a for this file -- it references
 #   vocabulary/b2-02-giving-receiving.yaml and phrases/b2-02-giving-receiving.yaml,
@@ -226,7 +216,8 @@
     - giving.i-helped-my-sister-with-her-homework
     - giving.i-taught-my-friend-english
     - giving.i-made-my-brother-a-lunch
-  kanji: []
+  kanji:
+    - 伝
   patternId: grammar.b2-giving-te-ageru
   grammarNote: "The three verbs have a second life, and this is the first of them. Put a verb in its te-form and add あげる, and what changes hands is no longer an object but the action itself: 教えてあげました, 作ってあげました, 手伝ってあげました. The form costs you nothing — it is the te-form you sorted into groups in Book One with あげる on the end, and あげる is ichidan, so it inflects exactly as it did in the first lesson of this chapter. What is new is the meaning. 作りました is that you made something. 作ってあげました is that you made it for someone, and the sentence now says so. The caution from that first lesson comes across unchanged and gets sharper here, because a favour is a more personal thing to claim than a gift. 手伝ってあげます said to a teacher or a boss has the same presumptuous edge as offering them a present with あげる — it announces that you are doing them a kindness. To a friend, a sibling or a child it is warm and completely ordinary. When you are unsure, drop the あげる: 手伝います on its own is a plain offer to help and is safe everywhere."
 

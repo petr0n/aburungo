@@ -59,6 +59,21 @@ export type Phrase = {
    * predates JLPT tagging; treat as N5 until resolved.
    */
   jlpt?: JlptLevel;
+  /**
+   * Meet this phrase, never be asked to type it.
+   *
+   * The produce step asks the learner to reconstruct a phrase from its English
+   * gloss. Some grammar is taught for recognition long before production is
+   * reasonable — Book Two chapter 7 introduces 〜と言われています so a learner can
+   * read it, and asking them to produce れる/られる forms the chapter never
+   * taught would be a demand the content never prepared them for.
+   *
+   * Kanji solved this by being absent from produceItems entirely (spec
+   * decision 4). Phrases need it per-phrase, because a chapter mixes the two.
+   *
+   * Defaults false: a phrase is producible unless it says otherwise.
+   */
+  recognitionOnly?: boolean;
 };
 
 export type WordType = "noun" | "verb" | "i-adj" | "na-adj" | "adverb" | "counter" | "interjection";

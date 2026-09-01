@@ -32,6 +32,8 @@ import pastTensePhrasesRaw from "./phrases/past-tense.yaml";
 import mealsPhrasesRaw from "./phrases/meals.yaml";
 import peopleClothesPhrasesRaw from "./phrases/people-clothes.yaml";
 import b2PlainFormPhrasesRaw from "./phrases/b2-01-plain-form.yaml";
+import b2GivingReceivingPhrasesRaw from "./phrases/b2-02-giving-receiving.yaml";
+import b2JoiningSentencesPhrasesRaw from "./phrases/b2-03-joining-sentences.yaml";
 
 export const allPhrases: Phrase[] = [
   ...parsePhrases(transitRaw, "phrases/transit.yaml"),
@@ -55,6 +57,8 @@ export const allPhrases: Phrase[] = [
   ...parsePhrases(mealsPhrasesRaw, "phrases/meals.yaml"),
   ...parsePhrases(peopleClothesPhrasesRaw, "phrases/people-clothes.yaml"),
   ...parsePhrases(b2PlainFormPhrasesRaw, "phrases/b2-01-plain-form.yaml"),
+  ...parsePhrases(b2GivingReceivingPhrasesRaw, "phrases/b2-02-giving-receiving.yaml"),
+  ...parsePhrases(b2JoiningSentencesPhrasesRaw, "phrases/b2-03-joining-sentences.yaml"),
 ];
 
 // parsePhrases only rejects duplicate ids within a single file, so the same id in

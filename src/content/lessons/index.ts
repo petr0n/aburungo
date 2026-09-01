@@ -41,6 +41,8 @@ import n5PastTenseRaw from "./n5-20-past-tense.yaml";
 import n5MealsRaw from "./n5-21-meals.yaml";
 import n5PeopleClothesRaw from "./n5-22-people-clothes.yaml";
 import b2PlainFormRaw from "./b2-01-plain-form.yaml";
+import b2GivingReceivingRaw from "./b2-02-giving-receiving.yaml";
+import b2JoiningSentencesRaw from "./b2-03-joining-sentences.yaml";
 
 const knownWordIds = new Set(allWords.map((w) => w.id));
 const knownPhraseIds = new Set(allPhrases.map((p) => p.id));
@@ -91,21 +93,20 @@ export const n5Lessons: Lesson[] = [
   .filter((u) => hanaEnabled || (u.checkpoint !== "conversation" && u.checkpoint !== "can-do"));
 
 /**
- * Book Two, chapter 1. Orders continue Book One's rather than restarting: they
- * are global across the course, because scripts/kanji.mjs sorts every lesson
- * file by `order` with no idea which book a lesson came from.
+ * Book Two. Orders continue Book One's rather than restarting: they are global
+ * across the course, because scripts/kanji.mjs sorts every lesson file by
+ * `order` with no idea which book a lesson came from. Sorted here for the same
+ * reason n5Lessons is: chapter files land out of order and the ladder is the
+ * `order` sequence, not the import list.
  *
  * No Hana filter here, unlike n5Lessons: nothing in this book is gated on the
  * shelved AI. Add one if that ever changes.
  */
-export const b2Lessons: Lesson[] = parseLessons(
-  b2PlainFormRaw,
-  "lessons/b2-01-plain-form.yaml",
-  knownWordIds,
-  knownPhraseIds,
-  knownPatternIds,
-  b2ChapterIds,
-);
+export const b2Lessons: Lesson[] = [
+  ...parseLessons(b2PlainFormRaw, "lessons/b2-01-plain-form.yaml", knownWordIds, knownPhraseIds, knownPatternIds, b2ChapterIds),
+  ...parseLessons(b2GivingReceivingRaw, "lessons/b2-02-giving-receiving.yaml", knownWordIds, knownPhraseIds, knownPatternIds, b2ChapterIds),
+  ...parseLessons(b2JoiningSentencesRaw, "lessons/b2-03-joining-sentences.yaml", knownWordIds, knownPhraseIds, knownPatternIds, b2ChapterIds),
+].sort((a, b) => a.order - b.order);
 
 export function findLesson(id: string): Lesson | undefined {
   return [...n5Lessons, ...b2Lessons].find((u) => u.id === id);

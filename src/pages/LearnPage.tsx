@@ -26,6 +26,7 @@ import { bookOne, books, currentBook, priorBooks } from "@/content/books";
 import { chapterLabel, placeInChapter } from "@/content/chapters";
 import { phrasesForTier, reachable, wordsForTier } from "@/content/access";
 import { findPhrase } from "@/content";
+import { produceItemsFor } from "./produceItems";
 import { getPathProgress, markLessonSeen } from "@/db/pathProgressStore";
 import { buildCanDoScope, buildCrossSituationScope, canDoMarkerId, taughtSituations, verifiedCanDos } from "@/srs/canDo";
 import { getOne, upsertSynced, hydrateFromServer, recordRating, recordReview } from "@/db/reviewStore";
@@ -762,7 +763,7 @@ export function LearnPage({ book: pinnedBook }: { book?: Book } = {}) {
     if (session === null) return;
     // Before the branch, so it runs whether or not this lesson has produce items.
     void seedNewKanji(session.newKanji, userId !== null);
-    const produceItems = [...session.newWords, ...session.newPhrases, ...(session.newGrammarPattern ? [session.newGrammarPattern] : [])];
+    const produceItems = produceItemsFor(session);
     if (produceItems.length > 0) {
       setStep("produce");
     } else if (session.newWords.length > 0) {
@@ -861,7 +862,7 @@ export function LearnPage({ book: pinnedBook }: { book?: Book } = {}) {
   } else if (step === "produce") {
     content = (
       <ProduceStep
-        items={[...session.newWords, ...session.newPhrases, ...(session.newGrammarPattern ? [session.newGrammarPattern] : [])]}
+        items={produceItemsFor(session)}
         shifted={shifted}
         onDone={afterProduce}
       />

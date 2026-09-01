@@ -3,6 +3,11 @@
   "_licence": "Source licensed CC BY-SA 3.0 Unported (https://creativecommons.org/licenses/by-sa/3.0/). This table is a modified adaptation, offered under CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/) as BY-SA 3.0 section 4(b) permits.",
   "_modifications": "Scoped to the characters this course teaches; self-references dropped; krad-unicode stand-in glyphs dropped; per-kanji spurious elements dropped (see src/content/kanji/filters.json).",
   "map": {
+    "伝": [
+      "⺅",
+      "二",
+      "厶"
+    ],
     "国": [
       "王",
       "囗",

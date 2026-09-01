@@ -1,9 +1,9 @@
 # Book Two chapters.
 #
-# One chapter, because one chapter has content. Nine more are designed and none
-# of them are authored yet, and a chapter declared here shows up on the ladder
-# and in the book map whether or not any lesson points at it — an entry the
-# learner can reach and find empty. Each joins this file as its lessons land.
+# Three chapters, because three chapters have content. Seven more are designed
+# and not yet wired, and a chapter declared here shows up on the ladder and in
+# the book map whether or not any lesson points at it — an entry the learner
+# can reach and find empty. Each joins this file as its lessons land.
 #
 # Holding them back is also what keeps the schema's "order runs 1..N with no
 # gap" check honest: the gap it exists to catch is a chapter accidentally
@@ -21,3 +21,11 @@
 - id: b2.chapter-1
   order: 1
   title: Talking like a friend
+
+- id: b2.chapter-2
+  order: 2
+  title: Giving and receiving
+
+- id: b2.chapter-3
+  order: 3
+  title: Putting sentences together
