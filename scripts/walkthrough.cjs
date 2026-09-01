@@ -15,6 +15,12 @@ const CLICK_TIMEOUT_RETRY = 20000;
 // lesson it saw, reporting ladderEndReached=false with nothing actually broken.
 // Keep it comfortably above the lesson count; per-step guards catch real stalls,
 // so a generous cap costs nothing.
+// COVERAGE LIMIT: this driver runs as a guest, and useUserTier() returns "guest"
+// whenever there is no Supabase session. TIER_BOOK_LIMIT caps a guest at Book One,
+// so currentBook() keeps the run inside Book One and the ladder ends at "All caught
+// up" after ~100 sessions. Book Two onward is never driven. Verified 2026-09-01:
+// currentBook with every Book One lesson seen returns Book One for a guest and Book
+// Two for free/paid. To cover Book Two the driver needs a signed-in session.
 const MAX_SESSIONS = process.env.MAX_SESSIONS ? parseInt(process.env.MAX_SESSIONS, 10) : 200;
 
 let currentPage = null;

@@ -144,8 +144,12 @@ pnpm ladder          regenerate the book map record: docs/<book>-ladder.md, ever
 pnpm bookmap         run the book map SPA (bookmap/) and open it in the browser
 ```
 
-`pnpm walkthrough` builds, serves the static bundle on :4173, and walks the whole ladder
-to "All caught up", reporting console and page errors. Run it before merging content that
+`pnpm walkthrough` builds, serves the static bundle on :4173, and walks the ladder to
+"All caught up", reporting console and page errors. **It runs as a guest, and a guest's
+reach is Book One (`TIER_BOOK_LIMIT` in `src/content/access.ts`), so a green run says
+nothing about Book Two or anything past it.** That is the access tier working correctly,
+not a bug — but it means the walkthrough cannot verify the books it most needs to. Giving
+it a signed-in session would lift it to `free`, which reaches Book Four. Run it before merging content that
 adds or renumbers units. It deliberately does **not** use the dev server: HMR from another
 agent editing the linked design-system package remounts React mid-session and reports a
 false stall. First run needs `pnpm exec playwright install chromium`.
