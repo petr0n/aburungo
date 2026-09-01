@@ -1,0 +1,61 @@
+# Book Two, Chapter 6 grammar patterns — being able to.
+#
+# One pattern per teaching lesson, each blanking the thing that lesson teaches
+# out of one of its own sentences. The blank is matched against the phrase's
+# reading, so these are kana.
+#
+# Two of the six blank a particle along with the ending, and that is the point
+# rather than an oversight. The が pattern blanks えいごが, not はなせます,
+# because the form was already drilled two patterns earlier and the particle is
+# what the lesson exists for. The noun pattern blanks only できます, because
+# there the noun is the variable and できる is the constant.
+#
+# The ことができる pattern blanks the whole tail — verb, こと, が and できます
+# together — since the learner is not building it out of parts. It is a fixed
+# shape that follows a dictionary form.
+#
+# content-source: n/a for this file — every pattern references an existing
+#   phrase from phrases/b2-06-potential.yaml rather than composing new Japanese.
+# jlpt-source: training — the level marks the band this chapter sits in.
+
+- id: grammar.b2-potential-ichidan
+  jlpt: N4
+  pattern: "ichidan: drop る, add られる"
+  gloss: Able to do it. する has no rule and becomes できる; 来る becomes 来られる, read こられる.
+  phraseId: dekiru.i-can-eat-sushi
+  blank: たべられます
+
+- id: grammar.b2-potential-godan
+  jlpt: N4
+  pattern: "godan: last sound to the え row, add る"
+  gloss: One move for all nine endings — 書ける, 泳げる, 話せる, 待てる, 死ねる, 呼べる, 読める, 買える.
+  phraseId: dekiru.i-can-swim
+  blank: およげます
+
+- id: grammar.b2-potential-ga
+  jlpt: N4
+  pattern: "noun + が + potential"
+  gloss: What you can do takes が, where the plain verb took を.
+  phraseId: dekiru.i-can-speak-a-little-english
+  blank: えいごが
+
+- id: grammar.b2-dekiru-noun
+  jlpt: N4
+  pattern: "noun + ができる"
+  gloss: A skill with no verb in the sentence at all. できる sits straight on the noun.
+  phraseId: dekiru.i-know-a-little-english
+  blank: できます
+
+- id: grammar.b2-koto-dekiru
+  jlpt: N4
+  pattern: "dictionary form + ことができる"
+  gloss: The same ability, with nothing conjugated. Any verb, no group to sort, and the object keeps を.
+  phraseId: dekiru.i-can-swim-koto
+  blank: およぐことができます
+
+- id: grammar.b2-yasui-nikui
+  jlpt: N4
+  pattern: "ます-stem + やすい / にくい"
+  gloss: Easy to, hard to — a claim about the thing, not about you. Both inflect like い-adjectives.
+  phraseId: dekiru.these-shoes-are-easy-to-walk-in
+  blank: あるきやすい

@@ -145,7 +145,7 @@ id yet — cited by word, not by fabricated id, until chapter 1 ships.
 - **Exercises (earlier Book Two chapters):** Chapter 1's ない rule, contrasted directly — う
   takes no exception under potential (買える, not the わ that ない forces), and the godan-る trap
   chapter 1 flagged returns here.
-- **New vocabulary:** none. Book One's 60 godan verbs cover all eight endings, ぬ included.
+- **New vocabulary:** none. Book One's 60 godan verbs cover all nine endings, ぬ included.
 - **New phrases:** 4 — the biggest mechanical lesson, one per row family, one of them built on the
   godan-る trap so it is seen in a sentence rather than only in the table.
 - **Depends on:** lesson 1 for the naming and register frame.
@@ -374,7 +374,7 @@ coverage gap here for fresh verbs to fill, which is a small piece of independent
 fresh verbs," offered without re-litigating the decision.
 
 If Book Two's rule chapters **do** bring fresh verbs (te-form's precedent): the natural landing spot
-is **lesson 2**, since it is the lesson with room across all eight endings and the one where
+is **lesson 2**, since it is the lesson with room across all nine endings and the one where
 te-form's own model would apply most directly — new verbs exercising rows the learner has not yet
 conjugated into this particular form. Lesson 1's ichidan set, lesson 4's skill-noun set, and lesson
 6's やすい／にくい exercise set would be less natural places to add verbs, since none of them is
