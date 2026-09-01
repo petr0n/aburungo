@@ -1,0 +1,315 @@
+# Chapter 10 — Trouble: lost, forgotten, broken. Closes Book Two.
+#
+# Every other chapter in this book taught a rule or a room to stand in. This
+# one asks for a bill to come due. Reporting trouble means saying what
+# happened (past tense, the plain-form chapter), why it's a problem (a reason
+# clause, the joining chapter), and often what you need now (wanting; being
+# able to) -- in one breath, to a stranger. That combination is the reason the
+# book is built the way it is, and this chapter is where it gets used for the
+# first time on purpose rather than as an exercise.
+#
+# It leans on Book One harder than a situation chapter usually does. 困る and
+# 無くす have sat in the ladder since the home-and-work chapter, cited zero
+# times since -- two verbs the learner has recognised for dozens of lessons
+# and never once needed. So do 財布-shaped nouns: お金, かばん, めがね, 鍵 were
+# all taught as things you own, never as things you could lose. This chapter
+# does not re-teach them. It spends them.
+#
+#    1  saying you're in trouble     困っています + から／ので, zero new words
+#    2  losing something             財布, and the register split on 無くした
+#    3  it's not turning up          探す／見つかる, and which pair is which
+#    4  what you left, and where     忘れ物 for free from 忘れる + 物; 時
+#    5  it's broken                  壊れています, the clothing chapter's state
+#                                     use of ています redirected onto objects
+#    6  and now it doesn't work      て-chains into 使えません -- zero new words
+#    7  asking for help              直す new, 手伝う reused from the giving
+#                                     chapter, both stacked on the potential
+#    8  what you need now            ～てほしい on what lesson 6 broke
+#    9  what you think happened      交番; と思います wrapped around plain past
+#   10  if it turns up               番号; 見つかったら closes the loop lesson 3
+#                                     opened, and hands straight to the book's
+#                                     production checkpoint
+#
+# Lessons 3 and 10 are a matched pair -- 見つかる taught negative in lesson 3,
+# reused affirmative-conditional in lesson 10 -- and lesson 6 cannot precede
+# lesson 5, since it chains 5's て-form into a new clause. Otherwise this
+# chapter is looser than a rule chapter: the lessons share an inventory more
+# than they share a dependency chain.
+#
+# Three things came out differently from the chapter breakdown, and each is
+# recorded here rather than quietly absorbed.
+#
+# 忘れ物 is a word card, not a free gift. The breakdown counted seven new words
+# and argued the eighth cost nothing, being 忘れる's stem plus 物. The grammar
+# argument is right; the cataloguing conclusion is not, since 食べ物, 飲み物 and
+# 買い物 are all word cards in Book One on exactly the same footing, and a word
+# that appears in a phrase but in no lesson's wordIds is a word the ladder never
+# reviews. Eight words. Lesson 4 still makes the point that it was free.
+#
+# ～てほしい is new here, not recalled. The breakdown assigned it to the
+# wanting-and-intending chapter; that chapter as authored teaches ～たい and
+# ～がほしい and says plainly that wanting on somebody else's behalf is a form
+# this book does not cover. Lesson 8 could not be written without it, so it is
+# taught, with its own pattern id, as a form -- te-form plus the ほしい already
+# owned. Three patterns for this chapter, not two.
+#
+# The production checkpoint lives at the bottom of this file rather than in one
+# of its own, which is where Book One put its equivalent. It carries no
+# chapterId, which is what marks it as the book's rather than this chapter's --
+# consolidation and completion stay separate things (DR-021) even when they
+# share a file.
+#
+# The `kanji:` arrays carry seven characters: 財 and 布 from the wallet, 探 from
+# searching, 壊, 直, 交 and 号. 番 is not among them, since 何番 already taught
+# it and 番号 simply recombines it -- and 見 is not either, which is a Book One
+# gap rather than this chapter's call. 見る has shown that character on its word
+# card since the first weeks and no lesson ever put it in a kanji array; 見つかる
+# inherits the omission rather than repairing it here. Flagging, not fixing.
+#
+# content-source: n/a for this file -- it references vocabulary/b2-10-trouble.yaml
+#   and phrases/b2-10-trouble.yaml, whose own provenance markers apply.
+
+- id: b2.trouble-in-trouble
+  order: 184
+  chapterId: b2.chapter-10
+  situation: Trouble
+  title: Saying you're in trouble
+  canDo: Say you're in trouble, and why
+  wordIds:
+    - vocab.komaru
+    - vocab.nakusu
+    - vocab.okane
+    - vocab.kaban
+  phraseIds:
+    - trouble.lost-money-so-im-stuck
+    - trouble.lost-bag-so-im-stuck
+    - trouble.lost-bag-so-im-stuck-plain
+  kanji: []
+  patternId: grammar.b2-trouble-reason
+  grammarNote: "There is no new word in this lesson, and that is the lesson. 困る has been sitting on your ladder since the home-and-work chapter without ever appearing in a sentence, and everything else here you have owned for months. What is new is putting three chapters together into the sentence a person in trouble actually says. Start with the frame. 困っています, not 困ります. The ています you know from Book One puts a verb into a state, and being stuck is a state you are in now. 困ります is a real sentence but a different one — it points at something that would be a problem, which is why a shop assistant says it to someone doing what they should not. For your own present predicament it is always 困っています. Now the reason, and Japanese puts it first. Take the plain past from the plain-form chapter — 無くした — and attach から or ので from the joining chapter. お金を無くしたので、困っています. Both connectors carry the same information and they do not carry the same tone. から states the reason flatly and points at it. ので presents it as the explanation for what follows and is gentler, which is why it is the one to reach for with a stranger at a counter who did not cause your problem. Neither is wrong, and if you only ever use ので in this chapter you will sound entirely normal. Last, the register. To a friend the whole thing drops to plain form and only the ending moves — かばんを無くしたから、困っている. The reason clause was already plain, because から and ので attach to the plain form whatever the sentence's own politeness is doing. That is the plain-form chapter's split doing its first genuinely useful work: one frame, two audiences, and the only thing you change is the last word."
+
+- id: b2.trouble-lost
+  order: 185
+  chapterId: b2.chapter-10
+  situation: Trouble
+  title: Losing something
+  canDo: Report that you've lost something
+  wordIds:
+    - vocab.saifu
+    - vocab.nakusu
+    - vocab.kaban
+    - vocab.okane
+    - vocab.megane
+    - vocab.kagi
+  phraseIds:
+    - trouble.i-lost-my-wallet
+    - trouble.i-lost-my-glasses-plain
+    - trouble.did-you-lose-your-key
+  kanji:
+    - 財
+    - 布
+  grammarNote: "One new noun and one old verb, finally pointed at something. 無くす is transitive, so the thing you lost takes を — 財布を無くしました. The whole of what is new grammatically is the ending, and you have had both endings for a while now. 無くしました across a counter, 無くした to a friend. That is the plain-form chapter's split again, and this is where it stops being a drill: the two sentences are the same report to two different people, and getting it the wrong way round is the mistake that is actually noticed. Three honest notes about the word. First, it is written in kana at least as often as in kanji — なくしました is completely ordinary, and the card shows you 無くす so you can read it when it turns up that way. Second, 無くす is not the only verb people reach for. Something that slipped out of your pocket is more often 落としました, from 落とす, to drop; 無くす says the thing is gone and you do not know where, which covers most of what you will need and is the safer default when you are not sure how it happened. Third, you will hear 無くしてしまいました constantly, and it is not a correction of what you just said. That ending adds regret and finality to a verb, and it belongs to a family this book does not teach. 無くしました is a complete, correct, unremarkable sentence on its own. And the question form is worth having, because you will be on the other side of it: 鍵を無くしましたか is what someone asks you when you are patting your pockets."
+
+- id: b2.trouble-not-turning-up
+  order: 186
+  chapterId: b2.chapter-10
+  situation: Trouble
+  title: It's not turning up
+  canDo: Say you can't find something, and that you're looking
+  wordIds:
+    - vocab.sagasu
+    - vocab.mitsukaru
+    - vocab.kaban
+    - vocab.megane
+    - vocab.kagi
+    - vocab.okane
+  phraseIds:
+    - trouble.my-bag-hasnt-turned-up
+    - trouble.im-looking-for-my-glasses
+    - trouble.did-the-key-turn-up
+  kanji:
+    - 探
+  grammarNote: "Two verbs, and the particles tell you which is which. 探す is what you do — a transitive verb, so the thing takes を, and 探しています with the ています you already own says you are in the middle of doing it. めがねを探しています. 見つかる is what the thing does. Nothing in that sentence found it; it turned up on its own, so it takes が. かばんが見つかりません is the sentence you want at a counter, and notice that English needs an I in it where Japanese does not. Now a pairing that is worth getting right, because it is easy to line the wrong two verbs up. Book One taught you 開く and 開ける, then 閉まる and 閉める — a thing happening by itself, and somebody doing it. 見つかる belongs to that family, and its partner is 見つける, to find: 鍵が見つかりました is the key turned up, 鍵を見つけました is I found it. 探す is not the other half of 見つかる. It is a different action altogether — hunting for something is not the same event as the thing being there — which is why the two can sit in one breath without repeating themselves. There is a second way to say you cannot find something, and it is worth recognising rather than building. The potential form from the being-able-to chapter gives 見つけられません, I cannot manage to find it, which puts the problem in you. 見つかりません puts it in the thing. Both are natural Japanese; 見つかりません is what you will hear far more often, and it is the kinder one to say to somebody who is helping you look."
+
+- id: b2.trouble-left-behind
+  order: 187
+  chapterId: b2.chapter-10
+  situation: Trouble
+  title: What you left, and where
+  canDo: Say what you left behind, and where
+  wordIds:
+    - vocab.wasuremono
+    - vocab.wasureru
+    - vocab.densha
+    - vocab.eki
+    - vocab.homu
+    - vocab.takushii
+    - vocab.nanban
+    - vocab.kaban
+    - vocab.tsuku
+    - vocab.aru
+    - vocab.toki
+    - vocab.doko
+  phraseIds:
+    - trouble.i-left-something-on-the-train
+    - trouble.when-i-got-to-the-station-my-bag-was-gone
+    - trouble.where-did-you-leave-it
+  kanji: []
+  grammarNote: "忘れ物 is a word you can build yourself, and it costs nothing you have not already paid for. Book One turned 食べる into 食べ物 and 飲む into 飲み物 by stopping the verb at its stem and putting 物 on the end; do that to 忘れる and you get the thing you left behind. It is the word on every station's lost-property window in Japan. The one thing to learn about it is the verb it takes, and it is not a verb of losing — 忘れ物をしました, with する. Keep it apart from last lesson's verb. 無くしました says the thing is gone and you cannot account for it. 忘れました says you left it somewhere, and that somewhere is often knowable, which is why this is the more hopeful of the two sentences to say at a counter. Then the particles, which do real work here. に marks where the thing now is — 電車に忘れ物をしました. で marks where the event happened — 駅で無くしました. And 時 from the joining chapter puts the whole thing at a moment: 駅に着いたとき、かばんがありませんでした. Remember how the tense inside that clause behaves, because it is not measured against now. 着いた時 is past because arriving had already happened when you noticed, and the main clause carries the sentence's own tense. Everything else you need here you already have. ホーム and タクシー and 何番ホームですか came in with the transit chapter and have been waiting for a reason; どこに忘れましたか is the question you will be asked, and it is worth practising as a question you can recognise fast rather than one you have to unpick."
+
+- id: b2.trouble-broken
+  order: 188
+  chapterId: b2.chapter-10
+  situation: Trouble
+  title: It's broken
+  canDo: Say something is broken
+  wordIds:
+    - vocab.kowareru
+    - vocab.denwa
+    - vocab.kagi
+    - vocab.megane
+    - vocab.kono
+  phraseIds:
+    - trouble.my-phone-is-broken
+    - trouble.the-key-is-broken
+    - trouble.these-glasses-are-broken
+  kanji:
+    - 壊
+  grammarNote: "One new verb, and no new grammar at all — the grammar was built in Book One's clothing chapter and is being pointed somewhere else. 帽子をかぶっています does not mean somebody is in the act of putting a hat on; it means the hat is on, a state that started earlier and is still true. Turn that same ています onto an object and you get its condition: 電話が壊れています, the phone is broken. Same mechanism, new subject, nothing to relearn. 壊れました is also correct and says something slightly different — it reports the moment it broke. At a counter you almost always want the state, because what matters is what is true now, so 壊れています is the default. The verb is intransitive, which here is not a grammatical footnote but a question of what you are admitting. 壊れる means the thing broke; nobody is in the sentence. Its partner 壊す means somebody broke it, and 壊しました says that somebody was you. Choose deliberately. If your phone stopped working in your pocket, 壊れています. If you dropped it, you may still say 壊れています and nobody will press you. What the verb covers is a thing coming apart or a machine giving up — a phone that will not switch on, a key that snapped, a pair of glasses in two pieces. That makes four pairs of this shape you now own — 開く and 開ける, 閉まる and 閉める, last lesson's 見つかる and 見つける, and this one. The pattern is now worth trusting on sight: if two verbs share a stem and one of them has somebody doing the doing, that is what the difference will be."
+
+- id: b2.trouble-cant-use
+  order: 189
+  chapterId: b2.chapter-10
+  situation: Trouble
+  title: And now it doesn't work
+  canDo: Say you can't use something because it's broken
+  wordIds:
+    - vocab.tsukau
+    - vocab.kowareru
+    - vocab.denwa
+    - vocab.kagi
+    - vocab.kono
+  phraseIds:
+    - trouble.phone-broke-so-i-cant-use-it
+    - trouble.key-broke-so-i-cant-use-it
+    - trouble.can-i-use-this-phone
+  kanji: []
+  patternId: grammar.b2-trouble-te-chain-potential
+  grammarNote: "Nothing in this sentence is new. 使う has been yours since the home-and-work chapter, 壊れる arrived last lesson, and both endings came from chapters you have finished. That is the point of putting the lesson here: this is what the book has been building toward, a sentence you can assemble from parts rather than remember whole. 使う is godan, so the being-able-to chapter's rule sends its last sound to the え row — 使える — and the negative is 使えません. Watch the particle, because the potential moves it: 電話を使います, but 電話が使えません. The thing you can or cannot do takes が. Now the join. The joining chapter taught て between two verbs as and then, in the order they happened, both halves the same person. This is the same て doing a second job it did not name: cause. 電話が壊れて、使えません is not two actions in sequence, it is a state and what follows from it. You have already read this shape without being told — 風邪を引いて、休みました is the same join. It is extremely common and it costs you nothing, since the form is the te-form you have had since Book One. One restriction on it, and it is a real one rather than a matter of style. A て used for cause cannot be followed by a request, an instruction or an invitation. 壊れて、直してください is not a sentence a Japanese speaker would produce. When the second half is something you are asking for, you need から or ので instead — which is exactly the frame this chapter opened with. So the two connectors divide the work cleanly. て for a consequence you are reporting, から or ので for a consequence you want somebody to act on."
+
+- id: b2.trouble-asking-for-help
+  order: 190
+  chapterId: b2.chapter-10
+  situation: Trouble
+  title: Asking for help
+  canDo: Ask someone for help
+  wordIds:
+    - vocab.naosu
+    - vocab.tetsudau
+    - vocab.oshieru
+    - vocab.tanomu
+  phraseIds:
+    - trouble.could-you-help-me
+    - trouble.could-you-fix-it
+    - trouble.could-you-tell-me
+    - trouble.give-me-a-hand-plain
+  kanji:
+    - 直
+  grammarNote: "The giving-and-receiving chapter ended by naming a pattern it could not yet build and promising it would be waiting once the potential arrived. This is it. もらう is godan, so its potential is もらえる by the ordinary rule, and putting that on a te-form gives 手伝ってもらえますか — literally, can I receive your doing this. That is why it lands as polite: you are not asking somebody to act, you are asking whether you may be on the receiving end of it, which leaves them a great deal more room. It works on any verb, so the same frame carries the new one — 直してもらえますか, could you fix it — and the old one, 教えてもらえますか. Line up what you now have, from the most direct to the least. 手伝ってください is a request made of somebody whose job it is to comply. 手伝ってくれますか asks a person rather than instructing them. 手伝ってもらえますか is the polite everyday request across a counter, and 手伝ってもらえませんか, the negative question from the giving chapter, is softer again for the same reason it was there. None of these is rude; they are distances, and a stranger doing you a real favour is worth the longer one. Above all of them sits 手伝っていただけますか, which you will hear in shops and hotels and which this book does not build. Recognise it as the same pattern in more formal clothes. One contrast worth drawing, since you already own the simpler verb. 頼む is to ask for or request, and it describes the act of asking rather than performing it — 友達に頼みました says you asked a friend. It does not make the request. 手伝ってもらえますか is the request itself. And with a friend the whole thing drops to plain form: 手伝ってくれない, with the question carried by your voice going up rather than by か, exactly as the plain-form chapter had it."
+
+- id: b2.trouble-what-you-need
+  order: 191
+  chapterId: b2.chapter-10
+  situation: Trouble
+  title: What you need now
+  canDo: Say what you need to put things right
+  wordIds:
+    - vocab.hoshii
+    - vocab.atarashii
+    - vocab.naosu
+    - vocab.denwa
+    - vocab.kaban
+    - vocab.megane
+  phraseIds:
+    - trouble.i-want-the-phone-fixed
+    - trouble.i-want-a-new-bag
+    - trouble.not-a-new-one-just-fixed
+  kanji: []
+  patternId: grammar.b2-trouble-te-hoshii
+  grammarNote: "The wanting chapter gave you ほしい on a noun — 新しいかばんがほしいです, a thing you want, marked with が. Put ほしい on a te-form instead and it wants an action, and crucially an action from somebody else: 電話を直してほしいです, I want the phone fixed. That is the half of wanting Book One never had, since ～たい only ever pointed at what you yourself intended to do. Everything about how it behaves comes free, because ほしい is an i-adjective and stays one. ほしくない, ほしかった, ほしくなかった all work exactly as they did in the wanting chapter, and the contrast in 新しいめがねはほしくないけど、直してほしいです is doing what は always does — setting one thing against another. If you name the person you want it from, they take に: 店の人に直してほしいです. Two limits, and the first will save you an awkward moment. ～てほしい is direct. It states your want rather than asking for anything, and across a counter it can land as closer to I want this fixed than to could you fix this. To a friend, or to somebody who has asked you what you need, it is completely ordinary. To a stranger whose help you are requesting, last lesson's 直してもらえますか is the sentence. Knowing both and choosing is the whole skill here. The second limit is the one the wanting chapter already set and it has not moved. You can say what you want and you can ask what the person in front of you wants; you cannot use ほしい to announce what a third person wants. 友達は新しいかばんがほしいです does not work as a plain statement about a friend, and neither does the てほしい version. Japanese marks that differently, and this book does not go there."
+
+- id: b2.trouble-what-happened
+  order: 192
+  chapterId: b2.chapter-10
+  situation: Trouble
+  title: What you think happened
+  canDo: Tell someone what you think happened
+  wordIds:
+    - vocab.kouban
+    - vocab.omou
+    - vocab.iu
+    - vocab.densha
+    - vocab.wasureru
+    - vocab.nakusu
+    - vocab.kaban
+    - vocab.tomodachi
+    - vocab.mitsukaru
+    - vocab.iku
+    - vocab.hou
+    - vocab.ii
+    - vocab.doko
+  phraseIds:
+    - trouble.i-think-i-left-it-on-the-train
+    - trouble.where-do-you-think-you-lost-it
+    - trouble.you-should-go-to-the-police-box
+    - trouble.my-friend-said-it-turned-up
+  kanji:
+    - 交
+  grammarNote: "A lost thing is a guess, and saying it as a fact makes trouble of a different kind. 電車に忘れました sends somebody to look on a train you are only fairly sure about. 電車に忘れたと思います says exactly as much as you know. The quoted-speech chapter built this: a whole plain clause, then と, then 思います. The clause stays plain however polite the sentence is — 忘れたと思います, never 忘れましたと思います — and this is the first time in this chapter that a full clause, rather than a single verb, has gone inside another pattern. Turn it round and you can ask for somebody else's guess: どこで無くしたと思いますか. Note the で there, marking where the losing happened rather than where the thing ended up. Then a stack worth seeing whole. 交番に行ったほうがいいと思います puts the conditionals chapter's advice inside the quoting chapter's opinion, and the two soften each other — ほうがいい said bare is firm, close to you had better, and wrapping it in と思います turns it back into a suggestion. Keep 思います apart from 言っていました, because they attribute to different people. 友達はかばんが見つかったと言っていました reports what somebody else said. と思います reports what you think. Nothing in this chapter is worth getting wrong more than which of those two you are doing. Last, the place. A 交番 is the small police post on a corner, staffed all day and all night, and it is where a lost thing in Japan is handed in and asked after. It is an errand, not a drama. 警察署, the police station, is a different building for different business, and reaching for it makes a lost umbrella sound like a crime."
+
+- id: b2.trouble-if-it-turns-up
+  order: 193
+  chapterId: b2.chapter-10
+  situation: Trouble
+  title: If it turns up
+  canDo: Leave contact information in case something turns up
+  wordIds:
+    - vocab.bangou
+    - vocab.mitsukaru
+    - vocab.denwa
+    - vocab.kouban
+    - vocab.iku
+    - vocab.kono
+    - vocab.kore
+    - vocab.watashi
+  phraseIds:
+    - trouble.if-it-turns-up-please-call
+    - trouble.if-it-turns-up-could-you-call-this-number
+    - trouble.if-it-doesnt-turn-up-ill-go-to-the-police-box
+    - trouble.this-is-my-phone-number
+  kanji:
+    - 号
+  grammarNote: "Lesson 3 taught 見つかる in the negative, because that is the shape you need first. Here it comes back the other way up, and the conditionals chapter supplies the ending at no cost — plain past plus ら. 見つかる becomes 見つかった becomes 見つかったら. Then Book One's てください finishes it: 見つかったら、電話してください. That combination is the one thing the conditionals chapter said たら can always do and the other two forms cannot. と never takes a request after it, and ば takes one only under conditions. たら takes one without argument, which is why it is the form to reach for whenever the second half of your sentence is something you are asking somebody to do. The ば version is here too, and it is the negative — 見つからなければ、交番に行きます. That works for the reason that chapter gave you and it is worth re-reading rather than taking on trust: the restriction on ば bites when the ば clause is an action somebody chose to do, and a negative is not one. Nothing here is being asked of anybody in the second half either; it is your own plan. Then the number. 番号 is a number used as a label rather than a quantity, which is what separates it from the 何番 you have been asking with since the transit chapter, and 電話番号 is simply the two words together. The number you call takes に — この番号に電話してください. And the whole thing stacks, which is the sentence this chapter has been building toward from its first lesson: 見つかったら、この番号に電話してもらえますか. A conditional from the chapter before this one, a request from three lessons ago, one breath, to a stranger. That is what the book was for."
+
+- id: b2.checkpoint-10
+  order: 194
+  chapterId: b2.chapter-10
+  situation: Integration & checkpoint
+  title: Chapter 10 checkpoint
+  canDo: Recognise everything taught so far
+  wordIds: []
+  phraseIds: []
+  kanji: []
+  checkpoint: recognition
+  grammarNote: "A wide pass over everything this chapter has taught. Type the reading or the meaning rather than picking it out of a line-up. The pairs are the ones to watch as they come round — 見つかる against 見つける, 壊れる against 壊す, 無くす against 忘れる — since the two halves of each look almost identical and mean quite different things about who did what. Anything you miss comes back sooner. It finishes when the remaining set empties; retry as often as you like, nothing is recorded."
+
+- id: b2.checkpoint-production
+  order: 195
+  situation: Integration & checkpoint
+  title: Build it yourself
+  canDo: Build a sentence from a pattern and a situation, unprompted
+  wordIds: []
+  phraseIds: []
+  kanji: []
+  checkpoint: production
+  grammarNote: "The last thing in this book, and the only one that asks you to make a sentence nobody has shown you. Every checkpoint so far has put Japanese in front of you to be recognised, and Book One's last one asked you to write back a phrase you had learned whole. This is different. You will be given a situation in English and told which pattern to use — a lost bag and a reason clause, a broken phone and the potential, a friend's message and と言っていました — and the words to build it from will be ones you already have. What you type is the sentence those pieces make. Nothing here is a phrase to remember. The frames are drawn from across the whole book, so a prompt may ask for two patterns at once, in the way this last chapter has been asking for them: something that happened plus why it is a problem, a state plus what follows from it, a favour plus the politeness that carries it. Write in kana; you can type romaji and let it convert, but what is checked is the Japanese. Anything you do not get comes straight back, and it ends when there is nothing left to build. There is no score and nothing is recorded — whatever you miss simply returns to your review queue sooner, which is where the work actually gets done."

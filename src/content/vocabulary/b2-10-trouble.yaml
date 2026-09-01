@@ -1,0 +1,174 @@
+# Book Two, Chapter 10 vocabulary — eight words, because Book One already owned
+# the rest of the trouble.
+#
+# The inventory pass before authoring found the chapter's two headline verbs
+# already on the ladder and never once used in a sentence -- 困る and 無くす have
+# sat there since the home-and-work chapter -- and nineteen more owned words
+# that fit the domain exactly. お金, かばん, めがね, 鍵, 傘, 荷物, 切符, 電話,
+# 駅, 電車, ホーム, タクシー were all taught as things you have. None was ever
+# taught as a thing you could lose. This file does not re-teach any of them.
+#
+# What it carries is only what that inventory cannot reach - a name for the
+# thing whose loss actually ruins a day (財布), the verb for a thing turning up
+# and the verb for hunting it (見つかる／探す), the verb for something being
+# broken and the verb for putting it right (壊れる／直す), the place the
+# conversation happens (交番), and a word for a number you can leave behind
+# you (番号).
+#
+# 忘れ物 is the eighth, and the chapter breakdown did not count it: it argued
+# the word costs nothing, being 忘れる's stem plus 物 through the same
+# nominaliser that already gave the learner 食べ物. That argument is right about
+# the grammar and wrong about the card. 食べ物, 飲み物 and 買い物 are all
+# vocabulary entries in Book One despite being just as derivable, and a phrase
+# containing a word no lesson lists is a word the ladder never reviews. It is
+# here as a word, and the lesson still makes the point that it was free.
+#
+# Two pairs here are the same shape the learner has already met twice, in
+# 開く／開ける and 閉まる／閉める - something happens by itself, or somebody does
+# it. 見つかる／見つける and 壊れる／壊す are the third and fourth instances.
+# Only the by-itself half of each pair is taught; the partners are named on the
+# card and in the lesson for recognition, because drilling all four would double
+# a chapter that is deliberately light.
+#
+# 手伝う is NOT here. It was proposed for this chapter and collided with an
+# independent proposal in Giving and receiving, which won on order and on fit.
+# Lesson 7 reuses vocab.tetsudau rather than reintroducing it.
+#
+# content-source: training — headword, reading, part of speech, transitivity and
+#   gloss verified against JMdict for Applications 3.6.2 on 2026-08-31, sequence
+#   numbers inline. All eight are flagged common in JMdict. The example
+#   sentences are Tatoeba, quoted verbatim with their ids, not composed.
+# jlpt-source: training — JLPT level unverified (JMdict carries no JLPT data).
+#   Levels follow data/jlpt/reference-*.json, where every one of the eight is
+#   attested by both the tanos and open-anki lists - 財布, 交番 and 番号 at N5,
+#   the five others at N4.
+
+# ── Losing something (Lesson 2) ───────────────────────────────────────────────
+
+- id: vocab.saifu
+  jlpt: N5
+  word_type: noun
+  theme: trouble
+  japanese: 財布
+  reading: さいふ
+  romaji: saifu
+  english: wallet, purse
+  notes: One word for both, with no gendered split — JMdict lists wallet, purse, coin purse, billfold and pocketbook under the single entry. Its two characters are new and both are worth the trade, since 財 is wealth and 布 is cloth, and a wallet is a cloth for your wealth. JMdict seq 1296970.
+  example:
+    japanese: この辺で茶色い財布を見ませんでしたか。
+    english: Did you see a brown wallet around here?
+    tatoeba_id: "219883"
+
+# ── It's not turning up (Lesson 3) ────────────────────────────────────────────
+
+- id: vocab.mitsukaru
+  jlpt: N4
+  word_type: verb
+  verb_class: u
+  theme: trouble
+  japanese: 見つかる
+  reading: みつかる
+  romaji: mitsukaru
+  english: to turn up, to be found
+  notes: Intransitive (vi). Nothing in the sentence found it — it simply turned up, so the thing takes が, not を. Its transitive partner is 見つける, to find (vt), which is ichidan where this one is godan; that pairing is the same shape as 開く／開ける and 閉まる／閉める, which you already have. JMdict seq 1604550.
+  example:
+    japanese: あらゆるところを捜しましたが、札入れが見つからないのです。
+    english: I have looked everywhere, but I cannot find my wallet.
+    tatoeba_id: "230047"
+
+- id: vocab.sagasu
+  jlpt: N4
+  word_type: verb
+  verb_class: u
+  theme: trouble
+  japanese: 探す
+  reading: さがす
+  romaji: sagasu
+  english: to look for, to search for
+  notes: Transitive (vt), so the thing you are hunting takes を. It has a twin spelling, 捜す, read the same and used in careful writing for something that has gone missing where 探す is for something you want; in everyday Japanese 探す covers both and is much the commoner sight. JMdict seq 1593670.
+  example:
+    japanese: 人物画を描けるスクールを探しています。
+    english: I'm looking for a school where I can paint portraits.
+    tatoeba_id: "74208"
+
+# ── What you left, and where (Lesson 4) ───────────────────────────────────────
+
+- id: vocab.wasuremono
+  jlpt: N4
+  word_type: noun
+  theme: trouble
+  japanese: 忘れ物
+  reading: わすれもの
+  romaji: wasuremono
+  english: something left behind, lost property
+  notes: 忘れる's stem plus 物, exactly the machinery that turned 食べる into 食べ物 — so the word costs you a meaning, not a construction. It goes with する rather than any verb of losing, and 忘れ物をしました is the fixed way to report it. This is the word on every station's lost-property window. JMdict seq 1519230.
+  example:
+    japanese: 今日忘れ物をした。
+    english: I left behind something today.
+    tatoeba_id: "171417"
+
+# ── It's broken (Lesson 5) ────────────────────────────────────────────────────
+
+- id: vocab.kowareru
+  jlpt: N4
+  word_type: verb
+  verb_class: ru
+  theme: trouble
+  japanese: 壊れる
+  reading: こわれる
+  romaji: kowareru
+  english: to break, to be broken
+  notes: Intransitive (vi), so nobody broke it in this sentence — it broke, and the thing takes が. Its transitive partner is 壊す, to break something (vt), and that is the one to use when you did it. JMdict's second sense covers machines specifically, to break down or stop working, which is what a phone does. JMdict seq 1199900.
+  example:
+    japanese: このイヤホンは壊れています。
+    english: These earphones don't work.
+    tatoeba_id: "223988"
+
+# ── Asking for help (Lesson 7) ────────────────────────────────────────────────
+
+- id: vocab.naosu
+  jlpt: N4
+  word_type: verb
+  verb_class: u
+  theme: trouble
+  japanese: 直す
+  reading: なおす
+  romaji: naosu
+  english: to fix, to repair
+  notes: Transitive (vt) — somebody does it, and the thing takes を. It also covers correcting a mistake and tidying something up, which is the same idea of putting a thing back the way it should be. Two things sit close to it. 直る is the by-itself partner, so a repaired thing 直りました. And 治す is a different word said exactly the same way, for curing an illness rather than mending an object — 風邪を治す, not 直す. JMdict seq 1599390.
+  example:
+    japanese: 知り合いの修理屋さんに電話して壊れた洗濯機をすぐさま直してもらうわ。
+    english: I'll call a repairman I know who'll be at your house to fix the washing machine promptly.
+    tatoeba_id: "127072"
+
+# ── What you think happened (Lesson 9) ────────────────────────────────────────
+
+- id: vocab.kouban
+  jlpt: N5
+  word_type: noun
+  theme: trouble
+  japanese: 交番
+  reading: こうばん
+  romaji: kouban
+  english: police box
+  notes: The small neighbourhood police post on a street corner, staffed around the clock, where you go to hand in or ask after a lost thing and to ask directions. It is not 警察署, the police station, and reaching for that word makes an everyday errand sound like a crime report. The 番 is the one you already read in 何番. JMdict seq 1272500 — note the same headword carries an unrelated technical sense, alternation, which is not this word in daily use.
+  example:
+    japanese: 向こうの交番で聞いてください。
+    english: Ask at the police station over there.
+    tatoeba_id: "173841"
+
+# ── If it turns up (Lesson 10) ────────────────────────────────────────────────
+
+- id: vocab.bangou
+  jlpt: N5
+  word_type: noun
+  theme: trouble
+  japanese: 番号
+  reading: ばんごう
+  romaji: bangou
+  english: number
+  notes: A number used as a label — a phone number, a room number, a ticket number — rather than a quantity, which is what 何番 has been asking about all along. 電話番号 is the two words together and is how a phone number is always named. JMdict seq 1482290.
+  example:
+    japanese: この電話番号に電話する方法を教えてください。
+    english: Could you tell me how to call this number?
+    tatoeba_id: "220372"
