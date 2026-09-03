@@ -396,7 +396,7 @@ async function handleProductionCheckpointIfPresent(page, sessionIndex) {
   if (!(await visible(page, "text=/(\\d+ to write|more to write)/"))) return false;
   log(`  production checkpoint detected (session ${sessionIndex})`);
 
-  const seen = new Set();
+  const answers = new Map();
   let guard = 0;
 
   while (guard < 200) {
@@ -405,32 +405,42 @@ async function handleProductionCheckpointIfPresent(page, sessionIndex) {
 
     const prompt = await page.locator("p.text-heading").first().textContent().catch(() => null);
     if (prompt === null) break;
-    seen.add(prompt.trim());
+    const known = answers.get(prompt.trim());
 
-    // Always reveal, never type.
+    // Reveal once to learn the answer, then type it back when the item
+    // re-queues. Both halves are load-bearing: FillBlankCard only reports
+    // `correct` from compareAnswer on a submitted value, so revealing always
+    // returns onNext(false), the gate re-queues the item, and a reveal-only
+    // loop never empties the set. I deleted this branch once on the theory
+    // that revealing was enough; the next run stalled at round 17.
     //
-    // There used to be a second branch that typed a remembered answer on a
-    // repeat prompt. It broke twice without anyone noticing, because it only
-    // runs when review state carries between sessions and nothing carried
-    // until the CORS fix: first it clicked a "JP keyboard" button b116f03 had
-    // removed, then it targeted input[placeholder="Type the Japanese..."],
-    // which does not exist either — FillBlankCard passes that string but the
-    // design system's FillInput uses it for the kana preview label and renders
-    // the typing input as "Type romaji here…".
-    //
-    // It was also feeding a kana reading into a field that expects romaji and
-    // converts. Revealing completes the checkpoint — 100 sessions of guest
-    // walks did exactly that — so the typing path bought nothing and cost two
-    // debugging rounds. This driver checks that lessons run, not that a
-    // learner can spell.
-    await clickWhenReady(page, "button:has-text('Show answer')", "Show answer (production)");
+    // "JP keyboard" is a real button — it comes from the design system's
+    // FillInput, not from src/, which is why grepping src/ said it did not
+    // exist. That mode is what renders the input placeholdered
+    // "Type the Japanese...", so the click has to happen before the wait.
+    if (known === undefined) {
+      await clickWhenReady(page, "button:has-text('Show answer')", "Show answer (production)");
+      const reading = await page
+        .locator("p.font-jp.text-jp.text-fg-muted")
+        .first()
+        .textContent()
+        .catch(() => null);
+      if (reading !== null) answers.set(prompt.trim(), reading.split("·")[0].trim());
+    } else {
+      await clickWhenReady(page, "button:has-text('JP keyboard')", "JP keyboard (production)");
+      const input = page.locator('input[placeholder="Type the Japanese..."]').first();
+      await input.waitFor({ state: "visible", timeout: CLICK_TIMEOUT_RETRY });
+      await input.fill(known);
+      await page.waitForTimeout(150);
+      await clickWhenReady(page, "button:has-text('Check answer')", "Check answer (production)");
+    }
 
     await clickWhenReady(page, "button:has-text('Next')", "Next (production)");
     await page.waitForTimeout(300);
   }
 
   if (guard >= 200) await failHard(page, sessionIndex, "stuck-in-production-checkpoint");
-  log(`  production checkpoint complete (${seen.size} distinct items)`);
+  log(`  production checkpoint complete (${answers.size} distinct items)`);
   return true;
 }
 
