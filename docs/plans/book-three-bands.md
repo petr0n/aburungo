@@ -1,0 +1,97 @@
+# Book Three — the band skeleton
+
+**Status: skeleton, not breakdowns.** This is the layer above
+`docs/plans/book-three-band-NN.md`, the way `03-book-two.md` §4 sat above
+`book-two-chapter-NN.md`. It names the bands and the patterns each one owns, so band
+breakdowns can be commissioned in parallel without two of them claiming the same grammar.
+
+It settles no Japanese sentences. Sourcing is `04-stage-reading.md` §8 and is stricter here
+than in Books One and Two: **no training-canonical sentences at this stage.** Every sentence
+in this book comes from Tatoeba with its id, or it does not ship.
+
+## 1. What is already decided
+
+- **A chapter is a band** (`04-stage-reading.md` §3, owner sign-off 2026-08-20): ~10 connective
+  patterns plus the slice of the library that exercises them. One pattern per lesson.
+- **Checkpoints stay shrinking-set gates** (DR-020), and gain one thing no earlier book could
+  offer: a **gate text** the learner could not have read when the band opened.
+- **Vocabulary does not come from lessons.** It arrives by mining from the library. This is what
+  lets the 10x10 shape survive at all — lessons carry patterns, the library carries words, so
+  lesson count decouples from word count. Book One's honest teaching rate was 5.7 words a lesson;
+  N3's ~2,200 words over ~100 lessons would demand 22.
+- **Can-dos stay computed, not declared** (DR-022), rederived from passages actually read and
+  patterns actually produced.
+
+## 2. The one open blocker
+
+**The text source (§5).** The pipeline levels texts; it cannot conjure them. Tatoeba is
+sentence-grained, and a shelf of isolated sentences is not extensive reading.
+
+The state of each option as of today, which the plan does not yet record:
+
+| Option | State | Verdict |
+|---|---|---|
+| (a) License a graded-reader corpus | Not started; costs money | Best fit, needs an owner decision |
+| (b) Aozora Bunko | **Built.** `scripts/aozora.mjs`, 202 texts fetched, ~11,200 filtered as public-domain + modern orthography | Wrong register for this book — its own header says "Book Five material by difficulty" |
+| (c) Clustered sentence sequences | **Prototyped.** `data/reading/micro-readings.json` | Stopgap; must never be dressed up as a story |
+
+**Nothing in this document depends on that decision.** The grammar spine is the same whichever
+way the library is sourced, which is why it can be drafted now.
+
+## 3. The bands
+
+Ten bands, grouped by what the grammar *does* rather than by JLPT sub-level, because a learner
+meets these by function. Pattern counts are targets, not quotas — Book Two proved a defended 7
+beats a padded 10.
+
+Every pattern below is **training-derived** and carries no sentence yet. A pattern earns its
+lesson only when a Tatoeba sentence is found that demonstrates it at the band's level; a pattern
+that cannot be attested moves to a later band or is cut. Expect this list to lose entries.
+
+| Band | Theme | Patterns it owns |
+|---|---|---|
+| 1 | Cause and consequence | ため(に) / せいで / おかげで / によって / から(に)は / ものだから / ことだから |
+| 2 | Contrast and concession | のに / くせに / ながらも / ものの / とはいえ / にもかかわらず / ながら |
+| 3 | Conditions, sharpened | 限り / 次第 / さえ〜ば / たとえ〜ても / ようでは / ものなら |
+| 4 | Time and sequence | うちに / 間(に) / 以来 / 際(に) / 途中で / たとたん / かける |
+| 5 | Speaker stance | はず / わけ / みたい / らしい / っぽい / ようだ / に違いない / かもしれない |
+| 6 | Degree and comparison | ほど / くらい / だけ / ばかり / どころか / に比べて / 反面 |
+| 7 | Purpose and intent | ように / ために / 〜べく / 〜まい / つもり / ことにする / ことになる |
+| 8 | Obligation and permission | ざるを得ない / ないわけにはいかない / べき / 必要がある / てはならない / constructions of 許可 |
+| 9 | Nominalisation and reference | こと / の / ところ / 〜という / 〜とは / 〜に関して / 〜について / 〜における |
+| 10 | Register and the written voice | である / 〜つつ / 〜ゆえ / 〜において / passive as formality / noun-heavy style |
+
+### Four of these are already taught, and only two are genuinely new
+
+Checked mechanically against every `pattern:` in `src/content/grammar/`. A band author who
+misses this re-teaches material the learner already owns, which is the single most common defect
+Book Two's audits found.
+
+| Pattern | What the learner already has | What the band adds |
+|---|---|---|
+| ながら (band 2) | ます-stem + ながら, *"two actions at once, one person"* — Book Two, joining chapter | The **concessive** sense, "although". Same form, unrelated meaning. Teach it as a second job and contrast it with the first, or it reads as a contradiction |
+| くらい (band 6) | ～ふんくらいです, *"about ~ minutes"* — Book One | Degree and extent, "to the point that". Different job, same word |
+| つもり (band 7) | plain non-past + つもりです, plus つもりはない / つもりでした — Book Two, deciding chapter | **Almost nothing. Cut it from band 7.** If a band wants it, the only new ground is ～たつもり, acting under an impression, and that is one lesson at most |
+| こと (band 9) | ～たことがある and ことができる — Book Two | Bare こと as a nominaliser, and ことにする / ことになる in band 7. Real, but narrower than "こと" suggests — say which |
+
+**Band 10 is the one to be suspicious of.** It is the written register rather than a grammar
+family, and it may turn out to belong to Book Four, or to be spread through the other nine as
+"here is how this looks in writing" rather than standing alone. Let the reading library decide:
+if the levelled texts keep needing it early, it is not band 10.
+
+## 4. What a band breakdown must add
+
+The same shape as `book-two-chapter-NN.md`, plus two things that book had no need for:
+
+- **The gate text.** Which passage closes the band, and the evidence it was unreadable at the
+  band's start — the levelling pipeline's own coverage number for that learner state, not a
+  guess.
+- **The mining budget.** How many unknowns a band's texts should carry. §5 fixes the flow target
+  at ~98% known, which puts 2-3 unknowns in a 150-word passage, so one number serves both flow
+  and mining. A breakdown that proposes texts outside that band is proposing a different book.
+
+## 5. Sequencing
+
+Bands 1-4 are safe to break down now: their patterns are the ones Tatoeba attests most densely,
+and none of them depends on the library's shape. Bands 5-10 should wait for the text-source
+decision, because their patterns are the ones a levelled corpus is most likely to re-order.
