@@ -62,4 +62,17 @@ if [ -z "${WALKTHROUGH_EMAIL:-}" ]; then
 fi
 export WALKTHROUGH_EMAIL WALKTHROUGH_PASSWORD
 
+# The API server's CORS allowlist is FRONTEND_URL, defaulting to the dev server
+# on :5173 (server/src/index.ts). This walk serves a preview build on :4173, so
+# every /api call from it is blocked at preflight unless the server was started
+# with FRONTEND_URL pointing here. A signed-in walk needs those calls: progress
+# is server-durable (DR-018).
+if [ -n "${WALKTHROUGH_EMAIL:-}" ] && lsof -ti:3000 >/dev/null 2>&1; then
+  if ! curl -fsS -o /dev/null -H "Origin: http://localhost:$PORT" \
+       -D- "http://localhost:3000/health" 2>/dev/null | grep -qi "access-control-allow-origin"; then
+    echo "WARNING: API server on :3000 does not allow origin http://localhost:$PORT." >&2
+    echo "         Restart it as: FRONTEND_URL=http://localhost:$PORT pnpm dev:api" >&2
+  fi
+fi
+
 BASE="http://localhost:$PORT" node scripts/walkthrough.cjs

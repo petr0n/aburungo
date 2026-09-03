@@ -79,18 +79,40 @@ async function signInIfConfigured(page) {
   await page.fill("#auth-password", password);
   await page.click('button[type="submit"]:has-text("Sign in")');
 
-  // The form clears on success and surfaces an inline error on failure. Waiting
-  // for the field to disappear distinguishes the two without reading the DOM for
-  // anything that might contain the password.
+  // Assert the SESSION, not the form. The form vanishing proves nothing — it
+  // unmounts on submit either way — and believing it labelled five guest walks
+  // as signed-in, each stopping at Book One while the summary claimed
+  // otherwise. Supabase persists under sb-<ref>-auth-token; that key existing
+  // is the only evidence that counts.
   for (let i = 0; i < 40; i++) {
-    if (!(await visible(page, "#auth-email"))) {
-      log("  signed in.");
+    if (await hasSession(page)) {
+      log("  signed in (supabase session present).");
       return true;
     }
     await page.waitForTimeout(250);
   }
   const err = await page.locator('[role="alert"], .text-danger-fg').first().textContent().catch(() => null);
-  throw new Error(`sign-in did not complete${err ? `: ${err.trim()}` : " (no error shown — is Supabase awake?)"}`);
+  throw new Error(`sign-in did not create a session${err ? `: ${err.trim()}` : " (no error shown — is Supabase awake?)"}`);
+}
+
+async function hasSession(page) {
+  return page
+    .evaluate(() => Object.keys(localStorage).some((k) => k.includes("auth-token")))
+    .catch(() => false);
+}
+
+/**
+ * Re-assert the session between lessons.
+ *
+ * A full walk runs well past an access token's lifetime. When it lapses the app
+ * falls back to guest, TIER_BOOK_LIMIT caps a guest at Book One, and the walk
+ * ends at "All caught up" with Book Two untouched — which is exactly what five
+ * runs did while reporting themselves signed in.
+ */
+async function keepSignedIn(page, wanted) {
+  if (!wanted || (await hasSession(page))) return;
+  log("  session lapsed — signing back in");
+  await signInIfConfigured(page);
 }
 
 async function clickWhenReady(page, sel, label) {
@@ -499,6 +521,7 @@ async function main() {
   while (sessionIndex < MAX_SESSIONS) {
     sessionIndex++;
     log(`=== Session ${sessionIndex}: navigating to /learn ===`);
+    await keepSignedIn(page, signedIn);
     await page.goto(`${BASE}/learn`, { waitUntil: "networkidle" });
 
     // Wait out the "Preparing today's session..." loading placeholder.
@@ -509,12 +532,31 @@ async function main() {
     }
     await page.waitForTimeout(WAIT_SHORT);
 
+    // "All caught up!" is not trustworthy the instant it appears. Supabase
+    // restores the session asynchronously, so LearnPage first builds a session
+    // as a guest — and a guest who has finished Book One IS caught up, because
+    // TIER_BOOK_LIMIT stops them there. Moments later auth lands, `tier` flips
+    // to free, the load effect re-runs on it, and Book Two appears.
+    //
+    // Accepting the first sighting ended every signed-in walk at exactly
+    // session 101 with Book Two untouched, which read as a content or handoff
+    // bug and is neither: LearnPage.handoff.dom.test.tsx covers the handoff and
+    // passes. Re-check before believing it.
     if (await visible(page, "text=All caught up!")) {
-      log(`All caught up! reached at session ${sessionIndex} — walkthrough complete.`);
-      allCaughtUpReached = true;
-      ladderEndReached = true;
-      sessionIndex--; // this iteration did not consume a real session
-      break;
+      await page.waitForTimeout(3000);
+      if (await visible(page, "text=All caught up!")) {
+        // Ground truth for why the walk stopped. A next-book prompt here means
+        // the app thinks this tier cannot reach the next book (guest); its
+        // absence means the app believes every reachable book is finished.
+        const body = await page.locator("body").innerText().catch(() => "");
+        log(`  STOP DIAGNOSTIC: ${JSON.stringify(body.replace(/\s+/g, " ").slice(0, 400))}`);
+        log(`All caught up! reached at session ${sessionIndex} — walkthrough complete.`);
+        allCaughtUpReached = true;
+        ladderEndReached = true;
+        sessionIndex--; // this iteration did not consume a real session
+        break;
+      }
+      log("  (transient 'All caught up!' before auth settled — continuing)");
     }
 
     await handleReviewStepIfPresent(page, sessionIndex);
