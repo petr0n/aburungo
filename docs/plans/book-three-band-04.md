@@ -36,6 +36,12 @@ author this chapter's ids as final until that band is sized.**
 
 ---
 
+
+> **Global orders settled.** The passive band (`book-three-band-00-passive.md`) opens
+> Book Three with 8 lessons at 196-203, so this band moved from 219 to **227**. Every
+> `order` below shifts by 8; no lesson id changes. The band's own number moves too - this is
+> the book's chapter 5, not 4.
+
 ## 0. The inventory pass
 
 Checked mechanically against every `pattern:` and `japanese:` in the regenerated manifest

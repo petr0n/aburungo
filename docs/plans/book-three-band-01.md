@@ -25,12 +25,10 @@ says it must.
 ---
 
 
-> **Orders here are provisional.** `book-three-bands.md` §3a was added after this document was
-> written: a passive and causative band opens Book Three, before band 1, because Book Two chapter 7
-> tells the learner the passive's conjugation and production "open the next book". That band is not
-> sized yet, so every global `order` below shifts by its length, and this band's own number moves.
-> Nothing else in this document changes — the patterns, the attestation and the lesson design all
-> stand. Settle the numbering before authoring, not after.
+> **Global orders settled.** The passive band (`book-three-band-00-passive.md`) opens
+> Book Three with 8 lessons at 196-203, so this band moved from 196 to **204**. Every
+> `order` below shifts by 8; no lesson id changes. The band's own number moves too - this is
+> the book's chapter 2, not 1.
 
 
 ## 1. Attestation — what I checked before committing anything
@@ -124,7 +122,9 @@ chapters.
 # which is that a learner has to choose. によって closes the strong half: the
 # most formal of the four, doing triple duty as "by," "according to" and "the
 # agent of a passive sentence" -- a job this band cannot fully cash out, because
-# passive voice is not built yet. See lesson 4 and section 6.
+# the passive is taught by the band immediately before this one
+#   (book-three-band-00-passive.md), which also takes ni-yotte's agent sense.
+#   See lesson 4 and section 6.
 #
 # The last three are a different kind of lesson. から(に)は, ものだから and
 # ことだから are real, attested, and genuinely thin in this corpus -- three,

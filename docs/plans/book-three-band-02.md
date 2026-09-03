@@ -20,12 +20,10 @@ assembles the book.**
 ---
 
 
-> **Orders here are provisional.** `book-three-bands.md` §3a was added after this document was
-> written: a passive and causative band opens Book Three, before band 1, because Book Two chapter 7
-> tells the learner the passive's conjugation and production "open the next book". That band is not
-> sized yet, so every global `order` below shifts by its length, and this band's own number moves.
-> Nothing else in this document changes — the patterns, the attestation and the lesson design all
-> stand. Settle the numbering before authoring, not after.
+> **Global orders settled.** The passive band (`book-three-band-00-passive.md`) opens
+> Book Three with 8 lessons at 196-203, so this band moved from 204 to **212**. Every
+> `order` below shifts by 8; no lesson id changes. The band's own number moves too - this is
+> the book's chapter 3, not 2.
 
 
 ## 1. Attestation — the part I most need to report

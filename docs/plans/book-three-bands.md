@@ -93,15 +93,15 @@ It also blocks band 1. によって's canonical use is marking the agent of a pa
 band 1 works around this by sourcing only the means/variation sense and deferring the rest, which
 is the right call locally and the wrong shape for the book.
 
-**Resolution: a passive and causative band opens Book Three, before band 1.** れる/られる, then
+**Resolved and planned: `book-three-band-00-passive.md`, 8 lessons at orders 196-203.** Bands 1-4
+shift down by 8 (band 1 now 204-211, band 2 212-218, band 3 219-226, band 4 227-234) and their
+documents carry the settled numbers. **A passive and causative band opens Book Three, before band 1.** れる/られる, then
 せる/させる, then the combination, then によって as the agent marker that needs all three. It is
 the one band that is conjugation rather than connective grammar, which is why it fell out of a
 skeleton built around connectives — and why it cannot simply be appended at the end.
 
-Bands 1-4 are being broken down against orders 196-226 as this is written. Those shift by the
-size of the passive band once it is planned. Renumbering costs nothing today because no Book
-Three content exists yet; it will not be free later, so this should be settled before authoring
-starts.
+Renumbering cost nothing because no Book Three content existed when it landed. It would not have
+been free later, which is why it was settled before authoring rather than after.
 
 ## 3b. Attestation ceilings for bands 5-10
 
