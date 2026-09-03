@@ -50,13 +50,13 @@ that cannot be attested moves to a later band or is cut. Expect this list to los
 
 | Band | Theme | Patterns it owns |
 |---|---|---|
-| 1 | Cause and consequence | ため(に) / せいで / おかげで / によって / から(に)は / ものだから / ことだから |
+| 1 | Cause and consequence | ため(に) **(causal only)** / せいで / おかげで / によって / から(に)は / ものだから / ことだから |
 | 2 | Contrast and concession | のに / くせに / ながらも / ものの / とはいえ / にもかかわらず / ながら |
 | 3 | Conditions, sharpened | 限り / 次第 / さえ〜ば / たとえ〜ても / ようでは / ものなら |
 | 4 | Time and sequence | うちに / 間(に) / 以来 / 際(に) / 途中で / たとたん / かける |
 | 5 | Speaker stance | はず / わけ / みたい / らしい / っぽい / ようだ / に違いない / かもしれない |
 | 6 | Degree and comparison | ほど / くらい / だけ / ばかり / どころか / に比べて / 反面 |
-| 7 | Purpose and intent | ように / ために / 〜べく / 〜まい / つもり / ことにする / ことになる |
+| 7 | Purpose and intent | ように / ために **(purposive only — band 1 owns the causal sense)** / 〜べく / 〜まい / ~~つもり~~ / ことにする / ことになる |
 | 8 | Obligation and permission | ざるを得ない / ないわけにはいかない / べき / 必要がある / てはならない / constructions of 許可 |
 | 9 | Nominalisation and reference | こと / の / ところ / 〜という / 〜とは / 〜に関して / 〜について / 〜における |
 | 10 | Register and the written voice | である / 〜つつ / 〜ゆえ / 〜において / passive as formality / noun-heavy style |
@@ -78,6 +78,30 @@ Book Two's audits found.
 family, and it may turn out to belong to Book Four, or to be spread through the other nine as
 "here is how this looks in writing" rather than standing alone. Let the reading library decide:
 if the levelled texts keep needing it early, it is not band 10.
+
+## 3a. A missing band: the passive, and it has to come first
+
+**Found while planning band 1, and it is a hole in this skeleton rather than a detail.**
+
+Book Two chapter 7 teaches 〜と言われています for recognition only and says so in its own header:
+the passive's *"conjugation and production of both, open the next book."* That is this book. A
+learner arrives having been told, in as many words, that the passive is coming — and none of the
+ten bands above teaches it. Band 10's "passive as formality" is a register note that presupposes
+a conjugation lesson that does not exist anywhere.
+
+It also blocks band 1. によって's canonical use is marking the agent of a passive sentence;
+band 1 works around this by sourcing only the means/variation sense and deferring the rest, which
+is the right call locally and the wrong shape for the book.
+
+**Resolution: a passive and causative band opens Book Three, before band 1.** れる/られる, then
+せる/させる, then the combination, then によって as the agent marker that needs all three. It is
+the one band that is conjugation rather than connective grammar, which is why it fell out of a
+skeleton built around connectives — and why it cannot simply be appended at the end.
+
+Bands 1-4 are being broken down against orders 196-226 as this is written. Those shift by the
+size of the passive band once it is planned. Renumbering costs nothing today because no Book
+Three content exists yet; it will not be free later, so this should be settled before authoring
+starts.
 
 ## 4. What a band breakdown must add
 
