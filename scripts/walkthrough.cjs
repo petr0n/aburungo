@@ -396,7 +396,7 @@ async function handleProductionCheckpointIfPresent(page, sessionIndex) {
   if (!(await visible(page, "text=/(\\d+ to write|more to write)/"))) return false;
   log(`  production checkpoint detected (session ${sessionIndex})`);
 
-  const answers = new Map();
+  const seen = new Set();
   let guard = 0;
 
   while (guard < 200) {
@@ -405,39 +405,32 @@ async function handleProductionCheckpointIfPresent(page, sessionIndex) {
 
     const prompt = await page.locator("p.text-heading").first().textContent().catch(() => null);
     if (prompt === null) break;
-    const known = answers.get(prompt.trim());
+    seen.add(prompt.trim());
 
-    if (known === undefined) {
-      await clickWhenReady(page, "button:has-text('Show answer')", "Show answer (production)");
-      const reading = await page
-        .locator("p.font-jp.text-jp.text-fg-muted")
-        .first()
-        .textContent()
-        .catch(() => null);
-      if (reading !== null) answers.set(prompt.trim(), reading.split("·")[0].trim());
-    } else {
-      // No mode button to press: FillBlankCard's inputMode defaults to "text",
-      // so the field is already rendered. The driver used to click a "JP
-      // keyboard" button that b116f03 removed when FillInput moved to the ADS
-      // adapter — the card's toggle is "Type" / "Speak" now, and "Type" is
-      // already selected.
-      //
-      // This only ever fires on a prompt the driver has already learned the
-      // answer to, which needs review state carried across sessions — so it
-      // stayed invisible until the CORS fix let the API server answer at all.
-      const input = page.locator('input[placeholder="Type the Japanese..."]').first();
-      await input.waitFor({ state: "visible", timeout: CLICK_TIMEOUT });
-      await input.fill(known);
-      await page.waitForTimeout(150);
-      await clickWhenReady(page, "button:has-text('Check answer')", "Check answer (production)");
-    }
+    // Always reveal, never type.
+    //
+    // There used to be a second branch that typed a remembered answer on a
+    // repeat prompt. It broke twice without anyone noticing, because it only
+    // runs when review state carries between sessions and nothing carried
+    // until the CORS fix: first it clicked a "JP keyboard" button b116f03 had
+    // removed, then it targeted input[placeholder="Type the Japanese..."],
+    // which does not exist either — FillBlankCard passes that string but the
+    // design system's FillInput uses it for the kana preview label and renders
+    // the typing input as "Type romaji here…".
+    //
+    // It was also feeding a kana reading into a field that expects romaji and
+    // converts. Revealing completes the checkpoint — 100 sessions of guest
+    // walks did exactly that — so the typing path bought nothing and cost two
+    // debugging rounds. This driver checks that lessons run, not that a
+    // learner can spell.
+    await clickWhenReady(page, "button:has-text('Show answer')", "Show answer (production)");
 
     await clickWhenReady(page, "button:has-text('Next')", "Next (production)");
     await page.waitForTimeout(300);
   }
 
   if (guard >= 200) await failHard(page, sessionIndex, "stuck-in-production-checkpoint");
-  log(`  production checkpoint complete (${answers.size} distinct items)`);
+  log(`  production checkpoint complete (${seen.size} distinct items)`);
   return true;
 }
 
