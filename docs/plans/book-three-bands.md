@@ -103,6 +103,37 @@ size of the passive band once it is planned. Renumbering costs nothing today bec
 Three content exists yet; it will not be free later, so this should be settled before authoring
 starts.
 
+## 3b. Attestation ceilings for bands 5-10
+
+Raw substring counts against the 25,983 unique Japanese sentences bundled in
+`server/data/jmdict-examples-eng-3.6.2.json`. **These are ceilings, not counts.** Bands 1-4
+found them shrinking hard once hand-classified: とはいえ showed 11 and yielded 2 (nine were
+とは言えない); ものの showed 24 and yielded 5 (nineteen were もの+の); concessive ながら showed 9
+and yielded **0**, every hit a frozen idiom. Treat a number here as permission to look, nothing more.
+
+| Band | Pattern : ceiling |
+|---|---|
+| 5 stance | はず 69 · わけ 85 · みたい 46 · らしい 94 · っぽい 20 · ようだ 64 · に違いない 24 · かもしれない 53 |
+| 6 degree | ほど 181 · くらい 89 · だけ 332 · ばかり 82 · どころか 9 · に比べて 5 · **反面 4** |
+| 7 purpose | ように 413 · ために 259 · べく 12 · まい 117 · **ことにする 1** · ことになる 29 |
+| 8 obligation | **ざるを得ない 3** · **ないわけにはいかない 1** · べき 178 · 必要がある 26 · てはならない 49 |
+| 9 nominal | ところ 220 · という 423 · とは 499 · に関して 28 · について 180 · における 25 |
+| 10 register | である 761 · つつ 36 · **ゆえ 6** · において 50 |
+
+Five patterns are already at risk before anyone hand-classifies: 反面, ことにする, ざるを得ない,
+ないわけにはいかない and ゆえ. Expect band 8 in particular to shrink — two of its five are in that
+list, and its remaining three are common words whose ceilings are inflated by unrelated uses.
+
+The high numbers mislead in the other direction. ところ 220 counts the ordinary noun "place",
+だけ 332 counts the ordinary "only", まい 117 counts every word containing まい. A planner must
+separate the construction from the word and say how.
+
+**A trap I fell into producing this table, recorded so nobody repeats it:** in
+`jmdict-examples-eng-3.6.2.json` an example's `text` field is the *headword form*
+("ＣＤプレイヤー"), not the sentence. The sentence is in `ex.sentences[]` under `lang: "jpn"`.
+Searching `text` returns numbers that look plausible and are meaningless — かもしれない came back
+as 1. `scripts/jlpt.mjs` around line 601 reads it correctly; copy that.
+
 ## 4. What a band breakdown must add
 
 The same shape as `book-two-chapter-NN.md`, plus two things that book had no need for:
