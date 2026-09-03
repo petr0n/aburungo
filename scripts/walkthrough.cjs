@@ -416,7 +416,15 @@ async function handleProductionCheckpointIfPresent(page, sessionIndex) {
         .catch(() => null);
       if (reading !== null) answers.set(prompt.trim(), reading.split("·")[0].trim());
     } else {
-      await clickWhenReady(page, "button:has-text('JP keyboard')", "JP keyboard (production)");
+      // No mode button to press: FillBlankCard's inputMode defaults to "text",
+      // so the field is already rendered. The driver used to click a "JP
+      // keyboard" button that b116f03 removed when FillInput moved to the ADS
+      // adapter — the card's toggle is "Type" / "Speak" now, and "Type" is
+      // already selected.
+      //
+      // This only ever fires on a prompt the driver has already learned the
+      // answer to, which needs review state carried across sessions — so it
+      // stayed invisible until the CORS fix let the API server answer at all.
       const input = page.locator('input[placeholder="Type the Japanese..."]').first();
       await input.waitFor({ state: "visible", timeout: CLICK_TIMEOUT });
       await input.fill(known);
