@@ -51,6 +51,14 @@ export function parsePhrase(raw: unknown, source: string): Phrase {
   if (!isOptionalString(o.notes)) {
     throw new PhraseSchemaError(`${source}: entry "${String(o.id)}" has invalid notes`, raw);
   }
+  // A number here is the easy mistake — YAML reads a bare 229619 as one, and
+  // ids are compared and cited as strings everywhere else.
+  if (o.tatoebaId !== undefined && typeof o.tatoebaId !== "string") {
+    throw new PhraseSchemaError(
+      `${source}: entry "${String(o.id)}" has a non-string tatoebaId — quote it in the YAML`,
+      raw,
+    );
+  }
   if (o.recognitionOnly !== undefined && typeof o.recognitionOnly !== "boolean") {
     throw new PhraseSchemaError(
       `${source}: entry "${String(o.id)}" has invalid recognitionOnly "${String(o.recognitionOnly)}" — must be true or false`,
@@ -75,6 +83,7 @@ export function parsePhrase(raw: unknown, source: string): Phrase {
     notes: o.notes as string | undefined,
     jlpt: o.jlpt as JlptLevel | undefined,
     recognitionOnly: o.recognitionOnly as boolean | undefined,
+    tatoebaId: o.tatoebaId as string | undefined,
   };
 }
 

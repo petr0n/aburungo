@@ -74,6 +74,21 @@ export type Phrase = {
    * Defaults false: a phrase is producible unless it says otherwise.
    */
   recognitionOnly?: boolean;
+  /**
+   * Tatoeba sentence id, when this phrase is quoted rather than composed.
+   *
+   * Books One and Two allow canonical composed sentences marked
+   * `content-source: training`, so most phrases have no id. Book Three does
+   * not: `04-stage-reading.md` §8 says every sentence at the reading stage and
+   * above comes from Tatoeba with its id or does not ship, and until now the
+   * schema had nowhere to put one — `WordExample` requires a `tatoebaId` but
+   * `Phrase` had no equivalent, so the citation had nowhere to live.
+   *
+   * Optional because the two books already shipped predate the rule. A Book
+   * Three phrase without one is a defect, and the check belongs with the first
+   * b3 content file rather than here, where it would assert over an empty set.
+   */
+  tatoebaId?: string;
 };
 
 export type WordType = "noun" | "verb" | "i-adj" | "na-adj" | "adverb" | "counter" | "interjection";
