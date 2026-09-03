@@ -134,6 +134,24 @@ separate the construction from the word and say how.
 Searching `text` returns numbers that look plausible and are meaningless — かもしれない came back
 as 1. `scripts/jlpt.mjs` around line 601 reads it correctly; copy that.
 
+## 3c. A second gap: だろう and でしょう are taught nowhere
+
+**Found by the band-5 planner, verified here.** Neither appears as a pattern in any of the ten
+bands, and neither is taught anywhere in Books One or Two — not as a rule, and not even inside a
+phrase a learner has met. Nor is そう.
+
+They are among the best-attested things in the corpus: **だろう 348 sentences, でしょう 215.**
+Only という, とは, ある and である beat them. A learner cannot read a page of ordinary Japanese
+without meeting one, and this book's whole premise is extensive reading.
+
+They belong with band 5, whose eight patterns are all "how sure am I, and on what grounds" —
+だろう is the plainest member of that family and the skeleton simply omitted it. Band 5 as planned
+is already 9 lessons, so this is a decision about that band's size, not a free addition.
+
+This is the second gap of the same kind as §3a's missing passive: the skeleton was built by
+listing connective grammar, and both misses are things that are not connectives. Worth one pass
+over the remaining bands looking for the same shape of omission before authoring starts.
+
 ## 4. What a band breakdown must add
 
 The same shape as `book-two-chapter-NN.md`, plus two things that book had no need for:
