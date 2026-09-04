@@ -152,20 +152,44 @@ async function detectPostProduceTerminal(page) {
 }
 
 async function handleReviewStepIfPresent(page, sessionIndex) {
-  let guard = 0;
+  // The loop bound is a stall detector, not an item cap. A signed-in account
+  // carries every due item it has ever accumulated (997 on 2026-09-04), and a
+  // flat cap of 40 failed that healthy run as "stuck-in-review-step" with a
+  // perfectly answerable card on screen. Fail only when the "Review · n / m"
+  // counter stops moving.
   let handledAny = false;
-  while (guard < 40) {
+  let lastCounter = null;
+  let idle = 0;
+  for (;;) {
     if (!(await visible(page, "text=Review ·"))) return handledAny;
-    guard++;
     handledAny = true;
-    if (await visible(page, "button:has-text('Reveal')")) {
-      log(`  (review, defensive) Reveal #${guard}`);
+    const body = (await page.textContent("body").catch(() => "")) ?? "";
+    const counter = body.match(/Review · \d+ \/ \d+/)?.[0] ?? null;
+    if (counter !== null && counter === lastCounter) {
+      idle++;
+      if (idle >= 40) await failHard(page, sessionIndex, "stuck-in-review-step");
+    } else {
+      idle = 0;
+      lastCounter = counter;
+    }
+    const tag = counter ?? "review";
+    if (await visible(page, "button:has-text('Show answer')")) {
+      // FillBlankCard: a word or phrase reviewed in a shifted book. Same
+      // handling as the new-unit produce step — reveal, then Next. It shows
+      // Check answer too, so this branch must come before the cloze one.
+      log(`  (review, defensive) typed card ${tag}`);
+      await clickWhenReady(page, "button:has-text('Show answer')", "Show answer (review)");
+      await page.waitForTimeout(WAIT_SHORT);
+      await clickWhenReady(page, "button:has-text('Next')", "Next (review)");
+      await page.waitForTimeout(WAIT_SHORT);
+    } else if (await visible(page, "button:has-text('Reveal')")) {
+      log(`  (review, defensive) Reveal ${tag}`);
       await clickWhenReady(page, "button:has-text('Reveal')", "Reveal");
       await page.waitForTimeout(WAIT_SHORT);
       await clickWhenReady(page, "button:has-text(\"Got it\")", "Got it (review back)");
       await page.waitForTimeout(WAIT_SHORT);
     } else if (await visible(page, "button:has-text('Check answer')")) {
-      log(`  (review, defensive) grammar cloze review item #${guard}`);
+      log(`  (review, defensive) grammar cloze ${tag}`);
       const romajiInput = page.locator('input[placeholder="Type romaji here…"]').first();
       await romajiInput.waitFor({ state: "visible", timeout: CLICK_TIMEOUT });
       await romajiInput.fill("test");
@@ -178,8 +202,6 @@ async function handleReviewStepIfPresent(page, sessionIndex) {
       await page.waitForTimeout(300);
     }
   }
-  if (guard >= 40) await failHard(page, sessionIndex, "stuck-in-review-step");
-  return handledAny;
 }
 
 
