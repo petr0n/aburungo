@@ -6,7 +6,7 @@
 # situation -- this stage's vocabulary is too broad to pre-curate and arrives
 # by mining, so "the lessons in this chapter" can no longer be a word list.
 #
-# One band, because one band has content. Nine more are designed
+# Five bands, because five bands have content. Five more are designed
 # (docs/plans/book-three-band-*.md) and none of them is authored. The same rule
 # Book Two's file records applies: a chapter declared here shows up on the
 # ladder whether or not any lesson points at it, and an empty chapter is
@@ -24,3 +24,19 @@
 - id: b3.band-0
   order: 1
   title: Doing, and being done to
+
+- id: b3.band-1
+  order: 2
+  title: Cause and consequence
+
+- id: b3.band-2
+  order: 3
+  title: Even though
+
+- id: b3.band-3
+  order: 4
+  title: Conditions, sharpened
+
+- id: b3.band-4
+  order: 5
+  title: More than one way to say "when"

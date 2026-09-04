@@ -42,6 +42,10 @@ import b2MakingPlansPhrasesRaw from "./phrases/b2-08-making-plans.yaml";
 import b2ConditionalsPhrasesRaw from "./phrases/b2-09-conditionals.yaml";
 import b2TroublePhrasesRaw from "./phrases/b2-10-trouble.yaml";
 import b3PassivePhrasesRaw from "./phrases/b3-00-passive.yaml";
+import b3CausePhrasesRaw from "./phrases/b3-01-cause.yaml";
+import b3ContrastPhrasesRaw from "./phrases/b3-02-contrast.yaml";
+import b3ConditionsPhrasesRaw from "./phrases/b3-03-conditions.yaml";
+import b3TimePhrasesRaw from "./phrases/b3-04-time.yaml";
 
 export const allPhrases: Phrase[] = [
   ...parsePhrases(transitRaw, "phrases/transit.yaml"),
@@ -75,6 +79,10 @@ export const allPhrases: Phrase[] = [
   ...parsePhrases(b2ConditionalsPhrasesRaw, "phrases/b2-09-conditionals.yaml"),
   ...parsePhrases(b2TroublePhrasesRaw, "phrases/b2-10-trouble.yaml"),
   ...parsePhrases(b3PassivePhrasesRaw, "phrases/b3-00-passive.yaml"),
+  ...parsePhrases(b3CausePhrasesRaw, "phrases/b3-01-cause.yaml"),
+  ...parsePhrases(b3ContrastPhrasesRaw, "phrases/b3-02-contrast.yaml"),
+  ...parsePhrases(b3ConditionsPhrasesRaw, "phrases/b3-03-conditions.yaml"),
+  ...parsePhrases(b3TimePhrasesRaw, "phrases/b3-04-time.yaml"),
 ];
 
 // parsePhrases only rejects duplicate ids within a single file, so the same id in

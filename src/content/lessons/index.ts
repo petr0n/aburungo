@@ -51,6 +51,10 @@ import b2MakingPlansRaw from "./b2-08-making-plans.yaml";
 import b2ConditionalsRaw from "./b2-09-conditionals.yaml";
 import b2TroubleRaw from "./b2-10-trouble.yaml";
 import b3PassiveRaw from "./b3-00-passive.yaml";
+import b3CauseRaw from "./b3-01-cause.yaml";
+import b3ContrastRaw from "./b3-02-contrast.yaml";
+import b3ConditionsRaw from "./b3-03-conditions.yaml";
+import b3TimeRaw from "./b3-04-time.yaml";
 
 const knownWordIds = new Set(allWords.map((w) => w.id));
 const knownPhraseIds = new Set(allPhrases.map((p) => p.id));
@@ -130,6 +134,10 @@ export const b2Lessons: Lesson[] = [
  */
 export const b3Lessons: Lesson[] = [
   ...parseLessons(b3PassiveRaw, "lessons/b3-00-passive.yaml", knownWordIds, knownPhraseIds, knownPatternIds, b3ChapterIds),
+  ...parseLessons(b3CauseRaw, "lessons/b3-01-cause.yaml", knownWordIds, knownPhraseIds, knownPatternIds, b3ChapterIds),
+  ...parseLessons(b3ContrastRaw, "lessons/b3-02-contrast.yaml", knownWordIds, knownPhraseIds, knownPatternIds, b3ChapterIds),
+  ...parseLessons(b3ConditionsRaw, "lessons/b3-03-conditions.yaml", knownWordIds, knownPhraseIds, knownPatternIds, b3ChapterIds),
+  ...parseLessons(b3TimeRaw, "lessons/b3-04-time.yaml", knownWordIds, knownPhraseIds, knownPatternIds, b3ChapterIds),
 ].sort((a, b) => a.order - b.order);
 
 export function findLesson(id: string): Lesson | undefined {

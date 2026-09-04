@@ -116,6 +116,24 @@
   on: ["ゴウ"]
   kun: ["さけ.ぶ", "よびな"]
   strokes: 5
+- character: "際"
+  meanings: ["occasion", "side", "edge", "verge"]
+  allMeanings: ["occasion", "side", "edge", "verge", "dangerous", "adventurous", "indecent", "time", "when"]
+  on: ["サイ"]
+  kun: ["きわ", "-ぎわ"]
+  strokes: 14
+- character: "途"
+  meanings: ["route", "way", "road"]
+  allMeanings: ["route", "way", "road"]
+  on: ["ト"]
+  kun: ["みち"]
+  strokes: 10
+- character: "以"
+  meanings: ["by means of", "because", "in view of", "compared with"]
+  allMeanings: ["by means of", "because", "in view of", "compared with"]
+  on: ["イ"]
+  kun: ["もっ.て"]
+  strokes: 5
 - character: "国"
   meanings: ["country"]
   allMeanings: ["country"]
