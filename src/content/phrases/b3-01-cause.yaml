@@ -1,0 +1,440 @@
+# Book Three, chapter 2 phrases -- cause and consequence.
+#
+# Twenty-nine sentences, and not one of them is ours. 04-stage-reading.md
+# section 8 withdraws the training-canonical exemption at the reading stage and
+# above, in those words -- "no training-canonical sentences at the reading stage
+# and above". So every sentence below is a verbatim Tatoeba pair carried out of
+# server/data/jmdict-examples-eng-3.6.2.json with its id in `tatoebaId`, and
+# nothing here was composed, trimmed, joined or smoothed. Where a shape had no
+# attested sentence it is described in a grammarNote and has no card, which is
+# what chapter 1 did and what the review of chapter 1 called correct.
+#
+# Three things quoting rather than composing cost this chapter, all visible
+# below:
+#
+#   Three of the seven patterns are thin, and the thinness is real rather than
+#   an authoring shortfall. からには has three sentences in the whole corpus,
+#   ものだから four genuine ones, ことだから exactly two. Those are all of them.
+#   ため has 328 and によって 157, so the imbalance below is the corpus's, not a
+#   choice.
+#
+#   The thin patterns are also the long ones. There is no short からには or
+#   ものだから sentence anywhere in this corpus -- the four genuine ものだから
+#   hits run 32 to 43 characters -- so five cards below carry
+#   `recognitionOnly: true`, and every one of them is marked because its kana
+#   reading exceeds Book Two's longest typed answer (41 kana,
+#   quote.my-friend-said-that-shop-is-famous-but-i-wont-go), not because the
+#   grammar is beyond the learner. Their readings run 42, 45, 46, 55 and 56.
+#
+#   #222287 is two sentences in one corpus entry. It is quoted whole because
+#   the rule is that nothing is trimmed, and trimming it to the second sentence
+#   -- the one carrying ものだから -- would be exactly the kind of smoothing the
+#   rule exists to stop. It is one speaker accounting for one watch, not an
+#   exchange.
+#
+# ---------------------------------------------------------------------------
+# GLOSS DEPARTURES. The English is Tatoeba's own wherever Tatoeba's own would
+# do. Eleven of the twenty-nine depart from it. Every one is listed here by id so
+# a reviewer can check the list against the corpus rather than take it on
+# trust. Every Japanese string is untouched.
+#
+#   Where the corpus English hid the grammar the card exists to teach:
+#   #213327 -- "It removes misunderstandings" has no trace of そのおかげで at
+#     all. Glossed "Thanks to that, misunderstandings are cleared up".
+#   #146000 -- "The tablets took away my pain" likewise drops おかげで.
+#     Glossed "Thanks to the tablets, the pain went away".
+#   #161701 -- "through your help" flattens おかげ, which is the card's whole
+#     point. Glossed "thanks to your help".
+#   #216991 -- "A map is available upon request" turns an active sentence with
+#     により in it into a different construction. Glossed "We will send you a
+#     map on request".
+#   #189757 -- "Absence of rain caused the plants to die" hides that the
+#     subject of せいで is a plain-past-negative clause. Glossed "The plants
+#     died because it didn't rain".
+#   #233557 -- "I hope and I know you did great!" shows nothing of
+#     あなたのことだから. Glossed "Knowing you, I'm sure it went splendidly".
+#   #149963 -- "You brought it on yourself" is a good idiom and shows neither
+#     ことだから nor 仕方がない. Glossed "You did it to yourself, so there's
+#     nothing to be done".
+#   #222287 -- the second sentence's ものだから, the reason the card exists,
+#     is not rendered at all. Glossed with "It's because ..." carrying it.
+#     (This id also appears under the next heading.)
+#
+#   Where the corpus English was wrong or used a word the learner would not:
+#   #122859 -- "Moderate exercise" for 日常の運動, which is daily exercise, not
+#     moderate exercise. Glossed "Everyday exercise".
+#   #85717 -- "the low air pressure" for 気圧; 低 is not in the Japanese.
+#     Glossed "the air pressure".
+#   #76862 -- "weird and hoopy stuff"; hoopy is Hitchhiker's Guide slang no
+#     learner would know. Glossed "weird stuff".
+#   #222287 -- "keep-sake", hyphenated. Corrected to keepsake.
+#
+# ---------------------------------------------------------------------------
+# ROUTING. Book Three's stage is "reading" (books.ts), and LearnPage routes
+# every non-foundation book to the typed FillBlankCard, where the learner types
+# the whole reading back. So all of these are typed except the five marked
+# recognitionOnly, and each of those five names its length in `notes`. The
+# grammar pattern for chapter 2's lesson 6 hangs off a recognitionOnly phrase
+# and that is deliberate rather than an oversight: produceItems filters
+# phrases, not patterns, so the ものだから lesson still asks the learner to type
+# ものだから -- five kana -- without asking for the forty-six-kana sentence
+# around it. That lesson has no typed sentence card at all, and it cannot,
+# because the corpus has no short ものだから sentence to give it.
+# ---------------------------------------------------------------------------
+#
+# Two traps the attestation pass caught that a naive grep would have shipped:
+#
+#   #229619 「あわてものだから彼はたぶん早合点するだろう。」 matches the string
+#   ものだから because あわてもの, a hasty person, is a noun that happens to end
+#   in もの. It is [noun]+だから, not [clause]+ものだから, and it is the shortest
+#   of the five hits, which is exactly what makes it dangerous. It is not used.
+#
+#   #197340 「ビルは印刷業でいい暮らしをするに足るお金をかせいだ。」 matches
+#   せいだ inside かせいだ, the past of 稼ぐ, to earn. Nothing to do with せい.
+#   It is not used either, and it is not in the breakdown -- it turned up in
+#   this pass.
+#
+# These are independent utterances. None is authored as an exchange, and none
+# is paired with another to make one -- a scripted back-and-forth is
+# multi-sentence composed text, which stays out even when both halves are
+# separately attested.
+#
+# content-source: Tatoeba, via the sentence pairs embedded in JMdict for
+#   Applications 3.6.2 (server/data/jmdict-examples-eng-3.6.2.json). Every
+#   phrase carries its sentence id in `tatoebaId`; the id is quoted, because
+#   YAML reads a bare 229619 as a number and the schema rejects it. Verified by
+#   id against the corpus on 2026-09-04 -- all 29 resolve and every Japanese
+#   string below matches its source character for character. Kana readings and
+#   romaji are transcriptions of the quoted sentence, not new content; every
+#   compound whose reading was not already obvious was checked against JMdict
+#   (着替え きがえ 1423160, 芝居 しばい 1321630, 犠牲 ぎせい 1225450, 大雨
+#   おおあめ 1413070, 決壊 けっかい 1254230, 交通 こうつう 1272280, 一時 いちじ
+#   1576100, 不通 ふつう 1493860, 日常 にちじょう 1464180, 運動 うんどう
+#   1172910, 頭痛 ずつう 1450890, 過労 かろう 1196490, 不足 ふそく 1493700,
+#   試験 しけん 1312350, 草木 くさき 1581300, 気圧 きあつ 1221880, 酔う よう
+#   1372650, 援助 えんじょ 1176660, 成功 せいこう 1375690, 錠剤 じょうざい
+#   1357120, 誤解 ごかい 1271310, 知識 ちしき 1420590, 経験 けいけん 1251270,
+#   生活 せいかつ 1378860, 様式 ようしき 1545830, 大半 たいはん 1414790,
+#   異なる ことなる 1157510, 要望 ようぼう 1546830, 苟も いやしくも 1634200,
+#   参謀 さんぼう 1302580, 危機感 ききかん 1821440, 海戦 かいせん 1613900,
+#   出港 しゅっこう 1338890, 乗組員 のりくみいん 1355380, 野宿 のじゅく
+#   1634050, 妙ちくりん みょうちくりん 2079500, 金時計 きんどけい 1242980,
+#   晩年 ばんねん 1482230, 形見 かたみ 1250260, 上々 じょうじょう 1595450).
+#   Two of those needed the gloss checked as well as the reading, because the
+#   headword has more than one entry: 得る in #152802 is える 1588760, to
+#   obtain, not うる 1454500, to be able to; and 解ける in #213327 is とける
+#   1198910, to be solved, not とける 1546070, to melt.
+# jlpt-source: training -- the level marks the chapter this content sits in,
+#   not each connective's textbook level. ため(に) and によって are commonly
+#   listed N4 and からには and ものだから N2; the sentences carrying all of them
+#   here are N3-band text and tagging them individually would misreport
+#   coverage.
+
+# ── Because, and in order to ──────────────────────────────────────────────────
+
+- id: band1.i-went-home-to-change
+  jlpt: N3
+  scenario: purpose
+  japanese: 着替えをするために家に帰った。
+  reading: きがえをするためにいえにかえった。
+  romaji: kigae o suru tame ni ie ni kaetta.
+  english: I went home to change my clothes.
+  tatoebaId: "126596"
+  notes: The purpose sense, in its plainest shape. A dictionary-form verb, then ために, then what you did about it. English puts the purpose second — went home to change — and Japanese puts it first.
+
+- id: band1.we-all-went-to-the-theatre-to-see-a-play
+  jlpt: N3
+  scenario: purpose
+  japanese: 私達みんなは芝居を見るためにシアターへ行った。
+  reading: わたしたちみんなはしばいをみるためにシアターへいった。
+  romaji: watashitachi minna wa shibai o miru tame ni shiataa e itta.
+  english: All of us went to the theater to see a play.
+  tatoebaId: "151231"
+  notes: The same shape with an object inside the ため clause. 芝居を見る is a whole sentence on its own, and ために turns it into the reason for the one that follows.
+
+- id: band1.she-gave-up-everything-for-her-children
+  jlpt: N3
+  scenario: purpose
+  japanese: 彼女は子供のために全てを犠牲にした。
+  reading: かのじょはこどものためにすべてをぎせいにした。
+  romaji: kanojo wa kodomo no tame ni subete o gisei ni shita.
+  english: She gave up everything for her children.
+  tatoebaId: "89740"
+  notes: A noun in front of ため needs の. 子供のために is for the sake of the children — the beneficiary sense, which is where ため's for the sake of flavour is most obvious.
+
+- id: band1.the-dam-burst-because-of-the-heavy-rain
+  jlpt: N3
+  scenario: cause
+  japanese: 大雨のためにダムが決壊した。
+  reading: おおあめのためにダムがけっかいした。
+  romaji: ooame no tame ni damu ga kekkai shita.
+  english: The dam burst owing to the heavy rain.
+  tatoebaId: "137673"
+  notes: The same 〜のために, and now it means because of. Nothing in the form changed. What changed is that heavy rain cannot be a purpose, so only the cause reading is available.
+
+- id: band1.traffic-is-suspended-because-of-the-fog
+  jlpt: N3
+  scenario: cause
+  japanese: 霧のために、交通は一時不通になっている。
+  reading: きりのために、こうつうはいちじふつうになっている。
+  romaji: kiri no tame ni, koutsuu wa ichiji futsuu ni natte iru.
+  english: Due to the fog, traffic is temporarily suspended.
+  tatoebaId: "80858"
+  notes: Cause again, and the register is the point. This is the sentence a traffic announcement or a news bulletin uses; 霧だから would be a person telling you about it.
+
+- id: band1.everyday-exercise-is-good-for-you
+  jlpt: N3
+  scenario: cause
+  japanese: 日常の運動はあなたのためになる。
+  reading: にちじょうのうんどうはあなたのためになる。
+  romaji: nichijou no undou wa anata no tame ni naru.
+  english: Everyday exercise is good for you.
+  tatoebaId: "122859"
+  notes: ため on its own, as an ordinary noun meaning benefit. ためになる is to do you good, and it is worth meeting once so that the に in ために stops looking compulsory.
+
+# ── Whose fault it is ─────────────────────────────────────────────────────────
+
+- id: band1.its-just-your-imagination
+  jlpt: N3
+  scenario: cause
+  japanese: 気のせいだよ。
+  reading: きのせいだよ。
+  romaji: ki no sei da yo.
+  english: It's just your imagination.
+  tatoebaId: "183261"
+  notes: Seven characters, and one of the most-used せい sentences there is. 気のせい is literally the fault of your mind — you only imagined it. Said to reassure somebody, not to blame them.
+
+- id: band1.your-headache-comes-from-overwork
+  jlpt: N3
+  scenario: cause
+  japanese: あなたの頭痛は過労のせいだ。
+  reading: あなたのずつうはかろうのせいだ。
+  romaji: anata no zutsuu wa karou no sei da.
+  english: Your headache comes from overwork.
+  tatoebaId: "233064"
+  notes: The predicate form, せいだ, ending the sentence rather than joining two. Noun plus の plus せいだ. Overwork is what gets the blame.
+
+- id: band1.he-failed-the-exam-because-he-had-not-studied
+  jlpt: N3
+  scenario: cause
+  japanese: 彼は勉強不足のせいで試験に落ちました。
+  reading: かれはべんきょうぶそくのせいでしけんにおちました。
+  romaji: kare wa benkyou busoku no sei de shiken ni ochimashita.
+  english: He failed the exam because he had not studied enough.
+  tatoebaId: "493157"
+  notes: せいで joining two halves, with the unwelcome result stated plainly. Swap in から or ので and the sentence stops assigning fault and just reports a sequence.
+
+- id: band1.the-plants-died-because-it-didnt-rain
+  jlpt: N3
+  scenario: cause
+  japanese: 雨が降らなかったせいで草木が枯れてしまった。
+  reading: あめがふらなかったせいでくさきがかれてしまった。
+  romaji: ame ga furanakatta sei de kusaki ga karete shimatta.
+  english: The plants died because it didn't rain.
+  tatoebaId: "189757"
+  notes: A whole clause in front of せいで this time, and a plain-past-negative one — 降らなかった attaches to せい the same way it would attach to any noun. てしまった at the end is doing its own regretting; the two agree.
+
+- id: band1.maybe-its-the-air-pressure
+  jlpt: N3
+  scenario: cause
+  japanese: 飛行機でお酒飲むと、気圧のせいか酔いやすい。
+  reading: ひこうきでおさけのむと、きあつのせいかよいやすい。
+  romaji: hikouki de osake nomu to, kiatsu no sei ka yoi yasui.
+  english: Maybe it's the air pressure, but you get drunk more easily on a plane.
+  tatoebaId: "85717"
+  notes: せいか, せい with the question particle on it, is the hedged version — maybe because of, I am not certain. It softens the blame rather than pressing it. 飲むと is the と conditional and 酔いやすい the 〜やすい ending, both already yours.
+
+# ── Who gets the credit ───────────────────────────────────────────────────────
+
+- id: band1.thanks-to-you-the-job-went-well
+  jlpt: N3
+  scenario: cause
+  japanese: あなたのおかげで仕事がうまく行きました。
+  reading: あなたのおかげでしごとがうまくいきました。
+  romaji: anata no okage de shigoto ga umaku ikimashita.
+  english: Thanks to you, the job went well.
+  tatoebaId: "178562"
+  notes: Same shape as せいで, opposite stance. Noun plus の plus おかげで, and the result is welcome. Say this to somebody's face; it is a real thank-you, not a description.
+
+- id: band1.i-succeeded-thanks-to-your-help
+  jlpt: N3
+  scenario: cause
+  japanese: 私はあなたの援助のおかげで成功した。
+  reading: わたしはあなたのえんじょのおかげでせいこうした。
+  romaji: watashi wa anata no enjo no okage de seikou shita.
+  english: I succeeded thanks to your help.
+  tatoebaId: "161701"
+  notes: Two のs stacked — あなたの援助 is your help, and 援助のおかげで is thanks to that help. The credit lands on the help, and through it on the person.
+
+- id: band1.thanks-to-the-tablets-the-pain-went-away
+  jlpt: N3
+  scenario: cause
+  japanese: 錠剤のおかげで痛みがなくなった。
+  reading: じょうざいのおかげでいたみがなくなった。
+  romaji: jouzai no okage de itami ga nakunatta.
+  english: Thanks to the tablets, the pain went away.
+  tatoebaId: "146000"
+  notes: おかげで does not need a person. Anything that made things better can take the credit — a pill, a bridge, the weather. What it does need is that things did get better.
+
+- id: band1.i-owe-what-i-am-to-my-parents
+  jlpt: N3
+  scenario: cause
+  japanese: 私が今日あるのは両親のおかげである。
+  reading: わたしがきょうあるのはりょうしんのおかげである。
+  romaji: watashi ga kyou aru no wa ryoushin no okage de aru.
+  english: I owe what I am to my parents.
+  tatoebaId: "167729"
+  notes: The predicate form, おかげである, ending the sentence — おかげです in ordinary speech. English reaches for owe, which is as close as it gets to おかげ in one word.
+
+- id: band1.thanks-to-that-misunderstandings-are-cleared-up
+  jlpt: N3
+  scenario: cause
+  japanese: そのおかげで誤解が解ける。
+  reading: そのおかげでごかいがとける。
+  romaji: sono okage de gokai ga tokeru.
+  english: Thanks to that, misunderstandings are cleared up.
+  tatoebaId: "213327"
+  notes: おかげで opening the sentence, pointing back at whatever was just said. This is how the word most often starts a sentence in conversation, and そのおかげで is worth keeping whole.
+
+# ── By, and according to ──────────────────────────────────────────────────────
+
+- id: band1.i-get-knowledge-by-reading-books
+  jlpt: N3
+  scenario: cause
+  japanese: 私は本を読むことによって知識を得る。
+  reading: わたしはほんをよむことによってちしきをえる。
+  romaji: watashi wa hon o yomu koto ni yotte chishiki o eru.
+  english: I get knowledge by reading books.
+  tatoebaId: "152802"
+  notes: The means sense, on a clause rather than a noun. こと turns 本を読む into a noun, and によって then says it is the method. Same こと you already met in 〜たことがある, doing the same job.
+
+- id: band1.we-learn-much-by-experience
+  jlpt: N3
+  scenario: cause
+  japanese: 私達は経験によって多くを学ぶ。
+  reading: わたしたちはけいけんによっておおくをまなぶ。
+  romaji: watashitachi wa keiken ni yotte ooku o manabu.
+  english: We learn much by experience.
+  tatoebaId: "151577"
+  notes: The same means sense on a plain noun, and no passive anywhere in the sentence. 学ぶ is what we do; 経験 is how.
+
+- id: band1.table-manners-vary-by-country
+  jlpt: N3
+  scenario: cause
+  japanese: テーブルマナーは国によって異なる。
+  reading: テーブルマナーはくににによってことなる。
+  romaji: teeburu manaa wa kuni ni yotte kotonaru.
+  english: Table manners vary from one country to another.
+  tatoebaId: "202379"
+  notes: The variation sense — X によって Y varies. Note the reading runs くに straight into によって, so two に fall together; that is 国 plus によって, not a doubled particle.
+
+- id: band1.lifestyle-is-determined-by-money
+  jlpt: N3
+  scenario: cause
+  japanese: 人の生活様式の大半はお金によって決まる。
+  reading: ひとのせいかつようしきのたいはんはおかねによってきまる。
+  romaji: hito no seikatsu youshiki no taihan wa okane ni yotte kimaru.
+  english: One's lifestyle is largely determined by money.
+  tatoebaId: "144586"
+  notes: English says determined by and reaches for the passive; Japanese does not. 決まる is an ordinary intransitive verb, and によって is marking what the outcome depends on, not who did anything.
+
+- id: band1.we-will-send-you-a-map-on-request
+  jlpt: N3
+  scenario: cause
+  japanese: ご要望により地図を送ります。
+  reading: ごようぼうによりちずをおくります。
+  romaji: goyoubou ni yori chizu o okurimasu.
+  english: We will send you a map on request.
+  tatoebaId: "216991"
+  notes: により, によって's written register-mate, in the sentence type it belongs to — a notice, a form, a company saying what it will do. Also non-passive, so the marker is doing its own work here rather than propping up a verb.
+
+# ── Now that ──────────────────────────────────────────────────────────────────
+
+- id: band1.if-you-do-it-at-all-do-it-well
+  jlpt: N3
+  scenario: cause
+  japanese: いやしくもやるからには上手くやれ。
+  reading: いやしくもやるからにはうまくやれ。
+  romaji: iyashikumo yaru kara ni wa umaku yare.
+  english: If you do it at all, do it well.
+  tatoebaId: "228488"
+  notes: The whole pattern in seventeen characters. からには sets what is already settled — you are going to do it — and what follows is not a fact but a demand. やれ is the blunt command form; the sentence is somebody being told.
+
+- id: band1.now-that-youre-my-staff-officer
+  jlpt: N3
+  scenario: cause
+  japanese: 私の参謀としてついたからには、危機感を持って任にあたって貰わねば困ります。
+  reading: わたしのさんぼうとしてついたからには、ききかんをもってにんにあたってもらわねばこまります。
+  romaji: watashi no sanbou toshite tsuita kara ni wa, kikikan o motte nin ni atatte morawaneba komarimasu.
+  english: If you're with me as a staff officer, then I need you to bring a sense of danger with you to your work.
+  tatoebaId: "75551"
+  recognitionOnly: true
+  notes: "Read this one, do not type it — forty-five kana, past what Book Two ever asked for. Worth reading because it shows からには where it lives: a settled fact in the first half, an obligation laid on somebody in the second. 貰わねば is a stiff written 貰わなければ."
+
+- id: band1.once-a-ship-has-left-port
+  jlpt: N3
+  scenario: cause
+  japanese: 海戦に先立って出港したからには、乗組員が船に慣れる時間がないことが、しばしばあるものだ。
+  reading: かいせんにさきだってしゅっこうしたからには、のりくみいんがふねになれるじかんがないことが、しばしばあるものだ。
+  romaji: kaisen ni sakidatte shukkou shita kara ni wa, norikumiin ga fune ni nareru jikan ga nai koto ga, shibashiba aru mono da.
+  english: A sailor frequently has no time to get his sea legs after leaving port before a battle starts.
+  tatoebaId: "185034"
+  recognitionOnly: true
+  notes: Fifty-five kana, and the third and last からには sentence in the corpus. Reading only. Here the second half is a consequence rather than an order — once you have sailed, this is simply what follows.
+
+# ── Explaining yourself ───────────────────────────────────────────────────────
+
+- id: band1.ive-been-sleeping-rough-lately
+  jlpt: N3
+  scenario: cause
+  japanese: ええ、このところ野宿ばかりだったものだから、久しぶりにゆっくり出来ました。ありがとう。
+  reading: ええ、このところのじゅくばかりだったものだから、ひさしぶりにゆっくりできました。ありがとう。
+  romaji: ee, kono tokoro nojuku bakari datta mono da kara, hisashiburi ni yukkuri dekimashita. arigatou.
+  english: Yes, thanks. Recently I've been roughing it so I was able to get a proper sleep for the first time in a while.
+  tatoebaId: "76840"
+  recognitionOnly: true
+  notes: Forty-six kana, so read it rather than type it. The shape to take away is 〜だったものだから — a plain-past clause, then ものだから, then what it accounts for. This is somebody explaining themselves to a host, which is the register the whole pattern lives in.
+
+- id: band1.i-write-weird-stuff-so-its-hard-to-comment
+  jlpt: N3
+  scenario: cause
+  japanese: いつも妙ちくりんなことばっかり書いてるもんだから、きっとコメントしにくいんだわ！
+  reading: いつもみょうちくりんなことばっかりかいてるもんだから、きっとコメントしにくいんだわ！
+  romaji: itsumo myouchikurin na koto bakkari kaiteru mon da kara, kitto komento shinikui n da wa!
+  english: I'm always writing weird stuff, so I'm sure it's hard to comment on.
+  tatoebaId: "76862"
+  recognitionOnly: true
+  notes: "Forty-two kana — one over the line, and reading-only for that reason alone. もんだから is ものだから in speech, and everything else here is casual too: 書いてる for 書いている, ばっかり for ばかり. The speaker is excusing themselves, which is what this pattern is for."
+
+- id: band1.this-gold-watch-means-a-great-deal-to-me
+  jlpt: N3
+  scenario: cause
+  japanese: この金時計は私にとって非常に大切なものだ。母が晩年に形見として私にくれたものだから。
+  reading: このきんどけいはわたしにとってひじょうにたいせつなものだ。ははがばんねんにかたみとしてわたしにくれたものだから。
+  romaji: kono kindokei wa watashi ni totte hijou ni taisetsu na mono da. haha ga bannen ni katami toshite watashi ni kureta mono da kara.
+  english: This gold watch means a great deal to me. It's because my mother gave it to me as a keepsake in her later years.
+  tatoebaId: "222287"
+  recognitionOnly: true
+  notes: "Fifty-six kana, and two sentences, both quoted as the corpus has them. The second one is ものだから standing alone at the end as the explanation for the first — a very common way to use it, and the reason this long entry is here at all. Watch the first sentence too: 大切なものだ is a real noun もの, which is where ものだから comes from."
+
+# ── Knowing them ──────────────────────────────────────────────────────────────
+
+- id: band1.knowing-you-im-sure-it-went-well
+  jlpt: N3
+  scenario: cause
+  japanese: あなたのことだから上々でしょう。
+  reading: あなたのことだからじょうじょうでしょう。
+  romaji: anata no koto da kara joujou deshou.
+  english: Knowing you, I'm sure it went splendidly.
+  tatoebaId: "233557"
+  notes: The idiomatic core. 〜のことだから takes a person and predicts from their character, so the second half is always a guess — でしょう, はずだ, に違いない. Not a report of what happened; a bet on it.
+
+- id: band1.you-did-it-to-yourself
+  jlpt: N3
+  scenario: cause
+  japanese: 自分でやったことだから仕方がないね。
+  reading: じぶんでやったことだからしかたがないね。
+  romaji: jibun de yatta koto da kara shikata ga nai ne.
+  english: You did it to yourself, so there's nothing to be done.
+  tatoebaId: "149963"
+  notes: The literal shape — a plain-past clause turned into a noun by こと, then だから. Since it is a thing you did yourself, it cannot be helped. Same こと as 〜たことがある, a different thing stapled on the end.

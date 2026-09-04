@@ -1,0 +1,114 @@
+# Book Three, chapter 2 grammar patterns -- cause and consequence.
+#
+# One pattern per teaching lesson, each blanking the connective that lesson
+# exists for out of one of its own sentences. The blank is matched against the
+# phrase's reading, so these are kana.
+#
+# The `pattern` strings are bare kana for the reason chapter 1's file records:
+# scripts/levelling.mjs's grammarSurface() rejects any pattern containing a
+# Latin character or a digit and needs at least one ～-delimited fragment of two
+# or more characters, so a free English description of a rule tags nothing and
+# the reading library can never find text for it. This chapter has an easier
+# time of it than chapter 1 did -- its seven patterns each have a fixed surface
+# string, unlike ～れる, which has one rule and eight surfaces -- so six of the
+# seven literals below are exactly the thing being taught.
+#
+# Where the literals are still coarse, said here rather than discovered later:
+#
+#   ～ために will not tag 大雨のため or 〜ためです, both of which are the same
+#   pattern with the に or the copula dropped. The alternative, ～ため, tags
+#   those and also tags 試す (ためす), 貯める (ためる) and every other word with
+#   ため inside it. Precision was worth more than recall here, so the tagger
+#   will under-report lesson 1 rather than over-report it. That is a choice,
+#   and the other choice is defensible.
+#
+#   ～せいで will not tag せいだ or せいか, which are the same word in a
+#   different predicate. ～せい would tag them and would also tag 生活, 成功,
+#   政治 and 稼いだ -- the last of which is the exact false positive this
+#   chapter's phrase file records screening out by hand (#197340). Same trade,
+#   same direction.
+#
+#   ～によって cannot tell this lesson's means and variation senses from
+#   chapter 1's passive-agent sense; nothing in the string can. Chapter 1's
+#   ～によって～れる is the more specific of the two and is what separates them:
+#   a sentence matching both is chapter 1's, a sentence matching only this one
+#   is this lesson's. A tagger reading them in that order gets it right; one
+#   reading them in file order does not. This is a pipeline-design question,
+#   flagged rather than solved.
+#
+#   ～ものだから will tag #229619, 「あわてものだから彼はたぶん早合点するだろう。」,
+#   which is [noun]+だから and not this construction at all. That is the false
+#   positive the attestation pass screened out by hand, now baked back into the
+#   tagger, and it will need screening out again wherever the library uses it.
+#   It also misses もんだから, the colloquial contraction, for the same reason
+#   ～ために misses ため.
+#
+# The ものだから pattern hangs off a phrase carrying `recognitionOnly: true`,
+# and that is deliberate. produceItems filters phrases, not patterns, so the
+# learner is asked to type ものだから -- five kana -- and never the forty-six-kana
+# sentence it was lifted from. Lesson 6 has no typed sentence card and this
+# pattern is the only thing it asks anyone to produce, because the corpus has no
+# short ものだから sentence to give it.
+#
+# Two blanks take a particle along with the connective and that is the point
+# rather than an oversight. The せいで blank is のせいで, because a learner who
+# is handed the の separately has been told how nouns attach, which is half of
+# what the lesson is for; the ことだから blank is のことだから for the same
+# reason -- 〜のことだから is one idiom about a person and blanking only the
+# だから would hide that.
+#
+# content-source: n/a for this file -- every pattern references an existing
+#   phrase from phrases/b3-01-cause.yaml rather than composing new Japanese,
+#   and that file carries the Tatoeba id for each.
+# jlpt-source: training -- the level marks the chapter this content sits in.
+#   ため(に) and によって are commonly listed N4 and からには and ものだから N2;
+#   the chapter is N3 and is tagged as such throughout.
+
+- id: grammar.b3-tame-ni
+  jlpt: N3
+  pattern: "～ために"
+  gloss: In order to, and because of. A dictionary-form verb in front means purpose; a noun plus の, or a past clause, usually means cause. ため on its own is an ordinary noun meaning benefit, which is where ためになる comes from.
+  phraseId: band1.i-went-home-to-change
+  blank: ために
+
+- id: grammar.b3-sei-de
+  jlpt: N3
+  pattern: "～せいで"
+  gloss: Because of, and it turned out badly. Noun plus の, or any plain clause, in front. せいだ ends the sentence instead of joining two; せいか hedges it to maybe because of.
+  phraseId: band1.he-failed-the-exam-because-he-had-not-studied
+  blank: のせいで
+
+- id: grammar.b3-okage-de
+  jlpt: N3
+  pattern: "～おかげで"
+  gloss: Thanks to, and it turned out well. Same shape as せいで, opposite stance. おかげである or おかげです ends the sentence; おかげさまで is a fixed thank-you of its own.
+  phraseId: band1.thanks-to-you-the-job-went-well
+  blank: おかげで
+
+- id: grammar.b3-niyotte-means
+  jlpt: N3
+  pattern: "～によって"
+  gloss: By this means, or varying with this. Noun plus によって, or a clause plus こと plus によって. により is the same word in a more written register. Marking the agent of a passive sentence is its third job and belongs to the previous chapter.
+  phraseId: band1.i-get-knowledge-by-reading-books
+  blank: ことによって
+
+- id: grammar.b3-kara-niwa
+  jlpt: N3
+  pattern: "～からには"
+  gloss: Now that this is settled, here is what follows. Plain form plus からには, and the second half carries resolve, obligation or a command rather than a plain fact.
+  phraseId: band1.if-you-do-it-at-all-do-it-well
+  blank: からには
+
+- id: grammar.b3-mono-dakara
+  jlpt: N3
+  pattern: "～ものだから"
+  gloss: That is why, you see. A plain clause plus ものだから, excusing or accounting for something rather than just reporting it. もんだから in speech.
+  phraseId: band1.ive-been-sleeping-rough-lately
+  blank: ものだから
+
+- id: grammar.b3-koto-dakara
+  jlpt: N3
+  pattern: "～ことだから"
+  gloss: Knowing them, this follows. A person plus の plus ことだから predicts from character, so what comes after is a guess. A past clause plus ことだから is the plainer since it is the case that.
+  phraseId: band1.knowing-you-im-sure-it-went-well
+  blank: のことだから

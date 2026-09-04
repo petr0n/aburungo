@@ -1,0 +1,241 @@
+# Chapter 2 -- Cause and consequence.
+#
+# Book Two already gave the learner two ways to state a reason -- から and ので,
+# taught back to back in the joining-sentences chapter as the same idea in two
+# registers. This chapter does not replace either. It adds five more words for
+# because, and the whole point is that they are not interchangeable: English
+# collapses blame, credit, mechanism, commitment and character into one word,
+# and a learner who reaches for せいで when they mean おかげで has said something
+# backwards, not something clumsy.
+#
+# There is one prerequisite under all seven lessons and it is already paid for.
+# ため, せい, おかげ, もの and こと are nouns, and every pattern here is a plain
+# clause modifying a noun -- grammar.b2-join-noun-clause, "plain clause + any
+# noun", taught with 前に食べた店. Nothing in the shape is new. What is new is
+# which noun, and what each one commits the speaker to.
+#
+# The four richly-attested patterns come first, in the order a learner will
+# actually reach for them. ため(に) opens because it does a job neither から nor
+# ので does at all -- purpose, in order to -- and because the corpus backs it
+# harder than anything else here: 328 sentences against おかげ's 33 and
+# ことだから's two. せいで and おかげで are taught as a pair immediately after:
+# same shape, opposite stance, blame and credit, and teaching them apart would
+# hide the one thing that makes them worth having, which is that a learner has
+# to choose. によって closes the strong half, and it is the one lesson in this
+# chapter that is half review -- the previous chapter already taught によって as
+# the agent marker of a passive sentence (b3.niyotte-agent) and told the learner
+# its other two jobs came next. This is next.
+#
+# The last three are a different kind of lesson. からには, ものだから and
+# ことだから are real, attested, and genuinely thin in this corpus -- three, four
+# and two sentences respectively, and those are all that exist. They are placed
+# last on purpose: a learner who has just spent four lessons choosing between
+# blame and credit is ready for finer, rarer distinctions, and a thin lesson
+# lands better as a refinement than as an opener.
+#
+#    1  because, and in order to     ため(に), both senses
+#    2  whose fault it is            せいで, and the せいか hedge
+#    3  who gets the credit          おかげで, the same shape turned over
+#    4  by, and according to         によって as means and as variation; the
+#                                      agent sense is the previous chapter's
+#    5  now that                     からには, から with a commitment on it
+#    6  explaining yourself          ものだから, and もんだから in speech
+#    7  knowing them                 ことだから, the こと-nominaliser again
+#
+# No lesson here depends on another's form. Each pattern attaches to a plain
+# clause the way から and ので do, and that is the shared prerequisite rather
+# than a chain between lessons. Lessons 5 and 7 do depend on earlier material by
+# name -- grammar.b2-join-kara and grammar.b2-ta-koto-ga-aru respectively -- and
+# both grammarNotes open on that bridge rather than presenting the pattern as
+# fresh. Re-surfacing those two in the SRS queue before those lessons is what
+# makes the bridge land; that is a scheduling matter, not something this file
+# can do.
+#
+# Two things the attestation pass found that the breakdown did not, both
+# recorded at length in phrases/b3-01-cause.yaml:
+#
+#   #197340 matches せいだ inside かせいだ, the past of 稼ぐ. It is a false
+#   positive of the same kind as the ものだから one the breakdown documented, and
+#   it is not used.
+#
+#   Five of this chapter's cards had to be marked `recognitionOnly: true`, all
+#   in lessons 5 and 6, every one because its kana reading runs past Book Two's
+#   longest typed answer -- 42 to 56 kana against a 41-kana ceiling. Lesson 6
+#   therefore has no typed sentence at all, only its pattern card. That is not a
+#   judgment about the grammar's difficulty; it is that the corpus has no short
+#   ものだから sentence anywhere, and nothing may be composed to make one.
+#
+# The `kanji:` arrays are empty and should stay that way, and so is
+# vocabulary/b3-01-cause.yaml. 為, 所為 and お陰 exist as kanji and the corpus
+# writes all three in kana almost everywhere; the vocabulary in the example
+# sentences belongs to the reading library and to mining, not to a curated list
+# (04-stage-reading.md section 3). The `wordIds` below name words the learner
+# already owns and that the lesson's own sentences use -- an SRS pull, not new
+# teaching.
+#
+# One rule the grammarNotes hold themselves to, inherited from the previous
+# chapter and stated again because a later editor will otherwise undo it by
+# accident. A grammarNote here may show a connective in isolation (ためになる),
+# a fragment of a rule (noun + の + ため), or a sentence that is a phrase card in
+# this chapter or in Book Two, quoted whole. It may not show a Japanese sentence
+# that is none of those. Several notes therefore describe a sentence in English
+# -- the sarcastic おかげで, the sentence about a flooded dam that is a card and
+# the one about a slow connection that is not -- where a draft would have
+# composed a Japanese one or trimmed an attested one down to fit.
+#
+# content-source: every phrase this file references is a verified Tatoeba pair,
+#   cited by id in `tatoebaId` in phrases/b3-01-cause.yaml. No
+#   training-canonical sentence is used anywhere in this chapter
+#   (04-stage-reading.md section 8).
+
+- id: b3.tame-ni
+  order: 204
+  chapterId: b3.band-1
+  situation: Cause and consequence
+  title: Because, and in order to
+  canDo: Explain what something is for, and what caused it
+  wordIds:
+    - vocab.ie
+    - vocab.kaeru
+    - vocab.miru
+    - vocab.kodomo
+    - vocab.ame
+    - vocab.zenbu
+  phraseIds:
+    - band1.i-went-home-to-change
+    - band1.we-all-went-to-the-theatre-to-see-a-play
+    - band1.she-gave-up-everything-for-her-children
+    - band1.the-dam-burst-because-of-the-heavy-rain
+    - band1.traffic-is-suspended-because-of-the-fog
+    - band1.everyday-exercise-is-good-for-you
+  kanji: []
+  patternId: grammar.b3-tame-ni
+  grammarNote: "ため is a noun, and everything else about this lesson follows from that. You already know how to put a plain clause in front of a noun — 前に食べた店, the shop I ate at before — and ため takes one exactly the same way. A noun in front needs の: 子供のために, 大雨のために, 安全のために. A な-adjective needs な: 便利なため. A verb or an い-adjective goes in plain, with nothing between. That is the whole shape, and there is nothing new in it. What is new is that one noun does two jobs English keeps apart. The first is purpose, and nothing in Books One or Two could say it. 着替えをするために家に帰った — I went home in order to change. 私達みんなは芝居を見るためにシアターへ行った — we went to the theatre in order to see a play. Dictionary form, then ために, then what you did about it. Notice the order: Japanese puts the purpose first and the action second, which is the reverse of English, so read to the end before you decide what the sentence is about. The second job is cause. 大雨のためにダムが決壊した — the dam burst because of the heavy rain. 霧のために、交通は一時不通になっている — because of the fog, traffic is suspended. Same word, same shape, and no marker anywhere tells you which reading is meant. So how do you tell? Not by a rule about the form, because there isn't one that always holds. What decides it is whether the thing in front could be somebody's aim. Heavy rain and fog cannot be aimed at, so those sentences can only be cause. Changing your clothes and seeing a play can, so those are purpose. A useful tendency, not a law: a dictionary-form verb you could choose to do usually reads as purpose, and a past clause or a plain fact usually reads as cause — 電車が遅れたため, because the train was late, is cause and is in the past. い-adjectives and things that simply are the case go the same way. Two more things worth having. The first is that the に is not compulsory. のため, ためです and ためだ are all ordinary, and in writing you will meet ため far more often without the に than with it — the news bulletin says 大雨のため, not 大雨のために. The second is that ため on its own is just a noun meaning benefit or good. 日常の運動はあなたのためになる — everyday exercise does you good. ためになる, to be instructive or worthwhile, is worth knowing as a phrase, and meeting it once stops the に in ために looking like part of a fixed string. Against から and ので, which you already have: ため is heavier and more written than either, and it carries a faint sense of for the sake of that neither has. から states a reason and can argue with you. ので states a reason politely. ため states a reason the way a sign or a broadcast does, and it is the one to reach for when the sentence would sound too personal in the other two."
+
+- id: b3.sei-de
+  order: 205
+  chapterId: b3.band-1
+  situation: Cause and consequence
+  title: Whose fault it is
+  canDo: Blame something for how things turned out
+  wordIds:
+    - vocab.atama
+    - vocab.ame
+    - vocab.hikouki
+    - vocab.dare
+  phraseIds:
+    - band1.its-just-your-imagination
+    - band1.your-headache-comes-from-overwork
+    - band1.he-failed-the-exam-because-he-had-not-studied
+    - band1.the-plants-died-because-it-didnt-rain
+    - band1.maybe-its-the-air-pressure
+  kanji: []
+  patternId: grammar.b3-sei-de
+  grammarNote: "せい is another noun, and it attaches the way ため did — a noun plus の, a な-adjective plus な, a plain clause with nothing between. 過労のせい. 勉強不足のせいで. 雨が降らなかったせいで. Nothing in the shape will surprise you. What せい adds is a verdict. から, ので and ため report a cause and take no position on it. せい says the result was unwelcome and names what is to blame for it. 彼は勉強不足のせいで試験に落ちました — he failed because he hadn't studied enough, and the sentence is pointing a finger. Put ので in the same slot and it becomes a neutral report of the same two facts. That difference is not decoration; it is the reason the word exists, and it is the one thing you cannot get wrong without saying something you did not mean. Three shapes. せいで joins two halves, with the bad outcome in the second. せいだ, or せいです, ends the sentence instead — あなたの頭痛は過労のせいだ, your headache is down to overwork. せいか adds the question particle and hedges the whole thing to maybe because of: 飛行機でお酒飲むと、気圧のせいか酔いやすい — maybe it's the air pressure, but you get drunk more easily on a plane. せいか is what you use when you are guessing at a cause rather than assigning one, and it is much softer than the other two. One thing to be careful of before you decide せい always blames. 気のせいだよ blames nobody at all: 気のせい is literally the fault of your mind, and the sentence means you only imagined it — it is said to reassure somebody. And 誰のせいでもない, nobody's fault, uses the same noun to refuse to blame anyone. What せい reliably carries is that the outcome was not good; who or what is at fault is a separate question the sentence may decline to answer. Whether the thing blamed is a person matters less than you might expect. Rain, overwork, air pressure and a plaster cast all take せい perfectly well. Blaming a person to their face with せい is strong — 君のせいだ is an accusation — but blaming the weather is entirely ordinary. Next lesson is the same word turned over."
+
+- id: b3.okage-de
+  order: 206
+  chapterId: b3.band-1
+  situation: Cause and consequence
+  title: Who gets the credit
+  canDo: Give something the credit for how things turned out
+  wordIds:
+    - vocab.shigoto
+    - vocab.ryoushin
+    - vocab.itai
+    - vocab.kyou
+  phraseIds:
+    - band1.thanks-to-you-the-job-went-well
+    - band1.i-succeeded-thanks-to-your-help
+    - band1.thanks-to-the-tablets-the-pain-went-away
+    - band1.i-owe-what-i-am-to-my-parents
+    - band1.thanks-to-that-misunderstandings-are-cleared-up
+  kanji: []
+  patternId: grammar.b3-okage-de
+  grammarNote: "One thing changed since the last lesson and it is not the grammar. おかげ attaches exactly as せい did — noun plus の, な-adjective plus な, plain clause plain. おかげで joins two halves. おかげです, or the more written おかげである, ends the sentence. The shape is the same shape. What flipped is the stance: the outcome is welcome, and the sentence is handing out credit rather than blame. あなたのおかげで仕事がうまく行きました — thanks to you, the job went well. 錠剤のおかげで痛みがなくなった — thanks to the tablets, the pain went away. Say the first one to somebody's face and it is a real thank-you, not a description of events. That is worth knowing, because せい and おかげ are the same grammar and reaching for the wrong one is not a small mistake. Telling somebody 君のせいで仕事がうまく行きました would be telling them the job going well was their fault. The words English uses — because of you — sit on top of both, which is exactly why Japanese needs two. The thing credited does not have to be a person, and often is not. Tablets, a bridge, a magazine, a piece of luck. What おかげで does need is that things went better, and if the sentence is about something going wrong, this is the wrong word. Bare おかげで at the start of a sentence, pointing back at whatever was just said, is one of the commonest ways you will meet it: そのおかげで誤解が解ける — thanks to that, misunderstandings are cleared up. Learn そのおかげで whole. And there is a sarcastic use, which is not an exception so much as proof of the rule — somebody who says thanks to that I was up all night is borrowing the word's gratitude to complain, and it only works because everyone knows おかげで is supposed to be grateful. Read those from the tone, not the word. One idiom you will hear far sooner than you will need to build a sentence with おかげ. おかげさまで is a fixed set phrase used in polite thanks and in answering how are you — it means something like thanks to you and to everybody, and it is not really a slot you fill. Take it as a phrase, and do not try to build おかげで sentences out of it."
+
+- id: b3.niyotte
+  order: 207
+  chapterId: b3.band-1
+  situation: Cause and consequence
+  title: By, and according to
+  canDo: Say what a difference comes from — a method, or a rule that things vary by
+  wordIds:
+    - vocab.hon
+    - vocab.yomu
+    - vocab.koto
+    - vocab.kuni
+    - vocab.okane
+    - vocab.chizu
+  phraseIds:
+    - band1.i-get-knowledge-by-reading-books
+    - band1.we-learn-much-by-experience
+    - band1.table-manners-vary-by-country
+    - band1.lifestyle-is-determined-by-money
+    - band1.we-will-send-you-a-map-on-request
+  kanji: []
+  patternId: grammar.b3-niyotte-means
+  grammarNote: "You already own によって. The last chapter taught it as the formal marker for whoever did something in a passive sentence — composed by Bach, invented by the Chinese — and told you at the time that it had two other jobs and that they came next. Here they are. Neither needs a passive verb anywhere. The first is means: によって says how something was done. 私達は経験によって多くを学ぶ — we learn much by experience. 私は本を読むことによって知識を得る — I get knowledge by reading books. That second one is worth stopping on. によって wants a noun in front of it, and 本を読む is a clause, so こと turns the clause into one first. That is the same こと you met in 〜たことがある, doing the same job it did there: take a whole clause, make it a noun, then treat it like any other noun. 〜ことによって, by doing such-and-such, is a shape you will meet constantly in written Japanese, and it is worth taking whole. The second job is variation: によって says what the answer depends on. テーブルマナーは国によって異なる — table manners vary by country. 人の生活様式の大半はお金によって決まる — a person's lifestyle is largely determined by money. Read that second one carefully, because English is misleading here. Determined by sounds passive and it is not: 決まる is an ordinary intransitive verb meaning to be settled, the pair to 決める, and there is no passive anywhere in the sentence. によって is marking what the outcome depends on, not who did anything. 異なる, 変わる, 決まる and 違う are the verbs this sense keeps company with. There is one small reading trap. In 国によって, the noun ends in に and によって begins with に, so the kana run together as くににによって — that is 国 plus によって, not a doubled particle. により is the same word one register up, and it is what you meet in print and on forms rather than in speech: ご要望により地図を送ります, we will send you a map on request. Same three jobs, one shade more formal, and nothing else changes. Sorting the three senses is easier than it sounds. If a passive verb follows, it is almost always the agent — that is the previous chapter's lesson and there is nothing to relearn. If an ordinary active verb follows, it cannot be an agent, because there is no passive to give it one, and you are looking at means or variation. Between those two, ask whether the sentence is about how something happened or about what it depends on. And a plain に still marks the agent of a passive perfectly well, which is what the previous chapter told you: によって is a choice of register, not a replacement."
+
+- id: b3.kara-niwa
+  order: 208
+  chapterId: b3.band-1
+  situation: Cause and consequence
+  title: Now that
+  canDo: Say what follows, now that something is already true
+  wordIds:
+    - vocab.komaru
+    - vocab.jikan
+  phraseIds:
+    - band1.if-you-do-it-at-all-do-it-well
+    - band1.now-that-youre-my-staff-officer
+    - band1.once-a-ship-has-left-port
+  kanji: []
+  patternId: grammar.b3-kara-niwa
+  grammarNote: "This is から, the one you have had since the joining-sentences chapter, with には on the end and a narrower job. Plain form in front, exactly as から takes it. Ordinary から says because. からには says: this is now settled, so here is what follows from it. The difference is not in the cause but in what the second half is allowed to be. いやしくもやるからには上手くやれ — if you are going to do it at all, do it properly. The first half is not offered as a reason; it is treated as already decided, and the second half is a demand made on the back of it. That is the pattern's normal shape: resolve, obligation, or a flat command. やれ there is the blunt imperative, and the sentence is somebody being told. What the second half is not required to be is an obligation. 海戦に先立って出港したからには、乗組員が船に慣れる時間がないことが、しばしばあるものだ ends in a plain observation — once you have sailed, this is simply what tends to happen. So からには narrows から to a settled premise, and it usually but not always puts something like a commitment after it. The other one below, about a staff officer, is the ordinary case: appointment settled, expectation laid on. There are only three からには sentences in the whole corpus this book quotes from, and you have all three. Two of them are long and are here to be read rather than typed. That is honest rather than ideal: this pattern is real and you will meet it, but it is not common enough for the corpus to have given it a bank of short examples, so what fixes it in place will be meeting it in reading rather than drilling it here. Do not go looking for it under からは. That string is common and is almost always the ordinary から, meaning from, with the topic particle は on it — この雑誌からは has nothing to do with this pattern. The には is what makes it, and there is no shorter form."
+
+- id: b3.mono-dakara
+  order: 209
+  chapterId: b3.band-1
+  situation: Cause and consequence
+  title: Explaining yourself
+  canDo: Explain why you did what you did, the way you would explain it to a friend
+  wordIds:
+    - vocab.koto
+    - vocab.kaku
+    - vocab.haha
+  phraseIds:
+    - band1.ive-been-sleeping-rough-lately
+    - band1.i-write-weird-stuff-so-its-hard-to-comment
+    - band1.this-gold-watch-means-a-great-deal-to-me
+  kanji: []
+  patternId: grammar.b3-mono-dakara
+  grammarNote: "もの is a noun meaning thing, and ものだから is that noun with だ and から stuck on it — literally, because it is a thing that. It takes a plain clause in front the way every noun in this chapter does, and a な-adjective or a noun takes な: 大切なものだから. In speech もの contracts to もん, and もんだから is what you will actually hear. What makes it worth a lesson is not the shape but the stance. ので states a reason. ものだから accounts for one — it is what you say when you think the listener might otherwise judge you, and it leans towards excusing yourself. このところ野宿ばかりだったものだから、久しぶりにゆっくり出来ました is somebody explaining to a host why they slept so well, not reporting a fact about their week. いつも妙ちくりんなことばっかり書いてるもんだから、きっとコメントしにくいんだわ is somebody accounting for why nobody comments on what they write. Both are speakers putting their own behaviour in a forgiving light, which is the flavour to listen for. Not every ものだから is an apology, though, and it is worth knowing that before you decide the word means sorry. It can simply carry the weight of an explanation. The sentence about the gold watch ends on ものだから standing alone — the reason for the sentence before it, offered afterwards, with nothing apologetic about it. That trailing use, a whole sentence of ものだから explaining the one just said, is very common and is worth recognising on sight. What ものだから always does is treat the reason as something that ought to settle the matter. Two practical notes. First: every sentence in this lesson is here to be read, not typed. There is no short ものだから sentence in the corpus this book quotes from — the four genuine ones run from thirty-two to forty-three characters — and rather than compose a tidy one, this lesson gives you the real ones. What you are asked to produce is the connective itself. Second, a trap worth naming because it caught an earlier pass: a noun that happens to end in もの, followed by だから, looks exactly like this pattern and is not it. あわてもの means a hasty person, so あわてものだから is that noun plus だから — the ordinary because — and there is no ものだから construction in it at all. Ask whether もの is a real noun with a meaning of its own, or the empty one this pattern uses."
+
+- id: b3.koto-dakara
+  order: 210
+  chapterId: b3.band-1
+  situation: Cause and consequence
+  title: Knowing them
+  canDo: Predict what someone will do, because you know them
+  wordIds:
+    - vocab.koto
+    - vocab.hito
+  phraseIds:
+    - band1.knowing-you-im-sure-it-went-well
+    - band1.you-did-it-to-yourself
+  kanji: []
+  patternId: grammar.b3-koto-dakara
+  grammarNote: "Same こと you have had since 〜たことがある, where it turned 日本に行った into a noun so that がある could be said about it. Here it turns a clause into a noun and だから is stapled on instead. The move is not new; only what is done with it afterwards is. Two shapes, and they are further apart than they look. The first is the idiom, and it is what this lesson is really for: a person, then の, then ことだから. あなたのことだから上々でしょう — knowing you, I'm sure it went splendidly. Literally it is because it is the matter of you, and what it means is: I know what you are like, so I can guess how this went. Because it is a guess drawn from character, the second half is nearly always a prediction rather than a report — でしょう, はずだ, に違いない, きっと. That is the thing to watch for: あなたのことだから followed by a flat past-tense statement of fact would be strange, because the whole point of the construction is that you are inferring rather than reporting. The second shape is plainer and needs no idiom at all: a clause plus ことだから, since it is the case that. 自分でやったことだから仕方がないね — since it's something you did yourself, it can't be helped. Here こと is doing exactly its ordinary nominalising job, nothing is being predicted, and the sentence is about something already done. So the prediction rule belongs to the person idiom, not to ことだから in general. Tell the two apart by what sits in front. A person's name or あなた plus の means the idiom and means a guess. A clause means the plain reading. This is the thinnest pattern in the chapter: two sentences exist in the corpus this book quotes from, and you have both. They are short, which is the one thing in their favour, but there is no third, and nothing was invented to make one. Meeting ことだから again will happen in reading, not in drilling."
+
+- id: b3.checkpoint-1
+  order: 211
+  chapterId: b3.band-1
+  situation: Integration & checkpoint
+  title: Chapter 2 checkpoint
+  canDo: Recognise everything this chapter taught
+  wordIds: []
+  phraseIds: []
+  kanji: []
+  checkpoint: recognition
+  grammarNote: "A wide pass over everything this chapter has taught. Type the reading or the meaning rather than picking it out of a line-up. Seven words for because, and the work is not remembering their shapes — they all attach to a plain clause the same way — but knowing which one a sentence has reached for and why. What is being checked is the choice. せいで and おかげで are the same grammar pointing opposite ways, and getting them the wrong way round says the opposite of what you meant, so those two are worth the most attention when they come back. ため's two readings are the other thing to watch: nothing in the form separates purpose from cause, and the sentence around it does. によって comes back too, and it now has three jobs across two chapters — one of them is the previous chapter's and it is fair game here. Some of what returns is a familiar sentence rather than a new one. For からには, ものだから and ことだから that is deliberate: there are three, four and two of these sentences in existence, and reusing one you have seen is a smaller cost than inventing one, which this book will not do. Recognising what a word is doing in a sentence you have met before is still the thing being asked. Anything you miss comes back sooner. It finishes when the remaining set empties; retry as often as you like, nothing is recorded."

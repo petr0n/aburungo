@@ -1,0 +1,39 @@
+# Book Three, chapter 2 vocabulary -- deliberately empty, for the same reason
+# chapter 1's is.
+#
+# This chapter teaches seven ways to say because, and every one of them is a
+# noun the learner already knows how to modify. ため, せい, おかげ, もの and
+# こと all take a plain clause in front of them exactly the way
+# grammar.b2-join-noun-clause taught them to -- 前に食べた店 became
+# 前に食べたこと became 雨が降らなかったせい, and nothing in that move is new.
+# What is new is which noun, and what stance it carries. That is grammar, not
+# vocabulary.
+#
+# 為, 所為 and お陰 all exist as kanji and are all real JMdict headwords
+# (為 ため 1157080, 所為 せい 1610040, お陰 おかげ 1001640). The corpus writes
+# them in kana nearly everywhere -- of the 33 sentences carrying おかげ, three
+# spell it 陰, and no sentence in the corpus spells せい as 所為 at all -- so
+# there is no character to teach here either, and the `kanji:` arrays in the
+# lessons file are empty to match.
+#
+# One homophone worth recording, because looking up せい by its kanji finds the
+# wrong word first. 所為 has two JMdict entries: 1343140 is しょい／そい, "act;
+# deed", and 1610040 is せい／せえ, "consequence; outcome; result; blame;
+# fault". This chapter means 1610040. The first entry is a different word that
+# happens to share the spelling, in the way こと's kana matched 琴 the zither
+# for an earlier author.
+#
+# The cited sentences do use words the learner does not own: 犠牲, 決壊, 錠剤,
+# 過労, 参謀, 乗組員, 形見 and their kin. That is not a gap this file should
+# close. 04-stage-reading.md section 3 hands vocabulary at this stage to the
+# reading library and to mining -- lessons carry patterns, the library carries
+# words. The chapter-1 file makes the same argument at length and it is the
+# same argument.
+#
+# The file exists so the chapter's four content files stay a matched set. An
+# empty array parses; a file of comments alone does not, which is why the `[]`
+# below is load-bearing rather than decorative.
+#
+# content-source: n/a -- this file adds no Japanese content.
+
+[]
