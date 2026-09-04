@@ -403,6 +403,19 @@ async function handleProductionCheckpointIfPresent(page, sessionIndex) {
     guard++;
     if (!(await visible(page, "text=/(\\d+ to write|more to write)/"))) break; // round(s) done, unit closed
 
+    // Wait for the card to be back in its input phase before reading anything.
+    // FillBlankCard renders the mode buttons ("Type"/"Speak", and the design
+    // system's "Romaji"/"Kana grid"/"JP keyboard") only while phase is "input";
+    // after a reveal it is in "result", showing Next. Reading the prompt during
+    // that transition returns the *previous* card's text, so `answers` reports a
+    // hit, the driver takes the typing branch, and JP keyboard is not on screen
+    // yet — which is the 30s click timeout, not a missing button.
+    await page
+      .locator("button:has-text('Check answer')")
+      .first()
+      .waitFor({ state: "visible", timeout: CLICK_TIMEOUT })
+      .catch(() => {});
+
     const prompt = await page.locator("p.text-heading").first().textContent().catch(() => null);
     if (prompt === null) break;
     const known = answers.get(prompt.trim());
