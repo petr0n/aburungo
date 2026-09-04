@@ -8,8 +8,8 @@
 # sentence below is a verbatim Tatoeba pair carried out of
 # server/data/jmdict-examples-eng-3.6.2.json with its id in `tatoebaId`, and
 # nothing here was composed, trimmed, joined or smoothed. Where a shape had no
-# attested sentence -- a な-adjective in front of のに is the clearest case --
-# the shape is described in a grammarNote and has no card.
+# short attested sentence -- a な-adjective in front of のに has two, both around
+# fifty kana -- the shape is described in a grammarNote and has no card.
 #
 # Four of the twenty-seven are `scenario: look-alike`, and they are the reason
 # this chapter is longer than its five connectives. Every pattern here except
@@ -21,7 +21,7 @@
 # wrong rule. Band 0 carded both halves of the 見られる collision for the same
 # reason; this file does it four times.
 #
-# The English is Tatoeba's own where Tatoeba's own would do. Eleven of the
+# The English is Tatoeba's own where Tatoeba's own would do. Twelve of the
 # twenty-seven depart from it, every one listed here so a reviewer can check
 # the list against the corpus rather than take it on trust. Every Japanese
 # string is untouched.
@@ -37,6 +37,9 @@
 #   #147360 -- "Woman as she was, she was brave" is a construction no learner
 #     of English-as-she-is-spoken would recognise as "even though". Glossed
 #     plainly.
+#   #76655 -- "Puffing and panting we continued to run with renewed vigor"
+#     has no concession in it, on the ながらも card. Glossed "Even though we
+#     were wheezing, we kept running with renewed vigour".
 #   #116451 -- "Though he tried hard" rewrites a noun phrase (彼の努力) as a
 #     clause, which is the one thing this card is teaching. Glossed "Despite
 #     his efforts".
@@ -242,7 +245,7 @@
   japanese: ぜいぜい言いながらも、気合をいれて走り続ける。
   reading: ぜいぜいいいながらも、きあいをいれてはしりつづける。
   romaji: zeizei ii nagara mo, kiai o irete hashiritsuzukeru.
-  english: Puffing and panting we continued to run with renewed vigor.
+  english: Even though we were wheezing, we kept running with renewed vigour.
   tatoebaId: "76655"
   notes: 言いながらも is the ます-stem, the same stopping point the while sense uses -- so this half of the pattern is a meaning to learn, not a form. ぜいぜい言う is to wheeze.
 
@@ -264,7 +267,7 @@
   romaji: sono warui shirase wa zannen nagara hontou da.
   english: The bad news is unfortunately true.
   tatoebaId: "212401"
-  notes: 残念ながら has stopped being a construction and become a word -- unfortunately, regrettably -- and it is the commonest bare concessive ながら in the language. Learn it whole; nothing is being contrasted clause against clause.
+  notes: 残念ながら has stopped being a construction and become a word -- unfortunately, regrettably -- and it is the commonest frozen ながら phrase in the language. Learn it whole; nothing is being contrasted clause against clause.
 
 # ── Although, in writing ──────────────────────────────────────────────────────
 
@@ -287,7 +290,7 @@
   romaji: kitanai te de kaisha o nottotta mono no, fukushin da to omotte ita buka ni uragirare, inga ouhou da ne.
   english: He took the company over by dirty means, but was betrayed by the subordinate he thought was his right hand -- what goes around comes around.
   tatoebaId: "188575"
-  notes: Long, because this is what the corpus had for a ものの sentence with both halves in place. 裏切られ is the passive from the last chapter, in the て-less form writing uses to hang clauses together. Read it; you are not asked to type it back.
+  notes: Long, because this is what the corpus had for a ものの sentence with both halves in place. 裏切られ is the passive from chapter 1, in the て-less form writing uses to hang clauses together. Read it; you are not asked to type it back.
 
 - id: band2.she-has-a-boyfriend-but-feels-stuck
   jlpt: N3
@@ -394,4 +397,4 @@
   romaji: marason wa seiu ni kakawarazu hirakaremasu.
   english: The marathon will be held, rain or shine.
   tatoebaId: "195187"
-  notes: Drop the も and the meaning shifts from despite to regardless of. 晴雨にかかわらず covers both outcomes rather than contradicting one -- rain or shine, it happens. 開かれます is the passive from the last chapter.
+  notes: Drop the も and the meaning shifts from despite to regardless of. 晴雨にかかわらず covers both outcomes rather than contradicting one -- rain or shine, it happens. 開かれます is the passive from chapter 1.
