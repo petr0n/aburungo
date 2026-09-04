@@ -21,6 +21,7 @@ import b2QuotedSpeechRaw from "./b2-07-quoted-speech.yaml";
 import b2MakingPlansRaw from "./b2-08-making-plans.yaml";
 import b2ConditionalsRaw from "./b2-09-conditionals.yaml";
 import b2TroubleRaw from "./b2-10-trouble.yaml";
+import b3PassiveRaw from "./b3-00-passive.yaml";
 
 const phrasesById = new Map(allPhrases.map((p) => [p.id, p]));
 
@@ -36,6 +37,7 @@ export const allGrammarPatterns: GrammarPattern[] = [
   ...parseGrammarPatterns(b2MakingPlansRaw, "grammar/b2-08-making-plans.yaml", phrasesById),
   ...parseGrammarPatterns(b2ConditionalsRaw, "grammar/b2-09-conditionals.yaml", phrasesById),
   ...parseGrammarPatterns(b2TroubleRaw, "grammar/b2-10-trouble.yaml", phrasesById),
+  ...parseGrammarPatterns(b3PassiveRaw, "grammar/b3-00-passive.yaml", phrasesById),
 ];
 
 export function findGrammarPattern(id: string): GrammarPattern | undefined {

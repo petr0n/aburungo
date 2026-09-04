@@ -17,7 +17,7 @@ import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 import { render, screen, cleanup } from "@testing-library/react";
 import { MemoryRouter } from "react-router";
 import type { Book, PathProgress, UserTier } from "@/types";
-import { bookOne, bookTwo } from "@/content/books";
+import { bookOne, bookThree, bookTwo, books } from "@/content/books";
 import type { DailySession } from "@/srs/dailyLoop";
 
 const state = vi.hoisted(() => ({
@@ -145,7 +145,11 @@ describe("LearnPage picks the book off the learner's progress", () => {
     // primary key of every stored row. Asking on the id reads an empty row.
     await renderLearn();
     const asked = getPathProgress.mock.calls.map((c) => c[0]);
-    expect(asked).toEqual(["n5", "book-2"]);
+    // Derived from `books` rather than listed, so adding a book does not break
+    // a test about key-versus-id. The vacuity guard is the id check below: an
+    // empty `asked` would satisfy the equality on its own.
+    expect(asked).toEqual(books.map((b) => b.progressKey));
+    expect(asked.length).toBeGreaterThan(1);
     expect(asked).not.toContain("book-1");
   });
 
@@ -176,12 +180,15 @@ describe("the gated hand-off", () => {
   });
 
   it("says nothing when there is no book after the one they finished", async () => {
-    // A free account reaches four books and the course ships two, so this
-    // learner is at the end of the course, not at a gate. Nothing to offer.
+    // A free account reaches four books and the course ships three, so a
+    // learner who has finished all of them is at the end of the course, not at
+    // a gate. Nothing to offer. Every book must be marked seen: finishing only
+    // Book Two now hands them to Book Three, which is the next test up.
     state.seen.set(bookOne.progressKey, allOf(bookOne));
     state.seen.set(bookTwo.progressKey, allOf(bookTwo));
+    state.seen.set(bookThree.progressKey, allOf(bookThree));
     await renderLearn();
-    expect(bookPassedToBuilder()).toBe(bookTwo);
+    expect(bookPassedToBuilder()).toBe(bookThree);
     expect(await screen.findByText(/All caught up!/)).toBeTruthy();
     expect(screen.queryByText(/carries on from here/)).toBeNull();
   });

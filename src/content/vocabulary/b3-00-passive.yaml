@@ -1,0 +1,24 @@
+# Book Three, Band 0 vocabulary -- deliberately empty.
+#
+# This band teaches four auxiliaries (れる, られる, せる, させる) and not one
+# word. Every auxiliary is kana with no independent kanji of its own, so there
+# is no character to teach either, and the breakdown
+# (docs/plans/book-three-band-00-passive.md sections 6.7 and 8) argues the case
+# for zero at length rather than leaving it to look like an oversight.
+#
+# The band's cited sentences do use verbs the learner does not own -- 盗む,
+# 降る, 招く, 育てる, 叱る, 囲む, 並ぶ among them. That is not a gap this file
+# should close. 04-stage-reading.md section 3 hands vocabulary at this stage to
+# the reading library and to mining: lessons carry patterns, the library carries
+# words, and lesson count decouples from word count. A band that smuggled its
+# example sentences' vocabulary back into a curated list would be re-importing
+# the model this book was designed to leave behind.
+#
+# The file exists so the band's four content files stay a matched set and so
+# the next author does not go looking for a missing one. An empty array parses;
+# a file of comments alone does not, which is why the `[]` below is load-bearing
+# rather than decorative.
+#
+# content-source: n/a -- this file adds no Japanese content.
+
+[]

@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import type { Book, Lesson } from "@/types";
-import { bookOne, bookTwo, books, currentBook, priorBooks } from "./books";
+import { bookOne, bookThree, bookTwo, books, currentBook, priorBooks } from "./books";
 import { n5Lessons, b2Lessons } from "./lessons";
 import { n5Chapters, b2Chapters } from "./chapters";
 
@@ -72,8 +72,8 @@ describe("bookTwo", () => {
 });
 
 describe("the course", () => {
-  it("runs Book One then Book Two", () => {
-    expect(books).toEqual([bookOne, bookTwo]);
+  it("runs Book One, then Book Two, then Book Three", () => {
+    expect(books).toEqual([bookOne, bookTwo, bookThree]);
   });
 
   it("gives every book a distinct progress key", () => {

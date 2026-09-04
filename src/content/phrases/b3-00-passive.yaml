@@ -1,0 +1,398 @@
+# Book Three, Band 0 phrases -- doing, and being done to.
+#
+# Thirty sentences, and not one of them is ours. Books One and Two composed
+# their example sentences from canonical N5/N4 material and marked them
+# `content-source: training`; 04-stage-reading.md section 8 withdraws that
+# exemption at the reading stage and above, in those words -- "no
+# training-canonical sentences at the reading stage and above". So every
+# sentence below is a verbatim Tatoeba pair carried out of
+# server/data/jmdict-examples-eng-3.6.2.json with its id in `tatoebaId`, and
+# nothing here was composed, trimmed, joined or smoothed. If a shape had no
+# attested sentence, the shape is described in a grammarNote and has no card.
+#
+# Two consequences of quoting rather than composing, both visible below and
+# neither a defect:
+#
+#   The Japanese is longer and less tidy than Book Two's. 彼は、自分の意志に
+#   反して契約書に署名させられた is twenty-four characters with a comma in it,
+#   because that is what the corpus had. A composed version would be shorter
+#   and would not exist.
+#
+#   The vocabulary runs ahead of the ladder. 更衣室, 家政婦, 引率, 幼年時代 and
+#   their kin are not taught anywhere and are not meant to be -- see
+#   vocabulary/b3-00-passive.yaml for why this band ships zero words. What is
+#   being reviewed here is the form on the verb, not the nouns around it.
+#
+# The English is Tatoeba's own except where it hid the grammar the card exists
+# to teach, and every departure is one of three kinds, listed so a reviewer can
+# check them rather than take them on trust:
+#
+#   #102256 -- the corpus reads "He was bought up by his strong willed sister",
+#     a plain typo for "brought". Corrected.
+#   Active glosses on passive Japanese -- where Tatoeba rendered a Japanese
+#     passive with an English active, the gloss is turned passive so the card
+#     does not teach against itself. Affects #212760 (take place -> be held)
+#     and #109254 (sweep his room -> clean the room).
+#   #195319 -- "You'll catch it from Mummy" is idiomatic British English that
+#     conceals the agent-marking に this card is for. Glossed "You'll get told
+#     off by Mum".
+#
+# Every Japanese string is untouched in all three cases.
+#
+# ---------------------------------------------------------------------------
+# READ BEFORE WIRING, not a defect to fix here: three of these are long enough
+# that asking a learner to type them back would be a demand no lesson prepared
+# them for -- band0.he-was-made-to-sign-the-contract (24 characters),
+# band0.please-let-me-cancel-the-appointment (28, and it contains a date) and
+# band0.my-brother-was-brought-up-by-our-grandmother (21). `recognitionOnly`
+# exists for exactly this and none of them carries it, because whether a Book
+# Three phrase routes to a typed card at all depends on the book's stage, which
+# is not decided and is not this file's to decide. Whoever wires Book Three
+# should look at these three again with the routing in front of them.
+#
+# The same pass owns the other half of that question. Book Two chapter 7's
+# quote.this-mountain-is-said-to-be-famous and
+# quote.fish-is-said-to-be-good-for-you carry `recognitionOnly: true` because,
+# in that chapter's own words, "producing れる/られる is next book's work". This
+# band is that work. The condition those flags name is met the moment
+# b3.passive-ichidan ships -- lifting them is still a wiring decision, and the
+# block comment in phrases/b2-07-quoted-speech.yaml is where it is recorded.
+# ---------------------------------------------------------------------------
+#
+# These are independent utterances, and several would sit naturally beside each
+# other -- 待たせてごめん and 彼に１時間待たされた most obviously. They are not
+# authored as an exchange: a scripted back-and-forth is multi-sentence composed
+# text, which is the surface the content rules exist to keep out, and it stays
+# out even when both halves are separately attested.
+#
+# content-source: Tatoeba, via the sentence pairs embedded in JMdict for
+#   Applications 3.6.2 (server/data/jmdict-examples-eng-3.6.2.json). Every
+#   phrase carries its sentence id in `tatoebaId`; the id is quoted, because
+#   YAML reads a bare 229619 as a number and the schema rejects it. Verified by
+#   id against the corpus on 2026-09-04 -- all 30 resolve, and each Japanese
+#   string below matches its source character for character. Kana readings and
+#   romaji are transcriptions of the quoted sentence, not new content; every
+#   compound whose reading was not already obvious was checked against JMdict
+#   (更衣室 こういしつ 1279330, 真っ昼間 まっぴるま 1363270, 男勝り おとこまさり
+#   1621130, 記念碑 きねんひ 1223390, 校長室 こうちょうしつ 1935110, 相席
+#   あいせき 1401080, 引率 いんそつ 1169710, 幼年時代 ようねんじだい 1818980,
+#   家政婦 かせいふ 1192110, 契約書 けいやくしょ 1250210, 一人息子 ひとりむすこ
+#   1163790, 葡萄 ぶどう 1499230, 女王 じょおう 1345020, 故人 こじん 1267190).
+# jlpt-source: training -- the level marks the band this content sits in, not
+#   the grammar's textbook level. れる/られる/せる/させる are canonically N4 and
+#   arrive here only because Book Two deferred them; the sentences carrying
+#   them are real N3-band text and tagging them N4 would misreport coverage.
+
+# ── Something was done to it, the easy half ───────────────────────────────────
+
+- id: band0.he-was-seen-eating-the-cake
+  jlpt: N3
+  scenario: passive
+  japanese: 彼はケーキをつまみ食いするのを見られた。
+  reading: かれはケーキをつまみぐいするのをみられた。
+  romaji: kare wa keeki o tsumamigui suru no o mirareta.
+  english: He was seen eating a piece of the cake in secret.
+  tatoebaId: "113892"
+  notes: The passive half of the collision. 見られた here can only mean somebody saw him -- the sentence has an eater, a cake and an audience, and no room at all for a reading about ability.
+
+- id: band0.i-cant-watch-videos-on-this-connection
+  jlpt: N3
+  scenario: passive
+  japanese: この回線の細さじゃ、動画は見られないよ。
+  reading: このかいせんのほそさじゃ、どうがはみられないよ。
+  romaji: kono kaisen no hososa ja, douga wa mirarenai yo.
+  english: This connection is too slow for me to watch videos.
+  tatoebaId: "222658"
+  notes: The other half, same string. 見られない is the potential you already own -- not able to watch -- and nothing about the form says which one it is. The line before it does. じゃ is casual では.
+
+- id: band0.i-was-invited-to-their-wedding
+  jlpt: N3
+  scenario: passive
+  japanese: 彼らの結婚式に招待された。
+  reading: かれらのけっこんしきにしょうたいされた。
+  romaji: karera no kekkonshiki ni shoutai sareta.
+  english: I was invited to their wedding.
+  tatoebaId: "98520"
+  notes: する goes to される, and every noun+する verb follows it -- 招待する becomes 招待される with nothing else changed. This is the largest and cleanest family of passives in the language.
+
+- id: band0.a-monument-was-erected
+  jlpt: N3
+  scenario: passive
+  japanese: 故人をしのんで、記念碑が建てられた。
+  reading: こじんをしのんで、きねんひがたてられた。
+  romaji: kojin o shinonde, kinenhi ga taterareta.
+  english: A monument was erected in memory of the deceased.
+  tatoebaId: "174513"
+  notes: 建てる is ichidan, so it takes the same drop-る-add-られる move 見る took. Nobody is named as the builder, which is most of what the passive is for.
+
+# ── Something was done to it, the rest ────────────────────────────────────────
+
+- id: band0.the-meeting-was-held-in-the-principals-office
+  jlpt: N3
+  scenario: passive
+  japanese: 校長室で会議が開かれた。
+  reading: こうちょうしつでかいぎがひらかれた。
+  romaji: kouchoushitsu de kaigi ga hirakareta.
+  english: The meeting was held in the principal's office.
+  tatoebaId: "173564"
+  notes: く-row. 開く becomes 開かれる -- か is the あ-row form of く, then れる.
+
+- id: band0.english-is-spoken-in-canada
+  jlpt: N3
+  scenario: passive
+  japanese: 英語はカナダで話されている。
+  reading: えいごはカナダではなされている。
+  romaji: eigo wa kanada de hanasarete iru.
+  english: English is spoken in Canada.
+  tatoebaId: "189149"
+  notes: す-row. 話す becomes 話される. The ている says it is the standing state of affairs, not one event -- the most common shape this pattern takes.
+
+- id: band0.the-rose-is-called-the-queen-of-flowers
+  jlpt: N3
+  scenario: passive
+  japanese: バラは花の女王と呼ばれている。
+  reading: バラははなのじょおうとよばれている。
+  romaji: bara wa hana no joou to yobarete iru.
+  english: The rose is called the queen of flowers.
+  tatoebaId: "197882"
+  notes: ぶ-row. 呼ぶ becomes 呼ばれる. 〜と呼ばれている, is called, is worth keeping whole -- you will meet it constantly.
+
+- id: band0.when-will-the-party-be-held
+  jlpt: N3
+  scenario: passive
+  japanese: そのパーティーはいつ行われますか。
+  reading: そのパーティーはいつおこなわれますか。
+  romaji: sono paatii wa itsu okonawaremasu ka.
+  english: When will the party be held?
+  tatoebaId: "212760"
+  notes: う-row, and the one exception -- う goes to わ, not あ. 行う becomes 行われる, the same bend that gave you 買わない. A passive verb is itself an ichidan verb, so ます, ません and か all attach the way they always have.
+
+- id: band0.this-wine-is-made-from-grapes
+  jlpt: N3
+  scenario: passive
+  japanese: このワインは葡萄から作られています。
+  reading: このワインはぶどうからつくられています。
+  romaji: kono wain wa budou kara tsukurarete imasu.
+  english: This wine is made from grapes.
+  tatoebaId: "222978"
+  notes: The trap. 作る ends in る and is godan, so it takes the godan rule -- 作られる, from 作ら + れる, not from anything ichidan. The string looks exactly like an ichidan passive and is not one. Ask which class the verb is, not what letter it ends in.
+
+# ── Who did it, and who it happened to ────────────────────────────────────────
+
+- id: band0.youll-get-told-off-by-mum
+  jlpt: N3
+  scenario: passive
+  japanese: ママに叱られますよ。
+  reading: ママにしかられますよ。
+  romaji: mama ni shikararemasu yo.
+  english: You'll get told off by Mum.
+  tatoebaId: "195319"
+  notes: Ten characters and the whole lesson is in them. ママに is who does the scolding; the one being scolded is the subject and does not need saying at all.
+
+- id: band0.she-is-loved-by-everybody
+  jlpt: N3
+  scenario: passive
+  japanese: 彼女はみんなに愛されている。
+  reading: かのじょはみんなにあいされている。
+  romaji: kanojo wa minna ni aisarete iru.
+  english: She is loved by everybody.
+  tatoebaId: "91423"
+  notes: The active would be みんなが彼女を愛している. Passive moves 彼女 to the front as the subject and hands みんな the に. Nothing else moves.
+
+- id: band0.he-was-brought-up-by-his-sister
+  jlpt: N3
+  scenario: passive
+  japanese: 彼は男まさりの姉に育てられた。
+  reading: かれはおとこまさりのあねにそだてられた。
+  romaji: kare wa otokomasari no ane ni sodaterareta.
+  english: He was brought up by his strong-willed sister.
+  tatoebaId: "102256"
+  notes: に on a person again, this time doing something over years rather than in a moment. 育てる is ichidan, so the form is lesson one's.
+
+- id: band0.the-lake-is-surrounded-by-hills
+  jlpt: N3
+  scenario: passive
+  japanese: 湖は緑の丘に囲まれている。
+  reading: みずうみはみどりのおかにかこまれている。
+  romaji: mizuumi wa midori no oka ni kakomarete iru.
+  english: The lake is surrounded by green hills.
+  tatoebaId: "174478"
+  notes: The thing marked に does not have to be a person, or to have intended anything. Hills do not surround a lake on purpose; に marks whatever the sentence holds responsible for the state.
+
+# ── When it happens to you ────────────────────────────────────────────────────
+
+- id: band0.i-had-my-wallet-stolen
+  jlpt: N3
+  scenario: passive
+  japanese: 私は更衣室で財布を盗まれた。
+  reading: わたしはこういしつでさいふをぬすまれた。
+  romaji: watashi wa kouishitsu de saifu o nusumareta.
+  english: I had my wallet stolen in the changing room.
+  tatoebaId: "157142"
+  notes: Look at 財布を. The wallet was the object of the theft and it keeps を even though the verb is passive -- the subject is not the thing taken, it is the person it was taken from.
+
+- id: band0.he-had-his-car-stolen
+  jlpt: N3
+  scenario: passive
+  japanese: 彼は真っ昼間に車を盗まれた。
+  reading: かれはまっぴるまにくるまをぬすまれた。
+  romaji: kare wa mappiruma ni kuruma o nusumareta.
+  english: He had his car stolen in broad daylight.
+  tatoebaId: "103713"
+  notes: The same shape on a different object, so the pattern is visible rather than memorised as one sentence. The に here is 真っ昼間に, a time, not an agent -- nobody is named as the thief.
+
+- id: band0.i-got-rained-on
+  jlpt: N3
+  scenario: passive
+  japanese: 雨に降られてぬれちゃったよ。
+  reading: あめにふられてぬれちゃったよ。
+  romaji: ame ni furarete nurechatta yo.
+  english: I was caught in the rain and got wet.
+  tatoebaId: "189616"
+  notes: The textbook example of the other face. 降る takes no object at all, so nothing was ever done to the speaker in the grammatical sense -- and the passive still applies, because the rain happened to them and it was unwelcome. ちゃった is casual てしまった.
+
+- id: band0.i-had-my-only-son-die
+  jlpt: N3
+  scenario: passive
+  japanese: 私はガンで一人息子に死なれた。
+  reading: わたしはガンでひとりむすこにしなれた。
+  romaji: watashi wa gan de hitori musuko ni shinareta.
+  english: I had my only son die of cancer.
+  tatoebaId: "161152"
+  notes: 死ぬ has no object either, and the son did not do anything to anybody. The passive says the loss landed on the speaker. English has no way to say this in one shape, which is why the translation reaches for had.
+
+# ── Making someone, letting someone ───────────────────────────────────────────
+
+- id: band0.he-had-the-maid-clean-the-room
+  jlpt: N3
+  scenario: causative
+  japanese: 彼は家政婦に部屋を掃除させた。
+  reading: かれはかせいふにへやをそうじさせた。
+  romaji: kare wa kaseifu ni heya o souji saseta.
+  english: He had the maid clean the room.
+  tatoebaId: "109254"
+  notes: The full transitive shape. 家政婦に is who was made to do it, 部屋を is what was done -- the verb already had an object, so the person takes に and the object keeps を.
+
+- id: band0.comedy-makes-people-laugh
+  jlpt: N3
+  scenario: causative
+  japanese: コメディは人を笑わせるものである。
+  reading: コメディはひとをわらわせるものである。
+  romaji: komedi wa hito o warawaseru mono de aru.
+  english: Comedy is something that makes people laugh.
+  tatoebaId: "219081"
+  notes: 笑う has no object of its own, so を is free and the person takes it instead -- 人を笑わせる. ものである is written register; ものです is the ordinary way to say the same thing.
+
+- id: band0.sorry-to-have-kept-you-waiting
+  jlpt: N3
+  scenario: causative
+  japanese: 待たせてごめん。
+  reading: またせてごめん。
+  romaji: matasete gomen.
+  english: Sorry to have kept you waiting.
+  tatoebaId: "137945"
+  notes: Eight characters, and one of the most-used causatives there is. 待つ goes to 待たせる the same way it went to 待たれる -- あ row, then the auxiliary. Literally, sorry for having made you wait.
+
+- id: band0.please-let-me-cancel-the-appointment
+  jlpt: N3
+  scenario: causative
+  japanese: 恐縮ですが、２月２７日の約束をキャンセルさせてください。
+  reading: きょうしゅくですが、にがつにじゅうしちにちのやくそくをキャンセルさせてください。
+  romaji: kyoushuku desu ga, nigatsu nijuushichinichi no yakusoku o kyanseru sasete kudasai.
+  english: I'm very sorry, but please let me cancel our appointment on the 27th of February.
+  tatoebaId: "180380"
+  notes: 〜させてください is the causative doing its politest work -- not making anyone do anything, but asking to be allowed to do it yourself. Long, because this is the sentence the corpus had; the shape to take away is キャンセルさせてください.
+
+- id: band0.may-i-share-this-table
+  jlpt: N3
+  scenario: causative
+  japanese: 相席させていただいてよろしいですか。
+  reading: あいせきさせていただいてよろしいですか。
+  romaji: aiseki sasete itadaite yoroshii desu ka.
+  english: May I share this table with you?
+  tatoebaId: "140433"
+  notes: The same request one register higher. 〜させていただく is receiving the favour of being allowed, and it is what you will hear in shops, offices and restaurants far more than させてください.
+
+# ── Made to do it ─────────────────────────────────────────────────────────────
+
+- id: band0.my-boss-made-me-work-overtime
+  jlpt: N3
+  scenario: causative
+  japanese: 上司に残業させられたんだよ。
+  reading: じょうしにざんぎょうさせられたんだよ。
+  romaji: joushi ni zangyou saserareta n da yo.
+  english: My boss made me work overtime.
+  tatoebaId: "146249"
+  notes: Causative and passive stacked, read left to right -- させ is the making, られ is that it was done to me. 上司に is the agent, marked exactly as it was in the plain passive.
+
+- id: band0.he-was-made-to-sign-the-contract
+  jlpt: N3
+  scenario: causative
+  japanese: 彼は、自分の意志に反して契約書に署名させられた。
+  reading: かれは、じぶんのいしにはんしてけいやくしょにしょめいさせられた。
+  romaji: kare wa, jibun no ishi ni hanshite keiyakusho ni shomei saserareta.
+  english: He was made to sign the contract against his will.
+  tatoebaId: "115495"
+  notes: 署名する goes to 署名させる goes to 署名させられた. Against his will is the flavour this form carries almost everywhere it appears -- being made to, not choosing to.
+
+- id: band0.he-kept-me-waiting-an-hour
+  jlpt: N3
+  scenario: causative
+  japanese: 彼に１時間待たされた。
+  reading: かれにいちじかんまたされた。
+  romaji: kare ni ichijikan matasareta.
+  english: He kept me waiting for an hour.
+  tatoebaId: "119130"
+  notes: The contraction. 待たせられた is what the rule builds; 待たされた is what people say, and it is a godan verb only. Strip される and what is left, 待た, is not a word; carry on to 待つ, a genuinely different verb, and only the causative-passive reading survives. That is the test that tells this apart from a plain passive.
+
+- id: band0.we-were-made-to-stand-in-line
+  jlpt: N3
+  scenario: causative
+  japanese: 私たちは一列に並ばされた。
+  reading: わたしたちはいちれつにならばされた。
+  romaji: watashitachi wa ichiretsu ni narabasareta.
+  english: We were made to stand in a line.
+  tatoebaId: "166069"
+  notes: The same contraction on a ぶ-row verb -- 並ぶ, 並ばせる, 並ばせられる, 並ばされる. Here 一列に says how they were made to stand, not who made them; no agent is named at all.
+
+# ── By, this time for real ────────────────────────────────────────────────────
+
+- id: band0.this-music-was-composed-by-bach
+  jlpt: N3
+  scenario: passive
+  japanese: この音楽はバッハによって作曲された。
+  reading: このおんがくはバッハによってさっきょくされた。
+  romaji: kono ongaku wa bahha ni yotte sakkyoku sareta.
+  english: This music was composed by Bach.
+  tatoebaId: "222882"
+  notes: によって where に would also have been possible, and more formal for it. This is the register in which creators, inventors and discoverers are named.
+
+- id: band0.paper-was-invented-by-the-chinese
+  jlpt: N3
+  scenario: passive
+  japanese: 紙は中国人によって発明された。
+  reading: かみはちゅうごくじんによってはつめいされた。
+  romaji: kami wa chuugokujin ni yotte hatsumei sareta.
+  english: Paper was invented by the Chinese.
+  tatoebaId: "151206"
+  notes: The classic textbook shape -- a suru-compound passive with によって naming who did it. Once によって sits in front of a passive verb there is no other reading available to the sentence.
+
+- id: band0.the-team-is-led-by-tom
+  jlpt: N3
+  scenario: passive
+  japanese: サッカーのチームはトムによって引率される。
+  reading: サッカーのチームはトムによっていんそつされる。
+  romaji: sakkaa no chiimu wa tomu ni yotte insotsu sareru.
+  english: The soccer team is led by Tom.
+  tatoebaId: "216814"
+  notes: Non-past rather than past, so the form is visible without the た hiding it. 引率される is 引率する in the passive.
+
+- id: band0.my-brother-was-brought-up-by-our-grandmother
+  jlpt: N3
+  scenario: passive
+  japanese: 一番下の弟は祖母により幼年時代育てられた。
+  reading: いちばんしたのおとうとはそぼによりようねんじだいそだてられた。
+  romaji: ichiban shita no otouto wa sobo ni yori younenjidai sodaterareta.
+  english: My youngest brother was brought up by our grandmother.
+  tatoebaId: "190121"
+  notes: により is によって's written register-mate, the same pair the means-and-variation lesson already gave you. Same job, one shade more formal, and it is what you meet in print rather than in speech.

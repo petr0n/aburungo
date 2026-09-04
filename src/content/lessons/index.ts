@@ -12,7 +12,7 @@ import { parseLessons } from "./schema";
 import { allWords } from "@/content/vocabulary";
 import { allPhrases } from "@/content/index";
 import { allGrammarPatterns } from "@/content/grammar";
-import { n5ChapterIds, b2ChapterIds } from "@/content/chapters";
+import { n5ChapterIds, b2ChapterIds, b3ChapterIds } from "@/content/chapters";
 
 import n5Raw from "./n5.yaml";
 import n5GreetingsContRaw from "./n5-01-greetings-cont.yaml";
@@ -50,6 +50,7 @@ import b2QuotedSpeechRaw from "./b2-07-quoted-speech.yaml";
 import b2MakingPlansRaw from "./b2-08-making-plans.yaml";
 import b2ConditionalsRaw from "./b2-09-conditionals.yaml";
 import b2TroubleRaw from "./b2-10-trouble.yaml";
+import b3PassiveRaw from "./b3-00-passive.yaml";
 
 const knownWordIds = new Set(allWords.map((w) => w.id));
 const knownPhraseIds = new Set(allPhrases.map((p) => p.id));
@@ -122,6 +123,15 @@ export const b2Lessons: Lesson[] = [
   ...parseLessons(b2TroubleRaw, "lessons/b2-10-trouble.yaml", knownWordIds, knownPhraseIds, knownPatternIds, b2ChapterIds),
 ].sort((a, b) => a.order - b.order);
 
+/**
+ * Book Three. Its bands are chapters (04-stage-reading.md section 3), and the
+ * passive band opens it because Book Two's quoted-speech chapter promised the
+ * conjugation would.
+ */
+export const b3Lessons: Lesson[] = [
+  ...parseLessons(b3PassiveRaw, "lessons/b3-00-passive.yaml", knownWordIds, knownPhraseIds, knownPatternIds, b3ChapterIds),
+].sort((a, b) => a.order - b.order);
+
 export function findLesson(id: string): Lesson | undefined {
-  return [...n5Lessons, ...b2Lessons].find((u) => u.id === id);
+  return [...n5Lessons, ...b2Lessons, ...b3Lessons].find((u) => u.id === id);
 }

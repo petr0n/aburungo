@@ -41,6 +41,7 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const BOOKS = {
   n5: { order: 1, title: "Book One" },
   b2: { order: 2, title: "Book Two" },
+  b3: { order: 3, title: "Book Three" },
 };
 
 const loadDir = (dir) =>

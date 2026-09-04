@@ -1,0 +1,94 @@
+# Book Three, Band 0 grammar patterns -- doing, and being done to.
+#
+# One pattern per teaching lesson, each blanking the thing that lesson exists
+# for out of one of its own sentences. The blank is matched against the
+# phrase's reading, so these are kana.
+#
+# The `pattern` strings here look thinner than Book Two's and the reason is
+# mechanical, not stylistic. scripts/levelling.mjs's grammarSurface() rejects
+# any pattern containing a Latin character or a digit and needs at least one
+# ～-delimited fragment of two or more characters. Book Two's
+# `pattern: "godan: last sound to the え row, add る"` -- a free English
+# description of the rule -- returns null under that check and would tag no
+# sentence at all. Since the levelling pipeline is what the reading library is
+# built on, a Book Three pattern that cannot be tagged is a pattern the library
+# cannot find text for, so every string below is bare kana that grammarSurface
+# accepts.
+#
+# What that costs, said plainly rather than discovered later: these literals are
+# coarse. This band's rules have no single fixed surface -- 書かれる, 読まれる
+# and 話される are three strings for one rule, unlike のに or ものの, which are
+# one string each -- so the only taggable literal is the auxiliary itself, and
+# ～れる will flag every lexicalised ichidan verb that happens to contain those
+# two kana (忘れる, 慣れる, 疲れる, 割れる, 倒れる). That is the same noise the
+# band's own attestation pass had to screen out by hand, now baked into the
+# tagger. Three of the seven do better by pairing the auxiliary with the
+# particle the lesson is actually about (～に～られる, ～を～れる,
+# ～によって～れる), which is both more precise and closer to what the lesson
+# teaches. The remaining four are as good as this field gets. This is a
+# pipeline-design question, flagged here rather than solved.
+#
+# Two of the seven blank a particle along with the ending, and that is the point
+# rather than an oversight. The agent pattern blanks ママに, not しかられます,
+# because the form was already drilled two patterns earlier and the particle is
+# what the lesson exists for; the によって pattern blanks バッハによって for the
+# same reason -- the passive verb is old news by then, the marker in front of it
+# is not. The adversity pattern blanks さいふをぬすまれた whole, object particle
+# included, because a learner who is handed the を separately has been told the
+# answer to the only question that construction asks.
+#
+# content-source: n/a for this file -- every pattern references an existing
+#   phrase from phrases/b3-00-passive.yaml rather than composing new Japanese,
+#   and that file carries the Tatoeba id for each.
+# jlpt-source: training -- the level marks the band this content sits in.
+#   れる/られる/せる/させる are canonically N4 grammar and arrive here only
+#   because Book Two deferred them; the band is N3 and is tagged as such.
+
+- id: grammar.b3-passive-ichidan
+  jlpt: N3
+  pattern: "～られる"
+  gloss: Something was done to it. Ichidan verbs drop る and add られる; する becomes される, 来る becomes 来られる, read こられる. The same string the potential already uses -- context sorts them.
+  phraseId: band0.he-was-seen-eating-the-cake
+  blank: みられた
+
+- id: grammar.b3-passive-godan
+  jlpt: N3
+  pattern: "～れる"
+  gloss: The same thing for godan verbs -- move the last sound to the あ row and add れる. 書かれる, 話される, 呼ばれる, 読まれる, 買われる. う bends to わ; る-row verbs are godan and take this rule, not the ichidan one.
+  phraseId: band0.english-is-spoken-in-canada
+  blank: はなされている
+
+- id: grammar.b3-passive-sentence
+  jlpt: N3
+  pattern: "～に～られる"
+  gloss: The full sentence. What was the object becomes the subject; whoever did it, if it is worth naming at all, takes に.
+  phraseId: band0.youll-get-told-off-by-mum
+  blank: ママに
+
+- id: grammar.b3-passive-adversity
+  jlpt: N3
+  pattern: "～を～れる"
+  gloss: It happened to you. The object keeps を and the person it happened to becomes the subject -- 財布を盗まれた. With a verb that has no object, 雨に降られた, there is nothing to keep.
+  phraseId: band0.i-had-my-wallet-stolen
+  blank: さいふをぬすまれた
+
+- id: grammar.b3-causative
+  jlpt: N3
+  pattern: "～させる"
+  gloss: Making or letting someone do it. Godan verbs take あ row plus せる, ichidan verbs drop る and add させる. A causee taken from a transitive verb takes に, one taken from an intransitive verb usually takes を.
+  phraseId: band0.he-had-the-maid-clean-the-room
+  blank: そうじさせた
+
+- id: grammar.b3-causative-passive
+  jlpt: N3
+  pattern: "～させられる"
+  gloss: Made to do it -- causative, then passive, stacked in that order. Godan verbs contract in speech, and 待たせられた becomes 待たされた.
+  phraseId: band0.my-boss-made-me-work-overtime
+  blank: させられた
+
+- id: grammar.b3-niyotte-agent
+  jlpt: N3
+  pattern: "～によって～れる"
+  gloss: By, in the formal register -- によって (written により) naming the agent of a passive sentence. The third job of a word you already have for means and for variation.
+  phraseId: band0.this-music-was-composed-by-bach
+  blank: バッハによって
