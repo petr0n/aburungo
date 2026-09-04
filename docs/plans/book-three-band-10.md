@@ -601,10 +601,11 @@ open and this band's design does not depend on which way it resolves.
 10. **The text-source decision** (`book-three-bands.md` §2) blocks the reading-library slice and the
     gate text, not the four teaching lessons — those can be authored and shipped from the attested
     sentences in §1 alone, same as every band in this book so far.
-11. **Flag for whoever plans band 9:** において (this band) and における (band 9) are the same
-    grammaticalized word in two syntactic slots — clausal/adverbial here, noun-modifying there.
-    Band 9's own document should re-surface `grammar.b3-ni-oite` before its における lesson (§4,
-    lesson 4).
+11. **The dependency runs the other way — corrected after band 9 was planned.** において (this
+    band, orders 274-278) and における (band 9, orders 266-273) are the same grammaticalized word
+    in two syntactic slots, clausal/adverbial here and noun-modifying there. But **band 9 comes
+    first**, so it cannot re-surface a pattern this band has not taught yet. Band 9 ships における
+    self-contained on its own 25 citations, and it is *this* lesson that should call back to it.
 12. **Flag for whoever assembles the book:** orders 279–281 are unused by this band (§2). This is
     also the book's last band — confirm separately whether Book Three needs its own completion
     checkpoint beyond this band's recognition gate (§4, lesson 5) before treating order 278 as the
