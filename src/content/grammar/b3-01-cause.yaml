@@ -67,7 +67,7 @@
 - id: grammar.b3-tame-ni
   jlpt: N3
   pattern: "～ために"
-  gloss: In order to, and because of. A dictionary-form verb in front means purpose; a noun plus の, or a past clause, usually means cause. ため on its own is an ordinary noun meaning benefit, which is where ためになる comes from.
+  gloss: In order to, and because of. A dictionary-form verb in front usually means purpose; a noun plus の, or a past clause, usually means cause. ため on its own is an ordinary noun meaning benefit, which is where ためになる comes from.
   phraseId: band1.i-went-home-to-change
   blank: ために
 
@@ -95,7 +95,7 @@
 - id: grammar.b3-kara-niwa
   jlpt: N3
   pattern: "～からには"
-  gloss: Now that this is settled, here is what follows. Plain form plus からには, and the second half carries resolve, obligation or a command rather than a plain fact.
+  gloss: Now that this is settled, here is what follows. Plain form plus からには, and the second half usually carries resolve, obligation or a command rather than a plain fact.
   phraseId: band1.if-you-do-it-at-all-do-it-well
   blank: からには
 

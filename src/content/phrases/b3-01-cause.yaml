@@ -57,7 +57,8 @@
 #     ことだから nor 仕方がない. Glossed "You did it to yourself, so there's
 #     nothing to be done".
 #   #222287 -- the second sentence's ものだから, the reason the card exists,
-#     is not rendered at all. Glossed with "It's because ..." carrying it.
+#     is not rendered at all. Glossed with "It's because ..." carrying it, and
+#     "the apple of my eye" plainly as "means a great deal to me".
 #     (This id also appears under the next heading.)
 #
 #   Where the corpus English was wrong or used a word the learner would not:
@@ -109,7 +110,7 @@
 #   compound whose reading was not already obvious was checked against JMdict
 #   (着替え きがえ 1423160, 芝居 しばい 1321630, 犠牲 ぎせい 1225450, 大雨
 #   おおあめ 1413070, 決壊 けっかい 1254230, 交通 こうつう 1272280, 一時 いちじ
-#   1576100, 不通 ふつう 1493860, 日常 にちじょう 1464180, 運動 うんどう
+#   1576100 sense 3, 不通 ふつう 1493860, 日常 にちじょう 1464180, 運動 うんどう
 #   1172910, 頭痛 ずつう 1450890, 過労 かろう 1196490, 不足 ふそく 1493700,
 #   試験 しけん 1312350, 草木 くさき 1581300, 気圧 きあつ 1221880, 酔う よう
 #   1372650, 援助 えんじょ 1176660, 成功 せいこう 1375690, 錠剤 じょうざい
@@ -123,7 +124,7 @@
 #   Two of those needed the gloss checked as well as the reading, because the
 #   headword has more than one entry: 得る in #152802 is える 1588760, to
 #   obtain, not うる 1454500, to be able to; and 解ける in #213327 is とける
-#   1198910, to be solved, not とける 1546070, to melt.
+#   1198910 sense 4, a misunderstanding cleared up, not とける 1546070, to melt.
 # jlpt-source: training -- the level marks the chapter this content sits in,
 #   not each connective's textbook level. ため(に) and によって are commonly
 #   listed N4 and からには and ものだから N2; the sentences carrying all of them
@@ -280,8 +281,8 @@
   jlpt: N3
   scenario: cause
   japanese: 私が今日あるのは両親のおかげである。
-  reading: わたしがきょうあるのはりょうしんのおかげである。
-  romaji: watashi ga kyou aru no wa ryoushin no okage de aru.
+  reading: わたしがこんにちあるのはりょうしんのおかげである。
+  romaji: watashi ga konnichi aru no wa ryoushin no okage de aru.
   english: I owe what I am to my parents.
   tatoebaId: "167729"
   notes: The predicate form, おかげである, ending the sentence — おかげです in ordinary speech. English reaches for owe, which is as close as it gets to おかげ in one word.
@@ -322,7 +323,7 @@
   jlpt: N3
   scenario: cause
   japanese: テーブルマナーは国によって異なる。
-  reading: テーブルマナーはくににによってことなる。
+  reading: テーブルマナーはくにによってことなる。
   romaji: teeburu manaa wa kuni ni yotte kotonaru.
   english: Table manners vary from one country to another.
   tatoebaId: "202379"
