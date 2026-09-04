@@ -1,0 +1,432 @@
+# Book Three, Chapter 5 phrases -- more than one way to say "when".
+#
+# Thirty sentences, and not one of them is ours. Books One and Two composed
+# their example sentences from canonical N5/N4 material and marked them
+# `content-source: training`; 04-stage-reading.md section 8 withdraws that
+# exemption at the reading stage and above, in those words -- "no
+# training-canonical sentences at the reading stage and above". So every
+# sentence below is a verbatim Tatoeba pair carried out of
+# server/data/jmdict-examples-eng-3.6.2.json with its id in `tatoebaId`, and
+# nothing here was composed, trimmed, joined or smoothed. Where a shape had no
+# attested sentence short enough or clean enough to card, the shape is
+# described in a grammarNote and has no card.
+#
+# Eight sentences the chapter breakdown named are not here, and each was
+# dropped for a reason worth recording rather than leaving as a silent
+# discrepancy:
+#
+#   #441557 is a two-speaker exchange in one corpus entry -- the breakdown
+#   quoted only its second half. Trimming it is exactly what section 8
+#   forbids, and shipping it whole would put a scripted back-and-forth on a
+#   card. Replaced with #234061 for the same punctual 間に.
+#
+#   #195823 (マーケットが開いたとたんに火事がおきた) is dropped over its
+#   reading, not its grammar. 開いた here is either あいた or ひらいた -- both
+#   are ordinary for a market opening, the corpus attaches the sentence to
+#   マーケット rather than to either verb, and the learner has to type the
+#   reading back. Guessing between them would teach one of the two as fact.
+#   Replaced with #217686, which additionally shows とたん with no に.
+#
+#   #74810 runs to 67 characters, most of them about character encodings.
+#   Its reading would be around a hundred kana against Book Two's longest
+#   typed answer of 41. Replaced with #201787, a verb attaching straight to
+#   際に in seven characters.
+#
+#   #230681 (41 characters) and #74632 fail the same length test, the latter
+#   also carrying a mixed full-width/ASCII "９.１１" that has no settled kana
+#   transcription. Replaced with #106913 and #121387, which between them show
+#   the same two attachment shapes.
+#
+#   #123596 attaches 途中で cleanly to a noun but ends in に違いない, which no
+#   book teaches. Replaced with #173302, the same noun + の attachment with
+#   nothing unglossed after it.
+#
+#   #154798 and #221764 were both dropped from the かける lesson: the first has
+#   an English gloss ("I have lost my place.") too terse to carry the form, the
+#   second an English gloss ("This child is teething now.") with no trace of
+#   生えかけている in it at all. Rewriting either would have made two more gloss
+#   departures where the corpus has better sentences already -- #161277 and
+#   #188770 -- so those are used instead.
+#
+# As in the passive chapter, the vocabulary runs ahead of the ladder. 焦げ臭い,
+# 吐き気, 警備体制, 丸焼け and their kin are not taught anywhere and are not
+# meant to be -- see vocabulary/b3-04-time.yaml for why this chapter ships zero
+# words. What is being reviewed here is the connective, not the nouns around
+# it.
+#
+# The English is Tatoeba's own where Tatoeba's own would do. Three of the
+# thirty depart from it, listed here in full so a reviewer can check them
+# against the corpus rather than take the count on trust. Every Japanese string
+# is untouched.
+#
+#   Where the corpus English hid the grammar the card exists to teach:
+#   #192859 -- "I visited Paris in Europe." drops 間に entirely, and what is
+#     left says something the Japanese does not. Glossed "I visited Paris
+#     while I was in Europe."
+#
+#   Where the corpus English was wrong:
+#   #147864 -- "The boy left his homework half-finished." There is no boy in
+#     宿題をやりかけにしておいた, and おいた is the speaker's own action.
+#     Glossed "I left my homework half-done."
+#
+#   Wording only, meaning unchanged:
+#   #201787 -- "In opening the door, I broke the lock." -> "When I opened the
+#     door, I broke the lock." The gerund buries the "when" the card is for.
+#
+# ---------------------------------------------------------------------------
+# ROUTING: Book Three's stage is "reading" (books.ts), and LearnPage routes
+# every non-foundation book to the typed FillBlankCard, where the learner types
+# the whole reading back. So all thirty of these are typed, and every one was
+# checked against that. The longest is band4.his-dog-stared-at-him-while-he-had-
+# breakfast at 39 kana -- two under Book Two's longest typed answer
+# (quote.my-friend-said-that-shop-is-famous-but-i-wont-go, 41) and one under
+# the passive chapter's longest (band0.please-let-me-cancel-the-appointment,
+# 40). Nothing here asks more than a learner has already been asked, so no
+# entry carries `recognitionOnly`. The three sentences dropped for length
+# above are dropped rather than flagged, because a chapter with an attested
+# alternative should quote the alternative.
+# ---------------------------------------------------------------------------
+#
+# These are independent utterances. Several would sit naturally beside each
+# other -- 学校へ行く途中でトムに会った and １９８８年以来トムに会っていません
+# most obviously, since they even share a Tom. They are not authored as an
+# exchange or a narrative: multi-sentence composed text is the surface the
+# content rules exist to keep out, and it stays out even when both halves are
+# separately attested.
+#
+# content-source: Tatoeba, via the sentence pairs embedded in JMdict for
+#   Applications 3.6.2 (server/data/jmdict-examples-eng-3.6.2.json). Every
+#   phrase carries its sentence id in `tatoebaId`; the id is quoted, because
+#   YAML reads a bare 215035 as a number and the schema rejects it. Verified by
+#   id against the corpus on 2026-09-04 -- all 30 resolve, and each Japanese
+#   string below matches its source character for character. Kana readings and
+#   romaji are transcriptions of the quoted sentence, not new content; every
+#   compound whose reading was not already obvious was checked against JMdict
+#   (召し上がる めしあがる 1346370, 鍛える きたえる 1419120, 消防車 しょうぼうしゃ
+#   1350360, 到着 とうちゃく 1449870, 丸焼け まるやけ 1216510, 風呂桶 ふろおけ
+#   1500120, 締める しめる 1436570, 朝食 ちょうしょく 1428390, 見つめる みつめる
+#   1604580, 焦げ臭い こげくさい 1350740, 匂い におい 1599760, 嗅ぐ かぐ 1565480,
+#   火事 かじ 1193950, 離陸 りりく 1550970, 訪問 ほうもん 1518120, にわか雨
+#   にわかあめ 1599930, 諦める あきらめる 1436730, 講義 こうぎ 1282260, 吐き気
+#   はきけ 1444120, 催す もよおす 1292160, 爆破 ばくは 1475900, 予告 よこく
+#   1542990, 警備 けいび 1252490, 体制 たいせい 1409550, 強化 きょうか 1236200,
+#   癖 くせ 1509350, 先手 せんて 1387830 -- and not 1387820 さきて, a different
+#   word, 演奏 えんそう 1607520).
+# jlpt-source: training -- the level marks the chapter this content sits in,
+#   not each connective's textbook level. うちに, 間に, 際に, たとたん, 途中で,
+#   以来 and 〜かける are canonically N3 grammar; the sentences carrying them are
+#   real N3 text and are tagged to match.
+
+# ── A closing window ──────────────────────────────────────────────────────────
+
+- id: band4.eat-your-soup-while-its-hot
+  jlpt: N3
+  scenario: time
+  japanese: スープは熱いうちに召し上がって下さい。
+  reading: スープはあついうちにめしあがってください。
+  romaji: suupu wa atsui uchi ni meshiagatte kudasai.
+  english: Eat your soup while it is hot.
+  tatoebaId: "215035"
+  notes: 熱い is an い-adjective and goes straight in front of うち, the same attachment 時 takes. The soup is cooling as the sentence is spoken, and that is the whole of what うちに adds -- act while this is still true, because it will not be for long.
+
+- id: band4.build-up-your-body-while-young
+  jlpt: N3
+  scenario: time
+  japanese: 若いうちに体を鍛えなさい。
+  reading: わかいうちにからだをきたえなさい。
+  romaji: wakai uchi ni karada o kitaenasai.
+  english: Build up your body while young.
+  tatoebaId: "148866"
+  notes: The same shape on a state that closes over decades rather than minutes. なさい is a firm instruction, softer than a bare command and used to someone junior -- a parent or a teacher speaking.
+
+- id: band4.we-set-up-our-tents-before-dark
+  jlpt: N3
+  scenario: time
+  japanese: 私たちは暗くならないうちにテントを張った。
+  reading: わたしたちはくらくならないうちにテントをはった。
+  romaji: watashitachi wa kuraku naranai uchi ni tento o hatta.
+  english: We set up our tents before dark.
+  tatoebaId: "166098"
+  notes: 暗くならない is a plain negative, and this is the shape うちに wears most often. It reads literally as while it has not got dark, which is how Japanese says before it gets dark -- the English translation has no negative in it at all.
+
+- id: band4.the-house-burnt-down-before-the-fire-engine-arrived
+  jlpt: N3
+  scenario: time
+  japanese: 消防車が到着しないうちに、その家は丸焼けになった。
+  reading: しょうぼうしゃがとうちゃくしないうちに、そのいえはまるやけになった。
+  romaji: shoubousha ga touchaku shinai uchi ni, sono ie wa maruyake ni natta.
+  english: Before the fire engine arrived, the whole house had burnt down.
+  tatoebaId: "146393"
+  notes: The negative again, this time on a clause with its own subject -- 消防車が, marked が rather than は because it sits inside the うちに clause. The window closed before anyone could act, which is the other thing this pattern is for.
+
+# ── A stretch of time ─────────────────────────────────────────────────────────
+
+- id: band4.i-visited-paris-while-i-was-in-europe
+  jlpt: N3
+  scenario: time
+  japanese: ヨーロッパにいる間に僕はパリをたずねた。
+  reading: ヨーロッパにいるあいだにぼくはパリをたずねた。
+  romaji: yooroppa ni iru aida ni boku wa pari o tazuneta.
+  english: I visited Paris while I was in Europe.
+  tatoebaId: "192859"
+  notes: The stretch is the whole stay; the visit is one thing that happened inside it. に is what says so. Without に the sentence would claim the speaker spent the entire trip in the act of visiting Paris.
+
+- id: band4.the-tub-ran-over-while-she-was-on-the-phone
+  jlpt: N3
+  scenario: time
+  japanese: 彼女が電話をしている間にふろ桶があふれた。
+  reading: かのじょがでんわをしているあいだにふろおけがあふれた。
+  romaji: kanojo ga denwa o shite iru aida ni furooke ga afureta.
+  english: The tub ran over while she was on the phone.
+  tatoebaId: "95280"
+  notes: ている in front of 間に is the ordinary way to draw the stretch -- an activity already under way, with a beginning and an end. The overflow is a single moment somewhere inside it.
+
+- id: band4.ill-sweep-the-floor-while-you-wash-the-dishes
+  jlpt: N3
+  scenario: time
+  japanese: あなたが皿を洗っている間に、私は床を掃除します。
+  reading: あなたがさらをあらっているあいだに、わたしはゆかをそうじします。
+  romaji: anata ga sara o aratte iru aida ni, watashi wa yuka o souji shimasu.
+  english: I'll sweep the floor while you wash the dishes.
+  tatoebaId: "234061"
+  notes: Non-past, so 間に is not a past-tense pattern -- the stretch can be one that has not started yet. に still says the cleaning is meant to fit inside the washing-up and be finished by the end of it.
+
+- id: band4.hold-still-while-i-fix-your-tie
+  jlpt: N3
+  scenario: time
+  japanese: ネクタイを締める間、ちょっとじっとしてね。
+  reading: ネクタイをしめるあいだ、ちょっとじっとしてね。
+  romaji: nekutai o shimeru aida, chotto jitto shite ne.
+  english: Hold still a moment while I fix your tie.
+  tatoebaId: "198630"
+  notes: No に, and the meaning changes. The keeping still has to last as long as the tie-fixing does, start to finish. Compare the sentence above, where に let one short act sit anywhere inside a long one.
+
+- id: band4.his-dog-stared-at-him-while-he-had-breakfast
+  jlpt: N3
+  scenario: time
+  japanese: 毎朝朝食をとっている間、彼の犬は彼をじっと見つめていた。
+  reading: まいあさちょうしょくをとっているあいだ、かれのいぬはかれをじっとみつめていた。
+  romaji: maiasa choushoku o totte iru aida, kare no inu wa kare o jitto mitsumete ita.
+  english: His dog stared at him every morning while he had his breakfast.
+  tatoebaId: "81333"
+  notes: The second half is ていた, an activity that ran the length of the first -- which is exactly why there is no に. Two ている clauses matched duration for duration.
+
+# ── The formal one ────────────────────────────────────────────────────────────
+
+- id: band4.i-broke-the-lock-when-i-opened-the-door
+  jlpt: N3
+  scenario: time
+  japanese: ドアを開ける際に、私は鍵を壊してしまった。
+  reading: ドアをあけるさいに、わたしはかぎをこわしてしまった。
+  romaji: doa o akeru sai ni, watashi wa kagi o kowashite shimatta.
+  english: When I opened the door, I broke the lock.
+  tatoebaId: "201787"
+  notes: A plain verb attaching straight to 際, the same slot 時 takes. Swap 際に for 時に and the sentence means the same thing in a plainer voice -- which is the only difference between them.
+
+- id: band4.in-the-case-of-fire-dial-119
+  jlpt: N3
+  scenario: time
+  japanese: 火事の際は１１９番に電話してください。
+  reading: かじのさいはひゃくじゅうきゅうばんにでんわしてください。
+  romaji: kaji no sai wa hyakujuukyuu-ban ni denwa shite kudasai.
+  english: In the case of fire, dial 119.
+  tatoebaId: "186687"
+  notes: A noun takes の in front of 際, as it does in front of any noun. This is 際 in its home register -- a notice on a wall. 火事の時 would be understood and would sound like somebody talking rather than a sign.
+
+- id: band4.you-must-fasten-your-seat-belts-during-take-off
+  jlpt: N3
+  scenario: time
+  japanese: 離陸の際は、シートベルトを締めなくてはならない。
+  reading: りりくのさいは、シートベルトをしめなくてはならない。
+  romaji: ririku no sai wa, shiitoberuto o shimenakute wa naranai.
+  english: You must fasten your seat belts during take-off.
+  tatoebaId: "78324"
+  notes: Noun + の + 際 again, and 際は rather than 際に -- は because the clause is setting up a case rather than pointing at a moment. なくてはならない is the written must, matching the register 際 has already set.
+
+- id: band4.i-was-treated-to-soba-when-i-visited-my-friend
+  jlpt: N3
+  scenario: time
+  japanese: 長野にいる友人を訪問した際、おいしいそばをごちそうになった。
+  reading: ながのにいるゆうじんをほうもんしたさい、おいしいそばをごちそうになった。
+  romaji: nagano ni iru yuujin o houmon shita sai, oishii soba o gochisou ni natta.
+  english: When I visited my friend in Nagano, I was treated to delicious soba.
+  tatoebaId: "125853"
+  notes: 際 is not only for signage. Here it takes a past verb and tells an ordinary story, one register up from speech -- the voice of a written account rather than a conversation.
+
+# ── The instant ───────────────────────────────────────────────────────────────
+
+- id: band4.he-turned-pale-on-hearing-this
+  jlpt: N3
+  scenario: time
+  japanese: これをきいたとたん、彼は真っ青になった。
+  reading: これをきいたとたん、かれはまっさおになった。
+  romaji: kore o kiita totan, kare wa massao ni natta.
+  english: On hearing this, he turned pale.
+  tatoebaId: "217686"
+  notes: とたん with no に after it, which is just as common as とたんに and means the same thing. きいた is the plain past, and that is the only form the verb in front of とたん takes. 真っ青になる is to go pale -- Japanese puts a colour there where English puts white.
+
+- id: band4.he-smelt-burning-the-instant-he-opened-the-door
+  jlpt: N3
+  scenario: time
+  japanese: ドアを開けたとたんに、彼は焦げ臭い匂いを嗅いだ。
+  reading: ドアをあけたとたんに、かれはこげくさいにおいをかいだ。
+  romaji: doa o aketa totan ni, kare wa kogekusai nioi o kaida.
+  english: The instant he opened the door, he smelt something burning.
+  tatoebaId: "201810"
+  notes: The same door as the 際に sentence three cards back, and the two are worth reading side by side. 開ける際に sets a formal scene; 開けたとたんに says the second thing landed on him with no gap at all.
+
+- id: band4.she-turned-pale-the-moment-she-heard-the-news
+  jlpt: N3
+  scenario: time
+  japanese: その知らせを聞いたとたんに彼女は青くなった。
+  reading: そのしらせをきいたとたんにかのじょはあおくなった。
+  romaji: sono shirase o kiita totan ni kanojo wa aoku natta.
+  english: The moment she heard the news, she turned pale.
+  tatoebaId: "207941"
+  notes: The same reaction, this time with に on とたん and 聞いた in kanji -- neither choice changes anything. A reaction nobody chooses is the company this pattern keeps.
+
+- id: band4.the-fuse-blew-the-moment-tom-turned-on-the-tv
+  jlpt: N3
+  scenario: time
+  japanese: トムがテレビをつけたとたんにヒューズがとんだ。
+  reading: トムがテレビをつけたとたんにヒューズがとんだ。
+  romaji: tomu ga terebi o tsuketa totan ni hyuuzu ga tonda.
+  english: No sooner had Tom turned on the TV than the fuse blew.
+  tatoebaId: "200220"
+  notes: Two different subjects, one either side -- トムが in front, ヒューズが behind. とたん does not require the same person to do both things, only that the second followed the first with nothing in between.
+
+# ── Partway through ───────────────────────────────────────────────────────────
+
+- id: band4.i-was-caught-in-a-shower-on-my-way-to-the-station
+  jlpt: N3
+  scenario: incomplete
+  japanese: 駅へ行く途中でにわか雨に遭った。
+  reading: えきへいくとちゅうでにわかあめにあった。
+  romaji: eki e iku tochuu de niwakaame ni atta.
+  english: I was caught in a shower on my way to the station.
+  tatoebaId: "188876"
+  notes: 行く attaches straight to 途中, and で marks it as the place-in-the-process where the shower happened. The speaker had not reached the station when it did -- that is what 途中 commits to and 時 would not.
+
+- id: band4.i-met-tom-on-my-way-to-school
+  jlpt: N3
+  scenario: incomplete
+  japanese: 学校へ行く途中でトムに会った。
+  reading: がっこうへいくとちゅうでトムにあった。
+  romaji: gakkou e iku tochuu de tomu ni atta.
+  english: I met Tom on my way to school.
+  tatoebaId: "184373"
+  notes: The commonest shape there is -- destination, へ行く, 途中で. Worth learning whole, because you will use it every time you report anything that happened on a journey.
+
+- id: band4.dont-give-up-halfway
+  jlpt: N3
+  scenario: incomplete
+  japanese: 途中であきらめるな。
+  reading: とちゅうであきらめるな。
+  romaji: tochuu de akirameru na.
+  english: Don't give up halfway.
+  tatoebaId: "124585"
+  notes: 途中 standing alone, with no journey named -- whatever you are in the middle of. な on a dictionary-form verb is the blunt negative command, the harshest way Japanese has of saying do not.
+
+- id: band4.she-felt-sick-halfway-through-the-lecture
+  jlpt: N3
+  scenario: incomplete
+  japanese: 講義の途中で彼女は吐き気を催した。
+  reading: こうぎのとちゅうでかのじょははきけをもよおした。
+  romaji: kougi no tochuu de kanojo wa hakike o moyooshita.
+  english: Halfway through the lecture, she began to feel sick.
+  tatoebaId: "173302"
+  notes: A noun takes の in front of 途中, as it does in front of うち, 間 and 際. The lecture is a process with a start and an end, and she is somewhere inside it -- not a time of day.
+
+# ── Ever since ────────────────────────────────────────────────────────────────
+
+- id: band4.i-havent-seen-tom-since-1988
+  jlpt: N3
+  scenario: time
+  japanese: １９８８年以来トムに会っていません。
+  reading: せんきゅうひゃくはちじゅうはちねんいらいトムにあっていません。
+  romaji: senkyuuhyaku hachijuuhachinen irai tomu ni atte imasen.
+  english: I haven't seen Tom since 1988.
+  tatoebaId: "235889"
+  notes: A date, then 以来 straight onto it with no particle. The main verb is ていません -- a state still running now, which is what 以来 asks for.
+
+- id: band4.security-has-been-stepped-up-since-the-bomb-scare
+  jlpt: N3
+  scenario: time
+  japanese: 爆破予告以来、空港の警備体制は強化された。
+  reading: ばくはよこくいらい、くうこうのけいびたいせいはきょうかされた。
+  romaji: bakuha yokoku irai, kuukou no keibi taisei wa kyouka sareta.
+  english: Security at the airport has been stepped up since the bomb scare.
+  tatoebaId: "121387"
+  notes: 以来 does not need a date -- an event will do, as long as it is over. 強化された is the passive from the chapter that opened this book, and nobody is named as having done the strengthening.
+
+- id: band4.he-took-to-drinking-after-his-wife-died
+  jlpt: N3
+  scenario: time
+  japanese: 彼は妻が死んで以来酒を飲む癖がついた。
+  reading: かれはつまがしんでいらいさけをのむくせがついた。
+  romaji: kare wa tsuma ga shinde irai sake o nomu kuse ga tsuita.
+  english: He has taken to drinking since the death of his wife.
+  tatoebaId: "106913"
+  notes: The other attachment, a te-form verb rather than a noun. 死んで以来, ever since she died. The te-form is doing the same job it does in front of から, marking a point the rest of the sentence runs forward from.
+
+- id: band4.he-has-never-been-heard-of-since
+  jlpt: N3
+  scenario: time
+  japanese: それ以来彼のうわさは聞いていない。
+  reading: それいらいかれのうわさはきいていない。
+  romaji: sore irai kare no uwasa wa kiite inai.
+  english: He has never been heard of since.
+  tatoebaId: "204482"
+  notes: それ以来 is the everyday shape -- ever since that, whatever that was. It refers back to something already said or already known, and it is the one you will meet most.
+
+# ── Started, not finished ─────────────────────────────────────────────────────
+
+- id: band4.i-left-my-homework-half-done
+  jlpt: N3
+  scenario: incomplete
+  japanese: 宿題をやりかけにしておいた。
+  reading: しゅくだいをやりかけにしておいた。
+  romaji: shukudai o yarikake ni shite oita.
+  english: I left my homework half-done.
+  tatoebaId: "147864"
+  notes: やる loses ます and takes かけ, and here the result is a noun -- やりかけ, a half-done thing. 読みかけの本 is a book you are partway through. The auxiliary freezes into a noun this way often enough to be worth recognising.
+
+- id: band4.he-started-to-say-something-but-i-beat-him-to-it
+  jlpt: N3
+  scenario: incomplete
+  japanese: 彼が何か言いかけたが先手を打ってやった。
+  reading: かれがなにかいいかけたがせんてをうってやった。
+  romaji: kare ga nanika iikaketa ga sente o utte yatta.
+  english: He started to say something, but I beat him to it.
+  tatoebaId: "120598"
+  notes: 言いかけた is the plainest case of the whole pattern -- he began the sentence and never finished it. かける conjugates as an ichidan verb whatever stem it lands on, so 言いかけた is its plain past.
+
+- id: band4.im-already-forgetting-my-grandmothers-face
+  jlpt: N3
+  scenario: incomplete
+  japanese: 私はおばあさんの顔をもう忘れかけている。
+  reading: わたしはおばあさんのかおをもうわすれかけている。
+  romaji: watashi wa obaasan no kao o mou wasurekakete iru.
+  english: I am already forgetting my grandmother's face.
+  tatoebaId: "161277"
+  notes: Forgetting is not a task anyone abandons -- it is a change partway through. かけている is the shape that says the process has begun and has not finished, and English reaches for a plain present continuous to translate it.
+
+- id: band4.the-man-was-on-the-brink-of-death
+  jlpt: N3
+  scenario: incomplete
+  japanese: その男は死にかけていた。
+  reading: そのおとこはしにかけていた。
+  romaji: sono otoko wa shinikakete ita.
+  english: The man was on the brink of death.
+  tatoebaId: "208057"
+  notes: The other reading of the same auxiliary. Nothing was interrupted here; the man was close to a thing that had not happened. 死にかける is the textbook case, and it is where the English on the brink of comes from.
+
+- id: band4.the-performance-was-almost-over
+  jlpt: N3
+  scenario: incomplete
+  japanese: 演奏は終わりかけていた。
+  reading: えんそうはおわりかけていた。
+  romaji: ensou wa owarikakete ita.
+  english: The performance was almost over.
+  tatoebaId: "188770"
+  notes: 終わりかけていた, on the point of ending. Six characters carrying what English needs almost over for, and no drama in it at all -- this reading is as ordinary as the last one is grave.

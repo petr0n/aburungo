@@ -1,0 +1,42 @@
+# Book Three, Chapter 5 vocabulary -- deliberately empty.
+#
+# This chapter teaches seven ways of placing two events against each other in
+# time, and five of the seven are ordinary nouns: うち, 間, 際, 途中, 以来. Book
+# Two would have given every one of them a Word card, the way it gave 時 both a
+# pattern (grammar.b2-join-toki) and a card (vocab.toki). Book Three does not,
+# and the difference is policy rather than oversight. 04-stage-reading.md
+# section 3 and book-three-bands.md section 1 hand vocabulary at this stage to
+# the reading library and to mining: lessons carry patterns, the library carries
+# words, and lesson count decouples from word count. That decoupling is what
+# lets roughly a hundred connectives fit roughly a hundred lessons without
+# dragging two thousand words along behind them. Each of the five nouns is
+# glossed where it is taught -- in its pattern's `gloss` and its lesson's
+# grammarNote -- so nothing here is unexplained; it simply is not a flashcard.
+#
+# The brief that commissioned this chapter expected new words. The chapter
+# breakdown (docs/plans/book-three-band-04.md section 5.1) argues for zero at
+# length and calls it "a genuine break from how Book Two's 時 was taught, not an
+# oversight", and the passive chapter -- the only Book Three content that has
+# shipped -- ships an empty file for the same reason. Following the two
+# committed precedents rather than the brief is the call recorded here so that
+# whoever reconciles them can see it was made, not missed.
+#
+# Three kanji do arrive with this chapter, and they are not affected by any of
+# the above: 際 (lesson 3), 途 (lesson 5) and 以 (lesson 6). A character a
+# learner will keep meeting in the reading library is worth introducing whether
+# or not its carrier word gets a flashcard. They are named in the header of
+# lessons/b3-04-time.yaml; the `kanji:` arrays there are empty pending the
+# wiring pass that fills them.
+#
+# The chapter's cited sentences do use words the learner does not own -- 焦げ臭い,
+# 吐き気, 警備体制, 丸焼け, 消防車 among them. That is not a gap this file should
+# close either, for the same section 3 reason.
+#
+# The file exists so the chapter's four content files stay a matched set and so
+# the next author does not go looking for a missing one. An empty array parses;
+# a file of comments alone does not, which is why the `[]` below is load-bearing
+# rather than decorative.
+#
+# content-source: n/a -- this file adds no Japanese content.
+
+[]

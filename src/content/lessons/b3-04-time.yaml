@@ -1,0 +1,247 @@
+# Chapter 5 -- More than one way to say "when".
+#
+# Book Two taught one word for "when": 時, a noun, taking a whole clause in
+# front of it the way any noun can (b2-03 lesson 6, generalised to any noun at
+# all in lesson 7). This chapter does not replace 時 -- it surrounds it. Six
+# more ways to place two events against each other in time, plus one that is
+# not about placing events at all, and the point of the chapter is that none of
+# them is a synonym for 時 or for each other. A learner who reaches for 時 every
+# time will sound flat, formal where they meant casual, vague where they meant
+# precise -- and in a few places will find that 時 simply does not say the
+# thing. That last part is worth stating carefully, because the easy version of
+# it is false. 時 is not ungrammatical in most of these slots; 暗くなる時 and
+# 聞いた時 are both fine Japanese. What happens is that they mean something
+# else. 暗くならない時 is grammatical and means "at times when it does not get
+# dark", which is not "before dark" and never will be. Each lesson below states
+# what its own pattern does that 時 does not, because that is the only fact
+# worth teaching once the form itself is this easy to pick up.
+#
+# Five of the seven run on a mechanism the learner already owns outright. 時 is
+# an ordinary noun, and an ordinary noun takes a clause in front of it through
+# one attachment table -- verb and い-adjective attach directly, な-adjective
+# takes な, noun takes の. うち, 間, 際 and 途中 are ordinary nouns too, and
+# every one of them takes that same table. This chapter does not re-teach the
+# table four more times; it teaches four more nouns and lets the table do the
+# work it was built for. 以来 bends it -- a noun goes straight onto 以来 with no
+# の at all. とたん breaks it on purpose: plain past, and nothing else, so there
+# is no table to consult. And かける breaks it completely -- not a noun, an
+# auxiliary bolted onto a verb's ます-stem, the same cut the learner already
+# made for ながら. That is placed last so the chapter does not end on "one more
+# noun."
+#
+# 間 and かける both collide with words the learner already owns, and both
+# collisions get named rather than left to be tripped over. 間 is already
+# "between", spatial, from the around-town chapter; here it is a stretch of
+# time (JMdict 1215230, sense 2, not sense 1), and whether something happened
+# once inside that stretch or lasted the whole of it is lesson 2's real
+# content -- with に, without に. かける is already "to hang, to put on
+# (glasses)" from the clothes chapter, and the honest version of that collision
+# is not the one the chapter breakdown gives: JMdict does not file the
+# auxiliary as a separate headword, it files it as sense 24 of the very same
+# entry, 1207610, tagged `suf`. Same word, stretched a long way. What separates
+# them is grammar, not lexicography -- the verb takes its own object and stands
+# alone, the suffix takes neither -- and lesson 7 says that rather than
+# claiming two words where the dictionary has one.
+#
+#   1  うちに     a closing window -- act before a state stops being true
+#   2  間(に)     a stretch of time -- once inside it, or spanning all of it
+#   3  際(に)     時's formal twin -- announcements, instructions, rules
+#   4  たとたん   時's sharpest edge -- the instant, and it caught you off guard
+#   5  途中で     not "when" at all -- partway through something unfinished
+#   6  以来       not a moment but a start line -- true ever since, still true
+#   7  かける     not a noun -- a verb stopped partway, or about to begin
+#
+# Every lesson depends on grammar.b2-join-toki landing first, for the contrast
+# each grammarNote draws. Lessons 1-3 and 5 additionally lean on the
+# noun-clause attachment table from b2-03 lessons 6-7; lesson 4 needs the plain
+# past (grammar.b2-plain-ta) specifically, since とたん takes nothing else;
+# lesson 6 needs the te-form for its second attachment shape; lesson 7 needs
+# the ます-stem cut from grammar.b2-join-nagara. No lesson here depends on
+# another lesson in this chapter, so the order above is pedagogical -- cluster
+# the 時-family first, then the two structural outliers -- rather than
+# load-bearing, unlike Book Two chapter 1's forms.
+#
+# No new vocabulary ships in this chapter, by policy rather than by accident;
+# vocabulary/b3-04-time.yaml carries the argument and the note that the
+# commissioning brief expected otherwise. うち, 間, 際, 途中, 以来 and とたん are
+# taught purely as grammar -- pattern, gloss, attested sentences for the cloze
+# review -- never as Word cards. The `wordIds` below name words the learner
+# already owns which the lesson's own sentences use or whose collision the
+# lesson turns on; they are an SRS pull, not new teaching.
+#
+# Three kanji do arrive: 際 on lesson 3, 途 on lesson 5, 以 on lesson 6. 間, 中
+# and 来 are already taught, so 途中 and 以来 each cost one character rather than
+# two, and 端 is not introduced at all -- see lesson 4's note on why this
+# chapter's とたん sentences are the kana ones. The `kanji:` arrays below are
+# empty pending the wiring pass that fills them; this header is where that pass
+# reads which lesson takes which character.
+#
+# One rule the grammarNotes hold themselves to, stated once because it is
+# stricter than Book Two's and a later editor will otherwise undo it by
+# accident. A grammarNote here may show a conjugation chain (言う becoming
+# 言いかける), a fragment (火事の際は), or a sentence that is a phrase card in
+# this chapter or in an earlier book, quoted whole. It may not show a Japanese
+# sentence that is none of those. Several notes therefore describe a sentence
+# in English where a draft would have composed a Japanese one or trimmed an
+# attested one down to fit. That is 04-stage-reading.md section 8 reaching into
+# the prose, not only into the cards.
+#
+# content-source: every phrase this file references is a verified Tatoeba pair,
+#   cited by id in `tatoebaId` in phrases/b3-04-time.yaml. No
+#   training-canonical sentence is used anywhere in this chapter
+#   (04-stage-reading.md section 8).
+
+- id: b3.seq-uchini
+  order: 227
+  chapterId: b3.band-4
+  situation: More than one way to say "when"
+  title: Before it's too late
+  canDo: Say to do something now, while a passing state or chance is still true
+  wordIds:
+    - vocab.toki
+    - vocab.wakai
+    - vocab.karada
+    - vocab.ie
+  phraseIds:
+    - band4.eat-your-soup-while-its-hot
+    - band4.build-up-your-body-while-young
+    - band4.we-set-up-our-tents-before-dark
+    - band4.the-house-burnt-down-before-the-fire-engine-arrived
+  kanji: []
+  patternId: grammar.b3-uchini
+  grammarNote: "うち is a noun, and it takes a clause in front of it through the table you already have from 時 — a plain verb or an い-adjective goes straight on, a な-adjective takes な, a noun takes の. 熱いうちに. 若いうちに. 忘れないうちに. Nothing about the form is new; what is new is what it means. 時 says two things coincided. うちに says the first thing is a window that is closing, and you should act before it shuts. スープは熱いうちに召し上がって下さい — the soup is cooling while the sentence is being said. Swap in 熱い時 and you have a sentence about soup temperature in general, which is not what anybody meant. That is the whole pattern, and the rest of this note is about the shape it usually wears. It is very often negative. 〜ないうちに reads literally as while it has not yet happened, and that is how Japanese says before it happens. 暗くならないうちに, before it gets dark. 忘れないうちに, before I forget. English puts the negative nowhere and Japanese puts it on the verb, so the translation and the original do not line up word for word and you should not expect them to. Watch what 時 does in that slot, because it is instructive: 暗くならない時 is perfectly grammatical and means at times when it does not get dark. It is not wrong, it is about something else. This is the one place in the chapter where the two are not near-neighbours at all. The state in front of うちに has to be one that will end. That is why 若いうちに works and why a permanent fact sits badly there. It also explains the two flavours you will meet — an instruction to act while there is still time, スープの sentence and 若いうちに体を鍛えなさい, and a report that the window shut before anybody could, 消防車が到着しないうちに、その家は丸焼けになった. Same pattern, opposite outcomes. The next lesson's 間に is the near-neighbour, and the difference is exactly this closing. Both gloss as while in English, both take a stretch of time, and with some clauses either is possible — うちに is the one that adds the deadline."
+
+- id: b3.seq-aida
+  order: 228
+  chapterId: b3.band-4
+  situation: More than one way to say "when"
+  title: Sometime while it lasts
+  canDo: Say something happened at one point during a stretch of time, or lasted the whole of it
+  wordIds:
+    - vocab.aida
+    - vocab.toki
+    - vocab.denwa
+    - vocab.arau
+  phraseIds:
+    - band4.i-visited-paris-while-i-was-in-europe
+    - band4.the-tub-ran-over-while-she-was-on-the-phone
+    - band4.ill-sweep-the-floor-while-you-wash-the-dishes
+    - band4.hold-still-while-i-fix-your-tie
+    - band4.his-dog-stared-at-him-while-he-had-breakfast
+  kanji: []
+  patternId: grammar.b3-aida
+  grammarNote: "You have owned 間 since the around-town chapter, where it meant between — 駅と学校の間にあります. This is the same character, the same reading, and a second job that has nothing to do with the first. Not the space between two things: a stretch of time. The dictionary lists both under one entry and calls them separate senses, and that is a fair description of what has happened here. The attachment is the table again — a plain verb clause goes straight on, a noun takes の, 私たちが留守の間 for the whole time we are away. Then one particle carries the entire lesson. With に, the second thing happened at a point inside the stretch. 彼女が電話をしている間にふろ桶があふれた — the call lasted a while, the tub overflowed once, somewhere in the middle. Without に, the second thing lasted the whole stretch, matched end to end. ネクタイを締める間、ちょっとじっとしてね — stay still for all of it, not at some moment during it. The test is not the tense and it is not the verb in front; it is what the second half is doing. A one-off event needs に, because it has to be placed somewhere. Something that genuinely runs the full length takes bare 間, because there is nowhere to place it. What the test does not do is decide for you when the second half only fills part of the span — that can still take に, and the two are closer there than the neat version of the rule suggests. Notice also that 間に is not a past-tense pattern. あなたが皿を洗っている間に、私は床を掃除します is entirely in the non-past, and に is still saying the same thing: get the floor done inside the washing-up. Two things worth having in advance. ている in front of 間 is the ordinary way to draw a stretch, since an activity under way has the beginning and end a span needs — but a plain non-past works too, as 締める間 shows. And 間に合う, to be in time, is a different word that happens to start with the same two characters and has no connection to any of this; when you meet 間に合った, nothing here applies. Against 時, 間(に) draws something 時 cannot: 時 marks a moment, and 間 marks a bounded duration and then says whether the second event was a point inside it or ran its whole length. Against last lesson's うちに, 間 is the neutral one — it says a stretch, and says nothing about that stretch running out."
+
+- id: b3.seq-sai
+  order: 229
+  chapterId: b3.band-4
+  situation: More than one way to say "when"
+  title: The formal way to say "when"
+  canDo: Say "when" the way an announcement, an instruction or a rule does
+  wordIds:
+    - vocab.toki
+    - vocab.tomodachi
+    - vocab.denwa
+  phraseIds:
+    - band4.i-broke-the-lock-when-i-opened-the-door
+    - band4.in-the-case-of-fire-dial-119
+    - band4.you-must-fasten-your-seat-belts-during-take-off
+    - band4.i-was-treated-to-soba-when-i-visited-my-friend
+  kanji: []
+  patternId: grammar.b3-sai
+  grammarNote: "際, read さい, is 時 in a suit. Same job, same attachment table, one register higher. A plain verb attaches straight to it, non-past or past — ドアを開ける際に, 訪問した際. A noun takes の — 火事の際, 離陸の際. And the particle after it varies the way it does after any noun: 際に points at the occasion, 際は sets up a case, 際の modifies what follows. There is no new mechanism here at all, which is why this lesson is short. What is new is where it belongs. 際 is what a sign reaches for, a manual, a safety card, a form, an announcement over a station PA. 火事の際は１１９番に電話してください is a notice on a wall. 火事の時は would be understood by everyone and would sound like a person talking. 時 is register-neutral — as at home in a text message as in a contract — and 際 is not neutral at all; it carries formality by itself, the way です against だ carried it for a whole sentence in Book Two. One word doing what a whole style used to. It does have a limit, and it is worth knowing before you over-apply it. 際 wants an occasion — something with edges, an event you could point at. 訪問した際 and 離陸の際 are occasions. A state is not: 若い時 and 若いうちに are how you say while young, and 若い際 is not said. So 際 is not simply formal 時 with the same reach; it is formal 時 for the subset of cases that are occasions. The last of this lesson's sentences is there to stop the register lesson from going too far the other way. 長野にいる友人を訪問した際、おいしいそばをごちそうになった is an ordinary story, not a regulation — 際 in a written account rather than on a sign. Formal does not mean official. One more thing, since 際 is a new character. It shows up in words that have nothing to do with this pattern: 実際 in fact, 国際 international, 交際 a relationship. And read きわ instead of さい it is a different entry again, meaning edge or brink. Meeting the character is not the same as meeting the pattern; what you are looking for is 際 with a clause in front of it."
+
+- id: b3.seq-totan
+  order: 230
+  chapterId: b3.band-4
+  situation: More than one way to say "when"
+  title: The instant it happened
+  canDo: Say one thing happened the very instant another did, and that nobody saw it coming
+  wordIds:
+    - vocab.toki
+    - vocab.kiku
+    - vocab.akeru
+  phraseIds:
+    - band4.he-turned-pale-on-hearing-this
+    - band4.he-smelt-burning-the-instant-he-opened-the-door
+    - band4.she-turned-pale-the-moment-she-heard-the-news
+    - band4.the-fuse-blew-the-moment-tom-turned-on-the-tv
+  kanji: []
+  patternId: grammar.b3-totan
+  grammarNote: "This is the one pattern in the chapter with no attachment table, and that is a mercy rather than an irregularity. とたん takes a plain past verb and only that. 聞いたとたん. 開けたとたん. つけたとたん. There is no non-past version, no い-adjective version, no な-adjective version and no noun-plus-の version to memorise, because the form in front is fixed. If you can build the plain past — and you have had it since Book Two — you can build this. The に after it is optional and changes nothing: とたん and とたんに are both ordinary, and this lesson's four sentences show you both. What it means is zero gap. Not soon after, not shortly, but at the instant, with nothing in between. その知らせを聞いたとたんに彼女は青くなった. 時 would be grammatical there — 聞いた時 — and would mean when she heard it, which allows a pause, a moment's thought, a delay. とたん allows none. The second half carries a flavour on top of the timing, and it is the part a form chart will not tell you. Almost every time, what follows is something that took the speaker by surprise, or was outside anybody's control, or both. Fires break out, fuses blow, faces go pale, someone starts laughing. That flavour is why the second half is nearly always in the past — it is a report of something that already happened — and why you will not meet this pattern giving an instruction or announcing a plan. Do not use it for the mundane and the arranged: for the sentence about buying a ticket when you get on the bus, 時 is the word, and とたん would be strange. On spelling. とたん is also written 途端 in kanji, and both spellings are ordinary; the four sentences on this lesson's cards happen to be the kana ones, so that is what you will type. 端 is not taught here — it earns nothing else at this stage — but 途 arrives in the next lesson but one, in 途中, and the two words are relatives. The previous chapter's 〜次第 is the neighbour worth keeping straight from this one, since both come out as as soon as in English. 次第 is for what you will do the moment something is finished, and it looks forward. とたん is for what happened to you the moment something else did, and it looks back."
+
+- id: b3.seq-tochu
+  order: 231
+  chapterId: b3.band-4
+  situation: More than one way to say "when"
+  title: Partway there
+  canDo: Say something happened partway through a trip or a task that was not finished yet
+  wordIds:
+    - vocab.toki
+    - vocab.eki
+    - vocab.gakkou
+    - vocab.iku
+    - vocab.au
+  phraseIds:
+    - band4.i-was-caught-in-a-shower-on-my-way-to-the-station
+    - band4.i-met-tom-on-my-way-to-school
+    - band4.dont-give-up-halfway
+    - band4.she-felt-sick-halfway-through-the-lecture
+  kanji: []
+  patternId: grammar.b3-tochu
+  grammarNote: "途中 is two characters that mean what they look like — 途 is a way or a road, 中 is the middle of something, and you have had 中 since Book One. The middle of the road. That is the whole idea, and the word keeps it whether the road is a literal one or a piece of work. The attachment is the table again. A verb goes straight on — 駅へ行く途中で, 学校へ行く途中で — and a noun takes の — 講義の途中で. It also stands entirely alone with nothing in front of it, and then it means whatever you are in the middle of: 途中であきらめるな, do not give up halfway. で is the usual particle after it, and it is doing double duty, marking a place as much as a time; に turns up too, for something that happens against the process rather than at a point in it. Here is what it does that 時 does not. Both 学校へ行く時 and 学校へ行く途中で can come out as on my way to school in English, and only one of them commits to anything. 時 says the two things coincided and stops there. 途中で says the journey was under way and not finished when the second thing happened — Tom was met before school was reached. That unfinished part is not a shade of meaning, it is the meaning, and it is why 途中 works equally on a task with no journey in it. Halfway through a lecture, halfway through a meal, halfway through a piece of work. Set it beside last week's 間に, which is the closest thing to it in this chapter. 間に needs a stretch of time with two ends. 途中で needs a process with a destination or a finish, and then puts you somewhere short of it. A lecture can be both, which is why 講義の間に and 講義の途中で are both sayable — the first places an event inside a span, the second says the lecture had not finished."
+
+- id: b3.seq-irai
+  order: 232
+  chapterId: b3.band-4
+  situation: More than one way to say "when"
+  title: Ever since
+  canDo: Say something has been true continuously, starting from one clear point in the past
+  wordIds:
+    - vocab.toki
+    - vocab.au
+    - vocab.nomu
+    - vocab.shinu
+  phraseIds:
+    - band4.i-havent-seen-tom-since-1988
+    - band4.security-has-been-stepped-up-since-the-bomb-scare
+    - band4.he-took-to-drinking-after-his-wife-died
+    - band4.he-has-never-been-heard-of-since
+  kanji: []
+  patternId: grammar.b3-irai
+  grammarNote: "以来 is not a moment, it is a start line. Everything after it has held from that point up to now. It attaches two ways and both are common. A noun goes straight onto it with no particle at all — １９８８年以来, 爆破予告以来, それ以来 — and that bare join is worth noticing, because every other noun in this chapter took の. A te-form verb also goes straight on: 妻が死んで以来, ever since his wife died. The te-form is doing the same job it does in front of から, marking the point the rest of the sentence runs forward from. Two conditions come with it, and they are what make it more than a formal から. The start line has to be in the past — 来年以来 is not Japanese, because you cannot have been anything ever since next year. And what follows has to still be the case. That is why these sentences are full of ていません and ていない and になってしまった: １９８８年以来トムに会っていません is not a report about 1988, it is a report about now, measured from 1988. から is the collision to watch, and the honest version is narrower than the warning you may expect. から is not wrong for time and never was — ３時から, from three o'clock, is ordinary and correct, and から will happily take a future start line that 以来 refuses. から is the general-purpose one, doing origin since Book One and reason since Book Two. 以来 is the narrow one: past point, unbroken span, still true. When a sentence would work with either, から is the plain choice and 以来 the weightier, more written one. The test to carry: if you would naturally add and it still is, 以来 is available. If you would not, it is not. Since 以 is a new character, it is worth seeing the family it belongs to, because they all work the same way — 以上 from here up, 以下 from here down, 以内 within, 以前 before, 以後 after. In each of them 以 marks the point you count from, and the second character says which direction. 来 you already have from 来る."
+
+- id: b3.seq-kakeru
+  order: 233
+  chapterId: b3.band-4
+  situation: More than one way to say "when"
+  title: Started, and then
+  canDo: Say you started something and did not finish it, or that something was on the point of happening
+  wordIds:
+    - vocab.kakeru
+    - vocab.shukudai
+    - vocab.wasureru
+    - vocab.kao
+    - vocab.obaasan
+    - vocab.shinu
+  phraseIds:
+    - band4.i-left-my-homework-half-done
+    - band4.he-started-to-say-something-but-i-beat-him-to-it
+    - band4.im-already-forgetting-my-grandmothers-face
+    - band4.the-man-was-on-the-brink-of-death
+    - band4.the-performance-was-almost-over
+  kanji: []
+  patternId: grammar.b3-kakeru
+  grammarNote: "Start with the collision, because it will bother you otherwise. You already have かける from the clothes chapter — めがねをかけています, I wear glasses; to hang, to put on. This is not a different word that happens to sound the same. The dictionary files what you are about to learn as sense 24 of that same entry, tagged as a suffix: to be partway doing something, to begin but not complete, to be about to. One word, stretched a very long way from hanging a coat. What separates them is grammar rather than vocabulary, and the split is clean. The かける you know is a verb with its own object — you hang something. The かける you are learning takes no object and cannot stand alone at all; it needs another verb to ride on. The form is the ます-stem, the same cut you made for ながら. Take ます off and put かける on. 言う, 言います, 言いかける. 忘れる, 忘れます, 忘れかける. 死ぬ, 死にます, 死にかける. And what comes out is an ichidan verb whatever went in, so it conjugates the way 食べる does — 言いかけた, 忘れかけている, 死にかけていた. Two readings come out of it and both are the same idea seen from different ends. Interrupted partway: 彼が何か言いかけたが先手を打ってやった, he began the sentence and never got to finish it. On the point of: その男は死にかけていた, he had not died and was close to it. What the two share is that the action is not complete — one because it stopped, one because it has not arrived — and Japanese does not treat them as separate patterns. 私はおばあさんの顔をもう忘れかけている sits between them, which is why it is on a card here. The stem+かけ chunk also freezes into a noun, and you will meet that as often as the verb: やりかけ, a half-done thing, 宿題をやりかけにしておいた; 読みかけの本, a book you are partway through. Two cautions. This lesson is not competing with 時 the way the first four did — かける describes an action's own incompleteness, which is not something any of the when-words can express, so there is no contrast to draw. And the same verb has produced a pile of compounds that are not this sense at all: 出かける to go out, 話しかける to address someone, 追いかける to chase. If the stem in front does not read as an unfinished version of itself, you are looking at a fixed word, not this pattern."
+
+- id: b3.checkpoint-4
+  order: 234
+  chapterId: b3.band-4
+  situation: Integration & checkpoint
+  title: Chapter 5 checkpoint
+  canDo: Recognise everything this chapter taught
+  wordIds: []
+  phraseIds: []
+  kanji: []
+  checkpoint: recognition
+  grammarNote: "A wide pass over everything this chapter has taught, and this is also where the seven get set side by side, since they were deliberately taught one at a time. 時 is still the neutral default and has not been demoted — it is correct far more often than not, and reaching for it is never an error of grammar. What the others add on top of it is the thing to have straight. うちに adds a deadline: the state in front of it is running out, and 〜ないうちに is how before happens is said. 間 adds a bounded stretch, and its one particle decides everything — に for a thing that happened at a point inside, no に for a thing that lasted the whole length. 際 adds register and nothing else, and only where there is an occasion to point at. たとたん adds an instant with no gap and a second half nobody saw coming, past tense, plain past verb in front, no exceptions to look up. Then two that are not competing for when at all, and that is the distinction most worth checking. 途中で puts you inside something unfinished — a journey short of its destination, a task short of its end. かける puts the incompleteness inside the verb itself: started and dropped, or not started and nearly there. Neither answers when something happened; they answer how far along it was. Type the reading or the meaning rather than picking it out of a line-up. Some of what comes back will hinge on one small thing — a に present or absent after 間, a negative in front of うちに that English throws away in translation, a かける that turns out to be 出かける and not this pattern at all. Those are the places worth slowing down. Anything you miss comes back sooner. It finishes when the remaining set empties; retry as often as you like, nothing is recorded."
