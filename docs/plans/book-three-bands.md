@@ -152,6 +152,33 @@ This is the second gap of the same kind as §3a's missing passive: the skeleton 
 listing connective grammar, and both misses are things that are not connectives. Worth one pass
 over the remaining bands looking for the same shape of omission before authoring starts.
 
+## 3d. A third gap, and this one is a hole in Books One and Two
+
+**Found by the band-8 planner, verified here.** 〜なければならない — the ordinary, productive way
+to say "must" in Japanese — is taught **nowhere in the course**. Not in Book One, not in Book Two,
+not as a rule and not inside any phrase a learner has met. No file under `src/content/` contains
+it. The corpus has it in **159 sentences**.
+
+This is worse than §3a's passive or §3c's だろう, both of which were Book Three's problem. This
+one means two shipped books have a hole in them: a learner finishing Book Two can say what they
+want to do, what they can do, what they intend and what they were told, and cannot say that
+something must be done.
+
+Band 8 absorbs it as its lesson 1, which is cheap — it is Book Two's ない-form plus the
+ば-conditional plus なる, all already owned. But it should also be considered for a Book Two
+revision, because the gap starts there.
+
+**All three gaps share a shape.** This skeleton was assembled by listing connective grammar, and
+the passive, だろう and なければならない are none of them connectives. Assume more of the same and
+sweep the remaining bands for it before authoring.
+
+### A related trap, worth its own line
+
+てはならない looks like 49 attested sentences. **31 of them are なくてはならない**, which is not a
+variant — it is the opposite polarity. てはならない forbids; なくてはならない obliges. A ceiling
+that lumps them hides a semantic inversion rather than noise, which is the most dangerous shape a
+misleading count can take.
+
 ## 4. What a band breakdown must add
 
 The same shape as `book-two-chapter-NN.md`, plus two things that book had no need for:
