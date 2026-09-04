@@ -167,7 +167,8 @@ following the same convention chapter 6 used for chapter 1's こと before chapt
 - **Can-do:** Tell someone what to do once something happens, and tell たら's "when" apart from とき
 - **Teaches:** the same たら form doing a different job — a specific, expected future event
   ("when," not "if"), typically paired with a request or suggestion in the second clause. This is
-  the form's real superpower: と cannot carry a request there, and ば strains under one, but たら
+  the form's real superpower: と cannot carry a request there, and ば strains under one **only
+  when its own clause is a chosen action** (「よろしければ…下さいませんか」 is ordinary), but たら
   does it without effort. This lesson also covers たら's **discovery reading** — 家に帰ったら〜が
   あった-shaped, where the first clause's completion reveals the second rather than causing it, a
   genuinely non-English pattern worth naming rather than leaving a learner to absorb by accident.
@@ -241,7 +242,7 @@ following the same convention chapter 6 used for chapter 1's こと before chapt
 - **Teaches:** ば, the one genuinely new mechanic in the chapter. Godan verbs move their last sound
   to the え row and add ば — 書く→書けば, 読む→読めば, 急ぐ→急げば — one rule across all eight
   endings, the same shape as chapter 1's ない rule, and with no exceptions of its own: う-ending
-  verbs take けば regularly (会う→会えば, not the わ that ない forces), and ある is regular too
+  verbs take えば regularly (会う→会えば, not the わ that ない forces), and ある is regular too
   (あれば). This lesson is cheaper than either of chapter 1's ない lessons despite being genuinely
   new material. Ichidan drops る and adds れば; する becomes すれば, 来る becomes くれば. This
   lesson is form only — what ば is *for* is lesson 6's job, once both conjugation classes are on
@@ -251,8 +252,9 @@ following the same convention chapter 6 used for chapter 1's こと before chapt
   1's う→わ exception for ない, so the learner sees ば does not repeat it), `vocab.taberu` 食べる,
   `vocab.suru` する, `vocab.kuru` 来る.
 - **Exercises (earlier Book Two chapters):** Chapter 1 lesson 3 (the う→わ exception under ない)
-  — 会う is shown regular under ば (買えば, not 買わる) as a direct callback showing ば does not
-  repeat that exception.
+  — 会う is shown regular under ば (買えば, not 買わば — the mistake is the false analogy with
+  買わない, not the non-existent 買わる) as a direct callback showing ば does not repeat that
+  exception.
 - **New vocabulary:** none.
 - **New phrases:** 4 — one per conjugation class (godan, ichidan, する, 来る), plain mechanical
   demonstrations of the form with no flavour attached yet.

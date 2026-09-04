@@ -1,0 +1,67 @@
+# Book Two, Chapter 3 grammar patterns — the seven joins.
+#
+# One pattern per teaching lesson, each blanking the join itself out of a
+# sentence from that lesson. The blank is matched against the phrase's reading,
+# so these are kana.
+#
+# The blanks are deliberately wider than one particle. から on its own is a
+# word the learner already has meaning "from", and ので and けど are strings a
+# learner can type without ever choosing a form -- so each blank takes the
+# predicate with it (いそがしいから, たかいけど, のるとき, はなすひと) and asks
+# for the attachment, which is the thing that is actually new. なので is the one
+# exception: there the two kana *are* the lesson, because they are what stops
+# it being だから.
+#
+# content-source: n/a for this file — every pattern references an existing
+#   phrase from phrases/b2-03-joining-sentences.yaml rather than composing new
+#   Japanese.
+# jlpt-source: training — the level marks the band this chapter sits in.
+
+- id: grammar.b2-join-kara
+  jlpt: N4
+  pattern: "plain form + から"
+  gloss: Because. Straight onto a verb or an い-adjective; a noun or な-adjective takes だ first.
+  phraseId: join.im-busy-so-im-not-going
+  blank: いそがしいから
+
+- id: grammar.b2-join-node
+  jlpt: N4
+  pattern: "plain form + ので"
+  gloss: The same reason, said more softly — and な where から took だ.
+  phraseId: join.im-a-student-so-i-dont-have-money
+  blank: なので
+
+- id: grammar.b2-join-kedo
+  jlpt: N4
+  pattern: "predicate + けど"
+  gloss: But. It attaches to a finished sentence, plain or polite, either way.
+  phraseId: join.expensive-but-good
+  blank: たかいけど
+
+- id: grammar.b2-join-te
+  jlpt: N4
+  pattern: "て + second verb"
+  gloss: And then. The te-form joining two verbs in the order they happened.
+  phraseId: join.i-read-a-book-and-listened-to-music
+  blank: よんで
+
+- id: grammar.b2-join-nagara
+  jlpt: N4
+  pattern: "ます-stem + ながら"
+  gloss: While. Stop before ます, add ながら — two actions at once, one person doing both.
+  phraseId: join.i-read-while-i-eat
+  blank: たべながら
+
+- id: grammar.b2-join-toki
+  jlpt: N4
+  pattern: "plain clause + 時"
+  gloss: When. A whole clause standing in front of an ordinary noun meaning "moment".
+  phraseId: join.when-i-get-on-the-bus
+  blank: のるとき
+
+- id: grammar.b2-join-noun-clause
+  jlpt: N4
+  pattern: "plain clause + any noun"
+  gloss: The book I bought, the person who speaks. The same slot 時 used, with no 時 in it.
+  phraseId: join.someone-who-speaks-english
+  blank: はなすひと

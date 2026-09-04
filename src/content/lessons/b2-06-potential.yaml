@@ -1,0 +1,227 @@
+# Chapter 6 -- Being able to.
+#
+# Ability is the third time this book asks a learner to conjugate by verb group
+# -- te-form in Book One, plain form in the chapter that opened this one, now
+# potential. The te-form chapter split godan into three lessons because its five
+# endings genuinely sound different: いて, いで, って, んで, して. The plain-form
+# chapter's ない did not repeat that shape -- every godan ending shifts to the
+# あ row and takes ない, one rule, one lesson -- because ない's row-shift is
+# uniform where te-form's is not. Potential is the same kind of rule as ない:
+# every godan ending shifts to the え row and takes る, no exceptions, no group
+# that behaves differently from its neighbours. This chapter follows the
+# plain-form chapter's precedent, not te-form's -- one lesson for the easy half,
+# one lesson for every godan ending at once. Four lessons of table in two, and
+# even う, which ない bends into わ, behaves here with no exception at all:
+# 買う becomes 買える, not 買わる.
+#
+# What that buys back gets spent on what te-form never had to teach: a potential
+# verb takes が for the thing you can do, not を. 英語を話します becomes
+# 英語が話せます, and the mistake is invisible in an isolated conjugation drill --
+# it only shows up in a sentence, which is why it earns a lesson of its own
+# rather than a footnote on lesson 2.
+#
+# できる, する's irregular potential, turns out to have a second life: it
+# attaches straight to a noun of skill with no verb and no conjugation at all --
+# 料理ができる, 英語ができる. 〜ことができる sits beside it as the other
+# conjugation-free path, dictionary form plus a fixed phrase, working on any verb
+# with no group to sort. Both are placed after the verb-potential lessons on
+# purpose: each reads as another way, which is the point being made, not as the
+# first thing a learner reaches for.
+#
+# 〜やすい and 〜にくい are not potential forms -- they say the thing itself is
+# easy or hard, not that the speaker is able -- and the chapter carries them
+# anyway because the confusion is real enough to be worth one lesson of
+# contrast. They attach to the ます-stem, which every verb in this book has had
+# since lesson one, so the mechanics cost nothing; the teaching is the
+# distinction, and the trap that 安い -- already owned, a different word --
+# happens to share the reading.
+#
+#   1  the easy half                ichidan, する, 来る -- できる is born here
+#   2  every other verb             one え-row rule, all eight godan endings
+#   3  what you can, in a sentence  が replaces を; negative; question
+#   4  skills without a verb        noun + できる, no conjugation at all
+#   5  the other way to say it      ことができる, on the dictionary form
+#   6  easy to, hard to             やすい／にくい, and why they are not potential
+#
+# Lessons 3-5 all stand on できる or the verb-potential existing first, so this
+# chapter does not split before its checkpoint -- the same constraint the
+# te-form and plain-form chapters carry.
+#
+# The え row is named in those words on purpose and should stay named that way.
+# The conditionals chapter builds 書けば off the same shelf and says so, and a
+# learner who met it here as "the え row" and there as something else has been
+# handed two rules where the language has one.
+#
+# The `kanji:` arrays are empty and should stay that way. This chapter brings one
+# new word, できる, and it is conventionally written in kana -- so there is no
+# character here to teach, which is the honest consequence of a chapter built
+# entirely out of endings on verbs the learner already owns.
+#
+# content-source: n/a for this file -- it references vocabulary/b2-06-potential.yaml
+#   and phrases/b2-06-potential.yaml, whose own provenance markers apply.
+
+- id: b2.potential-easy
+  order: 149
+  chapterId: b2.chapter-6
+  situation: Being able to
+  title: Saying what you can do, the easy half
+  canDo: Say what you are able to do, for ichidan verbs and the two irregulars
+  wordIds:
+    - vocab.dekiru
+    - vocab.taberu
+    - vocab.miru
+    - vocab.kariru
+    - vocab.oboeru
+    - vocab.okiru
+    - vocab.suru
+    - vocab.kuru
+    - vocab.sushi
+    - vocab.kaimono
+    - vocab.ashita
+    - vocab.kyou
+  phraseIds:
+    - dekiru.i-can-eat-sushi
+    - dekiru.i-cant-go-shopping-today
+    - dekiru.i-cant-come-tomorrow
+  kanji: []
+  patternId: grammar.b2-potential-ichidan
+  grammarNote: "Three things you can already say sit close to this one and none of them is it. 食べたいです is what you want. 食べてもいいですか is whether you are allowed. This lesson is whether you are able — 食べられます — and it is a fourth thing again from all of those. Ichidan verbs are the easy half because there is one move: drop る, add られる. 食べる → 食べられる, 見る → 見られる, 借りる → 借りられる, 覚える → 覚えられる, 起きる → 起きられる. する has no rule at all. Its potential is できる, a different word with its own card, and you will use it far more than any other verb in this chapter. 来る goes to 来られる, and the reading moves the way it always does — 来られる is こられる, never くられる, the same shift that made 来ない こない. What comes out the other end is itself an ichidan verb, whatever it started as, so everything you know about conjugating 食べる applies to 食べられる unchanged. Two honest warnings. First, in speech and in casual writing you will constantly meet 食べれる, 見れる, 来れる with the ら dropped — this is ら抜き, it is everywhere, and it is worth recognising instantly, but write the ら in anything polite. It only ever happens to ichidan verbs and 来る; there is no ら in a godan potential to drop. Second, られる has another job this book has not taught yet, so 見られる can mean I was able to see it or it was seen by somebody. Context does the sorting, and 見る has a rival worth knowing besides: 見える is not circumstantial ability — it means something is visible, it comes into view whether or not anyone tried. It does carry your own eyesight, though: 眼鏡がないと見えません is how you say you cannot see without your glasses, never 見られません. 海が見えます is the sea simply being there in front of you; 映画が見られます is you being in a position to watch. 聞く has the same pair, 聞ける against 聞こえる."
+
+- id: b2.potential-godan
+  order: 150
+  chapterId: b2.chapter-6
+  situation: Being able to
+  title: Saying what you can do, the rest
+  canDo: Say what you are able to do, with any verb
+  wordIds:
+    - vocab.kaku
+    - vocab.oyogu
+    - vocab.hanasu
+    - vocab.matsu
+    - vocab.shinu
+    - vocab.yobu
+    - vocab.yomu
+    - vocab.kau
+    - vocab.au
+    - vocab.kaeru
+    - vocab.hashiru
+    - vocab.aru
+    - vocab.kippu
+    - vocab.menyuu
+    - vocab.hayai
+  phraseIds:
+    - dekiru.i-can-swim
+    - dekiru.can-we-meet-tomorrow
+    - dekiru.i-cant-go-home-early-today
+    - dekiru.i-cant-read-the-menu
+  kanji: []
+  patternId: grammar.b2-potential-godan
+  grammarNote: "One rule covers every godan verb there is. Move the last sound to the え row and add る. 書く → 書ける. 泳ぐ → 泳げる. 話す → 話せる. 待つ → 待てる. 死ぬ → 死ねる. 呼ぶ → 呼べる. 読む → 読める. 買う → 買える. 帰る → 帰れる. Nine endings, one move, and it is the mirror of the あ-row move that gave you 書かない. Where ない had exceptions this has none. A verb ending in う is regular here — 買える, 会える — and there is no わ anywhere in the potential; that exception belongs to ない alone. 行く is regular too, which the te-form chapter could not say about 行って. The one trap that does carry over is the shape of る verbs. 帰る and 走る end in る and are godan, so they take the godan rule: 帰れる, 走れる, never the ichidan-looking 帰られる. Ask which class the verb is, not what letter it ends in. The rule reaches things you do, not things that simply happen, and a handful of verbs in your deck sit on the wrong side of that line. ある is the clearest: existence is not something a thing can be better or worse at, so there is no ordinary sentence where you would say it — English has the same hole, and no way to say a table can exist either. わかる and 知る are the ones to actually watch, because they do produce a form and it is not the one you want: 分かれる means to branch or separate, 知れる means to become known. Neither one means being able to understand or being able to know, and わかる already carries that meaning by itself. Leave it alone. Two sentences you have been saying since Book One turn out to have been this all along: 切符はどこで買えますか and カードで払えますか are 買う and 払う in the potential, memorised whole long before there was a rule to hang them on."
+
+- id: b2.potential-ga
+  order: 151
+  chapterId: b2.chapter-6
+  situation: Being able to
+  title: What you can, and can't, do
+  canDo: Talk about ability in a full sentence, marking the thing you can do correctly
+  wordIds:
+    - vocab.hanasu
+    - vocab.eigo
+    - vocab.oyogu
+    - vocab.yomu
+    - vocab.hon
+    - vocab.tsukau
+    - vocab.hashi-chopsticks
+    - vocab.sukoshi
+    - vocab.zenzen
+    - vocab.mada
+  phraseIds:
+    - dekiru.i-can-speak-a-little-english
+    - dekiru.i-cant-swim-at-all
+    - dekiru.can-you-speak-english
+    - dekiru.i-cant-use-chopsticks-yet
+  kanji: []
+  patternId: grammar.b2-potential-ga
+  grammarNote: "Here is the part a conjugation table cannot show you. 英語を話します is an ordinary sentence about doing something to an object. Put the verb in the potential and the object stops being an object: 英語が話せます. The sentence is no longer about performing an action, it is about a state — the English is speakable, by me — and が is the particle a state takes. 本が読めます, 箸が使えます. This is the single most common mistake made with this form, and you will not notice yourself making it while drilling verbs on their own. Two honest qualifications, because を has not disappeared from the language. You will hear 英語を話せます, especially in longer sentences where the object is a long way from the verb, and it is not an error — が is the textbook answer and the one this book uses. And the を that marks a path or a place you leave is a different を, which never changes at all: 道を歩けます, 家を出られます. What costs you nothing is everything else. A potential verb is an ichidan verb, so the negative is the rule you already have — 話せる → 話せない, 話せなかった — and polite is 話せます, 話せません. The question is just か on the end: 英語が話せますか. Two adverbs do a lot of work here and both want the negative: ぜんぜん話せません is not at all, まだ話せません is not yet, and the second is a much kinder thing to say about yourself."
+
+- id: b2.dekiru-noun
+  order: 152
+  chapterId: b2.chapter-6
+  situation: Being able to
+  title: Skills without a verb
+  canDo: Say what you are able to do using a noun instead of a verb
+  wordIds:
+    - vocab.dekiru
+    - vocab.eigo
+    - vocab.ryouri
+    - vocab.shigoto
+    - vocab.kaimono
+    - vocab.sukoshi
+    - vocab.zenzen
+  phraseIds:
+    - dekiru.i-know-a-little-english
+    - dekiru.i-cant-work-today
+    - dekiru.can-you-cook
+  kanji: []
+  patternId: grammar.b2-dekiru-noun
+  grammarNote: "できる arrived as する's potential. It is also an ordinary verb in its own right, and this is where it earns its keep: put a noun in front of it with が and you have said you can do that thing, with no verb in the sentence at all and nothing conjugated. 料理ができます. 英語ができます. 仕事ができます. Half of these are the same rule you already met, seen from the other side. 仕事をします and 買い物をします are nouns with する attached, so putting する into the potential turns them into 仕事ができます and 買い物ができません — the を becomes が and します becomes できます. The other half is not a rule at all: 英語 does not take する, and 英語ができます simply means the skill is there. That one is wider than 英語が話せます — it takes in reading and understanding, not only speaking. Where this stops is worth knowing before you overreach with it. The noun has to name a skill or an activity, not a thing. すしができます does not mean you can eat sushi; できる has a whole other sense of coming out ready, so what you have said is closer to the sushi is done. For an object, you need a verb — すしが食べられます."
+
+- id: b2.koto-dekiru
+  order: 153
+  chapterId: b2.chapter-6
+  situation: Being able to
+  title: The other way to say it
+  canDo: Say what you are able to do without conjugating the verb at all
+  wordIds:
+    - vocab.koto
+    - vocab.dekiru
+    - vocab.oyogu
+    - vocab.yomu
+    - vocab.tsukau
+    - vocab.miru
+    - vocab.kariru
+    - vocab.hon
+    - vocab.menyuu
+  phraseIds:
+    - dekiru.i-can-swim-koto
+    - dekiru.i-cant-read-the-menu-koto
+    - dekiru.you-can-borrow-books-here
+  kanji: []
+  patternId: grammar.b2-koto-dekiru
+  grammarNote: "There is a second way to say all of this, and it needs none of the last four lessons. Take the dictionary form — the plain non-past, exactly as it sits on the card — and add ことができます. 泳ぐことができます. 読むことができます. 借りることができます. Every verb, both classes, both irregulars, nothing to sort and nothing to remember. こと is not new; it is the same nominaliser you used to turn a verb into a thing, doing its second job here. Two things differ from the short form and both are small. The object keeps を: メニューを読むことができません, against メニューが読めません. Inside this pattern 読む is still an ordinary verb with an ordinary object, and only the potential ending forced が in the first place. And する now has two correct routes to one meaning — できます from the first lesson, or することができます from this one. That is not a contradiction to resolve; できる is simply shorter, the same way plain and polite are both correct and you choose. Register, lightly: ことができます leans a shade more formal and more written, and it is the safe choice when you cannot remember whether a verb is godan. In ordinary speech the short potential is far more common, so do not let this become the only one you use."
+
+- id: b2.yasui-nikui
+  order: 154
+  chapterId: b2.chapter-6
+  situation: Being able to
+  title: Easy to, hard to
+  canDo: Say whether something is easy or difficult to do
+  wordIds:
+    - vocab.yomu
+    - vocab.hon
+    - vocab.tsukau
+    - vocab.kaban
+    - vocab.aruku
+    - vocab.kutsu
+    - vocab.wakaru
+    - vocab.yasui
+  phraseIds:
+    - dekiru.these-shoes-are-easy-to-walk-in
+    - dekiru.this-bag-is-hard-to-use
+    - dekiru.this-book-was-easy-to-read
+    - dekiru.these-shoes-are-cheap
+  kanji: []
+  patternId: grammar.b2-yasui-nikui
+  grammarNote: "These are not potential forms, and the whole lesson is that difference. Take the polite form, drop ます, add やすい for easy or にくい for hard: 読みます → 読みやすい, 使います → 使いにくい, 歩きます → 歩きやすい, わかります → わかりやすい and わかりにくい. You have had that stem since your first lesson, so there is nothing new to build. What changes is who the sentence is about. 食べられます says you are able to eat it — you have the skill, or the allergy, or the chance. 食べやすいです says the food itself is easy to eat, small enough or soft enough, and says nothing whatever about you. Different subject, and the two are not swappable. What comes out ends in い and behaves like 高い, so the rule from the plain-form chapter runs on it unchanged: 読みやすかったです, 使いにくくないです, and です on the end rather than ます, because this is no longer a verb. Two things to keep straight. やすい is not only easy — it also means prone to, liable to happen: said of a person, 忘れやすい does not mean forgetting is simple, it means they forget easily, and にくい mirrors it in 割れにくい, which does not break easily. Which reading applies is usually obvious from the verb. And then the collision. 安い is a word you have had since Book One and it means cheap; 〜やすい means easy to. They sound identical and share nothing else. この靴は安いです and この靴は歩きやすいです are two unrelated claims about the same shoes, and the only way to tell them apart is that 〜やすい is never alone — it is always stuck to the end of a verb."
+
+- id: b2.checkpoint-6
+  order: 155
+  chapterId: b2.chapter-6
+  situation: Integration & checkpoint
+  title: Chapter 6 checkpoint
+  canDo: Recognise everything taught so far
+  wordIds: []
+  phraseIds: []
+  kanji: []
+  checkpoint: recognition
+  grammarNote: "A wide pass over everything this chapter has taught. Type the reading or the meaning rather than picking it out of a line-up. One rule for ichidan verbs, one for godan, two ways round the rule entirely with できる and ことができる, and one pair of endings that is not about ability at all — so what is being checked is whether the right one comes to hand for the sentence in front of you, not whether you can recite a table. The が that replaces を is worth watching for. Anything you miss comes back sooner. It finishes when the remaining set empties; retry as often as you like, nothing is recorded."

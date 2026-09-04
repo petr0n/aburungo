@@ -8,6 +8,11 @@
 # exactly like an app defect and cost ~15 minutes. A preview bundle ships no
 # HMR client, so a concurrent edit by another agent cannot perturb the run.
 #
+# A guest reaches Book One and stops there, so a plain run verifies ~100 lessons
+# and none of Book Two. Put WALKTHROUGH_EMAIL and WALKTHROUGH_PASSWORD in
+# .env.local (gitignored) and the driver signs in first, which lifts it to the
+# free tier and reaches Book Four. The summary line says which way it walked.
+#
 # Usage:  pnpm walkthrough
 set -euo pipefail
 
@@ -46,6 +51,28 @@ done
 if ! curl -fsS -o /dev/null "http://localhost:$PORT/"; then
   echo "preview server never came up on $PORT" >&2
   exit 1
+fi
+
+# Credentials live in .env.local, which is gitignored. Read only the two keys we
+# want, so nothing else in that file leaks into the driver's environment. An
+# existing WALKTHROUGH_EMAIL in the shell wins, for a one-off run as someone else.
+if [ -z "${WALKTHROUGH_EMAIL:-}" ]; then
+  WALKTHROUGH_EMAIL="$(sed -n 's/^WALKTHROUGH_EMAIL=//p' .env.local | tr -d '"' | head -1)"
+  WALKTHROUGH_PASSWORD="$(sed -n 's/^WALKTHROUGH_PASSWORD=//p' .env.local | tr -d '"' | head -1)"
+fi
+export WALKTHROUGH_EMAIL WALKTHROUGH_PASSWORD
+
+# The API server's CORS allowlist is FRONTEND_URL, defaulting to the dev server
+# on :5173 (server/src/index.ts). This walk serves a preview build on :4173, so
+# every /api call from it is blocked at preflight unless the server was started
+# with FRONTEND_URL pointing here. A signed-in walk needs those calls: progress
+# is server-durable (DR-018).
+if [ -n "${WALKTHROUGH_EMAIL:-}" ] && lsof -ti:3000 >/dev/null 2>&1; then
+  if ! curl -fsS -o /dev/null -H "Origin: http://localhost:$PORT" \
+       -D- "http://localhost:3000/health" 2>/dev/null | grep -qi "access-control-allow-origin"; then
+    echo "WARNING: API server on :3000 does not allow origin http://localhost:$PORT." >&2
+    echo "         Restart it as: FRONTEND_URL=http://localhost:$PORT pnpm dev:api" >&2
+  fi
 fi
 
 BASE="http://localhost:$PORT" node scripts/walkthrough.cjs

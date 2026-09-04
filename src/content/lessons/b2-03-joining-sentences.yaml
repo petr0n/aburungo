@@ -1,0 +1,282 @@
+# Chapter 3 — Putting sentences together.
+#
+# Every sentence the learner has produced through chapter 2 has had one clause.
+# This chapter is where that stops being true. It teaches six ways to put two
+# ideas in one sentence -- three that connect two full clauses (から, ので, けど),
+# two that chain two verbs belonging to the same subject (て, ながら), and one
+# that takes the second half of that pair and turns it into something new: a
+# clause standing in front of a noun instead of another clause (時, and then any
+# noun at all). That last move is why this chapter exists at the size it does.
+# Book Two's reading sets start once this chapter ships, because before it every
+# eligible sentence is single-clause and a "reading set" is just phrases
+# stacked. And chapter 4 -- explaining what hurts, to a doctor -- is placed
+# immediately after because it is the first situation that genuinely needs a
+# reason clause and a time clause in the same breath.
+#
+# The three connectors split by trap, not by difficulty of the base rule.
+#
+# から and ので look interchangeable and are not. Both attach directly after a
+# plain-form verb or い-adjective. Both need a linking word before a な-adjective
+# or noun -- but a different one. から takes だ, the same だ chapter 1 lesson 6
+# just taught. ので takes な. A learner taught both in one lesson will blend
+# them; a learner taught だから first, then handed なので as ので's own rule
+# right after, keeps them apart. That ordering is the whole reason these are
+# two lessons and not one.
+#
+# けど gets its own lesson because it is the first connector in the chapter
+# exercised in both registers side by side -- plain and です／ますけど -- rather
+# than one register standing in for the whole rule, the way the reason
+# connectors do.
+#
+# て and ながら both chain two verbs under one subject, and both get compared
+# against たり, which chapter 1 lesson 9 already taught and already flagged this
+# exact collision: たり lists representative, unordered examples; て reports a
+# real sequence; ながら reports two actions at once. Three lessons apart on
+# purpose, so each one lands before the next is introduced.
+#
+# 時 is the hinge. It is an ordinary noun -- the learner already has it folded
+# inside ときどき -- and it takes exactly the だ／な／の attachment table lessons
+# 1-3 just built, applied to a noun instead of a predicate. That is not a
+# coincidence this chapter points out once and moves on from: lesson 7 is the
+# generalisation of exactly that mechanism, from 時 to any noun at all --
+# unlocking the single most common shape in ordinary written Japanese, a clause
+# sitting in front of a noun the way English uses "that" or "who" or nothing.
+# The learner already has one word doing this job -- an い-adjective in front of
+# a noun, from Book One's colour-noun lesson (赤いかばん, already shipped). This
+# chapter's payoff is that the same slot takes a whole clause, not just one
+# adjective.
+#
+#   1  から               reason, casual; だ from chapter 1 lesson 6 pays off
+#   2  ので               reason, careful; な, not だ -- the direct collision
+#   3  けど                contrast, both registers side by side
+#   4  て as a connector   the te-form's third job; contrast with たり
+#   5  ながら              same subject, same moment; contrast with 4 and たり
+#   6  時                  a clause in front of one specific noun
+#   7  noun-modifying clauses   the same slot, any noun -- the reading unlock
+#
+# Lesson 2 depends on 1 for the contrast to land, 4 depends on Book One's
+# te-form chapter and on chapter 1 lesson 9, 6 depends on 1-3 for the
+# attachment table, and 7 depends on 6 directly. This chapter must not be
+# split by a checkpoint before lesson 7 -- the same constraint as every rule
+# chapter before it.
+#
+# `wordIds` is almost entirely Book One's own ids, as in chapter 1 and for the
+# same reason: the chapter brings one word, so re-listing an owned word in the
+# lesson that puts it to a new use is the only mechanism the ladder has for
+# contextual repetition, and it is what gives the checkpoint something to
+# recognise. Where a lesson's phrases needed a word the chapter breakdown's
+# exercise list did not name -- 読む and 聞く in lesson 4 for the たり
+# comparison, 切符 and 電話 in lesson 6 -- the word is listed too, so nothing
+# in a phrase is unattributed to a lesson.
+#
+# The `kanji:` arrays are empty and, unusually, that is the finished state
+# rather than a debt. This chapter's one new word is 時, and 時 is already
+# taught -- Book One's transit chapter introduces it on 何時. Every other word
+# here is Book One's, carrying characters Book One already taught. A chapter
+# that teaches connectives brings no characters, and padding it with some
+# would be inventing work.
+#
+# content-source: n/a for this file -- it references
+#   vocabulary/b2-03-joining-sentences.yaml and
+#   phrases/b2-03-joining-sentences.yaml, whose own provenance markers apply.
+
+- id: b2.join-kara
+  order: 124
+  chapterId: b2.chapter-3
+  situation: Putting sentences together
+  title: Saying why, casually
+  canDo: Give a reason for something, the way you would to a friend
+  wordIds:
+    - vocab.iku
+    - vocab.tsukareru
+    - vocab.samui
+    - vocab.isogashii
+    - vocab.shizuka
+    - vocab.hima
+    - vocab.gakusei
+    - vocab.ame
+  phraseIds:
+    - join.im-tired-so-im-going-home
+    - join.im-busy-so-im-not-going
+    - join.because-its-raining
+  kanji: []
+  patternId: grammar.b2-join-kara
+  grammarNote: "You already have から. It has been meaning \"from\" since アメリカから来ました. This is its other job, and it is just as common: because. Put a finished plain sentence in front of it and から turns it into the reason for whatever comes next. 疲れたから、帰る — I'm tired, so I'm going home. Reason first, result second, which is the opposite order from English and worth saying out loud a few times before it feels normal. A verb or an い-adjective attaches straight on: 行くから, 寒いから, 忙しいから. A noun or a な-adjective cannot — it needs だ in between, and that is exactly the だ from the casual-speech lessons. 雨だから, 学生だから, 暇だから. This is where that lesson pays. And から can be the whole answer. Asked why you are not coming, 雨だから is a complete reply — the reason and nothing else. It is casual, so it goes to friends; the next lesson is the version you want with a stranger."
+
+- id: b2.join-node
+  order: 125
+  chapterId: b2.chapter-3
+  situation: Putting sentences together
+  title: Saying why, more carefully
+  canDo: Give a reason the softer way — to a stranger, or in an explanation
+  wordIds:
+    - vocab.wakaru
+    - vocab.tsukareru
+    - vocab.samui
+    - vocab.chikai
+    - vocab.shizuka
+    - vocab.benri
+    - vocab.gakusei
+    - vocab.byouin
+  phraseIds:
+    - join.im-tired-so-ill-take-today-off
+    - join.the-station-is-close-so-ill-walk
+    - join.its-quiet-so-i-like-it-here
+    - join.im-a-student-so-i-dont-have-money
+  kanji: []
+  patternId: grammar.b2-join-node
+  grammarNote: "ので is から's near-twin, and it differs in two ways that both matter. The first is a trap, so take it before anything else. After a verb or an い-adjective, ので attaches exactly like から: 疲れたので, 近いので. After a な-adjective or a noun it does not take だ — it takes な. 静かなので, not 静かだので. 学生なので, not 学生だので. One lesson ago you learned だから; here the same slot takes な, and mixing them up is the single most likely mistake in this chapter. The second difference is how it lands. から points at your reason and can sound like you are defending yourself; ので presents a circumstance and sounds like you are explaining one. That is why announcements, apologies to strangers, and anything you want to sound reasonable rather than self-serving reach for ので — apologise with から and you can sound like you are handing the blame to your reason. Neither is polite or impolite by itself — you can say either to a friend and either to a stranger — but if you are unsure which fits, ので is the safer one."
+
+- id: b2.join-kedo
+  order: 126
+  chapterId: b2.chapter-3
+  situation: Putting sentences together
+  title: Saying "but"
+  canDo: Contradict, soften, or add a complication to what you just said
+  wordIds:
+    - vocab.takai
+    - vocab.oishii
+    - vocab.suki
+    - vocab.wakaru
+    - vocab.muzukashii
+    - vocab.omoshiroi
+  phraseIds:
+    - join.expensive-but-good
+    - join.difficult-but-interesting
+    - join.i-like-it-but-im-not-buying-it
+  kanji: []
+  patternId: grammar.b2-join-kedo
+  grammarNote: "けど is but, and it is the easiest join in this chapter because it does not care which register you are in. Finish a sentence, add けど, keep going. Plain: 高いけど、おいしい. Polite: 難しいですけど、面白いです, わかりますけど、時間がありません. The です and the ます stay exactly where they were — you are not switching to plain to attach it, which is the mistake to watch for. Only the plain な-adjective and noun case needs anything extra, and it is the same だ from two lessons ago: 好きだけど, 学生だけど. There is a second use worth recognising now and not drilling yet. けど at the end of a sentence, trailing off into nothing, softens whatever you were about to ask for — the speaker stops before the request and lets the けど do the asking. The unfinished half is the politeness. You will meet it properly once you have something worth asking softly for. For now: hear it, and do not read it as an unfinished thought."
+
+- id: b2.join-te
+  order: 127
+  chapterId: b2.chapter-3
+  situation: Putting sentences together
+  title: Doing one thing, then another
+  canDo: Describe two things you did, in order, as one sentence
+  wordIds:
+    - vocab.okiru
+    - vocab.taberu
+    - vocab.neru
+    - vocab.kaeru
+    - vocab.yasumu
+    - vocab.kaku
+    - vocab.oyogu
+    - vocab.matsu
+    - vocab.nomu
+    - vocab.hanasu
+    - vocab.aruku
+    - vocab.yomu
+    - vocab.kiku
+  phraseIds:
+    - join.i-swam-and-went-home
+    - join.i-walked-to-the-station-and-took-the-train
+    - join.i-read-a-book-and-listened-to-music
+    - join.i-ate-and-then-read-a-book
+  kanji: []
+  patternId: grammar.b2-join-te
+  grammarNote: "The te-form has a third job, and this one is what it was really built for. You have used it to ask (〜てください) and to say something is ongoing (〜ています). On its own, between two verbs, it means and then. 海で泳いで、家に帰った. 駅まで歩いて、電車にのった. ご飯を食べて、本を読んだ. There is nothing new to conjugate: 書いて, 泳いで, 待って, 飲んで, 話して, 帰って are the same forms you sorted into groups in Book One. Only the last verb carries the tense — put the whole sentence in the past by putting the final verb in the past, and everything before it follows. Two things the form insists on. The order is the real order: whatever comes before て happened first. And in the sequences you build here, both halves belong to the same person — this is for what you did, not for what you did while somebody else did something. Now the collision. You met たり in the plain-form chapter and it also joins two verbs. They are not the same. 本を読んだり音楽を聞いたりします means \"I read, listen to music, that sort of thing\" — examples, no order, and there is more you did not list. 本を読んで、音楽を聞いた means you read, and then you listened, in that order, and that is what happened. Representative versus sequential. If you can imagine adding \"and so on\", it is たり."
+
+- id: b2.join-nagara
+  order: 128
+  chapterId: b2.chapter-3
+  situation: Putting sentences together
+  title: Doing two things at once
+  canDo: Say you are doing two things simultaneously, as one person
+  wordIds:
+    - vocab.aruku
+    - vocab.hanasu
+    - vocab.taberu
+    - vocab.yomu
+    - vocab.hon
+    - vocab.utau
+    - vocab.kiku
+    - vocab.ongaku
+    - vocab.ryouri
+  phraseIds:
+    - join.we-talked-while-walking
+    - join.i-read-while-i-eat
+    - join.i-cook-while-listening-to-music
+  kanji: []
+  patternId: grammar.b2-join-nagara
+  grammarNote: "Same two verbs, same person, but this time at the same moment. Take a verb's polite form, stop just before ます, and add ながら. 話します → 話しながら. 食べます → 食べながら. 聞きます → 聞きながら. 歩きます → 歩きながら. That stopping point is not new — it is the shape you have been producing since your first polite verb, you have just never been asked to stop there and put something else on. Two constraints are worth having straight, because ながら enforces both and English does not. The subject must be the same person: ながら cannot join \"I read while she cooks\", and there is no version of it that can. And the ながら half is the background one — 音楽を聞きながら料理をします is cooking, with music on, not two equal activities. English \"while\" hides that; Japanese does not. Now all three are on the table. 本を読んだり音楽を聞いたりします — examples, no order. 本を読んで、音楽を聞いた — first one, then the other. ご飯を食べながら、本を読みます — both at once. Three joins, three different relationships between the same pair of verbs."
+
+- id: b2.join-toki
+  order: 129
+  chapterId: b2.chapter-3
+  situation: Putting sentences together
+  title: Saying when
+  canDo: Say when something happens or happened, as its own clause
+  wordIds:
+    - vocab.toki
+    - vocab.noru
+    - vocab.basu
+    - vocab.kippu
+    - vocab.tsuku
+    - vocab.ie
+    - vocab.denwa
+    - vocab.samui
+    - vocab.mado
+    - vocab.shimeru
+    - vocab.shizuka
+    - vocab.hon
+    - vocab.yomu
+    - vocab.kodomo
+    - vocab.kouen
+    - vocab.asobu
+  phraseIds:
+    - join.when-i-get-on-the-bus
+    - join.when-i-get-home-ill-call
+    - join.when-its-cold-i-close-the-window
+    - join.when-its-quiet-i-read
+    - join.when-i-was-a-child
+  kanji: []
+  patternId: grammar.b2-join-toki
+  grammarNote: "時 is the word this chapter has been building toward, and you have had its sound all along, sitting inside ときどき. Alone it is an ordinary noun meaning a moment or an occasion — read とき here, not じ — and English \"when\" is what you get by putting a whole clause in front of it. The attachment is the table you just built, applied to a noun instead of a predicate. A verb attaches directly: バスにのる時. An い-adjective attaches directly: 寒い時. A な-adjective takes な, the same な as ので: 静かな時. And a noun takes の — ordinary possession, the same の you use for whose bag it is, here saying whose moment it is: 子供の時, \"the time of being a child\". That last one is the shape you will hear most. The one genuinely new thing is the tense inside the clause, and it does not work the way you expect. It is measured against the other half of the sentence, not against now. Non-past means the thing has not happened yet at that point: バスにのる時、切符を買います — you buy the ticket before boarding. Past means it already has: 家に着いた時、電話します — you call once you have arrived, and 電話します is still future. Notice the main verb never changed. Non-past for not yet, past for already done, and the sentence's own tense lives on its last verb. That heuristic covers most of what you will meet; the corners are a later book's problem."
+
+- id: b2.join-noun-clause
+  order: 130
+  chapterId: b2.chapter-3
+  situation: Putting sentences together
+  title: The book, the person, the place
+  canDo: Understand — and build — a noun described by a whole sentence, not just one word
+  wordIds:
+    - vocab.hon
+    - vocab.kau
+    - vocab.kinou
+    - vocab.omoshiroi
+    - vocab.hito
+    - vocab.hanasu
+    - vocab.eigo
+    - vocab.iru
+    - vocab.ie
+    - vocab.sumu
+    - vocab.eki
+    - vocab.chikai
+    - vocab.mise
+    - vocab.takai
+    - vocab.oshieru
+    - vocab.tomodachi
+    - vocab.au
+    - vocab.kyonen
+  phraseIds:
+    - join.the-book-i-bought-yesterday
+    - join.someone-who-speaks-english
+    - join.the-house-i-live-in
+    - join.a-shop-thats-not-expensive
+    - join.the-friend-i-met-last-year
+  kanji: []
+  patternId: grammar.b2-join-noun-clause
+  grammarNote: "Look again at 子供の時 and ask what was special about 時. Nothing was. It is a noun with a clause in front of it, and the slot in front of a noun takes a clause in front of any noun at all. You have owned the one-word version since 赤いかばん — an adjective sitting directly in front of what it describes, no word in between. This is the same slot with a whole sentence in it. 昨日買った本 — the book I bought yesterday. 英語を話す人 — a person who speaks English. Everything the clause needs comes with it: its own object, its own particles, its own tense. It just has to end in a plain verb or a plain adjective. 私が住んでいる家 — 〜ている works here like anything else. 高くない店 — the plain negative from chapter 1, describing a shop instead of ending a sentence. Two things trip people up. The whole clause goes in front, so English's order reverses: \"the book I bought\" reads back to front as 買った本. And inside the clause, the subject takes が rather than は — 私が住んでいる家, not 私は. は belongs to the main sentence; the clause gets が. This is the shape that makes ordinary written Japanese readable. English marks it with \"that\", \"who\", or nothing; Japanese marks it with position alone, and once you see it you will find it in almost every sentence you read. One corner is left out on purpose: describing a noun with a clause that ends in another noun — \"the person who is a student\" — cannot simply use だ, and the way around it belongs to a later book."
+
+- id: b2.checkpoint-3
+  order: 131
+  chapterId: b2.chapter-3
+  situation: Integration & checkpoint
+  title: Chapter 3 checkpoint
+  canDo: Recognise everything taught so far
+  wordIds: []
+  phraseIds: []
+  kanji: []
+  checkpoint: recognition
+  grammarNote: "A wide pass over everything this chapter has taught. Type the reading or the meaning rather than picking it out of a line-up. The joins are worth watching for as they come round — だから against なので, て against ながら against たり — since the words on either side are ones you already knew and the join is the only new thing in the sentence. Anything you miss comes back sooner. It finishes when the remaining set empties; retry as often as you like, nothing is recorded."

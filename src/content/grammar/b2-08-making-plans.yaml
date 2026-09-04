@@ -1,0 +1,50 @@
+# Book Two, Chapter 8 grammar patterns — three, and only three.
+#
+# A situation chapter this late in the book earns most of its sentences by
+# recombining rules already taught, so there is nothing to blank out in four of
+# the seven lessons -- the arrangement lesson, the answering lesson, the meeting-
+# place lesson and the confirming lesson all run on grammar the learner owns and
+# carry no patternId at all. That is the same call the around-town chapter made
+# in Book One, and it is honest rather than thin.
+#
+# Three patterns survive, and one of them is here because of a gap found while
+# authoring rather than by design. The wanting-and-intending chapter teaches
+# ましょう and ませんか, and its ましょう lesson NAMES ましょうか in passing -- but
+# it ships no phrase for it and no pattern id, so nothing on the ladder actually
+# teaches it. The meeting-place lesson needs it (どこで会いましょうか is the
+# sentence that lesson exists for), so this chapter teaches it properly, in the
+# polite-invitation lesson, before leaning on it.
+#
+# The casual invitation is not new grammar and its pattern says so. The plain-
+# form chapter taught the ない form, and it taught that a plain question drops か
+# and rises instead. 行かない？ is those two things pointed at a person for the
+# first time rather than at a fact, which is a construction worth naming even
+# though both halves were already in hand.
+#
+# The blank is matched against the phrase's reading, so these are kana.
+#
+# content-source: n/a for this file — every pattern references an existing
+#   phrase from phrases/b2-08-making-plans.yaml rather than composing new
+#   Japanese.
+# jlpt-source: training — the level marks the band this chapter sits in.
+
+- id: grammar.b2-mashouka
+  jlpt: N4
+  pattern: "ます-stem + ましょうか"
+  gloss: Shall we? ましょう with か on the end stops assuming the answer and asks for it instead.
+  phraseId: plans.what-time-shall-we-meet
+  blank: ましょうか
+
+- id: grammar.b2-casual-invite
+  jlpt: N4
+  pattern: "plain negative + rising ？"
+  gloss: The casual invitation. The ない form asked as a question, with no か and the voice going up.
+  phraseId: plans.wanna-go-together
+  blank: いかない
+
+- id: grammar.b2-tsugou-ii-warui
+  jlpt: N4
+  pattern: "topic + は + 都合がいい／都合が悪い"
+  gloss: Whether a day suits you. One new noun on いい and 悪い, which you have had since the describing chapter.
+  phraseId: plans.is-saturday-convenient
+  blank: つごうがいい

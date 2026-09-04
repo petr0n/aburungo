@@ -1,0 +1,52 @@
+# Book Two, Chapter 6 vocabulary — one verb, and why the chapter needs exactly
+# one.
+#
+# A chapter about being able to do things that brings a single word. Everything
+# else here is an ending: ichidan verbs take られる, godan verbs move their last
+# sound to the え row and take る, and both operations run on verbs the learner
+# has owned since Book One. An ending is not vocabulary, and 泳げる is not a
+# second word for 泳ぐ any more than 泳ぎました was.
+#
+# できる is the exception, and it is a real one rather than a technicality. It
+# is する's potential, but it is not built from する by any rule -- there is no
+# operation that turns し into でき, the way there is one that turns 泳ぎ into
+# 泳げ. It is a separate headword with its own JMdict entry, and it has a life
+# outside the potential form entirely: 料理ができる, 英語ができる, 仕事ができる
+# attach it straight to a noun with が, no verb anywhere in the sentence. A
+# learner reviewing 料理ができます with no card for できる is reviewing a sentence
+# whose main verb they have never been taught.
+#
+# That is a deviation from this chapter's own breakdown, which claimed zero new
+# words on the grounds that できる could be taught inside the pattern the way
+# 行った was. 行った is a form of 行く and 行く has a card; できる is not a form of
+# anything in the deck. One card, and the chapter's claim survives everywhere
+# else -- no new nouns, no fresh verbs, no new kanji.
+#
+# Kept in kana rather than written 出来る. JMdict flags this entry [uk] (usually
+# written in kana), which is the same call the plain-form chapter made for こと
+# and the conditionals chapter made for ほう.
+#
+# content-source: training — headword, reading, part of speech and glosses
+#   verified against JMdict for Applications 3.6.2 on 2026-08-31, sequence
+#   number inline. Both the kanji and the kana form are flagged common, and the
+#   example is a Tatoeba sentence carried by that entry rather than a composed
+#   one.
+# jlpt-source: training — JMdict carries no JLPT data. できる is listed at N5 by
+#   both the Tanos and open-anki reference lists in data/jlpt/reference-n5.json,
+#   which is where the level below comes from; the potential *form* it belongs
+#   to is N4, and that is what the phrases and patterns in this chapter carry.
+
+- id: vocab.dekiru
+  jlpt: N5
+  word_type: verb
+  verb_class: ru
+  theme: basics
+  japanese: できる
+  reading: できる
+  romaji: dekiru
+  english: to be able to, to be good at
+  notes: "する's potential, and not built from it by any rule — it is its own word. It is an ichidan verb, so everything else about it is free: できない, できました, できません. It also attaches straight to a noun with が and no verb at all — 料理ができます — which is sense 2 of the JMdict entry, to be good at. Usually written in kana, though it has the kanji 出来る. JMdict seq 1340450, senses 1 and 2."
+  example:
+    japanese: 申し訳ないけど長居できないんですよ。
+    english: I'm sorry, I can't stay long.
+    tatoeba_id: "4951"

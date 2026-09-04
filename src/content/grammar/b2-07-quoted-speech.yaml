@@ -1,0 +1,78 @@
+# Book Two, Chapter 7 grammar patterns — the quotation particle and what closes it.
+#
+# Eight patterns for nine teaching lessons. The passive lesson deliberately has
+# none: a GrammarPattern is a blank-and-type cloze, which is production by
+# construction, and that lesson is recognition only by the chapter's own design
+# (book-two-chapter-07.md §5.2). Giving it a pattern would force exactly the
+# production the design forbids, so it does not get one.
+#
+# Each blank is the piece the lesson owns, matched against its phrase's reading,
+# so these are kana. The clause in front of と is never blanked -- building the
+# clause is the plain-form chapter's work and the learner already did it. What
+# is blanked is what goes after the clause, which is the only thing new here.
+#
+# The だ pattern blanks だと rather than だ alone, because だ on its own is not
+# the rule: the rule is that it survives contact with と. And the negation
+# pattern blanks ない inside the clause rather than the whole ending, because
+# where the negative sits is the entire teaching point.
+#
+# content-source: n/a for this file — every pattern references an existing
+#   phrase from phrases/b2-07-quoted-speech.yaml rather than composing new
+#   Japanese.
+# jlpt-source: training — the level marks the band this chapter sits in.
+
+- id: grammar.b2-quote-plain
+  jlpt: N4
+  pattern: "plain clause + と言いました"
+  gloss: と goes straight onto the plain form — no gap, no punctuation, nothing in between.
+  phraseId: quote.my-friend-said-theyre-going-tomorrow
+  blank: といいました
+
+- id: grammar.b2-quote-da
+  jlpt: N4
+  pattern: "noun／な-adjective + だ + と"
+  gloss: A noun or な-adjective clause keeps だ in front of と. です never appears there.
+  phraseId: quote.my-friend-said-theyre-a-student
+  blank: だと
+
+- id: grammar.b2-report-teimashita
+  jlpt: N4
+  pattern: "と言っていました"
+  gloss: What someone has been saying, rather than one thing they said once.
+  phraseId: quote.my-friend-was-saying-theyre-going-on-a-trip
+  blank: いっていました
+
+- id: grammar.b2-report-heard
+  jlpt: N4
+  pattern: "と聞きました"
+  gloss: What you heard, with no source named — 聞く slots into the same frame 言う did.
+  phraseId: quote.i-heard-it-will-rain-tomorrow
+  blank: ききました
+
+- id: grammar.b2-opinion-omou
+  jlpt: N4
+  pattern: "plain clause + と思います"
+  gloss: What you think, marked as your view rather than stated as fact.
+  phraseId: quote.i-think-this-book-is-interesting
+  blank: おもいます
+
+- id: grammar.b2-opinion-negative
+  jlpt: N4
+  pattern: "〜ない + と思います"
+  gloss: "The negative usually goes in the clause rather than on 思う. With は, 思いません is normal — そうは思いません."
+  phraseId: quote.i-dont-think-theres-time
+  blank: ない
+
+- id: grammar.b2-opinion-ongoing
+  jlpt: N4
+  pattern: "と思っています"
+  gloss: A view you have held for a while, not one you are forming on the spot.
+  phraseId: quote.ive-come-to-think-this-work-is-interesting
+  blank: おもっています
+
+- id: grammar.b2-report-and-opinion
+  jlpt: N4
+  pattern: "〜と言っていました。〜と思います。"
+  gloss: Their words, then yours — attributed separately so neither is mistaken for the other.
+  phraseId: quote.my-friend-said-theyre-busy-but-i-think-theyll-come
+  blank: くるとおもいます

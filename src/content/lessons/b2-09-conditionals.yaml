@@ -1,0 +1,375 @@
+# Chapter 9 — If and when.
+#
+# Three forms translate to the same two English words, "if" and "when," and a
+# course that teaches them in sequence and trusts the overlap to sort itself
+# out has taught three ways to be almost right. English gives a learner no
+# reason to reach for one over another, so the reaching has to be taught
+# directly -- not as a footnote on each form's lesson, but as its own exercise,
+# repeated. This chapter answers that by pairing every new form with a lesson
+# that does nothing but contrast it against what came before: three of the nine
+# teaching lessons introduce no new grammar at all. Their whole job is choosing.
+#
+# The three forms are not equally expensive, and the chapter's shape follows the
+# cost, the same rule the plain-form and potential-forms chapters used.
+#
+# たら costs nothing to build. It is the plain-form chapter's plain past plus ら,
+# on every word type without exception -- verb, い-adjective or noun collapse to
+# the same だった／かった shape before ら ever attaches. A learner who did that
+# chapter owns this form before the lesson starts, which is why it is taught
+# first and treated as the default for the rest of the chapter. It still gets
+# two lessons, because it does two different jobs that fail in different ways:
+# the everyday hypothetical, and a "when" reading that arrives already
+# contested -- the joining-sentences chapter's 時 claims "when" first, and this
+# is a second, different "when" that a learner will reach for the wrong one of
+# without being told they are different words for different things.
+#
+# と costs almost nothing to build -- dictionary form plus と, no conjugation at
+# all -- and almost everything to use correctly, because its one real rule is a
+# restriction: the result has to be automatic, never chosen. A request, an
+# invitation, a suggestion in the second clause is simply wrong there, where
+# たら carries all three without strain. That asymmetry is the lesson, and it is
+# followed immediately by the chapter's first dedicated contrast lesson,
+# because と-for-たら is the mistake an English-speaking learner makes first.
+#
+# ば is the one genuinely new mechanic in the chapter -- a conditional stem
+# nothing in Book One built -- but it is a single uniform rule, the same shape
+# as the plain-form chapter's ない and the potential-forms chapter's え-row rule.
+# Every godan ending shifts to the え row and takes ば, ichidan drops る for
+# れば, and unlike ない it has no exceptions of its own: う verbs are regular
+# here (買う → 買えば, not the わ that ない forces), and so is ある (あれば). One
+# lesson for verbs, cheap because the rule is uniform; a second for adjectives
+# and nouns, where い-adjectives reuse the かった stem a learner already owns and
+# nouns and な-adjectives borrow なら -- the only piece of a fourth conditional
+# this chapter admits. なら as its own topic-based register, "well, if that's
+# the case," is named as a leftover, not taught.
+#
+# 〜たほうがいい rides in last, per the book plan's own instruction that advice
+# travels with conditionals, and it rides on たら specifically: "if you're
+# tired, you should rest" is the sentence this chapter has been building
+# toward, made from a form the learner already had (the plain past) plus the
+# form they just spent four lessons on. Its negative twin, 〜ないほうがいい,
+# reaches back to the plain negative and costs nothing extra. Placed last, it
+# reads as the payoff the chapter was for rather than a fourth form competing
+# with the other three.
+#
+# The chapter closes on a capstone that is not the checkpoint: all three forms
+# in the same lesson, chosen against each other rather than in pairs. A learner
+# who can beat たら against と, and たら against ば, one pair at a time, has not
+# yet had to hold all three in mind at once -- this lesson asks for that, and
+# folds in the advice pattern so the chapter's two threads close together. The
+# checkpoint after it is recognition only, per DR-021.
+#
+#    1  if you have time              たら, the everyday hypothetical
+#    2  when you get there            たら's other reading, and where it
+#                                      differs from 時
+#    3  press it, and it opens        と, the automatic consequence
+#    4  two ifs that aren't the same  たら vs と, dedicated
+#    5  a third way to say if         ば, verbs
+#    6  if it were                    ば, adjectives and nouns; なら
+#    7  picking the right if          ば vs たら, dedicated
+#    8  you'd better                  〜たほうがいい／〜ないほうがいい
+#    9  when each is wrong            all three, capstone
+#
+# Lessons 4, 7 and 9 depend on everything before them and teach no new form, so
+# this chapter cannot be split by a checkpoint before lesson 9 -- the same
+# constraint every rule chapter before it carries for the same reason.
+#
+# Three of the grammarNotes carry a correction the breakdown did not: the rule
+# that ば cannot take a request in its result clause is only true when the
+# ば-clause is an action verb. 安ければ、買ってください and わからなければ、
+# 聞いてください are ordinary Japanese, and a learner meets both early. Stating
+# the restriction without its condition would have taught a clean lie that the
+# first real sentence contradicts, so lessons 6, 7 and 9 state the condition.
+#
+# `wordIds` is Book One's own ids almost throughout, as in every rule chapter
+# before this one and for the same reason: the chapter brings one word, so
+# re-listing an owned word in the lesson that puts it to new work is the only
+# mechanism the ladder has for contextual repetition, and it is what gives the
+# checkpoint something to recognise. Where a lesson's phrases needed a word the
+# breakdown's exercise list did not name, the word is listed too, so nothing in
+# a phrase is unattributed to a lesson.
+#
+# The `kanji:` arrays are empty and, as in the joining-sentences chapter, that
+# is the finished state rather than a debt. The chapter's one new word is ほう,
+# deliberately written in kana; every other word here is Book One's, carrying
+# characters Book One already taught. A chapter that teaches conditionals
+# brings no characters, and padding it with some would be inventing work. It is
+# the second rule chapter running to contribute roughly zero, which is worth
+# the owner knowing as a pattern rather than an accident.
+#
+# content-source: n/a for this file -- it references
+#   vocabulary/b2-09-conditionals.yaml and phrases/b2-09-conditionals.yaml,
+#   whose own provenance markers apply.
+
+- id: b2.cond-tara-if
+  order: 174
+  chapterId: b2.chapter-9
+  situation: If and when
+  title: If you have time
+  canDo: Say what you'll do if something happens
+  wordIds:
+    - vocab.jikan
+    - vocab.aru
+    - vocab.iku
+    - vocab.yasui
+    - vocab.kau
+    - vocab.gakusei
+    - vocab.tenki
+    - vocab.ii
+  phraseIds:
+    - cond.if-i-have-time-ill-go
+    - cond.if-its-cheap-ill-buy-it
+    - cond.if-youre-a-student-its-cheap
+  kanji: []
+  patternId: grammar.b2-cond-tara-if
+  grammarNote: "This is the cheapest form in the book, and you finished paying for it in the plain-form chapter. Take the plain past and add ら. 行った → 行ったら. 食べた → 食べたら. あった → あったら. That is the whole rule for verbs, and it is the whole rule for everything else too, because everything else already has a plain past. An い-adjective: 安い → 安かった → 安かったら. A noun or a な-adjective: 学生 → 学生だった → 学生だったら, 元気だったら. A negative, either class: 行かない → 行かなかった → 行かなかったら. Nothing is left out and there is no exception anywhere — even 行く behaves, because its irregularity was already spent on 行った and 行ったら simply inherits it. What the form means here is the ordinary if: something that may or may not happen, and what you will do if it does. 時間があったら、行きます. One framing to carry through the rest of the chapter, because two more conditionals are coming and both are narrower than this one: たら is the default. When you are unsure which to reach for, たら is very often the safe answer, and where it is not, the lesson that covers the other form will say so plainly."
+
+- id: b2.cond-tara-when
+  order: 175
+  chapterId: b2.chapter-9
+  situation: If and when
+  title: When you get there
+  canDo: Tell someone what to do once something happens, and tell たら's "when" apart from 時
+  wordIds:
+    - vocab.ie
+    - vocab.kaeru
+    - vocab.denwa
+    - vocab.suru
+    - vocab.mise
+    - vocab.shimaru
+    - vocab.eki
+    - vocab.tsuku
+    - vocab.basu
+    - vocab.noru
+    - vocab.toki
+  phraseIds:
+    - cond.when-you-get-home-please-call
+    - cond.when-i-went-to-the-shop-it-was-closed
+    - cond.when-i-get-to-the-station-ill-take-the-bus
+  kanji: []
+  patternId: grammar.b2-cond-tara-when
+  grammarNote: "Same form, second job, and no new conjugation. When the thing in front of たら is not in doubt — you are going home, the train does arrive — the sentence stops meaning if and starts meaning once that has happened. 駅に着いたら is not \"if I arrive\", it is \"once I'm there\". This is where たら earns the default status the last lesson gave it, because the second half can be anything at all: a request, an invitation, a plan, a suggestion. 家に帰ったら、電話してください. Of the two forms still coming, one cannot carry a request at all and the other can only sometimes, which is most of what the rest of this chapter is about. There is a third reading worth naming now so it does not confuse you later. Put the second half in the past and たら reports a discovery rather than a plan: 店に行ったら、閉まっていました. Going to the shop did not close it — going is what revealed it. English has no single word for this and you will meet it constantly. Now the collision. You already have 時 for \"when\" from the joining-sentences chapter, and the two are genuinely different. 時 names a moment: 家に帰る時 is on the way home, before you arrive, because the clause's tense is measured against the main verb. たら always says the first thing is finished, and that finishing is what makes the second one possible: 家に帰ったら is after you are through the door. Where 時 takes the past the two get close — 着いた時 and 着いたら often both work, and that is honest rather than a rule with a hidden catch. The difference you can rely on is with the non-past: 帰る時 is during, 帰ったら is after."
+
+- id: b2.cond-to
+  order: 176
+  chapterId: b2.chapter-9
+  situation: If and when
+  title: Press it, and it opens
+  canDo: Describe something that always happens as a result of something else
+  wordIds:
+    - vocab.osu
+    - vocab.aku
+    - vocab.haru
+    - vocab.naru
+    - vocab.hana
+    - vocab.saku
+    - vocab.takusan
+    - vocab.taberu
+    - vocab.nemui
+  phraseIds:
+    - cond.press-it-and-it-opens
+    - cond.when-spring-comes-the-flowers-bloom
+    - cond.if-you-eat-a-lot-you-get-sleepy
+  kanji: []
+  patternId: grammar.b2-cond-to
+  grammarNote: "と is the easiest thing in this chapter to build and the easiest to misuse. Building it: take the dictionary form and add と. 押すと, 食べると, 春になると. No conjugation, no exceptions, and it works on い-adjectives and nouns too — 寒いと, 雨だと. For the negative, use the ない form: 押さないと. The one thing the と clause never does is go into the past. Using it is where the work is, because と is much narrower than たら. What follows it has to be automatic — a machine doing what machines do, a season doing what seasons do, or something that happens every single time. 押すと、開きます. 春になると、花が咲きます. たくさん食べると、眠くなります. Nobody decided any of those. Now the restriction, and it is a rule with teeth rather than a note in the margin: the second half of a と sentence cannot be a request, an invitation, a command, or something you have decided to do. 押すと、教えてください is not a sentence a Japanese speaker would produce, and 春になると、日本に行きます is wrong if you mean it as a plan rather than as something you do every year. Whenever the second half is a choice somebody is making, と is out and たら is what you want. One place you will meet と breaking the automatic rule: the second half in the past, the と clause still in dictionary form, reporting what you found when you did something — the same discovery reading たら has. Recognise it when you read it. Do not build with it, because たら does that job and the rule above covers everything else."
+
+- id: b2.cond-tara-to-contrast
+  order: 177
+  chapterId: b2.chapter-9
+  situation: If and when
+  title: Two ifs that aren't the same
+  canDo: Choose between たら and と for a given situation, and say why the other one is wrong
+  wordIds:
+    - vocab.koko
+    - vocab.osu
+    - vocab.mizu
+    - vocab.deru
+    - vocab.mou-ichido
+    - vocab.aku
+    - vocab.fuyu
+    - vocab.naru
+    - vocab.samui
+    - vocab.mado
+    - vocab.shimeru
+    - vocab.jikan
+    - vocab.kaeru
+  phraseIds:
+    - cond.press-here-and-water-comes-out
+    - cond.if-no-water-comes-out-press-again
+    - cond.when-winter-comes-it-gets-cold
+    - cond.if-youre-cold-please-close-the-window
+  kanji: []
+  grammarNote: "No new form in this lesson. You have both, and the only thing left is knowing which one a Japanese speaker would have reached for — which English will never tell you, since it says if and when for all of it. Two sentences about the same tap. ここを押すと、水が出ます: that is what the tap does, every time, for anyone. 水が出なかったら、もう一度押してください: that is a request, aimed at you, about this one occasion. Swap them and the first becomes a strange instruction and the second stops being Japanese. Two sentences about the same cold. 冬になると、寒くなります: every year, without anybody's involvement. 寒かったら、窓を閉めてください: a request again. The test is short. Look at the second half. If it contains a request, an invitation, a command, or something somebody has decided to do, と is out — not stylistically worse, actually wrong — and たら is what carries it. If the second half follows on its own every time, と is the one that says so. The asymmetry is worth being precise about, because it runs one way only. と's restriction is hard: it bans those second halves outright. たら has no restriction of that kind at all — 押したら、開きます is perfectly good Japanese. It just says this once rather than always, so where you mean the general rule, と states it better. That is why the last lesson called たら the default: it is the form that is never actually wrong, only sometimes less exact. And it is why the mistake to watch for is the other direction — reaching for と because the English said when."
+
+- id: b2.cond-ba-verbs
+  order: 178
+  chapterId: b2.chapter-9
+  situation: If and when
+  title: A third way to say if
+  canDo: Build the conditional form of any verb
+  wordIds:
+    - vocab.hon
+    - vocab.yomu
+    - vocab.wakaru
+    - vocab.denki
+    - vocab.tsukeru
+    - vocab.akarui
+    - vocab.naru
+    - vocab.yoyaku
+    - vocab.suru
+    - vocab.daijoubu
+    - vocab.tomodachi
+    - vocab.kuru
+    - vocab.nigiyaka
+    - vocab.isogu
+    - vocab.kaku
+    - vocab.au
+    - vocab.kau
+    - vocab.aru
+    - vocab.taberu
+  phraseIds:
+    - cond.if-you-read-the-book-youll-understand
+    - cond.if-you-turn-on-the-light-it-gets-bright
+    - cond.if-you-book-itll-be-fine
+    - cond.if-friends-come-itll-be-lively
+  kanji: []
+  patternId: grammar.b2-cond-ba-verbs
+  grammarNote: "The one genuinely new piece of machinery in this chapter, and it is a single rule. A godan verb moves its last sound to the え row and adds ば. 書く → 書けば. 急ぐ → 急げば. 話す → 話せば. 待つ → 待てば. 死ぬ → 死ねば. 呼ぶ → 呼べば. 読む → 読めば. 帰る → 帰れば. Eight endings, one move, exactly the shape of the あ-row rule you used for ない and the え-row rule you used for the potential. Two things this rule does not do, and both are worth noticing because ない did them. A verb ending in う is regular here: 買う → 買えば, 会う → 会えば. There is no わ anywhere in ば — that exception belongs to ない alone. And ある is regular too: あれば. ない swallowed ある whole; ば leaves it standing. Ichidan verbs drop る and add れば: 食べる → 食べれば, 見る → 見れば, つける → つければ. The two irregulars come out where you would expect: する → すれば, 来る → 来れば. The reading of that last one moves again, the way it did for the negative — 来れば is くれば, not きれば, and the negative was こない. Say the pair out loud once and they will stay apart. This lesson is form only. What ば is actually for waits until adjectives and nouns are on the table too, because the flavour is easier to see across all three at once."
+
+- id: b2.cond-ba-adj-noun
+  order: 179
+  chapterId: b2.chapter-9
+  situation: If and when
+  title: If it were
+  canDo: Talk about hypothetical situations and general truths
+  wordIds:
+    - vocab.takai
+    - vocab.kau
+    - vocab.tenki
+    - vocab.ii
+    - vocab.yama
+    - vocab.noboru
+    - vocab.ame
+    - vocab.takushii
+    - vocab.iku
+    - vocab.hima
+    - vocab.tetsudau
+    - vocab.yasui
+    - vocab.genki
+    - vocab.gakusei
+    - vocab.isogu
+  phraseIds:
+    - cond.if-its-expensive-i-wont-buy-it
+    - cond.if-the-weather-is-good-ill-climb-the-mountain
+    - cond.if-its-raining-ill-take-a-taxi
+    - cond.if-youre-free-please-help
+  kanji: []
+  patternId: grammar.b2-cond-ba-adj-noun
+  grammarNote: "An い-adjective drops い and adds ければ: 高い → 高ければ, 安い → 安ければ, 寒ければ, 忙しければ. Nothing there is new: 高かった drops exactly the same い before adding its own ending, so you are recognising a move rather than learning one. いい is the one irregular, and it breaks in the direction you already know: よければ, not いければ, the same よ that gave you よかった. Since ない is itself an い-adjective, the negative conditional comes free: 行かない → 行かなければ, ない → なければ. Nouns and な-adjectives are the interesting case, because they have no ば at all. 学生ば and 学生ければ are not words. They use なら instead: 学生なら, 元気なら, 雨なら. Two honest footnotes on that. だったら also works there and means much the same thing — なら is the one that pairs with ば, not the only option. And in careful writing you will see ならば and であれば, which are the same word dressed up; recognise them and keep saying なら. Now the flavour the last lesson deferred. ば states a condition in general: in the event that this is so, that follows. It suits rules, tendencies and hypotheses, and it sits awkwardly on a definite one-time plan — which the next lesson drills directly. One restriction, stated with its condition attached, because the condition is what makes it usable: when the ば clause is an action verb you choose to do, the second half cannot be a request or a suggestion. When the ば clause is not an action — an adjective, a noun with なら, or ある and わかる and the negatives — a request is completely ordinary. 安ければ、買ってください and 暇なら、手伝ってください are the sentences of a normal day. Last thing, so you are not ambushed: なら has a second job, picking up what the person in front of you just said and answering it. That is a later book's, and this chapter uses なら only as the shape nouns take."
+
+- id: b2.cond-ba-tara-contrast
+  order: 180
+  chapterId: b2.chapter-9
+  situation: If and when
+  title: Picking the right if
+  canDo: Choose between ば and たら for a given situation, and say why
+  wordIds:
+    - vocab.haru
+    - vocab.naru
+    - vocab.atatakai
+    - vocab.nihon
+    - vocab.iku
+    - vocab.mainichi
+    - vocab.aruku
+    - vocab.genki
+    - vocab.kouen
+    - vocab.tsuku
+    - vocab.oshieru
+    - vocab.takai
+    - vocab.yasui
+    - vocab.isogu
+    - vocab.jikan
+    - vocab.kaeru
+  phraseIds:
+    - cond.if-spring-comes-it-gets-warm
+    - cond.when-spring-comes-ill-go-to-japan
+    - cond.if-you-walk-every-day-youll-be-healthy
+    - cond.when-you-get-to-the-park-let-me-know
+  kanji: []
+  grammarNote: "No new form again — this is ば's contrast lesson, and it works the same way the と one did. Two questions decide it. First: is the condition genuinely in doubt? 天気がよければ、山に登ります is a plan for one particular day and ば is right at home in it, because the weather might not cooperate. 春になったら、日本に行きます is also one occasion, but spring is coming whether you like it or not, and ば there — 春になれば、日本に行きます — reads stiff and oddly detached, as if you were stating a policy about springs in general. It is not that ば dislikes single occasions; it dislikes conditions that are already settled. たら is what carries a definite, dated intention regardless. 春になれば、暖かくなります is fine again, because that is what spring does, any spring, and no plan is riding on it. Second, and this is the one with teeth: what is in the second half? 毎日歩けば、元気になります — a statement, so ば is fine. 公園に着いたら、教えてください — a request, and the ば version, 公園に着けば、教えてください, is not Japanese. When the ば clause is an event rather than a state, the second half cannot be a request, a command, an invitation or a suggestion. Now the part a shorter rule would have hidden from you, and you would meet it within a week. That restriction only applies to action verbs. When the ば clause is an adjective, a noun with なら, or a verb of state — ある, わかる, and every negative — a request in the second half is completely normal. 安ければ、買ってください. わからなければ、聞いてください. 時間があれば、手伝ってください. All ordinary. So the rule is not \"ば never takes a request\"; it is \"ば plus a chosen action never takes one\". と gets one line, because と-against-ば is not the confusion that costs anybody anything: と's restriction has no such exception. Nothing that follows と can be a request, whatever the first half looks like. And the reason both contrast lessons in this chapter measure against たら rather than against each other is that たら is the form you will reach for by default, so the question you will actually be asking yourself is always why not たら here."
+
+- id: b2.cond-hougaii
+  order: 181
+  chapterId: b2.chapter-9
+  situation: If and when
+  title: You'd better
+  canDo: Recommend what someone should or shouldn't do
+  wordIds:
+    - vocab.hou
+    - vocab.ii
+    - vocab.hayai
+    - vocab.neru
+    - vocab.amari
+    - vocab.nomu
+    - vocab.tsukareru
+    - vocab.yasumu
+    - vocab.taberu
+  phraseIds:
+    - cond.you-should-go-to-bed-early
+    - cond.you-shouldnt-drink-too-much
+    - cond.if-youre-tired-you-should-rest
+  kanji: []
+  patternId: grammar.b2-cond-hougaii
+  grammarNote: "Advice, and it costs almost nothing: plain past, then ほうがいい. 寝る → 寝た → 寝たほうがいい. Polite, 〜たほうがいいです. ほう is your one new word this chapter, a noun meaning one side of two, so the sentence says the having-gone-to-bed-early side is the good one — a comparison, which is why it lands as a recommendation rather than an order. The past tense is the surprising part, and it is not optional. 早く寝るほうがいいです is also Japanese, but it is a flat comparison — sleeping early is the better option, said about nobody in particular. The past た is what turns it into advice aimed at the person in front of you. The negative is the mirror, and it does not mirror the tense. Use the plain ない, not なかった: 飲まないほうがいい, never 飲まなかったほうがいい. Affirmative takes the past, negative takes the non-past. That asymmetry is the only thing here worth memorising, and it catches almost everyone once. On how it lands: this is real advice and it can sound firm, closer to \"you'd better\" than to \"you might want to\". Adding よ softens it into a friendly tip rather than a verdict. Keep it apart from the 〜ましょう and 〜ませんか of the wanting-and-intending chapter, which propose doing something together — ほうがいい recommends what the other person should do, and does not put you in the picture. And here is what this chapter was built for. Put a conditional in front of it: 疲れたら、休んだほうがいいです. A situation, and the recommendation that follows from it, in one sentence."
+
+- id: b2.cond-three-way
+  order: 182
+  chapterId: b2.chapter-9
+  situation: If and when
+  title: When each is wrong
+  canDo: Recognise which conditional a native speaker would actually use, out of all three
+  wordIds:
+    - vocab.michi
+    - vocab.migi
+    - vocab.magaru
+    - vocab.ginkou
+    - vocab.aru
+    - vocab.shigoto
+    - vocab.owaru
+    - vocab.sugu
+    - vocab.kaeru
+    - vocab.yukkuri
+    - vocab.hanasu
+    - vocab.wakaru
+    - vocab.atama
+    - vocab.itai
+    - vocab.byouin
+    - vocab.iku
+    - vocab.hou
+    - vocab.osu
+    - vocab.aku
+    - vocab.jikan
+    - vocab.isogu
+    - vocab.takai
+    - vocab.tsukareru
+    - vocab.yasumu
+  phraseIds:
+    - cond.turn-right-and-theres-the-bank
+    - cond.when-work-finishes-ill-go-straight-home
+    - cond.if-you-speak-slowly-ill-understand
+    - cond.if-your-head-hurts-go-to-the-hospital
+  kanji: []
+  grammarNote: "You have beaten たら against と, and たら against ば, one pair at a time. Holding all three at once is a different job, and this is where the chapter asks for it. Three questions, in this order, settle almost everything. First: is there a request, an invitation, a command or a decision in the second half? Then と is out completely, and ば is out too if the first half is an action verb you chose to do. たら. Second: does the second half follow on its own, every time, with nobody deciding anything? と says that better than either of the others. この道を右に曲がると、銀行があります — the bank is where it is whatever you intend. Third: is this a general rule or a hypothesis rather than one particular occasion? ば. ゆっくり話せば、わかります is about speech in general, not about this afternoon. Anything the three questions leave over is たら, which is why 仕事が終わったら、すぐ帰ります takes it: today's plan, one occasion, a decision. Now one to reject on purpose, since seeing a wrong form named is worth more than another right one. 頭が痛かったら、病院に行ったほうがいいです is the natural sentence. 頭が痛いと、病院に行ったほうがいいです is not — と cannot be followed by a suggestion, and ほうがいい is a suggestion, so the と version fails on the hard restriction rather than on style. Note what is not wrong: 頭が痛ければ is perfectly acceptable, because 痛い is an adjective, not a chosen action, and the ば restriction does not reach it. Three forms, and only one of them — と — has a rule that never bends."
+
+- id: b2.checkpoint-9
+  order: 183
+  chapterId: b2.chapter-9
+  situation: Integration & checkpoint
+  title: Chapter 9 checkpoint
+  canDo: Recognise everything taught so far
+  wordIds: []
+  phraseIds: []
+  kanji: []
+  checkpoint: recognition
+  grammarNote: "A wide pass over everything this chapter has taught. Type the reading or the meaning rather than picking it out of a line-up. The conditionals are the ones to watch for as they come round — たら against と against ば — since every word on either side is one you already knew and the join is the only new thing in the sentence. Anything you miss comes back sooner. It finishes when the remaining set empties; retry as often as you like, nothing is recorded."

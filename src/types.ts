@@ -59,6 +59,36 @@ export type Phrase = {
    * predates JLPT tagging; treat as N5 until resolved.
    */
   jlpt?: JlptLevel;
+  /**
+   * Meet this phrase, never be asked to type it.
+   *
+   * The produce step asks the learner to reconstruct a phrase from its English
+   * gloss. Some grammar is taught for recognition long before production is
+   * reasonable — Book Two chapter 7 introduces 〜と言われています so a learner can
+   * read it, and asking them to produce れる/られる forms the chapter never
+   * taught would be a demand the content never prepared them for.
+   *
+   * Kanji solved this by being absent from produceItems entirely (spec
+   * decision 4). Phrases need it per-phrase, because a chapter mixes the two.
+   *
+   * Defaults false: a phrase is producible unless it says otherwise.
+   */
+  recognitionOnly?: boolean;
+  /**
+   * Tatoeba sentence id, when this phrase is quoted rather than composed.
+   *
+   * Books One and Two allow canonical composed sentences marked
+   * `content-source: training`, so most phrases have no id. Book Three does
+   * not: `04-stage-reading.md` §8 says every sentence at the reading stage and
+   * above comes from Tatoeba with its id or does not ship, and until now the
+   * schema had nowhere to put one — `WordExample` requires a `tatoebaId` but
+   * `Phrase` had no equivalent, so the citation had nowhere to live.
+   *
+   * Optional because the two books already shipped predate the rule. A Book
+   * Three phrase without one is a defect, and the check belongs with the first
+   * b3 content file rather than here, where it would assert over an empty set.
+   */
+  tatoebaId?: string;
 };
 
 export type WordType = "noun" | "verb" | "i-adj" | "na-adj" | "adverb" | "counter" | "interjection";

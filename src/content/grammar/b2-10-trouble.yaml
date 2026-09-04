@@ -1,0 +1,54 @@
+# Book Two, Chapter 10 grammar patterns — three, for ten teaching lessons.
+#
+# That is the lowest ratio in the book and it is what the chapter is for. This
+# is a situation chapter whose design brief was combine, don't add, so most of
+# its lessons put a pattern from an earlier chapter to work rather than
+# introducing one - から and ので from the joining chapter, 時 from the same,
+# ています from Book One's clothing chapter, てもらう from giving and receiving,
+# the potential from being able to, と思います and と言っていました from quoted
+# speech, たら and ば from conditionals. Naming any of those again here would be
+# a second id for something already named, and would break the one-pattern-one-
+# lesson rule the ladder has kept since Book One.
+#
+# What earns an id is a combination that is more than the sum of the two things
+# combined, and there are two: a reason clause bolted onto 困っています, which
+# is the fixed frame a person in trouble actually says, and a state chained by
+# て into a potential negative, which is how "it broke, so I can't use it"
+# comes out in one breath.
+#
+# The third is not a combination and was not in the chapter breakdown. The
+# breakdown assigned ～てほしい to the wanting-and-intending chapter and that
+# chapter does not teach it - it teaches ～がほしい and ～たい only, and says in
+# so many words that wanting on someone else's behalf is a form this book does
+# not cover. So ～てほしい is genuinely new here, cheap (the te-form you own plus
+# the ほしい you own), and needed by the lesson whose whole job is asking for a
+# repair. It gets an id because it is a form, not a recombination.
+#
+# The blank is matched against the phrase's reading, so these are kana, and each
+# is wide enough to carry the join rather than one kana a learner could type
+# without choosing anything.
+#
+# content-source: n/a for this file — every pattern references an existing
+#   phrase from phrases/b2-10-trouble.yaml rather than composing new Japanese.
+# jlpt-source: training — the level marks the band this chapter sits in.
+
+- id: grammar.b2-trouble-reason
+  jlpt: N4
+  pattern: "plain past + から／ので + 困っています"
+  gloss: What went wrong, then the fact that you are stuck. The reason comes first, as it always does in Japanese.
+  phraseId: trouble.lost-money-so-im-stuck
+  blank: なくしたので
+
+- id: grammar.b2-trouble-te-chain-potential
+  jlpt: N4
+  pattern: "～て + potential negative"
+  gloss: It broke, and so it cannot be used. The te-form carrying cause rather than sequence.
+  phraseId: trouble.phone-broke-so-i-cant-use-it
+  blank: こわれて
+
+- id: grammar.b2-trouble-te-hoshii
+  jlpt: N4
+  pattern: "te-form + ほしい"
+  gloss: Wanting somebody else to do it, where ～たい only ever wanted to do it yourself.
+  phraseId: trouble.i-want-the-phone-fixed
+  blank: なおしてほしい

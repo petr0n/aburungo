@@ -1,0 +1,243 @@
+# Chapter 8 — Making plans with friends.
+#
+# The deciding chapter built ましょう and ませんか and had nothing to hang them
+# on but food and rooms. This is the situation they were built for -- a friend,
+# a free evening, and an actual invitation. Book One already supplied almost
+# everything else this chapter needs: every day of the week, every date, a full
+# clock, 友達, 会う, 暇, 忙しい, どこ and every place two people could arrange to
+# stand in. Subtract all of that and what is left is genuinely small -- one word
+# for the arrangement itself, one for the weekend, one for whether a day works.
+# This chapter does not pad that back up. It spends its lessons on the thing
+# Book One never gave: the social choreography of asking, accepting, declining,
+# negotiating and confirming, built almost entirely out of material already
+# owned.
+#
+# Two of the moves are recombinations rather than new grammar. The casual
+# invitation -- 行かない？ -- is the plain-form chapter's ない form wearing the
+# plain-form chapter's rising question, aimed for the first time at a specific
+# social act rather than at a fact. And 都合がいい／都合が悪い costs exactly one
+# noun, because いい and 悪い have been on the ladder since the describing
+# chapter.
+#
+#   1  約束                    an arrangement, not just free time
+#   2  ませんか／ましょう       inviting politely -- the deciding chapter's payoff
+#   3  ～ない？                inviting casually -- the plain form's payoff
+#   4  saying yes, saying no   both registers, a real reason, and the 大丈夫 trap
+#   5  都合                    is that day any good for you
+#   6  どこで                  no new words -- everywhere is already named
+#   7  わかった、またね         closing the loop
+#
+# ONE CORRECTION TO THE BREAKDOWN, worth recording because it changed the
+# chapter. The design assumed the meeting-place lesson could reuse ましょうか
+# from the deciding chapter. It cannot -- that chapter's proposing lesson NAMES
+# ましょうか in a note and ships no phrase and no pattern id for it, so nothing
+# on the ladder actually teaches it. Lesson 2 therefore teaches it, with its own
+# phrase and its own pattern, before lesson 6 leans on it. The chapter carries
+# three original patterns rather than the two the design budgeted.
+#
+# The casual volitional (行こう, 食べよう) stays untaught. It is the natural
+# casual twin of ましょう for PROPOSING, but it is a genuine new conjugation
+# rule and that is rule-chapter work, not something a word-shaped situation
+# chapter should introduce. ない？ covers the inviting half without it, and
+# lesson 3's note flags 行こうか for recognition so a learner who hears it from
+# a friend is not lost.
+#
+# Register: the entire situation is completable in polite alone. Lessons 1, 2,
+# 5, 6 and the polite halves of 4 and 7 run end to end without plain form, so a
+# learner still shaky on the register split is never stranded. Casual is layered
+# on top -- lesson 3 exists only to teach it, and lessons 4 and 7 carry it in
+# their second halves. It is the chapter's bonus track, not its gate.
+#
+# Four new kanji across seven lessons is thin, and it is the honest consequence
+# of Book One having already covered this vocabulary domain. 約 was already
+# bought inside 予約 and 週 inside 先週／今週／来週, so 約束 costs 束 alone and
+# 週末 costs 末 alone; only 都合 pays full price. Forcing in 場所 or 誘う to lift
+# the count would be padding a chapter whose can-dos do not need them.
+#
+# content-source: n/a for this file -- it references vocabulary/b2-08-making-plans.yaml
+#   and phrases/b2-08-making-plans.yaml, whose own provenance markers apply.
+
+- id: b2.arrangement
+  order: 166
+  chapterId: b2.chapter-8
+  situation: Making plans with friends
+  title: An arrangement, not just free time
+  canDo: Say you have plans with someone, and that it isn't the same as being free
+  wordIds:
+    - vocab.yakusoku
+    - vocab.tomodachi
+    - vocab.au
+    - vocab.hima
+    - vocab.isogashii
+    - vocab.suru
+    - vocab.aru
+  phraseIds:
+    - plans.i-have-plans-with-a-friend-tomorrow
+    - plans.do-you-have-plans-tomorrow
+    - plans.i-have-plans-so-im-not-free
+  kanji:
+    - 束
+  grammarNote: "暇 and 忙しい describe your day. Neither can say why, and neither mentions the other person — which is the whole gap 約束 fills. It is an arrangement made with somebody, so it always implies a second party, and the particle that marks them is と. 明日、友達と約束があります. Two verbs do the work and you already own both. You have a 約束 with ある — 約束があります — and you make one by putting を in front of する: 友達と会う約束をしました. Note the を. 約束します on its own belongs to the word's other sense, promise, so 来週、約束します says you will give your word next week, not that you will make plans. There is no new verb to learn here either way. One thing to know before you use it casually. 約束's other sense is promise, and both senses live in the same word, so it carries more weight than English \"plans\" does — breaking a 約束 sounds closer to going back on your word than to cancelling on someone. For a loose, nothing-really-agreed \"I might see a friend\", 友達に会います is the safer sentence. And a small saving on the writing: 約 is the character already sitting in 予約, a reservation. Only 束 is new."
+
+- id: b2.invite-polite
+  order: 167
+  chapterId: b2.chapter-8
+  situation: Making plans with friends
+  title: Would you like to?
+  canDo: Invite a friend to do something, using the safe default register
+  wordIds:
+    - vocab.shuumatsu
+    - vocab.issho
+    - vocab.gohan
+    - vocab.taberu
+    - vocab.au
+    - vocab.miru
+    - vocab.nanji
+    - vocab.nani
+    - vocab.suru
+    - vocab.doyoubi
+    - vocab.raishuu
+  phraseIds:
+    - plans.would-you-like-to-eat-together-this-weekend
+    - plans.lets-meet-on-saturday-next-week
+    - plans.what-time-shall-we-meet
+    - plans.what-are-you-doing-this-weekend
+  kanji:
+    - 末
+  patternId: grammar.b2-mashouka
+  grammarNote: "The deciding chapter built ましょう and ませんか and had nothing to aim them at. This is what they were for. Take the register first, because it is the only thing here that can really go wrong. ませんか is correct aimed at anyone, a friend included, so when you are unsure it is the one — 週末、一緒にご飯を食べませんか. ましょう assumes the answer, which is right once you are already doing something together and presumptuous aimed at someone who has agreed to nothing: 来週の土曜日に会いましょう lands well after a plan exists, less well as the opening move. 一緒に makes the together explicit; ませんか invites perfectly well on its own, as the deciding chapter's お茶を飲みませんか already showed you. Without it, 食べませんか drifts toward \"aren't you eating?\" — a question about the other person's evening rather than an offer to share it. The new piece is ましょうか. The proposing lesson mentioned it once and never practised it, so treat it as new: it is ましょう with か on the end, and the か takes the assumption back out. 何時に会いましょうか is a genuine question about the time. Watch its second job, because it is just as common and it is not \"shall we\" at all — with 私が in front, ましょうか offers to do the thing yourself. 私がしましょうか is shall I do it? The subject is the only thing separating them. Finally, the time words behave as they always have, with one distinction worth keeping straight. Days of the week take に — 来週の土曜日に. 明日 and 今日 never do. 週末 sits between them and takes either, so 週末に会いましょう and 週末、会いましょう are both ordinary. And 来週の土曜日 joins the wider time word to the narrower one with の, in that order."
+
+- id: b2.invite-casual
+  order: 168
+  chapterId: b2.chapter-8
+  situation: Making plans with friends
+  title: Wanna?
+  canDo: Invite a close friend to do something, casually
+  wordIds:
+    - vocab.iku
+    - vocab.miru
+    - vocab.asobu
+    - vocab.taberu
+    - vocab.eiga
+    - vocab.issho
+    - vocab.shuumatsu
+    - vocab.tomodachi
+  phraseIds:
+    - plans.wanna-go-together
+    - plans.wanna-see-a-film
+    - plans.wanna-hang-out-this-weekend
+  kanji: []
+  patternId: grammar.b2-casual-invite
+  grammarNote: "Nothing in this lesson is new. The plain-form chapter gave you the ない form, and it gave you the two habits of casual register — a question drops か and rises at the end instead. Put those together and you have the casual invitation. 一緒に行かない？ is structurally \"won't we go?\", the same shape as ませんか, one register down. The forms are the ones you already make and being an invitation changes none of them. 見る is ichidan, so drop る and add ない — 見ない. 行く and 遊ぶ are godan, so the final kana moves to its あ row — 行かない, 遊ばない. Where this belongs is narrower than the polite version, and that is why the two lessons sit back to back on the same verbs. 行かない？ goes to friends, family, and people junior to you. Aimed at a stranger, or at anyone you would use です with, it is a real error — while the previous lesson's 行きませんか aimed at a close friend is only slightly stiff. The two mistakes are not the same size, and that asymmetry is your safety net. Two habits ride along. In relaxed speech the object particle often drops out entirely, so 映画を見ない？ comes out just as readily as 映画見ない？. And there is a second casual way to propose that this book has not taught you to build — the volitional, 行こう, 食べよう, which is ましょう's casual twin. 行こうか from a friend is \"shall we go?\". Recognise it when you hear it; keep asking with ない？ until a later book teaches you to make it."
+
+- id: b2.yes-and-no
+  order: 169
+  chapterId: b2.chapter-8
+  situation: Making plans with friends
+  title: Saying yes, saying no
+  canDo: Accept or decline an invitation, with a reason, in either register
+  wordIds:
+    - vocab.chotto
+    - vocab.daijoubu
+    - vocab.gomennasai
+    - vocab.isogashii
+    - vocab.hima
+    - vocab.yakusoku
+    - vocab.iku
+    - vocab.ii
+    - vocab.un
+    - vocab.uun
+    - vocab.onegaishimasu
+  phraseIds:
+    - plans.sounds-good-lets-go
+    - plans.sorry-i-have-plans-tomorrow
+    - plans.yeah-ill-go
+    - plans.sorry-i-cant-i-have-plans
+    - plans.no-thanks-im-fine
+    - plans.tomorrow-is-a-bit-difficult
+    - want.sorry-im-busy-on-sunday
+  kanji: []
+  grammarNote: "Four ways to answer, two registers, and one trap worth more of your attention than the rest of the lesson together. Accepting is the easy half. いいですね、行きましょう politely; うん、行く casually — the casual accept really is just the plain form, and nothing has been left out of it. Declining is where Japanese does something English does not. A bare いいえ or ううん is almost never the answer. What goes in its place is an apology, then a reason, then the no — and the reason clause is the joining chapter's work coming back, with ので when you are being careful and から when you are not. すみません、明日は約束があるので、行けません. ごめん、明日は約束があるから、行けない. ごめん is ごめんなさい with the polite tail cut off and it goes exactly where うん goes. 行けません and 行けない are the potential chapter's rule on a verb you have had since Book One. You can also decline without finishing the sentence, and this is the version you will hear most often. 明日はちょっと… trails off, and everyone present reads it as no. It is not evasive and it is not rude — saying the rest out loud would be blunter than the moment calls for. Now the trap. 大丈夫です aimed at an offer means \"I'm fine without it\". It is a refusal. English \"I'm fine with that\" pulls the other way, so an English speaker hears agreement where a Japanese speaker hears a polite no. Offered a second helping, offered a lift, offered help with a bag — いいえ、大丈夫です declines all three. When you actually mean yes to an offer, the word is はい、お願いします."
+
+- id: b2.does-that-work
+  order: 170
+  chapterId: b2.chapter-8
+  situation: Making plans with friends
+  title: Does that work for you?
+  canDo: Ask whether a day works, and propose a different one if it doesn't
+  wordIds:
+    - vocab.tsugou
+    - vocab.ii
+    - vocab.warui
+    - vocab.doyoubi
+    - vocab.getsuyoubi
+    - vocab.konshuu
+    - vocab.raishuu
+    - vocab.shuumatsu
+    - vocab.dou
+    - vocab.isogashii
+  phraseIds:
+    - plans.is-saturday-convenient
+    - plans.the-weekend-works-for-me
+    - plans.monday-doesnt-work
+    - plans.this-week-is-bad-how-about-next-week
+  kanji:
+    - 都
+    - 合
+  patternId: grammar.b2-tsugou-ii-warui
+  grammarNote: "Answering an invitation with a flat no ends the conversation. This lesson is what you say when the honest answer is \"not that day, but—\", and it costs a single word, because いい and 悪い have been on your ladder since the describing chapter. 都合 is a noun meaning roughly whether something suits you, and it lives with が plus いい or 悪い. 土曜日は都合がいいですか asks. 週末は都合がいいです and 月曜日は都合が悪いです answer. Both combinations are fixed enough that the dictionary lists them as expressions in their own right, so learn them whole rather than as a noun you decorate. What makes 都合が悪い useful is what it does not say. 忙しいです names a cause and invites a follow-up question; 都合が悪いです says only that the day does not work, which is a complete and perfectly polite answer with no reason attached at all. That is why it is the standard way to turn down a specific date at work as much as with a friend. Attach an alternative and the negotiation keeps moving — 今週は都合が悪いので、来週はどうですか. 〜はどうですか is how you put the next option on the table, and it works for a day, a time or a place. One thing to recognise rather than produce: from a receptionist or a colleague you will hear ご都合はいかがですか. That is formal dress on the same sentence, and understanding it is enough."
+
+- id: b2.where-to-meet
+  order: 171
+  chapterId: b2.chapter-8
+  situation: Making plans with friends
+  title: Where should we meet?
+  canDo: Agree on a place to meet
+  wordIds:
+    - vocab.doko
+    - vocab.eki
+    - vocab.kouen
+    - vocab.ie
+    - vocab.mise
+    - vocab.au
+    - vocab.matsu
+    - vocab.issho
+  phraseIds:
+    - plans.where-shall-we-meet
+    - plans.lets-meet-at-the-station
+    - plans.ill-be-waiting-at-the-park
+  kanji: []
+  grammarNote: "This lesson teaches no new words, on purpose. どこ, 駅, 公園, 家 and 店 have all been on the ladder since Book One; the only thing missing was a frame to put them in, and you built that two lessons ago. どこで会いましょうか is the ましょうか from the invitation lesson aimed at a place instead of an activity. The particle is the thing to get right, because 会う takes two of them and they mean different things. に marks the person you meet — 友達に会います — and と does the same job with a shade more mutuality, 友達と会います, which is the particle lesson 1 put with 約束. で marks the place you meet them in — 駅で会います. で is the particle for where an action happens, and meeting is an action; に after a place would point at a destination, which is a different sentence altogether. Once the place is settled, 待っています finishes the job. 公園で待っています is not a promise to start waiting at some point — the ています you already own says you will be there, waiting, when the other person arrives, which is exactly what you mean to say. 待ちます is not wrong, it is just a bare statement about the future where you want the picture of someone already there. And the answer to どこで can be as short as a place and で. Asked where, 駅で is a complete reply."
+
+- id: b2.confirming
+  order: 172
+  chapterId: b2.chapter-8
+  situation: Making plans with friends
+  title: Confirming the plan
+  canDo: Confirm an arrangement is settled and close the conversation
+  wordIds:
+    - vocab.wakaru
+    - vocab.matane
+    - vocab.au
+    - vocab.yakusoku
+    - vocab.wasureru
+    - vocab.doyoubi
+    - vocab.un
+  phraseIds:
+    - plans.understood-lets-meet-on-saturday
+    - plans.got-it-see-you
+    - plans.dont-forget-our-plans
+  kanji: []
+  grammarNote: "Nothing new, which is the point of the lesson. Everything this chapter set out to do — invite, be answered, negotiate a day, agree on a place — has to close, and closing runs entirely on words you already had. わかりました is the past of わかる, and Japanese puts it in the past where English reaches for the present: \"got it\", the understanding having just landed. Casually it is わかった, by the same tense on the same verb with the polite ending dropped. またね is the casual sign-off and it is friends only — with anyone you would say です to, the close is しつれいします or さようなら, and またね would be too familiar. 約束を忘れないでください closes the loop the first lesson opened. You already had 忘れないでください standing on its own; naming the thing in front of it is the only change, and between friends it is a nudge rather than a reprimand. Two things you own from earlier chapters extend this further, and neither is required here. The potential chapter turns a confirmation into a check — 明日は来られますか, can you make it tomorrow, built on the 来られる you met there. And the quoting chapter lets you pass the arrangement on to somebody else — 友達は行くと言っていました, my friend said they're going. Reach for either if it comes to hand; the confirmation is complete without them."
+
+- id: b2.checkpoint-8
+  order: 173
+  chapterId: b2.chapter-8
+  situation: Integration & checkpoint
+  title: Chapter 8 checkpoint
+  canDo: Recognise everything taught so far
+  wordIds: []
+  phraseIds: []
+  kanji: []
+  checkpoint: recognition
+  grammarNote: "A wide pass over everything this chapter has taught. Type the reading or the meaning rather than picking it out of a line-up. Only three words are new — 約束, 週末, 都合 — so most of what is being checked is whether the moves come to hand rather than the vocabulary: inviting politely and casually, accepting, declining with a reason, saying a day does not work and offering another, and closing the arrangement. Anything you miss comes back sooner. It finishes when the remaining set empties; retry as often as you like, nothing is recorded."

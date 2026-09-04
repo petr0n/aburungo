@@ -1,0 +1,41 @@
+# Book Two, Chapter 4 grammar patterns — becoming, and being asked.
+#
+# Three patterns for seven lessons, which is the honest count. Most of this
+# chapter runs on machinery the learner already owns: が for the part that
+# hurts (the describing chapter), あります for a fever, ～てください for the
+# doctor's instructions, and ので for every reason clause in it. A pattern id
+# for those would be a second name for something already named.
+#
+# What is genuinely new is なる, and it is deliberately split across the first
+# and last lessons. The noun half opens the chapter (病気になりました) and the
+# adjective half closes it (悪くなりました), so the second lands as the other
+# half of a rule the learner half-owns rather than as a fresh table.
+#
+# The blanks follow the joining chapter's convention -- wide enough to take the
+# attachment with them, since the attachment is the thing being learned. に and
+# く alone are one kana a learner could type without choosing anything.
+#
+# content-source: n/a for this file — every pattern references an existing
+#   phrase from phrases/b2-04-doctor.yaml rather than composing new Japanese.
+# jlpt-source: training — the level marks the band this chapter sits in.
+
+- id: grammar.b2-naru-noun
+  jlpt: N4
+  pattern: "noun or な-adjective + になる"
+  gloss: Become. The に is what a noun or a な-adjective needs before なる — 病気になる, 元気になる.
+  phraseId: doctor.i-got-sick
+  blank: びょうきに
+
+- id: grammar.b2-doushimashita
+  jlpt: N4
+  pattern: どうしましたか
+  gloss: What's wrong? どう, the past of する, and か — a stock question with no new word in it.
+  phraseId: doctor.whats-wrong
+  blank: どうしました
+
+- id: grammar.b2-naru-i-adj
+  jlpt: N4
+  pattern: "い-adjective + くなる"
+  gloss: Become, from an adjective. Drop the い and add く — 悪い to 悪くなる, with いい going irregular as よくなる.
+  phraseId: doctor.i-feel-worse
+  blank: わるく

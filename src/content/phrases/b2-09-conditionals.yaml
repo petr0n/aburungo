@@ -1,0 +1,352 @@
+# Book Two, Chapter 9 phrases — if and when.
+#
+# Thirty-two sentences, every word in them already taught. ほう is the only new
+# item the chapter brings and it appears in three of these; everything else is
+# Book One's vocabulary conjugated into forms it has never taken.
+#
+# Eight of the sentences are built as halves of a pair, because three of the
+# chapter's nine lessons do nothing but choose between forms and a contrast the
+# grammarNote only asserts is worth nothing in review:
+#
+#   ここを押すと、水が出ます          against  水が出なかったら、もう一度押してください
+#   冬になると、寒くなります          against  寒かったら、窓を閉めてください
+#   春になれば、暖かくなります        against  春になったら、日本に行きます
+#   毎日歩けば、元気になります        against  公園に着いたら、教えてください
+#
+# Each half of each pair is an ordinary sentence in its own right, written for
+# what it says rather than derived from its partner. That distinction is the
+# whole discipline here: taking one sentence and swapping its conditional to
+# manufacture a contrasting twin produces a sentence nobody would say, wearing
+# the citation of one somebody would. Where the two halves share a setup they
+# do not share a second clause -- the second clause is *why* the conditional
+# differs, so a pair that differs only in the particle would be demonstrating
+# nothing anyway.
+#
+# 春 appears three times across the chapter, once under each form, and that is
+# deliberate rather than a triple of one sentence: 春になると花が咲きます is
+# what happens every year, 春になれば暖かくなります is a general consequence,
+# 春になったら日本に行きます is a plan for this one. Same two words, three
+# different claims.
+#
+# のる and わかる stay in kana, matching their own word cards; バス and タクシー
+# stay in katakana in the reading line, as the joining-sentences chapter's own
+# bus sentence does.
+#
+# These are independent utterances. Several would sit naturally beside each
+# other and none of them is a pair of turns: a scripted exchange is
+# multi-sentence composed text, which is the surface the content rules exist to
+# keep out.
+#
+# content-source: training — N4 canonical, pending Tatoeba verification. JMdict
+#   cannot verify a composed sentence (only fixed expressions are headwords), so
+#   every shape below was checked against the Tatoeba-sourced examples bundled
+#   with JMdict for Applications 3.6.2, read on 2026-08-31. What each attests:
+#
+#     と, mechanical      「ぐいと押すとドアは開いた。」
+#     と, seasonal        「秋になると葉は黄色くなる。」
+#                         「３月になると多くの花が咲く。」
+#     と, automatic       「いもを食べるとおならがでる。」
+#     たら + request      「もし雨になったら洗濯物を取り込んでね。」
+#     い-adjective たら   「苦しかったらギブアップして、お姉さんのお願いを
+#                          聞きなさいっ。」
+#     noun/な-adj なら    「もし嘘なら、彼女はうそつきだ。」
+#                         「値段が手ごろなら、その車を買いたい。」
+#     たら, discovery     「家へついたら電話が鳴っていた。」
+#                         「喫茶店に入ったら、二人の青年がテレビでレスリング
+#                          の試合を見ていた。」
+#     たら, fixed plan    「買い物を済ませてしまったら電話します。」
+#                         「もう２週間たったら帰ります。」
+#     verb ば             「長い目で見れば、正直は引き合う。」
+#                         「こういう風に合体すれば、１４ポートのＵＳＢハブに
+#                          なります。」
+#     よければ            「出だしがよければ半ばやり遂げたようなものだ。」
+#     ば + a request      「よろしければ塩をこちらに回して下さいませんか。」
+#                         「お急ぎでなければ、もう少しいてください。」
+#     the advice pattern  「ビタミンが豊富にある野菜を食べた方がいい。」
+#                         「昇給を当てにしないほうがいい。」
+#     condition + advice  「歯が痛むなら、歯医者さんにかかるべきです。」
+#
+#   The last three rows are load-bearing rather than decorative. The two
+#   ば-plus-request sentences are what stopped this chapter teaching "ば never
+#   takes a request", which is the tidy version of the rule and false: both are
+#   requests, and both are fine because よろしい and 急ぎ are not actions the
+#   listener performs. And ほうがいい is separately a JMdict headword in its own
+#   right -- seq 2160680, "had better ...", flagged common -- which pins the
+#   expression itself rather than only attesting a shape.
+#
+#   No sentence below is a verbatim quotation, so none carries a Tatoeba id.
+# jlpt-source: training — the level marks the band this chapter sits in.
+
+# ── If you have time (Lesson 1) ───────────────────────────────────────────────
+
+- id: cond.if-i-have-time-ill-go
+  jlpt: N4
+  scenario: conditions
+  japanese: 時間があったら、行きます。
+  reading: じかんがあったら、いきます。
+  romaji: jikan ga attara, ikimasu.
+  english: If I have time, I'll go.
+
+- id: cond.if-its-cheap-ill-buy-it
+  jlpt: N4
+  scenario: conditions
+  japanese: 安かったら、買います。
+  reading: やすかったら、かいます。
+  romaji: yasukattara, kaimasu.
+  english: If it's cheap, I'll buy it.
+
+- id: cond.if-youre-a-student-its-cheap
+  jlpt: N4
+  scenario: conditions
+  japanese: 学生だったら、安いです。
+  reading: がくせいだったら、やすいです。
+  romaji: gakusei dattara, yasui desu.
+  english: If you're a student, it's cheap.
+
+# ── When you get there (Lesson 2) ─────────────────────────────────────────────
+
+- id: cond.when-you-get-home-please-call
+  jlpt: N4
+  scenario: conditions
+  japanese: 家に帰ったら、電話してください。
+  reading: いえにかえったら、でんわしてください。
+  romaji: ie ni kaettara, denwa shite kudasai.
+  english: When you get home, please call.
+
+- id: cond.when-i-went-to-the-shop-it-was-closed
+  jlpt: N4
+  scenario: conditions
+  japanese: 店に行ったら、閉まっていました。
+  reading: みせにいったら、しまっていました。
+  romaji: mise ni ittara, shimatte imashita.
+  english: When I went to the shop, it was closed.
+
+- id: cond.when-i-get-to-the-station-ill-take-the-bus
+  jlpt: N4
+  scenario: conditions
+  japanese: 駅に着いたら、バスにのります。
+  reading: えきについたら、バスにのります。
+  romaji: eki ni tsuitara, basu ni norimasu.
+  english: When I get to the station, I'll take the bus.
+
+# ── Press it, and it opens (Lesson 3) ─────────────────────────────────────────
+
+- id: cond.press-it-and-it-opens
+  jlpt: N4
+  scenario: conditions
+  japanese: 押すと、開きます。
+  reading: おすと、あきます。
+  romaji: osu to, akimasu.
+  english: Press it, and it opens.
+
+- id: cond.when-spring-comes-the-flowers-bloom
+  jlpt: N4
+  scenario: conditions
+  japanese: 春になると、花が咲きます。
+  reading: はるになると、はながさきます。
+  romaji: haru ni naru to, hana ga sakimasu.
+  english: When spring comes, the flowers bloom.
+
+- id: cond.if-you-eat-a-lot-you-get-sleepy
+  jlpt: N4
+  scenario: conditions
+  japanese: たくさん食べると、眠くなります。
+  reading: たくさんたべると、ねむくなります。
+  romaji: takusan taberu to, nemuku narimasu.
+  english: If you eat a lot, you get sleepy.
+
+# ── Two ifs that aren't the same (Lesson 4) ───────────────────────────────────
+
+- id: cond.press-here-and-water-comes-out
+  jlpt: N4
+  scenario: conditions
+  japanese: ここを押すと、水が出ます。
+  reading: ここをおすと、みずがでます。
+  romaji: koko o osu to, mizu ga demasu.
+  english: Press here, and water comes out.
+
+- id: cond.if-no-water-comes-out-press-again
+  jlpt: N4
+  scenario: conditions
+  japanese: 水が出なかったら、もう一度押してください。
+  reading: みずがでなかったら、もういちどおしてください。
+  romaji: mizu ga denakattara, mou ichido oshite kudasai.
+  english: If no water comes out, please press it again.
+
+- id: cond.when-winter-comes-it-gets-cold
+  jlpt: N4
+  scenario: conditions
+  japanese: 冬になると、寒くなります。
+  reading: ふゆになると、さむくなります。
+  romaji: fuyu ni naru to, samuku narimasu.
+  english: When winter comes, it gets cold.
+
+- id: cond.if-youre-cold-please-close-the-window
+  jlpt: N4
+  scenario: conditions
+  japanese: 寒かったら、窓を閉めてください。
+  reading: さむかったら、まどをしめてください。
+  romaji: samukattara, mado o shimete kudasai.
+  english: If you're cold, please close the window.
+
+# ── A third way to say if (Lesson 5) ──────────────────────────────────────────
+
+- id: cond.if-you-read-the-book-youll-understand
+  jlpt: N4
+  scenario: conditions
+  japanese: 本を読めば、わかります。
+  reading: ほんをよめば、わかります。
+  romaji: hon o yomeba, wakarimasu.
+  english: If you read the book, you'll understand.
+
+- id: cond.if-you-turn-on-the-light-it-gets-bright
+  jlpt: N4
+  scenario: conditions
+  japanese: 電気をつければ、明るくなります。
+  reading: でんきをつければ、あかるくなります。
+  romaji: denki o tsukereba, akaruku narimasu.
+  english: If you turn on the light, it gets bright.
+
+- id: cond.if-you-book-itll-be-fine
+  jlpt: N4
+  scenario: conditions
+  japanese: 予約すれば、大丈夫です。
+  reading: よやくすれば、だいじょうぶです。
+  romaji: yoyaku sureba, daijoubu desu.
+  english: If you make a reservation, it'll be fine.
+
+- id: cond.if-friends-come-itll-be-lively
+  jlpt: N4
+  scenario: conditions
+  japanese: 友達が来れば、にぎやかになります。
+  reading: ともだちがくれば、にぎやかになります。
+  romaji: tomodachi ga kureba, nigiyaka ni narimasu.
+  english: If friends come, it'll be lively.
+
+# ── If it were (Lesson 6) ─────────────────────────────────────────────────────
+
+- id: cond.if-its-expensive-i-wont-buy-it
+  jlpt: N4
+  scenario: conditions
+  japanese: 高ければ、買いません。
+  reading: たかければ、かいません。
+  romaji: takakereba, kaimasen.
+  english: If it's expensive, I won't buy it.
+
+- id: cond.if-the-weather-is-good-ill-climb-the-mountain
+  jlpt: N4
+  scenario: conditions
+  japanese: 天気がよければ、山に登ります。
+  reading: てんきがよければ、やまにのぼります。
+  romaji: tenki ga yokereba, yama ni noborimasu.
+  english: If the weather is good, I'll climb the mountain.
+
+- id: cond.if-its-raining-ill-take-a-taxi
+  jlpt: N4
+  scenario: conditions
+  japanese: 雨なら、タクシーで行きます。
+  reading: あめなら、タクシーでいきます。
+  romaji: ame nara, takushii de ikimasu.
+  english: If it's raining, I'll go by taxi.
+
+- id: cond.if-youre-free-please-help
+  jlpt: N4
+  scenario: conditions
+  japanese: 暇なら、手伝ってください。
+  reading: ひまなら、てつだってください。
+  romaji: hima nara, tetsudatte kudasai.
+  english: If you're free, please help.
+
+# ── Picking the right if (Lesson 7) ───────────────────────────────────────────
+
+- id: cond.if-spring-comes-it-gets-warm
+  jlpt: N4
+  scenario: conditions
+  japanese: 春になれば、暖かくなります。
+  reading: はるになれば、あたたかくなります。
+  romaji: haru ni nareba, atatakaku narimasu.
+  english: Once spring comes, it gets warm.
+
+- id: cond.when-spring-comes-ill-go-to-japan
+  jlpt: N4
+  scenario: conditions
+  japanese: 春になったら、日本に行きます。
+  reading: はるになったら、にほんにいきます。
+  romaji: haru ni nattara, nihon ni ikimasu.
+  english: When spring comes, I'm going to Japan.
+
+- id: cond.if-you-walk-every-day-youll-be-healthy
+  jlpt: N4
+  scenario: conditions
+  japanese: 毎日歩けば、元気になります。
+  reading: まいにちあるけば、げんきになります。
+  romaji: mainichi arukeba, genki ni narimasu.
+  english: If you walk every day, you'll be healthy.
+
+- id: cond.when-you-get-to-the-park-let-me-know
+  jlpt: N4
+  scenario: conditions
+  japanese: 公園に着いたら、教えてください。
+  reading: こうえんについたら、おしえてください。
+  romaji: kouen ni tsuitara, oshiete kudasai.
+  english: When you get to the park, let me know.
+
+# ── You'd better (Lesson 8) ───────────────────────────────────────────────────
+
+- id: cond.you-should-go-to-bed-early
+  jlpt: N4
+  scenario: advice
+  japanese: 早く寝たほうがいいです。
+  reading: はやくねたほうがいいです。
+  romaji: hayaku neta hou ga ii desu.
+  english: You should go to bed early.
+
+- id: cond.you-shouldnt-drink-too-much
+  jlpt: N4
+  scenario: advice
+  japanese: あまり飲まないほうがいいです。
+  reading: あまりのまないほうがいいです。
+  romaji: amari nomanai hou ga ii desu.
+  english: You shouldn't drink too much.
+
+- id: cond.if-youre-tired-you-should-rest
+  jlpt: N4
+  scenario: advice
+  japanese: 疲れたら、休んだほうがいいです。
+  reading: つかれたら、やすんだほうがいいです。
+  romaji: tsukaretara, yasunda hou ga ii desu.
+  english: If you're tired, you should rest.
+
+# ── When each is wrong (Lesson 9) ─────────────────────────────────────────────
+
+- id: cond.turn-right-and-theres-the-bank
+  jlpt: N4
+  scenario: conditions
+  japanese: この道を右に曲がると、銀行があります。
+  reading: このみちをみぎにまがると、ぎんこうがあります。
+  romaji: kono michi o migi ni magaru to, ginkou ga arimasu.
+  english: Turn right on this road, and there's the bank.
+
+- id: cond.when-work-finishes-ill-go-straight-home
+  jlpt: N4
+  scenario: conditions
+  japanese: 仕事が終わったら、すぐ帰ります。
+  reading: しごとがおわったら、すぐかえります。
+  romaji: shigoto ga owattara, sugu kaerimasu.
+  english: When work finishes, I'll go straight home.
+
+- id: cond.if-you-speak-slowly-ill-understand
+  jlpt: N4
+  scenario: conditions
+  japanese: ゆっくり話せば、わかります。
+  reading: ゆっくりはなせば、わかります。
+  romaji: yukkuri hanaseba, wakarimasu.
+  english: If you speak slowly, I'll understand.
+
+- id: cond.if-your-head-hurts-go-to-the-hospital
+  jlpt: N4
+  scenario: advice
+  japanese: 頭が痛かったら、病院に行ったほうがいいです。
+  reading: あたまがいたかったら、びょういんにいったほうがいいです。
+  romaji: atama ga itakattara, byouin ni itta hou ga ii desu.
+  english: If your head hurts, you should go to the hospital.

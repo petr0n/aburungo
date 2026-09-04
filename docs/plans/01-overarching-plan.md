@@ -233,8 +233,9 @@ toward review and holds back new unit content. Presented as a normal session —
 - **Item format rotates across sessions.** The orchestrator cycles the activity type on each
   resurfacing (flashcard → fill-in-the-blank → Hana phrase) so the same word is seen in different
   retrieval contexts. Example sentences also rotate per resurfacing.
-- Free vs paid: N5/N4 ladders fully playable free; hitting N3 shows a soft upgrade prompt
-  (consistent with the existing soft-gate pattern), with the learner's progress preserved.
+- Free vs paid: gated by book order, not level (DR-033). Books One through Four are fully playable
+  free; Book Five is the first paid content. Reaching it shows a soft upgrade prompt (consistent
+  with the existing soft-gate pattern), with the learner's progress preserved.
 
 ---
 
@@ -331,9 +332,10 @@ High-level tracking for the Learning Paths initiative. Check off items as they s
 - [ ] N4 unit content authored
 - [ ] Scoped Hana launch (constrained to unit items + JLPT level)
 
-### Phase 3 — N3 paid flagship
+### Phase 3 — Book Three, the reading stage
 - [ ] Tatoeba ingestion + i+1 leveling pipeline
 - [ ] Graded reading library + reader UI
 - [ ] In-text sentence mining → SRS
-- [ ] Hana structured feedback mode
-- [ ] Paywall wired (N3 entry behind tier gate)
+- [ ] ~~Hana structured feedback mode~~ — shelved with Hana itself (DR-023)
+- [ ] ~~Paywall wired (N3 entry behind tier gate)~~ — Book Three is free (DR-033: a free account
+      reaches Book Four). The paywall belongs to Book Five; see 99-roadmap.md.

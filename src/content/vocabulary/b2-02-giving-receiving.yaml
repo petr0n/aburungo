@@ -1,0 +1,84 @@
+# Book Two, Chapter 2 vocabulary — the three verbs, and one favour to do.
+#
+# Three of these four words are the chapter itself. English has one verb for
+# this and hands the direction out with a preposition; Japanese has three verbs
+# and the direction is which one you reach for. So あげる, もらう and くれる are
+# not vocabulary the chapter needs in order to teach something else -- they are
+# the something else.
+#
+# The fourth, 手伝う, is here because a chapter about doing things for people
+# needs a verb that means doing something for someone, and because chapter 10
+# (Trouble) proposed the same word independently for its own favour-asking
+# lesson. Chapter 2 comes first, so chapter 2 owns the introduction.
+#
+# All three giving verbs are written in kana, and that is not a stylistic
+# preference -- JMdict tags every relevant sense `uk` (usually written in kana
+# alone). It matters most for あげる, whose kanji 上げる belongs to a different
+# sense entirely (to raise, to lift) and carries the 上 the ladder already
+# teaches as "on, above". A learner who writes 上げる has written the wrong word.
+#
+# Homophones checked, not assumed. くれる is also 暮れる, "to get dark, to come
+# to an end" (JMdict seq 1514960) -- a completely separate entry with the same
+# reading, and the one this file does *not* mean. あげる is also 揚げる (deep-fry,
+# seq 2864817) and 挙げる (to cite, seq 2864818). The senses below are the giving
+# ones and the sequence numbers point at them.
+#
+# content-source: training — headwords, readings, part of speech and glosses
+#   verified against JMdict for Applications 3.6.2 on 2026-08-31, sequence
+#   numbers inline. All four are flagged common in JMdict.
+# jlpt-source: training — JLPT level unverified (JMdict carries no JLPT data).
+#   All four appear at N4 in both reference lists (tanos and open-anki), written
+#   in kana for the giving verbs. 上げる appears separately at N5 in both, glossed
+#   "to raise, to lift" — a different word, and the reason for the note on あげる.
+
+# ── Giving, from the speaker's side (Lesson 1) ────────────────────────────────
+
+- id: vocab.ageru
+  jlpt: N4
+  word_type: verb
+  verb_class: ru
+  theme: actions
+  japanese: あげる
+  reading: あげる
+  romaji: ageru
+  english: to give (to someone else)
+  notes: Written in kana. The kanji 上げる is a different word — to raise, to lift — built on the 上 you know as "on, above". Ichidan, so あげます, あげて, あげた. The gift moves away from you, and the giver is the subject. JMdict seq 1352320, sense 5.
+
+# ── Receiving, from the speaker's side (Lesson 2) ─────────────────────────────
+
+- id: vocab.morau
+  jlpt: N4
+  word_type: verb
+  verb_class: u
+  theme: actions
+  japanese: もらう
+  reading: もらう
+  romaji: morau
+  english: to receive, to get
+  notes: Written in kana, though it has the kanji 貰う. Godan — もらいます, もらって, もらった. Still your own sentence, still your own subject, but the thing is coming towards you, and the person it came from takes から or に. JMdict seq 1535910.
+
+# ── Receiving, but someone else is the subject (Lesson 3) ─────────────────────
+
+- id: vocab.kureru
+  jlpt: N4
+  word_type: verb
+  verb_class: ru
+  theme: actions
+  japanese: くれる
+  reading: くれる
+  romaji: kureru
+  english: to give (to me)
+  notes: Written in kana. Ichidan — くれます, くれて, くれた. JMdict's own note on this sense is the whole lesson - "the receiver is the speaker or someone close to the speaker". Do not confuse it with 暮れる, a different verb with the same sound meaning "to get dark". You have been saying a form of this word since your first request - ください is the imperative of くださる, the polite stand-in for くれる. JMdict seq 1269130.
+
+# ── A favour worth doing (Lesson 6) ───────────────────────────────────────────
+
+- id: vocab.tetsudau
+  jlpt: N4
+  word_type: verb
+  verb_class: u
+  theme: actions
+  japanese: 手伝う
+  reading: てつだう
+  romaji: tetsudau
+  english: to help, to assist
+  notes: Godan, so 手伝います and 手伝って. The reading is worth a second look — 伝 is read だ here, which happens nowhere else, so 手伝 is てつだ as one block rather than 手 plus 伝 sounded out. What is helped takes を - 宿題を手伝う, 仕事を手伝う. JMdict seq 1328190.

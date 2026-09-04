@@ -15,6 +15,15 @@ const CLICK_TIMEOUT_RETRY = 20000;
 // lesson it saw, reporting ladderEndReached=false with nothing actually broken.
 // Keep it comfortably above the lesson count; per-step guards catch real stalls,
 // so a generous cap costs nothing.
+// COVERAGE depends on who is walking. useUserTier() returns "guest" whenever there
+// is no Supabase session, and TIER_BOOK_LIMIT caps a guest at Book One — so a
+// credential-less run keeps currentBook() inside Book One and ends at "All caught
+// up" after ~100 sessions, never touching Book Two. Verified 2026-09-01: currentBook
+// with every Book One lesson seen returns Book One for a guest, Book Two for free.
+//
+// Set WALKTHROUGH_EMAIL and WALKTHROUGH_PASSWORD to sign in first, which lifts the
+// run to "free" and reaches Book Four. Without them the run still works and still
+// passes; it just covers less, and says so in the summary.
 const MAX_SESSIONS = process.env.MAX_SESSIONS ? parseInt(process.env.MAX_SESSIONS, 10) : 200;
 
 let currentPage = null;
@@ -37,6 +46,73 @@ async function visible(page, sel) {
   const loc = page.locator(sel);
   if ((await loc.count()) === 0) return false;
   return loc.first().isVisible().catch(() => false);
+}
+
+/**
+ * Sign in, if credentials were supplied, so the walk covers more than Book One.
+ *
+ * A guest reaches Book One and stops; any signed-in user is "free" and reaches
+ * Book Four (useUserTier in src/store/auth.ts, TIER_BOOK_LIMIT in
+ * src/content/access.ts). So this is the difference between verifying ~100
+ * lessons and verifying all of them.
+ *
+ * Credentials come from the environment, never from a file in the repo, and are
+ * never logged. With none set the run proceeds as a guest exactly as before —
+ * the summary records which happened, so a green result cannot be mistaken for
+ * coverage it did not have.
+ */
+async function signInIfConfigured(page) {
+  const email = process.env.WALKTHROUGH_EMAIL;
+  const password = process.env.WALKTHROUGH_PASSWORD;
+  if (!email || !password) {
+    log("No WALKTHROUGH_EMAIL/WALKTHROUGH_PASSWORD — walking as a guest (Book One only).");
+    return false;
+  }
+
+  log(`Signing in as ${email} to reach past Book One...`);
+  await page.goto(`${BASE}/`, { waitUntil: "networkidle" });
+
+  if (!(await visible(page, "#auth-email"))) {
+    throw new Error("sign-in requested but the auth form is not on / — has the landing page changed?");
+  }
+  await page.fill("#auth-email", email);
+  await page.fill("#auth-password", password);
+  await page.click('button[type="submit"]:has-text("Sign in")');
+
+  // Assert the SESSION, not the form. The form vanishing proves nothing — it
+  // unmounts on submit either way — and believing it labelled five guest walks
+  // as signed-in, each stopping at Book One while the summary claimed
+  // otherwise. Supabase persists under sb-<ref>-auth-token; that key existing
+  // is the only evidence that counts.
+  for (let i = 0; i < 40; i++) {
+    if (await hasSession(page)) {
+      log("  signed in (supabase session present).");
+      return true;
+    }
+    await page.waitForTimeout(250);
+  }
+  const err = await page.locator('[role="alert"], .text-danger-fg').first().textContent().catch(() => null);
+  throw new Error(`sign-in did not create a session${err ? `: ${err.trim()}` : " (no error shown — is Supabase awake?)"}`);
+}
+
+async function hasSession(page) {
+  return page
+    .evaluate(() => Object.keys(localStorage).some((k) => k.includes("auth-token")))
+    .catch(() => false);
+}
+
+/**
+ * Re-assert the session between lessons.
+ *
+ * A full walk runs well past an access token's lifetime. When it lapses the app
+ * falls back to guest, TIER_BOOK_LIMIT caps a guest at Book One, and the walk
+ * ends at "All caught up" with Book Two untouched — which is exactly what five
+ * runs did while reporting themselves signed in.
+ */
+async function keepSignedIn(page, wanted) {
+  if (!wanted || (await hasSession(page))) return;
+  log("  session lapsed — signing back in");
+  await signInIfConfigured(page);
 }
 
 async function clickWhenReady(page, sel, label) {
@@ -310,9 +386,14 @@ async function handleCheckpointIfPresent(page, sessionIndex) {
  *    never "みずをください". JP-keyboard mode takes the kana reading verbatim.
  * 2. **Verbs render "reading · politeReading" in one node.** Scraping it whole
  *    types both forms. Only the plain form before the separator is the answer.
+ *
+ * Detected on the counter ("3 to write" / "1 more to write"), not on the bare
+ * words "to write": that gloss belongs to 書く, and Book Two's first lesson
+ * puts it on an intro card. Matching the gloss called that teaching lesson a
+ * production checkpoint and stalled the run on its first session.
  */
 async function handleProductionCheckpointIfPresent(page, sessionIndex) {
-  if (!(await visible(page, "text=to write"))) return false;
+  if (!(await visible(page, "text=/(\\d+ to write|more to write)/"))) return false;
   log(`  production checkpoint detected (session ${sessionIndex})`);
 
   const answers = new Map();
@@ -320,12 +401,36 @@ async function handleProductionCheckpointIfPresent(page, sessionIndex) {
 
   while (guard < 200) {
     guard++;
-    if (!(await visible(page, "text=to write"))) break; // round(s) done, unit closed
+    if (!(await visible(page, "text=/(\\d+ to write|more to write)/"))) break; // round(s) done, unit closed
+
+    // Wait for the card to be back in its input phase before reading anything.
+    // FillBlankCard renders the mode buttons ("Type"/"Speak", and the design
+    // system's "Romaji"/"Kana grid"/"JP keyboard") only while phase is "input";
+    // after a reveal it is in "result", showing Next. Reading the prompt during
+    // that transition returns the *previous* card's text, so `answers` reports a
+    // hit, the driver takes the typing branch, and JP keyboard is not on screen
+    // yet — which is the 30s click timeout, not a missing button.
+    await page
+      .locator("button:has-text('Check answer')")
+      .first()
+      .waitFor({ state: "visible", timeout: CLICK_TIMEOUT })
+      .catch(() => {});
 
     const prompt = await page.locator("p.text-heading").first().textContent().catch(() => null);
     if (prompt === null) break;
     const known = answers.get(prompt.trim());
 
+    // Reveal once to learn the answer, then type it back when the item
+    // re-queues. Both halves are load-bearing: FillBlankCard only reports
+    // `correct` from compareAnswer on a submitted value, so revealing always
+    // returns onNext(false), the gate re-queues the item, and a reveal-only
+    // loop never empties the set. I deleted this branch once on the theory
+    // that revealing was enough; the next run stalled at round 17.
+    //
+    // "JP keyboard" is a real button — it comes from the design system's
+    // FillInput, not from src/, which is why grepping src/ said it did not
+    // exist. That mode is what renders the input placeholdered
+    // "Type the Japanese...", so the click has to happen before the wait.
     if (known === undefined) {
       await clickWhenReady(page, "button:has-text('Show answer')", "Show answer (production)");
       const reading = await page
@@ -337,7 +442,7 @@ async function handleProductionCheckpointIfPresent(page, sessionIndex) {
     } else {
       await clickWhenReady(page, "button:has-text('JP keyboard')", "JP keyboard (production)");
       const input = page.locator('input[placeholder="Type the Japanese..."]').first();
-      await input.waitFor({ state: "visible", timeout: CLICK_TIMEOUT });
+      await input.waitFor({ state: "visible", timeout: CLICK_TIMEOUT_RETRY });
       await input.fill(known);
       await page.waitForTimeout(150);
       await clickWhenReady(page, "button:has-text('Check answer')", "Check answer (production)");
@@ -423,6 +528,8 @@ async function main() {
     log(`PAGE ERROR: ${String(err)}`);
   });
 
+  const signedIn = await signInIfConfigured(page);
+
   let sessionIndex = 0;
   let grammarClozeCount = 0;
   let allCaughtUpReached = false;
@@ -438,6 +545,7 @@ async function main() {
   while (sessionIndex < MAX_SESSIONS) {
     sessionIndex++;
     log(`=== Session ${sessionIndex}: navigating to /learn ===`);
+    await keepSignedIn(page, signedIn);
     await page.goto(`${BASE}/learn`, { waitUntil: "networkidle" });
 
     // Wait out the "Preparing today's session..." loading placeholder.
@@ -448,12 +556,31 @@ async function main() {
     }
     await page.waitForTimeout(WAIT_SHORT);
 
+    // "All caught up!" is not trustworthy the instant it appears. Supabase
+    // restores the session asynchronously, so LearnPage first builds a session
+    // as a guest — and a guest who has finished Book One IS caught up, because
+    // TIER_BOOK_LIMIT stops them there. Moments later auth lands, `tier` flips
+    // to free, the load effect re-runs on it, and Book Two appears.
+    //
+    // Accepting the first sighting ended every signed-in walk at exactly
+    // session 101 with Book Two untouched, which read as a content or handoff
+    // bug and is neither: LearnPage.handoff.dom.test.tsx covers the handoff and
+    // passes. Re-check before believing it.
     if (await visible(page, "text=All caught up!")) {
-      log(`All caught up! reached at session ${sessionIndex} — walkthrough complete.`);
-      allCaughtUpReached = true;
-      ladderEndReached = true;
-      sessionIndex--; // this iteration did not consume a real session
-      break;
+      await page.waitForTimeout(3000);
+      if (await visible(page, "text=All caught up!")) {
+        // Ground truth for why the walk stopped. A next-book prompt here means
+        // the app thinks this tier cannot reach the next book (guest); its
+        // absence means the app believes every reachable book is finished.
+        const body = await page.locator("body").innerText().catch(() => "");
+        log(`  STOP DIAGNOSTIC: ${JSON.stringify(body.replace(/\s+/g, " ").slice(0, 400))}`);
+        log(`All caught up! reached at session ${sessionIndex} — walkthrough complete.`);
+        allCaughtUpReached = true;
+        ladderEndReached = true;
+        sessionIndex--; // this iteration did not consume a real session
+        break;
+      }
+      log("  (transient 'All caught up!' before auth settled — continuing)");
     }
 
     await handleReviewStepIfPresent(page, sessionIndex);
@@ -596,10 +723,12 @@ async function main() {
   }
 
   log(
-    `=== SUMMARY: sessionsCompleted=${results.sessionsCompleted}, ladderEndReached=${ladderEndReached}, ` +
+    `=== SUMMARY: walkedAs=${signedIn ? "signed-in (reaches Book Four)" : "GUEST (Book One only)"}, ` +
+      `sessionsCompleted=${results.sessionsCompleted}, ladderEndReached=${ladderEndReached}, ` +
       `allCaughtUpReached=${allCaughtUpReached}, grammarClozeCardsSeen=${grammarClozeCount}, ` +
       `consoleErrors=${results.consoleErrors.length}, pageErrors=${results.pageErrors.length} ===`,
   );
+  results.walkedAs = signedIn ? "signed-in" : "guest";
   results.ladderEndReached = ladderEndReached;
   results.allCaughtUpReached = allCaughtUpReached;
   results.grammarClozeCardsSeen = grammarClozeCount;

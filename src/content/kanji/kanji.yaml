@@ -2,6 +2,120 @@
 # Source: KANJIDIC2 via kanjiapi.dev. KANJIDIC2 is CC BY-SA 4.0,
 # (c) Electronic Dictionary Research and Development Group.
 
+- character: "伝"
+  meanings: ["transmit", "go along", "walk along", "follow"]
+  allMeanings: ["transmit", "go along", "walk along", "follow", "report", "communicate", "legend", "tradition"]
+  on: ["デン", "テン"]
+  kun: ["つた.わる", "つた.える", "つた.う", "つだ.う", "-づた.い", "つて"]
+  strokes: 6
+- character: "病"
+  meanings: ["ill", "sick"]
+  allMeanings: ["ill", "sick"]
+  on: ["ビョウ", "ヘイ"]
+  kun: ["や.む", "-や.み", "やまい"]
+  strokes: 10
+- character: "腹"
+  meanings: ["abdomen", "belly", "stomach"]
+  allMeanings: ["abdomen", "belly", "stomach"]
+  on: ["フク"]
+  kun: ["はら"]
+  strokes: 13
+- character: "熱"
+  meanings: ["heat", "temperature", "fever", "mania"]
+  allMeanings: ["heat", "temperature", "fever", "mania", "passion"]
+  on: ["ネツ"]
+  kun: ["あつ.い"]
+  strokes: 15
+- character: "邪"
+  meanings: ["wicked", "injustice", "wrong"]
+  allMeanings: ["wicked", "injustice", "wrong"]
+  on: ["ジャ"]
+  kun: ["よこし.ま"]
+  strokes: 8
+- character: "医"
+  meanings: ["doctor", "medicine"]
+  allMeanings: ["doctor", "medicine"]
+  on: ["イ"]
+  kun: ["い.やす", "い.する", "くすし"]
+  strokes: 7
+- character: "者"
+  meanings: ["someone", "person"]
+  allMeanings: ["someone", "person"]
+  on: ["シャ"]
+  kun: ["もの"]
+  strokes: 8
+- character: "薬"
+  meanings: ["medicine", "chemical", "enamel", "gunpowder"]
+  allMeanings: ["medicine", "chemical", "enamel", "gunpowder", "benefit"]
+  on: ["ヤク"]
+  kun: ["くすり"]
+  strokes: 16
+- character: "束"
+  meanings: ["bundle", "sheaf", "ream", "tie in bundles"]
+  allMeanings: ["bundle", "sheaf", "ream", "tie in bundles", "govern", "manage", "control"]
+  on: ["ソク"]
+  kun: ["たば", "たば.ねる", "つか", "つか.ねる"]
+  strokes: 7
+- character: "末"
+  meanings: ["end", "close", "tip", "powder"]
+  allMeanings: ["end", "close", "tip", "powder", "posterity"]
+  on: ["マツ", "バツ"]
+  kun: ["すえ", "うら", "うれ"]
+  strokes: 5
+- character: "都"
+  meanings: ["metropolis", "capital", "all", "everything"]
+  allMeanings: ["metropolis", "capital", "all", "everything"]
+  on: ["ト", "ツ"]
+  kun: ["みやこ"]
+  strokes: 11
+- character: "合"
+  meanings: ["fit", "suit", "join", "0.1"]
+  allMeanings: ["fit", "suit", "join", "0.1"]
+  on: ["ゴウ", "ガッ", "カッ"]
+  kun: ["あ.う", "-あ.う", "あ.い", "あい-", "-あ.い", "-あい", "あ.わす", "あ.わせる", "-あ.わせる"]
+  strokes: 6
+- character: "財"
+  meanings: ["property", "money", "wealth", "assets"]
+  allMeanings: ["property", "money", "wealth", "assets"]
+  on: ["ザイ", "サイ", "ゾク"]
+  kun: ["たから"]
+  strokes: 10
+- character: "布"
+  meanings: ["linen", "cloth", "spread", "distribute"]
+  allMeanings: ["linen", "cloth", "spread", "distribute"]
+  on: ["フ", "ホ"]
+  kun: ["ぬの", "し.く", "きれ"]
+  strokes: 5
+- character: "探"
+  meanings: ["grope", "search", "look for"]
+  allMeanings: ["grope", "search", "look for"]
+  on: ["タン"]
+  kun: ["さぐ.る", "さが.す"]
+  strokes: 11
+- character: "壊"
+  meanings: ["demolition", "break", "destroy"]
+  allMeanings: ["demolition", "break", "destroy"]
+  on: ["カイ", "エ"]
+  kun: ["こわ.す", "こわ.れる", "やぶ.る"]
+  strokes: 16
+- character: "直"
+  meanings: ["straightaway", "honesty", "frankness", "fix"]
+  allMeanings: ["straightaway", "honesty", "frankness", "fix", "repair"]
+  on: ["チョク", "ジキ", "ジカ"]
+  kun: ["ただ.ちに", "なお.す", "-なお.す", "なお.る", "なお.き", "す.ぐ"]
+  strokes: 8
+- character: "交"
+  meanings: ["mingle", "mixing", "association", "coming & going"]
+  allMeanings: ["mingle", "mixing", "association", "coming & going"]
+  on: ["コウ"]
+  kun: ["まじ.わる", "まじ.える", "ま.じる", "まじ.る", "ま.ざる", "ま.ぜる", "-か.う", "か.わす", "かわ.す", "こもごも"]
+  strokes: 6
+- character: "号"
+  meanings: ["nickname", "number", "item", "title"]
+  allMeanings: ["nickname", "number", "item", "title", "pseudonym", "name", "call"]
+  on: ["ゴウ"]
+  kun: ["さけ.ぶ", "よびな"]
+  strokes: 5
 - character: "国"
   meanings: ["country"]
   allMeanings: ["country"]

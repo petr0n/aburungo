@@ -3,6 +3,115 @@
   "_licence": "Source licensed CC BY-SA 3.0 Unported (https://creativecommons.org/licenses/by-sa/3.0/). This table is a modified adaptation, offered under CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/) as BY-SA 3.0 section 4(b) permits.",
   "_modifications": "Scoped to the characters this course teaches; self-references dropped; krad-unicode stand-in glyphs dropped; per-kanji spurious elements dropped (see src/content/kanji/filters.json).",
   "map": {
+    "伝": [
+      "⺅",
+      "二",
+      "厶"
+    ],
+    "病": [
+      "一",
+      "人",
+      "冂",
+      "疒"
+    ],
+    "腹": [
+      "月",
+      "日",
+      "夂",
+      "ノ",
+      "一",
+      "人"
+    ],
+    "熱": [
+      "土",
+      "九",
+      "丶",
+      "儿",
+      "⺣"
+    ],
+    "邪": [
+      "牙",
+      "⻏"
+    ],
+    "医": [
+      "矢",
+      "匚"
+    ],
+    "者": [
+      "日",
+      "⺹"
+    ],
+    "薬": [
+      "日",
+      "木",
+      "冫",
+      "⺾"
+    ],
+    "束": [
+      "｜",
+      "一",
+      "口",
+      "ハ",
+      "木"
+    ],
+    "末": [
+      "｜",
+      "一",
+      "ハ",
+      "木",
+      "亠"
+    ],
+    "都": [
+      "日",
+      "⻏",
+      "⺹"
+    ],
+    "合": [
+      "口",
+      "𠆢",
+      "一"
+    ],
+    "財": [
+      "ノ",
+      "一",
+      "貝",
+      "目",
+      "ハ",
+      "亅"
+    ],
+    "布": [
+      "ノ",
+      "一",
+      "巾"
+    ],
+    "探": [
+      "木",
+      "儿",
+      "冖",
+      "⺘"
+    ],
+    "壊": [
+      "衣",
+      "十",
+      "土",
+      "⺲",
+      "亠"
+    ],
+    "直": [
+      "十",
+      "目",
+      "｜",
+      "一"
+    ],
+    "交": [
+      "父",
+      "亠"
+    ],
+    "号": [
+      "一",
+      "口",
+      "勹"
+    ],
     "国": [
       "王",
       "囗",

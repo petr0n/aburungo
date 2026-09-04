@@ -1,0 +1,295 @@
+# Chapter 7 — What people are saying.
+#
+# Ninety percent of a language is not what you did, it's what somebody told
+# you somebody else did. The plain-form chapter built the four shapes and
+# promised they would sit in front of half of Book Two's patterns; this is
+# where that promise is cashed, for real money. Every quote in this chapter
+# is a plain-form clause with と stapled to the end of it, and a learner who
+# has that chapter in hand can already build the clause -- this chapter's
+# whole job is teaching them what to staple on.
+#
+# The chapter runs two families side by side. と言っていました reports what
+# someone else said, in something close to their own words; と思います
+# reports what you think. English blurs the two constantly -- "she says
+# it's expensive" and "I think it's expensive" lean on the same small verb,
+# and a learner defaults to whichever one they met first. Japanese keeps
+# them apart by definition: 言う always needs a source outside the speaker,
+# 思う always needs the speaker's own head. Splitting the chapter along that
+# seam, rather than teaching と once and swapping verbs in and out, is what
+# makes the distinction stick instead of blurring back together the way it
+# does in English.
+#
+# The report family goes first because it costs less. 言う and 聞く are
+# both already owned -- vocab.iu since Book One's home & work chapter,
+# vocab.kiku since its verbs set -- so the entire family is built by
+# pointing already-known grammar (て-form, ている, た) at already-known
+# verbs. The passive lands here too, immediately after 言っていました,
+# because と言われています is that same sentence with the source erased --
+# "it is said" rather than "she said" -- and a learner who just met the
+# sourced version is the one best placed to notice what changed. It is
+# recognition only: read it, notice the shift, never build it. Causative,
+# and production of both, open the next book -- nothing here asks for either.
+#
+# The opinion family comes second and needs one thing the plain-form chapter
+# could not give it: 思う itself, a verb Book One never taught despite being
+# one of the most common in the language, because nothing before this chapter
+# had anywhere to put it. Once it lands, its conjugation costs nothing new --
+# 思う ends in う, so it takes the same わ exception as 買う and 会う from the
+# godan-negative lesson, and the same て→た swap as everything else from the
+# plain-past lesson. The one genuinely new rule on this side is where the
+# negative goes: "I don't think it's expensive" negates the clause, not 思う
+# -- 高くない plus と思います, never 思います swapped for 思いません -- which is
+# exactly the error an English speaker defaults to, and exactly why it earns
+# its own lesson rather than a footnote.
+#
+# One rule crosses both families and gets its own lesson before either one
+# starts building sentences with it: a noun or な-adjective clause keeps だ
+# in front of と even though the copula lesson taught that だ is dropped
+# constantly everywhere else. だ stays, です never appears there at all --
+# the one place in the whole book where the plain copula is mandatory and
+# the polite one is flatly wrong, in a chapter that is otherwise all about
+# choosing plain form on purpose rather than by rule.
+#
+#    1  what was said               と after a plain verb or い-adjective clause
+#    2  the word you can't leave out    noun／な-adjective clauses keep だ
+#    3  what they've been saying    と言っていました -- て-form + ている + た
+#    4  they say...                 と言われています, recognition only
+#    5  so I heard                  と聞きました／と聞いています, no new verb
+#    6  what I think                と思います -- 思う, new
+#    7  saying you don't think so   negate the clause, not 思う
+#    8  what I've been thinking     と思っていました／と思っています
+#    9  passing it on               a report and an opinion, kept separate
+#
+# The passive lesson depends on the one before it; the negation and ongoing
+# lessons depend on the lesson that brings 思う; the closing lesson depends on
+# both families being in hand. This chapter must not be split by a checkpoint
+# before that closing lesson -- the same constraint as the plain-form and
+# te-form chapters.
+#
+# ---------------------------------------------------------------------------
+# BLOCKED, READ BEFORE WIRING: b2.report-passive is recognition-only content
+# and the engine cannot yet say so. Book Two is a `shifted` book, so its two
+# phrases route to the typed FillBlankCard, which would ask a learner to
+# produce れる/られる -- the one thing the chapter design forbids. The lesson
+# carries no patternId for the same reason, since a cloze is production by
+# construction. The fix specified in book-two-chapter-07.md §5.2 is a
+# `recognitionOnly?: boolean` on Phrase, checked in ReviewStep ahead of the
+# shifted branch exactly as isKanji is checked today; it does not exist in
+# src/ as of 2026-08-31. Do not ship this lesson until it lands.
+# ---------------------------------------------------------------------------
+#
+# The `kanji:` arrays are empty and should not stay that way. 思う brings 思,
+# a character no Book One word contains and no lesson teaches -- verified
+# against the manifest on 2026-08-31. One character is a fraction of what a
+# situation chapter brings, and that is the honest consequence of a rule
+# chapter built on verbs the learner already owns: kanji ride in on nouns,
+# and this family of patterns needs almost none.
+#
+# It is held back for the reason the plain-form chapter names: a character in
+# a lesson's array must also have a row in the generated kanji set, in its
+# decomposition, and in the component layer, and the component layer is built
+# from the registered ladder, so it cannot resolve a lesson that is not wired
+# in yet. Adding it here turns src/content/kanji/scope.test.ts red. When this
+# file is wired into the lessons index and the book: put 思 on the lesson that
+# brings 思う, then rerun `node scripts/kanji.mjs build` and `decompose`.
+#
+# content-source: n/a for this file -- it references vocabulary/b2-07-quoted-speech.yaml
+#   and phrases/b2-07-quoted-speech.yaml, whose own provenance markers apply.
+
+- id: b2.quote-plain
+  order: 156
+  chapterId: b2.chapter-7
+  situation: What people are saying
+  title: What was said
+  canDo: Say what someone else said, in something close to their own words
+  wordIds:
+    - vocab.iu
+    - vocab.iku
+    - vocab.taberu
+    - vocab.kau
+    - vocab.samui
+    - vocab.tomodachi
+  phraseIds:
+    - quote.my-friend-said-theyre-going-tomorrow
+    - quote.my-friend-said-they-ate-sushi
+    - quote.my-friend-said-theyre-not-buying-anything
+    - quote.my-friend-said-its-cold
+  kanji: []
+  patternId: grammar.b2-quote-plain
+  grammarNote: "Take what the person said, put it in plain form, and close it with と. Then say 言いました. 明日行くと言いました. That is the whole mechanism, and the reason this chapter is where the plain-form chapter pays off: all four verb shapes you built there go in front of と unchanged. The dictionary form for something they will do — 行くと言いました. The past for something they did — 食べたと言いました. The negative for something they will not do — 買わないと言いました, the わ exception still holding. And an い-adjective needs no conversion at all, because Book One taught adjectives in plain form from the first card — 寒いと言いました. Two things to watch. と attaches directly, with nothing between it and the clause: no pause, no punctuation, no politeness. And the clause inside stays plain no matter how polite the sentence around it gets — 行きますと言いました is wrong even though 言いました is polite. The politeness lives on the closing verb only."
+
+- id: b2.quote-da
+  order: 157
+  chapterId: b2.chapter-7
+  situation: What people are saying
+  title: The word you can't leave out
+  canDo: Report what someone said about who or what something is, without the sentence coming out wrong
+  wordIds:
+    - vocab.iu
+    - vocab.gakusei
+    - vocab.daijoubu
+    - vocab.genki
+    - vocab.takai
+    - vocab.suki
+  phraseIds:
+    - quote.my-friend-said-theyre-a-student
+    - quote.the-teacher-said-its-fine
+    - quote.my-friend-said-they-were-well
+  kanji: []
+  patternId: grammar.b2-quote-da
+  grammarNote: "The copula lesson told you だ gets dropped constantly in casual speech — before ね and よ, and in questions. In front of と it cannot be dropped, and this is the exception worth learning on its own. A noun or な-adjective clause keeps it: 学生だと言いました, 大丈夫だと言いました. Not 学生と, not 大丈夫と. And です never appears there either, however polite the rest of the sentence is: 学生ですと言いました is wrong. This is the one place in the book where the plain copula is required and the polite one is simply not an option. The past behaves the same way — だった, not でした: 元気だったと言いました. い-adjectives are the other half of the rule and nothing about them has changed: they take no copula, so 高いと言いました, never 高いだと. Set those two side by side and the shape is easy to hold — a noun or な-adjective needs a word in front of と, an い-adjective already has everything it needs."
+
+- id: b2.report-teimashita
+  order: 158
+  chapterId: b2.chapter-7
+  situation: What people are saying
+  title: What they've been saying
+  canDo: Report what someone has been telling you, the way it is actually said in conversation
+  wordIds:
+    - vocab.iu
+    - vocab.ashita
+    - vocab.shigoto
+    - vocab.isogashii
+    - vocab.ryokou
+    - vocab.ame
+  phraseIds:
+    - quote.my-friend-was-saying-theyre-going-on-a-trip
+    - quote.the-teacher-was-saying-work-is-busy
+    - quote.my-friend-was-saying-theyre-not-coming
+    - quote.my-mother-was-saying-it-will-rain
+  kanji: []
+  patternId: grammar.b2-report-teimashita
+  grammarNote: "Mechanically this asks nothing new of you. 言う is godan and ends in う, so its te-form is 言って; ています is Book One's; and the plain-past swap is the one the past-tense lesson taught. Put them together and you have 言っていました. What is new is when to reach for it. 言いました reports a single utterance at a single moment — a thing said once, like a line in a meeting. 言っていました reports what someone has been saying, and that is how reported speech actually gets delivered in conversation almost all of the time. If a friend has mentioned twice this week that they are busy, 忙しいと言っていました is the natural report and 忙しいと言いました sounds oddly forensic, as though you were quoting a statement. They are not synonyms. Reach for the ている version by default when you are passing on what someone told you, and keep 言いました for the moment you really do mean one specific thing said once."
+
+- id: b2.report-passive
+  order: 159
+  chapterId: b2.chapter-7
+  situation: What people are saying
+  title: They say...
+  canDo: Read a sentence that reports something without naming who said it, and understand what it means
+  wordIds:
+    - vocab.iu
+    - vocab.yuumei
+  phraseIds:
+    - quote.this-mountain-is-said-to-be-famous
+    - quote.fish-is-said-to-be-good-for-you
+  kanji: []
+  grammarNote: "This lesson is for reading only. You are not asked to build these sentences, and nothing later in this chapter needs you to. Look at 言われています next to the 言っていました you just met. Same と, same clause in front of it, same ている on the end — and the person who said it has vanished. 有名だと言っていました is somebody telling you something; 有名だと言われています is \"it is said to be famous\", with no one to attribute it to. That is what 言われる does: it takes the speaker out of the sentence. It is the most common way written Japanese states a general belief, so you will meet it constantly in signs, articles and guidebooks long before you have any reason to write one, and the form itself — れる and られる — is next book's material. Two things are worth noticing while you are here. だ still survives in front of と even under this extra layer, and an い-adjective still refuses it: 有名だと言われています, but 体にいいと言われています."
+
+- id: b2.report-heard
+  order: 160
+  chapterId: b2.chapter-7
+  situation: What people are saying
+  title: So I heard
+  canDo: Say what you heard, without saying who told you
+  wordIds:
+    - vocab.kiku
+    - vocab.ame
+    - vocab.tenki
+    - vocab.raishuu
+    - vocab.mise
+  phraseIds:
+    - quote.i-heard-it-will-rain-tomorrow
+    - quote.i-heard-the-teacher-is-going-on-a-trip
+    - quote.i-hear-that-shop-is-expensive
+  kanji: []
+  patternId: grammar.b2-report-heard
+  grammarNote: "聞く is on your cards as \"to listen, to ask\", and it carries a further sense the same headword has always had (JMdict seq 1591110, sense 4): to hear that something is the case. Slot it into the frame you already built and nothing else changes — 雨だと聞きました, exactly where 言いました stood. The point of this one is not mechanical, it is about how much you are committing to. と言っていました names a source: you are telling me that this particular person said this. と聞きました names nobody. It is what you reach for when you picked something up secondhand, or half remember where it came from, or would rather not put someone's name to it — all of which are ordinary and none of which are evasive. 聞いています is the same move as 言っています: not one moment of hearing, but something you have been given to understand and still hold. Use it when you are reporting a standing impression rather than a piece of news."
+
+- id: b2.opinion-omou
+  order: 161
+  chapterId: b2.chapter-7
+  situation: What people are saying
+  title: What I think
+  canDo: Say what you think, as an opinion rather than a fact
+  wordIds:
+    - vocab.omou
+    - vocab.takai
+    - vocab.omoshiroi
+    - vocab.suki
+    - vocab.yuumei
+    - vocab.iku
+    - vocab.hon
+  phraseIds:
+    - quote.i-think-this-book-is-interesting
+    - quote.i-think-my-friend-likes-sushi
+    - quote.i-think-my-friend-will-come-tomorrow
+    - quote.i-think-the-teacher-will-go-too
+  kanji: []
+  patternId: grammar.b2-opinion-omou
+  grammarNote: "Here is 思う, and it is the one genuinely new word in this chapter. Book One never taught it, which is strange for a verb this common, and the reason is that until now there was nowhere to put it: 思う needs a clause in front of it, and clauses are what you have only just learned to build. It costs nothing to conjugate. It ends in う, so the negative takes わ — 思わない, like 買わない and 会わない — and the past is 思った by the same swap as everything else. The frame is the one you already have: plain clause, と, then 思います. 面白いと思います. 好きだと思います, with だ still compulsory after a な-adjective. 来ると思います. What changes is the claim you are making. 面白いです states that the book is interesting; 面白いと思います says that is your read on it. In Japanese that hedge does a lot of work, and stating an opinion flatly as fact sounds more forceful than an English speaker usually intends, so と思います is not decoration — it is the ordinary, expected way to put a view."
+
+- id: b2.opinion-negative
+  order: 162
+  chapterId: b2.chapter-7
+  situation: What people are saying
+  title: Saying you don't think so
+  canDo: Say you don't think something is true, without producing the sentence English grammar would suggest
+  wordIds:
+    - vocab.omou
+    - vocab.kuru
+    - vocab.wakaru
+    - vocab.aru
+    - vocab.jikan
+    - vocab.kinou
+  phraseIds:
+    - quote.i-dont-think-my-friend-understands
+    - quote.i-dont-think-theres-time
+    - quote.i-dont-think-my-friend-came-yesterday
+  kanji: []
+  patternId: grammar.b2-opinion-negative
+  grammarNote: "English puts the negative on \"think\": I don't think it's expensive. Japanese puts it in the clause. 高くないと思います — the thing being negated is 高い, not 思う. 思いません exists and is grammatical, but it reads blunt and flat, closer to \"I don't see it that way\" than to \"I don't think so\", and it is not how this is normally said. This is the single most predictable mistake an English speaker makes with 思う, which is why it gets a lesson of its own rather than a line at the bottom of the last one. Every form you need is already built. Ichidan and irregular negatives from the easy half of the negative lesson: 来ないと思います. Godan negatives from the harder half: わからないと思います. ある's outright exception from the same place: 時間がないと思います, never 時間があらない. And the past negative from the なかった lesson: 来なかったと思います. Nothing new to learn here — only somewhere new to put it."
+
+- id: b2.opinion-ongoing
+  order: 163
+  chapterId: b2.chapter-7
+  situation: What people are saying
+  title: What I've been thinking
+  canDo: Say what you've been thinking, or that your opinion has held for a while
+  wordIds:
+    - vocab.omou
+    - vocab.shigoto
+    - vocab.daijoubu
+    - vocab.genki
+    - vocab.omoshiroi
+  phraseIds:
+    - quote.ive-come-to-think-this-work-is-interesting
+    - quote.i-thought-work-would-be-fine
+    - quote.i-believe-my-friend-is-well
+  kanji: []
+  patternId: grammar.b2-opinion-ongoing
+  grammarNote: "You can probably predict this one before reading it, which is the point. It is the same move that turned 言いました into 言っていました, one verb later: te-form, then ている, then た for the past. 思う ends in う and belongs to the って group, so the te-form is 思って and the result is 思っています and 思っていました. What the ている adds is duration. 思います is a judgement formed now, on the spot, about what is in front of you. 思っています is a view you have been holding — 面白いと思っています says you have come to find the work interesting and still do, not that the thought just struck you. The past form carries a strong flavour worth knowing: 大丈夫だと思っていました usually means you thought so and no longer do. That is how a change of mind gets said, and it is why the same sentence in the present would be a report of what you believe and in the past is close to an admission you were wrong."
+
+- id: b2.report-and-opinion
+  order: 164
+  chapterId: b2.chapter-7
+  situation: What people are saying
+  title: Passing it on
+  canDo: Relay what you heard, then say what you think about it, without mixing the two into one claim
+  wordIds:
+    - vocab.iu
+    - vocab.omou
+    - vocab.kiku
+    - vocab.ashita
+    - vocab.tenki
+    - vocab.isogashii
+    - vocab.yuumei
+  phraseIds:
+    - quote.i-heard-rain-but-i-think-it-will-be-fine
+    - quote.my-friend-said-theyre-busy-but-i-think-theyll-come
+    - quote.my-friend-said-that-shop-is-famous-but-i-wont-go
+  kanji: []
+  patternId: grammar.b2-report-and-opinion
+  grammarNote: "No new grammar. This is the two halves of the chapter doing what they were built to do, side by side on one topic. Report first, attributed: 友達は忙しいと言っていました. Then your own view, marked as yours: 明日は来ると思います. The けど from the joining chapter is enough to hold them in one sentence. Keeping them apart is a real skill and not a grammatical nicety. Say what you heard as though you thought it and you have quietly taken on a claim that was never yours; hedge your own view as something you merely heard and you have ducked the responsibility for it. Both are ordinary miscommunications, and both are avoidable by the discipline this lesson practises: one verb per claim, and the right verb. 言う and 聞く for what came from outside you, 思う for what came from you, and never one standing in for the other."
+
+- id: b2.checkpoint-7
+  order: 165
+  chapterId: b2.chapter-7
+  situation: Integration & checkpoint
+  title: Chapter 7 checkpoint
+  canDo: Recognise everything taught so far
+  wordIds: []
+  phraseIds: []
+  kanji: []
+  checkpoint: recognition
+  grammarNote: "A wide pass over everything this chapter has taught. Type the reading or the meaning rather than picking it out of a line-up. The thing to watch as the sentences come round is which verb closes them — 言う and 聞く for what someone else said, 思う for what you think — and whether there is a だ in front of と, since that is the one small word the whole chapter turns on. Anything you miss comes back sooner. It finishes when the remaining set empties; retry as often as you like, nothing is recorded."

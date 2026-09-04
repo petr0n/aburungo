@@ -1,0 +1,43 @@
+# Book Two, Chapter 9 vocabulary — the one noun the advice pattern needs.
+#
+# A chapter of three conditionals that brings a single word, and that word is
+# not there to exercise any of them. たら, ば and と are built out of forms the
+# learner already owns -- the plain past, the plain negative, the dictionary
+# form -- so every sentence in this chapter is made of Book One's verbs and
+# adjectives doing new work. Bringing fresh verbs would put a second unfamiliar
+# thing in a sentence whose only interesting part is the join.
+#
+# ほう is the exception because 〜たほうがいい cannot be phrased without it. It
+# is the head noun of the pattern and has no independent life inside it: the
+# sentence literally says "the having-rested side is the good one", and ほう is
+# that side.
+#
+# Kept in kana rather than written 方. The kanji exists and is common, but this
+# grammatical use is conventionally written in hiragana -- the same call the
+# plain-form chapter made for こと, which has 事 and does not use it. Writing
+# 方 here would also invite the wrong reading: 方 is かた at least as often as
+# it is ほう, and かた is a different word.
+#
+# content-source: training — headword, reading, part of speech and gloss
+#   verified against JMdict for Applications 3.6.2 on 2026-08-31, sequence
+#   number inline. Flagged common in JMdict. Note that the sense meant here is
+#   not JMdict's first for this entry: seq 1516930 opens on "direction; way;
+#   side" and the comparison sense ("indicates one side of a comparison") is
+#   sense 5 of the same entry. The whole expression is separately a JMdict
+#   headword -- 方がいい / ほうがいい, seq 2160680, "had better ...", also
+#   flagged common -- which is the entry that pins this reading and this sense.
+# jlpt-source: training — JLPT level unverified (JMdict carries no JLPT data).
+#   Tagged N4 for the band 〜たほうがいい sits in on both the Tanos and open-anki
+#   reference lists; the bare noun is not listed on its own in either.
+
+# ── The advice pattern (Lesson 8) ─────────────────────────────────────────────
+
+- id: vocab.hou
+  jlpt: N4
+  word_type: noun
+  theme: basics
+  japanese: ほう
+  reading: ほう
+  romaji: hou
+  english: side, the one of two
+  notes: Written in kana in this use, though it has the kanji 方. It names one option out of two, so 休んだほうがいい is "the resting side is the better one" — a recommendation, not a command. JMdict seq 1516930; the fixed expression ほうがいい is its own entry, seq 2160680.

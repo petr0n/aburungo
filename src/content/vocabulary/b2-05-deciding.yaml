@@ -1,0 +1,43 @@
+# Book Two, Chapter 5 vocabulary — one word, and the reason it is only one.
+#
+# A chapter about wanting, planning and proposing that brings a single noun.
+# That is not a shortfall, it is what the material is: たい, ほしい, ましょう and
+# ませんか are all built on the polite stem or on the plain form, so they are
+# endings on verbs the learner already owns rather than new things to know.
+# Bringing fresh verbs here would only obscure the claim the chapter makes --
+# that these endings work on any verb, including every verb already in the deck.
+#
+# つもり is the exception, and it is a real one. The chapter's other three
+# patterns are shapes; つもり is a concept -- a decided intention, as opposed to
+# a want -- and no word in the ladder carries it. It is a noun, which is what
+# makes the rest of its behaviour free: 行くつもりです puts it after a plain
+# verb the way any noun takes a modifier, つもりでした is the same です → でした
+# swap the plain-copula lesson taught, and つもりはありません is the ordinary
+# ある／ない of お金がある and 時間がない with a different noun in front of it.
+#
+# ほしい is not here on purpose. It has been in the deck since Book One's
+# food-preferences lesson and has never appeared in a phrase, so this chapter
+# uses `vocab.hoshii` rather than re-authoring it -- the same reason
+# `vocab.tabetai` and `vocab.nomitai` are explained by this chapter and not
+# taught by it.
+#
+# content-source: training — headword, reading, part of speech and glosses
+#   verified against JMdict for Applications 3.6.2 on 2026-08-31, sequence
+#   number inline. The kana form is flagged common in JMdict, and the example
+#   is a Tatoeba sentence carried by that entry rather than a composed one.
+# jlpt-source: training — JLPT level unverified (JMdict carries no JLPT data);
+#   つもり appears at N4 in both the Tanos and open-anki reference lists.
+
+- id: vocab.tsumori
+  jlpt: N4
+  word_type: noun
+  theme: basics
+  japanese: つもり
+  reading: つもり
+  romaji: tsumori
+  english: intention, plan
+  notes: Written in kana, though it has the kanji 積もり. It is a noun, so a plain verb sits in front of it — 行くつもり is "the intention to go" — and it takes です, でした and はありません like any other noun. JMdict seq 1382980, sense 1.
+  example:
+    japanese: 私は来年留学するつもりです。
+    english: I intend to study abroad next year.
+    tatoeba_id: "152381"

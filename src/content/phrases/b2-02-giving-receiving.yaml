@@ -1,0 +1,308 @@
+# Book Two, Chapter 2 phrases — the same exchange, told from three sides.
+#
+# Everything here is polite. The chapter sits directly after the one that
+# teaches plain form and deliberately does not use it: the difficulty in this
+# material is perspective, not register, and mixing the two would hide which
+# one a learner got wrong.
+#
+# The sentences are built as sets rather than as a list, because the whole
+# chapter is about the choice between verbs and a choice needs something to
+# choose against.
+#
+#   友達に花をあげました  ↔  友達が花をくれました
+#       one gift, one pair of people, direction reversed. The verb is the only
+#       thing that differs, which is the point.
+#
+#   母に本をあげました / 母が本をくれました / 母に本をもらいました
+#       the three-way set the choosing lesson runs on. Same two people, same
+#       book, all three verbs, so nothing in the vocabulary gives the answer
+#       away and only the situation can.
+#
+#   母がお弁当を作ってくれました  ↔  母にお弁当を作ってもらいました
+#   友達が傘を貸してくれました    ↔  友達に傘を貸してもらいました
+#   先生が英語を教えてくれました  ↔  先生に英語を教えてもらいました
+#       the favour patterns mirror exactly across lessons 7 and 9. Each pair is
+#       one event described twice, from the giver's side and the receiver's.
+#
+# Two of the request sentences pair against phrases the ladder already carries:
+# 待ってくれますか against te.please-wait (待ってください) and 傘を貸してくれませんか
+# against te.please-lend-it-to-me (貸してください). The register difference is
+# reviewable rather than asserted.
+#
+# The four request sentences in the asking lesson are four independent things a
+# person might say. They are not an exchange and must not be authored into one.
+#
+# One sentence the breakdown asked for is not here: a review question mixing the
+# borrowing family with the receiving family. A single utterance that genuinely
+# contrasts 借りる against もらう needs a disjunction — か…か or それとも — which
+# no lesson teaches yet, and the alternatives are two questions in a row, which
+# is a scripted exchange. The lending lesson ships with three sentences instead
+# of four and the contrast lives in the grammarNote.
+#
+# content-source: training — N4 canonical, pending Tatoeba verification.
+#   JMdict cannot verify composed sentences (only fixed expressions are
+#   headwords), so sentence checks need Tatoeba, not JMdict. Every shape below
+#   was checked against the Tatoeba-sourced examples bundled with JMdict for
+#   Applications 3.6.2 on 2026-08-31 — 「おじさんがぼくにカメラをくれました。」and
+#   「兄は私にかわいらしい人形をくれました。」attest the くれる frame,
+#   「あなたは時には妹さんにおこづかいをあげますか。」the あげる frame,
+#   「友人からもらったコンパクト」and「私はたびたび彼から手紙をもらう。」the から
+#   source, 「母はクリスマスケーキを作ってくれた。」and「ジョーンズ先生が私たちに
+#   英会話を教えてくれます。」the 〜てくれる payoff, 「ホッチキスを貸してくれませんか。」
+#   and「おすすめの靴屋を教えてくれませんか。」the request register, and
+#   「私はお母さんにおとぎ話を読んでもらった。」the 〜てもらう frame. No sentence
+#   below is a verbatim quotation, so none carries a Tatoeba id.
+# jlpt-source: training — the level marks the band this chapter sits in.
+
+# ── Giving something to someone (Lesson 1) ────────────────────────────────────
+
+- id: giving.i-gave-a-friend-flowers
+  jlpt: N4
+  scenario: giving
+  japanese: 友達に花をあげました。
+  reading: ともだちにはなをあげました。
+  romaji: tomodachi ni hana o agemashita.
+  english: I gave a friend flowers.
+
+- id: giving.ill-give-my-sister-sweets
+  jlpt: N4
+  scenario: giving
+  japanese: 妹にお菓子をあげます。
+  reading: いもうとにおかしをあげます。
+  romaji: imouto ni okashi o agemasu.
+  english: I'll give my little sister some sweets.
+
+- id: giving.what-will-you-give-for-the-birthday
+  jlpt: N4
+  scenario: giving
+  japanese: 誕生日に何をあげますか。
+  reading: たんじょうびになにをあげますか。
+  romaji: tanjoubi ni nani o agemasu ka.
+  english: What are you going to give for the birthday?
+
+# ── Receiving something from someone (Lesson 2) ───────────────────────────────
+
+- id: giving.i-got-a-book-from-a-friend
+  jlpt: N4
+  scenario: giving
+  japanese: 誕生日に友達から本をもらいました。
+  reading: たんじょうびにともだちからほんをもらいました。
+  romaji: tanjoubi ni tomodachi kara hon o moraimashita.
+  english: I got a book from a friend for my birthday.
+
+- id: giving.i-got-money-from-my-mother
+  jlpt: N4
+  scenario: giving
+  japanese: 母にお金をもらいました。
+  reading: ははにおかねをもらいました。
+  romaji: haha ni okane o moraimashita.
+  english: I got some money from my mother.
+
+- id: giving.who-did-you-get-it-from
+  jlpt: N4
+  scenario: giving
+  japanese: 誰からもらいましたか。
+  reading: だれからもらいましたか。
+  romaji: dare kara moraimashita ka.
+  english: Who did you get it from?
+
+# ── When someone gives it to you (Lesson 3) ───────────────────────────────────
+
+- id: giving.a-friend-gave-me-flowers
+  jlpt: N4
+  scenario: giving
+  japanese: 友達が花をくれました。
+  reading: ともだちがはなをくれました。
+  romaji: tomodachi ga hana o kuremashita.
+  english: A friend gave me flowers.
+
+- id: giving.my-mother-gave-me-sweets
+  jlpt: N4
+  scenario: giving
+  japanese: 母がお菓子をくれました。
+  reading: ははがおかしをくれました。
+  romaji: haha ga okashi o kuremashita.
+  english: My mother gave me some sweets.
+
+- id: giving.my-teacher-gave-me-an-umbrella
+  jlpt: N4
+  scenario: giving
+  japanese: 先生が私に傘をくれました。
+  reading: せんせいがわたしにかさをくれました。
+  romaji: sensei ga watashi ni kasa o kuremashita.
+  english: My teacher gave me an umbrella.
+
+- id: giving.who-gave-it-to-you
+  jlpt: N4
+  scenario: giving
+  japanese: 誰がくれましたか。
+  reading: だれがくれましたか。
+  romaji: dare ga kuremashita ka.
+  english: Who gave it to you?
+
+# ── Choosing the right one (Lesson 4) ─────────────────────────────────────────
+# Same two people, same book, three verbs. Only the direction changes.
+
+- id: giving.i-gave-my-mother-a-book
+  jlpt: N4
+  scenario: giving
+  japanese: 母に本をあげました。
+  reading: ははにほんをあげました。
+  romaji: haha ni hon o agemashita.
+  english: I gave my mother a book.
+
+- id: giving.my-mother-gave-me-a-book
+  jlpt: N4
+  scenario: giving
+  japanese: 母が本をくれました。
+  reading: ははがほんをくれました。
+  romaji: haha ga hon o kuremashita.
+  english: My mother gave me a book.
+
+- id: giving.i-got-a-book-from-my-mother
+  jlpt: N4
+  scenario: giving
+  japanese: 母に本をもらいました。
+  reading: ははにほんをもらいました。
+  romaji: haha ni hon o moraimashita.
+  english: I got a book from my mother.
+
+# ── Not the same as lending (Lesson 5) ────────────────────────────────────────
+
+- id: giving.please-lend-me-an-umbrella
+  jlpt: N4
+  scenario: giving
+  japanese: 傘を貸してください。
+  reading: かさをかしてください。
+  romaji: kasa o kashite kudasai.
+  english: Please lend me an umbrella.
+
+- id: giving.please-give-me-an-umbrella
+  jlpt: N4
+  scenario: giving
+  japanese: 傘をください。
+  reading: かさをください。
+  romaji: kasa o kudasai.
+  english: Please give me an umbrella.
+
+- id: giving.ill-return-the-book-tomorrow
+  jlpt: N4
+  scenario: giving
+  japanese: 明日、本を返します。
+  reading: あした、ほんをかえします。
+  romaji: ashita, hon o kaeshimasu.
+  english: I'll give the book back tomorrow.
+
+# ── Doing something for someone (Lesson 6) ────────────────────────────────────
+
+- id: giving.i-helped-my-sister-with-her-homework
+  jlpt: N4
+  scenario: giving
+  japanese: 妹の宿題を手伝ってあげました。
+  reading: いもうとのしゅくだいをてつだってあげました。
+  romaji: imouto no shukudai o tetsudatte agemashita.
+  english: I helped my little sister with her homework.
+
+- id: giving.i-taught-my-friend-english
+  jlpt: N4
+  scenario: giving
+  japanese: 友達に英語を教えてあげました。
+  reading: ともだちにえいごをおしえてあげました。
+  romaji: tomodachi ni eigo o oshiete agemashita.
+  english: I taught my friend English.
+
+- id: giving.i-made-my-brother-a-lunch
+  jlpt: N4
+  scenario: giving
+  japanese: 弟にお弁当を作ってあげました。
+  reading: おとうとにおべんとうをつくってあげました。
+  romaji: otouto ni obentou o tsukutte agemashita.
+  english: I made my little brother a boxed lunch.
+
+# ── When someone does something for you (Lesson 7) ────────────────────────────
+
+- id: giving.my-mother-made-me-a-lunch
+  jlpt: N4
+  scenario: giving
+  japanese: 母がお弁当を作ってくれました。
+  reading: ははがおべんとうをつくってくれました。
+  romaji: haha ga obentou o tsukutte kuremashita.
+  english: My mother made me a boxed lunch.
+
+- id: giving.a-friend-lent-me-an-umbrella
+  jlpt: N4
+  scenario: giving
+  japanese: 友達が傘を貸してくれました。
+  reading: ともだちがかさをかしてくれました。
+  romaji: tomodachi ga kasa o kashite kuremashita.
+  english: A friend lent me an umbrella.
+
+- id: giving.my-teacher-taught-me-english
+  jlpt: N4
+  scenario: giving
+  japanese: 先生が英語を教えてくれました。
+  reading: せんせいがえいごをおしえてくれました。
+  romaji: sensei ga eigo o oshiete kuremashita.
+  english: My teacher taught me English.
+
+# ── Asking for the favour (Lesson 8) ──────────────────────────────────────────
+# Four separate things a person might say, not four turns of one conversation.
+
+- id: giving.will-you-wait-for-me
+  jlpt: N4
+  scenario: giving
+  japanese: 待ってくれますか。
+  reading: まってくれますか。
+  romaji: matte kuremasu ka.
+  english: Will you wait for me?
+
+- id: giving.could-you-lend-me-an-umbrella
+  jlpt: N4
+  scenario: giving
+  japanese: 傘を貸してくれませんか。
+  reading: かさをかしてくれませんか。
+  romaji: kasa o kashite kuremasen ka.
+  english: Could you lend me an umbrella?
+
+- id: giving.could-you-teach-me-english
+  jlpt: N4
+  scenario: giving
+  japanese: 英語を教えてくれませんか。
+  reading: えいごをおしえてくれませんか。
+  romaji: eigo o oshiete kuremasen ka.
+  english: Could you teach me English?
+
+- id: giving.will-you-help-me
+  jlpt: N4
+  scenario: giving
+  japanese: 手伝ってくれますか。
+  reading: てつだってくれますか。
+  romaji: tetsudatte kuremasu ka.
+  english: Will you help me?
+
+# ── Having someone do it for you (Lesson 9) ───────────────────────────────────
+# The same three favours as Lesson 7, told from the other side of the table.
+
+- id: giving.i-had-my-teacher-teach-me-english
+  jlpt: N4
+  scenario: giving
+  japanese: 先生に英語を教えてもらいました。
+  reading: せんせいにえいごをおしえてもらいました。
+  romaji: sensei ni eigo o oshiete moraimashita.
+  english: I had my teacher teach me English.
+
+- id: giving.i-got-a-friend-to-lend-me-an-umbrella
+  jlpt: N4
+  scenario: giving
+  japanese: 友達に傘を貸してもらいました。
+  reading: ともだちにかさをかしてもらいました。
+  romaji: tomodachi ni kasa o kashite moraimashita.
+  english: I got a friend to lend me an umbrella.
+
+- id: giving.i-had-my-mother-make-a-lunch
+  jlpt: N4
+  scenario: giving
+  japanese: 母にお弁当を作ってもらいました。
+  reading: ははにおべんとうをつくってもらいました。
+  romaji: haha ni obentou o tsukutte moraimashita.
+  english: I had my mother make me a boxed lunch.

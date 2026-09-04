@@ -393,9 +393,9 @@ cut in this chapter, both flagged in their lesson entries rather than discovered
   means "once it has happened" — not as the exhaustive rule N4 textbooks eventually give it. The
   heuristic covers the large majority of natural usage and is teachable in one lesson; the full rule
   is not.
-- **Noun-predicate clause modification** (lesson 7) — "the person who *was* a student" — is named
+- **Noun-predicate clause modification** (lesson 7) — "the person who *is* a student" — is named
   and skipped. A noun predicate cannot simply take だ inside a modifier the way it does as a main
-  predicate (学生だ人 is not grammatical), and the workarounds belong with という and other N3-
+  predicate (学生だ人 is not grammatical; note the *past* 学生だった人 is fine, so the gloss must stay non-past), and the workarounds belong with という and other N3-
   adjacent machinery this book does not carry. Verb-clause and i-adjective-clause modification, the
   high-frequency cases, are drilled fully; na-adjective-clause modification transfers for free from
   lesson 6's なとき.

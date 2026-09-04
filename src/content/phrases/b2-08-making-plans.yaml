@@ -1,0 +1,291 @@
+# Book Two, Chapter 8 phrases — inviting, answering, negotiating, confirming.
+#
+# Twenty-six sentences, and almost every word in them is already on the ladder.
+# That is the shape of a situation chapter placed this late — the chapter's job
+# is the social choreography, not the vocabulary, so the sentences are built out
+# of owned material and only three nouns are new.
+#
+# The register pairs are deliberate, and they are the reason the same verbs come
+# back twice rather than being varied for variety's sake:
+#
+#   一緒にご飯を食べませんか   against  一緒に行かない？
+#   いいですね、行きましょう   against  うん、行く。
+#   すみません、…行けません    against  ごめん、…行けない。
+#   わかりました、…            against  わかった、またね。
+#
+# Held side by side, the only thing that changes is the ending, which is what
+# the plain-form chapter taught and what this chapter finally aims at somebody.
+#
+# Four sentences reach back across the book on purpose, and none of them reaches
+# forward. ので and から carry the reasons in the two declines (the joining
+# chapter). 行けません and 行けない are the godan potential (the ability chapter,
+# which the learner passed two chapters before this one) — 会えますか was taught
+# there on the same rule, so 行く needs no new instruction here. 忘れないでください
+# extends the plain-form chapter's own 忘れないでください to the thing this chapter
+# arranged. That is recombination, not a dependency the learner does not have.
+#
+# EVERY ENTRY BELOW IS AN INDEPENDENT UTTERANCE. The invitation sentences and the
+# answering sentences are not an exchange and must never be authored into one --
+# a scripted back-and-forth is multi-sentence composed text, which is the surface
+# the content rules exist to keep out. Where a sentence has two clauses joined by
+# a comma it is still one speaker saying one thing, in the shape the existing
+# ladder already uses (すみません、日曜日は忙しいです).
+#
+# 明日はちょっと…。 is the one entry that is not a complete sentence, and that is
+# the point of it -- trailing off IS the decline. JMdict lists exactly this use
+# as its own sense of ちょっと, "thanks, but no; not feasible; not possible"
+# (seq 1163940, sense 6). Teaching すみません、忙しいです as the only way to say no
+# would be teaching a true thing incompletely.
+#
+# content-source: training — N5/N4 canonical, pending Tatoeba verification.
+#   JMdict cannot verify a composed sentence (only fixed expressions are
+#   headwords), so sentence checking needs Tatoeba, not JMdict. Two constructions
+#   here ARE JMdict headwords and were verified as such on 2026-08-31 --
+#   都合がいい (seq 2264750, "convenient") and 都合が悪い (seq 2264760,
+#   "inconvenient") -- and the Tatoeba sentences JMdict bundles with them attest
+#   the shape this chapter uses (「何時がご都合がいいですか。」 Tatoeba 187466,
+#   「あなたからご都合が悪いというお知らせがなければ…」 Tatoeba 234149). No
+#   sentence below is a verbatim quotation, so none carries a Tatoeba id.
+# jlpt-source: training — the level marks the band this chapter sits in.
+
+# ── An arrangement, not just free time ────────────────────────────────────────
+
+- id: plans.i-have-plans-with-a-friend-tomorrow
+  jlpt: N4
+  scenario: plans
+  japanese: 明日、友達と約束があります。
+  reading: あした、ともだちとやくそくがあります。
+  romaji: ashita, tomodachi to yakusoku ga arimasu.
+  english: I have plans with a friend tomorrow.
+  notes: と marks the person you made the arrangement with. 約束 takes ある, not する, when you are saying you have one already.
+
+- id: plans.do-you-have-plans-tomorrow
+  jlpt: N4
+  scenario: plans
+  japanese: 明日は約束がありますか。
+  reading: あしたはやくそくがありますか。
+  romaji: ashita wa yakusoku ga arimasu ka.
+  english: Do you have plans tomorrow?
+
+- id: plans.i-have-plans-so-im-not-free
+  jlpt: N4
+  scenario: plans
+  japanese: 土曜日は約束があるので、暇じゃありません。
+  reading: どようびはやくそくがあるので、ひまじゃありません。
+  romaji: doyoubi wa yakusoku ga aru node, hima ja arimasen.
+  english: I have plans on Saturday, so I'm not free.
+  notes: The sentence 暇 could never say on its own. 暇じゃありません tells someone your day is full; 約束があるので tells them why, and that a second person is involved.
+
+# ── Would you like to? ────────────────────────────────────────────────────────
+
+- id: plans.would-you-like-to-eat-together-this-weekend
+  jlpt: N4
+  scenario: plans
+  japanese: 週末、一緒にご飯を食べませんか。
+  reading: しゅうまつ、いっしょにごはんをたべませんか。
+  romaji: shuumatsu, issho ni gohan o tabemasen ka.
+  english: Would you like to get something to eat together this weekend?
+  notes: ご飯を食べる is the ordinary way to say "have a meal", not specifically rice. 一緒に says together outright; ませんか is what makes it an invitation.
+
+- id: plans.lets-meet-on-saturday-next-week
+  jlpt: N4
+  scenario: plans
+  japanese: 来週の土曜日に会いましょう。
+  reading: らいしゅうのどようびにあいましょう。
+  romaji: raishuu no doyoubi ni aimashou.
+  english: Let's meet on Saturday next week.
+  notes: 来週の土曜日 — the の joins the two time words, the wider one first. Days of the week take に.
+
+- id: plans.what-time-shall-we-meet
+  jlpt: N4
+  scenario: plans
+  japanese: 何時に会いましょうか。
+  reading: なんじにあいましょうか。
+  romaji: nanji ni aimashou ka.
+  english: What time shall we meet?
+
+- id: plans.what-are-you-doing-this-weekend
+  jlpt: N4
+  scenario: plans
+  japanese: 週末は何をしますか。
+  reading: しゅうまつはなにをしますか。
+  romaji: shuumatsu wa nani o shimasu ka.
+  english: What are you doing this weekend?
+  notes: The sentence most invitations start with. 何 in front of を is なに, not なん.
+
+# ── Wanna? ────────────────────────────────────────────────────────────────────
+
+- id: plans.wanna-go-together
+  jlpt: N4
+  scenario: plans
+  japanese: 一緒に行かない？
+  reading: いっしょにいかない？
+  romaji: issho ni ikanai?
+  english: Want to go together?
+  notes: Friends only. The plain negative asked as a question — no か, and the voice rises at the end.
+
+- id: plans.wanna-see-a-film
+  jlpt: N4
+  scenario: plans
+  japanese: 映画を見ない？
+  reading: えいがをみない？
+  romaji: eiga o minai?
+  english: Want to see a film?
+  notes: 見る is ichidan, so the ない form is just 見ない. In relaxed speech you will also hear 映画見ない？ with を dropped altogether.
+
+- id: plans.wanna-hang-out-this-weekend
+  jlpt: N4
+  scenario: plans
+  japanese: 週末、遊ばない？
+  reading: しゅうまつ、あそばない？
+  romaji: shuumatsu, asobanai?
+  english: Want to hang out this weekend?
+  notes: 遊ぶ is godan and its ぶ becomes ば. Between adults 遊ぶ is not childish — it is spending time together with nothing else planned.
+
+# ── Saying yes, saying no ─────────────────────────────────────────────────────
+
+- id: plans.sounds-good-lets-go
+  jlpt: N4
+  scenario: plans
+  japanese: いいですね、行きましょう。
+  reading: いいですね、いきましょう。
+  romaji: ii desu ne, ikimashou.
+  english: That sounds good, let's go.
+
+- id: plans.sorry-i-have-plans-tomorrow
+  jlpt: N4
+  scenario: plans
+  japanese: すみません、明日は約束があるので、行けません。
+  reading: すみません、あしたはやくそくがあるので、いけません。
+  romaji: sumimasen, ashita wa yakusoku ga aru node, ikemasen.
+  english: I'm sorry, I have plans tomorrow, so I can't go.
+  notes: The full polite decline — apology, reason, then the no. ので is the softer of the two reason words, which is what you want when you are turning someone down. 行けません is the potential of 行く, built by the same rule that gave you 会えますか.
+
+- id: plans.yeah-ill-go
+  jlpt: N4
+  scenario: plans
+  japanese: うん、行く。
+  reading: うん、いく。
+  romaji: un, iku.
+  english: Yeah, I'll go.
+  notes: The casual accept is just the plain form. Nothing is missing from it.
+
+- id: plans.sorry-i-cant-i-have-plans
+  jlpt: N4
+  scenario: plans
+  japanese: ごめん、明日は約束があるから、行けない。
+  reading: ごめん、あしたはやくそくがあるから、いけない。
+  romaji: gomen, ashita wa yakusoku ga aru kara, ikenai.
+  english: Sorry, I've got plans tomorrow, so I can't go.
+  notes: The same decline one register down. ごめん is ごめんなさい with the polite tail cut off, から is the casual reason word, and 行けない is the plain potential negative.
+
+- id: plans.no-thanks-im-fine
+  jlpt: N4
+  scenario: plans
+  japanese: いいえ、大丈夫です。
+  reading: いいえ、だいじょうぶです。
+  romaji: iie, daijoubu desu.
+  english: No thanks, I'm fine.
+  notes: Aimed at an offer, 大丈夫です is a refusal, not an agreement. English "I'm fine with that" pulls the wrong way here, and it is worth practising as a no.
+
+- id: plans.tomorrow-is-a-bit-difficult
+  jlpt: N4
+  scenario: plans
+  japanese: 明日はちょっと…。
+  reading: あしたはちょっと…。
+  romaji: ashita wa chotto...
+  english: Tomorrow is a bit difficult, sorry.
+  notes: Not an unfinished sentence — the trailing off is the whole message, and everybody hears it as a no. Saying the rest out loud would be blunter than the situation wants.
+
+# ── Does that work for you? ───────────────────────────────────────────────────
+
+- id: plans.is-saturday-convenient
+  jlpt: N4
+  scenario: plans
+  japanese: 土曜日は都合がいいですか。
+  reading: どようびはつごうがいいですか。
+  romaji: doyoubi wa tsugou ga ii desu ka.
+  english: Does Saturday work for you?
+
+- id: plans.the-weekend-works-for-me
+  jlpt: N4
+  scenario: plans
+  japanese: 週末は都合がいいです。
+  reading: しゅうまつはつごうがいいです。
+  romaji: shuumatsu wa tsugou ga ii desu.
+  english: The weekend works for me.
+
+- id: plans.monday-doesnt-work
+  jlpt: N4
+  scenario: plans
+  japanese: 月曜日は都合が悪いです。
+  reading: げつようびはつごうがわるいです。
+  romaji: getsuyoubi wa tsugou ga warui desu.
+  english: Monday doesn't work for me.
+  notes: A complete answer on its own. Unlike 忙しいです it says nothing about why, which is often exactly what you want.
+
+- id: plans.this-week-is-bad-how-about-next-week
+  jlpt: N4
+  scenario: plans
+  japanese: 今週は都合が悪いので、来週はどうですか。
+  reading: こんしゅうはつごうがわるいので、らいしゅうはどうですか。
+  romaji: konshuu wa tsugou ga warui node, raishuu wa dou desu ka.
+  english: This week doesn't work for me, so how about next week?
+  notes: A no with a way forward attached. 〜はどうですか is how you put the alternative on the table.
+
+# ── Where should we meet? ─────────────────────────────────────────────────────
+
+- id: plans.where-shall-we-meet
+  jlpt: N4
+  scenario: plans
+  japanese: どこで会いましょうか。
+  reading: どこであいましょうか。
+  romaji: doko de aimashou ka.
+  english: Where shall we meet?
+  notes: で, not に. 会う takes に (or と) for the person you meet and で for the place you meet them in.
+
+- id: plans.lets-meet-at-the-station
+  jlpt: N4
+  scenario: plans
+  japanese: 駅で会いましょう。
+  reading: えきであいましょう。
+  romaji: eki de aimashou.
+  english: Let's meet at the station.
+
+- id: plans.ill-be-waiting-at-the-park
+  jlpt: N4
+  scenario: plans
+  japanese: 公園で待っています。
+  reading: こうえんでまっています。
+  romaji: kouen de matte imasu.
+  english: I'll be waiting at the park.
+  notes: 待っています rather than 待ちます — the ています form you already have is what says you will be there, waiting, when the other person arrives.
+
+# ── Confirming the plan ───────────────────────────────────────────────────────
+
+- id: plans.understood-lets-meet-on-saturday
+  jlpt: N4
+  scenario: plans
+  japanese: わかりました、土曜日に会いましょう。
+  reading: わかりました、どようびにあいましょう。
+  romaji: wakarimashita, doyoubi ni aimashou.
+  english: Understood — let's meet on Saturday.
+  notes: わかりました is the past of わかる and it is how Japanese says "got it", even though English reaches for a present tense there.
+
+- id: plans.got-it-see-you
+  jlpt: N4
+  scenario: plans
+  japanese: わかった、またね。
+  reading: わかった、またね。
+  romaji: wakatta, mata ne.
+  english: Got it, see you.
+  notes: The casual close. またね is for friends only — with anyone else the sign-off is しつれいします or さようなら.
+
+- id: plans.dont-forget-our-plans
+  jlpt: N4
+  scenario: plans
+  japanese: 約束を忘れないでください。
+  reading: やくそくをわすれないでください。
+  romaji: yakusoku o wasurenaide kudasai.
+  english: Please don't forget our plans.
+  notes: Your own 忘れないでください with the thing named. Said lightly between friends it is a nudge, not a reprimand.

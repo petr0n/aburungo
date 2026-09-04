@@ -1,0 +1,245 @@
+# Book Two, Chapter 6 phrases — being able to.
+#
+# Twenty-one sentences, and one word in them that the ladder did not already
+# teach (できる). Everything else is Book One's vocabulary in a form it has
+# never taken: 泳ぐ → 泳げます, 帰る → 帰れません, 食べる → 食べられます.
+#
+# Two of these forms are not new to the learner even though the rule is. Book
+# One's transit lesson has been asking 切符はどこで買えますか since long before
+# any of this was explained, and its shopping lesson asks カードで払えますか.
+# Both are potential forms, memorised whole. The chapter's job is to turn two
+# remembered sentences into a rule, so nothing here re-authors them.
+#
+# Six of the sentences are built as halves of a pair, because three of this
+# chapter's six lessons teach a distinction rather than a form, and a
+# distinction a grammarNote only asserts is worth nothing in review:
+#
+#   私は英語が少し話せます      against  私は英語が少しできます
+#   私は泳げます                against  私は泳ぐことができます
+#   メニューが読めません        against  メニューを読むことができません
+#   この靴は歩きやすいです      against  この靴は安いです
+#
+# The first three pairs say the same thing two ways, and their English glosses
+# are deliberately not identical — "I can speak a little English" against "I
+# know a little English", "I can swim" against "I am able to swim". That is not
+# padding to keep two cards apart: 英語ができる is broader than 英語が話せる, and
+# ことができる does sit a shade more formal than the plain potential. The gloss
+# carries the difference the Japanese carries.
+#
+# The last pair carries the chapter's one reading collision. 安い (cheap) and
+# 〜やすい (easy to) are unrelated words that sound identical, and the pair puts
+# them on the same noun so the collision is heard rather than described.
+#
+# The を against が in the menu pair is the chapter's most consequential
+# contrast and the one most likely to be read as a typo: が is what the plain
+# potential takes, を is what survives inside ことができる, because the verb
+# there is still an ordinary dictionary-form verb with an ordinary object.
+# Attested on both sides — 発音記号が読めますか (Tatoeba 121322) and
+# 中国語や韓国語を話すことができる (Tatoeba 406266).
+#
+# These are independent utterances. Several would sit naturally next to each
+# other in a real exchange -- 英語が話せますか and 私は英語が少し話せます most
+# obviously -- and they are deliberately not authored as one: a scripted
+# exchange is multi-sentence composed text, which is the surface the content
+# rules exist to keep out.
+#
+# content-source: training — N4 canonical, pending Tatoeba verification. JMdict
+#   cannot verify a composed sentence (only fixed expressions are headwords), so
+#   these need Tatoeba, not JMdict. Every shape below was checked against the
+#   Tatoeba-sourced examples bundled with JMdict for Applications 3.6.2 on
+#   2026-08-31 — potential + が in 発音記号が読めますか (121322), potential
+#   negative in もうこれ以上食べられない (81070), noun + ができる in
+#   君が英語ができれば (179071), ことができる in 馬に乗ることができますか (177011),
+#   〜やすい in このクリームは、リキッドっぽくて使いやすい (223840), 〜にくい in
+#   日本語は外人にとって覚えにくい (122337). No sentence below is a verbatim
+#   quotation, so none carries a Tatoeba id.
+# jlpt-source: training — the level marks the band this chapter sits in.
+
+# ── Saying what you can do, the easy half ─────────────────────────────────────
+
+- id: dekiru.i-can-eat-sushi
+  jlpt: N4
+  scenario: ability
+  japanese: 私はすしが食べられます。
+  reading: わたしはすしがたべられます。
+  romaji: watashi wa sushi ga taberaremasu.
+  english: I can eat sushi.
+
+- id: dekiru.i-cant-go-shopping-today
+  jlpt: N4
+  scenario: ability
+  japanese: 今日は買い物ができません。
+  reading: きょうはかいものができません。
+  romaji: kyou wa kaimono ga dekimasen.
+  english: I can't go shopping today.
+
+- id: dekiru.i-cant-come-tomorrow
+  jlpt: N4
+  scenario: ability
+  japanese: 明日は来られません。
+  reading: あしたはこられません。
+  romaji: ashita wa koraremasen.
+  english: I can't come tomorrow.
+  notes: 来られる is こられる. The reading moves the same way it did for 来ない (こない) and 来ます (きます) — the kanji stays put while the sound underneath it changes.
+
+# ── Saying what you can do, the rest ──────────────────────────────────────────
+
+- id: dekiru.i-can-swim
+  jlpt: N4
+  scenario: ability
+  japanese: 私は泳げます。
+  reading: わたしはおよげます。
+  romaji: watashi wa oyogemasu.
+  english: I can swim.
+
+- id: dekiru.can-we-meet-tomorrow
+  jlpt: N4
+  scenario: ability
+  japanese: 明日、会えますか。
+  reading: あした、あえますか。
+  romaji: ashita, aemasu ka.
+  english: Can we meet tomorrow?
+  notes: 会う is the ending that had an exception under ない — 会わない, not 会あない. Under the potential it has none at all — 会える, straight off the え row.
+
+- id: dekiru.i-cant-go-home-early-today
+  jlpt: N4
+  scenario: ability
+  japanese: 今日は早く帰れません。
+  reading: きょうははやくかえれません。
+  romaji: kyou wa hayaku kaeremasen.
+  english: I can't get home early today.
+  notes: 帰る ends in る and is godan, so it is 帰れません. 帰られません would be the ichidan shape, and 帰る is not one.
+
+- id: dekiru.i-cant-read-the-menu
+  jlpt: N4
+  scenario: ability
+  japanese: メニューが読めません。
+  reading: メニューがよめません。
+  romaji: menyuu ga yomemasen.
+  english: I can't read the menu.
+
+# ── What you can, and can't, do ───────────────────────────────────────────────
+
+- id: dekiru.i-can-speak-a-little-english
+  jlpt: N4
+  scenario: ability
+  japanese: 私は英語が少し話せます。
+  reading: わたしはえいごがすこしはなせます。
+  romaji: watashi wa eigo ga sukoshi hanasemasu.
+  english: I can speak a little English.
+  notes: 英語を話します becomes 英語が話せます. The を does not survive the potential in a sentence like this one.
+
+- id: dekiru.i-cant-swim-at-all
+  jlpt: N4
+  scenario: ability
+  japanese: 私はぜんぜん泳げません。
+  reading: わたしはぜんぜんおよげません。
+  romaji: watashi wa zenzen oyogemasen.
+  english: I can't swim at all.
+
+- id: dekiru.can-you-speak-english
+  jlpt: N4
+  scenario: ability
+  japanese: 英語が話せますか。
+  reading: えいごがはなせますか。
+  romaji: eigo ga hanasemasu ka.
+  english: Can you speak English?
+
+- id: dekiru.i-cant-use-chopsticks-yet
+  jlpt: N4
+  scenario: ability
+  japanese: まだ箸が使えません。
+  reading: まだはしがつかえません。
+  romaji: mada hashi ga tsukaemasen.
+  english: I can't use chopsticks yet.
+
+# ── Skills without a verb ─────────────────────────────────────────────────────
+
+- id: dekiru.i-know-a-little-english
+  jlpt: N4
+  scenario: ability
+  japanese: 私は英語が少しできます。
+  reading: わたしはえいごがすこしできます。
+  romaji: watashi wa eigo ga sukoshi dekimasu.
+  english: I know a little English.
+  notes: No verb in the sentence at all — できる sits straight on the noun. Wider than 話せます, which is only the speaking.
+
+- id: dekiru.i-cant-work-today
+  jlpt: N4
+  scenario: ability
+  japanese: 今日は仕事ができません。
+  reading: きょうはしごとができません。
+  romaji: kyou wa shigoto ga dekimasen.
+  english: I can't work today.
+
+- id: dekiru.can-you-cook
+  jlpt: N4
+  scenario: ability
+  japanese: 料理ができますか。
+  reading: りょうりができますか。
+  romaji: ryouri ga dekimasu ka.
+  english: Can you cook?
+
+# ── The other way to say it ───────────────────────────────────────────────────
+
+- id: dekiru.i-can-swim-koto
+  jlpt: N4
+  scenario: ability
+  japanese: 私は泳ぐことができます。
+  reading: わたしはおよぐことができます。
+  romaji: watashi wa oyogu koto ga dekimasu.
+  english: I am able to swim.
+  notes: The same claim as 私は泳げます, built without conjugating 泳ぐ at all. This one reads a shade more formal.
+
+- id: dekiru.i-cant-read-the-menu-koto
+  jlpt: N4
+  scenario: ability
+  japanese: メニューを読むことができません。
+  reading: メニューをよむことができません。
+  romaji: menyuu o yomu koto ga dekimasen.
+  english: I am not able to read the menu.
+  notes: を here, against が in メニューが読めません. 読む is still an ordinary dictionary-form verb inside this pattern, so it keeps its ordinary object.
+
+- id: dekiru.you-can-borrow-books-here
+  jlpt: N4
+  scenario: ability
+  japanese: ここで本を借りることができます。
+  reading: ここでほんをかりることができます。
+  romaji: koko de hon o kariru koto ga dekimasu.
+  english: You can borrow books here.
+
+# ── Easy to, hard to ──────────────────────────────────────────────────────────
+
+- id: dekiru.these-shoes-are-easy-to-walk-in
+  jlpt: N4
+  scenario: ability
+  japanese: この靴は歩きやすいです。
+  reading: このくつはあるきやすいです。
+  romaji: kono kutsu wa arukiyasui desu.
+  english: These shoes are easy to walk in.
+
+- id: dekiru.this-bag-is-hard-to-use
+  jlpt: N4
+  scenario: ability
+  japanese: このかばんは使いにくいです。
+  reading: このかばんはつかいにくいです。
+  romaji: kono kaban wa tsukainikui desu.
+  english: This bag is hard to use.
+
+- id: dekiru.this-book-was-easy-to-read
+  jlpt: N4
+  scenario: ability
+  japanese: この本は読みやすかったです。
+  reading: このほんはよみやすかったです。
+  romaji: kono hon wa yomiyasukatta desu.
+  english: This book was easy to read.
+  notes: 読みやすい ends in い and inflects like 高い — 読みやすかった, and the polite です goes on after it, never ました.
+
+- id: dekiru.these-shoes-are-cheap
+  jlpt: N4
+  scenario: ability
+  japanese: この靴は安いです。
+  reading: このくつはやすいです。
+  romaji: kono kutsu wa yasui desu.
+  english: These shoes are cheap.
+  notes: The same noun as この靴は歩きやすいです and the same sound at the end, and no connection between the two words. 安い is a word on its own; 〜やすい only ever appears stuck to a verb.

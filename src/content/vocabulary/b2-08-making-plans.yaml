@@ -1,0 +1,98 @@
+# Book Two, Chapter 8 vocabulary — three words, because Book One owns the rest.
+#
+# The inventory pass before authoring is the whole story of this file. Book One
+# already teaches every day of the week, every date, the clock, the relative-time
+# set (今週／来週／毎週, 今日, 明日), the social core (友達, 会う, 暇, 忙しい), the
+# register vocabulary an invitation needs answering with (大丈夫, ごめんなさい,
+# またね, わかる, うん, ううん), and every place two people could arrange to stand
+# in (駅, 公園, 家, 店, 一緒). Roughly thirty candidate words were checked against
+# the manifest and twenty-four were already there.
+#
+# What survives that subtraction is three nouns, and each one buys something the
+# owned vocabulary genuinely cannot reach:
+#
+#   約束  an arrangement made WITH someone -- 暇 and 忙しい describe your day,
+#         and neither of them can say why
+#   週末  the one hole in Book One's otherwise complete time set, and the single
+#         most natural frame for a friend invitation
+#   都合  whether a particular day suits you -- carries a whole construction on
+#         one word, because いい and 悪い have been on the ladder since the
+#         describing chapter
+#
+# Two of the four new characters were half-bought before the search started.
+# 約 is already taught inside 予約 (reservation), so 約束 costs 束 alone; 週 is
+# already taught inside 先週／今週／来週／毎週, so 週末 costs 末 alone. 都合 pays
+# full price for both of its characters. Four new kanji across seven lessons is
+# thin, and it is the honest consequence of a situation whose vocabulary domain
+# Book One had already covered -- forcing in 場所 or 誘う to buy characters would
+# be padding a chapter its own can-dos do not need.
+#
+# ちょっと is deliberately NOT here. It appears in this chapter's soft-decline
+# phrase and in its lesson note, and Book One already puts it in front of the
+# learner in ちょっと見てもいいですか -- but it is an adverb doing pragmatic work
+# rather than a word this chapter teaches, and the chapter's word budget is
+# spent on the three nouns above.
+#
+# content-source: training — headword, reading, part of speech and gloss
+#   verified against JMdict for Applications 3.6.2 on 2026-08-31, sequence
+#   numbers inline. All three are flagged common in JMdict. Two of them need
+#   their sense named rather than assumed, and the notes say which:
+#   約束's everyday "plans with someone" reading is JMdict's SECOND sense
+#   (appointment; engagement), not its first (promise), and 都合's is the third
+#   gloss of its first sense (convenience), not the first (circumstances).
+#   No example sentences are attached — the Tatoeba sentences JMdict bundles for
+#   all three sit well above this chapter's grammar.
+# jlpt-source: training — JMdict carries no JLPT data. 約束 and 都合 are N4 on
+#   both reference lists in data/jlpt (tanos and open-anki). 週末 is on NEITHER
+#   list at ANY level, which is a gap in the references rather than a signal
+#   about the word — it is JMdict-common and it is in every beginner course. It
+#   is marked N4 on the same training basis as the rest of this book's band, and
+#   the learner never reads a level either way.
+
+# ── An arrangement, not just free time (Lesson 1) ─────────────────────────────
+
+- id: vocab.yakusoku
+  jlpt: N4
+  word_type: noun
+  theme: daily-life
+  japanese: 約束
+  reading: やくそく
+  romaji: yakusoku
+  english: arrangement, plans with someone
+  notes: An arrangement made with another person, so it always implies a second party — this is JMdict's second sense, "appointment; engagement; date". Its first sense is "promise; agreement; one's word", and both live in the same word, which is why breaking a 約束 sounds heavier in Japanese than breaking "plans" does in English. You have it with ある (約束があります) and you make it with を plus する (会う約束をしました), so no new verb is needed. JMdict marks the verb use on the first sense only, so a bare 約束します means to promise, not to make plans. The 約 is the one already on your ladder in 予約, a reservation. JMdict seq 1538130.
+
+- id: vocab.chotto
+  # jlpt-source: training
+  jlpt: N5
+  word_type: adverb
+  theme: daily-life
+  japanese: ちょっと
+  reading: ちょっと
+  romaji: chotto
+  english: a little; (trailing off) sorry, no
+  notes: You already met it as "a little" in ちょっと見てもいいですか. This chapter needs its other job, which JMdict lists as a sense of its own — 明日はちょっと…, trailed off and left unfinished, is a refusal, and everyone hears it as one. Nothing follows the ちょっと; that is the point. Japanese declines by making the reason sound too awkward to say out loud, and finishing the sentence would be blunter than the situation wants. JMdict seq 1163940, sense 6.
+  # content-source: training
+
+# ── Would you like to? (Lesson 2) ─────────────────────────────────────────────
+
+- id: vocab.shuumatsu
+  jlpt: N4
+  word_type: noun
+  theme: time
+  japanese: 週末
+  reading: しゅうまつ
+  romaji: shuumatsu
+  english: weekend
+  notes: The 週 is the one you already read in 先週, 今週, 来週 and 毎週; 末 means the end of something, so this is literally the end of the week. It behaves like the other time words you have — 週末に会いましょう, or with the に dropped at the front of a sentence the way 明日 drops it. Careful with the reading — it is しゅうまつ with a long しゅう, not しゅまつ. JMdict seq 1333520.
+
+# ── Does that work for you? (Lesson 5) ────────────────────────────────────────
+
+- id: vocab.tsugou
+  jlpt: N4
+  word_type: noun
+  theme: daily-life
+  japanese: 都合
+  reading: つごう
+  romaji: tsugou
+  english: convenience, whether a time suits you
+  notes: JMdict glosses the first sense "circumstances; condition; convenience" — the third of those is the one this chapter uses, and in practice 都合 almost always means whether a particular time works for someone. It is a noun and it is nearly always used with いい or 悪い, both of which you already have, and JMdict lists both combinations as expressions in their own right (都合がいい seq 2264750, 都合が悪い seq 2264760). Saying 都合が悪い is also the polite way to decline without giving a reason at all, which is a real advantage over 忙しい. Its two characters are new — 都 is the one in 京都, and 合 means to fit or match. JMdict seq 1444980.

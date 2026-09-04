@@ -1,0 +1,269 @@
+# Chapter 5 -- Deciding what to do.
+#
+# Two words have been sitting in the ladder since Book One's food-preferences
+# lesson doing almost nothing. 食べたい and 飲みたい were taught as vocabulary --
+# "want to eat", "want to drink" -- two memorised i-adjectives, not a rule.
+# ほしい arrived in the same lesson and has never appeared in a phrase since: a
+# word taught and never used. This chapter turns that vocabulary into grammar --
+# たい as something you build onto any verb, not two verbs you happened to be
+# handed pre-built -- and then gives the learner two more ways to talk about the
+# future: つもり for what you have decided, and ましょう／ませんか for what you
+# propose to someone else.
+#
+# The four pieces are not equally connected to the rest of the book. たい and
+# ほしい need nothing but the ます-stem the learner has used since the first
+# lesson of Book One -- no dependency on the plain-form chapter at all. つもり
+# does: it sits on the plain non-past, so it cannot come before that chapter.
+# ましょう and ませんか are independent again, built off the same ます-stem as たい.
+#
+# The split follows the book plan's four named items, plus one lesson that sits
+# between the first two and belongs to neither: turning a statement of your own
+# want into a question about someone else's. That move matters more than it
+# looks. たい and ほしい describe the speaker; declaring what a THIRD person
+# wants is a genuine error in Japanese (it needs たがっている, which this book
+# does not teach), so the only safe way to talk about what someone else wants is
+# to ask them. That is also the exact move the making-plans chapter needs --
+# deciding together starts with asking, not declaring.
+#
+#   1  wanting to do something     たい as a rule, any verb, the が it keeps
+#   2  not wanting to, and having  たくない／たかった -- the same i-adjective
+#      wanted to                   machine that already turned 高い into 高かった
+#   3  wanting a thing             ほしい, finally used; thing vs. action
+#   4  asking what someone wants   the question turn; the third-person trap
+#                                  named, not taught around
+#   5  what you've decided         つもり, the plain form's first payoff outside
+#                                  the plain-form chapter itself
+#   6  plans that changed          つもりはない／つもりでした -- でした is the same
+#                                  swap the plain-copula lesson taught
+#   7  let's                       ましょう, proposing together
+#   8  would you like to           ませんか, inviting -- softer, and the one the
+#                                  making-plans chapter leans on hardest
+#
+# Lessons 5 and 6 are the chapter's only hard dependency on the plain-form
+# chapter. Everything else only needs Book One, apart from two sentences that
+# reach back to the joining chapter for から and けど. No checkpoint splits the
+# chapter -- lesson 4 needs 1 and 3, lesson 6 needs 5, and 8 is read directly
+# against 7.
+#
+# The `kanji:` arrays are empty and, unusually, should stay that way: this
+# chapter brings one new word and it is written in kana, so there is no
+# character here to teach. That is the honest consequence of a chapter built
+# entirely out of endings on verbs the learner already owns.
+#
+# content-source: n/a for this file -- it references vocabulary/b2-05-deciding.yaml
+#   and phrases/b2-05-deciding.yaml, whose own provenance markers apply.
+
+- id: b2.tai-rule
+  order: 140
+  chapterId: b2.chapter-5
+  situation: Deciding what to do
+  title: Wanting to do something
+  canDo: Say you want to do something, with any verb
+  wordIds:
+    - vocab.tabetai
+    - vocab.nomitai
+    - vocab.taberu
+    - vocab.nomu
+    - vocab.iku
+    - vocab.kau
+    - vocab.oyogu
+    - vocab.miru
+    - vocab.suru
+    - vocab.kuru
+    - vocab.eiga
+    - vocab.kaimono
+    - vocab.atarashii
+    - vocab.kuruma
+    - vocab.nihon
+  phraseIds:
+    - want.i-want-to-go-to-japan
+    - want.i-want-to-see-a-film
+    - want.i-want-to-go-shopping
+    - want.i-want-to-buy-a-new-car
+  kanji: []
+  patternId: grammar.b2-tai
+  grammarNote: "You already say ラーメンが食べたいです and 水が飲みたいです. Those are not two vocabulary items — they are one ending on two ordinary verbs, and the ending works on every verb you know. Take the polite form, drop ます, add たい: 行きます → 行きたい, 買います → 買いたい, 泳ぎます → 泳ぎたい, 見ます → 見たい, します → したい. 来ます is the one to watch, because its reading moves the way it did in 来ない — 来ます is きます, so 来たい is きたい, never くたい. What comes out is no longer a verb. 食べたい ends in い and behaves like 高い, so the polite form is 食べたいです, not 食べたいます. One thing carries over from what you already know: the thing you want is marked with が, the same が that sits in front of what you like and dislike. 映画が見たいです. 新しい車が買いたいです. You will also hear を, and your own deck has そばを食べたいです — that is not an error, it is the other option; が is what this chapter uses and what you will see in a textbook."
+
+- id: b2.tai-negative-past
+  order: 141
+  chapterId: b2.chapter-5
+  situation: Deciding what to do
+  title: Not wanting to, and having wanted to
+  canDo: Say you don't want to do something, or that you did or didn't want to
+  wordIds:
+    - vocab.taberu
+    - vocab.miru
+    - vocab.iku
+    - vocab.takai
+    - vocab.kinou
+    - vocab.senshuu
+    - vocab.shigoto
+    - vocab.watashi
+    - vocab.nanimo
+    - vocab.eiga
+  phraseIds:
+    - want.i-dont-want-to-eat-anything-today
+    - want.i-wanted-to-see-a-film-yesterday
+    - want.i-wanted-to-go-too
+    - want.i-didnt-want-to-go-to-work
+  kanji: []
+  patternId: grammar.b2-tai-negative-past
+  grammarNote: "Nothing new is learned here mechanically. What is new is where a rule you already own now points. 食べたい ends in い, so it inflects like 高い: drop the い and add くない for the negative, かった for the past, くなかった for both. 食べたい → 食べたくない → 食べたかった → 食べたくなかった. Every verb, both classes, both irregulars, no exceptions anywhere. Polite is the です an i-adjective always takes: 行きたくないです. What is worth the practice is たかった. English reaches for \"I wanted to\" constantly, usually with a small regret riding on it — you hear about something after the fact and say 私も行きたかったです — and until now you had no way to say it at all. Note that the time word behaves as it always has: 昨日 in front, and the past tense on the end where it belongs."
+
+- id: b2.hoshii
+  order: 142
+  chapterId: b2.chapter-5
+  situation: Deciding what to do
+  title: Wanting a thing
+  canDo: Say you want something, not to do something
+  wordIds:
+    - vocab.hoshii
+    - vocab.atarashii
+    - vocab.kuruma
+    - vocab.okane
+    - vocab.mizu
+    - vocab.nomu
+    - vocab.nanimo
+    - vocab.iku
+    - vocab.nihon
+  phraseIds:
+    - want.i-want-a-new-car
+    - want.i-dont-want-anything
+    - want.i-want-money-to-go-to-japan
+  kanji: []
+  patternId: grammar.b2-hoshii
+  grammarNote: "ほしい has been in your deck since Book One's food lesson and you have never used it once. Here is what it is for, and it is the other half of the previous two lessons. たい goes on a verb — an action you want to do. ほしい goes on a noun — a thing you want — and it takes the same が: 新しい車がほしいです, お金がほしいです. It is an i-adjective, so the machine from the last lesson runs on it unchanged and there is nothing else to learn: ほしくない, ほしかった, ほしくなかった. The error worth heading off is reaching for たい when you mean a thing. 水がほしいです is I want water; 水が飲みたいです is I want to drink water; both are good sentences, but たい needs a verb in front of it and cannot sit on a bare noun. You will also see ほしい written 欲しい — the same word."
+
+- id: b2.asking-what-you-want
+  order: 143
+  chapterId: b2.chapter-5
+  situation: Deciding what to do
+  title: Asking what someone wants
+  canDo: Ask a friend what they want to do, or what they want
+  wordIds:
+    - vocab.nani
+    - vocab.taberu
+    - vocab.hoshii
+    - vocab.sushi
+    - vocab.tomodachi
+  phraseIds:
+    - want.what-do-you-want-to-eat
+    - want.what-do-you-want
+    - want.i-want-to-eat-sushi
+  kanji: []
+  patternId: grammar.b2-asking-what-you-want
+  grammarNote: "何 and が turn both of the last lessons into questions: 何が食べたいですか, 何がほしいですか. Watch the reading — in front of が it is なに, not なん. This does more than save you a guess in a restaurant. たい and ほしい describe the person speaking. You can say what you want, and you can ask the person in front of you what they want, but you cannot use either to announce what a third person wants: 友達はすしが食べたいです does not work as a plain statement about someone else. Japanese has a separate form for that and this book does not teach it. Treat that as the register rather than a gap — deciding anything with another person starts by asking, and the answer comes back in the shape you already have: すしが食べたいです."
+
+- id: b2.tsumori
+  order: 144
+  chapterId: b2.chapter-5
+  situation: Deciding what to do
+  title: What you've decided
+  canDo: Say what you plan to do
+  wordIds:
+    - vocab.tsumori
+    - vocab.iku
+    - vocab.au
+    - vocab.taberu
+    - vocab.rainen
+    - vocab.raishuu
+    - vocab.tomodachi
+    - vocab.nihon
+    - vocab.resutoran
+  phraseIds:
+    - want.i-plan-to-go-to-japan-next-year
+    - want.im-meeting-a-friend-next-week
+    - want.i-plan-to-eat-at-a-restaurant
+  kanji: []
+  patternId: grammar.b2-tsumori
+  grammarNote: "つもり is a noun, and it means an intention. Put a verb in front of it and です after it and you have said what you are planning to do: 来年、日本に行くつもりです. The verb has to be the plain non-past — the dictionary form the plain-form chapter named — which is the first time outside that chapter you need it for something you could not otherwise say. ます never goes in front of つもり: 行きますつもりです is wrong, 行くつもりです is right. Hold this apart from たい, because they answer different questions. 日本に行きたいです is a want, and you can want something you have no plan to do. 日本に行くつもりです is a decision, and you can plan something you do not particularly want. Say the second one and you have told someone something firm about your year."
+
+- id: b2.tsumori-changed
+  order: 145
+  chapterId: b2.chapter-5
+  situation: Deciding what to do
+  title: Plans that changed
+  canDo: Say you don't plan to do something, or that you had planned to and it changed
+  wordIds:
+    - vocab.tsumori
+    - vocab.iku
+    - vocab.kaeru
+    - vocab.au
+    - vocab.kau
+    - vocab.aru
+    - vocab.okane
+    - vocab.jikan
+    - vocab.kuruma
+    - vocab.tomodachi
+    - vocab.kinou
+    - vocab.senshuu
+    - vocab.kyou
+  phraseIds:
+    - want.i-have-no-plans-to-go-today
+    - want.i-was-going-to-meet-a-friend
+    - want.i-was-going-to-buy-a-car
+  kanji: []
+  patternId: grammar.b2-tsumori-changed
+  grammarNote: "Both halves of this lesson are things you already own, aimed at a new word. つもり is a noun, so it says a plan does not exist the same way you say money or time does not — with ある and ない. 行くつもりはありません, or plainly 行くつもりはない. The は is the ordinary contrast は and belongs there. There is a second negative you will meet, and the difference between them is real: 行かないつもりです, with the plain negative in front, means you have decided not to go, while 行くつもりはありません says only that the plan to go does not exist — you have not decided against it, you simply have no such plan. Watch the verb form in that one — 帰る is godan, so it is 帰らないつもり, never 帰ないつもり. Then the past, which costs you nothing at all: です → でした, exactly as after any other noun. 昨日、友達に会うつもりでした. That form carries the same implication it does in English — I was going to, and then I didn't."
+
+- id: b2.mashou
+  order: 146
+  chapterId: b2.chapter-5
+  situation: Deciding what to do
+  title: Let's
+  canDo: Propose doing something together
+  wordIds:
+    - vocab.iku
+    - vocab.taberu
+    - vocab.yasumu
+    - vocab.au
+    - vocab.suru
+    - vocab.issho
+    - vocab.nichiyoubi
+    - vocab.kyou
+    - vocab.mou
+    - vocab.ii
+  phraseIds:
+    - want.lets-go-together
+    - want.lets-meet-on-sunday
+    - want.lets-stop-for-today
+    - want.sounds-good
+  kanji: []
+  patternId: grammar.b2-mashou
+  grammarNote: "Drop ます, add ましょう, and you are proposing: 行きます → 行きましょう, 食べます → 食べましょう, 休みます → 休みましょう. Every verb, no classes to sort, no exceptions. The lesson is not the form, it is how the form lands. ましょう assumes agreement. You are not asking whether the other person will come — you are saying let's go and expecting them to, which is right among people already doing something together and pushy aimed at someone who has agreed to nothing yet. 一緒に in front makes the together explicit: 一緒に行きましょう. Add か and the assumption drops out: 行きましょうか is shall we go?, a real question, and it is also how you offer to do something yourself — 私がしましょうか, shall I do it? To accept someone else's proposal, いいですね does the whole job."
+
+- id: b2.masenka
+  order: 147
+  chapterId: b2.chapter-5
+  situation: Deciding what to do
+  title: Would you like to
+  canDo: Invite someone to do something, more softly than a proposal
+  wordIds:
+    - vocab.iku
+    - vocab.nomu
+    - vocab.miru
+    - vocab.eiga
+    - vocab.ocha
+    - vocab.issho
+    - vocab.nichiyoubi
+    - vocab.isogashii
+  phraseIds:
+    - want.would-you-like-to-go-together
+    - want.would-you-like-some-tea
+    - want.would-you-like-to-see-a-film-on-sunday
+    - want.sorry-im-busy-on-sunday
+  kanji: []
+  patternId: grammar.b2-masenka
+  grammarNote: "Same stem, one step softer. ませんか is the polite negative you have made since Book One — 行きません — with か on the end, and it invites rather than proposes: 一緒に行きませんか, お茶を飲みませんか, 日曜日に映画を見ませんか. Asking in the negative is what makes it gentle, the same way \"won't you join us?\" is gentler than \"join us\". Held against the last lesson: 行きましょう assumes the answer and 行きませんか asks for it. When you are unsure which to use, use ませんか — it is correct aimed at anyone, a friend included, while ましょう aimed at someone who has not agreed to anything yet is presumptuous. You have met this shape once before, in 貸してくれませんか: the same negative question, asking a favour rather than offering company. And leaving room for no means it can be taken — すみません、日曜日は忙しいです is how a decline usually arrives, an apology and a reason rather than a flat いいえ."
+
+- id: b2.checkpoint-5
+  order: 148
+  chapterId: b2.chapter-5
+  situation: Integration & checkpoint
+  title: Chapter 5 checkpoint
+  canDo: Recognise everything taught so far
+  wordIds: []
+  phraseIds: []
+  kanji: []
+  checkpoint: recognition
+  grammarNote: "A wide pass over everything this chapter has taught. Type the reading or the meaning rather than picking it out of a line-up. Four endings on verbs you already had — たい, つもり, ましょう, ませんか — plus the word ほしい finally in use, so what is being checked is whether the endings come to hand, not whether the verbs do. Anything you miss comes back sooner. It finishes when the remaining set empties; retry as often as you like, nothing is recorded."

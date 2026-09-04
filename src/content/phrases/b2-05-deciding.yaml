@@ -1,0 +1,272 @@
+# Book Two, Chapter 5 phrases — wanting, planning, proposing.
+#
+# Every sentence here is built from words the ladder already teaches plus the
+# chapter's one new noun. The endings carry the whole load, which is the point:
+# a learner should hear 行きたい, 行くつもりです and 行きましょう as three things
+# done to one verb they have owned since Book One.
+#
+# Several pairs are deliberate twins, so the contrast is reviewable rather than
+# asserted -- 新しい車が買いたいです against 新しい車がほしいです (an action you
+# want against a thing you want), 来週、友達に会うつもりです against 昨日、友達に
+# 会うつもりでした (a plan against a plan that was), 一緒に行きましょう against
+# 一緒に行きませんか (proposing against inviting).
+#
+# The answering sentences in the question lesson, the proposing lesson and the
+# inviting lesson are four independent utterances. They are not exchanges and
+# must not be authored into one: a scripted dialogue is multi-sentence composed
+# text, which is the surface the content rules exist to keep out.
+#
+# Two sentences reach back to the chapter that joined sentences -- から in
+# 日本に行きたいから、お金がほしいです and けど in the plan that changed. That is
+# a backwards dependency on material already taught, and it buys the two
+# sentences that show want-a-thing against want-to-do, and had-planned against
+# didn't, inside one sentence each rather than across two.
+#
+# content-source: training — N5/N4 canonical, pending Tatoeba verification.
+#   JMdict cannot verify composed sentences (only fixed expressions are
+#   headwords), so sentence checks need Tatoeba, not JMdict. The shapes were
+#   checked against the Tatoeba-sourced examples bundled with JMdict for
+#   Applications 3.6.2 on 2026-08-31 -- 「私は来年留学するつもりです。」 (Tatoeba
+#   152381) attests plain non-past + つもりです -- but no sentence below is a
+#   verbatim quotation, so none carries a Tatoeba id.
+# jlpt-source: training — the level marks the band this chapter sits in.
+
+# ── Wanting to do something ───────────────────────────────────────────────────
+
+- id: want.i-want-to-go-to-japan
+  jlpt: N4
+  scenario: deciding
+  japanese: 日本に行きたいです。
+  reading: にほんにいきたいです。
+  romaji: nihon ni ikitai desu.
+  english: I want to go to Japan.
+
+- id: want.i-want-to-see-a-film
+  jlpt: N4
+  scenario: deciding
+  japanese: 映画が見たいです。
+  reading: えいががみたいです。
+  romaji: eiga ga mitai desu.
+  english: I want to see a film.
+
+- id: want.i-want-to-go-shopping
+  jlpt: N4
+  scenario: deciding
+  japanese: 買い物がしたいです。
+  reading: かいものがしたいです。
+  romaji: kaimono ga shitai desu.
+  english: I want to go shopping.
+
+- id: want.i-want-to-buy-a-new-car
+  jlpt: N4
+  scenario: deciding
+  japanese: 新しい車が買いたいです。
+  reading: あたらしいくるまがかいたいです。
+  romaji: atarashii kuruma ga kaitai desu.
+  english: I want to buy a new car.
+
+# ── Not wanting to, and having wanted to ──────────────────────────────────────
+
+- id: want.i-dont-want-to-eat-anything-today
+  jlpt: N4
+  scenario: deciding
+  japanese: 今日は何も食べたくないです。
+  reading: きょうはなにもたべたくないです。
+  romaji: kyou wa nanimo tabetakunai desu.
+  english: I don't want to eat anything today.
+
+- id: want.i-wanted-to-see-a-film-yesterday
+  jlpt: N4
+  scenario: deciding
+  japanese: 昨日、映画が見たかったです。
+  reading: きのう、えいががみたかったです。
+  romaji: kinou, eiga ga mitakatta desu.
+  english: I wanted to see a film yesterday.
+
+- id: want.i-wanted-to-go-too
+  jlpt: N4
+  scenario: deciding
+  japanese: 私も行きたかったです。
+  reading: わたしもいきたかったです。
+  romaji: watashi mo ikitakatta desu.
+  english: I wanted to go too.
+
+- id: want.i-didnt-want-to-go-to-work
+  jlpt: N4
+  scenario: deciding
+  japanese: 先週は仕事に行きたくなかったです。
+  reading: せんしゅうはしごとにいきたくなかったです。
+  romaji: senshuu wa shigoto ni ikitakunakatta desu.
+  english: I didn't want to go to work last week.
+
+# ── Wanting a thing ───────────────────────────────────────────────────────────
+
+- id: want.i-want-a-new-car
+  jlpt: N4
+  scenario: deciding
+  japanese: 新しい車がほしいです。
+  reading: あたらしいくるまがほしいです。
+  romaji: atarashii kuruma ga hoshii desu.
+  english: I want a new car.
+
+- id: want.i-dont-want-anything
+  jlpt: N4
+  scenario: deciding
+  japanese: 何もほしくないです。
+  reading: なにもほしくないです。
+  romaji: nanimo hoshikunai desu.
+  english: I don't want anything.
+
+- id: want.i-want-money-to-go-to-japan
+  jlpt: N4
+  scenario: deciding
+  japanese: 日本に行きたいから、お金がほしいです。
+  reading: にほんにいきたいから、おかねがほしいです。
+  romaji: nihon ni ikitai kara, okane ga hoshii desu.
+  english: I want to go to Japan, so I want money.
+
+# ── Asking what someone wants ─────────────────────────────────────────────────
+
+- id: want.what-do-you-want-to-eat
+  jlpt: N4
+  scenario: deciding
+  japanese: 何が食べたいですか。
+  reading: なにがたべたいですか。
+  romaji: nani ga tabetai desu ka.
+  english: What do you want to eat?
+
+- id: want.what-do-you-want
+  jlpt: N4
+  scenario: deciding
+  japanese: 何がほしいですか。
+  reading: なにがほしいですか。
+  romaji: nani ga hoshii desu ka.
+  english: What do you want?
+
+- id: want.i-want-to-eat-sushi
+  jlpt: N4
+  scenario: deciding
+  japanese: すしが食べたいです。
+  reading: すしがたべたいです。
+  romaji: sushi ga tabetai desu.
+  english: I want to eat sushi.
+
+# ── What you've decided ───────────────────────────────────────────────────────
+
+- id: want.i-plan-to-go-to-japan-next-year
+  jlpt: N4
+  scenario: deciding
+  japanese: 来年、日本に行くつもりです。
+  reading: らいねん、にほんにいくつもりです。
+  romaji: rainen, nihon ni iku tsumori desu.
+  english: I'm planning to go to Japan next year.
+
+- id: want.im-meeting-a-friend-next-week
+  jlpt: N4
+  scenario: deciding
+  japanese: 来週、友達に会うつもりです。
+  reading: らいしゅう、ともだちにあうつもりです。
+  romaji: raishuu, tomodachi ni au tsumori desu.
+  english: I'm planning to meet a friend next week.
+
+- id: want.i-plan-to-eat-at-a-restaurant
+  jlpt: N4
+  scenario: deciding
+  japanese: レストランで食べるつもりです。
+  reading: レストランでたべるつもりです。
+  romaji: resutoran de taberu tsumori desu.
+  english: I'm planning to eat at a restaurant.
+
+# ── Plans that changed ────────────────────────────────────────────────────────
+
+- id: want.i-have-no-plans-to-go-today
+  jlpt: N4
+  scenario: deciding
+  japanese: 今日は行くつもりはありません。
+  reading: きょうはいくつもりはありません。
+  romaji: kyou wa iku tsumori wa arimasen.
+  english: I have no plans to go today.
+
+- id: want.i-was-going-to-meet-a-friend
+  jlpt: N4
+  scenario: deciding
+  japanese: 昨日、友達に会うつもりでした。
+  reading: きのう、ともだちにあうつもりでした。
+  romaji: kinou, tomodachi ni au tsumori deshita.
+  english: I was going to meet a friend yesterday.
+
+- id: want.i-was-going-to-buy-a-car
+  jlpt: N4
+  scenario: deciding
+  japanese: 先週、車を買うつもりでしたけど、買いませんでした。
+  reading: せんしゅう、くるまをかうつもりでしたけど、かいませんでした。
+  romaji: senshuu, kuruma o kau tsumori deshita kedo, kaimasen deshita.
+  english: I was going to buy a car last week, but I didn't.
+
+# ── Let's ─────────────────────────────────────────────────────────────────────
+
+- id: want.lets-go-together
+  jlpt: N4
+  scenario: deciding
+  japanese: 一緒に行きましょう。
+  reading: いっしょにいきましょう。
+  romaji: issho ni ikimashou.
+  english: Let's go together.
+
+- id: want.lets-meet-on-sunday
+  jlpt: N4
+  scenario: deciding
+  japanese: 日曜日に会いましょう。
+  reading: にちようびにあいましょう。
+  romaji: nichiyoubi ni aimashou.
+  english: Let's meet on Sunday.
+
+- id: want.lets-stop-for-today
+  jlpt: N4
+  scenario: deciding
+  japanese: 今日はもう休みましょう。
+  reading: きょうはもうやすみましょう。
+  romaji: kyou wa mou yasumimashou.
+  english: Let's take a break for today.
+
+- id: want.sounds-good
+  jlpt: N4
+  scenario: deciding
+  japanese: いいですね。
+  reading: いいですね。
+  romaji: ii desu ne.
+  english: Sounds good.
+
+# ── Would you like to ─────────────────────────────────────────────────────────
+
+- id: want.would-you-like-to-go-together
+  jlpt: N4
+  scenario: deciding
+  japanese: 一緒に行きませんか。
+  reading: いっしょにいきませんか。
+  romaji: issho ni ikimasen ka.
+  english: Would you like to go together?
+
+- id: want.would-you-like-some-tea
+  jlpt: N4
+  scenario: deciding
+  japanese: お茶を飲みませんか。
+  reading: おちゃをのみませんか。
+  romaji: ocha o nomimasen ka.
+  english: Would you like some tea?
+
+- id: want.would-you-like-to-see-a-film-on-sunday
+  jlpt: N4
+  scenario: deciding
+  japanese: 日曜日に映画を見ませんか。
+  reading: にちようびにえいがをみませんか。
+  romaji: nichiyoubi ni eiga o mimasen ka.
+  english: Would you like to see a film on Sunday?
+
+- id: want.sorry-im-busy-on-sunday
+  jlpt: N4
+  scenario: deciding
+  japanese: すみません、日曜日は忙しいです。
+  reading: すみません、にちようびはいそがしいです。
+  romaji: sumimasen, nichiyoubi wa isogashii desu.
+  english: Sorry, I'm busy on Sunday.

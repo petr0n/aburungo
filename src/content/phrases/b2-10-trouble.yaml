@@ -1,0 +1,345 @@
+# Book Two, Chapter 10 phrases — reporting that something has gone wrong.
+#
+# Register is mixed on purpose, and it is the only chapter in this book where
+# that is true of the file as a whole. Trouble is the situation where a learner
+# has to say the same thing to a stranger at a counter and to a friend on the
+# phone within the same hour, so lessons 1, 2 and 7 each carry a plain-form twin
+# of a polite sentence rather than describing the split in a note. Everything
+# else defaults polite, for the plain-form chapter's own reason - the person you
+# are most likely to be saying this to does not know you.
+#
+# These are independent utterances. Nothing here is a scripted exchange, and
+# this is the chapter most at risk of becoming one, since a lost-property
+# counter is a conversation by nature. 見つかったら、電話してください and
+# 友達はかばんが見つかったと言っていました are two separate things a person
+# might say on two separate days, not a scene.
+#
+# Nothing dramatic. A wallet is lost, a phone stopped working, a bag was left on
+# a train, and the place this gets sorted out is a 交番 on a corner. No theft, no
+# accident, no emergency - the register the chapter design fixed, and the one
+# that makes the vocabulary reusable.
+#
+# No passive anywhere. The obvious adversity passives of a trouble chapter --
+# 財布を盗まれました and its family -- are exactly the crime register that is
+# ruled out, and the quoted-speech chapter teaches れる／られる for reading only.
+# Nothing here needs the recognitionOnly flag as a result.
+#
+# content-source: training — N4/N5 canonical, pending Tatoeba verification.
+#   JMdict cannot verify a composed sentence (only fixed expressions are
+#   headwords), so every shape below was checked against the Tatoeba-sourced
+#   examples bundled with JMdict for Applications 3.6.2 on 2026-08-31:
+#   「『財布を無くした』ジョンは嘆いた。」(236325) attests 財布を無くした verbatim,
+#   「私は財布をなくしてしまっていた…」(156837) the same with the kana spelling,
+#   「この辺で茶色い財布を見ませんでしたか。」(219883) 財布 asked after by a
+#   stranger, 「この頃は、誰もがお金に困っているようです。」(221905) and
+#   「彼は困っているときにはいつも力になってくれた。」(106404) 困っている,
+#   「あなたからの最新のメールが見つかりません。」(234143) and
+#   「あらゆるところを捜しましたが、札入れが見つからないのです。」(230047)
+#   ～が見つかりません／見つからない, 「人物画を描けるスクールを探しています。」
+#   (74208) and 「現在私どもは、カスタマーサービスの経験者を探しています。」
+#   (174882) ～を探しています, 「今日忘れ物をした。」(171417) 忘れ物をする,
+#   「バス停に着いた時、バスはすでに出ていた。」(198049) ～に着いた時 with a past
+#   main clause, 「このイヤホンは壊れています。」(223988) この～は壊れています,
+#   「電話機が壊れているかどうか調べて下さい。」(124639) a telephone as the thing
+#   that broke, 「この蛇口は使えません。故障しています。」(221367) 使えません of a
+#   broken thing and 「このクレジット・カードは使えますか。」(223838) この～は
+#   使えますか, 「この紙に記入するのを手伝ってください。」(221735) and
+#   「手伝ってもらった代わりに…」(148497) 手伝う as the thing asked for,
+#   「駅への行き方を教えてもらえますか。」(188886) ～てもらえますか as a polite
+#   request, 「…壊れた洗濯機をすぐさま直してもらうわ。」(127072) 直してもらう,
+#   「耳垢を取って欲しい。」(150147) and 「だったら、私のお願いを聞いて欲しいの。」
+#   (76577) ～を～てほしい, 「向こうの交番で聞いてください。」(173841) 交番,
+#   「私の祖母は…１００歳まで生きると言っていましたが…」(163154) と言っていました,
+#   「間違ったら、そのまま棒引きで消しておいてください。」(183723) ～たら followed
+#   by a request, 「火事の際は１１９番に電話してください。」(186687) a number
+#   plus に電話してください, and 「この電話番号に電話する方法を教えてください。」
+#   (220372) この電話番号に電話する. 見つかったら has no attesting sentence in the
+#   bundle; it is the plain past of an attested verb plus the ら the conditionals
+#   chapter taught, and the frame it sits in is attested at 183723. No sentence
+#   below is a verbatim quotation, so none carries a Tatoeba id.
+# jlpt-source: training — the level marks the band this chapter sits in.
+
+# ── Saying you're in trouble ──────────────────────────────────────────────────
+
+- id: trouble.lost-money-so-im-stuck
+  jlpt: N4
+  scenario: trouble
+  japanese: お金を無くしたので、困っています。
+  reading: おかねをなくしたので、こまっています。
+  romaji: okane o nakushita node, komatte imasu.
+  english: I've lost my money, so I'm in trouble.
+
+- id: trouble.lost-bag-so-im-stuck
+  jlpt: N4
+  scenario: trouble
+  japanese: かばんを無くしたから、困っています。
+  reading: かばんをなくしたから、こまっています。
+  romaji: kaban o nakushita kara, komatte imasu.
+  english: I've lost my bag, so I'm in trouble.
+
+- id: trouble.lost-bag-so-im-stuck-plain
+  jlpt: N4
+  scenario: casual
+  japanese: かばんを無くしたから、困っている。
+  reading: かばんをなくしたから、こまっている。
+  romaji: kaban o nakushita kara, komatte iru.
+  english: I've lost my bag, so I'm stuck.
+
+# ── Losing something ──────────────────────────────────────────────────────────
+
+- id: trouble.i-lost-my-wallet
+  jlpt: N5
+  scenario: trouble
+  japanese: 財布を無くしました。
+  reading: さいふをなくしました。
+  romaji: saifu o nakushimashita.
+  english: I've lost my wallet.
+
+- id: trouble.i-lost-my-glasses-plain
+  jlpt: N4
+  scenario: casual
+  japanese: めがねを無くした。
+  reading: めがねをなくした。
+  romaji: megane o nakushita.
+  english: I've lost my glasses.
+
+- id: trouble.did-you-lose-your-key
+  jlpt: N5
+  scenario: trouble
+  japanese: 鍵を無くしましたか。
+  reading: かぎをなくしましたか。
+  romaji: kagi o nakushimashita ka.
+  english: Did you lose your key?
+
+# ── It's not turning up ───────────────────────────────────────────────────────
+
+- id: trouble.my-bag-hasnt-turned-up
+  jlpt: N4
+  scenario: trouble
+  japanese: かばんが見つかりません。
+  reading: かばんがみつかりません。
+  romaji: kaban ga mitsukarimasen.
+  english: I can't find my bag.
+
+- id: trouble.im-looking-for-my-glasses
+  jlpt: N4
+  scenario: trouble
+  japanese: めがねを探しています。
+  reading: めがねをさがしています。
+  romaji: megane o sagashite imasu.
+  english: I'm looking for my glasses.
+
+- id: trouble.did-the-key-turn-up
+  jlpt: N4
+  scenario: trouble
+  japanese: 鍵は見つかりましたか。
+  reading: かぎはみつかりましたか。
+  romaji: kagi wa mitsukarimashita ka.
+  english: Did the key turn up?
+
+# ── What you left, and where ──────────────────────────────────────────────────
+
+- id: trouble.i-left-something-on-the-train
+  jlpt: N4
+  scenario: trouble
+  japanese: 電車に忘れ物をしました。
+  reading: でんしゃにわすれものをしました。
+  romaji: densha ni wasuremono o shimashita.
+  english: I left something behind on the train.
+
+- id: trouble.when-i-got-to-the-station-my-bag-was-gone
+  jlpt: N4
+  scenario: trouble
+  japanese: 駅に着いたとき、かばんがありませんでした。
+  reading: えきについたとき、かばんがありませんでした。
+  romaji: eki ni tsuita toki, kaban ga arimasen deshita.
+  english: When I got to the station, my bag wasn't there.
+
+- id: trouble.where-did-you-leave-it
+  jlpt: N4
+  scenario: trouble
+  japanese: どこに忘れましたか。
+  reading: どこにわすれましたか。
+  romaji: doko ni wasuremashita ka.
+  english: Where did you leave it?
+
+# ── It's broken ───────────────────────────────────────────────────────────────
+
+- id: trouble.my-phone-is-broken
+  jlpt: N4
+  scenario: trouble
+  japanese: 電話が壊れています。
+  reading: でんわがこわれています。
+  romaji: denwa ga kowarete imasu.
+  english: My phone is broken.
+
+- id: trouble.the-key-is-broken
+  jlpt: N4
+  scenario: trouble
+  japanese: 鍵が壊れています。
+  reading: かぎがこわれています。
+  romaji: kagi ga kowarete imasu.
+  english: The key is broken.
+
+- id: trouble.these-glasses-are-broken
+  jlpt: N4
+  scenario: trouble
+  japanese: このめがねは壊れています。
+  reading: このめがねはこわれています。
+  romaji: kono megane wa kowarete imasu.
+  english: These glasses are broken.
+
+# ── And now it doesn't work ───────────────────────────────────────────────────
+
+- id: trouble.phone-broke-so-i-cant-use-it
+  jlpt: N4
+  scenario: trouble
+  japanese: 電話が壊れて、使えません。
+  reading: でんわがこわれて、つかえません。
+  romaji: denwa ga kowarete, tsukaemasen.
+  english: My phone broke, so I can't use it.
+
+- id: trouble.key-broke-so-i-cant-use-it
+  jlpt: N4
+  scenario: trouble
+  japanese: 鍵が壊れて、使えません。
+  reading: かぎがこわれて、つかえません。
+  romaji: kagi ga kowarete, tsukaemasen.
+  english: The key broke, so I can't use it.
+
+- id: trouble.can-i-use-this-phone
+  jlpt: N4
+  scenario: trouble
+  japanese: この電話は使えますか。
+  reading: このでんわはつかえますか。
+  romaji: kono denwa wa tsukaemasu ka.
+  english: Can I use this phone?
+
+# ── Asking for help ───────────────────────────────────────────────────────────
+# Four separate things a person might say, not four turns of one conversation.
+
+- id: trouble.could-you-help-me
+  jlpt: N4
+  scenario: trouble
+  japanese: 手伝ってもらえますか。
+  reading: てつだってもらえますか。
+  romaji: tetsudatte moraemasu ka.
+  english: Could you help me?
+
+- id: trouble.could-you-fix-it
+  jlpt: N4
+  scenario: trouble
+  japanese: 直してもらえますか。
+  reading: なおしてもらえますか。
+  romaji: naoshite moraemasu ka.
+  english: Could you fix it?
+
+- id: trouble.could-you-tell-me
+  jlpt: N4
+  scenario: trouble
+  japanese: 教えてくれますか。
+  reading: おしえてくれますか。
+  romaji: oshiete kuremasu ka.
+  english: Could you tell me?
+
+- id: trouble.give-me-a-hand-plain
+  jlpt: N4
+  scenario: casual
+  japanese: 手伝ってくれない？
+  reading: てつだってくれない？
+  romaji: tetsudatte kurenai?
+  english: Give me a hand?
+
+# ── What you need now ─────────────────────────────────────────────────────────
+
+- id: trouble.i-want-the-phone-fixed
+  jlpt: N4
+  scenario: trouble
+  japanese: 電話を直してほしいです。
+  reading: でんわをなおしてほしいです。
+  romaji: denwa o naoshite hoshii desu.
+  english: I'd like you to fix the phone.
+
+- id: trouble.i-want-a-new-bag
+  jlpt: N4
+  scenario: trouble
+  japanese: 新しいかばんがほしいです。
+  reading: あたらしいかばんがほしいです。
+  romaji: atarashii kaban ga hoshii desu.
+  english: I want a new bag.
+
+- id: trouble.not-a-new-one-just-fixed
+  jlpt: N4
+  scenario: trouble
+  japanese: 新しいめがねはほしくないけど、直してほしいです。
+  reading: あたらしいめがねはほしくないけど、なおしてほしいです。
+  romaji: atarashii megane wa hoshikunai kedo, naoshite hoshii desu.
+  english: I don't want new glasses, but I'd like these fixed.
+
+# ── What you think happened ───────────────────────────────────────────────────
+
+- id: trouble.i-think-i-left-it-on-the-train
+  jlpt: N4
+  scenario: trouble
+  japanese: 電車に忘れたと思います。
+  reading: でんしゃにわすれたとおもいます。
+  romaji: densha ni wasureta to omoimasu.
+  english: I think I left it on the train.
+
+- id: trouble.where-do-you-think-you-lost-it
+  jlpt: N4
+  scenario: trouble
+  japanese: どこで無くしたと思いますか。
+  reading: どこでなくしたとおもいますか。
+  romaji: doko de nakushita to omoimasu ka.
+  english: Where do you think you lost it?
+
+- id: trouble.you-should-go-to-the-police-box
+  jlpt: N4
+  scenario: trouble
+  japanese: 交番に行ったほうがいいと思います。
+  reading: こうばんにいったほうがいいとおもいます。
+  romaji: kouban ni itta hou ga ii to omoimasu.
+  english: I think you'd better go to the police box.
+
+- id: trouble.my-friend-said-it-turned-up
+  jlpt: N4
+  scenario: trouble
+  japanese: 友達はかばんが見つかったと言っていました。
+  reading: ともだちはかばんがみつかったといっていました。
+  romaji: tomodachi wa kaban ga mitsukatta to itte imashita.
+  english: My friend was saying the bag turned up.
+
+# ── If it turns up ────────────────────────────────────────────────────────────
+
+- id: trouble.if-it-turns-up-please-call
+  jlpt: N4
+  scenario: trouble
+  japanese: 見つかったら、電話してください。
+  reading: みつかったら、でんわしてください。
+  romaji: mitsukattara, denwa shite kudasai.
+  english: If it turns up, please call me.
+
+- id: trouble.if-it-turns-up-could-you-call-this-number
+  jlpt: N4
+  scenario: trouble
+  japanese: 見つかったら、この番号に電話してもらえますか。
+  reading: みつかったら、このばんごうにでんわしてもらえますか。
+  romaji: mitsukattara, kono bangou ni denwa shite moraemasu ka.
+  english: If it turns up, could you call this number?
+
+- id: trouble.if-it-doesnt-turn-up-ill-go-to-the-police-box
+  jlpt: N4
+  scenario: trouble
+  japanese: 見つからなければ、交番に行きます。
+  reading: みつからなければ、こうばんにいきます。
+  romaji: mitsukaranakereba, kouban ni ikimasu.
+  english: If it doesn't turn up, I'll go to the police box.
+
+- id: trouble.this-is-my-phone-number
+  jlpt: N5
+  scenario: trouble
+  japanese: これはわたしの電話番号です。
+  reading: これはわたしのでんわばんごうです。
+  romaji: kore wa watashi no denwa bangou desu.
+  english: This is my phone number.
