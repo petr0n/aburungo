@@ -1,0 +1,293 @@
+# Chapter 4 -- Conditions, sharpened.
+#
+# Book Two's conditionals chapter gave four ways to say "if" and spent three of
+# its nine lessons doing nothing but teaching a learner which one a Japanese
+# speaker would reach for. This chapter does not reopen that argument. It
+# assumes it, and adds connectives that do not compete with たら/と/ば/なら so
+# much as sit on top of them: one is a second conditional in its own right
+# (限り), one is a new particle dropped in front of the ば a learner already
+# conjugates (さえ〜ば), one is a noun that never conjugates at all (次第), and
+# one crosses out of condition into concession (たとえ〜ても), which is why it
+# closes the teaching rather than sitting in the middle.
+#
+# The plan for this chapter (docs/plans/book-three-band-03.md) named six
+# patterns. Two did not survive contact with Tatoeba: ようでは returned zero
+# attested sentences under any spelling, and ものなら returned one clean hit,
+# not enough to source a lesson without composing Japanese this project does
+# not permit. Both are cut rather than padded. That left five teaching lessons
+# and a capstone where the brief had budgeted seven teaching slots, and the
+# seventh is lesson 2, which the plan had as a footnote on lesson 1. That is a
+# deliberate departure from the plan, and it is argued rather than assumed. 限り
+# in its "as far as I know" sense is the best-attested thing in this chapter:
+# 知る限り and its past-tense twin 見た限り have eight sentences between them,
+# 見渡す限り six and できる限り five -- nineteen, against the four clean ない限り
+# sentences the chapter opens on. And the plan itself asked that a learner
+# meeting it in reading "does not assume it is a broken version of the grammar
+# they just learned". A footnote does not do that job for the commonest use of
+# the word. A lesson does.
+#
+# 限り costs nothing to build and everything to place correctly. It attaches
+# straight to the plain non-past, ている or plain negative a learner has owned
+# since the plain-form chapter -- no new conjugation -- and it means roughly
+# "for as long as X keeps holding" or, negated, "unless". The work is that
+# English glosses it the same way it glosses ば and たら, and it is not
+# interchangeable with either: 限り bounds the result by the condition's
+# lifetime, which is exactly the axis lesson 4 needs.
+#
+# さえ〜ば is not a new conditional. It is さえ, one new particle meaning "even",
+# dropped in front of the ば a learner already conjugates without thinking.
+# Building it costs one word; using it costs noticing that さえ narrows ば's
+# condition to "this one thing is sufficient" -- a different claim from 限り's,
+# made from a different direction, which is why lesson 4 follows immediately
+# the way every genuinely confusable pair in Book Two's conditionals chapter
+# got a lesson of its own.
+#
+# 次第 is one word doing two jobs at uneven attestation, so it gets one lesson
+# rather than two: noun + 次第 ("depends on", eight clean sentences) is the
+# spine, and ます-stem + 次第 ("the moment it's done", three) rides with it.
+# Watch for 次第に, the adverb "gradually" -- same word, unrelated grammar, and
+# a third of that word's hits in the corpus, which is why it gets a card of its
+# own rather than a warning.
+#
+# たとえ〜ても closes the teaching because it is the one pattern here that is not
+# a variation on "if": the outcome holds regardless of the condition rather
+# than because of it. The plan called the mechanic new -- "nothing in Book Two
+# taught concessive も" -- and that is not quite right, which lesson 6 says
+# rather than repeats. 〜てもいいですか has been in the course since Book One,
+# and it is this construction: literally "even if I do it, is it all right?".
+# What is new is the reading, not the machinery.
+#
+# The capstone teaches no new grammar. It is this chapter's four patterns plus
+# every conditional Book Two built -- たら, と, ば, なら -- put in front of the
+# learner together and asked which one a Japanese speaker would reach for. That
+# is the same move b2.cond-three-way made, one level up.
+#
+#    1  as long as it holds        限り, affirmative and ない限り
+#    2  as far as I know           限り's other job, and 〜とは限らない
+#    3  if only you'd just         さえ〜ば, built on the ば you already have
+#    4  two ways to say as long as 限り against さえ〜ば, no new grammar
+#    5  depends on it, or the      次第, two jobs at uneven attestation
+#       moment it's done
+#    6  even if it doesn't go      たとえ〜ても, and the ても you already had
+#       your way
+#    7  every "if" at once         all seven conditionals, old and new, no new
+#                                  grammar
+#
+# Lesson 7 depends on everything before it and on the whole of Book Two's
+# conditionals chapter, so this chapter cannot be split by a checkpoint before
+# it -- the same constraint b2-09 carried for the same reason.
+#
+# One rule the grammarNotes below hold themselves to, inherited from chapter 1
+# and stated again because an editor will otherwise undo it by accident. A note
+# here may show a conjugation chain (降る becoming 降っても), a short verb phrase
+# (走る限り), or a sentence that is a phrase card in this chapter or in Book Two,
+# quoted whole. It may not show a Japanese sentence that is none of those.
+# Several notes therefore describe a sentence in English where a draft would
+# have composed a Japanese one. That is 04-stage-reading.md section 8 reaching
+# into the prose, not only into the cards.
+#
+# A second rule, this one added because it is where a conditionals chapter
+# fails. Before any note here says "always", "never", "only" or "cannot", the
+# claim had to survive a search for a counterexample in the corpus, and where
+# one turned up the rule is written with its exception attached. Three places
+# this changed the text: lesson 1 does not say the clause before 限り is
+# non-past, because 私の見た限りでは is attested; lesson 4 does not call either
+# 限り or さえ〜ば wrong in the other's place, because neither is ungrammatical
+# and only the claim changes; lesson 6 does not say ても needs a non-past
+# second half, because 彼女は決して泣かなかった follows one. Book Two's own
+# chapter did this for ば and it is the single thing that kept that chapter
+# honest.
+#
+# Four shapes named in the notes below carry no card, because the corpus had
+# nothing quotable at this level rather than because they were forgotten:
+# 〜に限る ("there is nothing like"), 〜限りに and 力の限り, 〜次第では
+# ("depending on"), and 〜次第です in its formal "such is the situation" sense.
+# Each is described in English in the lesson that owns it. Nothing was composed
+# to fill any of the four.
+#
+# The `kanji:` arrays are empty and should stay that way, and so is
+# vocabulary/b3-03-conditions.yaml. Every connective here is written in kana or
+# in characters Book One already taught, and the vocabulary in the example
+# sentences belongs to the reading library and to mining, not to a curated list
+# (04-stage-reading.md section 3). The `wordIds` below name words the learner
+# already owns and that the lesson's own sentences use -- they are an SRS pull,
+# not new teaching.
+#
+# content-source: every phrase this file references is a verified Tatoeba pair,
+#   cited by id in `tatoebaId` in phrases/b3-03-conditions.yaml. No
+#   training-canonical sentence is used anywhere in this chapter
+#   (04-stage-reading.md section 8).
+
+- id: b3.cond-kagiri
+  order: 219
+  chapterId: b3.band-3
+  situation: Conditions, sharpened
+  title: As long as it holds
+  canDo: Say that something stays true for exactly as long as something else does, and say its flip side, unless
+  wordIds:
+    - vocab.aru
+    - vocab.iru
+    - vocab.wasureru
+    - vocab.hon
+  phraseIds:
+    - band3.as-long-as-i-live-i-wont-forget
+    - band3.as-long-as-we-live-we-must-keep-learning
+    - band3.as-long-as-he-has-enough-to-eat
+    - band3.as-long-as-you-keep-it-clean
+    - band3.unless-you-work-harder-youll-fail
+  kanji: []
+  patternId: grammar.b3-cond-kagiri
+  grammarNote: "Building this costs nothing. 限り goes straight onto a plain form you already have. ある → ある限り. 生きている → 生きている限り. 存在する → 存在する限り. The negative works the same way: 汚さない → 汚さない限り, 勉強しない → 勉強しない限り. A な-adjective reaches it through な — 可能な限り — and a noun through である. There is no conjugation to learn here at all, which is why the whole lesson is about when to reach for it. What it means is a boundary. 命がある限りあなたのご恩は忘れません — the promise runs for exactly as long as the life does, and the sentence is saying so. That is what separates 限り from every conditional Book Two gave you. たら says if or once; と says whenever; ば states a condition in general. 限り measures. It attaches the second half to the first half's lifetime and lets you hear when it would end. So the clause in front of it is normally something that goes on being true rather than something that finishes: ある, 生きている, 続く, 存在する. Notice the shape of that sentence — normally, not always. The next lesson is entirely about a use of 限り where the verb is in the past, 私の見た限りでは, and it is completely ordinary. What is true without a hedge is narrower and more useful: when the first clause names a one-off finished action, the form you want is たら, not 限り. Now the negative, which is half of what you will meet. ない限り flips the reading, and English takes it two different ways depending on nothing but which reads better. 汚さない限り、この本を持ち帰ってもいいですよ comes out as \"as long as you keep it clean\" — the negative is in the Japanese and not in the English. もっと勉強しない限り落第しますよ comes out as \"unless you work harder\". Same construction, both times. If you find yourself hunting for which one 限り means, it means neither: it means the outcome holds for as long as that stays untrue. Look at what follows 限り in those two sentences, because it is the one place 限り is easier than what you already have. A permission — 持ち帰ってもいいですよ. A warning — 落第しますよ. と cannot take either of those, and ば cannot when its clause is an action you chose. 限り has no restriction of that kind, so the second half can be a request, an instruction, a judgment or a plan. One last thing so it does not ambush you later: 限り is also an ordinary noun meaning a limit, and it appears in fixed expressions that have nothing to do with the grammar above. That is the next lesson, and it is not a broken version of this one."
+
+- id: b3.kagiri-extent
+  order: 220
+  chapterId: b3.band-3
+  situation: Conditions, sharpened
+  title: As far as I know
+  canDo: Limit what you are claiming to what you know, what you can see, or what you can manage
+  wordIds:
+    - vocab.shiru
+    - vocab.miru
+    - vocab.umi
+    - vocab.dekiru
+    - vocab.takai
+  phraseIds:
+    - band3.there-is-no-limit-to-the-universe
+    - band3.as-far-as-i-know-hes-honest
+    - band3.ocean-as-far-as-the-eye-could-see
+    - band3.ill-help-as-much-as-i-can
+    - band3.a-title-doesnt-necessarily-mean-rank
+  kanji: []
+  patternId: grammar.b3-kagiri-extent
+  grammarNote: "Start with what 限り actually is, because the last lesson could have left you thinking it was a particle. It is a noun, and it means a limit. 宇宙には限りはない — there is no limit to the universe, with 限り as the plain subject of the sentence and no grammar attached to it anywhere. Everything the last lesson taught is built on that noun, and so is everything in this one. Put a verb in front of it and you get within the limit of that verb. 私の知る限りでは彼は正直です — within the limit of what I know, he is honest. 見渡す限り海だった — within the limit of what the eye takes in, ocean. 私はできる限りあなたの援助をします — within the limit of what is possible, I will help. Three different English phrases, as far as I know, as far as the eye could see, as much as I can, and one Japanese construction under all of them. The last lesson said the clause before 限り normally names something that goes on being true, and here is where that stops holding. 私の見た限りでは — from what I saw — puts a plain past in front of 限り and is completely ordinary. So is 私の知る限り with 知る in the non-past. What decides it is which of the word's two jobs is running: bounding an outcome by a condition's lifetime, which is the last lesson, or bounding a claim by the speaker's reach, which is this one. And the line between the two is not a wall. 命がある限り is both — for as long as I have life, and within the limit of my life. One word, one meaning, two English routes. These are hedges, and they are worth having as hedges. 私の知る限り asserts something and admits in the same breath that the speaker may not have the whole picture. It is polite, it is very common in writing, and it is what a careful person says instead of a flat claim. では is optional throughout — 私の知る限り and 私の知る限りでは do the same work. Then the one you will meet most in reading, which comes from the verb rather than the noun. 限る means to limit. Its negative, in the fixed shape 〜とは限らない, says a thing is not limited to being so — which English renders as not necessarily. 肩書きが偉くても地位が高いとは限らない: a grand title does not necessarily mean a high rank. Watch for it. It is one of the standard ways Japanese hedges a generalisation, and a reader who takes 限らない for the 限り above will get the sentence backwards. Two more you will see and this lesson does not teach, named so they do not look like mistakes. 〜に限る, after a noun, most often means there is nothing better than that — a recommendation rather than a limit, though the plainer reading, is limited to, is also real and context is what sorts them. And 力の限り, 声を限りに mean to the full extent of one's strength or voice. Both are attested and neither had a sentence at this level worth quoting, so they get named here and no card."
+
+- id: b3.cond-saeba
+  order: 221
+  chapterId: b3.band-3
+  situation: Conditions, sharpened
+  title: If only you'd just
+  canDo: Say that one thing on its own is enough to settle the matter
+  wordIds:
+    - vocab.osu
+    - vocab.hashiru
+    - vocab.kuruma
+    - vocab.oboeru
+    - vocab.au
+    - vocab.ame
+  phraseIds:
+    - band3.all-you-have-to-do-is-press-the-button
+    - band3.any-car-will-do-as-long-as-it-runs
+    - band3.once-you-get-the-hang-of-it
+    - band3.if-only-i-had-the-chance
+    - band3.if-only-it-would-stop-raining
+  kanji: []
+  patternId: grammar.b3-cond-saeba
+  grammarNote: "This is not a fifth conditional. The ば in it is the ば you built in Book Two and have not touched since — え row plus ば for godan verbs, れば for ichidan, すれば, 来れば. Nothing about that changes. The only new thing in this lesson is one particle. さえ means even. On its own, with no ば anywhere, it does what も and でも do and pushes further: 先生でさえ is even the teacher, 時間さえもない is not even time. Hold that meaning, because it is what makes the rest of the lesson make sense rather than something to memorise. Now put さえ in front of a ば. Even just this much, and it follows — which is to say, this one thing is all that is being asked for. あなたはボタンを押しさえすればいい: pressing the button is the whole of what you have to do. Two shapes carry it, and both are worth building. First, the ます-stem plus さえ plus すれば. Take the verb to its ます-stem the way you would for ます — 押す → 押し, 走る → 走り, やむ → やみ — put さえ on it, and let する carry the conjugation: 押しさえすれば, 走りさえすれば, やみさえすれば. The verb splits in two and さえ sits in the join. Second, a noun plus さえ, with the verb itself in ば: コツさえ覚えれば, 機会さえあれば. Use this one when there is a noun the sentence is really about — the knack, the chance — and the first when there is not. あれば is common here but nothing restricts it to ある; 覚えれば is an ordinary verb doing the same job. You will also meet て-form plus さえ plus いれば, which is the same idea about a state rather than an act. What follows is very often いい or よい, and that is where the English \"all you have to do is\" comes from. It does not have to be. コツさえ覚えれば、朝飯前ですよ ends in a judgment, and 走りさえすれば、どんな車でもよいのです ends in a claim about cars. Add なあ and the whole thing turns wistful: 雨がやみさえすればいいのになあ, if only it would stop raining. That wistfulness is in のになあ, not in さえ〜ば. One caution about reading rather than building. Most さえ you meet will have no ば after it at all, because the plain \"even\" is the commoner of the two in this corpus. Seeing さえ is not enough to tell you which construction you are in; look for the ば."
+
+- id: b3.cond-kagiri-saeba-contrast
+  order: 222
+  chapterId: b3.band-3
+  situation: Conditions, sharpened
+  title: Two ways to say "as long as"
+  canDo: Choose between 限り and さえ〜ば when English says "as long as", and say what each of them is actually claiming
+  wordIds:
+    - vocab.aru
+    - vocab.hashiru
+    - vocab.kuruma
+    - vocab.iru
+  phraseIds:
+    - band3.as-long-as-he-has-enough-to-eat
+    - band3.any-car-will-do-as-long-as-it-runs
+    - band3.as-long-as-i-live-i-wont-forget
+    - band3.all-you-have-to-do-is-press-the-button
+  kanji: []
+  grammarNote: "No new form in this lesson. You have both, and the problem is that English hands you the same four words for them. Look at two cards you have already met. 飲み食いするものが十分ある限り彼は何も気にしない came out as \"provided he has enough to eat and drink\". 走りさえすれば、どんな車でもよいのです came out as \"any car will do, as long as it runs\". Provided, as long as — an English speaker has no signal at all telling those two apart, and the Japanese underneath them is doing two different things. 限り bounds. It ties the second half to the first half's lifetime: this holds, and it holds for exactly as long as that does, and you can hear where it would stop. さえ〜ば measures sufficiency. It says this much is enough and nothing more is being asked for, and it says nothing whatever about how long anything lasts. So the question to ask is not which one is allowed. It is what you are claiming. Take the car. 走りさえすれば says running is the only requirement — I am not asking for paint, or a radio, or comfort. 走る限り, the same verb under the other construction, would say something else entirely: for as long as it keeps running. One is about how little the car needs to do; the other is about how long it will keep doing it. Both are Japanese. They are not versions of each other. Now the honest part, and it is why this lesson is shorter than Book Two's contrast lessons were. Neither of these forms has a restriction with teeth. と genuinely cannot be followed by a request — that is a rule, and putting one there produces something a Japanese speaker would not say. ば genuinely cannot take a request when its own clause is an action you chose to do, though it can when the clause is an adjective, a noun with なら, or a verb of state. Nothing like that is going on here. Put 限り where さえ〜ば belonged and you have not broken the sentence, you have changed what it claims — and usually made it sound more formal and more detached than you meant, because 限り on a small controllable act reads like a policy statement. Put さえ〜ば where 限り belonged and you have offered a minimum condition for something nobody can meet: 命がある限り is a life, not a requirement, and \"if only you had life\" is not a thing to say. Two questions, then, and they are about meaning rather than legality. Is the point how little is needed? さえ〜ば. Is the point how long it holds? 限り. And if the answer is neither — if you just mean if — the form you want is the one Book Two told you was the default, and it is たら."
+
+- id: b3.cond-shidai
+  order: 223
+  chapterId: b3.band-3
+  situation: Conditions, sharpened
+  title: Depends on it, or the moment it's done
+  canDo: Say that one thing depends on another, and that something will happen the moment something else is finished
+  wordIds:
+    - vocab.shigoto
+    - vocab.tenki
+    - vocab.tsuku
+    - vocab.denwa
+    - vocab.suru
+  phraseIds:
+    - band3.the-choice-is-up-to-you
+    - band3.success-depends-on-your-efforts
+    - band3.it-depends-on-the-weather
+    - band3.ill-phone-as-soon-as-i-arrive
+    - band3.well-leave-as-soon-as-youre-ready
+    - band3.the-train-gradually-picked-up-speed
+  kanji: []
+  patternId: grammar.b3-cond-shidai
+  grammarNote: "One word, two jobs, and a third word that looks exactly like it and is neither. The first job is the one you will use. A noun, then 次第, and nothing in between — no particle, no copula, no の. 天気次第. 君次第. 努力次第. It means the thing depends on that, or is up to that, and the whole 〜次第 block behaves as a noun, so だ and です attach to the end of it the way they attach to any noun: 選択は全く君次第だ, 仕事の成功はあなた方の努力次第です. That bare join is the part to watch. Coming off a chapter of ば and なら, you will want to put something between the noun and 次第, and there is nothing to put. You will also meet 〜次第で and 〜次第では, meaning depending on that, where the block goes on to modify a whole clause rather than close the sentence. Same word, one step looser. Neither had a sentence at this level worth quoting, so they are named here and get no card. The second job is thinner and formal. Take a verb to its ます-stem — 着く → 着き, 出来る → 出来, 終わる → 終わり — and put 次第 on that, and it means the moment that is done. 空港に着き次第、電話します. あなたの用意が出来次第出発しましょう. What follows is something still to come: a promise, a plan, a request. This is not the form for reporting what already happened, which is たら's job and てから's. Register matters here more than usual — 着き次第 belongs to email, announcements and service counters, not to talking with a friend, and Japanese has softer ways of saying as soon as that a later chapter of this book collects. Now the false friend, which is common enough that it gets a card rather than a warning. 次第に is an adverb and it means gradually. その急行列車は次第に速度を上げた — the express train gradually picked up speed. Same two characters, no connection at all to the two jobs above, and it accounts for something like a third of the times you will see the word. The に is what tells you. If 次第 is followed by に and modifies a verb, it is this word; if it sits on a noun or a ます-stem, it is the pattern. One more, named and not taught: 〜次第です in formal writing can mean nothing more than \"such is the situation\", closing a letter or an explanation, and 手当たり次第 means at random. Neither is the grammar above; both are worth recognising rather than parsing."
+
+- id: b3.cond-tatoe-temo
+  order: 224
+  chapterId: b3.band-3
+  situation: Conditions, sharpened
+  title: Even if it doesn't go your way
+  canDo: Say that something holds no matter what happens, including the worst case
+  wordIds:
+    - vocab.ame
+    - vocab.takai
+    - vocab.furui
+    - vocab.kau
+    - vocab.ima
+    - vocab.kuru
+    - vocab.komaru
+  phraseIds:
+    - band3.the-game-will-go-ahead-even-if-it-rains
+    - band3.even-if-hes-busy-hell-come
+    - band3.even-in-trouble-hes-optimistic
+    - band3.however-expensive-ill-buy-it
+    - band3.even-if-he-isnt-now
+    - band3.no-matter-what-happens-i-wont-give-up
+  kanji: []
+  patternId: grammar.b3-cond-tatoe-temo
+  grammarNote: "Everything else in this chapter says the second half follows from the first. This one says it holds anyway. That is concession rather than condition, and it is the last thing in the chapter for that reason. Start with the good news, because you have had this machinery since Book One and were not told what it was. 見てもいいですか, may I have a look. Take it apart: 見て is the te-form, も is the も you already know, and the sentence literally asks even if I look, is that all right. That is exactly the construction below. What is new here is not the mechanics, it is reading 〜ても with a real second clause after it instead of いい. Verbs take the te-form plus も. 降る → 降って → 降っても. ある → あって → あっても. い-adjectives drop い for くて and add も: 高い → 高くて → 高くても. な-adjectives and nouns have no te-form of their own, so they use で: 多忙 → 多忙でも, 雨 → 雨でも. Negatives go through ない, which is itself an い-adjective and behaves like one: 行かない → 行かなくて → 行かなくても, じゃない → じゃなくても. One rule, four word classes, and every piece of it is a form you already build. たとえ is optional. Say that to yourself once, because a table that prints たとえ〜ても together implies the two words travel as a pair, and they do not. どんなに高くても、あの古い時計を買います has no たとえ in it. 今はそうじゃなくても将来はいい夫になるよ has no たとえ in it. What たとえ does is warn you early, at the head of the clause, that a concession is coming — useful in a long sentence, unnecessary in a short one. And たとえ does not only take ても: you will meet たとえ…とも in writing (寒くとも for 寒くても), たとえ…であれ, and たとえ…としても. All are the same move at different registers. Put a question word in front and the single condition becomes all of them. たとえどんなことがあってもあきらめません — no matter what happens. どんなに高くても — no matter how expensive. Any question word does it — how, who, when, what — and English answers every one of them with no matter rather than even if. On even if against even though: Japanese does not choose. たとえ困っていても、マックはいつも楽天的だ is translated even if he is in trouble, but Mac's trouble is real and present, so even when is closer. ても covers the hypothetical and the actual with one form, and the surrounding sentence is what tells you which you are reading. The second half is free, including in tense — it can be a plan, a claim, a refusal, or a report of something that already happened. Three things that look like this and are not. 例えば means for example. It shares a root with たとえ and you will meet both in the same paragraph, and they are not interchangeable in either direction. でも at the head of a sentence means but. And 〜てもいい is still permission, not concession, which is the same string doing the older job — what tells you is whether いい follows or a whole clause does."
+
+- id: b3.cond-capstone
+  order: 225
+  chapterId: b3.band-3
+  situation: Conditions, sharpened
+  title: Every "if" at once
+  canDo: Pick the conditional a Japanese speaker would actually use, out of everything you now have
+  wordIds:
+    - vocab.jikan
+    - vocab.iku
+    - vocab.au
+    - vocab.tsukau
+    - vocab.hashiru
+    - vocab.osu
+    - vocab.aru
+  phraseIds:
+    - band3.unless-you-grease-his-palm
+    - band3.even-the-fastest-runner-cant-run-hungry
+    - band3.as-long-as-i-live-i-wont-forget
+    - band3.all-you-have-to-do-is-press-the-button
+    - band3.the-game-will-go-ahead-even-if-it-rains
+    - band3.the-choice-is-up-to-you
+    - cond.if-i-have-time-ill-go
+    - cond.press-it-and-it-opens
+    - cond.if-its-expensive-i-wont-buy-it
+    - cond.if-its-raining-ill-take-a-taxi
+    - cond.if-youre-tired-you-should-rest
+  kanji: []
+  grammarNote: "Nothing new, and everything at stake. Book Two closed its conditionals chapter by holding たら, と and ば apart from each other; this lesson puts 限り, さえ〜ば and たとえ〜ても on the same board and adds なら back, and asks you to place all seven. Six questions, in this order, and almost everything falls out of them. First: does the second half hold regardless of the first rather than because of it? Then none of the conditionals is right and the answer is たとえ〜ても. This is the only question in the list that takes a form out of the running by meaning rather than by rule, and it is first because getting it wrong turns a sentence inside out. Second: is the point that one thing on its own is enough? さえ〜ば. あなたはボタンを押しさえすればいい — the button is the whole of it. Third: does the second half last exactly as long as the first stays true? 限り. 命がある限りあなたのご恩は忘れません. Its negative, ない限り, is where English says unless. Fourth: is there a request, an invitation, a command or a decision in the second half? Then と is out, completely — it is the one form in this set with a rule that does not bend. ば is out too if its own clause is an action you chose to do, though not if the clause is an adjective, a noun with なら, or a verb of state, where a request after it is completely ordinary — 安ければ and 時間があれば both take one. 限り has no restriction of that kind at all — 汚さない限り、この本を持ち帰ってもいいですよ ends in permission. So the field here is たら and 限り, and 限り only when the first clause names something that keeps being true. Fifth: does the second half follow on its own, every time, with nobody deciding anything? と says that better than anything else. 押すと、開きます. Sixth: is this a general rule or a hypothesis rather than one dated occasion? ば. Leftovers go to たら, which is what made it the default. なら does a job none of the others do: it picks up the situation in front of you and answers it. あの政治家に会うつもりなら、袖の下を使わない限り駄目だね — if that is what you intend, then. Two conditionals in one sentence, and they are not competing; なら frames the case and ない限り states the condition inside it. And 次第 belongs on the board without being on the list, because it is not an if at all. 選択は全く君次第だ names what an outcome depends on rather than stating a condition for it, and 着き次第 fixes a moment rather than a case. If you catch yourself choosing between 次第 and たら you have almost certainly misread the sentence. One to reject on purpose, since a wrong form named is worth more than another right one. 世界最速の走者でさえ、空腹だったら走れない has both a さえ and a conditional in it, and the さえ is not part of one. It is the plain even — even the fastest runner — and たら is carrying the condition by itself. A learner who sees さえ and reaches for さえ〜ば will look for a ば that is not there and lose the sentence. Look for the ば, always."
+
+- id: b3.checkpoint-3
+  order: 226
+  chapterId: b3.band-3
+  situation: Integration & checkpoint
+  title: Chapter 4 checkpoint
+  canDo: Recognise everything this chapter taught
+  wordIds: []
+  phraseIds: []
+  kanji: []
+  checkpoint: recognition
+  grammarNote: "A wide pass over everything this chapter has taught. Type the reading or the meaning rather than picking it out of a line-up. Four connectives, one of them doing two jobs and one of them a particle you had never met, and what is being checked is not whether you can recite a table — it is whether the right reading comes to hand for the sentence in front of you. Some of what comes back is a 限り that bounds a promise and some is a 限り that hedges a claim, and the only way through is to read the rest of the sentence. Same for 次第 against 次第に, and for a さえ with a ば after it against a さえ with nothing after it at all. Those are the collisions this chapter exists to sort out, so they are the ones worth checking. Anything you miss comes back sooner. It finishes when the remaining set empties; retry as often as you like, nothing is recorded."

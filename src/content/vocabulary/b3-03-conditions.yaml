@@ -1,0 +1,36 @@
+# Book Three, chapter 4 vocabulary -- deliberately empty.
+#
+# This chapter teaches four connectives (限り, さえ〜ば, 次第, たとえ〜ても) and
+# not one word, which is the same answer chapter 1 gave and for the same reason.
+# 04-stage-reading.md section 3 hands vocabulary at this stage to the reading
+# library and to mining: lessons carry patterns, the library carries words.
+#
+# Two of the four are ordinary nouns doing grammatical work -- 限り is "a limit"
+# and 次第 is "circumstances" -- so there is a real argument for entering them
+# the way Book Two entered ほう for ほうがいい. The chapter's own plan document
+# (docs/plans/book-three-band-03.md section 4) makes the case against and it
+# holds: ほう earned its entry because ほうがいい rides on ほう still meaning
+# "side", whereas nothing else in Book Two's connective inventory -- と, たら,
+# ば, なら, ので, けど, し -- was ever given a vocabulary entry. 限り and 次第
+# are connectives here. さえ and たとえ are a particle and an adverb, which is
+# an easier call still: は, も, が and ば never got entries either.
+#
+# The one place that judgment is worth revisiting is lesson 2, which teaches
+# 限り in its "within the limit of" sense and opens on 宇宙には限りはない, where
+# 限り genuinely is a content noun and nothing else. Even there the word is met
+# in an attested sentence rather than on a card, which is the acquisition path
+# this book was built to prefer.
+#
+# The cited sentences use plenty of words the learner does not own -- 落第,
+# 肩書き, 袖の下, 朝飯前, 急行列車 among them. That is not a gap this file
+# should close. What is being reviewed in this chapter is the join between two
+# clauses, not the nouns on either side of it.
+#
+# The file exists so the chapter's four content files stay a matched set and so
+# the next author does not go looking for a missing one. An empty array parses;
+# a file of comments alone does not, which is why the `[]` below is load-bearing
+# rather than decorative.
+#
+# content-source: n/a -- this file adds no Japanese content.
+
+[]

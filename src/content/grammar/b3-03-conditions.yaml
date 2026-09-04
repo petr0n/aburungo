@@ -1,0 +1,83 @@
+# Book Three, chapter 4 grammar patterns -- conditions, sharpened.
+#
+# One pattern per teaching lesson that introduces new grammar, each blanking
+# the thing that lesson exists for out of one of its own sentences. The blank
+# is matched against the phrase's reading, so these are kana. Two of the
+# chapter's seven teaching lessons introduce no new grammar -- the 限り-against
+# -さえ〜ば contrast and the closing lesson that puts every conditional on one
+# board -- and they carry no `patternId`, which is what Book Two's own contrast
+# lessons did.
+#
+# The `pattern` strings are bare Japanese for the reason chapter 1 recorded:
+# scripts/levelling.mjs's grammarSurface() rejects any pattern containing a
+# Latin character or a digit and needs at least one ～-delimited fragment of two
+# or more characters, so a Book-Two-style English description of a rule tags no
+# sentence at all. The reading library is built on that tagger, so a pattern it
+# cannot see is a pattern the library cannot find text for.
+#
+# What each literal costs, said plainly rather than found later:
+#
+#   ～限り and ～次第 will fire on senses this chapter separates by hand. 限り
+#   also appears as a bare noun (宇宙には限りはない) and inside 力の限り and
+#   声を限りに; 次第 also appears as the adverb 次第に, "gradually", which is a
+#   third of that word's hits in the corpus. Lessons 2 and 5 teach those senses
+#   rather than pretending they are noise, but the tagger cannot tell them
+#   apart, and a gate text tagged ～次第 may have nothing but 次第に in it.
+#
+#   ～限りでは is the more precise of the two 限り literals -- in this corpus
+#   限りでは occurs only in the scope sense (知る限りでは, 見た限りでは,
+#   関する限りでは) -- but it misses 見渡す限り and できる限り, which have no
+#   では. Precision was worth more than recall here, because the alternative
+#   literal for lesson 2 was ～限り again, tagging exactly what lesson 1 tags.
+#
+#   ～たとえ～ても is deliberately narrower than the lesson. A bare ～ても would
+#   fire on ～てもいい and ～てもらう, both of which Books One and Two teach, and
+#   that noise would swamp the concessive reading this chapter is about. The
+#   cost is real and lesson 6 says the opposite of the tagger: たとえ is
+#   optional, two of that lesson's six cards do without it, and the tagger will
+#   not see either. This is a pipeline limit, flagged rather than solved.
+#
+#   ～さえ～ば is the cleanest of the five. Both fragments are needed and in
+#   order, which excludes the plain "even" さえ -- 先生でさえ, 時間さえもない --
+#   that lesson 3 names and the closing lesson has a card for.
+#
+# content-source: n/a for this file -- every pattern references an existing
+#   phrase from phrases/b3-03-conditions.yaml rather than composing new
+#   Japanese, and that file carries the Tatoeba id for each.
+# jlpt-source: training -- 限り, さえ〜ば, 次第 and たとえ〜ても are canonically
+#   N3 grammar and the chapter is tagged as such.
+
+- id: grammar.b3-cond-kagiri
+  jlpt: N3
+  pattern: "～限り"
+  gloss: For as long as it holds. Plain non-past, ている or plain negative, then 限り -- no conjugation of its own. Negated, ない限り, English says either "as long as you don't" or "unless".
+  phraseId: band3.as-long-as-i-live-i-wont-forget
+  blank: あるかぎり
+
+- id: grammar.b3-kagiri-extent
+  jlpt: N3
+  pattern: "～限りでは"
+  gloss: Within the limit of. 限り is a noun meaning a limit, and 知る限り, 見渡す限り and できる限り all say "as far as" -- as far as I know, as far as the eye reaches, as far as I am able. では is common and optional.
+  phraseId: band3.as-far-as-i-know-hes-honest
+  blank: しるかぎりでは
+
+- id: grammar.b3-cond-saeba
+  jlpt: N3
+  pattern: "～さえ～ば"
+  gloss: This one thing and nothing else is enough. さえ means "even", and in front of a ば you already build it narrows the condition to a minimum -- ます-stem plus さえ plus すれば, or a noun plus さえ with the verb itself in ば.
+  phraseId: band3.all-you-have-to-do-is-press-the-button
+  blank: おしさえすれば
+
+- id: grammar.b3-cond-shidai
+  jlpt: N3
+  pattern: "～次第"
+  gloss: It depends on that. A bare noun plus 次第, no particle and no copula between them. On a ます-stem the same word means the moment something is done -- 着き次第, as soon as I arrive. Watch for 次第に, the adverb "gradually", which is neither.
+  phraseId: band3.the-choice-is-up-to-you
+  blank: きみしだい
+
+- id: grammar.b3-cond-tatoe-temo
+  jlpt: N3
+  pattern: "たとえ～ても"
+  gloss: Even if -- the outcome holds regardless. te-form plus も for verbs, くても for い-adjectives, でも for な-adjectives and nouns, なくても for negatives. たとえ in front is emphasis and can be left out.
+  phraseId: band3.the-game-will-go-ahead-even-if-it-rains
+  blank: たとえあめがふっても

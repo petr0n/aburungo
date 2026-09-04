@@ -1,0 +1,388 @@
+# Book Three, chapter 4 phrases -- conditions, sharpened.
+#
+# Twenty-nine sentences, and not one of them is ours. Books One and Two composed
+# their example sentences from canonical N5/N4 material and marked them
+# `content-source: training`; 04-stage-reading.md section 8 withdraws that
+# exemption at the reading stage and above, in those words -- "no
+# training-canonical sentences at the reading stage and above". So every
+# sentence below is a verbatim Tatoeba pair carried out of
+# server/data/jmdict-examples-eng-3.6.2.json with its id in `tatoebaId`, and
+# nothing here was composed, trimmed, joined or smoothed. Where a shape had no
+# attested sentence it is described in a grammarNote and has no card; the list
+# of those is in lessons/b3-03-conditions.yaml, which names each one.
+#
+# The English is Tatoeba's own where Tatoeba's own would do. Two of the
+# twenty-nine depart from it, both listed here so a reviewer can check them
+# against the corpus rather than take them on trust. Every Japanese string is
+# untouched.
+#
+#   Where the corpus English hid the grammar the card exists to teach:
+#   #80757 -- "I shall never forget your kindness" drops 命がある限り from the
+#     translation altogether, and that clause is the entire reason the card
+#     exists. Glossed "As long as I live, I will never forget your kindness".
+#
+#   Where the corpus English was worn or reached past the learner:
+#   #224132 -- "It's a snap once you get the hang of it". A snap is American
+#     idiom a learner at this stage has no reason to know, and 朝飯前 is not
+#     itself idiomatic in that register. Glossed "Once you get the hang of it,
+#     it's easy".
+#
+# Everything else is verbatim, including some English that is looser than a
+# textbook would write. #169129's "our success" for 仕事の成功, #118652's "If
+# only I get a chance to see him", #230683's "grease his palm" for 袖の下 --
+# all left alone. They are natural English and they do not hide the pattern,
+# and the cost of rewriting them is a reviewer who can no longer diff this file
+# against the corpus.
+#
+# ---------------------------------------------------------------------------
+# ROUTING: Book Three's stage is "reading" (books.ts), and LearnPage routes
+# every non-foundation book to the typed FillBlankCard, where the learner types
+# the whole reading back. So all twenty-nine of these are typed. The longest
+# reading here is band3.unless-you-grease-his-palm at 34 kana, seven shorter than
+# Book Two's longest typed answer
+# (quote.my-friend-said-that-shop-is-famous-but-i-wont-go, 41), so none asks
+# more than a learner has already been asked and no card carries
+# `recognitionOnly`. The flag is there if a later pass disagrees.
+# ---------------------------------------------------------------------------
+#
+# Two sentences carry a form from a later chapter of this book and are used
+# anyway, with the note saying so: #175197 (肩書きが偉くても...) has a ても that
+# lesson 6 owns, and #143398 (世界最速の走者でさえ...) has a たら the learner
+# has had since Book Two next to a さえ this chapter has just taught. Neither
+# was chosen for its extra form -- they are the corpus's clearest sentences for
+# とは限らない and for さえ meaning "even" -- and the alternative was to compose
+# something tidier, which is exactly what this file may not do.
+#
+# These are independent utterances. Several would sit naturally beside each
+# other -- 空港に着き次第、電話します and あなたの用意が出来次第出発しましょう
+# most obviously -- and they are not authored as an exchange: a scripted
+# back-and-forth is multi-sentence composed text, which is the surface the
+# content rules exist to keep out, and it stays out even when both halves are
+# separately attested.
+#
+# content-source: Tatoeba, via the sentence pairs embedded in JMdict for
+#   Applications 3.6.2 (server/data/jmdict-examples-eng-3.6.2.json). Every
+#   phrase carries its sentence id in `tatoebaId`; the id is quoted, because
+#   YAML reads a bare 119130 as a number and the schema rejects it. Verified by
+#   id against the corpus on 2026-09-04 -- all 29 resolve, and each Japanese
+#   string below matches its source character for character. Kana readings and
+#   romaji are transcriptions of the quoted sentence, not new content; every
+#   compound whose reading was not already obvious was checked against JMdict
+#   (朝飯前 あさめしまえ 1428510, 袖の下 そでのした 2012030, 落第 らくだい
+#   1548810, 肩書き かたがき 1590360, 楽天的 らくてんてき 1207480, 多忙 たぼう
+#   1408040, 走者 そうしゃ 1402610, 空腹 くうふく 1246000, 努力 どりょく
+#   1445130, 援助 えんじょ 1176660, 見渡す みわたす 1259920, 汚す よごす
+#   1178960, 持ち帰る もちかえる 1658430, 我々 われわれ 1607050, 正直 しょうじき
+#   1377590, 最速 さいそく 2006780, 急行列車 きゅうこうれっしゃ 1933070, 速度
+#   そくど 1405050, 飲み食い のみくい 1169810, 十分 じゅうぶん 1335080, 恩 おん
+#   1183090, 宇宙 うちゅう 1171300, 命 いのち 1531940, 機会 きかい 1220800,
+#   地位 ちい 1420780, 選択 せんたく 1392290, 成功 せいこう 1375690, 用意 ようい
+#   1546220, 出発 しゅっぱつ 1340000, 将来 しょうらい 1347710, 政治家 せいじか
+#   1375980). 十分 was the one worth the check: it is also じっぷん, "ten
+#   minutes" (seq 1335070), and #189964 needs じゅうぶん, "enough".
+# jlpt-source: training -- the level marks the chapter this content sits in,
+#   not each sentence's own difficulty. 限り, さえ〜ば, 次第 and たとえ〜ても are
+#   canonically N3 grammar; several of the sentences carrying them use N2 and
+#   N1 vocabulary, which is what the corpus had and what mining is for.
+
+# ── As long as it holds ───────────────────────────────────────────────────────
+
+- id: band3.as-long-as-i-live-i-wont-forget
+  jlpt: N3
+  scenario: condition
+  japanese: 命がある限りあなたのご恩は忘れません。
+  reading: いのちがあるかぎりあなたのごおんはわすれません。
+  romaji: inochi ga aru kagiri anata no go-on wa wasuremasen.
+  english: As long as I live, I will never forget your kindness.
+  tatoebaId: "80757"
+  notes: 限り attached to ある, and nothing conjugated to get there. The promise runs for exactly as long as the condition does, which is the whole of what this form says.
+
+- id: band3.as-long-as-we-live-we-must-keep-learning
+  jlpt: N3
+  scenario: condition
+  japanese: 我々は生きている限り学び続けなければならない。
+  reading: われわれはいきているかぎりまなびつづけなければならない。
+  romaji: wareware wa ikite iru kagiri manabitsuzukenakereba naranai.
+  english: We must continue to study as long as we live.
+  tatoebaId: "185730"
+  notes: ている in front of 限り, which is where you will meet it most -- a state that is going on, not an event that finished. 我々 is the written form of 私たち.
+
+- id: band3.as-long-as-he-has-enough-to-eat
+  jlpt: N3
+  scenario: condition
+  japanese: 飲み食いするものが十分ある限り彼は何も気にしない。
+  reading: のみくいするものがじゅうぶんあるかぎりかれはなにもきにしない。
+  romaji: nomikui suru mono ga juubun aru kagiri kare wa nani mo ki ni shinai.
+  english: He doesn't care, provided he has enough to eat and drink.
+  tatoebaId: "189964"
+  notes: English reaches for "provided" here rather than "as long as", and both are the same 限り. 十分 is じゅうぶん, enough -- not じっぷん, ten minutes, which is the same two characters.
+
+- id: band3.as-long-as-you-keep-it-clean
+  jlpt: N3
+  scenario: condition
+  japanese: 汚さない限り、この本を持ち帰ってもいいですよ。
+  reading: よごさないかぎり、このほんをもちかえってもいいですよ。
+  romaji: yogosanai kagiri, kono hon o mochikaette mo ii desu yo.
+  english: You may take this book as long as you keep it clean.
+  tatoebaId: "188572"
+  notes: The negative half. 汚さない限り is "as long as you don't dirty it", and English turns it round into "as long as you keep it clean". Note what follows -- permission. 限り has no objection to a request or a permission in its second half.
+
+- id: band3.unless-you-work-harder-youll-fail
+  jlpt: N3
+  scenario: condition
+  japanese: もっと勉強しない限り落第しますよ。
+  reading: もっとべんきょうしないかぎりらくだいしますよ。
+  romaji: motto benkyou shinai kagiri rakudai shimasu yo.
+  english: You will fail unless you work harder.
+  tatoebaId: "193204"
+  notes: The same ない限り, and this time English says "unless". One Japanese shape, two English words, and which one gets used depends on nothing but what reads better in English.
+
+# ── As far as I know ──────────────────────────────────────────────────────────
+
+- id: band3.there-is-no-limit-to-the-universe
+  jlpt: N3
+  scenario: extent
+  japanese: 宇宙には限りはない。
+  reading: うちゅうにはかぎりはない。
+  romaji: uchuu ni wa kagiri wa nai.
+  english: There is no limit to the universe.
+  tatoebaId: "189885"
+  notes: 限り on its own, doing no grammatical work at all -- a noun meaning a limit. Every other use in this chapter is built on that meaning, which is why this sentence comes first rather than as a footnote.
+
+- id: band3.as-far-as-i-know-hes-honest
+  jlpt: N3
+  scenario: extent
+  japanese: 私の知る限りでは彼は正直です。
+  reading: わたしのしるかぎりではかれはしょうじきです。
+  romaji: watashi no shiru kagiri de wa kare wa shoujiki desu.
+  english: As far as I know, he is honest.
+  tatoebaId: "163037"
+  notes: Within the limit of what I know. The では is common here and is not required -- 私の知る限り alone says the same thing. This is a hedge -- it says he is honest and quietly admits the speaker may not know everything.
+
+- id: band3.ocean-as-far-as-the-eye-could-see
+  jlpt: N3
+  scenario: extent
+  japanese: 見渡す限り海だった。
+  reading: みわたすかぎりうみだった。
+  romaji: miwatasu kagiri umi datta.
+  english: There was nothing but the ocean as far as the eye could see.
+  tatoebaId: "175109"
+  notes: Within the limit of what you can survey. Nine characters, and one of the most-quoted phrases in the language -- 見渡す限り turns up in travel writing constantly.
+
+- id: band3.ill-help-as-much-as-i-can
+  jlpt: N3
+  scenario: extent
+  japanese: 私はできる限りあなたの援助をします。
+  reading: わたしはできるかぎりあなたのえんじょをします。
+  romaji: watashi wa dekiru kagiri anata no enjo o shimasu.
+  english: I'll help you as much as I can.
+  tatoebaId: "159452"
+  notes: Within the limit of what is possible. できる限り and 出来る限り are the same word written two ways, and both are ordinary.
+
+- id: band3.a-title-doesnt-necessarily-mean-rank
+  jlpt: N3
+  scenario: extent
+  japanese: 肩書きが偉くても地位が高いとは限らない。
+  reading: かたがきがえらくてもちいがたかいとはかぎらない。
+  romaji: katagaki ga erakute mo chii ga takai to wa kagiranai.
+  english: A big title does not necessarily mean a high position.
+  tatoebaId: "175197"
+  notes: 限る is the verb behind the noun -- to limit -- and 〜とは限らない is "it is not limited to being that", which English says as "not necessarily". The ても at the front belongs to lesson 6; you are not expected to build it yet.
+
+# ── If only you'd just ────────────────────────────────────────────────────────
+
+- id: band3.all-you-have-to-do-is-press-the-button
+  jlpt: N3
+  scenario: sufficiency
+  japanese: あなたはボタンを押しさえすればいい。
+  reading: あなたはボタンをおしさえすればいい。
+  romaji: anata wa botan o oshisae sureba ii.
+  english: All you have to do is press the button.
+  tatoebaId: "232397"
+  notes: The commonest shape. 押す goes to its ます-stem 押し, さえ lands on it, and する picks the verb back up in the ば form you already build. 押しさえすれば -- press it and that is the whole of what is required.
+
+- id: band3.any-car-will-do-as-long-as-it-runs
+  jlpt: N3
+  scenario: sufficiency
+  japanese: 走りさえすれば、どんな車でもよいのです。
+  reading: はしりさえすれば、どんなくるまでもよいのです。
+  romaji: hashirisae sureba, donna kuruma demo yoi no desu.
+  english: Any car will do, as long as it runs.
+  tatoebaId: "140286"
+  notes: The same stem+さえ+すれば, and the English is "as long as" -- which is also what 限り glosses to. Lesson 4 is about that collision. よい is the written form of いい.
+
+- id: band3.once-you-get-the-hang-of-it
+  jlpt: N3
+  scenario: sufficiency
+  japanese: コツさえ覚えれば、朝飯前ですよ。
+  reading: コツさえおぼえれば、あさめしまえですよ。
+  romaji: kotsu sae oboereba, asameshimae desu yo.
+  english: Once you get the hang of it, it's easy.
+  tatoebaId: "224132"
+  notes: The other shape -- a noun takes さえ and the verb goes into ば directly, with no する. コツ is the knack; 朝飯前 is literally "before breakfast" and means something is no trouble at all.
+
+- id: band3.if-only-i-had-the-chance
+  jlpt: N3
+  scenario: sufficiency
+  japanese: 彼に会う機会さえあればなあ。
+  reading: かれにあうきかいさえあればなあ。
+  romaji: kare ni au kikai sae areba naa.
+  english: If only I get a chance to see him.
+  tatoebaId: "118652"
+  notes: Noun + さえ + あれば, and the sentence stops there. なあ at the end turns it into a wish rather than a statement, which is where the English "if only" comes from -- さえ〜ば itself is not wistful.
+
+- id: band3.if-only-it-would-stop-raining
+  jlpt: N3
+  scenario: sufficiency
+  japanese: 雨がやみさえすればいいのになあ。
+  reading: あめがやみさえすればいいのになあ。
+  romaji: ame ga yamisae sureba ii no ni naa.
+  english: If only it would stop raining!
+  tatoebaId: "237033"
+  notes: やむ is what rain does when it stops. さえすればいいのに is a set closing -- if only that one thing happened, everything would be fine -- and it is the wistful end of this pattern's range.
+
+# ── Depends on it, or the moment it's done ────────────────────────────────────
+
+- id: band3.the-choice-is-up-to-you
+  jlpt: N3
+  scenario: dependence
+  japanese: 選択は全く君次第だ。
+  reading: せんたくはまったくきみしだいだ。
+  romaji: sentaku wa mattaku kimi shidai da.
+  english: The choice is all up to you.
+  tatoebaId: "141009"
+  notes: Noun straight onto 次第, with no particle and no copula in between -- 君次第, not 君の次第 or 君だ次第. 君 is a familiar "you", used down or across, not up.
+
+- id: band3.success-depends-on-your-efforts
+  jlpt: N3
+  scenario: dependence
+  japanese: 仕事の成功はあなた方の努力次第です。
+  reading: しごとのせいこうはあなたがたのどりょくしだいです。
+  romaji: shigoto no seikou wa anatagata no doryoku shidai desu.
+  english: Our success in this work depends on your efforts.
+  tatoebaId: "169129"
+  notes: The whole 〜次第です block is the predicate, so です attaches to it exactly as it would to any noun. あなた方 is the plural of あなた.
+
+- id: band3.it-depends-on-the-weather
+  jlpt: N3
+  scenario: dependence
+  japanese: ビアガーデンに客がたくさんいるかどうかは天気次第だ。
+  reading: ビアガーデンにきゃくがたくさんいるかどうかはてんきしだいだ。
+  romaji: biagaaden ni kyaku ga takusan iru ka dou ka wa tenki shidai da.
+  english: Whether or not beer gardens get a lot of customers depends on the weather.
+  tatoebaId: "197729"
+  notes: 天気次第 is the sentence you will hear most often with this pattern. かどうか -- whether or not -- is worth noticing on the way past; it makes the whole first clause into the thing being talked about.
+
+- id: band3.ill-phone-as-soon-as-i-arrive
+  jlpt: N3
+  scenario: dependence
+  japanese: 空港に着き次第、電話します。
+  reading: くうこうにつきしだい、でんわします。
+  romaji: kuukou ni tsuki shidai, denwa shimasu.
+  english: I'll phone you as soon as I get to the airport.
+  tatoebaId: "179349"
+  notes: The second job. 着く goes to its ます-stem 着き and 次第 follows -- the moment I arrive. What comes after looks forward -- a promise, not a report.
+
+- id: band3.well-leave-as-soon-as-youre-ready
+  jlpt: N3
+  scenario: dependence
+  japanese: あなたの用意が出来次第出発しましょう。
+  reading: あなたのよういができしだいしゅっぱつしましょう。
+  romaji: anata no youi ga deki shidai shuppatsu shimashou.
+  english: We'll leave as soon as you are ready.
+  tatoebaId: "183007"
+  notes: 出来る goes to 出来 and takes 次第 the same way. This is business and service register far more than casual speech -- you will meet it in email and hear it across a counter.
+
+- id: band3.the-train-gradually-picked-up-speed
+  jlpt: N3
+  scenario: dependence
+  japanese: その急行列車は次第に速度を上げた。
+  reading: そのきゅうこうれっしゃはしだいにそくどをあげた。
+  romaji: sono kyuukou ressha wa shidai ni sokudo o ageta.
+  english: The express train picked up speed gradually.
+  tatoebaId: "211447"
+  notes: The false friend, and it is common enough to be worth a card of its own. 次第に is an adverb meaning gradually. Same two characters, no connection to the pattern this lesson teaches, and に is what tells them apart.
+
+# ── Even if it doesn't go your way ────────────────────────────────────────────
+
+- id: band3.the-game-will-go-ahead-even-if-it-rains
+  jlpt: N3
+  scenario: concession
+  japanese: たとえ雨が降っても、その試合は行われるだろう。
+  reading: たとえあめがふっても、そのしあいはおこなわれるだろう。
+  romaji: tatoe ame ga futte mo, sono shiai wa okonawareru darou.
+  english: The game will be played even if it rains.
+  tatoebaId: "203527"
+  notes: The plain shape -- te-form plus も. 降って plus も gives 降っても. 行われる is a passive, from chapter 1, doing what passives do best, which is that nobody has to be named as the one holding the match.
+
+- id: band3.even-if-hes-busy-hell-come
+  jlpt: N3
+  scenario: concession
+  japanese: たとえ多忙でも彼は来るだろう。
+  reading: たとえたぼうでもかれはくるだろう。
+  romaji: tatoe tabou demo kare wa kuru darou.
+  english: Even if he is busy, he will come.
+  tatoebaId: "203482"
+  notes: A な-adjective has no te-form of its own, so it uses で, and で plus も gives でも. Nouns behave the same way. 多忙 is a written, formal 忙しい.
+
+- id: band3.even-in-trouble-hes-optimistic
+  jlpt: N3
+  scenario: concession
+  japanese: たとえ困っていても、マックはいつも楽天的だ。
+  reading: たとえこまっていても、マックはいつもらくてんてきだ。
+  romaji: tatoe komatte ite mo, makku wa itsumo rakutenteki da.
+  english: Even if he is in trouble, Mac is always optimistic.
+  tatoebaId: "203493"
+  notes: ている takes も the way any te-form does -- 困っている, then 困っていても. English says "even if" here but the trouble is real and present, so "even when" is closer; the Japanese does not choose between them.
+
+- id: band3.however-expensive-ill-buy-it
+  jlpt: N3
+  scenario: concession
+  japanese: どんなに高くても、あの古い時計を買います。
+  reading: どんなにたかくても、あのふるいとけいをかいます。
+  romaji: donna ni takakute mo, ano furui tokei o kaimasu.
+  english: I'll buy that old clock, however expensive it is.
+  tatoebaId: "199530"
+  notes: An い-adjective drops い for くて and takes も -- 高くても. And there is no たとえ anywhere in this sentence, which is the point of putting it here -- どんなに does the emphasising instead, and ても carries the meaning on its own.
+
+- id: band3.even-if-he-isnt-now
+  jlpt: N3
+  scenario: concession
+  japanese: 今はそうじゃなくても将来はいい夫になるよ。
+  reading: いまはそうじゃなくてもしょうらいはいいおっとになるよ。
+  romaji: ima wa sou ja nakute mo shourai wa ii otto ni naru yo.
+  english: Even if he isn't now, he'll be a good husband in the future.
+  tatoebaId: "172676"
+  notes: The negative. ない is an い-adjective, so it goes to なくて and takes も like any other -- なくても. じゃなくても is the casual spoken form of ではなくても. Again no たとえ.
+
+- id: band3.no-matter-what-happens-i-wont-give-up
+  jlpt: N3
+  scenario: concession
+  japanese: たとえどんなことがあってもあきらめません。
+  reading: たとえどんなことがあってもあきらめません。
+  romaji: tatoe donna koto ga atte mo akiramemasen.
+  english: No matter what happens, I won't give up.
+  tatoebaId: "77717"
+  notes: Put a question word in front of ても and it stops being one condition and becomes all of them -- どんなことがあっても, whatever happens. English answers with "no matter what" rather than "even if".
+
+# ── Every "if" at once ────────────────────────────────────────────────────────
+
+- id: band3.unless-you-grease-his-palm
+  jlpt: N3
+  scenario: condition
+  japanese: あの政治家に会うつもりなら、袖の下を使わない限り駄目だね。
+  reading: あのせいじかにあうつもりなら、そでのしたをつかわないかぎりだめだね。
+  romaji: ano seijika ni au tsumori nara, sode no shita o tsukawanai kagiri dame da ne.
+  english: That politician won't meet you unless you grease his palm.
+  tatoebaId: "230683"
+  notes: Two conditionals in one sentence, doing different jobs. なら picks up the situation -- if that is what you intend -- and ない限り states the condition the outcome hangs on. 袖の下 is a bribe, literally what is passed under a sleeve.
+
+- id: band3.even-the-fastest-runner-cant-run-hungry
+  jlpt: N3
+  scenario: condition
+  japanese: 世界最速の走者でさえ、空腹だったら走れない。
+  reading: せかいさいそくのそうしゃでさえ、くうふくだったらはしれない。
+  romaji: sekai saisoku no sousha de sae, kuufuku dattara hashirenai.
+  english: Even the fastest runner in the world cannot run if he is hungry.
+  tatoebaId: "143398"
+  notes: さえ without a ば in sight, meaning simply "even" -- でさえ on a noun. That is the meaning さえ〜ば is built out of. たら carries the condition, and 走れない is the potential from Book Two.
