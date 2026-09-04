@@ -29,9 +29,9 @@
 #
 #   ～かける is the coarse one, and there is no way to sharpen it without
 #   losing real hits. It flags 出かける, 話しかける, 追いかける, 呼びかける and
-#   every other lexicalised compound built on the same verb -- which are, per
-#   JMdict, the same headword (1207610) under different senses, so no lexical
-#   test separates them either. Eleven of the corpus's かけ hits are this
+#   every other lexicalised compound built on the same verb -- each its own
+#   JMdict entry (1598550, 1562300, 1608720, 1266280), so the string does not
+#   separate them from the auxiliary, though a dictionary lookup does. Eleven of the corpus's かけ hits are this
 #   auxiliary and several dozen are not.
 #
 # This is a pipeline-design question, flagged here rather than solved.
@@ -55,14 +55,14 @@
 - id: grammar.b3-uchini
   jlpt: N3
   pattern: "～うちに"
-  gloss: While it is still true -- and it will not be for long. Attaches like 時 does, straight onto a plain verb or an い-adjective. Most often negative, 〜ないうちに, which is how Japanese says before X happens.
+  gloss: While it is still true -- and it will not be for long. Attaches like 時 does, straight onto a plain verb or an い-adjective. Very often negative, 〜ないうちに, which is how Japanese says before X happens.
   phraseId: band4.we-set-up-our-tents-before-dark
   blank: ならないうちに
 
 - id: grammar.b3-aida
   jlpt: N3
   pattern: "～間に"
-  gloss: During a stretch of time. With に, the second thing happened at one point inside the stretch; without に, it lasted the whole of it. This is the 間 of vocab.aida doing a second job -- not the space between two things, a span of time.
+  gloss: During a stretch of time. With に, the second thing is a bounded event completed inside the stretch; without に, it runs the whole length. This is the 間 of vocab.aida doing a second job -- not the space between two things, a span of time.
   phraseId: band4.the-tub-ran-over-while-she-was-on-the-phone
   blank: あいだに
 
