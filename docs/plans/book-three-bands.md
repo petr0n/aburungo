@@ -118,7 +118,7 @@ and yielded **0**, every hit a frozen idiom. Treat a number here as permission t
 | 7 purpose | ように 413 · ために 259 · べく 12 · まい 117 · **ことにする 1** · ことになる 29 |
 | 8 obligation | **ざるを得ない 3** · **ないわけにはいかない 1** · べき 178 · 必要がある 26 · てはならない 49 |
 | 9 nominal | ところ 220 · という 423 · とは 499 · に関して 28 · について 180 · における 25 |
-| 10 register | である 761 · つつ 36 · **ゆえ 6** · において 50 |
+| 10 register | である 761 · つつ 36 · **ゆえ 7** (6 kana + 1 as 故に — this table searched kana only and undercounted; check both spellings) · において 50 |
 
 Five patterns are already at risk before anyone hand-classifies: 反面, ことにする, ざるを得ない,
 ないわけにはいかない and ゆえ. Expect band 8 in particular to shrink — two of its five are in that
@@ -168,13 +168,20 @@ Band 8 absorbs it as its lesson 1, which is cheap — it is Book Two's ない-fo
 ば-conditional plus なる, all already owned. But it should also be considered for a Book Two
 revision, because the gap starts there.
 
+**A fifth, found by band 10: honorific speech.** 敬語 is taught nowhere as a system — no
+いらっしゃる, no お〜になる, no 〜させていただく. The only honorific string in the whole course is
+ありがとうございます, a fixed greeting in Book One with no rule behind it. Band 10's title,
+"register and the written voice", invites mistaking this for its job; it is not, and band 10
+flagged it rather than absorbing it. A learner reading anything written by a company or an
+official will meet it constantly.
+
 **A fourth, found by band 7: the plain volitional.** 行こう / 食べよう is taught nowhere. ましょう
 is (Book Two's deciding and making-plans chapters), but its plain counterpart is not, and no band
 above claims it. Book Two chapter 8 met this and *declined it on purpose*, calling it rule-chapter
 work for a later book — so, like the passive, it is a promise the course made and this skeleton
 did not keep.
 
-**All four gaps share a shape.** This skeleton was assembled by listing connective grammar, and
+**All five gaps share a shape.** This skeleton was assembled by listing connective grammar, and
 the passive, だろう and なければならない are none of them connectives. Assume more of the same and
 sweep the remaining bands for it before authoring.
 
