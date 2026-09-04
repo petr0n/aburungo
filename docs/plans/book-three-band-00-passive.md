@@ -436,8 +436,8 @@ chapters this band most resembles in shape.
   already carry), 帰る→帰られる (る-row, the same trap those chapters flag — ask which class the
   verb is, not what letter it ends in). Unlike lesson 1, this shape does **not** collide with the
   potential (potential is え-row + る; passive is あ-row + れる — two different rows, two different
-  endings, genuinely distinct strings for every ending except る-row verbs, which inherit lesson 1's
-  ambiguity instead).
+  endings, genuinely distinct strings for every ending, る-row godan verbs included — 作れる against
+  作られる. What る-row verbs inherit is the class trap, not lesson 1's potential/passive ambiguity).
 - **Attestation:** aggregate 695 raw across all eight rows, 552 ≤30 chars. Four rows are rich
   (かれ 128, され 868 shared with the irregular, ばれ 48, まれ 152, われ 254); one is thin but real
   (がれ 23, ~6 genuine after screening あこがれる/のがれる/すたれる out). Clean, citable examples:
@@ -815,6 +815,10 @@ numeric `order` field moves, mechanically, by +8.
 5. **Flip `recognitionOnly` to absent (or explicitly `false`) on `quote.this-mountain-is-said-to-be-famous`
    and `quote.fish-is-said-to-be-good-for-you`** in `src/content/phrases/b2-07-quoted-speech.yaml`
    once `b3.passive-ichidan` ships — the block comment in that file names this exact condition.
+   **Decided at audit, 2026-09-04: not flipped.** Those phrases are taught at orders 156–158, forty
+   lessons before `b3.passive-ichidan` at 196, and `recognitionOnly` gates the produce step of the
+   lesson that teaches them, where the learner still cannot build the form. The condition the
+   comment names has not been met at the moment it matters. Leave the flag.
 6. **Commit messages** on every content commit must name the source, or the commit is rejected
    (CLAUDE.md).
 7. **Run `pnpm walkthrough`** before merge, signed in — as a guest it will not reach Book Three at

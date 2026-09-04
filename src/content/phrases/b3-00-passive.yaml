@@ -23,32 +23,41 @@
 #   vocabulary/b3-00-passive.yaml for why this band ships zero words. What is
 #   being reviewed here is the form on the verb, not the nouns around it.
 #
-# The English is Tatoeba's own except where it hid the grammar the card exists
-# to teach, and every departure is one of three kinds, listed so a reviewer can
-# check them rather than take them on trust:
+# The English is Tatoeba's own where Tatoeba's own would do. Eleven of the
+# thirty depart from it, every one listed here so a reviewer can check them
+# rather than take them on trust. Every Japanese string is untouched.
 #
-#   #102256 -- the corpus reads "He was bought up by his strong willed sister",
-#     a plain typo for "brought". Corrected.
-#   Active glosses on passive Japanese -- where Tatoeba rendered a Japanese
-#     passive with an English active, the gloss is turned passive so the card
-#     does not teach against itself. Affects #212760 (take place -> be held)
-#     and #109254 (sweep his room -> clean the room).
+#   Where the corpus English hid the grammar the card exists to teach:
 #   #195319 -- "You'll catch it from Mummy" is idiomatic British English that
-#     conceals the agent-marking に this card is for. Glossed "You'll get told
-#     off by Mum".
+#     conceals the agent-marking に. Glossed "You'll get told off by Mum".
+#   #180380 -- "I must cancel our appointment" conceals させてください, the
+#     asking-permission causative the card is for. Glossed "please let me
+#     cancel our appointment".
+#   #212760 -- "take place" for 行われる, a passive. Glossed "be held".
 #
-# Every Japanese string is untouched in all three cases.
+#   Where the corpus English was wrong or worn:
+#   #102256 -- "bought up", a typo for "brought". Corrected.
+#   #157142 -- "purse" for 財布. Glossed "wallet", the everyday word.
+#   #222658 -- "movies" for 動画. Glossed "videos".
+#   #109254 -- "sweep" for 掃除. Glossed "clean".
+#   #113892 -- "seen to eat a piece of cake secretly", smoothed to "seen
+#     eating a piece of the cake in secret".
+#
+#   Wording only, meaning unchanged:
+#   #173564 at -> in the principal's office; #219081 makes you laugh -> makes
+#   people laugh; #166069 stand in line -> stand in a line.
 #
 # ---------------------------------------------------------------------------
-# READ BEFORE WIRING, not a defect to fix here: three of these are long enough
-# that asking a learner to type them back would be a demand no lesson prepared
-# them for -- band0.he-was-made-to-sign-the-contract (24 characters),
-# band0.please-let-me-cancel-the-appointment (28, and it contains a date) and
-# band0.my-brother-was-brought-up-by-our-grandmother (21). `recognitionOnly`
-# exists for exactly this and none of them carries it, because whether a Book
-# Three phrase routes to a typed card at all depends on the book's stage, which
-# is not decided and is not this file's to decide. Whoever wires Book Three
-# should look at these three again with the routing in front of them.
+# ROUTING, decided at wiring: Book Three's stage is "reading" (books.ts), and
+# LearnPage routes every non-foundation book to the typed FillBlankCard, where
+# the learner types the whole reading back. So all thirty of these are typed.
+# The three longest -- band0.please-let-me-cancel-the-appointment,
+# band0.he-was-made-to-sign-the-contract and
+# band0.my-brother-was-brought-up-by-our-grandmother -- were looked at and
+# left producible: the longest of them is one kana shorter than Book Two's
+# longest typed answer (quote.my-friend-said-that-shop-is-famous-but-i-wont-go),
+# so none asks more than a learner has already been asked. `recognitionOnly`
+# is there if a later pass disagrees.
 #
 # The same pass owns the other half of that question. Book Two chapter 7's
 # quote.this-mountain-is-said-to-be-famous and
@@ -343,7 +352,7 @@
   romaji: kare ni ichijikan matasareta.
   english: He kept me waiting for an hour.
   tatoebaId: "119130"
-  notes: The contraction. 待たせられた is what the rule builds; 待たされた is what people say, and it is a godan verb only. Strip される and what is left, 待た, is not a word; carry on to 待つ, a genuinely different verb, and only the causative-passive reading survives. That is the test that tells this apart from a plain passive.
+  notes: The contraction. 待たせられた is what the rule builds; 待たされた is what people say, and only godan verbs do it, and not the ones ending in す. It is the passive of 待たす, a verb that means nothing but make somebody wait, and that is what tells it apart from だまされた, the passive of だます, deceive, where nobody was made to do anything.
 
 - id: band0.we-were-made-to-stand-in-line
   jlpt: N3
@@ -395,4 +404,4 @@
   romaji: ichiban shita no otouto wa sobo ni yori younenjidai sodaterareta.
   english: My youngest brother was brought up by our grandmother.
   tatoebaId: "190121"
-  notes: により is によって's written register-mate, the same pair the means-and-variation lesson already gave you. Same job, one shade more formal, and it is what you meet in print rather than in speech.
+  notes: により is によって's written register-mate. Same job, one shade more formal, and it is what you meet in print rather than in speech.

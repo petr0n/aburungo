@@ -10696,7 +10696,7 @@
    "file": "b3-00-passive.yaml",
    "jlpt": "N3",
    "pattern": "～れる",
-   "gloss": "The same thing for godan verbs -- move the last sound to the あ row and add れる. 書かれる, 話される, 呼ばれる, 読まれる, 買われる. う bends to わ; る-row verbs are godan and take this rule, not the ichidan one.",
+   "gloss": "The same thing for godan verbs -- move the last sound to the あ row and add れる. 書かれる, 話される, 呼ばれる, 読まれる, 買われる. う bends to わ; a verb ending in る may be either class, and the godan ones -- 帰る, 作る -- take this rule.",
    "phraseId": "band0.english-is-spoken-in-canada"
   },
   {
@@ -10728,7 +10728,7 @@
    "file": "b3-00-passive.yaml",
    "jlpt": "N3",
    "pattern": "～させられる",
-   "gloss": "Made to do it -- causative, then passive, stacked in that order. Godan verbs contract in speech, and 待たせられた becomes 待たされた.",
+   "gloss": "Made to do it -- causative, then passive, stacked in that order. Godan verbs not ending in す contract in speech, and 待たせられた becomes 待たされた.",
    "phraseId": "band0.my-boss-made-me-work-overtime"
   },
   {
@@ -10736,7 +10736,7 @@
    "file": "b3-00-passive.yaml",
    "jlpt": "N3",
    "pattern": "～によって～れる",
-   "gloss": "By, in the formal register -- によって (written により) naming the agent of a passive sentence. The third job of a word you already have for means and for variation.",
+   "gloss": "By, in the formal register -- によって (written により) naming the agent of a passive sentence. Its other two jobs, means and variation, come in the next chapter.",
    "phraseId": "band0.this-music-was-composed-by-bach"
   },
   {

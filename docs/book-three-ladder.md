@@ -20,7 +20,7 @@ never reads it.
 
 ---
 
-## Chapter 1 — Things that happen to you
+## Chapter 1 — Doing, and being done to
 
 *Doing, and being done to*
 
@@ -48,7 +48,7 @@ never reads it.
 
 **Lesson 2 of 7** · Doing, and being done to
 **Can do:** Read and build a passive sentence for any verb
-**Grammar:** `～れる` — The same thing for godan verbs -- move the last sound to the あ row and add れる. 書かれる, 話される, 呼ばれる, 読まれる, 買われる. う bends to わ; る-row verbs are godan and take this rule, not the ichidan one.
+**Grammar:** `～れる` — The same thing for godan verbs -- move the last sound to the あ row and add れる. 書かれる, 話される, 呼ばれる, 読まれる, 買われる. う bends to わ; a verb ending in る may be either class, and the godan ones -- 帰る, 作る -- take this rule.
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -131,7 +131,7 @@ never reads it.
 
 **Lesson 6 of 7** · Doing, and being done to
 **Can do:** Say that you were made to do something, and recognise the colloquial contracted form when you meet it
-**Grammar:** `～させられる` — Made to do it -- causative, then passive, stacked in that order. Godan verbs contract in speech, and 待たせられた becomes 待たされた.
+**Grammar:** `～させられる` — Made to do it -- causative, then passive, stacked in that order. Godan verbs not ending in す contract in speech, and 待たせられた becomes 待たされた.
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -147,7 +147,7 @@ never reads it.
 
 **Lesson 7 of 7** · Doing, and being done to
 **Can do:** Say who or what did something, in the formal register
-**Grammar:** `～によって～れる` — By, in the formal register -- によって (written により) naming the agent of a passive sentence. The third job of a word you already have for means and for variation.
+**Grammar:** `～によって～れる` — By, in the formal register -- によって (written により) naming the agent of a passive sentence. Its other two jobs, means and variation, come in the next chapter.
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -161,4 +161,4 @@ never reads it.
 
 ### 203. Recognition checkpoint — closes the chapter
 
-> A wide pass over everything this band has taught. Type the reading or the meaning rather than picking it out of a line-up. One ending built two ways, one auxiliary stacked on another, and one formal marker for the person behind it all. What is being checked is not whether you can recite a table — it is whether the right reading comes to hand for the sentence in front of you. Some of what comes back is a られる sentence that could be about being able to or could be about something that happened, and the only way through it is to read the rest of the sentence. That is the skill this band exists to build, so it is the one worth checking. The を that stays put when a wallet is stolen is worth watching for, and so is the difference between a contraction and a verb that only looks like one. Anything you miss comes back sooner. It finishes when the remaining set empties; retry as often as you like, nothing is recorded.
+> A wide pass over everything this chapter has taught. Type the reading or the meaning rather than picking it out of a line-up. One ending built two ways, one auxiliary stacked on another, and one formal marker for the person behind it all. What is being checked is not whether you can recite a table — it is whether the right reading comes to hand for the sentence in front of you. Some of what comes back is a られる sentence that could be about being able to or could be about something that happened, and the only way through it is to read the rest of the sentence. That is the skill this chapter exists to build, so it is the one worth checking. The を that stays put when a wallet is stolen is worth watching for, and so is the difference between a contraction and a verb that only looks like one. Anything you miss comes back sooner. It finishes when the remaining set empties; retry as often as you like, nothing is recorded.

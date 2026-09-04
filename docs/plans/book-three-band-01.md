@@ -44,7 +44,7 @@ throwaway script, not committed.
 | ため(に) | ために, ための, ためだ, ため、, ため。, ためです, ためか | **328** | 221 | Rich. No risk. |
 | せいで | せいで, せいだ, せいか | **26** | 17 | Solid. |
 | おかげで | おかげで, おかげだ, お陰で, お陰だ | **31** | 23 | Solid. |
-| によって | によって, により | **157** | 86 | Rich, but see the caveat below — a real share of these need passive voice, which Book Two never taught. |
+| によって | によって, により | **157** | 86 | Rich, but see the caveat below — a real share of these are passive-agent sentences, which belong to band 0's lesson 7, not here. |
 | から(に)は | からには (strict) | **3** | 1 | Thin. Real, but the lesson will lean on 2 long sentences. |
 | ものだから | ものだから, もんだから | 5 raw → **4 genuine** | 0 | Thin, and one of the 5 raw hits is a false positive — see below. |
 | ことだから | ことだから | **2** | 2 | Thinnest pattern in the band. Both hits are clean and short, but there are only two. |
@@ -142,8 +142,8 @@ chapters.
 #    1  ため(に)      because, and in order to
 #    2  せいで        whose fault it is
 #    3  おかげで      who gets the credit
-#    4  によって      by, according to, and what a lesson short of passive
-#                      voice can and can't say about it
+#    4  によって      by, according to; the agent sense is band 0's
+#                      (b3.niyotte-agent) and is called back, not taught
 #    5  からには       now that
 #    6  ものだから     explaining yourself
 #    7  ことだから     knowing them
@@ -242,12 +242,14 @@ chapters.
   ("by reading books, I get knowledge" — #152802), **variation** ("table manners vary by country"
   — #202379, "decided by money" — #144586), and — the one this lesson must handle carefully — the
   **agent of a passive sentence** ("determined by," "made by"). That third job is by far the most
-  textbook-canonical use of によって, and this band cannot teach it honestly: **passive voice is
-  not built anywhere in Book One or Book Two**, and — see section 6 — it is not clearly built
-  anywhere in the rest of the Book Three skeleton either. Source this lesson's teaching sentences
-  from the means/variation sense only (决まる, 異なる, 決める-family predicates, not a passive verb
-  form); a passive-agent によって sentence met in the reading library should be treated as
-  incidental exposure the learner is not expected to parse yet, not a lesson failure.
+  textbook-canonical use of によって, and **band 0 has already taught it**: `b3.niyotte-agent`
+  (order 202, `book-three-band-00-passive.md` lesson 7) introduces によって/により as the agent
+  marker of a passive sentence and tells the learner the other two jobs come next chapter. This
+  lesson is that next chapter: it teaches means and variation, and calls the agent sense back in a
+  sentence rather than introducing the word. Source this lesson's teaching sentences from the
+  means/variation sense only (决まる, 異なる, 決める-family predicates, not a passive verb form), so
+  the two lessons stay distinct; a passive-agent によって sentence met in the reading library is
+  ordinary review of band 0, not incidental exposure.
 - **Attestation:** 157 hits (によって + により combined), 86 at ≤30 characters — rich, but a
   meaningful share of the deeper hits are passive-voice sentences that must be screened out at
   authoring for exactly the reason above. Safe, non-passive examples: #202379
@@ -260,8 +262,8 @@ chapters.
   worth a one-line bridge, not a re-teach).
 - **New vocabulary:** none.
 - **Reading-library slice:** tag only means/variation-sense によって sentences as this pattern's
-  reinforcement at Band 1. Passive-agent によって sentences should wait for whichever later band
-  or book actually builds passive voice — see section 6's recommendation.
+  reinforcement at Band 1. Passive-agent によって sentences reinforce `grammar.b3-niyotte-agent`
+  (band 0), not this pattern.
 
 ### Lesson 5 — Now that
 
@@ -377,6 +379,10 @@ chapters.
 
 ### 6.1 によって's canonical use needs passive voice, and nothing in the ten-band skeleton clearly builds it
 
+> **Resolved 2026-09-04.** The skeleton gained band 0 (`book-three-band-00-passive.md`), which
+> opens the book with passive, adversative passive, causative and causative-passive, and teaches
+> によって's agent sense as its lesson 7. What follows is the finding as originally written.
+
 **This is the band's most consequential finding, and it isn't really about Band 1 — it's about
 the skeleton.** によって's single most common textbook use is marking the agent of a passive
 sentence ("this novel was written by Natsume Sōseki," 〜によって書かれた) — Genki and every other
@@ -470,9 +476,9 @@ it:
    stricter than Books One and Two and this band has no exemption.
 2. **Do not use Tatoeba #229619** (ものだから false positive, section 1) or search `からは` as a
    substitute for `からには` (also section 1) — both are documented traps, not open questions.
-3. **Screen lesson 4's によって sentences for passive voice** and exclude them at this band
-   (section 6.1). A passive-agent によって sentence met later in the reading library is fine
-   incidental exposure; one used as this lesson's own teaching example is not.
+3. **Screen lesson 4's によって sentences for passive voice** and exclude them from this lesson's
+   teaching examples: band 0 owns the agent sense (`b3.niyotte-agent`) and this lesson teaches
+   means and variation. A passive-agent sentence in the reading library is review of band 0.
 4. **Commit messages** on every content commit must name the source, or the commit is rejected
    (CLAUDE.md).
 5. **Re-surface `grammar.b2-join-kara` and `grammar.b2-ta-koto-ga-aru`** in the SRS queue before
