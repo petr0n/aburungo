@@ -1,0 +1,397 @@
+# Book Three, chapter 3 phrases -- even though.
+#
+# Twenty-seven sentences, and not one of them is ours. Books One and Two
+# composed their examples from canonical N5/N4 material and marked them
+# `content-source: training`; 04-stage-reading.md section 8 withdraws that
+# exemption at the reading stage and above, in those words -- "no
+# training-canonical sentences at the reading stage and above". So every
+# sentence below is a verbatim Tatoeba pair carried out of
+# server/data/jmdict-examples-eng-3.6.2.json with its id in `tatoebaId`, and
+# nothing here was composed, trimmed, joined or smoothed. Where a shape had no
+# attested sentence -- a な-adjective in front of のに is the clearest case --
+# the shape is described in a grammarNote and has no card.
+#
+# Four of the twenty-seven are `scenario: look-alike`, and they are the reason
+# this chapter is longer than its five connectives. Every pattern here except
+# くせに shares its surface string with an unrelated construction that is more
+# common than it is: のに also means "for the purpose of", ものの is usually
+# もの plus の, とはいえ is outnumbered four to one by とは言えない, and
+# にもかかわらず drops its も to mean "regardless of" instead of "despite". A
+# learner who meets those in the reading library with no warning learns the
+# wrong rule. Band 0 carded both halves of the 見られる collision for the same
+# reason; this file does it four times.
+#
+# The English is Tatoeba's own where Tatoeba's own would do. Eleven of the
+# twenty-seven depart from it, every one listed here so a reviewer can check
+# the list against the corpus rather than take it on trust. Every Japanese
+# string is untouched.
+#
+#   Where the corpus English hid the grammar the card exists to teach:
+#   #145102 -- "Act your place" is opaque and drops the くせに sneer entirely.
+#     Glossed "Don't act so big when you are the new one here".
+#   #170678 -- "more and more young people talk to their elders on even terms"
+#     turns the criticism into a trend report. Glossed to keep "even though
+#     they are younger".
+#   #229564 -- "With all her merits she was not proud" hides the のに. Glossed
+#     "Even though she had so many good points".
+#   #147360 -- "Woman as she was, she was brave" is a construction no learner
+#     of English-as-she-is-spoken would recognise as "even though". Glossed
+#     plainly.
+#   #116451 -- "Though he tried hard" rewrites a noun phrase (彼の努力) as a
+#     clause, which is the one thing this card is teaching. Glossed "Despite
+#     his efforts".
+#   #82641 -- "persisted in believing that in spite of the evidence" strands
+#     the "that". Glossed "went on believing it, despite the evidence".
+#   #188575 -- the corpus English restructures the whole sentence into a
+#     subordinate clause and loses the ものの pivot. Glossed to keep the pivot.
+#   #78255 -- drops と思わない, the question the sentence ends on. Restored.
+#
+#   Wording only, meaning unchanged:
+#   #193301 worked -> studied (勉強); #153148 drops "very", which is not in
+#   疲れていた, and "nevertheless" -> "even so"; #76485 drops a stray "well"
+#   and adds "careless", which is what 凡ミス is (JMdict 2106030).
+#
+# ---------------------------------------------------------------------------
+# ROUTING. Book Three's stage is "reading" (books.ts), and LearnPage routes
+# every non-foundation book to the typed FillBlankCard, where the learner types
+# the whole reading back. Book Two's longest typed answer is 41 kana
+# (quote.my-friend-said-that-shop-is-famous-but-i-wont-go). Three sentences
+# here run past that and carry `recognitionOnly: true` for it --
+# band2.he-took-over-the-company-but-was-betrayed (51),
+# band2.she-has-a-boyfriend-but-feels-stuck (57) and
+# band2.easier-said-than-done (49). The corpus had nothing shorter carrying
+# those shapes, and quoting long beats composing short. Every other reading
+# here is 31 kana or shorter.
+#
+# One more is recognition-only for a mechanical reason rather than a length
+# one. band2.i-was-young-but-what-a-stupid-mistake opens あぁ……、 and
+# compareAnswer normalises nothing but katakana and whitespace, so a typed
+# answer would have to reproduce a two-character ellipsis exactly or be marked
+# Not quite for a reason that has nothing to do with とはいえ. It is the only
+# attested とはいえ sentence short enough to card at all -- the other genuine
+# hit, #74923, is a 56-character two-speaker exchange -- so the pattern is
+# produced through its grammar cloze, which asks for とはいえ alone, and not
+# through this card.
+#
+# These are independent utterances. Several would sit naturally beside each
+# other and none is authored as an exchange -- a scripted back-and-forth is
+# multi-sentence composed text, which is the surface the content rules exist to
+# keep out, and #74923 was left uncarded partly because it is one.
+#
+# content-source: Tatoeba, via the sentence pairs embedded in JMdict for
+#   Applications 3.6.2 (server/data/jmdict-examples-eng-3.6.2.json). Every
+#   phrase carries its sentence id in `tatoebaId`; the id is quoted, because
+#   YAML reads a bare 229564 as a number and the schema rejects it. Verified by
+#   id against the corpus on 2026-09-04 -- all 27 resolve and each Japanese
+#   string below matches its source character for character. Kana readings and
+#   romaji are transcriptions of the quoted sentence, not new content; every
+#   compound whose reading was not already obvious was checked against JMdict
+#   (空席 くうせき 1245690, 長所 ちょうしょ 1430030, 誇る ほこる 1267760,
+#   一生懸命 いっしょうけんめい 1164010, 夏服 なつふく 1191600, 太る ふとる
+#   1408220, 新米 しんまい 1362410, 青二才 あおにさい 1381740, 年下 としした
+#   1468230, ため口 ためぐち 2021640, 不本意 ふほんい 1494940, 勇敢 ゆうかん
+#   1539730, 気合 きあい 1591030, 幸福 こうふく 1278400, 乗っ取る のっとる
+#   1354700, 腹心 ふくしん 1501210, 部下 ぶか 1499350, 裏切る うらぎる 1550380,
+#   因果応報 いんがおうほう 1822250, 高校時代 こうこうじだい 2651120, 彼氏
+#   かれし 1483140, 惰性 だせい 1408570, 募る つのる 1514800, 東洋人 とうようじん
+#   1448250, 見方 みかた 1260070, 我々 われわれ 1607050, 実際的 じっさいてき
+#   1706420, 流言飛語 りゅうげんひご 1552300, 惑わす まどわす 1562580, 凡ミス
+#   ぼんミス 2106030, 晴天 せいてん 1376550, 冷え冷え ひえびえ 1556710, 努力
+#   どりょく 1445130, 以前 いぜん 1155150, 反証 はんしょう 1480550, 晴雨 せいう
+#   1750770, 境遇 きょうぐう 1236000, 残念 ざんねん 1304680). Two readings are
+#   not JMdict's to give and are recorded here instead. 頼りきり is 頼り
+#   (たより, 1548390) plus the suffix きり, which JMdict carries separately and
+#   not as a compound. 芳男 is a personal name, absent from JMdict for
+#   Applications; its reading よしお is the one the pair's own English gives
+#   ("Yoshio").
+# jlpt-source: training -- the level marks the chapter this content sits in,
+#   not each connective's textbook level. のに and くせに are commonly placed at
+#   N3, ながらも and ものの and とはいえ and にもかかわらず at N2 or N1 in
+#   reference lists; tagging them apart would fragment coverage reporting for a
+#   chapter a learner meets as one thing.
+
+# ── Even though, plainly ──────────────────────────────────────────────────────
+
+- id: band2.no-sense-standing-when-there-are-seats
+  jlpt: N3
+  scenario: contrast
+  japanese: 空席があるのに立っていてもしょうがない。
+  reading: くうせきがあるのにたっていてもしょうがない。
+  romaji: kuuseki ga aru no ni tatte ite mo shou ga nai.
+  english: There is no sense in standing when there are seats available.
+  tatoebaId: "179319"
+  notes: のに straight onto a plain verb, nothing in between. The first half is the fact, the second half is what you would not have expected from it -- there are seats, and somebody is standing anyway.
+
+- id: band2.she-had-merits-but-was-not-proud
+  jlpt: N3
+  scenario: contrast
+  japanese: あんなに長所が多いのに彼女は誇らなかった。
+  reading: あんなにちょうしょがおおいのにかのじょはほこらなかった。
+  romaji: anna ni chousho ga ooi no ni kanojo wa hokoranakatta.
+  english: Even though she had so many good points, she was not proud.
+  tatoebaId: "229564"
+  notes: An い-adjective takes のに the same way a verb does -- 多い, then のに, with nothing added. あんなに at the front is doing the same work as the English so in so many.
+
+- id: band2.he-is-38-and-still-depends-on-his-parents
+  jlpt: N3
+  scenario: contrast
+  japanese: 彼は３８歳なのに両親に頼りきりです。
+  reading: かれはさんじゅうはっさいなのにりょうしんにたよりきりです。
+  romaji: kare wa sanjuu hassai na no ni ryoushin ni tayorikiri desu.
+  english: Though 38, he is still dependent on his parents.
+  tatoebaId: "115141"
+  notes: The one attachment worth memorising. A noun takes な in front of のに where you might have expected だ -- ３８歳なのに, not ３８歳だのに. 頼りきり is 頼る with きり on it, meaning nothing but that and no more.
+
+- id: band2.you-should-have-studied-harder
+  jlpt: N3
+  scenario: contrast
+  japanese: もっと一生懸命勉強すべきだったのに。
+  reading: もっといっしょうけんめいべんきょうすべきだったのに。
+  romaji: motto isshoukenmei benkyou subeki datta no ni.
+  english: You should have studied harder.
+  tatoebaId: "193301"
+  notes: のに at the end of a sentence with nothing after it. The half that would have followed is left unsaid, and leaving it unsaid is what makes this a reproach rather than a report. すべき, ought to, is a shape to read here rather than to build.
+
+- id: band2.why-dont-you-wear-summer-clothes
+  jlpt: N3
+  scenario: contrast
+  japanese: 夏服を着ればいいのに。
+  reading: なつふくをきればいいのに。
+  romaji: natsufuku o kireba ii no ni.
+  english: Why don't you wear summer clothes?
+  tatoebaId: "187154"
+  notes: 〜ばいいのに, from the ば you already have. It is the same trailing のに, over a condition that has not happened -- it would be good if you wore summer clothes, and you are not. Said about yourself it is a wish; said about somebody else, as here, it is a nudge.
+
+- id: band2.it-took-years-to-build-it
+  jlpt: N3
+  scenario: look-alike
+  japanese: それを建てるのに何年もかかった。
+  reading: それをたてるのになんねんもかかった。
+  romaji: sore o tateru no ni nannen mo kakatta.
+  english: It took many years to build it.
+  tatoebaId: "204608"
+  notes: Same three characters, unrelated job. Here のに means for the purpose of building it, and the tell is what follows -- かかる, 使う, 必要, 便利, 十分, 役立つ. Nothing is being contrasted with anything.
+
+# ── Even though, with an edge ─────────────────────────────────────────────────
+
+- id: band2.his-voice-is-thin-though-he-is-fat
+  jlpt: N3
+  scenario: contrast
+  japanese: 彼は太っているくせに声は細い。
+  reading: かれはふとっているくせにこえはほそい。
+  romaji: kare wa futotte iru kuse ni koe wa hosoi.
+  english: His voice is thin even though he is fat.
+  tatoebaId: "102553"
+  notes: くせに onto a plain verb, exactly where のに went. What changes is the tone -- this is not a neutral observation, it is a dig. 太る is the verb behind the 太い you already know.
+
+- id: band2.dont-act-big-when-youre-new
+  jlpt: N3
+  scenario: contrast
+  japanese: 新米のくせに大きな顔をするな。
+  reading: しんまいのくせにおおきなかおをするな。
+  romaji: shinmai no kuse ni ookina kao o suru na.
+  english: Don't act so big when you are the new one here.
+  tatoebaId: "145102"
+  notes: The trap, and the reason くせに follows のに. A noun takes の here -- 新米のくせに -- where のに took な. 大きな顔をする is to throw your weight about, and するな is the blunt don't.
+
+- id: band2.big-talk-for-an-upstart
+  jlpt: N3
+  scenario: contrast
+  japanese: 青二才のくせに何を言うか。
+  reading: あおにさいのくせになにをいうか。
+  romaji: aonisai no kuse ni nani o iu ka.
+  english: That's big talk for an upstart like you.
+  tatoebaId: "142557"
+  notes: Noun plus の again, so the rule is visible rather than memorised off one sentence. 何を言うか is not a question -- it is the same shape used to reject what was just said.
+
+- id: band2.too-many-younger-people-talk-like-equals
+  jlpt: N3
+  scenario: contrast
+  japanese: 最近は、年下のくせにため口を聞く奴が多すぎる。
+  reading: さいきんは、としたのくせにためぐちをきくやつがおおすぎる。
+  romaji: saikin wa, toshishita no kuse ni tameguchi o kiku yatsu ga oosugiru.
+  english: These days there are far too many people who talk to you as an equal even though they are younger.
+  tatoebaId: "170678"
+  notes: A third noun plus の, and the register the whole pattern carries. ため口 is speaking to somebody without the polite forms their position asks for, and 奴 for people is as unfriendly as the rest of the sentence.
+
+# ── The other job of ながら ───────────────────────────────────────────────────
+
+- id: band2.she-did-it-against-her-will
+  jlpt: N3
+  scenario: contrast
+  japanese: 彼女は不本意ながらもそうした。
+  reading: かのじょはふほんいながらもそうした。
+  romaji: kanojo wa fuhon'i nagara mo sou shita.
+  english: She did it against her will.
+  tatoebaId: "86975"
+  notes: ながら you already own as while. This is its other job, even though, and the も is what says so. 不本意ながら is against one's own wishes, and it is one of the phrases you will meet this form in most often.
+
+- id: band2.woman-as-she-was-she-was-brave
+  jlpt: N3
+  scenario: contrast
+  japanese: 女ながらも彼女は勇敢だった。
+  reading: おんなながらもかのじょはゆうかんだった。
+  romaji: onna nagara mo kanojo wa yuukan datta.
+  english: Even though she was a woman, she was brave.
+  tatoebaId: "147360"
+  notes: A bare noun in front of ながらも, with no の and no な -- the attachment neither のに nor くせに uses. The thought behind the sentence is of its time; the form is not.
+
+- id: band2.we-kept-running-though-out-of-breath
+  jlpt: N3
+  scenario: contrast
+  japanese: ぜいぜい言いながらも、気合をいれて走り続ける。
+  reading: ぜいぜいいいながらも、きあいをいれてはしりつづける。
+  romaji: zeizei ii nagara mo, kiai o irete hashiritsuzukeru.
+  english: Puffing and panting we continued to run with renewed vigor.
+  tatoebaId: "76655"
+  notes: 言いながらも is the ます-stem, the same stopping point the while sense uses -- so this half of the pattern is a meaning to learn, not a form. ぜいぜい言う is to wheeze.
+
+- id: band2.rich-as-he-is-he-is-not-happy
+  jlpt: N3
+  scenario: contrast
+  japanese: あれほど金を持ちながら彼は幸福でない。
+  reading: あれほどかねをもちながらかれはこうふくでない。
+  romaji: are hodo kane o mochinagara kare wa koufuku de nai.
+  english: For all his wealth, he is not happy.
+  tatoebaId: "229665"
+  notes: The same job with no も at all -- 持ちながら, holding that much money, and unhappy anyway. Nothing in the form says which sense is meant; あれほど and 幸福でない do. This is the sentence to reach for when somebody says bare ながら is only ever while.
+
+- id: band2.the-bad-news-is-unfortunately-true
+  jlpt: N3
+  scenario: contrast
+  japanese: その悪い知らせは残念ながら本当だ。
+  reading: そのわるいしらせはざんねんながらほんとうだ。
+  romaji: sono warui shirase wa zannen nagara hontou da.
+  english: The bad news is unfortunately true.
+  tatoebaId: "212401"
+  notes: 残念ながら has stopped being a construction and become a word -- unfortunately, regrettably -- and it is the commonest bare concessive ながら in the language. Learn it whole; nothing is being contrasted clause against clause.
+
+# ── Although, in writing ──────────────────────────────────────────────────────
+
+- id: band2.i-decided-to-go-to-the-party-but
+  jlpt: N3
+  scenario: contrast
+  japanese: パーティーに行くことにしたものの、気が進まない。
+  reading: パーティーにいくことにしたものの、きがすすまない。
+  romaji: paatii ni iku koto ni shita mono no, ki ga susumanai.
+  english: Though I have decided to go to the party, I'm not looking forward to it.
+  tatoebaId: "198491"
+  notes: ものの straight onto a plain past verb. Read it as けど with a suit on -- same relationship between the halves, written register instead of spoken. ことにする, to decide to, is a shape to read here and not one this book has taught.
+
+- id: band2.he-took-over-the-company-but-was-betrayed
+  jlpt: N3
+  scenario: contrast
+  recognitionOnly: true
+  japanese: 汚い手で会社を乗っ取ったものの、腹心だと思っていた部下に裏切られ、因果応報だね。
+  reading: きたないてでかいしゃをのっとったものの、ふくしんだとおもっていたぶかにうらぎられ、いんがおうほうだね。
+  romaji: kitanai te de kaisha o nottotta mono no, fukushin da to omotte ita buka ni uragirare, inga ouhou da ne.
+  english: He took the company over by dirty means, but was betrayed by the subordinate he thought was his right hand -- what goes around comes around.
+  tatoebaId: "188575"
+  notes: Long, because this is what the corpus had for a ものの sentence with both halves in place. 裏切られ is the passive from the last chapter, in the て-less form writing uses to hang clauses together. Read it; you are not asked to type it back.
+
+- id: band2.she-has-a-boyfriend-but-feels-stuck
+  jlpt: N3
+  scenario: contrast
+  recognitionOnly: true
+  japanese: 高校時代からつきあっている彼氏はいるものの、つきあいが惰性になっていると感じ、不満をつのらせている。
+  reading: こうこうじだいからつきあっているかれしはいるものの、つきあいがだせいになっているとかんじ、ふまんをつのらせている。
+  romaji: koukou jidai kara tsukiatte iru kareshi wa iru mono no, tsukiai ga dasei ni natte iru to kanji, fuman o tsunorasete iru.
+  english: She has a boyfriend she's been going out with since high school but feels their relationship has become a matter of habit and is increasingly dissatisfied.
+  tatoebaId: "75487"
+  notes: ものの after いる, so the shape is not tied to past-tense verbs. This is the register the pattern lives in -- a written paragraph about somebody, not something anybody says across a table.
+
+- id: band2.people-in-the-east-see-things-differently
+  jlpt: N3
+  scenario: look-alike
+  japanese: 東洋人はものの見方が我々とは違う。
+  reading: とうようじんはもののみかたがわれわれとはちがう。
+  romaji: touyoujin wa mono no mikata ga wareware to wa chigau.
+  english: People from the East do not look at things the same as we do.
+  tatoebaId: "124150"
+  notes: The same three characters, and no connector anywhere in the sentence. This is もの, thing, plus the の you have had since Book One -- ものの見方, a way of looking at things. Most ものの you meet in real text is this one.
+
+# ── That said ────────────────────────────────────────────────────────────────
+
+- id: band2.i-was-young-but-what-a-stupid-mistake
+  jlpt: N3
+  scenario: contrast
+  recognitionOnly: true
+  japanese: あぁ……、若かったとはいえ、しょうもない凡ミスだ。
+  reading: あぁ……、わかかったとはいえ、しょうもないぼんミスだ。
+  romaji: aa..., wakakatta to wa ie, shou mo nai bon misu da.
+  english: Ahh... I was young, but what a stupid careless mistake.
+  tatoebaId: "76485"
+  notes: とはいえ granting the point and then overruling it -- yes I was young, and it was still a stupid mistake. 若かった keeps its past tense in front of it. Recognition only because typing this back would mean reproducing an ellipsis, not because the sentence is hard.
+
+- id: band2.easier-said-than-done
+  jlpt: N3
+  scenario: contrast
+  recognitionOnly: true
+  japanese: 流言飛語に惑わされるべからず、とはいうものの、言うは易く行うは難し、と思わない？
+  reading: りゅうげんひごにまどわされるべからず、とはいうものの、いうはやすくおこなうはかたし、とおもわない？
+  romaji: ryuugen higo ni madowasareru bekarazu, to wa iu mono no, iu wa yasuku okonau wa katashi, to omowanai?
+  english: They say you shouldn't be taken in by rumours, but that's easier said than done, don't you think?
+  tatoebaId: "78255"
+  notes: とはいうものの is the bridge between the last two patterns -- literally that said, though, and it is where とはいえ comes from. The classical bits around it (べからず, 易く, 難し) are quotations of set phrases, not grammar to build.
+
+- id: band2.your-ideas-are-hardly-practical
+  jlpt: N3
+  scenario: look-alike
+  japanese: あなたの考えはとても実際的とはいえない。
+  reading: あなたのかんがえはとてもじっさいてきとはいえない。
+  romaji: anata no kangae wa totemo jissaiteki to wa ienai.
+  english: Your ideas are hardly practical.
+  tatoebaId: "233304"
+  notes: Not this chapter's pattern, and four times as common in the corpus. とは言えない is the potential of 言う under a negative -- cannot be called practical -- and the giveaway is that the sentence ends there instead of running on into a second clause.
+
+# ── Despite that ─────────────────────────────────────────────────────────────
+
+- id: band2.the-air-was-chilly-despite-the-sunny-weather
+  jlpt: N3
+  scenario: contrast
+  japanese: 晴天にもかかわらず、空気は冷え冷えとしていた。
+  reading: せいてんにもかかわらず、くうきはひえびえとしていた。
+  romaji: seiten ni mo kakawarazu, kuuki wa hiebie to shite ita.
+  english: In spite of the sunny weather, the air was rather chilly.
+  tatoebaId: "142993"
+  notes: A bare noun in front of にもかかわらず, with no copula and no の. This is the shape the pattern takes most often, and it is the whole reason it reads as heavy -- one word carries what English needs in spite of the fact that for.
+
+- id: band2.despite-his-efforts-nothing-changed
+  jlpt: N3
+  scenario: contrast
+  japanese: 彼の努力にもかかわらず、すべては以前と変りなかった。
+  reading: かれのどりょくにもかかわらず、すべてはいぜんとかわりなかった。
+  romaji: kare no doryoku ni mo kakawarazu, subete wa izen to kawarinakatta.
+  english: Despite his efforts, nothing was any different from before.
+  tatoebaId: "116451"
+  notes: The noun in front can be a whole noun phrase -- 彼の努力, his efforts -- which is how a written sentence packs a clause's worth of meaning in front of the connector.
+
+- id: band2.he-went-on-believing-despite-the-evidence
+  jlpt: N3
+  scenario: contrast
+  japanese: 芳男は反証があるにもかかわらず、そう信じ続けた。
+  reading: よしおははんしょうがあるにもかかわらず、そうしんじつづけた。
+  romaji: yoshio wa hanshou ga aru ni mo kakawarazu, sou shinjitsuzuketa.
+  english: Yoshio went on believing it, despite the evidence to the contrary.
+  tatoebaId: "82641"
+  notes: A full clause this time -- 反証がある, there is evidence against it -- attached plain, with nothing between the verb and に. Noun or clause, the connector does not change shape.
+
+- id: band2.i-was-tired-but-could-not-sleep
+  jlpt: N3
+  scenario: contrast
+  japanese: 私は疲れていたが、それにもかかわらず眠れなかった。
+  reading: わたしはつかれていたが、それにもかかわらずねむれなかった。
+  romaji: watashi wa tsukarete ita ga, sore ni mo kakawarazu nemurenakatta.
+  english: I was tired, but even so I could not sleep.
+  tatoebaId: "153148"
+  notes: それにもかかわらず standing at the head of the second half, pointing back at what was just said, the way English uses and yet. 眠れなかった is the potential negative you already have.
+
+- id: band2.the-marathon-is-held-rain-or-shine
+  jlpt: N3
+  scenario: look-alike
+  japanese: マラソンは晴雨にかかわらず開かれます。
+  reading: マラソンはせいうにかかわらずひらかれます。
+  romaji: marason wa seiu ni kakawarazu hirakaremasu.
+  english: The marathon will be held, rain or shine.
+  tatoebaId: "195187"
+  notes: Drop the も and the meaning shifts from despite to regardless of. 晴雨にかかわらず covers both outcomes rather than contradicting one -- rain or shine, it happens. 開かれます is the passive from the last chapter.

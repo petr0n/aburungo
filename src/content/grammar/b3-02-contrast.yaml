@@ -1,0 +1,79 @@
+# Book Three, chapter 3 grammar patterns -- even though.
+#
+# One pattern per teaching lesson, each blanking the thing that lesson exists
+# for out of one of its own sentences. The blank is matched against the
+# phrase's reading, so these are kana.
+#
+# Every `pattern` string here is a bare Japanese literal, and that is a
+# mechanical requirement rather than a style choice. scripts/levelling.mjs's
+# grammarSurface() rejects any pattern containing a Latin character or a digit,
+# so Book Two's `pattern: "plain form + から"` tags nothing at all. The reading
+# library is built on that tagger, and a pattern it cannot see is a pattern the
+# library cannot find text for. This chapter is luckier than band 0 was: its
+# five connectives are fixed strings with no conjugation inside them, so the
+# taggable literal and the thing being taught are the same object, which is not
+# true of ～れる.
+#
+# What the literals still cost, said here rather than discovered downstream.
+# ～のに and ～ものの both over-tag, because each is a common substring of an
+# unrelated construction (the purpose のに, and もの plus の); ～とはいえ
+# under-tags nothing but sits next to とは言えない, which it does not match and
+# a sloppier literal would. Any gate text tagged with grammar.b3-noni or
+# grammar.b3-monono needs a person to confirm the sense before it ships. That
+# is a pipeline limitation, flagged, not solved.
+#
+# Two blanks take more than the connector, on purpose. grammar.b3-kuseni blanks
+# しんまいのくせに rather than くせに alone, because the の on a noun is the one
+# place this pattern and the previous one disagree and handing it over free
+# would answer the only question the lesson asks. grammar.b3-nagara-concessive
+# blanks ふほんいながらも for the same reason -- the も is the whole difference
+# between this lesson and the ながら the learner already owns.
+#
+# content-source: n/a for this file -- every pattern references an existing
+#   phrase from phrases/b3-02-contrast.yaml rather than composing new Japanese,
+#   and that file carries the Tatoeba id for each.
+# jlpt-source: training -- the level marks the chapter this content sits in.
+#   Reference lists spread these five across N3, N2 and N1; the chapter is
+#   tagged as one thing because a learner meets it as one thing.
+
+- id: grammar.b3-noni
+  jlpt: N3
+  pattern: "～のに"
+  gloss: Even though. Straight onto a plain verb or い-adjective; a noun or な-adjective takes な first -- 学生なのに. On its own at the end of a sentence it is a complaint with the rest left unsaid.
+  phraseId: band2.no-sense-standing-when-there-are-seats
+  blank: あるのに
+
+- id: grammar.b3-kuseni
+  jlpt: N3
+  pattern: "～くせに"
+  gloss: Even though, with a sneer. Same attachment as のに on a verb or い-adjective, but a noun takes の rather than な -- 新米のくせに. Never neutral; it always blames.
+  phraseId: band2.dont-act-big-when-youre-new
+  blank: しんまいのくせに
+
+- id: grammar.b3-nagara-concessive
+  jlpt: N3
+  pattern: "～ながらも"
+  gloss: Even though, from the ながら you already have. The も marks the concessive sense unmistakably; without it the same ending is usually while, and only the sentence around it decides.
+  phraseId: band2.she-did-it-against-her-will
+  blank: ふほんいながらも
+
+- id: grammar.b3-monono
+  jlpt: N3
+  pattern: "～ものの"
+  gloss: Although, in writing. Onto a plain predicate, けど's meaning in an essay's register. Most ものの in real text is もの plus の instead, so read the sentence, not the string.
+  phraseId: band2.i-decided-to-go-to-the-party-but
+  blank: したものの
+
+- id: grammar.b3-tohaie
+  jlpt: N3
+  pattern: "～とはいえ"
+  gloss: That said. Granting a point and overruling it, onto a noun with no copula or onto a plain predicate. Not とは言えない, which is 言う in the potential negative.
+  phraseId: band2.i-was-young-but-what-a-stupid-mistake
+  blank: とはいえ
+
+- id: grammar.b3-nimokakawarazu
+  jlpt: N3
+  pattern: "～にもかかわらず"
+  gloss: Despite. Onto a bare noun or a plain clause, and standing alone as それにもかかわらず. Drop the も and にかかわらず means regardless of instead.
+  phraseId: band2.despite-his-efforts-nothing-changed
+  blank: にもかかわらず

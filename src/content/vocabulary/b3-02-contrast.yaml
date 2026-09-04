@@ -1,0 +1,28 @@
+# Book Three, chapter 3 vocabulary -- deliberately empty.
+#
+# This chapter teaches five connectives (のに, くせに, ながらも, ものの, とはいえ,
+# にもかかわらず -- six strings, five ways of saying even though) and not one
+# word. None of them has a kanji it is normally written in: のに, くせに and
+# ながらも are kana outright, ものの and とはいえ are written in kana in every
+# attested sentence in the corpus, and にもかかわらず appears as 関わらず or
+# 拘らず often enough to mention in a grammarNote and not often enough to teach
+# a character for. So there is nothing here to teach as a word and nothing to
+# teach as a character either.
+#
+# The chapter's cited sentences do use words the learner does not own -- 空席,
+# 長所, 青二才, 腹心, 惰性, 流言飛語 and plenty more. That is not a gap this
+# file should close. 04-stage-reading.md section 3 hands vocabulary at this
+# stage to the reading library and to mining: lessons carry patterns, the
+# library carries words, and lesson count decouples from word count. A chapter
+# that smuggled its example sentences' vocabulary back into a curated list
+# would be re-importing the model this book was designed to leave behind.
+#
+# The file exists so the chapter's four content files stay a matched set and so
+# the next author does not go looking for a missing one, exactly as
+# vocabulary/b3-00-passive.yaml does. An empty array parses; a file of comments
+# alone does not, which is why the `[]` below is load-bearing rather than
+# decorative.
+#
+# content-source: n/a -- this file adds no Japanese content.
+
+[]

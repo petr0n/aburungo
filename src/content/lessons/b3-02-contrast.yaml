@@ -1,0 +1,213 @@
+# Chapter 3 -- Even though.
+#
+# Book Two gave the learner one way to contradict an expectation: けど, taught
+# in the joining-sentences chapter as the casual but. This chapter adds five
+# more, and the point is not that Japanese has six words for but -- it is that
+# each of them says something けど does not. のに carries the surprise or the
+# grievance けど leaves out. くせに carries contempt. ながらも is the concessive
+# hiding inside a form the learner already owns for something else. ものの,
+# とはいえ and にもかかわらず are the written register's three, and the last of
+# them is the heaviest connective in the book so far.
+#
+# The order is the order the shapes are safe to meet in, and it splits down the
+# middle. Lessons 1 and 2 are the spoken pair and belong together, back to
+# back, because they take the same attachment everywhere except one row: a noun
+# in front of のに takes な and in front of くせに takes の. Teaching them apart
+# would let a learner build 学生なくせに and never find out. Lesson 3 stands
+# alone: it depends on Book Two's ながら and on nothing in this chapter, and it
+# is placed third rather than first because a learner meeting a second job for
+# an owned form should already have the idea of concession from a form that was
+# new. Lessons 4, 5 and 6 climb the written register together, and the ものの
+# lesson comes first of the three because とはいうものの -- attested, and a card
+# in lesson 5 -- is the bridge into とはいえ.
+#
+#    1  even though, plainly            のに, and the other job of the same
+#                                         three characters
+#    2  even though, with an edge       くせに, and the noun row where it and
+#                                         のに part company
+#    3  the other job of ながら          ながらも, and the も that says which
+#                                         sense is meant
+#    4  although, in writing            ものの, and the もの plus の that is
+#                                         far commoner than it
+#    5  that said                       とはいえ, the thinnest pattern in the
+#                                         book, and とは言えない
+#    6  despite that                    にもかかわらず, and the にかかわらず
+#                                         that means something else
+#
+# Lesson 3 has a hard external dependency: grammar.b2-join-nagara. The lesson
+# is the contrast, so a learner whose simultaneous ながら has decayed gets a
+# lesson about nothing. Re-surface it in the queue immediately before this one
+# -- the same move Book Two made for the te-form before its plain-past lesson.
+#
+# The `kanji:` arrays are empty and should stay that way, and so is
+# vocabulary/b3-02-contrast.yaml; the argument is in that file's header. The
+# `wordIds` below name words the learner already owns that turn up in the
+# lesson's own sentences -- an SRS pull, not new teaching.
+#
+# Four things the attestation pass found that the breakdown
+# (docs/plans/book-three-band-02.md) did not, all four recorded here because
+# the next author will otherwise re-derive them:
+#
+#   Bare concessive ながら is attested productively, and the breakdown says it
+#   is not. #229665, あれほど金を持ちながら彼は幸福でない, is a freely built
+#   ます-stem, not a frozen idiom, and it is a card in lesson 3. The
+#   breakdown's count of zero came from a search that only turned up the
+#   idioms.
+#
+#   Concessive ながらも takes a verb ます-stem, which the breakdown says it does
+#   not. Two of the four attested ながらも sentences are verbs (言いながらも,
+#   twice). The breakdown's noun-and-adjective-only rule would have taught a
+#   restriction the corpus contradicts.
+#
+#   #228108 is not a ものの sentence. The breakdown lists it among the five
+#   genuine hits; 入れたものの全部が全部 is もの (the people who got in) plus
+#   の, the same false friend the lesson warns about. Four genuine hits, not
+#   five, and one of them (#78255) is the とはいうものの idiom.
+#
+#   とはいえ has one cardable sentence, not two. The breakdown's other genuine
+#   hit, #74923, is a 56-character exchange between two speakers -- quoting it
+#   would put a scripted dialogue on a card, which the content rules keep out
+#   whether or not the text is attested. The lesson runs on one sentence for
+#   the pattern, one for the look-alike and one for the family resemblance, and
+#   says so to the learner rather than hiding it.
+#
+# One rule the grammarNotes below hold themselves to, inherited from band 0's
+# lessons file and stricter than Book Two's: a note may show a conjugation
+# chain, a short phrase, or a sentence that is a card in this chapter or an
+# earlier book, quoted whole. It may not show a Japanese sentence that is none
+# of those. Lesson 1's note therefore describes a corpus sentence in English
+# rather than quoting it -- the one about age being no barrier to learning,
+# which is the purpose のに carrying none of the cost words the lesson offers as
+# its tell -- where a draft would have quoted a sentence no card teaches, or
+# trimmed one to fit.
+#
+# content-source: every phrase this file references is a verified Tatoeba pair,
+#   cited by id in `tatoebaId` in phrases/b3-02-contrast.yaml. No
+#   training-canonical sentence is used anywhere in this chapter
+#   (04-stage-reading.md section 8).
+
+- id: b3.noni
+  order: 212
+  chapterId: b3.band-2
+  situation: Even though
+  title: Even though, plainly
+  canDo: React to something that contradicts what you would have expected
+  wordIds:
+    - vocab.ryoushin
+    - vocab.tatsu
+    - vocab.kiru-wear
+  phraseIds:
+    - band2.no-sense-standing-when-there-are-seats
+    - band2.she-had-merits-but-was-not-proud
+    - band2.he-is-38-and-still-depends-on-his-parents
+    - band2.you-should-have-studied-harder
+    - band2.why-dont-you-wear-summer-clothes
+    - band2.it-took-years-to-build-it
+  kanji: []
+  patternId: grammar.b3-noni
+  grammarNote: "けど already lets you put two clauses side by side and say the second one goes against the first. のに does the same job and adds the part けど leaves out — that the second half is a surprise, a disappointment, or something worth complaining about. Attachment first, because it is short. A plain verb or an い-adjective takes のに directly, with nothing in between: 行く → 行くのに, 行った → 行ったのに, 高い → 高いのに, 多い → 多いのに. A noun or a な-adjective takes な first: ３８歳なのに, 静かなのに, 学生なのに. Not だのに — the な sits in the slot だ would have taken, exactly as it did for ので back in Book Two. You may meet だのに in older writing or in a dialect; な is the form to produce. Now the flavour, which is most of what this pattern is. けど is neutral: it will carry good news, bad news or a change of subject. のに is not neutral. It says the second half should not have followed from the first — there are seats and somebody is standing anyway, she had every reason to boast and did not. Where から hands you a reason and then the outcome that follows from it, のに hands you a reason and then withholds that outcome. Two more things it does. It ends sentences: もっと一生懸命勉強すべきだったのに stops there, and the half that would have followed — so why didn't you — is left unsaid, which is what makes it a reproach rather than a report. And on a condition, 〜ばいいのに, it becomes a wish or a nudge: 夏服を着ればいいのに, it would be good if you wore summer clothes, and you are not. Then the warning, because this is the one you will meet most in reading and it has nothing to do with anything above. のに also means for the purpose of, and it looks identical: それを建てるのに何年もかかった is about what building it cost, not about a contradiction. The tell is the second half. If what follows is about cost, time, effort or usefulness — かかる, 使う, 必要, 便利, 十分, 役立つ, and their neighbours — you are looking at the other のに. If the two halves contradict each other, you are looking at this one. The heuristic is good rather than perfect: sentences about whether something matters for a purpose sit in the same family without using any of those words. Read the halves, not the string."
+
+- id: b3.kuseni
+  order: 213
+  chapterId: b3.band-2
+  situation: Even though
+  title: Even though, with an edge
+  canDo: Point out a contradiction with an edge of criticism to it
+  wordIds:
+    - vocab.futoi
+    - vocab.hosoi
+    - vocab.iu
+  phraseIds:
+    - band2.his-voice-is-thin-though-he-is-fat
+    - band2.dont-act-big-when-youre-new
+    - band2.big-talk-for-an-upstart
+    - band2.too-many-younger-people-talk-like-equals
+  kanji: []
+  patternId: grammar.b3-kuseni
+  grammarNote: "くせに is のに with a judgement attached, and it comes straight after のに because of one row in the attachment table. On a verb or an い-adjective, nothing changes: 太っている → 太っているくせに, 細い → 細いくせに, the same direct attachment you just learned. A な-adjective takes な, also the same. A noun does not. A noun takes の — 新米のくせに, 青二才のくせに, 年下のくせに, three of this lesson's four sentences confirming it — where のに took な. 学生なのに and 学生のくせに, one slot, two different fillers, and it is the only row where the two attachment tables disagree. That is the whole reason these lessons sit next to each other rather than a chapter apart. Now the part that decides whether you should use it at all. のに can be plainly informational; くせに cannot. It always carries a judgement — irritation, contempt, or the sense that somebody is not entitled to what they are doing. His voice is thin even though he is fat is not a neutral observation about voices. Don't act so big when you are the new one here is an order with a sneer in it. The target is usually somebody else, though you can turn it on yourself, and turning it on somebody in front of you is rude in a way けど and のに are not. If you are not sure you mean to be rude, use のに. One more restriction worth having, and it is a tendency rather than a law: the two halves are nearly always about the same person. のに happily joins two clauses about different people — it rained even though the forecast was clear — and くせに almost never does, because the whole construction is about somebody being inconsistent with themselves. When you meet a くせに sentence, look for the person both halves are about; they are the one being criticised. And it is the cleanest string in the chapter to read. のに, ものの and とはいえ each have a second job or a look-alike waiting for you; くせに has no second grammatical job hiding in it, and all seven くせに sentences in the corpus this book quotes from are this pattern. The one thing to know is that くせ on its own is an ordinary noun meaning a habit or a quirk, so a sentence about somebody's habits can put it in front of a particle and look briefly like this one."
+
+- id: b3.nagara-concessive
+  order: 214
+  chapterId: b3.band-2
+  situation: Even though
+  title: The other job of ながら
+  canDo: Recognise and produce even though using a form you already own for something else
+  wordIds:
+    - vocab.onna
+    - vocab.hashiru
+    - vocab.iu
+  phraseIds:
+    - band2.she-did-it-against-her-will
+    - band2.woman-as-she-was-she-was-brave
+    - band2.we-kept-running-though-out-of-breath
+    - band2.rich-as-he-is-he-is-not-happy
+    - band2.the-bad-news-is-unfortunately-true
+  kanji: []
+  patternId: grammar.b3-nagara-concessive
+  grammarNote: "You know ながら as while. ご飯を食べながら、本を読みます, reading a book while eating, taught with two constraints: same subject for both halves, and the ながら half is the background one. That is one of its two jobs. This is the other: even though. And the reason this lesson is not a disaster is that Japanese usually marks which one it means, by adding も. 不本意ながらも, against her own wishes and she did it anyway. 女ながらも, woman though she was. 言いながらも, saying that, and yet. When you see ながらも, the sentence is contrasting, not timing. That is the form to produce when you mean even though, and it is why this lesson's pattern is ながらも and not bare ながら. Attachment is the same in both jobs, which is the good news: the ます-stem of a verb — 言います → 言いながら, 持ちます → 持ちながら. Nouns and adjectives also go in front, which the while sense cannot do because you cannot be in the middle of a noun: 女ながらも, 不本意ながら, 残念ながら. Two things not to over-tidy here. First, bare ながら really does carry the concessive sense on its own, without も: あれほど金を持ちながら彼は幸福でない is even though, built freely, not a frozen phrase. Nothing in the form says so; あれほど and 幸福でない do. So も is your marker when you write, and not a guarantee when you read. Second, a noun in front does not automatically mean even though. 残念ながら has hardened into a single word meaning unfortunately, 生まれながら means by birth and 涙ながらに means in tears — those are the older sense, in the state of, which is where the concession came from and is not concession itself. Learn them whole. And the corner this lesson leaves alone on purpose: a verb of knowing or understanding plus bare ながら — 知りながら — can be genuinely ambiguous between while knowing and even though knowing, and only the sentence settles it. No attested example turned up to teach that honestly, so it is named here and taught nowhere. Recognise that it exists."
+
+- id: b3.monono
+  order: 215
+  chapterId: b3.band-2
+  situation: Even though
+  title: Although, in writing
+  canDo: Read a formal although joining two clauses, and use it in writing of your own
+  wordIds:
+    - vocab.kaisha
+    - vocab.iku
+  phraseIds:
+    - band2.i-decided-to-go-to-the-party-but
+    - band2.he-took-over-the-company-but-was-betrayed
+    - band2.she-has-a-boyfriend-but-feels-stuck
+    - band2.people-in-the-east-see-things-differently
+  kanji: []
+  patternId: grammar.b3-monono
+  grammarNote: "The same idea as けど and のに, in the register you meet in an essay, a newspaper or a report. ものの attaches to a plain predicate with nothing in between: 行った → 行ったものの, いる → いるものの, 高い → 高いものの. A noun needs である or だった in front of it rather than going in bare, and a な-adjective takes な or である; no attested example of either shape turned up in this corpus, so they are described here and have no card. What the register buys you is a difference in weight, not in meaning: パーティーに行くことにしたものの、気が進まない says exactly what a けど sentence would say, in the voice of somebody writing rather than talking. You will meet ものの constantly in text and almost never in conversation, and reaching for it across a café table would sound like reading aloud from a leaflet. Now the false friend, and it is the worst one in the chapter. もの is an ordinary noun meaning thing or person, and の is the possessive you have had since Book One, so もの plus の is written exactly like this pattern and is far commoner: ものの見方, a way of looking at things, has no connector in it anywhere. Of the sentences in this corpus that contain the string, most are the noun. The tell is what the string is sitting between. The connector joins two clauses and has a verb or an adjective in front of it, usually followed by a comma. The noun has another noun after it and no clause boundary anywhere near. If you can put a full stop where the ものの is and get two sentences, it is the connector. One fixed phrase built on it is worth taking whole, because the next lesson comes out of it: とはいうものの, that said though, standing at the head of a second clause to take back what the first one claimed."
+
+- id: b3.tohaie
+  order: 216
+  chapterId: b3.band-2
+  situation: Even though
+  title: That said
+  canDo: Recognise a formal that said or granted that, and tell it from the phrase it looks like
+  wordIds:
+    - vocab.wakai
+    - vocab.iu
+  phraseIds:
+    - band2.i-was-young-but-what-a-stupid-mistake
+    - band2.easier-said-than-done
+    - band2.your-ideas-are-hardly-practical
+  kanji: []
+  patternId: grammar.b3-tohaie
+  grammarNote: "とはいえ grants a point and then overrules it. Yes, that is true — and even so. 若かったとはいえ, granted I was young — and the rest of the sentence on the card says it was a careless mistake anyway. It attaches to a plain predicate, past or not, and to a bare noun with no copula at all — 親戚とはいえ, relative or not — which is the shape the corpus's other example uses. It very often has いくら or どんなに in front of the first half: however much X is true, still Y. This is the thinnest pattern in the book, and you should know that rather than wonder why the lesson is short. Two sentences in the whole corpus use it, and one of them is an exchange between two speakers, too long and too tangled to put on a card. So the lesson gives you one sentence for the pattern itself, one for the phrase it is built from, and one for the thing it is not. It is real, it is common in written Japanese and in speeches, and the corpus this book quotes from simply does not contain much of it. The thing it is not comes first in importance, because it outnumbers the real pattern about four to one here. とは言えない — and とはいえません, とはいえなかった — is 言う in the potential under a negative: cannot be called, would not be described as. あなたの考えはとても実際的とはいえない says your ideas can hardly be called practical, and there is no concession in it anywhere. The giveaway is what follows. This chapter's とはいえ is followed by a comma and a second clause that contradicts the first; とは言えない ends the sentence, because it is the verb. And the phrase it is built from you already met in the last lesson: とはいうものの, literally though it is said that. It is the same と and the same 言う, with the verb in an older concessive shape and the ものの gone. They are family, they mean nearly the same thing, and とはいうものの is the one you are likelier to meet."
+
+- id: b3.nimokakawarazu
+  order: 217
+  chapterId: b3.band-2
+  situation: Even though
+  title: Despite that
+  canDo: Read and use despite and regardless of in formal writing
+  wordIds:
+    - vocab.tsukareru
+    - vocab.hare
+  phraseIds:
+    - band2.the-air-was-chilly-despite-the-sunny-weather
+    - band2.despite-his-efforts-nothing-changed
+    - band2.he-went-on-believing-despite-the-evidence
+    - band2.i-was-tired-but-could-not-sleep
+    - band2.the-marathon-is-held-rain-or-shine
+  kanji: []
+  patternId: grammar.b3-nimokakawarazu
+  grammarNote: "The heaviest connective in the book so far, and the most useful of the three formal ones, because it takes a noun. 晴天にもかかわらず — despite the fine weather — is one word plus the connector doing what English needs in spite of the fact that for. The noun goes in bare, with no copula and no の: 彼の努力にもかかわらず, despite his efforts, where the noun phrase carries what a whole clause would otherwise have to. A plain clause works too, attached directly: 反証があるにもかかわらず, even though there is evidence against it. Written Japanese also puts である in front of it, and the connector itself does not change shape for any of these. It stands alone as well. それにもかかわらず at the head of a second sentence or a second clause points back at everything just said — and yet, even so — which is how the sentence about being tired and still unable to sleep works. Register: this is print. Reports, editorials, formal speech. In conversation people say のに or けど, and a spoken にもかかわらず sounds like someone quoting a document. You will also see it written 関わらず or 拘らず instead of in kana (JMdict carries both as spellings of the same word); the kana is commonest and all three are one thing. Then the difference one small particle makes. Drop the も and にかかわらず stops meaning despite and starts meaning regardless of: 晴雨にかかわらず covers both possibilities rather than contradicting one — rain or shine, the marathon happens. That is the pattern you meet with pairs and with words like 成否 or いかん, and it is not saying anything was surprising. Keep the も when you mean despite. Real text is less tidy than that rule: にかかわらず does turn up doing the despite job, and a sentence that means despite with no も in it is a sentence you will meet rather than a mistake somebody made. Read what the two halves are doing to each other. Also worth keeping apart, because it looks similar and is a different word: 変わらず means unchanged, and 相変わらず means as always. No connector in either."
+
+- id: b3.checkpoint-2
+  order: 218
+  chapterId: b3.band-2
+  situation: Integration & checkpoint
+  title: Chapter 3 checkpoint
+  canDo: Recognise everything this chapter taught
+  wordIds: []
+  phraseIds: []
+  kanji: []
+  checkpoint: recognition
+  grammarNote: "A wide pass over everything this chapter has taught. Type the reading or the meaning rather than picking it out of a line-up. Six ways of saying even though, and the work is not remembering that they exist — it is knowing which one a sentence is using and whether it is using one at all. Half of what comes back is a look-alike: のに that means for the purpose of, ものの that is just a thing and its, とはいえない that is a verb in the negative, にかかわらず that means regardless rather than despite. Reading past those is the skill this chapter was built to give you, so it is the one worth checking. The noun row is worth watching for too — な in front of のに, の in front of くせに — and so is the も that tells ながら's two jobs apart. Anything you miss comes back sooner. It finishes when the remaining set empties; retry as often as you like, nothing is recorded."
