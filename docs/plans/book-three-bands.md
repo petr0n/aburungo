@@ -168,7 +168,13 @@ Band 8 absorbs it as its lesson 1, which is cheap — it is Book Two's ない-fo
 ば-conditional plus なる, all already owned. But it should also be considered for a Book Two
 revision, because the gap starts there.
 
-**All three gaps share a shape.** This skeleton was assembled by listing connective grammar, and
+**A fourth, found by band 7: the plain volitional.** 行こう / 食べよう is taught nowhere. ましょう
+is (Book Two's deciding and making-plans chapters), but its plain counterpart is not, and no band
+above claims it. Book Two chapter 8 met this and *declined it on purpose*, calling it rule-chapter
+work for a later book — so, like the passive, it is a promise the course made and this skeleton
+did not keep.
+
+**All four gaps share a shape.** This skeleton was assembled by listing connective grammar, and
 the passive, だろう and なければならない are none of them connectives. Assume more of the same and
 sweep the remaining bands for it before authoring.
 
