@@ -1,5 +1,5 @@
 @import 'tailwindcss';
-@source '../node_modules/aburungo-design-system/dist';
+@source '../node_modules/aburungo-design-system/dist/**/*.js';
 
 @font-face {
   font-family: 'Noto Sans';
