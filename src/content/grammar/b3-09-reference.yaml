@@ -1,0 +1,122 @@
+# Book Three, Chapter 10 grammar patterns -- what you mean, exactly.
+#
+# One pattern per teaching lesson, each blanking the thing that lesson exists
+# for out of one of its own sentences. The blank is matched against the
+# phrase's reading, so these are kana except where the construction is written
+# with a kanji in every attested hit.
+#
+# The `pattern` strings are bare Japanese for a mechanical reason the passive
+# chapter's file records first: scripts/levelling.mjs's grammarSurface()
+# rejects any pattern containing a Latin character or a digit and needs at
+# least one ～-delimited fragment of two or more characters. A Book Two-style
+# English description of the rule returns null there and would tag no sentence
+# at all, and the levelling pipeline is what the reading library is built on --
+# so a pattern that cannot be tagged is a pattern the library cannot find text
+# for. All seven below clear the check.
+#
+# Clearing the check is not the same as tagging well, and this chapter is the
+# worst case in the book so far, because five of its seven patterns are short
+# strings that other Japanese contains. Counted directly against
+# server/data/jmdict-examples-eng-3.6.2.json (25,983 sentences), what each
+# literal would actually flag:
+#
+#   ～こと flags 1,570 sentences, and only a minority are this chapter's job.
+#   The bulk is the ordinary noun ("thing, matter") plus the four fixed phrases
+#   already taught elsewhere -- ことができる, ～たことがある (Book Two),
+#   ことになる and ことだから (chapters 2 and 8 of this book). There is no
+#   sharper literal available: the whole point of the pattern is that anything
+#   can sit in front of it, so there is nothing fixed to anchor on. Pairing it
+#   with a following particle (ことが, ことを, ことは) would be more precise and
+#   would tag three disjoint thirds of the same rule, which the schema has no
+#   way to express as one pattern.
+#
+#   ～とは flags 499, and 285 of those contain the substring ことは -- bare こと
+#   plus は, which is lesson 1's material and not lesson 4's. Two ordinary words
+#   also collide: 中途半端 (ちゅうとはんぱ) and 仕事始め (しごとはじめ). A screen
+#   on ことは would fix most of it and is a pipeline change, not a content one.
+#
+#   ～ところ flags 220. Around eighty carry ところで or ところが, a discourse
+#   connective rather than this noun, and three are the unrelated words ふところ
+#   (懐) and ひところ (一頃).
+#
+#   ～について flags 180, of which seven are the verb 付く in its て-form after
+#   に, written in kana -- 途についている, 床についてから and their kin.
+#
+#   ～という flags 423 and is, by the same check, the cleanest of the five: no
+#   unrelated common word in JMdict has a kana headword containing the string.
+#   Every one of the nine that do is という itself or a frame built on it.
+#
+# ～に関して (28) and ～における (25) are both exact and both clean; nothing else
+# in the corpus contains either string. They are the two patterns in this
+# chapter whose tags can be trusted without a screen. This is a pipeline-design
+# question, flagged here rather than solved, exactly as the passive and time
+# chapters flagged theirs.
+#
+# Four of the seven blank the marker together with what attaches to it, and
+# that is the point rather than an oversight. こと is blanked as することは
+# because the nominaliser alone teaches nothing -- what the lesson is about is a
+# clause becoming a noun and then taking a particle, and handing over the
+# particle separately gives away which of the three slots it is. という is
+# blanked as スリムという because the naming job is the name plus the marker, not
+# the marker alone. とは is blanked as やみとは and における as このまちにおける
+# for the same reason in each case. The other three blank the marker with the
+# noun it governs -- てんきについて, しごとにかんして, もどったところ -- because
+# in every one of them what has to be learned is which word the marker attaches
+# to, not the marker's own spelling.
+#
+# content-source: n/a for this file -- every pattern references an existing
+#   phrase from phrases/b3-09-reference.yaml rather than composing new Japanese,
+#   and that file carries the Tatoeba id for each.
+# jlpt-source: training -- the level marks the chapter this content sits in.
+#   All seven constructions are canonically N3 grammar and are tagged as such.
+#   The one Word this chapter ships, vocab.tokoro, is tagged N5 instead, and
+#   vocabulary/b3-09-reference.yaml records why.
+
+- id: grammar.b3-koto
+  jlpt: N3
+  pattern: "～こと"
+  gloss: Turns a whole clause into a noun. Put it after a plain-form clause and the result can take が, を or は like any other noun. A noun or な-adjective goes through である first; a verb or い-adjective attaches directly. This is the こと you already have, doing the job its own card promised, outside the two fixed phrases Book Two taught it in.
+  phraseId: band9.playing-tennis-is-easy-for-me
+  blank: することは
+
+- id: grammar.b3-tokoro
+  jlpt: N3
+  pattern: "～ところ"
+  gloss: Where you are in something. Dictionary form + ところだ is about to happen, and in the past it is usually a near miss that did not; ている + ところだ is partway through; plain past + ところだ is only just finished. The noun can also take を and be what a verb of seeing or catching caught.
+  phraseId: band9.mary-has-just-come-home
+  blank: もどったところ
+
+- id: grammar.b3-toiu
+  jlpt: N3
+  pattern: "～という"
+  gloss: Names what something is called. Noun A という Noun B gives a thing its name; a clause + という + noun says what the rumour, news or claim was; ということだ closes a clause as hearsay or as the point. Not Book Two's と言いました, which closes a sentence and reports an utterance.
+  phraseId: band9.a-man-named-slim-was-killed-in-that-accident
+  blank: スリムという
+
+- id: grammar.b3-towa
+  jlpt: N3
+  pattern: "～とは"
+  gloss: Sets a term up and then says something definitive about it. After a bare noun it defines, the way a glossary entry does, usually closing on ことだ or である. After a whole clause it reacts, and what follows is a verdict. A こと in front of は is not this pattern.
+  phraseId: band9.darkness-is-the-absence-of-light
+  blank: やみとは
+
+- id: grammar.b3-nitsuite
+  jlpt: N3
+  pattern: "～について"
+  gloss: About, concerning. Goes on a noun and marks what the talking, writing, asking or thinking is about. Add の -- についての -- to put it in front of a noun instead of a verb. Written in kana, which is why it collides with 付いて, the て-form of 付く.
+  phraseId: band9.they-chatted-about-the-weather
+  blank: てんきについて
+
+- id: grammar.b3-nikanshite
+  jlpt: N3
+  pattern: "～に関して"
+  gloss: The same job as について, in the register of a report or a formal letter. に関しては limits the claim to that one topic. In front of a noun it becomes に関する with no の, because 関する is a verb. Built on 関する, to concern or relate, which has no separate card.
+  phraseId: band9.sam-is-serious-about-his-work
+  blank: しごとにかんして
+
+- id: grammar.b3-niokeru
+  jlpt: N3
+  pattern: "～における"
+  gloss: In, when it describes a noun. Sits between two nouns and joins them into one phrase -- 政治における宣伝活動, propaganda in politics. It does not mark a topic for a verb the way について does; swapping one in for the other gives a different sentence rather than a worse one. Formal and written.
+  phraseId: band9.the-frequency-of-crime-in-the-town-is-high
+  blank: このまちにおける

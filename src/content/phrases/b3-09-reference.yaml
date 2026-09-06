@@ -1,0 +1,653 @@
+# Book Three, Chapter 10 phrases -- what you mean, exactly.
+#
+# Forty-six sentences, and not one of them is ours. Books One and Two composed
+# their example sentences from canonical N5/N4 material and marked them
+# `content-source: training`; 04-stage-reading.md section 8 withdraws that
+# exemption at the reading stage and above, in those words -- "no
+# training-canonical sentences at the reading stage and above". So every
+# sentence below is a verbatim Tatoeba pair carried out of
+# server/data/jmdict-examples-eng-3.6.2.json with its id in `tatoebaId`, and
+# nothing here was composed, trimmed, joined or smoothed. Where a shape had no
+# attested sentence clean enough to card, the shape is described in a
+# grammarNote and has no card.
+#
+# Three shapes the chapter breakdown named are described rather than carded,
+# each for a reason worth recording:
+#
+#   The 「X」とはどういう意味ですか question form (breakdown lesson 4). Both
+#   attested examples -- #236156 and #236326 -- put the term being defined in
+#   corner brackets, and Book Three's routing has the learner type the whole
+#   reading back. No bracket-free とはどういう/とは何 sentence exists in this
+#   corpus that is not either 30+ characters or a different pattern (checked:
+#   twelve hits on とは(どういう|なん|何), listed in the search, none usable).
+#   The shape is named in lesson 4's grammarNote as a fragment instead.
+#
+#   とは限らない, "not necessarily" (breakdown lesson 4). Twelve genuine hits
+#   exist, so this is not an attestation failure -- the breakdown itself files
+#   it as recognition-only and the chapter checkpoint explicitly does not test
+#   it. Carding it would present a citation as mastered material. Named as a
+#   fragment in lesson 4's grammarNote.
+#
+#   ところで / ところが / Vたところで / Vたところ (breakdown lesson 2). Eighty
+#   of the corpus's 220 ところ sentences carry ところで or ところが, which is a
+#   large family and a different grammatical category -- a discourse connective,
+#   not the noun this chapter teaches. Recognition footnote in lesson 2's
+#   grammarNote, no cards, and not tested at the checkpoint.
+#
+# に関しても is named by the breakdown as "attested and natural" alongside
+# に関しては. It is not attested here: a substring search on に関しても returns
+# **zero** hits across all 25,983 sentences. に関しては returns many and is
+# carded. に関する, the attributive, returns six and is carded. The claim is
+# corrected rather than repeated.
+#
+# As in every chapter of this book, the vocabulary runs ahead of the ladder.
+# 朗報, 補足, 兵士, 発生率, 所見 and their kin are not taught anywhere and are
+# not meant to be -- see vocabulary/b3-09-reference.yaml for why this chapter
+# ships one word. What is being reviewed here is the construction, not the
+# nouns around it. Two grammar points also run ahead: 忙し過ぎる (#78808) uses
+# the 〜すぎる auxiliary, which no book teaches, and 見失ってはいけない (#177120)
+# uses 〜てはいけない, whose written cousin 〜てはならない chapter 9 teaches
+# immediately before this one. Both are glossed in the phrase's own note.
+#
+# The English is Tatoeba's own where Tatoeba's own would do. Five of the
+# forty-six depart from it, every one listed here so a reviewer can diff them
+# against the corpus rather than take them on trust. Every Japanese string is
+# untouched.
+#
+#   Where the corpus English hid the grammar the card exists to teach:
+#   #182679 -- "The holiday ended all too soon." あっという間に is about speed,
+#     not regret, and the card exists for the idiom. Glossed "The holiday ended
+#     in no time at all."
+#
+#   Where the corpus English was wrong:
+#   #220542 -- "The frequency of crime in the town is high." The Japanese is
+#     この町, this town, not the town. Glossed "The frequency of crime in this
+#     town is high."
+#
+#   Wording only, meaning unchanged:
+#   #198179 -- "leave her umbrella in the bus" -> "on the bus".
+#   #167051 -- "opened, as usual, upon the weather" -> "opened, as usual, with
+#     the weather". "Upon" in that sense is not a word this learner has.
+#   #143207 -- "Appreciate the importance of propaganda in politics." 認識する
+#     is to recognise or become aware of; "appreciate" reads first in English
+#     as "be grateful for". Glossed "Recognise the importance of propaganda in
+#     politics."
+#
+# ---------------------------------------------------------------------------
+# ROUTING: Book Three's stage is "reading" (books.ts), and LearnPage routes
+# every non-foundation book to the typed FillBlankCard, where the learner types
+# the whole reading back. So all forty-six of these are typed, and every one was
+# measured. The longest readings here are 31 characters, counting the closing
+# 。 -- band9.our-conversation-opened-upon-the-weather and
+# band9.the-importance-of-propaganda-in-politics -- ten under Book Two's
+# longest typed answer (quote.my-friend-said-that-shop-is-famous-but-i-wont-go,
+# 41) and nine under the passive chapter's longest. Nothing here asks more than a
+# learner has already been asked, so no entry carries `recognitionOnly`. Two
+# candidate sentences the breakdown named were dropped for length rather than
+# flagged -- #235879 (31 characters, and １９９５年 alone is thirteen kana) and
+# #233151 (36) -- because a chapter with shorter attested alternatives should
+# quote the alternative.
+# ---------------------------------------------------------------------------
+#
+# These are independent utterances. Several would sit naturally beside each
+# other -- 彼らは天気についておしゃべりした and
+# 私たちの会話はいつものように天気に関して始まった most obviously, since they
+# share a topic and are the chapter's own register pair. They are not authored
+# as an exchange or a narrative: multi-sentence composed text is the surface the
+# content rules exist to keep out, and it stays out even when both halves are
+# separately attested.
+#
+# On contamination, since three of this chapter's seven patterns are strings
+# that other words contain. The check run was mechanical and can be repeated:
+# for each pattern, every JMdict entry whose common kana headword contains the
+# string.
+#
+#   という -- nine such headwords, and not one is an unrelated word. They are
+#   と言う itself (1922760) and eight frames built on it: あっという間に
+#   (1000390), あっという間 (2208410), というもの (1008510), 何という
+#   (1188450), どちらかというと (2136160), ということは (2136300),
+#   ということはない (2136710), 何と言うか (2838528). No lexical collision.
+#
+#   とは -- eight, and two are unrelated words that merely contain the string:
+#   中途半端 ちゅうとはんぱ (1425050) and 仕事始め しごとはじめ (2133380).
+#   The rest are とは itself (2028950) and its own frames. The far bigger
+#   contaminant is not lexical: 285 of the corpus's 499 とは sentences contain
+#   the substring ことは, which is lesson 1's material and not lesson 4's.
+#
+#   ところ -- eight, of which 懐 ふところ (1200480) is a genuinely different
+#   word. It appears twice in the corpus (#120498, #199935), and ひところ
+#   (一頃) once (#111133). Excluded.
+#
+#   について -- one, に就いて itself (1009780). The collision here is not
+#   lexical but compositional: に + 付いて, the て-form of 付く written in kana.
+#   Seven found and excluded -- #215782 (シャツについている), #199672
+#   (車についている), #126363 (下欄についている), #108591 (途についている),
+#   #143241 (後についてくる), #163673 (後について), #155840 (床についてから).
+#   The breakdown counts eight; the eighth was not found by targeted search.
+#
+# content-source: Tatoeba, via the sentence pairs embedded in JMdict for
+#   Applications 3.6.2 (server/data/jmdict-examples-eng-3.6.2.json). Every
+#   phrase carries its sentence id in `tatoebaId`; the id is quoted, because
+#   YAML reads a bare 214583 as a number and the schema rejects it. Verified by
+#   id against the corpus on 2026-09-05 -- all 46 resolve, and each Japanese
+#   string below matches its source character for character. Kana readings and
+#   romaji are transcriptions of the quoted sentence, not new content; every
+#   compound whose reading was not already obvious was checked against JMdict,
+#   and the ones with a real alternative reading are called out first:
+#   避ける さける 1583260 -- the entry also reads よける, and JMdict restricts
+#   "to avoid (a situation)" to さける and "to avoid physical contact with" to
+#   よける, which is why ストレスを避ける is さける; 件 けん 1255940 and not
+#   1255930 くだん, a different entry meaning "the aforementioned"; 話 はなし
+#   1600900 and not 2100460 わ, the counter for episodes; 名 な 1531330 and not
+#   2153790 めい, the counter for people; 要は ようは 1914670 and not 1609600
+#   かなめ; 事 こと 1313580 and not 2613010 ごと; 事故 じこ 1313850 and not
+#   ことゆえ, the same entry's second reading; 戻る もどる 1535880 and not
+#   1642200 もとる, a different word written with the same character; 傘 かさ
+#   1301940 and not 1774770 からかさ; 過ぎる すぎる 1195970 and not 2106790
+#   よぎる; 好き すき 1277450 and not 2146440 ずき. Then the ordinary ones:
+#   必要 ひつよう 1487660, 理想的 りそうてき 1550040, 夫 おっと 1496480,
+#   拒む こばむ 1232360, 本能的 ほんのうてき 2514590, 覚える おぼえる 1206050,
+#   簡単 かんたん 1214330, 金沢 かなざわ 2845104, 吹雪く ふぶく 2011640,
+#   細菌 さいきん 1295590, 病気 びょうき 1490230, 引き起こす ひきおこす 1168880,
+#   補足 ほそく 1514700, 説明 せつめい 1386460, 朗報 ろうほう 1560740,
+#   巣 す 1400390, 張る はる 1427900, 落とす おとす 1589260, 男 おとこ 1419990,
+#   死ぬ しぬ 1310730, 広島 ひろしま 2164670, 噂 うわさ 1172590,
+#   厳しい きびしい 1262530, 冬 ふゆ 1446070, 母親 ははおや 1515120,
+#   華やか はなやか 1600990, 何千 なんぜん 1189120, 飢え うえ 1224070,
+#   休暇 きゅうか 1227610, 闇 やみ 1154910, 光 ひかり 1272780,
+#   北極 ほっきょく 1520890, 北極圏 ほっきょくけん 1520920,
+#   周辺 しゅうへん 1331300, 地域 ちいき 1420800, 軍事 ぐんじ 1248080,
+#   訓練 くんれん 1247470, 兵士 へいし 1506420, 受ける うける 1329590,
+#   独立 どくりつ 1456040, 財産 ざいさん 1296820, 天気 てんき 1438690,
+#   趣味 しゅみ 1329000, 質問 しつもん 1320760, 問題 もんだい 1536010,
+#   論文 ろんぶん 1561840, 猫 ねこ 1467640, 物語 ものがたり 1502480,
+#   所見 しょけん 1343200, 述べる のべる 1340820, 賛成 さんせい 1304200,
+#   会話 かいわ 1198880, 動物 どうぶつ 1451470, 町 まち 1603990,
+#   犯罪 はんざい 1481590, 発生率 はっせいりつ 1477640, 高い たかい 1283190,
+#   人生 じんせい 1368370, 見失う みうしなう 1259640, 科学 かがく 1192700,
+#   性的 せいてき 1375430, 偏見 へんけん 1510380, 政治 せいじ 1375970,
+#   宣伝 せんでん 1389730, 活動 かつどう 1208360,
+#   重要性 じゅうようせい 1336850, 認識 にんしき 1467550,
+#   分かる わかる 1606560, 鳥 とり 1430250, 飛ぶ とぶ 1429700.
+#   One reading has no JMdict entry behind it: 口和 in #76174 is a place name
+#   and JMdict has no entry for it. Its reading くちわ comes from the corpus's
+#   own English, which romanises it "Kuchiwa" in the same pair.
+# jlpt-source: training -- the level marks the chapter this content sits in,
+#   not each construction's textbook level. こと as a general nominaliser,
+#   ところ's aspectual triad, という, とは, について, に関して and における are
+#   canonically N3 grammar; the sentences carrying them are real N3 text and are
+#   tagged to match.
+
+# ── Any clause can be a noun (Lesson 1) ───────────────────────────────────────
+
+- id: band9.its-necessary-to-avoid-stress
+  jlpt: N3
+  scenario: nominalising
+  japanese: ストレスを避けることが必要です。
+  reading: ストレスをさけることがひつようです。
+  romaji: sutoresu o sakeru koto ga hitsuyou desu.
+  english: It's necessary to avoid stress.
+  tatoebaId: "214583"
+  notes: ストレスを避ける is a whole clause with its own object. こと wraps it into one noun, が marks that noun as the subject, and 必要です is said about it. Without こと there is no noun for が to attach to.
+
+- id: band9.mike-likes-to-play-basketball
+  jlpt: N3
+  scenario: nominalising
+  japanese: マイクはバスケットボールをすることが好きです。
+  reading: マイクはバスケットボールをすることがすきです。
+  romaji: maiku wa basukettobooru o suru koto ga suki desu.
+  english: Mike likes to play basketball.
+  tatoebaId: "195759"
+  notes: 好き takes が, and what it needs on the left is a noun. バスケットボールをする is not one until こと makes it one. This is the shape you will reach for most -- an activity you like, put where a noun goes.
+
+- id: band9.he-proved-to-be-an-ideal-husband
+  jlpt: N3
+  scenario: nominalising
+  japanese: 彼は理想的な夫であることが分かった。
+  reading: かれはりそうてきなおっとであることがわかった。
+  romaji: kare wa risouteki na otto de aru koto ga wakatta.
+  english: He proved to be an ideal husband.
+  tatoebaId: "99073"
+  notes: A noun or な-adjective cannot sit straight in front of こと -- it goes through である first, the same slot the previous chapter's べき used. 理想的な夫だ becomes 理想的な夫である, and then こと can take it.
+
+- id: band9.unfortunately-he-refused-to-come
+  jlpt: N3
+  scenario: nominalising
+  japanese: あいにく彼は来ることを拒んだ。
+  reading: あいにくかれはくることをこばんだ。
+  romaji: ainiku kare wa kuru koto o kobanda.
+  english: Unfortunately he refused to come.
+  tatoebaId: "234559"
+  notes: 拒む takes an object with を, and what he refused was 来る -- a verb. こと turns it into something you can put を on. 来る here reads くる, not きたる.
+
+- id: band9.birds-learn-to-fly-by-instinct
+  jlpt: N3
+  scenario: nominalising
+  japanese: 鳥は本能的に飛ぶことを覚える。
+  reading: とりはほんのうてきにとぶことをおぼえる。
+  romaji: tori wa honnouteki ni tobu koto o oboeru.
+  english: Birds learn to fly by instinct.
+  tatoebaId: "125777"
+  notes: The same object slot, with a different verb over it. English says "learn to fly" and leaves the grammar invisible; Japanese has to make 飛ぶ into a thing before 覚える can take it.
+
+- id: band9.playing-tennis-is-easy-for-me
+  jlpt: N3
+  scenario: nominalising
+  japanese: テニスをすることは私には簡単だ。
+  reading: テニスをすることはわたしにはかんたんだ。
+  romaji: tenisu o suru koto wa watashi ni wa kantan da.
+  english: Playing tennis is easy for me.
+  tatoebaId: "202171"
+  notes: The third slot is は, the topic. The clause becomes the thing the sentence is about, and 簡単だ is the comment on it. が, を and は are the three particles this pattern is worth learning with.
+
+- id: band9.what-he-says-makes-no-sense
+  jlpt: N3
+  scenario: nominalising
+  japanese: 彼がいうことはわけがわからない。
+  reading: かれがいうことはわけがわからない。
+  romaji: kare ga iu koto wa wake ga wakaranai.
+  english: What he says makes no sense at all.
+  tatoebaId: "121097"
+  notes: 言うこと is the single commonest thing this pattern builds -- what someone says, treated as a thing you can then judge. Note 彼が rather than 彼は, because the subject sits inside the こと clause, so it takes が.
+
+- id: band9.there-are-sometimes-blizzards-in-kanazawa
+  jlpt: N3
+  scenario: nominalising
+  japanese: 金沢では吹雪くことがある。
+  reading: かなざわではふぶくことがある。
+  romaji: kanazawa de wa fubuku koto ga aru.
+  english: There are sometimes blizzards in Kanazawa.
+  tatoebaId: "179639"
+  notes: Three characters you have had since Book Two, and not what you had them for. 吹雪く is non-past, and a non-past verb + ことがある means it happens sometimes -- not "I have done it before", which needs the past 吹雪いた in front.
+
+- id: band9.germs-can-cause-sickness
+  jlpt: N3
+  scenario: nominalising
+  japanese: 細菌が病気を引き起こすことがある。
+  reading: さいきんがびょうきをひきおこすことがある。
+  romaji: saikin ga byouki o hikiokosu koto ga aru.
+  english: Germs can cause sickness.
+  tatoebaId: "170281"
+  notes: The same tense trap on a general statement. English reaches for "can" here and for "sometimes" in the Kanazawa sentence, and the Japanese is identical in both -- 引き起こすことがある is a tendency, not a record of anything that happened.
+
+- id: band9.anything-to-add-to-his-explanation
+  jlpt: N3
+  scenario: nominalising
+  japanese: 彼の説明に何か補足することがありますか。
+  reading: かれのせつめいになにかほそくすることがありますか。
+  romaji: kare no setsumei ni nanika hosoku suru koto ga arimasu ka.
+  english: Do you have anything to add to his explanation?
+  tatoebaId: "116668"
+  notes: The other reading of non-past ことがある -- there is a thing that fits this description. 何か in front is the giveaway that this is asking whether such a thing exists, not whether you have ever done it.
+
+# ── Right about now (Lesson 2) ────────────────────────────────────────────────
+
+- id: band9.im-going-to-meet-a-certain-student
+  jlpt: N3
+  scenario: nominalising
+  japanese: ある学生に会うところです。
+  reading: あるがくせいにあうところです。
+  romaji: aru gakusei ni au tokoro desu.
+  english: I'm going to meet a certain student.
+  tatoebaId: "229895"
+  notes: A dictionary-form verb in front of ところだ puts you at the point just before it happens. The meeting has not started. ある here is the adjectival "a certain", not the verb.
+
+- id: band9.i-almost-forgot-all-about-that
+  jlpt: N3
+  scenario: nominalising
+  japanese: うっかりそれを忘れるところだったわ。
+  reading: うっかりそれをわすれるところだったわ。
+  romaji: ukkari sore o wasureru tokoro datta wa.
+  english: I almost forgot all about that.
+  tatoebaId: "161315"
+  notes: The same dictionary form, with ところ in the past -- and the meaning flips to a near miss. She was at the point of forgetting and did not. わ on the end is a soft sentence-final particle, more common in women's speech.
+
+- id: band9.i-was-nearly-run-over-by-a-car
+  jlpt: N3
+  scenario: nominalising
+  japanese: 危なく車にひかれるところだった。
+  reading: あぶなくくるまにひかれるところだった。
+  romaji: abunaku kuruma ni hikareru tokoro datta.
+  english: I was nearly run over by a car.
+  tatoebaId: "183591"
+  notes: ひかれる is the passive from the chapter that opened this book, and ところだった says it did not happen. 危なく, "narrowly", is the adverb this near-miss reading keeps company with -- あやうく and もう少しで do the same job.
+
+- id: band9.shes-cleaning-off-the-make-up
+  jlpt: N3
+  scenario: nominalising
+  japanese: 彼女はメーキャップを落としているところですよ。
+  reading: かのじょはメーキャップをおとしているところですよ。
+  romaji: kanojo wa meekyappu o otoshite iru tokoro desu yo.
+  english: She's cleaning off the make-up.
+  tatoebaId: "91414"
+  notes: ている in front of ところ is the middle of the three -- it has started and it has not finished. 落としています alone would say the same thing more loosely; ところ pins it to right now.
+
+- id: band9.ive-been-expecting-good-news-from-them
+  jlpt: N3
+  scenario: nominalising
+  japanese: 彼らからの朗報を待っているところだ。
+  reading: かれらからのろうほうをまっているところだ。
+  romaji: karera kara no rouhou o matte iru tokoro da.
+  english: I've been expecting good news from them.
+  tatoebaId: "98741"
+  notes: Waiting is a state rather than an action with steps, and ているところ works on it anyway -- being partway through applies to anything that has a beginning and an end. 朗報 is good news, the kind you have been hoping for.
+
+- id: band9.mary-has-just-come-home
+  jlpt: N3
+  scenario: nominalising
+  japanese: メアリーはただいま戻ったところです。
+  reading: メアリーはただいまもどったところです。
+  romaji: mearii wa tadaima modotta tokoro desu.
+  english: Mary has just come home.
+  tatoebaId: "194804"
+  notes: A plain past verb in front of ところ is the third of the three -- finished, and only just. ただいま here is the adverb "just now", not the greeting you say walking through the door -- same word, different job.
+
+- id: band9.he-came-home-just-now
+  jlpt: N3
+  scenario: nominalising
+  japanese: 彼はちょうど今、帰ってきたところだ。
+  reading: かれはちょうどいま、かえってきたところだ。
+  romaji: kare wa choudo ima, kaette kita tokoro da.
+  english: He came home just now.
+  tatoebaId: "111953"
+  notes: ちょうど今 says "just now" already, and たところ says it again. That doubling is ordinary rather than redundant -- the adverb dates it, ところ says the action is barely over.
+
+- id: band9.have-you-ever-seen-a-spider-spinning-its-web
+  jlpt: N3
+  scenario: nominalising
+  japanese: クモがクモの巣を張るところを見たことがありますか。
+  reading: クモがクモのすをはるところをみたことがありますか。
+  romaji: kumo ga kumo no su o haru tokoro o mita koto ga arimasu ka.
+  english: Have you ever seen a spider spinning its web?
+  tatoebaId: "225632"
+  notes: ところ is a noun, so it can take を and be the object of a verb of catching or seeing. What was seen is not the spider but the moment. The end of the sentence is Book Two's たことがある, and this is the past-tense one -- have you ever.
+
+# ── What it's called (Lesson 3) ───────────────────────────────────────────────
+
+- id: band9.a-man-named-slim-was-killed-in-that-accident
+  jlpt: N3
+  scenario: naming
+  japanese: スリムという名の男が事故で死んだ。
+  reading: スリムというなのおとこがじこでしんだ。
+  romaji: surimu to iu na no otoko ga jiko de shinda.
+  english: A man named Slim was killed in that accident.
+  tatoebaId: "214106"
+  notes: The core job. A name, then という, then the noun it belongs to. Note where this sits -- inside the sentence, in front of a noun. Book Two's と言いました closed a sentence and reported speech; this one does neither.
+
+- id: band9.theres-a-place-called-kuchiwa-in-hiroshima
+  jlpt: N3
+  scenario: naming
+  japanese: 広島に口和というところがあります。
+  reading: ひろしまにくちわというところがあります。
+  romaji: hiroshima ni kuchiwa to iu tokoro ga arimasu.
+  english: There's a place called Kuchiwa in Hiroshima.
+  tatoebaId: "76174"
+  notes: The same shape for a place, and the reason it is here is that という is exactly what you reach for when you expect the listener not to know the name. ところ here is the plain noun of the previous lesson -- a place, no grammar in it.
+
+- id: band9.theres-a-rumor-johnson-is-going-to-be-traded
+  jlpt: N3
+  scenario: naming
+  japanese: ジョンソンがトレードされるという噂がある。
+  reading: ジョンソンがトレードされるといううわさがある。
+  romaji: jonson ga toreedo sareru to iu uwasa ga aru.
+  english: There's a rumor Johnson is going to be traded.
+  tatoebaId: "215508"
+  notes: What sits in front of という here is not a name but a whole clause, and 噂 is what the clause is the content of. English does the same thing with "that" -- a rumor that he will be traded. 噂, 話, 知らせ and 事実 are the nouns this shape keeps company with.
+
+- id: band9.they-say-were-going-to-have-a-severe-winter
+  jlpt: N3
+  scenario: naming
+  japanese: 厳しい冬になるという話です。
+  reading: きびしいふゆになるというはなしです。
+  romaji: kibishii fuyu ni naru to iu hanashi desu.
+  english: They say we are going to have a severe winter.
+  tatoebaId: "174979"
+  notes: という話です is how Japanese says "they say" without naming who. There is no speaker anywhere in the sentence, which is the point -- it marks the claim as second-hand and stops there.
+
+- id: band9.the-point-is-that-the-mothers-are-too-busy
+  jlpt: N3
+  scenario: naming
+  japanese: 要は母親たちが忙し過ぎるということだ。
+  reading: ようはははおやたちがいそがしすぎるということだ。
+  romaji: you wa hahaoya-tachi ga isogashisugiru to iu koto da.
+  english: The point is that the mothers are too busy.
+  tatoebaId: "78808"
+  notes: ということだ closes a clause off as the content of a statement -- it amounts to this. 要は at the front means "in short". 忙し過ぎる is 忙しい with 〜すぎる, too much of something, which no chapter has taught yet; take it whole for now.
+
+- id: band9.show-business-is-really-glamorous
+  jlpt: N3
+  scenario: naming
+  japanese: ショービジネスというのは本当に華やかだ。
+  reading: ショービジネスというのはほんとうにはなやかだ。
+  romaji: shoobijinesu to iu no wa hontou ni hanayaka da.
+  english: Show business is really glamorous.
+  tatoebaId: "76672"
+  notes: というのは picks a term up and then says what it is like. It is close to the next lesson's とは and the two are often swappable here, with というのは the more conversational of the pair.
+
+- id: band9.thousands-of-people-died-of-hunger
+  jlpt: N3
+  scenario: naming
+  japanese: 何千という人が飢えで死んだ。
+  reading: なんぜんというひとがうえでしんだ。
+  romaji: nanzen to iu hito ga ue de shinda.
+  english: Thousands of people died of hunger.
+  tatoebaId: "187364"
+  notes: 何千 is "how many thousands", and という after a number like it turns the count into an emphasis -- thousands upon thousands. 何百という works the same way. Nothing is being named here, so this is worth recognising rather than deriving.
+
+- id: band9.the-holiday-ended-all-too-soon
+  jlpt: N3
+  scenario: naming
+  japanese: 休暇はあっという間に終わった。
+  reading: きゅうかはあっというまにおわった。
+  romaji: kyuuka wa atto iu ma ni owatta.
+  english: The holiday ended in no time at all.
+  tatoebaId: "182679"
+  notes: A fixed idiom, listed in the dictionary as its own entry. Literally it is the space of time it takes to say "ah" -- あっ, という, 間. Learn it whole; taking it apart teaches nothing you can reuse.
+
+# ── What that word means (Lesson 4) ───────────────────────────────────────────
+
+- id: band9.darkness-is-the-absence-of-light
+  jlpt: N3
+  scenario: naming
+  japanese: 闇とは光がないことです。
+  reading: やみとはひかりがないことです。
+  romaji: yami to wa hikari ga nai koto desu.
+  english: Darkness is the absence of light.
+  tatoebaId: "191233"
+  notes: The definition shape at its shortest -- term, とは, what it is. Notice what closes it -- 光がないこと, this chapter's own nominaliser, because a definition of a noun has to end in a noun.
+
+- id: band9.the-arctic-is-the-area-round-the-north-pole
+  jlpt: N3
+  scenario: naming
+  japanese: 北極圏とは北極周辺の地域の事である。
+  reading: ほっきょくけんとはほっきょくしゅうへんのちいきのことである。
+  romaji: hokkyokuken to wa hokkyoku shuuhen no chiiki no koto de aru.
+  english: The Arctic is the area round the North Pole.
+  tatoebaId: "82423"
+  notes: The same shape in an encyclopedia voice, closing on 事である rather than ことです. 事 is こと in kanji, doing the ordinary noun job here -- the thing that is the area round the pole.
+
+- id: band9.military-training-is-training-given-to-soldiers
+  jlpt: N3
+  scenario: naming
+  japanese: 軍事訓練とは兵士たちが受ける訓練である。
+  reading: ぐんじくんれんとはへいしたちがうけるくんれんである。
+  romaji: gunji kunren to wa heishi-tachi ga ukeru kunren de aru.
+  english: Military training is training given to soldiers.
+  tatoebaId: "176676"
+  notes: A definition that repeats its own head noun -- 訓練 both sides. That is normal for this pattern, since とは asks what a term is, and the answer names the wider category it belongs to and then narrows it.
+
+- id: band9.a-gentleman-is-a-man-of-independent-means
+  jlpt: N3
+  scenario: naming
+  japanese: ジェントルマンとは独立した財産のある人のことだ。
+  reading: ジェントルマンとはどくりつしたざいさんのあるひとのことだ。
+  romaji: jentoruman to wa dokuritsu shita zaisan no aru hito no koto da.
+  english: A gentleman is a man of independent means.
+  tatoebaId: "216374"
+  notes: 〜のことだ is how a definition of a person or thing usually closes -- it means such-and-such a person. Take Xとは...のことだ as a frame and you can define almost anything.
+
+- id: band9.it-was-careless-of-me-to-do-that
+  jlpt: N3
+  scenario: naming
+  japanese: そんな事をするとはうかつだった。
+  reading: そんなことをするとはうかつだった。
+  romaji: sonna koto o suru to wa ukatsu datta.
+  english: It was careless of me to do something like that.
+  tatoebaId: "204115"
+  notes: A whole clause in front of とは instead of a bare noun, and the job changes completely -- the speaker is reacting to what was done, not defining a term. うかつ is careless in the sense of not thinking.
+
+- id: band9.it-was-careless-of-her-to-leave-her-umbrella
+  jlpt: N3
+  scenario: naming
+  japanese: バスに傘を忘れるとは彼女はそそっかしい。
+  reading: バスにかさをわすれるとはかのじょはそそっかしい。
+  romaji: basu ni kasa o wasureru to wa kanojo wa sosokkashii.
+  english: It was careless of her to leave her umbrella on the bus.
+  tatoebaId: "198179"
+  notes: The reaction reading again, and the verb in front is non-past 忘れる even though it already happened. That is normal here -- the clause names the deed rather than dating it. What follows is a verdict on somebody.
+
+# ── Talking about it (Lesson 5) ───────────────────────────────────────────────
+
+- id: band9.they-chatted-about-the-weather
+  jlpt: N3
+  scenario: reference
+  japanese: 彼らは天気についておしゃべりした。
+  reading: かれらはてんきについておしゃべりした。
+  romaji: karera wa tenki ni tsuite oshaberi shita.
+  english: They chatted about the weather.
+  tatoebaId: "96491"
+  notes: A noun, について, and then a verb of talking or thinking. This is the everyday word for "about" and it is what you should reach for by default.
+
+- id: band9.please-tell-me-about-your-hobbies
+  jlpt: N3
+  scenario: reference
+  japanese: あなたの趣味について話してください。
+  reading: あなたのしゅみについてはなしてください。
+  romaji: anata no shumi ni tsuite hanashite kudasai.
+  english: Please tell me about your hobbies.
+  tatoebaId: "233207"
+  notes: The one to have ready in conversation. について marks what the talking is about; 話す on its own would take を for what is said, not for the topic.
+
+- id: band9.i-asked-him-about-the-accident
+  jlpt: N3
+  scenario: reference
+  japanese: その事故について彼に質問した。
+  reading: そのじこについてかれにしつもんした。
+  romaji: sono jiko ni tsuite kare ni shitsumon shita.
+  english: I asked him about the accident.
+  tatoebaId: "209899"
+  notes: Two に in one sentence doing different jobs -- 事故について marks the topic, 彼に marks who was asked. They do not compete, and について here is one piece rather than a loose に.
+
+- id: band9.he-wrote-a-paper-on-the-subject
+  jlpt: N3
+  scenario: reference
+  japanese: 彼はその問題について論文を書いた。
+  reading: かれはそのもんだいについてろんぶんをかいた。
+  romaji: kare wa sono mondai ni tsuite ronbun o kaita.
+  english: He wrote a paper on the subject.
+  tatoebaId: "112366"
+  notes: について is not only spoken -- writing, reading, asking and thinking all take it. English swaps "about" for "on" here and Japanese does not change at all.
+
+- id: band9.this-is-a-story-about-a-cat
+  jlpt: N3
+  scenario: reference
+  japanese: これは、ある猫についての物語です。
+  reading: これは、あるねこについてのものがたりです。
+  romaji: kore wa, aru neko ni tsuite no monogatari desu.
+  english: This is a story about a cat.
+  tatoebaId: "219941"
+  notes: Add の and について can sit in front of a noun instead of a verb -- についての物語, a story about. The の is what any phrase needs before it can modify a noun, and it is not optional here.
+
+# ── On the subject of (Lesson 6) ──────────────────────────────────────────────
+
+- id: band9.sam-is-serious-about-his-work
+  jlpt: N3
+  scenario: reference
+  japanese: サムは仕事に関してまじめです。
+  reading: サムはしごとにかんしてまじめです。
+  romaji: samu wa shigoto ni kanshite majime desu.
+  english: Sam is serious about his work.
+  tatoebaId: "216718"
+  notes: に関して does について's job one register up. Swap in について here and nothing about the meaning changes; what changes is that the sentence stops sounding written.
+
+- id: band9.he-made-a-few-remarks-on-the-book
+  jlpt: N3
+  scenario: reference
+  japanese: 彼はその本に関していくつかの所見を述べた。
+  reading: かれはそのほんにかんしていくつかのしょけんをのべた。
+  romaji: kare wa sono hon ni kanshite ikutsuka no shoken o nobeta.
+  english: He made a few remarks on the book.
+  tatoebaId: "112406"
+  notes: The company に関して keeps is the giveaway. 所見を述べる, to state observations, is not conversational Japanese, and に関して is the marker that matches it.
+
+- id: band9.i-agree-with-you-on-this-issue
+  jlpt: N3
+  scenario: reference
+  japanese: 私はこの件に関しては、あなたに賛成です。
+  reading: わたしはこのけんにかんしては、あなたにさんせいです。
+  romaji: watashi wa kono ken ni kanshite wa, anata ni sansei desu.
+  english: I agree with you on this issue.
+  tatoebaId: "160928"
+  notes: に関しては, with は on the end, sets the topic off as a limit -- on this one, whatever the position elsewhere. 件 here reads けん, a matter or case, not くだん.
+
+- id: band9.our-conversation-opened-upon-the-weather
+  jlpt: N3
+  scenario: reference
+  japanese: 私たちの会話はいつものように天気に関して始まった。
+  reading: わたしたちのかいわはいつものようにてんきにかんしてはじまった。
+  romaji: watashitachi no kaiwa wa itsumo no you ni tenki ni kanshite hajimatta.
+  english: Our conversation opened, as usual, with the weather.
+  tatoebaId: "167051"
+  notes: The same topic as this chapter's について sentence about chatting, in the other register. Read the two side by side -- the conversation itself would have used について, and the account of it uses に関して.
+
+- id: band9.she-wrote-a-book-about-animals
+  jlpt: N3
+  scenario: reference
+  japanese: 彼女は動物に関する本を書いた。
+  reading: かのじょはどうぶつにかんするほんをかいた。
+  romaji: kanojo wa doubutsu ni kansuru hon o kaita.
+  english: She wrote a book about animals.
+  tatoebaId: "87699"
+  notes: In front of a noun, に関して becomes に関する -- no の needed, because 関する is a verb and a verb modifies a noun directly. That is the one structural difference from についての, which does need の.
+
+# ── In, before a noun (Lesson 7) ──────────────────────────────────────────────
+
+- id: band9.the-frequency-of-crime-in-the-town-is-high
+  jlpt: N3
+  scenario: reference
+  japanese: この町における犯罪の発生率は高い。
+  reading: このまちにおけるはんざいのはっせいりつはたかい。
+  romaji: kono machi ni okeru hanzai no hasseiritsu wa takai.
+  english: The frequency of crime in this town is high.
+  tatoebaId: "220542"
+  notes: における sits between two nouns and joins them -- この町における犯罪, crime in this town. It is not marking a topic for a verb the way について does; the whole thing is one noun phrase, and 高い is said about the rate.
+
+- id: band9.you-must-not-lose-sight-of-your-goal-in-life
+  jlpt: N3
+  scenario: reference
+  japanese: 君は人生におけるゴールを見失ってはいけない。
+  reading: きみはじんせいにおけるゴールをみうしなってはいけない。
+  romaji: kimi wa jinsei ni okeru gooru o miushinatte wa ikenai.
+  english: You must not lose sight of your goal in life.
+  tatoebaId: "177120"
+  notes: 人生におけるゴール is a noun phrase, and を on the end of it belongs to 見失う, not to における. 〜てはいけない is the spoken twin of the previous chapter's 〜てはならない.
+
+- id: band9.she-wrote-on-gender-bias-in-science
+  jlpt: N3
+  scenario: reference
+  japanese: 彼女は科学における性的偏見について書いた。
+  reading: かのじょはかがくにおけるせいてきへんけんについてかいた。
+  romaji: kanojo wa kagaku ni okeru seiteki henken ni tsuite kaita.
+  english: She wrote on gender bias in science.
+  tatoebaId: "90838"
+  notes: Both markers in one sentence, doing their own jobs. における builds the noun phrase 科学における性的偏見, and について then makes that phrase the topic of 書いた. Neither could take the other's place.
+
+- id: band9.the-importance-of-propaganda-in-politics
+  jlpt: N3
+  scenario: reference
+  japanese: 政治における宣伝活動の重要性を認識する。
+  reading: せいじにおけるせんでんかつどうのじゅうようせいをにんしきする。
+  romaji: seiji ni okeru senden katsudou no juuyousei o ninshiki suru.
+  english: Recognise the importance of propaganda in politics.
+  tatoebaId: "143207"
+  notes: A noun phrase three layers deep -- 政治における宣伝活動, then その重要性, then を. における is what lets the first layer be built at all, and this stacking is why it belongs to written Japanese.

@@ -1,0 +1,50 @@
+# Book Three, Chapter 10 vocabulary -- one word, and the argument for it.
+#
+# Every other chapter of this book so far has shipped an empty vocabulary file,
+# and the reasoning is recorded at length in vocabulary/b3-00-passive.yaml and
+# vocabulary/b3-04-time.yaml: 04-stage-reading.md section 3 hands vocabulary at
+# this stage to the reading library and to mining, so lessons carry patterns and
+# the library carries words. That reasoning still holds for six of this
+# chapter's seven patterns. という, とは, について, に関して and における are
+# built from particles and words the learner already owns, and こと has been a
+# Word card since Book Two chapter 1 (vocab.koto, "thing, matter").
+#
+# ところ is the exception, and it is a different case rather than a relaxation
+# of the rule. The other six chapters could gloss their nouns inside a pattern
+# because the pattern was the only place the noun appeared. ところ is not like
+# that: it is one of the most common nouns in the language in its plain "place"
+# sense, it is absent from data/content-manifest.json entirely (checked -- no
+# word card anywhere in Books One through Three carries it, and 台所 teaches the
+# character 所 without ever naming the word), and the aspectual grammar this
+# chapter teaches cannot be explained without first saying what the word means.
+# Teaching the grammar while leaving the noun untaught would be teaching
+# 〜たことがある without ever carding こと.
+#
+# On the JLPT tag, which departs from the rest of this chapter. Every phrase and
+# pattern in chapter 10 is tagged N3, the level of the chapter they sit in --
+# that is what the phrase and grammar files do and why. This word is tagged N5
+# instead, and the reason is that the tag on a Word feeds vocabulary coverage
+# tooling rather than describing a chapter: data/jlpt/reference-n5.json carries
+# 所/ところ ("place") at N5, from both the tanos and open-anki sources, and it
+# appears in neither the N4 nor the N3 reference list. Tagging it N3 would make
+# scripts/jlpt.mjs report an N5 word as missing and an N3 word as taught that no
+# N3 list contains -- a false reading of coverage in two directions. The word is
+# N5; the grammar built on it in this chapter is N3, and the pattern carries
+# that.
+#
+# content-source: training -- headword, reading, part of speech and gloss
+#   verified against JMdict for Applications 3.6.2 on 2026-09-05, sequence
+#   number inline. The entry is flagged common.
+# jlpt-source: training -- JLPT level unverified (JMdict carries no JLPT data).
+#   data/jlpt/reference-n5.json lists 所/ところ at N5; reference-n4.json and
+#   reference-n3.json do not list it at all.
+
+- id: vocab.tokoro
+  jlpt: N5
+  word_type: noun
+  theme: basics
+  japanese: ところ
+  reading: ところ
+  romaji: tokoro
+  english: place; point (in time or in a process)
+  notes: The kanji is 所, the one already in 台所, but the grammar this word carries is written in kana and this card is the kana form. JMdict seq 1343100 lists twelve senses under it; the first is the plain one, "place, spot", and the two chapter 10 builds on are sense 10, "about to, on the verge of", and sense 11, "was just doing, have just done". So it is a word for a place, and also a word for where you are in something you are doing -- the same double life こと has as both "thing" and a clause turned into a noun.

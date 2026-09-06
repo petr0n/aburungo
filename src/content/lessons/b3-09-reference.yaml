@@ -1,0 +1,260 @@
+# Chapter 10 -- What you mean, exactly.
+#
+# Two jobs, in that order. The first two lessons turn a whole sentence into a
+# single noun. こと turns an action or a fact into "the thing"; ところ turns a
+# moment into "the point you are at". The learner half-owns the first word
+# already: Book Two carded こと and told them outright that it "turns a whole
+# action into a noun", then only ever let them put that noun in front of ある
+# or できる. This chapter is where こと stops being part of two fixed phrases
+# and starts being a tool. ことになる and ことだから, the two other fixed phrases
+# built on the same word that this book has already taught, are not reopened.
+#
+# The next two lessons name and define. という gives something its name -- a
+# person, a rumour, a word, a claim -- and it is not the と + 言う of Book Two's
+# reported-speech chapter. That one closes a sentence with a tensed verb of
+# saying; this one sits inside a sentence saying what something is called. とは
+# goes one step further and says what a name actually means, either as a real
+# definition or as a reaction to something surprising enough to comment on.
+# Both are common in real writing, and both hide behind a raw search that is
+# mostly made of something else -- とは in particular is mostly bare こと with
+# は on it, which is why it is taught after こと rather than before.
+#
+# The last three all come out as "about" or "in" in English, at three
+# different registers and in two different grammatical slots. について is the
+# everyday one and the default. に関して is its formal cousin, the one a report
+# or a formal letter reaches for. における is different in kind rather than in
+# degree: it does not mark a topic for a verb at all, it joins two nouns, the
+# way "in" does in "the best restaurant in Tokyo" rather than in "let's talk
+# about Tokyo".
+#
+#    1  こと      turning what you do into a thing
+#    2  ところ    about to, mid-way, only just done
+#    3  という    what it is called
+#    4  とは      what that word actually means
+#    5  について  talking about it
+#    6  に関して  the same thing, in writing
+#    7  における  "in", when it describes a noun
+#
+# No lesson here depends on another's *form* -- every one attaches to plain-form
+# material Book Two already built -- but lessons 3 and 4 are a deliberate pair
+# (both name or define something), lessons 5 and 6 are a deliberate pair (one
+# job, two registers), and lesson 4 leans on lesson 1 for its sharpest content,
+# the boundary between defining とは and ordinary こと + は. The checkpoint
+# closes the chapter rather than splitting it (DR-021).
+#
+# ON `order`. The chapter breakdown (docs/plans/book-three-band-09.md section 2)
+# assigns 266-273, reading forward from ranges the two chapters before this one
+# were expected to spend in full. Both returned slots when they were actually
+# authored -- chapter 8 landed at 252-257 and chapter 9 at 258-263 -- so the
+# tail of the book was renumbered contiguously and this chapter runs 264-271:
+# seven teaching lessons at 264-270, checkpoint at 271. Nothing else in the
+# breakdown's numbering table changes. `order` is global across books, and
+# scripts/kanji.mjs sorts by it with no book-awareness, which is why it does not
+# restart per book.
+#
+# NEW KANJI: one. 関, on lesson 6, from に関して -- confirmed absent from
+# data/content-manifest.json's kanji set at the time of writing, and written in
+# kanji in every one of the corpus's twenty-eight に関して sentences, so there
+# is no honest kana-only fallback for it. No other lesson in this chapter brings
+# a character: という, とは, について and における are written in kana in
+# ordinary use, and ところ's grammar is kana too -- 所 is already taught, via
+# 台所, and is available if a concrete "place" citation is ever wanted. The
+# `kanji:` arrays below are all empty pending the wiring pass; this header is
+# where that pass reads which lesson takes which character.
+#
+# NEW VOCABULARY: one word, ところ, and vocabulary/b3-09-reference.yaml carries
+# the argument for it and the argument for why every other chapter of this book
+# ships none. The `wordIds` below name words the learner already owns which the
+# lesson's own sentences use or whose collision the lesson turns on; they are an
+# SRS pull, not new teaching. vocab.tokoro on lesson 2 is the one exception.
+#
+# One rule the grammarNotes hold themselves to, stated once because it is
+# stricter than Book Two's and a later editor will otherwise undo it by
+# accident. A grammarNote here may show a fragment (～ことがある,
+# とはどういう意味ですか, 何百という, についての本), a conjugation chain, or a
+# sentence that is a phrase card in this chapter or in an earlier book,
+# quoted whole.
+# Several notes therefore describe a sentence in English where a draft would
+# have composed a Japanese one or trimmed an attested one down to fit. That is
+# 04-stage-reading.md section 8 reaching into the prose, not only into the
+# cards.
+#
+# content-source: every phrase this file references is a verified Tatoeba pair,
+#   cited by id in `tatoebaId` in phrases/b3-09-reference.yaml. No
+#   training-canonical sentence is used anywhere in this chapter
+#   (04-stage-reading.md section 8).
+
+- id: b3.koto
+  order: 264
+  chapterId: b3.band-9
+  situation: What you mean, exactly
+  title: Anything can be a thing
+  canDo: Turn what you do, think or feel into a noun another sentence can be about
+  wordIds:
+    - vocab.koto
+    - vocab.suki
+    - vocab.iu
+    - vocab.tori
+    - vocab.byouki
+  phraseIds:
+    - band9.its-necessary-to-avoid-stress
+    - band9.mike-likes-to-play-basketball
+    - band9.he-proved-to-be-an-ideal-husband
+    - band9.unfortunately-he-refused-to-come
+    - band9.birds-learn-to-fly-by-instinct
+    - band9.playing-tennis-is-easy-for-me
+    - band9.what-he-says-makes-no-sense
+    - band9.there-are-sometimes-blizzards-in-kanazawa
+    - band9.germs-can-cause-sickness
+    - band9.anything-to-add-to-his-explanation
+  kanji: []
+  patternId: grammar.b3-koto
+  grammarNote: "Book Two carded こと and told you what it does — it turns a whole action into a noun. Then it only ever let you put that noun in front of ある, in 〜たことがある, or in front of できる, in 〜ことができる. This lesson is that promise cashed. Take any plain-form clause, put こと after it, and you have a noun. Not a noun that means anything in particular — a noun made of that clause, which you can then do the ordinary things to. Three of those things account for nearly everything you will meet. Mark it with が and it is the subject of a new predicate: ストレスを避けることが必要です. Mark it with を and it is the object of a new verb: あいにく彼は来ることを拒んだ, 鳥は本能的に飛ぶことを覚える. Mark it with は and it is the topic: テニスをすることは私には簡単だ. The whole trick is that 拒む and 覚える and 必要 all need a noun on their left, and 来る and 飛ぶ and テニスをする are not nouns until こと makes them so. English mostly hides this behind -ing and to, which is why the Japanese looks like extra machinery when it is really doing what English does silently. What goes in front follows the attachment table you already have. A plain verb and an い-adjective go straight on. A noun or a な-adjective goes through である first, the same slot べき needed in the chapter before this one: 彼は理想的な夫であることが分かった, not 夫なこと. In ordinary usage the clause is plain rather than polite — 食べることは, not 食べますことは, though the polite version does survive in very formal speech and you may meet it. The single commonest thing this pattern builds is 言うこと, what somebody says treated as a thing you can then judge: 彼がいうことはわけがわからない. Watch the が in that sentence. The subject sits inside the こと clause, so it takes が, not は — は would be marking the topic of the whole sentence, which is already the こと phrase. Now the trap, and it is a real one because the string is identical to something you already own. 〜ことがある in the non-past is not 〜たことがある. With a past verb in front it counts your experience: have you ever. With a non-past verb in front it does something else entirely, and there are two flavours. It can say a thing happens sometimes — 金沢では吹雪くことがある, 細菌が病気を引き起こすことがある. English reaches for sometimes in one and can in the other, and the Japanese is the same shape in both. Or it can say a thing of that description exists — 彼の説明に何か補足することがありますか, is there anything to add. 何か in front is usually the giveaway for the second reading. Same three words, different tense in front, a different claim. One thing not to over-learn from this lesson. Japanese has a second nominaliser, の, which does much of the same work — and no chapter of this course has taught it, this one included. The two overlap heavily and are often both possible, but they are not always interchangeable: with verbs of direct perception, 見る and 聞こえる among them, it is の that is used and こと that is not. When you meet a のが or のを where you expected ことが or ことを, that is what you are looking at, and nothing here is broken."
+
+- id: b3.tokoro
+  order: 265
+  chapterId: b3.band-9
+  situation: What you mean, exactly
+  title: Right about now
+  canDo: Say you are about to do something, right in the middle of it, or only just finished
+  wordIds:
+    - vocab.tokoro
+    - vocab.daidokoro
+    - vocab.wasureru
+    - vocab.kuruma
+    - vocab.matsu
+    - vocab.kaeru
+    - vocab.miru
+  phraseIds:
+    - band9.im-going-to-meet-a-certain-student
+    - band9.i-almost-forgot-all-about-that
+    - band9.i-was-nearly-run-over-by-a-car
+    - band9.shes-cleaning-off-the-make-up
+    - band9.ive-been-expecting-good-news-from-them
+    - band9.mary-has-just-come-home
+    - band9.he-came-home-just-now
+    - band9.have-you-ever-seen-a-spider-spinning-its-web
+  kanji: []
+  patternId: grammar.b3-tokoro
+  grammarNote: "ところ is a new word, and the first thing to say about it is that you already half-know it. Its kanji is 所, the one in 台所, and its plain meaning is a place. What this lesson is about is its second life, which works the same way こと's does — put a clause in front of it and it stops being a place on a map and becomes a place in time, the point you are at in something. That grammar is written in kana, so you will type ところ rather than 所 here. Three points on the line, set by the form of the verb in front. Dictionary form plus ところだ puts you just before it happens: ある学生に会うところです, the meeting has not started. ている plus ところだ puts you inside it: 彼女はメーキャップを落としているところですよ, started and not finished. Plain past plus ところだ puts you just after: メアリーはただいま戻ったところです, over, and only just. That is the whole pattern, and the form in front is the only thing that decides which of the three you get. Put ところ into the past and the first of the three changes its flavour. うっかりそれを忘れるところだったわ is not a report that she was about to forget — it is a near miss, she came that close and did not. 危なく車にひかれるところだった is the same thing at higher stakes, and 危なく, あやうく and もう少しで are the adverbs this reading keeps company with. It is worth knowing that the near-miss reading is the usual one and not the only one: a past ところだった with no such adverb can simply mean was about to, as in an attested sentence about the sun coming up at that moment, where nothing was avoided. Because ところ is a noun, it takes particles like one. を is the useful one: クモがクモの巣を張るところを見たことがありますか. What was seen there is not the spider but the moment, and 見る, 捕まえる and 押さえる are the verbs that catch someone at a ところ. The end of that sentence is Book Two's 〜たことがある in its own past-tense job, which is worth reading next to the non-past ことがある of this chapter's こと lesson. A near neighbour you will meet and this chapter does not teach: 〜たばかり also comes out as just did. It measures how recently in the speaker's feeling; たところ says the action is barely over. They overlap a great deal. Finally, a family to recognise rather than produce. ところ also opens a sentence as a connective, and then it is not this noun at all: ところで means by the way, ところが means however, Vたところで means even if, and Vたところ、 means and then, as it turned out. Around eighty of the corpus's two hundred and twenty ところ sentences are one of these, so you will meet them constantly in reading; none of them is what this lesson teaches, and none of them is tested. Two more strings to leave alone: ふところ (懐, the inside of your coat, and by extension your purse) and ひところ (一頃, at one time) are different words that happen to contain the same three characters."
+
+- id: b3.toiu
+  order: 266
+  chapterId: b3.band-9
+  situation: What you mean, exactly
+  title: What it's called
+  canDo: Give something its name, and say what a rumour, a claim or a fact actually was
+  wordIds:
+    - vocab.iu
+    - vocab.namae
+    - vocab.otoko
+    - vocab.hito
+    - vocab.fuyu
+    - vocab.shinu
+  phraseIds:
+    - band9.a-man-named-slim-was-killed-in-that-accident
+    - band9.theres-a-place-called-kuchiwa-in-hiroshima
+    - band9.theres-a-rumor-johnson-is-going-to-be-traded
+    - band9.they-say-were-going-to-have-a-severe-winter
+    - band9.the-point-is-that-the-mothers-are-too-busy
+    - band9.show-business-is-really-glamorous
+    - band9.thousands-of-people-died-of-hunger
+    - band9.the-holiday-ended-all-too-soon
+  kanji: []
+  patternId: grammar.b3-toiu
+  grammarNote: "Start with the boundary, because this is と plus 言う and you have had both since Book Two's reported-speech chapter, where the shape was a whole sentence, then と, then a tensed verb of saying at the very end. That chapter's shape reports an utterance and closes the sentence. This one does not close anything: it sits inside a sentence, in front of a noun, and says what that noun is called. スリムという名の男が事故で死んだ. 広島に口和というところがあります. Name, という, then the noun it belongs to. You reach for it when you expect the listener not to know the name — 佐藤さんが来ました needs no という at all if they know who 佐藤さん is. What sits in front does not have to be a name. Put a whole clause there and という attaches it to a noun as its content: ジョンソンがトレードされるという噂がある, a rumour that he will be traded. 噂, 話, 知らせ and 事実 are the nouns this shape keeps company with, and English does exactly the same thing with that. 厳しい冬になるという話です is the version with no source named at all, and it is how Japanese says they say without saying who. Close a clause with ということだ and you get the same second-hand flavour, or else the point is: 要は母親たちが忙し過ぎるということだ. Now the exception to the boundary above, because the tidy version of it is false. という can end a sentence, and when it does it is this pattern rather than the reported-speech one — a clause plus という with nothing after it reports hearsay with no speaker anywhere in the sentence, the written equivalent of 〜そうだ. What it never is, in that position, is 〜と言いました: that shape needs somebody named or implied who did the saying, and a tensed verb to do it with. If there is no verb of saying and no sayer, you are looking at this lesson's word. Three more uses worth recognising on sight, none of them worth deriving. というのは opens an explanation — ショービジネスというのは本当に華やかだ, as for show business, it is glamorous — and it is close enough to the next lesson's とは that the two are often swappable here, with というのは the more conversational of the pair. After a number word, という turns a count into an emphasis: 何千という人が飢えで死んだ, thousands upon thousands. And あっという間に is a fixed idiom with its own dictionary entry, literally the space of time it takes to say ah: 休暇はあっという間に終わった. Learn that one whole; taking it apart teaches nothing you can reuse."
+
+- id: b3.towa
+  order: 267
+  chapterId: b3.band-9
+  situation: What you mean, exactly
+  title: What that word means
+  canDo: Define a term the way a glossary would, or react to something surprising enough to comment on
+  wordIds:
+    - vocab.koto
+    - vocab.kasa
+    - vocab.wasureru
+    - vocab.hito
+  phraseIds:
+    - band9.darkness-is-the-absence-of-light
+    - band9.the-arctic-is-the-area-round-the-north-pole
+    - band9.military-training-is-training-given-to-soldiers
+    - band9.a-gentleman-is-a-man-of-independent-means
+    - band9.it-was-careless-of-me-to-do-that
+    - band9.it-was-careless-of-her-to-leave-her-umbrella
+  kanji: []
+  patternId: grammar.b3-towa
+  grammarNote: "Before anything else, a warning about what とは is not, because searching for it in real text is misleading in a way no other pattern in this chapter is. The corpus this book quotes from has four hundred and ninety-nine sentences containing the string とは, and two hundred and eighty-five of them contain ことは — that is bare こと from this chapter's こと lesson with は on the end, and it has nothing to do with this pattern. 彼がいうことはわけがわからない is not a definition of anything. When you see とは, look at the two characters in front of it first. With that out of the way, here is what the real pattern does. Put a bare noun in front and とは sets it up as a term to be explained; what follows is the explanation, and it usually closes on ことだ or である, because a definition of a noun has to end in a noun. 闇とは光がないことです. 軍事訓練とは兵士たちが受ける訓練である. ジェントルマンとは独立した財産のある人のことだ. 北極圏とは北極周辺の地域の事である. That is the voice of a glossary, an encyclopedia or a textbook, and Xとは...のことだ is a frame you can use to define almost anything. The question form is とはどういう意味ですか, what does it mean, and it is the same pattern turned around. Put a whole clause in front instead and the job changes completely. Now とは is not defining, it is reacting: そんな事をするとはうかつだった, バスに傘を忘れるとは彼女はそそっかしい. What follows is a verdict on somebody, and the verb in front stays non-past even when the deed is over, because the clause is naming the deed rather than dating it. These two jobs feel unrelated in English and are the same move in Japanese — set something up, then say something definitive about it. There is a third thing a noun plus とは can be, and it is not this pattern. と also means with and and, and は can go on top of it: 彼とは１０年来の知り合いだ is not defining 彼, it is saying who the speaker has known. If the sentence goes on to compare, contrast, or say who something was done with, you are looking at ordinary と with は, and the corpus has several dozen of those. Two boundaries left. とはいえ, which this book taught in its contrast chapter, is a different word with a different job — although, in spite of that — and it is not this lesson's defining or reacting とは. And 〜とは限らない is a fixed idiom meaning not necessarily, common enough to recognise on sight and not something you need to produce; it is a citation here rather than material, and it is not tested."
+
+- id: b3.nitsuite
+  order: 268
+  chapterId: b3.band-9
+  situation: What you mean, exactly
+  title: Talking about it
+  canDo: Say what you are talking, writing, asking or thinking about
+  wordIds:
+    - vocab.tenki
+    - vocab.hanasu
+    - vocab.hon
+    - vocab.kaku
+  phraseIds:
+    - band9.they-chatted-about-the-weather
+    - band9.please-tell-me-about-your-hobbies
+    - band9.i-asked-him-about-the-accident
+    - band9.he-wrote-a-paper-on-the-subject
+    - band9.this-is-a-story-about-a-cat
+  kanji: []
+  patternId: grammar.b3-nitsuite
+  grammarNote: "This is the easiest thing in the chapter and the one you will use most. Take a noun, put について after it, and it is what the talking, writing, asking, reading or thinking is about. 彼らは天気についておしゃべりした. あなたの趣味について話してください. その事故について彼に質問した. 彼はその問題について論文を書いた. There is no attachment table to learn, because what goes in front is always a noun. If what you want to talk about is not a noun yet, make it one first — こと is how, and a question can go in front too by keeping its か, as in a sentence about who should be appointed chairman. One structural point. To put について in front of a noun rather than a verb, add の: これは、ある猫についての物語です, a story about a cat. That の is not optional, and it is what any phrase needs before it can modify a noun. On register, do not over-correct. について is not casual — it is neutral, and it is completely at home in an academic paper as well as in a conversation about the weather. The next lesson's に関して is the marked one, not this one. Reach for について by default. Finally, the trap. について is written in kana, and so is the て-form of the ordinary verb 付く — to stick, to attach, to follow, to set out on. Put that after に and you get the identical string with none of this grammar in it. 途についている is to be on one's way home. 床についてから is after going to bed. シャツについている is stuck to your shirt. 私の後について is follow me. Seven sentences in the corpus this book quotes from are that verb rather than this pattern. The test is whether the sentence is about a topic of discussion at all; if something is attached to something, or somebody is following somebody, it is the verb."
+
+- id: b3.nikanshite
+  order: 269
+  chapterId: b3.band-9
+  situation: What you mean, exactly
+  title: On the subject of
+  canDo: Mark a topic in writing or formal speech, the way について does in conversation
+  wordIds:
+    - vocab.shigoto
+    - vocab.hon
+    - vocab.tenki
+    - vocab.kaku
+  phraseIds:
+    - band9.sam-is-serious-about-his-work
+    - band9.he-made-a-few-remarks-on-the-book
+    - band9.i-agree-with-you-on-this-issue
+    - band9.our-conversation-opened-upon-the-weather
+    - band9.she-wrote-a-book-about-animals
+  kanji: []
+  patternId: grammar.b3-nikanshite
+  grammarNote: "に関して does について's job in a suit. Same slot, same noun in front, same meaning: サムは仕事に関してまじめです would mean exactly what 仕事についてまじめです means. What changes is the voice. に関して belongs to reports, formal letters, news writing and official speech, and the company it keeps in real sentences gives it away — 彼はその本に関していくつかの所見を述べた is not a way anybody talks. Read this chapter's two weather sentences side by side: the conversation itself was 天気についておしゃべりした, and the written account of it was 天気に関して始まった. Same subject, two registers. Say the register difference the right way round, because the easy version of it is wrong. について is not the casual one — it is the neutral one, correct everywhere, including in writing. に関して is the marked one: choosing it says something about the document you are in. So the practical advice is not to alternate between them but to keep について as your default and recognise に関して when you read it. Two shapes to have. に関しては, with は on the end, limits the claim to that one topic and leaves the rest open: 私はこの件に関しては、あなたに賛成です, on this one, whatever I think elsewhere. And in front of a noun it becomes に関する, with no の: 彼女は動物に関する本を書いた. That is the one structural difference from について, which needs の to do the same job — についての本, but に関する本. The reason is that 関する is a verb, meaning to concern or to relate, and a verb modifies a noun directly. It is not carded on its own, because outside this construction and its own attributive you are unlikely to meet it. 関 is a new character. It is the 関 of 関係, a relationship or connection, and of 関心, interest in something; you will also meet it read げん in 玄関, the entrance hall of a house, where it has nothing to do with any of this."
+
+- id: b3.niokeru
+  order: 270
+  chapterId: b3.band-9
+  situation: What you mean, exactly
+  title: In, before a noun
+  canDo: Say where, or in what respect, something is true, when it describes a noun rather than a whole sentence
+  wordIds:
+    - vocab.takai
+    - vocab.kaku
+    - vocab.hito
+  phraseIds:
+    - band9.the-frequency-of-crime-in-the-town-is-high
+    - band9.you-must-not-lose-sight-of-your-goal-in-life
+    - band9.she-wrote-on-gender-bias-in-science
+    - band9.the-importance-of-propaganda-in-politics
+  kanji: []
+  patternId: grammar.b3-niokeru
+  grammarNote: "における is the odd one of the three, and the difference is not register. について and に関して both mark a topic for a verb — what the talking or writing is about. における does not do that at all. It sits between two nouns and joins them into a single noun phrase: この町における犯罪, crime in this town; 政治における宣伝活動, propaganda in politics; 人生におけるゴール, a goal in life. Nothing has been marked as a topic; a bigger noun has been built. Once you see that, the sentences fall out. この町における犯罪の発生率は高い is a sentence about a rate, and everything before は is one long noun. 君は人生におけるゴールを見失ってはいけない has を on the end of the phrase, and that を belongs to 見失う, not to における. 彼女は科学における性的偏見について書いた has both markers doing their own jobs in one sentence — における builds 科学における性的偏見, and について makes that whole phrase the topic of 書いた. Try to swap them and you do not get nonsense, you get a different sentence: 科学についての性的偏見 would be bias about science, which is not what she wrote about. The English preposition in covers all of this, which is why English gives no warning that a distinction exists. Register is real too. における is written Japanese — reports, papers, headlines, contracts — and in speech an ordinary で or の would carry the same idea: この町の犯罪, この町で起きる犯罪. Choosing における is choosing a document. It also stacks, which is the main reason writing likes it: 政治における宣伝活動の重要性 is three layers deep, and building that in speech would take a whole sentence. One more thing, for later. における has a cousin, において, which is the same word attaching to a clause rather than modifying a noun, and it comes up in the chapter after this one. You do not need it here — nothing in this lesson depends on it — and when you meet it, it is this word you will be recognising."
+
+- id: b3.checkpoint-9
+  order: 271
+  chapterId: b3.band-9
+  situation: Integration & checkpoint
+  title: Chapter 10 checkpoint
+  canDo: Recognise everything this chapter taught
+  wordIds: []
+  phraseIds: []
+  kanji: []
+  checkpoint: recognition
+  grammarNote: "A wide pass over everything this chapter has taught, and the place where seven things taught one at a time get set beside each other. Two of them do the same job and are worth separating first. こと turns a clause into a noun that can be a subject, an object or a topic; ところ turns a clause into a point in time — before, during or just after. Neither has anything to do with the other beyond the shape of the move. What comes back most often is the boundary that costs the most to get wrong. とは after a bare noun defines a term. こと followed by は is a nominalised clause with the topic particle on it, and it is by far the more common of the two in real text — most of what looks like とは in a search is exactly that. If a sentence sets a word up and then explains it, that is とは; if it turns an action into a thing and then says something about it, that is こと plus は, the material of this chapter's own こと lesson rather than its とは lesson. The same test decides a second pair. という names what something is called and sits inside a sentence, or closes one as hearsay; Book Two's と言いました reports what somebody actually said and needs a sayer and a tensed verb of saying. If nobody is doing the saying, it is という. Then the three that all come out as about or in. について is the neutral default and marks a topic for a verb. に関して is the same job in a formal document, and turns into に関する in front of a noun. における is not the same job at all — it joins two nouns into one phrase, and the giveaway is that a noun follows it directly rather than a verb coming later to be about something. Some of what comes back will hinge on one small thing: a non-past verb in front of ことがある rather than a past one, which changes it from an experience into a tendency; a ところ that turns out to be ところが and a different grammatical category; a について that turns out to be the verb 付く. Those are the places worth slowing down. Type the reading or the meaning rather than picking it out of a line-up. Anything you miss comes back sooner. It finishes when the remaining set empties; retry as often as you like, nothing is recorded."
