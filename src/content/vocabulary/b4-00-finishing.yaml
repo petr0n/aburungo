@@ -1,0 +1,508 @@
+# Book Four, Chapter 1 vocabulary -- forty-two words, and every one of them was
+# already in a sentence the learner is about to read.
+#
+# This file is the first of its kind in the fluency stage, so the reason it
+# exists is worth writing down rather than leaving to be inferred. Book Three
+# shipped ten chapters and one word (ところ, in vocabulary/b3-09-reference.yaml),
+# because 04-stage-reading.md section 3 handed vocabulary at this stage to a
+# reading library and to mining. The library does not exist. Book Four's plan
+# (docs/plans/book-four-bands.md section 2) suspends that sentence for as long
+# as that is true, and replaces it with a narrower rule: a lesson teaches the
+# untaught content words of the sentences it is already quoting. Not a curated
+# situation list, not a frequency list -- the words that are in the way of
+# reading the card in front of you.
+#
+# So nothing here was chosen for its own sake. Every word below appears in a
+# phrase in phrases/b4-00-finishing.yaml, and every word whose sentence did not
+# survive the carding pass was dropped rather than kept for tidiness. The
+# breakdown named 旅 (from #166668), 腕 (from #100843) and 描く (from #161382)
+# as firm; none of those three sentences is carded, so none of those three words
+# is here. 話し合う took 描く's slot in lesson 7 because its sentence is carded
+# and 描く's is not.
+#
+# Two ids are not the plain romaji, and both follow Book One's vocab.hana-nose
+# and Book Two's vocab.kaze-cold:
+#
+#   者 もの (a person) -> vocab.mono-person, leaving vocab.mono free for 物,
+#     the ordinary "thing", which no book teaches yet and which every book
+#     eventually will. Lesson 3's note makes the collision teaching material
+#     rather than hiding it.
+#
+# ---------------------------------------------------------------------------
+# ON THE JLPT TAGS, which are noisier here than in any file before it.
+#
+# The rule is the one Book Two's doctor chapter set and Book Three's ところ
+# followed: tag the word at the level the reference lists in data/jlpt actually
+# put it at, not at the level of the book it lands in. The learner never reads
+# a level (DR-024); the only consumer of this field is coverage tooling, and
+# nudging a word into this book's band would make that tooling report a lie in
+# two directions at once.
+#
+# Following that rule honestly produces four N1 tags on words nobody would call
+# advanced -- あらかじめ, 近づく, スピード and どうやら. That is a fact about the
+# reference lists (tanos and open-anki), not about the words: they are simply
+# the only lists carrying those four, and 予め/あらかじめ and 近付く/ちかづく sit
+# on the N1 sheet with nothing below them. Four more depart from what the
+# breakdown assumed, upward in the sense of easier: 故障 and 用意 are on the N4
+# list rather than N3, and 一番 and うち are on the N5 list, so they are tagged
+# there. Three words -- 二度と, 送り返す and お湯 -- are on no list at all in the
+# exact form carded (the lists carry 湯/ゆ, not お湯), and carry the nearest
+# honest level with this note standing in for a citation.
+#
+# content-source: training -- headword, reading, part of speech and gloss
+#   verified against JMdict for Applications 3.6.2 on 2026-09-06, sequence
+#   number inline on every entry, and the sense number checked against the
+#   sentence that carries the word rather than taken from the breakdown. Six
+#   senses turned out not to be the sense the breakdown named; each of those
+#   entries says so in its own notes. All but two entries (塩っぱい, which is
+#   not carded, and お湯) are flagged common in JMdict.
+# jlpt-source: training -- JLPT level unverified (JMdict carries no JLPT data).
+#   Levels follow data/jlpt/reference-*.json as set out above.
+
+# ── Lesson 1: Done, and gone ──────────────────────────────────────────────────
+
+- id: vocab.koshou
+  jlpt: N4
+  word_type: noun
+  theme: trouble
+  japanese: 故障
+  reading: こしょう
+  romaji: koshou
+  english: breakdown, being out of order
+  notes: What a machine does when it stops working. 故障する is the verb and 故障している is the state, which is what you say pointing at a lift or a ticket gate. Not for people and not for plans -- a broken arm is 骨折, a plan that fell through is 駄目になった. Watch the reading against 胡椒, also こしょう, which is pepper. JMdict seq 1267180, sense 1.
+
+- id: vocab.bamen
+  jlpt: N3
+  word_type: noun
+  theme: leisure
+  japanese: 場面
+  reading: ばめん
+  romaji: bamen
+  english: scene (in a film or play)
+  notes: JMdict's first sense is the wider one, a scene or setting in the sense of the situation something happens in. The sentence in this lesson uses the second, a scene in a film -- アクション場面, an action scene -- and that is the sense JMdict itself files that sentence under. Both are live; the film sense is the one you will meet first. JMdict seq 1355910, sense 2.
+
+- id: vocab.taikutsu
+  jlpt: N3
+  word_type: na-adj
+  theme: feeling
+  japanese: 退屈
+  reading: たいくつ
+  romaji: taikutsu
+  english: boring, tedious
+  notes: As an adjective it describes the thing -- 退屈な映画, a boring film. As a verb, 退屈する, it describes you -- 退屈してしまう is ending up bored, which is what this lesson's sentence says. English uses one word for both ends and Japanese does not, so decide first whether you are describing the film or yourself. JMdict seq 1596750, sense 1 for the adjective and sense 2 for the verb the sentence uses.
+
+- id: vocab.sukunai
+  jlpt: N5
+  word_type: i-adj
+  theme: quality
+  japanese: 少ない
+  reading: すくない
+  romaji: sukunai
+  english: few, not much
+  notes: The opposite of 多い, and the pair behaves unlike English. Both go at the end of a sentence quite happily -- 人が少ない -- but in front of a noun they are stiff, and 少ない映画 for "a film with little of something" only works because 少ない is describing what came before it, not the film. Do not confuse it with 少し, which is an adverb meaning a little. JMdict seq 1348910, sense 1.
+
+- id: vocab.uchi
+  jlpt: N5
+  word_type: noun
+  theme: home
+  japanese: うち
+  reading: うち
+  romaji: uchi
+  english: one's own home, one's own household
+  notes: JMdict's headword is 家 and marks it as usually written in kana, which is why this card is the kana form. It is not a synonym for 家 いえ. 家 is a building; うち is yours -- your home, your family, your side of things -- so うちのクーラー is our air conditioner and うちの赤ん坊 is our baby, and both would be odd with いえ. This is also the うち in うちの会社, the company I work for. JMdict seq 1191740, sense 1.
+
+# ── Lesson 2: Ready in advance, left as it is ─────────────────────────────────
+
+- id: vocab.youi
+  jlpt: N4
+  word_type: noun
+  theme: daily-life
+  japanese: 用意
+  reading: ようい
+  romaji: youi
+  english: preparation, getting ready
+  notes: 用意する is to get something ready -- food, a room, money, an answer. 準備 covers almost the same ground and is the one to reach for when the preparation is a process rather than an object; 用意 leans towards laying something out. Its reading collides with 容易 ようい, meaning easy, which is a different word entirely. JMdict seq 1546220, sense 1.
+
+- id: vocab.makaseru
+  jlpt: N3
+  word_type: verb
+  verb_class: ru
+  theme: work
+  japanese: 任せる
+  reading: まかせる
+  romaji: makaseru
+  english: to leave (a job or decision) to someone, to entrust
+  notes: The thing handed over takes を and the person it is handed to takes に -- 彼に仕事を任せる. 任せてください, leave it to me, is the phrase you will hear most. It is transitive and ichidan, so 任せて, 任せた, 任せておく all behave the way 食べる does. JMdict seq 1467150, sense 1.
+
+- id: vocab.anshin
+  jlpt: N4
+  word_type: na-adj
+  theme: feeling
+  japanese: 安心
+  reading: あんしん
+  romaji: anshin
+  english: relief, peace of mind
+  notes: Not the same as 安全, safe. 安全 is a property of the thing; 安心 is what you feel about it, so a road can be 安全 and you can be 安心 about walking down it. 安心だ says the situation is one you need not worry about, and 安心する is the moment of relief. JMdict seq 1153890, sense 1.
+
+- id: vocab.ichiban
+  jlpt: N5
+  word_type: adverb
+  theme: basics
+  japanese: 一番
+  reading: いちばん
+  romaji: ichiban
+  english: most, best
+  notes: In front of an adjective it makes a superlative with no other machinery at all -- 一番いい, 一番大きい, 一番好き. That is the sense this chapter uses, and it is JMdict's second. The first is the noun, number one or first place, which is the same word doing an entirely ordinary job. JMdict seq 1165970, sense 2 for the adverb the sentence uses, sense 1 for the noun.
+
+- id: vocab.jibun
+  jlpt: N5
+  word_type: noun
+  theme: basics
+  japanese: 自分
+  reading: じぶん
+  romaji: jibun
+  english: oneself
+  notes: It refers back to whoever the sentence is already about, so 自分の部屋 is my room when I am speaking and his room when he is. That is why it is worth having, because Japanese leaves the subject out constantly, and 自分 keeps the reference straight without naming anybody. It is also used flatly for "I" in some registers, mostly male and mostly formal or military-flavoured. JMdict seq 1318610, sense 1.
+
+- id: vocab.arakajime
+  jlpt: N1
+  word_type: adverb
+  theme: time
+  japanese: あらかじめ
+  reading: あらかじめ
+  romaji: arakajime
+  english: beforehand, in advance
+  notes: JMdict's headword is 予め and marks it usually kana, which is why the card is kana. It is the adverb that says out loud what 〜ておく says with grammar, which is why the two turn up in the same sentence so often. Slightly formal; 前もって is the everyday twin and 事前に the one on forms. The N1 tag is what the reference lists say, not a claim about difficulty -- see the note at the top of this file. JMdict seq 1542860, sense 1.
+
+# ── Lesson 3: Give it a try ───────────────────────────────────────────────────
+
+- id: vocab.shiraberu
+  jlpt: N4
+  word_type: verb
+  verb_class: ru
+  theme: actions
+  japanese: 調べる
+  reading: しらべる
+  romaji: shiraberu
+  english: to look up, to check, to investigate
+  notes: The verb for finding something out on purpose -- in a dictionary, in a file, by examining an object. It is not 勉強する, which is studying to learn, and it is not 探す, which is looking for something you have lost. Ichidan and transitive. JMdict seq 1429060, sense 1.
+
+- id: vocab.tamesu
+  jlpt: N3
+  word_type: verb
+  verb_class: u
+  theme: actions
+  japanese: 試す
+  reading: ためす
+  romaji: tamesu
+  english: to try out, to test
+  notes: 試す is trying a thing to find out what it is like -- a machine, a recipe, somebody's patience. It sits very close to the てみる this lesson teaches, which is why 試してみる is common and not redundant -- the verb says you tested it, the auxiliary says you did it to see. Godan, ending in す, so the te-form is 試して. JMdict seq 1312260, sense 1.
+
+- id: vocab.mono-person
+  jlpt: N3
+  word_type: noun
+  theme: people
+  japanese: 者
+  reading: もの
+  romaji: mono
+  english: person (of a stated kind)
+  notes: The id is vocab.mono-person because もの is a busy reading. JMdict's own entry notes that 者 is rarely used without a qualifier, and that is the whole shape of it -- 営業の者, 若い者, 医者 -- somebody described by what they are rather than named. In front of an outsider it is also the modest way to refer to your own colleagues, which is what 営業の者 is doing in this lesson. Do not confuse it with 物 もの, a thing, or with the nominaliser もの Book Three uses, or with こと. JMdict seq 1322990, sense 1.
+
+- id: vocab.eigyou
+  jlpt: N3
+  word_type: noun
+  theme: work
+  japanese: 営業
+  reading: えいぎょう
+  romaji: eigyou
+  english: business operations, sales
+  notes: Two lives in one word. On a shop door 営業中 means open for business and 営業時間 is opening hours -- that is JMdict's first sense, trading. Inside a company 営業 is the sales department, JMdict's second, and that is what 営業の者 means here even though JMdict files this sentence under the first. JMdict seq 1173430, senses 1 and 2.
+
+- id: vocab.houseki
+  jlpt: N3
+  word_type: noun
+  theme: objects
+  japanese: 宝石
+  reading: ほうせき
+  romaji: houseki
+  english: jewel, precious stone
+  notes: 宝 is treasure and 石 is a stone, which is about as transparent as a compound gets. It is the stone itself; a piece of jewellery is 宝石類 or, more usually, アクセサリー. JMdict seq 1516220, sense 1.
+
+# ── Lesson 4: Away from here, on from now ─────────────────────────────────────
+
+- id: vocab.ou
+  jlpt: N3
+  word_type: verb
+  verb_class: u
+  theme: movement
+  japanese: 追う
+  reading: おう
+  romaji: ou
+  english: to chase, to drive (animals) along
+  notes: The breakdown for this chapter named JMdict's first sense, chasing or pursuing, and that is the sense you will meet most. The sentence carded here is filed by JMdict under a fourth sense instead -- driving a herd, which is what a cowboy does to cattle -- and the two are the same idea pointed from behind. Godan ending in う, so the negative bends to 追わない. JMdict seq 1432410, sense 1 for chasing and sense 4 for the sentence.
+
+- id: vocab.ushi
+  jlpt: N3
+  word_type: noun
+  theme: nature
+  japanese: 牛
+  reading: うし
+  romaji: ushi
+  english: cow, cattle
+  notes: One word for the whole animal, male or female. Read ぎゅう in compounds, where it usually means the meat -- 牛肉 ぎゅうにく, beef, and 牛乳 ぎゅうにゅう, milk. JMdict seq 1231490, sense 1.
+
+- id: vocab.ikiru
+  jlpt: N4
+  word_type: verb
+  verb_class: ru
+  theme: basics
+  japanese: 生きる
+  reading: いきる
+  romaji: ikiru
+  english: to live, to be alive
+  notes: Being alive, not residing somewhere -- that is 住む. 生きている is the ordinary way to say something is alive, since 生きる itself describes the change into that state more than the state. Ichidan and intransitive; the 生 is the character already in 学生 and 先生. JMdict seq 1378520, sense 1.
+
+- id: vocab.hitsuyou
+  jlpt: N4
+  word_type: na-adj
+  theme: basics
+  japanese: 必要
+  reading: ひつよう
+  romaji: hitsuyou
+  english: necessary, needed
+  notes: You have already built the construction. Book Three's obligation chapter taught 〜必要がある, there is a need to. This is the word inside it, standing on its own. What is needed takes が -- 衣食住が必要です -- exactly as it does after a potential verb, and for the same reason. Also a noun, 必要, a necessity. JMdict seq 1487660, sense 1.
+
+- id: vocab.dondon
+  jlpt: N4
+  word_type: adverb
+  theme: basics
+  japanese: どんどん
+  reading: どんどん
+  romaji: dondon
+  english: steadily, more and more
+  notes: A mimetic word, and its first sense in JMdict is literal -- the sound of banging or drumming. The one used twice in this chapter is the second -- something increasing steadily and fast, どんどん増える, どんどん減る. It sits naturally with 〜ていく and 〜てくる because all three are about change over time. JMdict seq 1009320, sense 2.
+
+# ── Lesson 5: Towards you, up to now ──────────────────────────────────────────
+
+- id: vocab.chikazuku
+  jlpt: N1
+  word_type: verb
+  verb_class: u
+  theme: movement
+  japanese: 近づく
+  reading: ちかづく
+  romaji: chikazuku
+  english: to approach, to draw near
+  notes: Both in space and in time -- a person walking over, and a date coming up, which is what this lesson's sentence uses it for. Also written 近付く. Godan, intransitive; the transitive partner is 近づける. The N1 tag is the reference lists' doing, not a claim about the word -- see the note at the top of this file. JMdict seq 1242170, sense 1.
+
+- id: vocab.heru
+  jlpt: N3
+  word_type: verb
+  verb_class: u
+  theme: actions
+  japanese: 減る
+  reading: へる
+  romaji: heru
+  english: to decrease, to go down (in number)
+  notes: Intransitive, so the number goes down by itself. The transitive partner is 減らす, to reduce something. Godan even though it ends in る, so 減らない and 減って. Its opposite is 増える. Watch the reading against 経る, also へる, which is to pass through or elapse. JMdict seq 1263120, sense 1.
+
+- id: vocab.kazu
+  jlpt: N3
+  word_type: noun
+  theme: numbers
+  japanese: 数
+  reading: かず
+  romaji: kazu
+  english: number, count
+  notes: How many of something there are -- 数が減る, 数を数える. Read すう in compounds and in mathematics, as in 数学 すうがく. It is not 番号, which is an identifying number like a phone number, and it is not 数字, the written digit. JMdict seq 1580820, sense 1.
+
+- id: vocab.doubutsu
+  jlpt: N5
+  word_type: noun
+  theme: nature
+  japanese: 動物
+  reading: どうぶつ
+  romaji: doubutsu
+  english: animal
+  notes: 動 is to move and 物 is a thing, so an animal is literally a moving thing, against 植物 しょくぶつ, a planted thing, a plant. 動物園 どうぶつえん is the zoo. JMdict seq 1451470, sense 1.
+
+- id: vocab.inu
+  jlpt: N5
+  word_type: noun
+  theme: nature
+  japanese: 犬
+  reading: いぬ
+  romaji: inu
+  english: dog
+  notes: Often written イヌ in katakana when the animal is meant as a species, in the way English writes Latin names -- the same convention as 猫 ネコ. JMdict seq 1258330, sense 1.
+
+# ── Lesson 6: Too much ────────────────────────────────────────────────────────
+
+- id: vocab.kiken
+  jlpt: N4
+  word_type: na-adj
+  theme: trouble
+  japanese: 危険
+  reading: きけん
+  romaji: kiken
+  english: dangerous, danger
+  notes: JMdict lists it as both a noun and a な-adjective, and both are ordinary. 危険です says something is dangerous, 危険な場所 is a dangerous place, 危険がある is there is a danger. Its opposite is 安全. On signs you will see it alone, in red, meaning exactly what it looks like. JMdict seq 1218560, sense 1.
+
+- id: vocab.yakunitatsu
+  jlpt: N4
+  word_type: verb
+  verb_class: u
+  theme: quality
+  japanese: 役に立つ
+  reading: やくにたつ
+  romaji: yakunitatsu
+  english: to be useful, to come in handy
+  notes: A fixed phrase with a verb on the end, so it conjugates on 立つ alone -- 役に立つ, 役に立たない, 役に立ちます, 役に立った. The に is part of the phrase and never moves. 役 by itself is a role or a use, so the whole thing is literally to stand in a role. JMdict seq 1537980, sense 1.
+
+- id: vocab.supiido
+  jlpt: N1
+  word_type: noun
+  theme: movement
+  japanese: スピード
+  reading: スピード
+  romaji: supiido
+  english: speed
+  notes: Used of vehicles and of processes, and most often in スピードを出す, to put on speed, which is what this lesson's sentence turns into a noun. 速さ is the neutral native word and 速度 the technical one. The N1 tag comes from the reference lists, which carry this word on no other sheet -- see the note at the top of this file. JMdict seq 1072310, sense 1.
+
+- id: vocab.suupu
+  jlpt: N3
+  word_type: noun
+  theme: food
+  japanese: スープ
+  reading: スープ
+  romaji: suupu
+  english: soup (Western)
+  notes: JMdict marks it Western soup specifically. Japanese soup is 汁 しる or 吸い物, and 味噌汁 is never スープ. Note that Japanese drinks soup rather than eating it, which is why this lesson's sentence says 飲めない for a soup too salty to get down. JMdict seq 1067040, sense 1.
+
+- id: vocab.douyara
+  jlpt: N1
+  word_type: adverb
+  theme: basics
+  japanese: どうやら
+  reading: どうやら
+  romaji: douyara
+  english: apparently, it seems
+  notes: It goes at the front of a sentence and flags that what follows is a guess rather than a fact, so it pairs with the hedges Book Three taught -- どうやら〜みたいだ, どうやら〜らしい. Leaving the hedge off and using どうやら alone happens, but the pair is what you will meet. The N1 tag is the reference lists' -- see the note at the top of this file. JMdict seq 1009020, sense 1.
+
+# ── Lesson 7: Left as it was ──────────────────────────────────────────────────
+
+- id: vocab.gaishutsu
+  jlpt: N3
+  word_type: noun
+  theme: daily-life
+  japanese: 外出
+  reading: がいしゅつ
+  romaji: gaishutsu
+  english: going out (of the house)
+  notes: 外出する is leaving home or the office for a while, with the expectation of coming back -- which is why 外出中 on a desk or a status message means out at the moment. Plainer speech uses 出かける for the same thing; 外出 is the word on a form or a sign. JMdict seq 1203800, sense 1.
+
+- id: vocab.modoru
+  jlpt: N4
+  word_type: verb
+  verb_class: u
+  theme: movement
+  japanese: 戻る
+  reading: もどる
+  romaji: modoru
+  english: to go back, to return
+  notes: JMdict's first sense is narrower than the one wanted here -- turning back part-way -- and the sense this chapter uses is the second, simply returning to where you were. 戻る is going back to a place you were at; 帰る is going home. Godan even though it ends in る. The transitive partner is 戻す, to put something back. JMdict seq 1535880, sense 2.
+
+- id: vocab.sonomama
+  jlpt: N3
+  word_type: adverb
+  theme: basics
+  japanese: そのまま
+  reading: そのまま
+  romaji: sonomama
+  english: as it is, without changing anything
+  notes: Worth learning whole rather than as その plus まま, because it is one word in practice, as in そのままにしておいて, leave it as it is. In this lesson's sentence it carries the second flavour JMdict lists, and just stayed that way -- he left, and that was that. Usually kana; the kanji form 其の儘 is not something you need to write. JMdict seq 1406030, senses 1 and 3.
+
+- id: vocab.fune
+  jlpt: N3
+  word_type: noun
+  theme: transit
+  japanese: 船
+  reading: ふね
+  romaji: fune
+  english: ship, boat
+  notes: The same reading covers 舟, which JMdict notes is usually small and hand-propelled, and 船, which is the general word and the one to write. Compounds read せん, as in 船長 せんちょう, the captain, and 造船 ぞうせん, shipbuilding. JMdict seq 1602800, sense 1.
+
+- id: vocab.hanashiau
+  jlpt: N3
+  word_type: verb
+  verb_class: u
+  theme: communication
+  japanese: 話し合う
+  reading: はなしあう
+  romaji: hanashiau
+  english: to talk something over, to discuss
+  notes: 話す plus 合う, and 合う is what makes it mutual -- two sides talking rather than one person speaking. That 合う turns up on other verbs the same way, 助け合う to help each other, 知り合う to get to know one another. Godan, from the 合う on the end. JMdict seq 1562310, sense 1.
+
+- id: vocab.nidoto
+  jlpt: N3
+  word_type: adverb
+  theme: time
+  japanese: 二度と
+  reading: にどと
+  romaji: nidoto
+  english: never again
+  notes: JMdict flags the thing that trips people up -- it is used with a verb in the negative, and the negative is where the "never" lives. 二度と戻らなかった is never came back; 二度と戻った is not a sentence. So read 二度と as a signal that a negative is coming. It is on none of the reference JLPT lists, so its level here is a judgement rather than a citation. JMdict seq 2110850, sense 1.
+
+# ── Lesson 8: Without ─────────────────────────────────────────────────────────
+
+- id: vocab.waru
+  jlpt: N3
+  word_type: verb
+  verb_class: u
+  theme: actions
+  japanese: 割る
+  reading: わる
+  romaji: waru
+  english: to break, to crack, to split
+  notes: JMdict's first sense is to divide, which is the arithmetic one, and the sense wanted here is the third -- breaking something brittle -- an egg, a plate, a window. It is transitive and the intransitive partner is 割れる, which is what the plate does. Godan even though it ends in る. JMdict seq 1208000, sense 3.
+
+- id: vocab.tegami
+  jlpt: N5
+  word_type: noun
+  theme: communication
+  japanese: 手紙
+  reading: てがみ
+  romaji: tegami
+  english: letter
+  notes: A letter you post. Not a letter of the alphabet, which is 文字. The reading is がみ rather than かみ because of the voicing that happens to the second half of a compound -- the same shift behind 手袋 てぶくろ. JMdict seq 1327720, sense 1.
+
+- id: vocab.kougi
+  jlpt: N4
+  word_type: noun
+  theme: study
+  japanese: 講義
+  reading: こうぎ
+  romaji: kougi
+  english: lecture
+  notes: A university lecture. 講義する is to give one, 講義を受ける to attend one. Its reading collides with 抗議 こうぎ, a protest, which is a word you would rather not confuse with this one in a sentence about a lecture hall. JMdict seq 1282260, sense 1.
+
+- id: vocab.okurikaesu
+  jlpt: N3
+  word_type: verb
+  verb_class: u
+  theme: communication
+  japanese: 送り返す
+  reading: おくりかえす
+  romaji: okurikaesu
+  english: to send back
+  notes: 送る plus 返す, both of which you already have, joined the way Japanese joins verbs -- the ます-stem of the first, then the second carrying all the conjugation. So it is 送り返した, 送り返します, and the stem 送り never changes. On no reference JLPT list, so the level here is a judgement rather than a citation. JMdict seq 1402710, sense 1.
+
+- id: vocab.oyu
+  jlpt: N4
+  word_type: noun
+  theme: home
+  japanese: お湯
+  reading: おゆ
+  romaji: oyu
+  english: hot water
+  notes: A separate word from 水 みず, which in Japanese means cold water and only cold water -- there is no "water" that covers both, so asking for 水 in winter gets you exactly that. The お is not optional politeness here; 湯 alone is used, but お湯 is what people say. It also means a hot bath. The reference lists carry 湯 ゆ at N4 rather than お湯, which is where this level comes from. JMdict seq 1002510, sense 1.

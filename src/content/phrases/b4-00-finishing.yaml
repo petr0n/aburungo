@@ -1,0 +1,571 @@
+# Book Four, Chapter 1 phrases -- finishing what was started.
+#
+# Forty sentences, five to a lesson, and not one of them is ours.
+# 04-stage-reading.md section 8 withdrew the composed-sentence exemption at the
+# reading stage and above -- "no training-canonical sentences at the reading
+# stage and above" -- and Book Four is a stage past that again. So every
+# sentence below is a verbatim Tatoeba pair carried out of
+# server/data/jmdict-examples-eng-3.6.2.json with its id in `tatoebaId`, and
+# nothing here was composed, trimmed, joined, or smoothed. Where a shape had no
+# clean attested sentence, the shape is described in a grammarNote and has no
+# card -- とく, the spoken contraction of ておく, is the clearest case, and
+# lesson 2 says so out loud rather than inventing one.
+#
+# What is new in Book Four is on the other side of this file: these sentences
+# now teach their own vocabulary. vocabulary/b4-00-finishing.yaml carries
+# forty-two words, all of them drawn from the forty sentences below, and every
+# word whose sentence did not survive the carding pass was dropped rather than
+# kept. That is docs/plans/book-four-bands.md section 2, and it is the reason
+# these sentences were chosen from a much larger attested set: the grammar came
+# first, and where two sentences taught the same form equally well, the one
+# whose unknown words were worth teaching won.
+#
+# Six candidates the breakdown offered are not here, each for a stated reason:
+#
+#   #166668 (私たちは５時間の旅で…) -- room for five cards a lesson, and the
+#     four others carry more of lesson 1's shape. Costs the word 旅.
+#   #226673 (お別れを言いに…立ち寄ってみました) -- same, in lesson 3.
+#   #100843 (彼は彼女の腕を取り、引きずっていった) -- the breakdown itself flags
+#     it, though not quite accurately (see below): 取り is a verb continuative,
+#     which no chapter teaches. Costs the word 腕.
+#   #235998 (１０分もすれば彼がやってきます) -- lesson 5 had five better ones.
+#   #202121 (デメリットが多すぎます) -- lesson 6 already has two い-adjective
+#     cards and #223720 is the cleaner of them.
+#   #161382 (私はいつも事物をあるがままに描くことにしている) -- あるがまま is
+#     literary and the breakdown marks it recognition-only, but the real
+#     objection is ことにしている: the breakdown claims Book Three chapter 8
+#     taught it, and it did not. b3-07-purpose.yaml cards ことになる and
+#     discusses ことにする inside that lesson's prose without ever giving it a
+#     pattern of its own. A card whose main clause rests on a form with no
+#     pattern behind it is a card the learner cannot check. Costs the word 描く,
+#     which 話し合う replaces.
+#
+#   #109822 (彼は雨の中を傘もささずに歩きつづけた) is the one declined on
+#     grammar rather than on room. 歩きつづけた is ます-stem + 続ける, an
+#     auxiliary no book has taught -- not Book One, not Book Two, and not any of
+#     Book Three's eleven chapters. Lesson 8 has four other ずに sentences and
+#     does not need to spend a learner's attention on an unglossed auxiliary in
+#     the main verb of the sentence.
+#
+# ---------------------------------------------------------------------------
+# ONE THING THE BREAKDOWN GOT WRONG, and what was done about it.
+#
+# Two carded sentences use の as a nominaliser -- #237020 (…しておくのが一番いい)
+# and #196686 (…乗るのは危険だ). The breakdown calls that "the のが nominaliser,
+# Book Three ch.10's". It is not. b3-09-reference.yaml teaches こと and says, in
+# that lesson's own words, that "Japanese has a second nominaliser, の, which
+# does much of the same work -- and no chapter of this course has taught it,
+# this one included", closing with "when you meet a のが or のを where you
+# expected ことが or ことを, that is what you are looking at, and nothing here is
+# broken." So the learner has been told what it is and told to expect it, which
+# is enough to read these two sentences, and their notes point back at that
+# rather than pretending の was taught. It still has not been.
+# ---------------------------------------------------------------------------
+#
+# The English is Tatoeba's own where Tatoeba's own would do. Eleven of the forty
+# depart from it, every one listed here by id and kind so a reviewer can check
+# them rather than take them on trust. Every Japanese string is untouched.
+#
+#   Where the corpus English hid the grammar or the word the card exists to
+#   teach:
+#   #228239 -- "The air conditioner is out of order" drops うち, which this
+#     lesson cards as a word. Glossed "Our air conditioner has broken down".
+#   #234664 -- "You can trust him with any job" hides both ておけば and 安心,
+#     and adds an "any" the Japanese does not have. Glossed "If you leave the
+#     job to him, you can rest easy".
+#   #165556 -- "in order to live" for 生きていく drops the 〜ていく this lesson
+#     is for. Glossed "in order to go on living".
+#   #143662 -- "bring" for 持っていく points the wrong way in English; bring is
+#     towards the speaker, which would be 持ってくる. Glossed "take along".
+#   #229868 -- "Certain animals are fast disappearing" hides 数 and 減る, both
+#     carded here as words, and the 〜てきている build-up. Glossed "The numbers
+#     of certain animals are steadily falling".
+#   #202686 -- "buy one for me as well" loses the go-and-come-back of 買ってきて.
+#     Glossed "pick one up for me while you're out".
+#   #201130 -- "I'm afraid I've eaten too much" reads as regret in English;
+#     どうやら〜みたいだ is a guess, and both halves are taught here. Glossed
+#     "It looks like I've eaten too much".
+#   #141111 -- "Down under the sea went the ship with all her crew" is a
+#     literary inversion that hides which noun is the subject and drops
+#     乗せたまま. Glossed "The ship went down under the sea with all her crew
+#     still aboard".
+#   #184197 -- "The students sat still, listening to the lecture" replaces the
+#     ずに construction with a different one. Glossed "The students listened to
+#     the lecture without stirring".
+#
+#   Where the corpus English was wrong or worn:
+#   #112180 -- "panting to have a go at it" is dated; JMdict's own gloss for
+#     うずうず is "itching to do something". Glossed "itching to have a go".
+#   #223657 -- "too salty to eat" for 飲めない, where the verb is drink and the
+#     note turns on that. Glossed "too salty to drink".
+#
+# ---------------------------------------------------------------------------
+# ROUTING. Book Four's stage is `fluency`, and `isShifted` treats every
+# non-foundation book alike, so LearnPage routes all of these to the typed
+# FillBlankCard and the learner types the whole reading back. One card carries
+# `recognitionOnly: true`:
+#
+#   b4band0.he-left-england-and-never-returned (#235915) -- thirty characters,
+#   a four-digit year read out as せんきゅうひゃくねん, and a verb continuative,
+#   去り, joining the two halves. The breakdown attributes that continuative to
+#   Book Three chapter 11 and it is not there: that chapter teaches であり, the
+#   *copula's* linking form, and says in its own prose that verbs have had the
+#   te-form for the job since Book One. The verb-side 去り、 is untaught. It is
+#   carded anyway because そのまま is worth meeting in a real sentence and
+#   because recognition is all that is asked of it; the note names the 去り
+#   rather than letting it pass as something the learner should already know.
+#   #201819 (ドアをそのままにしておいてはいけません) is a shorter そのまま
+#   sentence the breakdown did not list, and a later pass may prefer it.
+#
+# Nothing else here reaches the 41-kana ceiling; the longest producible reading
+# is #237020's at thirty-four.
+# ---------------------------------------------------------------------------
+#
+# These are independent utterances. Several would sit naturally side by side --
+# #226793 (お湯を全部使わないで) answers #112693 almost too neatly -- and they
+# are deliberately not authored as an exchange. A scripted back-and-forth is
+# multi-sentence composed text, which is exactly the surface the content rules
+# exist to keep out, and it stays out even when both halves are separately
+# attested.
+#
+# content-source: Tatoeba, via the sentence pairs embedded in JMdict for
+#   Applications 3.6.2 (server/data/jmdict-examples-eng-3.6.2.json). Every
+#   phrase carries its sentence id in `tatoebaId`; the id is quoted, because
+#   YAML reads a bare 162222 as a number and the schema rejects it. Verified by
+#   id against the corpus on 2026-09-06 -- all 40 resolve, and each Japanese
+#   string below matches its source character for character. Kana readings and
+#   romaji are transcriptions of the quoted sentence, not new content; every
+#   compound whose reading was not already obvious was checked against JMdict
+#   (アドレス帳 アドレスちょう 1017250, 牧草地 ぼくそうち 1521810, 衣食住
+#   いしょくじゅう 1158780, 水着 みずぎ 1371830, 羽織る はおる 1171780, ある種
+#   あるしゅ 2114450, 赤ん坊 あかんぼう 1383310, 乗組員 のりくみいん 1355380,
+#   海中 かいちゅう 1201640, 弾丸 だんがん 1419440, 込める こめる 1288790,
+#   噛み合う かみあう 1209150, 身じろぎ みじろぎ 2600420, 聞き入る ききいる
+#   1505870, 開封 かいふう 1202920, 目を通す めをとおす 1535250, いそいそ
+#   1000820, うずうず 1000980, ばっちり 1010280, こないだ 1004610). One reading
+#   could not be checked against this dictionary and is flagged where it
+#   appears: 智子 in #126798 is a personal name, and JMdict for Applications
+#   carries no name entries. ともこ is the standard reading of those two
+#   characters as a given name.
+# jlpt-source: training -- the level marks the chapter this content sits in, not
+#   the grammar's textbook level. てしまう, ておく, てみる, ていく/てくる, すぎる,
+#   まま and ずに are canonically N4 and arrive here only because Books One
+#   through Three never reached them; the sentences carrying them are N3-band
+#   text and tagging them N4 would misreport coverage.
+
+# ── Done, and gone ────────────────────────────────────────────────────────────
+
+- id: b4band0.i-lost-my-camera-the-other-day
+  jlpt: N3
+  scenario: completion
+  japanese: こないだ、カメラをなくしてしまった。
+  reading: こないだ、カメラをなくしてしまった。
+  romaji: konaida, kamera o nakushite shimatta.
+  english: I lost my camera the other day.
+  tatoebaId: "162222"
+  notes: The regret reading, and the plainest one in the chapter. なくした on its own reports the loss; なくしてしまった says it is done and cannot be undone and the speaker minds. こないだ is casual for この間, the other day.
+
+- id: b4band0.our-air-conditioner-has-broken-down
+  jlpt: N3
+  scenario: completion
+  japanese: うちのクーラーが故障してしまった。
+  reading: うちのクーラーがこしょうしてしまった。
+  romaji: uchi no kuuraa ga koshou shite shimatta.
+  english: Our air conditioner has broken down.
+  tatoebaId: "228239"
+  notes: Nobody did anything wrong here -- a machine broke -- and してしまった still fits, because the thing it marks is that the situation is now settled and unwelcome. うち is the household, not the building.
+
+- id: b4band0.i-left-my-address-book-in-my-room
+  jlpt: N3
+  scenario: completion
+  japanese: アドレス帳を部屋に忘れちゃった。
+  reading: アドレスちょうをへやにわすれちゃった。
+  romaji: adoresuchou o heya ni wasurechatta.
+  english: I left my address book in my room.
+  tatoebaId: "234291"
+  notes: The contraction. 忘れてしまった squeezes to 忘れちゃった in speech, and this is how you will hear it far more often than the full form. Same meaning, same regret, one register down.
+
+- id: b4band0.im-always-bored-by-films-with-little-action
+  jlpt: N3
+  scenario: completion
+  japanese: アクション場面の少ない映画にはいつも退屈してしまう。
+  reading: アクションばめんのすくないえいがにはいつもたいくつしてしまう。
+  romaji: akushon bamen no sukunai eiga ni wa itsumo taikutsu shite shimau.
+  english: I'm always bored with films that have little action.
+  tatoebaId: "234505"
+  notes: Non-past してしまう, with いつも in front of it -- so this is not one event that is over, it is what always ends up happening. That is the same form doing the same job on a habit rather than an incident. The の in 場面の少ない marks the subject inside a clause describing 映画; が would also be right there.
+
+- id: b4band0.she-kissed-me-full-on-the-lips
+  jlpt: N3
+  scenario: completion
+  japanese: 彼女にばっちりキスされちゃったよ。
+  reading: かのじょにばっちりキスされちゃったよ。
+  romaji: kanojo ni bacchiri kisu sarechatta yo.
+  english: She kissed me full on the lips.
+  tatoebaId: "95000"
+  notes: Book Three's passive with this chapter's contraction stacked on the end -- キスする, キスされる, キスされてしまった, キスされちゃった. Note what the pair does to the tone -- the passive says it happened to the speaker, ちゃった says it is done, and together they read as amused rather than sorry. This form does not always mean regret.
+
+# ── Ready in advance, left as it is ───────────────────────────────────────────
+
+- id: b4band0.we-prepared-snacks-beforehand
+  jlpt: N3
+  scenario: preparation
+  japanese: 私たちはあらかじめスナックを用意しておいた。
+  reading: わたしたちはあらかじめスナックをよういしておいた。
+  romaji: watashitachi wa arakajime sunakku o youi shite oita.
+  english: We prepared snacks beforehand.
+  tatoebaId: "166624"
+  notes: あらかじめ says in a word what しておいた says in grammar, which is why they sit together so comfortably. Take the adverb away and 用意しておいた still means got them ready in advance -- the ahead-of-time is in the おく.
+
+- id: b4band0.make-that-a-shared-folder
+  jlpt: N3
+  scenario: preparation
+  japanese: そのフォルダ、共有にしておいて。
+  reading: そのフォルダ、きょうゆうにしておいて。
+  romaji: sono foruda, kyouyuu ni shite oite.
+  english: Make that a shared folder.
+  tatoebaId: "212677"
+  notes: ておく in the te-form, used as a casual request -- the same 〜て on the end that has asked for things since Book One, with おく underneath saying do it now so it is done. The comma after フォルダ is where the topic particle would have been.
+
+- id: b4band0.i-want-to-keep-my-room-neat
+  jlpt: N3
+  scenario: preparation
+  japanese: 自分の部屋は出来るだけきちんとしておきたい。
+  reading: じぶんのへやはできるだけきちんとしておきたい。
+  romaji: jibun no heya wa dekiru dake kichinto shite okitai.
+  english: I want to keep my room as neat as possible.
+  tatoebaId: "149773"
+  notes: The other job. Here nothing is being prepared for a future event -- 〜ておく is leaving a state in place, keeping it that way. Book Two's たい goes on the おく, not on the する, giving しておきたい. 出来るだけ is the できる限り of Book Three's conditions chapter with a plainer word in front.
+
+- id: b4band0.leave-the-job-to-him-and-you-can-rest-easy
+  jlpt: N3
+  scenario: preparation
+  japanese: あいつに仕事を任せておけば安心だ。
+  reading: あいつにしごとをまかせておけばあんしんだ。
+  romaji: aitsu ni shigoto o makasete okeba anshin da.
+  english: If you leave the job to him, you can rest easy.
+  tatoebaId: "234664"
+  notes: Book Two's ば conditional built on the おく rather than on the main verb -- 任せておく, 任せておけば. Once you have handed the work over, the worry is over too. あいつ is blunt and familiar; it is what you call a friend, not a client.
+
+- id: b4band0.best-to-review-the-material-beforehand
+  jlpt: N3
+  scenario: preparation
+  japanese: プレゼンテーションの前に資料に目を通しておくのが一番いい。
+  reading: プレゼンテーションのまえにしりょうにめをとおしておくのがいちばんいい。
+  romaji: purezenteeshon no mae ni shiryou ni me o tooshite oku no ga ichiban ii.
+  english: It is best to review the material before the presentation.
+  tatoebaId: "237020"
+  notes: 目を通す is a fixed phrase, to run your eye over something, and ておく puts it in advance. The のが is the second nominaliser Japanese has -- Book Three's reference chapter named it, said no chapter had taught it, and told you to expect it exactly here, where こと would also have been possible.
+
+# ── Give it a try ─────────────────────────────────────────────────────────────
+
+- id: b4band0.could-you-turn-on-your-headlights
+  jlpt: N3
+  scenario: attempt
+  japanese: ヘッドライトをつけてみてください。
+  reading: ヘッドライトをつけてみてください。
+  romaji: heddoraito o tsukete mite kudasai.
+  english: Could you turn on your headlights?
+  tatoebaId: "196781"
+  notes: てみてください rather than てください, and the difference is real, because this asks you to try it and see what happens, which lands softer than an instruction. Two て-forms in a row, つけて and みて, because みる is itself a verb taking the ください.
+
+- id: b4band0.i-talked-with-our-sales-people
+  jlpt: N3
+  scenario: attempt
+  japanese: 営業の者と話をしてみました。
+  reading: えいぎょうのものとはなしをしてみました。
+  romaji: eigyou no mono to hanashi o shite mimashita.
+  english: I talked with our sales people.
+  tatoebaId: "189354"
+  notes: The plainest shape there is -- してみました, I tried it and here is what came of it. 営業の者 is how you refer to your own colleagues when speaking to someone outside the company; 者 there is deliberately modest, and 人 would sound like praise.
+
+- id: b4band0.on-examination-the-jewel-was-an-imitation
+  jlpt: N3
+  scenario: attempt
+  japanese: 調べてみるとその宝石はイミテーションだと分かった。
+  reading: しらべてみるとそのほうせきはイミテーションだとわかった。
+  romaji: shirabete miru to sono houseki wa imiteeshon da to wakatta.
+  english: On examination the jewel proved to be an imitation.
+  tatoebaId: "126036"
+  notes: てみると, with the と Book Two taught as the automatic-consequence conditional doing a narrative job instead -- I tried looking, and on looking, this is what turned up. That narrative use was not in Book Two, so meet it here. The second と, in だと分かった, is the quoting particle and a different word entirely.
+
+- id: b4band0.why-dont-you-give-it-another-try
+  jlpt: N3
+  scenario: attempt
+  japanese: もう一度それにトライしてみたら。
+  reading: もういちどそれにトライしてみたら。
+  romaji: mou ichido sore ni torai shite mitara.
+  english: Why don't you give it another try?
+  tatoebaId: "194328"
+  notes: てみたら as a suggestion, and the sentence stops there on purpose. The full form would carry どう or いい on the end -- してみたらどう -- and dropping it is ordinary in speech, said with the intonation rising. Book Two's たら doing conversational work.
+
+- id: b4band0.he-was-itching-to-have-a-go
+  jlpt: N3
+  scenario: attempt
+  japanese: 彼はそれを試してみたくてうずうずしていた。
+  reading: かれはそれをためしてみたくてうずうずしていた。
+  romaji: kare wa sore o tameshite mitakute uzuuzu shite ita.
+  english: He was itching to have a go at it.
+  tatoebaId: "112180"
+  notes: てみたい, wanting to try, and then that たい put in its own te-form, みたくて, to say why he was fidgeting. 試してみたい stacks the verb try on the auxiliary try and is not a mistake -- 試す is what he wanted to do, みる is that he wanted to do it and see.
+
+# ── Away from here, on from now ───────────────────────────────────────────────
+
+- id: b4band0.tomoko-went-happily-out-the-door
+  jlpt: N3
+  scenario: departure
+  japanese: 智子はイソイソと出掛けていった。
+  reading: ともこはイソイソとでかけていった。
+  romaji: tomoko wa isoiso to dekakete itta.
+  english: Tomoko bounced happily out the door.
+  tatoebaId: "126798"
+  notes: The literal job. She went out, and the いった says she went away from where the speaker is standing -- the sentence is written from the place she left. イソイソと is a mimetic adverb for doing something eagerly, and the と on it is the one that attaches mimetics, not the conditional.
+
+- id: b4band0.a-cowboy-is-driving-cattle-to-the-pasture
+  jlpt: N3
+  scenario: departure
+  japanese: カウボーイが牛を牧草地へ追っていく。
+  reading: カウボーイがうしをぼくそうちへおっていく。
+  romaji: kaubooi ga ushi o bokusouchi e otte iku.
+  english: A cowboy is driving cattle to the pasture.
+  tatoebaId: "226445"
+  notes: Non-past, so the form is visible without a past tense hiding it, and there is real movement across real ground -- the へ names where it goes. When something physically travels, ていく is the literal reading and nothing else.
+
+- id: b4band0.the-digression-is-escalating
+  jlpt: N3
+  scenario: departure
+  japanese: 脱線がどんどんエスカレートしていく。
+  reading: だっせんがどんどんエスカレートしていく。
+  romaji: dassen ga dondon esukareeto shite iku.
+  english: The digression is escalating more and more.
+  tatoebaId: "75893"
+  notes: Now the other job, in the same form. Nothing moves anywhere; the いく points at time instead, saying this will go on getting worse from here. どんどん is the tell -- an adverb of steady increase pulls the sentence towards the aspect reading.
+
+- id: b4band0.we-need-food-clothes-and-a-home-to-go-on-living
+  jlpt: N3
+  scenario: departure
+  japanese: 私達が生きていくためには衣食住が必要です。
+  reading: わたしたちがいきていくためにはいしょくじゅうがひつようです。
+  romaji: watashitachi ga ikite iku tame ni wa ishokujuu ga hitsuyou desu.
+  english: We need food, clothes and a home in order to go on living.
+  tatoebaId: "165556"
+  notes: 生きていく is the textbook case of the forward-looking reading -- not being alive now, but carrying on being alive from here. ために is Book Three's purpose marker, and 必要 takes が for the thing needed, exactly as a potential verb does.
+
+- id: b4band0.take-something-to-slip-on-over-your-swimsuit
+  jlpt: N3
+  scenario: departure
+  japanese: 水着の上に羽織られるもの持っていったほうがいいね。
+  reading: みずぎのうえにはおられるものもっていったほうがいいね。
+  romaji: mizugi no ue ni haorareru mono motte itta hou ga ii ne.
+  english: It's a good idea to take along something to slip on over your bathing suit.
+  tatoebaId: "143662"
+  notes: 持っていく is take it along, and the direction is the point -- 持ってくる would be bring it here, which is the next lesson. English uses take and bring for the same split and gets it wrong in translation constantly. The を after もの is dropped, which speech does freely; 羽織られる is a potential, something you can throw on.
+
+# ── Towards you, up to now ────────────────────────────────────────────────────
+
+- id: b4band0.the-bon-festival-is-near-at-hand
+  jlpt: N3
+  scenario: approach
+  japanese: お盆が近づいてきた。
+  reading: おぼんがちかづいてきた。
+  romaji: obon ga chikazuite kita.
+  english: The Bon Festival is near at hand.
+  tatoebaId: "226586"
+  notes: Ten characters and both halves of the lesson in them. 近づく already means to draw near; きた adds that it has been drawing near up to now, arriving at the present moment. That is what てくる does to a verb of change.
+
+- id: b4band0.the-numbers-of-certain-animals-are-falling
+  jlpt: N3
+  scenario: approach
+  japanese: ある種の動物はどんどん数が減ってきている。
+  reading: あるしゅのどうぶつはどんどんかずがへってきている。
+  romaji: aru shu no doubutsu wa dondon kazu ga hette kite iru.
+  english: The numbers of certain animals are steadily falling.
+  tatoebaId: "229868"
+  notes: 減ってきている, three pieces deep. 減る is the fall, きて is that it has been falling up to now, いる is that it is still going on. Read it left to right and each piece adds one thing. ある種の is a fixed phrase, certain kinds of.
+
+- id: b4band0.could-you-pick-one-up-for-me
+  jlpt: N3
+  scenario: approach
+  japanese: ついでに私のも買ってきてくれますか。
+  reading: ついでにわたしのもかってきてくれますか。
+  romaji: tsuide ni watashi no mo katte kite kuremasu ka.
+  english: Could you pick one up for me while you're out?
+  tatoebaId: "202686"
+  notes: 買ってくる is three actions in one form -- go, buy, come back -- and it is the single most useful thing this lesson teaches, because English has no word for it. Book Two's てくれますか is stacked on top, so the whole request is 買ってきてくれますか. 私の here means mine.
+
+- id: b4band0.my-dog-follows-me-wherever-i-go
+  jlpt: N3
+  scenario: approach
+  japanese: 私の犬は、どこでも私の行くところへついてくる。
+  reading: わたしのいぬは、どこでもわたしのいくところへついてくる。
+  romaji: watashi no inu wa, doko demo watashi no iku tokoro e tsuite kuru.
+  english: My dog follows me wherever I go.
+  tatoebaId: "163745"
+  notes: ついてくる is following along after the speaker, and the くる is what puts the speaker at the centre of it. ついていく would be the dog following somebody else, away from here -- same verb, opposite viewpoint. ところ is Book Three's, and 私の行く uses の for the subject inside the clause.
+
+- id: b4band0.our-baby-is-learning-to-speak
+  jlpt: N3
+  scenario: approach
+  japanese: うちの赤ん坊は口をきくようになってきました。
+  reading: うちのあかんぼうはくちをきくようになってきました。
+  romaji: uchi no akanbou wa kuchi o kiku you ni natte kimashita.
+  english: Our baby is learning to speak.
+  tatoebaId: "228187"
+  notes: The callback this lesson exists to make. Book Three taught ようになる, coming to be able to do something; てくる puts that change on a line running up to now, so ようになってきました is has been getting there and is there now. 口をきく is a fixed phrase for speaking.
+
+# ── Too much ──────────────────────────────────────────────────────────────────
+
+- id: b4band0.this-size-is-too-large-for-me
+  jlpt: N3
+  scenario: excess
+  japanese: このサイズは私には大きすぎます。
+  reading: このサイズはわたしにはおおきすぎます。
+  romaji: kono saizu wa watashi ni wa ookisugimasu.
+  english: This size is too large for me.
+  tatoebaId: "223720"
+  notes: The base case. Take an い-adjective, drop the い, add すぎる -- 大きい, 大き, 大きすぎる -- and what comes out is an ordinary ichidan verb, which is why it can end in ます. 私には says too large for me specifically, not too large in general.
+
+- id: b4band0.it-looks-like-ive-eaten-too-much
+  jlpt: N3
+  scenario: excess
+  japanese: どうやら食べ過ぎたみたいだ。
+  reading: どうやらたべすぎたみたいだ。
+  romaji: douyara tabesugita mitai da.
+  english: It looks like I've eaten too much.
+  tatoebaId: "201130"
+  notes: On a verb it is the ます-stem that takes すぎる -- 食べます gives 食べ, then 食べ過ぎる. The same stem Book Two used for やすい and にくい. Written 過ぎ here and すぎ elsewhere in this lesson; both are ordinary and you need to read both. どうやら〜みたいだ is Book Three's hedging.
+
+- id: b4band0.this-soup-is-too-salty-to-drink
+  jlpt: N3
+  scenario: excess
+  japanese: このスープは、しょっぱ過ぎて飲めないよ。
+  reading: このスープは、しょっぱすぎてのめないよ。
+  romaji: kono suupu wa, shoppasugite nomenai yo.
+  english: This soup is too salty to drink.
+  tatoebaId: "223657"
+  notes: すぎて followed by a negative potential is the commonest frame this pattern appears in -- too X to be able to Y. 飲む, not 食べる -- Japanese drinks soup. しょっぱい is the everyday word for salty; 塩辛い is the one in writing.
+
+- id: b4band0.driving-too-fast-is-dangerous
+  jlpt: N3
+  scenario: excess
+  japanese: スピードの出し過ぎは危険です。
+  reading: スピードのだしすぎはきけんです。
+  romaji: supiido no dashisugi wa kiken desu.
+  english: Driving too fast is dangerous.
+  tatoebaId: "214534"
+  notes: Cut the る off すぎる and you have a noun. 出し過ぎ is too much putting-out, and it takes は here like any other noun; 飲みすぎ and 食べすぎ work the same way and are what you will hear on a Monday morning.
+
+- id: b4band0.this-screwdriver-is-too-small-to-be-any-use
+  jlpt: N3
+  scenario: excess
+  japanese: このドライバーは小さすぎて役に立たない。
+  reading: このドライバーはちいさすぎてやくにたたない。
+  romaji: kono doraibaa wa chiisasugite yaku ni tatanai.
+  english: This screwdriver is too small to be any use.
+  tatoebaId: "74962"
+  notes: The same すぎて frame as the soup, with a plain negative instead of a potential one. ドライバー is a screwdriver here; the same word is a driver of a car, and only the sentence around it says which.
+
+# ── Left as it was ────────────────────────────────────────────────────────────
+
+- id: b4band0.i-went-out-with-the-heater-on
+  jlpt: N3
+  scenario: unchanged
+  japanese: ヒーターをつけたまま外出した。
+  reading: ヒーターをつけたままがいしゅつした。
+  romaji: hiitaa o tsuketa mama gaishutsu shita.
+  english: I went out with the heater on.
+  tatoebaId: "197683"
+  notes: The core shape is a past-tense verb, then まま, then something else happening while that state holds. つけたまま is with it left switched on. Past tense in front even though nothing is in the past -- the た marks the state as already established, not the time as gone.
+
+- id: b4band0.he-keeps-this-gun-loaded
+  jlpt: N3
+  scenario: unchanged
+  japanese: 彼はこの銃に弾丸を込めたままにしている。
+  reading: かれはこのじゅうにだんがんをこめたままにしている。
+  romaji: kare wa kono juu ni dangan o kometa mama ni shite iru.
+  english: He keeps this gun loaded.
+  tatoebaId: "113761"
+  notes: ままにする is deliberately leaving it that way, and ままにしている is that it is his standing practice. Hold it against lesson 2's ておく. 〜ておく leaves a state in place for a purpose ahead, ままにする just does not change it.
+
+- id: b4band0.they-talked-for-hours-at-cross-purposes
+  jlpt: N3
+  scenario: unchanged
+  japanese: うまく噛み合わないまま何時間も話し合った。
+  reading: うまくかみあわないままなんじかんもはなしあった。
+  romaji: umaku kamiawanai mama nanjikan mo hanashiatta.
+  english: They talked for hours at cross purposes.
+  tatoebaId: "228098"
+  notes: まま on a negative, and the negative is plain non-past -- 噛み合わない, not 噛み合わなかった. So the state that did not change was a state of something not happening. 噛み合う is gears meshing, used of conversations that fail to.
+
+- id: b4band0.the-ship-went-down-with-all-her-crew
+  jlpt: N3
+  scenario: unchanged
+  japanese: 船は全乗組員を乗せたまま海中へと沈んでいった。
+  reading: ふねはぜんのりくみいんをのせたままかいちゅうへとしずんでいった。
+  romaji: fune wa zen norikumiin o noseta mama kaichuu e to shizunde itta.
+  english: The ship went down under the sea with all her crew still aboard.
+  tatoebaId: "141111"
+  notes: 乗せたまま is with them still aboard -- the state that did not change while the ship sank. Then 沈んでいった on the end, which is lesson 4's ていく doing its literal job, movement away and downward. へと is へ with an emphatic と, a shade more written than へ alone.
+
+- id: b4band0.he-left-england-and-never-returned
+  jlpt: N3
+  scenario: unchanged
+  japanese: １９００年に彼はイギリスを去り、そのまま二度と戻らなかった。
+  reading: せんきゅうひゃくねんにかれはイギリスをさり、そのままにどともどらなかった。
+  romaji: sen kyuuhyaku nen ni kare wa igirisu o sari, sonomama nidoto modoranakatta.
+  english: In 1900, he left England, and he never returned.
+  tatoebaId: "235915"
+  recognitionOnly: true
+  notes: そのまま is one word and worth learning whole -- literally in that state, here meaning that things stayed as they were and he never came back. 二度と demands the negative that follows it. 去り, with the comma after it, is a verb stem used to join two clauses -- writing's alternative to the te-form, and the verb-side counterpart of the であり Book Three's register chapter taught. Recognise it here; no chapter has taught it to build.
+
+# ── Without ───────────────────────────────────────────────────────────────────
+
+- id: b4band0.you-cant-make-an-omelet-without-breaking-eggs
+  jlpt: N3
+  scenario: without
+  japanese: たまごを割らずにオムレツは作れない。
+  reading: たまごをわらずにオムレツはつくれない。
+  romaji: tamago o warazu ni omuretsu wa tsukurenai.
+  english: You can't make an omelet without breaking eggs.
+  tatoebaId: "203324"
+  notes: Take the ない form, 割らない, drop the ない, put ずに there instead, giving 割らずに. That is the whole rule for every godan and ichidan verb. Book Two's potential negative closes the sentence.
+
+- id: b4band0.riding-a-motorbike-without-a-helmet-is-dangerous
+  jlpt: N3
+  scenario: without
+  japanese: ヘルメットをかぶらずにバイクに乗るのは危険だ。
+  reading: ヘルメットをかぶらずにバイクにのるのはきけんだ。
+  romaji: herumetto o kaburazu ni baiku ni noru no wa kiken da.
+  english: It is dangerous to ride a motorbike without a helmet.
+  tatoebaId: "196686"
+  notes: The same rule on かぶる, which Book One taught for putting a hat on -- かぶらない, かぶらずに. 危険 came two lessons ago. のは is the の nominaliser Book Three named without teaching, turning the whole riding clause into the topic.
+
+- id: b4band0.the-students-listened-without-stirring
+  jlpt: N3
+  scenario: without
+  japanese: 学生達は身じろぎもせずに講義に聞き入っていた。
+  reading: がくせいたちはみじろぎもせずにこうぎにききいっていた。
+  romaji: gakuseitachi wa mijirogi mo sezu ni kougi ni kikiitte ita.
+  english: The students listened to the lecture without stirring.
+  tatoebaId: "184197"
+  notes: The one irregular worth memorising. する does not give しずに -- it gives せずに, from an older negative stem, and 勉強せずに, 何もせずに and 気にせずに are all built on it. The も after 身じろぎ is not even, it is the emphatic も that goes with a negative.
+
+- id: b4band0.he-sent-the-letter-back-unopened
+  jlpt: N3
+  scenario: without
+  japanese: 彼はその手紙を開封しないで送り返した。
+  reading: かれはそのてがみをかいふうしないでおくりかえした。
+  romaji: kare wa sono tegami o kaifuu shinaide okurikaeshita.
+  english: He sent the letter back unopened.
+  tatoebaId: "112693"
+  notes: ないで doing the same job as ずに, one register down -- 開封しないで送り返した, sent it back without opening it. Note this is the する verb again and the ないで form is regular, 開封しないで, where the ずに form would have been 開封せずに.
+
+- id: b4band0.dont-use-all-the-hot-water
+  jlpt: N3
+  scenario: without
+  japanese: お湯を全部使わないで。
+  reading: おゆをぜんぶつかわないで。
+  romaji: oyu o zenbu tsukawanaide.
+  english: Don't use all the hot water.
+  tatoebaId: "226793"
+  notes: The contrast card, and the string is identical to the one above. 使わないで here is Book Two's ないでください with the ください dropped -- a request not to do something, complete in itself. What tells the two apart is not the form, it is whether a second verb follows.
