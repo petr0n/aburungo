@@ -42,8 +42,8 @@ This is not a defect in Book Three; it followed its plan. It is the fact Book Fo
 
 ## 2. The decision this document makes: lessons teach the words their sentences use
 
-**Decision (revocable by the owner, and the one line in this document that needs a yes or a no):
-every Book Four lesson teaches the untaught words its own verified sentences contain.**
+**Decision — confirmed by the owner on 2026-09-06 ("yes add new words"): every Book Four lesson
+teaches the untaught words its own verified sentences contain.**
 
 The mechanics already exist. A lesson has `wordIds`; a `Word` is a JMdict-verified headword with
 reading and gloss (`content-source: training` on the gloss, as Books One and Two do); the produce
