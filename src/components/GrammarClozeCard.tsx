@@ -54,7 +54,7 @@ export function GrammarClozeCard({ pattern, phrase, showRomaji = true, onNext }:
         </div>
 
         <div className="flex flex-col gap-4">
-          {phase === "input" && <FillInput onSubmit={handleSubmit} placeholder="Fill in the blank..." />}
+          {phase === "input" && <FillInput onSubmit={handleSubmit} />}
 
           {phase === "result" && (
             <div className="flex flex-col gap-4">

@@ -1,9 +1,10 @@
 import { useState } from "react";
+import type { SVGProps } from "react";
 import type { Phrase, Word, WordType } from "@/types";
 import { isWord } from "@/types";
 import { compareAnswer } from "@/lib/compareAnswer";
 import { toPoliteJapanese, toPoliteReading } from "@/lib/verbForms";
-import { AnswerResult, Badge, Button, Card } from "aburungo-design-system";
+import { AnswerResult, Badge, Button, Card, MicIcon } from "aburungo-design-system";
 import { FillInput } from "./FillInput";
 import { VoiceInput } from "./VoiceInput";
 import { AudioButton } from "./AudioButton";
@@ -31,6 +32,27 @@ type Props = {
   showRomaji?: boolean;
   onNext: (correct: boolean) => void;
 };
+
+/**
+ * The design system ships MicIcon but no keyboard glyph, and one icon is not
+ * a component library. Same conventions as its set: 24x24, currentColor,
+ * aria-hidden -- the label belongs on the button that wraps it.
+ */
+function KeyboardIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden {...props}>
+      <path
+        fill="currentColor"
+        d="M20 5H4c-1.1 0-1.99.9-1.99 2L2 17c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm-9 3h2v2h-2V8zm0 3h2v2h-2v-2zM8 8h2v2H8V8zm0 3h2v2H8v-2zm-1 2H5v-2h2v2zm0-3H5V8h2v2zm9 7H8v-2h8v2zm0-4h-2v-2h2v2zm0-3h-2V8h2v2zm3 3h-2v-2h2v2zm0-3h-2V8h2v2z"
+      />
+    </svg>
+  );
+}
+
+const INPUT_MODES = [
+  { mode: "text" as const, label: "Type your answer", Icon: KeyboardIcon },
+  { mode: "voice" as const, label: "Speak your answer", Icon: MicIcon },
+];
 
 export function FillBlankCard({ card, showRomaji = true, onNext }: Props) {
   const [phase, setPhase] = useState<Phase>("input");
@@ -102,56 +124,60 @@ export function FillBlankCard({ card, showRomaji = true, onNext }: Props) {
       </Button>
     );
 
-  return (
-    <Card className="w-full">
-      <div className="flex flex-col gap-6">
-        <header className="flex items-center justify-between gap-4">
-          <Badge emphasis>{badgeLabel}</Badge>
-          <AudioButton src={card.audioUrl ?? undefined} />
-        </header>
-
-        <div className="flex flex-col items-center gap-2 text-center">
-          <p className="text-body-sm text-fg-subtle">How do you say...</p>
-          <p className="text-heading text-fg">{card.english}</p>
-          {card.notes != null ? <p className="text-body-sm text-fg-subtle">{card.notes}</p> : null}
-        </div>
-
-        <div className="flex flex-col gap-4">
-          {phase === "input" && (
-            <>
-              <div className="flex justify-center gap-2 rounded-xl border border-border bg-surface p-1">
-                <button
-                  type="button"
-                  onClick={() => setInputMode("text")}
-                  className={[
-                    "min-h-[44px] rounded-lg px-4 text-body-sm font-medium transition-colors",
-                    inputMode === "text" ? "bg-bg text-fg shadow-card" : "text-fg-subtle active:bg-surface-2",
-                  ].join(" ")}
-                >
-                  Type
-                </button>
-                <button
-                  type="button"
-                  onClick={() => setInputMode("voice")}
-                  className={[
-                    "min-h-[44px] rounded-lg px-4 text-body-sm font-medium transition-colors",
-                    inputMode === "voice" ? "bg-bg text-fg shadow-card" : "text-fg-subtle active:bg-surface-2",
-                  ].join(" ")}
-                >
-                  Speak
-                </button>
-              </div>
-
-              {inputMode === "text" ? (
-                <FillInput onSubmit={handleSubmit} placeholder="Type the Japanese..." />
-              ) : (
-                <VoiceInput onResult={handleSubmit} />
-              )}
-            </>
-          )}
-          {footer}
+  const modeToggle =
+    phase === "input" ? (
+      <div className="flex justify-end">
+        <div className="flex gap-1 rounded-xl border border-border bg-surface p-1">
+          {INPUT_MODES.map(({ mode, label, Icon }) => (
+            <button
+              key={mode}
+              type="button"
+              onClick={() => setInputMode(mode)}
+              aria-label={label}
+              aria-pressed={inputMode === mode}
+              title={label}
+              className={[
+                "flex min-h-[44px] min-w-[44px] items-center justify-center rounded-lg transition-colors",
+                inputMode === mode ? "bg-bg text-fg shadow-card" : "text-fg-subtle active:bg-surface-2",
+              ].join(" ")}
+            >
+              <Icon className="h-5 w-5" />
+            </button>
+          ))}
         </div>
       </div>
-    </Card>
+    ) : null;
+
+  return (
+    <div className="flex w-full flex-col gap-3">
+      {modeToggle}
+      <Card className="w-full">
+        <div className="flex flex-col gap-6">
+          <header className="flex items-center justify-between gap-4">
+            <Badge emphasis>{badgeLabel}</Badge>
+            <AudioButton src={card.audioUrl ?? undefined} />
+          </header>
+
+          {/*
+            Sticky, because focusing the input opens the soft keyboard, and the
+            browser scrolls the input into view -- which pushes the very word
+            being asked for off the top of what is left of the screen. Pinning
+            it holds at any keyboard height; making the card shorter only moves
+            the break to a smaller phone.
+          */}
+          <div className="sticky top-0 z-10 flex flex-col items-center gap-2 bg-surface py-2 text-center">
+            <p className="text-body-sm text-fg-subtle">How do you say...</p>
+            <p className="text-heading text-fg">{card.english}</p>
+            {card.notes != null ? <p className="text-body-sm text-fg-subtle">{card.notes}</p> : null}
+          </div>
+
+          <div className="flex flex-col gap-4">
+            {phase === "input" &&
+              (inputMode === "text" ? <FillInput onSubmit={handleSubmit} /> : <VoiceInput onResult={handleSubmit} />)}
+            {footer}
+          </div>
+        </div>
+      </Card>
+    </div>
   );
 }
