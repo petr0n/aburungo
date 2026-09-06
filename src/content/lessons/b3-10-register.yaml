@@ -1,0 +1,230 @@
+# Chapter 11 -- Register and the written voice.
+#
+# Every book, essay, news report and public notice a learner will eventually
+# want to read is written in a voice this ladder has not taught. Not harder
+# grammar -- a different voice for saying the same things. This chapter teaches
+# four words that mark that voice: である, the written stand-in for だ; つつ,
+# doing ながら's job in the same register plus one of its own, marking a change
+# still under way; ゆえ, the written word for because; and において, the written
+# word for in, covering both a place and a respect in which something is true.
+#
+# である is not new grammar wearing a big number. Book Two's plain-copula
+# lesson already taught the whole spoken paradigm in one lesson, in its own
+# words -- "です has a plain form too, and it is だ. Four shapes, and you own
+# all four already in their polite dress" -- and である's paradigm is the same
+# shape: である, であった, ではない. What is genuinely new is the register
+# boundary itself, which nobody has had to name before because everything this
+# course has taught so far was speakable; and であり, the copula's linking
+# form, which joins two statements the way the te-form joins two verbs and
+# which no lesson in this course has taught in either register. One lesson, not
+# several: 761 attested sentences is the copula being everywhere in formal
+# writing, not a great deal to teach about it.
+#
+# つつ earns its lesson from an unusual angle. Chapter 3 already found that
+# freely-produced concessive ながら barely exists in this corpus -- almost every
+# hit was a frozen idiom. つつ's own corpus has real, freely-produced while
+# sentences, and its dominant job by a wide margin is つつある, a change still
+# happening, which is the second most useful thing in this chapter after
+# である itself.
+#
+# ゆえ is the thinnest lesson here and among the thinnest this book has
+# shipped -- six kana sentences in the whole corpus, every one of them a card
+# below, plus one more spelled with a kanji this chapter names and does not
+# teach. Thin, not hollow: each of the six is a clean, standalone because in
+# formal register, and the contrast is against から and ので, already owned.
+#
+# において closes the teaching content as the richest pattern here after
+# である -- 47 clean sentences doing three related jobs, marking where, when or
+# in what respect something holds. Its noun-modifying twin における belongs to
+# the previous chapter, and this lesson calls back to it rather than reaching
+# past it.
+#
+#    1  how writing says "is"    である, であった, ではない, であり
+#    2  still changing           つつある, and bare つつ for ながら's job
+#    3  because, in writing      ゆえに, がゆえに, それゆえ
+#    4  in, formally speaking    において -- a place, a time, or a respect
+#
+# No lesson here gates another's form. Each of the four attaches to something
+# the learner already owns -- a noun or な-adjective for である, a ます-stem for
+# つつ, a bare noun or a plain clause plus が for ゆえ, a bare noun for において
+# -- and that shared prerequisite is what holds the chapter together rather
+# than a chain between its lessons. Three of the four open on a bridge to
+# earlier material by name: the plain copula lesson from Book Two before
+# lesson 1, ながら and ながらも before lesson 2, から and ので before lesson 3.
+# Re-surfacing those in the SRS queue before those lessons is what makes the
+# bridge land; that is a scheduling matter, not something this file can do.
+#
+# On the numbers. The planning document (docs/plans/book-three-band-10.md)
+# assigns this chapter orders 274-278 and returns three unspent slots. The
+# tail of the book was renumbered contiguously when the later chapters landed,
+# so the orders below are 272-276. Nothing else about the shape changed --
+# still four teaching lessons and one recognition checkpoint, still a defended
+# smaller number rather than an invented larger one.
+#
+# What this chapter is not, stated because its own title invites the mistake.
+# It does not teach honorific or humble speech. Nothing anywhere in this ladder
+# does -- no いらっしゃる, no 召し上がる, no 伺う or 申し上げる, no productive
+# keigo of any kind, and a manifest check finds only ございます frozen inside a
+# thank-you. That is a real gap and it is not this chapter's to close.
+# "Written voice" here means the plain declarative register of an essay, a
+# report or a definition -- what century the sentence sounds like, not who is
+# speaking to whom. The two are different systems and the second is much the
+# larger.
+#
+# One cross-reference this file makes that depends on a sibling landing: the
+# において lesson calls back to における as "the chapter before this one". That
+# is chapter 10's own last pattern. If chapter 10 ships without it, that one
+# sentence needs cutting.
+#
+# The `kanji:` arrays are empty and should stay that way, and so is
+# vocabulary/b3-10-register.yaml. である and つつ have no kanji of their own;
+# 於いて is a real JMdict headword that appears in no sentence in this corpus at
+# all; 故 appears in exactly one, which the phrase file explains it does not
+# card. The `wordIds` below name words the learner already owns that the
+# lesson's own sentences use -- an SRS pull, not new teaching.
+#
+# Three things the attestation pass found that the planning document did not:
+#
+#   であり has 31 raw hits, not the "20+" the plan estimated, and である does
+#   take polite ます -- であります is attested twice (#167549, #234180). The
+#   copula lesson says so rather than implying である cannot be spoken.
+#
+#   The plan's count of raw 故に and が故 hits was 17 after removing overlap;
+#   the corpus gives 16 (12 + 5, one shared). The conclusion is unchanged --
+#   exactly one of them is the causal construction and fifteen are 事故 or
+#   故障.
+#
+#   The plan proposed citing #75231 (が故に, with である in the same sentence)
+#   in the checkpoint. It is not carded anywhere here: the sentence mixes the
+#   written copula with net slang and a sentence-final わ, and its corpus
+#   English would have to be rewritten almost whole. The kanji spelling is
+#   named in English in lesson 3 instead.
+#
+# One rule the grammarNotes below hold themselves to, inherited from the
+# earlier chapters and stated again because a later editor will otherwise undo
+# it by accident. A grammarNote here may show a conjugation chain (である
+# becoming であった), a fragment of a rule (noun + において), or a sentence that
+# is a phrase card in this chapter or in an earlier book, quoted whole. It may
+# not show a Japanese sentence that is none of those, and it may not compose a
+# wrong one to demonstrate an error. Several notes therefore describe a
+# sentence in English -- the one slangy が故に citation, the one explicitly
+# concessive つつ -- where a draft would have composed a Japanese one or
+# trimmed an attested one down to fit.
+#
+# content-source: every phrase this file references is a verified Tatoeba pair,
+#   cited by id in `tatoebaId` in phrases/b3-10-register.yaml. No
+#   training-canonical sentence is used anywhere in this chapter
+#   (04-stage-reading.md section 8).
+
+- id: b3.de-aru
+  order: 272
+  chapterId: b3.band-10
+  situation: Register and the written voice
+  title: How writing says "is"
+  canDo: Read and write the plain factual statements an essay, a report or a definition is built out of — and know why you would not say である to a friend
+  wordIds:
+    - vocab.isha
+    - vocab.sensei
+  phraseIds:
+    - band10.a-rainbow-is-a-natural-phenomenon
+    - band10.one-three-and-five-are-odd-numbers
+    - band10.all-men-are-equal
+    - band10.nigeria-was-once-a-british-colony
+    - band10.lincoln-was-a-great-statesman
+    - band10.the-earth-is-not-a-perfect-globe
+    - band10.africa-is-a-continent-greenland-is-not
+    - band10.he-is-a-doctor-and-a-university-professor
+    - band10.cars-are-factory-products-foods-are-farm-products
+    - band10.a-car-is-a-necessity-not-a-luxury
+    - band10.you-should-be-more-reasonable
+  kanji: []
+  patternId: grammar.b3-de-aru
+  grammarNote: "Book Two taught you the plain copula in one lesson, and its words still hold: です has a plain form too, and it is だ. Four shapes, and you own all four already in their polite dress. Here is a fifth shape nobody mentioned, because until now you have only been taught Japanese you could say out loud. である. It sits in exactly the slot だ sits in, means exactly what だ means, and belongs to writing. 虹は自然現象である. １、３、５は奇数である. That is what a dictionary entry, an encyclopaedia, a textbook, a legal notice and a newspaper editorial look like. Take it apart and there is nothing new inside it. である is で plus ある, the ordinary verb to exist — which is why the rest of the paradigm falls out of ある's own conjugation with no new rule at all. Past: ある goes to あった, so である goes to であった. ナイジェリアはかつてイギリスの植民地であった. Negative: ある goes to ない, with a は slipping in ahead of it, and である goes to ではない. 地球は完全な球体ではない. And that last one is the piece of this paradigm you already had. じゃない, which Book Two gave you, is a contraction of ではない — the same negative, in the register that does not bother contracting. Where it attaches is where だ attaches. A noun, or a な-adjective: 人間は全て平等である, with 平等 taking である exactly where it would have taken だ. Not directly onto an い-adjective, the same restriction Book Two already gave you for だ. Writing reaches that register on an い-adjective by another route, のである, which turns up constantly and which this chapter does not teach. Now the genuinely new part, and it is worth more than the paradigm. である has a linking form, であり, which stops the sentence halfway so it can carry on. あの人は医者でありまた大学の先生でもある — is a doctor, and also is a teacher. 自動車は工業製品であり、食料は農作物である — two statements balanced against each other with no conjunction at all. Verbs have had a way to do this since Book One, the te-form, and Book Two's own gloss for that job was And then — the te-form joining two verbs in the order they happened. The copula's version of the same move is で in speech and であり in writing, and this course has not shown you either until now. What follows であり need not be another である: アメリカでは自動車は必需品であり贅沢品ではない ends on the negative instead. Two more shapes you only have to recognise. であるが is the written but — アフリカは大陸であるが、グリーンランドはそうではない. That が joining two clauses is the written register's けど, and no lesson has taught it to you before now; where you meet it between two halves of a sentence, read it as but. And であるべき, because べき wants a verb in front of it and a noun does not supply one; である does, since it has ある inside it. あなたはもっと理性的であるべきだ. Last, the boundary, said carefully because the easy version of it is wrong. である is not a word nobody ever says. It takes ます like any other verb, であります, and you will hear that from a podium, in a formal speech, or from a character in fiction written to sound stiff. What is true is narrower and more useful: である belongs to language that was written first, or is being delivered as though it had been. Between two friends it is not formal, it is strange — about the way announcing I shall now take my leave would be strange on the way out of a friend's kitchen. When you are talking, だ and です remain the only natural choices. When you are reading, expect である and be glad of it, because it is the surest sign you are looking at the register this chapter is about."
+
+- id: b3.tsutsu
+  order: 273
+  chapterId: b3.band-10
+  situation: Register and the written voice
+  title: Still changing
+  canDo: Say that something is changing, gradually and not yet finished — and read the same word doing "while" in formal writing
+  wordIds:
+    - vocab.furui
+    - vocab.kaisha
+    - vocab.tenki
+    - vocab.hito
+    - vocab.iu
+    - vocab.shinu
+    - vocab.ima
+  phraseIds:
+    - band10.old-traditions-are-crumbling-away
+    - band10.the-atmosphere-is-being-polluted
+    - band10.the-international-situation-is-becoming-grave
+    - band10.my-business-is-picking-up-again
+    - band10.computers-are-being-introduced-into-this-company
+    - band10.the-weather-was-getting-worse-as-the-day-went-on
+    - band10.we-are-born-crying
+    - band10.we-must-keep-our-eyes-on-the-future
+  kanji: []
+  patternId: grammar.b3-tsutsu
+  grammarNote: "One word, two jobs, and the corpus is lopsided about which one you will meet. Start with the common one. Stop a verb before ます and add つつある, and you have said that a change is under way and has not arrived. 消滅し becomes 消滅しつつある: 古い伝統が消滅しつつある, old traditions dying out, still in the middle of dying out. 重大になり becomes 重大になりつつある. The stem is the same stem ながら and ます take, so there is nothing new in the join. What is new is what it buys you, and the clearest way to see it is against ている, which you have had since Book One. With a verb of change, ている usually reports the state after the change has landed — the traditions are gone. つつある reports the change still travelling. That is a distinction English makes with are dying out against have died out, and Japanese makes with these two endings. Because it is built on ある, an ordinary verb, everything else you know applies unchanged. Polite: 私のビジネスは再び回復しつつあります. Past: 日が経つにつれて、天気は次第に悪化しつつあった, the change under way at some time in the past. And it stacks cleanly on a passive, which is where you will meet it most often in a report: 大気が汚染されつつある, コンピューターがこの会社に導入されつつあります — 導入する made passive, then つつある for the change, then ます for the register, all readable left to right with nothing hidden. Now the second job, the same つつ with no ある after it. Bare つつ does what ながら does. Book Two's own words for ながら were: while — stop before ます, add ながら — two actions at once, one person doing both. Everything in that sentence is true of つつ too, one register up. 人は泣きつつ生まれ、泣き言を言いつつ暮らし、失望落胆して死ぬ — crying while being born, complaining while living. 我々は将来を見据えつつ、今そこにある危機を乗り越えていかねばならない, and notice that everything around the つつ is written register as well: 我々 for we, ねばならない for the なければならない you already have. That is how these words travel, in company. One more thing about bare つつ, and it is worth a curious learner's minute. Chapter 3 taught you ながらも and said of it that the も marks the concessive sense unmistakably, and without it the same ending is usually while, and only the sentence around it decides. つつ works the same way — it can carry and yet as well as while, and only the sentence decides. But in this book's whole source corpus there is exactly one sentence where a bare つつ is unmistakably concessive, and it manages it by putting a しかし immediately after the つつ rather than by anything つつ does on its own. It is not a card here. So read bare つつ as while by default, and let an explicit but in the sentence tell you when it is doing more than that. Bare つつ is the more literary of the two jobs; つつある is current, and you will find it in a business email as readily as in a white paper."
+
+- id: b3.yue
+  order: 274
+  chapterId: b3.band-10
+  situation: Register and the written voice
+  title: Because, in writing
+  canDo: Recognise and use the written register's word for because — the one that appears in a report or an argument rather than in conversation
+  wordIds:
+    - vocab.eigo
+    - vocab.chiisai
+    - vocab.kuruma
+    - vocab.koko
+  phraseIds:
+    - band10.the-charges-were-dropped-because-of-his-youth
+    - band10.canadian-english-has-features-of-both
+    - band10.some-things-cannot-be-put-into-words
+    - band10.hence-i-shall-have-to-stay-here
+    - band10.half-the-muscle-can-give-way-to-fat
+    - band10.miss-baker-had-a-special-place-in-the-car-park
+  kanji: []
+  patternId: grammar.b3-yue
+  grammarNote: "You have had から and ので since Book Two, and the cause-and-consequence chapter of this book added several more. Here is the one that belongs to writing. から attaches straight onto a verb or an い-adjective and takes だ first on a noun; ので does the same thing more softly. ゆえに does the same job again, in the voice of a report, a judgment or an argument. Two shapes, and the corpus has both. A bare noun in front, with no particle at all between them: 若さゆえに彼に対する告訴は取り下げられた, and その起源ゆえに opening the sentence about Canadian English. Notice there is no の there — where から needs だ and ので needs な, ゆえに needs nothing. A whole clause in front, and then it needs a が: 愛するがゆえに, because I love you. That が is not the subject marker you know; it is the older linking が that survives in 我が国 and in a handful of other set shapes, and here it is simply what stands between a clause and ゆえに. Then the shape you will actually meet first, because it opens paragraphs. ゆえに standing alone at the head of a sentence means therefore — it points back at everything just said and draws the conclusion. ゆえに、筋肉の５０パーセントが脂肪に取って代わられる可能性がある. それゆえ does the same job with an explicit それ in front of it, literally that being the reason: それゆえここにとどまらざるを得ないだろう. The に is droppable and this corpus attests it both ways, それゆえ in one sentence and それゆえに in another, with no difference in meaning worth chasing. This is the thinnest lesson in the chapter and it is worth telling you why rather than hiding it. Six sentences in the whole of this book's source corpus spell ゆえ in kana, and all six are the cards in front of you. That is not an authoring shortfall — it is what a genuinely written-register word looks like in a corpus of mostly spoken and everyday sentences, and it is exactly the reason ゆえ is worth naming: if you meet it, you are almost certainly reading rather than listening. One thing to recognise and not to produce. ゆえ is sometimes written with a kanji, 故, so がゆえに appears as が故に. This corpus has one such sentence and it is not a card here — it mixes the written copula with internet slang and would teach you as much bad style as good. Recognise the character in that position and read it as ゆえ; you do not need to write it. A last word on choosing. ゆえに is not a drop-in replacement for から. It is heavier, it prefers a noun or a nominalised clause in front of it, and dropped into a conversation it lands about the way hence would land in the middle of chatting about the weather. Keep から and ので for talking. Reach for ゆえに when the sentence around it is already formal."
+
+- id: b3.ni-oite
+  order: 275
+  chapterId: b3.band-10
+  situation: Register and the written voice
+  title: In, formally speaking
+  canDo: Mark where, when, or in what respect something is true — the formal written cousin of に and で
+  wordIds:
+    - vocab.eigo
+    - vocab.shio
+    - vocab.okane
+    - vocab.hito
+    - vocab.fuku
+    - vocab.koko
+  phraseIds:
+    - band10.english-is-useful-in-commerce
+    - band10.salt-was-precious-in-ancient-times
+    - band10.some-people-place-importance-on-money
+    - band10.this-suit-is-superior-in-quality
+    - band10.she-is-inferior-to-him-in-math
+    - band10.accuracy-is-indispensable-in-measurement
+    - band10.do-everything-on-your-own-responsibility
+    - band10.you-must-decide-on-your-own-responsibility
+    - band10.the-line-between-amateur-and-professional-is-disappearing
+  kanji: []
+  patternId: grammar.b3-ni-oite
+  grammarNote: "The join first, because it is the easy part. A bare noun, then において, with no particle and no copula between them. 英語は商業において役に立つ. Not 商業の, not 商業に — the noun simply stands there and において does the rest. JMdict gives this one word three senses and this lesson follows them, because they really are three different jobs. First, a place or a time. 古代において塩は希少で貴重な商品であった — in ancient times, marking a stretch of history rather than a spot on a map, which is the commonest thing you will see it do. 人生においてお金を重視する人もいる — inside a life, which is neither a place nor a time but works the same way. In a plainer sentence these would have been で or に, and which of the two depends on the verb; において does not make you choose, and that vagueness is part of why formal writing likes it. Second, and this is the job worth the lesson, a respect. この服は品質においてあの服よりもずっと優れていると思う — superior in quality, and only in quality. 彼女は、彼より、数学において劣っている — において says what the comparison is about, より says who it is against, and the two work together. 測定においては正確さは欠かせないものである, with は added to set 測定 up as the topic first: as for measurement. This is where English reaches for in terms of or with respect to. Third, a fixed phrase worth keeping whole. 責任において means on someone's own responsibility, under their own authority. 自分の責任において何でも行いなさい. 君らは自らの責任において、自らの良心に照らし合わせ、決定を下さなくてはならない. You will meet this one in contracts, instructions and disclaimers, and it is worth recognising as one piece rather than reassembling it each time. Now the trap, which is a spelling accident and nothing deeper. The verb 置く, to put, has a て-form 置いて, and に置いて written in kana is において, character for character. Three sentences in this book's source corpus are that verb and not this word. The test that separates them: the verb has something marked を being put somewhere, and it is usually followed by てくる, ている or てある. This construction has no を of its own at all — the noun in front of it takes no particle, which is the first thing this lesson told you. One last thing, and it points backwards. The chapter before this one taught における, which is the same word bent to sit between two nouns instead of in front of a clause — the first noun names the where, the second names the thing. において modifies what comes after it the way an adverb would; における modifies one noun. Same word, two slots, and if you can read one you can read the other."
+
+- id: b3.checkpoint-10
+  order: 276
+  chapterId: b3.band-10
+  situation: Integration & checkpoint
+  title: Chapter 11 checkpoint
+  canDo: Recognise everything this chapter taught
+  wordIds: []
+  phraseIds: []
+  kanji: []
+  checkpoint: recognition
+  grammarNote: "A wide pass over everything this chapter has taught. Type the reading or the meaning rather than picking it out of a line-up. Four words, one register: the copula writing uses, the ending for a change still under way, the written because, and the written in. What is being checked is not whether you can recite four rules. It is whether, when one of these words comes past, you know without being told what kind of text you are standing in — because that is the actual skill this chapter is for. A sentence ending in である was written to be read, and read the rest of it accordingly. Some of what comes back has more than one of these words in it, and that is deliberate rather than showing off. 古代において塩は希少で貴重な商品であった carries a locative において and a past copula in twenty-one characters. The sentence about amateurs and professionals carries において and つつある together. These words travel in company, and a passage that uses one usually uses several — that is what a register is, as opposed to a decorated word. One thing to watch for that no single lesson could ask you about. Formal writing of this kind tends not to say who. The atmosphere is being polluted, computers are being introduced, the charges were dropped — every one of those is a passive with no agent anywhere in the sentence, and none of them is being coy about it. Naming nobody is the normal way this register reports what happened, and noticing that is worth as much as knowing any of the four words. ゆえ is thin, and some of what comes back will be sentences you have already seen in its lesson. There are six of them in the whole corpus this book draws on; nothing has been invented to make a larger pool. Anything you miss comes back sooner. It finishes when the remaining set empties; retry as often as you like, nothing is recorded."

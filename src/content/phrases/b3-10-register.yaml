@@ -1,0 +1,520 @@
+# Book Three, chapter 11 phrases -- register and the written voice.
+#
+# Thirty-four sentences, and not one of them is ours. 04-stage-reading.md
+# section 8 withdraws the training-canonical exemption at the reading stage and
+# above, in those words -- "no training-canonical sentences at the reading stage
+# and above". So every sentence below is a verbatim Tatoeba pair carried out of
+# server/data/jmdict-examples-eng-3.6.2.json with its id in `tatoebaId`, and
+# nothing here was composed, trimmed, joined or smoothed. Where a shape had no
+# attested sentence it is described in a grammarNote and has no card, which is
+# what every chapter of this book has done and what the audits of those
+# chapters called correct.
+#
+# Two shapes this chapter names and does not card, both deliberate:
+#
+#   The kanji spelling of ゆえ, 故に. The corpus has exactly one genuine
+#   citation of it, #75231, and that sentence mixes the written copula with
+#   net slang (一般ピーポー) and a sentence-final わ. Its English would have to
+#   be rewritten almost whole to be usable. It is named in the ゆえ lesson's
+#   grammarNote in English and carded nowhere. (The other sixteen raw hits for
+#   故に and が故 are 事故, accident, and 故障, breakdown -- unrelated words that
+#   happen to contain 故.)
+#
+#   Bare つつ doing an unambiguously concessive job. The corpus has one --
+#   #76645, where a しかし after the つつ makes the concession explicit -- and it
+#   is forty-nine characters of otaku slang whose corpus English is a loose
+#   paraphrase. It is described in the つつ lesson's grammarNote in English and
+#   carded nowhere. The two bare-つつ cards below (#144511, #185773) are the
+#   simultaneous job, which is what the corpus actually supplies.
+#
+# Three things quoting rather than composing cost this chapter:
+#
+#   The imbalance below is the corpus's, not a choice. である has 761 raw hits,
+#   において 50 (47 genuine), つつ 36 (25 genuine) and ゆえ 6 in kana. All six
+#   ゆえ sentences are cards here, because six is all there is.
+#
+#   Four cards carry `recognitionOnly: true`, every one because its kana
+#   reading runs past Book Two's longest typed answer -- 41 kana,
+#   quote.my-friend-said-that-shop-is-famous-but-i-wont-go -- not because the
+#   grammar is beyond the learner. Their readings run 48, 53, 68 and 70.
+#
+#   #191565 and #204782 both end in shapes no lesson in this course has taught
+#   (ということもあります is ordinary, but だろう is not taught anywhere). Each
+#   card's own `notes` says so in one line rather than leaving it unglossed.
+#
+# ---------------------------------------------------------------------------
+# GLOSS DEPARTURES. The English is Tatoeba's own wherever Tatoeba's own would
+# do. Seven of the thirty-four depart from it. Every one is listed here by id so
+# a reviewer can diff this list against the corpus rather than take it on
+# trust. Every Japanese string is untouched.
+#
+#   Where the corpus English hid the grammar the card exists to teach:
+#   #185773 -- "and prepare to get through the coming crisis" shows nothing of
+#     つつ, and 今そこにある危機 is the crisis already here, not a coming one.
+#     Glossed "We must keep our eyes on the future while getting through the
+#     crisis that is here now."
+#   #191565 -- "My love for you won't let me tell you everything" carries no
+#     because at all, and がゆえに is the card's whole point. Glossed "Because I
+#     love you there are things I cannot put into words, and there are things
+#     better left unsaid."
+#   #184184 -- それゆえに, therefore, is absent from the corpus English
+#     entirely. Glossed with therefore restored and nothing else changed.
+#   #139892 -- "Precision in measurement is a necessity" rebuilds the sentence
+#     as one noun phrase and においては disappears. Glossed "In measurement,
+#     accuracy is indispensable."
+#   #149797 -- "at your own risk" is the right English idiom and contains no
+#     trace of 責任において, the fixed phrase this card exists for. Glossed "Do
+#     everything on your own responsibility."
+#
+#   Where the corpus English was wrong or used a word the learner would not:
+#   #176788 -- "decisions about your responsibility" misreads 自らの責任に
+#     おいて, which says how you decide, not what you decide about. Glossed
+#     "You must make your decisions on your own responsibility, in the light of
+#     your own conscience."
+#   #144033 -- "a lot more emphasis" makes a comparison the Japanese does not
+#     make; 重視する is to attach importance to something. Glossed "Some people
+#     place a lot of importance on money in life."
+#
+# ---------------------------------------------------------------------------
+# ROUTING. Book Three's stage is "reading" (books.ts), and LearnPage routes
+# every non-foundation book to the typed FillBlankCard, where the learner types
+# the whole reading back. So all of these are typed except the four marked
+# recognitionOnly, and each of those four names its length in `notes`. Every
+# lesson in this chapter keeps at least three typed cards, so no pattern here
+# depends on its grammar card alone the way chapter 2's ものだから had to.
+#
+# ---------------------------------------------------------------------------
+# TRAPS the attestation pass screened out by hand, recorded so the next pass
+# does not have to find them again:
+#
+#   Three of において's 50 raw hits are the verb 置く in its て-form, spelled
+#   identically to に + おいて once written in kana -- #234564 (カメラを家に
+#   おいてきた), #216737 (トップにおいています), #79178 (手元においてある). In
+#   all three the giveaway is the same, a thing marked を being physically put
+#   somewhere, with てくる, ている or てある after the おいて. None is used.
+#
+#   Eleven of つつ's 36 raw hits are unrelated words containing the two kana --
+#   つつじ azalea (#174037), づつ running into つめ (#78480), つつく to peck
+#   (#197445, #76788, #77078, #195367), つつまれる to be wrapped (#219470),
+#   つつがなく without incident (#76078), 夢うつつ half-asleep (#80970),
+#   つつましい and つつましやか modest (#159333, #92099). None is used. JMdict
+#   carries three more homographs of the bare kana that this corpus does not
+#   happen to contain -- 筒 pipe 1449590, 銃 gun 2864475, 鶺鴒 wagtail 1575110 --
+#   so the auxiliary is seq 1008120, prt, "while / even though; despite", and
+#   nothing else.
+#
+#   ゆえ has a homophone of its own. JMdict 1267120 is 故 ゆえ, "reason; cause"
+#   and the conjunction "because of", which is this chapter's word; 2854173 is
+#   湯坐 ゆえ, a Yamato-court nursemaid, an entirely different word. The gloss
+#   checked here is 1267120.
+#
+# ---------------------------------------------------------------------------
+# READING JUDGEMENT CALLS, both numerals, both stated rather than left to be
+# discovered:
+#
+#   #192977's ５０パーセント is transcribed ごじゅっパーセント. じゅっ is the
+#   ordinary modern reading of 十 before a p-initial counter; じっ is the older
+#   prescriptive one and is still heard. Either is defensible and the card asks
+#   for one of them.
+#
+#   #150038's 農作物 is transcribed のうさくぶつ. JMdict 1827050 lists
+#   のうさくもつ as a second reading; のうさくぶつ is the ordinary modern one.
+#
+# content-source: Tatoeba, via the sentence pairs embedded in JMdict for
+#   Applications 3.6.2 (server/data/jmdict-examples-eng-3.6.2.json). Every
+#   phrase carries its sentence id in `tatoebaId`; the id is quoted, because
+#   YAML reads a bare 236127 as a number and the schema rejects it. Verified by
+#   id against the corpus on 2026-09-05 -- all 34 resolve and every Japanese
+#   string below matches its source character for character. Kana readings and
+#   romaji are transcriptions of the quoted sentence, not new content; every
+#   compound whose reading was not already obvious was checked against JMdict
+#   (自然現象 しぜんげんしょう 1726720, 奇数 きすう 1219410, 平等 びょうどう
+#   1507670, 植民地 しょくみんち 1357350, 偉大 いだい 1155920, 政治家 せいじか
+#   1375980, 完全 かんぜん 1211510, 球体 きゅうたい 1230000, 大陸 たいりく
+#   1415150, 工業製品 こうぎょうせいひん 1935000, 食料 しょくりょう 1358670,
+#   農作物 のうさくぶつ 1827050, 自動車 じどうしゃ 1318400, 必需品 ひつじゅひん
+#   1487500, 贅沢品 ぜいたくひん 1573160, 理性的 りせいてき 1795780, 伝統
+#   でんとう 1442260, 消滅 しょうめつ 1350380, 大気 たいき 1413330, 汚染 おせん
+#   1179040, 国際 こくさい 1286400, 情勢 じょうせい 1356320, 重大 じゅうだい
+#   1336500, 回復 かいふく 1199720, 導入 どうにゅう 1453790, 経つ たつ 1251100,
+#   次第 しだい 1316680, 悪化 あっか 1151470, 泣き言 なきごと 1684740, 失望
+#   しつぼう 1320170, 落胆 らくたん 1548820, 我々 われわれ 1607050, 将来
+#   しょうらい 1347710, 見据える みすえる 1259750, 危機 きき 1218450, 乗り越える
+#   のりこえる 1354770, 若さ わかさ 1324310, 告訴 こくそ 1286030, 取り下げる
+#   とりさげる 1326570, 起源 きげん 1591140, 両方 りょうほう 1554010, 特徴
+#   とくちょう 1455170, 脂肪 しぼう 1311820, 取って代わる とってかわる 1707410,
+#   可能性 かのうせい 1191080, 学寮 がくりょう 1207170 sense 3, 所有 しょゆう
+#   1343390, 駐車場 ちゅうしゃじょう 1426920, 設ける もうける 1386000, 言わぬが花
+#   いわぬがはな 1264370, 商業 しょうぎょう 1346740, 役に立つ やくにたつ 1537980,
+#   古代 こだい 1265760, 希少 きしょう 1222880, 貴重 きちょう 1223520, 商品
+#   しょうひん 1347310, 人生 じんせい 1368370, 重視 じゅうし 1336260, 品質
+#   ひんしつ 1490580, 優れる すぐれる 1539080, 数学 すうがく 1372980, 劣る おとる
+#   1558400, 測定 そくてい 1404570, 正確 せいかく 1376760, 欠かせない かかせない
+#   2666380, 責任 せきにん 1383180, 行う おこなう 1589060, 君ら きみら 2662350,
+#   良心 りょうしん 1554590, 照らし合わせる てらしあわせる 1847590, 決定 けってい
+#   1254380, 概して がいして 1204400, 境界線 きょうかいせん 1235970, 明確 めいかく
+#   1532410, 地球 ちきゅう 1420970, 全て すべて 1595730, 再び ふたたび 1292300).
+#   Six needed the gloss checked as well as the reading, because the headword
+#   has more than one entry -- 虹 in #122964 is にじ 1463740, the rainbow, not
+#   二次 にじ 1461870, "second/quadratic"; 筋肉 in #192977 is きんにく 1241810,
+#   muscle, not すじにく 2206880, sinewy meat; 塩 in #174595 is しお 1576630, not
+#   えん 2847901; 自ら in #176788 is みずから 1317340, oneself, not おのずから
+#   1317330, naturally; 下す in #176788 is くだす 1184320 sense 2, to hand down a
+#   decision, not おろす 1589580; 点 in #224527 is てん 1441390 sense 5, an
+#   aspect or respect, not ちょぼ 1007860.
+# jlpt-source: training -- the level marks the chapter this content sits in,
+#   not each word's textbook level. である and において are commonly listed N3,
+#   つつ and ゆえ N1; the sentences carrying all four here are read at this
+#   chapter's own level and tagging them individually would misreport coverage.
+
+# ── How writing says "is" ─────────────────────────────────────────────────────
+
+- id: band10.a-rainbow-is-a-natural-phenomenon
+  jlpt: N3
+  scenario: register
+  japanese: 虹は自然現象である。
+  reading: にじはしぜんげんしょうである。
+  romaji: niji wa shizen genshou de aru.
+  english: A rainbow is a natural phenomenon.
+  tatoebaId: "122964"
+  notes: The whole lesson in nine characters. Said out loud to a friend, the last word would be だ. Written in an encyclopaedia entry, it is である. Same fact, same slot, a different register.
+
+- id: band10.one-three-and-five-are-odd-numbers
+  jlpt: N3
+  scenario: register
+  japanese: １、３、５は奇数である。
+  reading: いち、さん、ごはきすうである。
+  romaji: ichi, san, go wa kisuu de aru.
+  english: One, three, and five are odd numbers.
+  tatoebaId: "236127"
+  notes: A definition, which is where である lives. Reference books, academic papers and mathematical writing state facts in this voice; a textbook written to sound friendly uses です instead.
+
+- id: band10.all-men-are-equal
+  jlpt: N3
+  scenario: register
+  japanese: 人間は全て平等である。
+  reading: にんげんはすべてびょうどうである。
+  romaji: ningen wa subete byoudou de aru.
+  english: All men are equal.
+  tatoebaId: "144261"
+  notes: 平等 is a な-adjective, and である lands on it exactly where だ would. Nouns and な-adjectives take である; an い-adjective does not, the same restriction だ already has.
+
+- id: band10.nigeria-was-once-a-british-colony
+  jlpt: N3
+  scenario: register
+  japanese: ナイジェリアはかつてイギリスの植民地であった。
+  reading: ナイジェリアはかつてイギリスのしょくみんちであった。
+  romaji: naijeria wa katsute igirisu no shokuminchi de atta.
+  english: At one time Nigeria was a British colony.
+  tatoebaId: "199356"
+  notes: The past. である is built out of で plus ある, so its past is ある's past -- であった. だった says the same thing in the spoken register.
+
+- id: band10.lincoln-was-a-great-statesman
+  jlpt: N3
+  scenario: register
+  japanese: リンカーンは偉大な政治家であった。
+  reading: リンカーンはいだいなせいじかであった。
+  romaji: rinkaan wa idai na seijika de atta.
+  english: Lincoln was a great statesman.
+  tatoebaId: "192484"
+  notes: であった again, and this is the sentence shape a history book or an obituary is written in. 偉大な政治家だった would be the same claim in a conversation.
+
+- id: band10.the-earth-is-not-a-perfect-globe
+  jlpt: N3
+  scenario: register
+  japanese: 地球は完全な球体ではない。
+  reading: ちきゅうはかんぜんなきゅうたいではない。
+  romaji: chikyuu wa kanzen na kyuutai de wa nai.
+  english: The earth is not a perfect globe.
+  tatoebaId: "126970"
+  notes: The negative, and it is the one part of this paradigm that is not new. じゃない, which you already have, is a contraction of ではない -- so writing does not need a special negative, it just declines to contract the one everybody uses.
+
+- id: band10.africa-is-a-continent-greenland-is-not
+  jlpt: N3
+  scenario: register
+  japanese: アフリカは大陸であるが、グリーンランドはそうではない。
+  reading: アフリカはたいりくであるが、グリーンランドはそうではない。
+  romaji: afurika wa tairiku de aru ga, guriinrando wa sou de wa nai.
+  english: Africa is a continent; Greenland is not.
+  tatoebaId: "230381"
+  notes: であるが, though it is, is the written register's けど. That が joining two clauses is a but no lesson has taught you yet; where it sits between two halves of a sentence, read it as but.
+
+- id: band10.he-is-a-doctor-and-a-university-professor
+  jlpt: N3
+  scenario: register
+  japanese: あの人は医者でありまた大学の先生でもある。
+  reading: あのひとはいしゃでありまただいがくのせんせいでもある。
+  romaji: ano hito wa isha de ari mata daigaku no sensei de mo aru.
+  english: He is a doctor and a university professor.
+  tatoebaId: "230730"
+  notes: であり is である stopped halfway, so the sentence can carry on -- is a doctor, and also is a teacher. This is the copula doing what the て-form does for verbs, and nothing in this course has shown you it before.
+
+- id: band10.cars-are-factory-products-foods-are-farm-products
+  jlpt: N3
+  scenario: register
+  japanese: 自動車は工業製品であり、食料は農作物である。
+  reading: じどうしゃはこうぎょうせいひんであり、しょくりょうはのうさくぶつである。
+  romaji: jidousha wa kougyou seihin de ari, shokuryou wa nousakubutsu de aru.
+  english: Cars are factory products, while foods are farm products.
+  tatoebaId: "150038"
+  notes: The shape to take away whole -- one statement closed with であり, the next closed with である. Two claims balanced against each other with no conjunction between them at all, which is why formal writing reaches for it so often.
+
+- id: band10.a-car-is-a-necessity-not-a-luxury
+  jlpt: N3
+  scenario: register
+  japanese: アメリカでは自動車は必需品であり贅沢品ではない。
+  reading: アメリカではじどうしゃはひつじゅひんでありぜいたくひんではない。
+  romaji: amerika de wa jidousha wa hitsujuhin de ari zeitakuhin de wa nai.
+  english: In the United States the automobile is a necessity and not a luxury.
+  tatoebaId: "230257"
+  notes: であり joining to a negative this time. What follows であり does not have to be another である -- here it is ではない, and the two halves are is and is not.
+
+- id: band10.you-should-be-more-reasonable
+  jlpt: N3
+  scenario: register
+  japanese: あなたはもっと理性的であるべきだ。
+  reading: あなたはもっとりせいてきであるべきだ。
+  romaji: anata wa motto riseiteki de aru beki da.
+  english: You should be more reasonable.
+  tatoebaId: "232346"
+  notes: べき needs a verb in front of it, and a noun or な-adjective has no verb -- so である supplies one, since it has ある inside it. だ cannot stand there, which is why the shape you meet is であるべき.
+
+# ── Still changing ────────────────────────────────────────────────────────────
+
+- id: band10.old-traditions-are-crumbling-away
+  jlpt: N3
+  scenario: aspect
+  japanese: 古い伝統が消滅しつつある。
+  reading: ふるいでんとうがしょうめつしつつある。
+  romaji: furui dentou ga shoumetsu shitsutsu aru.
+  english: Old traditions are crumbling away.
+  tatoebaId: "174615"
+  notes: Stop the verb before ます -- 消滅し -- and add つつある. It says the change is under way and not finished. 消滅している would report a state already arrived at.
+
+- id: band10.the-atmosphere-is-being-polluted
+  jlpt: N3
+  scenario: aspect
+  japanese: 大気が汚染されつつある。
+  reading: たいきがおせんされつつある。
+  romaji: taiki ga osen saretsutsu aru.
+  english: The atmosphere is being polluted.
+  tatoebaId: "137591"
+  notes: つつある sitting on a passive verb. 汚染される is the passive you already build; つつある then says it is happening progressively, and nobody is named as doing the polluting.
+
+- id: band10.the-international-situation-is-becoming-grave
+  jlpt: N3
+  scenario: aspect
+  japanese: 国際情勢は重大になりつつある。
+  reading: こくさいじょうせいはじゅうだいになりつつある。
+  romaji: kokusai jousei wa juudai ni naritsutsu aru.
+  english: The international situation is becoming grave.
+  tatoebaId: "173054"
+  notes: なる in front of it gives なりつつある, is becoming, mid-change -- the news bulletin's way of saying a thing has not got there yet.
+
+- id: band10.my-business-is-picking-up-again
+  jlpt: N3
+  scenario: aspect
+  japanese: 私のビジネスは再び回復しつつあります。
+  reading: わたしのビジネスはふたたびかいふくしつつあります。
+  romaji: watashi no bijinesu wa futatabi kaifuku shitsutsu arimasu.
+  english: My business is picking up again.
+  tatoebaId: "164122"
+  notes: ある is an ordinary verb, so it takes ます like any other. つつあります is the polite form, and it is what you would say to a client rather than write in a report.
+
+- id: band10.computers-are-being-introduced-into-this-company
+  jlpt: N3
+  scenario: aspect
+  japanese: コンピューターがこの会社に導入されつつあります。
+  reading: コンピューターがこのかいしゃにどうにゅうされつつあります。
+  romaji: konpyuutaa ga kono kaisha ni dounyuu saretsutsu arimasu.
+  english: Computers are being introduced into this company.
+  tatoebaId: "217282"
+  notes: Three things stacked and each one readable on its own -- 導入する made passive, then つつある for the change under way, then ます for the register. Read them left to right and nothing is hidden.
+
+- id: band10.the-weather-was-getting-worse-as-the-day-went-on
+  jlpt: N3
+  scenario: aspect
+  japanese: 日が経つにつれて、天気は次第に悪化しつつあった。
+  reading: ひがたつにつれて、てんきはしだいにあっかしつつあった。
+  romaji: hi ga tatsu ni tsurete, tenki wa shidai ni akka shitsutsu atta.
+  english: The weather was getting worse and worse as the day went on.
+  tatoebaId: "122956"
+  notes: The past, つつあった, because ある is what carries the tense. につれて at the front, as-and-when, is not taught anywhere in this course -- here it just says the two changes kept pace with each other.
+
+- id: band10.we-are-born-crying
+  jlpt: N3
+  scenario: aspect
+  japanese: 人は泣きつつ生まれ、泣き言を言いつつ暮らし、失望落胆して死ぬ。
+  reading: ひとはなきつつうまれ、なきごとをいいつつくらし、しつぼうらくたんしてしぬ。
+  romaji: hito wa nakitsutsu umare, nakigoto o iitsutsu kurashi, shitsubou rakutan shite shinu.
+  english: We are born crying, spend our lives complaining, and die disappointed.
+  tatoebaId: "144511"
+  notes: つつ with no ある after it, twice in one sentence, doing ながら's own job -- crying while being born, complaining while living. The ます-stem in front of it is the same stem ながら takes.
+
+- id: band10.we-must-keep-our-eyes-on-the-future
+  jlpt: N3
+  scenario: aspect
+  japanese: 我々は将来を見据えつつ、今そこにある危機を乗り越えていかねばならない。
+  reading: われわれはしょうらいをみすえつつ、いまそこにあるききをのりこえていかねばならない。
+  romaji: wareware wa shourai o misuetsutsu, ima soko ni aru kiki o norikoete ikaneba naranai.
+  english: We must keep our eyes on the future while getting through the crisis that is here now.
+  tatoebaId: "185773"
+  notes: Bare つつ again, and everything around it is written register too -- 我々 for we, and ねばならない, the literary shape of なければならない. This is the voice of an editorial.
+
+# ── Because, in writing ───────────────────────────────────────────────────────
+
+- id: band10.the-charges-were-dropped-because-of-his-youth
+  jlpt: N3
+  scenario: cause
+  japanese: 若さゆえに彼に対する告訴は取り下げられた。
+  reading: わかさゆえにかれにたいするこくそはとりさげられた。
+  romaji: wakasa yue ni kare ni taisuru kokuso wa torisagerareta.
+  english: The charges against him were dropped because of his youth.
+  tatoebaId: "148764"
+  notes: A noun, then ゆえに, then the consequence. から and ので are how a person would tell you the same thing; ゆえに is how the court report writes it.
+
+- id: band10.canadian-english-has-features-of-both
+  jlpt: N3
+  scenario: cause
+  japanese: その起源ゆえに、カナダ英語にはアメリカ英語とイギリス英語の両方の特徴がある。
+  reading: そのきげんゆえに、カナダえいごにはアメリカえいごとイギリスえいごのりょうほうのとくちょうがある。
+  romaji: sono kigen yue ni, kanada eigo ni wa amerika eigo to igirisu eigo no ryouhou no tokuchou ga aru.
+  english: Because of its origins, Canadian English has features of both American and British English.
+  tatoebaId: "236966"
+  recognitionOnly: true
+  notes: The same noun-plus-ゆえに, opening the sentence rather than sitting inside it -- exactly where English puts because of. Recognition only, because its reading runs to 48 kana.
+
+- id: band10.some-things-cannot-be-put-into-words
+  jlpt: N3
+  scenario: cause
+  japanese: 愛するがゆえに言葉にできないこともあるし、言わぬが花ということもあります。
+  reading: あいするがゆえにことばにできないこともあるし、いわぬがはなということもあります。
+  romaji: aisuru ga yue ni kotoba ni dekinai koto mo aru shi, iwanu ga hana to iu koto mo arimasu.
+  english: Because I love you there are things I cannot put into words, and there are things better left unsaid.
+  tatoebaId: "191565"
+  notes: A whole clause in front of ゆえに needs が between them -- 愛する becomes 愛するがゆえに. 言わぬが花, some things are better left unsaid, is a set phrase in its own right.
+
+- id: band10.hence-i-shall-have-to-stay-here
+  jlpt: N3
+  scenario: cause
+  japanese: それゆえここにとどまらざるを得ないだろう。
+  reading: それゆえここにとどまらざるをえないだろう。
+  romaji: sore yue koko ni todomarazaru o enai darou.
+  english: Hence, I shall have to stay here.
+  tatoebaId: "204782"
+  notes: それゆえ opens a sentence and means therefore, pointing back at whatever was just said. だろう on the end is the plain form of でしょう -- no chapter in this course teaches either, and here it only softens the claim to I expect.
+
+- id: band10.half-the-muscle-can-give-way-to-fat
+  jlpt: N3
+  scenario: cause
+  japanese: ゆえに、筋肉の５０パーセントが脂肪に取って代わられる可能性がある。
+  reading: ゆえに、きんにくのごじゅっパーセントがしぼうにとってかわられるかのうせいがある。
+  romaji: yue ni, kinniku no gojuppaasento ga shibou ni totte kawarareru kanousei ga aru.
+  english: Hence 50 percent of the muscle can give way to fat.
+  tatoebaId: "192977"
+  notes: ゆえに standing alone at the head of a sentence, which is where an argument draws its conclusion. 取って代わられる is the passive of 取って代わる, to supplant.
+
+- id: band10.miss-baker-had-a-special-place-in-the-car-park
+  jlpt: N3
+  scenario: cause
+  japanese: 学寮長のベイカーさんは、それゆえに自分の所有する小さい車のために、駐車場に特別なスペースを設けた。
+  reading: がくりょうちょうのベイカーさんは、それゆえにじぶんのしょゆうするちいさいくるまのために、ちゅうしゃじょうにとくべつなスペースをもうけた。
+  romaji: gakuryouchou no beikaa san wa, sore yue ni jibun no shoyuu suru chiisai kuruma no tame ni, chuushajou ni tokubetsu na supeesu o mouketa.
+  english: The head of the college, Miss Baker, therefore had a special place in the car park for her small car.
+  tatoebaId: "184184"
+  recognitionOnly: true
+  notes: それゆえに and ために in one sentence -- therefore, and for the sake of. Worth reading slowly for that pairing alone. Recognition only, because its reading runs to 68 kana.
+
+# ── In, formally speaking ─────────────────────────────────────────────────────
+
+- id: band10.english-is-useful-in-commerce
+  jlpt: N3
+  scenario: domain
+  japanese: 英語は商業において役に立つ。
+  reading: えいごはしょうぎょうにおいてやくにたつ。
+  romaji: eigo wa shougyou ni oite yaku ni tatsu.
+  english: English is useful in commerce.
+  tatoebaId: "189119"
+  notes: A bare noun, then において, with no particle and no copula in between -- 商業において. で would carry the same sentence in a plainer voice.
+
+- id: band10.salt-was-precious-in-ancient-times
+  jlpt: N3
+  scenario: domain
+  japanese: 古代において塩は希少で貴重な商品であった。
+  reading: こだいにおいてしおはきしょうできちょうなしょうひんであった。
+  romaji: kodai ni oite shio wa kishou de kichou na shouhin de atta.
+  english: Salt was a rare and costly commodity in ancient times.
+  tatoebaId: "174595"
+  notes: において marking a stretch of time rather than a place, and であった closing the sentence. One sentence, two of this chapter's patterns, and it reads as one continuous voice rather than two decorations.
+
+- id: band10.some-people-place-importance-on-money
+  jlpt: N3
+  scenario: domain
+  japanese: 人生においてお金を重視する人もいる。
+  reading: じんせいにおいておかねをじゅうしするひともいる。
+  romaji: jinsei ni oite okane o juushi suru hito mo iru.
+  english: Some people place a lot of importance on money in life.
+  tatoebaId: "144033"
+  notes: 人生において is neither a place nor a time but a span you live inside. There is a を in this sentence and it belongs to 重視する -- the noun in front of において is never marked を, which is the surest way to tell this construction from the verb 置く written in kana.
+
+- id: band10.this-suit-is-superior-in-quality
+  jlpt: N3
+  scenario: domain
+  japanese: この服は品質においてあの服よりもずっと優れていると思う。
+  reading: このふくはひんしつにおいてあのふくよりもずっとすぐれているとおもう。
+  romaji: kono fuku wa hinshitsu ni oite ano fuku yori mo zutto sugurete iru to omou.
+  english: I think this suit is much superior to that one in quality.
+  tatoebaId: "219951"
+  notes: The second job -- in what respect, not in what place. 品質において says the comparison is about quality and nothing else. This is where English says in terms of.
+
+- id: band10.she-is-inferior-to-him-in-math
+  jlpt: N3
+  scenario: domain
+  japanese: 彼女は、彼より、数学において劣っている。
+  reading: かのじょは、かれより、すうがくにおいておとっている。
+  romaji: kanojo wa, kare yori, suugaku ni oite ototte iru.
+  english: She is inferior to him in math.
+  tatoebaId: "93694"
+  notes: The same respect-marking job with 劣る instead of 優れる. において and より work together here -- より says who the comparison is against, において says what it is about.
+
+- id: band10.accuracy-is-indispensable-in-measurement
+  jlpt: N3
+  scenario: domain
+  japanese: 測定においては正確さは欠かせないものである。
+  reading: そくていにおいてはせいかくさはかかせないものである。
+  romaji: sokutei ni oite wa seikakusa wa kakasenai mono de aru.
+  english: In measurement, accuracy is indispensable.
+  tatoebaId: "139892"
+  notes: においては, with は added, sets 測定 up as the topic before saying anything about it -- as for measurement. The sentence closes on ものである, the written voice again.
+
+- id: band10.do-everything-on-your-own-responsibility
+  jlpt: N3
+  scenario: domain
+  japanese: 自分の責任において何でも行いなさい。
+  reading: じぶんのせきにんにおいてなんでもおこないなさい。
+  romaji: jibun no sekinin ni oite nandemo okonainasai.
+  english: Do everything on your own responsibility.
+  tatoebaId: "149797"
+  notes: 責任において is a fixed phrase worth keeping whole -- on someone's own responsibility, under their own authority. JMdict gives this its own sense of において, separate from the place and the respect senses.
+
+- id: band10.you-must-decide-on-your-own-responsibility
+  jlpt: N3
+  scenario: domain
+  japanese: 君らは自らの責任において、自らの良心に照らし合わせ、決定を下さなくてはならない。
+  reading: きみらはみずからのせきにんにおいて、みずからのりょうしんにてらしあわせ、けっていをくださなくてはならない。
+  romaji: kimira wa mizukara no sekinin ni oite, mizukara no ryoushin ni terashiawase, kettei o kudasanakute wa naranai.
+  english: You must make your decisions on your own responsibility, in the light of your own conscience.
+  tatoebaId: "176788"
+  recognitionOnly: true
+  notes: The same fixed phrase, this time with なくてはならない closing the sentence. 自ら is the written register's own word for oneself. Recognition only, because its reading runs to 53 kana.
+
+- id: band10.the-line-between-amateur-and-professional-is-disappearing
+  jlpt: N3
+  scenario: domain
+  japanese: ここで明確にしなければならない点は、スポーツにおいてアマチュアとプロフェッショナルの境界線が消失しつつあるということだ。
+  reading: ここでめいかくにしなければならないてんは、スポーツにおいてアマチュアとプロフェッショナルのきょうかいせんがしょうめつしつつあるということだ。
+  romaji: koko de meikaku ni shinakereba naranai ten wa, supootsu ni oite amachua to purofesshonaru no kyoukaisen ga shoumetsu shitsutsu aru to iu koto da.
+  english: The point we must clarify here is that the lines between amateur and professional in sport are beginning to disappear.
+  tatoebaId: "224527"
+  recognitionOnly: true
+  notes: において and つつある in one sentence, which is what this chapter's register actually looks like in the wild -- not one formal word in a plain sentence, but several agreeing with each other. Recognition only, because its reading runs to 70 kana.

@@ -1,0 +1,88 @@
+# Book Three, chapter 11 grammar patterns -- register and the written voice.
+#
+# One pattern per teaching lesson, each blanking the word that lesson exists for
+# out of one of its own sentences. The blank is matched against the phrase's
+# reading, so these are kana.
+#
+# The `pattern` strings are bare kana for the reason chapter 1's file records:
+# scripts/levelling.mjs's grammarSurface() rejects any pattern containing a
+# Latin character or a digit and needs at least one ～-delimited fragment of two
+# or more characters, so a free English description of a rule tags nothing and
+# the reading library can never find text for it. This chapter has the easiest
+# time of it of any in the book -- all four of its words are fixed surface
+# strings, spelled in kana in every genuine citation -- so all four literals
+# below are exactly the thing being taught, with no ～ needed and nothing
+# approximated.
+#
+# Where the literals are still coarse, said here rather than discovered later:
+#
+#   ～である tags only the non-past. であった, ではない and であり are the same
+#   copula in three other shapes and none of them contains the string である,
+#   so the tagger will under-report this lesson by roughly the 337 raw
+#   sentences those three shapes account for (111 + 195 + 31). The alternative,
+#   ～であ, would catch all four and would also catch であろう, で会う and every
+#   な-adjective ending in であ that is not this word at all. Precision was
+#   worth more than recall, the same trade chapter 2 made for ～ために.
+#
+#   ～つつある will not tag bare つつ, つつあった or つつあり -- five of this
+#   chapter's own eight つつ sentences. Dropping to ～つつ would tag all eight
+#   and would also tag つつじ, つつく, つつまれる, つつがなく, 夢うつつ,
+#   つつましい and every other word in the corpus that happens to contain the
+#   two kana. The phrase file lists eleven such sentences by id. Same trade,
+#   same direction, and this one is not close.
+#
+#   ～ゆえに misses それゆえ with no に after it, which is one of the six kana
+#   citations this chapter has (#204782). ～ゆえ would catch it and would also
+#   catch ゆえん and any other word containing the two kana. With six sentences
+#   in the whole corpus the difference is one sentence either way, so the
+#   precise literal wins. It also cannot see 故に, the kanji spelling -- exactly
+#   the single-script blind spot the planning document found when it corrected
+#   this pattern's own ceiling upward.
+#
+#   ～において will tag the verb 置く written in kana. #234564, #216737 and
+#   #79178 are all 置いて plus an auxiliary and all three match this string
+#   exactly. Nothing in the literal can separate them; the phrase file records
+#   the hand test that does (a を-marked thing being put somewhere), and it will
+#   need applying again wherever the library uses this pattern.
+#
+# No blank here takes a particle along with the word, unlike chapter 1's
+# ママに or chapter 2's のせいで. These four patterns attach to what precedes
+# them with no particle at all -- a bare noun before において and ゆえに, a
+# ます-stem before つつある, a noun or な-adjective before である -- so there is
+# no particle to blank, and the absence is itself half of what each lesson
+# teaches.
+#
+# content-source: n/a for this file -- every pattern references an existing
+#   phrase from phrases/b3-10-register.yaml rather than composing new Japanese,
+#   and that file carries the Tatoeba id for each.
+# jlpt-source: training -- the level marks the chapter this content sits in,
+#   not each word's textbook level. である and において are commonly listed N3,
+#   つつ and ゆえ N1; the chapter is N3 and is tagged as such throughout.
+
+- id: grammar.b3-de-aru
+  jlpt: N3
+  pattern: "である"
+  gloss: The written register's だ. Same slot, same paradigm -- であった for the past, ではない for the negative, であり to link one statement to the next. Nouns and な-adjectives take it; an い-adjective does not, exactly as with だ.
+  phraseId: band10.a-rainbow-is-a-natural-phenomenon
+  blank: である
+
+- id: grammar.b3-tsutsu
+  jlpt: N3
+  pattern: "つつある"
+  gloss: A change under way and not finished. Onto the ます-stem, most often a verb of becoming or of change. Without ある, bare つつ does ながら's job -- doing one thing while doing another -- in the same formal register.
+  phraseId: band10.old-traditions-are-crumbling-away
+  blank: つつある
+
+- id: grammar.b3-yue
+  jlpt: N3
+  pattern: "ゆえに"
+  gloss: Because, on paper. A bare noun in front, or a plain clause plus が. それゆえ at the head of a sentence is therefore, pointing back at what was just said.
+  phraseId: band10.the-charges-were-dropped-because-of-his-youth
+  blank: ゆえに
+
+- id: grammar.b3-ni-oite
+  jlpt: N3
+  pattern: "において"
+  gloss: In -- a place, a time, or a respect. A bare noun in front, no particle between. Three jobs in one word, and JMdict separates all three -- at a place or time, in terms of some quality, and the fixed 責任において, on one's own responsibility.
+  phraseId: band10.english-is-useful-in-commerce
+  blank: において

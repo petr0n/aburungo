@@ -1,0 +1,37 @@
+# Book Three, chapter 11 vocabulary -- deliberately empty, for the same reason
+# chapter 1's and chapter 2's are.
+#
+# This chapter teaches four words and not one of them is a word a vocabulary
+# card can hold. である is the copula -- JMdict 1008340 tags it cop, a part of
+# speech no card in this app has a slot for. つつ (1008120) and において
+# (1009550) are tagged prt and exp, particles and a fixed expression, and both
+# mark a grammatical role rather than naming a thing or an action. ゆえ
+# (1267120) is the closest to an ordinary noun of the four -- JMdict's first
+# sense really is "reason; cause" -- but no sentence in this book's source
+# corpus uses it that way. All six kana citations are the conjunction, ゆえに,
+# and teaching the noun off the back of zero attested sentences is exactly the
+# move 04-stage-reading.md section 8 exists to stop.
+#
+# All four have kanji spellings that this chapter does not teach and that the
+# corpus mostly does not use. 於いて exists as a JMdict headword (に於いて,
+# に於て, 1009550) and appears in **no** sentence in this corpus -- checked, not
+# assumed. 故 ゆえ appears in exactly one (#75231), which the phrase file
+# explains it does not card. である and つつ have no kanji of their own at all.
+# So the `kanji:` arrays in the lessons file are empty, and that is a finding
+# rather than an omission.
+#
+# The cited sentences do use words the learner does not own -- 消滅, 情勢,
+# 告訴, 境界線, 贅沢品, 照らし合わせる and their kin. That is not a gap this
+# file should close. 04-stage-reading.md section 3 hands vocabulary at this
+# stage to the reading library and to mining -- lessons carry patterns, the
+# library carries words. Chapter 1's file makes the argument at length and it
+# is the same argument.
+#
+# The file exists so the chapter's four content files stay a matched set and so
+# the next author does not go looking for a missing one. An empty array parses;
+# a file of comments alone does not, which is why the `[]` below is load-bearing
+# rather than decorative.
+#
+# content-source: n/a -- this file adds no Japanese content.
+
+[]
