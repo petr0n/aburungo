@@ -1,0 +1,235 @@
+# Chapter 9 -- What you have to do.
+#
+# Books One and Two gave the learner two ways to lean on somebody else's
+# judgment. ちょっと見てもいいですか, may I have a look, asks what is allowed.
+# 疲れたら、休んだほうがいいです, if you're tired you should rest, offers advice
+# that costs nothing to ignore. Neither commits to anything. This chapter is
+# where the learner starts making claims that carry weight: rules that have to
+# be followed, verdicts about what is right, prohibitions that cannot be waved
+# off, and one admission that there was never a choice. Five ways to say so,
+# each answering to a different kind of authority.
+#
+# Lesson 1 is not on the chapter breakdown's list of five patterns, and it has
+# to come first anyway. なければならない -- the ordinary, productive way to say
+# "must" -- is taught nowhere in Books One or Two. Not as a rule, not inside a
+# phrase, not once; the gap is recorded in book-three-bands.md section 3d and
+# was confirmed against every grammar, lesson and phrase file before this
+# chapter was written. A learner who finishes Book Two can say what they want
+# to do, what they can do, what they intend and what they were told, and cannot
+# say that something has to be done. The other four patterns in this chapter
+# are all variations on "must" or "must not" that only make sense taught
+# against the plain form, so this is where it lands. It costs almost nothing:
+# both halves are already owned -- the ない-form from Book Two's plain-form
+# chapter, and the ば conditional from its conditionals chapter, which already
+# established that ない is an い-adjective and takes ければ -- plus ならない, the
+# negative of なる, a word held since Book One. Two owned rules and one new
+# idea: the double negative that turns "if not, no good" into "must".
+#
+# Lessons 2 and 3 are two different reasons to say "should", and the difference
+# is where the authority sits. べき is a verdict: this is what is right,
+# whether or not any rule says so. 必要がある passes no verdict at all -- it
+# reports that a need exists, the way you would say a car needs an oil change.
+# Say べき where 必要がある was meant and a plain statement of fact becomes a
+# judgment on somebody.
+#
+# Lesson 4 turns the whole thing over: prohibition, "you must not". It is the
+# direct negative of the permission question Book One taught -- ask 見てもいい
+# ですか and this is what "no" sounds like when it is a rule rather than one
+# person's preference. It also carries the trap the chapter is built around.
+# なくてはならない is two kana longer than てはならない and means the opposite:
+# 締めなくてはならない requires you to fasten your seat belt, 締めてはならない
+# would forbid it. Getting this backwards does not sound clumsy; it says the
+# reverse of what was meant.
+#
+# Lesson 5 closes with the chapter's most emphatic member: ざるを得ない, "there
+# was no way around it". Its closest cousin, ないわけにはいかない, is not taught
+# here -- it is the negation of わけにはいかない, which the speaker-stance
+# chapter already covers as one of わけ's jobs, and this corpus attests the
+# negated form exactly once. Extending an owned pattern with ordinary negation
+# is not new ground, and one sentence would not be enough to teach it on if it
+# were.
+#
+#    1  なければならない (+なくては／なきゃ／なくちゃ)  you have to
+#    2  べき                                          you should -- a verdict
+#    3  必要がある                                    there's a need to -- a fact
+#    4  てはならない／てはいけない                     you must not
+#    5  ざるを得ない                                  there's no way around it
+#
+# No lesson here depends on another's *form* -- each attaches to material the
+# learner already owns, whether the ない-form, the dictionary form or the
+# て-form -- but lessons 1 and 4 are taught as a deliberate pair around the なく
+# trap, and lessons 2 and 3 as a deliberate pair around where authority comes
+# from. The checkpoint closes the chapter rather than splitting it (DR-021).
+#
+# NUMBERING. The chapter breakdown assigns global orders 260-265. Band 7
+# returned two of its assigned slots, which left a gap, so the book's tail was
+# renumbered contiguously and this chapter runs 258-263. The chapter id
+# (b3.band-8) and every lesson id are unchanged; only `order` moved. The
+# chapter's position in the assembled book is 9, since the passive chapter
+# opens the book ahead of the connective chapters.
+#
+# WIRING. This chapter's `b3.band-8` entry does not exist yet in
+# chapters/b3.yaml. It wants `order: 9` and `title: What you have to do`, which
+# is the string every teaching lesson below carries in `situation`.
+#
+# KANJI. Three arrive: 必 and 要 on lesson 3, both halves of 必要, and 得 on
+# lesson 5. None is in data/content-manifest.json's 222-character set, checked
+# one character at a time. Every attested 必要がある sentence writes 必要 in
+# kanji and every attested ざるを得ない sentence writes 得, so there is no
+# honest kana-only spelling to fall back on. The other four patterns are
+# kana-only in ordinary use and cost nothing. The `kanji:` arrays below are
+# empty pending the wiring pass that fills them; this header is where that pass
+# reads which lesson takes which character. No new vocabulary ships --
+# vocabulary/b3-08-obligation.yaml carries that argument. The `wordIds` below
+# are empty, unlike the passive chapter's: that chapter pulled words whose
+# passive its own sentences built, and nothing in this chapter's sentences is a
+# conjugation of a word the learner already owns. An SRS pull here would be
+# padding.
+#
+# FOUR THINGS THE ATTESTATION PASS FOUND THAT THE BREAKDOWN DID NOT:
+#
+#   てはいけない was never counted. The breakdown built lesson 4 on てはならない
+#   alone, at 18 genuine hits. てはいけない -- the same construction in the
+#   everyday register -- has 43, and its sentences are shorter and far more
+#   usable. Both are taught in lesson 4 and the cards are split three and
+#   three. Leaving いけない out would have taught the formal half of a pattern
+#   and called it the whole.
+#
+#   ざるを得ない is not a three-sentence pattern. Three is the count for that
+#   exact string; the past ざるを得なかった and the polite ざるを得ません bring
+#   the construction to nine. Lesson 5 has five cards and the checkpoint did
+#   not have to reuse a teaching sentence, which is what the breakdown planned
+#   for.
+#
+#   なければいけない (9) and ねばならない (27) belong to lesson 1's family and
+#   went uncounted. Neither earns a card; both are named in lesson 1's note so
+#   a reader who meets one knows what it is.
+#
+#   の必要がある has zero hits, which is what the breakdown implied when it
+#   said noun attachment "did not surface". But が必要だ has 20 and が必要です
+#   18, so the noun form is common -- it just is not this construction. Lesson
+#   3 says so rather than leaving the impression that nouns cannot do this.
+#
+# ONE THING DESCRIBED AND NOT CARDED. なくてもいい, "don't have to", is
+# lesson 1's mirror image and is genuinely attested (7 clean hits). It stays a
+# described rule in lesson 1's note rather than a card, following the
+# breakdown's own call: it is not one of the chapter's patterns and nothing
+# here depends on it. If a later revision finds a spare slot, it is the first
+# place to spend one.
+#
+# One rule the grammarNotes below hold themselves to, stated once because it is
+# stricter than Book Two's and a later editor will otherwise undo it by
+# accident. A grammarNote here may show a conjugation chain (書く becoming
+# 書かなければならない), a verb phrase (規則を守る), or a sentence that is a
+# phrase card in this chapter, in an earlier chapter of this book, or in an
+# earlier book, quoted whole. It may not
+# show a Japanese sentence that is none of those. Several notes below therefore
+# describe a sentence in English where a draft would have composed a Japanese
+# one or trimmed an attested one down to fit.
+#
+# content-source: every phrase this file references is a verified Tatoeba pair,
+#   cited by id in `tatoebaId` in phrases/b3-08-obligation.yaml. No
+#   training-canonical sentence is used anywhere in this chapter
+#   (04-stage-reading.md section 8).
+
+- id: b3.nakereba
+  order: 258
+  chapterId: b3.band-8
+  situation: What you have to do
+  title: You have to
+  canDo: State a real obligation, at any register from a written rule to a text to a friend
+  wordIds: []
+  phraseIds:
+    - band8.you-must-control-yourself
+    - band8.the-frame-must-be-rigid
+    - band8.above-all-we-must-be-healthy
+    - band8.we-must-respect-local-customs
+    - band8.we-always-have-to-obey-the-rules
+    - band8.youve-got-to-try-the-local-sake
+    - band8.i-have-to-comb-my-hair
+  kanji: []
+  patternId: grammar.b3-nakereba
+  grammarNote: "Start with what you have been missing, because it is worth knowing that you were. Book Two taught you 疲れたら、休んだほうがいいです — if you're tired, you should rest — and that is advice, offered and easily declined. It taught you to ask ちょっと見てもいいですか, may I have a look, and that is a question about what somebody will allow. Neither of them says that something has to happen. Nothing in Books One or Two does. This lesson is that missing piece, and you already own every part of it. Take the ない-form: 書く → 書かない, 食べる → 食べない, する → しない. Then remember what Book Two's conditionals chapter told you about ない — it is an い-adjective, it conjugates like one, and an い-adjective's ば conditional is ければ. 高い → 高ければ. ない → なければ. So 書かない → 書かなければ, if I don't write. Then put ならない on the end, which is just なる in the negative, the same なる you have had since Book One. If I don't write, it won't do. That is 書かなければならない, I have to write. 君は自制しなければならない. The logic is a double negative and it is worth saying out loud once, because after that you can stop thinking about it: not doing it is not acceptable, therefore do it. Everything else attaches the same way, one step earlier. An い-adjective goes to its own くない first and then takes the same ければ — その機械の骨組みは堅くなければならない, the frame has to be rigid. A noun or a な-adjective joins with で and nothing more: 何よりもまず健康でなければならない. Not 健康ではなければ. では would be negating a second time and なければ has already done it. Now the other faces of the same thing, because you will meet all of them and they mean the same. なくてはならない swaps the ば conditional for the て-form of ない — 我々は地方の慣習を尊重しなくてはならない. なくてはいけない and なければいけない put いけない where ならない was; いけない is the more everyday of the two words and ならない the more written, but no line between them is sharp and either will be understood anywhere. Then the spoken contractions. なきゃ is なければ worn down, なくちゃ is なくては worn down, and both very often stop right there with the ending word left unsaid — 旅に出たら地酒を飲まなきゃ, 髪をとかさなくちゃ. Not always, though: 入力しなきゃならない and 夜勤しなくちゃいけない are both perfectly ordinary and both turn up in this corpus, so do not take a bare なきゃ as a rule about how the form works. One more is worth recognising and not building: ねばならない, the same thing in a literary voice, common in older writing and in anything deliberately formal. Then the polite ending, which you will want: ならない is a verb like any other, so なければなりません and なくてはなりません are simply the polite versions, and they are what you would write in an email. Finally, the mirror. Put てもいい — the permission you already have — onto the same ない-form and you get なくてもいい, don't have to. 払わなくてもいい, you don't have to pay. Same starting point, opposite conclusion, and no card here asks you to produce it; recognise it and move on."
+
+- id: b3.beki
+  order: 259
+  chapterId: b3.band-8
+  situation: What you have to do
+  title: You should
+  canDo: Say what is right, as your own verdict rather than as a rule or a fact
+  wordIds: []
+  phraseIds:
+    - band8.you-should-pay-your-debts
+    - band8.you-should-face-reality
+    - band8.i-think-you-should-do-it-yourself
+    - band8.you-should-be-more-reasonable
+    - band8.she-shouldnt-go-out-alone-at-night
+    - band8.drivers-should-wear-seat-belts
+    - band8.this-is-a-surprising-discovery
+  kanji: []
+  patternId: grammar.b3-beki
+  grammarNote: "The form is the easy part. Take a verb in its dictionary form, put べき on it, finish with だ or です. 払う → 払うべきだ. 君は借金を払うべきだ, you should pay your debts. What the lesson is actually about is the difference between べき and なければならない, and it is not a difference of strength. なければならない reports an obligation that is there whether or not the speaker likes it — a rule, a requirement, a deadline. べき is the speaker stepping forward and saying what is right. Take the seat belt. The time chapter gave you 離陸の際は、シートベルトを締めなくてはならない, which reports what the airline requires of you — and you can now see what that ending was doing. 運転手はベルトを締めるべきだ says instead that somebody thinks drivers ought to, which is an opinion about drivers and would still be sayable if no law existed. That is why べき can sting: aimed at a person, it is a verdict on them. This is a tendency rather than a wall — rules and official texts use べき too, especially where a document is arguing that something ought to be so — but if you are choosing between the two, ask whether you are reporting a requirement or delivering a judgment. Two attachment points to get right. する is irregular and drops its stem: 現実を直視すべきだ. It is also the only verb with a second form in ordinary use — 自分自身でするべきだと思いますよ. Both are current, both are in this corpus, and speakers genuinely split; すべき leans written, するべき leans spoken, and neither is a mistake. A noun or な-adjective cannot take べき directly, because べき wants a predicate in dictionary form in front of it and a noun does not have one. It borrows the copula's: である. あなたはもっと理性的であるべきだ. 理性的べきだ is not a sentence. You will also meet the classical たるべき in frozen expressions of the 国家の棟梁たるべき器 sort, where たり is doing である's job in an older voice — read it, do not build it. The negative is べきではない or べきでない, both attested, the second being the first with は dropped: 彼女は夜にひとりで出歩くべきではない. Read that reading carefully — ひとりで ends in で and 出歩く begins with で, so ひとりでであるく has two で in a row and that is correct. One last thing, so a common word does not ambush you. A handful of verbs have frozen solid with べき into single adjectives: 驚くべき, astonishing; 恐るべき, fearsome; 記念すべき, memorable; 来たるべき, coming. これは驚くべき発見だ does not mean anyone should be surprised, it means the discovery is a surprising one. Recognise these as words. Do not manufacture new ones. And there is a string that is not this grammar at all: 食べきれない is the ます-stem of 食べる plus きれない, can't finish eating, and the べき in the middle of it belongs to neither word."
+
+- id: b3.hitsuyo-ga-aru
+  order: 260
+  chapterId: b3.band-8
+  situation: What you have to do
+  title: There's a need to
+  canDo: State a plain necessity without making it a judgment about anyone
+  wordIds: []
+  phraseIds:
+    - band8.your-shirts-need-washing
+    - band8.this-chair-needs-repairing
+    - band8.you-dont-need-to-go-to-the-dentist
+    - band8.we-need-to-develop-renewable-energy
+    - band8.she-needs-to-play-with-more-expression
+  kanji: []
+  patternId: grammar.b3-hitsuyo-ga-aru
+  grammarNote: "必要 is a noun meaning necessity — it is also a な-adjective, the 必要な of 必要な個人情報, the personal details that are needed — and 必要がある says that a necessity exists. Put a verb in its dictionary form in front and you have the least personal way this chapter offers of saying something has to happen. あなたのシャツは洗う必要がある. Nobody is obliged, nobody is being judged; a need is simply reported, the way you would report that a tyre is flat. That is the whole content of this lesson, and it only shows up in contrast. Set the three side by side on the same imagined shirt. 洗わなければならない makes it an obligation you are under. 洗うべきだ makes it somebody's opinion that you ought to. 洗う必要がある makes it a fact about the shirt. The first two have a person in them even when no person is named. The third does not, which is why この椅子は修繕する必要がある works perfectly on a chair — a chair has no duties and holds no opinions, and this construction does not hand it any. It is also why you will meet this pattern constantly in reports, manuals, policy and anything else written about what has to be done rather than about who has to do it: 私たちは再生可能なエネルギー源を開発する必要がある. Reaching for べき in a sentence like that would turn an assessment into an accusation. The negative swaps two things at once — が becomes は, ある becomes ない. 歯医者に行く必要はないですよ, there's no need to go to the dentist. が is not wrong there and 必要がない is grammatical; は is what turns up far more often, because a Japanese negative tends to attract は. Then the extension, stated honestly rather than smoothed. Every example on this lesson's cards attaches to a verb, because in this corpus 必要がある always does — の必要がある does not appear once. But that is a fact about this construction, not about the word. 必要 attaches to nouns all the time through a different frame: X が必要だ, X is needed. That shape is common — the corpus has it in dozens of sentences about needing a licence, needing capital, needing a nut to fit a bolt — and you will meet it in the reading library long before you need to write it. Same noun, different sentence around it. Two characters arrive with this lesson and both are worth a moment, because they are the only new ones in it. 必 is certainty, what must be so; 要 is what is wanted or required. Together they are exactly what the word says. Every attested sentence writes them in kanji and not one sentence in this corpus spells the word ひつよう, so this is the one lesson in the chapter you cannot read without them."
+
+- id: b3.tewanaranai
+  order: 261
+  chapterId: b3.band-8
+  situation: What you have to do
+  title: You must not
+  canDo: Forbid something outright, and tell it apart on sight from an obligation
+  wordIds: []
+  phraseIds:
+    - band8.students-must-not-use-this-toilet
+    - band8.dont-be-too-eager-for-success
+    - band8.you-must-not-smoke-while-working
+    - band8.never-resort-to-violence
+    - band8.no-country-may-interfere-in-another
+    - band8.foreign-workers-must-not-be-a-buffer
+  kanji: []
+  patternId: grammar.b3-tewanaranai
+  grammarNote: "Book One taught you to ask ちょっと見てもいいですか, may I have a look. This is what a firm no sounds like. Take the て-form, which you have had since the te-form chapter, add はならない or はいけない, and you have flat prohibition. 生徒はこの便所を使ってはならない. 仕事中は喫煙してはいけない. The two endings say the same thing at different volumes. ならない is the written and official one — statutes, treaties, notices, anything that speaks with institutional weight, which is why いかなる国も他国の内政に干渉してはならない sounds the way it does. いけない is what a person says to another person. It is a difference of register and not of meaning, and neither is confined to its home ground: ならない turns up in proverbs and in speech that wants to sound weighty, and いけない turns up in plenty of written rules. If you are unsure which to use, use いけない. A noun or な-adjective has no て-form of its own and borrows the copula's, であって: 外国人労働者は日本経済のバッファーであってはならない. That is how the pattern forbids a state of affairs rather than an action. And now the thing this whole chapter is built around, which matters more than anything else in this lesson. なくてはならない is not a variant spelling of てはならない. It is the なければならない family this chapter opened with — the ない-form's て-form, なくて, plus はならない — and it means the opposite. Two kana decide it. 締めてはならない forbids you to fasten your seat belt. 締めなくてはならない, the take-off sentence the time chapter already gave you, requires you to. 喫煙してはいけない forbids smoking; 喫煙しなくてはいけない would order everyone to smoke. The same trap sits on the いけない ending too, so there is nowhere to hide from it. The habit to build is small and it is the only defence: when you see てはならない or てはいけない, look at the two characters immediately in front of it. If they are なく, you are reading an obligation, not a prohibition — everything else about the sentence stays the same and its meaning has just turned around. This is worth more attention than the usual reading trap, because most of them cost you a sentence you don't understand. This one hands you a sentence you understand backwards. One more shape you will meet and need not build: ならぬ is an older ならない, and 信用してはならぬ says the same as 信用してはならない in an archaic voice."
+
+- id: b3.zaru-wo-enai
+  order: 262
+  chapterId: b3.band-8
+  situation: What you have to do
+  title: No way around it
+  canDo: Say you had no real choice, however little you may like admitting it
+  wordIds: []
+  phraseIds:
+    - band8.people-must-accept-their-fate
+    - band8.he-was-forced-to-sign-the-document
+    - band8.i-had-no-choice-but-to-tell-the-truth
+    - band8.i-shall-have-to-stay-here
+    - band8.i-cannot-help-laughing-at-his-manner
+  kanji: []
+  patternId: grammar.b3-zaru-wo-enai
+  grammarNote: "This is the chapter's most emphatic member and its most literary, and it is built out of two old pieces. ざる is the classical negative auxiliary ず wearing the ending it takes in front of a noun. It is not an ancestor of ない — they are separate lineages that ended up doing the same job — but it attaches in exactly the same place ない does. Move the last sound of a godan verb to the あ row and put ざる on instead of ない: 言う → 言わない → 言わざる. とどまる → とどまらない → とどまらざる. If you can build the ない-form you can build this, because it is the same step with a different ending. Then 得ない, the negative of 得る, to obtain or gain. So the whole thing reads: cannot manage not to. 私は本当のことを言わざるを得なかった, I had no choice but to tell the truth. Two irregularities and both are worth memorising, because guessing wrong here is visible. する does not give しざる; it gives せざる, using an old form of the verb that survives only in places like this. 人は運命を甘受せざるを得ない. And the reading of 得 in this construction is え, not う. That matters because 得る has two lives in the dictionary — える, to obtain, and うる, to be able to — and it is the second one this construction looks like it should be using and isn't. What it means is not simply must. なければならない reports that something has to happen. ざるを得ない reports that you had no way out, usually with the speaker's reluctance audible in it: signing a document under pressure, staying somewhere you would rather leave, laughing when you were trying not to. The English that fits is have no choice but to, or cannot help. That reluctance is the point, so this is the wrong form for something you were glad to do. Where you will meet it is in writing and in careful, formal speech — reports, editorials, anything argued rather than chatted. That said, it is not a museum piece: 得る conjugates like any other verb here, so 得ません, 得なかった and 得ないだろう all exist and 笑わざるを得ません is a sentence a person could say aloud. One neighbour, named so you can recognise it and not because this lesson teaches it: ないわけにはいかない says something close, and it is わけにはいかない — which the speaker-stance chapter already gave you — with an ordinary negative in front. You are extending something you own, not learning a new thing."
+
+- id: b3.checkpoint-8
+  order: 263
+  chapterId: b3.band-8
+  situation: Integration & checkpoint
+  title: Chapter 9 checkpoint
+  canDo: Recognise everything this chapter taught, and tell obligation from prohibition on sight
+  wordIds: []
+  phraseIds: []
+  kanji: []
+  checkpoint: recognition
+  grammarNote: "A wide pass over everything this chapter has taught, and the place where the five get set beside each other after being taught one at a time. Three of them say something has to happen and they differ in where the pressure comes from. なければならない and its family report a requirement that exists whether or not anyone approves of it. べき is somebody's verdict on what is right, which is why it can land as criticism when a plain report would not have. 必要がある reports a need and nothing else, with no person in it at all — which is exactly why a chair can need repairing and a chair cannot be told it should. Then てはならない and てはいけない, the same thing turned over into prohibition, ならない for the official voice and いけない for the everyday one. And ざるを得ない, which is not stronger than the rest so much as different: it says there was no way out, usually of something already done, though it will look forward too. Type the reading or the meaning rather than picking it out of a line-up. One thing here is worth more care than the rest, and if it is the only thing that sticks the chapter has done its job. ぼくたちはいつも規則を守らなくてはいけない tells you to obey the rules. 仕事中は喫煙してはいけない tells you not to smoke. The endings are identical; the difference is two kana, なく, sitting in front of the て. Look for them every time before you decide which way a sentence points, because a mistake here does not leave you confused — it leaves you confident and wrong. The smaller things worth slowing down for: 得 read え and not う; する going to す before べき and to せ before ざる; a noun needing で in front of なければ and である in front of べき; and 驚くべき, which is a word rather than this pattern. Anything you miss comes back sooner. It finishes when the remaining set empties; retry as often as you like, nothing is recorded."

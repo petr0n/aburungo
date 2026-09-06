@@ -1,0 +1,475 @@
+# Book Three, chapter 9 phrases -- what you have to do.
+#
+# Thirty sentences, and not one of them is ours. 04-stage-reading.md section 8
+# withdraws the training-canonical exemption at the reading stage and above, in
+# those words -- "no training-canonical sentences at the reading stage and
+# above". So every sentence below is a verbatim Tatoeba pair carried out of
+# server/data/jmdict-examples-eng-3.6.2.json with its id in `tatoebaId`, and
+# nothing here was composed, trimmed, joined or smoothed. Where a shape had no
+# attested sentence it is described in a grammarNote and has no card, which is
+# what every shipped Book Three chapter did and what their audits called
+# correct.
+#
+# ---------------------------------------------------------------------------
+# ATTESTATION, and three places the chapter breakdown's counts were wrong.
+# Counted directly against the corpus's 25,983 unique Tatoeba sentences,
+# reading ex.sentences[] under lang "jpn" -- not the `text` headword field.
+# Every raw hit for every pattern was read, not sampled.
+#
+#   なければならない 159, なくてはならない 31, なくてはいけない 12, なきゃ 18,
+#   なくちゃ 12 -- as the breakdown said. It missed two more members of the
+#   same family that are just as real: なければいけない (9) and ねばならない
+#   (27, the literary one). Neither gets a card; both are named in lesson 1's
+#   note so a reader who meets them knows what they are.
+#
+#   てはいけない has 55 raw hits, 43 genuine after the 12 なくてはいけない are
+#   removed -- more than twice てはならない's 18, and the sentences are shorter
+#   and far more everyday. The breakdown built lesson 4 on てはならない alone
+#   and never counted its sibling. Both are taught in that lesson, ならない as
+#   the written/official register and いけない as the ordinary one, and the
+#   cards are split three and three.
+#
+#   ざるを得ない has 3 hits in that exact string, which is what the breakdown
+#   counted and called "the thinnest lesson in the band". Searching the
+#   construction rather than the string -- ざるを得 -- gives 9: the past
+#   ざるを得なかった (4) and the polite ざるを得ません (1) are the same grammar
+#   conjugated. Lesson 5 has five cards, not three, and did not have to reuse a
+#   teaching sentence in the checkpoint the way the breakdown planned for.
+#
+# 必要がある is 26 raw, 26 genuine -- clean, exactly as the breakdown had it.
+# べき is 178 raw, 176 genuine; the two false positives are 食べきれない
+# (#78766) and たべきれない (#235702), both ます-stem + きれない, "can't finish
+# eating", an unrelated construction that happens to contain the same two kana.
+# Neither is used here.
+#
+# One extension claim the breakdown made loosely, checked and stated exactly:
+# it says noun attachment for 必要 "did not surface here". の必要がある is
+# indeed absent -- zero hits. But が必要だ (20) and が必要です (18) are richly
+# attested, so the noun form is not missing from the corpus, only from this
+# construction. Lesson 3's note says that rather than implying the noun form is
+# rare.
+#
+# ---------------------------------------------------------------------------
+# GLOSS DEPARTURES. The English is Tatoeba's own wherever Tatoeba's own would
+# do. Eight of the thirty depart from it. Every one is listed here by id so a
+# reviewer can check the list against the corpus rather than take it on trust.
+# Every Japanese string is untouched.
+#
+#   Where the corpus English hid the grammar the card exists to teach:
+#   #211556 -- "The frame of the machine should be rigid" renders
+#     なければならない as "should", which is the word lesson 2 spends itself
+#     teaching as べき. Glossed "must be rigid".
+#   #165778 -- "We must develop renewable energy sources" renders 必要がある as
+#     "must", which is the one word lesson 3 exists to separate it from.
+#     Glossed "We need to develop renewable energy sources".
+#   #229291 -- "No country should interfere ..." softens a flat prohibition
+#     into advice. Glossed "No country may interfere in another country's
+#     internal affairs".
+#   #184744 -- "We should not use foreign workers as a buffer against Japan's
+#     economic slowdown" rebuilds the sentence around a "we" that is not in it,
+#     adds "slowdown", which is not in it either, and leaves no trace of
+#     であってはならない, the copula attachment the card is for. Glossed
+#     "Foreign workers must not be a buffer for the Japanese economy".
+#   #144528 -- "One can't quarrel with destiny" is an English proverb with no
+#     trace of せざるを得ない in it. Glossed "People have no choice but to
+#     accept their fate".
+#
+#   Where the corpus English was wrong, worn, or used a word the learner would
+#   not:
+#   #222958 -- "This chair is in want of repair"; "in want of" is archaic.
+#     Glossed "This chair needs repairing".
+#   #152782 -- "I couldn't but speak the truth"; "couldn't but" is archaic.
+#     Glossed "I had no choice but to tell the truth".
+#   #78209 -- "the local brew"; 地酒 is local sake (JMdict 1421160) and "brew"
+#     reads as beer. Glossed "the local sake". One word changed.
+#
+#   Deliberately not departed from, because the mismatch is worth a note
+#   instead: #189441's "Drivers should wear seat belts" for
+#   運転手はベルトを締めるべきだ, where the Japanese says only ベルト. The card's
+#   own note says so, and the English is otherwise the natural rendering.
+#
+# ---------------------------------------------------------------------------
+# TWO SENTENCES THIS FILE SHARES WITH A CHAPTER BEING WRITTEN IN PARALLEL, for
+# whoever runs the consolidation pass. #232346 (あなたはもっと理性的であるべきだ)
+# and #204782 (それゆえここにとどまらざるを得ないだろう) are also carded in
+# phrases/b3-10-register.yaml, which was still uncommitted when this file was
+# written. Both are load-bearing here and neither has a comparable substitute:
+# #232346 is one of only two である+べき sentences in the corpus and the other
+# runs on katakana with interpuncts, and #204782 is the only ordinary godan
+# ざるを得ない in the non-past that is short enough to card. A third collision,
+# #78324 (the take-off seat-belt sentence), was found the same way and resolved
+# in favour of the chapter that already ships it -- the time chapter cards it
+# for 際, and this file uses 我々は地方の慣習を尊重しなくてはならない (#185683)
+# for its なくてはならない example instead.
+# ---------------------------------------------------------------------------
+# ROUTING. Book Three's stage is "reading" (books.ts), and LearnPage routes
+# every non-foundation book to the typed FillBlankCard, where the learner types
+# the whole reading back. So all thirty are typed except one:
+# band8.she-needs-to-play-with-more-expression, whose kana reading is 42 --
+# past Book Two's longest typed answer of 41 kana
+# (quote.my-friend-said-that-shop-is-famous-but-i-wont-go). It carries
+# `recognitionOnly: true` and its note says why. Nothing else here is close;
+# the next two longest are both 35.
+# ---------------------------------------------------------------------------
+#
+# These are independent utterances. None is authored as an exchange, and none
+# is paired with another to make one -- a scripted back-and-forth is
+# multi-sentence composed text, which stays out even when both halves are
+# separately attested. Two of them do sit deliberately near each other, and
+# that is a teaching choice rather than a dialogue: 守らなくてはいけない (lesson
+# 1) and 喫煙してはいけない (lesson 4) are the chapter's なく trap in its natural
+# habitat -- same ending, two kana apart, opposite polarity.
+#
+# content-source: Tatoeba, via the sentence pairs embedded in JMdict for
+#   Applications 3.6.2 (server/data/jmdict-examples-eng-3.6.2.json). Every
+#   phrase carries its sentence id in `tatoebaId`; the id is quoted, because
+#   YAML reads a bare 177211 as a number and the schema rejects it. Verified by
+#   id against the corpus on 2026-09-05 -- all 30 resolve and every Japanese
+#   string below matches its source character for character, checked by script
+#   after the file was written. Kana readings and romaji are transcriptions of
+#   the quoted sentence, not new content; every compound whose reading was not
+#   already obvious was checked against JMdict (自制 じせい 1318020, 機械 きかい
+#   1220810, 骨組み ほねぐみ 1288670, 堅い かたい 1257110, 何よりも なによりも
+#   2141560, 健康 けんこう 1256170, 地方 ちほう 1421450, 慣習 かんしゅう 1212700,
+#   尊重 そんちょう 1406460, 締める しめる 1436570, 規則 きそく 1223021, 守る
+#   まもる 1327120 sense 2, 地酒 じざけ 1421160, 借金
+#   しゃっきん 1323940, 現実 げんじつ 1263710, 直視 ちょくし 1430980, 自分自身
+#   じぶんじしん 1318620, 理性的 りせいてき 1795780, 出歩く であるく 1340300,
+#   運転手 うんてんしゅ 1172870, 驚く おどろく 1238680, 発見 はっけん 1477310,
+#   洗う あらう 1390930, 椅子 いす 1157070, 修繕 しゅうぜん 1332170, 歯医者
+#   はいしゃ 1313080, 再生可能 さいせいかのう 2847574, エネルギー源 エネルギーげん
+#   2134470, 開発 かいはつ 1202880, 感情 かんじょう 1212410, 込める こめる
+#   1288790 sense 2, 演奏 えんそう 1607520, 生徒 せいと 1379380, 使う つかう
+#   1305990, 成功 せいこう 1375690, 焦る あせる 1350780, 仕事中 しごとちゅう
+#   1305020, 喫煙 きつえん 1226390, 決して けっして 1254130, 暴力 ぼうりょく
+#   1519590, 訴える うったえる 1397720 sense 5, 他国 たこく 1407050, 内政 ないせい
+#   1458600, 干渉 かんしょう 1212050, 外国人 がいこくじん 1203650, 労働者
+#   ろうどうしゃ 1560470, 経済 けいざい 1251320, 運命 うんめい 1173030, 甘受
+#   かんじゅ 1213530, 書類 しょるい 1344200, 署名 しょめい 1343640, 本当
+#   ほんとう 1523060, 物腰 ものごし 1502510, 必要 ひつよう 1487660).
+#   Six needed the gloss or the entry checked as well as the reading, because
+#   the headword has more than one: 得る in every ざるを得ない sentence is える
+#   1588760, to obtain, not うる 1454500, which means "to be able to" and is
+#   the trap this construction sets by looking like it; とかす in #121292 is
+#   梳かす 1598660, to comb, not 溶かす/解かす 1546040, to melt; 便所 in #142728
+#   is べんじょ 1512520, the toilet, not びんしょ 2784580, a shogunal
+#   hairdresser's room; 髪 in #121292 is かみ 1477950, not はつ 2843553; and 夜
+#   in #86490 is よる 1536350, night, not や 2827999, the counter; and 地方 in
+#   #185683 is ちほう 1421450, a region, not じかた 2796690, a musician in a
+#   dance performance.
+# jlpt-source: training -- the level marks the chapter this content sits in,
+#   not each pattern's textbook level. なければならない and てはいけない are
+#   commonly listed N4 or even N5, べき and ざるを得ない N2; the sentences
+#   carrying all of them are real N3-band text and splitting them by textbook
+#   level would misreport coverage.
+
+# ── You have to ───────────────────────────────────────────────────────────────
+
+- id: band8.you-must-control-yourself
+  jlpt: N3
+  scenario: obligation
+  japanese: 君は自制しなければならない。
+  reading: きみはじせいしなければならない。
+  romaji: kimi wa jisei shinakereba naranai.
+  english: You must control yourself.
+  tatoebaId: "177211"
+  notes: The plainest shape the chapter has. 自制する goes to its ない-stem, 自制し, then なければ -- the ば conditional on ない, which conjugates like an い-adjective -- then ならない. If you do not do it, it will not do.
+
+- id: band8.the-frame-must-be-rigid
+  jlpt: N3
+  scenario: obligation
+  japanese: その機械の骨組みは堅くなければならない。
+  reading: そのきかいのほねぐみはかたくなければならない。
+  romaji: sono kikai no honegumi wa kataku nakereba naranai.
+  english: The frame of the machine must be rigid.
+  tatoebaId: "211556"
+  notes: An い-adjective takes the same route a verb does, one step earlier -- 堅い goes to 堅くない, and ない takes ければ. Nothing here is anybody's duty; this is a requirement a machine has to meet, and the form covers both.
+
+- id: band8.above-all-we-must-be-healthy
+  jlpt: N3
+  scenario: obligation
+  japanese: 何よりもまず健康でなければならない。
+  reading: なによりもまずけんこうでなければならない。
+  romaji: nani yori mo mazu kenkou de nakereba naranai.
+  english: Above all, we must be healthy.
+  tatoebaId: "187653"
+  notes: A noun or な-adjective joins with で and nothing else -- 健康でなければ, not 健康ではなければ. では would be negating twice, and なければ is already doing it.
+
+- id: band8.we-must-respect-local-customs
+  jlpt: N3
+  scenario: obligation
+  japanese: 我々は地方の慣習を尊重しなくてはならない。
+  reading: われわれはちほうのかんしゅうをそんちょうしなくてはならない。
+  romaji: wareware wa chihou no kanshuu o sonchou shinakute wa naranai.
+  english: We have to respect local customs.
+  tatoebaId: "185683"
+  notes: The same meaning at a different register -- the て-form of ない, なくて, plus はならない. Read the ending carefully, because 尊重してはならない, two kana shorter, would forbid respecting them.
+
+- id: band8.we-always-have-to-obey-the-rules
+  jlpt: N3
+  scenario: obligation
+  japanese: ぼくたちはいつも規則を守らなくてはいけない。
+  reading: ぼくたちはいつもきそくをまもらなくてはいけない。
+  romaji: bokutachi wa itsumo kisoku o mamoranakute wa ikenai.
+  english: We always have to obey the rules.
+  tatoebaId: "196400"
+  notes: いけない in place of ならない, which is the ordinary spoken choice. 守る here is JMdict's second sense, to keep or abide by, not the first sense of protecting something.
+
+- id: band8.youve-got-to-try-the-local-sake
+  jlpt: N3
+  scenario: obligation
+  japanese: 旅に出たら地酒を飲まなきゃ。
+  reading: たびにでたらじざけをのまなきゃ。
+  romaji: tabi ni detara jizake o nomanakya.
+  english: When you travel, you've got to try the local sake.
+  tatoebaId: "78209"
+  notes: なきゃ is なければ squeezed down, and the sentence stops there -- ならない is understood and never said. This is how the form usually turns up in speech.
+
+- id: band8.i-have-to-comb-my-hair
+  jlpt: N3
+  scenario: obligation
+  japanese: 髪をとかさなくちゃ。
+  reading: かみをとかさなくちゃ。
+  romaji: kami o tokasanakucha.
+  english: I have to comb my hair.
+  tatoebaId: "121292"
+  notes: なくちゃ is なくては squeezed down the same way, and again nothing follows it. とかす is 梳かす, to comb, not the identical-sounding 溶かす, to melt.
+
+# ── You should ────────────────────────────────────────────────────────────────
+
+- id: band8.you-should-pay-your-debts
+  jlpt: N3
+  scenario: judgment
+  japanese: 君は借金を払うべきだ。
+  reading: きみはしゃっきんをはらうべきだ。
+  romaji: kimi wa shakkin o harau beki da.
+  english: You should pay your debts.
+  tatoebaId: "177166"
+  notes: Dictionary form straight onto べき, then だ. Nobody has passed a rule about this; the speaker is saying what is right.
+
+- id: band8.you-should-face-reality
+  jlpt: N3
+  scenario: judgment
+  japanese: 現実を直視すべきだ。
+  reading: げんじつをちょくしすべきだ。
+  romaji: genjitsu o chokushi subeki da.
+  english: You should face reality.
+  tatoebaId: "174861"
+  notes: する drops to す in front of べき -- 直視すべき, not 直視するべき. This is the older of the two forms and the commoner one in this corpus, by about four to one.
+
+- id: band8.i-think-you-should-do-it-yourself
+  jlpt: N3
+  scenario: judgment
+  japanese: 自分自身でするべきだと思いますよ。
+  reading: じぶんじしんでするべきだとおもいますよ。
+  romaji: jibun jishin de suru beki da to omoimasu yo.
+  english: I think you should do it yourself.
+  tatoebaId: "231883"
+  notes: The same verb keeping its る -- するべき. Both are ordinary current Japanese and the corpus carries both; する is the one verb where speakers genuinely split.
+
+- id: band8.you-should-be-more-reasonable
+  jlpt: N3
+  scenario: judgment
+  japanese: あなたはもっと理性的であるべきだ。
+  reading: あなたはもっとりせいてきであるべきだ。
+  romaji: anata wa motto riseiteki de aru beki da.
+  english: You should be more reasonable.
+  tatoebaId: "232346"
+  notes: べき needs a predicate in dictionary form in front of it, and a な-adjective or noun has to borrow one -- である. 理性的べきだ is not a sentence.
+
+- id: band8.she-shouldnt-go-out-alone-at-night
+  jlpt: N3
+  scenario: judgment
+  japanese: 彼女は夜にひとりで出歩くべきではない。
+  reading: かのじょはよるにひとりでであるくべきではない。
+  romaji: kanojo wa yoru ni hitori de dearuku beki de wa nai.
+  english: She shouldn't go out by herself at night.
+  tatoebaId: "86490"
+  notes: The negative is べきではない, or べきでない with the は dropped -- both are attested. Watch the reading in the middle -- ひとりで ends in で and 出歩く starts with で, so でで is right and not a typo.
+
+- id: band8.drivers-should-wear-seat-belts
+  jlpt: N3
+  scenario: judgment
+  japanese: 運転手はベルトを締めるべきだ。
+  reading: うんてんしゅはベルトをしめるべきだ。
+  romaji: untenshu wa beruto o shimeru beki da.
+  english: Drivers should wear seat belts.
+  tatoebaId: "189441"
+  notes: The same verb as the take-off sentence in the time chapter, 締めなくてはならない, under a different authority -- that one reports a rule, this one is somebody's opinion about what drivers ought to do. The Japanese says only ベルト; the English supplies the "seat".
+
+- id: band8.this-is-a-surprising-discovery
+  jlpt: N3
+  scenario: judgment
+  japanese: これは驚くべき発見だ。
+  reading: これはおどろくべきはっけんだ。
+  romaji: kore wa odorokubeki hakken da.
+  english: This is a surprising discovery.
+  tatoebaId: "218449"
+  notes: Not "one should be surprised". 驚くべき has frozen into a single adjective meaning astonishing, and a handful of others have too -- 恐るべき, 記念すべき, 来たるべき. Recognise them; do not build new ones.
+
+# ── There's a need to ─────────────────────────────────────────────────────────
+
+- id: band8.your-shirts-need-washing
+  jlpt: N3
+  scenario: necessity
+  japanese: あなたのシャツは洗う必要がある。
+  reading: あなたのシャツはあらうひつようがある。
+  romaji: anata no shatsu wa arau hitsuyou ga aru.
+  english: Your shirts need to be washed.
+  tatoebaId: "233523"
+  notes: Dictionary form plus 必要がある. It reports a state of affairs -- a need exists -- rather than telling anyone off, which is why English reaches for "need" here and not "must".
+
+- id: band8.this-chair-needs-repairing
+  jlpt: N3
+  scenario: necessity
+  japanese: この椅子は修繕する必要がある。
+  reading: このいすはしゅうぜんするひつようがある。
+  romaji: kono isu wa shuuzen suru hitsuyou ga aru.
+  english: This chair needs repairing.
+  tatoebaId: "222958"
+  notes: A chair has no duties and holds no opinions, and this construction does not give it any. That is the whole difference between 必要がある and the other two.
+
+- id: band8.you-dont-need-to-go-to-the-dentist
+  jlpt: N3
+  scenario: necessity
+  japanese: 歯医者に行く必要はないですよ。
+  reading: はいしゃにいくひつようはないですよ。
+  romaji: haisha ni iku hitsuyou wa nai desu yo.
+  english: You don't need to go to the dentist's.
+  tatoebaId: "150948"
+  notes: The negative swaps が for は and ある for ない -- 必要はない, there is no need. が can also stay, and 必要がない is fine; は is what the corpus mostly uses, because a negative likes は.
+
+- id: band8.we-need-to-develop-renewable-energy
+  jlpt: N3
+  scenario: necessity
+  japanese: 私たちは再生可能なエネルギー源を開発する必要がある。
+  reading: わたしたちはさいせいかのうなエネルギーげんをかいはつするひつようがある。
+  romaji: watashitachi wa saisei kanou na enerugii-gen o kaihatsu suru hitsuyou ga aru.
+  english: We need to develop renewable energy sources.
+  tatoebaId: "165778"
+  notes: The register this pattern is most at home in -- policy, reports, anything written about what has to be done rather than about who has to do it.
+
+- id: band8.she-needs-to-play-with-more-expression
+  jlpt: N3
+  scenario: necessity
+  recognitionOnly: true
+  japanese: 彼女のテクニックはすばらしいが、もっと感情を込めて演奏する必要がある。
+  reading: かのじょのテクニックはすばらしいが、もっとかんじょうをこめてえんそうするひつようがある。
+  romaji: kanojo no tekunikku wa subarashii ga, motto kanjou o komete ensou suru hitsuyou ga aru.
+  english: Her technique is superb, but she needs to play with more expression.
+  tatoebaId: "94686"
+  notes: Praise on one side of が and a plain statement of what is missing on the other. Recognition only -- its reading runs 42 kana, one past the longest answer this course has asked anyone to type.
+
+# ── You must not ──────────────────────────────────────────────────────────────
+
+- id: band8.students-must-not-use-this-toilet
+  jlpt: N3
+  scenario: prohibition
+  japanese: 生徒はこの便所を使ってはならない。
+  reading: せいとはこのべんじょをつかってはならない。
+  romaji: seito wa kono benjo o tsukatte wa naranai.
+  english: Students must not use this toilet.
+  tatoebaId: "142728"
+  notes: The て-form straight onto はならない. Compare it against 守らなくてはいけない, the obligation card built on the same ending -- that one requires, this one forbids, and the difference is the なく.
+
+- id: band8.dont-be-too-eager-for-success
+  jlpt: N3
+  scenario: prohibition
+  japanese: 成功を焦ってはいけない。
+  reading: せいこうをあせってはいけない。
+  romaji: seikou o asette wa ikenai.
+  english: Don't be too eager for success.
+  tatoebaId: "143231"
+  notes: いけない rather than ならない, and this is the everyday one -- the shape a person actually says out loud. 焦る is to rush or fret, so the English "eager" is doing a little work.
+
+- id: band8.you-must-not-smoke-while-working
+  jlpt: N3
+  scenario: prohibition
+  japanese: 仕事中は喫煙してはいけない。
+  reading: しごとちゅうはきつえんしてはいけない。
+  romaji: shigotochuu wa kitsuen shite wa ikenai.
+  english: You must not smoke while working.
+  tatoebaId: "169019"
+  notes: A rule, in the ordinary register. Put なく in the middle -- 喫煙しなくてはいけない -- and it would order everyone to smoke.
+
+- id: band8.never-resort-to-violence
+  jlpt: N3
+  scenario: prohibition
+  japanese: 決して暴力に訴えてはいけない。
+  reading: けっしてぼうりょくにうったえてはいけない。
+  romaji: kesshite bouryoku ni uttaete wa ikenai.
+  english: You must never resort to violence.
+  tatoebaId: "175927"
+  notes: 決して pairs with a negative and sharpens it to "never, under any circumstances". 訴える is JMdict's fifth sense here -- to resort to force or violence -- not the courtroom one.
+
+- id: band8.no-country-may-interfere-in-another
+  jlpt: N3
+  scenario: prohibition
+  japanese: いかなる国も他国の内政に干渉してはならない。
+  reading: いかなるくにもたこくのないせいにかんしょうしてはならない。
+  romaji: ikanaru kuni mo takoku no naisei ni kanshou shite wa naranai.
+  english: No country may interfere in another country's internal affairs.
+  tatoebaId: "229291"
+  notes: ならない at its most typical -- treaties, statutes, official notices. いかなる is a formal どんな, and it pairs with も the same way.
+
+- id: band8.foreign-workers-must-not-be-a-buffer
+  jlpt: N3
+  scenario: prohibition
+  japanese: 外国人労働者は日本経済のバッファーであってはならない。
+  reading: がいこくじんろうどうしゃはにほんけいざいのバッファーであってはならない。
+  romaji: gaikokujin roudousha wa nihon keizai no baffaa de atte wa naranai.
+  english: Foreign workers must not be a buffer for the Japanese economy.
+  tatoebaId: "184744"
+  notes: There is no verb to make a て-form from, so the copula supplies one -- だ becomes であって, and はならない attaches to that. This is how the pattern forbids a state rather than an action.
+
+# ── No way around it ──────────────────────────────────────────────────────────
+
+- id: band8.people-must-accept-their-fate
+  jlpt: N3
+  scenario: no-choice
+  japanese: 人は運命を甘受せざるを得ない。
+  reading: ひとはうんめいをかんじゅせざるをえない。
+  romaji: hito wa unmei o kanju sezaru o enai.
+  english: People have no choice but to accept their fate.
+  tatoebaId: "144528"
+  notes: する turns into せ in front of ざる -- 甘受せざる, never 甘受しざる. 得 is read え here, from 得る, to obtain; the identically written うる, meaning "to be able to", is the trap this construction sets.
+
+- id: band8.he-was-forced-to-sign-the-document
+  jlpt: N3
+  scenario: no-choice
+  japanese: 彼は書類に署名せざるを得なかった。
+  reading: かれはしょるいにしょめいせざるをえなかった。
+  romaji: kare wa shorui ni shomei sezaru o enakatta.
+  english: He was forced to sign the document.
+  tatoebaId: "104255"
+  notes: 得る is an ordinary ichidan verb, so the past is 得なかった and the ending conjugates like any other. "Was forced to" is the English that fits; nobody in the Japanese is named as forcing him.
+
+- id: band8.i-had-no-choice-but-to-tell-the-truth
+  jlpt: N3
+  scenario: no-choice
+  japanese: 私は本当のことを言わざるを得なかった。
+  reading: わたしはほんとうのことをいわざるをえなかった。
+  romaji: watashi wa hontou no koto o iwazaru o enakatta.
+  english: I had no choice but to tell the truth.
+  tatoebaId: "152782"
+  notes: An ordinary godan verb takes the あ row and adds ざる -- 言う to 言わざる, the same first step as the ない-form and a different ending on it.
+
+- id: band8.i-shall-have-to-stay-here
+  jlpt: N3
+  scenario: no-choice
+  japanese: それゆえここにとどまらざるを得ないだろう。
+  reading: それゆえここにとどまらざるをえないだろう。
+  romaji: sore yue koko ni todomarazaru o enai darou.
+  english: Hence, I shall have to stay here.
+  tatoebaId: "204782"
+  notes: とどまる to とどまらざる, the same あ-row step. だろう on the end softens the claim to something like "I suppose"; it is not this chapter's business and no card asks you to produce it.
+
+- id: band8.i-cannot-help-laughing-at-his-manner
+  jlpt: N3
+  scenario: no-choice
+  japanese: 私は彼のおかしな物腰に笑わざるを得ません。
+  reading: わたしはかれのおかしなものごしにわらわざるをえません。
+  romaji: watashi wa kare no okashina monogoshi ni warawazaru o emasen.
+  english: I cannot help laughing at his odd manner.
+  tatoebaId: "154031"
+  notes: The polite form -- 得ません. Nothing about this pattern is confined to writing; it takes ます like any other verb and turns up in careful speech.

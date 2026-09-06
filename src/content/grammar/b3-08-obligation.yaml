@@ -1,0 +1,96 @@
+# Book Three, Chapter 9 grammar patterns -- what you have to do.
+#
+# One pattern per teaching lesson, each blanking the thing that lesson exists
+# for out of one of its own sentences. The blank is matched against the
+# phrase's reading, so these are kana.
+#
+# The `pattern` strings are bare Japanese for a mechanical reason the passive
+# chapter's file records first: scripts/levelling.mjs's grammarSurface()
+# rejects any pattern containing a Latin character or a digit and needs at
+# least one ～-delimited fragment of two or more characters. A Book Two-style
+# English description of the rule returns null there and would tag no sentence
+# at all, and the levelling pipeline is what the reading library is built on --
+# so a pattern that cannot be tagged is a pattern the library cannot find text
+# for. All five below clear the two-character minimum after splitting on ～.
+#
+# This chapter fares well on precision and badly on one pattern, and the split
+# is worth stating rather than discovering downstream:
+#
+#   ～なければならない, ～必要がある and ～ざるを得ない are long enough to be
+#   effectively unambiguous. A full read of every corpus hit for each turned up
+#   no string that is not the construction.
+#
+#   ～べき is the coarse one. 176 of its 178 raw hits are this auxiliary and
+#   two are not -- 食べきれない (#78766) and たべきれない (#235702), the
+#   ます-stem of 食べる plus きれない, "can't finish eating". A screen on 食べき
+#   and たべき removes both and costs nothing, because no genuine べき hit is
+#   preceded by those characters. It will not catch a future 飲みきれない-shaped
+#   one, so the check to write is "ます-stem + きれ", not a word list.
+#
+#   ～てはならない is the dangerous one, and this is the chapter's central
+#   finding rather than a footnote. Of 49 raw hits, 31 are なくてはならない --
+#   not a spelling variant but the opposite polarity, an obligation rather than
+#   a prohibition, and lesson 1's grammar rather than lesson 4's. The same
+#   holds for ～てはいけない: 55 raw, 12 of them なくてはいけない. A literal
+#   substring tagger for this pattern will mis-tag 43 sentences across the two
+#   endings as meaning the reverse of what they mean. The screen is exact and
+#   cheap -- reject any hit whose two preceding characters are なく -- and it
+#   has to be applied before any of this chapter's reading-library text ships.
+#
+# This is a pipeline-design question, flagged here rather than solved.
+#
+# Three of the five blank the ending together with what attaches to it, and
+# that is the point rather than an oversight. なければならない is blanked whole
+# because the ない-stem in front of it (じせいし) is Book Two's material and the
+# eight kana after it are this lesson's. てはならない is blanked as
+# つかってはならない, te-form included, because a learner handed the て-form
+# separately has been given the answer to the only question the なく trap asks.
+# ざるを得ない is blanked as せざるをえない because the irregular せ is half of
+# what the lesson teaches about する. べき and 必要がある are blanked bare --
+# べきだ and ひつようがある -- since what precedes each is a plain dictionary
+# form the learner has owned since Book Two, and including it would test that
+# instead.
+#
+# content-source: n/a for this file -- every pattern references an existing
+#   phrase from phrases/b3-08-obligation.yaml rather than composing new
+#   Japanese, and that file carries the Tatoeba id for each.
+# jlpt-source: training -- the level marks the chapter this content sits in,
+#   not each pattern's textbook level. なければならない and てはいけない are
+#   commonly listed N4 or N5 and arrive here only because Books One and Two
+#   never taught them; べき and ざるを得ない are commonly listed N2. The chapter
+#   is N3 and is tagged as such throughout.
+
+- id: grammar.b3-nakereba
+  jlpt: N3
+  pattern: "～なければならない"
+  gloss: You have to. The ない-form plus ければ -- ない conjugates like an い-adjective -- plus ならない, the negative of なる. If it does not happen, it will not do. なくてはならない, なくてはいけない, なければいけない and the spoken なきゃ / なくちゃ are the same idea at other registers.
+  phraseId: band8.you-must-control-yourself
+  blank: なければならない
+
+- id: grammar.b3-beki
+  jlpt: N3
+  pattern: "～べき"
+  gloss: You should -- the speaker's own verdict on what is right, not a rule anyone passed. Dictionary form in front; a noun or な-adjective borrows である. する gives both すべき and するべき. Negative べきではない.
+  phraseId: band8.you-should-pay-your-debts
+  blank: べきだ
+
+- id: grammar.b3-hitsuyo-ga-aru
+  jlpt: N3
+  pattern: "～必要がある"
+  gloss: There is a need to. Dictionary form plus 必要がある -- a report that something is required, with nobody obliged and nobody judged. Negative 必要はない. The noun version is X が必要だ.
+  phraseId: band8.your-shirts-need-washing
+  blank: ひつようがある
+
+- id: grammar.b3-tewanaranai
+  jlpt: N3
+  pattern: "～てはならない"
+  gloss: You must not. The て-form plus はならない, or はいけない for the everyday register; a noun or な-adjective uses the copula's て-form, であって. Check the two characters in front -- なくてはならない is not this pattern, it is the opposite one.
+  phraseId: band8.students-must-not-use-this-toilet
+  blank: つかってはならない
+
+- id: grammar.b3-zaru-wo-enai
+  jlpt: N3
+  pattern: "～ざるを得ない"
+  gloss: There is no way around it. The あ-row stem plus ざる, the classical negative, plus 得ない, cannot manage -- so, cannot manage not to. する is irregular, せざる. 得 is read え, not う.
+  phraseId: band8.people-must-accept-their-fate
+  blank: せざるをえない

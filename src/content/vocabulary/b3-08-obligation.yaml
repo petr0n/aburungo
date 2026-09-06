@@ -1,0 +1,42 @@
+# Book Three, Chapter 9 vocabulary -- deliberately empty.
+#
+# This chapter teaches five ways of saying that something has to happen, must
+# not happen, or could not have been avoided. Four of the five are pure grammar
+# with no independent word behind them: なければならない and its family, べき,
+# てはならない and ざるを得ない are auxiliaries and frozen chunks, not nouns a
+# learner looks up. The fifth, 必要がある, is built on a real noun -- 必要,
+# "necessity" (JMdict 1487660) -- and it still gets no Word card, for the same
+# reason ため, せい and おかげ got none in the cause chapter: it is taught as
+# part of the construction, glossed in the pattern and in the lesson, and it
+# never appears in this chapter doing anything except carrying がある or はない.
+#
+# 04-stage-reading.md section 3 and book-three-bands.md section 1 hand
+# vocabulary at this stage to the reading library and to mining: lessons carry
+# patterns, the library carries words, and lesson count decouples from word
+# count. Every shipped Book Three chapter has an empty file here and this one
+# follows them.
+#
+# Three kanji do arrive with this chapter, and they are unaffected by the
+# above: 必 and 要 on lesson 3, both halves of 必要, and 得 on lesson 5. None of
+# the three is in data/content-manifest.json's 222-character set, checked
+# character by character before this file was written. Every one of the 26
+# attested 必要がある sentences writes 必要 in kanji and every attested
+# ざるを得ない sentence writes 得 in kanji, so there is no honest kana-only
+# spelling to fall back on the way ため and せい had one. They are named in the
+# header of lessons/b3-08-obligation.yaml; the `kanji:` arrays there are empty
+# pending the wiring pass that fills them.
+#
+# The chapter's cited sentences do use words the learner does not own -- 自制,
+# 骨組み, 地酒, 借金, 直視, 修繕, 便所, 干渉, 甘受, 物腰 among them. That is
+# not a gap this file should close either, for the same section 3 reason. What
+# is being reviewed on those cards is the ending on the verb, not the nouns
+# around it.
+#
+# The file exists so the chapter's four content files stay a matched set and so
+# the next author does not go looking for a missing one. An empty array parses;
+# a file of comments alone does not, which is why the `[]` below is load-bearing
+# rather than decorative.
+#
+# content-source: n/a -- this file adds no Japanese content.
+
+[]
