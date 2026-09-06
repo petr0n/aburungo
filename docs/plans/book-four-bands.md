@@ -127,11 +127,11 @@ Chapter numbers are the learner's; band numbers are internal (§6).
 | 7 | 8 | Only so far, and no way round it | に過ぎない · ことはない · までもない · ようがない · わけにはいかない · からといって · といっても · にしては/にしても/としても · がち · 〜げ | にすぎない 18 (14) + に過ぎない 8, ことはない 26 (21), までもない 6 (4), ようがない 4 (3), わけにはいかない 7 (6), からといって 10 (4), といっても 8 (4), としても 16 (13), にしても 13 (7), がち 20 (17 — see §9), げに 19 (17) |
 | 8 | 9 | Joining an argument | つまり/すなわち · したがって · ただし/なお · または/あるいは/それとも · しかも/さらに · むしろ · 一方 · 要するに | つまり 13 (6), したがって 11 (6), すなわち 7 (3), ただし 9 (3 — see §9), または 9 (6), それとも 11 (9), しかも 10 (7), さらに 28 (15), むしろ 15 (12), 一方 16 (8) |
 
-**Shape:** nine bands, roughly 8 + 7 + 6 + 8 + 8 + 8 + 9 + 10 + 8 = **72 teaching lessons, plus
-nine recognition checkpoints = 81**, the same size Book Three landed at, under the ~100 landing
-zone (DR-033 shape directive: "about learning, not strict 10×10"). Bands 7 and 8 are the thin
-ones and may merge or shed lessons at breakdown; that is the planner's call, argued in the
-breakdown.
+**Shape as broken down (2026-09-06, `book-four-band-00.md` to `-08.md`):** 8 + 7 + 6 + 8 + 8 + 7 + 8 +
+8 + 7 = **67 teaching lessons, plus nine recognition checkpoints = 76 lessons, global orders
+277–352**, under Book Three's 81 and the ~100 landing zone (DR-033 shape directive: "about
+learning, not strict 10×10"). Bands 7 and 8 merged their thin pairs, as this paragraph said they
+might. The row table above keeps the pre-breakdown estimate; the breakdowns are the record.
 
 **Vocabulary (§2):** at ~5 words per teaching lesson, ~350 words. **Kanji:** arrives with them.
 
@@ -153,9 +153,10 @@ None of these is dropped. Each is one blocker away, and the blocker is named.
 
 ## 6. Numbering, ids, stage, tier
 
-- **Global orders start at 277.** Contiguous, band by band, no returned slots: a planner that
-  lands fewer lessons than assigned tells the controller, who renumbers the tail before authoring,
-  as Book Three's bands 7–10 were.
+- **Global orders start at 277 and end at 352.** Contiguous, band by band, no returned slots —
+  the breakdowns already carry the final numbers (band 0 277–285, 1 286–293, 2 294–300, 3 301–309,
+  4 310–318, 5 319–326, 6 327–335, 7 336–344, 8 345–352). An author that lands fewer lessons than
+  its breakdown tells the controller, who renumbers the tail before the next band is authored.
 - **Files** `b4-NN-<slug>.yaml` in all four content directories, NN = band number (`b4-00-…`).
 - **Chapter id** `b4.band-N`, chapter `order` N+1, chapter title = the lessons' `situation:`.
   Lesson ids `b4.<slug>`, pattern ids `grammar.b4-<slug>`, phrase ids `b4band<N>.<slug>` (Book
