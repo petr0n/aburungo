@@ -143,7 +143,7 @@ export function FillBlankCard({ card, showRomaji = true, onNext }: Props) {
               </div>
 
               {inputMode === "text" ? (
-                <FillInput onSubmit={handleSubmit} placeholder="Type the Japanese..." />
+                <FillInput onSubmit={handleSubmit} />
               ) : (
                 <VoiceInput onResult={handleSubmit} />
               )}
