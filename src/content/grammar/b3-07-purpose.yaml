@@ -1,0 +1,112 @@
+# Book Three, chapter 8 grammar patterns -- purpose and intent.
+#
+# One pattern per teaching lesson, each blanking the thing that lesson exists
+# for out of one of its own sentences. The blank is matched against the
+# phrase's reading, so these are kana.
+#
+# The `pattern` strings are bare kana for the reason chapter 1's file records:
+# scripts/levelling.mjs's grammarSurface() rejects any pattern containing a
+# Latin character or a digit and needs at least one ～-delimited fragment of two
+# or more characters, so a free English description of a rule tags nothing and
+# the reading library can never find text for it. All five literals below clear
+# that bar. ～まい is exactly two characters, the tightest fit in this chapter
+# and in the book so far.
+#
+# Where the literals are coarse, said here rather than discovered later. This
+# chapter has the worst of it in the book to date, because three of its five
+# patterns are built from the same four kana:
+#
+#   ～ように tags all 413 sentences containing that string, which is every
+#   sentence this chapter's other two ように patterns want plus the whole
+#   のように comparison family the previous chapter owns. Precision is
+#   impossible from the string alone -- there is nothing in ように that says
+#   which job it is doing, which is the lesson's own teaching point turned into
+#   a tooling problem. A tagger reading this file's patterns in order and
+#   taking the first match will mis-file every ようになる and ようにする
+#   sentence under lesson 1. Reading the two longer patterns first fixes it,
+#   the same ordering fix chapter 2's file records for ～によって against
+#   chapter 1's ～によって～れる. Flagged, not solved.
+#
+#   ～ようになる misses ようになった, ようになりました and ようになっている,
+#   which are the same pattern in a different tense and are the majority of its
+#   own citations -- four of this lesson's five cards are one of those three
+#   shapes. ～ようにな would catch them and would also catch ないようにな, a
+#   sentence-final particle with nothing to do with this pattern (#228448 is
+#   the corpus's one example). The same trade holds for ～ようにする against
+#   ようにしなさい, ようにしてください and ようにしている. Recall was traded
+#   for precision in both, as chapter 2 traded it for ～ために against ため.
+#
+#   ～まい is the noisiest two-character literal this book has shipped. It will
+#   tag うまい, しまう, てしまった, めまい, 曖昧, 参ります, 住まい, ふるまい,
+#   店じまい, いまいち and 枚 as a counter, among others -- 117 raw hits in the
+#   corpus of which 14 are the auxiliary. The phrase file lists the collision
+#   classes in full. Nothing shorter or longer helps: the auxiliary has no
+#   fixed surface beyond まい itself, since what precedes it is a whole verb.
+#   Any library slice tagged from this pattern needs a human pass before use.
+#
+#   ～ことになる misses ことになっている and ことになった, which carry the
+#   arrangement sense two of its cards teach, and it tags ことになると, the
+#   when-it-comes-to idiom that is not this construction at all (#202199,
+#   #77941). Same trade, same direction, and the same screening the
+#   attestation pass did by hand will need doing again wherever the library
+#   uses it.
+#
+# Three blanks take more than the bare connective and that is the point rather
+# than an oversight. The ように blank is ないように, because the negative clause
+# is half of what makes that sentence need ように instead of ために; the まい
+# blank is なくまいと, because 〜まいと is the shape the auxiliary almost always
+# appears in and a learner handed only まい has been shown a suffix rather than
+# a construction; the ようにする blank carries its なさい for the same reason
+# the ようになる blank carries its ます -- the ending is where the tense and the
+# register live, and blanking it out is what makes the card test the pattern
+# rather than the stem in front of it.
+#
+# ことにする has no pattern here, and that is a decision rather than an
+# omission. It has 24 attested sentences (phrase file, attestation section) and
+# would carry a lesson on that evidence, but this chapter's six order slots
+# were settled before the recount. It ships as two phrase cards inside lesson
+# 5, as the contrast that makes ことになる legible, in exactly the way chapter
+# 1's passive lesson carries a potential card to teach the collision. Whoever
+# plans the next pass over this book should know the material is there.
+#
+# content-source: n/a for this file -- every pattern references an existing
+#   phrase from phrases/b3-07-purpose.yaml rather than composing new Japanese,
+#   and that file carries the Tatoeba id for each.
+# jlpt-source: training -- the level marks the chapter this content sits in.
+#   ように and ようになる are commonly listed N4 and まい N1; the chapter is N3
+#   and is tagged as such throughout.
+
+- id: grammar.b3-you-ni
+  jlpt: N3
+  pattern: "～ように"
+  gloss: So that. A plain non-past clause plus ように, for a goal nobody can simply decide to do -- a potential, a negative, or something that happens to somebody else. Left hanging at the end of a sentence it is a wish or a warning; put a verb of speaking after it and it reports what somebody was told to do.
+  phraseId: band7.i-wore-a-coat-so-i-wouldnt-catch-a-cold
+  blank: ないように
+
+- id: grammar.b3-you-ni-naru
+  jlpt: N3
+  pattern: "～ようになる"
+  gloss: Coming to be. The same ように with なる after it, marking a change arrived at over time rather than an act -- often a potential verb, and often in the past, ようになった. The reverse change is usually said with 〜なくなる, not with a negative in front of ようになる.
+  phraseId: band7.youll-soon-be-able-to-swim
+  blank: ようになります
+
+- id: grammar.b3-you-ni-suru
+  jlpt: N3
+  pattern: "～ようにする"
+  gloss: Making it your practice. The same ように with する after it -- the effort rather than the result. ようにしている says it is a standing habit; ようになる says the habit worked.
+  phraseId: band7.try-not-to-be-a-nuisance
+  blank: ようにしなさい
+
+- id: grammar.b3-mai
+  jlpt: N3
+  pattern: "～まい"
+  gloss: Will not, and surely will not. A classical negative auxiliary, mostly written and formal. On a first-person subject it is resolve; on any other it is a prediction. Godan verbs take the dictionary form in front of it, and verbs like 食べる and する are met with the dictionary form or the stem.
+  phraseId: band7.she-steeled-herself-not-to-cry
+  blank: なくまいと
+
+- id: grammar.b3-koto-ni-naru
+  jlpt: N3
+  pattern: "～ことになる"
+  gloss: That is how it turned out. A plain clause plus ことになる -- what a fact implies, or what circumstances settled. ことになっている is a standing arrangement or a rule. Its partner ことにする is a decision the speaker made.
+  phraseId: band7.it-follows-that-he-is-not-the-criminal
+  blank: ことになる

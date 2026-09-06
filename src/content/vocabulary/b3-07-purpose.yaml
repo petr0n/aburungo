@@ -1,0 +1,41 @@
+# Book Three, chapter 8 vocabulary -- deliberately empty, for the same reason
+# chapters 1 and 2 are.
+#
+# This chapter teaches one word doing five jobs (ように), two auxiliary verbs
+# bolted onto it (なる, する), one classical auxiliary (まい) and one more use
+# of a nominaliser the learner already owns (こと). よう, なる, する and こと
+# are all already in the learner's hands or are grammar rather than lexicon,
+# and まい is an auxiliary with no independent life as a word. There is nothing
+# here to put on a vocabulary card.
+#
+# 様 exists as a kanji and is a real JMdict headword (様 よう 1605840; the same
+# character is a different entry read さま, 1545790, and another read ざま,
+# 1410750). The corpus writes this chapter's ように in kana in every one of the
+# 413 sentences that carry it -- checked by searching 様に across all 25,983
+# sentences, which returns 24 hits and not one of them is this construction:
+# they are 同様に, お母様に, 奥様に, 見様によっては and their kin. So there is
+# no character to teach either, and the `kanji:` arrays in the lessons file are
+# empty to match.
+#
+# One judgement worth recording rather than leaving silent. The breakdown
+# (docs/plans/book-three-band-07.md section 6.5) considered and rejected a
+# vocabulary card for bare よう meaning way or manner, the way chapter 2
+# considered one for せい and おかげ. Nothing in this chapter's citation pool
+# uses よう as a free-standing noun, so a card for it would be teaching a word
+# no sentence in the chapter contains. Rejected for the same reason the
+# breakdown rejected it.
+#
+# The cited sentences do use words the learner does not own -- 略図, 芸当,
+# 傾聴, 消化不良, 期限切れ, 暖房器, 精白米, 簿記 and their kin. That is not a
+# gap this file should close. 04-stage-reading.md section 3 hands vocabulary at
+# this stage to the reading library and to mining -- lessons carry patterns,
+# the library carries words. The chapter-1 file makes that argument at length
+# and it is the same argument.
+#
+# The file exists so the chapter's four content files stay a matched set. An
+# empty array parses; a file of comments alone does not, which is why the `[]`
+# below is load-bearing rather than decorative.
+#
+# content-source: n/a -- this file adds no Japanese content.
+
+[]

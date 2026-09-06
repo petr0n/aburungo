@@ -1,0 +1,230 @@
+# Chapter 8 -- Purpose and intent.
+#
+# The cause chapter already gave the learner ために for in order to -- both of
+# ため's senses, cause and purpose, taught side by side and contrasted against
+# から and ので. This chapter does not reopen that lesson. Its breakdown named
+# ために again; hand-checking all 259 attested ために sentences confirmed what
+# the cause chapter's own header already said, that there is no second,
+# untouched vein of purpose-ために material left. What this chapter teaches
+# instead is the word that takes over where ために stops being idiomatic --
+# ように, used when the goal is not something the same speaker can simply
+# decide to do. You can study in order to pass an exam with ために, because
+# studying is your own deliberate act. Speak louder in order that everyone can
+# hear is a different shape, because the hearing is not yours to perform. That
+# boundary is this chapter's real content, not a footnote to it.
+#
+# ように is the deepest single pattern this book has drawn on -- 413 sentences
+# carry the string, and even after the comparison family and the two auxiliary
+# extensions are taken out of the count it is far ahead of anything else. Its
+# own lesson keeps four jobs together, the way the cause chapter kept ため's
+# two senses together rather than splitting one word into artificial pieces --
+# aim at a goal, aim at avoiding one, wish for one with nothing following, and
+# report what somebody else was told to do. A fifth job, ように as like or as,
+# gets a line and a fragment rather than a re-teaching, because the chapter on
+# how things look and seem already built it.
+#
+# Two more lessons cash out what ように pays for once a verb comes after it.
+# ようになる is the change a learner will use constantly and has never seen
+# collected -- I have become able to, it has come to be that -- built from
+# lesson 1's word plus a verb Book One taught. ようにする is its partner in
+# effort rather than result. They earn separate lessons because each adds a
+# different verb carrying a different core meaning, not because ように needed
+# padding out.
+#
+# The last two lessons are unrelated to ように and to each other. まい is the
+# negative mirror of intent -- I will not, and just as often surely will not --
+# and it is the thinnest lesson in this book on genuine production material:
+# 117 raw hits in the corpus, 14 of them the auxiliary. It ships anyway,
+# because those 14 cover two distinct still-productive jobs across six verbs,
+# which is more than one job's worth of depth even at that count. ことになる
+# closes the chapter with the flip side of a decision -- not what you decided,
+# but what the situation settled, or what a fact implies.
+#
+#    1  so that                      ように, and the boundary against ために
+#    2  coming to be able to         ようになる
+#    3  making it your practice      ようにする
+#    4  won't, and surely won't      まい
+#    5  that's how it turned out     ことになる, and ことにする beside it
+#
+# Lessons 2 and 3 stand on lesson 1's word and should follow it. Lessons 4 and
+# 5 stand on nothing in this chapter and could sit anywhere in it. Re-surfacing
+# grammar.b3-tame-ni in the SRS queue before lesson 1 is what makes that
+# lesson's opening land; that is a scheduling matter, not something this file
+# can do.
+#
+# Three things the attestation pass found that the breakdown did not, all
+# recorded at length in phrases/b3-07-purpose.yaml:
+#
+#   ことにする has 24 attested sentences, not the 1 the breakdown reports. The
+#   breakdown searched the literal string and missed ことにした, ことにしている
+#   and ことにしよう. On 24 it would carry a lesson; the six order slots for
+#   this chapter were settled before the recount, so it ships as two cards
+#   inside lesson 5 instead, as the contrast that makes ことになる legible.
+#
+#   ことになる has 66 genuine sentences across its family, not 28. The same
+#   single-string search missed ことになっている and ことになった -- and those
+#   carry precisely the arrangement sense the breakdown reports as missing from
+#   this corpus. Because of that, the imperfect sentence the breakdown asks to
+#   be cited with a caveat is not used at all.
+#
+#   ように's 413 hits are not "essentially all genuine" for lesson 1's
+#   purposes. Nearly half are the comparison family or the two auxiliary
+#   extensions. The pattern is still the richest in the book; the number is
+#   not the number.
+#
+# The `kanji:` arrays are empty and should stay that way, and so is
+# vocabulary/b3-07-purpose.yaml. Every pattern here is written in kana in every
+# sentence that carries it, and the vocabulary in the example sentences belongs
+# to the reading library and to mining, not to a curated list
+# (04-stage-reading.md section 3). The `wordIds` below name words the learner
+# already owns and whose form the lesson's own sentences use -- an SRS pull,
+# not new teaching.
+#
+# One rule the grammarNotes hold themselves to, inherited from the earlier
+# chapters and stated again because a later editor will otherwise undo it by
+# accident. A grammarNote here may show a connective in isolation (ようにする),
+# a fragment of a rule (potential verb + ようになる), a verb phrase
+# (逮捕すべく), or a sentence that is a phrase card in this chapter or an
+# earlier one, quoted whole. It may not show a Japanese sentence that is none
+# of those. Several notes therefore describe a sentence in English -- the Zen
+# monk sentence, the sentence about a child who changed beyond recognition,
+# the one about a man who will have lived somewhere ten years -- where a draft
+# would have composed a Japanese one or trimmed an attested one down to fit.
+#
+# content-source: every phrase this file references is a verified Tatoeba pair,
+#   cited by id in `tatoebaId` in phrases/b3-07-purpose.yaml. No
+#   training-canonical sentence is used anywhere in this chapter
+#   (04-stage-reading.md section 8).
+
+- id: b3.you-ni
+  order: 252
+  chapterId: b3.band-7
+  situation: Purpose and intent
+  title: So that
+  canDo: Say what you are aiming for when the goal is not something you can simply decide to do, and wish for something out loud
+  wordIds:
+    - vocab.kaze-cold
+    - vocab.kooto
+    - vocab.kiru-wear
+    - vocab.hanasu
+    - vocab.eki
+    - vocab.michi
+    - vocab.wakaru
+    - vocab.dekiru
+    - vocab.byouki
+    - vocab.hayai
+    - vocab.haha
+    - vocab.isha
+    - vocab.iu
+  phraseIds:
+    - band7.i-wore-a-coat-so-i-wouldnt-catch-a-cold
+    - band7.take-care-not-to-oversleep
+    - band7.speak-louder-so-everyone-can-hear
+    - band7.he-drew-a-map-so-id-know-the-way
+    - band7.i-trained-the-dog-so-it-could-do-tricks
+    - band7.may-all-my-dreams-come-true
+    - band7.i-hope-youll-get-well-soon
+    - band7.keep-away-from-unlicensed-taxis
+    - band7.mother-told-me-to-mow-the-lawn
+    - band7.the-doctor-ordered-him-to-rest
+  kanji: []
+  patternId: grammar.b3-you-ni
+  grammarNote: "Start from the word you already have. ために said in order to, and it wanted a goal you were deliberately going about — 着替えをするために家に帰った, I went home in order to change. Changing your clothes is an act you perform. Now try to say I wore a coat in order not to catch a cold, and the shape stops fitting, because not catching a cold is not an act anyone performs. That is where ように lives. The shape is the plain non-past clause you already know how to build, then ように, then what you did about it. 風邪引かないようにコートを着た. What goes in front of ように is usually one of three things, and all three are the same idea from different angles. First, a predicate nobody can simply decide to do — a potential verb or a verb of understanding or arriving. 私はその犬を芸当ができるように訓練した, できる. 彼は駅までの道がわかるように略図を書いてくれた, わかる. Second, a negative goal, which is what you want not to happen rather than something you do. 寝坊しないように注意しなさい. Third, a goal that belongs to somebody other than the person acting. みんなに聞こえるようにもっと大きな声で話しなさい — you do the speaking, they do the hearing. How firm is this? Firmer than a tendency and softer than a law. The honest version is that ように is the ordinary choice for all three, and ために is not simply ungrammatical in the second — 〜ないために exists, and there is one in this corpus, in a sentence about not wasting an acquired priority in a queue. It reads as a written policy rather than an everyday precaution, so it is worth recognising and not worth reaching for. Now the second job, and it is the one you are most likely to say out loud. Put nothing after ように and the sentence becomes a wish. 夢がすべて叶いますように. 早く病気がよくなりますように. Two things to notice there. The verb is 叶います, not 叶う — the wish idiom is one of the very few places a polite form sits in the middle of a sentence rather than at the end. That polite shape is the usual one for a wish said out loud, though the plain form turns up too, most often when 祈っています follows. And nothing is missing off the end; the sentence is complete. It can be finished, with 祈っています, and it usually is not. Turn the clause negative and the same hanging ように lands as a warning instead. 白タクには乗らないように. The third job puts a verb of speaking after the ように, and reports what somebody was told to do. 母は私に芝を刈るように言った. 医者は彼に休養するように命令した. 言う, 命令する, 頼む, 勧める, 注意する all take a clause plus ように in front of them, the person instructed takes に, and how hard the instruction was is carried by that verb rather than by ように. You will also meet ようにと, with the quoting と spelled out, doing exactly the same work. Two things to recognise and not to produce. ように also means like or as — 烈火のように怒った, angry like a raging fire — which is the same word doing the job the chapter on how things look and seem taught, attached to a verb instead of standing as a predicate. And どのように, このように, そのように and 次のように are a small high-frequency family meaning how, in this way, as follows. Finally, a formal cousin. 逮捕すべく, in order to arrest, is 〜べく, which does this lesson's purposive job in writing that is trying to sound weighty. One sentence in this whole corpus uses it that way. Read it, do not write it."
+
+- id: b3.you-ni-naru
+  order: 253
+  chapterId: b3.band-7
+  situation: Purpose and intent
+  title: Coming to be able to
+  canDo: Say you have reached a new ability or a new habit, arrived at over time
+  wordIds:
+    - vocab.oyogu
+    - vocab.taberu
+    - vocab.naru
+    - vocab.kotoshi
+  phraseIds:
+    - band7.youll-soon-be-able-to-swim
+    - band7.i-became-able-to-keep-accounts
+    - band7.when-did-the-japanese-start-eating-polished-rice
+    - band7.he-started-walking-every-morning
+    - band7.the-records-became-available-this-year
+  kanji: []
+  patternId: grammar.b3-you-ni-naru
+  grammarNote: "Nothing here is new. Take the ように you just learned and put なる after it. すぐ泳げるようになりますよ — 泳げる is the potential from Book Two, ように is last lesson's, なる has been yours since Book One, and the three together say you will come to be able to swim. That is the whole formation. What it means is a change arrived at rather than an act performed, and that is the same reason the last lesson gave for reaching past ために. Becoming able to swim is not something you do on purpose in a moment; it is a state you end up in, which is what put it on ように's side of the line in the first place. You can still put ために in front of the whole thing when the becoming is what you are aiming at, and people do. The tense is usually where the meaning sits. なった and なりました say the change has already happened, and most of what you will read is in that form. なる and なります point forward, at a change that has not arrived yet. Two things worth having, because both are easy to narrow by accident. The pattern is not only for potential verbs. いつから日本人は精白米を食べるようになったのですか asks when a habit started, with an ordinary 食べる in front, and 彼はリハビリの後、毎朝散歩するようになりました reports one man taking up a habit he did not have. English reaches for started rather than became able to in those, and the Japanese has not changed at all. And the subject does not have to be a person. 今年になってやっとこれらの記録がみんなに利用できるようになった is about a set of records. The pattern needs something that was one way and is now another; it does not need somebody to have grown. Now the reverse, because the obvious guess is wrong. To say a change went the other way — I stopped being able to, it came not to happen — the ordinary Japanese is 〜なくなる rather than a negative in front of ようになる. 泳げなくなった, came not to be able to swim. This corpus has no 〜ないようになる sentence in it at all; the one string that looks like it is a sentence-final particle after ように doing something else. Two more shapes to recognise. ようになっている describes a thing that has been set up to work a certain way, a machine or a system rather than a person, and you will meet it in manuals. And be careful of 〜のようになる, with の, which is the comparison word from the chapter on how things look and seem plus なる — 別人のようになった says somebody came to be like a different person, which is not this pattern and is not about ability at all."
+
+- id: b3.you-ni-suru
+  order: 254
+  chapterId: b3.band-7
+  situation: Purpose and intent
+  title: Making it your practice
+  canDo: Say you make an effort to do something, or that you make a practice of it
+  wordIds:
+    - vocab.okane
+    - vocab.tsukau
+    - vocab.suru
+  phraseIds:
+    - band7.try-not-to-be-a-nuisance
+    - band7.try-to-make-up-your-mind-soon
+    - band7.try-to-be-patient-with-others
+    - band7.lets-not-deviate-from-the-subject
+    - band7.try-not-to-spend-more-than-you-need
+    - band7.he-makes-a-point-of-not-falling-behind
+  kanji: []
+  patternId: grammar.b3-you-ni-suru
+  grammarNote: "Same base, different verb, and the difference is the whole lesson. ようになる is a result — you can now do it. ようにする is an effort — you are working at it, and whether it comes off is not what the sentence says. すぐ決心するようにしてください asks somebody to try to decide soon, not to have decided. In real speech the two turn up together, one person describing the effort and, later, the result it produced. Very often the clause in front is a negative one. 迷惑にならないようにしなさい. 必要以上にお金を使わないようにしなさい. 本題からそれないようにしましょう. Making a practice of not doing something turns up at least as often in this corpus as making a practice of doing it, and the negative clause goes in front of ように unchanged. The ending on する carries the register, and it takes whichever one the moment wants. なさい is the plain instruction ending — firmer than てください, gentler than a bare imperative, and the form most of this pattern's attested sentences use. てください asks. ましょう makes it a shared plan, and it is Book Two's. Nothing restricts the pattern to instructions, though the material you will read leans that way heavily: 彼は時代の流れに遅れないようにしている simply reports what a man habitually does. That ている form is worth taking away on its own. ようにしている says this is a standing practice rather than a resolution made once — a thing you keep doing. It is how you answer a question about your habits. One second job, so it does not surprise you later. ようにする also means arrange it so that, of things rather than of yourself — setting a machine or a permission up so that something can or cannot happen. Same words, and what tells you is whether the subject is a person promising an effort or somebody adjusting the world. The near-neighbour that gets confused with this one is ことにする, and it comes at the end of this chapter. Very briefly, so you have it now: ようにする is trying to, and ことにする is having decided to."
+
+- id: b3.mai
+  order: 255
+  chapterId: b3.band-7
+  situation: Purpose and intent
+  title: Won't, and surely won't
+  canDo: Read a determined refusal or a confident prediction that something will not happen
+  wordIds:
+    - vocab.iku
+    - vocab.naru
+    - vocab.wakaru
+  phraseIds:
+    - band7.she-steeled-herself-not-to-cry
+    - band7.they-listened-so-as-not-to-miss-a-word
+    - band7.she-held-onto-me-to-stop-me-going
+    - band7.you-will-gain-nothing-from-that
+    - band7.theyll-never-understand-japanese-culture
+    - band7.believe-it-or-not-that-is-true
+  kanji: []
+  patternId: grammar.b3-mai
+  grammarNote: "まい is old. It is the classical negative of the volitional, it belongs to writing and to formal or emphatic speech, and you will meet it in a novel or an editorial long before you meet it across a counter. That said, do not file it under archaic: two frozen expressions built on it are ordinary conversation, and this lesson names both. Attachment first. For godan verbs — 行く, 泣く, わかる, 聞きもらす — put まい straight onto the dictionary form. 泣くまい. わかるまい. 聞きもらすまい. For verbs that conjugate like 食べる, and for する and 来る, you will meet the dictionary form and the bare stem both, and both are standard: 食べるまい or 食べまい, するまい or しまい or すまい, 来るまい or 来まい, the last of those read こまい. The stem route is the older one and it is what 彼女は行かせまいとして私に縋った uses, on the causative 行かせる from this book's first chapter. If you are unsure which to write, the dictionary form is safe everywhere. Two jobs, and they are worth naming apart because the ending is identical. The first is resolve — I will not, I am determined not to. 彼女は泣くまいと気を張った. 彼らは１語も聞きもらすまいと傾聴した. Notice the と after まい in both. That is the quoting と you already have, and 〜まいと followed by a verb of trying or bracing is by far the commonest frame this job appears in. The second job is prediction — surely will not, could not possibly. そうしたところで君には何もなるまい. どうせ日本文化の粋などは連中には絶対わかるまい. What sorts them, most of the time, is who the subject is: a first-person subject with something they control reads as resolve, anybody else reads as a prediction. Most of the time, not always — a speaker can predict about themselves, and nobody resolves to understand something, so a verb like わかる leaves only the prediction reading open. Read the sentence, not the ending. Two fixed expressions to recognise on sight. じゃあるまいし, literally since it is not as if it is, dismisses a comparison the other person is leaning on — it is not as if I were a Zen monk, so spare me the austerity diet. That one is ordinary spoken Japanese and this chapter gives it no card, because every sentence the corpus has for it is long, heavily colloquial, and paired with an English translation loose enough to teach the wrong thing. And 〜ようと〜まいと puts the volitional and まい side by side for whether or not. 信じようと信じまいと、それは真実だ. 信じよう there is the plain-register counterpart of 信じましょう, which this course has never taught on its own; take the pair whole rather than trying to build it. One more shape you will meet in formal writing, worth knowing because the double negative hides the meaning: なければなるまい and ねばなるまい say something must be done. Literally it will surely not do to not do it. If you want to say any of this yourself, you do not have to. 〜ないつもりだ from Book Two says I do not intend to, and 〜ないだろう says it probably will not. まい is what you read. Finally, the string. まい turns up inside a great many ordinary words — うまい, しまう, てしまった, 住まい, ふるまい, 参ります, めまい, and 枚 the counter for flat things. Of the sentences in this corpus containing まい, roughly one in eight is this auxiliary. Check what is in front of it before you decide."
+
+- id: b3.koto-ni-naru
+  order: 256
+  chapterId: b3.band-7
+  situation: Purpose and intent
+  title: That's how it turned out
+  canDo: Say what a fact implies, or that something was settled by circumstances rather than by you
+  wordIds:
+    - vocab.naru
+    - vocab.suru
+    - vocab.raishuu
+    - vocab.kesu
+  phraseIds:
+    - band7.it-follows-that-he-is-not-the-criminal
+    - band7.eat-too-much-and-you-suffer-for-it
+    - band7.if-it-expires-there-will-be-trouble
+    - band7.the-campus-festival-is-to-be-held-next-week
+    - band7.you-are-expected-to-turn-off-the-lights
+    - band7.i-make-a-practice-of-getting-up-at-six
+    - band7.he-decided-to-look-elsewhere
+  kanji: []
+  patternId: grammar.b3-koto-ni-naru
+  grammarNote: "こと turns a clause into a noun, and you have done that twice already — ことができる for what you can do, たことがある for what you have done. This is a third job for the same nominaliser, and the noun it makes goes into になる, comes to be. Put together, a plain clause plus ことになる says this is what it comes to. It does two main things. The first is inference. この証拠から、彼は犯人ではないということになる — nobody decided anything, the evidence sits there, and the conclusion follows from it. That ということになる, with the quoting という in front, is the shape this job usually wears when what follows is a whole claim. The consequence version is the same idea pointed forward. 食べ過ぎると、消化不良に苦しむことになる — eat too much and this is what you end up with. Drop the ことになる and you have a plain report of a fact; keep it and you have said this is where it leads. The second thing it does is report an arrangement, and here the form you will meet most is ことになっている. 学園祭は来週行われることになっている — somebody settled it, and it is now simply how things stand. 退社前に電灯や暖房器を消すことになっている does the same for a rule. Notice that neither sentence names who decided, and neither needs to; that is most of what the pattern is for, and it is why the passive from this book's first chapter sits so comfortably inside it. One fixed pair worth memorising whole, because you will hear it before you have time to parse it: 大変なことになる and 困ったことになる, things are going to get serious, we are in a fix. もし期限切れになったら、大変なことになるよ. There is a narrower job too, worth recognising rather than learning: ことになる can total up a stretch of time, as in a sentence about a man who, by the end of next month, will have lived somewhere for ten years. Nothing was decided and nothing follows from anything; it is arithmetic. Now the partner, because the contrast is what makes either of them clear. ことにする, with する, is a decision the speaker made. 彼はほかに情報を求めることにした — he chose. 私は６時に起床することにしている — a rule the speaker set and keeps to, which is worth holding directly against the ようにしている from earlier in this chapter: ようにしている is trying to, ことにしている is having decided to. So ことになる is what happened to be settled and ことにする is what you settled. That is the textbook contrast and it is a good one, but do not turn it into a rule about who decided. Japanese speakers announce their own decisions with ことになりました all the time — it is how a great many people tell you they are getting married — and the point of choosing that form is modesty, presenting your own choice as something that came about. The form tells you how it is being presented, not who is responsible. One trap. 〜のことになると is a different idiom built from the same three morphemes, and it means when it comes to the subject of. A sentence about somebody being in her element when it comes to tennis is that idiom, not this construction. What tells them apart is that こと there has a topic in front of it rather than a clause describing an event, and that the sentence carries on after なる instead of ending on it."
+
+- id: b3.checkpoint-7
+  order: 257
+  chapterId: b3.band-7
+  situation: Integration & checkpoint
+  title: Chapter 8 checkpoint
+  canDo: Recognise everything this chapter taught
+  wordIds: []
+  phraseIds: []
+  kanji: []
+  checkpoint: recognition
+  grammarNote: "A wide pass over everything this chapter has taught. Type the reading or the meaning rather than picking it out of a line-up. One word doing four jobs, two verbs bolted onto it that pull in opposite directions, one old ending for what will not happen, and one way of saying that something settled itself. What is being checked is not whether you can recite the shapes. It is whether the right one comes to hand for the sentence in front of you, which for this chapter means two choices in particular. The first is ために against ように — the same English word for, and two Japanese answers, sorted by whether the goal is something anybody could set out to do. The second is ようになる against ようにする, result against effort, which share every kana except one and mean quite different things. ことになる and ことにする are the same choice one lesson later, and the two pairs are worth feeling as one habit rather than two facts. Anything you miss comes back sooner. It finishes when the remaining set empties; retry as often as you like, nothing is recorded."

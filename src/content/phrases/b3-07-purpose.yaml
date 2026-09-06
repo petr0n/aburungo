@@ -1,0 +1,545 @@
+# Book Three, chapter 8 phrases -- purpose and intent.
+#
+# Thirty-four sentences, and not one of them is ours. 04-stage-reading.md
+# section 8 withdraws the training-canonical exemption at the reading stage and
+# above, in those words -- "no training-canonical sentences at the reading stage
+# and above". So every sentence below is a verbatim Tatoeba pair carried out of
+# server/data/jmdict-examples-eng-3.6.2.json with its id in `tatoebaId`, and
+# nothing here was composed, trimmed, joined or smoothed. Where a shape had no
+# usable attested sentence it is described in a grammarNote and has no card.
+#
+# ---------------------------------------------------------------------------
+# ATTESTATION, and three places the breakdown's own numbers were wrong in this
+# chapter's favour. Every count below is from a search over all 25,983 unique
+# Japanese sentences in the corpus, re-run for this file rather than quoted.
+#
+#   ように 413 raw. The breakdown calls this "essentially all genuine, no
+#   contamination found". That is too generous, and the correction matters
+#   because it is what decided how many cards lesson 1 gets. Of the 413: 48
+#   are ようになる and belong to lesson 2, 48 are ようにする and belong to
+#   lesson 3, and 103 are のように, the comparison family the previous chapter
+#   owns rather than this lesson. Removing all three buckets leaves 228, and
+#   that 228 is still not lesson 1's own material -- it holds verb-plus-ように
+#   similes the same chapter owns (#85880 死んだように倒れた, #141104
+#   縫うように進んで行った) and the ように見える／ように思われる hedges
+#   (#210695, #196996, #209151). The pool doing lesson 1's own jobs -- purpose,
+#   negative purpose, wish, warning, reported instruction -- is therefore well
+#   under 228 and well over a hundred. Still the deepest single pool this book
+#   has drawn on, which is why lesson 1 carries ten cards where the rest carry
+#   five to seven. Not 413 of them.
+#
+#   ことにする 24, not 1. The breakdown searched the literal string ことにする
+#   and found one sentence, and dropped the pattern on that basis. Searching
+#   its conjugations as well (ことにした, ことにしている, ことにしよう,
+#   ことにします) returns 24, and they are short and clean -- #110971 at 17
+#   characters, #161904 at 17, #215704 at 20. That is richer than three
+#   patterns this book has already shipped. It still does not get its own
+#   lesson, because this chapter's six order slots were settled before the
+#   count was; it gets two real cards inside lesson 5 as the direct contrast
+#   against ことになる, which is the pairing every reference grammar makes
+#   anyway. Recorded here because the next author to read the breakdown will
+#   otherwise inherit the wrong number.
+#
+#   ことになる 69 raw across the family, not 29. The same single-string search
+#   missed ことになっている and ことになった -- 40 more sentences, and they
+#   carry precisely the "it has been arranged that" sense the breakdown
+#   reports as "simply not well attested in this corpus". It is well attested:
+#   #184512, #80263, #137873, #184244, #176743, #109525 and a dozen more.
+#   Three of the 69 are excluded as a different construction (see the traps
+#   below), leaving 66 genuine. Because of this, #193010 -- the imperfect
+#   sentence the breakdown asks to be cited with a caveat attached -- is not
+#   used at all. There is no need for it now, and its corpus English ("Maybe I
+#   will settle down with a woman") does not render the Japanese it is paired
+#   with.
+#
+#   まい 117 raw, 14 genuine, exactly as the breakdown said, and its list of
+#   collision classes is accurate. One correction of fact rather than count --
+#   it gives #209047 and #90506 as "two independent sentences, same verb" and
+#   quotes 彼女は泣くまいと気を張った for both. #209047 is a different
+#   sentence, その少年は男らしくして泣くまいとがんばった. Both are genuine.
+# ---------------------------------------------------------------------------
+#
+# Two consequences of quoting rather than composing, both visible below:
+#
+#   The vocabulary runs ahead of the ladder. 略図, 芸当, 傾聴, 消化不良,
+#   期限切れ, 暖房器, 精白米 and 簿記 are not taught anywhere and are not meant
+#   to be -- see vocabulary/b3-07-purpose.yaml for why this chapter ships zero
+#   words. What is being reviewed here is the clause ending, not the nouns
+#   around it.
+#
+#   Two forms appear in these sentences that no lesson in this ladder teaches
+#   as its own pattern, and both are named in the grammarNote that quotes them
+#   rather than left to ambush a learner. なさい, the plain instruction ending,
+#   carries three of lesson 3's six cards and one of lesson 1's, because that
+#   is the register the corpus's ようにする material lives in; the other three
+#   in that lesson use てください, ましょう and a plain ている, all owned.
+#   信じよう, the plain volitional, is
+#   half of the frozen pair in #145736; the ladder teaches ましょう and never
+#   built its plain-register counterpart, a gap the breakdown records at
+#   section 6.4 and this chapter does not fix.
+#
+# ---------------------------------------------------------------------------
+# GLOSS DEPARTURES. The English is Tatoeba's own wherever Tatoeba's own would
+# do. Eight of the thirty-four depart from it. Every one is listed here by id so
+# a reviewer can diff this list against the corpus rather than take it on trust.
+# Every Japanese string is untouched.
+#
+#   Where the corpus English hid the grammar the card exists to teach:
+#   #109592 -- "He did a rough drawing to show me the way to the station" has
+#     no trace of がわかるように, which is the whole reason the card exists, and
+#     drops くれた as well. Glossed "He drew a rough map so that I would know
+#     the way to the station".
+#   #160195 -- "I trained the dog to do tricks" reads as a plain purpose and
+#     hides that the Japanese clause is a potential, 芸当ができる. Glossed "I
+#     trained the dog so that it could do tricks".
+#   #80226 -- "Never make a nuisance of yourself" states a prohibition where
+#     the Japanese asks for an effort, which is the difference between this
+#     lesson and the one before it. Glossed "Try not to make a nuisance of
+#     yourself".
+#   #105268 -- "He is trying to keep up with the current of the times" turns a
+#     negative clause, 遅れないようにしている, into a positive one and loses the
+#     shape the card teaches. Glossed "He makes a point of not falling behind
+#     the times".
+#   #125857 -- "enabled me to keep accounts" renders ようになった as a
+#     causative and shows no change of state. Glossed "Thanks to years of
+#     practice, I became able to keep accounts easily". (The corpus English
+#     also reads "Years of practice has", which does not agree.)
+#   #145918 -- "we suffer from indigestion" reports a fact where ことになる
+#     says it is what you end up with. Glossed "If we eat too much, we end up
+#     suffering from indigestion".
+#
+#   Where the corpus English used a word the learner would not, or says
+#   something the Japanese does not:
+#   #83924 -- "lest I catch a cold". Lest is not a word this learner will meet
+#     again. Glossed "so I would not catch a cold".
+#   #193739 -- "There will be hell to pay if I don't make this deadline" puts
+#     a first person in a sentence that has none; 期限切れになったら is about
+#     the deadline running out, not about who missed it. Glossed "If it goes
+#     past its expiry date, there will be real trouble".
+#
+# ---------------------------------------------------------------------------
+# ROUTING. Book Three's stage is "reading" (books.ts), and LearnPage routes
+# every non-foundation book to the typed FillBlankCard, where the learner types
+# the whole reading back. All thirty-four of these are typed. The longest
+# reading in the file is 38 kana (band7.i-became-able-to-keep-accounts), three
+# short of Book Two's longest typed answer at 41
+# (quote.my-friend-said-that-shop-is-famous-but-i-wont-go), so nothing here is
+# marked `recognitionOnly` and nothing here asks more than a learner has
+# already been asked. That is a property of what this chapter's patterns
+# attach to -- short clauses -- and not of any trimming; the long attested
+# sentences were passed over in favour of short ones, not cut down.
+# ---------------------------------------------------------------------------
+#
+# Three traps the attestation pass caught that a naive grep would have shipped,
+# all in the ことになる family and all screened out by hand:
+#
+#   #202199 「テニスのことになると彼女は水を得た魚のようだ。」 and #77941
+#   「料理ということになれば、誰もメアリーにはかなわない。」 are の＋こと＋に
+#   なる／なれ functioning as the fixed idiom "when it comes to the topic of X",
+#   not the result construction. Same three morphemes, different work -- the
+#   shape of trap chapter 2 found in あわてもの＋だから. Neither is used;
+#   #202199 is named in lesson 5's grammarNote so a reader meets it once.
+#
+#   #184275 「学生の時は勉強することになれていた。」 matches ことになれ inside
+#   ことに慣れる, to be used to doing something. Nothing to do with なる. It is
+#   not used, and it is not in the breakdown -- it turned up in this pass.
+#
+# These are independent utterances. None is authored as an exchange, and none
+# is paired with another to make one -- a scripted back-and-forth is
+# multi-sentence composed text, which stays out even when both halves are
+# separately attested.
+#
+# content-source: Tatoeba, via the sentence pairs embedded in JMdict for
+#   Applications 3.6.2 (server/data/jmdict-examples-eng-3.6.2.json). Every
+#   phrase carries its sentence id in `tatoebaId`; the id is quoted, because
+#   YAML reads a bare 214803 as a number and the schema rejects it. Verified by
+#   id against the corpus on 2026-09-05 -- all 34 resolve and every Japanese
+#   string below matches its source character for character. Kana readings and
+#   romaji are transcriptions of the quoted sentence, not new content; every
+#   compound whose reading was not already obvious was checked against JMdict
+#   (略図 りゃくず 1810220, 芸当 げいとう 1253120, 訓練 くんれん 1247470,
+#   白タク しろタク 2123400, 寝坊 ねぼう 1360320, 注意 ちゅうい 1426530,
+#   加護 かご 1190110, 叶う かなう 1208870, 芝 しば 1321610, 刈る かる 1209540,
+#   休養 きゅうよう 1228100, 命令 めいれい 1532160, 聞こえる きこえる 1591150,
+#   大きな おおきな 1412890, 駅 えき 1175140, 道 みち 1454080, 病気 びょうき
+#   1490230, 夢 ゆめ 1529410, 声 こえ 1380440, 犬 いぬ 1258330, 泳ぐ およぐ
+#   1174340, 精白米 せいはくまい 1751080, 簿記 ぼき 1515230, 長年 ながねん
+#   1430100, 練習 れんしゅう 1559160, 簡単 かんたん 1214330, 今年 ことし
+#   1579130, 記録 きろく 1223440, 利用 りよう 1549660, 散歩 さんぽ 1303620,
+#   毎朝 まいあさ 1524700, リハビリ 1142240, 日本人 にほんじん 1464700,
+#   迷惑 めいわく 1532800, 決心 けっしん 1254340, 辛抱 しんぼう 1365930,
+#   他人 たにん 1581400, 本題 ほんだい 1522970, 必要 ひつよう 1487660,
+#   以上 いじょう 1155120, 時代 じだい 1316300, 流れ ながれ 1552130,
+#   遅れる おくれる 1589040, 気を張る きをはる 2402670, 聞き漏らす ききもらす
+#   1505930, 傾聴 けいちょう 1249560, 縋る すがる 1610010, 連中 れんちゅう
+#   1559700, 絶対 ぜったい 1386840, 真実 しんじつ 1363780, 文化 ぶんか
+#   1505120, 一語 いちご 1162350, 証拠 しょうこ 1351600, 犯人 はんにん
+#   1481630, 食べ過ぎる たべすぎる 1358300, 消化不良 しょうかふりょう
+#   1743040, 苦しむ くるしむ 1244350, 期限切れ きげんぎれ 1756840, 大変
+#   たいへん 1415000, 学園祭 がくえんさい 1206580, 行う おこなう 1589060,
+#   退社 たいしゃ 1411400, 電灯 でんとう 1443660, 暖房器 だんぼうき 1419870,
+#   消す けす 1350110, 起床 きしょう 1223820, 情報 じょうほう 1356370,
+#   求める もとめる 1229350).
+#   Four of those needed the gloss checked as well as the reading, because the
+#   headword has more than one entry and the first is not the one meant.
+#   粋 in #201384 (日本文化の粋, the essence of Japanese culture) is すい
+#   2848938, essence, and not いき 1372410, chic -- the same character, two
+#   entries, two readings, and the wrong one would put an extra syllable in
+#   what the learner types. 前 in #137873 (退社前) is まえ 1392580, not ぜん
+#   1392570 or さき 1387210. 後 in #110338 (リハビリの後) is あと 1269320, not
+#   のち 1269330 or うしろ 1269410. 他人 in #138554 is たにん, the first
+#   reading of 1581400, whose entry also carries ひと and あだびと.
+# jlpt-source: training -- the level marks the chapter this content sits in,
+#   not each pattern's textbook level. ように and ようになる are commonly
+#   listed N4 and まい N1; the sentences carrying all of them here are N3-band
+#   text and tagging them individually would misreport coverage.
+
+# ── So that ───────────────────────────────────────────────────────────────────
+
+- id: band7.i-wore-a-coat-so-i-wouldnt-catch-a-cold
+  jlpt: N3
+  scenario: purpose
+  japanese: 風邪引かないようにコートを着た。
+  reading: かぜひかないようにコートをきた。
+  romaji: kaze hikanai you ni kooto o kita.
+  english: I wore a coat so I would not catch a cold.
+  tatoebaId: "83924"
+  notes: The shape at its plainest — a negative clause, then ように, then what you did about it. Catching a cold is not something anyone decides to do, and not catching one is not an action at all, which is why the goal here is aimed at rather than performed.
+
+- id: band7.take-care-not-to-oversleep
+  jlpt: N3
+  scenario: purpose
+  japanese: 寝坊しないように注意しなさい。
+  reading: ねぼうしないようにちゅういしなさい。
+  romaji: nebou shinai you ni chuui shinasai.
+  english: Take care not to oversleep.
+  tatoebaId: "145625"
+  notes: 注意する is one of the handful of verbs that live next to ように — take care, be careful, watch out that. なさい is the plain instruction ending, one step firmer than てください and softer than a bare imperative.
+
+- id: band7.speak-louder-so-everyone-can-hear
+  jlpt: N3
+  scenario: purpose
+  japanese: みんなに聞こえるようにもっと大きな声で話しなさい。
+  reading: みんなにきこえるようにもっとおおきなこえではなしなさい。
+  romaji: minna ni kikoeru you ni motto ookina koe de hanashinasai.
+  english: Speak louder so everyone can hear you.
+  tatoebaId: "194963"
+  notes: The clearest case of the boundary this lesson teaches. You do the speaking; the hearing happens to みんな. A goal that belongs to somebody else cannot be your own purpose, so ために has nothing to attach to and ように does.
+
+- id: band7.he-drew-a-map-so-id-know-the-way
+  jlpt: N3
+  scenario: purpose
+  japanese: 彼は駅までの道がわかるように略図を書いてくれた。
+  reading: かれはえきまでのみちがわかるようにりゃくずをかいてくれた。
+  romaji: kare wa eki made no michi ga wakaru you ni ryakuzu o kaite kureta.
+  english: He drew a rough map so that I would know the way to the station.
+  tatoebaId: "109592"
+  notes: The same shape again, with わかる. Understanding is not an act you perform on purpose — it either happens or it does not — and the person doing the understanding is not the person drawing the map. Two reasons in one sentence to reach for ように.
+
+- id: band7.i-trained-the-dog-so-it-could-do-tricks
+  jlpt: N3
+  scenario: purpose
+  japanese: 私はその犬を芸当ができるように訓練した。
+  reading: わたしはそのいぬをげいとうができるようにくんれんした。
+  romaji: watashi wa sono inu o geitou ga dekiru you ni kunren shita.
+  english: I trained the dog so that it could do tricks.
+  tatoebaId: "160195"
+  notes: できる is the other verb you will meet in front of ように constantly. Any potential verb works the same way — the goal is an ability somebody arrives at, not a thing anybody does.
+
+- id: band7.may-all-my-dreams-come-true
+  jlpt: N3
+  scenario: purpose
+  japanese: 夢がすべて叶いますように。
+  reading: ゆめがすべてかないますように。
+  romaji: yume ga subete kanaimasu you ni.
+  english: May all my dreams come true.
+  tatoebaId: "80969"
+  notes: Nothing follows the ように, and nothing is meant to. Left hanging like this it is a wish. Notice the verb is 叶います and not 叶う — the wish idiom is one of the few places a polite form sits in the middle of a sentence rather than at the end of one.
+
+- id: band7.i-hope-youll-get-well-soon
+  jlpt: N3
+  scenario: purpose
+  japanese: 早く病気がよくなりますように。
+  reading: はやくびょうきがよくなりますように。
+  romaji: hayaku byouki ga yoku narimasu you ni.
+  english: I hope you'll get well soon.
+  tatoebaId: "140539"
+  notes: The same wish shape, and the one you are most likely to need. It is what you say to somebody who is ill, and it is complete as it stands — there is no verb missing off the end.
+
+- id: band7.keep-away-from-unlicensed-taxis
+  jlpt: N3
+  scenario: purpose
+  japanese: 白タクには乗らないように。
+  reading: しろタクにはのらないように。
+  romaji: shiro taku ni wa noranai you ni.
+  english: Keep away from the unlicensed taxis.
+  tatoebaId: "121415"
+  notes: The same hanging ように with a negative clause in front of it, and it lands as a warning rather than a wish. 白タク is an unlicensed cab, a white plate where a green one belongs.
+
+- id: band7.mother-told-me-to-mow-the-lawn
+  jlpt: N3
+  scenario: purpose
+  japanese: 母は私に芝を刈るように言った。
+  reading: はははわたしにしばをかるようにいった。
+  romaji: haha wa watashi ni shiba o karu you ni itta.
+  english: Mother told me to mow the lawn.
+  tatoebaId: "82968"
+  notes: A different job for the same word. Clause, ように, then a verb of speaking — and what comes out is a report of what somebody was told to do. The person told takes に.
+
+- id: band7.the-doctor-ordered-him-to-rest
+  jlpt: N3
+  scenario: purpose
+  japanese: 医者は彼に休養するように命令した。
+  reading: いしゃはかれにきゅうようするようにめいれいした。
+  romaji: isha wa kare ni kyuuyou suru you ni meirei shita.
+  english: His doctor ordered him to rest.
+  tatoebaId: "190778"
+  notes: The same reported instruction with a stronger verb on the end. 言う, 命じる, 命令する, 頼む, 勧める, 注意する all take a clause plus ように in front of them, and the register of the report is carried by that verb, not by ように.
+
+# ── Coming to be able to ──────────────────────────────────────────────────────
+
+- id: band7.youll-soon-be-able-to-swim
+  jlpt: N3
+  scenario: change
+  japanese: すぐ泳げるようになりますよ。
+  reading: すぐおよげるようになりますよ。
+  romaji: sugu oyogeru you ni narimasu yo.
+  english: You'll soon be able to swim.
+  tatoebaId: "214803"
+  notes: Fourteen characters and the whole pattern is in them. 泳げる is the potential you already have; ように is what you just learned; なる is come to be. Nothing here is a new word.
+
+- id: band7.i-became-able-to-keep-accounts
+  jlpt: N3
+  scenario: change
+  japanese: 長年の練習のおかげで、私は簡単に簿記ができるようになった。
+  reading: ながねんのれんしゅうのおかげで、わたしはかんたんにぼきができるようになった。
+  romaji: naganen no renshuu no okage de, watashi wa kantan ni boki ga dekiru you ni natta.
+  english: Thanks to years of practice, I became able to keep accounts easily.
+  tatoebaId: "125857"
+  notes: おかげで is the credit half of the pair from the cause chapter, and it belongs here — a change that took years is exactly the thing you thank something for. なった says the change has already happened.
+
+- id: band7.when-did-the-japanese-start-eating-polished-rice
+  jlpt: N3
+  scenario: change
+  japanese: いつから日本人は精白米を食べるようになったのですか？
+  reading: いつからにほんじんはせいはくまいをたべるようになったのですか？
+  romaji: itsu kara nihonjin wa seihakumai o taberu you ni natta no desu ka?
+  english: When did the Japanese start eating polished rice?
+  tatoebaId: "74057"
+  notes: 食べる is not a potential and nothing here is about ability. The pattern also covers a habit that came to be where there was none before, which is why English reaches for started rather than became able to.
+
+- id: band7.he-started-walking-every-morning
+  jlpt: N3
+  scenario: change
+  japanese: 彼はリハビリの後、毎朝散歩するようになりました。
+  reading: かれはリハビリのあと、まいあささんぽするようになりました。
+  romaji: kare wa rihabiri no ato, maiasa sanpo suru you ni narimashita.
+  english: He came to take a walk every morning after rehabilitation.
+  tatoebaId: "110338"
+  notes: The same habit change one register up, and a good sentence to hold next to the swimming one — same pattern, one with a potential verb and one without.
+
+- id: band7.the-records-became-available-this-year
+  jlpt: N3
+  scenario: change
+  japanese: 今年になってやっとこれらの記録がみんなに利用できるようになった。
+  reading: ことしになってやっとこれらのきろくがみんなにりようできるようになった。
+  romaji: kotoshi ni natte yatto korera no kiroku ga minna ni riyou dekiru you ni natta.
+  english: It was not until this year that these documents were made available to the public.
+  tatoebaId: "171407"
+  notes: The thing that changed is a set of records, not a person. Nothing in the pattern requires a human subject — it requires something that was one way and is now another.
+
+# ── Making it your practice ───────────────────────────────────────────────────
+
+- id: band7.try-not-to-be-a-nuisance
+  jlpt: N3
+  scenario: intent
+  japanese: 迷惑にならないようにしなさい。
+  reading: めいわくにならないようにしなさい。
+  romaji: meiwaku ni naranai you ni shinasai.
+  english: Try not to make a nuisance of yourself.
+  tatoebaId: "80226"
+  notes: The same ように as the goal lesson, with する on the end instead of なる. Not a change that happens to you — something you set out to keep doing. The negative clause in front is the commonest shape this pattern takes.
+
+- id: band7.try-to-make-up-your-mind-soon
+  jlpt: N3
+  scenario: intent
+  japanese: すぐ決心するようにしてください。
+  reading: すぐけっしんするようにしてください。
+  romaji: sugu kesshin suru you ni shite kudasai.
+  english: Try to make up your mind soon.
+  tatoebaId: "214793"
+  notes: てください is Book One's, and it lands on ようにする the way it lands on any other verb. What it asks for is the effort, not the result — try to decide, rather than decide.
+
+- id: band7.try-to-be-patient-with-others
+  jlpt: N3
+  scenario: intent
+  japanese: 他人には辛抱するようにしなさい。
+  reading: たにんにはしんぼうするようにしなさい。
+  romaji: tanin ni wa shinbou suru you ni shinasai.
+  english: Try to be patient with others.
+  tatoebaId: "138554"
+  notes: A positive clause this time. Patience is something you can work at without ever arriving, which is the sort of goal this pattern is built for.
+
+- id: band7.lets-not-deviate-from-the-subject
+  jlpt: N3
+  scenario: intent
+  japanese: 本題からそれないようにしましょう。
+  reading: ほんだいからそれないようにしましょう。
+  romaji: hondai kara sorenai you ni shimashou.
+  english: Let's not deviate from the subject.
+  tatoebaId: "81579"
+  notes: ましょう from Book Two, doing what it always does. A shared effort rather than an instruction to somebody else — the pattern takes whatever ending the moment calls for.
+
+- id: band7.try-not-to-spend-more-than-you-need
+  jlpt: N3
+  scenario: intent
+  japanese: 必要以上にお金を使わないようにしなさい。
+  reading: ひつよういじょうにおかねをつかわないようにしなさい。
+  romaji: hitsuyou ijou ni okane o tsukawanai you ni shinasai.
+  english: Try not to spend more money than is necessary.
+  tatoebaId: "85431"
+  notes: 必要以上に is more than is needed, and it is worth keeping whole. The pattern here is asking for a standing habit, not for one careful afternoon.
+
+- id: band7.he-makes-a-point-of-not-falling-behind
+  jlpt: N3
+  scenario: intent
+  japanese: 彼は時代の流れに遅れないようにしている。
+  reading: かれはじだいのながれにおくれないようにしている。
+  romaji: kare wa jidai no nagare ni okurenai you ni shite iru.
+  english: He makes a point of not falling behind the times.
+  tatoebaId: "105268"
+  notes: ようにしている, in the ている form, is the shape that says this is an ongoing practice rather than a one-off resolution. It is how you describe what somebody habitually does about something.
+
+# ── Won't, and surely won't ───────────────────────────────────────────────────
+
+- id: band7.she-steeled-herself-not-to-cry
+  jlpt: N3
+  scenario: intent
+  japanese: 彼女は泣くまいと気を張った。
+  reading: かのじょはなくまいときをはった。
+  romaji: kanojo wa nakumai to ki o hatta.
+  english: She steeled herself not to cry.
+  tatoebaId: "90506"
+  notes: 泣くまい is I will not cry, said as a resolve rather than a prediction. The と after it is the quoting と you already have — literally, she braced herself with I will not cry in mind.
+
+- id: band7.they-listened-so-as-not-to-miss-a-word
+  jlpt: N3
+  scenario: intent
+  japanese: 彼らは１語も聞きもらすまいと傾聴した。
+  reading: かれらはいちごもききもらすまいとけいちょうした。
+  romaji: karera wa ichigo mo kikimorasumai to keichou shita.
+  english: They listened attentively so as not to miss a single word.
+  tatoebaId: "98295"
+  notes: The same 〜まいと shape on a longer verb. 聞きもらす is godan and takes the dictionary form in front of まい, which is the safest attachment for any verb.
+
+- id: band7.she-held-onto-me-to-stop-me-going
+  jlpt: N3
+  scenario: intent
+  japanese: 彼女は行かせまいとして私に縋った。
+  reading: かのじょはいかせまいとしてわたしにすがった。
+  romaji: kanojo wa ikasemai to shite watashi ni sugatta.
+  english: She held on to me to prevent me from going.
+  tatoebaId: "2500602"
+  notes: 行かせる is the causative from the first chapter of this book, and here it drops its る before まい rather than keeping it — 行かせまい. Verbs that conjugate like 食べる, causatives among them, are met both ways.
+
+- id: band7.you-will-gain-nothing-from-that
+  jlpt: N3
+  scenario: intent
+  japanese: そうしたところで君には何もなるまい。
+  reading: そうしたところできみにはなにもなるまい。
+  romaji: sou shita tokoro de kimi ni wa nani mo narumai.
+  english: You will gain nothing from doing that.
+  tatoebaId: "213894"
+  notes: Nobody is resolving anything here. The subject is 君 and the speaker is predicting, not deciding — surely nothing will come of it. Same ending, and only the sentence around it says which reading is meant.
+
+- id: band7.theyll-never-understand-japanese-culture
+  jlpt: N3
+  scenario: intent
+  japanese: どうせ日本文化の粋などは連中には絶対わかるまい。
+  reading: どうせにほんぶんかのすいなどはれんちゅうにはぜったいわかるまい。
+  romaji: douse nihon bunka no sui nado wa renchuu ni wa zettai wakarumai.
+  english: They'll never truly understand the essence of Japanese culture anyway.
+  tatoebaId: "201384"
+  notes: A prediction again, and a scornful one — どうせ and 連中 are both dismissive. わかる is not something anyone chooses, so this could not be a resolve even if the subject were the speaker.
+
+- id: band7.believe-it-or-not-that-is-true
+  jlpt: N3
+  scenario: intent
+  japanese: 信じようと信じまいと、それは真実だ。
+  reading: しんじようとしんじまいと、それはしんじつだ。
+  romaji: shinjiyou to shinjimai to, sore wa shinjitsu da.
+  english: Believe it or not, that is true.
+  tatoebaId: "145736"
+  notes: A frozen pair worth taking whole rather than building. 信じよう is the plain-register counterpart of 信じましょう, a form this course has not taught on its own; the pattern is verb-will and verb-will-not, side by side, meaning either way it makes no difference.
+
+# ── That's how it turned out ──────────────────────────────────────────────────
+
+- id: band7.it-follows-that-he-is-not-the-criminal
+  jlpt: N3
+  scenario: change
+  japanese: この証拠から、彼は犯人ではないということになる。
+  reading: このしょうこから、かれははんにんではないということになる。
+  romaji: kono shouko kara, kare wa hannin de wa nai to iu koto ni naru.
+  english: From this evidence, it follows that he is not the criminal.
+  tatoebaId: "221119"
+  notes: Nobody decided anything. The evidence sits there and the conclusion follows from it, and ことになる is how Japanese says so. ということになる, with the quoting という in front, is the shape this job usually wears.
+
+- id: band7.eat-too-much-and-you-suffer-for-it
+  jlpt: N3
+  scenario: change
+  japanese: 食べ過ぎると、消化不良に苦しむことになる。
+  reading: たべすぎると、しょうかふりょうにくるしむことになる。
+  romaji: tabesugiru to, shouka furyou ni kurushimu koto ni naru.
+  english: If we eat too much, we end up suffering from indigestion.
+  tatoebaId: "145918"
+  notes: The と conditional from the conditions chapter, with the consequence spelled out as ことになる rather than left as a plain verb. Ending up with something is the flavour the pattern adds.
+
+- id: band7.if-it-expires-there-will-be-trouble
+  jlpt: N3
+  scenario: change
+  japanese: もし期限切れになったら、大変なことになるよ。
+  reading: もしきげんぎれになったら、たいへんなことになるよ。
+  romaji: moshi kigengire ni nattara, taihen na koto ni naru yo.
+  english: If it goes past its expiry date, there will be real trouble.
+  tatoebaId: "193739"
+  notes: 大変なことになる is a fixed way of saying things will get serious, and 困ったことになる is its near neighbour. Worth learning whole — you will hear it before you have time to parse it.
+
+- id: band7.the-campus-festival-is-to-be-held-next-week
+  jlpt: N3
+  scenario: change
+  japanese: 学園祭は来週行われることになっている。
+  reading: がくえんさいはらいしゅうおこなわれることになっている。
+  romaji: gakuensai wa raishuu okonawareru koto ni natte iru.
+  english: Our campus festival is to be held next week.
+  tatoebaId: "184512"
+  notes: ことになっている is a standing arrangement — somebody settled this and it is now simply how things are. 行われる is the passive from the first chapter of this book, and the two forms suit each other because neither names who decided.
+
+- id: band7.you-are-expected-to-turn-off-the-lights
+  jlpt: N3
+  scenario: change
+  japanese: 退社前に電灯や暖房器を消すことになっている。
+  reading: たいしゃまえにでんとうやだんぼうきをけすことになっている。
+  romaji: taisha mae ni dentou ya danbouki o kesu koto ni natte iru.
+  english: You are expected to put out lamps and heaters before you leave the office.
+  tatoebaId: "137873"
+  notes: The same standing arrangement used for a rule. No subject anywhere, and none needed — the office works this way, and whoever wrote the rule is beside the point.
+
+- id: band7.i-make-a-practice-of-getting-up-at-six
+  jlpt: N3
+  scenario: intent
+  japanese: 私は６時に起床することにしている。
+  reading: わたしはろくじにきしょうすることにしている。
+  romaji: watashi wa rokuji ni kishou suru koto ni shite iru.
+  english: I make a practice of getting up at six.
+  tatoebaId: "161904"
+  notes: する, not なる, and everything changes. This is a rule the speaker set for themselves and keeps to. Hold it next to the sentence about not falling behind the times — 〜ようにしている is trying to, 〜ことにしている is having decided to.
+
+- id: band7.he-decided-to-look-elsewhere
+  jlpt: N3
+  scenario: intent
+  japanese: 彼はほかに情報を求めることにした。
+  reading: かれはほかにじょうほうをもとめることにした。
+  romaji: kare wa hoka ni jouhou o motomeru koto ni shita.
+  english: He decided to seek information elsewhere.
+  tatoebaId: "110971"
+  notes: ことにした is one decision made once, and it is the sentence to compare against every ことになる above. He chose; nothing chose for him.
