@@ -158,7 +158,14 @@ export function FillBlankCard({ card, showRomaji = true, onNext }: Props) {
             <AudioButton src={card.audioUrl ?? undefined} />
           </header>
 
-          <div className="flex flex-col items-center gap-2 text-center">
+          {/*
+            Sticky, because focusing the input opens the soft keyboard, and the
+            browser scrolls the input into view -- which pushes the very word
+            being asked for off the top of what is left of the screen. Pinning
+            it holds at any keyboard height; making the card shorter only moves
+            the break to a smaller phone.
+          */}
+          <div className="sticky top-0 z-10 flex flex-col items-center gap-2 bg-surface py-2 text-center">
             <p className="text-body-sm text-fg-subtle">How do you say...</p>
             <p className="text-heading text-fg">{card.english}</p>
             {card.notes != null ? <p className="text-body-sm text-fg-subtle">{card.notes}</p> : null}
