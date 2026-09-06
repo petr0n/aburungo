@@ -32,7 +32,7 @@
 #   ざるを得ない has 3 hits in that exact string, which is what the breakdown
 #   counted and called "the thinnest lesson in the band". Searching the
 #   construction rather than the string -- ざるを得 -- gives 9: the past
-#   ざるを得なかった (4) and the polite ざるを得ません (1) are the same grammar
+#   ざるを得なかった (5) and the polite ざるを得ません (1) are the same grammar
 #   conjugated. Lesson 5 has five cards, not three, and did not have to reuse a
 #   teaching sentence in the checkpoint the way the breakdown planned for.
 #
@@ -106,7 +106,7 @@
 # every non-foundation book to the typed FillBlankCard, where the learner types
 # the whole reading back. So all thirty are typed except one:
 # band8.she-needs-to-play-with-more-expression, whose kana reading is 42 --
-# past Book Two's longest typed answer of 41 kana
+# past Book Two's longest typed answer of 39 kana, 41 with its punctuation
 # (quote.my-friend-said-that-shop-is-famous-but-i-wont-go). It carries
 # `recognitionOnly: true` and its note says why. Nothing else here is close;
 # the next two longest are both 35.
