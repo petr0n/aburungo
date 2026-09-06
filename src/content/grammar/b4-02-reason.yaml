@@ -1,0 +1,109 @@
+# Book Four, Chapter 3 grammar patterns -- why you're saying it.
+#
+# One pattern per teaching lesson, each blanking the thing that lesson exists
+# for out of one of its own sentences. The blank is matched against the
+# phrase's reading, so these are kana.
+#
+# The `pattern` strings are bare Japanese for a mechanical reason first written
+# down in grammar/b3-00-passive.yaml: scripts/levelling.mjs's grammarSurface()
+# rejects any pattern containing a Latin character or a digit and needs at
+# least one ～-delimited fragment of two or more characters, so an English
+# description of the rule would tag nothing and the reading library would never
+# find text for it. All six below clear the check.
+#
+# What each literal would actually tag, counted against the 25,983 sentences in
+# server/data/jmdict-examples-eng-3.6.2.json, so that a later pipeline pass
+# knows where the noise is without re-deriving it:
+#
+#   ～んです flags 140 and is the cleanest of the six. The only false-positive
+#   class is a name or a noun ending in さん followed by です -- 3 sentences,
+#   #85523 こちらケニーさんです among them. のです (316), のだ (303) and んだ
+#   (693) are the same pattern in other clothes and are not tagged here; a
+#   single literal cannot cover all four, and んだ in particular is the one the
+#   spoken-register chapter of this book will want.
+#
+#   ～でしょう flags 215, of which 56 carry でしょうか -- a softened question,
+#   not this lesson's conjecture or its tag, and closer to what a shop
+#   assistant says than to what this lesson teaches. だろう, the plain form the
+#   lesson also teaches, has 348 of its own and is not the literal here; five
+#   of those are the exclamative なんて〜だろう, which belongs to this book's
+#   spoken-register chapter.
+#
+#   ～そうだ flags 77 and is tagged twice, by lessons 3 and 4 both, because
+#   hearsay そうだ and appearance そうだ are the same four kana and only what
+#   stands in front of them tells the two apart. The tagger cannot see that,
+#   and neither can a reader who has not been taught it -- which is the whole
+#   reason the two lessons exist and why the collision is left standing rather
+#   than papered over with a narrower literal. Six of the 77 are neither: そうだ
+#   as an interjection meaning that's right or right then (#236170, #75468).
+#   The inflections the appearance sense alone can take -- そうな (26), そうに
+#   (38) -- would tag cleanly, and cover only part of the lesson.
+#
+#   ～のではないか flags the written form only. のではない has 29 hits, 20 of
+#   them with the か; the spoken んじゃない has 21 more that this literal does
+#   not reach, and a second pattern for the contraction would have been a
+#   second lesson.
+#
+#   ～ものだ flags 167, and this is the dirtiest of the six. Fourteen are a noun
+#   plus の plus ものだ -- 独自のものだ, this is hers -- which is the ordinary
+#   noun もの and the last book's material, not this pattern. Forty carry the
+#   nostalgic たものだ this lesson does teach, and four the というものだ.
+#
+# This is a pipeline-design question, flagged here rather than solved, exactly
+# as the passive, time and reference chapters flagged theirs.
+#
+# Every blank takes the marker together with what it attaches to, and that is
+# deliberate in each case. なりたいんです, ダイヤでしょう, ちゅうじつだそうだ,
+# ふりそうだ, いったものだ: in this chapter the marker is never the hard part --
+# what it hangs off is. A learner handed そうだ on its own has been told the
+# answer to the only question lessons 3 and 4 ask.
+#
+# content-source: n/a for this file -- every pattern references an existing
+#   phrase from phrases/b4-02-reason.yaml rather than composing new Japanese,
+#   and that file carries the Tatoeba id for each.
+# jlpt-source: training -- the level marks the chapter this content sits in.
+#   んです, でしょう, そうだ, ものだ and のではないか are canonically N4 and
+#   early-N3 grammar and arrive here only because Books Two and Three had no
+#   room for them; the chapter is N3 and all six are tagged as such.
+
+- id: grammar.b4-ndesu
+  jlpt: N3
+  pattern: "～んです"
+  gloss: Marks the whole sentence as an explanation. A plain clause takes it directly; a noun or な-adjective takes な first -- 流行なのだ. んです in speech, のです when careful, のだ in writing. With か it asks for the reason behind something both people can see; with が it opens a request and leaves the rest unsaid.
+  phraseId: b4band2.id-like-to-be-a-guitarist
+  blank: なりたいんです
+
+- id: grammar.b4-deshou
+  jlpt: N3
+  pattern: "～でしょう"
+  gloss: Probably. A plain clause goes in front, and a noun or な-adjective goes in bare with no copula -- ダイヤでしょう. だろう is the same word in plain form. Said on a rising tone it stops guessing and asks the listener to agree. Weaker than に違いない, stronger than かもしれない.
+  phraseId: b4band2.this-is-probably-a-real-diamond
+  blank: ダイヤでしょう
+
+- id: grammar.b4-souda-hearsay
+  jlpt: N3
+  pattern: "～そうだ"
+  gloss: I hear that. Goes on the end of a plain clause and passes on what someone else said -- including the copula, 忠実だそうだ, and the past, 癌だったそうです. Nothing is trimmed off the clause in front. によると or によれば can name the source at the front of the sentence.
+  phraseId: b4band2.that-translation-is-said-to-be-faithful
+  blank: ちゅうじつだそうだ
+
+- id: grammar.b4-souda-appearance
+  jlpt: N3
+  pattern: "～そうだ"
+  gloss: It looks like it. The same four kana as the hearsay ending, on a stem rather than a clause -- a verb's ます-stem, 降りそうだ, or an adjective with its ending removed, 簡単そう, 面白そう. いい gives よさそう and ない gives なさそう. Then it inflects like a な-adjective -- そうな before a noun, そうに before a verb.
+  phraseId: b4band2.it-looks-like-rain-soon
+  blank: ふりそうだ
+
+- id: grammar.b4-nodewanaika
+  jlpt: N3
+  pattern: "～のではないか"
+  gloss: I suspect that. A claim put forward as a question the speaker has half answered already. Spoken, it contracts to んじゃない(か) and takes on two more jobs -- a suggestion on a rising tone, いいんじゃない, and a prohibition on a falling one after a dictionary verb. Without the か it denies a conclusion rather than hedging one.
+  phraseId: b4band2.i-suspect-they-water-down-the-beer
+  blank: しているのではないか
+
+- id: grammar.b4-monoda
+  jlpt: N3
+  pattern: "～ものだ"
+  gloss: That is how it is. After a plain non-past it states what is in the nature of a thing, and ものではない says what is not; after a past verb it is a memory, I used to; with たい it is a wish held at a distance. というものだ names what something amounts to. A noun plus の plus ものだ is the ordinary noun instead.
+  phraseId: b4band2.i-used-to-go-to-miami-every-summer
+  blank: いったものだ

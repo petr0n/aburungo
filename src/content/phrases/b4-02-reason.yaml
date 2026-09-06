@@ -1,0 +1,429 @@
+# Book Four, Chapter 3 phrases -- why you're saying it.
+#
+# Thirty-three sentences, and not one of them is ours. 04-stage-reading.md
+# section 8 withdrew the training-canonical exemption at this stage in so many
+# words, so every sentence below is a verbatim Tatoeba pair carried out of
+# server/data/jmdict-examples-eng-3.6.2.json with its id in `tatoebaId`, and
+# nothing here was composed, trimmed, joined or smoothed. Where a cell of a
+# pattern had no attested sentence, the cell is described in a grammarNote and
+# has no card.
+#
+# These are independent utterances. Several would sit naturally beside one
+# another -- この自動販売機、動かないんですが and おしぼりが欲しいのです are two
+# halves of the same afternoon -- and they are deliberately not authored as an
+# exchange, because a scripted back-and-forth is multi-sentence composed text.
+#
+# ---------------------------------------------------------------------------
+# THE ENGLISH is Tatoeba's own where Tatoeba's own would do. Thirteen of the
+# thirty-three depart from it; every one is listed here by id and kind so a
+# reviewer can check them rather than take them on trust. Every Japanese string
+# is untouched.
+#
+#   Where the corpus English states the wrong grammar outright:
+#   #197328 -- "It looks like Bill will go to medical school after all" for
+#     行くそうだ. "It looks like" is the appearance そう of the next lesson,
+#     which is the one thing this card exists to rule out. Glossed "I hear
+#     Bill will go to medical school after all".
+#   #223523 -- "I didn't ask for a table here" reads この as here; この attaches
+#     to テーブル. Glossed "I didn't order this table".
+#
+#   Where the corpus English hid the grammar the card exists to teach:
+#   #196993 -- "I'd like to know how to..." conceals 教えて欲しい, the asking
+#     someone else Book Two taught. Glossed "I'd like you to tell me how to...".
+#   #227703 -- "Do you have hot towels?" conceals 欲しい entirely. Glossed
+#     "I'd like a hot towel".
+#   #235778, #195063, #199528 -- a bare English future ("We'll arrive",
+#     "Miniskirts will soon come back", "the result will be the same") drops
+#     the hedge that is the whole lesson. "probably" added to each.
+#   #114934 -- "He was the sort of man you could get along with" drops そうな.
+#     Glossed "He looked like the sort of man...".
+#   #228269 -- "How about adding some Worcestershire sauce?" invents a verb and
+#     hides the suggesting んじゃない. Glossed "Wouldn't Worcester sauce be
+#     good?".
+#   #178376 -- "Aren't you pushing it too far?" is an idiom that hides both
+#     言うこと and 極端. Glossed "Isn't what you're saying a bit extreme?".
+#
+#   Wording only, meaning unchanged:
+#   #232498 "come by" -> "get hold of", and その glossed as that rather than
+#     the; #74724 "an unappealing proposition" -> "a bad deal"; #213973 drops
+#     an orphan "But" with nothing behind it in the Japanese, and glosses 衰退
+#     as decline rather than failure.
+#
+# ---------------------------------------------------------------------------
+# TWO CARDS ARE RECOGNITION-ONLY and the reasons are different.
+#
+#   #219011 これがいわゆる「天ぷら」というものです carries corner brackets.
+#   Asking a learner to type 「」 on a phone keyboard tests the keyboard.
+#
+#   #226772 お伴したいものです is the たいものだ cell, and the only attested one
+#   short enough to card. お伴 is deferential -- you accompany someone whose
+#   standing is above yours -- and お plus a noun in that job is chapters away
+#   (bands 4-5 own keigo). Recognise it now, produce it when the book has
+#   taught what it is doing.
+#
+# Nothing else here is keigo. The set was screened for it, since honorific and
+# humble forms belong to later chapters and a card that smuggles one in teaches
+# it by accident. The お of おしぼり and おかね is the fixed prefix of the word,
+# not a register choice.
+#
+# content-source: Tatoeba, via the sentence pairs embedded in JMdict for
+#   Applications 3.6.2 (server/data/jmdict-examples-eng-3.6.2.json). Every
+#   phrase carries its sentence id in `tatoebaId`; the id is quoted, because
+#   YAML reads a bare 161147 as a number and the schema rejects it. Checked by
+#   script on 2026-09-06 -- all 33 ids resolve and all 33 Japanese strings match
+#   their source character for character. Kana readings and romaji are
+#   transcriptions of the quoted sentence, not new content; every compound
+#   whose reading was not obvious was checked against JMdict (自動販売機
+#   じどうはんばいき 1318480, 送金 そうきん 1402750, 上着 うわぎ 1580340, 一本
+#   いっぽん 1166600, 大火 たいか 1413170, 死因 しいん 1310740, 医大 いだい
+#   1160030, 原文 げんぶん 1262340, 忠実 ちゅうじつ 1012210, 寝込む ねこむ
+#   1360130, 一見 いっけん 1162170, 見回す みまわす 1259400, 一朝一夕
+#   いっちょういっせき 1164850, お伴 おとも 1001810).
+# jlpt-source: training -- the level marks the chapter this content sits in.
+#   んです, でしょう, そうだ and ものだ are canonically N4 grammar and arrive
+#   here only because Books Two and Three had no room for them; the sentences
+#   carrying them are N3-band text and are tagged N3.
+
+# ── Because that's the reason ─────────────────────────────────────────────────
+
+- id: b4band2.id-like-to-be-a-guitarist
+  jlpt: N3
+  scenario: reason
+  japanese: 私はギタリストになりたいんです。
+  reading: わたしはギタリストになりたいんです。
+  romaji: watashi wa gitarisuto ni naritai n desu.
+  english: I'd like to be a guitarist.
+  tatoebaId: "161147"
+  notes: The plainest shape there is -- plain clause, then んです. Without the ん this is a bare announcement; with it, the speaker is answering a question that was in the air, which is why it so often follows someone asking why you are here or what you want. たい makes an い-adjective, so it takes んです directly.
+
+- id: b4band2.were-one-baton-short
+  jlpt: N3
+  scenario: reason
+  japanese: リレー用のバトンが１本足りないんです。
+  reading: リレーようのバトンがいっぽんたりないんです。
+  romaji: riree you no baton ga ippon tarinai n desu.
+  english: We're one baton short for the relay.
+  tatoebaId: "75066"
+  notes: A problem stated as an explanation. The ん is what turns 足りない, we are short, into here is the situation, so somebody do something -- which is why this is what you say at a counter rather than the bare fact. 用 after a noun means for use in, and 足りる takes が for the thing there is not enough of.
+
+- id: b4band2.how-did-you-get-hold-of-that-money
+  jlpt: N3
+  scenario: reason
+  japanese: どうやってそのお金を手に入れたんですか。
+  reading: どうやってそのおかねをてにいれたんですか。
+  romaji: douyatte sono okane o te ni ireta n desu ka.
+  english: How did you get hold of that money?
+  tatoebaId: "232498"
+  notes: んですか asks for the story behind something the speaker can already see. The money exists and both people know it; what is being asked for is the explanation. Drop the ん and どうやって手に入れましたか is a flat request for information, which is a different question in the same words.
+
+- id: b4band2.this-vending-machine-isnt-working
+  jlpt: N3
+  scenario: reason
+  japanese: この自動販売機、動かないんですが。
+  reading: このじどうはんばいき、うごかないんですが。
+  romaji: kono jidouhanbaiki, ugokanai n desu ga.
+  english: This vending machine isn't working.
+  tatoebaId: "221546"
+  notes: The opener. んですが hands over the situation and stops, leaving the request unsaid -- so could you help. English has to finish the sentence and Japanese does not, which is why the gloss looks blunter than the original. The particle after 自動販売機 has been dropped, as it often is in speech, and the comma is standing where it was.
+
+- id: b4band2.id-like-you-to-tell-me-how-to-send-money
+  jlpt: N3
+  scenario: reason
+  japanese: フランスへの送金の仕方を教えて欲しいんですが。
+  reading: フランスへのそうきんのしかたをおしえてほしいんですが。
+  romaji: furansu e no soukin no shikata o oshiete hoshii n desu ga.
+  english: I'd like you to tell me how to send money to France.
+  tatoebaId: "196993"
+  notes: The same opener carrying an actual request. て欲しい, wanting somebody else to do it, is Book Two's; んですが wraps the whole thing and softens it into an approach rather than an order. への is the particle へ turned into a modifier by の, which is how a direction gets attached to a noun.
+
+- id: b4band2.id-like-a-hot-towel
+  jlpt: N3
+  scenario: reason
+  japanese: おしぼりが欲しいのです。
+  reading: おしぼりがほしいのです。
+  romaji: oshibori ga hoshii no desu.
+  english: I'd like a hot towel.
+  tatoebaId: "227703"
+  notes: のです is the unshortened form of んです, and in speech it sounds more careful or more deliberate rather than more polite -- です is already doing the politeness. おしぼり is the rolled wet towel a Japanese restaurant hands you before the meal; the お is part of the word.
+
+- id: b4band2.loose-jackets-are-the-latest-fad
+  jlpt: N3
+  scenario: reason
+  japanese: だぶだぶの上着が最新の流行なのだ。
+  reading: だぶだぶのうわぎがさいしんのりゅうこうなのだ。
+  romaji: dabudabu no uwagi ga saishin no ryuukou na no da.
+  english: Loose jackets are the latest fad.
+  tatoebaId: "203365"
+  notes: The attachment cell that catches people. A noun does not take のだ directly -- it takes な first, 流行なのだ, exactly as it takes な in front of ので. And this is the written form -- のだ in an essay or an article, んです in speech. だぶだぶ is one of the sound-shape words, loose and baggy.
+
+# ── Probably ──────────────────────────────────────────────────────────────────
+
+- id: b4band2.well-probably-get-there-within-an-hour
+  jlpt: N3
+  scenario: conjecture
+  japanese: １時間以内にそこに着くでしょう。
+  reading: いちじかんいないにそこにつくでしょう。
+  romaji: ichijikan inai ni soko ni tsuku deshou.
+  english: We'll probably get there within an hour.
+  tatoebaId: "235778"
+  notes: A plain verb, then でしょう. This is a forecast, not a promise -- the speaker is estimating, and the English has to add probably to say so. １時間以内に is the deadline, with 以内 fixing the boundary and に putting the arrival inside it.
+
+- id: b4band2.this-is-probably-a-real-diamond
+  jlpt: N3
+  scenario: conjecture
+  japanese: これは本物のダイヤでしょう。
+  reading: これはほんもののダイヤでしょう。
+  romaji: kore wa honmono no daiya deshou.
+  english: This is probably a real diamond.
+  tatoebaId: "218083"
+  notes: A noun takes でしょう bare -- no だ, no な, nothing in between. You have met this diamond before -- the stance chapter carded これは本物のダイヤではないかもしれない, and that speaker had not decided while this one has, which is the whole distance between かもしれない and でしょう.
+
+- id: b4band2.miniskirts-will-probably-come-back-soon
+  jlpt: N3
+  scenario: conjecture
+  japanese: ミニスカートはすぐに復活するだろう。
+  reading: ミニスカートはすぐにふっかつするだろう。
+  romaji: minisukaato wa sugu ni fukkatsu suru darou.
+  english: Miniskirts will probably come back soon.
+  tatoebaId: "195063"
+  notes: だろう is でしょう's plain form and this is the register it is most at home in -- a written prediction, where it reads as neutral. Attachment is identical -- plain dictionary verb, then だろう.
+
+- id: b4band2.the-result-will-probably-be-the-same
+  jlpt: N3
+  scenario: conjecture
+  japanese: どんなに骨を折ってやっても、結果は同じでしょう。
+  reading: どんなにほねをおってやっても、けっかはおなじでしょう。
+  romaji: donna ni hone o otte yatte mo, kekka wa onaji deshou.
+  english: No matter how hard you try, the result will probably be the same.
+  tatoebaId: "199528"
+  notes: どんなに and ても are the conditions chapter's matched pair, no matter how much; でしょう closes the sentence on the speaker's estimate of the outcome. 骨を折る is an idiom -- to break your bones over something, meaning to go to great trouble -- and its two words mean nothing separately here.
+
+- id: b4band2.shes-with-a-government-bureau-isnt-she
+  jlpt: N3
+  scenario: conjecture
+  japanese: 彼女は政府機関に勤めているのでしょう？
+  reading: かのじょはせいふきかんにつとめているのでしょう？
+  romaji: kanojo wa seifu kikan ni tsutomete iru no deshou?
+  english: She's with a government bureau, isn't she?
+  tatoebaId: "88382"
+  notes: The tag. Said on a rising tone, でしょう stops guessing and asks the listener to confirm something the speaker already believes -- English does this with isn't she. Note the の in front -- this is the previous lesson's explanatory の, and the two stack quite happily.
+
+- id: b4band2.this-isnt-a-bad-deal-is-it
+  jlpt: N3
+  scenario: conjecture
+  japanese: これは悪い話ではないでしょう？
+  reading: これはわるいはなしではないでしょう？
+  romaji: kore wa warui hanashi de wa nai deshou?
+  english: This isn't a bad deal, is it?
+  tatoebaId: "74724"
+  notes: The tag again, this time on a negative, which is where English and Japanese part company -- 悪い話ではないでしょう invites agreement that it is not bad, where an English negative question can sound like doubt. 話 read はなし is a story, a talk or, as here, a proposition somebody has put to you.
+
+# ── I hear that ───────────────────────────────────────────────────────────────
+
+- id: b4band2.i-hear-bill-will-go-to-medical-school
+  jlpt: N3
+  scenario: hearsay
+  japanese: ビルは結局医大に行くそうだ。
+  reading: ビルはけっきょくいだいにいくそうだ。
+  romaji: biru wa kekkyoku idai ni iku sou da.
+  english: I hear Bill will go to medical school after all.
+  tatoebaId: "197328"
+  notes: A plain dictionary verb, then そうだ, and the speaker is passing on what they were told. Nothing is added to 行く -- no stem, no ます -- and that is the test that separates this from the next lesson. 医大 is short for 医科大学, a medical school.
+
+- id: b4band2.i-hear-my-uncle-died-of-cancer
+  jlpt: N3
+  scenario: hearsay
+  japanese: 叔父の死因は癌だったそうです。
+  reading: おじのしいんはがんだったそうです。
+  romaji: oji no shiin wa gan datta sou desu.
+  english: I hear my uncle died of cancer.
+  tatoebaId: "147929"
+  notes: A noun with the past copula on it, 癌だった, then そうです. Hearsay takes whatever plain form the clause already had and adds nothing, so past stays past. 死因 is the cause of death and 癌 is cancer, usually written in kana as がん.
+
+- id: b4band2.they-say-mike-is-sick-in-bed
+  jlpt: N3
+  scenario: hearsay
+  japanese: マイクは病気で寝こんでいるそうだ。
+  reading: マイクはびょうきでねこんでいるそうだ。
+  romaji: maiku wa byouki de nekonde iru sou da.
+  english: They say that Mike is sick in bed.
+  tatoebaId: "195726"
+  notes: ている plus そうだ. The English they say has no counterpart in the Japanese -- そうだ carries the whole idea of a source without naming one, which is exactly why it is the polite way to report something you cannot vouch for. 寝込む is to be laid up in bed, and the で on 病気 is the で of cause.
+
+- id: b4band2.that-translation-is-said-to-be-faithful
+  jlpt: N3
+  scenario: hearsay
+  japanese: あの翻訳は原文に忠実だそうだ。
+  reading: あのほんやくはげんぶんにちゅうじつだそうだ。
+  romaji: ano honyaku wa genbun ni chuujitsu da sou da.
+  english: That translation is said to be true to the original.
+  tatoebaId: "230445"
+  notes: The cell that matters most in this lesson. A な-adjective keeps its だ before そうだ -- 忠実だそうだ, with both だ present. Next lesson's appearance そう takes the same word with no だ at all, 忠実そうだ, and means something else. 原文 is the original text; 忠実 is faithful.
+
+- id: b4band2.according-to-the-papers-there-was-a-big-fire
+  jlpt: N3
+  scenario: hearsay
+  japanese: 新聞によれば、その町に大火があったそうだ。
+  reading: しんぶんによれば、そのまちにたいかがあったそうだ。
+  romaji: shinbun ni yoreba, sono machi ni taika ga atta sou da.
+  english: According to the papers, there was a big fire in the town.
+  tatoebaId: "145165"
+  notes: The source named out loud. によれば, and its twin によると, put the source at the front and そうだ closes the sentence -- a matched pair, and the fullest form this pattern takes. Treat によれば as a fragment to recognise for now; a later chapter of this book gives it a lesson. 大火 is a large fire.
+
+# ── It looks like ─────────────────────────────────────────────────────────────
+
+- id: b4band2.it-looks-like-rain-soon
+  jlpt: N3
+  scenario: appearance
+  japanese: まもなく雨が降りそうだ。
+  reading: まもなくあめがふりそうだ。
+  romaji: mamonaku ame ga furisou da.
+  english: It is going to rain soon.
+  tatoebaId: "195298"
+  notes: The pair that defines this lesson. 降り is the ます-stem of 降る, and stem plus そうだ says the speaker is looking at the sky right now. 降るそうだ, with the dictionary form, would be I hear it is going to rain -- the previous lesson's word, the same four kana, and a different claim.
+
+- id: b4band2.this-problem-looks-easy-but-isnt
+  jlpt: N3
+  scenario: appearance
+  japanese: この問題は一見簡単そうだが実は難しい。
+  reading: このもんだいはいっけんかんたんそうだがじつはむずかしい。
+  romaji: kono mondai wa ikken kantan sou da ga jitsu wa muzukashii.
+  english: This problem seems to be easy on the surface, but it's really difficult.
+  tatoebaId: "219389"
+  notes: A な-adjective loses its な and takes そう on the bare stem -- 簡単そうだ. The sentence is built to be read against itself -- 一見, at first glance, sets up the appearance and 実は knocks it down, which is what this そう is for. The が joining the two halves is the written counterpart of けど.
+
+- id: b4band2.ill-take-this-tie-it-seems-the-best
+  jlpt: N3
+  scenario: appearance
+  japanese: このネクタイにしましょう、一番よさそうだから。
+  reading: このネクタイにしましょう、いちばんよさそうだから。
+  romaji: kono nekutai ni shimashou, ichiban yosasou da kara.
+  english: I will take this tie, as it seems to be the best.
+  tatoebaId: "223406"
+  notes: いい is irregular here and it is worth memorising as its own item -- いい becomes よさそう, never いそう. ない does the same thing, なさそう. The rest is regular -- an い-adjective drops its い and takes そう, 高そう, 面白そう. にする is deciding on something, and から on the end gives the reason for the decision.
+
+- id: b4band2.he-looked-around-uneasily
+  jlpt: N3
+  scenario: appearance
+  japanese: 彼は不安そうにあたりをきょときょと見回した。
+  reading: かれはふあんそうにあたりをきょときょとみまわした。
+  romaji: kare wa fuansou ni atari o kyotokyoto mimawashita.
+  english: He looked around uneasily.
+  tatoebaId: "100487"
+  notes: Once そう has landed it behaves like a な-adjective, so it takes に in front of a verb -- 不安そうに見回した, looked around in a way that appeared anxious. The claim is about how he looked to an observer, not about what he felt. きょときょと is a sound-shape word for darting glances, and あたり is the area around you.
+
+- id: b4band2.he-looked-like-someone-you-could-get-along-with
+  jlpt: N3
+  scenario: appearance
+  japanese: 彼はあなたとうまくやっていけそうな人だった。
+  reading: かれはあなたとうまくやっていけそうなひとだった。
+  romaji: kare wa anata to umaku yatte ikesou na hito datta.
+  english: He looked like the sort of man you could get along with.
+  tatoebaId: "114934"
+  notes: The other inflection -- そうな in front of a noun, describing the person rather than the verb. What it attaches to here is a stem three layers deep -- やる, plus ていく from this book's first chapter, in the potential, giving やっていける, and the stem of that is やっていけ. うまくやっていく is to get along with someone.
+
+# ── Isn't it, though? ─────────────────────────────────────────────────────────
+
+- id: b4band2.i-suspect-they-water-down-the-beer
+  jlpt: N3
+  scenario: hedging
+  japanese: あのパブではビールを水増ししているのではないか。
+  reading: あのパブではビールをみずまししているのではないか。
+  romaji: ano pabu de wa biiru o mizumashi shite iru no de wa nai ka.
+  english: I suspect they water down the beer in that pub.
+  tatoebaId: "231278"
+  notes: The full written form. のではないか puts a claim forward as a question the speaker has already half answered -- not I do not know, but I think so and I am leaving you room to disagree. English reaches for I suspect. The では on パブ is the location particle で with は on it, marking that pub as the topic.
+
+- id: b4band2.wouldnt-worcester-sauce-be-good
+  jlpt: N3
+  scenario: hedging
+  japanese: ウスターソースがいいんじゃない？
+  reading: ウスターソースがいいんじゃない？
+  romaji: usutaasoosu ga ii n ja nai?
+  english: Wouldn't Worcester sauce be good?
+  tatoebaId: "228269"
+  notes: The spoken form doing its second job. いいんじゃない with a rising tone is a suggestion, and it is one of the most common things a Japanese speaker says when offering an idea without pushing it. Written out it is いいのではないか; ん for の and じゃ for では are the ordinary contractions of speech.
+
+- id: b4band2.isnt-what-youre-saying-a-bit-extreme
+  jlpt: N3
+  scenario: hedging
+  japanese: 君の言うことは極端じゃないか。
+  reading: きみのいうことはきょくたんじゃないか。
+  romaji: kimi no iu koto wa kyokutan ja nai ka.
+  english: Isn't what you're saying a bit extreme?
+  tatoebaId: "178376"
+  notes: The same ending with no の in front, and dropping the の is what turns a hedge into a challenge -- this speaker is not leaving much room. 言うこと is the last book's reference chapter turning a clause into a noun, what someone says. On 君, JMdict marks it familiar and notes that it is sometimes read as male speech, towards someone of equal or lower standing -- a tendency rather than a rule, and not a word for a shop or an office.
+
+- id: b4band2.i-didnt-order-this-table
+  jlpt: N3
+  scenario: hedging
+  japanese: このテーブルを頼んだのではない。
+  reading: このテーブルをたのんだのではない。
+  romaji: kono teeburu o tanonda no de wa nai.
+  english: I didn't order this table.
+  tatoebaId: "223523"
+  notes: のではない with no か on the end is not a hedge at all -- it denies a conclusion. What is being contradicted is the idea that this table is what the speaker asked for, not the fact of asking; plain 頼まなかった would deny the asking instead. That is the の doing visible work.
+
+- id: b4band2.dont-eat-like-that
+  jlpt: N3
+  scenario: hedging
+  japanese: そんなにがつがつ食べるんじゃないよ。
+  reading: そんなにがつがつたべるんじゃないよ。
+  romaji: sonna ni gatsugatsu taberu n ja nai yo.
+  english: Don't eat like a pig.
+  tatoebaId: "204306"
+  notes: The same string, the opposite job. After a dictionary verb and said falling, んじゃない is a prohibition -- stop that -- and it belongs with the blunt commands of this book's second chapter rather than with the suggestion two cards up. The clue is what comes before it -- a dictionary form and no rising tone. がつがつ is eating greedily.
+
+# ── That's just how it is ─────────────────────────────────────────────────────
+
+- id: b4band2.i-used-to-go-to-miami-every-summer
+  jlpt: N3
+  scenario: generalisation
+  japanese: 夏はいつもマイアミに行ったものだ。
+  reading: なつはいつもマイアミにいったものだ。
+  romaji: natsu wa itsumo maiami ni itta mono da.
+  english: During summers, I used to go to Miami.
+  tatoebaId: "187211"
+  notes: A past verb plus ものだ, and it is not a general truth but a memory -- I used to, with the fondness English gets from used to. 〜ていた would report the same habit flatly; ものだ adds that the speaker is looking back at it.
+
+- id: b4band2.english-cannot-be-mastered-overnight
+  jlpt: N3
+  scenario: generalisation
+  japanese: 英語というのは一朝一夕にマスターできるものではない。
+  reading: えいごというのはいっちょういっせきにマスターできるものではない。
+  romaji: eigo to iu no wa icchou isseki ni masutaa dekiru mono de wa nai.
+  english: English cannot be mastered overnight.
+  tatoebaId: "189201"
+  notes: ものではない states what is not in the nature of the thing -- not a fact about one attempt but about the kind of thing English is. というのは, from the last book's reference chapter, sets 英語 up as the topic being defined. 一朝一夕 is a four-character idiom, one morning and one evening, meaning overnight.
+
+- id: b4band2.i-would-like-to-go-with-you
+  jlpt: N3
+  scenario: generalisation
+  japanese: お伴したいものです。
+  reading: おともしたいものです。
+  romaji: otomo shitai mono desu.
+  english: I would like to go with you.
+  recognitionOnly: true
+  tatoebaId: "226772"
+  notes: たいものだ is a wish held at a slight distance -- it is the sort of thing I would like to do -- and it is warmer and more formal than plain 〜たいです. お伴する is to accompany someone whose standing is above your own, which is why this card is recognition rather than production -- the お that does that job belongs to a later chapter.
+
+- id: b4band2.thats-the-rhetoric-of-decline
+  jlpt: N3
+  scenario: generalisation
+  japanese: そいつは衰退のレトリックというものだ。
+  reading: そいつはすいたいのレトリックというものだ。
+  romaji: soitsu wa suitai no retorikku to iu mono da.
+  english: That's the rhetoric of decline.
+  tatoebaId: "213973"
+  notes: というものだ names what something amounts to -- that is what you would call it. The という in front is the last book's naming marker, and it is what lets a whole label be attached to ものだ. そいつ points at the previous speaker's idea rather than at a person, which is its milder job.
+
+- id: b4band2.this-is-what-we-call-tempura
+  jlpt: N3
+  scenario: generalisation
+  japanese: これがいわゆる「天ぷら」というものです。
+  reading: これがいわゆる「てんぷら」というものです。
+  romaji: kore ga iwayuru "tenpura" to iu mono desu.
+  english: This is what we call "tempura".
+  recognitionOnly: true
+  tatoebaId: "219011"
+  notes: The same というものだ in its most literal use, introducing a thing by its name. いわゆる sits in front of a noun and means what people call, so it and というものです are saying the same thing at both ends of the sentence. The card is recognition-only because the corner brackets, 「」, are what Japanese uses for quotation marks and are not worth typing on a phone.

@@ -40,6 +40,10 @@ import b2MakingPlansRaw from "./b2-08-making-plans.yaml";
 import b2ConditionalsRaw from "./b2-09-conditionals.yaml";
 import b2TroubleRaw from "./b2-10-trouble.yaml";
 import b3ReferenceRaw from "./b3-09-reference.yaml";
+import b4FinishingRaw from "./b4-00-finishing.yaml";
+import b4MeaningRaw from "./b4-01-meaning.yaml";
+import b4ReasonRaw from "./b4-02-reason.yaml";
+import b4TalkRaw from "./b4-03-talk.yaml";
 
 export const allWords: Word[] = [
   ...parseWords(basicsRaw, "vocabulary/basics.yaml"),
@@ -81,6 +85,10 @@ export const allWords: Word[] = [
   ...parseWords(b2ConditionalsRaw, "vocabulary/b2-09-conditionals.yaml"),
   ...parseWords(b2TroubleRaw, "vocabulary/b2-10-trouble.yaml"),
   ...parseWords(b3ReferenceRaw, "vocabulary/b3-09-reference.yaml"),
+  ...parseWords(b4FinishingRaw, "vocabulary/b4-00-finishing.yaml"),
+  ...parseWords(b4MeaningRaw, "vocabulary/b4-01-meaning.yaml"),
+  ...parseWords(b4ReasonRaw, "vocabulary/b4-02-reason.yaml"),
+  ...parseWords(b4TalkRaw, "vocabulary/b4-03-talk.yaml"),
 ];
 
 // parseWords only rejects duplicate ids within a single file, so the same id in

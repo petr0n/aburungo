@@ -7,7 +7,7 @@ phrases each one teaches.
 fails if this file is out of date. Ids carry the book's `b3` prefix; a learner
 never reads it.
 
-[Book One](book-one-ladder.md) · [Book Two](book-two-ladder.md) · **Book Three**
+[Book One](book-one-ladder.md) · [Book Two](book-two-ladder.md) · **Book Three** · [Book Four](book-four-ladder.md)
 
 | | |
 |---|---|

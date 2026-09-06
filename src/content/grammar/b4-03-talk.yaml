@@ -1,0 +1,116 @@
+# Book Four, Chapter 4 grammar patterns -- how people actually talk.
+#
+# One pattern per teaching lesson, each blanking the thing that lesson exists
+# for out of one of its own sentences. The blank is matched against the
+# phrase's reading, so these are kana.
+#
+# THE `pattern` FIELD AND WHY HALF OF THESE END IN A FULL STOP. The string is
+# not decoration: scripts/levelling.mjs grammarSurface() reads it, and it
+# rejects any pattern containing a Latin character or a digit and needs at
+# least one ～-delimited fragment of two characters or more. That floor exists
+# for a good reason -- a bare ～と would tag nearly every sentence in the
+# corpus, which is noise rather than detection -- but this chapter is built
+# almost entirely out of one-mora sentence-final particles, and な, ぞ and て
+# are each a single character. Writing them with the full stop attached, ～な。
+# and ～ぞ。 and ～て。, clears the floor and is *more* precise rather than less:
+# 。 occurs at the end of a sentence, so ～ぞ。 tags sentence-final ぞ and
+# nothing else, which is exactly the form the lesson teaches. It is the one
+# case in this app where the punctuation is load-bearing.
+#
+# What the strings still cannot do, said plainly rather than discovered later:
+#
+#   ～な。 cannot separate this chapter's musing な from Book Four chapter 2's
+#   prohibitive な. Both end a sentence with な and the difference is entirely
+#   in what precedes it -- a dictionary form for the prohibitive, anything else
+#   for this one -- which a substring match cannot see. Lesson 3 teaches the
+#   pair directly for that reason.
+#
+#   ～て。 tags every te-form-final sentence, which includes a request (this
+#   lesson), a trailing-off continuation, and a fragment quoted mid-thought.
+#   The corpus's own English is what sorts them, and it sorted them by hand
+#   here -- see the declined sentence in phrases/b4-03-talk.yaml.
+#
+#   ～じゃなくて misses sentence-final じゃない entirely, and ～よね misses the
+#   よ and ね the same lesson teaches on their own. Each lesson teaches more
+#   than one string and the field holds one. The pattern names the lesson's
+#   centre, not its whole content.
+#
+# THE BLANKS are longer than one particle in five of the eight, and that is the
+# point rather than an oversight. Handing a learner こんかいは＿ぞ。 asks them
+# to supply a particle they can already see the shape of; blanking
+# しくじれないぞ asks for the verb and the ending together, which is what
+# actually has to be produced. Where the particle alone is the whole lesson --
+# じゃなくて, よね, なんて -- the blank is the particle alone.
+#
+# ON REGISTER, and this is a rule these glosses hold themselves to. Every
+# coding claim below is a tendency with the corpus as its evidence, never
+# "men say this, women say that". ぞ and ぜ are overwhelmingly male in this
+# corpus and it says so in those words; わ is described as reading feminine and
+# somewhat dated in Tokyo speech while a flatter わ is ordinary for anyone in
+# western Japan, because both are true and the second half is what a learner
+# meets in Osaka. かしら leans older and feminine. None of these is a rule a
+# speaker cannot break, and the corpus is one source from one era -- a
+# frequency table it is not.
+#
+# content-source: n/a for this file -- every pattern references an existing
+#   phrase from phrases/b4-03-talk.yaml rather than composing new Japanese,
+#   and that file carries the Tatoeba id for each.
+# jlpt-source: training -- the level marks the chapter this content sits in.
+#   Most of these forms are taught as N5 or N4 material in other courses and
+#   arrive here only because no earlier book of this course taught them.
+
+- id: grammar.b4-ja-nakute
+  jlpt: N3
+  pattern: "～じゃなくて"
+  gloss: Not X but Y, the way speech says it. じゃ is では contracted, so じゃなくて is ではなくて and じゃない is ではない -- the negative you already own, in its spoken clothes. Sentence-final じゃない with a falling tone asserts that something is not so; with a rising one, or after a noun, it invites agreement.
+  phraseId: b4band3.our-next-trip-is-for-pleasure-not-for-work
+  blank: じゃなくて
+
+- id: grammar.b4-yo-ne
+  jlpt: N3
+  pattern: "～よね"
+  gloss: What a statement is for. よ tells you something the speaker thinks you do not know; ね hands you something they think you already share; よね does both, in that order only -- fairly sure, and asking you to confirm. All three sit on です／ます as readily as on plain forms.
+  phraseId: b4band3.japan-is-heading-for-self-destruction
+  blank: よね
+
+- id: grammar.b4-na-final
+  jlpt: N3
+  pattern: "～な。"
+  gloss: A remark made half to oneself -- reflection, mild emphasis, or a wish in いいな. It follows a past verb, a plain adjective or だ, never a bare dictionary form; that slot belongs to the prohibitive な of the previous chapter. In assertive use it reads male in this corpus, though いいな and だな are said by anyone.
+  phraseId: b4band3.those-twins-are-identical
+  blank: だな
+
+- id: grammar.b4-kana
+  jlpt: N3
+  pattern: "～かな"
+  gloss: Wondering aloud. かな after a plain clause is I wonder; after a volitional it is maybe I will. かしら is the same job and leans older and feminine in Tokyo speech. っけ is the third of the set and asks a different question -- was it...? -- checking a memory rather than a fact, usually as だっけ or たっけ.
+  phraseId: b4band3.maybe-ill-cancel-the-la-trip
+  blank: しようかな
+
+- id: grammar.b4-nante
+  jlpt: N3
+  pattern: "～なんて"
+  gloss: Holding something at arm's length. After a clause or a noun, なんて waves the idea away or marvels at it; in front of a clause, なんて〜だろう is what a ...! なんか is its shorter relative, hedging a noun or, wedged before a negative, giving anything but. Both are built from 何 and neither is rude by itself.
+  phraseId: b4band3.i-never-dreamed-of-winning-first-prize
+  blank: なんて
+
+- id: grammar.b4-toka
+  jlpt: N3
+  pattern: "～とか"
+  gloss: A list that does not claim to be finished, or a suggestion that does not insist. Noun とか noun とか names examples; one noun plus とか offers it and leaves room; とかいう holds a name or a claim at arm's length. Softer and vaguer than や, which lists without the shrug.
+  phraseId: b4band3.bring-knives-and-pots
+  blank: ほうちょうとかなべとか
+
+- id: grammar.b4-zo-ze-wa
+  jlpt: N3
+  pattern: "～ぞ。"
+  gloss: Endings that say who is talking. ぞ pushes a statement out hard, to oneself or downward, and is overwhelmingly male in this corpus; ぜ is its softer, more dated neighbour; わ softens instead of pushing, and reads feminine and somewhat dated in Tokyo speech while a flatter わ is ordinary for any speaker in the west. Worth recognising rather than reaching for.
+  phraseId: b4band3.i-cant-fail-this-time
+  blank: しくじれないぞ
+
+- id: grammar.b4-te-request
+  jlpt: N3
+  pattern: "～て。"
+  gloss: A request with ください taken off. A bare te-form asks between intimates; てよ presses; ないで asks somebody not to, and ないでくれ says the same thing bluntly. The ladder runs て, てよ, てくれる？, てください, and ends at ていただけますか, which is the keigo chapters' business.
+  phraseId: b4band3.please-turn-on-the-television
+  blank: つけて

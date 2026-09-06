@@ -12,7 +12,7 @@ import { parseLessons } from "./schema";
 import { allWords } from "@/content/vocabulary";
 import { allPhrases } from "@/content/index";
 import { allGrammarPatterns } from "@/content/grammar";
-import { n5ChapterIds, b2ChapterIds, b3ChapterIds } from "@/content/chapters";
+import { n5ChapterIds, b2ChapterIds, b3ChapterIds, b4ChapterIds } from "@/content/chapters";
 
 import n5Raw from "./n5.yaml";
 import n5GreetingsContRaw from "./n5-01-greetings-cont.yaml";
@@ -61,6 +61,10 @@ import b3PurposeRaw from "./b3-07-purpose.yaml";
 import b3ObligationRaw from "./b3-08-obligation.yaml";
 import b3ReferenceRaw from "./b3-09-reference.yaml";
 import b3RegisterRaw from "./b3-10-register.yaml";
+import b4FinishingRaw from "./b4-00-finishing.yaml";
+import b4MeaningRaw from "./b4-01-meaning.yaml";
+import b4ReasonRaw from "./b4-02-reason.yaml";
+import b4TalkRaw from "./b4-03-talk.yaml";
 
 const knownWordIds = new Set(allWords.map((w) => w.id));
 const knownPhraseIds = new Set(allPhrases.map((p) => p.id));
@@ -68,31 +72,185 @@ const knownPatternIds = new Set(allGrammarPatterns.map((p) => p.id));
 
 export const n5Lessons: Lesson[] = [
   ...parseLessons(n5Raw, "lessons/n5.yaml", knownWordIds, knownPhraseIds, knownPatternIds, n5ChapterIds),
-  ...parseLessons(n5GreetingsContRaw, "lessons/n5-01-greetings-cont.yaml", knownWordIds, knownPhraseIds, knownPatternIds, n5ChapterIds),
-  ...parseLessons(n5FoodDrinkRaw, "lessons/n5-02-food-drink.yaml", knownWordIds, knownPhraseIds, knownPatternIds, n5ChapterIds),
-  ...parseLessons(n5ShoppingRaw, "lessons/n5-03-shopping.yaml", knownWordIds, knownPhraseIds, knownPatternIds, n5ChapterIds),
-  ...parseLessons(n5TransitRaw, "lessons/n5-04-transit.yaml", knownWordIds, knownPhraseIds, knownPatternIds, n5ChapterIds),
+  ...parseLessons(
+    n5GreetingsContRaw,
+    "lessons/n5-01-greetings-cont.yaml",
+    knownWordIds,
+    knownPhraseIds,
+    knownPatternIds,
+    n5ChapterIds,
+  ),
+  ...parseLessons(
+    n5FoodDrinkRaw,
+    "lessons/n5-02-food-drink.yaml",
+    knownWordIds,
+    knownPhraseIds,
+    knownPatternIds,
+    n5ChapterIds,
+  ),
+  ...parseLessons(
+    n5ShoppingRaw,
+    "lessons/n5-03-shopping.yaml",
+    knownWordIds,
+    knownPhraseIds,
+    knownPatternIds,
+    n5ChapterIds,
+  ),
+  ...parseLessons(
+    n5TransitRaw,
+    "lessons/n5-04-transit.yaml",
+    knownWordIds,
+    knownPhraseIds,
+    knownPatternIds,
+    n5ChapterIds,
+  ),
   ...parseLessons(n5HotelRaw, "lessons/n5-05-hotel.yaml", knownWordIds, knownPhraseIds, knownPatternIds, n5ChapterIds),
-  ...parseLessons(n5Checkpoint1Raw, "lessons/n5-02b-checkpoint-1.yaml", knownWordIds, knownPhraseIds, knownPatternIds, n5ChapterIds),
-  ...parseLessons(n5Checkpoint2Raw, "lessons/n5-04b-checkpoint-2.yaml", knownWordIds, knownPhraseIds, knownPatternIds, n5ChapterIds),
-  ...parseLessons(n5Checkpoint3Raw, "lessons/n5-07b-checkpoint-3.yaml", knownWordIds, knownPhraseIds, knownPatternIds, n5ChapterIds),
-  ...parseLessons(n5DirectionsRaw, "lessons/n5-06-directions.yaml", knownWordIds, knownPhraseIds, knownPatternIds, n5ChapterIds),
-  ...parseLessons(n5WeatherRaw, "lessons/n5-07-weather.yaml", knownWordIds, knownPhraseIds, knownPatternIds, n5ChapterIds),
-  ...parseLessons(n5IntegrationRaw, "lessons/n5-08-integration.yaml", knownWordIds, knownPhraseIds, knownPatternIds, n5ChapterIds),
+  ...parseLessons(
+    n5Checkpoint1Raw,
+    "lessons/n5-02b-checkpoint-1.yaml",
+    knownWordIds,
+    knownPhraseIds,
+    knownPatternIds,
+    n5ChapterIds,
+  ),
+  ...parseLessons(
+    n5Checkpoint2Raw,
+    "lessons/n5-04b-checkpoint-2.yaml",
+    knownWordIds,
+    knownPhraseIds,
+    knownPatternIds,
+    n5ChapterIds,
+  ),
+  ...parseLessons(
+    n5Checkpoint3Raw,
+    "lessons/n5-07b-checkpoint-3.yaml",
+    knownWordIds,
+    knownPhraseIds,
+    knownPatternIds,
+    n5ChapterIds,
+  ),
+  ...parseLessons(
+    n5DirectionsRaw,
+    "lessons/n5-06-directions.yaml",
+    knownWordIds,
+    knownPhraseIds,
+    knownPatternIds,
+    n5ChapterIds,
+  ),
+  ...parseLessons(
+    n5WeatherRaw,
+    "lessons/n5-07-weather.yaml",
+    knownWordIds,
+    knownPhraseIds,
+    knownPatternIds,
+    n5ChapterIds,
+  ),
+  ...parseLessons(
+    n5IntegrationRaw,
+    "lessons/n5-08-integration.yaml",
+    knownWordIds,
+    knownPhraseIds,
+    knownPatternIds,
+    n5ChapterIds,
+  ),
   ...parseLessons(n5DatesRaw, "lessons/n5-09-dates.yaml", knownWordIds, knownPhraseIds, knownPatternIds, n5ChapterIds),
-  ...parseLessons(n5CheckpointRaw, "lessons/n5-10-checkpoint.yaml", knownWordIds, knownPhraseIds, knownPatternIds, n5ChapterIds),
-  ...parseLessons(n5RelativeTimeRaw, "lessons/n5-11-relative-time.yaml", knownWordIds, knownPhraseIds, knownPatternIds, n5ChapterIds),
-  ...parseLessons(n5FinalCheckpointRaw, "lessons/n5-12-final-checkpoint.yaml", knownWordIds, knownPhraseIds, knownPatternIds, n5ChapterIds),
-  ...parseLessons(n5ProductionCheckpointRaw, "lessons/n5-13-production-checkpoint.yaml", knownWordIds, knownPhraseIds, knownPatternIds, n5ChapterIds),
-  ...parseLessons(n5FamilyRaw, "lessons/n5-14-family.yaml", knownWordIds, knownPhraseIds, knownPatternIds, n5ChapterIds),
-  ...parseLessons(n5HomeWorkRaw, "lessons/n5-15-home-work.yaml", knownWordIds, knownPhraseIds, knownPatternIds, n5ChapterIds),
-  ...parseLessons(n5TeFormRaw, "lessons/n5-16-te-form.yaml", knownWordIds, knownPhraseIds, knownPatternIds, n5ChapterIds),
-  ...parseLessons(n5CountingRaw, "lessons/n5-17-counting.yaml", knownWordIds, knownPhraseIds, knownPatternIds, n5ChapterIds),
-  ...parseLessons(n5DescribingRaw, "lessons/n5-18-describing.yaml", knownWordIds, knownPhraseIds, knownPatternIds, n5ChapterIds),
-  ...parseLessons(n5AroundTownRaw, "lessons/n5-19-around-town.yaml", knownWordIds, knownPhraseIds, knownPatternIds, n5ChapterIds),
-  ...parseLessons(n5PastTenseRaw, "lessons/n5-20-past-tense.yaml", knownWordIds, knownPhraseIds, knownPatternIds, n5ChapterIds),
+  ...parseLessons(
+    n5CheckpointRaw,
+    "lessons/n5-10-checkpoint.yaml",
+    knownWordIds,
+    knownPhraseIds,
+    knownPatternIds,
+    n5ChapterIds,
+  ),
+  ...parseLessons(
+    n5RelativeTimeRaw,
+    "lessons/n5-11-relative-time.yaml",
+    knownWordIds,
+    knownPhraseIds,
+    knownPatternIds,
+    n5ChapterIds,
+  ),
+  ...parseLessons(
+    n5FinalCheckpointRaw,
+    "lessons/n5-12-final-checkpoint.yaml",
+    knownWordIds,
+    knownPhraseIds,
+    knownPatternIds,
+    n5ChapterIds,
+  ),
+  ...parseLessons(
+    n5ProductionCheckpointRaw,
+    "lessons/n5-13-production-checkpoint.yaml",
+    knownWordIds,
+    knownPhraseIds,
+    knownPatternIds,
+    n5ChapterIds,
+  ),
+  ...parseLessons(
+    n5FamilyRaw,
+    "lessons/n5-14-family.yaml",
+    knownWordIds,
+    knownPhraseIds,
+    knownPatternIds,
+    n5ChapterIds,
+  ),
+  ...parseLessons(
+    n5HomeWorkRaw,
+    "lessons/n5-15-home-work.yaml",
+    knownWordIds,
+    knownPhraseIds,
+    knownPatternIds,
+    n5ChapterIds,
+  ),
+  ...parseLessons(
+    n5TeFormRaw,
+    "lessons/n5-16-te-form.yaml",
+    knownWordIds,
+    knownPhraseIds,
+    knownPatternIds,
+    n5ChapterIds,
+  ),
+  ...parseLessons(
+    n5CountingRaw,
+    "lessons/n5-17-counting.yaml",
+    knownWordIds,
+    knownPhraseIds,
+    knownPatternIds,
+    n5ChapterIds,
+  ),
+  ...parseLessons(
+    n5DescribingRaw,
+    "lessons/n5-18-describing.yaml",
+    knownWordIds,
+    knownPhraseIds,
+    knownPatternIds,
+    n5ChapterIds,
+  ),
+  ...parseLessons(
+    n5AroundTownRaw,
+    "lessons/n5-19-around-town.yaml",
+    knownWordIds,
+    knownPhraseIds,
+    knownPatternIds,
+    n5ChapterIds,
+  ),
+  ...parseLessons(
+    n5PastTenseRaw,
+    "lessons/n5-20-past-tense.yaml",
+    knownWordIds,
+    knownPhraseIds,
+    knownPatternIds,
+    n5ChapterIds,
+  ),
   ...parseLessons(n5MealsRaw, "lessons/n5-21-meals.yaml", knownWordIds, knownPhraseIds, knownPatternIds, n5ChapterIds),
-  ...parseLessons(n5PeopleClothesRaw, "lessons/n5-22-people-clothes.yaml", knownWordIds, knownPhraseIds, knownPatternIds, n5ChapterIds),
+  ...parseLessons(
+    n5PeopleClothesRaw,
+    "lessons/n5-22-people-clothes.yaml",
+    knownWordIds,
+    knownPhraseIds,
+    knownPatternIds,
+    n5ChapterIds,
+  ),
 ]
   .sort((a, b) => a.order - b.order)
   /**
@@ -121,16 +279,86 @@ export const n5Lessons: Lesson[] = [
  * shelved AI. Add one if that ever changes.
  */
 export const b2Lessons: Lesson[] = [
-  ...parseLessons(b2PlainFormRaw, "lessons/b2-01-plain-form.yaml", knownWordIds, knownPhraseIds, knownPatternIds, b2ChapterIds),
-  ...parseLessons(b2GivingReceivingRaw, "lessons/b2-02-giving-receiving.yaml", knownWordIds, knownPhraseIds, knownPatternIds, b2ChapterIds),
-  ...parseLessons(b2JoiningSentencesRaw, "lessons/b2-03-joining-sentences.yaml", knownWordIds, knownPhraseIds, knownPatternIds, b2ChapterIds),
-  ...parseLessons(b2DoctorRaw, "lessons/b2-04-doctor.yaml", knownWordIds, knownPhraseIds, knownPatternIds, b2ChapterIds),
-  ...parseLessons(b2DecidingRaw, "lessons/b2-05-deciding.yaml", knownWordIds, knownPhraseIds, knownPatternIds, b2ChapterIds),
-  ...parseLessons(b2PotentialRaw, "lessons/b2-06-potential.yaml", knownWordIds, knownPhraseIds, knownPatternIds, b2ChapterIds),
-  ...parseLessons(b2QuotedSpeechRaw, "lessons/b2-07-quoted-speech.yaml", knownWordIds, knownPhraseIds, knownPatternIds, b2ChapterIds),
-  ...parseLessons(b2MakingPlansRaw, "lessons/b2-08-making-plans.yaml", knownWordIds, knownPhraseIds, knownPatternIds, b2ChapterIds),
-  ...parseLessons(b2ConditionalsRaw, "lessons/b2-09-conditionals.yaml", knownWordIds, knownPhraseIds, knownPatternIds, b2ChapterIds),
-  ...parseLessons(b2TroubleRaw, "lessons/b2-10-trouble.yaml", knownWordIds, knownPhraseIds, knownPatternIds, b2ChapterIds),
+  ...parseLessons(
+    b2PlainFormRaw,
+    "lessons/b2-01-plain-form.yaml",
+    knownWordIds,
+    knownPhraseIds,
+    knownPatternIds,
+    b2ChapterIds,
+  ),
+  ...parseLessons(
+    b2GivingReceivingRaw,
+    "lessons/b2-02-giving-receiving.yaml",
+    knownWordIds,
+    knownPhraseIds,
+    knownPatternIds,
+    b2ChapterIds,
+  ),
+  ...parseLessons(
+    b2JoiningSentencesRaw,
+    "lessons/b2-03-joining-sentences.yaml",
+    knownWordIds,
+    knownPhraseIds,
+    knownPatternIds,
+    b2ChapterIds,
+  ),
+  ...parseLessons(
+    b2DoctorRaw,
+    "lessons/b2-04-doctor.yaml",
+    knownWordIds,
+    knownPhraseIds,
+    knownPatternIds,
+    b2ChapterIds,
+  ),
+  ...parseLessons(
+    b2DecidingRaw,
+    "lessons/b2-05-deciding.yaml",
+    knownWordIds,
+    knownPhraseIds,
+    knownPatternIds,
+    b2ChapterIds,
+  ),
+  ...parseLessons(
+    b2PotentialRaw,
+    "lessons/b2-06-potential.yaml",
+    knownWordIds,
+    knownPhraseIds,
+    knownPatternIds,
+    b2ChapterIds,
+  ),
+  ...parseLessons(
+    b2QuotedSpeechRaw,
+    "lessons/b2-07-quoted-speech.yaml",
+    knownWordIds,
+    knownPhraseIds,
+    knownPatternIds,
+    b2ChapterIds,
+  ),
+  ...parseLessons(
+    b2MakingPlansRaw,
+    "lessons/b2-08-making-plans.yaml",
+    knownWordIds,
+    knownPhraseIds,
+    knownPatternIds,
+    b2ChapterIds,
+  ),
+  ...parseLessons(
+    b2ConditionalsRaw,
+    "lessons/b2-09-conditionals.yaml",
+    knownWordIds,
+    knownPhraseIds,
+    knownPatternIds,
+    b2ChapterIds,
+  ),
+  ...parseLessons(
+    b2TroubleRaw,
+    "lessons/b2-10-trouble.yaml",
+    knownWordIds,
+    knownPhraseIds,
+    knownPatternIds,
+    b2ChapterIds,
+  ),
 ].sort((a, b) => a.order - b.order);
 
 /**
@@ -139,19 +367,110 @@ export const b2Lessons: Lesson[] = [
  * conjugation would.
  */
 export const b3Lessons: Lesson[] = [
-  ...parseLessons(b3PassiveRaw, "lessons/b3-00-passive.yaml", knownWordIds, knownPhraseIds, knownPatternIds, b3ChapterIds),
+  ...parseLessons(
+    b3PassiveRaw,
+    "lessons/b3-00-passive.yaml",
+    knownWordIds,
+    knownPhraseIds,
+    knownPatternIds,
+    b3ChapterIds,
+  ),
   ...parseLessons(b3CauseRaw, "lessons/b3-01-cause.yaml", knownWordIds, knownPhraseIds, knownPatternIds, b3ChapterIds),
-  ...parseLessons(b3ContrastRaw, "lessons/b3-02-contrast.yaml", knownWordIds, knownPhraseIds, knownPatternIds, b3ChapterIds),
-  ...parseLessons(b3ConditionsRaw, "lessons/b3-03-conditions.yaml", knownWordIds, knownPhraseIds, knownPatternIds, b3ChapterIds),
+  ...parseLessons(
+    b3ContrastRaw,
+    "lessons/b3-02-contrast.yaml",
+    knownWordIds,
+    knownPhraseIds,
+    knownPatternIds,
+    b3ChapterIds,
+  ),
+  ...parseLessons(
+    b3ConditionsRaw,
+    "lessons/b3-03-conditions.yaml",
+    knownWordIds,
+    knownPhraseIds,
+    knownPatternIds,
+    b3ChapterIds,
+  ),
   ...parseLessons(b3TimeRaw, "lessons/b3-04-time.yaml", knownWordIds, knownPhraseIds, knownPatternIds, b3ChapterIds),
-  ...parseLessons(b3StanceRaw, "lessons/b3-05-stance.yaml", knownWordIds, knownPhraseIds, knownPatternIds, b3ChapterIds),
-  ...parseLessons(b3DegreeRaw, "lessons/b3-06-degree.yaml", knownWordIds, knownPhraseIds, knownPatternIds, b3ChapterIds),
-  ...parseLessons(b3PurposeRaw, "lessons/b3-07-purpose.yaml", knownWordIds, knownPhraseIds, knownPatternIds, b3ChapterIds),
-  ...parseLessons(b3ObligationRaw, "lessons/b3-08-obligation.yaml", knownWordIds, knownPhraseIds, knownPatternIds, b3ChapterIds),
-  ...parseLessons(b3ReferenceRaw, "lessons/b3-09-reference.yaml", knownWordIds, knownPhraseIds, knownPatternIds, b3ChapterIds),
-  ...parseLessons(b3RegisterRaw, "lessons/b3-10-register.yaml", knownWordIds, knownPhraseIds, knownPatternIds, b3ChapterIds),
+  ...parseLessons(
+    b3StanceRaw,
+    "lessons/b3-05-stance.yaml",
+    knownWordIds,
+    knownPhraseIds,
+    knownPatternIds,
+    b3ChapterIds,
+  ),
+  ...parseLessons(
+    b3DegreeRaw,
+    "lessons/b3-06-degree.yaml",
+    knownWordIds,
+    knownPhraseIds,
+    knownPatternIds,
+    b3ChapterIds,
+  ),
+  ...parseLessons(
+    b3PurposeRaw,
+    "lessons/b3-07-purpose.yaml",
+    knownWordIds,
+    knownPhraseIds,
+    knownPatternIds,
+    b3ChapterIds,
+  ),
+  ...parseLessons(
+    b3ObligationRaw,
+    "lessons/b3-08-obligation.yaml",
+    knownWordIds,
+    knownPhraseIds,
+    knownPatternIds,
+    b3ChapterIds,
+  ),
+  ...parseLessons(
+    b3ReferenceRaw,
+    "lessons/b3-09-reference.yaml",
+    knownWordIds,
+    knownPhraseIds,
+    knownPatternIds,
+    b3ChapterIds,
+  ),
+  ...parseLessons(
+    b3RegisterRaw,
+    "lessons/b3-10-register.yaml",
+    knownWordIds,
+    knownPhraseIds,
+    knownPatternIds,
+    b3ChapterIds,
+  ),
+].sort((a, b) => a.order - b.order);
+
+export const b4Lessons: Lesson[] = [
+  ...parseLessons(
+    b4FinishingRaw,
+    "lessons/b4-00-finishing.yaml",
+    knownWordIds,
+    knownPhraseIds,
+    knownPatternIds,
+    b4ChapterIds,
+  ),
+  ...parseLessons(
+    b4MeaningRaw,
+    "lessons/b4-01-meaning.yaml",
+    knownWordIds,
+    knownPhraseIds,
+    knownPatternIds,
+    b4ChapterIds,
+  ),
+  ...parseLessons(
+    b4ReasonRaw,
+    "lessons/b4-02-reason.yaml",
+    knownWordIds,
+    knownPhraseIds,
+    knownPatternIds,
+    b4ChapterIds,
+  ),
+  ...parseLessons(b4TalkRaw, "lessons/b4-03-talk.yaml", knownWordIds, knownPhraseIds, knownPatternIds, b4ChapterIds),
 ].sort((a, b) => a.order - b.order);
 
 export function findLesson(id: string): Lesson | undefined {
-  return [...n5Lessons, ...b2Lessons, ...b3Lessons].find((u) => u.id === id);
+  return [...n5Lessons, ...b2Lessons, ...b3Lessons, ...b4Lessons].find((u) => u.id === id);
 }

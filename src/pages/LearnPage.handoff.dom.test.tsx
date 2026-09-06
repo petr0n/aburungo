@@ -17,7 +17,7 @@ import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 import { render, screen, cleanup } from "@testing-library/react";
 import { MemoryRouter } from "react-router";
 import type { Book, PathProgress, UserTier } from "@/types";
-import { bookOne, bookThree, bookTwo, books } from "@/content/books";
+import { bookFour, bookOne, bookThree, bookTwo, books } from "@/content/books";
 import type { DailySession } from "@/srs/dailyLoop";
 
 const state = vi.hoisted(() => ({
@@ -33,12 +33,10 @@ vi.mock("@/store/auth", () => ({
   useUserTier: () => state.tier,
 }));
 
-const getPathProgress = vi.fn(
-  (pathId: string, signedIn: boolean): Promise<PathProgress> => {
-    void signedIn;
-    return Promise.resolve({ pathId, seenLessonIds: state.seen.get(pathId) ?? [] });
-  },
-);
+const getPathProgress = vi.fn((pathId: string, signedIn: boolean): Promise<PathProgress> => {
+  void signedIn;
+  return Promise.resolve({ pathId, seenLessonIds: state.seen.get(pathId) ?? [] });
+});
 
 vi.mock("@/db/pathProgressStore", () => ({
   getPathProgress: (pathId: string, signedIn: boolean) => getPathProgress(pathId, signedIn),
@@ -180,15 +178,16 @@ describe("the gated hand-off", () => {
   });
 
   it("says nothing when there is no book after the one they finished", async () => {
-    // A free account reaches four books and the course ships three, so a
+    // A free account reaches four books and the course now ships four, so a
     // learner who has finished all of them is at the end of the course, not at
-    // a gate. Nothing to offer. Every book must be marked seen: finishing only
-    // Book Two now hands them to Book Three, which is the next test up.
+    // a gate. Nothing to offer. Every book must be marked seen before the app
+    // can recognise the end of the ladder.
     state.seen.set(bookOne.progressKey, allOf(bookOne));
     state.seen.set(bookTwo.progressKey, allOf(bookTwo));
     state.seen.set(bookThree.progressKey, allOf(bookThree));
+    state.seen.set(bookFour.progressKey, allOf(bookFour));
     await renderLearn();
-    expect(bookPassedToBuilder()).toBe(bookThree);
+    expect(bookPassedToBuilder()).toBe(bookFour);
     expect(await screen.findByText(/All caught up!/)).toBeTruthy();
     expect(screen.queryByText(/carries on from here/)).toBeNull();
   });

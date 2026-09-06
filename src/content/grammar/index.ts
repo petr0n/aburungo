@@ -32,6 +32,10 @@ import b3PurposeRaw from "./b3-07-purpose.yaml";
 import b3ObligationRaw from "./b3-08-obligation.yaml";
 import b3ReferenceRaw from "./b3-09-reference.yaml";
 import b3RegisterRaw from "./b3-10-register.yaml";
+import b4FinishingRaw from "./b4-00-finishing.yaml";
+import b4MeaningRaw from "./b4-01-meaning.yaml";
+import b4ReasonRaw from "./b4-02-reason.yaml";
+import b4TalkRaw from "./b4-03-talk.yaml";
 
 const phrasesById = new Map(allPhrases.map((p) => [p.id, p]));
 
@@ -58,6 +62,10 @@ export const allGrammarPatterns: GrammarPattern[] = [
   ...parseGrammarPatterns(b3ObligationRaw, "grammar/b3-08-obligation.yaml", phrasesById),
   ...parseGrammarPatterns(b3ReferenceRaw, "grammar/b3-09-reference.yaml", phrasesById),
   ...parseGrammarPatterns(b3RegisterRaw, "grammar/b3-10-register.yaml", phrasesById),
+  ...parseGrammarPatterns(b4FinishingRaw, "grammar/b4-00-finishing.yaml", phrasesById),
+  ...parseGrammarPatterns(b4MeaningRaw, "grammar/b4-01-meaning.yaml", phrasesById),
+  ...parseGrammarPatterns(b4ReasonRaw, "grammar/b4-02-reason.yaml", phrasesById),
+  ...parseGrammarPatterns(b4TalkRaw, "grammar/b4-03-talk.yaml", phrasesById),
 ];
 
 export function findGrammarPattern(id: string): GrammarPattern | undefined {

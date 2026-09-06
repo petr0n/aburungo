@@ -1,0 +1,302 @@
+# Chapter 4 -- How people actually talk.
+#
+# Books One and Two taught polite speech. Book Three taught the written
+# register -- である, ゆえに, において -- and the connective grammar that holds
+# an argument together. The three chapters of this book before this one taught
+# the machinery of plain speech: the contractions ちゃう and とく, the
+# volitional and the prohibitive な, んだ and だろう. What none of them taught
+# is the layer that sits on top of all of it and decides what a sentence sounds
+# like: じゃ for では, よ and ね and な on the end, かな for wondering aloud,
+# なんて for waving something away, とか for being vague on purpose, and a
+# request made of nothing but a te-form.
+#
+# A learner who has finished Book Three can read 〜にもかかわらず and cannot
+# hear the difference between 行くよ and 行くね. That is this chapter.
+#
+# It is also where a debt gets paid. Book Three's audits kept flagging register
+# in sentences the course was quoting -- 君, お前, ぞ turning up in cards with
+# no lesson anywhere to point at, so the note on the card had to do the whole
+# job. The pointer now exists.
+#
+#    1  not that, this            じゃ as spoken では, and falling じゃない
+#    2  you know, right?          よ, ね, よね -- what a statement is for
+#    3  to yourself, out loud     sentence-final な, and って as topic marker
+#    4  I wonder                  かな, かしら, っけ
+#    5  things like that          なんて and なんか
+#    6  and so on                 とか, in its three jobs
+#    7  rough and soft endings    ぞ, ぜ, わ -- recognition, not production
+#    8  just do it, would you     the request ladder, from bare て upward
+#    9  chapter checkpoint        recognition
+#
+# The order is not arbitrary. じゃ comes first because three later lessons use
+# it inside their own sentences (どっちが重いかしら follows じゃ; the chapter
+# cannot ask a learner to read past a contraction it has not named). よ and ね
+# come second because they are the two commonest particles in the corpus by a
+# wide margin and every later lesson's sentences end in one of them. な is
+# third, immediately after ね, because the pair is the confusion worth building
+# early -- ね is aimed at somebody, な is not. かな follows な because it
+# contains it. Then the three that play something down or leave it vague
+# (なんて, なんか, とか), then the two register lessons, which need everything
+# before them to be readable.
+#
+# ---------------------------------------------------------------------------
+# ON `order`. 301 to 309, and `order` is global across books rather than
+# restarting -- scripts/kanji.mjs sorts by it with no book-awareness, so a
+# chapter that restarted its numbering would interleave two books and corrupt
+# that tool's output. This chapter takes the block after the three chapters
+# before it (277-300).
+#
+# VOCABULARY: forty-two words, and vocabulary/b4-03-talk.yaml carries the
+# argument. In short: docs/plans/book-four-bands.md section 2 decides that a
+# Book Four lesson teaches the untaught words its own verified sentences carry,
+# for as long as the reading library that Book Three delegated all vocabulary
+# growth to has no texts in it. Every word in that file appears in a sentence
+# this chapter cards. The `wordIds` below also name a few words the learner
+# already owns whose collision or callback the lesson turns on -- ほう, こと,
+# 天気, 持ってくる -- and those are an SRS pull, not new teaching.
+#
+# KANJI: `kanji: []` on every lesson, as the chapter breakdown asks, and the
+# wiring pass places characters from this header. The words above bring
+# **thirty-two characters that data/content-manifest.json does not yet have**:
+#
+#   今 度 別 語 自 滅 始 入 双 付 僕 出 張 前 夢 失 敗 決 愚 鍋 包 丁 親 倒 参
+#   回 信 用 劇 場 捕 謝
+#
+# Two of those deserve a note for whoever places them. 前 is the character of
+# まえ, a word taught since Book One and written in kana there, so this chapter
+# is the first place a learner sees the character at all. 出 is likewise in
+# 出る and 出かける, owned since Book One and never placed. Neither is new
+# vocabulary; both are new to the kanji ladder.
+#
+# NO `recognitionOnly` ANYWHERE, including the ぞ, ぜ and わ cards, and
+# phrases/b4-03-talk.yaml argues that at length. The short version: the flag
+# takes a card out of typed review permanently, and what those cards need is
+# not less practice but a warning about deployment, which their notes and
+# lesson 7's own can-do carry instead.
+#
+# THE CORPUS'S SKEW, stated in the lessons as well as here. These sentences
+# come from one corpus, largely translated in one era, and its register-coded
+# endings are evidence that the forms exist and what they sound like -- not a
+# survey of how anyone speaks this year. わ is over-represented; ぜ has three
+# short sentences in twenty-six thousand. Every coding claim in the notes below
+# is written as a tendency with a sentence beside it, never as a rule about who
+# is allowed to say what.
+#
+# One rule the grammarNotes hold themselves to, stated once because a later
+# editor will otherwise undo it by accident. A note here may show a fragment
+# (〜じゃなくて, いいな, 面倒を見る), a conjugation chain, or a sentence that is
+# a phrase card in this chapter or an earlier book, quoted whole. It may not
+# show a Japanese sentence that is none of those. Several notes therefore
+# describe a sentence in English where a draft would have composed a Japanese
+# one. That is 04-stage-reading.md section 8 reaching into the prose, not only
+# into the cards.
+#
+# content-source: every phrase this file references is a verified Tatoeba pair,
+#   cited by id in `tatoebaId` in phrases/b4-03-talk.yaml. No
+#   training-canonical sentence is used anywhere in this chapter
+#   (04-stage-reading.md section 8).
+
+- id: b4.ja-nai
+  order: 301
+  chapterId: b4.band-3
+  situation: How people actually talk
+  title: Not that, this
+  canDo: Say not X but Y, and hear it isn't, the way speech says them
+  wordIds:
+    - vocab.kondo
+    - vocab.asobi
+    - vocab.betsuni
+    - vocab.tamani
+    - vocab.shigo
+    - vocab.tesaki
+    - vocab.shigoto
+    - vocab.warui
+  phraseIds:
+    - b4band3.our-next-trip-is-for-pleasure-not-for-work
+    - b4band3.it-wasnt-a-hundred-yen-coin
+    - b4band3.thats-a-dead-word-now
+    - b4band3.im-not-his-stooge
+    - b4band3.its-no-crime-to-idle-a-whole-day
+  kanji: []
+  patternId: grammar.b4-ja-nakute
+  grammarNote: "One contraction, and it is everywhere. では becomes じゃ in speech, and that single change quietly rewrites every negative you have. ではない becomes じゃない. ではありません becomes じゃありません. ではなくて becomes じゃなくて. ではなかった becomes じゃなかった. Nothing else moves. If you can already build the ではない that Book Three's register chapter gave you, you can already build all of these — you are saying the same thing with two kana instead of three. Where does the じ come from? では run together at speed: de-wa, dya, じゃ. Written Japanese keeps では; spoken Japanese almost never does, outside a speech or a formal announcement. There is also じゃあ with a long vowel, and it is the same word with more air in it. Start with the shape this lesson cards most. 〜じゃなくて〜, not X but Y, and the two halves sit either side of it with nothing else needed: 百円じゃなくて、王冠でした. Not a hundred-yen coin — a bottle cap. 今度の旅行は仕事じゃなくて遊びです. Not work — pleasure. Notice what the second sentence does at its end: じゃなくて in the middle, polite です at the close. That is not a mismatch and not a mistake. じゃ is a contraction, not a register, and it sits inside polite speech all day long. Now the harder half, which is one string doing two opposite jobs. Sentence-final じゃない. With a falling tone it flatly denies: あいつの手先じゃない, I am not his stooge. With a rising tone, or after a noun with a pause in front of it, it asks you to agree, and the English comes out as isn't it. Same words, same order, same characters. The tune decides. This is not a subtlety you can put off — it is one of the most common shapes in spoken Japanese, and the previous chapter's じゃないか is this same ending with か added to make the agreement-seeking explicit. When you are reading rather than listening, the surrounding sentence is what tells you: a complaint, a denial, a correction of somebody, and it falls. A shared observation, and it rises. それって死語じゃないの adds の on the end, which softens the whole thing further and is very common on this ending. Two more places you will meet じゃ, both worth recognising now. At the head of a sentence it is not a negative at all: じゃ、行こう is well then, let's go — では meaning in that case. And between two nouns, じゃ is では marking the ground of a comparison, which is exactly what the かしら sentence in the next lesson but two does with sandwiches and rice balls. One word, several jobs, all of them coming from では."
+
+- id: b4.yo-ne
+  order: 302
+  chapterId: b4.band-3
+  situation: How people actually talk
+  title: You know, right?
+  canDo: Add to a plain statement what it is for -- telling, agreeing, or both
+  wordIds:
+    - vocab.toku
+    - vocab.jimetsu
+    - vocab.uesuto
+    - vocab.jirettai
+    - vocab.hou
+    - vocab.tenki
+  phraseIds:
+    - b4band3.youd-be-better-off-buying-a-new-one
+    - b4band3.its-a-beautiful-day-isnt-it
+    - b4band3.the-waist-is-a-little-tight
+    - b4band3.the-way-you-do-things-is-exasperating
+    - b4band3.japan-is-heading-for-self-destruction
+  kanji: []
+  patternId: grammar.b4-yo-ne
+  grammarNote: "A Japanese sentence can be finished and still not have said what it is for. よ and ね are where that gets decided, and they are two of the three or four commonest words in spoken Japanese. よ says: I am telling you this, and I do not think you knew it. It points outward, from the speaker to the listener. 買い替えた方がお得ですよ — the shop assistant knows something you do not, and the よ is the handing over. Take it off and the sentence still means the same thing while sounding like a label on a shelf. ね says: this is ours, isn't it. It points at the space between you. いいお天気ですね is the reason ね opens so many conversations — the weather is something you can both already see, so nothing is being told, only shared. Take the ね off and you have announced the weather to somebody standing in it. よね is both, in that order and never the other way round. First the よ, telling you; then the ね, asking you to come along. It is what you use when you are fairly sure and want it confirmed: 今の日本は自滅へのみちを突き進んでいますよね. A heavy claim, delivered with the door left open. Four things worth knowing before you start using them. First, neither is politeness. They sit on です and ます exactly as readily as on plain forms — ですね has been in your hands since Book One, and ちょっとウエストがきついね is the same ね on a bare adjective. Adding よ to a polite sentence does not make it casual, and adding it to a plain one does not make it rude. Second, neither is gentle by nature. ね is often called a softener and it is, often — but 君のやることはじれったいね is a criticism, and its ね presses the listener to accept the criticism rather than softening it away. It is closer to you know that, don't you. Third, the intonation carries as much as the particle. ね said rising asks a real question; ね said falling is closer to musing to yourself, and at that point it is leaning towards the な of the next lesson. Fourth, and this is the part a chart will not tell you: leaving both off is itself a choice. A plain statement with no particle at all is flat, and to a Japanese ear it can sound curt or bookish in conversation. Learners under-use ね far more often than they over-use it. The reverse risk is real too — よ piled onto every sentence sounds insistent, because every よ says you did not know this and I did. Neither of those is a rule. They are what the corpus and ordinary listening will keep showing you, and this chapter's forty sentences are a small sample of one era's Japanese, not a survey."
+
+- id: b4.na-final
+  order: 303
+  chapterId: b4.band-3
+  situation: How people actually talk
+  title: To yourself, out loud
+  canDo: Recognise a remark made half to oneself, and the って that marks its topic
+  wordIds:
+    - vocab.hajimeru
+    - vocab.ki-ni-iru
+    - vocab.futago
+    - vocab.hotondo
+    - vocab.tsuki
+    - vocab.boku
+    - vocab.denwa
+  phraseIds:
+    - b4band3.youve-started-warming-up
+    - b4band3.i-didnt-like-the-ending
+    - b4band3.a-room-with-a-bathtub-would-be-nice
+    - b4band3.those-twins-are-identical
+    - b4band3.you-hardly-see-dial-phones-anymore
+  kanji: []
+  patternId: grammar.b4-na-final
+  grammarNote: "ね is aimed at somebody. な is not. That is the whole difference, and it is worth holding onto, because everything else about the two particles looks alike. A sentence ending in な is a thought said out loud — noticing something, turning it over, wishing for it. あの双子は瓜二つだな. 君はウオーミングアップを始めたな. 僕はエンディングが気に入らなかったな. Nobody in any of those is being asked anything. If a listener happens to be there, they are overhearing rather than being addressed, which is exactly why な often gets translated with an English word that is not a word at all: oh, hm, well. Now the collision, and it is a real one rather than a warning invented for a lesson. The previous chapter taught the prohibitive な, which also ends a sentence and is also one kana: 心配するな, do not worry. Two identical particles, opposite jobs, and what separates them is entirely what comes in front. The prohibitive follows a bare dictionary form and nothing else. 始めるな is do not start. 始めたな, past tense, is you have started, haven't you — this lesson's な, because a past form cannot take the prohibitive. Same for だ, for a plain adjective, for a negative: あれはだめだな can only be musing. So the test is not the な, it is the shape of the word before it. Dictionary form plus な, and somebody is being told to stop; anything else plus な, and somebody is thinking aloud. Two sub-cases you will meet constantly. いいな is a wish — that would be nice, I want that — and it is the one place in this lesson where the register colouring falls away completely: ああ、バスタブ付きがいいな could be said by anyone at all. だな, plain だ plus な, is the noun-predicate version and is just as ordinary. The colouring, said as a tendency rather than a rule: in assertive use — telling somebody what you have noticed, insisting on a point — な reads as male in this corpus and in most descriptions of Tokyo speech, in the same family as 僕 and ぞ. In the musing and wishing uses it reads as nobody in particular. The corpus these cards come from skews old and skews literary, so treat what it shows you as evidence about the form rather than a headcount. The second thing this lesson carries is って, which is not a final particle at all and belongs here because the な sentences are full of it. ダイヤル式の電話って、ほとんど見なくなったな — that って is standing in for は, marking the topic the way speech does, with a shrug built in: as for dial phones. それって死語じゃないの from the first lesson is the same thing. って also does quotation, standing in for と — 帰るって言ってた, he said he was going home — which is the spoken shortcut for the という machinery Book Three's chapter 10 built. One kana, two jobs, both of them everywhere."
+
+- id: b4.kana
+  order: 304
+  chapterId: b4.band-3
+  situation: How people actually talk
+  title: I wonder
+  canDo: Wonder aloud, and check your own memory
+  wordIds:
+    - vocab.shucchou
+    - vocab.kyanseru
+    - vocab.sorosoro
+    - vocab.kono-mae
+    - vocab.sandoicchi
+    - vocab.hou
+    - vocab.onigiri
+    - vocab.oboeru
+  phraseIds:
+    - b4band3.maybe-ill-cancel-the-la-trip
+    - b4band3.maybe-its-time-i-learned-to-program
+    - b4band3.i-wonder-whose-car-this-is
+    - b4band3.i-wonder-which-is-heavier
+    - b4band3.arent-you-the-one-who-gets-carsick
+    - b4band3.when-was-the-last-time-i-saw-you
+  kanji: []
+  patternId: grammar.b4-kana
+  grammarNote: "Three endings for three kinds of not-knowing, and this lesson carries six cards rather than the usual four or five because each of the three needs to be seen twice to be worth anything. かな is the everyday one. It is か, the question particle, plus な, the musing particle from the last lesson — a question asked of nobody. これは誰の車かしら is the かしら version of exactly that shape; with かな it would be 誰の車かな. Attach it to a plain form: 来るかな, 高いかな, 大丈夫かな. Not to です or ます, which is why it is a marker of casual speech even though it is not rude. Two things sit in front of it constantly. One is の, the explanatory の of the previous chapter — したのかな, I wonder whether he did — which asks about the circumstances rather than the bare fact. The other is the volitional, and that combination is worth learning as its own thing: しよう is a decision made, and しようかな is a decision still being made. ロス出張をキャンセルしようかな is not I will cancel, it is maybe I'll cancel — the difference between announcing a plan and floating one. That is how Japanese says maybe I'll, and there is no shorter way. かしら does the same job as かな and carries the か inside it already, so it never follows another か: 誰の車かしら, never 誰の車かかしら. Its colouring, as a tendency and not a rule: in Tokyo speech it is heard mainly from women and mainly from older speakers, and in this corpus — translated decades ago, and fond of a certain kind of fiction — it turns up far more often than you will hear it on a train today. Read it as a real form that tells you something about the speaker, and do not treat sixteen sentences as a census. っけ is a different question entirely, and this is the one learners skip and then miss constantly in real conversation. It does not ask about the world; it asks about your own memory. 車酔いするほうだっけ, この前、僕が君にあったのはいつだっけ. In both, the speaker once knew and is trying to retrieve it. That is why it is almost always だっけ after a noun or a な-adjective and たっけ after a verb — past forms, because you are reaching back for something. It cannot be used for something you never knew: to ask a stranger's name for the first time it is wrong, and to ask it for the third time it is exactly right. The corpus is thin here — a handful of clean っけ sentences in twenty-six thousand — which says something about how it is used rather than how common it is: it belongs to conversation between people who have a shared past, and that is the sort of sentence a translated corpus collects least."
+
+- id: b4.nante
+  order: 305
+  chapterId: b4.band-3
+  situation: How people actually talk
+  title: Things like that
+  canDo: Play something down, or be amazed by it
+  wordIds:
+    - vocab.yume
+    - vocab.shippai
+    - vocab.kesshite
+    - vocab.pasokon
+    - vocab.oroka
+    - vocab.hen
+    - vocab.nani
+  phraseIds:
+    - b4band3.i-never-dreamed-of-winning-first-prize
+    - b4band3.silly-of-me-to-make-the-same-mistake
+    - b4band3.what-a-big-eater-he-is
+    - b4band3.this-work-is-anything-but-easy
+    - b4band3.something-was-wrong-with-my-computer
+  kanji: []
+  patternId: grammar.b4-nante
+  grammarNote: "Both of these words are 何 with something stuck to it, and both of them hold whatever they touch at arm's length. That is the single idea; the rest is where they sit in the sentence. なんて after a clause turns the clause into an idea to be marvelled at or waved away, and what follows says which. １等になるなんて夢にも思わなかった — the idea of coming first, and never dreamed of it. また同じ失敗をするなんて、我ながら愚かだと思う — the idea of making the same mistake again, and what a fool. In both, なんて is doing what English does with the very idea of or with a flat to think that. It attaches to a plain clause with nothing in between, and it attaches to a bare noun the same way. なんて in front of a clause is a different shape and reads as an exclamation rather than a dismissal: なんて〜だろう, what a ...! 彼はなんて大食らいなんだろう. The だろう is the previous chapter's, and the pattern is fixed enough to learn whole — なんて, then the thing, then だろう or でしょう. なんか is the shorter relative and lives in three places. After a noun it hedges, roughly things like or or something: 私のパソコンなんかへんで — my computer, or something about it, was odd. Before a negative it produces what English calls anything but: この仕事は決してやさしくなんかないんだよ, where やさしく + なんか + ない brushes the idea of easy aside before denying it. And in conversation it is a filler, dropped in the way English drops like — very common, and not something to imitate before you can hear it. The trap is spelling, and it is worth being blunt about. なんか is not 何か. 何か, also written なにか, means something — 何か食べたい, I want to eat something. The two are different words that share their kana when the kanji is dropped, and the way to tell them apart is the job they are doing: 何か is a noun standing where a noun goes, and なんか is hanging off a noun that is already there. One more piece of honesty about the register. なんか and なんて are informal, and なんて aimed at another person's things or plans can sting — the same arm's-length distance that makes it modest about yourself makes it dismissive about somebody else. Neither is rude in itself; both are rude in the wrong direction, which is a different thing and worth watching for."
+
+- id: b4.toka
+  order: 306
+  chapterId: b4.band-3
+  situation: How people actually talk
+  title: And so on
+  canDo: List loosely, or report a name loosely
+  wordIds:
+    - vocab.nabe
+    - vocab.houchou
+    - vocab.oya
+    - vocab.mendou
+    - vocab.jisan
+    - vocab.daidokoro
+    - vocab.karui
+  phraseIds:
+    - b4band3.bring-knives-and-pots
+    - b4band3.shall-we-have-cornflakes-or-something
+    - b4band3.a-mr-marconi-wants-to-see-you
+    - b4band3.i-cant-look-after-my-parents-either
+  kanji: []
+  patternId: grammar.b4-toka
+  grammarNote: "This lesson has four cards rather than five, and the reason is worth stating rather than hiding: the corpus has no more clean ones. Of the eighty-nine sentences containing the string とか, most are false positives — かけ離れた, かえって, 考えた and their kin all contain those two kana — and of the genuine ones, most are two-speaker exchanges or run past thirty characters. Four survived. Nothing was composed to round the number up. とか is と plus か, and it means what that suggests: and, then a question mark. Three jobs. The first is a list that does not claim to be complete. 包丁とか鍋とか、台所用品を持参すること — knives, pots, that sort of thing. Two items are named and とか follows each of them, which is the ordinary shape; the list stays open, and often a category word follows to close it. The second job is one item plus とか and nothing after it, which stops being a list and becomes a hedge. 明日からコーンフレークとか、軽い物にしようか — cornflakes or something. It offers without insisting, and it is one of the most useful things in spoken Japanese for exactly that reason: it lets you make a suggestion that the other person can decline without declining you. The third is とかいう, which holds a name at arm's length. マルコーニさんとかいう人がご面会です — somebody calling himself Marconi. It is という, which Book Three's chapter 10 taught, with とか's vagueness folded in, and it signals that the speaker is passing on a name they do not vouch for. Not always sceptical; often just a name half-remembered. Where it sits among its neighbours. や also lists incompletely and is the neutral, slightly more written choice — や lists, とか lists with a shrug. など closes a list formally, on a notice or in a report. と, which you have had since Book One, is the one that claims to be complete: A と B means those two and no others. Neither や nor など is taught anywhere in this course yet, so you will meet them before you own them; と is the contrast you can already feel. Two last details from the cards. 私も親の面倒とか見られないですね plants とか inside the fixed expression 面倒を見る, splitting it — which shows how loosely it attaches, and also that 面倒を見る is worth learning whole, since 面倒 on its own means a nuisance. And 持参すること ends a sentence with a plain verb plus こと, which is how a printed instruction speaks: on a notice or a school letter, where a person would say 持ってきてください."
+
+- id: b4.zo-ze-wa
+  order: 307
+  chapterId: b4.band-3
+  situation: How people actually talk
+  title: Rough and soft endings
+  canDo: Recognise who is talking from the last syllable
+  wordIds:
+    - vocab.konkai
+    - vocab.shinyou
+    - vocab.anna
+    - vocab.nooto
+    - vocab.gekijou
+    - vocab.kasu
+    - vocab.densha
+  phraseIds:
+    - b4band3.i-cant-fail-this-time
+    - b4band3.trust-him-and-youll-lose-everything
+    - b4band3.here-we-are-at-the-theatre
+    - b4band3.ill-pay-you-back-with-my-calculus-notes
+    - b4band3.look-here-comes-your-train
+  kanji: []
+  patternId: grammar.b4-zo-ze-wa
+  grammarNote: "This lesson asks you to recognise, not to produce, and that is not squeamishness — it is that these three particles carry information about the speaker that a learner cannot control until they have heard a great deal of Japanese. You will meet them in the first hour of any film, any manga, any novel. Using them is a decision you should get to make later, on purpose. ぞ pushes a statement out hard. It goes to oneself — 今回はしくじれないぞ, I cannot mess this one up — or downward, to somebody the speaker outranks or is close to, and often it is an alert: watch out, here it comes. In this corpus it is used overwhelmingly by male speakers, and every description of contemporary Tokyo speech says the same thing. Read that as a strong tendency rather than a law: a form can be borrowed, and plenty of speakers borrow this one for effect. What is not a tendency is the direction. ぞ aimed upward, at anyone senior, is wrong in a way that has nothing to do with who is speaking. ぜ is ぞ's neighbour, softer, aimed at somebody the speaker is comfortable with rather than beneath them. さあ劇場に着いたぜ — right, here we are. It also dates a speaker: this corpus of twenty-six thousand sentences contains exactly three short ones ending in ぜ, and that scarcity is itself the finding. It belongs to a register you will read far more often than you will hear. わ is the interesting one, because it is two different particles wearing the same kana. In Tokyo speech, said with a rising tone, わ softens — it adds warmth to an offer or gentleness to an observation, and it reads as feminine and as somewhat dated, the speech of fiction and of older speakers more than of anyone under thirty. お返しに微積分のノートを貸してあげるわ and ほら、あなたの乗る電車が来たわ are both that わ. In Kansai and much of western Japan there is another わ entirely, said with a falling tone, which is a flat emphatic used by everybody regardless of sex and carries none of the Tokyo colouring. If you learn Japanese in Osaka you will meet the second one first and it will not mean what a Tokyo textbook told you. Two cautions about the evidence, since this lesson is built on it. These sentences come from one corpus, largely translated decades ago, with a taste for the theatrical — so わ is over-represented and ぜ survives mainly in period dialogue. And the endings do not come alone: 骨までしゃぶられちゃうぞ carries やつ for a person, a たら conditional, a passive and the ちゃう contraction, all of them casual, and the ぞ is the last brick rather than the whole wall. Register is a package. Reading the whole sentence, not the last syllable, is what actually tells you who is talking."
+
+- id: b4.te-request
+  order: 308
+  chapterId: b4.band-3
+  situation: How people actually talk
+  title: Just do it, would you
+  canDo: Ask for something the short way, and hear how short is too short
+  wordIds:
+    - vocab.tsukamaeru
+    - vocab.terebi
+    - vocab.ayamaru
+    - vocab.kaeru-change
+    - vocab.tisshu
+    - vocab.mottekuru
+    - vocab.tsukeru
+  phraseIds:
+    - b4band3.get-him
+    - b4band3.please-turn-on-the-television
+    - b4band3.bring-me-the-tissues
+    - b4band3.ive-apologised-so-lay-off
+    - b4band3.dont-keep-changing-what-you-say
+  kanji: []
+  patternId: grammar.b4-te-request
+  grammarNote: "Take ください off 〜てください and the request still works. That is the whole form: a bare te-form, on its own, asking somebody to do something. テレビをつけて. ティッシュを持ってきて. そいつをつかまえて. Nothing has been added — something has been removed, and what it removes is the distance. Between family, between close friends, from an adult to a child, or in a moment with no time in it, this is what a request sounds like. To anyone outside that circle it is not casual, it is rude, and the difference is not softened by tone. It helps to see the whole ladder at once, from shortest to longest, because Japanese chooses along it constantly. て is bare. てよ is te-form plus the よ of lesson 2, and it presses — 謝ったんだから、さっきのはチャラにしてよ. That よ is the same one that tells you something you did not know, and pointed at a request it comes out as insistence, which is why てよ can sound petulant or childish where plain て does not. てくれる？ and てくれない？ come next: these are Book Two chapter 2's giving verbs turned into a question, and they are the everyday polite-but-casual middle of the ladder, the level most conversation between friends actually lives at. This chapter cards neither of them, because the corpus has no clean short example of either, and a described form with no card is the honest outcome rather than a composed one. Then てください, which you have had since Book One, and beyond it ていただけますか and its relatives, which the keigo chapters later in this book will teach. The negative side runs the same way. ないで on its own asks somebody not to do something — the same 〜ないで the first chapter of this book taught as an adverbial, doing a different job here. ないでくれ adds くれ, the plain imperative of くれる, and lands blunt: そんなにコロコロ、言う事を変えないでくれよ. In this corpus that form is male-coded, and like ぞ it is aimed sideways or downward, never up. Book Two's ないでください is the same request with the register put back in. Two details worth carrying. Rising intonation softens all of these — て said with the voice going up is a request, said flat it is closer to an instruction — and it is the cheapest politeness available in casual speech. And a bare て can also be a sentence that has simply stopped early, trailing off into an unspoken second half rather than asking for anything; when you are reading, the punctuation and the context are what tell you which, and this chapter had to leave one otherwise-good sentence uncarded for exactly that ambiguity."
+
+- id: b4.checkpoint-3
+  order: 309
+  chapterId: b4.band-3
+  situation: Integration & checkpoint
+  title: Chapter 4 checkpoint
+  canDo: Recognise everything this chapter taught
+  wordIds: []
+  phraseIds: []
+  kanji: []
+  checkpoint: recognition
+  grammarNote: "A wide pass over the chapter, and this one is mostly about pairs, because almost everything here has a look-alike that means something else. Start with the two that cost the most. Dictionary form plus な is the previous chapter's prohibitive, telling somebody to stop; anything else plus な — past tense, だ, an adjective — is this chapter's musing な, telling nobody anything. 始めるな and 始めたな differ by one kana and by their entire meaning. The second pair is one string with two tunes: sentence-final じゃない falling is a flat denial, and rising is an invitation to agree. Nothing on the page separates them, so what comes back is the sentence around them — a correction and a complaint fall, a shared observation rises. Then the ones that sort by job rather than by shape. よ hands over something new; ね hands over something shared; よね does both and only in that order. かな wonders about the world; っけ reaches for something you already knew and mislaid, which is why it arrives as だっけ and たっけ and not as るっけ. なんて holds a whole idea at arm's length; なんか hedges the noun in front of it — and 何か, which sounds identical, is the ordinary word for something and is not related to either. とか leaves a list open; と closes it. Two things here are recognition only, and the checkpoint treats them that way. ぞ, ぜ and わ tell you about the speaker, and what is being asked is whether you can hear that — not whether you would say it. Same for かしら. Everything else in the chapter is yours to use. Some of what comes back will hinge on something small: a じゃ that turns out to be では between two nouns rather than a negative, a って standing in for は rather than for と, a なんか sitting before a negative and coming out as anything but. Those are the places worth slowing down. Type the reading or the meaning rather than picking it out of a line-up. Anything you miss comes back sooner. It finishes when the remaining set empties; retry as often as you like, and nothing is recorded."

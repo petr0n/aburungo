@@ -52,6 +52,10 @@ import b3PurposePhrasesRaw from "./phrases/b3-07-purpose.yaml";
 import b3ObligationPhrasesRaw from "./phrases/b3-08-obligation.yaml";
 import b3ReferencePhrasesRaw from "./phrases/b3-09-reference.yaml";
 import b3RegisterPhrasesRaw from "./phrases/b3-10-register.yaml";
+import b4FinishingPhrasesRaw from "./phrases/b4-00-finishing.yaml";
+import b4MeaningPhrasesRaw from "./phrases/b4-01-meaning.yaml";
+import b4ReasonPhrasesRaw from "./phrases/b4-02-reason.yaml";
+import b4TalkPhrasesRaw from "./phrases/b4-03-talk.yaml";
 
 export const allPhrases: Phrase[] = [
   ...parsePhrases(transitRaw, "phrases/transit.yaml"),
@@ -95,6 +99,10 @@ export const allPhrases: Phrase[] = [
   ...parsePhrases(b3ObligationPhrasesRaw, "phrases/b3-08-obligation.yaml"),
   ...parsePhrases(b3ReferencePhrasesRaw, "phrases/b3-09-reference.yaml"),
   ...parsePhrases(b3RegisterPhrasesRaw, "phrases/b3-10-register.yaml"),
+  ...parsePhrases(b4FinishingPhrasesRaw, "phrases/b4-00-finishing.yaml"),
+  ...parsePhrases(b4MeaningPhrasesRaw, "phrases/b4-01-meaning.yaml"),
+  ...parsePhrases(b4ReasonPhrasesRaw, "phrases/b4-02-reason.yaml"),
+  ...parsePhrases(b4TalkPhrasesRaw, "phrases/b4-03-talk.yaml"),
 ];
 
 // parsePhrases only rejects duplicate ids within a single file, so the same id in

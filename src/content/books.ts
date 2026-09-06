@@ -7,8 +7,8 @@
  * book is one more instance here when its content exists.
  */
 import type { Book, UserTier } from "@/types";
-import { n5Lessons, b2Lessons, b3Lessons } from "@/content/lessons";
-import { n5Chapters, b2Chapters, b3Chapters } from "@/content/chapters";
+import { n5Lessons, b2Lessons, b3Lessons, b4Lessons } from "@/content/lessons";
+import { n5Chapters, b2Chapters, b3Chapters, b4Chapters } from "@/content/chapters";
 import { reachable } from "@/content/access";
 
 export const bookOne: Book = {
@@ -59,8 +59,18 @@ export const bookThree: Book = {
   stage: "reading",
 };
 
+export const bookFour: Book = {
+  id: "book-4",
+  progressKey: "book-4",
+  order: 4,
+  title: "Book Four",
+  chapters: b4Chapters,
+  lessons: b4Lessons,
+  stage: "reading",
+};
+
 /** Every book, in ladder order. */
-export const books: readonly Book[] = [bookOne, bookTwo, bookThree];
+export const books: readonly Book[] = [bookOne, bookTwo, bookThree, bookFour];
 
 /** The books before this one — whose items keep coming back for review. */
 export function priorBooks(book: Book): readonly Book[] {
