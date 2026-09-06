@@ -15,7 +15,7 @@ import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 import { render, screen, cleanup } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { MemoryRouter } from "react-router";
-import type { Kanji, ReviewState, Word } from "@/types";
+import type { Kanji, Phrase, ReviewState, Word } from "@/types";
 import { n5Lessons } from "@/content/lessons";
 import type { DailySession } from "@/srs/dailyLoop";
 
@@ -153,6 +153,23 @@ describe("ReviewStep with the difficulty shift", () => {
     await typeAnswer(user, "mizu");
 
     expect(recordRating).toHaveBeenCalledWith("vocab.mizu", "got-it", false);
+  });
+
+  it("shows a recognition-only phrase as a flip card, never a typed one", () => {
+    const kuchiwa = {
+      id: "band9.theres-a-place-called-kuchiwa-in-hiroshima",
+      japanese: "広島に口和というところがあります。",
+      reading: "ひろしまにくちわというところがあります。",
+      romaji: "hiroshima ni kuchiwa to iu tokoro ga arimasu.",
+      english: "There's a place called Kuchiwa in Hiroshima.",
+      jlpt: "N3",
+      scenario: "naming",
+      recognitionOnly: true,
+    } as Phrase;
+    render(<ReviewStep items={[kuchiwa]} shifted onDone={() => {}} />);
+
+    expect(screen.queryByRole("button", { name: "Check answer" })).toBeNull();
+    expect(screen.getByRole("button", { name: /Reveal/ })).toBeTruthy();
   });
 
   it("records a typed miss as 'didnt'", async () => {

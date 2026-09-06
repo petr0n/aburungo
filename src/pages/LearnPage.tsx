@@ -20,7 +20,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { Link } from "react-router";
 import type { Book, GrammarPattern, Kanji, Phrase, ReviewRating, Lesson, UserTier, Word } from "@/types";
-import { isGrammarPattern, isKanji } from "@/types";
+import { isGrammarPattern, isKanji, isWord } from "@/types";
 import { useAuth, useUserTier } from "@/store/auth";
 import { bookOne, books, currentBook, priorBooks } from "@/content/books";
 import { chapterLabel, placeInChapter } from "@/content/chapters";
@@ -214,7 +214,11 @@ export function ReviewStep({
     );
   }
 
-  if (shifted) {
+  // A phrase authored recognitionOnly is one the learner is never asked to type
+  // (too long, or a reading nothing settles). It falls through to the flip card
+  // here, exactly as produceItemsFor keeps it out of the produce step.
+  const typed = shifted && !(!isWord(current) && current.recognitionOnly === true);
+  if (typed) {
     return (
       <div className="flex w-full flex-col gap-4 py-4">
         <p className="text-body-sm text-fg-subtle">
