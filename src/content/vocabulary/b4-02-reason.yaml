@@ -100,7 +100,7 @@
   reading: しかた
   romaji: shikata
   english: way of doing something, method
-  notes: Sense 1 of three registered senses, and the one the sentence needs -- way, method, means. The pattern behind it is bigger than the word -- any ます-stem plus 方 makes a way-of-doing noun, so 送金の仕方 and 書き方 are built the same way. You will also meet it in the fixed 仕方がない, there is nothing to be done, where the noun has stopped meaning method at all. JMdict seq 1594110, sense 1.
+  notes: The only sense JMdict registers, and the one the sentence needs -- way, method, means. The pattern behind it is bigger than the word -- any ます-stem plus 方 makes a way-of-doing noun, so 送金の仕方 and 書き方 are built the same way. You will also meet it in the fixed 仕方がない, there is nothing to be done, where the noun has stopped meaning method at all. JMdict seq 1594110, sense 1.
 
 - id: vocab.ryuukou
   jlpt: N3
@@ -120,7 +120,7 @@
   reading: さいしん
   romaji: saishin
   english: newest, the latest
-  notes: 最 is the superlative prefix -- most, -est -- and it makes a small family worth expecting -- 最新 newest, 最初 first, 最後 last, 最近 recent. In front of a noun it takes の, 最新の流行, since JMdict marks it adj-no rather than a な-adjective. On no JLPT reference list in any source, and tagged at the level of the book it appears in. JMdict seq 1294090, sense 1.
+  notes: 最 is the superlative prefix -- most, -est -- and it makes a small family worth expecting -- 最新 newest, 最初 first, 最後 last, 最近 recent. In front of a noun it takes の, 最新の流行, since JMdict marks it adj-no rather than a な-adjective. JMdict seq 1294090, sense 1.
 
 # ── Lesson 2: Probably ────────────────────────────────────────────────────────
 
@@ -162,7 +162,7 @@
   reading: ふっかつ
   romaji: fukkatsu
   english: revival, comeback
-  notes: A thing that had gone coming back -- a fashion, a custom, a cancelled train service. 復活する is the verb. Sense 2 is resurrection, which is why 復活祭 is Easter. Both reference lists put it at N1, which says more about the lists than about the word -- it is ordinary newspaper vocabulary. JMdict seq 1500700, sense 1.
+  notes: A thing that had gone coming back -- a fashion, a custom, a cancelled train service. 復活する is the verb. Sense 2 is resurrection, which is why 復活祭 is Easter. It is ordinary newspaper vocabulary. JMdict seq 1500700, sense 1.
 
 - id: vocab.seifu
   jlpt: N3
@@ -182,7 +182,7 @@
   reading: きかん
   romaji: kikan
   english: agency, institution, organisation
-  notes: This is sense 2, not sense 1, and the breakdown asked the author to choose. Sense 1 is an engine -- 機関車 is a locomotive -- and it is the older meaning, but 政府機関 in this lesson's sentence is a government body, which is sense 2. Sense 3 is a system or a facility. Which one a sentence means is decided by the noun in front of it. JMdict seq 1220870, sense 2.
+  notes: This is sense 2, not sense 1. Sense 1 is an engine -- 機関車 is a locomotive -- and it is the older meaning, but 政府機関 in this lesson's sentence is a government body, which is sense 2. Sense 3 is a system or a facility. Which one a sentence means is decided by the noun in front of it. JMdict seq 1220870, sense 2.
 
 # ── Lesson 3: I hear that ─────────────────────────────────────────────────────
 
@@ -214,7 +214,7 @@
   reading: しんぶん
   romaji: shinbun
   english: newspaper
-  notes: The paper itself, not the news in it -- that is ニュース. 新聞によれば, according to the papers, is the shape this lesson meets it in and the standard way a Japanese sentence names where it heard something. Both reference lists put it at N5; no earlier book in this course happened to teach it. JMdict seq 1362360, sense 1.
+  notes: The paper itself, not the news in it -- that is ニュース. 新聞によれば, according to the papers, is the shape this lesson meets it in and the standard way a Japanese sentence names where it heard something. No earlier book in this course happened to teach it. JMdict seq 1362360, sense 1.
 
 - id: vocab.machi
   jlpt: N5
@@ -224,7 +224,7 @@
   reading: まち
   romaji: machi
   english: town, neighbourhood
-  notes: 町 and 街 are both read まち and are not quite the same word. 町 is the administrative and everyday one, a town or the block you live in; 街 leans towards the busy shopping streets of a city. Sense 1 is this one. The breakdown marked it N3, but both reference lists carry it at N5, so it is tagged there. JMdict seq 1603990, sense 1.
+  notes: 町 and 街 are both read まち and are not quite the same word. 町 is the administrative and everyday one, a town or the block you live in; 街 leans towards the busy shopping streets of a city. Sense 1 is this one. JMdict seq 1603990, sense 1.
 
 - id: vocab.honyaku
   jlpt: N4
@@ -319,7 +319,7 @@
   reading: きょくたん
   romaji: kyokutan
   english: extreme
-  notes: A な-adjective and a noun both -- 極端な例, an extreme example, and 極端に走る, to go to extremes. 極 on its own is a pole or an extremity, and it is the same character as 北極, the North Pole. Both reference lists put it at N1; it is common enough in ordinary argument that the tag is worth ignoring except by the coverage tooling that reads it. JMdict seq 1240380, sense 1.
+  notes: A な-adjective and a noun both -- 極端な例, an extreme example, and 極端に走る, to go to extremes. 極 on its own is a pole or an extremity, and it is the same character as 北極, the North Pole. It is common enough in ordinary argument. JMdict seq 1240380, sense 1.
 
 - id: vocab.kimi
   jlpt: N4
@@ -339,7 +339,7 @@
   reading: みずまし
   romaji: mizumashi
   english: watering down, padding (of a figure)
-  notes: 水 water plus the stem of 増す, to increase -- adding water to make more of it. Sense 2 is the same move applied to numbers, inflating a budget or a headcount, and that is the sense the newspapers use. 水増しする is the verb. On no reference list; tagged at the level of the writing it belongs to. JMdict seq 1371810, sense 1.
+  notes: 水 water plus the stem of 増す, to increase -- adding water to make more of it. Sense 2 is the same move applied to numbers, inflating a budget or a headcount, and that is the sense the newspapers use. 水増しする is the verb. JMdict seq 1371810, sense 1.
 
 - id: vocab.sonnani
   jlpt: N4
@@ -359,7 +359,7 @@
   reading: パブ
   romaji: pabu
   english: pub
-  notes: The borrowed word, used in Japan for a bar with table service rather than for anything English. 居酒屋 is the native equivalent and is the word you would actually be looking for. On no reference list, and tagged at the level of the chapter that carries it. JMdict seq 1102260, sense 1.
+  notes: The borrowed word, used in Japan for a bar with table service rather than for anything English. 居酒屋 is the native equivalent and is the word you would actually be looking for. JMdict seq 1102260, sense 1.
 
 - id: vocab.usutaasoosu
   jlpt: N3
@@ -381,7 +381,7 @@
   reading: すいたい
   romaji: suitai
   english: decline, decay
-  notes: A long slide downwards -- an industry, an empire, a language. 衰退する is the verb. It belongs to writing and to commentary rather than to speech, where 元気がない or だめになる do the everyday work. On no reference list; tagged at the level of the register it lives in. JMdict seq 1372550, sense 1.
+  notes: A long slide downwards -- an industry, an empire, a language. 衰退する is the verb. It belongs to writing and to commentary rather than to speech, where 元気がない or だめになる do the everyday work. JMdict seq 1372550, sense 1.
 
 - id: vocab.masutaa
   jlpt: N3
@@ -392,7 +392,7 @@
   reading: マスター
   romaji: masutaa
   english: to master (a skill)
-  notes: JMdict's sense 1 is the verb, マスターする, which is the sense this lesson's sentence uses and the one the breakdown asked the author to pick. The noun senses that follow are a different word in practice -- sense 2, the proprietor of a bar or a coffee shop, is the マスター you will actually be introduced to in Japan. Both are written the same and only the sentence sorts them. JMdict seq 1127970, sense 1.
+  notes: JMdict's sense 1 is the verb, マスターする, which is the sense this lesson's sentence uses. The noun senses that follow are a different word in practice -- sense 2, the proprietor of a bar or a coffee shop, is the マスター you will actually be introduced to in Japan. Both are written the same and only the sentence sorts them. JMdict seq 1127970, sense 1.
 
 - id: vocab.soitsu
   jlpt: N3
@@ -402,7 +402,7 @@
   reading: そいつ
   romaji: soitsu
   english: that one, that thing (blunt)
-  notes: The sentence in this lesson uses sense 2, that thing, pointing back at an idea rather than at a person -- the breakdown named sense 1. Sense 1 is a person, that guy, and JMdict tags it derogatory as well as familiar. That is a tendency worth respecting -- aimed at a person it is rude in most rooms, aimed at an object it is merely blunt. こいつ and あいつ are the other two, on the same こ/そ/あ rule as これ. JMdict seq 1006600, sense 2.
+  notes: The sentence in this lesson uses sense 2, that thing, pointing back at an idea rather than at a person. Sense 1 is a person, that guy, and JMdict tags it derogatory as well as familiar. That is a tendency worth respecting -- aimed at a person it is rude in most rooms, aimed at an object it is merely blunt. こいつ and あいつ are the other two, on the same こ/そ/あ rule as これ. JMdict seq 1006600, sense 2.
 
 - id: vocab.retorikku
   jlpt: N2
@@ -412,7 +412,7 @@
   reading: レトリック
   romaji: retorikku
   english: rhetoric
-  notes: The borrowed word, used for the art of persuasion and, as in this lesson's sentence, for language that is doing more persuading than reporting. The native equivalent is 修辞 or 修辞学, which is rarer than the loanword. On no reference list, and tagged at the level of the writing it belongs to. JMdict seq 1145640, sense 1.
+  notes: The borrowed word, used for the art of persuasion and, as in this lesson's sentence, for language that is doing more persuading than reporting. The native equivalent is 修辞 or 修辞学, which is rarer than the loanword. JMdict seq 1145640, sense 1.
 
 - id: vocab.iwayuru
   jlpt: N3
@@ -422,4 +422,4 @@
   reading: いわゆる
   romaji: iwayuru
   english: so-called, what people call
-  notes: It goes straight in front of a noun and never anywhere else -- いわゆる天ぷら, the thing people call tempura. JMdict tags it adj-pn, a word that only ever attaches to a noun, and this app's word types have no slot for that, so it is filed as a noun the way pronouns are; it is neither. The characters are 所謂 and you will meet those in print, but the kana form is the common one. JMdict seq 1343150, sense 1.
+  notes: It goes straight in front of a noun and never anywhere else -- いわゆる天ぷら, the thing people call tempura. JMdict tags it adj-pn, a word that only ever attaches to a noun. The characters are 所謂 and you will meet those in print, but the kana form is the common one. JMdict seq 1343150, sense 1.

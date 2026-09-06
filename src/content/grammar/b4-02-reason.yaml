@@ -30,7 +30,7 @@
 #   spoken-register chapter.
 #
 #   ～そうだ flags 77 and is tagged twice, by lessons 3 and 4 both, because
-#   hearsay そうだ and appearance そうだ are the same four kana and only what
+#   hearsay そうだ and appearance そうだ are the same three kana and only what
 #   stands in front of them tells the two apart. The tagger cannot see that,
 #   and neither can a reader who has not been taught it -- which is the whole
 #   reason the two lessons exist and why the collision is left standing rather
@@ -90,7 +90,7 @@
 - id: grammar.b4-souda-appearance
   jlpt: N3
   pattern: "～そうだ"
-  gloss: It looks like it. The same four kana as the hearsay ending, on a stem rather than a clause -- a verb's ます-stem, 降りそうだ, or an adjective with its ending removed, 簡単そう, 面白そう. いい gives よさそう and ない gives なさそう. Then it inflects like a な-adjective -- そうな before a noun, そうに before a verb.
+  gloss: It looks like it. The same three kana as the hearsay ending, on a stem rather than a clause -- a verb's ます-stem, 降りそうだ, or an adjective with its ending removed, 簡単そう, 面白そう. いい gives よさそう and ない gives なさそう. Then it inflects like a な-adjective -- そうな before a noun, そうに before a verb.
   phraseId: b4band2.it-looks-like-rain-soon
   blank: ふりそうだ
 
@@ -104,6 +104,6 @@
 - id: grammar.b4-monoda
   jlpt: N3
   pattern: "～ものだ"
-  gloss: That is how it is. After a plain non-past it states what is in the nature of a thing, and ものではない says what is not; after a past verb it is a memory, I used to; with たい it is a wish held at a distance. というものだ names what something amounts to. A noun plus の plus ものだ is the ordinary noun instead.
+  gloss: That is how it is. After a plain non-past it states what is in the nature of a thing, and ものではない says what is not; after a past verb it is usually a memory, I used to; with たい it is a wish held at a distance. というものだ names what something amounts to. A noun plus の plus ものだ is the ordinary noun instead.
   phraseId: b4band2.i-used-to-go-to-miami-every-summer
   blank: いったものだ

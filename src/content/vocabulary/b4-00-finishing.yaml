@@ -172,7 +172,7 @@
   reading: あらかじめ
   romaji: arakajime
   english: beforehand, in advance
-  notes: JMdict's headword is 予め and marks it usually kana, which is why the card is kana. It is the adverb that says out loud what 〜ておく says with grammar, which is why the two turn up in the same sentence so often. Slightly formal; 前もって is the everyday twin and 事前に the one on forms. The N1 tag is what the reference lists say, not a claim about difficulty -- see the note at the top of this file. JMdict seq 1542860, sense 1.
+  notes: JMdict's headword is 予め and marks it usually kana, which is why the card is kana. It is the adverb that says out loud what 〜ておく says with grammar, which is why the two turn up in the same sentence so often. Slightly formal; 前もって is the everyday twin and 事前に the one on forms. JMdict seq 1542860, sense 1.
 
 # ── Lesson 3: Give it a try ───────────────────────────────────────────────────
 
@@ -293,7 +293,7 @@
   reading: ちかづく
   romaji: chikazuku
   english: to approach, to draw near
-  notes: Both in space and in time -- a person walking over, and a date coming up, which is what this lesson's sentence uses it for. Also written 近付く. Godan, intransitive; the transitive partner is 近づける. The N1 tag is the reference lists' doing, not a claim about the word -- see the note at the top of this file. JMdict seq 1242170, sense 1.
+  notes: Both in space and in time -- a person walking over, and a date coming up, which is what this lesson's sentence uses it for. Also written 近付く. Godan, intransitive; the transitive partner is 近づける. JMdict seq 1242170, sense 1.
 
 - id: vocab.heru
   jlpt: N3
@@ -367,7 +367,7 @@
   reading: スピード
   romaji: supiido
   english: speed
-  notes: Used of vehicles and of processes, and most often in スピードを出す, to put on speed, which is what this lesson's sentence turns into a noun. 速さ is the neutral native word and 速度 the technical one. The N1 tag comes from the reference lists, which carry this word on no other sheet -- see the note at the top of this file. JMdict seq 1072310, sense 1.
+  notes: Used of vehicles and of processes, and most often in スピードを出す, to put on speed, which is what this lesson's sentence turns into a noun. 速さ is the neutral native word and 速度 the technical one. JMdict seq 1072310, sense 1.
 
 - id: vocab.suupu
   jlpt: N3
@@ -387,7 +387,7 @@
   reading: どうやら
   romaji: douyara
   english: apparently, it seems
-  notes: It goes at the front of a sentence and flags that what follows is a guess rather than a fact, so it pairs with the hedges Book Three taught -- どうやら〜みたいだ, どうやら〜らしい. Leaving the hedge off and using どうやら alone happens, but the pair is what you will meet. The N1 tag is the reference lists' -- see the note at the top of this file. JMdict seq 1009020, sense 1.
+  notes: It goes at the front of a sentence and flags that what follows is a guess rather than a fact, so it pairs with the hedges Book Three taught -- どうやら〜みたいだ, どうやら〜らしい. Leaving the hedge off and using どうやら alone happens, but the pair is what you will meet. JMdict seq 1009020, sense 1.
 
 # ── Lesson 7: Left as it was ──────────────────────────────────────────────────
 
@@ -451,7 +451,7 @@
   reading: にどと
   romaji: nidoto
   english: never again
-  notes: JMdict flags the thing that trips people up -- it is used with a verb in the negative, and the negative is where the "never" lives. 二度と戻らなかった is never came back; 二度と戻った is not a sentence. So read 二度と as a signal that a negative is coming. It is on none of the reference JLPT lists, so its level here is a judgement rather than a citation. JMdict seq 2110850, sense 1.
+  notes: JMdict flags the thing that trips people up -- it is used with a verb in the negative, and the negative is where the "never" lives. 二度と戻らなかった is never came back; 二度と戻った is not a sentence. So read 二度と as a signal that a negative is coming. JMdict seq 2110850, sense 1.
 
 # ── Lesson 8: Without ─────────────────────────────────────────────────────────
 
@@ -495,7 +495,7 @@
   reading: おくりかえす
   romaji: okurikaesu
   english: to send back
-  notes: 送る plus 返す, both of which you already have, joined the way Japanese joins verbs -- the ます-stem of the first, then the second carrying all the conjugation. So it is 送り返した, 送り返します, and the stem 送り never changes. On no reference JLPT list, so the level here is a judgement rather than a citation. JMdict seq 1402710, sense 1.
+  notes: 送る plus 返す, both of which you already have, joined the way Japanese joins verbs -- the ます-stem of the first, then the second carrying all the conjugation. So it is 送り返した, 送り返します, and the stem 送り never changes. JMdict seq 1402710, sense 1.
 
 - id: vocab.oyu
   jlpt: N4
@@ -505,4 +505,4 @@
   reading: おゆ
   romaji: oyu
   english: hot water
-  notes: A separate word from 水 みず, which in Japanese means cold water and only cold water -- there is no "water" that covers both, so asking for 水 in winter gets you exactly that. The お is not optional politeness here; 湯 alone is used, but お湯 is what people say. It also means a hot bath. The reference lists carry 湯 ゆ at N4 rather than お湯, which is where this level comes from. JMdict seq 1002510, sense 1.
+  notes: A separate word from 水 みず, which in Japanese is water of the cool kind by default -- ask for 水 in winter and that is still what arrives, so asking for 水 in winter gets you exactly that. The お is not optional politeness here; 湯 alone is used, but お湯 is what people say. It also means a hot bath. JMdict seq 1002510, sense 1.

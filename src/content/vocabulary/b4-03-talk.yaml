@@ -46,7 +46,7 @@
 #     it is already taught: vocab.hou, Book Two chapter 9, "side, the one of
 #     two", cited there with the same 1516930. The breakdown asked the author
 #     to pick a sense for it; the right answer was that it needed no card at
-#     all. Three of this chapter's sentences use it and pull vocab.hou instead.
+#     all. Two of this chapter's sentences use it and pull vocab.hou instead.
 #
 # ---------------------------------------------------------------------------
 # JLPT TAGS, and why they do not all say N3. b3-09-reference.yaml records the
@@ -88,15 +88,15 @@
 #   買い替える 2012810 -- verified (かいかえる, "to buy a replacement"), but
 #     JMdict does not flag it common, and its sentence glosses it in place. It
 #     is glossed in that card's note instead of taking a card.
-#   王冠, 用品, 面会, 突き進む, 大食らい, ネット, 車酔い, パン粉, お返し,
-#     しゃぶる, しくじる, グレープフルーツ -- all verified and all glossed in
+#   王冠, 用品, 面会, 突き進む, 大食らい, ネット, 車酔い, お返し,
+#     しゃぶる, しくじる -- all verified and all glossed in
 #     their card's note rather than carded, because each is a concrete noun or
 #     a one-off verb whose sentence's English already says what it means.
 #
 # Words in this chapter's cards that stay untaught and are glossed in a note:
 # きつい, 瓜二つ, 我ながら, ぼけっと, まる一日, 微積分, チャラ, コロコロ, 式,
 # コーンフレーク, プログラミング, バスタブ, エンディング, ウオーミングアップ,
-# ロス, ムスタング, マルコーニ. The chapter reviews the ending on the sentence,
+# ロス, マルコーニ. The chapter reviews the ending on the sentence,
 # not the nouns around it.
 #
 # One id needed disambiguating. 変える is かえる, and vocab.kaeru is already
@@ -154,7 +154,7 @@
   reading: しご
   romaji: shigo
   english: a word nobody says anymore; a dead language
-  notes: "JMdict seq 1310840, and the sense in this chapter's card is the second one -- an obsolete word, a piece of slang that has aged out. Sense 1 is a dead language in the linguist's sense, Latin or Sumerian. The characters are literally \"dead word\", and the word is on no JLPT reference list at any level; it is here because the sentence it sits in is one of the cleanest falling じゃない in the corpus."
+  notes: "JMdict seq 1310840, and the sense in this chapter's card is the second one -- an obsolete word, a piece of slang that has aged out. Sense 1 is a dead language in the linguist's sense, Latin or Sumerian. The characters are literally \"dead word\", and it is here because the sentence it sits in is one of the cleanest falling じゃない in the corpus."
 
 - id: vocab.tesaki
   jlpt: N3
@@ -176,7 +176,7 @@
   reading: とく
   romaji: toku
   english: a good deal; profitable
-  notes: "JMdict seq 1454490, sense 1, tagged adj-na and n both -- so it is 得な買い物 as an adjective and お得です as a predicate. お得 with the polite お in front is what a shop sign says. Not the verb 得る, and not the とく of Book Four chapter 1's ておく contraction, which is a different thing wearing the same two kana. The reference lists carry several とく words -- 解く, 溶く, 説く -- and none of them is this one, so its tag is the chapter's band."
+  notes: "JMdict seq 1454490, sense 1, tagged adj-na and n both -- so it is 得な買い物 as an adjective and お得です as a predicate. お得 with the polite お in front is what a shop sign says. Not the verb 得る, and not the とく of Book Four chapter 1's ておく contraction, which is a different thing wearing the same two kana. Several other verbs read とく -- 解く, 溶く, 説く -- and none of them is this one."
 
 - id: vocab.jimetsu
   jlpt: N3
@@ -196,7 +196,7 @@
   reading: ウエスト
   romaji: uesuto
   english: waist; waistline
-  notes: "JMdict seq 1026070, sense 1. From English \"waist\", and it means the measurement or the waistband of a garment rather than the part of the body -- for the body, 腰 is the word. ウェスト is the same word spelt with the small ェ and is equally ordinary."
+  notes: "JMdict seq 1026070, sense 1. From English \"waist\", and it means the measurement or the waistband of a garment, and also the body's waist when the talk is of figure or fit; 腰 is the lower back and hips, nearby but not the same part. ウェスト is the same word spelt with the small ェ and is equally ordinary."
 
 - id: vocab.jirettai
   jlpt: N3
@@ -230,7 +230,7 @@
   reading: きにいる
   romaji: ki ni iru
   english: to like; to take a liking to
-  notes: "JMdict seq 1221740, one sense, tagged as an expression that conjugates -- 入る is godan, so 気に入らない, 気に入った, 気に入っています. Three words fused into one verb, and the fusion is why it takes を on what you like rather than が: this is not 好き. Literally \"it enters my 気\", the same 気 as 元気 and 天気."
+  notes: "JMdict seq 1221740, one sense, tagged as an expression that conjugates -- 入る is godan, so 気に入らない, 気に入った, 気に入っています. Three words fused into one verb, and the thing you like takes が, exactly as with 好き -- 僕はエンディングが気に入らなかった. Literally \"it enters my 気\", the same 気 as 元気 and 天気."
 
 - id: vocab.futago
   jlpt: N3
@@ -260,7 +260,7 @@
   reading: つき
   romaji: tsuki
   english: with; including (attached to a noun)
-  notes: "JMdict seq 1583630, sense 1, and it works as a suffix rather than a free noun -- バスタブ付き, a room with a bathtub; 朝食付き, with breakfast; 保証付き, with a guarantee. From 付く, to be attached. The reference lists disagree about where it belongs (open-anki has ～付 at N2, Tanos has 付き at N1) and neither is the everyday suffix at N3, so the tag here follows open-anki. Do not read it as 月 つき, the moon, which is a different word spelt differently."
+  notes: "JMdict seq 1583630, sense 1, and it works as a suffix rather than a free noun -- バスタブ付き, a room with a bathtub; 朝食付き, with breakfast; 保証付き, with a guarantee. From 付く, to be attached. Do not read it as 月 つき, the moon, which is a different word spelt differently."
 
 - id: vocab.boku
   jlpt: N4
@@ -322,7 +322,7 @@
   reading: サンドイッチ
   romaji: sandoicchi
   english: a sandwich
-  notes: "JMdict seq 1058580, sense 1. The small ッ before チ is the double consonant, so it is four beats plus the pause, sa-n-do-i-cchi. サンドウィッチ is the same word."
+  notes: "JMdict seq 1058580, sense 1. The small ッ before チ is the double consonant, so it is five beats plus the pause, six in all, sa-n-do-i-cchi. サンドウィッチ is the same word."
 
 # ── Lesson 5 · Things like that ──────────────────────────────────────────────
 
@@ -374,7 +374,7 @@
   reading: おろか
   romaji: oroka
   english: foolish; silly
-  notes: "JMdict seq 1245100, one sense, a な-adjective. Both reference lists put it at N1, and it is here only because this chapter's なんて sentence uses it of the speaker's own behaviour -- 愚かだ about yourself is rueful rather than harsh. Aimed at somebody else it is a real insult; ばか is the everyday word and this one is written and formal."
+  notes: "JMdict seq 1245100, one sense, a な-adjective. It is here only because this chapter's なんて sentence uses it of the speaker's own behaviour -- 愚かだ about yourself is rueful rather than harsh. Aimed at somebody else it is a real insult; ばか is the everyday word and this one is written and formal."
 
 - id: vocab.hen
   jlpt: N5
@@ -384,7 +384,7 @@
   reading: へん
   romaji: hen
   english: strange; odd
-  notes: "JMdict seq 1510640, sense 1, the な-adjective -- 変な人, a strange person; 変です, that is odd. The same character is a noun meaning change (senses 3 and 4), and it is the 変 of 大変, which you have had since Book One, where the \"change\" sense is the historical one. Both reference lists carry it at N5 and this app has never taught it; the card exists because this chapter's なんか sentence uses it and nothing earlier did."
+  notes: "JMdict seq 1510640, sense 1, the な-adjective -- 変な人, a strange person; 変です, that is odd. The same character is a noun meaning change (senses 3 and 4), and it is the 変 of 大変, which you have had since Book One, where the \"change\" sense is the historical one. The card exists because this chapter's なんか sentence uses it and nothing earlier did."
 
 # ── Lesson 6 · And so on ─────────────────────────────────────────────────────
 
@@ -416,7 +416,7 @@
   reading: おや
   romaji: oya
   english: a parent; parents
-  notes: "JMdict seq 1365040, sense 1. Singular and plural at once, like 両親 without the \"both\" -- 親 covers one parent or the pair. It is the character in 両親, which you have had since Book One's family chapter, and this is the character standing alone as its own word. Both reference lists put it at N4, not the N3 the chapter's breakdown assumed. Careful with the identical-looking おや that opens a sentence, 「おや、…」 -- that is an interjection, \"oh\", a different entry entirely."
+  notes: "JMdict seq 1365040, sense 1. Singular and plural at once, like 両親 without the \"both\" -- 親 covers one parent or the pair. It is the character in 両親, which you have had since Book One's family chapter, and this is the character standing alone as its own word. Careful with the identical-looking おや that opens a sentence, 「おや、…」 -- that is an interjection, \"oh\", a different entry entirely."
 
 - id: vocab.mendou
   jlpt: N3
@@ -511,7 +511,7 @@
   reading: テレビ
   romaji: terebi
   english: a television; TV
-  notes: "JMdict seq 1080510, sense 1, an abbreviation of テレビジョン. Sense 2 is the programme rather than the set. Both reference lists carry it at N5 and this app had not taught it; it arrives here because a request card needed something ordinary to ask for."
+  notes: "JMdict seq 1080510, sense 1, an abbreviation of テレビジョン. Sense 2 is the programme rather than the set. It arrives here because a request card needed something ordinary to ask for."
 
 - id: vocab.ayamaru
   jlpt: N4

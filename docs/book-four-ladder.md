@@ -165,7 +165,7 @@ never reads it.
 | 出す | だす | to take out, to hand in |
 
 - このサイズは私には大きすぎます。 — This size is too large for me.
-- どうやら食べ過ぎたみたいだ。 — It looks like I've eaten too much.
+- コショウを入れすぎたね。 — You put far too much pepper in it.
 - このスープは、しょっぱ過ぎて飲めないよ。 — This soup is too salty to drink.
 - スピードの出し過ぎは危険です。 — Driving too fast is dangerous.
 - このドライバーは小さすぎて役に立たない。 — This screwdriver is too small to be any use.
@@ -465,7 +465,7 @@ never reads it.
 
 **Lesson 4 of 6** · Why you're saying it
 **Can do:** Say how something looks about to turn out
-**Grammar:** `～そうだ` — It looks like it. The same four kana as the hearsay ending, on a stem rather than a clause -- a verb's ます-stem, 降りそうだ, or an adjective with its ending removed, 簡単そう, 面白そう. いい gives よさそう and ない gives なさそう. Then it inflects like a な-adjective -- そうな before a noun, そうに before a verb.
+**Grammar:** `～そうだ` — It looks like it. The same three kana as the hearsay ending, on a stem rather than a clause -- a verb's ます-stem, 降りそうだ, or an adjective with its ending removed, 簡単そう, 面白そう. いい gives よさそう and ない gives なさそう. Then it inflects like a な-adjective -- そうな before a noun, そうに before a verb.
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -477,7 +477,7 @@ never reads it.
 | あたり | あたり | the area around, the vicinity |
 | 降る | ふる | to fall (of rain or snow) |
 
-- まもなく雨が降りそうだ。 — It is going to rain soon.
+- まもなく雨が降りそうだ。 — It looks like it's going to rain soon.
 - この問題は一見簡単そうだが実は難しい。 — This problem seems to be easy on the surface, but it's really difficult.
 - このネクタイにしましょう、一番よさそうだから。 — I will take this tie, as it seems to be the best.
 - 彼は不安そうにあたりをきょときょと見回した。 — He looked around uneasily.
@@ -501,14 +501,14 @@ never reads it.
 - あのパブではビールを水増ししているのではないか。 — I suspect they water down the beer in that pub.
 - ウスターソースがいいんじゃない？ — Wouldn't Worcester sauce be good?
 - 君の言うことは極端じゃないか。 — Isn't what you're saying a bit extreme?
-- このテーブルを頼んだのではない。 — I didn't order this table.
+- このテーブルを頼んだのではない。 — It's not this table that I ordered.
 - そんなにがつがつ食べるんじゃないよ。 — Don't eat like a pig.
 
 ### 299. That's just how it is
 
 **Lesson 6 of 6** · Why you're saying it
 **Can do:** State a general truth, or recall how things used to be
-**Grammar:** `～ものだ` — That is how it is. After a plain non-past it states what is in the nature of a thing, and ものではない says what is not; after a past verb it is a memory, I used to; with たい it is a wish held at a distance. というものだ names what something amounts to. A noun plus の plus ものだ is the ordinary noun instead.
+**Grammar:** `～ものだ` — That is how it is. After a plain non-past it states what is in the nature of a thing, and ものではない says what is not; after a past verb it is usually a memory, I used to; with たい it is a wish held at a distance. というものだ names what something amounts to. A noun plus の plus ものだ is the ordinary noun instead.
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -584,7 +584,7 @@ never reads it.
 
 **Lesson 3 of 8** · How people actually talk
 **Can do:** Recognise a remark made half to oneself, and the って that marks its topic
-**Grammar:** `～な。` — A remark made half to oneself -- reflection, mild emphasis, or a wish in いいな. It follows a past verb, a plain adjective or だ, never a bare dictionary form; that slot belongs to the prohibitive な of the previous chapter. In assertive use it reads male in this corpus, though いいな and だな are said by anyone.
+**Grammar:** `～な。` — A remark made half to oneself -- reflection, mild emphasis, or a wish in いいな. It follows a past verb, a plain adjective or だ, and after a bare dictionary form it shares the slot with chapter 2's prohibitive な -- 思うな is either I reckon or don't think. In assertive use it reads male in this corpus, though いいな and だな are said by anyone.
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -695,7 +695,7 @@ never reads it.
 
 **Lesson 8 of 8** · How people actually talk
 **Can do:** Ask for something the short way, and hear how short is too short
-**Grammar:** `～て。` — A request with ください taken off. A bare te-form asks between intimates; てよ presses; ないで asks somebody not to, and ないでくれ says the same thing bluntly. The ladder runs て, てよ, てくれる？, てください, and ends at ていただけますか, which is the keigo chapters' business.
+**Grammar:** `～て。` — A request with ください taken off. A bare te-form asks between intimates; てよ presses; ないで asks somebody not to, and ないでくれ says the same thing bluntly. The ladder runs て and てよ together at the bottom -- てよ presses rather than softens -- then てくれる？, てください, and ends at ていただけますか, which is the keigo chapters' business.
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -715,4 +715,4 @@ never reads it.
 
 ### 309. Recognition checkpoint — closes the chapter
 
-> A wide pass over the chapter, and this one is mostly about pairs, because almost everything here has a look-alike that means something else. Start with the two that cost the most. Dictionary form plus な is the previous chapter's prohibitive, telling somebody to stop; anything else plus な — past tense, だ, an adjective — is this chapter's musing な, telling nobody anything. 始めるな and 始めたな differ by one kana and by their entire meaning. The second pair is one string with two tunes: sentence-final じゃない falling is a flat denial, and rising is an invitation to agree. Nothing on the page separates them, so what comes back is the sentence around them — a correction and a complaint fall, a shared observation rises. Then the ones that sort by job rather than by shape. よ hands over something new; ね hands over something shared; よね does both and only in that order. かな wonders about the world; っけ reaches for something you already knew and mislaid, which is why it arrives as だっけ and たっけ and not as るっけ. なんて holds a whole idea at arm's length; なんか hedges the noun in front of it — and 何か, which sounds identical, is the ordinary word for something and is not related to either. とか leaves a list open; と closes it. Two things here are recognition only, and the checkpoint treats them that way. ぞ, ぜ and わ tell you about the speaker, and what is being asked is whether you can hear that — not whether you would say it. Same for かしら. Everything else in the chapter is yours to use. Some of what comes back will hinge on something small: a じゃ that turns out to be では between two nouns rather than a negative, a って standing in for は rather than for と, a なんか sitting before a negative and coming out as anything but. Those are the places worth slowing down. Type the reading or the meaning rather than picking it out of a line-up. Anything you miss comes back sooner. It finishes when the remaining set empties; retry as often as you like, and nothing is recorded.
+> A wide pass over the chapter, and this one is mostly about pairs, because almost everything here has a look-alike that means something else. Start with the two that cost the most. Anything but a plain non-past in front of な — past tense, だ, an adjective — is this chapter's musing な and cannot be chapter 2's prohibitive. A dictionary form in front is the ambiguous one: 思うな is I reckon or don't think, and only intonation and who the verb is aimed at will tell you. 始めるな and 始めたな differ by one kana and by their entire meaning. The second pair is one string with two tunes: sentence-final じゃない falling is a flat denial, and rising is an invitation to agree. Nothing on the page separates them, so what comes back is the sentence around them — a correction and a complaint fall, a shared observation rises. Then the ones that sort by job rather than by shape. よ hands over something new; ね hands over something shared; よね does both and only in that order. かな wonders about the world; っけ reaches for something you already knew and mislaid, which is why it arrives as だっけ and たっけ and not as るっけ. なんて holds a whole idea at arm's length; なんか hedges the noun in front of it — and 何か, which sounds identical, is the ordinary word for something and is not related to either. とか leaves a list open; と closes it. Two things here are recognition only, and the checkpoint treats them that way. ぞ, ぜ and わ tell you about the speaker, and what is being asked is whether you can hear that — not whether you would say it. Same for かしら. Everything else in the chapter is yours to use. Some of what comes back will hinge on something small: a じゃ that turns out to be では between two nouns rather than a negative, a って standing in for は rather than for と, a なんか sitting before a negative and coming out as anything but. Those are the places worth slowing down. Type the reading or the meaning rather than picking it out of a line-up. Anything you miss comes back sooner. It finishes when the remaining set empties; retry as often as you like, and nothing is recorded.

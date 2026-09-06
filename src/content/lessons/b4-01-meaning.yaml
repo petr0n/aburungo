@@ -51,8 +51,8 @@
 #
 #   Book Two's と思います is in its quoted-speech chapter, not Book Three's.
 #
-# The `kanji:` arrays are empty on every lesson here, as they are in every Book
-# Three and Book Four file so far. The characters these thirty-six words bring
+# The `kanji:` arrays are empty on every lesson here, as they are in most Book
+# Three and Book Four files so far. The characters these thirty-six words bring
 # -- 忍 参 加 勧 焼 済 盗 捕 無 駄 考 現 実 触 他 寄 迷 全 隠 新 性 起 誰 among
 # them -- are the wiring pass's to place, and placing them from inside a content
 # file would collide with the pass that owns the ordering.
