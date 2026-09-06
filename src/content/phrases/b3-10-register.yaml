@@ -1,6 +1,6 @@
 # Book Three, chapter 11 phrases -- register and the written voice.
 #
-# Thirty-four sentences, and not one of them is ours. 04-stage-reading.md
+# Thirty-three sentences, and not one of them is ours. 04-stage-reading.md
 # section 8 withdraws the training-canonical exemption at the reading stage and
 # above, in those words -- "no training-canonical sentences at the reading stage
 # and above". So every sentence below is a verbatim Tatoeba pair carried out of
@@ -30,21 +30,29 @@
 # Three things quoting rather than composing cost this chapter:
 #
 #   The imbalance below is the corpus's, not a choice. である has 761 raw hits,
-#   において 50 (47 genuine), つつ 36 (25 genuine) and ゆえ 6 in kana. All six
-#   ゆえ sentences are cards here, because six is all there is.
+#   において 50 (47 genuine), つつ 36 (25 genuine) and ゆえ 6 in kana. Five of
+#   the six ゆえ sentences are cards here -- six is all there is, and the sixth
+#   belongs to another chapter (see the next paragraph).
 #
 #   Four cards carry `recognitionOnly: true`, every one because its kana
 #   reading runs past Book Two's longest typed answer -- 41 kana,
 #   quote.my-friend-said-that-shop-is-famous-but-i-wont-go -- not because the
 #   grammar is beyond the learner. Their readings run 48, 53, 68 and 70.
 #
-#   #191565 and #204782 both end in shapes no lesson in this course has taught
-#   (ということもあります is ordinary, but だろう is not taught anywhere). Each
-#   card's own `notes` says so in one line rather than leaving it unglossed.
+#   Two sentences this chapter would otherwise have carded belong to the
+#   obligation chapter, which teaches the patterns they turn on and cards them
+#   there. #232346 (あなたはもっと理性的であるべきだ) is a べき sentence and
+#   #204782 (それゆえここにとどまらざるを得ないだろう) is a ざるを得ない one.
+#   Neither is carded here. #232346's job in the copula lesson -- showing that
+#   a noun needs である in front of べき, because べき wants a verb -- is made in
+#   that lesson's grammarNote in English instead, and #227976 carries the
+#   paradigm cell it was displaced from. #204782 was the corpus's only それゆえ
+#   without a following に; the ゆえ lesson names that variant in English, and
+#   #184184 carries それゆえに.
 #
 # ---------------------------------------------------------------------------
 # GLOSS DEPARTURES. The English is Tatoeba's own wherever Tatoeba's own would
-# do. Seven of the thirty-four depart from it. Every one is listed here by id so
+# do. Seven of the thirty-three depart from it. Every one is listed here by id so
 # a reviewer can diff this list against the corpus rather than take it on
 # trust. Every Japanese string is untouched.
 #
@@ -124,7 +132,7 @@
 #   Applications 3.6.2 (server/data/jmdict-examples-eng-3.6.2.json). Every
 #   phrase carries its sentence id in `tatoebaId`; the id is quoted, because
 #   YAML reads a bare 236127 as a number and the schema rejects it. Verified by
-#   id against the corpus on 2026-09-05 -- all 34 resolve and every Japanese
+#   id against the corpus on 2026-09-05 -- all 33 resolve and every Japanese
 #   string below matches its source character for character. Kana readings and
 #   romaji are transcriptions of the quoted sentence, not new content; every
 #   compound whose reading was not already obvious was checked against JMdict
@@ -133,7 +141,7 @@
 #   1375980, 完全 かんぜん 1211510, 球体 きゅうたい 1230000, 大陸 たいりく
 #   1415150, 工業製品 こうぎょうせいひん 1935000, 食料 しょくりょう 1358670,
 #   農作物 のうさくぶつ 1827050, 自動車 じどうしゃ 1318400, 必需品 ひつじゅひん
-#   1487500, 贅沢品 ぜいたくひん 1573160, 理性的 りせいてき 1795780, 伝統
+#   1487500, 贅沢品 ぜいたくひん 1573160, 秀才 しゅうさい 1332630, 伝統
 #   でんとう 1442260, 消滅 しょうめつ 1350380, 大気 たいき 1413330, 汚染 おせん
 #   1179040, 国際 こくさい 1286400, 情勢 じょうせい 1356320, 重大 じゅうだい
 #   1336500, 回復 かいふく 1199720, 導入 どうにゅう 1453790, 経つ たつ 1251100,
@@ -269,15 +277,15 @@
   tatoebaId: "230257"
   notes: であり joining to a negative this time. What follows であり does not have to be another である -- here it is ではない, and the two halves are is and is not.
 
-- id: band10.you-should-be-more-reasonable
+- id: band10.edison-was-not-a-bright-student
   jlpt: N3
   scenario: register
-  japanese: あなたはもっと理性的であるべきだ。
-  reading: あなたはもっとりせいてきであるべきだ。
-  romaji: anata wa motto riseiteki de aru beki da.
-  english: You should be more reasonable.
-  tatoebaId: "232346"
-  notes: べき needs a verb in front of it, and a noun or な-adjective has no verb -- so である supplies one, since it has ある inside it. だ cannot stand there, which is why the shape you meet is であるべき.
+  japanese: エジソンは秀才ではなかった。
+  reading: エジソンはしゅうさいではなかった。
+  romaji: ejison wa shuusai de wa nakatta.
+  english: Edison was not a bright student.
+  tatoebaId: "227976"
+  notes: The last cell of the paradigm, and it is built the way the others were -- ある goes to なかった, and the は stays. Book Two gave you じゃなかった; ではなかった is the same shape with nothing contracted.
 
 # ── Still changing ────────────────────────────────────────────────────────────
 
@@ -393,16 +401,6 @@
   english: Because I love you there are things I cannot put into words, and there are things better left unsaid.
   tatoebaId: "191565"
   notes: A whole clause in front of ゆえに needs が between them -- 愛する becomes 愛するがゆえに. 言わぬが花, some things are better left unsaid, is a set phrase in its own right.
-
-- id: band10.hence-i-shall-have-to-stay-here
-  jlpt: N3
-  scenario: cause
-  japanese: それゆえここにとどまらざるを得ないだろう。
-  reading: それゆえここにとどまらざるをえないだろう。
-  romaji: sore yue koko ni todomarazaru o enai darou.
-  english: Hence, I shall have to stay here.
-  tatoebaId: "204782"
-  notes: それゆえ opens a sentence and means therefore, pointing back at whatever was just said. だろう on the end is the plain form of でしょう -- no chapter in this course teaches either, and here it only softens the claim to I expect.
 
 - id: band10.half-the-muscle-can-give-way-to-fat
   jlpt: N3
