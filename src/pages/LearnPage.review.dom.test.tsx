@@ -58,7 +58,7 @@ vi.mock("@/srs/dailyLoop", () => ({
   buildDailySession: () => buildDailySession(),
 }));
 
-const { ReviewStep, LearnPage } = await import("./LearnPage");
+const { ReviewStep, LearnPage, ProduceStep } = await import("./LearnPage");
 
 function word(id: string, japanese: string): Word {
   return {
@@ -383,5 +383,31 @@ describe("LearnPage seeds a review state for newly introduced kanji", () => {
     await user.click(await screen.findByRole("button", { name: "Start" }));
     await vi.waitFor(() => expect(getOne).toHaveBeenCalledWith("kanji.水"));
     expect(upsertSynced).not.toHaveBeenCalled();
+  });
+});
+
+describe("ProduceStep", () => {
+  beforeEach(() => recordRating.mockClear());
+  afterEach(() => {
+    getOne.mockImplementation(() => Promise.resolve(undefined));
+    cleanup();
+  });
+
+  it("advances on the click itself, even while the store is slow", async () => {
+    // A store that never answers. The old handler awaited it before advancing,
+    // and the card sat in its input phase meanwhile inviting a second Next.
+    getOne.mockImplementation(() => new Promise(() => {}));
+    const user = userEvent.setup();
+    const onDone = vi.fn();
+    const mizu = { ...word("vocab.mizu", "みず"), romaji: "mizu", english: "water" } as Word;
+    const ocha = { ...word("vocab.ocha", "おちゃ"), romaji: "ocha", english: "tea" } as Word;
+    render(<ProduceStep items={[mizu, ocha]} shifted onDone={onDone} />);
+
+    await user.click(screen.getByRole("button", { name: "Show answer" }));
+    await user.click(screen.getByRole("button", { name: "Next" }));
+
+    expect(screen.getByText("Try it · 2 / 2")).toBeTruthy();
+    expect(onDone).not.toHaveBeenCalled();
+    expect(recordRating).toHaveBeenCalledWith("vocab.mizu", "didnt", false);
   });
 });

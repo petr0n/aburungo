@@ -29,7 +29,7 @@ import { findPhrase } from "@/content";
 import { produceItemsFor } from "./produceItems";
 import { getPathProgress, markLessonSeen } from "@/db/pathProgressStore";
 import { buildCanDoScope, buildCrossSituationScope, canDoMarkerId, taughtSituations, verifiedCanDos } from "@/srs/canDo";
-import { getOne, upsertSynced, hydrateFromServer, recordRating, recordReview } from "@/db/reviewStore";
+import { getOne, hydrateFromServer, recordRating, recordReview, upsertSynced } from "@/db/reviewStore";
 import { schedule } from "@/srs/leitner";
 import { buildDailySession, type DailySession } from "@/srs/dailyLoop";
 import { allGrammarPatterns } from "@/content/grammar";
@@ -476,7 +476,7 @@ function NewLessonStep({
  * them cannot be made safe; they have to be written down. Restore
  * FrameComposeCard from git history when Book Two authors frames to feed it.
  */
-function ProduceStep({
+export function ProduceStep({
   items,
   shifted,
   onDone,
@@ -489,11 +489,13 @@ function ProduceStep({
   const [index, setIndex] = useState(0);
   const current = items[index];
 
-  async function handleNext(correct: boolean) {
+  // Advance on the click itself and persist without awaiting, as ReviewStep does.
+  // This used to await two writes first; the card reset to its input phase in
+  // that window, so a second Next advanced twice - the 2026-09-06 walkthrough
+  // skipped a lesson's grammar cloze and closed it that way.
+  function handleNext(correct: boolean) {
     if (current === undefined) return;
-    const existing = await getOne(current.id);
-    const next = schedule(existing, correct ? "got-it" : "didnt", Date.now(), current.id);
-    await upsertSynced(next, signedIn);
+    void recordRating(current.id, correct ? "got-it" : "didnt", signedIn);
     const nextIndex = index + 1;
     if (nextIndex >= items.length) {
       onDone();
