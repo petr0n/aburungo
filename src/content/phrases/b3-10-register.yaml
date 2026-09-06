@@ -167,7 +167,7 @@
 #   二次 にじ 1461870, "second/quadratic"; 筋肉 in #192977 is きんにく 1241810,
 #   muscle, not すじにく 2206880, sinewy meat; 塩 in #174595 is しお 1576630, not
 #   えん 2847901; 自ら in #176788 is みずから 1317340, oneself, not おのずから
-#   1317330, naturally; 下す in #176788 is くだす 1184320 sense 2, to hand down a
+#   1317330, naturally; 下す in #176788 is くだす 1184320 sense 1, to hand down a
 #   decision, not おろす 1589580; 点 in #224527 is てん 1441390 sense 5, an
 #   aspect or respect, not ちょぼ 1007860.
 # jlpt-source: training -- the level marks the chapter this content sits in,
@@ -337,7 +337,7 @@
   romaji: konpyuutaa ga kono kaisha ni dounyuu saretsutsu arimasu.
   english: Computers are being introduced into this company.
   tatoebaId: "217282"
-  notes: Three things stacked and each one readable on its own -- 導入する made passive, then つつある for the change under way, then ます for the register. Read them left to right and nothing is hidden.
+  notes: Three things stacked and each one readable on its own -- 導入する made passive, then つつある for the change under way, then ます for the register. Read them left to right and nothing is hidden. この会社に says where the computers are going, not who is introducing them; this passive names no agent.
 
 - id: band10.the-weather-was-getting-worse-as-the-day-went-on
   jlpt: N3
@@ -453,7 +453,7 @@
   romaji: jinsei ni oite okane o juushi suru hito mo iru.
   english: Some people place a lot of importance on money in life.
   tatoebaId: "144033"
-  notes: 人生において is neither a place nor a time but a span you live inside. There is a を in this sentence and it belongs to 重視する -- the noun in front of において is never marked を, which is the surest way to tell this construction from the verb 置く written in kana.
+  notes: 人生において is neither a place nor a time but a span you live inside. There is a を in this sentence and it belongs to 重視する -- the tell against the verb 置く written in kana is a を-marked thing being physically put somewhere, usually with てくる, ている or てある, and nothing here is being put anywhere.
 
 - id: band10.this-suit-is-superior-in-quality
   jlpt: N3

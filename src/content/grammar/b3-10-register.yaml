@@ -76,7 +76,7 @@
 - id: grammar.b3-yue
   jlpt: N3
   pattern: "ゆえに"
-  gloss: Because, on paper. A bare noun in front, or a plain clause plus が. それゆえ at the head of a sentence is therefore, pointing back at what was just said.
+  gloss: Because, on paper. A bare noun in front, or a plain clause; の after the noun and が after the clause are optional. それゆえ at the head of a sentence is therefore, pointing back at what was just said.
   phraseId: band10.the-charges-were-dropped-because-of-his-youth
   blank: ゆえに
 
