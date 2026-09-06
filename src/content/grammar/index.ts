@@ -26,6 +26,12 @@ import b3CauseRaw from "./b3-01-cause.yaml";
 import b3ContrastRaw from "./b3-02-contrast.yaml";
 import b3ConditionsRaw from "./b3-03-conditions.yaml";
 import b3TimeRaw from "./b3-04-time.yaml";
+import b3StanceRaw from "./b3-05-stance.yaml";
+import b3DegreeRaw from "./b3-06-degree.yaml";
+import b3PurposeRaw from "./b3-07-purpose.yaml";
+import b3ObligationRaw from "./b3-08-obligation.yaml";
+import b3ReferenceRaw from "./b3-09-reference.yaml";
+import b3RegisterRaw from "./b3-10-register.yaml";
 
 const phrasesById = new Map(allPhrases.map((p) => [p.id, p]));
 
@@ -46,6 +52,12 @@ export const allGrammarPatterns: GrammarPattern[] = [
   ...parseGrammarPatterns(b3ContrastRaw, "grammar/b3-02-contrast.yaml", phrasesById),
   ...parseGrammarPatterns(b3ConditionsRaw, "grammar/b3-03-conditions.yaml", phrasesById),
   ...parseGrammarPatterns(b3TimeRaw, "grammar/b3-04-time.yaml", phrasesById),
+  ...parseGrammarPatterns(b3StanceRaw, "grammar/b3-05-stance.yaml", phrasesById),
+  ...parseGrammarPatterns(b3DegreeRaw, "grammar/b3-06-degree.yaml", phrasesById),
+  ...parseGrammarPatterns(b3PurposeRaw, "grammar/b3-07-purpose.yaml", phrasesById),
+  ...parseGrammarPatterns(b3ObligationRaw, "grammar/b3-08-obligation.yaml", phrasesById),
+  ...parseGrammarPatterns(b3ReferenceRaw, "grammar/b3-09-reference.yaml", phrasesById),
+  ...parseGrammarPatterns(b3RegisterRaw, "grammar/b3-10-register.yaml", phrasesById),
 ];
 
 export function findGrammarPattern(id: string): GrammarPattern | undefined {

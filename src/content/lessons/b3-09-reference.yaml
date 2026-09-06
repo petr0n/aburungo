@@ -224,7 +224,8 @@
     - band9.i-agree-with-you-on-this-issue
     - band9.our-conversation-opened-upon-the-weather
     - band9.she-wrote-a-book-about-animals
-  kanji: []
+  kanji:
+    - 関
   patternId: grammar.b3-nikanshite
   grammarNote: "に関して does について's job in a suit. Same slot, same noun in front, same meaning: サムは仕事に関してまじめです would mean exactly what 仕事についてまじめです means. What changes is the voice. に関して belongs to reports, formal letters, news writing and official speech, and the company it keeps in real sentences gives it away — 彼はその本に関していくつかの所見を述べた is not a way anybody talks. Read this chapter's two weather sentences side by side: the conversation itself was 天気についておしゃべりした, and the written account of it was 天気に関して始まった. Same subject, two registers. Say the register difference the right way round, because the easy version of it is wrong. について is not the casual one — it is the neutral one, correct everywhere, including in writing. に関して is the marked one: choosing it says something about the document you are in. So the practical advice is not to alternate between them but to keep について as your default and recognise に関して when you read it. Two shapes to have. に関しては, with は on the end, limits the claim to that one topic and leaves the rest open: 私はこの件に関しては、あなたに賛成です, on this one, whatever I think elsewhere. And in front of a noun it becomes に関する, with no の: 彼女は動物に関する本を書いた. That is the one structural difference from について, which needs の to do the same job — についての本, but に関する本. The reason is that 関する is a verb, meaning to concern or to relate, and a verb modifies a noun directly. It is not carded on its own, because outside this construction and its own attributive you are unlikely to meet it. 関 is a new character. It is the 関 of 関係, a relationship or connection, and of 関心, interest in something; you will also meet it read かん in 玄関, げんかん, the entrance hall of a house, where it has nothing to do with any of this."
 

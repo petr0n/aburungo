@@ -46,6 +46,12 @@ import b3CausePhrasesRaw from "./phrases/b3-01-cause.yaml";
 import b3ContrastPhrasesRaw from "./phrases/b3-02-contrast.yaml";
 import b3ConditionsPhrasesRaw from "./phrases/b3-03-conditions.yaml";
 import b3TimePhrasesRaw from "./phrases/b3-04-time.yaml";
+import b3StancePhrasesRaw from "./phrases/b3-05-stance.yaml";
+import b3DegreePhrasesRaw from "./phrases/b3-06-degree.yaml";
+import b3PurposePhrasesRaw from "./phrases/b3-07-purpose.yaml";
+import b3ObligationPhrasesRaw from "./phrases/b3-08-obligation.yaml";
+import b3ReferencePhrasesRaw from "./phrases/b3-09-reference.yaml";
+import b3RegisterPhrasesRaw from "./phrases/b3-10-register.yaml";
 
 export const allPhrases: Phrase[] = [
   ...parsePhrases(transitRaw, "phrases/transit.yaml"),
@@ -83,6 +89,12 @@ export const allPhrases: Phrase[] = [
   ...parsePhrases(b3ContrastPhrasesRaw, "phrases/b3-02-contrast.yaml"),
   ...parsePhrases(b3ConditionsPhrasesRaw, "phrases/b3-03-conditions.yaml"),
   ...parsePhrases(b3TimePhrasesRaw, "phrases/b3-04-time.yaml"),
+  ...parsePhrases(b3StancePhrasesRaw, "phrases/b3-05-stance.yaml"),
+  ...parsePhrases(b3DegreePhrasesRaw, "phrases/b3-06-degree.yaml"),
+  ...parsePhrases(b3PurposePhrasesRaw, "phrases/b3-07-purpose.yaml"),
+  ...parsePhrases(b3ObligationPhrasesRaw, "phrases/b3-08-obligation.yaml"),
+  ...parsePhrases(b3ReferencePhrasesRaw, "phrases/b3-09-reference.yaml"),
+  ...parsePhrases(b3RegisterPhrasesRaw, "phrases/b3-10-register.yaml"),
 ];
 
 // parsePhrases only rejects duplicate ids within a single file, so the same id in

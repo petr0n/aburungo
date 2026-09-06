@@ -55,6 +55,12 @@ import b3CauseRaw from "./b3-01-cause.yaml";
 import b3ContrastRaw from "./b3-02-contrast.yaml";
 import b3ConditionsRaw from "./b3-03-conditions.yaml";
 import b3TimeRaw from "./b3-04-time.yaml";
+import b3StanceRaw from "./b3-05-stance.yaml";
+import b3DegreeRaw from "./b3-06-degree.yaml";
+import b3PurposeRaw from "./b3-07-purpose.yaml";
+import b3ObligationRaw from "./b3-08-obligation.yaml";
+import b3ReferenceRaw from "./b3-09-reference.yaml";
+import b3RegisterRaw from "./b3-10-register.yaml";
 
 const knownWordIds = new Set(allWords.map((w) => w.id));
 const knownPhraseIds = new Set(allPhrases.map((p) => p.id));
@@ -138,6 +144,12 @@ export const b3Lessons: Lesson[] = [
   ...parseLessons(b3ContrastRaw, "lessons/b3-02-contrast.yaml", knownWordIds, knownPhraseIds, knownPatternIds, b3ChapterIds),
   ...parseLessons(b3ConditionsRaw, "lessons/b3-03-conditions.yaml", knownWordIds, knownPhraseIds, knownPatternIds, b3ChapterIds),
   ...parseLessons(b3TimeRaw, "lessons/b3-04-time.yaml", knownWordIds, knownPhraseIds, knownPatternIds, b3ChapterIds),
+  ...parseLessons(b3StanceRaw, "lessons/b3-05-stance.yaml", knownWordIds, knownPhraseIds, knownPatternIds, b3ChapterIds),
+  ...parseLessons(b3DegreeRaw, "lessons/b3-06-degree.yaml", knownWordIds, knownPhraseIds, knownPatternIds, b3ChapterIds),
+  ...parseLessons(b3PurposeRaw, "lessons/b3-07-purpose.yaml", knownWordIds, knownPhraseIds, knownPatternIds, b3ChapterIds),
+  ...parseLessons(b3ObligationRaw, "lessons/b3-08-obligation.yaml", knownWordIds, knownPhraseIds, knownPatternIds, b3ChapterIds),
+  ...parseLessons(b3ReferenceRaw, "lessons/b3-09-reference.yaml", knownWordIds, knownPhraseIds, knownPatternIds, b3ChapterIds),
+  ...parseLessons(b3RegisterRaw, "lessons/b3-10-register.yaml", knownWordIds, knownPhraseIds, knownPatternIds, b3ChapterIds),
 ].sort((a, b) => a.order - b.order);
 
 export function findLesson(id: string): Lesson | undefined {

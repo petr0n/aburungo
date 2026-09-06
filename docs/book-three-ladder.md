@@ -11,12 +11,12 @@ never reads it.
 
 | | |
 |---|---|
-| Chapters | 5 |
-| Lessons | 39 (34 teaching, 5 checkpoints) |
-| Words | 85 |
-| Phrases | 150 |
-| Grammar patterns | 32 |
-| Kanji introduced | 3 |
+| Chapters | 11 |
+| Lessons | 81 (70 teaching, 11 checkpoints) |
+| Words | 126 |
+| Phrases | 379 |
+| Grammar patterns | 68 |
+| Kanji introduced | 10 |
 
 ---
 
@@ -715,3 +715,786 @@ never reads it.
 ### 234. Recognition checkpoint — closes the chapter
 
 > A wide pass over everything this chapter has taught, and this is also where the seven get set side by side, since they were deliberately taught one at a time. 時 is still the neutral default and has not been demoted — it is correct far more often than not, and reaching for it is never an error of grammar. What the others add on top of it is the thing to have straight. うちに adds a deadline: the state in front of it is running out, and 〜ないうちに is how before happens is said. 間 adds a bounded stretch, and its one particle decides everything — に for a thing that happened at a point inside, no に for a thing that lasted the whole length. 際 adds register and nothing else, and only where there is an occasion to point at. たとたん adds an instant with no gap and a second half nobody saw coming, past tense, plain past verb in front, no exceptions to look up. Then two that are not competing for when at all, and that is the distinction most worth checking. 途中で puts you inside something unfinished — a journey short of its destination, a task short of its end. かける puts the incompleteness inside the verb itself: started and dropped, or not started and nearly there. Neither answers when something happened; they answer how far along it was. Type the reading or the meaning rather than picking it out of a line-up. Some of what comes back will hinge on one small thing — a に present or absent after 間, a negative in front of うちに that English throws away in translation, a かける that turns out to be 出かける and not this pattern at all. Those are the places worth slowing down. Anything you miss comes back sooner. It finishes when the remaining set empties; retry as often as you like, nothing is recorded.
+
+---
+
+## Chapter 6 — How sure are you?
+
+*How sure are you?*
+
+8 lessons · 27 words · 50 phrases
+
+### 235. It looks like
+
+**Lesson 1 of 8** · How sure are you?
+**Can do:** Guess what is going on from what you can see right now
+**Grammar:** `～みたい` — It looks like, in casual speech. Goes straight onto a plain clause or, unusually, straight onto a bare noun with nothing in between -- then takes だ or です itself and behaves like a な-adjective. みたいな before a noun, みたいに before a verb or an adjective.
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 建物 | たてもの | building |
+| 部屋 | へや | room |
+| 食べる | たべる | to eat |
+| 顔 | かお | face |
+
+- うん、誤診だったみたい。 — Yes, it seems it was a misdiagnosis.
+- その建物は化け物みたいだ。 — That building is like a monster.
+- 部屋は兎小屋みたいだけど。 — But my place is like a rabbit hutch.
+- どうやら食べ過ぎたみたいだ。 — It looks like I've eaten too much.
+- 赤ん坊のお尻みたいにすべすべだ。 — It's as smooth as a baby's bottom.
+- 君はまるで人ごとみたいな顔をしているね。 — You look as if it were none of your business.
+
+### 236. It looks like, more formally
+
+**Lesson 2 of 8** · How sure are you?
+**Can do:** Make the same guess in neutral or written Japanese
+**Grammar:** `～ようだ` — The same guess in a neutral or written voice. A verb or い-adjective takes it bare; a noun needs の in front. The standard rule gives a な-adjective な, which this corpus happens not to show at all.
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 車 | くるま | car |
+| 悪い | わるい | bad |
+| 見る | みる | to see, to watch |
+
+- 君が一番乗りのようだ。 — It seems as if you are the first one here.
+- この車はどこか具合が悪いようだ。 — It seems that something is wrong with this car.
+- 彼は我々を警戒しているようだ。 — He seems to be wary of us.
+- まるで夢を見ているようだよ。 — I feel as if I were dreaming.
+- 遠くから見れば、その丘は象のようだ。 — Seen from a distance, the hill looks like an elephant.
+- トラの子は大きな子ネコのようだった。 — The tiger cub looked like a large kitten.
+
+### 237. I hear that
+
+**Lesson 3 of 8** · How sure are you?
+**Can do:** Pass on something you were told, and mark it as secondhand
+**Grammar:** `～らしい` — What you were told, not what you saw. Attaches to a plain clause like ようだ, but takes a bare noun where ようだ needs の, and changes where the evidence came from. After a bare noun it usually does its other job instead -- every inch a, true to type.
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 病気 | びょうき | illness, sickness |
+| 春 | はる | spring |
+| 行く | いく | to go |
+| 明日 | あした | tomorrow |
+| 朝食 | ちょうしょく | breakfast |
+
+- 荒稼ぎしているらしいね。 — I heard you're raking in the money.
+- 彼女は病気だったらしい。 — Apparently she was ill.
+- 幼なじみが春から大阪の大学に行くらしい。 — Apparently an old friend of mine is going to a university in Osaka in spring.
+- トムは明日の授業の予習をしているらしい。 — I hear Tom is preparing for tomorrow's lessons.
+- 朝食前に出勤するなんていかにも彼らしい。 — It is characteristic of him to go to work before breakfast.
+- 彼はどこからどこまでも紳士らしい。 — He looks every inch a gentleman.
+
+### 238. The look of it
+
+**Lesson 4 of 8** · How sure are you?
+**Can do:** Describe a quality or a tendency, rather than guessing about a situation
+**Grammar:** `～っぽい` — A trait or a surface quality, not a guess about a situation. Onto a noun, an adjective's stem or a verb's ます-stem, and what comes out is an ordinary い-adjective -- 怒りっぽい, 水っぽい, 安っぽい, conjugating っぽくない and っぽかった.
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 子供 | こども | child, children |
+| 水 | みず | water |
+| コート | コート | coat |
+
+- 彼女は怒りっぽい。 — She has a hot temper.
+- 彼は何をしても飽きっぽい。 — Whatever he takes up, he soon gets tired of it.
+- 肌が脂っぽいのです。 — I have greasy skin.
+- これは水っぽい茶だね。 — This is watery tea, isn't it?
+- 彼の子供っぽい笑い方が素敵よね。 — His childlike way of laughing is lovely, isn't it?
+- その黒っぽいコートは彼女の浅黒い肌には合わない。 — That dark coat does not match her dark skin.
+
+### 239. It should be
+
+**Lesson 5 of 8** · How sure are you?
+**Can do:** Say what ought to be true, going by something you already know
+**Grammar:** `～はず` — It should be, going by something already known -- a schedule, an arrangement, a fact. Plain clause in front, as with any noun. はずがない is the flat denial, はずだった the expectation that did not come off.
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 来る | くる | to come |
+| 飛行機 | ひこうき | aeroplane |
+
+- 物価はまもなく下がるはずだ。 — Prices ought to come down soon.
+- トムは今にもここに来るはずです。 — Tom should be here any minute.
+- その飛行機は今ごろは関西空港に当然着いているはずだ。 — The plane should have arrived at Kansai Airport by now.
+- これを解く何らかの方法があるはずだ。 — There must be some way to solve this.
+- カールが優等生だったはずがない。 — Carl cannot have been a model student.
+- その国際会議は今年の２月に開催されるはずだった。 — The international conference was to be held in February this year.
+
+### 240. It has to be
+
+**Lesson 6 of 8** · How sure are you?
+**Can do:** State a conviction you have reasoned your way to from the evidence
+**Grammar:** `～に違いない` — It has to be. Stronger than はず and built on evidence rather than an arrangement. A な-adjective or noun goes in front with no だ and no な at all -- 幸福に違いない, ばかに違いない.
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 悪い | わるい | bad |
+| 建物 | たてもの | building |
+| 話す | はなす | to speak, to talk |
+
+- どこか機構が悪いに違いない。 — Something must be wrong with the machinery.
+- 彼らは高飛びしたに違いない。 — They must've skipped out of town.
+- あそこの建物が燃えているに違いない。 — That building must be on fire.
+- 再婚した今、彼はもっと幸福に違いない。 — He must be happier now after having remarried.
+- あんなふうに話すとは彼はばかに違いない。 — He must be a fool to talk like that.
+
+### 241. That explains it
+
+**Lesson 7 of 8** · How sure are you?
+**Can do:** Account for a situation, say what it does not mean, or say a choice is off the table
+**Grammar:** `～わけ` — The formal noun that accounts for things. わけだ says that explains it, わけではない says that does not follow, わけにはいかない says the option is closed, わけがない says there is no way.
+
+- 道理で、君が喜ぶわけだ。 — No wonder you are so happy.
+- 彼もとうとう詰め腹を切らされたってわけだね。 — So he too was finally forced to resign, then.
+- あなたの作文は全然だめだというわけではない。 — It's not that your composition is completely hopeless.
+- だからといって異議があるわけではない。 — Not that I have any objection.
+- ほえる犬が必ずしもかみつくわけではない。 — Barking dogs don't always bite.
+- 君は自分の健康を度外視するわけにはいかない。 — You can't afford to neglect your health.
+- もうこれ以上延ばすわけにはいかない。 — I can't put it off any longer.
+- 清廉潔白できこえた彼が、汚職なんかに手を染めるわけない。 — He has a reputation as being straight as an arrow. He'd never get involved in corruption.
+- どういうわけかメールにアクセスできませんでした。 — For some reason I couldn't access my e-mail.
+
+### 242. It might be
+
+**Lesson 8 of 8** · How sure are you?
+**Can do:** Hedge honestly, when you really are not sure
+**Grammar:** `～かもしれない` — It might be -- real doubt rather than a confident claim politely softened. Plain clause in front, or a bare な-adjective or noun with no copula, the same exception に違いない makes. かもしれません politely, かも in a hurry.
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 高い | たかい | expensive, tall, high |
+| 明日 | あした | tomorrow |
+| 雨 | あめ | rain |
+| 言う | いう | to say |
+| 病気 | びょうき | illness, sickness |
+| なる | なる | to become |
+| 来る | くる | to come |
+
+- 大根は人参より高いかもしれない。 — Daikon might be more expensive than carrots.
+- ひょっとすると明日は雨かもしれない。 — Perhaps it will rain tomorrow.
+- あなたの言うことは正しいかもしれない。 — You could be right, I suppose.
+- これは本物のダイヤではないかもしれない。 — This may not be a real diamond.
+- あなたはいつ何時病気になるかもしれない。 — You may fall ill at any moment.
+- もしかすると彼は明日来るかもしれない。 — He might come tomorrow.
+
+### 243. Recognition checkpoint — closes the chapter
+
+> A wide pass over everything this chapter has taught. Type the reading or the meaning rather than picking it out of a line-up. Eight ways of marking how sure you are and how you found out, where Book Two had one. What is being checked is not whether you can recite which is which — it is whether the right one comes to hand for the sentence in front of you, which is the only form this knowledge is any use in. Two things are worth watching for as they come back. The first is the boundary rather than the gloss: given a speaker who saw something, one who was told it, and one who is describing what somebody is like, three different words are correct and they are not interchangeable. The second is attachment, which is where these differ most on the page — the の that ようだ needs and みたい does not, and the bare stem that に違いない and かもしれない both take where everything else wanted a copula. Anything you miss comes back sooner. It finishes when the remaining set empties; retry as often as you like, nothing is recorded.
+
+---
+
+## Chapter 7 — Just how much
+
+*Just how much*
+
+7 lessons · 30 words · 36 phrases
+
+### 244. Just this much
+
+**Lesson 1 of 7** · Just how much
+**Can do:** Say that one thing, and nothing else, is true
+**Grammar:** `～だけ` — Only this, and nothing else. A noun, a plain verb or an い-adjective goes straight on; a な-adjective takes な first, and so does a noun when the sense is "it is merely that". It also runs the other way as "as much as" -- 好きなだけ, できるだけ -- where the limit is a ceiling rather than a floor.
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 来る | くる | to come |
+| 少し | すこし | a little, a few |
+| 走る | はしる | to run |
+| 本 | ほん | book |
+| 読む | よむ | to read |
+| 音楽 | おんがく | music |
+| 好き | すき | like, favorite |
+
+- 見ているだけです — I'm just looking.
+- 来たのはメアリーだけだった。 — No one came except Mary.
+- 彼は時間稼ぎをしているだけだよ。 — He is just killing time.
+- 少し走っただけで膝がガクガクしてるよ。 — All I did was run a little and now my knees are wobbly.
+- 好きなだけ飲食していただいて結構です。 — You can eat and drink as much as you want.
+- できるだけ多くの本を読みなさい。 — Read as many books as you can.
+- スポーツだけでなく、音楽も好きだ。 — I love music as well as sports.
+
+### 245. Nothing but
+
+**Lesson 2 of 7** · Just how much
+**Can do:** Complain that someone does nothing else, or say something has only just happened
+**Grammar:** `～ばかり` — Nothing but, usually with a complaint attached -- on a noun or a て-form. On a plain past verb it does a different job instead, "only just did it", with no complaint in it at all. Also, less often, "about" a quantity.
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 先生 | せんせい | teacher |
+| 言う | いう | to say |
+| 家 | いえ | house, home |
+
+- トムはいつもテレビゲームばかりしている。 — All Tom ever does is play video games.
+- あいつはいつもぐずぐず文句ばかり言っている。 — He is complaining about something or other all the time.
+- 彼女は先生にこびてばかり。 — She always kisses up to teachers.
+- ご兄弟のことはカンザス州から問い合わせを受けたばかりです。 — We have just received an inquiry from Kansas concerning your brother.
+- 一体全体、どうして建てたばかりの家を売却してしまったんだい。 — Why on earth did you sell your newly built house?
+- 彼女は美しいばかりでなく才能もあった。 — She was not merely beautiful, but also talented.
+
+### 246. As much as
+
+**Lesson 3 of 7** · Just how much
+**Can do:** Say two things are about equal, or that something goes to a surprising extent
+**Grammar:** `～くらい` — About this much, in a second job. と同じくらい sets two things level; a clause plus くらい measures how far something goes; くらいなら names what you would rather avoid. ぐらい is the same word. This is the ～ふんくらいです of Book One, grown up.
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 車 | くるま | car |
+| 大きい | おおきい | big, large |
+| 死ぬ | しぬ | to die |
+
+- この車はあの車と同じくらい大きい。 — This car is as big as that car.
+- スーパーマンはロケットと同じくらいに速く飛ぶ。 — Superman flies as fast as a rocket.
+- せめて日常会話ができるくらいになりたい。 — At the very least, I'd like to be able to have everyday conversations.
+- 彼は外車を買えるぐらい金持ちだ。 — He is rich enough to buy a foreign-made car.
+- 降伏するくらいなら死んだほうが増しだ。 — I would rather die than yield.
+
+### 247. Nowhere near
+
+**Lesson 4 of 7** · Just how much
+**Can do:** Say something falls short of another, or reaches a striking extent, more carefully than くらい does
+**Grammar:** `～ほど` — To that degree. AはBほど〜ない says A falls short of B; a clause plus ほど says how far something goes, more carefully than くらい does; and 〜ば〜ほど, with the word said twice, is "the more, the more".
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 木 | き | tree, wood |
+| 高い | たかい | expensive, tall, high |
+| 今 | いま | now |
+| 日本 | にほん | Japan |
+| 軽い | かるい | light (in weight) |
+| 知る | しる | to know |
+| 好き | すき | like, favorite |
+
+- あの木はこれほど高くない。 — That tree is not so tall as this.
+- 学生時代は彼は今ほど優しくなかった。 — In his school days he wasn't as gentle as he is now.
+- 日本では琵琶湖ほど大きな湖はほかにない。 — No other lake in Japan is as large as Lake Biwa.
+- この箱は持ち運べるほど軽い。 — This box is light enough to carry.
+- 法律が多ければ多いほど、違反者も多くなる。 — The more laws, the more offenders.
+- 彼のことを知れば知るほどいっそう彼のことが好きになる。 — The more you know about him, the more you like him.
+
+### 248. Far from it
+
+**Lesson 5 of 7** · Just how much
+**Can do:** Correct an assumption by naming what is actually true, in either direction
+**Grammar:** `～どころか` — Far from it. Attaches bare to a noun, a plain verb, an い-adjective or a な-adjective's stem -- no な, no だ. Overturns what was just assumed and replaces it, usually with something further in the other direction.
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 飲む | のむ | to drink |
+| ビール | ビール | beer |
+
+- 彼は強健どころか実に虚弱だった。 — So far from being robust, he was extremely weak.
+- やむどころか、嵐はいっそう激しくなった。 — Far from stopping, the storm became much more intense.
+- 彼はウイスキーどころかビールさえ飲まない。 — He doesn't even drink beer, not to mention whiskey.
+- この辞書は初級者に、いやそれどころか上級者にも役に立つ。 — This dictionary is useful to beginners -- no, more than that, to advanced learners too.
+
+### 249. Next to that
+
+**Lesson 6 of 7** · Just how much
+**Can do:** Set two things side by side and say how they differ
+**Grammar:** `～に比べて` — Compared with. A noun, then に, then 比べて. Names the comparison outright where ほど leaves it implied, and works in a positive sentence. に比べれば and bare に比べ are the same thing in other registers, and と can stand in for the に.
+**New kanji:** 比
+
+| Word | Reading | Meaning |
+|---|---|---|
+| それ | それ | that (thing) |
+| こちら | こちら | this way, this one (polite) |
+| あちら | あちら | that way over there (polite) |
+
+- それは以前に比べて格段に進歩した。 — It has greatly improved compared with what it was.
+- 同業他社に比べて業績がずっと良かった。 — The company's results were much better than those of other firms in the same industry.
+- こちらはあちらに比べれば全く原始的だった。 — This was quite primitive compared to that.
+- それに比べ最近彼女のお天気は良好。 — By comparison, she has been in a really good mood recently.
+
+### 250. On the other hand
+
+**Lesson 7 of 7** · Just how much
+**Can do:** Say one thing is true, and its opposite is true too, of the same subject
+**Grammar:** `～反面` — On the other hand -- two things true of the same subject at once, weighed evenly, with neither presented as a setback. その反面 opens a second clause; a noun takes の in front of it.
+**New kanji:** 反 面
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 仕事 | しごと | work, job |
+| 安い | やすい | cheap, inexpensive |
+| お金 | おかね | money |
+| 時間 | じかん | time, hour |
+| 働く | はたらく | to work |
+
+- それは値段は安いが、その反面品質がよくない。 — It is cheap, but on the other hand the quality is not good.
+- 憂いの反面には喜びがあるものだ。 — On the other side of sorrow there is joy.
+- その仕事は十分にお金になるが、その反面１日に12時間働かなくてはならない。 — The job pays well, but on the other hand I have to work twelve hours a day.
+- 昨年は輸出が好調の反面、輸入が落ち着いていたので貿易収支は改善した。 — The nation's trade balance improved last year as exports were strong, while imports remained steady.
+
+### 251. Recognition checkpoint — closes the chapter
+
+> A wide pass over everything this chapter has taught, and this is where the seven get set beside each other, since they were deliberately taught apart. Start with the pair that means "only". だけ states a limit and leaves your feelings out of it; ばかり states the same limit with an eye-roll, and then does a second job entirely when a plain past verb is in front of it — 受けたばかり is timing, not complaint. Then the pair that measures. くらい says two things are about level, or how far one thing goes, in an everyday voice. ほど does the same work more carefully, is the one that says A falls short of B when a negative follows it, and has a shape of its own in 〜ば〜ほど, where the word is said twice. Then the three refinements. どころか throws out the claim and replaces it, in either direction — far from X, or forget X, not even Y. に比べて names a comparison outright and is happy in a positive sentence, which ほど often is not. 反面 holds two facts about one subject and weighs them evenly, which is exactly what にもかかわらず and ものの do not do. Type the reading or the meaning rather than picking it out of a line-up. Some of what comes back will hinge on one small thing — whether the verb in front of ばかり is a te-form or a plain past, whether だけ is narrowing a set or opening one up, whether the くらい in a sentence is measuring anything at all or is 暗い written in kana. Those are the places worth slowing down. Anything you miss comes back sooner. It finishes when the remaining set empties; retry as often as you like, nothing is recorded.
+
+---
+
+## Chapter 8 — Purpose and intent
+
+*Purpose and intent*
+
+5 lessons · 27 words · 34 phrases
+
+### 252. So that
+
+**Lesson 1 of 5** · Purpose and intent
+**Can do:** Say what you are aiming for when the goal is not something you can simply decide to do, and wish for something out loud
+**Grammar:** `～ように` — So that. A plain non-past clause plus ように, for a goal nobody can simply decide to do -- a potential, a negative, or something that happens to somebody else. Left hanging at the end of a sentence it is a wish or a warning; put a verb of speaking after it and it reports what somebody was told to do.
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 風邪 | かぜ | a cold |
+| コート | コート | coat |
+| 着る | きる | to wear, to put on (upper body) |
+| 話す | はなす | to speak, to talk |
+| 駅 | えき | station |
+| 道 | みち | road, street, way |
+| わかる | わかる | to understand |
+| できる | できる | to be able to, to be good at |
+| 病気 | びょうき | illness, sickness |
+| 早い | はやい | early, fast |
+| 母 | はは | my mother |
+| 医者 | いしゃ | doctor, physician |
+| 言う | いう | to say |
+
+- 風邪引かないようにコートを着た。 — I wore a coat so I would not catch a cold.
+- 寝坊しないように注意しなさい。 — Take care not to oversleep.
+- みんなに聞こえるようにもっと大きな声で話しなさい。 — Speak louder so everyone can hear you.
+- 彼は駅までの道がわかるように略図を書いてくれた。 — He drew a rough map so that I would know the way to the station.
+- 私はその犬を芸当ができるように訓練した。 — I trained the dog so that it could do tricks.
+- 夢がすべて叶いますように。 — May all my dreams come true.
+- 早く病気がよくなりますように。 — I hope you'll get well soon.
+- 白タクには乗らないように。 — Keep away from the unlicensed taxis.
+- 母は私に芝を刈るように言った。 — Mother told me to mow the lawn.
+- 医者は彼に休養するように命令した。 — His doctor ordered him to rest.
+
+### 253. Coming to be able to
+
+**Lesson 2 of 5** · Purpose and intent
+**Can do:** Say you have reached a new ability or a new habit, arrived at over time
+**Grammar:** `～ようになる` — Coming to be. The same ように with なる after it, marking a change arrived at over time rather than an act -- often a potential verb, and often in the past, ようになった. The reverse change is usually said with 〜なくなる, not with a negative in front of ようになる.
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 泳ぐ | およぐ | to swim |
+| 食べる | たべる | to eat |
+| なる | なる | to become |
+| 今年 | ことし | this year |
+
+- すぐ泳げるようになりますよ。 — You'll soon be able to swim.
+- 長年の練習のおかげで、私は簡単に簿記ができるようになった。 — Thanks to years of practice, I became able to keep accounts easily.
+- いつから日本人は精白米を食べるようになったのですか？ — When did the Japanese start eating polished rice?
+- 彼はリハビリの後、毎朝散歩するようになりました。 — He came to take a walk every morning after rehabilitation.
+- 今年になってやっとこれらの記録がみんなに利用できるようになった。 — It was not until this year that these documents were made available to the public.
+
+### 254. Making it your practice
+
+**Lesson 3 of 5** · Purpose and intent
+**Can do:** Say you make an effort to do something, or that you make a practice of it
+**Grammar:** `～ようにする` — Making it your practice. The same ように with する after it -- the effort rather than the result. ようにしている says it is a standing habit; ようになる says the habit worked.
+
+| Word | Reading | Meaning |
+|---|---|---|
+| お金 | おかね | money |
+| 使う | つかう | to use |
+| する | する | to do |
+
+- 迷惑にならないようにしなさい。 — Try not to make a nuisance of yourself.
+- すぐ決心するようにしてください。 — Try to make up your mind soon.
+- 他人には辛抱するようにしなさい。 — Try to be patient with others.
+- 本題からそれないようにしましょう。 — Let's not deviate from the subject.
+- 必要以上にお金を使わないようにしなさい。 — Try not to spend more money than is necessary.
+- 彼は時代の流れに遅れないようにしている。 — He makes a point of not falling behind the times.
+
+### 255. Won't, and surely won't
+
+**Lesson 4 of 5** · Purpose and intent
+**Can do:** Read a determined refusal or a confident prediction that something will not happen
+**Grammar:** `～まい` — Will not, and surely will not. A classical negative auxiliary, mostly written and formal. Usually resolve when the subject is the one resolving, a prediction otherwise -- the sentence decides, not the ending. Godan verbs take the dictionary form in front of it, and verbs like 食べる and する are met with the dictionary form or the stem.
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 行く | いく | to go |
+| なる | なる | to become |
+| わかる | わかる | to understand |
+
+- 彼女は泣くまいと気を張った。 — She steeled herself not to cry.
+- 彼らは１語も聞きもらすまいと傾聴した。 — They listened attentively so as not to miss a single word.
+- 彼女は行かせまいとして私に縋った。 — She held on to me to prevent me from going.
+- そうしたところで君には何もなるまい。 — You will gain nothing from doing that.
+- どうせ日本文化の粋などは連中には絶対わかるまい。 — They'll never truly understand the essence of Japanese culture anyway.
+- 信じようと信じまいと、それは真実だ。 — Believe it or not, that is true.
+
+### 256. That's how it turned out
+
+**Lesson 5 of 5** · Purpose and intent
+**Can do:** Say what a fact implies, or that something was settled by circumstances rather than by you
+**Grammar:** `～ことになる` — That is how it turned out. A plain clause plus ことになる -- what a fact implies, or what circumstances settled. ことになっている is a standing arrangement or a rule. Its partner ことにする is a decision the speaker made.
+
+| Word | Reading | Meaning |
+|---|---|---|
+| なる | なる | to become |
+| する | する | to do |
+| 来週 | らいしゅう | next week |
+| 消す | けす | to turn off, to erase |
+
+- この証拠から、彼は犯人ではないということになる。 — From this evidence, it follows that he is not the criminal.
+- 食べ過ぎると、消化不良に苦しむことになる。 — If we eat too much, we end up suffering from indigestion.
+- もし期限切れになったら、大変なことになるよ。 — If it goes past its expiry date, there will be real trouble.
+- 学園祭は来週行われることになっている。 — Our campus festival is to be held next week.
+- 退社前に電灯や暖房器を消すことになっている。 — You are expected to put out lamps and heaters before you leave the office.
+- 私は６時に起床することにしている。 — I make a practice of getting up at six.
+- 彼はほかに情報を求めることにした。 — He decided to seek information elsewhere.
+
+### 257. Recognition checkpoint — closes the chapter
+
+> A wide pass over everything this chapter has taught. Type the reading or the meaning rather than picking it out of a line-up. One word doing four jobs, two verbs bolted onto it that pull in opposite directions, one old ending for what will not happen, and one way of saying that something settled itself. What is being checked is not whether you can recite the shapes. It is whether the right one comes to hand for the sentence in front of you, which for this chapter means two choices in particular. The first is ために against ように — the same English word for, and two Japanese answers, sorted by whether the goal is something anybody could set out to do. The second is ようになる against ようにする, result against effort, which share every kana except one and mean quite different things. ことになる and ことにする are the same choice one lesson later, and the two pairs are worth feeling as one habit rather than two facts. Anything you miss comes back sooner. It finishes when the remaining set empties; retry as often as you like, nothing is recorded.
+
+---
+
+## Chapter 9 — What you have to do
+
+*What you have to do*
+
+5 lessons · 0 words · 30 phrases
+
+### 258. You have to
+
+**Lesson 1 of 5** · What you have to do
+**Can do:** State a real obligation, at any register from a written rule to a text to a friend
+**Grammar:** `～なければならない` — You have to. The ない-form plus ければ -- ない conjugates like an い-adjective -- plus ならない, the negative of なる. If it does not happen, it will not do. なくてはならない, なくてはいけない, なければいけない and the spoken なきゃ / なくちゃ are the same idea at other registers.
+
+- 君は自制しなければならない。 — You must control yourself.
+- その機械の骨組みは堅くなければならない。 — The frame of the machine must be rigid.
+- 何よりもまず健康でなければならない。 — Above all, we must be healthy.
+- 我々は地方の慣習を尊重しなくてはならない。 — We have to respect local customs.
+- ぼくたちはいつも規則を守らなくてはいけない。 — We always have to obey the rules.
+- 旅に出たら地酒を飲まなきゃ。 — When you travel, you've got to try the local sake.
+- 髪をとかさなくちゃ。 — I have to comb my hair.
+
+### 259. You should
+
+**Lesson 2 of 5** · What you have to do
+**Can do:** Say what is right, as your own verdict rather than as a rule or a fact
+**Grammar:** `～べき` — You should -- the speaker's own verdict on what is right, not a rule anyone passed. Dictionary form in front; a noun or な-adjective borrows である. する gives both すべき and するべき. Negative べきではない.
+
+- 君は借金を払うべきだ。 — You should pay your debts.
+- 現実を直視すべきだ。 — You should face reality.
+- 自分自身でするべきだと思いますよ。 — I think you should do it yourself.
+- あなたはもっと理性的であるべきだ。 — You should be more reasonable.
+- 彼女は夜にひとりで出歩くべきではない。 — She shouldn't go out by herself at night.
+- 運転手はベルトを締めるべきだ。 — Drivers should wear seat belts.
+- これは驚くべき発見だ。 — This is a surprising discovery.
+
+### 260. There's a need to
+
+**Lesson 3 of 5** · What you have to do
+**Can do:** State a plain necessity without making it a judgment about anyone
+**Grammar:** `～必要がある` — There is a need to. Dictionary form plus 必要がある -- a report that something is required, with nobody obliged and nobody judged. Negative 必要はない. The noun version is X が必要だ.
+**New kanji:** 必 要
+
+- あなたのシャツは洗う必要がある。 — Your shirts need to be washed.
+- この椅子は修繕する必要がある。 — This chair needs repairing.
+- 歯医者に行く必要はないですよ。 — You don't need to go to the dentist's.
+- 私たちは再生可能なエネルギー源を開発する必要がある。 — We need to develop renewable energy sources.
+- 彼女のテクニックはすばらしいが、もっと感情を込めて演奏する必要がある。 — Her technique is superb, but she needs to play with more expression.
+
+### 261. You must not
+
+**Lesson 4 of 5** · What you have to do
+**Can do:** Forbid something outright, and tell it apart on sight from an obligation
+**Grammar:** `～てはならない` — You must not. The て-form plus はならない, or はいけない for the everyday register; a noun or な-adjective uses the copula's て-form, であって. Check the two characters in front -- なくてはならない is not this pattern, it is the opposite one.
+
+- 生徒はこの便所を使ってはならない。 — Students must not use this toilet.
+- 成功を焦ってはいけない。 — Don't be too eager for success.
+- 仕事中は喫煙してはいけない。 — You must not smoke while working.
+- 決して暴力に訴えてはいけない。 — You must never resort to violence.
+- いかなる国も他国の内政に干渉してはならない。 — No country may interfere in another country's internal affairs.
+- 外国人労働者は日本経済のバッファーであってはならない。 — Foreign workers must not be a buffer for the Japanese economy.
+
+### 262. No way around it
+
+**Lesson 5 of 5** · What you have to do
+**Can do:** Say you had no real choice, however little you may like admitting it
+**Grammar:** `～ざるを得ない` — There is no way around it. The あ-row stem plus ざる, the classical negative, plus 得ない, cannot manage -- so, cannot manage not to. する is irregular, せざる. 得 is read え, not う.
+**New kanji:** 得
+
+- 人は運命を甘受せざるを得ない。 — People have no choice but to accept their fate.
+- 彼は書類に署名せざるを得なかった。 — He was forced to sign the document.
+- 私は本当のことを言わざるを得なかった。 — I had no choice but to tell the truth.
+- それゆえここにとどまらざるを得ないだろう。 — Hence, I shall have to stay here.
+- 私は彼のおかしな物腰に笑わざるを得ません。 — I cannot help laughing at his odd manner.
+
+### 263. Recognition checkpoint — closes the chapter
+
+> A wide pass over everything this chapter has taught, and the place where the five get set beside each other after being taught one at a time. Three of them say something has to happen and they differ in where the pressure comes from. なければならない and its family report a requirement that exists whether or not anyone approves of it. べき is somebody's verdict on what is right, which is why it can land as criticism when a plain report would not have. 必要がある reports a need and nothing else, with no person in it at all — which is exactly why a chair can need repairing and a chair cannot be told it should. Then てはならない and てはいけない, the same thing turned over into prohibition, ならない for the official voice and いけない for the everyday one. And ざるを得ない, which is not stronger than the rest so much as different: it says there was no way out, usually of something already done, though it will look forward too. Type the reading or the meaning rather than picking it out of a line-up. One thing here is worth more care than the rest, and if it is the only thing that sticks the chapter has done its job. ぼくたちはいつも規則を守らなくてはいけない tells you to obey the rules. 仕事中は喫煙してはいけない tells you not to smoke. The endings are identical; the difference is two kana, なく, sitting in front of the て. Look for them every time before you decide which way a sentence points, because a mistake here does not leave you confused — it leaves you confident and wrong. The smaller things worth slowing down for: 得 read え and not う; する going to す before べき and to せ before ざる; a noun needing で in front of なければ and である in front of べき; and 驚くべき, which is a word rather than this pattern. Anything you miss comes back sooner. It finishes when the remaining set empties; retry as often as you like, nothing is recorded.
+
+---
+
+## Chapter 10 — What you mean, exactly
+
+*What you mean, exactly*
+
+7 lessons · 33 words · 46 phrases
+
+### 264. Anything can be a thing
+
+**Lesson 1 of 7** · What you mean, exactly
+**Can do:** Turn what you do, think or feel into a noun another sentence can be about
+**Grammar:** `～こと` — Turns a whole clause into a noun. Put it after a plain-form clause and the result can take が, を or は like any other noun. A noun goes through である first (夫であること); a な-adjective takes な, or である in writing; a verb or い-adjective attaches directly. This is the こと you already have, doing the job its own card promised, outside the two fixed phrases Book Two taught it in.
+
+| Word | Reading | Meaning |
+|---|---|---|
+| こと | こと | thing, matter |
+| 好き | すき | like, favorite |
+| 言う | いう | to say |
+| 鳥 | とり | bird; chicken (as food) |
+| 病気 | びょうき | illness, sickness |
+
+- ストレスを避けることが必要です。 — It's necessary to avoid stress.
+- マイクはバスケットボールをすることが好きです。 — Mike likes to play basketball.
+- 彼は理想的な夫であることが分かった。 — He proved to be an ideal husband.
+- あいにく彼は来ることを拒んだ。 — Unfortunately he refused to come.
+- 鳥は本能的に飛ぶことを覚える。 — Birds learn to fly by instinct.
+- テニスをすることは私には簡単だ。 — Playing tennis is easy for me.
+- 彼がいうことはわけがわからない。 — What he says makes no sense at all.
+- 金沢では吹雪くことがある。 — There are sometimes blizzards in Kanazawa.
+- 細菌が病気を引き起こすことがある。 — Germs can cause sickness.
+- 彼の説明に何か補足することがありますか。 — Do you have anything to add to his explanation?
+
+### 265. Right about now
+
+**Lesson 2 of 7** · What you mean, exactly
+**Can do:** Say you are about to do something, right in the middle of it, or only just finished
+**Grammar:** `～ところ` — Where you are in something. Dictionary form + ところだ is about to happen, and in the past it is usually a near miss that did not; ている + ところだ is partway through; plain past + ところだ is only just finished. The noun can also take を and be what a verb of seeing or catching caught.
+
+| Word | Reading | Meaning |
+|---|---|---|
+| ところ | ところ | place; point (in time or in a process) |
+| 台所 | だいどころ | kitchen |
+| 忘れる | わすれる | to forget, to leave behind |
+| 車 | くるま | car |
+| 待つ | まつ | to wait |
+| 帰る | かえる | to return home |
+| 見る | みる | to see, to watch |
+
+- ある学生に会うところです。 — I'm going to meet a certain student.
+- うっかりそれを忘れるところだったわ。 — I almost forgot all about that.
+- 危なく車にひかれるところだった。 — I was nearly run over by a car.
+- 彼女はメーキャップを落としているところですよ。 — She's cleaning off the make-up.
+- 彼らからの朗報を待っているところだ。 — I've been expecting good news from them.
+- メアリーはただいま戻ったところです。 — Mary has just come home.
+- 彼はちょうど今、帰ってきたところだ。 — He came home just now.
+- クモがクモの巣を張るところを見たことがありますか。 — Have you ever seen a spider spinning its web?
+
+### 266. What it's called
+
+**Lesson 3 of 7** · What you mean, exactly
+**Can do:** Give something its name, and say what a rumour, a claim or a fact actually was
+**Grammar:** `～という` — Names what something is called. Noun A という Noun B gives a thing its name; a clause + という + noun says what the rumour, news or claim was; ということだ closes a clause as hearsay or as the point. Not Book Two's と言いました, which closes a sentence and reports an utterance.
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 言う | いう | to say |
+| なまえ | なまえ | name |
+| 男 | おとこ | man |
+| 人 | ひと | person, people |
+| 冬 | ふゆ | winter |
+| 死ぬ | しぬ | to die |
+
+- スリムという名の男が事故で死んだ。 — A man named Slim was killed in that accident.
+- 広島に口和というところがあります。 — There's a place called Kuchiwa in Hiroshima.
+- ジョンソンがトレードされるという噂がある。 — There's a rumor Johnson is going to be traded.
+- 厳しい冬になるという話です。 — They say we are going to have a severe winter.
+- 要は母親たちが忙し過ぎるということだ。 — The point is that the mothers are too busy.
+- ショービジネスというのは本当に華やかだ。 — Show business is really glamorous.
+- 何千という人が飢えで死んだ。 — Thousands of people died of hunger.
+- 休暇はあっという間に終わった。 — The holiday ended in no time at all.
+
+### 267. What that word means
+
+**Lesson 4 of 7** · What you mean, exactly
+**Can do:** Define a term the way a glossary would, or react to something surprising enough to comment on
+**Grammar:** `～とは` — Sets a term up and then says something definitive about it. After a bare noun it defines, the way a glossary entry does, usually closing on ことだ or である. After a whole clause it reacts, and what follows is a verdict. A こと in front of は is not this pattern.
+
+| Word | Reading | Meaning |
+|---|---|---|
+| こと | こと | thing, matter |
+| 傘 | かさ | umbrella |
+| 忘れる | わすれる | to forget, to leave behind |
+| 人 | ひと | person, people |
+
+- 闇とは光がないことです。 — Darkness is the absence of light.
+- 北極圏とは北極周辺の地域の事である。 — The Arctic is the area round the North Pole.
+- 軍事訓練とは兵士たちが受ける訓練である。 — Military training is training given to soldiers.
+- ジェントルマンとは独立した財産のある人のことだ。 — A gentleman is a man of independent means.
+- そんな事をするとはうかつだった。 — It was careless of me to do something like that.
+- バスに傘を忘れるとは彼女はそそっかしい。 — It was careless of her to leave her umbrella on the bus.
+
+### 268. Talking about it
+
+**Lesson 5 of 7** · What you mean, exactly
+**Can do:** Say what you are talking, writing, asking or thinking about
+**Grammar:** `～について` — About, concerning. Goes on a noun and marks what the talking, writing, asking or thinking is about. Add の -- についての -- to put it in front of a noun instead of a verb. Written in kana, which is why it collides with ついて, the て-form of 付く (stick, attach, follow) or 就く (take up, set out on).
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 天気 | てんき | weather |
+| 話す | はなす | to speak, to talk |
+| 本 | ほん | book |
+| 書く | かく | to write |
+
+- 彼らは天気についておしゃべりした。 — They chatted about the weather.
+- あなたの趣味について話してください。 — Please tell me about your hobbies.
+- その事故について彼に質問した。 — I asked him about the accident.
+- 彼はその問題について論文を書いた。 — He wrote a paper on the subject.
+- これは、ある猫についての物語です。 — This is a story about a cat.
+
+### 269. On the subject of
+
+**Lesson 6 of 7** · What you mean, exactly
+**Can do:** Mark a topic in writing or formal speech, the way について does in conversation
+**Grammar:** `～に関して` — The same job as について, in the register of a report or a formal letter. に関しては limits the claim to that one topic. In front of a noun it becomes に関する with no の, because 関する is a verb. Built on 関する, to concern or relate, which has no separate card.
+**New kanji:** 関
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 仕事 | しごと | work, job |
+| 本 | ほん | book |
+| 天気 | てんき | weather |
+| 書く | かく | to write |
+
+- サムは仕事に関してまじめです。 — Sam is serious about his work.
+- 彼はその本に関していくつかの所見を述べた。 — He made a few remarks on the book.
+- 私はこの件に関しては、あなたに賛成です。 — I agree with you on this issue.
+- 私たちの会話はいつものように天気に関して始まった。 — Our conversation opened, as usual, with the weather.
+- 彼女は動物に関する本を書いた。 — She wrote a book about animals.
+
+### 270. In, before a noun
+
+**Lesson 7 of 7** · What you mean, exactly
+**Can do:** Say where, or in what respect, something is true, when it describes a noun rather than a whole sentence
+**Grammar:** `～における` — In, when it describes a noun. Sits between two nouns and joins them into one phrase -- 政治における宣伝活動, propaganda in politics. It does not mark a topic for a verb the way について does; swapping one in for the other gives a different sentence rather than a worse one. Formal and written.
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 高い | たかい | expensive, tall, high |
+| 書く | かく | to write |
+| 人 | ひと | person, people |
+
+- この町における犯罪の発生率は高い。 — The frequency of crime in this town is high.
+- 君は人生におけるゴールを見失ってはいけない。 — You must not lose sight of your goal in life.
+- 彼女は科学における性的偏見について書いた。 — She wrote on gender bias in science.
+- 政治における宣伝活動の重要性を認識する。 — Recognise the importance of propaganda in politics.
+
+### 271. Recognition checkpoint — closes the chapter
+
+> A wide pass over everything this chapter has taught, and the place where seven things taught one at a time get set beside each other. Two of them do the same job and are worth separating first. こと turns a clause into a noun that can be a subject, an object or a topic; ところ turns a clause into a point in time — before, during or just after. Neither has anything to do with the other beyond the shape of the move. What comes back most often is the boundary that costs the most to get wrong. とは after a bare noun defines a term. こと followed by は is a nominalised clause with the topic particle on it, and it is by far the more common of the two in real text — most of what looks like とは in a search is exactly that. If a sentence sets a word up and then explains it, that is とは; if it turns an action into a thing and then says something about it, that is こと plus は, the material of this chapter's own こと lesson rather than its とは lesson. The same test decides a second pair. という names what something is called and sits inside a sentence, or closes one as hearsay; Book Two's と言いました reports what somebody actually said and needs a sayer and a tensed verb of saying. If nobody is doing the saying, it is という. Then the three that all come out as about or in. について is the neutral default and marks a topic for a verb. に関して is the same job in a formal document, and turns into に関する in front of a noun. における is not the same job at all — it joins two nouns into one phrase, and the giveaway is that a noun follows it directly rather than a verb coming later to be about something. Some of what comes back will hinge on one small thing: a non-past verb in front of ことがある rather than a past one, which changes it from an experience into a tendency; a ところ that turns out to be ところが and a different grammatical category; a について that turns out to be the verb 付く. Those are the places worth slowing down. Type the reading or the meaning rather than picking it out of a line-up. Anything you miss comes back sooner. It finishes when the remaining set empties; retry as often as you like, nothing is recorded.
+
+---
+
+## Chapter 11 — Register and the written voice
+
+*Register and the written voice*
+
+4 lessons · 18 words · 33 phrases
+
+### 272. How writing says "is"
+
+**Lesson 1 of 4** · Register and the written voice
+**Can do:** Read and write the plain factual statements an essay, a report or a definition is built out of — and know why you would not say である to a friend
+**Grammar:** `である` — The written register's だ. Same slot, same paradigm -- であった for the past, ではない for the negative, であり to link one statement to the next. Nouns and な-adjectives take it; an い-adjective does not, exactly as with だ.
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 医者 | いしゃ | doctor, physician |
+| 先生 | せんせい | teacher |
+
+- 虹は自然現象である。 — A rainbow is a natural phenomenon.
+- １、３、５は奇数である。 — One, three, and five are odd numbers.
+- 人間は全て平等である。 — All men are equal.
+- ナイジェリアはかつてイギリスの植民地であった。 — At one time Nigeria was a British colony.
+- リンカーンは偉大な政治家であった。 — Lincoln was a great statesman.
+- 地球は完全な球体ではない。 — The earth is not a perfect globe.
+- アフリカは大陸であるが、グリーンランドはそうではない。 — Africa is a continent; Greenland is not.
+- あの人は医者でありまた大学の先生でもある。 — He is a doctor and a university professor.
+- 自動車は工業製品であり、食料は農作物である。 — Cars are factory products, while foods are farm products.
+- アメリカでは自動車は必需品であり贅沢品ではない。 — In the United States the automobile is a necessity and not a luxury.
+- エジソンは秀才ではなかった。 — Edison was not a bright student.
+
+### 273. Still changing
+
+**Lesson 2 of 4** · Register and the written voice
+**Can do:** Say that something is changing, gradually and not yet finished — and read the same word doing "while" in formal writing
+**Grammar:** `つつある` — A change under way and not finished. Onto the ます-stem, most often a verb of becoming or of change. Without ある, bare つつ does ながら's job -- doing one thing while doing another -- in the same formal register.
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 古い | ふるい | old (for things, not people) |
+| 会社 | かいしゃ | company, office |
+| 天気 | てんき | weather |
+| 人 | ひと | person, people |
+| 言う | いう | to say |
+| 死ぬ | しぬ | to die |
+| 今 | いま | now |
+
+- 古い伝統が消滅しつつある。 — Old traditions are crumbling away.
+- 大気が汚染されつつある。 — The atmosphere is being polluted.
+- 国際情勢は重大になりつつある。 — The international situation is becoming grave.
+- 私のビジネスは再び回復しつつあります。 — My business is picking up again.
+- コンピューターがこの会社に導入されつつあります。 — Computers are being introduced into this company.
+- 日が経つにつれて、天気は次第に悪化しつつあった。 — The weather was getting worse and worse as the day went on.
+- 人は泣きつつ生まれ、泣き言を言いつつ暮らし、失望落胆して死ぬ。 — We are born crying, spend our lives complaining, and die disappointed.
+- 我々は将来を見据えつつ、今そこにある危機を乗り越えていかねばならない。 — We must keep our eyes on the future while getting through the crisis that is here now.
+
+### 274. Because, in writing
+
+**Lesson 3 of 4** · Register and the written voice
+**Can do:** Recognise and use the written register's word for because — the one that appears in a report or an argument rather than in conversation
+**Grammar:** `ゆえに` — Because, on paper. A bare noun in front, or a plain clause; の after the noun and が after the clause are optional. それゆえ at the head of a sentence is therefore, pointing back at what was just said.
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 英語 | えいご | English (language) |
+| 小さい | ちいさい | small, little |
+| 車 | くるま | car |
+
+- 若さゆえに彼に対する告訴は取り下げられた。 — The charges against him were dropped because of his youth.
+- その起源ゆえに、カナダ英語にはアメリカ英語とイギリス英語の両方の特徴がある。 — Because of its origins, Canadian English has features of both American and British English.
+- 愛するがゆえに言葉にできないこともあるし、言わぬが花ということもあります。 — Because I love you there are things I cannot put into words, and there are things better left unsaid.
+- ゆえに、筋肉の５０パーセントが脂肪に取って代わられる可能性がある。 — Hence 50 percent of the muscle can give way to fat.
+- 学寮長のベイカーさんは、それゆえに自分の所有する小さい車のために、駐車場に特別なスペースを設けた。 — The head of the college, Miss Baker, therefore had a special place in the car park for her small car.
+
+### 275. In, formally speaking
+
+**Lesson 4 of 4** · Register and the written voice
+**Can do:** Mark where, when, or in what respect something is true — the formal written cousin of に and で
+**Grammar:** `において` — In -- a place, a time, or a respect. A bare noun in front, no particle between. Three jobs in one word, and JMdict separates all three -- at a place or time, in terms of some quality, and the fixed 責任において, on one's own responsibility.
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 英語 | えいご | English (language) |
+| 塩 | しお | salt |
+| お金 | おかね | money |
+| 人 | ひと | person, people |
+| 服 | ふく | clothes |
+| ここ | ここ | here |
+
+- 英語は商業において役に立つ。 — English is useful in commerce.
+- 古代において塩は希少で貴重な商品であった。 — Salt was a rare and costly commodity in ancient times.
+- 人生においてお金を重視する人もいる。 — Some people place a lot of importance on money in life.
+- この服は品質においてあの服よりもずっと優れていると思う。 — I think this suit is much superior to that one in quality.
+- 彼女は、彼より、数学において劣っている。 — She is inferior to him in math.
+- 測定においては正確さは欠かせないものである。 — In measurement, accuracy is indispensable.
+- 自分の責任において何でも行いなさい。 — Do everything on your own responsibility.
+- 君らは自らの責任において、自らの良心に照らし合わせ、決定を下さなくてはならない。 — You must make your decisions on your own responsibility, in the light of your own conscience.
+- ここで明確にしなければならない点は、スポーツにおいてアマチュアとプロフェッショナルの境界線が消失しつつあるということだ。 — The point we must clarify here is that the lines between amateur and professional in sport are beginning to disappear.
+
+### 276. Recognition checkpoint — closes the chapter
+
+> A wide pass over everything this chapter has taught. Type the reading or the meaning rather than picking it out of a line-up. Four words, one register: the copula writing uses, the ending for a change still under way, the written because, and the written in. What is being checked is not whether you can recite four rules. It is whether, when one of these words comes past, you know without being told what kind of text you are standing in — because that is the actual skill this chapter is for. A sentence ending in である was written to be read, and read the rest of it accordingly. Some of what comes back has more than one of these words in it, and that is deliberate rather than showing off. 古代において塩は希少で貴重な商品であった carries a locative において and a past copula in twenty-one characters. The sentence about amateurs and professionals carries において and つつある together. These words travel in company, and a passage that uses one usually uses several — that is what a register is, as opposed to a decorated word. One thing to watch for that no single lesson could ask you about. Formal writing of this kind tends not to say who. The atmosphere is being polluted, computers are being introduced, the charges were dropped — every one of those is a passive with no agent anywhere in the sentence, and none of them is being coy about it. Naming nobody is the normal way this register reports what happened, and noticing that is worth as much as knowing any of the four words. ゆえ is thin, and some of what comes back will be sentences you have already seen in its lesson. There are six of them in the whole corpus this book draws on; nothing has been invented to make a larger pool. Anything you miss comes back sooner. It finishes when the remaining set empties; retry as often as you like, nothing is recorded.

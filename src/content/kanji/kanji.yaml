@@ -134,6 +134,48 @@
   on: ["イ"]
   kun: ["もっ.て"]
   strokes: 5
+- character: "比"
+  meanings: ["compare", "race", "ratio", "Philippines"]
+  allMeanings: ["compare", "race", "ratio", "Philippines"]
+  on: ["ヒ"]
+  kun: ["くら.べる"]
+  strokes: 4
+- character: "反"
+  meanings: ["anti-"]
+  allMeanings: ["anti-"]
+  on: ["ハン", "ホン", "タン", "ホ"]
+  kun: ["そ.る", "そ.らす", "かえ.す", "かえ.る", "-かえ.る"]
+  strokes: 4
+- character: "面"
+  meanings: ["mask", "face", "features", "surface"]
+  allMeanings: ["mask", "face", "features", "surface"]
+  on: ["メン", "ベン"]
+  kun: ["おも", "おもて", "つら"]
+  strokes: 9
+- character: "必"
+  meanings: ["invariably", "certain", "inevitable"]
+  allMeanings: ["invariably", "certain", "inevitable"]
+  on: ["ヒツ"]
+  kun: ["かなら.ず"]
+  strokes: 5
+- character: "要"
+  meanings: ["need", "main point", "essence", "pivot"]
+  allMeanings: ["need", "main point", "essence", "pivot", "key to"]
+  on: ["ヨウ"]
+  kun: ["い.る", "かなめ"]
+  strokes: 9
+- character: "得"
+  meanings: ["gain", "get", "find", "earn"]
+  allMeanings: ["gain", "get", "find", "earn", "acquire", "can", "may", "able to", "profit", "advantage", "benefit"]
+  on: ["トク"]
+  kun: ["え.る", "う.る"]
+  strokes: 11
+- character: "関"
+  meanings: ["connection", "barrier", "gateway", "involve"]
+  allMeanings: ["connection", "barrier", "gateway", "involve", "concerning"]
+  on: ["カン"]
+  kun: ["せき", "-ぜき", "かか.わる", "からくり", "かんぬき"]
+  strokes: 14
 - character: "国"
   meanings: ["country"]
   allMeanings: ["country"]

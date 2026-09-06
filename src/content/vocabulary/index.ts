@@ -39,6 +39,7 @@ import b2QuotedSpeechRaw from "./b2-07-quoted-speech.yaml";
 import b2MakingPlansRaw from "./b2-08-making-plans.yaml";
 import b2ConditionalsRaw from "./b2-09-conditionals.yaml";
 import b2TroubleRaw from "./b2-10-trouble.yaml";
+import b3ReferenceRaw from "./b3-09-reference.yaml";
 
 export const allWords: Word[] = [
   ...parseWords(basicsRaw, "vocabulary/basics.yaml"),
@@ -79,6 +80,7 @@ export const allWords: Word[] = [
   ...parseWords(b2MakingPlansRaw, "vocabulary/b2-08-making-plans.yaml"),
   ...parseWords(b2ConditionalsRaw, "vocabulary/b2-09-conditionals.yaml"),
   ...parseWords(b2TroubleRaw, "vocabulary/b2-10-trouble.yaml"),
+  ...parseWords(b3ReferenceRaw, "vocabulary/b3-09-reference.yaml"),
 ];
 
 // parseWords only rejects duplicate ids within a single file, so the same id in

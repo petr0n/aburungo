@@ -6,11 +6,11 @@
 # situation -- this stage's vocabulary is too broad to pre-curate and arrives
 # by mining, so "the lessons in this chapter" can no longer be a word list.
 #
-# Five bands, because five bands have content. Five more are designed
-# (docs/plans/book-three-band-*.md) and none of them is authored. The same rule
-# Book Two's file records applies: a chapter declared here shows up on the
-# ladder whether or not any lesson points at it, and an empty chapter is
-# something a learner can reach and find hollow. Each joins as its lessons land.
+# All eleven bands, because all eleven have content: Book Three is complete at
+# 81 lessons. The rule Book Two's file records still applies to anything added
+# after this -- a chapter declared here shows up on the ladder whether or not
+# any lesson points at it, and an empty chapter is something a learner can
+# reach and find hollow. Each joined as its lessons landed.
 #
 # The passive band opens the book rather than sitting among the connectives,
 # and that is not an ordering preference. Book Two's quoted-speech chapter
@@ -40,3 +40,27 @@
 - id: b3.band-4
   order: 5
   title: More than one way to say "when"
+
+- id: b3.band-5
+  order: 6
+  title: "How sure are you?"
+
+- id: b3.band-6
+  order: 7
+  title: Just how much
+
+- id: b3.band-7
+  order: 8
+  title: Purpose and intent
+
+- id: b3.band-8
+  order: 9
+  title: What you have to do
+
+- id: b3.band-9
+  order: 10
+  title: What you mean, exactly
+
+- id: b3.band-10
+  order: 11
+  title: Register and the written voice
