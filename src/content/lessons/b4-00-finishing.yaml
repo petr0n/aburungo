@@ -1,0 +1,331 @@
+# Book Four, Chapter 1 -- Finishing what was started.
+#
+# A learner who has finished Book Three can read 〜にもかかわらず and
+# 〜ざるを得ない and cannot say 忘れちゃった, 買ってきて or 食べすぎた. That is
+# the debt this chapter pays, and it is not a small one:
+# docs/plans/book-four-bands.md section 3a checked every taught pattern string
+# and every shipped phrase and found ten N4 forms taught nowhere at all. Eight
+# of them are here. The other two, the volitional and the imperative, are the
+# next two chapters.
+#
+# These eight are the te-form's second life. Book One taught 〜てください and
+# 〜ています and stopped; Book Two added 〜てあげます, 〜てくれます and
+# 〜てもらいます and stopped. What was left out is the layer that every N3 text
+# and every conversation leans on in nearly every sentence: the auxiliaries
+# that go on the same て and say something about how the action stands.
+# Book Three quoted them constantly without glossing them -- 帰っていった,
+# 減ってきた, 過ぎて all appear inside its own attested sentences, and band 9's
+# header flags 過ぎる as untaught in a sentence it ships. This chapter is where
+# they get a gloss, before anything else in Book Four builds on them.
+#
+#    1  done, and gone                てしまう, both readings, and ちゃう
+#    2  ready in advance, left as it   ておく, preparation and leaving in place
+#       is
+#    3  give it a try                  てみる, and its four common tails
+#    4  away from here, on from now    ていく, motion away and change forward
+#    5  towards you, up to now         てくる, the mirror of 4, and になってきた
+#    6  too much                       すぎる on three kinds of stem, and 〜すぎ
+#    7  left as it was                 まま, past and negative, and ままにする
+#    8  without                        ずに and ないで, and the ないで that is a
+#                                        request
+#
+# The order is not arbitrary and only one link in it is load-bearing. Lessons 4
+# and 5 are a pair and have to be adjacent -- ていく and てくる are one
+# opposition, and teaching either alone teaches half a thing. Lesson 7 refers
+# back to lesson 2 (ままにする against ておく) and to lesson 4 (its ship sentence
+# ends in 沈んでいった), and lesson 8 refers back to lesson 6 for 危険. Everything
+# else could be shuffled; 1 comes first because てしまう is the densest of the
+# eight in the corpus and the one a learner will hear on their first day.
+#
+# WHAT IS NEW IN BOOK FOUR, and it is visible in every `wordIds` below. Book
+# Three's chapters taught patterns and one word between them, because
+# 04-stage-reading.md section 3 handed vocabulary to a reading library that does
+# not exist. book-four-bands.md section 2 suspends that for as long as that
+# stays true: a lesson now teaches the untaught content words of the sentences
+# it is already quoting. Forty-two words in this chapter, five or six a lesson,
+# every one of them from a carded sentence and none chosen for its own sake.
+# See vocabulary/b4-00-finishing.yaml for the whole argument and for the three
+# words the breakdown listed that are not there.
+#
+# The `wordIds` arrays mix the two kinds and do not mark which is which,
+# deliberately: a lesson's word list is what its sentences use, and the SRS does
+# not care whether a card is new here or came from Book One. So vocab.heya turns
+# up under lesson 1 beside vocab.koshou -- one is a pull, the other is teaching,
+# and both are words in that lesson's sentences.
+#
+# `kanji:` is empty on every lesson and should not stay that way. This chapter
+# brings roughly forty-five characters the 229-character manifest does not have
+# (docs/plans/book-four-band-00.md section 5 lists them per lesson), which is
+# more than all of Book Three placed between its eleven chapters. Placing them
+# is the wiring pass's job, and that pass owns three checks this file cannot
+# make: whether 動, 犬 and 飲 are genuinely absent, and whether 出 and 話 really
+# are missing when 出かける and 話す are both taught words.
+#
+# ---------------------------------------------------------------------------
+# THREE CLAIMS IN THE BREAKDOWN THAT DID NOT SURVIVE CONTACT WITH THE SHIPPED
+# FILES. Recorded here because the next author will otherwise re-derive them.
+#
+#   The の nominaliser is not taught. The breakdown calls のが "Book Three
+#   ch.10's". b3-09-reference.yaml teaches こと and says in its own grammarNote
+#   that の "does much of the same work -- and no chapter of this course has
+#   taught it, this one included", then tells the learner to expect a のが where
+#   they wanted a ことが. Two sentences here use it and their notes point at
+#   that sentence rather than claiming の was taught.
+#
+#   ことにする is not a pattern. The breakdown attributes ことにしている to Book
+#   Three chapter 8. That chapter cards ことになる and discusses ことにする inside
+#   the prose of that same lesson without ever giving it a pattern id. The
+#   candidate that needed it (#161382) is not carded.
+#
+#   The verb continuative is not taught. The breakdown attributes 取り and 去り
+#   to Book Three chapter 11's "written joining". That chapter teaches であり,
+#   the copula's linking form, and says explicitly that verbs have had the
+#   te-form for the job since Book One. #100843 was dropped partly for this;
+#   #235915 keeps its 去り and its note names it as untaught.
+#
+#   One more, smaller: 〜ないでください is Book Two chapter 1's
+#   (b2-01-plain-form.yaml), not Book One's. Lesson 8 says Book Two.
+# ---------------------------------------------------------------------------
+#
+# A rule the grammarNotes below hold themselves to, inherited from Book Three's
+# band 0 and worth restating because a later editor will otherwise undo it by
+# accident. A note may show a conjugation chain (書く becoming 書いてしまう), a
+# verb phrase (目を通しておく), or a sentence that is a phrase card in this
+# chapter or an earlier book, quoted whole. It may not show a Japanese sentence
+# that is none of those. Several notes therefore describe a sentence in English
+# where a draft would have composed a Japanese one. That is
+# 04-stage-reading.md section 8 reaching into the prose, not only into the
+# cards.
+#
+# And a second rule, this one about English. Twenty-one audits on this project
+# have all led with a rule stated more absolutely than it is true, so every
+# "always", "never" and "only" below was checked against a counterexample before
+# it was written, and most of them lost. Where a note says the sentence decides,
+# it is because the form genuinely does not.
+#
+# content-source: every phrase this file references is a verified Tatoeba pair,
+#   cited by id in `tatoebaId` in phrases/b4-00-finishing.yaml, and every word
+#   it references is JMdict-verified by sequence number in
+#   vocabulary/b4-00-finishing.yaml. No composed Japanese anywhere in the
+#   chapter (04-stage-reading.md section 8).
+
+- id: b4.te-shimau
+  order: 277
+  chapterId: b4.band-0
+  situation: Finishing what was started
+  title: Done, and gone
+  canDo: Say that something is finished, or that it happened and you wish it hadn't
+  wordIds:
+    - vocab.uchi
+    - vocab.koshou
+    - vocab.bamen
+    - vocab.taikutsu
+    - vocab.sukunai
+    - vocab.nakusu
+    - vocab.wasureru
+    - vocab.heya
+    - vocab.eiga
+  phraseIds:
+    - b4band0.i-lost-my-camera-the-other-day
+    - b4band0.our-air-conditioner-has-broken-down
+    - b4band0.i-left-my-address-book-in-my-room
+    - b4band0.im-always-bored-by-films-with-little-action
+    - b4band0.she-kissed-me-full-on-the-lips
+  kanji: []
+  patternId: grammar.b4-te-shimau
+  grammarNote: "You have had the te-form since Book One, where it asked for things and said what you were doing. This chapter is the rest of what it does, and this lesson is the first of eight auxiliaries that sit on the end of it. Take any verb's te-form and add しまう. 忘れる → 忘れて → 忘れてしまう. なくす → なくして → なくしてしまう. If the te-form ends in で, so does this — 読む → 読んで → 読んでしまう. That is the whole formation and there is nothing irregular in it. What it means is where the work is. Reference grammars give it two readings and English needs two different sentences for them. The first is completion: the thing is finished, all of it, done and closed off. Read the whole book, ate the lot, finished the work. The second is regret: it happened, it was not what you wanted, and it cannot be undone now. I lost my camera. I left my address book at home. Here is the part worth slowing down on. These are not two forms. They are one form, and the sentence around it decides which reading you get — often the object, sometimes an adverb, sometimes nothing but what the situation obviously is. 宿題をやってしまった with 全部 in front of it is finished it; the same three words said about homework you meant to save for the weekend is regret. Nobody is choosing between two grammars. They are saying that the action is now over and closed, and whether that is satisfying or awful is not the verb's business. The two readings are not evenly matched in the wild, which is worth knowing before you go looking for them. Regret is the commoner one by a wide margin in ordinary speech, and it is what the corpus mostly has. Completion turns up more with an explicit 全部 or 最後まで, and more in writing. Now the contraction, because you will hear it before you hear the full form. てしまう squeezes to ちゃう, and でしまう to じゃう. 忘れてしまった → 忘れちゃった. 読んでしまった → 読んじゃった. Every ending follows: ちゃいます, ちゃった, ちゃう, and on the で side じゃった, じゃう. It is the plain, spoken, everyday version, and it belongs in conversation the way the full form belongs in writing and in careful speech. This book's third chapter comes back to contractions as a class; here you only need to see that ちゃった is 忘れてしまった with the middle worn off. Two things this form is not. しまう is a real verb of its own meaning to put something away, and 本をしまう is that verb, not this auxiliary; what tells them apart is the て in front. And a passive can carry this ending like any other verb — キスされちゃった is キスされる with ちゃった on it — which is worth watching for, because the pair of them together does not have to mean the speaker minded. Read that sentence again and notice how amused it sounds."
+
+- id: b4.te-oku
+  order: 278
+  chapterId: b4.band-0
+  situation: Finishing what was started
+  title: Ready in advance, left as it is
+  canDo: Say you did something ahead of time, or left something the way it was
+  wordIds:
+    - vocab.youi
+    - vocab.arakajime
+    - vocab.jibun
+    - vocab.makaseru
+    - vocab.anshin
+    - vocab.ichiban
+    - vocab.heya
+    - vocab.shigoto
+    - vocab.me
+  phraseIds:
+    - b4band0.we-prepared-snacks-beforehand
+    - b4band0.make-that-a-shared-folder
+    - b4band0.i-want-to-keep-my-room-neat
+    - b4band0.leave-the-job-to-him-and-you-can-rest-easy
+    - b4band0.best-to-review-the-material-beforehand
+  kanji: []
+  patternId: grammar.b4-te-oku
+  grammarNote: "Same slot, different auxiliary. te-form plus おく, and after a voiced て it is でおく — 読んでおく. 用意する → 用意して → 用意しておく. Textbooks usually give it two meanings and it is easier to hold as one: do it now, so that later is taken care of. Sometimes that means getting something ready in advance — 用意しておいた, prepared them beforehand — and sometimes it means leaving something the way it is because that is how you want it to stay: 部屋をきちんとしておきたい, keep the room neat. Both are the same idea pointed at a future you are not going to have to fix. おく is a real verb, to put or to place, and that is not a coincidence to be memorised around; you are putting the situation somewhere and leaving it there. Everything conjugates on the おく, which is where beginners most often go wrong. It is 用意しておいた, not 用意したおく. たい goes on the end: しておきたい. Book Two's ば goes on the end: 任せておけば. ください goes on the end, and 〜ておいてください is one of the more useful requests you can make — do it in advance for me. In the te-form on its own, しておいて, it is a casual version of that same request. Now the contraction, which is why you may have met this form without recognising it. ておく squeezes to とく and でおく to どく. 買っておく → 買っとく. 読んでおく → 読んどく. しておく → しとく. This is extremely common in speech and it is not in this chapter's cards, for an honest reason: the corpus these cards come from has no clean example of it. Rather than compose one, the form is named here and left for the spoken-register chapter later in this book, which is where the contractions belong as a group anyway. Recognise とく as ておく wearing everyday clothes; you do not have to produce it yet. Two things to keep it apart from. さておき and さておいて look like this pattern and are not — they are a fixed conjunction meaning setting that aside, as in 冗談はさておき, joking aside, and they take a noun in front rather than a te-form. And 〜てある, which no chapter has taught yet, does a job that overlaps this one: 書いてある describes the state something has been left in, where 書いておく is the act of leaving it that way. If you meet てある and it feels like this lesson, that is why."
+
+- id: b4.te-miru
+  order: 279
+  chapterId: b4.band-0
+  situation: Finishing what was started
+  title: Give it a try
+  canDo: Say you tried something to see what would happen, or suggest that someone does
+  wordIds:
+    - vocab.shiraberu
+    - vocab.tamesu
+    - vocab.mono-person
+    - vocab.eigyou
+    - vocab.houseki
+    - vocab.mou
+    - vocab.ichido
+  phraseIds:
+    - b4band0.could-you-turn-on-your-headlights
+    - b4band0.i-talked-with-our-sales-people
+    - b4band0.on-examination-the-jewel-was-an-imitation
+    - b4band0.why-dont-you-give-it-another-try
+    - b4band0.he-was-itching-to-have-a-go
+  kanji: []
+  patternId: grammar.b4-te-miru
+  grammarNote: "te-form plus みる, and this one comes with its own mnemonic built in: 見る is to see, and 〜てみる is do it and see. Do it and find out what happens. 話す → 話して → 話してみる. 調べる → 調べて → 調べてみる. Written in kana rather than with 見る, almost always, because it is functioning as grammar rather than as the verb to look. What makes this lesson worth its length is not the form, which you now build automatically, but the four tails it wears, each doing a different conversational job. てみてください, and the plainer てみて, softens an instruction into an invitation. ヘッドライトをつけてみてください does not order anybody to do anything; it asks them to try it and see. That is the difference between てください and てみてください, and it is a real one — the second sounds like a suggestion where the first sounds like a request. てみたら, from Book Two's たら, offers the suggestion outright: why don't you try. Notice that the sentence in this lesson stops dead at してみたら with nothing after it. The full form would end in どう or いい — してみたらどう — and dropping the tail is ordinary in speech, carried by intonation. てみると reports what turned up. 調べてみると, on looking into it, and then whatever was found. The と is the one Book Two taught for automatic consequence — do this and that follows — doing a narrative job here rather than a conditional one, which is a use that chapter did not cover. By the time it reaches you it is not about trying at all; it is a frame for reporting a discovery, and you will meet it constantly in writing. てみたい is wanting to give something a go — 試してみたい — and it takes Book Two's たい, so it inflects like an い-adjective from there: てみたかった, てみたくて. Two things to keep separate. 〜てみせる is not this: it is doing something in order to show somebody, or doing something in defiance — やってみせる, I'll show you I can. Same shape, different verb, different meaning, and it is not taught here. And putting 試す inside 試してみる is not a mistake or a redundancy, though it looks like one: 試す is the trying, みる is that you did it to find out. English does the same thing when it says give it a try."
+
+- id: b4.te-iku
+  order: 280
+  chapterId: b4.band-0
+  situation: Finishing what was started
+  title: Away from here, on from now
+  canDo: Say that something moves away from you, or keeps going from now on
+  wordIds:
+    - vocab.ou
+    - vocab.ushi
+    - vocab.dondon
+    - vocab.ikiru
+    - vocab.hitsuyou
+    - vocab.iku
+    - vocab.motsu
+    - vocab.ue
+  phraseIds:
+    - b4band0.tomoko-went-happily-out-the-door
+    - b4band0.a-cowboy-is-driving-cattle-to-the-pasture
+    - b4band0.the-digression-is-escalating
+    - b4band0.we-need-food-clothes-and-a-home-to-go-on-living
+    - b4band0.take-something-to-slip-on-over-your-swimsuit
+  kanji: []
+  patternId: grammar.b4-te-iku
+  grammarNote: "te-form plus いく, written 行く or in kana — the corpus has both and you should expect both. 出掛ける → 出掛けて → 出掛けていく. 持つ → 持って → 持っていく. The past is ていった, which is what most of the sentences here use. One form, and grammars describe two jobs for it. The first is literal. Something moves, and it moves away from wherever the speaker is standing. 出掛けていった is went out and away. 持っていく is take it with you, going from here. 追っていく is driving the cattle off towards the pasture. In every case the sentence has a viewpoint — a place the speaker is — and the いく says the movement goes from there outward. The second job has no movement in it at all. A change starts now and carries on into the future. エスカレートしていく is going to keep escalating. 生きていく is not being alive at this moment but going on living from here. The いく has stopped being a direction in space and become a direction in time, pointing forward. Most of the time you can tell which you have by asking whether anything physically travels. That is a good working test and it is not a rule, because some sentences are honestly both and some are neither in any simple way — 出ていく of somebody leaving a relationship is a physical departure and a permanent change at once, and neither reading is wrong. When a sentence resists the test, take the general sense: something is moving away from here and now, in space or in time, and let the context fill in which. What sits in front is the other clue. A verb of motion — 出る, 帰る, 持つ, 追う, 連れる — pulls it towards the literal reading. A verb of change or of state — なる, 増える, 減る, 生きる — pulls it towards the aspectual one. どんどん and 次第に and だんだん in front of it all but settle the matter for the aspectual reading, since an adverb of gradual increase has nothing to say about walking through a door. The next lesson is this same form with くる instead, pointing the opposite way, and the two are best learned as a pair rather than one at a time."
+
+- id: b4.te-kuru
+  order: 281
+  chapterId: b4.band-0
+  situation: Finishing what was started
+  title: Towards you, up to now
+  canDo: Say that something comes your way, or has been changing up to now
+  wordIds:
+    - vocab.chikazuku
+    - vocab.doubutsu
+    - vocab.dondon
+    - vocab.kazu
+    - vocab.heru
+    - vocab.inu
+    - vocab.uchi
+    - vocab.kau
+    - vocab.kuru
+    - vocab.iku
+    - vocab.kuchi
+  phraseIds:
+    - b4band0.the-bon-festival-is-near-at-hand
+    - b4band0.the-numbers-of-certain-animals-are-falling
+    - b4band0.could-you-pick-one-up-for-me
+    - b4band0.my-dog-follows-me-wherever-i-go
+    - b4band0.our-baby-is-learning-to-speak
+  kanji: []
+  patternId: grammar.b4-te-kuru
+  grammarNote: "The mirror of the last lesson, and everything in it maps across. te-form plus くる, and the past is てきた. 近づく → 近づいて → 近づいてくる. 買う → 買って → 買ってくる. After a voiced て it is でくる, as in 読んでくる. The two jobs are the same two, pointed the other way. Literally, something moves towards where the speaker is. ついてくる is the dog following me. やってくる is somebody arriving. And then the one English has no single word for, which is the most useful thing in this lesson: 買ってくる is go, buy it, and come back. Three actions, one form. 取ってくる, fetch it. 呼んでくる, go and get them. If you learn one shape from this chapter to use tomorrow, make it this one, because English forces you into a whole clause every time. Aspectually, a change has been building up to now and has arrived at the present. 近づいてきた is has been getting closer and now is close. 減ってきている is has been falling and is still falling. になってきた is has been becoming. Where ていく looks forward from now, てくる looks back at how we got here — so the same verb in the two forms describes the same change from opposite ends, and 増えていく and 増えてきた are both true of a rising number, one about what happens next and one about what has already happened. Here is the callback this lesson is placed for. Book Three's purpose chapter taught ようになる, coming to be able to do something. Put てくる on the end and you have ようになってきた: the coming-to-be has been happening up to now. 口をきくようになってきました, our baby has been getting to the point of talking. That is not a new pattern; it is two you already have, stacked in the obvious order. The bring-and-take trap is worth naming because it catches every English speaker. English chooses bring or take by where the listener is, Japanese by where the speaker is, and the two do not line up. 持ってくる is bring it here. 持っていく is take it there — including when you are taking it to the person you are speaking to, where English would say bring. If somebody on the phone asks you to bring the file to their office, what you will do is 持っていく."
+
+- id: b4.sugiru
+  order: 282
+  chapterId: b4.band-0
+  situation: Finishing what was started
+  title: Too much
+  canDo: Say that something is more than it should be
+  wordIds:
+    - vocab.douyara
+    - vocab.suupu
+    - vocab.supiido
+    - vocab.kiken
+    - vocab.yakunitatsu
+    - vocab.ookii
+    - vocab.chiisai
+    - vocab.taberu
+    - vocab.nomu
+    - vocab.dasu
+  phraseIds:
+    - b4band0.this-size-is-too-large-for-me
+    - b4band0.it-looks-like-ive-eaten-too-much
+    - b4band0.this-soup-is-too-salty-to-drink
+    - b4band0.driving-too-fast-is-dangerous
+    - b4band0.this-screwdriver-is-too-small-to-be-any-use
+  kanji: []
+  patternId: grammar.b4-sugiru
+  grammarNote: "The first thing in this chapter that is not a te-form. すぎる goes onto a stem, and there are three kinds of stem it takes. An い-adjective drops its い: 大きい → 大き → 大きすぎる. 小さい → 小さすぎる. しょっぱい → しょっぱすぎる. A な-adjective drops nothing, because its stem is the bare word: 静か → 静かすぎる, 有名 → 有名すぎる. A verb uses its ます-stem, the same one Book Two used for やすい and にくい: 食べます → 食べ → 食べすぎる. 飲みます → 飲みすぎる. 出します → 出しすぎる. What comes out is an ichidan verb every time, whatever went in, so 大きすぎます, 食べすぎた, 飲みすぎない all conjugate the ordinary way. Written 過ぎる or すぎる, and this chapter's own cards use both — 食べ過ぎた and 大きすぎます — because that is what the corpus had. Read both. Cut the る off and you have a noun. 出し過ぎ is too-much-putting-out. 飲みすぎ and 食べすぎ and 働きすぎ are all ordinary nouns that take は and が and の like any other. スピードの出し過ぎは危険です is exactly that. Two irregular stems, small but worth having. いい does not give いすぎる; it gives よすぎる, from the older stem よ, the same one behind よかった. And ない gives なさすぎる, with a さ appearing from nowhere. Both are common enough that meeting them without warning is annoying. The frame you will meet most is すぎて followed by a negative, and it is the sentence pattern too X to Y. 小さすぎて役に立たない, too small to be any use. しょっぱ過ぎて飲めない, too salty to drink — with Book Two's potential negative doing the second half. Once you see すぎて, expect a negative or a bad consequence after it. What すぎる is not. 過ぎる by itself is a perfectly ordinary verb meaning to pass, and １０時過ぎ is just after ten o'clock, a noun about time with nothing excessive in it. And 〜に過ぎない, which looks like this and is a different construction entirely, means merely or nothing more than. It comes later in this book and is worth not confusing with this one: 学生に過ぎない says somebody is only a student, and has nothing to do with anybody being too much of anything."
+
+- id: b4.mama
+  order: 283
+  chapterId: b4.band-0
+  situation: Finishing what was started
+  title: Left as it was
+  canDo: Say that a state was left unchanged while something else happened
+  wordIds:
+    - vocab.gaishutsu
+    - vocab.hanashiau
+    - vocab.fune
+    - vocab.sonomama
+    - vocab.nidoto
+    - vocab.modoru
+    - vocab.tsukeru
+  phraseIds:
+    - b4band0.i-went-out-with-the-heater-on
+    - b4band0.he-keeps-this-gun-loaded
+    - b4band0.they-talked-for-hours-at-cross-purposes
+    - b4band0.the-ship-went-down-with-all-her-crew
+    - b4band0.he-left-england-and-never-returned
+  kanji: []
+  patternId: grammar.b4-mama
+  grammarNote: "まま is a noun meaning a state that has not been changed, and the whole construction falls out of that once you see it. Something is in a certain state, and it stays in that state while something else goes on. The commonest shape is a past-tense verb in front. つけたまま, with it left switched on. 込めたまま, with it left loaded. 乗せたまま, with them still aboard. The た there is not saying the event was in the past; it is saying the state is already established by the time the rest of the sentence happens. That is why ヒーターをつけたまま外出した can be about tonight — the heater got switched on, and then, in that condition, out he went. A negative works the same way and takes the plain non-past ない, not なかった: 噛み合わないまま, with it still not meshing. So the state that persists can be a state of something not happening, which is what makes 話がまとまらないまま a useful thing to be able to say. It also goes after a noun with の — 昔のまま, as it was in the old days — and after a demonstrative, which is where そのまま comes from. そのまま is worth learning whole rather than assembled: as it is, leave it, just like that. You will meet it far more often than the grammar around it. Then the shape that connects this lesson to the second one in this chapter. ままにする is deliberately leaving something the way it is, and ままにしている is that this is your standing practice. Hold that against 〜ておく from lesson 2. Both leave a state in place. ておく leaves it in place for the sake of something coming; ままにする just does not change it, and often carries a shade of neglect — a door left open, a gun left loaded. When the sentence has a purpose in it, ておく; when it is simply untouched, ままにする. Two shapes to recognise and not to produce. あるがまま and なすがまま are literary — as things are, at the mercy of — and they belong to writing and to song lyrics rather than to speech. And まま turns up as a noun on its own in fixed phrases like 思うまま and 気の向くまま. Recognise them; you do not need to build them."
+
+- id: b4.zu-ni
+  order: 284
+  chapterId: b4.band-0
+  situation: Finishing what was started
+  title: Without
+  canDo: Say that something was done without doing something else
+  wordIds:
+    - vocab.waru
+    - vocab.kougi
+    - vocab.tegami
+    - vocab.okurikaesu
+    - vocab.oyu
+    - vocab.kiken
+    - vocab.tamago
+    - vocab.tsukuru
+    - vocab.kaburu
+    - vocab.gakusei
+    - vocab.zenbu
+    - vocab.tsukau
+  phraseIds:
+    - b4band0.you-cant-make-an-omelet-without-breaking-eggs
+    - b4band0.riding-a-motorbike-without-a-helmet-is-dangerous
+    - b4band0.the-students-listened-without-stirring
+    - b4band0.he-sent-the-letter-back-unopened
+    - b4band0.dont-use-all-the-hot-water
+  kanji: []
+  patternId: grammar.b4-zu-ni
+  grammarNote: "Two ways to say without doing something, and one look-alike that is a different sentence altogether. Start with ずに. Take the ない form you have had since Book Two, drop the ない, and put ずに in its place. 割らない → 割らずに. かぶらない → かぶらずに. 食べない → 食べずに. Godan and ichidan verbs both follow it with nothing to remember. する is the one that does not, and this is the fact to carry out of the lesson: する gives せずに, from an older negative stem, and しずに is not a word. 勉強せずに, 何もせずに, 気にせずに, 身じろぎもせずに. Every noun+する verb inherits it, so it is 開封せずに and 用意せずに. 来る gives こずに, which is regular by the rule but worth hearing once. Then ないで, which says the same thing in a plainer voice. 開封しないで送り返した, sent it back without opening it. The difference between the two is register rather than meaning: ずに is the more written of the pair, ないで the more spoken, and either would be understood in either place. If you are choosing, ないで is the safer default in conversation and ずに is what you will read. Now the look-alike, and it matters because the string is identical. お湯を全部使わないで is not without doing anything; it is a request not to do something — Book Two's 〜ないでください with the ください dropped, which is ordinary and complete on its own. So 使わないで can be a request or the first half of a longer sentence, and what tells you which is whether a second verb follows. Nothing follows in お湯を全部使わないで, so it is asking you to stop. 開封しないで送り返した has 送り返した after it, so the ないで is adverbial and the sentence is about how the letter was sent back. Read to the end of the sentence before deciding. One more shape, named so it does not confuse you and not taught here. 〜ずにはいられない is a fixed emphatic meaning cannot help doing — 笑わずにはいられない, cannot help laughing. It contains ずに and it is not the adverbial; it is an idiom with its own meaning, and pulling it apart the way this lesson pulls apart 割らずに will not give you the sense of it."
+
+- id: b4.checkpoint-0
+  order: 285
+  chapterId: b4.band-0
+  situation: Integration & checkpoint
+  title: Chapter 1 checkpoint
+  canDo: Recognise everything this chapter taught
+  wordIds: []
+  phraseIds: []
+  kanji: []
+  checkpoint: recognition
+  grammarNote: "A wide pass over everything this chapter taught — eight endings and forty-two words, which is more vocabulary than any chapter of the last book carried. Type the reading or the meaning rather than picking it out of a line-up. Four pairs are worth slowing down for, because they are the ones where getting it wrong costs you a sentence rather than a word. てしまう's two readings, finished against wish-it-hadn't, decided by the sentence and not by the form. ていく against てくる on the same verb, where the whole difference is which direction the speaker is standing in. ずに against the ないで that is a request, where the string is the same and the giveaway is whether another verb follows. And すぎる, too much, against 〜に過ぎない, merely — which this book has not taught yet and will not test, but which is close enough in shape to be worth knowing is coming. Anything you miss comes back sooner. It finishes when the remaining set empties; retry as often as you like, nothing is recorded."

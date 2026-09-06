@@ -1,0 +1,544 @@
+# Book Four, Chapter 4 phrases -- how people actually talk.
+#
+# Forty sentences, and not one of them is ours. 04-stage-reading.md section 8
+# withdrew the training-canonical exemption at the reading stage and above --
+# "no training-canonical sentences at the reading stage and above" -- so every
+# sentence below is a verbatim Tatoeba pair carried out of
+# server/data/jmdict-examples-eng-3.6.2.json with its id in `tatoebaId`.
+# Nothing was composed, trimmed, joined, smoothed or corrected. Every Japanese
+# string was checked character for character against the corpus after the file
+# was written, not before: all forty match.
+#
+# ---------------------------------------------------------------------------
+# ONE UTTERANCE PER CARD. This chapter's material -- final particles, casual
+# requests, wondering aloud -- is exactly where the corpus keeps its
+# two-speaker exchanges, and dozens of otherwise perfect sentences were
+# excluded for it. A scripted back-and-forth is multi-sentence composed text
+# even when both halves are separately attested, and it is the surface the
+# content rules exist to keep out. Several cards below would sit naturally
+# beside each other -- 謝ったんだから、さっきのはチャラにしてよ answers a
+# complaint that is not here, and the two ぞ sentences are both warnings -- and
+# they are authored as independent utterances, not as a scene.
+#
+# THREE SENTENCES DELIBERATELY NOT CARDED:
+#
+#   #172676 今はそうじゃなくても将来はいい夫になるよ and #146800
+#   少し走っただけで膝がガクガクしてるよ -- both are already Book Three cards
+#   (b3-03-conditions and b3-06-degree). The chapter breakdown flagged them.
+#
+#   #161315 うっかりそれを忘れるところだったわ -- the breakdown did not flag
+#   this one, and it is also already a Book Three card
+#   (b3-09-reference.yaml, band9.i-almost-forgot-all-about-that, where it
+#   teaches ところだった). It was the breakdown's cleanest わ candidate. It is
+#   replaced by #216883 さあ劇場に着いたぜ, which fills a real hole: lesson 7
+#   teaches ぞ, ぜ and わ, and the breakdown's candidate list had no ぜ sentence
+#   in it at all. The corpus has exactly three ぜ-final sentences at thirty
+#   characters or under, and this is the only one whose other vocabulary is
+#   within reach.
+#
+# ONE SENTENCE DECLINED, and this is the honest kind of gap rather than an
+# oversight. #194982 みんなソックスを引っ張り上げて was the breakdown's fourth
+# candidate for lesson 8, the bare-て request. Its corpus English is "Everybody
+# pulled their socks up, yeah" -- a past-tense narrative, which reads the て as
+# a mid-sentence continuation rather than as the request the lesson exists to
+# teach. Standing alone with a full stop the sentence is most naturally a
+# request, but "most naturally" is not verification, and a card whose only
+# English evidence contradicts the grammar point it is carding is a trap. It is
+# replaced by #201970 テレビをつけて, whose corpus English is "Please turn on
+# the television" -- the corpus itself confirming the reading. The cost is
+# real: ソックス and みんな lose their only attestation in this chapter, and
+# みんな is untaught anywhere in the app. A later chapter should card it.
+#
+# ---------------------------------------------------------------------------
+# THE ENGLISH is Tatoeba's own wherever Tatoeba's own would do. Thirteen of the
+# forty depart from it, every one listed here by id and kind so a reviewer can
+# check them rather than take them on trust. No Japanese string was touched.
+#
+#   Where the corpus English hid the grammar or the word the card exists for:
+#   #205790 -- "People don't say that anymore" hides both 死語 and the
+#     sentence-final じゃない. Glossed "That's a dead word now, isn't it?"
+#   #234657 -- "I don't live in his pocket" is an English idiom that hides 手先
+#     entirely. Glossed "I'm not his stooge."
+#   #178489 -- "I am losing my patience with you" moves じれったい onto the
+#     speaker; the Japanese puts it on 君のやること. Glossed "The way you do
+#     things is exasperating."
+#   #234759 -- "Oh, a bath, please" hides both 付き and the いいな this card is
+#     for. Glossed "Oh, one with a bathtub would be nice."
+#   #192197 -- "I should cancel my L.A. trip" hides the かな, which is the
+#     lesson, and drops the "business" in 出張. Glossed "Maybe I'll cancel my
+#     L.A. business trip."
+#   #216625 -- "Which are heavier" hides the かしら. Glossed "I wonder which is
+#     heavier, ...".
+#   #82758 -- "Don't forget to bring" adds a clause the Japanese does not have
+#     and hides 持参すること, an instruction on a printed list. Glossed "Bring
+#     kitchen utensils such as knives and pots."
+#   #121485 -- "than trying to fix it" is not in the Japanese at all. Glossed
+#     "You'd be better off buying a new one."
+#   #204303 -- "your mind" for 言う事, which is what you say rather than what
+#     you think. Glossed "Don't change what you say so often."
+#
+#   Where the corpus English was wrong, worn, or used a word the learner
+#   would not:
+#   #202858 -- "small" for きつい, which is tight (JMdict 1003450 sense 4).
+#   #216625 -- "onigiris", an English plural of a word the learner has as
+#     おにぎり. Glossed "a rice ball".
+#   #164132 -- "on-line", now written online.
+#   #75147 -- "self destruction", hyphenated.
+#   #202478 -- "Kleenex", a brand name, for ティッシュ. Glossed "tissues".
+#
+# ---------------------------------------------------------------------------
+# NO `recognitionOnly` ANYWHERE IN THIS CHAPTER, including on the ぞ, ぜ and わ
+# cards, and that is a decision rather than an omission. The flag exists for
+# two things in this app: a reading too long to type back (over about
+# forty-one kana), and a reading nothing settles. The longest reading below is
+# thirty kana, and every one is settled. Register is a third thing and the flag
+# is the wrong tool for it -- `recognitionOnly` removes a card from typed
+# review entirely (it holds on review as well as on first meeting, since
+# 2056df2), which would quietly retire the very sentences a learner most needs
+# to keep recognising. What ぞ and ぜ need is not less practice but a warning
+# about deployment, and that lives in the notes below and in lesson 7's own
+# can-do, which asks the learner to recognise who is talking rather than to
+# talk that way.
+#
+# THE CORPUS'S OWN SKEW, said once here and again in the lessons. These
+# sentences come from one corpus, largely translated in one era, and its
+# register-coded endings are not a survey of how anybody speaks now. わ in
+# particular is over-represented in fiction-flavoured lines. Read them as
+# evidence that these forms exist and what they sound like, not as a
+# frequency table.
+#
+# content-source: Tatoeba, via the sentence pairs embedded in JMdict for
+#   Applications 3.6.2 (server/data/jmdict-examples-eng-3.6.2.json). Every
+#   phrase carries its sentence id in `tatoebaId`; the id is quoted, because
+#   YAML reads a bare 172116 as a number and the schema rejects it. Verified by
+#   id against the corpus on 2026-09-06 -- all 40 resolve and each Japanese
+#   string matches its source character for character. Kana readings and romaji
+#   are transcriptions of the quoted sentence, not new content; every compound
+#   whose reading was not already obvious was checked against JMdict (王冠
+#   おうかん 1181450, 死語 しご 1310840, 手先 てさき 1328010, 丸一日 まるいちにち
+#   1922680, 買い替える かいかえる 2012810, 自滅 じめつ 1318710, 突き進む
+#   つきすすむ 1456730, 瓜二つ うりふたつ 1172580, 車酔い くるまよい 1872770,
+#   一等 いっとう 1165220, 我ながら われながら 1196710, 大食らい おおぐらい
+#   1862010, 微積分 びせきぶん 1724060, 骨 ほね 1288550 -- not こつ 1288540 --
+#   用品 ようひん 1546400, 面会 めんかい 1533440, お返し おかえし 1002640,
+#   劇場 げきじょう 1253410, 式 しき 1319060).
+# jlpt-source: training -- the level marks the chapter this content sits in,
+#   not each form's textbook level. Several of these endings are taught as N5
+#   or N4 in most courses; they arrive here because no earlier book of this
+#   course taught them, and tagging them N5 would misreport coverage.
+
+# ── Lesson 1 · Not that, this ────────────────────────────────────────────────
+
+- id: b4band3.our-next-trip-is-for-pleasure-not-for-work
+  jlpt: N3
+  scenario: casual negation
+  japanese: 今度の旅行は仕事じゃなくて遊びです。
+  reading: こんどのりょこうはしごとじゃなくてあそびです。
+  romaji: kondo no ryokou wa shigoto ja nakute asobi desu.
+  english: Our next trip is for pleasure, not for work.
+  tatoebaId: "172116"
+  notes: "The full form is ではなくて, and じゃ is what では becomes in speech -- one contraction, and it runs through every card in this lesson. Notice the polite です on the end: じゃなくて is casual in its middle and the sentence is polite at its close, which is ordinary and not a mismatch."
+
+- id: b4band3.it-wasnt-a-hundred-yen-coin
+  jlpt: N3
+  scenario: casual negation
+  japanese: 百円じゃなくて、王冠でした。
+  reading: ひゃくえんじゃなくて、おうかんでした。
+  romaji: hyaku-en ja nakute, oukan deshita.
+  english: It wasn't a 100 yen coin, it was a bottle cap.
+  tatoebaId: "75740"
+  notes: "The shape without a verb in sight -- noun, じゃなくて, noun. The correction structure in one line. 王冠 (おうかん, JMdict 1181450) is a crown in its first sense and the cap of a bottle in its second, which is the sense here and is not a card."
+
+- id: b4band3.thats-a-dead-word-now
+  jlpt: N3
+  scenario: casual negation
+  japanese: それって死語じゃないの。
+  reading: それってしごじゃないの。
+  romaji: sorette shigo ja nai no.
+  english: That's a dead word now, isn't it?
+  tatoebaId: "205790"
+  notes: "Two things at once. って is the spoken topic marker standing in for は, which lesson 3 names properly; の on the end is the soft final の, and with じゃない in front of it the sentence checks a shared impression rather than flatly denying anything. Said with a falling tone it is closer to a statement, \"that's dead now\" -- the words do not change, the tune does."
+
+- id: b4band3.im-not-his-stooge
+  jlpt: N3
+  scenario: casual negation
+  japanese: あいつの手先じゃない。
+  reading: あいつのてさきじゃない。
+  romaji: aitsu no tesaki ja nai.
+  english: I'm not his stooge.
+  tatoebaId: "234657"
+  notes: "Falling じゃない, flatly denying something -- this is the plain negative you already have as ではない from Book Three's register chapter, in its spoken dress. あいつ is a blunt \"that guy\", the あ of あれ pointed at a person; it is not taught on a card here and it is not neutral, so read it rather than reach for it."
+
+- id: b4band3.its-no-crime-to-idle-a-whole-day
+  jlpt: N3
+  scenario: casual negation
+  japanese: たまにまる一日ぼけっとしていても別に悪い事じゃない。
+  reading: たまにまるいちにちぼけっとしていてもべつにわるいことじゃない。
+  romaji: tama ni maru ichinichi boketto shite ite mo betsu ni warui koto ja nai.
+  english: It's no crime to just idle the whole day once in a while.
+  tatoebaId: "203279"
+  notes: "The longest sentence in the lesson and worth the length, because 別に and じゃない are made for each other -- 別に〜じゃない is the flattest way to say something is not a problem. まる一日 (まるいちにち, JMdict 1922680) is a whole day end to end, and ぼけっと (2077520) is doing nothing at all, vacantly. The ても in the middle is the one Book Three chapter 4 taught inside たとえ〜ても."
+
+# ── Lesson 2 · You know, right? ──────────────────────────────────────────────
+
+- id: b4band3.youd-be-better-off-buying-a-new-one
+  jlpt: N3
+  scenario: final particles
+  japanese: 買い替えた方がお得ですよ。
+  reading: かいかえたほうがおとくですよ。
+  romaji: kaikaeta hou ga otoku desu yo.
+  english: You'd be better off buying a new one.
+  tatoebaId: "121485"
+  notes: "よ on a polite sentence, telling somebody something they had not worked out -- which is what a shop assistant is doing here. This is Book Two chapter 9's たほうがいい with a different ending on it: 買い替えた方が, the replacing option, is 得, a better deal. 買い替える (かいかえる, JMdict 2012810) is buying a replacement rather than repairing."
+
+- id: b4band3.its-a-beautiful-day-isnt-it
+  jlpt: N3
+  scenario: final particles
+  japanese: いいお天気ですね。
+  reading: いいおてんきですね。
+  romaji: ii otenki desu ne.
+  english: It's a beautiful day, isn't it?
+  tatoebaId: "229416"
+  notes: "The ね you have had since Book One, and the reason it opens conversations: it hands the other person something they can already see and invites them to agree. Nothing is being told here. The お on 天気 is the polite prefix, ordinary on this word."
+
+- id: b4band3.the-waist-is-a-little-tight
+  jlpt: N3
+  scenario: final particles
+  japanese: ちょっとウエストがきついね。
+  reading: ちょっとウエストがきついね。
+  romaji: chotto uesuto ga kitsui ne.
+  english: The waist is a little tight.
+  tatoebaId: "202858"
+  notes: "The same ね on a plain adjective instead of です -- it sits on either. Here it softens a complaint into something shared rather than a verdict, which is most of the work ね does in a fitting room. きつい (JMdict 1003450, sense 4) is tight or constricting."
+
+- id: b4band3.the-way-you-do-things-is-exasperating
+  jlpt: N3
+  scenario: final particles
+  japanese: 君のやることはじれったいね。
+  reading: きみのやることはじれったいね。
+  romaji: kimi no yaru koto wa jirettai ne.
+  english: The way you do things is exasperating.
+  tatoebaId: "178489"
+  notes: "Proof that ね is not politeness. The sentence is critical and the ね does not soften the criticism away -- it presses the listener to accept it, closer to \"you know that, don't you\" than to a friendly aside. 君 is a familiar \"you\", used downward or between equals and not safe upward; やること is 「やる」 plus こと, the thing you do."
+
+- id: b4band3.japan-is-heading-for-self-destruction
+  jlpt: N3
+  scenario: final particles
+  japanese: 今の日本は自滅へのみちを突き進んでいますよね。
+  reading: いまのにほんはじめつへのみちをつきすすんでいますよね。
+  romaji: ima no nihon wa jimetsu e no michi o tsukisusunde imasu yo ne.
+  english: Present-day Japan is going down the route to self-destruction, isn't it?
+  tatoebaId: "75147"
+  notes: "よね, both particles at once and in that order only -- the よ says I am telling you this, the ね asks you to come with me. A heavy claim delivered with the door left open. 突き進む (つきすすむ, JMdict 1456730) is to push straight on regardless; へのみち is the へ particle turned into a noun modifier with の, the road towards."
+
+# ── Lesson 3 · To yourself, out loud ─────────────────────────────────────────
+
+- id: b4band3.youve-started-warming-up
+  jlpt: N3
+  scenario: self-talk
+  japanese: 君はウオーミングアップを始めたな。
+  reading: きみはウオーミングアップをはじめたな。
+  romaji: kimi wa uoomingu appu o hajimeta na.
+  english: You've started warming up.
+  tatoebaId: "177898"
+  notes: "な on a past verb -- a remark, half to oneself, about something just noticed. Nothing is being asked. Note the shape: 始めた, plain past, then な. That is not the prohibitive な of Book Four chapter 2, which only ever follows a dictionary form (始めるな, do not start). ウオーミングアップ is the corpus's spelling; ウォーミングアップ is the commoner one now."
+
+- id: b4band3.i-didnt-like-the-ending
+  jlpt: N3
+  scenario: self-talk
+  japanese: 僕はエンディングが気に入らなかったな。
+  reading: ぼくはエンディングがきにいらなかったな。
+  romaji: boku wa endingu ga ki ni iranakatta na.
+  english: Oh, I didn't like the ending.
+  tatoebaId: "82120"
+  notes: "The corpus's English opens with \"Oh\", which is a fair reading of this な -- an opinion offered as a musing rather than a verdict. Two register markers in one short sentence: 僕 for a male speaker, and な at the end. Neither is required by the grammar; both tell you who is speaking and how."
+
+- id: b4band3.a-room-with-a-bathtub-would-be-nice
+  jlpt: N3
+  scenario: self-talk
+  japanese: ああ、バスタブ付きがいいな。
+  reading: ああ、バスタブつきがいいな。
+  romaji: aa, basutabu tsuki ga ii na.
+  english: Oh, one with a bathtub would be nice.
+  tatoebaId: "234759"
+  notes: "いいな is the wishing な, and it is the one place in this lesson the coding falls away -- 「いいな」 is said by anyone, of anything they would like. Somebody is choosing a room. 〜付き hangs on a noun to mean \"with one of those attached\"."
+
+- id: b4band3.those-twins-are-identical
+  jlpt: N3
+  scenario: self-talk
+  japanese: あの双子は瓜二つだな。
+  reading: あのふたごはうりふたつだな。
+  romaji: ano futago wa uri futatsu da na.
+  english: Those twins look like two peas in a pod.
+  tatoebaId: "230644"
+  notes: "だな -- plain だ and then な -- on a noun predicate. 瓜二つ (うりふたつ, JMdict 1172580) is marked as an idiom there and is literally \"two halves of a melon\", which is the same picture English draws with two peas in a pod. The corpus English keeps the English idiom, and it is exactly right."
+
+- id: b4band3.you-hardly-see-dial-phones-anymore
+  jlpt: N3
+  scenario: self-talk
+  japanese: ダイヤル式の電話って、ほとんど見なくなったな。
+  reading: ダイヤルしきのでんわって、ほとんどみなくなったな。
+  romaji: daiyaru-shiki no denwa tte, hotondo minaku natta na.
+  english: You don't see many dial phones around anymore.
+  tatoebaId: "203868"
+  notes: "The card that carries って, the spoken topic marker -- ダイヤル式の電話って is ダイヤル式の電話は with a shrug in it, naming the topic the way speech does. Book Three chapter 10's という family did not cover this job. 見なくなった is Book Two's くなる on a negative, \"came not to see\", and 〜式 (しき, JMdict 1319060) means \"of that type\"."
+
+# ── Lesson 4 · I wonder ──────────────────────────────────────────────────────
+
+- id: b4band3.maybe-ill-cancel-the-la-trip
+  jlpt: N3
+  scenario: wondering aloud
+  japanese: ロス出張をキャンセルしようかな。
+  reading: ロスしゅっちょうをキャンセルしようかな。
+  romaji: rosu shucchou o kyanseru shiyou ka na.
+  english: Maybe I'll cancel my L.A. business trip.
+  tatoebaId: "192197"
+  notes: "The volitional from Book Four chapter 2 with かな behind it, which is how Japanese says \"maybe I'll\" -- しよう on its own is a decision, しようかな is a decision still being made. ロス is a clipping of ロサンゼルス (JMdict 1147310); the corpus reads it as L.A."
+
+- id: b4band3.maybe-its-time-i-learned-to-program
+  jlpt: N3
+  scenario: wondering aloud
+  japanese: そろそろプログラミングを覚えようかな。
+  reading: そろそろプログラミングをおぼえようかな。
+  romaji: sorosoro puroguramingu o oboeyou ka na.
+  english: Maybe it's about time I started learning to program.
+  tatoebaId: "204469"
+  notes: "The same 〜ようかな, and そろそろ in front of it doing the timing: the moment has arrived, not the clock. 覚える you have from Book One's home and work chapter; here it is picking up a skill rather than memorising a fact."
+
+- id: b4band3.i-wonder-whose-car-this-is
+  jlpt: N3
+  scenario: wondering aloud
+  japanese: これは誰の車かしら。
+  reading: これはだれのくるまかしら。
+  romaji: kore wa dare no kuruma kashira.
+  english: I wonder whose car this is.
+  tatoebaId: "218202"
+  notes: "かしら does the same job as かな. In Tokyo speech it is heard mostly from women and mostly from older speakers -- a tendency with real exceptions, not a rule, and this corpus is old enough to over-represent it. Notice there is no か before it: 誰の車かしら, not 誰の車かかしら. The か is already inside the word."
+
+- id: b4band3.i-wonder-which-is-heavier
+  jlpt: N3
+  scenario: wondering aloud
+  japanese: サンドイッチとおにぎりじゃ、どっちが重いかしら。
+  reading: サンドイッチとおにぎりじゃ、どっちがおもいかしら。
+  romaji: sandoicchi to onigiri ja, docchi ga omoi kashira.
+  english: I wonder which is heavier, a sandwich or a rice ball.
+  tatoebaId: "216625"
+  notes: "Lesson 1's じゃ turning up in its other job -- では after a pair of nouns, \"as between these two\". Then a question word, が, and かしら. どっち is the casual どちら."
+
+- id: b4band3.arent-you-the-one-who-gets-carsick
+  jlpt: N3
+  scenario: wondering aloud
+  japanese: 車酔いするほうだっけ？
+  reading: くるまよいするほうだっけ？
+  romaji: kuruma yoi suru hou dakke?
+  english: Don't you tend to get carsick?
+  tatoebaId: "148919"
+  notes: "だっけ is the memory check -- was it...? -- and it is asked of yourself as often as of anybody else. Built from だ plus っけ. ほう is Book Two's ほう widened a little: the sort or category you belong to, not one of two named options. 車酔い is くるまよい (JMdict 1872770), car sickness."
+
+- id: b4band3.when-was-the-last-time-i-saw-you
+  jlpt: N3
+  scenario: wondering aloud
+  japanese: この前、僕が君にあったのはいつだっけ。
+  reading: このまえ、ぼくがきみにあったのはいつだっけ。
+  romaji: kono mae, boku ga kimi ni atta no wa itsu dakke.
+  english: Do you remember when I saw you last?
+  tatoebaId: "220765"
+  notes: "The corpus English is loose and is right about the job: だっけ hands the remembering to whoever is listening. のは turns the whole clause 僕が君にあった into the subject: の doing to a clause what こと does in Book Three chapter 10, then は on top of it. 会う takes に for the person met, and here it is written in kana."
+
+# ── Lesson 5 · Things like that ──────────────────────────────────────────────
+
+- id: b4band3.i-never-dreamed-of-winning-first-prize
+  jlpt: N3
+  scenario: playing it down
+  japanese: １等になるなんて夢にも思わなかった。
+  reading: いっとうになるなんてゆめにもおもわなかった。
+  romaji: ittou ni naru nante yume ni mo omowanakatta.
+  english: Never did I dream of winning first prize.
+  tatoebaId: "235713"
+  notes: "なんて after a whole clause -- \"the very idea of coming first\" -- and what follows says what the speaker makes of that idea. Here, disbelief. 夢にも思わなかった is a set phrase, never dreamed it, with も pushing the negative as far as it goes. １等 is いっとう (JMdict 1165220), first place."
+
+- id: b4band3.silly-of-me-to-make-the-same-mistake
+  jlpt: N3
+  scenario: playing it down
+  japanese: また同じ失敗をするなんて、我ながら愚かだと思う。
+  reading: またおなじしっぱいをするなんて、われながらおろかだとおもう。
+  romaji: mata onaji shippai o suru nante, warenagara oroka da to omou.
+  english: It is silly of me to have made the same mistake twice.
+  tatoebaId: "195400"
+  notes: "The same なんて, this time turning the speaker's own behaviour into something to marvel at -- which is how なんて dismisses. 我ながら (われながら, JMdict 1196710) is one fixed adverb meaning \"even if I do say so myself\"; it is not the ながら of Book Two's simultaneous action or Book Three chapter 3's ながらも, and it will not decompose."
+
+- id: b4band3.what-a-big-eater-he-is
+  jlpt: N3
+  scenario: playing it down
+  japanese: 彼はなんて大食らいなんだろう。
+  reading: かれはなんておおぐらいなんだろう。
+  romaji: kare wa nante oogurai nan darou.
+  english: What a big eater he is!
+  tatoebaId: "111388"
+  notes: "なんて's other job, and this one is at the front of the sentence rather than after a clause: なんて〜だろう is \"what a ...!\", exclaiming rather than dismissing. The だろう is Book Four chapter 3's. 大食らい (おおぐらい, JMdict 1862010) is a glutton."
+
+- id: b4band3.this-work-is-anything-but-easy
+  jlpt: N3
+  scenario: playing it down
+  japanese: この仕事は決してやさしくなんかないんだよ。
+  reading: このしごとはけっしてやさしくなんかないんだよ。
+  romaji: kono shigoto wa kesshite yasashiku nanka nai n da yo.
+  english: This work is anything but easy.
+  tatoebaId: "221811"
+  notes: "なんか wedged between an adjective and its negative -- やさしく + なんか + ない. It brushes the idea aside before denying it, which is where the English \"anything but\" comes from. Three intensifiers stacked: 決して needing the negative, なんか belittling it, んだよ from Book Four chapter 3 insisting on it."
+
+- id: b4band3.something-was-wrong-with-my-computer
+  jlpt: N3
+  scenario: playing it down
+  japanese: 私のパソコンなんかへんでネットに乗れませんでした。
+  reading: わたしのパソコンなんかへんでネットにのれませんでした。
+  romaji: watashi no pasokon nanka hen de netto ni noremasen deshita.
+  english: Something was wrong with my computer and I couldn't get online.
+  tatoebaId: "164132"
+  notes: "なんか after a noun, hedging rather than listing -- \"my computer or something about it\". It is doing the work English does with \"sort of\". ネット (JMdict 1093020, sense 2) is the internet; 乗れません is the potential of 乗る, and ネットに乗る is a dated way to say get online."
+
+# ── Lesson 6 · And so on ─────────────────────────────────────────────────────
+
+- id: b4band3.bring-knives-and-pots
+  jlpt: N3
+  scenario: loose lists
+  japanese: 包丁とか鍋とか、台所用品を持参すること。
+  reading: ほうちょうとかなべとか、だいどころようひんをじさんすること。
+  romaji: houchou toka nabe toka, daidokoro youhin o jisan suru koto.
+  english: Bring kitchen utensils such as knives and pots.
+  tatoebaId: "82758"
+  notes: "The core shape -- noun とか noun とか, a list that does not claim to be complete. Two items are named and a category follows them. The ending is worth noticing separately: a plain verb plus こと closes a written instruction, on a notice or a school letter, where speech would say 持ってきてください. 用品 is ようひん (JMdict 1546400), supplies."
+
+- id: b4band3.shall-we-have-cornflakes-or-something
+  jlpt: N3
+  scenario: loose lists
+  japanese: 明日からコーンフレークとか、軽い物にしようか？
+  reading: あしたからコーンフレークとか、かるいものにしようか？
+  romaji: ashita kara koonfureeku toka, karui mono ni shiyou ka?
+  english: Shall we go with cornflakes or something light from tomorrow?
+  tatoebaId: "75517"
+  notes: "One item plus とか, with nothing after it -- which is where とか stops being a list and becomes a hedge. It offers cornflakes without insisting on cornflakes. Then 〜にする, settling on something, in the volitional Book Four chapter 2 taught, plus か -- 軽い物にしようか, shall we make it something light."
+
+- id: b4band3.a-mr-marconi-wants-to-see-you
+  jlpt: N3
+  scenario: loose lists
+  japanese: マルコーニさんとかいう人がご面会です。
+  reading: マルコーニさんとかいうひとがごめんかいです。
+  romaji: marukooni-san toka iu hito ga gomenkai desu.
+  english: A Mr. Marconi wants to see you.
+  tatoebaId: "195162"
+  notes: "とかいう holds a name at arm's length -- someone calling himself Marconi, the corpus's \"A Mr. Marconi\". It is という with とか's vagueness folded in. ご on 面会 (めんかい, JMdict 1533440) is the honorific prefix this book's keigo chapters teach; here it is only worth recognising."
+
+- id: b4band3.i-cant-look-after-my-parents-either
+  jlpt: N3
+  scenario: loose lists
+  japanese: 私も親の面倒とか見られないですね。
+  reading: わたしもおやのめんどうとかみられないですね。
+  romaji: watashi mo oya no mendou toka mirarenai desu ne.
+  english: I can't look after my parents and such either.
+  tatoebaId: "74030"
+  notes: "とか planted inside a fixed expression, 面倒を見る, looking after somebody -- which shows how loosely it attaches. 見られない is the potential negative from Book Two, not the passive. The ね at the end is lesson 2's, and the も says somebody else has just said the same thing."
+
+# ── Lesson 7 · Rough and soft endings ────────────────────────────────────────
+
+- id: b4band3.i-cant-fail-this-time
+  jlpt: N3
+  scenario: rough and soft endings
+  japanese: 今回はしくじれないぞ。
+  reading: こんかいはしくじれないぞ。
+  romaji: konkai wa shikujirenai zo.
+  english: You cannot fail this time.
+  tatoebaId: "172500"
+  notes: "ぞ pushes a statement out hard. In this corpus it is used overwhelmingly by male speakers, and it goes to oneself or downward -- never up. Nobody is named in the Japanese: the corpus reads it as a warning to somebody else, and read as self-talk it is just as good, a man telling himself he cannot mess this one up. しくじる (JMdict 1005500) is to blunder; しくじれない is its potential negative."
+
+- id: b4band3.trust-him-and-youll-lose-everything
+  jlpt: N3
+  scenario: rough and soft endings
+  japanese: あんなやつを信用したら骨までしゃぶられちゃうぞ。
+  reading: あんなやつをしんようしたらほねまでしゃぶられちゃうぞ。
+  romaji: anna yatsu o shinyou shitara hone made shaburarechau zo.
+  english: If you trust such a fellow, you'll lose everything you have.
+  tatoebaId: "229559"
+  notes: "The rough ending in the company it keeps -- やつ for a person, たら from Book Two, Book Three's passive, and Book Four chapter 1's ちゃう, all of them casual, and ぞ closing it. 骨までしゃぶられる is picked to the bone (骨 is ほね, JMdict 1288550 -- not the こつ of 1288540, which is a knack). しゃぶる (1005670) is to suck."
+
+- id: b4band3.here-we-are-at-the-theatre
+  jlpt: N3
+  scenario: rough and soft endings
+  japanese: さあ劇場に着いたぜ。
+  reading: さあげきじょうについたぜ。
+  romaji: saa gekijou ni tsuita ze.
+  english: Here we are at the theater.
+  tatoebaId: "216883"
+  notes: "ぜ is ぞ's softer neighbour -- the same assertive push, aimed at somebody the speaker is comfortable with rather than downward, and it dates a speaker: it is heard far less now than in the fiction this corpus draws on. The corpus holds only three ぜ-final sentences short enough to card, which is itself the evidence. さあ opens the sentence as a nudge, \"right then\"."
+
+- id: b4band3.ill-pay-you-back-with-my-calculus-notes
+  jlpt: N3
+  scenario: rough and soft endings
+  japanese: お返しに微積分のノートを貸してあげるわ。
+  reading: おかえしにびせきぶんのノートをかしてあげるわ。
+  romaji: okaeshi ni bisekibun no nooto o kashite ageru wa.
+  english: I'll pay you back with my calculus notes.
+  tatoebaId: "226669"
+  notes: "わ, and it is not ぞ with a skirt on -- it softens rather than pushes, adding warmth to an offer. In Tokyo speech it reads as feminine and somewhat dated; in Kansai and much of western Japan a flatter わ is ordinary for any speaker, and the two are different particles doing different things with the same kana. てあげる is Book Two chapter 2. お返しに (JMdict 1002640) is \"in return\"; 微積分 is びせきぶん, calculus."
+
+- id: b4band3.look-here-comes-your-train
+  jlpt: N3
+  scenario: rough and soft endings
+  japanese: ほら、あなたの乗る電車が来たわ。
+  reading: ほら、あなたののるでんしゃがきたわ。
+  romaji: hora, anata no noru densha ga kita wa.
+  english: Look, here comes your train.
+  tatoebaId: "195969"
+  notes: "The second わ, on a plain past verb, pointing something out gently. あなたの乗る電車 is a relative clause with の standing in for が inside it -- the train you are getting on -- which is ordinary and worth spotting. ほら (JMdict 1011710) is \"look\" as an interjection."
+
+# ── Lesson 8 · Just do it, would you ─────────────────────────────────────────
+
+- id: b4band3.get-him
+  jlpt: N3
+  scenario: casual requests
+  japanese: そいつをつかまえて！
+  reading: そいつをつかまえて！
+  romaji: soitsu o tsukamaete!
+  english: Get him!
+  tatoebaId: "213972"
+  notes: "A te-form and nothing else. Strip ください off 〜てください and this is what is left: the request at its shortest, for people you are close to or moments you have no time in. そいつ is a blunt \"that one\" for a person, from それ."
+
+- id: b4band3.please-turn-on-the-television
+  jlpt: N3
+  scenario: casual requests
+  japanese: テレビをつけて。
+  reading: テレビをつけて。
+  romaji: terebi o tsukete.
+  english: Please turn on the television.
+  tatoebaId: "201970"
+  notes: "The same bare て with none of the urgency -- at home, to family. The corpus English puts \"please\" in it, which is fair: this is not rude, it is close. To anybody outside that circle it would be, and てください is the version that travels."
+
+- id: b4band3.bring-me-the-tissues
+  jlpt: N3
+  scenario: casual requests
+  japanese: ティッシュを持ってきて。
+  reading: ティッシュをもってきて。
+  romaji: tisshu o motte kite.
+  english: Bring me the tissues.
+  tatoebaId: "202478"
+  notes: "Bare て on a compound verb -- 持ってくる, to bring, itself already a て-form plus 来る, and then the request て on the end of that. Book One taught the whole thing as 持ってきてください."
+
+- id: b4band3.ive-apologised-so-lay-off
+  jlpt: N3
+  scenario: casual requests
+  japanese: 謝ったんだから、さっきのはチャラにしてよ。
+  reading: あやまったんだから、さっきのはチャラにしてよ。
+  romaji: ayamatta n da kara, sakki no wa chara ni shite yo.
+  english: I've apologised, so lay off, OK?
+  tatoebaId: "76044"
+  notes: "てよ -- the request particle from lesson 2 on the end of a bare て -- which presses. It is the difference between asking and pushing, and it is why てよ can sound childish or petulant where plain て does not. んだから is Book Four chapter 3's explanatory ん with から on it. チャラ (JMdict 1007630) is colloquial for calling a debt even, water under the bridge."
+
+- id: b4band3.dont-keep-changing-what-you-say
+  jlpt: N3
+  scenario: casual requests
+  japanese: そんなにコロコロ、言う事を変えないでくれよ。
+  reading: そんなにコロコロ、いうことをかえないでくれよ。
+  romaji: sonna ni korokoro, iu koto o kaenaide kure yo.
+  english: Don't change what you say so often.
+  tatoebaId: "204303"
+  notes: "The negative end of the ladder. ないで alone is already a request not to do something; ないでくれ adds くれ, the plain imperative of くれる, and lands blunt -- male-coded in this corpus, and not something to aim upward. Book Two's ないでください is the same request with the register put back. コロコロ (JMdict 1004840, sense 3) is changing over and over."

@@ -1,7 +1,8 @@
 # The fluency stage — the long tail
 
 **Stage:** `fluency` (DR-033) — the fourth and last: foundation, building, reading, fluency.
-**Status: not started.**
+**Status: first volume specified** — `book-four-bands.md` (2026-09-06) re-derives §3 against Book
+Three as shipped and against measured coverage, since the library §7 wanted to wait for does not exist.
 
 **Goal:** extend the reading, mining and production machinery of
 [the reading stage](04-stage-reading.md) with harder and broader content, plus the register and

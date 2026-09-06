@@ -42,6 +42,7 @@ const BOOKS = {
   n5: { order: 1, title: "Book One" },
   b2: { order: 2, title: "Book Two" },
   b3: { order: 3, title: "Book Three" },
+  b4: { order: 4, title: "Book Four" },
 };
 
 const loadDir = (dir) =>
@@ -233,7 +234,6 @@ function buildMarkdown(book, ctx) {
 
   return out.join("\n");
 }
-
 
 /** Every file the map is made of — one Markdown record per book. */
 export function buildOutputs() {

@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import type { Book, Lesson } from "@/types";
-import { bookOne, bookThree, bookTwo, books, currentBook, priorBooks } from "./books";
+import { bookFour, bookOne, bookThree, bookTwo, books, currentBook, priorBooks } from "./books";
 import { n5Lessons, b2Lessons } from "./lessons";
 import { n5Chapters, b2Chapters } from "./chapters";
 
@@ -36,7 +36,6 @@ describe("bookOne", () => {
   it("has nothing before it, so its sessions review its own items only", () => {
     expect(priorBooks(bookOne)).toEqual([]);
   });
-
 });
 
 describe("bookTwo", () => {
@@ -71,9 +70,15 @@ describe("bookTwo", () => {
   });
 });
 
+describe("bookFour", () => {
+  it("is the fluency stage, matching the Book Four content plan and routing", () => {
+    expect(bookFour.stage).toBe("fluency");
+  });
+});
+
 describe("the course", () => {
-  it("runs Book One, then Book Two, then Book Three", () => {
-    expect(books).toEqual([bookOne, bookTwo, bookThree]);
+  it("runs Book One, then Book Two, then Book Three, then Book Four", () => {
+    expect(books).toEqual([bookOne, bookTwo, bookThree, bookFour]);
   });
 
   it("gives every book a distinct progress key", () => {
@@ -142,14 +147,24 @@ describe("currentBook", () => {
   });
 
   it("returns the last reachable book when every reachable book is finished", () => {
-    const chosen = currentBook([one, two], seen([["key-1", ["a1", "a2"]], ["key-2", ["b1"]]]), "free");
+    const chosen = currentBook(
+      [one, two],
+      seen([
+        ["key-1", ["a1", "a2"]],
+        ["key-2", ["b1"]],
+      ]),
+      "free",
+    );
     expect(chosen).toBe(two);
   });
 
   it("returns the last book the tier reaches, not the last book there is", () => {
     // A paid-only third book must not be handed to a free account that has
     // run out of its own.
-    const finished = seen([["key-1", ["a1", "a2"]], ["key-2", ["b1"]]]);
+    const finished = seen([
+      ["key-1", ["a1", "a2"]],
+      ["key-2", ["b1"]],
+    ]);
     expect(currentBook([one, two, three], finished, "paid")).toBe(three);
   });
 

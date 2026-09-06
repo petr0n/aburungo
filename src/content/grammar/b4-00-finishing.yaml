@@ -1,0 +1,111 @@
+# Book Four, Chapter 1 grammar patterns -- finishing what was started.
+#
+# Eight patterns, one per teaching lesson, each blanking the thing that lesson
+# exists for out of one of its own sentences. The blank is matched against the
+# phrase's reading, so these are kana.
+#
+# ちゃう is not a ninth. It is てしまう's spoken contraction and it rides on
+# lesson 1's card, where two of the five phrases carry it -- 忘れちゃった and
+# キスされちゃった -- and the grammarNote builds it from the full form rather
+# than presenting it as a separate rule. Giving it a pattern of its own would
+# say it is a different construction, and it is not; it is the same one said
+# faster. Band 3 of this book, on spoken register, is where the contraction
+# machinery as a class belongs, and this chapter hands it over rather than
+# pre-empting it.
+#
+# On the `pattern` strings, and why they are all bare kana. Book Three's band 0
+# file records the mechanical reason at length and it has not changed:
+# scripts/levelling.mjs's grammarSurface() returns null for any pattern
+# containing a Latin character or a digit, and needs at least one ～-delimited
+# fragment two characters or longer. A pattern that returns null tags no
+# sentence, and the levelling index is what a future reading library queries.
+# Book Two's free English descriptions ("godan: last sound to the え row, add
+# る") are unusable there.
+#
+# This chapter gets an easier ride from that constraint than Book Three's
+# auxiliaries did, and it is worth saying why rather than letting it look like
+# luck. Every form here has one fixed surface -- てしまう is always てしまう, ずに
+# is always ずに -- where the passive's rule produced 書かれる, 読まれる and
+# 話される from one derivation and could only be tagged by the auxiliary alone.
+# So these literals are precise in a way that band 0's could not be. Two carry
+# known noise anyway, named rather than hidden:
+#
+#   ～まま tags そのまま, あるがまま and まま-the-noun along with the
+#   construction. There is no narrower literal, since the whole point of the
+#   pattern is that anything at all can sit in front of まま.
+#
+#   ～ずに catches せずに and 知らずに correctly, since both contain the string,
+#   and it also catches ずにはいられない -- the fixed emphatic this chapter names
+#   without carding. That last one is a different construction wearing the same
+#   two kana, so a tag count on ～ずに is an upper bound on the adverbial.
+#
+# ～てくる and ～ていく are the two to watch when reading the tagger's output.
+# Both tag their aspectual and their motion uses without distinguishing them,
+# because the string is identical in both and only the sentence decides. That is
+# the same thing the lessons teach, so it is honest noise rather than a defect,
+# but a later pass reading tag counts should not treat "sentences using ていく"
+# as one category.
+#
+# content-source: n/a for this file -- every pattern references an existing
+#   phrase from phrases/b4-00-finishing.yaml rather than composing new Japanese,
+#   and that file carries the Tatoeba id for each sentence.
+# jlpt-source: training -- the level marks the chapter this content sits in.
+#   All eight forms are canonically N4 grammar and arrive here only because
+#   Books One through Three never reached them; the chapter is N3 and is tagged
+#   as such, consistent with its phrases.
+
+- id: grammar.b4-te-shimau
+  jlpt: N3
+  pattern: "～てしまう"
+  gloss: It is finished, or it happened and cannot be undone. te-form plus しまう. The same form carries completion and regret and the sentence around it decides which; after a voiced て it is でしまう, 読んでしまう. In speech it contracts to ちゃう and じゃう -- 忘れちゃった, 読んじゃった.
+  phraseId: b4band0.i-lost-my-camera-the-other-day
+  blank: なくしてしまった
+
+- id: grammar.b4-te-oku
+  jlpt: N3
+  pattern: "～ておく"
+  gloss: Do it now, for later. te-form plus おく, either getting something ready in advance or leaving a state in place on purpose. After a voiced て it is でおく. Speech contracts it to とく and どく -- 買っとく, 読んどく -- which this chapter names and does not card.
+  phraseId: b4band0.we-prepared-snacks-beforehand
+  blank: よういしておいた
+
+- id: grammar.b4-te-miru
+  jlpt: N3
+  pattern: "～てみる"
+  gloss: Do it and see. te-form plus みる. てみてください softens an instruction, てみたら offers a suggestion, てみると reports what turned up on trying, and てみたい is wanting to give it a go. Not てみせる, which is doing something to show somebody.
+  phraseId: b4band0.could-you-turn-on-your-headlights
+  blank: つけてみて
+
+- id: grammar.b4-te-iku
+  jlpt: N3
+  pattern: "～ていく"
+  gloss: Away from here, or on from now. te-form plus いく. Either something physically moves away from where the speaker is, or a change carries forward into the future. Written 行く or in kana, both ordinary.
+  phraseId: b4band0.tomoko-went-happily-out-the-door
+  blank: でかけていった
+
+- id: grammar.b4-te-kuru
+  jlpt: N3
+  pattern: "～てくる"
+  gloss: Towards you, or up to now. te-form plus くる, the mirror of ていく. Either something moves towards the speaker -- including go, do it, and come back, as in 買ってくる -- or a change has been building up to the present.
+  phraseId: b4band0.the-bon-festival-is-near-at-hand
+  blank: ちかづいてきた
+
+- id: grammar.b4-sugiru
+  jlpt: N3
+  pattern: "～すぎる"
+  gloss: More than it should be. Onto an い-adjective stem, a な-adjective stem, or a verb's ます-stem -- 大きすぎる, 食べすぎる. Cut the る and it is a noun, 飲みすぎ. Written 過ぎる or in kana. Not に過ぎない, which means merely and comes later in this book.
+  phraseId: b4band0.this-size-is-too-large-for-me
+  blank: おおきすぎます
+
+- id: grammar.b4-mama
+  jlpt: N3
+  pattern: "～まま"
+  gloss: Left as it was. After a past-tense verb, a negative, a noun with の, or a demonstrative -- つけたまま, 噛み合わないまま, そのまま. One state holds unchanged while something else happens. ままにする is leaving it that way on purpose.
+  phraseId: b4band0.i-went-out-with-the-heater-on
+  blank: つけたまま
+
+- id: grammar.b4-zu-ni
+  jlpt: N3
+  pattern: "～ずに"
+  gloss: Without doing it. Take the ない form, drop the ない, put ずに there -- 割らずに, かぶらずに. する is the one irregular and gives せずに, never しずに. 〜ないで says the same thing one register down, and is also how Book Two asked you not to do something.
+  phraseId: b4band0.you-cant-make-an-omelet-without-breaking-eggs
+  blank: わらずに

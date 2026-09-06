@@ -1,0 +1,425 @@
+# Book Four, Chapter 3 vocabulary -- thirty-four words, every one of them
+# standing in a sentence this chapter already quotes.
+#
+# The rule is the one docs/plans/book-four-bands.md section 2 sets for this
+# book and vocabulary/b4-00-finishing.yaml states first: a lesson teaches the
+# untaught content words of the sentences it is carding, not a curated list and
+# not a frequency list. Nothing below was chosen for its own sake, and a word
+# whose sentence did not survive the carding pass is not here.
+#
+# What that produced, lesson by lesson: 5, 6, 5, 7, 6, 5. The breakdown
+# (docs/plans/book-four-band-02.md) named 28 firm words and about twenty
+# optional ones; six of the optional ones are carded and the reason is written
+# on each entry. In short:
+#
+#   機関 and あたり because the breakdown asked the author to choose their sense
+#     and both stand in a carded sentence -- so choosing the sense and then not
+#     teaching the word would have been half a job.
+#   降る because lesson 4's whole contrast is 降るそうだ against 降りそうだ, and
+#     the learner owns おりる (to get off) but not this verb. Teaching the
+#     contrast while leaving one of its two verbs unglossed is not teachable.
+#   ウスターソース because it is the only content word in its card.
+#   いわゆる because it is the only untaught word in its card, and it is one of
+#     the commonest single words in expository Japanese.
+#   マスター because its sense 1 is a verb, which the breakdown flagged.
+#
+# Words in carded sentences that are deliberately NOT here, so that the
+# omissions read as decisions rather than oversights: 死因, 癌, 医大, 大火, 原文,
+# 忠実, 寝込む, 一朝一夕, 一見, 見回す, きょときょと, がつがつ, だぶだぶ, 送金,
+# おしぼり, 自動販売機, ギタリスト, ミニスカート, マイアミ, お伴, 骨, 折る.
+# Each is glossed in its phrase's `notes` instead. The line drawn is between a
+# word that will recur in ordinary reading and one that belongs to its own
+# sentence: 癌 and 死因 are a medical pair the learner will meet again in a
+# reading, but not one this chapter has any way to exercise, and 骨を折る is an
+# idiom whose parts teach the wrong thing when carded separately.
+#
+# ---------------------------------------------------------------------------
+# ON THE JLPT TAGS. The rule is Book Two's, Book Three's ところ and Book Four
+# chapter 1's: tag a word at the level the reference lists in data/jlpt
+# actually carry it at, not at the level of the book it lands in. The learner
+# never reads a level (DR-024); the only consumer of this field is coverage
+# tooling, and moving a word up or down to match its chapter would make that
+# tooling report a lie in two directions.
+#
+# Followed honestly, three tags look wrong and are not: 復活 and 極端 sit on the
+# N1 sheet (tanos and open-anki both), and 叔父/おじ on the N2 sheet, while
+# 新聞, 町, 問題 and 降る are N5 words that no earlier book happened to teach.
+# Two departures from the breakdown are corrections rather than choices: it
+# marked 町 as N3 where both lists carry it at N5, and marked 流行 N3, which is
+# right for りゅうこう and not for はやり (N1, same characters, different word).
+#
+# Eleven words are on no reference list at all in the form carded -- 手に入れる,
+# 最新, 水増し, パブ, ウスターソース, 衰退, そいつ, レトリック, and with them
+# 機関's sense and マスター's verb use. Those carry the nearest honest level and
+# this note stands in for a citation: N3 where the word is everyday
+# (手に入れる, 最新, パブ, ウスターソース, そいつ), N2 where it belongs to
+# writing or the news (水増し, 衰退, レトリック).
+#
+# content-source: training -- headword, reading, part of speech and gloss
+#   verified against JMdict for Applications 3.6.2 (server/data/) on 2026-09-06,
+#   sequence number inline on every entry, and the sense number checked against
+#   the sentence that carries the word rather than taken from the breakdown.
+#   Three senses turned out not to be the sense the breakdown named and each
+#   says so on its own entry: 機関 sense 2, そいつ sense 2, and あたり, whose
+#   seq in the breakdown (1448780) is 当たり, "a hit" -- the word in the
+#   sentence is 辺り, seq 1512080. Every entry but one is flagged common in
+#   JMdict; the exception is ウスターソース, which is carded because it is the
+#   only content word in its sentence.
+# jlpt-source: training -- JLPT level unverified (JMdict carries no JLPT data).
+#   Levels follow data/jlpt/reference-*.json as set out above.
+
+# ── Lesson 1: Because that's the reason ───────────────────────────────────────
+
+- id: vocab.tariru
+  jlpt: N4
+  word_type: verb
+  verb_class: ru
+  theme: basics
+  japanese: 足りる
+  reading: たりる
+  romaji: tariru
+  english: to be enough, to be sufficient
+  notes: Intransitive, so what is short takes が and not を -- バトンが１本足りない, we are one baton short. The negative 足りない is the form you will meet most, and it is how Japanese says something is missing without naming anyone to blame. Same character as 足, a foot or a leg, which is the pair worth keeping straight when you meet it alone. JMdict seq 1404740, sense 1.
+
+- id: vocab.teniireru
+  jlpt: N3
+  word_type: verb
+  verb_class: ru
+  theme: actions
+  japanese: 手に入れる
+  reading: てにいれる
+  romaji: teniireru
+  english: to obtain, to get hold of
+  notes: Literally to put into your hand, and JMdict files it as an expression that conjugates like any ichidan verb -- 手に入れた, 手に入れて. Deliberate acquisition rather than plain receiving, so it carries an effort もらう does not. The intransitive twin is 手に入る, where the thing does the arriving and takes が. JMdict seq 1327230, sense 1.
+
+- id: vocab.shikata
+  jlpt: N4
+  word_type: noun
+  theme: basics
+  japanese: 仕方
+  reading: しかた
+  romaji: shikata
+  english: way of doing something, method
+  notes: Sense 1 of three registered senses, and the one the sentence needs -- way, method, means. The pattern behind it is bigger than the word -- any ます-stem plus 方 makes a way-of-doing noun, so 送金の仕方 and 書き方 are built the same way. You will also meet it in the fixed 仕方がない, there is nothing to be done, where the noun has stopped meaning method at all. JMdict seq 1594110, sense 1.
+
+- id: vocab.ryuukou
+  jlpt: N3
+  word_type: noun
+  theme: clothes
+  japanese: 流行
+  reading: りゅうこう
+  romaji: ryuukou
+  english: fashion, trend, what is in vogue
+  notes: Two words share these characters. りゅうこう is this one, a trend or a craze, and it also does duty for an epidemic in sense 2 -- インフルエンザの流行 -- because a disease spreads the way a fad does. はやり is the other reading of the same pair and the everyday spoken word for the same idea. Reading the characters correctly is a matter of register, not of meaning. JMdict seq 1585110, sense 1.
+
+- id: vocab.saishin
+  jlpt: N3
+  word_type: noun
+  theme: quality
+  japanese: 最新
+  reading: さいしん
+  romaji: saishin
+  english: newest, the latest
+  notes: 最 is the superlative prefix -- most, -est -- and it makes a small family worth expecting -- 最新 newest, 最初 first, 最後 last, 最近 recent. In front of a noun it takes の, 最新の流行, since JMdict marks it adj-no rather than a な-adjective. On no JLPT reference list in any source, and tagged at the level of the book it appears in. JMdict seq 1294090, sense 1.
+
+# ── Lesson 2: Probably ────────────────────────────────────────────────────────
+
+- id: vocab.kekka
+  jlpt: N3
+  word_type: noun
+  theme: basics
+  japanese: 結果
+  reading: けっか
+  romaji: kekka
+  english: result, outcome
+  notes: The noun for how something turned out. It also works as a connector meaning as a result of, sense 2, sitting after another noun -- 努力の結果. Do not file it with 結局, the adverb this chapter teaches two lessons on -- 結果 is the outcome itself, 結局 is the speaker saying in the end. They share a character and nothing else. JMdict seq 1254690, sense 1.
+
+- id: vocab.honmono
+  jlpt: N3
+  word_type: noun
+  theme: quality
+  japanese: 本物
+  reading: ほんもの
+  romaji: honmono
+  english: the genuine article, the real thing
+  notes: 本 here is not the book you learned in Book One but its other job, real or main. The opposite is 偽物, にせもの, a fake. In front of a noun it takes の -- 本物のダイヤ -- which is where you have already met it, in the stance chapter's これは本物のダイヤではないかもしれない. JMdict seq 1523180, sense 1.
+
+- id: vocab.inai
+  jlpt: N4
+  word_type: noun
+  theme: time
+  japanese: 以内
+  reading: いない
+  romaji: inai
+  english: within, inside of
+  notes: A suffix on a quantity -- １時間以内, 一週間以内, ３キロ以内 -- and the following に marks the deadline or the boundary. The 以 family is worth learning together -- 以内 within, 以上 that much or more, 以下 that much or less, 以来 ever since, which the time chapter of the last book taught. JMdict seq 1155180, sense 1.
+
+- id: vocab.fukkatsu
+  jlpt: N1
+  word_type: noun
+  theme: basics
+  japanese: 復活
+  reading: ふっかつ
+  romaji: fukkatsu
+  english: revival, comeback
+  notes: A thing that had gone coming back -- a fashion, a custom, a cancelled train service. 復活する is the verb. Sense 2 is resurrection, which is why 復活祭 is Easter. Both reference lists put it at N1, which says more about the lists than about the word -- it is ordinary newspaper vocabulary. JMdict seq 1500700, sense 1.
+
+- id: vocab.seifu
+  jlpt: N3
+  word_type: noun
+  theme: town
+  japanese: 政府
+  reading: せいふ
+  romaji: seifu
+  english: government, administration
+  notes: The government as an institution. 政治 is politics, the activity, and the two are not interchangeable. Sits in front of another noun with nothing between, 政府機関, the way most two-character compounds do. JMdict seq 1376070, sense 1.
+
+- id: vocab.kikan
+  jlpt: N3
+  word_type: noun
+  theme: work
+  japanese: 機関
+  reading: きかん
+  romaji: kikan
+  english: agency, institution, organisation
+  notes: This is sense 2, not sense 1, and the breakdown asked the author to choose. Sense 1 is an engine -- 機関車 is a locomotive -- and it is the older meaning, but 政府機関 in this lesson's sentence is a government body, which is sense 2. Sense 3 is a system or a facility. Which one a sentence means is decided by the noun in front of it. JMdict seq 1220870, sense 2.
+
+# ── Lesson 3: I hear that ─────────────────────────────────────────────────────
+
+- id: vocab.kekkyoku
+  jlpt: N3
+  word_type: adverb
+  theme: basics
+  japanese: 結局
+  reading: けっきょく
+  romaji: kekkyoku
+  english: after all, in the end
+  notes: An adverb, dropped in ahead of the verb, that says the thing settled this way after some back and forth -- 結局医大に行く, he is going to medical school after all. It reports the end of a story, and it does not state a result the way 結果 does. JMdict seq 1254730, sense 1.
+
+- id: vocab.oji
+  jlpt: N2
+  word_type: noun
+  theme: family
+  japanese: 叔父
+  reading: おじ
+  romaji: oji
+  english: uncle
+  notes: Written two ways, and the choice is information rather than spelling -- 伯父 is a parent's older brother, 叔父 a younger one. Both read おじ. Speaking to him or about someone else's, おじさん, which also does duty for any middle-aged man. The aunt is 叔母 or 伯母, おば, on the same rule. JMdict seq 1607070, sense 1.
+
+- id: vocab.shinbun
+  jlpt: N5
+  word_type: noun
+  theme: communication
+  japanese: 新聞
+  reading: しんぶん
+  romaji: shinbun
+  english: newspaper
+  notes: The paper itself, not the news in it -- that is ニュース. 新聞によれば, according to the papers, is the shape this lesson meets it in and the standard way a Japanese sentence names where it heard something. Both reference lists put it at N5; no earlier book in this course happened to teach it. JMdict seq 1362360, sense 1.
+
+- id: vocab.machi
+  jlpt: N5
+  word_type: noun
+  theme: places
+  japanese: 町
+  reading: まち
+  romaji: machi
+  english: town, neighbourhood
+  notes: 町 and 街 are both read まち and are not quite the same word. 町 is the administrative and everyday one, a town or the block you live in; 街 leans towards the busy shopping streets of a city. Sense 1 is this one. The breakdown marked it N3, but both reference lists carry it at N5, so it is tagged there. JMdict seq 1603990, sense 1.
+
+- id: vocab.honyaku
+  jlpt: N4
+  word_type: noun
+  theme: language
+  japanese: 翻訳
+  reading: ほんやく
+  romaji: honyaku
+  english: translation (of writing)
+  notes: Written translation. Spoken interpreting is 通訳, つうやく, a different word with a different job, and mixing them is the standard mistake. 翻訳する to translate, 翻訳者 a translator. Sense 2 covers deciphering or decoding, which is the same idea pointed at a cipher rather than a language. JMdict seq 1523400, sense 1.
+
+# ── Lesson 4: It looks like ───────────────────────────────────────────────────
+
+- id: vocab.mondai
+  jlpt: N5
+  word_type: noun
+  theme: study
+  japanese: 問題
+  reading: もんだい
+  romaji: mondai
+  english: question, problem
+  notes: One word covering what English splits -- a question on a test, sense 1, and a problem in the world, sense 2. 問題ない, no problem, is the phrase you will hear most. The sentence in this lesson uses sense 1 -- a problem set that looks easy and is not. JMdict seq 1536010, sense 1.
+
+- id: vocab.kantan
+  jlpt: N4
+  word_type: na-adj
+  theme: quality
+  japanese: 簡単
+  reading: かんたん
+  romaji: kantan
+  english: simple, easy
+  notes: A な-adjective, so 簡単な問題 before a noun and 簡単だ at the end, and 簡単に as an adverb, easily or briefly. Sense 2 is that second flavour, brief rather than easy -- 簡単に説明する is to explain in short. The opposite is 難しい, which you already have. JMdict seq 1214330, sense 1.
+
+- id: vocab.fuan
+  jlpt: N3
+  word_type: na-adj
+  theme: feeling
+  japanese: 不安
+  reading: ふあん
+  romaji: fuan
+  english: uneasy, anxious; anxiety
+  notes: Both a な-adjective and a noun, which is why 不安だ and 不安がある are both ordinary. Built from 不, the negative prefix, on 安, at ease -- so literally not at ease, and the same 不 turns up on 不便 inconvenient and 不足 insufficient. In this lesson's sentence it appears as 不安そうに, looking anxious, which is the appearance そう on a な-adjective stem. JMdict seq 1491150, sense 1.
+
+- id: vocab.jitsuwa
+  jlpt: N3
+  word_type: adverb
+  theme: basics
+  japanese: 実は
+  reading: じつは
+  romaji: jitsuwa
+  english: actually, to tell the truth
+  notes: The は is the topic particle fossilised into the word and is pronounced わ, as it always is. It marks what follows as the real story behind an appearance, which is why it pairs so naturally with 一見, at first glance -- 一見簡単そうだが実は難しい. Written 実 is also じつ in 実際, in practice. JMdict seq 1320830, sense 1.
+
+- id: vocab.mamonaku
+  jlpt: N2
+  word_type: adverb
+  theme: time
+  japanese: まもなく
+  reading: まもなく
+  romaji: mamonaku
+  english: soon, before long
+  notes: JMdict marks it usually written in kana, which is why the card is the kana form; the characters are 間もなく, literally with no interval. It is the station-announcement word for soon -- まもなく電車が参ります -- where すぐ is the everyday one. Sense 2 is a different construction entirely, a dictionary verb plus 間もなく meaning with no time to do it. JMdict seq 1215290, sense 1.
+
+- id: vocab.atari
+  jlpt: N3
+  word_type: noun
+  theme: position
+  japanese: あたり
+  reading: あたり
+  romaji: atari
+  english: the area around, the vicinity
+  notes: The characters are 辺り and the sentence writes it in kana, which is how this word usually travels. あたりを見回す is to look around you. The trap is a different word with the same sound -- 当たり, a hit or a win, which is what a lottery ticket is -- and there is a third job as a suffix meaning per, ひとりあたり, per person. The breakdown pointed at 当たり's entry, seq 1448780; the word in this sentence is 辺り. JMdict seq 1512080, sense 1.
+
+- id: vocab.furu
+  jlpt: N5
+  word_type: verb
+  verb_class: u
+  theme: weather
+  japanese: 降る
+  reading: ふる
+  romaji: furu
+  english: to fall (of rain or snow)
+  notes: Rain, snow and ash do this; people and objects do not. It is a godan verb, so the ます-stem is 降り, which is exactly where this lesson's trap lives -- 降りそうだ is looks like rain and 降るそうだ is I hear it will rain. And the same character carries おりる, to get off a train, which you already know in kana. Same character, two verbs, and the kana ending tells them apart. JMdict seq 1282790, sense 1.
+
+# ── Lesson 5: Isn't it, though? ───────────────────────────────────────────────
+
+- id: vocab.kyokutan
+  jlpt: N1
+  word_type: na-adj
+  theme: quality
+  japanese: 極端
+  reading: きょくたん
+  romaji: kyokutan
+  english: extreme
+  notes: A な-adjective and a noun both -- 極端な例, an extreme example, and 極端に走る, to go to extremes. 極 on its own is a pole or an extremity, and it is the same character as 北極, the North Pole. Both reference lists put it at N1; it is common enough in ordinary argument that the tag is worth ignoring except by the coverage tooling that reads it. JMdict seq 1240380, sense 1.
+
+- id: vocab.kimi
+  jlpt: N4
+  word_type: noun
+  theme: people
+  japanese: 君
+  reading: きみ
+  romaji: kimi
+  english: you (familiar)
+  notes: JMdict files it as a pronoun and tags it familiar, with the note that it is sometimes considered male language and is used towards someone of equal or lower standing. Take that as the tendency it is rather than a rule -- it is ordinary in song lyrics and between close friends of any gender, and it would be wrong in a shop or to a manager, where a name plus さん is what Japanese uses instead of any word for you at all. Same character as the くん that follows a name. JMdict seq 1247250, sense 1.
+
+- id: vocab.mizumashi
+  jlpt: N2
+  word_type: noun
+  theme: quality
+  japanese: 水増し
+  reading: みずまし
+  romaji: mizumashi
+  english: watering down, padding (of a figure)
+  notes: 水 water plus the stem of 増す, to increase -- adding water to make more of it. Sense 2 is the same move applied to numbers, inflating a budget or a headcount, and that is the sense the newspapers use. 水増しする is the verb. On no reference list; tagged at the level of the writing it belongs to. JMdict seq 1371810, sense 1.
+
+- id: vocab.sonnani
+  jlpt: N4
+  word_type: adverb
+  theme: basics
+  japanese: そんなに
+  reading: そんなに
+  romaji: sonnani
+  english: that much, like that
+  notes: The そ of そこ and それ, pointing at the amount the other person just showed or named -- そんなに食べるな, do not eat that much. With a negative it becomes not particularly, そんなに高くない. こんなに and あんなに are the other two members, on the same rule that governs これ, それ, あれ. JMdict seq 2008740, sense 1.
+
+- id: vocab.pabu
+  jlpt: N3
+  word_type: noun
+  theme: places
+  japanese: パブ
+  reading: パブ
+  romaji: pabu
+  english: pub
+  notes: The borrowed word, used in Japan for a bar with table service rather than for anything English. 居酒屋 is the native equivalent and is the word you would actually be looking for. On no reference list, and tagged at the level of the chapter that carries it. JMdict seq 1102260, sense 1.
+
+- id: vocab.usutaasoosu
+  jlpt: N3
+  word_type: noun
+  theme: food
+  japanese: ウスターソース
+  reading: ウスターソース
+  romaji: usutaasoosu
+  english: Worcester sauce
+  notes: Named for the English city and pronounced from the spelling rather than from the English. In Japan ソース on its own usually means one of this family, thickened for tonkatsu and okonomiyaki, and not what an English speaker means by sauce. JMdict lists ウースターソース as an equal variant. JMdict seq 1024920, sense 1.
+
+# ── Lesson 6: That's just how it is ───────────────────────────────────────────
+
+- id: vocab.suitai
+  jlpt: N2
+  word_type: noun
+  theme: basics
+  japanese: 衰退
+  reading: すいたい
+  romaji: suitai
+  english: decline, decay
+  notes: A long slide downwards -- an industry, an empire, a language. 衰退する is the verb. It belongs to writing and to commentary rather than to speech, where 元気がない or だめになる do the everyday work. On no reference list; tagged at the level of the register it lives in. JMdict seq 1372550, sense 1.
+
+- id: vocab.masutaa
+  jlpt: N3
+  word_type: verb
+  verb_class: irregular
+  theme: study
+  japanese: マスター
+  reading: マスター
+  romaji: masutaa
+  english: to master (a skill)
+  notes: JMdict's sense 1 is the verb, マスターする, which is the sense this lesson's sentence uses and the one the breakdown asked the author to pick. The noun senses that follow are a different word in practice -- sense 2, the proprietor of a bar or a coffee shop, is the マスター you will actually be introduced to in Japan. Both are written the same and only the sentence sorts them. JMdict seq 1127970, sense 1.
+
+- id: vocab.soitsu
+  jlpt: N3
+  word_type: noun
+  theme: people
+  japanese: そいつ
+  reading: そいつ
+  romaji: soitsu
+  english: that one, that thing (blunt)
+  notes: The sentence in this lesson uses sense 2, that thing, pointing back at an idea rather than at a person -- the breakdown named sense 1. Sense 1 is a person, that guy, and JMdict tags it derogatory as well as familiar. That is a tendency worth respecting -- aimed at a person it is rude in most rooms, aimed at an object it is merely blunt. こいつ and あいつ are the other two, on the same こ/そ/あ rule as これ. JMdict seq 1006600, sense 2.
+
+- id: vocab.retorikku
+  jlpt: N2
+  word_type: noun
+  theme: language
+  japanese: レトリック
+  reading: レトリック
+  romaji: retorikku
+  english: rhetoric
+  notes: The borrowed word, used for the art of persuasion and, as in this lesson's sentence, for language that is doing more persuading than reporting. The native equivalent is 修辞 or 修辞学, which is rarer than the loanword. On no reference list, and tagged at the level of the writing it belongs to. JMdict seq 1145640, sense 1.
+
+- id: vocab.iwayuru
+  jlpt: N3
+  word_type: noun
+  theme: basics
+  japanese: いわゆる
+  reading: いわゆる
+  romaji: iwayuru
+  english: so-called, what people call
+  notes: It goes straight in front of a noun and never anywhere else -- いわゆる天ぷら, the thing people call tempura. JMdict tags it adj-pn, a word that only ever attaches to a noun, and this app's word types have no slot for that, so it is filed as a noun the way pronouns are; it is neither. The characters are 所謂 and you will meet those in print, but the kana form is the common one. JMdict seq 1343150, sense 1.

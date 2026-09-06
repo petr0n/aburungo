@@ -12,6 +12,7 @@ import { parseChapters } from "./schema";
 import n5Raw from "./n5.yaml";
 import b2Raw from "./b2.yaml";
 import b3Raw from "./b3.yaml";
+import b4Raw from "./b4.yaml";
 
 export const n5Chapters: readonly Chapter[] = parseChapters(n5Raw, "chapters/n5.yaml");
 
@@ -19,9 +20,11 @@ export const n5ChapterIds: ReadonlySet<string> = new Set(n5Chapters.map((c) => c
 
 export const b2Chapters: readonly Chapter[] = parseChapters(b2Raw, "chapters/b2.yaml");
 export const b3Chapters: readonly Chapter[] = parseChapters(b3Raw, "chapters/b3.yaml");
+export const b4Chapters: readonly Chapter[] = parseChapters(b4Raw, "chapters/b4.yaml");
 
 export const b2ChapterIds: ReadonlySet<string> = new Set(b2Chapters.map((c) => c.id));
 export const b3ChapterIds: ReadonlySet<string> = new Set(b3Chapters.map((c) => c.id));
+export const b4ChapterIds: ReadonlySet<string> = new Set(b4Chapters.map((c) => c.id));
 
 /** Where a lesson sits inside its chapter, as the session header reads it. */
 export type ChapterPlacement = {

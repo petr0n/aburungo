@@ -1,0 +1,546 @@
+# Book Four, Chapter 4 vocabulary -- forty-two words, and why this file is not
+# empty.
+#
+# Every vocabulary file in Book Three is empty except one, and the reasoning is
+# written out at length in vocabulary/b3-00-passive.yaml: 04-stage-reading.md
+# section 3 hands vocabulary at this stage to the reading library and to
+# mining, so lessons carry patterns and the library carries words. That library
+# still has no texts -- the text source has been blocked since 2026-08-20 --
+# and docs/plans/book-four-bands.md section 2 makes the decision this file
+# follows: **every Book Four lesson teaches the untaught words its own verified
+# sentences contain**, for as long as the library is blocked. Not a curated
+# situation list, not a frequency list: the words the learner is already being
+# asked to read on this chapter's forty cards.
+#
+# So the selection rule here is mechanical, and worth stating because it is the
+# opposite of Books One and Two. A word is in this file if and only if it
+# appears in a sentence this chapter cards. Nothing was added because it
+# seemed useful; several obvious words were left out because their sentence did
+# not survive the attestation pass (below). Five per lesson is the target, not
+# a quota -- lesson 2 teaches four and lessons 1, 3 and 5 teach six, because
+# that is what their sentences carry.
+#
+# ---------------------------------------------------------------------------
+# VERIFICATION. Every entry below was checked against JMdict for Applications
+# 3.6.2 (server/data/jmdict-examples-eng-3.6.2.json) on 2026-09-06: headword,
+# reading, part of speech and gloss, with the sequence number in `notes`. Where
+# the sense the chapter needs is not JMdict's first, the note says which sense
+# and why -- nine of the forty-two are in that position:
+#
+#   今度 1289370 s2 (not s1 "this time")      死語 1310840 s2 (not "dead language")
+#   遊び 1542070 s2 (not "play")              手先 1328010 s2 (not "fingertips")
+#   ほとんど 1522050 s2 with a negative       面倒 1533550 s3 (not "trouble")
+#   付き 1583630 s1 as a suffix               この前 2216900 s1/s2 together
+#   変 1510640 s1 (the adjective, not "change")
+#
+# Three homophone traps were checked rather than assumed, since a kana lookup
+# lands on the wrong entry silently:
+#
+#   僕 -- 1521400 ぼく (the pronoun) and 1521390 しもべ (a servant) are the same
+#     character. The chapter means 1521400.
+#   骨 -- 1288550 ほね (bone) and 1288540 こつ/コツ (knack) are the same
+#     character. The 骨 in this chapter's card #229559 is ほね; it is glossed in
+#     that card's note and is not a word card here.
+#   方 -- 1516925 is 方 かた ("direction; way", and the polite word for a
+#     person). The word this chapter leans on is 方 ほう, seq **1516930**, and
+#     it is already taught: vocab.hou, Book Two chapter 9, "side, the one of
+#     two", cited there with the same 1516930. The breakdown asked the author
+#     to pick a sense for it; the right answer was that it needed no card at
+#     all. Three of this chapter's sentences use it and pull vocab.hou instead.
+#
+# ---------------------------------------------------------------------------
+# JLPT TAGS, and why they do not all say N3. b3-09-reference.yaml records the
+# argument in full: the tag on a Word feeds vocabulary coverage tooling
+# (scripts/jlpt.mjs) rather than describing the chapter it sits in, so tagging
+# an N4 word N3 misreports coverage in two directions. Each word below carries
+# the level the merged reference lists in data/jlpt/ give it -- 親 is N4 on
+# both lists, not the N3 the breakdown assumed, and 愚か is N1 on both. Nine
+# words are on no reference list at any level -- 死語, 手先, 得 as とく, 自滅,
+# ウエスト, じれったい, キャンセル, この前, ティッシュ -- and those carry N3,
+# the chapter's own band. That tag is a placement, not a claim about any exam.
+#
+# jlpt-source: training -- levels read off data/jlpt/reference-*.json (Tanos
+#   CC BY 4.0 + open-anki), which is a community reference, not an authority.
+#   JMdict carries no JLPT data.
+# content-source: training -- headword, reading, part of speech and gloss
+#   verified against JMdict for Applications 3.6.2, sequence number inline.
+#   Every word is attested in a Tatoeba sentence this chapter cards; the
+#   sentence id is in phrases/b4-03-talk.yaml.
+#
+# ---------------------------------------------------------------------------
+# WHAT THE BREAKDOWN LISTED AND THIS FILE DOES NOT SHIP, each because its
+# sentence went:
+#
+#   うっかり -- its sentence, #161315 うっかりそれを忘れるところだったわ, is
+#     already a Book Three card (b3-09-reference, the ところだった lesson).
+#     Carding it twice would teach the same sentence in two books. The lesson
+#     replaces it with #216883, the ぜ sentence the breakdown had no candidate
+#     for at all, and 劇場 takes the freed word slot.
+#   ソックス and みんな -- their sentence, #194982, was declined; see
+#     phrases/b4-03-talk.yaml. みんな is genuinely untaught anywhere in the app
+#     (the breakdown guessed it was already taught; it is not) and is worth a
+#     card in a later chapter that can attest it.
+#   オペレーター -- its sentence, #236099, contains the number １０４ read as a
+#     phone number, and this app's phrases spell every digit out in the
+#     `reading` a learner types. Which of ひゃくよん and いちまるよん that is
+#     could not be verified, so the card was swapped for #202478 and ティッシュ
+#     takes the word slot.
+#   買い替える 2012810 -- verified (かいかえる, "to buy a replacement"), but
+#     JMdict does not flag it common, and its sentence glosses it in place. It
+#     is glossed in that card's note instead of taking a card.
+#   王冠, 用品, 面会, 突き進む, 大食らい, ネット, 車酔い, パン粉, お返し,
+#     しゃぶる, しくじる, グレープフルーツ -- all verified and all glossed in
+#     their card's note rather than carded, because each is a concrete noun or
+#     a one-off verb whose sentence's English already says what it means.
+#
+# Words in this chapter's cards that stay untaught and are glossed in a note:
+# きつい, 瓜二つ, 我ながら, ぼけっと, まる一日, 微積分, チャラ, コロコロ, 式,
+# コーンフレーク, プログラミング, バスタブ, エンディング, ウオーミングアップ,
+# ロス, ムスタング, マルコーニ. The chapter reviews the ending on the sentence,
+# not the nouns around it.
+#
+# One id needed disambiguating. 変える is かえる, and vocab.kaeru is already
+# 帰る (Book One). The app's own precedent for a homophone is a suffixed id --
+# vocab.atsui-hot, vocab.kaze-cold, vocab.hana-nose -- so this one is
+# vocab.kaeru-change.
+
+# ── Lesson 1 · Not that, this ────────────────────────────────────────────────
+
+- id: vocab.kondo
+  jlpt: N4
+  word_type: noun
+  theme: time
+  japanese: 今度
+  reading: こんど
+  romaji: kondo
+  english: next time; this time
+  notes: "JMdict seq 1289370, and the sense this chapter needs is the second one, not the first. 今度 is two characters meaning \"this\" and \"time/occasion\", and it points either way -- s1 is the time at hand, s2 is the next one, s3 is the recent one. Only context sorts them. 今度の旅行 on this lesson's card is the trip coming up. The word is common enough that both readings turn up daily, so read the sentence rather than the word."
+
+- id: vocab.asobi
+  jlpt: N4
+  word_type: noun
+  theme: leisure
+  japanese: 遊び
+  reading: あそび
+  romaji: asobi
+  english: pleasure; amusement; play
+  notes: "JMdict seq 1542070, sense 2. The noun made from 遊ぶ, which you have had since Book One's te-form chapter (vocab.asobu) -- the ます-stem standing on its own as a noun, the same move behind 買い物 and 忘れ物. Sense 1 is a child's play; sense 2, the one on this card, is what an adult does that is not work, which is why it sits opposite 仕事 in the sentence."
+
+- id: vocab.betsuni
+  jlpt: N3
+  word_type: adverb
+  theme: basics
+  japanese: 別に
+  reading: べつに
+  romaji: betsu ni
+  english: (not) particularly; (not) especially
+  notes: "JMdict seq 1509480, sense 1. It leans on a negative -- 別に悪くない, not especially bad -- and on its own, 別に。, it is the flattest \"not really\" in the language. Sense 2 is the literal one, separately or in addition, and it is the only one that works in an affirmative sentence."
+
+- id: vocab.tamani
+  jlpt: N4
+  word_type: adverb
+  theme: time
+  japanese: たまに
+  reading: たまに
+  romaji: tama ni
+  english: occasionally; once in a while
+  notes: "JMdict seq 1634500, sense 1, marked \"usually written in kana\" -- the kanji forms 偶に and 適に exist and are rare enough that this card is the kana one. Less often than 時々, and it carries a small sense of the exception rather than the routine."
+
+- id: vocab.shigo
+  jlpt: N3
+  word_type: noun
+  theme: language
+  japanese: 死語
+  reading: しご
+  romaji: shigo
+  english: a word nobody says anymore; a dead language
+  notes: "JMdict seq 1310840, and the sense in this chapter's card is the second one -- an obsolete word, a piece of slang that has aged out. Sense 1 is a dead language in the linguist's sense, Latin or Sumerian. The characters are literally \"dead word\", and the word is on no JLPT reference list at any level; it is here because the sentence it sits in is one of the cleanest falling じゃない in the corpus."
+
+- id: vocab.tesaki
+  jlpt: N3
+  word_type: noun
+  theme: people
+  japanese: 手先
+  reading: てさき
+  romaji: tesaki
+  english: someone's stooge; a pawn
+  notes: "JMdict seq 1328010, sense 2, and sense 1 is the trap -- 手先 first means fingers or fingertips, \"the tip of the hand\", which is where the second sense comes from: somebody who is only the end of another person's arm. The card's Tatoeba English, \"I don't live in his pocket\", is an English idiom that hides the word entirely, so the gloss on that card departs from it."
+
+# ── Lesson 2 · You know, right? ──────────────────────────────────────────────
+
+- id: vocab.toku
+  jlpt: N3
+  word_type: na-adj
+  theme: money
+  japanese: 得
+  reading: とく
+  romaji: toku
+  english: a good deal; profitable
+  notes: "JMdict seq 1454490, sense 1, tagged adj-na and n both -- so it is 得な買い物 as an adjective and お得です as a predicate. お得 with the polite お in front is what a shop sign says. Not the verb 得る, and not the とく of Book Four chapter 1's ておく contraction, which is a different thing wearing the same two kana. The reference lists carry several とく words -- 解く, 溶く, 説く -- and none of them is this one, so its tag is the chapter's band."
+
+- id: vocab.jimetsu
+  jlpt: N3
+  word_type: noun
+  theme: trouble
+  japanese: 自滅
+  reading: じめつ
+  romaji: jimetsu
+  english: self-destruction; ruining oneself
+  notes: "JMdict seq 1318710, sense 1, a noun that takes する. 自 is the character for oneself and 滅 is ruin or extinction; both are new to this app's kanji set. It is a written-register word -- newspapers and speeches, not the kitchen -- which is part of why the sentence carrying it ends in よね: a heavy claim, softened at the end."
+
+- id: vocab.uesuto
+  jlpt: N3
+  word_type: noun
+  theme: clothes
+  japanese: ウエスト
+  reading: ウエスト
+  romaji: uesuto
+  english: waist; waistline
+  notes: "JMdict seq 1026070, sense 1. From English \"waist\", and it means the measurement or the waistband of a garment rather than the part of the body -- for the body, 腰 is the word. ウェスト is the same word spelt with the small ェ and is equally ordinary."
+
+- id: vocab.jirettai
+  jlpt: N3
+  word_type: i-adj
+  theme: feeling
+  japanese: じれったい
+  reading: じれったい
+  romaji: jirettai
+  english: exasperating; frustrating to watch
+  notes: "JMdict seq 1006010, marked \"usually written in kana\" -- the kanji form 焦れったい exists and is rare. It describes the thing that is frustrating, not the person feeling it, which is why the card's sentence puts it on 君のやること, the things you do. The corpus English relocates it onto the speaker; the card's gloss puts it back."
+
+# ── Lesson 3 · To yourself, out loud ─────────────────────────────────────────
+
+- id: vocab.hajimeru
+  jlpt: N4
+  word_type: verb
+  verb_class: ru
+  theme: actions
+  japanese: 始める
+  reading: はじめる
+  romaji: hajimeru
+  english: to start; to begin (something)
+  notes: "JMdict seq 1307550, sense 1. The transitive half of a pair -- 始める is you starting something, 始まる is the thing starting by itself, and the pair works exactly like 開ける/開く. Sense 3 is the one you will meet most often after this chapter: hung on a ます-stem it means \"start doing\", 降り始める, it started to rain."
+
+- id: vocab.ki-ni-iru
+  jlpt: N3
+  word_type: verb
+  verb_class: u
+  theme: feeling
+  japanese: 気に入る
+  reading: きにいる
+  romaji: ki ni iru
+  english: to like; to take a liking to
+  notes: "JMdict seq 1221740, one sense, tagged as an expression that conjugates -- 入る is godan, so 気に入らない, 気に入った, 気に入っています. Three words fused into one verb, and the fusion is why it takes を on what you like rather than が: this is not 好き. Literally \"it enters my 気\", the same 気 as 元気 and 天気."
+
+- id: vocab.futago
+  jlpt: N3
+  word_type: noun
+  theme: family
+  japanese: 双子
+  reading: ふたご
+  romaji: futago
+  english: twins
+  notes: "JMdict seq 1398750, sense 1. 双 means a pair and is new here; 子 is the child you have had since Book One. The alternative reading そうし exists in JMdict and is not what anybody says."
+
+- id: vocab.hotondo
+  jlpt: N4
+  word_type: adverb
+  theme: basics
+  japanese: ほとんど
+  reading: ほとんど
+  romaji: hotondo
+  english: almost; hardly (with a negative)
+  notes: "JMdict seq 1522050, and it has two senses that are opposites in English depending on what follows it. With a positive verb, sense 1: almost, nearly, mostly. With a negative, sense 2: hardly, barely -- ほとんど見なくなった on this lesson's card is \"you hardly see them anymore\". The word did not change; the verb did. Written in kana in ordinary use, though 殆ど exists."
+
+- id: vocab.tsuki
+  jlpt: N2
+  word_type: noun
+  theme: basics
+  japanese: 付き
+  reading: つき
+  romaji: tsuki
+  english: with; including (attached to a noun)
+  notes: "JMdict seq 1583630, sense 1, and it works as a suffix rather than a free noun -- バスタブ付き, a room with a bathtub; 朝食付き, with breakfast; 保証付き, with a guarantee. From 付く, to be attached. The reference lists disagree about where it belongs (open-anki has ～付 at N2, Tanos has 付き at N1) and neither is the everyday suffix at N3, so the tag here follows open-anki. Do not read it as 月 つき, the moon, which is a different word spelt differently."
+
+- id: vocab.boku
+  jlpt: N4
+  word_type: noun
+  theme: people
+  japanese: 僕
+  reading: ぼく
+  romaji: boku
+  english: I; me (used by men and boys)
+  notes: "JMdict seq 1521400, sense 1, tagged \"male term\". Softer and more casual than 俺, less neutral than 私 -- a man choosing 僕 in a sentence is choosing a register, which is why the word belongs in this chapter rather than in a pronoun list. Women use it in song lyrics and in some regional and youth speech; the tendency is strong, the rule is not absolute. The same character read しもべ is a different entry (seq 1521390) and means a servant; that is the word's older sense and not this card."
+
+# ── Lesson 4 · I wonder ──────────────────────────────────────────────────────
+
+- id: vocab.shucchou
+  jlpt: N2
+  word_type: noun
+  theme: work
+  japanese: 出張
+  reading: しゅっちょう
+  romaji: shucchou
+  english: a business trip
+  notes: "JMdict seq 1339660, sense 1, a noun that takes する. Not 旅行 -- a 出張 is travel your employer sends you on, so 大阪に出張する is a fact about work rather than a holiday. 出 is the character in 出る and 出かける, which you have owned since Book One; 張 is new."
+
+- id: vocab.kyanseru
+  jlpt: N3
+  word_type: noun
+  theme: actions
+  japanese: キャンセル
+  reading: キャンセル
+  romaji: kyanseru
+  english: cancellation; to cancel
+  notes: "JMdict seq 1042050, sense 1, a noun taking する. From English \"cancel\", and it is the ordinary word for cancelling a booking, a flight or an order. Book Three's causative chapter already quoted it inside キャンセルさせてください; this is the word itself."
+
+- id: vocab.sorosoro
+  jlpt: N4
+  word_type: adverb
+  theme: time
+  japanese: そろそろ
+  reading: そろそろ
+  romaji: sorosoro
+  english: soon; about time to
+  notes: "JMdict seq 1345605, sense 1, an on-mim word. It marks the moment when something is due rather than a point on a clock -- そろそろ行こうか is what you say when the evening has run its course. Sense 2, slowly and gingerly, is the older literal one and is rare now."
+
+- id: vocab.kono-mae
+  jlpt: N3
+  word_type: noun
+  theme: time
+  japanese: この前
+  reading: このまえ
+  romaji: kono mae
+  english: the other day; last time
+  notes: "JMdict seq 2216900, senses 1 and 2 together -- as an adverb it is \"the other day\", and as a noun in front of の it is \"last\", この前の日曜日. Two pieces you already own, この and まえ, doing a job neither does alone. まえ has been a word since Book One, written in kana there; the character 前 has never been placed on a lesson, and this card is where it is first read."
+
+- id: vocab.sandoicchi
+  jlpt: N4
+  word_type: noun
+  theme: food
+  japanese: サンドイッチ
+  reading: サンドイッチ
+  romaji: sandoicchi
+  english: a sandwich
+  notes: "JMdict seq 1058580, sense 1. The small ッ before チ is the double consonant, so it is four beats plus the pause, sa-n-do-i-cchi. サンドウィッチ is the same word."
+
+# ── Lesson 5 · Things like that ──────────────────────────────────────────────
+
+- id: vocab.yume
+  jlpt: N4
+  word_type: noun
+  theme: basics
+  japanese: 夢
+  reading: ゆめ
+  romaji: yume
+  english: a dream (asleep or hoped for)
+  notes: "JMdict seq 1529410, senses 1 and 2 -- the same double life the English word has, what you see asleep and what you hope for. 夢を見る is how you say you had a dream; 夢にも思わなかった, on this lesson's card, is \"I never dreamed of it\", with も pushing the negative to its limit."
+
+- id: vocab.shippai
+  jlpt: N4
+  word_type: noun
+  theme: trouble
+  japanese: 失敗
+  reading: しっぱい
+  romaji: shippai
+  english: failure; a mistake
+  notes: "JMdict seq 1320140, one sense, a noun taking する. 失 is losing and 敗 is defeat, both new here. It covers the small mistake as well as the large failure -- 失敗した is what you say when you have burnt the rice."
+
+- id: vocab.kesshite
+  jlpt: N4
+  word_type: adverb
+  theme: basics
+  japanese: 決して
+  reading: けっして
+  romaji: kesshite
+  english: never; not at all (with a negative)
+  notes: "JMdict seq 1254130, one sense, and every gloss in it is written with \"(not)\" in front for a reason -- 決して needs a negative later in the sentence. 決してやさしくない, not easy by any means. Meeting it early in a sentence tells you a negative is coming, which is worth knowing before you reach the end."
+
+- id: vocab.pasokon
+  jlpt: N4
+  word_type: noun
+  theme: objects
+  japanese: パソコン
+  reading: パソコン
+  romaji: pasokon
+  english: a personal computer
+  notes: "JMdict seq 1101570, sense 1, marked as an abbreviation -- from パーソナルコンピューター, clipped to its first two beats and then the next two, which is the standard way Japanese shortens a long loanword. コンピューター alone is the machine in general; パソコン is the one on your desk."
+
+- id: vocab.oroka
+  jlpt: N1
+  word_type: na-adj
+  theme: quality
+  japanese: 愚か
+  reading: おろか
+  romaji: oroka
+  english: foolish; silly
+  notes: "JMdict seq 1245100, one sense, a な-adjective. Both reference lists put it at N1, and it is here only because this chapter's なんて sentence uses it of the speaker's own behaviour -- 愚かだ about yourself is rueful rather than harsh. Aimed at somebody else it is a real insult; ばか is the everyday word and this one is written and formal."
+
+- id: vocab.hen
+  jlpt: N5
+  word_type: na-adj
+  theme: quality
+  japanese: 変
+  reading: へん
+  romaji: hen
+  english: strange; odd
+  notes: "JMdict seq 1510640, sense 1, the な-adjective -- 変な人, a strange person; 変です, that is odd. The same character is a noun meaning change (senses 3 and 4), and it is the 変 of 大変, which you have had since Book One, where the \"change\" sense is the historical one. Both reference lists carry it at N5 and this app has never taught it; the card exists because this chapter's なんか sentence uses it and nothing earlier did."
+
+# ── Lesson 6 · And so on ─────────────────────────────────────────────────────
+
+- id: vocab.nabe
+  jlpt: N3
+  word_type: noun
+  theme: home
+  japanese: 鍋
+  reading: なべ
+  romaji: nabe
+  english: a pot; a pan
+  notes: "JMdict seq 1459720, sense 1. Sense 2 is the food cooked in one -- 鍋 on a winter menu is the hot pot itself, not the vessel, the way \"a curry\" names a dish rather than a spice."
+
+- id: vocab.houchou
+  jlpt: N2
+  word_type: noun
+  theme: home
+  japanese: 包丁
+  reading: ほうちょう
+  romaji: houchou
+  english: a kitchen knife
+  notes: "JMdict seq 1515530, sense 1. Specifically the kitchen one -- a knife in general is ナイフ, and 包丁 is what is on the chopping board. Both characters are new and neither appears elsewhere in this book."
+
+- id: vocab.oya
+  jlpt: N4
+  word_type: noun
+  theme: family
+  japanese: 親
+  reading: おや
+  romaji: oya
+  english: a parent; parents
+  notes: "JMdict seq 1365040, sense 1. Singular and plural at once, like 両親 without the \"both\" -- 親 covers one parent or the pair. It is the character in 両親, which you have had since Book One's family chapter, and this is the character standing alone as its own word. Both reference lists put it at N4, not the N3 the chapter's breakdown assumed. Careful with the identical-looking おや that opens a sentence, 「おや、…」 -- that is an interjection, \"oh\", a different entry entirely."
+
+- id: vocab.mendou
+  jlpt: N3
+  word_type: noun
+  theme: trouble
+  japanese: 面倒
+  reading: めんどう
+  romaji: mendou
+  english: a bother; looking after someone (in 面倒を見る)
+  notes: "JMdict seq 1533550. Senses 1 and 2 are the everyday one -- 面倒な仕事, a job that is a nuisance, and as a な-adjective 面倒くさい is the word every learner meets first. Sense 3 is the one on this lesson's card and it is not obviously related: inside 面倒を見る it means care or attention, so 親の面倒を見る is looking after your parents. Learn the phrase whole; the noun on its own does not carry that meaning."
+
+- id: vocab.jisan
+  jlpt: N2
+  word_type: noun
+  theme: actions
+  japanese: 持参
+  reading: じさん
+  romaji: jisan
+  english: bringing something with you
+  notes: "JMdict seq 1315790, one sense, a noun taking する. Written register -- notices, school letters, wedding invitations. 持参すること on this lesson's card is an instruction on a printed list, where ordinary speech would say 持ってきてください. 持 you have from 持つ and 持ってくる; 参 is new, and it is the same character as the humble 参る that the keigo chapters later in this book will teach."
+
+# ── Lesson 7 · Rough and soft endings ────────────────────────────────────────
+
+- id: vocab.konkai
+  jlpt: N3
+  word_type: noun
+  theme: time
+  japanese: 今回
+  reading: こんかい
+  romaji: konkai
+  english: this time; on this occasion
+  notes: "JMdict seq 1289070, one sense. Where 今度 points either forward or back, 今回 points only at the instance in front of you -- this attempt, this round, this trip. 回 is the counter for occurrences and is new as a character here."
+
+- id: vocab.shinyou
+  jlpt: N3
+  word_type: noun
+  theme: feeling
+  japanese: 信用
+  reading: しんよう
+  romaji: shinyou
+  english: trust; confidence in someone
+  notes: "JMdict seq 1359620, sense 1, a noun taking する. 信用する is trusting somebody to be what they claim; 信じる is believing what they say. Sense 2 is the financial one, credit, which is the same idea moved to money."
+
+- id: vocab.anna
+  jlpt: N4
+  word_type: noun
+  theme: pointing
+  japanese: あんな
+  reading: あんな
+  romaji: anna
+  english: that sort of; like that
+  notes: "JMdict seq 1000590, one sense, tagged adj-pn -- a word that only ever sits in front of a noun and never conjugates, so あんな人 is fine and あんなです is not. One of a set of four -- こんな, そんな, あんな, どんな -- built on the same こ/そ/あ/ど pattern as これ, それ, あれ and どれ, which you have had since Book One. The other three are not taught anywhere in the app yet. Pointed at a person it usually carries distaste."
+
+- id: vocab.nooto
+  jlpt: N5
+  word_type: noun
+  theme: study
+  japanese: ノート
+  reading: ノート
+  romaji: nooto
+  english: a notebook
+  notes: "JMdict seq 1093450, sense 1, marked as an abbreviation of ノートブック. The thing you write in, not the note you write -- for a note left on a table, メモ is the word. Sense 4 is a laptop computer, from ノートパソコン, and is heard as often as sense 1."
+
+- id: vocab.gekijou
+  jlpt: N3
+  word_type: noun
+  theme: town
+  japanese: 劇場
+  reading: げきじょう
+  romaji: gekijou
+  english: a theatre
+  notes: "JMdict seq 1253410, one sense. 劇 is drama and 場 is a place, the character in 場所 -- a drama place. Cinemas are 映画館 and concert halls are ホール; 劇場 is the stage."
+
+# ── Lesson 8 · Just do it, would you ─────────────────────────────────────────
+
+- id: vocab.tsukamaeru
+  jlpt: N4
+  word_type: verb
+  verb_class: ru
+  theme: actions
+  japanese: 捕まえる
+  reading: つかまえる
+  romaji: tsukamaeru
+  english: to catch; to grab hold of
+  notes: "JMdict seq 1597780, senses 1 to 3, which run from catching a thief to grabbing a sleeve to flagging down a taxi -- タクシーを捕まえる is the everyday one. Transitive and ichidan. Written in kana on this lesson's card, which is ordinary for it."
+
+- id: vocab.terebi
+  jlpt: N5
+  word_type: noun
+  theme: home
+  japanese: テレビ
+  reading: テレビ
+  romaji: terebi
+  english: a television; TV
+  notes: "JMdict seq 1080510, sense 1, an abbreviation of テレビジョン. Sense 2 is the programme rather than the set. Both reference lists carry it at N5 and this app had not taught it; it arrives here because a request card needed something ordinary to ask for."
+
+- id: vocab.ayamaru
+  jlpt: N4
+  word_type: verb
+  verb_class: u
+  theme: communication
+  japanese: 謝る
+  reading: あやまる
+  romaji: ayamaru
+  english: to apologise
+  notes: "JMdict seq 1323010, sense 1, godan. The verb for the act; ごめん and すみません are the words you actually say while doing it. The identical reading あやまる also belongs to 誤る, to be mistaken (a separate entry), so the kanji is what tells them apart in writing."
+
+- id: vocab.kaeru-change
+  jlpt: N4
+  word_type: verb
+  verb_class: ru
+  theme: actions
+  japanese: 変える
+  reading: かえる
+  romaji: kaeru
+  english: to change something
+  notes: "JMdict seq 1510650, sense 1, transitive and ichidan -- you change a thing. Its intransitive partner is 変わる, the thing changes by itself. Three verbs share the reading かえる and the app now teaches two of them: 帰る, to go home (Book One), which is godan, and this one. 替える and 換える, swapping and exchanging, are two more. The id on this card is suffixed for exactly that reason."
+
+- id: vocab.tisshu
+  jlpt: N3
+  word_type: noun
+  theme: home
+  japanese: ティッシュ
+  reading: ティッシュ
+  romaji: tisshu
+  english: a tissue
+  notes: "JMdict seq 1079090, sense 1. The ティ is the small ィ after テ, a katakana spelling invented for foreign sounds Japanese does not otherwise have. The card's Tatoeba English says \"Kleenex\", a brand name; the gloss there says tissues."
