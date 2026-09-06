@@ -70,6 +70,12 @@ describe("bookTwo", () => {
   });
 });
 
+describe("bookFour", () => {
+  it("is the fluency stage, matching the Book Four content plan and routing", () => {
+    expect(bookFour.stage).toBe("fluency");
+  });
+});
+
 describe("the course", () => {
   it("runs Book One, then Book Two, then Book Three, then Book Four", () => {
     expect(books).toEqual([bookOne, bookTwo, bookThree, bookFour]);

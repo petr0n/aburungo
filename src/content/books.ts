@@ -66,7 +66,12 @@ export const bookFour: Book = {
   title: "Book Four",
   chapters: b4Chapters,
   lessons: b4Lessons,
-  stage: "reading",
+  /**
+   * The fluency stage. Book Four is the first volume after the reading-stage
+   * content boundary, and the content/routing notes explicitly treat it as a
+   * stage past reading rather than another reading book.
+   */
+  stage: "fluency",
 };
 
 /** Every book, in ladder order. */
