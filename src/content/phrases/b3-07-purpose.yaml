@@ -17,7 +17,7 @@
 #   contamination found". That is too generous, and the correction matters
 #   because it is what decided how many cards lesson 1 gets. Of the 413: 48
 #   are ようになる and belong to lesson 2, 48 are ようにする and belong to
-#   lesson 3, and 103 are のように, the comparison family the previous chapter
+#   lesson 3, and 103 are のように, the comparison family the stance chapter's ようだ lesson
 #   owns rather than this lesson. Removing all three buckets leaves 228, and
 #   that 228 is still not lesson 1's own material -- it holds verb-plus-ように
 #   similes the same chapter owns (#85880 死んだように倒れた, #141104
@@ -40,7 +40,7 @@
 #   anyway. Recorded here because the next author to read the breakdown will
 #   otherwise inherit the wrong number.
 #
-#   ことになる 69 raw across the family, not 29. The same single-string search
+#   ことになる 72 raw across the family, not 29. The same single-string search
 #   missed ことになっている and ことになった -- 40 more sentences, and they
 #   carry precisely the "it has been arranged that" sense the breakdown
 #   reports as "simply not well attested in this corpus". It is well attested:
@@ -70,7 +70,7 @@
 #   Two forms appear in these sentences that no lesson in this ladder teaches
 #   as its own pattern, and both are named in the grammarNote that quotes them
 #   rather than left to ambush a learner. なさい, the plain instruction ending,
-#   carries three of lesson 3's six cards and one of lesson 1's, because that
+#   carries three of lesson 3's six cards and two of lesson 1's, because that
 #   is the register the corpus's ようにする material lives in; the other three
 #   in that lesson use てください, ましょう and a plain ている, all owned.
 #   信じよう, the plain volitional, is
@@ -450,7 +450,7 @@
   romaji: sou shita tokoro de kimi ni wa nani mo narumai.
   english: You will gain nothing from doing that.
   tatoebaId: "213894"
-  notes: Nobody is resolving anything here. The subject is 君 and the speaker is predicting, not deciding — surely nothing will come of it. Same ending, and only the sentence around it says which reading is meant.
+  notes: Nobody is resolving anything here. The person in view is 君, not the speaker, and the speaker is predicting, not deciding — surely nothing will come of it. Same ending, and only the sentence around it says which reading is meant.
 
 - id: band7.theyll-never-understand-japanese-culture
   jlpt: N3

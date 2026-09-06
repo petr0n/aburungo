@@ -100,7 +100,7 @@
 - id: grammar.b3-mai
   jlpt: N3
   pattern: "～まい"
-  gloss: Will not, and surely will not. A classical negative auxiliary, mostly written and formal. On a first-person subject it is resolve; on any other it is a prediction. Godan verbs take the dictionary form in front of it, and verbs like 食べる and する are met with the dictionary form or the stem.
+  gloss: Will not, and surely will not. A classical negative auxiliary, mostly written and formal. Usually resolve when the subject is the one resolving, a prediction otherwise -- the sentence decides, not the ending. Godan verbs take the dictionary form in front of it, and verbs like 食べる and する are met with the dictionary form or the stem.
   phraseId: band7.she-steeled-herself-not-to-cry
   blank: なくまいと
 
