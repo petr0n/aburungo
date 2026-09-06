@@ -1,0 +1,279 @@
+# Book Three, chapter 6 -- How sure are you?
+#
+# Book Two gave the learner one way to hedge: a plain clause plus と思います, I
+# think that. It carries no information about why the speaker thinks it or how
+# sure they are. This chapter is what happens when that single hedge splits into
+# eight, each one committing to a source of evidence and a level of confidence
+# that English usually leaves to tone of voice. A learner with only と思います
+# cannot tell a reader I saw this myself apart from somebody told me this apart
+# from this has to be true; Japanese makes the speaker choose, and choosing
+# wrong says something backwards, the same way the cause chapter warned that
+# せいで where おかげで belongs does.
+#
+# Two families, taught in that order.
+#
+# Lessons 1-4 are about where the impression came from. みたい and ようだ are the
+# same idea -- an inference from what you can see or work out right now -- at two
+# registers, casual then neutral; ようだ also needs の before a noun where みたい
+# does not, which is the one attachment fact this half cannot skip. らしい
+# changes the evidence source entirely: not what you observed but what you were
+# told. っぽい closes the half by breaking the family on purpose -- not a guess
+# about a situation at all, but a suffix that manufactures a new adjective for a
+# trait or a quality. Four lessons, one question each time: how do you know?
+#
+# Lessons 5-8 are about how sure you are and on what grounds. はず is expectation
+# from something already known -- a schedule, a fact, a plan. に違いない is
+# conviction built from evidence rather than from an arrangement, taught directly
+# against はず because both gloss must be and the difference is entirely in the
+# grounds. わけ does different work again: it does not predict, it accounts for
+# what is already known, or denies what somebody might wrongly conclude from it,
+# or closes off a course of action -- and it lands after はず on purpose, because
+# わけがない and はずがない overlap enough that a learner who has just been taught
+# they belong to different families needs that collision named rather than met
+# as a surprise. かもしれない closes the chapter at the far end from both: real
+# uncertainty, not a confident claim wearing a polite hedge.
+#
+#    1  みたい          it looks like -- casual
+#    2  ようだ          it looks like -- neutral, and needs の for a noun
+#    3  らしい          I hear that -- told, not observed
+#    4  っぽい          the different job: a trait, not a guess
+#    5  はず            it should be -- expectation from a known fact
+#    6  に違いない      it has to be -- stronger, against はず directly
+#    7  わけ            that explains it / that does not mean / cannot afford to
+#    8  かもしれない    it might be -- the honest end, and the closer
+#
+# Attachment is not uniform across the chapter and that is taught on purpose
+# rather than smoothed over. みたい and らしい take a bare noun; ようだ needs の
+# first; わけ takes な the way ので and the cause chapter's せい and おかげ
+# already do -- から, which takes だ there, is the odd one out -- or bridges
+# through という; に違いない and かもしれない break the habit hardest, both taking
+# a bare な-adjective or noun stem with no copula at all.
+#
+# Where this chapter states a rule the corpus does not prove, it says so in the
+# lesson rather than letting a card imply otherwise. Three such places:
+#
+#   はず after a non-past noun or な-adjective (noun + の + はず, な-adjective +
+#   な + はず) has zero hits here. Searching のはず finds only 町のはずれ and its
+#   kin; なはず finds nothing at all. What the corpus does show is 優等生だった
+#   はずがない -- a noun with the plain past copula -- and that is the card.
+#
+#   な-adjective + な + ようだ has zero hits. The one な-adjective before ようだ
+#   in the corpus is 状況は絶望的のようだ (#146023), which takes の instead. The
+#   な rule is stated as the reference rule and not as something proved here.
+#
+#   わけ after a な-adjective has two hits, #75984 名前負けなわけじゃん and
+#   #74577 必死な訳です, and neither is short enough or plain enough to be a
+#   card. The rule is stated in lesson 7 with both ids recorded here.
+#
+# The `kanji:` arrays are empty and should stay that way, and so is
+# vocabulary/b3-05-stance.yaml. Every pattern here is written in kana in
+# ordinary usage; 違 is the only kanji any of them needs and it is already
+# taught. The `wordIds` below name words the learner already owns that actually
+# occur in that lesson's own sentences -- they are an SRS pull, not new
+# teaching, and a word that does not appear in a sentence is not listed. Lesson
+# 7 is the one teaching lesson with an empty list: わけ's nine sentences run on
+# 度外視, 清廉潔白, 詰め腹, 異議 and 作文, and not one taught word among them.
+# Padding the list to make it look like its neighbours would be a false claim
+# about what the lesson reviews.
+#
+# One rule these grammarNotes hold themselves to, stated once because it is
+# stricter than Book Two's and a later editor will otherwise undo it by
+# accident. A note here may show an attachment chain (怒る becoming 怒りっぽい),
+# a bare fragment of the pattern itself (わけにはいかない, みたいな顔), a phrase
+# card from an earlier book quoted whole (水が飲みたいです), or a phrase card from
+# this chapter quoted whole. It may not show a Japanese sentence that is none of
+# those, it may not trim an attested sentence down to fit, and it may not show a
+# deliberately wrong form to warn against.
+# Several notes therefore describe a construction in English where a draft would
+# have composed a Japanese one. That is 04-stage-reading.md section 8 reaching
+# into the prose, not only into the cards.
+#
+# content-source: every phrase this file references is a verified Tatoeba pair,
+#   cited by id in `tatoebaId` in phrases/b3-05-stance.yaml. No
+#   training-canonical sentence is used anywhere in this chapter
+#   (04-stage-reading.md section 8).
+
+- id: b3.mitai
+  order: 235
+  chapterId: b3.band-5
+  situation: "How sure are you?"
+  title: It looks like
+  canDo: Guess what is going on from what you can see right now
+  wordIds:
+    - vocab.tatemono
+    - vocab.heya
+    - vocab.taberu
+    - vocab.kao
+  phraseIds:
+    - band5.it-seems-it-was-a-misdiagnosis
+    - band5.that-building-is-like-a-monster
+    - band5.my-place-is-like-a-rabbit-hutch
+    - band5.it-looks-like-ive-eaten-too-much
+    - band5.as-smooth-as-a-babys-bottom
+    - band5.you-look-like-its-none-of-your-business
+  kanji: []
+  patternId: grammar.b3-mitai
+  grammarNote: "You already own one hedge. Book Two taught you a plain clause plus と思います — I think that — and it has served you for everything from an opinion to a guess. What it cannot tell anyone is why you think so. Japanese has a great many ways of answering that question and this chapter teaches eight of them. Start with the casual one. みたい goes on the end of something and says the speaker is reading the situation off what is in front of them right now. どうやら食べ過ぎたみたいだ — looks like I overdid it, and the evidence is how the speaker feels. Attachment is the loosest in the chapter and that is worth knowing before the loose end trips you. A plain clause takes it directly: 食べ過ぎた, then みたい. A noun takes it directly too, with nothing at all in between — 化け物みたい, その建物は化け物みたいだ. No の, no な, no copula between the noun and みたい. Remember that, because the very next lesson teaches a word that means almost the same thing and does need の there. And once みたい has landed it takes the copula itself and behaves like a な-adjective from that point on: みたいだ, みたいです, みたいな before a noun — まるで人ごとみたいな顔 — and みたいに before a verb or adjective. That last form is the word's other job, and it is the same idea turned outward. 赤ん坊のお尻みたいにすべすべだ is not a guess about anything; it is a comparison, smooth in the way a baby's skin is smooth. One word, two jobs — an impression of what is going on, and a resemblance between two things — and the sentence tells you which. まるで in front is a matched pair with みたい and with the next lesson's ようだ both: as if, just like. When you see まるで, expect one of them at the other end. Now the trap, and it is one your own deck already contains. たい, want to, attaches to a verb's ます-stem, and when the stem ends in み the two are the same three kana. 飲みたい is want to drink and has no みたい in it. 水が飲みたいです, from Book One, is the same collision in a sentence you have already learned. 見たい, written without its kanji, reads identically. So does every 〜てみたい, try-and-see plus want-to. Here is the check that works. たい only ever attaches to a ます-stem, so look at what comes immediately before. A ます-stem — 飲み, 頼み, 住み, 見 — and it is want to. A noun, an adjective, or a plain clause ending in た, だ, る or い, and it is this lesson's word. That last part is the useful half: たい cannot follow a plain past, so anything of the shape 〜たみたい or 〜だみたい is always this pattern, never want to. On register: みたい reads casual. It is at home in speech and in writing that wants to sound like speech, and out of place in anything formal, which is what the next lesson is for."
+
+- id: b3.youda
+  order: 236
+  chapterId: b3.band-5
+  situation: "How sure are you?"
+  title: It looks like, more formally
+  canDo: Make the same guess in neutral or written Japanese
+  wordIds:
+    - vocab.kuruma
+    - vocab.warui
+    - vocab.miru
+  phraseIds:
+    - band5.it-seems-you-are-the-first-one-here
+    - band5.something-seems-wrong-with-this-car
+    - band5.he-seems-to-be-wary-of-us
+    - band5.i-feel-as-if-i-were-dreaming
+    - band5.from-a-distance-the-hill-looks-like-an-elephant
+    - band5.the-tiger-cub-looked-like-a-kitten
+  kanji: []
+  patternId: grammar.b3-youda
+  grammarNote: "ようだ means what みたい means. Same inference, same two jobs — an impression of a situation, and a resemblance between things — and the difference is register. みたい sounds like speech; ようだ is the neutral word, at home in a report, an article, a careful sentence, and perfectly ordinary in conversation too. If you learn only one of the two, learn this one. Now the attachment, which is the whole reason this is a separate lesson. A verb clause takes ようだ bare: 警戒しているようだ. An い-adjective takes it bare: 具合が悪いようだ. But a noun needs の first. 一番乗りのようだ. 象のようだ. 子ネコのようだった. Where みたい attached to a bare noun with nothing between them, ようだ puts a の there, every time, and a sentence missing it will read as a mistake. This is the single fact most worth carrying out of this lesson, because the two words are otherwise close enough to swap. For a な-adjective the reference rule is な — the same な that ので takes, though not the だ that から takes. This corpus does not happen to contain a single example of it, so take it as the rule the grammars give rather than as something the sentences here prove; the one な-adjective that does appear before ようだ, 絶望的, takes の instead, which is common for words ending in 的. Because ようだ ends in the copula だ, everything the copula does it does: ようです politely, ようだった in the past, ようで joining on to another clause. まるで works with it exactly as it worked with みたい — まるで夢を見ているようだよ, as if I were dreaming — and the speaker knows perfectly well they are awake. As-if does not claim anything is true. Two more inflections you will meet in reading, flagged so they do not ambush you rather than taught here. ような is the form before a noun, and it is how a whole description gets attached to one. ように is the adverbial, and it does far more than this chapter covers — in a way that, so that, in order to — so treat it as a separate word when you meet it rather than as this one wearing a different ending."
+
+- id: b3.rashii
+  order: 237
+  chapterId: b3.band-5
+  situation: "How sure are you?"
+  title: I hear that
+  canDo: Pass on something you were told, and mark it as secondhand
+  wordIds:
+    - vocab.byouki
+    - vocab.haru
+    - vocab.iku
+    - vocab.ashita
+    - vocab.choushoku
+  phraseIds:
+    - band5.i-hear-youre-raking-in-the-money
+    - band5.apparently-she-was-ill
+    - band5.apparently-an-old-friend-is-going-to-university-in-osaka
+    - band5.i-hear-tom-is-preparing-for-tomorrows-lessons
+    - band5.just-like-him-to-go-to-work-before-breakfast
+    - band5.every-inch-a-gentleman
+  kanji: []
+  patternId: grammar.b3-rashii
+  grammarNote: "Attachment first, because there is nothing new in it. らしい goes on the end of a plain clause exactly as ようだ does — 荒稼ぎしているらしい, 行くらしい — and on the end of a noun with the plain past copula, 病気だったらしい. What changes is not the shape but where the speaker got it. ようだ says I can see it or I have worked it out. らしい says somebody told me, or I read it. Swap one for the other in 授業の予習をしているらしい and the sentence does not become more or less polite; it changes who saw. That is the distinction this chapter exists to build, and it is the one English throws away, since it seems covers both. The line is not a wall. らしい also gets used for a conclusion the speaker wants to hold at arm's length, and some speakers reach for it where ようだ would do; but told rather than saw is what it means by default and what you should hear in it. Politely, らしいです. There is a second job, and a bare noun in front is where you will usually see it — though a bare noun can carry the hearsay sense too, and only the sentence around it sorts the two. 彼らしい does not usually mean I heard about him — it means that is exactly like him, every inch him, true to type. 紳士らしい is a man with everything a gentleman ought to have. いかにも in front is the usual partner: 朝食前に出勤するなんていかにも彼らしい. Notice the difference from the first job here, because the two really are different claims: this one says the thing has the qualities of its type, where the previous two lessons would have said it merely appears to. Now the trap, and it is the largest in the chapter. In ordinary Japanese the word you will meet most often ending in those three kana is すばらしい, wonderful, and it has nothing whatever to do with this grammar. Neither does かわいらしい, みすぼらしい, わざとらしい, もっともらしい, 馬鹿らしい, 憎たらしい, 汚らしい, 嫌らしい or 長たらしい. Every one of them is its own dictionary word, an adjective in its own right, and the らしい in it is fossilised. In the sentence collection this chapter draws on, 57 of the 94 lines containing らしい are one of these and not this pattern — すばらしい alone accounts for 39 of them. The check is simple: this lesson's らしい follows a complete idea, a clause or a noun that could stand on its own. すばらしい's does not follow anything; it is part of the word. When you meet a new adjective ending in らしい, assume it is a word to look up before you assume it is this grammar."
+
+- id: b3.ppoi
+  order: 238
+  chapterId: b3.band-5
+  situation: "How sure are you?"
+  title: The look of it
+  canDo: Describe a quality or a tendency, rather than guessing about a situation
+  wordIds:
+    - vocab.kodomo
+    - vocab.mizu
+    - vocab.kooto
+  phraseIds:
+    - band5.she-has-a-hot-temper
+    - band5.he-soon-gets-tired-of-whatever-he-takes-up
+    - band5.i-have-greasy-skin
+    - band5.this-tea-is-watery
+    - band5.his-childlike-way-of-laughing-is-lovely
+    - band5.that-dark-coat-doesnt-match-her-skin
+  kanji: []
+  patternId: grammar.b3-ppoi
+  grammarNote: "This one is in the chapter to show you where the family stops. English flattens all four of these into seems or -ish, and っぽい is the one that is not doing what the other three do. It does not comment on a situation. It makes a word. Take a noun or a verb's ます-stem, put っぽい on the end, and what comes out is a brand new い-adjective. 怒る, to get angry, gives its stem 怒り, and 怒りっぽい is quick-tempered — not she seems angry, which would be a guess about right now, but she is the sort of person who gets angry, which is a fact about her. 飽きる gives 飽きっぽい, easily bored. Nouns work the same way: 水 gives 水っぽい, watery; 脂 gives 脂っぽい, greasy; 子供 gives 子供っぽい, childish; 黒 gives 黒っぽい, blackish. That last one shows the other flavour the suffix carries. Alongside a lasting trait it also does a surface quality, the colour or texture as it strikes you rather than as it is — 黒っぽいコート is a dark-ish coat, not a black one. Because what you built is an ordinary い-adjective, everything you know about い-adjectives applies with nothing new to learn. It goes straight in front of a noun with no な and no の: 水っぽい茶, 子供っぽい笑い方, 黒っぽいコート. It takes the negative and the past the way any い-adjective does, dropping い for くない and かった. And it takes no だ and no な of its own, where みたい and ようだ both take one. らしい does not take だ either — it ends in い, as this suffix does, and takes です for politeness. Two cautions worth carrying. First, several of these words are lexicalised — 安っぽい means cheap-looking and tawdry, not merely cheap, and 子供っぽい usually leans critical where childlike in English does not. It is 素敵 at the end of 彼の子供っぽい笑い方が素敵よね that turns that one warm; the word by itself would not have. Second, in casual modern speech っぽい has spread onto whole clauses — you will hear it stuck on the end of a plain verb, doing something much closer to みたい. None of the sentences in this chapter does that, and it is not what to produce, but do not be surprised when you hear it."
+
+- id: b3.hazu
+  order: 239
+  chapterId: b3.band-5
+  situation: "How sure are you?"
+  title: It should be
+  canDo: Say what ought to be true, going by something you already know
+  wordIds:
+    - vocab.kuru
+    - vocab.hikouki
+  phraseIds:
+    - band5.prices-ought-to-come-down-soon
+    - band5.tom-should-be-here-any-minute
+    - band5.the-plane-should-have-arrived-by-now
+    - band5.there-must-be-some-way-to-solve-this
+    - band5.carl-cannot-have-been-a-model-student
+    - band5.the-conference-was-to-be-held-in-february
+  kanji: []
+  patternId: grammar.b3-hazu
+  grammarNote: "The second half of this chapter stops asking how you know and starts asking how sure you are. はず opens it. It behaves like a noun, so a plain clause goes in front of it in the slot you have been putting clauses in since Book Two put one in front of 時 and こと. 物価はまもなく下がるはずだ. トムは今にもここに来るはずです — です on the end, because はず sits where a noun sits. What makes it はず rather than a guess is that there is something behind it. A schedule, an arrangement, a fact, a plan: the plane left on time so it should have landed; Tom said he was coming so he should be here. The speaker is not reporting evidence about the thing itself, they are reasoning from what they already knew. English ought to and should are close, and English must sometimes covers it too — これを解く何らかの方法があるはずだ is there must be some way, and the ground is a general belief about problems rather than anything about this one. On what goes in front, one honest gap. Every attested example available to this chapter is a plain verb or い-adjective clause, or a noun with the plain past copula on it: 優等生だったはずがない. For a noun or な-adjective in the non-past the reference rule is noun plus の plus はず, and な-adjective plus な plus はず — の, like ようだ, not な like the わけ lesson coming up. Take that as the rule the grammars give; none of the sentences in this chapter demonstrates it. The negative is the half you will meet most. はずがない, and its variants はずはない and the clipped はずない, deny the expectation outright: there is no way that is so. カールが優等生だったはずがない, Carl cannot have been a model student — the speaker is not doubting, they are ruling it out. Keep an eye out for this shape, because a very similar one arrives when わけ is taught and the two overlap in ordinary speech. Last, はずだった. That is the expectation in the past, and it usually carries the sense that things did not turn out that way. その国際会議は今年の２月に開催されるはずだった leaves you fairly sure the conference did not happen. Finally, a warning about reading rather than about grammar. はず written in kana is two of the commonest kana there are, and far more often than not a line containing them is not this pattern. 外す and 外れる, to remove and to come off; 弾む and 弾み, to bounce and momentum; 恥ずかしい, ashamed; 手はず, arrangements; 期待はずれ, a disappointment; and above all the topic particle は followed by any word starting with ず — 彼はずっと, それはずいぶん. In this chapter's sentence collection, 48 of the 69 lines containing はず are one of those. Check what is in front of it. This pattern needs a predicate there — a clause, or a noun or な-adjective with its linking の or な. In every look-alike above, the はず is buried inside one word, or is the particle は followed by the start of the next."
+
+- id: b3.nichigainai
+  order: 240
+  chapterId: b3.band-5
+  situation: "How sure are you?"
+  title: It has to be
+  canDo: State a conviction you have reasoned your way to from the evidence
+  wordIds:
+    - vocab.warui
+    - vocab.tatemono
+    - vocab.hanasu
+  phraseIds:
+    - band5.something-must-be-wrong-with-the-machinery
+    - band5.they-must-have-skipped-town
+    - band5.that-building-must-be-on-fire
+    - band5.he-must-be-happier-now
+    - band5.he-must-be-a-fool-to-talk-like-that
+  kanji: []
+  patternId: grammar.b3-nichigainai
+  grammarNote: "違い is a difference or a mistake, ない says there is none, and に違いない means there is no mistaking it. Both this and はず come out in English as must be, and telling them apart is the point of putting them next to each other. はず reasons from something already settled — a timetable, a promise, a known fact. に違いない reasons from evidence about the thing itself, and commits harder. あそこの建物が燃えているに違いない is somebody looking at smoke. 彼らは高飛びしたに違いない is somebody looking at an empty flat. Neither speaker can prove it; both have decided. If はず is checking a calendar, this is a detective in the last chapter. Attachment is where it breaks the habit the first half of this chapter built, and it is worth meeting head-on rather than discovering as an inconsistency. A verb or い-adjective clause goes in front, plain and unadorned, exactly as with はず: 燃えているに違いない, 悪いに違いない. But a な-adjective or a noun goes in front with no copula at all — no だ, no な, nothing. 幸福に違いない, with no だ standing between the two. ばかに違いない, the same. The stem goes straight in. That is the same behaviour かもしれない has, which closes this chapter, so it is a habit worth forming now rather than a one-off. The reference rule does allow the past copula だった in that slot, and an い-adjective in the past certainly goes there, but no sentence available to this chapter puts a past-tense noun in front of it, so treat that as the rule rather than as something proved here. In polite writing the ending becomes に違いありません, which you will meet in print more often than in speech. And be careful with the register: this is an emphatic, somewhat literary way of committing to a conclusion, so it lands harder in conversation than English must be does. When you only want to say something is probably so, the honest weak form arrives at the end of this chapter."
+
+- id: b3.wake
+  order: 241
+  chapterId: b3.band-5
+  situation: "How sure are you?"
+  title: That explains it
+  canDo: Account for a situation, say what it does not mean, or say a choice is off the table
+  wordIds: []
+  phraseIds:
+    - band5.no-wonder-you-are-happy
+    - band5.so-he-too-was-forced-to-resign
+    - band5.its-not-that-your-composition-is-hopeless
+    - band5.not-that-i-have-any-objection
+    - band5.barking-dogs-dont-always-bite
+    - band5.you-cant-afford-to-neglect-your-health
+    - band5.i-cant-put-it-off-any-longer
+    - band5.theres-no-way-hed-get-mixed-up-in-corruption
+    - band5.for-some-reason-i-couldnt-access-my-email
+  kanji: []
+  patternId: grammar.b3-wake
+  grammarNote: "This lesson carries more than its neighbours because the word does. わけ is a noun meaning the reason or the circumstances — どういうわけかメールにアクセスできませんでした, for some reason I could not get at my mail, and there it is just the noun, no clause attached to it at all. Everything else in this lesson is that noun with a clause in front and a different ending behind, and none of it predicts anything. That is the first thing to hold on to: the patterns before this one guess at what is true, and this one takes what is already known and does something with it. Four jobs. First, わけだ. Something is already established, and this says why it makes sense — so that is why. 道理で、君が喜ぶわけだ, no wonder you are pleased. 道理で in front is the usual partner and means much the same on its own. Second, and by a distance the commonest, わけではない, casually わけじゃない. It denies a conclusion rather than a fact. だからといって異議があるわけではない — the speaker is not denying whatever came before, they are denying that objecting follows from it. Paired with 必ずしも it makes a not-always: ほえる犬が必ずしもかみつくわけではない, barking dogs do not necessarily bite, which is a long way from saying they never do. Third, わけにはいかない. A fixed shape, に and は both in place, saying a course of action is closed off — not that you could not, but that you must not, or cannot afford to. 君は自分の健康を度外視するわけにはいかない. もうこれ以上延ばすわけにはいかない. Put a negative verb in front instead and the meaning turns inside out into having no choice but to do it. Fourth, わけがない, and its shorter form わけない — flat denial, there is no way. The sentence below about a man with a reputation for integrity uses the short form. This is the one to look at carefully, because it is very close to はずがない from earlier in this chapter, and in casual speech people use them for the same job. If you want the difference: はずがない denies an expectation the speaker had grounds for, and わけがない denies that the thing is possible at all. Plenty of sentences would take either. On what goes in front. A plain clause attaches directly, as it does to はず. A な-adjective takes な — the same な that ので takes, and that せい and おかげ took in the cause chapter, where から takes だ instead — though it is rare enough that this chapter has no card for it. A noun much more often bridges through という or, casually, って, rather than a bare copula: あなたの作文は全然だめだというわけではない, and the sentence about a forced resignation below bridges the same way with って. Learn the bridge; it is what people actually say. And the reading trap, smaller than らしい's but real: とりわけ is a fixed adverb meaning especially, and 言い訳 is a noun meaning an excuse. Both contain these two kana and neither is this word."
+
+- id: b3.kamoshirenai
+  order: 242
+  chapterId: b3.band-5
+  situation: "How sure are you?"
+  title: It might be
+  canDo: Hedge honestly, when you really are not sure
+  wordIds:
+    - vocab.takai
+    - vocab.ashita
+    - vocab.ame
+    - vocab.iu
+    - vocab.byouki
+    - vocab.naru
+    - vocab.kuru
+  phraseIds:
+    - band5.daikon-might-be-more-expensive-than-carrots
+    - band5.it-might-rain-tomorrow
+    - band5.you-could-be-right
+    - band5.this-may-not-be-a-real-diamond
+    - band5.you-may-fall-ill-at-any-moment
+    - band5.he-might-come-tomorrow
+  kanji: []
+  patternId: grammar.b3-kamoshirenai
+  grammarNote: "The chapter closes at the honest end. はず and に違いない are claims — the speaker has decided and is telling you so. かもしれない is the opposite: it admits the speaker does not know. 大根は人参より高いかもしれない is somebody who genuinely has not checked. Attachment is a straight repeat of the last lesson, which is why it comes here. A plain clause goes in front with nothing between: 正しいかもしれない, 来るかもしれない, 病気になるかもしれない. A negative clause works the same way and the doubt then sits on top of the negative — これは本物のダイヤではないかもしれない is it may not be, not it is not. And a bare noun or な-adjective goes in front with no copula at all, exactly as に違いない takes them: 明日は雨かもしれない. That is now two patterns making the same exception, so it is a habit rather than a quirk. Politely, かもしれません. In quick speech it shortens all the way down to かも, which you will hear constantly and can read the moment you know what it is short for. A family of adverbs front-loads the doubt so the listener knows from the start of the sentence where it is going: ひょっとすると, もしかすると, ひょっとしたら, もしかしたら. ひょっとすると明日は雨かもしれない, もしかすると彼は明日来るかもしれない. The adverb and the ending are a matched pair the way まるで and ようだ were. One last thing about how these eight sit together, worth having before the chapter closes. They are not one line from weak to strong. かもしれない really is the weak end, but はず and に違いない differ in their grounds as much as in their force — はず leans on something already arranged, に違いない on evidence the speaker has just weighed. And the first four are not on that scale at all: みたい, ようだ and らしい are about where the impression came from, and っぽい is about what something is like. The question a Japanese speaker answers when they choose one of these is not only how sure am I but also how do I know, and English usually asks neither out loud."
+
+- id: b3.checkpoint-5
+  order: 243
+  chapterId: b3.band-5
+  situation: Integration & checkpoint
+  title: Chapter 6 checkpoint
+  canDo: Recognise everything this chapter taught
+  wordIds: []
+  phraseIds: []
+  kanji: []
+  checkpoint: recognition
+  grammarNote: "A wide pass over everything this chapter has taught. Type the reading or the meaning rather than picking it out of a line-up. Eight ways of marking how sure you are and how you found out, where Book Two had one. What is being checked is not whether you can recite which is which — it is whether the right one comes to hand for the sentence in front of you, which is the only form this knowledge is any use in. Two things are worth watching for as they come back. The first is the boundary rather than the gloss: given a speaker who saw something, one who was told it, and one who is describing what somebody is like, three different words are correct and they are not interchangeable. The second is attachment, which is where these differ most on the page — the の that ようだ needs and みたい does not, and the bare stem that に違いない and かもしれない both take where everything else wanted a copula. Anything you miss comes back sooner. It finishes when the remaining set empties; retry as often as you like, nothing is recorded."

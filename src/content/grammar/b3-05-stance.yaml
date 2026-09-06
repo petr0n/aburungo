@@ -1,0 +1,111 @@
+# Book Three, chapter 6 grammar patterns -- how sure are you, and how do you
+# know.
+#
+# One pattern per teaching lesson, each blanking the thing that lesson exists
+# for out of one of its own sentences. The blank is matched against the phrase's
+# reading, so these are kana.
+#
+# Every `pattern` string below is a bare Japanese literal, because
+# scripts/levelling.mjs's grammarSurface() rejects any pattern containing a
+# Latin character or a digit and needs at least one ～-delimited fragment of two
+# characters or more. Book Two's free English descriptions return null under
+# that check and tag nothing; since the levelling pipeline is what the reading
+# library is built on, a pattern that cannot be tagged is a pattern the library
+# cannot find text for. All eight clear the check.
+#
+# What that costs, stated plainly rather than discovered later, because for this
+# chapter it costs more than for any chapter before it. Four of these eight
+# literals are strings that far commoner words contain, so the tagger will
+# over-tag exactly where this chapter's own attestation pass had to screen by
+# hand (the full counts and the blocklist are in phrases/b3-05-stance.yaml):
+#
+#   ～らしい will flag every すばらしい, 可愛らしい, 見すぼらしい, 尤もらしい,
+#     馬鹿らしい and their kin -- 57 of the corpus's 94 hits are not this
+#     grammar, and すばらしい alone is 39 of them. This is the worst
+#     over-tagging in the book so far.
+#   ～はず will flag 外す, 外れる, はずれ, 弾む, 弾み, 恥ずかしい, 手はず,
+#     期待はずれ, and the topic particle は in front of any ず-initial word
+#     (彼はずっと). 48 of 69 hits are not this grammar.
+#   ～みたい will flag every ます-stem + たい written in kana, 見たい included --
+#     14 of 46.
+#   ～わけ will flag とりわけ and 言い訳 -- 13 of 85.
+#
+#   ～っぽい, ～ようだ, ～に違いない and ～かもしれない are clean in this corpus
+#   and can be tagged from the literal alone.
+#
+# A more precise literal is not available for any of the four. Unlike the
+# passive chapter, where three of seven patterns could be sharpened by pairing
+# the auxiliary with the particle the lesson is about, these four have no
+# second element to pair with -- はず and わけ take any plain clause, and らしい
+# and みたい take a clause or a bare noun. Anything tagged with these four needs
+# a person to confirm it before it reaches a learner. This is a pipeline-design
+# question, flagged here rather than solved.
+#
+# Two of the blanks are longer than the bare pattern and that is deliberate.
+# ～ようだ blanks のようだ, particle included, because the の is the entire
+# difference between this lesson and the one before it, and a learner handed the
+# の for free has been told the answer to the only question the lesson asks.
+# ～っぽい blanks 怒りっぽい whole, stem included, because っぽい makes a word
+# rather than modifying a sentence, and the word is what there is to produce.
+#
+# content-source: n/a for this file -- every pattern references an existing
+#   phrase from phrases/b3-05-stance.yaml rather than composing new Japanese,
+#   and that file carries the Tatoeba id for each.
+# jlpt-source: training -- all eight are canonically N3 grammar and the chapter
+#   they sit in is N3.
+
+- id: grammar.b3-mitai
+  jlpt: N3
+  pattern: "～みたい"
+  gloss: It looks like, in casual speech. Goes straight onto a plain clause or, unusually, straight onto a bare noun with nothing in between -- then takes だ or です itself and behaves like a な-adjective. みたいな before a noun, みたいに before a verb.
+  phraseId: band5.that-building-is-like-a-monster
+  blank: みたいだ
+
+- id: grammar.b3-youda
+  jlpt: N3
+  pattern: "～ようだ"
+  gloss: The same guess in a neutral or written voice. A verb or い-adjective takes it bare; a noun needs の in front. The standard rule gives a な-adjective な, which this corpus happens not to show at all.
+  phraseId: band5.it-seems-you-are-the-first-one-here
+  blank: のようだ
+
+- id: grammar.b3-rashii
+  jlpt: N3
+  pattern: "～らしい"
+  gloss: What you were told, not what you saw. Attaches like ようだ but changes where the evidence came from. After a bare noun it usually does its other job instead -- every inch a, true to type.
+  phraseId: band5.i-hear-youre-raking-in-the-money
+  blank: らしい
+
+- id: grammar.b3-ppoi
+  jlpt: N3
+  pattern: "～っぽい"
+  gloss: A trait or a surface quality, not a guess about a situation. Onto a noun or a verb's ます-stem, and what comes out is an ordinary い-adjective -- 怒りっぽい, 水っぽい, 安っぽい, conjugating っぽくない and っぽかった.
+  phraseId: band5.she-has-a-hot-temper
+  blank: おこりっぽい
+
+- id: grammar.b3-hazu
+  jlpt: N3
+  pattern: "～はず"
+  gloss: It should be, going by something already known -- a schedule, an arrangement, a fact. Plain clause in front, as with any noun. はずがない is the flat denial, はずだった the expectation that did not come off.
+  phraseId: band5.prices-ought-to-come-down-soon
+  blank: はずだ
+
+- id: grammar.b3-nichigainai
+  jlpt: N3
+  pattern: "～に違いない"
+  gloss: It has to be. Stronger than はず and built on evidence rather than an arrangement. A な-adjective or noun goes in front with no だ and no な at all -- 幸福に違いない, ばかに違いない.
+  phraseId: band5.something-must-be-wrong-with-the-machinery
+  blank: にちがいない
+
+- id: grammar.b3-wake
+  jlpt: N3
+  pattern: "～わけ"
+  gloss: The formal noun that accounts for things. わけだ says that explains it, わけではない says that does not follow, わけにはいかない says the option is closed, わけがない says there is no way.
+  phraseId: band5.no-wonder-you-are-happy
+  blank: わけだ
+
+- id: grammar.b3-kamoshirenai
+  jlpt: N3
+  pattern: "～かもしれない"
+  gloss: It might be -- real doubt rather than a confident claim politely softened. Plain clause in front, or a bare な-adjective or noun with no copula, the same exception に違いない makes. かもしれません politely, かも in a hurry.
+  phraseId: band5.daikon-might-be-more-expensive-than-carrots
+  blank: かもしれない

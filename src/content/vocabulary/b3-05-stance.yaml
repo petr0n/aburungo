@@ -1,0 +1,55 @@
+# Book Three, chapter 6 vocabulary -- deliberately empty, for the same reason
+# chapters 1 and 2 are.
+#
+# This chapter teaches eight ways of saying how sure you are and how you know,
+# and not one of them is a word the learner needs to hold as a card. Four are
+# suffixes or auxiliaries with no independent life at all -- みたい, っぽい,
+# らしい and かもしれない -- and the other four are formal nouns or fixed
+# expressions the learner already knows how to put a plain clause in front of:
+# はず, わけ, よう and に違いない all sit in the slot grammar.b2-join-noun-clause
+# opened when it taught 前に食べた店 and 雨が降らなかったせい. What is new is
+# which noun, what evidence it claims, and how much confidence it commits to.
+# That is grammar, not vocabulary.
+#
+# Kanji spellings exist for four of the eight and the corpus does not use them
+# where this chapter needs them, so there is no character to teach either and
+# the `kanji:` arrays in the lessons file are empty to match:
+#
+#   筈 (はず, JMdict 1476430 sense 1, "should be; bound to be") -- zero
+#     occurrences of the character 筈 in the 25,983 sentences. Every one of the
+#     21 genuine はず sentences writes it in kana.
+#   訳 (わけ, JMdict 1538330 sense 1, "reason; cause; grounds") -- the character
+#     appears in 59 sentences, but in this chapter's grammatical sense in four:
+#     #75350 不満がある訳じゃない, #74577 必死な訳です, #76943 バージョンアップ
+#     した訳ではない, #168060 聞く訳ないじゃない. None of the four is a card
+#     here. The other 55 are 翻訳, 和訳, 英訳, 意訳, 直訳, 言い訳 and 申し訳 --
+#     other words entirely.
+#   様 (よう, JMdict 1605840) -- of the twelve 様だ hits, eleven are other words
+#     (空模様, 同様, 有様, 多種多様, 何様, 王女様, 模様) and the twelfth,
+#     #75550's 察しは良い様だけど, is a genuine ようだ in kanji inside a
+#     49-character sentence that is no card here.
+#   違 (に違いない) -- already taught, confirmed against the manifest, which is
+#     why this chapter needs no new kanji at all.
+#
+# One homophone worth recording, because looking わけ up by its kana finds four
+# wrong words before the right one. JMdict has five headwords read わけ: 1502990
+# 分け ("division; splitting"), 1538330 訳 ("reason; cause; grounds"), 1550140
+# 理由 (usually りゆう, わけ as a reading), 2259820 戯奴 (an archaic pronoun) and
+# 2259830 別 (an ancient hereditary title). This chapter means 1538330 and
+# nothing else -- the same trap as こと's kana matching 琴, the zither, for an
+# earlier author.
+#
+# The cited sentences do use words the learner does not own: 誤診, 兎小屋,
+# 一番乗り, 荒稼ぎ, 優等生, 度外視, 清廉潔白, 詰め腹 and their kin. That is not
+# a gap this file should close. 04-stage-reading.md section 3 hands vocabulary
+# at this stage to the reading library and to mining -- lessons carry patterns,
+# the library carries words. The chapter-1 file makes that argument at length
+# and it is the same argument.
+#
+# The file exists so the chapter's four content files stay a matched set. An
+# empty array parses; a file of comments alone does not, which is why the `[]`
+# below is load-bearing rather than decorative.
+#
+# content-source: n/a -- this file adds no Japanese content.
+
+[]

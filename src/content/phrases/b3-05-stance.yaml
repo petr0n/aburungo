@@ -1,0 +1,676 @@
+# Book Three, chapter 6 phrases -- how sure are you, and how do you know.
+#
+# Fifty sentences, and not one of them is ours. 04-stage-reading.md section 8
+# withdraws the training-canonical exemption at the reading stage and above, in
+# those words -- "no training-canonical sentences at the reading stage and
+# above". So every sentence below is a verbatim Tatoeba pair carried out of
+# server/data/jmdict-examples-eng-3.6.2.json with its id in `tatoebaId`, and
+# nothing here was composed, trimmed, joined or smoothed. Where a shape had no
+# attested sentence it is described in a grammarNote and has no card, which is
+# what chapters 1 through 5 did and what their reviews called correct.
+#
+# ---------------------------------------------------------------------------
+# THE FALSE-POSITIVE PASS, because four of this chapter's eight patterns are
+# strings that far commoner words happen to contain. Raw substring hits against
+# the 25,983 unique Japanese sentences, then hits left after reading every one
+# by hand:
+#
+#   はず        69 raw ->  21 genuine
+#   わけ        85 raw ->  72 genuine
+#   みたい      46 raw ->  32 genuine
+#   らしい      94 raw ->  37 genuine
+#   っぽい      20 raw ->  20 genuine   (clean)
+#   ようだ      64 raw ->  64 genuine   (clean)
+#   に違いない  24 raw ->  24 genuine   (clean)
+#   かもしれない 53 raw ->  53 genuine  (clean)
+#
+# What the four contaminated counts actually contain, and every item below was
+# confirmed to be its own JMdict headword rather than this chapter's suffix in
+# use:
+#
+#   らしい loses 57 of 94 to lexicalised i-adjectives that merely end in those
+#   three kana. すばらしい/素晴らしい (1397300) alone is 39 of them. The rest are
+#   可愛らしい 1190740, 愛らしい 1150510, 見すぼらしい 1259180, 態とらしい
+#   2010050, 尤もらしい 1535820, 馬鹿らしい 1612910, 憎たらしい 2012000,
+#   汚らしい 1639700, しおらしい 2056900, 長たらしい 2012350, 嫌らしい 1257270,
+#   空々しい 1596670. None is the productive suffix; every one is a dictionary
+#   word in its own right.
+#
+#   はず loses 48 of 69, and not to one collision but to at least eight: 外す /
+#   外れる / はずれ (remove, come off, the edge of a place), 弾む / 弾み (bounce,
+#   momentum), 恥ずかしい (ashamed), and -- the largest single source -- the
+#   topic particle は followed by an unrelated ず-initial word: 彼はずっと,
+#   それはずいぶん, この魚はずいぶん. Two more that the chapter breakdown's
+#   blocklist does not name and this pass found: 手はず / 手筈 (1328290,
+#   "arrangements", #187214) and 期待はずれ / 期待外れ (2115080,
+#   "disappointment", #146298). Both read はず and neither is the grammar.
+#
+#   みたい loses 14 of 46 to ます-stem + たい written in kana -- 飲みたい,
+#   頼みたい, 住みたい, つかみたい, 進みたい -- and to 見たい ("want to see")
+#   and every -てみたい. The learner's own deck carries this collision already:
+#   vocab.nomitai and the phrase food-preferences.want-water both contain the
+#   literal string みたい and neither is this grammar.
+#
+#   わけ loses 13 of 85: とりわけ (1599150, "especially", 9 hits), 言い訳 /
+#   いいわけ (1587030, "excuse", 2), 分ける conjugated (#82995), and 見分ける
+#   (#80850).
+#
+# No sentence below came from a bare substring search. Every one was read.
+# ---------------------------------------------------------------------------
+#
+# GLOSS DEPARTURES. The English is Tatoeba's own wherever Tatoeba's own would
+# do. Eleven of the fifty depart from it. Every one is listed here by id so a
+# reviewer can diff this list against the corpus rather than take it on trust.
+# Every Japanese string is untouched.
+#
+#   Where the corpus English hid the grammar the card exists to teach:
+#   #211038 -- "The building is a monstrous structure" has no trace of みたい.
+#     Glossed "That building is like a monster".
+#   #201130 -- "I'm afraid I've eaten too much" renders どうやら...みたいだ as
+#     "I'm afraid". Glossed "It looks like I've eaten too much".
+#   #87037 -- "It seems that she was ill" reads as the speaker's own inference,
+#     which is the one thing らしい does not mark. Glossed "Apparently she was
+#     ill".
+#   #199801 -- "Tom seems to be preparing" the same way. Glossed "I hear Tom is
+#     preparing for tomorrow's lessons".
+#   #98801 -- "He was finally forced to resign" shows nothing of ってわけだね,
+#     which is the card's whole point, and drops も. Glossed "So he too was
+#     finally forced to resign, then".
+#   #233276 -- "Your composition is not altogether bad" flattens
+#     というわけではない into one hedged adjective. Glossed "It's not that your
+#     composition is completely hopeless".
+#
+#   Where the corpus English was wrong or used a word the learner would not:
+#   #218249 -- "a weak tea" for 水っぽい茶. 水っぽい is watery (1637530), and
+#     the article is stray on a mass noun. Glossed "This is watery tea, isn't
+#     it?".
+#   #109377 -- "he gets soon tired of it", with the adverb in the wrong place.
+#     Glossed "he soon gets tired of it".
+#   #117212 -- "laugh" for 笑い方, which is the way somebody laughs rather than
+#     the laugh itself, and 笑い方 is the noun 子供っぽい is attached in front
+#     of. The whole line is reglossed: "His childlike laugh is charming" becomes
+#     "His childlike way of laughing is lovely, isn't it?", which also restores
+#     the よね the corpus English drops.
+#   #137561 -- "than the carrots" for 人参, which is generic here; the article
+#     reads as one particular bunch. Glossed "than carrots".
+#
+#   Capitalisation only, meaning unchanged:
+#   #74041 -- "in Spring" mid-sentence. Glossed "in spring".
+#
+# ---------------------------------------------------------------------------
+# ROUTING. Book Three's stage is "reading" (books.ts), and LearnPage routes
+# every non-foundation book to the typed FillBlankCard, where the learner types
+# the whole reading back. So all fifty of these are typed and none carries
+# `recognitionOnly`. The longest reading here is 33 kana (#237397 and #142860),
+# well inside Book Two's longest typed answer of 41
+# (quote.my-friend-said-that-shop-is-famous-but-i-wont-go), which is the line
+# chapter 2 set when it had to flag five sentences. Nothing in this chapter came
+# close, because the corpus offered short sentences for all eight patterns.
+# ---------------------------------------------------------------------------
+#
+# These are independent utterances. None is authored as an exchange, and none is
+# paired with another to make one -- a scripted back-and-forth is multi-sentence
+# composed text, which stays out even when both halves are separately attested.
+# Two corpus entries that would have been useful were passed over for exactly
+# that reason: #237266 and #76998 are both two speakers taking turns inside one
+# entry, and #144914 puts its わけがない inside a quotation with a speech tag.
+#
+# content-source: Tatoeba, via the sentence pairs embedded in JMdict for
+#   Applications 3.6.2 (server/data/jmdict-examples-eng-3.6.2.json). Every
+#   phrase carries its sentence id in `tatoebaId`; the id is quoted, because
+#   YAML reads a bare 211038 as a number and the schema rejects it. Verified by
+#   id against the corpus on 2026-09-05 -- all 50 resolve and every Japanese
+#   string below matches its source character for character. Kana readings and
+#   romaji are transcriptions of the quoted sentence, not new content; every
+#   compound whose reading was not already obvious was checked against JMdict
+#   (誤診 ごしん 1271400, 化け物 ばけもの 1601300, 兎小屋 うさぎごや 1712310,
+#   赤ん坊 あかんぼう 1383310, お尻 おしり 1002190, 人ごと ひとごと 1367880
+#   sense 1, 一番乗り いちばんのり 1166010 sense 2, 丘 おか 1588920, 象 ぞう
+#   1351830, 具合 ぐあい 1592500, 我々 われわれ 1607050, 警戒 けいかい 1252310,
+#   夢 ゆめ 1529410, 荒稼ぎ あらかせぎ 1281540, 幼なじみ おさななじみ 1545120,
+#   春 はる 1341000, 大阪 おおさか 2078800, 大学 だいがく 1413240, 授業
+#   じゅぎょう 1330290, 予習 よしゅう 1543070, 出勤 しゅっきん 1338600, 紳士
+#   しんし 1364950, 怒りっぽい おこりっぽい 2013850, 飽きっぽい あきっぽい
+#   1621650, 脂っぽい あぶらっぽい 2657030, 水っぽい みずっぽい 1637530,
+#   黒っぽい くろっぽい 1287460, 浅黒い あさぐろい 1390840, 肌 はだ 1476450,
+#   素敵 すてき 1397350, 物価 ぶっか 1502430, 下がる さがる 1184160, 今にも
+#   いまにも 1288950, 今頃 いまごろ 1289160, 関西 かんさい 1215910, 空港
+#   くうこう 1245570, 当然 とうぜん 1449190, 何らか なんらか 1714490, 方法
+#   ほうほう 1517090, 優等生 ゆうとうせい 1539530, 国際 こくさい 1286400, 会議
+#   かいぎ 1198360, 今年 ことし 1579130, 開催 かいさい 1202710, 機構 きこう
+#   1220940 sense 1, 高飛び たかとび 1808990 sense 1, 燃える もえる 1469570,
+#   再婚 さいこん 1292750, 幸福 こうふく 1278400, 道理で どうりで 1454270,
+#   詰め腹 つめばら 1727650 sense 2, 作文 さくぶん 1297960, 全然 ぜんぜん
+#   1395620, 異議 いぎ 1157580, 必ずしも かならずしも 1487410, かみつく
+#   1209220, 健康 けんこう 1256170, 度外視 どがいし 1616690, 以上 いじょう
+#   1155120, 延ばす のばす 1600290, 清廉潔白 せいれんけっぱく 1378430, 汚職
+#   おしょく 1179010, 手を染める てをそめる 1896010, どういうわけか 2841070,
+#   大根 だいこん 1413730 sense 1, 人参 にんじん 1367800 sense 1, 本物 ほんもの
+#   1523180, いつ何時 いつなんどき 1188930, ひょっとすると 1010650,
+#   もしかすると 1012530, いかにも 1000660, まるで 1216280, どうやら 1009020).
+#   Four of those are readings a lookup gets wrong on the first hit and are
+#   called out for the next author: 解く is とく here (1198890 sense 3, to
+#   solve), not ほどく (1198900); 丘 is おか (1588920), not つかさ (2251090);
+#   象 is ぞう (1351830), not しょう (1351820); 作文 is さくぶん (1297960), not
+#   さくもん (2525510); 今年 is ことし (1579130), not こんねん. 笑い方 is not a
+#   JMdict headword at all -- it is 笑い plus the 方 (かた) suffix, read
+#   わらいかた.
+# jlpt-source: training -- the level marks the chapter this content sits in.
+#   All eight patterns are canonically N3 grammar and the sentences carrying
+#   them are real N3-band text.
+
+# ── It looks like ────────────────────────────────────────────────────────────
+
+- id: band5.it-seems-it-was-a-misdiagnosis
+  jlpt: N3
+  scenario: appearance
+  japanese: うん、誤診だったみたい。
+  reading: うん、ごしんだったみたい。
+  romaji: un, goshin datta mitai.
+  english: Yes, it seems it was a misdiagnosis.
+  tatoebaId: "76843"
+  notes: Twelve characters, and the whole shape is in them. A plain clause -- 誤診だった, it was a misdiagnosis -- then みたい to say the speaker is reading it off something rather than stating it flat. No だ or です on the end, which is ordinary in speech.
+
+- id: band5.that-building-is-like-a-monster
+  jlpt: N3
+  scenario: appearance
+  japanese: その建物は化け物みたいだ。
+  reading: そのたてものはばけものみたいだ。
+  romaji: sono tatemono wa bakemono mitai da.
+  english: That building is like a monster.
+  tatoebaId: "211038"
+  notes: Look at 化け物みたい. A noun takes みたい with nothing at all between them -- no の, no な, no copula -- and then みたい takes the copula itself, みたいだ or みたいです, behaving from that point on like any な-adjective.
+
+- id: band5.my-place-is-like-a-rabbit-hutch
+  jlpt: N3
+  scenario: appearance
+  japanese: 部屋は兎小屋みたいだけど。
+  reading: へやはうさぎごやみたいだけど。
+  romaji: heya wa usagigoya mitai da kedo.
+  english: But my place is like a rabbit hutch.
+  tatoebaId: "84137"
+  notes: The same bare attachment on a second noun, so the pattern is visible rather than memorised as one sentence. けど trails off the way it does in speech -- the speaker is warning you before you arrive.
+
+- id: band5.it-looks-like-ive-eaten-too-much
+  jlpt: N3
+  scenario: appearance
+  japanese: どうやら食べ過ぎたみたいだ。
+  reading: どうやらたべすぎたみたいだ。
+  romaji: douyara tabesugita mitai da.
+  english: It looks like I've eaten too much.
+  tatoebaId: "201130"
+  notes: どうやら front-loads the hedge and みたい closes it, and the two turn up together constantly. You can say this about yourself -- the evidence is how you feel, and it is still evidence.
+
+- id: band5.as-smooth-as-a-babys-bottom
+  jlpt: N3
+  scenario: appearance
+  japanese: 赤ん坊のお尻みたいにすべすべだ。
+  reading: あかんぼうのおしりみたいにすべすべだ。
+  romaji: akanbou no oshiri mitai ni subesube da.
+  english: It's as smooth as a baby's bottom.
+  tatoebaId: "75939"
+  notes: The other job of the same word. Here nothing is being guessed at -- みたいに is drawing a comparison, like, in the way that. It is the same idea of resemblance turned outward instead of inward.
+
+- id: band5.you-look-like-its-none-of-your-business
+  jlpt: N3
+  scenario: appearance
+  japanese: 君はまるで人ごとみたいな顔をしているね。
+  reading: きみはまるでひとごとみたいなかおをしているね。
+  romaji: kimi wa marude hitogoto mitai na kao o shite iru ne.
+  english: You look as if it were none of your business.
+  tatoebaId: "177566"
+  notes: まるで in front and みたい behind is a matched pair meaning as if, and once you see まるで you can expect the other half. Before a noun みたい takes な, exactly as な-adjectives do -- みたいな顔, the face of someone who thinks it is nothing to do with them.
+
+# ── It looks like, more formally ──────────────────────────────────────────────
+
+- id: band5.it-seems-you-are-the-first-one-here
+  jlpt: N3
+  scenario: appearance
+  japanese: 君が一番乗りのようだ。
+  reading: きみがいちばんのりのようだ。
+  romaji: kimi ga ichibannori no you da.
+  english: It seems as if you are the first one here.
+  tatoebaId: "179075"
+  notes: The の is the difference. Where a noun took みたい with nothing in between, the same noun needs の before ようだ -- 一番乗りのようだ. Everything else about the two words is close enough to swap; this is the one place they part company on the page.
+
+- id: band5.from-a-distance-the-hill-looks-like-an-elephant
+  jlpt: N3
+  scenario: appearance
+  japanese: 遠くから見れば、その丘は象のようだ。
+  reading: とおくからみれば、そのおかはぞうのようだ。
+  romaji: tooku kara mireba, sono oka wa zou no you da.
+  english: Seen from a distance, the hill looks like an elephant.
+  tatoebaId: "188702"
+  notes: Comparison rather than inference, and the の is there again -- 象のようだ. Notice the ば conditional opening the sentence -- from far off, this is what it resembles.
+
+- id: band5.something-seems-wrong-with-this-car
+  jlpt: N3
+  scenario: appearance
+  japanese: この車はどこか具合が悪いようだ。
+  reading: このくるまはどこかぐあいがわるいようだ。
+  romaji: kono kuruma wa dokoka guai ga warui you da.
+  english: It seems that something is wrong with this car.
+  tatoebaId: "221408"
+  notes: After an い-adjective or a verb, ようだ attaches with nothing in between -- 悪いようだ. The の is only for nouns. どこか, somewhere, is doing the work of the English something.
+
+- id: band5.he-seems-to-be-wary-of-us
+  jlpt: N3
+  scenario: appearance
+  japanese: 彼は我々を警戒しているようだ。
+  reading: かれはわれわれをけいかいしているようだ。
+  romaji: kare wa wareware o keikai shite iru you da.
+  english: He seems to be wary of us.
+  tatoebaId: "109109"
+  notes: A plain clause ending in ている, then ようだ straight on the end. This is the commonest shape the pattern takes -- somebody is behaving a certain way and the speaker is drawing the obvious conclusion.
+
+- id: band5.i-feel-as-if-i-were-dreaming
+  jlpt: N3
+  scenario: appearance
+  japanese: まるで夢を見ているようだよ。
+  reading: まるでゆめをみているようだよ。
+  romaji: marude yume o mite iru you da yo.
+  english: I feel as if I were dreaming.
+  tatoebaId: "158843"
+  notes: まるで pairs with ようだ just as it pairs with みたい, and this is the register in which you will meet it most. The speaker knows perfectly well they are awake -- as if does not claim anything is true.
+
+- id: band5.the-tiger-cub-looked-like-a-kitten
+  jlpt: N3
+  scenario: appearance
+  japanese: トラの子は大きな子ネコのようだった。
+  reading: トラのこはおおきなこネコのようだった。
+  romaji: tora no ko wa ookina koneko no you datta.
+  english: The tiger cub looked like a large kitten.
+  tatoebaId: "199735"
+  notes: ようだ ends in the copula だ, so it takes a past the way だ does -- ようだった. The の is in place before the noun, and 大きな sits between them without disturbing it.
+
+# ── I hear that ───────────────────────────────────────────────────────────────
+
+- id: band5.i-hear-youre-raking-in-the-money
+  jlpt: N3
+  scenario: hearsay
+  japanese: 荒稼ぎしているらしいね。
+  reading: あらかせぎしているらしいね。
+  romaji: arakasegi shite iru rashii ne.
+  english: I heard you're raking in the money.
+  tatoebaId: "173429"
+  notes: The speaker has not seen the money. Somebody told them, and らしい is where that gets marked. Attachment is the same as ようだ's for a verb clause -- straight on the end of している.
+
+- id: band5.apparently-she-was-ill
+  jlpt: N3
+  scenario: hearsay
+  japanese: 彼女は病気だったらしい。
+  reading: かのじょはびょうきだったらしい。
+  romaji: kanojo wa byouki datta rashii.
+  english: Apparently she was ill.
+  tatoebaId: "87037"
+  notes: 病気だった is a noun with the plain past copula on it, and らしい goes straight on the end of that. The speaker is passing on what they were told, not reporting a diagnosis they made.
+
+- id: band5.apparently-an-old-friend-is-going-to-university-in-osaka
+  jlpt: N3
+  scenario: hearsay
+  japanese: 幼なじみが春から大阪の大学に行くらしい。
+  reading: おさななじみがはるからおおさかのだいがくにいくらしい。
+  romaji: osananajimi ga haru kara oosaka no daigaku ni iku rashii.
+  english: Apparently an old friend of mine is going to a university in Osaka in spring.
+  tatoebaId: "74041"
+  notes: News about somebody else, heard at second hand and marked as such. Non-past 行く takes らしい with nothing in between, and the whole sentence stays casual -- らしいです is the polite form when you need it.
+
+- id: band5.i-hear-tom-is-preparing-for-tomorrows-lessons
+  jlpt: N3
+  scenario: hearsay
+  japanese: トムは明日の授業の予習をしているらしい。
+  reading: トムはあしたのじゅぎょうのよしゅうをしているらしい。
+  romaji: tomu wa ashita no jugyou no yoshuu o shite iru rashii.
+  english: I hear Tom is preparing for tomorrow's lessons.
+  tatoebaId: "199801"
+  notes: Swap らしい for ようだ here and the sentence changes its source, not its politeness. ようだ would mean the speaker has seen Tom at it; らしい means somebody told them.
+
+- id: band5.just-like-him-to-go-to-work-before-breakfast
+  jlpt: N3
+  scenario: hearsay
+  japanese: 朝食前に出勤するなんていかにも彼らしい。
+  reading: ちょうしょくまえにしゅっきんするなんていかにもかれらしい。
+  romaji: choushoku mae ni shukkin suru nante ikanimo kare rashii.
+  english: It is characteristic of him to go to work before breakfast.
+  tatoebaId: "126176"
+  notes: The word's second job, and no hearsay in it at all. Noun plus らしい means every inch a, thoroughly, true to type -- 彼らしい, just like him. いかにも in front is the usual partner.
+
+- id: band5.every-inch-a-gentleman
+  jlpt: N3
+  scenario: hearsay
+  japanese: 彼はどこからどこまでも紳士らしい。
+  reading: かれはどこからどこまでもしんしらしい。
+  romaji: kare wa doko kara doko made mo shinshi rashii.
+  english: He looks every inch a gentleman.
+  tatoebaId: "111673"
+  notes: The same job on a common noun. 紳士らしい says he has everything a gentleman ought to have. That is a different claim from saying he appears to be one, which is what the previous two patterns would have said.
+
+# ── The look of it ────────────────────────────────────────────────────────────
+
+- id: band5.she-has-a-hot-temper
+  jlpt: N3
+  scenario: quality
+  japanese: 彼女は怒りっぽい。
+  reading: かのじょはおこりっぽい。
+  romaji: kanojo wa okorippoi.
+  english: She has a hot temper.
+  tatoebaId: "93137"
+  notes: Nine characters, the shortest card in the chapter. 怒る goes to its ます-stem 怒り, then っぽい, and what comes out is a new adjective describing what she is like -- not a guess about what is happening right now.
+
+- id: band5.he-soon-gets-tired-of-whatever-he-takes-up
+  jlpt: N3
+  scenario: quality
+  japanese: 彼は何をしても飽きっぽい。
+  reading: かれはなにをしてもあきっぽい。
+  romaji: kare wa nani o shite mo akippoi.
+  english: Whatever he takes up, he soon gets tired of it.
+  tatoebaId: "109377"
+  notes: The same stem-plus-っぽい move on 飽きる, to get tired of. 何をしても, whatever he does, is the ても you already have -- and it is there because the sentence is about a standing trait rather than one occasion.
+
+- id: band5.i-have-greasy-skin
+  jlpt: N3
+  scenario: quality
+  japanese: 肌が脂っぽいのです。
+  reading: はだがあぶらっぽいのです。
+  romaji: hada ga aburappoi no desu.
+  english: I have greasy skin.
+  tatoebaId: "121343"
+  notes: A noun this time -- 脂, fat -- plus っぽい, giving greasy. Nouns and verb stems both feed this suffix, and both produce an ordinary い-adjective at the other end.
+
+- id: band5.this-tea-is-watery
+  jlpt: N3
+  scenario: quality
+  japanese: これは水っぽい茶だね。
+  reading: これはみずっぽいちゃだね。
+  romaji: kore wa mizuppoi cha da ne.
+  english: This is watery tea, isn't it?
+  tatoebaId: "218249"
+  notes: 水 plus っぽい is watery, and here it sits in front of a noun with no な and no の -- because 水っぽい is an い-adjective now, and い-adjectives modify nouns directly.
+
+- id: band5.his-childlike-way-of-laughing-is-lovely
+  jlpt: N3
+  scenario: quality
+  japanese: 彼の子供っぽい笑い方が素敵よね。
+  reading: かれのこどもっぽいわらいかたがすてきよね。
+  romaji: kare no kodomoppoi waraikata ga suteki yo ne.
+  english: His childlike way of laughing is lovely, isn't it?
+  tatoebaId: "117212"
+  notes: 子供っぽい usually leans critical -- childish rather than childlike -- and it is 素敵 at the end of this sentence that turns it warm. The word itself does not decide; the sentence around it does.
+
+- id: band5.that-dark-coat-doesnt-match-her-skin
+  jlpt: N3
+  scenario: quality
+  japanese: その黒っぽいコートは彼女の浅黒い肌には合わない。
+  reading: そのくろっぽいコートはかのじょのあさぐろいはだにはあわない。
+  romaji: sono kuroppoi kooto wa kanojo no asaguroi hada ni wa awanai.
+  english: That dark coat does not match her dark skin.
+  tatoebaId: "210561"
+  notes: 黒っぽい is not 黒い. It is blackish, dark-ish, the colour as perceived rather than claimed -- which is the other flavour this suffix carries alongside the trait one.
+
+# ── It should be ──────────────────────────────────────────────────────────────
+
+- id: band5.prices-ought-to-come-down-soon
+  jlpt: N3
+  scenario: expectation
+  japanese: 物価はまもなく下がるはずだ。
+  reading: ぶっかはまもなくさがるはずだ。
+  romaji: bukka wa mamonaku sagaru hazu da.
+  english: Prices ought to come down soon.
+  tatoebaId: "83791"
+  notes: はず behaves like a noun, so a plain clause goes in front of it exactly as it goes in front of こと or 時 -- 下がるはず. The claim is not that prices will fall but that everything the speaker knows says they should.
+
+- id: band5.tom-should-be-here-any-minute
+  jlpt: N3
+  scenario: expectation
+  japanese: トムは今にもここに来るはずです。
+  reading: トムはいまにもここにくるはずです。
+  romaji: tomu wa ima ni mo koko ni kuru hazu desu.
+  english: Tom should be here any minute.
+  tatoebaId: "199940"
+  notes: です goes on the end of はず, in the slot a noun's copula sits in, and that is the whole of the polite form. What makes this はず rather than a guess is that there is an arrangement behind it -- Tom said he was coming.
+
+- id: band5.the-plane-should-have-arrived-by-now
+  jlpt: N3
+  scenario: expectation
+  japanese: その飛行機は今ごろは関西空港に当然着いているはずだ。
+  reading: そのひこうきはいまごろはかんさいくうこうにとうぜんついているはずだ。
+  romaji: sono hikouki wa imagoro wa kansai kuukou ni touzen tsuite iru hazu da.
+  english: The plane should have arrived at Kansai Airport by now.
+  tatoebaId: "237397"
+  notes: A timetable is the clearest kind of ground this pattern has. 当然, naturally, doubles the certainty はず already carries rather than adding anything new -- which tells you something about how confident はず sounds on its own.
+
+- id: band5.there-must-be-some-way-to-solve-this
+  jlpt: N3
+  scenario: expectation
+  japanese: これを解く何らかの方法があるはずだ。
+  reading: これをとくなんらかのほうほうがあるはずだ。
+  romaji: kore o toku nanraka no houhou ga aru hazu da.
+  english: There must be some way to solve this.
+  tatoebaId: "217664"
+  notes: English reaches for must here, and it is still はず -- the speaker is reasoning from what they know about problems in general, not from evidence about this one. 解く is read とく when it means solve.
+
+- id: band5.carl-cannot-have-been-a-model-student
+  jlpt: N3
+  scenario: expectation
+  japanese: カールが優等生だったはずがない。
+  reading: カールがゆうとうせいだったはずがない。
+  romaji: kaaru ga yuutousei datta hazu ga nai.
+  english: Carl cannot have been a model student.
+  tatoebaId: "226462"
+  notes: The negative half of the same word. はずがない denies the expectation outright -- there is no way this is so. Note what comes before it -- 優等生だった, a noun with the plain past copula, taking はず straight on the end.
+
+- id: band5.the-conference-was-to-be-held-in-february
+  jlpt: N3
+  scenario: expectation
+  japanese: その国際会議は今年の２月に開催されるはずだった。
+  reading: そのこくさいかいぎはことしのにがつにかいさいされるはずだった。
+  romaji: sono kokusai kaigi wa kotoshi no nigatsu ni kaisai sareru hazu datta.
+  english: The international conference was to be held in February this year.
+  tatoebaId: "210565"
+  notes: はずだった is the expectation in the past, and it usually carries the sense that things did not go that way. Whatever was arranged for February, the sentence is hinting it did not happen. 開催される is the passive.
+
+# ── It has to be ──────────────────────────────────────────────────────────────
+
+- id: band5.something-must-be-wrong-with-the-machinery
+  jlpt: N3
+  scenario: conviction
+  japanese: どこか機構が悪いに違いない。
+  reading: どこかきこうがわるいにちがいない。
+  romaji: dokoka kikou ga warui ni chigainai.
+  english: Something must be wrong with the machinery.
+  tatoebaId: "201011"
+  notes: Literally, there is no mistaking it. This is a conclusion drawn from something the speaker can hear or see going wrong, which is what separates it from はず -- no arrangement, no schedule, just the evidence in front of them.
+
+- id: band5.they-must-have-skipped-town
+  jlpt: N3
+  scenario: conviction
+  japanese: 彼らは高飛びしたに違いない。
+  reading: かれらはたかとびしたにちがいない。
+  romaji: karera wa takatobi shita ni chigainai.
+  english: They must've skipped out of town.
+  tatoebaId: "107277"
+  notes: A detective's sentence. The plain past 高飛びした takes に違いない straight on the end, and the speaker is committing to a conclusion they cannot prove.
+
+- id: band5.that-building-must-be-on-fire
+  jlpt: N3
+  scenario: conviction
+  japanese: あそこの建物が燃えているに違いない。
+  reading: あそこのたてものがもえているにちがいない。
+  romaji: asoko no tatemono ga moete iru ni chigainai.
+  english: That building must be on fire.
+  tatoebaId: "234386"
+  notes: Somebody can see smoke. That is the shape this pattern likes -- visible evidence, one step of reasoning, and a claim made with real confidence rather than a polite hedge.
+
+- id: band5.he-must-be-happier-now
+  jlpt: N3
+  scenario: conviction
+  japanese: 再婚した今、彼はもっと幸福に違いない。
+  reading: さいこんしたいま、かれはもっとこうふくにちがいない。
+  romaji: saikon shita ima, kare wa motto koufuku ni chigainai.
+  english: He must be happier now after having remarried.
+  tatoebaId: "110547"
+  notes: 幸福 is a な-adjective and there is no だ and no な in front of に違いない -- the bare stem goes straight in. That breaks the habit the earlier patterns in this chapter built, and it is worth noticing rather than smoothing over.
+
+- id: band5.he-must-be-a-fool-to-talk-like-that
+  jlpt: N3
+  scenario: conviction
+  japanese: あんなふうに話すとは彼はばかに違いない。
+  reading: あんなふうにはなすとはかれはばかにちがいない。
+  romaji: anna fuu ni hanasu to wa kare wa baka ni chigainai.
+  english: He must be a fool to talk like that.
+  tatoebaId: "229560"
+  notes: A noun does the same thing -- ばかに違いない, with no copula between them. 〜とは in front supplies the grounds -- given that he talks that way, here is what follows.
+
+# ── That explains it ──────────────────────────────────────────────────────────
+
+- id: band5.no-wonder-you-are-happy
+  jlpt: N3
+  scenario: accounting
+  japanese: 道理で、君が喜ぶわけだ。
+  reading: どうりで、きみがよろこぶわけだ。
+  romaji: douri de, kimi ga yorokobu wake da.
+  english: No wonder you are so happy.
+  tatoebaId: "123542"
+  notes: わけだ does not predict anything. Something is already known to be true and this says why it makes sense -- so that is why you are pleased. 道理で in front is the usual partner and means the same thing on its own.
+
+- id: band5.so-he-too-was-forced-to-resign
+  jlpt: N3
+  scenario: accounting
+  japanese: 彼もとうとう詰め腹を切らされたってわけだね。
+  reading: かれもとうとうつめばらをきらされたってわけだね。
+  romaji: kare mo toutou tsumebara o kirasareta tte wake da ne.
+  english: So he too was finally forced to resign, then.
+  tatoebaId: "98801"
+  notes: って is casual for という, and it is how わけ takes what came before it when the speaker is summing something up. 切らされた is the causative passive -- he was made to do it.
+
+- id: band5.its-not-that-your-composition-is-hopeless
+  jlpt: N3
+  scenario: accounting
+  japanese: あなたの作文は全然だめだというわけではない。
+  reading: あなたのさくぶんはぜんぜんだめだというわけではない。
+  romaji: anata no sakubun wa zenzen dame da to iu wake de wa nai.
+  english: It's not that your composition is completely hopeless.
+  tatoebaId: "233276"
+  notes: わけではない denies a conclusion, not a fact. The speaker is not saying the essay is good; they are saying you should not take it as hopeless. というわけ is how a noun or な-adjective predicate reaches わけ in ordinary use.
+
+- id: band5.not-that-i-have-any-objection
+  jlpt: N3
+  scenario: accounting
+  japanese: だからといって異議があるわけではない。
+  reading: だからといっていぎがあるわけではない。
+  romaji: dakara to itte igi ga aru wake de wa nai.
+  english: Not that I have any objection.
+  tatoebaId: "203835"
+  notes: だからといって sets up exactly what わけではない knocks down -- just because that is so, it does not follow that. The two work as a pair and you will meet them together.
+
+- id: band5.barking-dogs-dont-always-bite
+  jlpt: N3
+  scenario: accounting
+  japanese: ほえる犬が必ずしもかみつくわけではない。
+  reading: ほえるいぬがかならずしもかみつくわけではない。
+  romaji: hoeru inu ga kanarazushimo kamitsuku wake de wa nai.
+  english: Barking dogs don't always bite.
+  tatoebaId: "196585"
+  notes: 必ずしも, not necessarily, needs a negative to finish it, and わけではない is the one it reaches for most. Together they say the rule does not hold every time -- not that it never holds.
+
+- id: band5.you-cant-afford-to-neglect-your-health
+  jlpt: N3
+  scenario: accounting
+  japanese: 君は自分の健康を度外視するわけにはいかない。
+  reading: きみはじぶんのけんこうをどがいしするわけにはいかない。
+  romaji: kimi wa jibun no kenkou o dogaishi suru wake ni wa ikanai.
+  english: You can't afford to neglect your health.
+  tatoebaId: "177201"
+  notes: わけにはいかない is usually not about ability. Doing it is generally possible -- it is that circumstances, duty or common sense will not allow it. English can't afford to is the closest thing to it.
+
+- id: band5.i-cant-put-it-off-any-longer
+  jlpt: N3
+  scenario: accounting
+  japanese: もうこれ以上延ばすわけにはいかない。
+  reading: もうこれいじょうのばすわけにはいかない。
+  romaji: mou kore ijou nobasu wake ni wa ikanai.
+  english: I can't put it off any longer.
+  tatoebaId: "194466"
+  notes: A dictionary-form verb goes in front, and the ending is fixed -- わけにはいかない, with the に and the は both in place. Put a negative verb in front instead and the meaning flips to having no choice but to do it.
+
+- id: band5.theres-no-way-hed-get-mixed-up-in-corruption
+  jlpt: N3
+  scenario: accounting
+  japanese: 清廉潔白できこえた彼が、汚職なんかに手を染めるわけない。
+  reading: せいれんけっぱくできこえたかれが、おしょくなんかにてをそめるわけない。
+  romaji: seiren keppaku de kikoeta kare ga, oshoku nanka ni te o someru wake nai.
+  english: He has a reputation as being straight as an arrow. He'd never get involved in corruption.
+  tatoebaId: "142860"
+  notes: わけない, and in fuller form わけがない, is flat denial -- there is no way. It sits very close to はずがない, and in casual speech people use them for the same job.
+
+- id: band5.for-some-reason-i-couldnt-access-my-email
+  jlpt: N3
+  scenario: accounting
+  japanese: どういうわけかメールにアクセスできませんでした。
+  reading: どういうわけかメールにアクセスできませんでした。
+  romaji: douiu wake ka meeru ni akusesu dekimasen deshita.
+  english: For some reason I couldn't access my e-mail.
+  tatoebaId: "201707"
+  notes: Here わけ is just the noun it always was -- the reason -- inside a set phrase meaning for some reason or other. No clause is attached to it at all, and this is the plain noun the other uses are built on.
+
+# ── It might be ───────────────────────────────────────────────────────────────
+
+- id: band5.daikon-might-be-more-expensive-than-carrots
+  jlpt: N3
+  scenario: possibility
+  japanese: 大根は人参より高いかもしれない。
+  reading: だいこんはにんじんよりたかいかもしれない。
+  romaji: daikon wa ninjin yori takai kamoshirenai.
+  english: Daikon might be more expensive than carrots.
+  tatoebaId: "137561"
+  notes: The honest end of the scale. はず and に違いない are claims; かもしれない is an admission that the speaker does not know. It goes straight onto a plain clause, here an い-adjective.
+
+- id: band5.it-might-rain-tomorrow
+  jlpt: N3
+  scenario: possibility
+  japanese: ひょっとすると明日は雨かもしれない。
+  reading: ひょっとするとあしたはあめかもしれない。
+  romaji: hyotto suru to ashita wa ame kamoshirenai.
+  english: Perhaps it will rain tomorrow.
+  tatoebaId: "197418"
+  notes: 雨かもしれない -- a bare noun with no だ in front, the same exception に違いない makes. ひょっとすると front-loads the doubt; もしかすると and ひょっとしたら do the same job.
+
+- id: band5.you-could-be-right
+  jlpt: N3
+  scenario: possibility
+  japanese: あなたの言うことは正しいかもしれない。
+  reading: あなたのいうことはただしいかもしれない。
+  romaji: anata no iu koto wa tadashii kamoshirenai.
+  english: You could be right, I suppose.
+  tatoebaId: "233344"
+  notes: Conceding a point without agreeing to it. This is what かもしれない does socially -- it leaves the speaker room, which is why it turns up so often where English would just say maybe.
+
+- id: band5.this-may-not-be-a-real-diamond
+  jlpt: N3
+  scenario: possibility
+  japanese: これは本物のダイヤではないかもしれない。
+  reading: これはほんもののダイヤではないかもしれない。
+  romaji: kore wa honmono no daiya de wa nai kamoshirenai.
+  english: This may not be a real diamond.
+  tatoebaId: "218082"
+  notes: The clause in front can be negative, and then the doubt sits on top of the negative -- it may not be, rather than it is not. ではない is the plain negative copula you already have.
+
+- id: band5.you-may-fall-ill-at-any-moment
+  jlpt: N3
+  scenario: possibility
+  japanese: あなたはいつ何時病気になるかもしれない。
+  reading: あなたはいつなんどきびょうきになるかもしれない。
+  romaji: anata wa itsu nandoki byouki ni naru kamoshirenai.
+  english: You may fall ill at any moment.
+  tatoebaId: "232818"
+  notes: いつ何時 is read いつなんどき and means at any moment. A plain non-past verb takes かもしれない with nothing in between, the way it takes はず and に違いない.
+
+- id: band5.he-might-come-tomorrow
+  jlpt: N3
+  scenario: possibility
+  japanese: もしかすると彼は明日来るかもしれない。
+  reading: もしかするとかれはあしたくるかもしれない。
+  romaji: moshika suru to kare wa ashita kuru kamoshirenai.
+  english: He might come tomorrow.
+  tatoebaId: "193878"
+  notes: The second of the doubt adverbs, doing the same front-loading job as ひょっとすると. In polite speech the ending becomes かもしれません, and in quick speech it shortens all the way to かも.
