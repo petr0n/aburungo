@@ -1,0 +1,46 @@
+# Book Three, Chapter 7 vocabulary -- deliberately empty.
+#
+# This chapter teaches seven ways of saying how much, and every one of them is
+# a particle or a bound noun rather than a word a learner would look up and
+# carry around. だけ, ばかり, くらい, ほど and どころか are kana particles;
+# 比べて is a conjugated form of a verb the chapter does not teach as a verb;
+# 反面 is a noun that only ever appears inside this construction in the corpus.
+# Book Two would have given several of them a Word card. Book Three does not,
+# and the difference is policy rather than oversight. 04-stage-reading.md
+# section 3 and book-three-bands.md section 1 hand vocabulary at this stage to
+# the reading library and to mining -- lessons carry patterns, the library
+# carries words, and lesson count decouples from word count. Each of the seven
+# is glossed where it is taught, in its pattern's `gloss` and its lesson's
+# grammarNote, so nothing here is unexplained; it simply is not a flashcard.
+#
+# The chapter breakdown (docs/plans/book-three-band-06.md sections 4 and 5)
+# specifies zero new words for this chapter, and the four Book Three chapters
+# already committed all ship an empty file for the same reason. There is no
+# disagreement to record here, unlike the time chapter, whose brief expected
+# words and got none.
+#
+# 比べる is the one candidate worth naming, because a reader will reasonably ask.
+# It is a real verb (JMdict 1483540, くらべる, "to compare"), the learner does not own it,
+# and it is the thing に比べて is built out of. It stays a mining word rather
+# than a card for the section 3 reason above, and the same call the cause
+# chapter made for せい and おかげ as standalone nouns.
+#
+# Three kanji do arrive with this chapter, and they are not affected by any of
+# the above: 比 (the に比べて lesson), 反 and 面 (the 反面 lesson). A character a
+# learner will keep meeting in the reading library is worth introducing whether
+# or not its carrier word gets a flashcard. They are named in the header of
+# lessons/b3-06-degree.yaml; the `kanji:` arrays there are empty pending the
+# wiring pass that fills them.
+#
+# The chapter's cited sentences do use words the learner does not own -- 時間稼ぎ,
+# 売却, 虚弱, 貿易収支, 違反者 among them. That is not a gap this file should
+# close either, for the same section 3 reason.
+#
+# The file exists so the chapter's four content files stay a matched set and so
+# the next author does not go looking for a missing one. An empty array parses;
+# a file of comments alone does not, which is why the `[]` below is load-bearing
+# rather than decorative.
+#
+# content-source: n/a -- this file adds no Japanese content.
+
+[]

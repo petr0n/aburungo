@@ -1,0 +1,113 @@
+# Book Three, Chapter 7 grammar patterns -- just how much.
+#
+# One pattern per teaching lesson, each blanking the thing that lesson exists
+# for out of one of its own sentences. The blank is matched against the
+# phrase's reading, so these are kana.
+#
+# The `pattern` strings are bare Japanese literals for a mechanical reason the
+# passive chapter's file records first: scripts/levelling.mjs's
+# grammarSurface() rejects any pattern containing a Latin character or a digit
+# and needs at least one ～-delimited fragment of two or more characters. A
+# Book Two-style English description of the rule returns null there and would
+# tag no sentence at all, and the levelling pipeline is what the reading
+# library is built on -- so a pattern that cannot be tagged is a pattern the
+# library cannot find text for. All seven below were run through
+# grammarSurface() before this file was committed and all seven return a
+# fragment list.
+#
+# This chapter is the worst in the book for tagger noise, and saying so here is
+# more useful than discovering it downstream. Five of the seven literals are
+# two or three kana that occur inside ordinary words:
+#
+#   ～だけ    tags every いただけ (the potential of いただく, a different verb
+#             entirely) and every だけど/だけれど (which is だ plus けど). In
+#             this corpus that is 122 of 332 raw hits, plus four くだける.
+#             A screen on いただけ and だけ[どれ] recovers most of it, but the
+#             breakdown's own pass found four sentences that scan as いただけ
+#             and are genuine -- a ku-verb's plain past ending in いた followed
+#             by だけ spells いただけ by accident -- so the screen needs a human
+#             after it, not instead of it.
+#   ～くらい  tags 暗い and 食らい付く whenever either is written in kana. Two
+#             hits in this corpus, both real false positives.
+#   ～ほど    tags なるほど, 先ほど, 後ほど, ほどほど, 〜のほど and the verb
+#             ほどく/ほどける. Around 26 of 181 raw hits.
+#   ～ばかり  is clean. No word in this corpus contains ばかり incidentally.
+#   ～どころか is clean, and there are only nine sentences to be wrong about.
+#
+# The two kanji patterns are the precise ones, which is the opposite of what
+# the rest of the book has found: ～に比べて and ～反面 tag nothing but
+# themselves. ～に比べて misses the attested variants に比べれば, bare に比べ
+# and と比べて -- the fragment list is a literal, not a stem match -- so the
+# library will under-count that family by half. Under-counting is the failure
+# mode to prefer here; a missed sentence costs a candidate, a wrong one costs
+# a lesson. This is a pipeline-design question, flagged rather than solved.
+#
+# Four of the seven blank the particle together with what attaches to it, and
+# that is the point rather than an oversight. だけ is blanked as メアリーだけ
+# because a bare だけ would leave the learner nothing to decide -- what the
+# lesson teaches is that a noun goes straight on. ほど is blanked as
+# これほどたかくない because the negative is half the pattern and handing it
+# over gives away the answer to the only question the sentence asks. に比べて
+# is blanked as いぜんにくらべて for the same reason: the に in front is the
+# part a learner leaves out. 反面 is blanked as そのはんめん because that is
+# the shape it actually appears in. くらい, ばかり and どころか take what their
+# lesson turns on -- おなじくらい for the equal-comparison frame, ばかりしている
+# for the nothing-but sense, やむどころか for the bare dictionary-form
+# attachment.
+#
+# content-source: n/a for this file -- every pattern references an existing
+#   phrase from phrases/b3-06-degree.yaml rather than composing new Japanese,
+#   and that file carries the Tatoeba id for each.
+# jlpt-source: training -- the level marks the chapter this content sits in,
+#   not each word's textbook level. だけ and くらい are canonically N5 and N4
+#   words being taught new jobs; ばかり, ほど, どころか, に比べて and 反面 are
+#   canonically N3 grammar. All seven are tagged N3 to match the chapter.
+
+- id: grammar.b3-dake
+  jlpt: N3
+  pattern: "～だけ"
+  gloss: Only this, and nothing else. A noun, a plain verb or an い-adjective goes straight on; a な-adjective takes な first, and so does a noun when the sense is "it is merely that". It also runs the other way as "as much as" -- 好きなだけ, できるだけ -- where the limit is a ceiling rather than a floor.
+  phraseId: band6.no-one-came-except-mary
+  blank: メアリーだけ
+
+- id: grammar.b3-bakari
+  jlpt: N3
+  pattern: "～ばかり"
+  gloss: Nothing but, usually with a complaint attached -- on a noun or a て-form. On a plain past verb it does a different job instead, "only just did it", with no complaint in it at all. Also, less often, "about" a quantity.
+  phraseId: band6.all-tom-does-is-play-video-games
+  blank: ばかりしている
+
+- id: grammar.b3-kurai
+  jlpt: N3
+  pattern: "～くらい"
+  gloss: About this much, in a second job. と同じくらい sets two things level; a clause plus くらい measures how far something goes; くらいなら names what you would rather avoid. ぐらい is the same word. This is the ～ふんくらいです of Book One, grown up.
+  phraseId: band6.this-car-is-as-big-as-that-one
+  blank: おなじくらい
+
+- id: grammar.b3-hodo
+  jlpt: N3
+  pattern: "～ほど"
+  gloss: To that degree. AはBほど〜ない says A falls short of B; a clause plus ほど says how far something goes, more carefully than くらい does; and 〜ば〜ほど, with the word said twice, is "the more, the more".
+  phraseId: band6.that-tree-is-not-so-tall-as-this
+  blank: これほどたかくない
+
+- id: grammar.b3-dokoroka
+  jlpt: N3
+  pattern: "～どころか"
+  gloss: Far from it. Attaches bare to a noun, a plain verb, an い-adjective or a な-adjective's stem -- no な, no だ. Overturns what was just assumed and replaces it, usually with something further in the other direction.
+  phraseId: band6.far-from-stopping-the-storm-grew-worse
+  blank: やむどころか
+
+- id: grammar.b3-ni-kurabete
+  jlpt: N3
+  pattern: "～に比べて"
+  gloss: Compared with. A noun, then に, then 比べて. Names the comparison outright where ほど leaves it implied, and works in a positive sentence. に比べれば and bare に比べ are the same thing in other registers, and と can stand in for the に.
+  phraseId: band6.it-has-greatly-improved-on-what-it-was
+  blank: いぜんにくらべて
+
+- id: grammar.b3-hanmen
+  jlpt: N3
+  pattern: "～反面"
+  gloss: On the other hand -- two things true of the same subject at once, weighed evenly, with neither presented as a setback. その反面 opens a second clause; a noun takes の in front of it.
+  phraseId: band6.its-cheap-but-the-quality-is-poor
+  blank: そのはんめん

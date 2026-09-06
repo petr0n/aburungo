@@ -1,0 +1,562 @@
+# Book Three, Chapter 7 phrases -- just how much.
+#
+# Thirty-five sentences, and not one of them is ours. Books One and Two composed
+# their example sentences from canonical N5/N4 material and marked them
+# `content-source: training`; 04-stage-reading.md section 8 withdraws that
+# exemption at the reading stage and above, in those words -- "no
+# training-canonical sentences at the reading stage and above". So every
+# sentence below is a verbatim Tatoeba pair carried out of
+# server/data/jmdict-examples-eng-3.6.2.json with its id in `tatoebaId`, and
+# nothing here was composed, trimmed, joined or smoothed. Where a shape had no
+# attested sentence, or no attested sentence a learner could type back, the
+# shape is described in a grammarNote and has no card.
+#
+# ---------------------------------------------------------------------------
+# WHAT THE ATTESTATION PASS FOUND, since the chapter's whole risk is mistaking
+# a collision for the construction. Raw substring counts against the 25,983
+# unique sentences in the corpus, each re-run for this file rather than taken
+# from the breakdown:
+#
+#   だけ       332 raw. 66 are いただけ, the potential of いただく -- a
+#              different verb whose stem happens to end in the same two kana
+#              (見せていただけますか). 56 are だけど/だけれど, which is だ plus
+#              けど and already taught in the joining-sentences chapter. 4 more
+#              are くだける/砕ける, "to break". 206 remain.
+#   ばかり     82 raw, and no collision word contains ばかり, so 82 genuine.
+#   くらい     89 plus 18 ぐらい. Two are false: #188444's くらい is 暗い,
+#              "dark", written in kana, and #216241's is 食らい付く, "to sink
+#              its teeth into". 105 remain.
+#   ほど       181 raw. Excluded: なるほど (11, a fixed interjection),
+#              先ほど/後ほど (3, fixed time nouns), ほどほど (1), 〜のほど (6, a
+#              fixed formal set phrase), and the verb ほどく/ほどける (5 by the
+#              search I ran, which also catches ほどいて; the breakdown counts 4).
+#              About 155 remain.
+#   どころか   9 raw, 9 genuine.
+#   に比べて   5 exact, plus 3 に比べれば and 2 bare に比べ -- 10 in the family,
+#              all genuine. と比べて/と比べると is a further 4 with the other
+#              particle.
+#   反面       4 raw, 4 genuine. That is every 反面 sentence in the corpus.
+#
+# Two homophone traps are worth recording because a headword lookup walks into
+# them. だけ has a second JMdict entry, 岳/嶽 [たけ/だけ] 1207210, "mountain";
+# ほど has 歩度 1691110, "one's walking pace". Neither collides with anything
+# below -- both are checked because the reading, not the gloss, is what a
+# lookup matches on.
+# ---------------------------------------------------------------------------
+#
+# Nine sentences the chapter breakdown named are not here, and each was dropped
+# for a reason worth recording rather than left as a silent discrepancy:
+#
+#   #76386 (生理痛なだけ) is quoted in the breakdown as ending at とか？. The
+#   corpus entry runs on -- いや、まさかね。 -- and is 33 characters. Trimming
+#   it is exactly what section 8 forbids. Replaced with #173809, which shows
+#   the same な before だけ in ten fewer characters.
+#
+#   #75568 (少しの頭痛くらい我慢しろ) is quoted in the breakdown as eleven
+#   characters of a 46-character entry, the rest of which is a fantasy
+#   character shouting about magical power. Same reason. The belittling
+#   "even just this much" flavour is described in the くらい grammarNote and
+#   has no card.
+#
+#   #237276 (「あなたは仕事が気に入っていると思います」「いやそれどころか、
+#   嫌いです」) is a two-speaker exchange inside one corpus entry. Carding it
+#   whole would put a scripted back-and-forth in front of a learner, which the
+#   time chapter already declined to do for its own #441557. Replaced with
+#   #221500, which shows いやそれどころか in a single utterance.
+#
+#   #84074 (封切られたばかりの映画はなんですか) is dropped over its reading,
+#   not its grammar. JMdict 2012960 gives 封切る two readings, ふうきる and
+#   ふうぎる, with no restriction between them, and the learner types the
+#   reading back. Guessing would teach one of the two as fact -- the same call
+#   the time chapter made over 開いた. Replaced with #217172 and #190355.
+#
+#   #144266 (人間は神ほど万能ではない) is dropped for the same reason: JMdict
+#   1584530 gives 万能 both ばんのう and まんのう on one entry. Replaced with
+#   #230432 and #184215, both negative comparisons with nothing ambiguous in
+#   them.
+#
+#   #228010 (ほとんど私と同じくらいの背丈) likewise -- 背丈 is せたけ or
+#   せいたけ, JMdict 1472760, both listed. Replaced with #215052.
+#
+#   #227196 (お兄さんと比べて、彼は運動神経が鈍い) likewise -- 鈍い is にぶい
+#   (1582430) or のろい (2838553), separate entries, same three characters. It
+#   was the file's only candidate card for the と比べて variant, so the variant
+#   is named in the grammarNote instead and has no card.
+#
+#   #81064 (味は日本のお米に比べて遜色はありません) is dropped because the
+#   breakdown recruits it as the proof that に比べて does not need a negative
+#   predicate, and its predicate is 遜色はありません, a negative. #123683 makes
+#   the point properly, with ずっと良かった.
+#
+#   #149773 (自分の部屋は出来るだけきちんとしておきたい) and #226236
+#   (ガブリエル…) are both fine sentences, dropped only for length in favour of
+#   #202294 and #146800, which teach the same two shapes in fewer characters.
+#
+# One sentence the breakdown's draft chapter header quotes does not exist:
+# このケーキは母のケーキほどおいしくない. The corpus has no sentence containing
+# ケーキほど at all. It is not used anywhere in this chapter. Two more of that
+# header's fragments -- いつもゲームばかりしている, 来たばかりです -- are not
+# attested as written either; the corpus has トムはいつもテレビゲームばかり
+# している, which is a card below, and the header quotes cards.
+#
+# As in every Book Three chapter, the vocabulary runs ahead of the ladder.
+# 時間稼ぎ, 売却, 虚弱, 違反者, 貿易収支 and their kin are not taught anywhere
+# and are not meant to be -- see vocabulary/b3-06-degree.yaml for why this
+# chapter ships zero words. What is being reviewed here is the particle, not
+# the nouns around it.
+#
+# The English is Tatoeba's own where Tatoeba's own would do. Six of the
+# thirty-five depart from it, every one listed here by id so a reviewer can
+# diff them against the corpus rather than take the count on trust. Every
+# Japanese string is untouched.
+#
+#   Where the corpus English hid the grammar the card exists to teach:
+#   #200114 -- "Tom is always playing video games." carries いつも and drops
+#     ばかり, which is the whole card. Glossed "All Tom ever does is play video
+#     games."
+#   #79270 -- "Every cloud has a silver lining." is a proverb-for-proverb
+#     trade with no trace of 反面 in it. Glossed "On the other side of sorrow
+#     there is joy." Tatoeba's equivalent is kept in the card's note, where it
+#     belongs.
+#   #221500 -- "useful to beginners, yes, and to advanced learners" flattens
+#     いやそれどころか into "yes, and". Glossed "This dictionary is useful to
+#     beginners -- no, more than that, to advanced learners too."
+#
+#   Wording only, meaning unchanged:
+#   #123683 -- "Business results of the company were much better than other
+#     companies in the industry" compares results to companies. Glossed "The
+#     company's results were much better than those of other firms in the same
+#     industry."
+#   #76607 -- "In comparison to which she's been in a really good mood
+#     recently" is a sentence fragment hanging off nothing. Glossed "By
+#     comparison, she has been in a really good mood recently."
+#   #204988 -- "it is not good" for 品質がよくない. Glossed "the quality is not
+#     good."
+#
+# ---------------------------------------------------------------------------
+# ROUTING: Book Three's stage is "reading" (books.ts), and LearnPage routes
+# every non-foundation book to the typed FillBlankCard, where the learner types
+# the whole reading back. Thirty-three of these are typed. Two carry
+# `recognitionOnly: true`, both in the 反面 lesson, both at 51 kana against the
+# 41-kana line the cause chapter set when it flagged a 42-kana card as one over:
+# band6.the-job-pays-well-but-the-hours-are-long and
+# band6.exports-were-strong-and-imports-steady. They are kept rather than
+# dropped because 反面 has exactly four sentences in the corpus and dropping two
+# would halve the lesson. The longest typed answer here is
+# band6.this-dictionary-helps-advanced-learners-too at 39 kana, inside what
+# Book Two already asked (41, quote.my-friend-said-that-shop-is-famous-but-i-
+# wont-go).
+# ---------------------------------------------------------------------------
+#
+# These are independent utterances. Several would sit naturally beside each
+# other -- the two ば〜ほど sentences most obviously. They are not authored as an
+# exchange or a narrative: multi-sentence composed text is the surface the
+# content rules exist to keep out, and it stays out even when both halves are
+# separately attested.
+#
+# content-source: Tatoeba, via the sentence pairs embedded in JMdict for
+#   Applications 3.6.2 (server/data/jmdict-examples-eng-3.6.2.json). Every
+#   phrase carries its sentence id in `tatoebaId`; the id is quoted, because
+#   YAML reads a bare 214352 as a number and the schema rejects it. Verified by
+#   id against the corpus on 2026-09-05 -- all 35 resolve, and each Japanese
+#   string below matches its source character for character. Kana readings and
+#   romaji are transcriptions of the quoted sentence, not new content; every
+#   compound whose reading was not already obvious was checked against JMdict
+#   (時間稼ぎ じかんかせぎ 1315940, 膝 ひざ 1487320, 飲食 いんしょく 1169940 --
+#   the entry also lists おんじき, a Buddhist reading not used of an ordinary
+#   invitation to eat -- 結構 けっこう 1254760, 媚びる こびる 1566080, 文句
+#   もんく 1505260, 兄弟 きょうだい 1249960 and not けいてい 2870775, 州 しゅう
+#   1331840, 問い合わせ といあわせ 1598590, 一体全体 いったいぜんたい 1164540,
+#   売却 ばいきゃく 1473980, 才能 さいのう 1294630, 日常会話 にちじょうかいわ
+#   1464190, 外車 がいしゃ 1203760, 金持ち かねもち 1242970, 降伏 こうふく
+#   1282940, 増し まし 1611600, 学生時代 がくせいじだい 1206910, 優しい やさしい
+#   1539040, 琵琶湖 びわこ 1621920, 湖 みずうみ 1267280, 持ち運ぶ もちはこぶ
+#   1315500, 法律 ほうりつ 1517480, 違反者 いはんしゃ 1158940, 強健 きょうけん
+#   1236240, 虚弱 きょじゃく 1232720, 実に じつに 2820720 -- the same three
+#   characters are also listed as a kanji form of まことに 1381160, and じつに is
+#   the reading modern prose gives 実に while まことに is normally written 誠に --
+#   嵐 あらし 1549340, 激しい はげしい 1600720, 辞書 じしょ 1318970, 初級者
+#   しょきゅうしゃ 2753890, 上級者 じょうきゅうしゃ 2753870, 役に立つ やくにたつ
+#   1537980, 以前 いぜん 1155150, 格段 かくだん 1205420, 進歩 しんぽ 1366190,
+#   同業他社 どうぎょうたしゃ 2825140, 業績 ぎょうせき 1239460, 原始的 げんしてき
+#   1261540, 全く まったく 1394800, お天気 おてんき 1002470 sense 2, "mood;
+#   temper", which is its own entry and not the 天気 the learner owns, 良好
+#   りょうこう 1554550, 値段 ねだん 1600160, 品質 ひんしつ 1490580, 憂い うれい
+#   1540740 and not うい 1540730, a different entry and an adjective, 喜び
+#   よろこび 1606140, 十分 じゅうぶん 1335080 and not じっぷん 1335070, ten
+#   minutes, １日 いちにち 1576260 -- the same string is also ついたち 2225040,
+#   the first of the month, and "twelve hours a １日" fixes it as いちにち --
+#   昨年 さくねん 1298230, 輸出 ゆしゅつ 1538820, 輸入 ゆにゅう 1538870,
+#   落ち着く おちつく 1589220, 貿易収支 ぼうえきしゅうし 1520160, 改善 かいぜん
+#   1200960).
+# jlpt-source: training -- the level marks the chapter this content sits in,
+#   not each particle's textbook level. だけ and くらい are canonically N5 and
+#   N4 words doing N3 jobs here; ばかり, ほど, どころか, に比べて and 反面 are
+#   canonically N3 grammar. The sentences carrying them are real N3 text and
+#   are tagged to match.
+
+# ── Just this much ────────────────────────────────────────────────────────────
+
+- id: band6.no-one-came-except-mary
+  jlpt: N3
+  scenario: degree
+  japanese: 来たのはメアリーだけだった。
+  reading: きたのはメアリーだけだった。
+  romaji: kita no wa mearii dake datta.
+  english: No one came except Mary.
+  tatoebaId: "78728"
+  notes: A noun goes straight onto だけ with nothing in between -- メアリーだけ, and no particle, no copula. 来たの is the nominalizer you have from Book Two, turning the clause into "the one who came", so the whole sentence is "the one who came was only Mary."
+
+- id: band6.hes-just-killing-time
+  jlpt: N3
+  scenario: degree
+  japanese: 彼は時間稼ぎをしているだけだよ。
+  reading: かれはじかんかせぎをしているだけだよ。
+  romaji: kare wa jikankasegi o shite iru dake da yo.
+  english: He is just killing time.
+  tatoebaId: "105314"
+  notes: 〜ているだけです is the shape you already produce in a shop when you say you are only looking. Here it is doing the same work on somebody else -- he is doing this and nothing more. Once you can see だけ as a piece rather than as part of a memorised phrase, that shop sentence is a rule.
+
+- id: band6.all-i-did-was-run-a-little
+  jlpt: N3
+  scenario: degree
+  japanese: 少し走っただけで膝がガクガクしてるよ。
+  reading: すこしはしっただけでひざがガクガクしてるよ。
+  romaji: sukoshi hashitta dake de hiza ga gakugaku shiteru yo.
+  english: All I did was run a little and now my knees are wobbly.
+  tatoebaId: "146800"
+  notes: A plain past verb attaches as directly as a noun did -- 走っただけ. だけで is だけ plus で, "with only that much and no more", and it is how Japanese says "all it took was". してる is casual している.
+
+- id: band6.eat-and-drink-as-much-as-you-like
+  jlpt: N3
+  scenario: degree
+  japanese: 好きなだけ飲食していただいて結構です。
+  reading: すきなだけいんしょくしていただいてけっこうです。
+  romaji: suki na dake inshoku shite itadaite kekkou desu.
+  english: You can eat and drink as much as you want.
+  tatoebaId: "173809"
+  notes: 好き is a な-adjective, so it takes な before だけ. And notice what だけ means here -- not "only" but "as much as", the ceiling rather than the floor. Same word, and the sentence around it decides which way the limit points.
+
+- id: band6.read-as-many-books-as-you-can
+  jlpt: N3
+  scenario: degree
+  japanese: できるだけ多くの本を読みなさい。
+  reading: できるだけおおくのほんをよみなさい。
+  romaji: dekiru dake ooku no hon o yominasai.
+  english: Read as many books as you can.
+  tatoebaId: "202294"
+  notes: できるだけ, as much as is possible, is worth keeping whole. It is also written 出来るだけ, and both spellings are ordinary. The conditions chapter gave you できる限り for the same job in a more written voice.
+
+- id: band6.i-love-music-as-well-as-sports
+  jlpt: N3
+  scenario: degree
+  japanese: スポーツだけでなく、音楽も好きだ。
+  reading: スポーツだけでなく、おんがくもすきだ。
+  romaji: supootsu dake de naku, ongaku mo suki da.
+  english: I love music as well as sports.
+  tatoebaId: "214352"
+  notes: だけでなく is だけ plus で plus ない, and it says "not only X" -- with も usually waiting in the second half to say "Y too". だけではなく with は is the fuller form and means the same thing.
+
+# ── Nothing but ───────────────────────────────────────────────────────────────
+
+- id: band6.all-tom-does-is-play-video-games
+  jlpt: N3
+  scenario: degree
+  japanese: トムはいつもテレビゲームばかりしている。
+  reading: トムはいつもテレビゲームばかりしている。
+  romaji: tomu wa itsumo terebi geemu bakari shite iru.
+  english: All Tom ever does is play video games.
+  tatoebaId: "200114"
+  notes: Swap だけ in here and you get a neutral report -- he plays video games and nothing else. ばかり says the same thing with an eye-roll attached. Nothing in the form carries that; the word does.
+
+- id: band6.hes-complaining-all-the-time
+  jlpt: N3
+  scenario: degree
+  japanese: あいつはいつもぐずぐず文句ばかり言っている。
+  reading: あいつはいつもぐずぐずもんくばかりいっている。
+  romaji: aitsu wa itsumo guzuguzu monku bakari itte iru.
+  english: He is complaining about something or other all the time.
+  tatoebaId: "234642"
+  notes: 文句ばかり言っている, doing nothing but complain, is a phrase you will meet often. あいつ is a rough word for somebody, and ぐずぐず is the sound of dragging your feet -- the whole sentence is fed up before ばかり arrives.
+
+- id: band6.she-always-kisses-up-to-teachers
+  jlpt: N3
+  scenario: degree
+  japanese: 彼女は先生にこびてばかり。
+  reading: かのじょはせんせいにこびてばかり。
+  romaji: kanojo wa sensei ni kobite bakari.
+  english: She always kisses up to teachers.
+  tatoebaId: "88247"
+  notes: A te-form attaches to ばかり as readily as a noun does -- こびてばかり, doing nothing but flatter. There is no いつも in the Japanese; the "always" in the English is ばかり.
+
+- id: band6.we-have-just-received-an-inquiry
+  jlpt: N3
+  scenario: degree
+  japanese: ご兄弟のことはカンザス州から問い合わせを受けたばかりです。
+  reading: ごきょうだいのことはカンザスしゅうからといあわせをうけたばかりです。
+  romaji: go-kyoudai no koto wa kanzasu-shuu kara toiawase o uketa bakari desu.
+  english: We have just received an inquiry from Kansas concerning your brother.
+  tatoebaId: "217172"
+  notes: The second job, and it hangs on one thing -- the verb in front is in the plain past. 受けたばかり, only just received. Nothing here is a complaint, and nothing in ばかり itself decided that; the た did.
+
+- id: band6.why-did-you-sell-your-newly-built-house
+  jlpt: N3
+  scenario: degree
+  japanese: 一体全体、どうして建てたばかりの家を売却してしまったんだい。
+  reading: いったいぜんたい、どうしてたてたばかりのいえをばいきゃくしてしまったんだい。
+  romaji: ittai zentai, doushite tateta bakari no ie o baikyaku shite shimatta n dai.
+  english: Why on earth did you sell your newly built house?
+  tatoebaId: "190355"
+  notes: 建てたばかりの家, a house only just built. Add の and the whole just-did phrase modifies a noun, the same way any clause does. んだい is a casual masculine question ending.
+
+- id: band6.she-was-not-merely-beautiful
+  jlpt: N3
+  scenario: degree
+  japanese: 彼女は美しいばかりでなく才能もあった。
+  reading: かのじょはうつくしいばかりでなくさいのうもあった。
+  romaji: kanojo wa utsukushii bakari de naku sainou mo atta.
+  english: She was not merely beautiful, but also talented.
+  tatoebaId: "87092"
+  notes: ばかりでなく is built exactly like だけでなく and means the same thing, with も again in the second half. ばかりか is the shorter version of it. This is the one place the two words really are interchangeable.
+
+# ── As much as ────────────────────────────────────────────────────────────────
+
+- id: band6.this-car-is-as-big-as-that-one
+  jlpt: N3
+  scenario: degree
+  japanese: この車はあの車と同じくらい大きい。
+  reading: このくるまはあのくるまとおなじくらいおおきい。
+  romaji: kono kuruma wa ano kuruma to onaji kurai ookii.
+  english: This car is as big as that car.
+  tatoebaId: "221418"
+  notes: AはBと同じくらい〜, A is about as ~ as B. と marks what you are measuring against, and 同じくらい says the two come out level. This is the frame to memorise whole.
+
+- id: band6.superman-flies-as-fast-as-a-rocket
+  jlpt: N3
+  scenario: degree
+  japanese: スーパーマンはロケットと同じくらいに速く飛ぶ。
+  reading: スーパーマンはロケットとおなじくらいにはやくとぶ。
+  romaji: suupaaman wa roketto to onaji kurai ni hayaku tobu.
+  english: Superman flies as fast as a rocket.
+  tatoebaId: "215052"
+  notes: The same frame with に after it, which lets 同じくらい modify what follows. The particle behaves the way it does after any noun -- の in front of a noun, に or nothing in front of a predicate. Both this sentence and the last one would still work if the に were swapped for nothing.
+
+- id: band6.id-like-to-manage-everyday-conversation
+  jlpt: N3
+  scenario: degree
+  japanese: せめて日常会話ができるくらいになりたい。
+  reading: せめてにちじょうかいわができるくらいになりたい。
+  romaji: semete nichijou kaiwa ga dekiru kurai ni naritai.
+  english: At the very least, I'd like to be able to have everyday conversations.
+  tatoebaId: "213995"
+  notes: A whole clause in front of くらい, and now it is measuring a degree rather than comparing two things -- to the point where everyday conversation works. できる is the potential you own; a potential verb in front of くらい is the commonest way this shape is built.
+
+- id: band6.hes-rich-enough-to-buy-a-foreign-car
+  jlpt: N3
+  scenario: degree
+  japanese: 彼は外車を買えるぐらい金持ちだ。
+  reading: かれはがいしゃをかえるぐらいかねもちだ。
+  romaji: kare wa gaisha o kaeru gurai kanemochi da.
+  english: He is rich enough to buy a foreign-made car.
+  tatoebaId: "108941"
+  notes: ぐらい, with a voiced g, is the same word as くらい and the same grammar -- speakers pick one or the other with no difference in meaning, and both spellings are ordinary in writing. Rich to the degree that he could buy an imported car.
+
+- id: band6.id-rather-die-than-surrender
+  jlpt: N3
+  scenario: degree
+  japanese: 降伏するくらいなら死んだほうが増しだ。
+  reading: こうふくするくらいならしんだほうがましだ。
+  romaji: koufuku suru kurai nara shinda hou ga mashi da.
+  english: I would rather die than yield.
+  tatoebaId: "173267"
+  notes: くらいなら sets up something you would rather avoid, and the second half names what you would take instead -- almost always with 〜ほうがましだ or 〜ほうがいい. The English inverts the order, so read the Japanese halves in the order they come.
+
+# ── Nowhere near ──────────────────────────────────────────────────────────────
+
+- id: band6.that-tree-is-not-so-tall-as-this
+  jlpt: N3
+  scenario: degree
+  japanese: あの木はこれほど高くない。
+  reading: あのきはこれほどたかくない。
+  romaji: ano ki wa kore hodo takakunai.
+  english: That tree is not so tall as this.
+  tatoebaId: "230432"
+  notes: AはBほど〜ない, A does not come up to B. Thirteen characters and the whole pattern is in them. The negative is load-bearing rather than decorative -- drop it and the sentence says the opposite. Textbook grammars lead with this use, though it is not what most ほど sentences do; the positive job is on the next cards.
+
+- id: band6.he-wasnt-as-gentle-then-as-he-is-now
+  jlpt: N3
+  scenario: degree
+  japanese: 学生時代は彼は今ほど優しくなかった。
+  reading: がくせいじだいはかれはいまほどやさしくなかった。
+  romaji: gakusei jidai wa kare wa ima hodo yasashiku nakatta.
+  english: In his school days he wasn't as gentle as he is now.
+  tatoebaId: "184215"
+  notes: What sits in front of ほど does not have to be a thing. 今ほど measures against a time, and the sentence compares one version of a person to another.
+
+- id: band6.no-lake-in-japan-is-as-large-as-lake-biwa
+  jlpt: N3
+  scenario: degree
+  japanese: 日本では琵琶湖ほど大きな湖はほかにない。
+  reading: にほんではびわこほどおおきなみずうみはほかにない。
+  romaji: nihon de wa biwako hodo ookina mizuumi wa hoka ni nai.
+  english: No other lake in Japan is as large as Lake Biwa.
+  tatoebaId: "122753"
+  notes: The negative comparison turned into a superlative. Nothing reaches this thing, so this thing is the biggest -- which is how Japanese most often says "the most" without a word for "most" anywhere in the sentence.
+
+- id: band6.this-box-is-light-enough-to-carry
+  jlpt: N3
+  scenario: degree
+  japanese: この箱は持ち運べるほど軽い。
+  reading: このはこはもちはこべるほどかるい。
+  romaji: kono hako wa mochihakoberu hodo karui.
+  english: This box is light enough to carry.
+  tatoebaId: "220178"
+  notes: The other job, and the sentence is positive. A clause in front of ほど measures how far the thing goes -- light to the degree that you could carry it. くらい would say the same thing in a lighter voice.
+
+- id: band6.the-more-laws-the-more-offenders
+  jlpt: N3
+  scenario: degree
+  japanese: 法律が多ければ多いほど、違反者も多くなる。
+  reading: ほうりつがおおければおおいほど、いはんしゃもおおくなる。
+  romaji: houritsu ga ookereba ooi hodo, ihansha mo ooku naru.
+  english: The more laws, the more offenders.
+  tatoebaId: "82673"
+  notes: 多ければ多いほど -- the ば conditional from Book Two, then the same word again in plain form, then ほど. The word is said twice on purpose. That doubling is the pattern.
+
+- id: band6.the-more-you-know-him-the-more-you-like-him
+  jlpt: N3
+  scenario: degree
+  japanese: 彼のことを知れば知るほどいっそう彼のことが好きになる。
+  reading: かれのことをしればしるほどいっそうかれのことがすきになる。
+  romaji: kare no koto o shireba shiru hodo issou kare no koto ga suki ni naru.
+  english: The more you know about him, the more you like him.
+  tatoebaId: "118333"
+  notes: The same doubling on a verb -- 知れば知るほど. いっそう, all the more, often turns up in the second half to carry the "the more" that English puts there.
+
+# ── Far from it ───────────────────────────────────────────────────────────────
+
+- id: band6.far-from-robust-he-was-weak
+  jlpt: N3
+  scenario: degree
+  japanese: 彼は強健どころか実に虚弱だった。
+  reading: かれはきょうけんどころかじつにきょじゃくだった。
+  romaji: kare wa kyouken dokoroka jitsu ni kyojaku datta.
+  english: So far from being robust, he was extremely weak.
+  tatoebaId: "108381"
+  notes: 強健 is a な-adjective and どころか takes its bare stem -- no な, no だ. The second half does not just deny the first, it goes past it in the opposite direction, which is what this word is for.
+
+- id: band6.far-from-stopping-the-storm-grew-worse
+  jlpt: N3
+  scenario: degree
+  japanese: やむどころか、嵐はいっそう激しくなった。
+  reading: やむどころか、あらしはいっそうはげしくなった。
+  romaji: yamu dokoroka, arashi wa issou hageshiku natta.
+  english: Far from stopping, the storm became much more intense.
+  tatoebaId: "193045"
+  notes: A verb attaches in its dictionary form. やむ, to let up, is 止む in kanji and written in kana here. Everybody expected the storm to ease; it did the reverse.
+
+- id: band6.he-doesnt-even-drink-beer
+  jlpt: N3
+  scenario: degree
+  japanese: 彼はウイスキーどころかビールさえ飲まない。
+  reading: かれはウイスキーどころかビールさえのまない。
+  romaji: kare wa uisukii dokoroka biiru sae nomanai.
+  english: He doesn't even drink beer, not to mention whiskey.
+  tatoebaId: "114350"
+  notes: A noun attaches with nothing in between. This is the other direction the word runs -- not "far from X, actually the opposite" but "forget X, not even the smaller thing". さえ, even, is the partner it keeps in this reading, and the sentence around it is usually negative.
+
+- id: band6.this-dictionary-helps-advanced-learners-too
+  jlpt: N3
+  scenario: degree
+  japanese: この辞書は初級者に、いやそれどころか上級者にも役に立つ。
+  reading: このじしょはしょきゅうしゃに、いやそれどころかじょうきゅうしゃにもやくにたつ。
+  romaji: kono jisho wa shokyuusha ni, iya sore dokoroka joukyuusha ni mo yaku ni tatsu.
+  english: This dictionary is useful to beginners -- no, more than that, to advanced learners too.
+  tatoebaId: "221500"
+  notes: いやそれどころか is the stock way this appears in speech -- say something, stop, and correct yourself upward. それ points back at what you just said, so nothing else has to attach.
+
+# ── Next to that ──────────────────────────────────────────────────────────────
+
+- id: band6.it-has-greatly-improved-on-what-it-was
+  jlpt: N3
+  scenario: comparison
+  japanese: それは以前に比べて格段に進歩した。
+  reading: それはいぜんにくらべてかくだんにしんぽした。
+  romaji: sore wa izen ni kurabete kakudan ni shinpo shita.
+  english: It has greatly improved compared with what it was.
+  tatoebaId: "205342"
+  notes: A noun, then に, then 比べて. 以前に比べて, compared with what it was before, is an ordinary way to open. Unlike ほど, it names the comparison outright instead of leaving it implied inside a negative.
+
+- id: band6.business-was-much-better-than-rival-firms
+  jlpt: N3
+  scenario: comparison
+  japanese: 同業他社に比べて業績がずっと良かった。
+  reading: どうぎょうたしゃにくらべてぎょうせきがずっとよかった。
+  romaji: dougyou tasha ni kurabete gyouseki ga zutto yokatta.
+  english: The company's results were much better than those of other firms in the same industry.
+  tatoebaId: "123683"
+  notes: The predicate is positive -- 良かった, not よくなかった. This is the sentence that shows に比べて does not need a negative anywhere, which ほど very often does. ずっと, by a long way, is a natural partner.
+
+- id: band6.this-was-quite-primitive-compared-to-that
+  jlpt: N3
+  scenario: comparison
+  japanese: こちらはあちらに比べれば全く原始的だった。
+  reading: こちらはあちらにくらべればまったくげんしてきだった。
+  romaji: kochira wa achira ni kurabereba mattaku genshiteki datta.
+  english: This was quite primitive compared to that.
+  tatoebaId: "224158"
+  notes: に比べれば is the ば conditional of the same verb -- if you compare it with that. It means what に比べて means and sounds a shade more tentative, the way an English "if you compare them" does.
+
+- id: band6.shes-been-in-a-good-mood-by-comparison
+  jlpt: N3
+  scenario: comparison
+  japanese: それに比べ最近彼女のお天気は良好。
+  reading: それにくらべさいきんかのじょのおてんきはりょうこう。
+  romaji: sore ni kurabe saikin kanojo no o-tenki wa ryoukou.
+  english: By comparison, she has been in a really good mood recently.
+  tatoebaId: "76607"
+  notes: Bare に比べ with no て, which is the written register of the same thing, and it opens the sentence here as それに比べ, by comparison with that. お天気 is its own word meaning somebody's mood, not the weather you learned in Book One.
+
+# ── On the other hand ─────────────────────────────────────────────────────────
+
+- id: band6.its-cheap-but-the-quality-is-poor
+  jlpt: N3
+  scenario: comparison
+  japanese: それは値段は安いが、その反面品質がよくない。
+  reading: それはねだんはやすいが、そのはんめんひんしつがよくない。
+  romaji: sore wa nedan wa yasui ga, sono hanmen hinshitsu ga yokunai.
+  english: It is cheap, but on the other hand the quality is not good.
+  tatoebaId: "204988"
+  notes: The が is already doing the "but". 反面 arrives on top of it to say the two halves are both simply true of the same thing -- cheap, and poor quality, with neither presented as a surprise. その反面 is the commonest way it opens a second clause.
+
+- id: band6.on-the-other-side-of-sorrow-there-is-joy
+  jlpt: N3
+  scenario: comparison
+  japanese: 憂いの反面には喜びがあるものだ。
+  reading: うれいのはんめんにはよろこびがあるものだ。
+  romaji: urei no hanmen ni wa yorokobi ga aru mono da.
+  english: On the other side of sorrow there is joy.
+  tatoebaId: "79270"
+  notes: 反面 is a noun before it is anything else, and here it is doing its literal job -- the other face of a thing, with a noun and の in front. Tatoeba translates the whole saying as "every cloud has a silver lining", which is what it means and shows you none of the grammar.
+
+- id: band6.the-job-pays-well-but-the-hours-are-long
+  jlpt: N3
+  scenario: comparison
+  japanese: その仕事は十分にお金になるが、その反面１日に12時間働かなくてはならない。
+  reading: そのしごとはじゅうぶんにおかねになるが、そのはんめんいちにちにじゅうにじかんはたらかなくてはならない。
+  romaji: sono shigoto wa juubun ni okane ni naru ga, sono hanmen ichinichi ni juuni jikan hatarakanakute wa naranai.
+  english: The job pays well, but on the other hand I have to work twelve hours a day.
+  tatoebaId: "210359"
+  recognitionOnly: true
+  notes: Fifty-one kana, so read it rather than type it. The shape to take away is the same その反面 as the cheap-goods sentence, and the same evenness -- good money and long hours, both true, neither one a complaint about the other.
+
+- id: band6.exports-were-strong-and-imports-steady
+  jlpt: N3
+  scenario: comparison
+  japanese: 昨年は輸出が好調の反面、輸入が落ち着いていたので貿易収支は改善した。
+  reading: さくねんはゆしゅつがこうちょうのはんめん、ゆにゅうがおちついていたのでぼうえきしゅうしはかいぜんした。
+  romaji: sakunen wa yushutsu ga kouchou no hanmen, yunyuu ga ochitsuite ita node bouekishuushi wa kaizen shita.
+  english: The nation's trade balance improved last year as exports were strong, while imports remained steady.
+  tatoebaId: "169778"
+  recognitionOnly: true
+  notes: Fifty-one kana, so read it rather than type it. 好調 is listed as both a な-adjective and a の-adjective, so 好調な and 好調の are both available and the corpus writes の here. Neither half is a setback -- 反面 is holding up two facts, not an obstacle.

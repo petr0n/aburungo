@@ -1,0 +1,264 @@
+# Chapter 7 -- Just how much.
+#
+# English has one small toolkit for "only", "just", "about", "to that extent",
+# "compared to" and "on the other hand" -- a handful of words that flex to
+# cover all of it. Japanese does not economise the same way. It has seven here,
+# and they are not interchangeable, because reaching for the wrong one does not
+# sound clumsy the way a wrong verb ending does. It changes the temperature of
+# the sentence. だけ states a limit and says nothing about how the speaker feels
+# about it. ばかり usually complains. くらい is warm and casual. ほど is careful
+# and often cold. どころか contradicts. に比べて measures out loud. 反面 holds
+# two things up and refuses to pick.
+#
+# The chapter falls into three families, and the lesson order follows them.
+#
+# だけ and ばかり (lessons 1-2) both mean "only". だけ is the plain statement of
+# a limit -- 見ているだけです, "just looking", which the learner has produced
+# since the shopping chapter without ever being told what だけ is doing in it.
+# ばかり is that same limit with a judgment attached, and it does a second job
+# on top, built on the plain past instead: 受けたばかりです, only just received.
+# The two jobs are taught together in one lesson rather than split, because
+# they are one word and a learner meets them shuffled together in the wild.
+#
+# くらい and ほど (lessons 3-4) are the second pair, and くらい needs its own
+# note before anything else: it is not new. Book One already taught it in
+# ～ふんくらいです, "about five minutes". This chapter gives it three related new
+# jobs -- equal comparison, degree, and くらいなら -- and then teaches ほど right
+# after it as the same territory in stricter clothes. くらい says two things are
+# about level. ほど is the one that most often turns up saying they are not.
+# Same shape, different lean, taught back to back on purpose.
+#
+# The last three (lessons 5-7) are thin -- 9, 10 and 4 attested sentences
+# against the first four's dozens -- and are placed last because each is a
+# refinement of something above. どころか overturns the assumption that だけ and
+# ばかり limit; に比べて names outright the comparison ほど only implies; 反面
+# closes the chapter by holding two true things about one subject at once,
+# formal enough to sit beside にもかかわらず and ものの from the contrast
+# chapter the learner has already finished.
+#
+#    1  だけ        just this much
+#    2  ばかり      nothing but -- and only just now
+#    3  くらい      as much as -- a second job for a word already owned
+#    4  ほど        nowhere near -- くらい's stricter neighbour
+#    5  どころか    far from it
+#    6  に比べて    next to that
+#    7  反面        on the other hand
+#
+# No lesson here depends on another's *form*. Lessons 1-2 and 3-4 are taught as
+# contrastive pairs and each grammarNote leans on the one before it, but every
+# pattern attaches to a plain-form clause, a noun or an adjective the learner
+# already owns from Book Two's plain-form chapter. Lesson 4's ば〜ほど needs the
+# ば conditional (grammar.b2-cond-ba-verbs, grammar.b2-cond-ba-adj-noun) and
+# lessons 3-4 lean on the potential (grammar.b2-potential-ichidan,
+# grammar.b2-potential-godan) for their degree examples. The checkpoint closes
+# the chapter rather than splitting it (DR-021).
+#
+# Three kanji arrive: 比 on lesson 6, 反 and 面 on lesson 7. None of the three
+# is in the 222-character manifest. The other four patterns ship kana, and the
+# reason is checked rather than assumed -- see the note below on what the corpus
+# actually writes. The `kanji:` arrays below are empty pending the wiring pass
+# that fills them; this header is where that pass reads which lesson takes which
+# character.
+#
+# On kanji spellings, because the chapter breakdown states four of these as
+# "kana-only in ordinary use" and three of the four claims do not survive a
+# look at the corpus:
+#
+#   だけ is 丈 in kanji. Twenty-seven corpus sentences contain 丈 and not one
+#   of them is this word -- they are 大丈夫, 背丈 and the length of a coat. So
+#   だけ really is kana here.
+#   ばかり is 許り. Zero corpus hits for that spelling, so kana here too.
+#   どころか is 所か/処か. The seven 所か hits are all 〜所から, a place plus
+#   から. Kana here too.
+#   ほど is 程, and the breakdown's claim is wrong: #162717 (私の物は君の程よく
+#   ありません) and #140536 (早ければ早い程よい) both write this particle in
+#   kanji, and #207422 writes the approximation sense as 百メートル程. Both
+#   spellings are ordinary. 程 is not taught in this chapter because the cards
+#   the chapter ships happen to be the kana ones, not because the kanji does
+#   not exist.
+#   くらい is 位, and the same correction applies in miniature: #74855 writes
+#   ３０万円位 for the approximation sense the learner already owns. No corpus
+#   sentence writes the comparison or degree senses that way. 位 is not taught
+#   here either.
+#
+# No new vocabulary ships in this chapter, by policy rather than by accident;
+# vocabulary/b3-06-degree.yaml carries the argument. The `wordIds` below name
+# words the learner already owns which the lesson's own sentences use; they are
+# an SRS pull, not new teaching. Lesson 6's list is empty because not one word
+# in its four sentences is taught anywhere -- that is what a thin, written-
+# register pattern looks like, and padding the list with a near-match would be
+# the thing the contrast chapter's audit caught.
+#
+# One rule the grammarNotes hold themselves to, stated once because it is
+# stricter than Book Two's and a later editor will otherwise undo it by
+# accident. A grammarNote here may show a conjugation chain, a fragment
+# (できるだけ, その反面), or a sentence that is a phrase card in this chapter or
+# in an earlier book, quoted whole. It may not show a Japanese sentence that is
+# none of those. Several notes therefore describe a sentence in English where a
+# draft would have composed a Japanese one or trimmed an attested one down to
+# fit. That is 04-stage-reading.md section 8 reaching into the prose, not only
+# into the cards.
+#
+# content-source: every phrase this file references is a verified Tatoeba pair,
+#   cited by id in `tatoebaId` in phrases/b3-06-degree.yaml. No
+#   training-canonical sentence is used anywhere in this chapter
+#   (04-stage-reading.md section 8).
+
+- id: b3.dake
+  order: 244
+  chapterId: b3.band-6
+  situation: Just how much
+  title: Just this much
+  canDo: Say that one thing, and nothing else, is true
+  wordIds:
+    - vocab.kuru
+    - vocab.sukoshi
+    - vocab.hashiru
+    - vocab.hon
+    - vocab.yomu
+    - vocab.ongaku
+    - vocab.suki
+  phraseIds:
+    - shopping.just-looking
+    - band6.no-one-came-except-mary
+    - band6.hes-just-killing-time
+    - band6.all-i-did-was-run-a-little
+    - band6.eat-and-drink-as-much-as-you-like
+    - band6.read-as-many-books-as-you-can
+    - band6.i-love-music-as-well-as-sports
+  kanji: []
+  patternId: grammar.b3-dake
+  grammarNote: "You have said 見ているだけです in a shop since Book One. Nobody told you what だけ was doing in it, and until now you could not have said it about anything else. This lesson is that sentence taken apart. だけ marks a limit — this and nothing more — and it attaches to almost anything with nothing in between. A noun goes straight on: メアリーだけ. A plain verb goes straight on, dictionary or past: しているだけ, 走っただけ. An い-adjective goes straight on. A な-adjective takes its な first: 好きなだけ. Verbs and い-adjectives attach the way they do in front of のに and くせに from the contrast chapter. Nouns are where this word parts company with those: のに demands な on a noun and だけ does not. One footnote on nouns, and it is a footnote because the corpus has very little of it. A noun can also take な before だけ, and it means something different from the bare join. 生理痛なだけ is not \"only period pain\" but \"it is merely a case of period pain\" — the copula's な, saying the situation is nothing more than that. Bare noun plus だけ narrows a set; noun plus な plus だけ dismisses an explanation. If you are not sure which you want, the bare join is the one you will need ninety-nine times out of a hundred. Then the part that surprises people. だけ does not only mean \"only\". It also means \"as much as\", and the dictionary lists both as senses of one word. 好きなだけ飲食していただいて結構です is an invitation to eat everything, not a restriction on eating. できるだけ, as much as is possible, is the same sense frozen into a set phrase, and it is worth learning whole — you will meet it constantly, written either できるだけ or 出来るだけ. The conditions chapter already gave you できる限り for the same job in a more written voice. What decides which way the limit points is not the word, it is what surrounds it: a limit on a set reads as \"only\", a limit on an amount reads as \"as much as\". Two combinations to have ready. だけで is だけ plus で, \"with only that much\" — 少し走っただけで膝がガクガクしてるよ, all it took was a short run. And だけでなく, also written だけではなく, is \"not only\" — スポーツだけでなく、音楽も好きだ, with も usually waiting in the second half to add the other thing. Finally, two strings that look like this word and are not. だけど and だけれど are だ plus けど, the \"but\" you learned in the joining-sentences chapter, and they have nothing to do with limits. And 〜ていただけますか, could you please, is the potential of いただく — a completely different verb whose stem simply ends in the same two kana. In this corpus those two account for a hundred and twenty-two of the three hundred and thirty-two sentences containing だけ, so they are not a rare trap; they are most of what a careless search returns."
+
+- id: b3.bakari
+  order: 245
+  chapterId: b3.band-6
+  situation: Just how much
+  title: Nothing but
+  canDo: Complain that someone does nothing else, or say something has only just happened
+  wordIds:
+    - vocab.sensei
+    - vocab.iu
+    - vocab.ie
+  phraseIds:
+    - band6.all-tom-does-is-play-video-games
+    - band6.hes-complaining-all-the-time
+    - band6.she-always-kisses-up-to-teachers
+    - band6.we-have-just-received-an-inquiry
+    - band6.why-did-you-sell-your-newly-built-house
+    - band6.she-was-not-merely-beautiful
+  kanji: []
+  patternId: grammar.b3-bakari
+  grammarNote: "ばかり is the last lesson's word with a mood. Where だけ reports a limit flatly, ばかり usually reports the same limit while rolling its eyes — too much of this, nothing else, and I have had enough of it. トムはいつもテレビゲームばかりしている is not a schedule, it is a complaint. Swap in だけ and the eye-roll goes away. Nothing about the grammar carries that; the choice of word does, which is why the two are taught side by side. It attaches to a noun — 文句ばかり — or to a te-form — こびてばかり. Both are ordinary and the te-form version needs nothing after it: 彼女は先生にこびてばかり is a complete sentence. Then the second job, which is a different thing wearing the same clothes. Put a plain past verb in front and ばかり stops meaning \"nothing but\" and starts meaning \"only just\". 受けたばかりです, we have only just received it. 建てたばかりの家, a house only just built — add の and the whole phrase modifies a noun the way any clause does. There is no complaint anywhere in this sense; it is a statement about how recently something happened. What tells the two apart is the form in front: a noun or a te-form gives you the complaint, a plain past gives you the timing. One thing that shape does not cover — a plain past followed by ばかりに, with に on the end, is a third thing again, meaning \"just because\" and blaming what went wrong on it. It is rare, one sentence in this corpus, and worth knowing exists so the に does not slip past you. Two more shapes to recognise. ばかりでなく is built exactly like だけでなく and means the same \"not only\" — 彼女は美しいばかりでなく才能もあった, with も again in the second half. ばかりか is the shorter version of it. And ばかり does one more job, quietly: after a quantity it means \"about\", which is くらい's job too — a corpus sentence uses ５０００円ばかり for \"about five thousand yen\". You will meet that more in older or bookish writing than in speech. Two cautions. First, do not read a complaint into every ばかり. 骨と皮ばかり, nothing but skin and bone, is a description, not a grumble, and the just-did sense usually carries no attitude at all. The complaint is the common case, not the rule. Second, there is a literary shape, 〜んばかり, meaning \"as if about to\" — a crowd all but overflowing a stadium, a boy all but bursting with youth. It exists, you will meet it in print, and this lesson does not build it. Recognise it and move on. You have already read ばかり without being told any of this: the cause chapter's reading-only cards carry it, one of them contracted to ばっかり, which is the same word said with more feeling."
+
+- id: b3.kurai
+  order: 246
+  chapterId: b3.band-6
+  situation: Just how much
+  title: As much as
+  canDo: Say two things are about equal, or that something goes to a surprising extent
+  wordIds:
+    - vocab.kuruma
+    - vocab.ookii
+    - vocab.shinu
+  phraseIds:
+    - band6.this-car-is-as-big-as-that-one
+    - band6.superman-flies-as-fast-as-a-rocket
+    - band6.id-like-to-manage-everyday-conversation
+    - band6.hes-rich-enough-to-buy-a-foreign-car
+    - band6.id-rather-die-than-surrender
+  kanji: []
+  patternId: grammar.b3-kurai
+  grammarNote: "This word is not new. Book One taught it in ～ふんくらいです, about five minutes, and that job has not changed. What follows is the same word doing three more, all of them about measuring rather than counting. First, two things held level. AはBと同じくらい〜 — この車はあの車と同じくらい大きい. と marks what you are measuring against and 同じくらい says they come out about the same. Learn the frame whole; you will fill it in constantly. The particle after it behaves the way it does after any noun — の in front of a noun, に or nothing in front of a predicate — so 同じくらいに速く飛ぶ and 同じくらい大きい are the same construction with different things following. Second, degree. Put a whole clause in front and くらい stops comparing two things and starts saying how far one thing goes. せめて日常会話ができるくらいになりたい — to the point where everyday conversation works. 彼は外車を買えるぐらい金持ちだ — rich to the point of being able to buy an imported car. Both of those lean on a potential verb, which is the commonest way this shape is built, though it does not have to be one. And note ぐらい in the second: with a voiced g it is the same word, the same grammar, and the same meaning. Speakers use both, writers write both, and there is nothing to choose between them. Third, くらいなら. Name the thing you would rather avoid, put くらいなら on it, and the second half says what you would take instead — 降伏するくらいなら死んだほうが増しだ. It almost always ends in 〜ほうがましだ or 〜ほうがいい. The English turns the halves around, so read the Japanese in the order it comes: the awful option first, the preferred one second. A fourth flavour, worth recognising rather than building: くらい after a small thing dismisses it. A corpus sentence tells somebody to put up with a headache this small — the word there is doing the opposite of what it does in 好きなだけ, marking a floor so low it should not be worth mentioning. You will meet it; you do not need to reach for it. One trap, and it is easy to walk into when reading. くらい in kana is not always this word. 暗い, dark, is spelled くらい when written in kana, and 食らい付く, to sink teeth into, starts with the same three. Two sentences in this corpus are one or the other. If くらい is doing no measuring at all, look for a different word. Next lesson is ほど, which covers a lot of the same ground in a cooler voice."
+
+- id: b3.hodo
+  order: 247
+  chapterId: b3.band-6
+  situation: Just how much
+  title: Nowhere near
+  canDo: Say something falls short of another, or reaches a striking extent, more carefully than くらい does
+  wordIds:
+    - vocab.ki
+    - vocab.takai
+    - vocab.ima
+    - vocab.nihon
+    - vocab.karui
+    - vocab.shiru
+    - vocab.suki
+  phraseIds:
+    - band6.that-tree-is-not-so-tall-as-this
+    - band6.he-wasnt-as-gentle-then-as-he-is-now
+    - band6.no-lake-in-japan-is-as-large-as-lake-biwa
+    - band6.this-box-is-light-enough-to-carry
+    - band6.the-more-laws-the-more-offenders
+    - band6.the-more-you-know-him-the-more-you-like-him
+  kanji: []
+  patternId: grammar.b3-hodo
+  grammarNote: "ほど measures the same things くらい measures and sounds more careful doing it. It has three jobs and you should meet all three, because they look different on the page. First, and the one grammar references lead with: AはBほど〜ない, A does not come up to B. あの木はこれほど高くない. 学生時代は彼は今ほど優しくなかった — and notice that what sits in front of ほど does not have to be a thing; 今ほど measures against a time. The negative is load-bearing. Drop it and the sentence says something else. Do not take from this that ほど is a negative word — roughly a third of the ほど sentences in this corpus have a negative after it, and the other two thirds are the jobs below. What is true is that when you want to say A falls short of B, this is the shape, and くらい will not do it for you. A useful variant of the same job: point it at everything else and you get a superlative without a word for \"most\" anywhere. 日本では琵琶湖ほど大きな湖はほかにない — nothing reaches it, so it is the biggest. Second, degree, in positive sentences. A clause in front of ほど says how far something goes: この箱は持ち運べるほど軽い, light to the point where you could carry it. That is くらい's second job, told in a cooler, more written voice. Both are correct here; ほど is what you would write and くらい is what you would say to a friend. Third, and this one has a shape of its own: 〜ば〜ほど, the more the more. Take the ば conditional you already own, then say the same word again in plain form, then ほど. 法律が多ければ多いほど、違反者も多くなる. 彼のことを知れば知るほどいっそう彼のことが好きになる. The doubling is the pattern — 多ければ多いほど, 知れば知るほど — and いっそう turns up in the second half of one of these carrying the \"all the more\" that English puts in front. Now the reading traps, which are worse here than anywhere else in the chapter. なるほど is a fixed interjection meaning \"I see\" and is not this word. 先ほど and 後ほど are fixed time nouns, a moment ago and shortly. ほどく and ほどける are a verb meaning to untie. ほどほどに means in moderation. And ご〜のほど is a set formality in polite letters. Together those are about twenty-six of the hundred and eighty-one sentences in this corpus containing ほど — if what you are looking at is not measuring anything, it is probably one of them."
+
+- id: b3.dokoroka
+  order: 248
+  chapterId: b3.band-6
+  situation: Just how much
+  title: Far from it
+  canDo: Correct an assumption by naming what is actually true, in either direction
+  wordIds:
+    - vocab.nomu
+    - vocab.biiru
+  phraseIds:
+    - band6.far-from-robust-he-was-weak
+    - band6.far-from-stopping-the-storm-grew-worse
+    - band6.he-doesnt-even-drink-beer
+    - band6.this-dictionary-helps-advanced-learners-too
+  kanji: []
+  patternId: grammar.b3-dokoroka
+  grammarNote: "だけ, ばかり, くらい and ほど all narrow a claim down. This one throws the whole claim out. どころか attaches bare — a noun, a plain verb in dictionary form, an い-adjective, or a な-adjective's stem with no な and no だ. 彼はウイスキーどころか. やむどころか. 彼は強健どころか. That is the same no-copula attachment the contrast chapter taught for とはいえ, so there is nothing new to learn about the join. It runs in two directions, and telling them apart is the lesson. The first: far from X, actually the opposite. 彼は強健どころか実に虚弱だった — not just \"not robust\", but weak, which is further in the other direction than merely denying it. やむどころか、嵐はいっそう激しくなった — everyone expected it to ease and it did the reverse. The sentence sets up an expectation in its first half and demolishes it in the second. The second direction: forget X, not even Y. 彼はウイスキーどころかビールさえ飲まない — never mind whiskey, he does not even drink beer. Here the first thing is the bigger claim and the second is a smaller one that also fails. さえ, even, is the partner this reading keeps, and the sentence around it is usually negative. In conversation it very often opens with それ, pointing back at whatever was just said, and with いや in front of that: いやそれどころか. この辞書は初級者に、いやそれどころか上級者にも役に立つ is somebody starting a sentence, stopping, and correcting themselves upward mid-breath. That is the most natural place you will hear this word. Two things to keep straight. どころか is voiced, and the unvoiced ところか is a different thing — a corpus sentence ends 〜というところかね, roughly \"something like that, wouldn't you say\". The voicing is part of this word. And this is a thin pattern: nine sentences in the whole corpus, every one of them genuine, but nine. You will meet it in reading long before you have a reason to build one yourself, and recognising it is the goal for now."
+
+- id: b3.ni-kurabete
+  order: 249
+  chapterId: b3.band-6
+  situation: Just how much
+  title: Next to that
+  canDo: Set two things side by side and say how they differ
+  wordIds: []
+  phraseIds:
+    - band6.it-has-greatly-improved-on-what-it-was
+    - band6.business-was-much-better-than-rival-firms
+    - band6.this-was-quite-primitive-compared-to-that
+    - band6.shes-been-in-a-good-mood-by-comparison
+  kanji: []
+  patternId: grammar.b3-ni-kurabete
+  grammarNote: "ほど leaves the comparison implied inside a negative. に比べて says it out loud. A noun, then に, then 比べて: それは以前に比べて格段に進歩した, compared with what it was before. 同業他社に比べて業績がずっと良かった. It is a verb, 比べる, to compare, in its te-form, and once you see that the rest follows — the thing you are comparing against takes に because that is what 比べる asks for. And here is the difference that matters after a whole lesson on ほど. The second half of a に比べて sentence does not need a negative. 業績がずっと良かった is positive and ordinary, and ずっと, by a long way, is a natural partner. If you have just spent a lesson watching ほど appear in negative sentences, do not carry that over. Three variants, all attested, none of them a separate pattern to learn. に比べれば is the ば conditional of the same verb — if you compare it with that — and sounds a shade more tentative, the way an English \"if you compare them\" does. Bare に比べ, with no て, is the written register, and often opens a sentence: それに比べ, by comparison with that. And the particle can be と instead of に — と比べて and と比べると both appear — with no change in meaning. に is the one to default to. 比 is a new character and a small one: two of the same figure standing side by side, which is what comparing looks like. It turns up in 比較, comparison, 比例, proportion, and 対比, contrast — and in each of them it is the comparing or the ratio part. Finally, the honest size of this pattern. There are ten sentences in this corpus across the に family, five of them in the exact に比べて shape, plus four more built with と. That is enough to teach the pattern and not enough to drill it, so most of your exposure will have to come from reading."
+
+- id: b3.hanmen
+  order: 250
+  chapterId: b3.band-6
+  situation: Just how much
+  title: On the other hand
+  canDo: Say one thing is true, and its opposite is true too, of the same subject
+  wordIds:
+    - vocab.shigoto
+    - vocab.yasui
+    - vocab.okane
+    - vocab.jikan
+    - vocab.hataraku
+  phraseIds:
+    - band6.its-cheap-but-the-quality-is-poor
+    - band6.on-the-other-side-of-sorrow-there-is-joy
+    - band6.the-job-pays-well-but-the-hours-are-long
+    - band6.exports-were-strong-and-imports-steady
+  kanji: []
+  patternId: grammar.b3-hanmen
+  grammarNote: "反面 is a noun as well as a connector, and the noun is where it comes from. Its two characters are 反, reverse, and 面, face or side — the other face of a thing. 憂いの反面には喜びがあるものだ uses it that way, literally: on the reverse side of sorrow there is joy. A noun plus の goes in front of it, exactly as it would in front of any noun. From there it becomes a connector. その反面, on that other side, opens a second clause about the same subject: それは値段は安いが、その反面品質がよくない. Notice that the が is already doing the \"but\". 反面 does not replace が or けど; it lands on top of them to say that the two halves are both simply true, weighed evenly. That is what separates it from the whole contrast chapter you have already done. にもかかわらず and ものの hold a fact up against an expectation and one side loses — despite this, that happened anyway. のに adds a complaint on top. 反面 does none of that. The job pays well and the hours are long; exports were strong and imports were steady. Neither half is a setback, neither half is a surprise, and the sentence is not disappointed about either. If you find yourself wanting to say \"and yet\", you want ものの. If you want to say \"and also, on the other side of it\", you want this. One thing this chapter cannot show you. Reference grammars also give 反面 a plain-predicate attachment — a plain verb or adjective straight in front of it, no の. That is real and you should expect to meet it. It has no card here because there is no example of it in this corpus: all four 反面 sentences attach either to その or to a noun plus の, and the rule for this book is that a shape with no attested sentence gets described and not quoted. Four sentences is also the whole of what exists, which makes this the thinnest lesson in the chapter — two of its four cards are long enough to be reading-only. Two new characters, and both pay for themselves outside this pattern. 反 is in 反対, opposite, 反応, reaction, and 違反, a violation, whose other character you already have. 面 you have owned since Book One without knowing it: it is the first character of 面白い. It also gives 場面, a scene, 表面, a surface, and 面接, a job interview."
+
+- id: b3.checkpoint-6
+  order: 251
+  chapterId: b3.band-6
+  situation: Integration & checkpoint
+  title: Chapter 7 checkpoint
+  canDo: Recognise everything this chapter taught
+  wordIds: []
+  phraseIds: []
+  kanji: []
+  checkpoint: recognition
+  grammarNote: "A wide pass over everything this chapter has taught, and this is where the seven get set beside each other, since they were deliberately taught apart. Start with the pair that means \"only\". だけ states a limit and leaves your feelings out of it; ばかり states the same limit with an eye-roll, and then does a second job entirely when a plain past verb is in front of it — 受けたばかり is timing, not complaint. Then the pair that measures. くらい says two things are about level, or how far one thing goes, in an everyday voice. ほど does the same work more carefully, is the one that says A falls short of B when a negative follows it, and has a shape of its own in 〜ば〜ほど, where the word is said twice. Then the three refinements. どころか throws out the claim and replaces it, in either direction — far from X, or forget X, not even Y. に比べて names a comparison outright and is happy in a positive sentence, which ほど often is not. 反面 holds two facts about one subject and weighs them evenly, which is exactly what にもかかわらず and ものの do not do. Type the reading or the meaning rather than picking it out of a line-up. Some of what comes back will hinge on one small thing — whether the verb in front of ばかり is a te-form or a plain past, whether だけ is narrowing a set or opening one up, whether the くらい in a sentence is measuring anything at all or is 暗い written in kana. Those are the places worth slowing down. Anything you miss comes back sooner. It finishes when the remaining set empties; retry as often as you like, nothing is recorded."
