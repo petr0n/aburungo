@@ -108,7 +108,8 @@ shipping and drops any word whose sentence is not carded. Kanji lists name only 
   - #237020 プレゼンテーションの前に資料に目を通しておくのが一番いい。 — It is best to review the
     material before the presentation. (30 characters; the のが nominaliser is Book Three ch.10's)
 - **Not this lesson:** #225528 クリーニング取ってきておいて uses てきて before lesson 5 teaches it.
-- **Depends on:** Book Two's ば conditional; Book Three ch.4 (できる限り) and ch.10 (の nominaliser).
+- **Depends on:** Book Two's ば conditional; Book Three ch.4 (できる限り). The の nominaliser in #237020 is
+  taught nowhere (Book Three ch.10 says so in its own note) — the card's note glosses it.
 - **New words:** 用意 ようい 1546220 s1 (N3) · 任せる まかせる 1467150 s1 (N3) · 安心 あんしん 1153890 s1 ·
   一番 いちばん 1165970 s1 (N3) · 自分 じぶん 1318610 s1. Optional: きちんと 1003400 (N3), 資料 1312820
   (N2), 共有 1235240, あらかじめ 1542860.
@@ -150,8 +151,8 @@ shipping and drops any word whose sentence is not carded. Kanji lists name only 
     live. (ために: Book Three ch.2)
   - #143662 水着の上に羽織られるもの持っていったほうがいいね。 — It's a good idea to bring something to
     slip on over your bathing suit. (30 characters; passive + ほうがいい, both known)
-- **Not this lesson:** #100843 彼は彼女の腕を取り、引きずっていった uses the continuative 取り, Book
-  Three ch.11's written joining — fine to read, but the author should prefer the five above.
+- **Not this lesson:** #100843 彼は彼女の腕を取り、引きずっていった uses the verb continuative 取り
+  (Book Three ch.11 taught only the copula's であり) — fine to read, but the author should prefer the five above.
 - **Depends on:** Book Three ch.2 (ために), Book Two ほうがいい.
 - **New words:** 追う おう 1432410 s1 · 腕 うで 1562850 s1 · 牛 うし 1231490 s1 (N3) · 生きる いきる
   1378520 s1 · 必要 ひつよう 1487660 s1 (the word; Book Three ch.9 taught the construction 必要がある
@@ -219,7 +220,8 @@ shipping and drops any word whose sentence is not carded. Kanji lists name only 
     he never returned. (31 characters — `recognitionOnly`; carries そのまま and 去り, written joining)
   - #161382 私はいつも事物をあるがままに描くことにしている。 — I always make it a point to paint things as
     they are. (あるがまま; ことにしている: Book Three ch.8 — recognition only)
-- **Depends on:** lesson 2 (ておく), lesson 4 (ていった); Book Three ch.8 ことにする.
+- **Depends on:** lesson 2 (ておく), lesson 4 (ていった). ことにしている (#161382) has no pattern of its own —
+  Book Three ch.8 taught only ことになる — so that card is recognition or dropped.
 - **New words:** 外出 がいしゅつ 1203800 s1 · 戻る もどる 1535880 (the sense "to return", not s1 "turn
   back half-way" — author picks the sense; Book Three ch.10 verified the reading) · そのまま 1406030
   s1 (N3) · 船 ふね 1602800 s1 (N3) · 描く えがく 1583460 s1 (N3). Optional: 去る 1231650, 話し合う
@@ -235,7 +237,7 @@ shipping and drops any word whose sentence is not carded. Kanji lists name only 
 - **Teaches:** the adverbial negative: verb ない-stem + ずに (割らずに, かぶらずに; する → せずに,
   never しずに) and its everyday twin 〜ないで (開封しないで送り返した). Both mean "without doing";
   ずに is the more written. Separate two look-alikes the learner already has or will meet: ないで as
-  a request (Book One's ないでください, and bare 使わないで — same string, different job, decided by
+  a request (Book Two ch.1's ないでください, and bare 使わないで — same string, different job, decided by
   what follows) and 〜ずにはいられない (cannot help doing — a fixed emphatic, named not carded).
 - **Candidates:**
   - #203324 たまごを割らずにオムレツは作れない。 — You can't make an omelet without breaking eggs.

@@ -163,7 +163,7 @@ manifest lacks (band 0's placements excluded where noted).
 - **Teaches:** dictionary form + な, sentence-final: the imperative's negative twin, same register.
   The look-alike to defuse now: sentence-final な after anything else is emphasis or reflection
   (してるな, いいな) — band 3 teaches it; the tell is the dictionary form immediately in front.
-  Softer prohibitions the learner has: ないでください (Book One), ないで (band 0 lesson 8), てはいけない
+  Softer prohibitions the learner has: ないでください (Book Two ch.1), ないで (band 0 lesson 8), てはいけない
   (Book Three ch.9).
 - **Candidates:**
   - #234503 あくどい事をするな。 — Don't do wicked things.
