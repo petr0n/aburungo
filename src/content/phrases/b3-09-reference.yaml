@@ -119,7 +119,8 @@
 #   (一頃) once (#111133). Excluded.
 #
 #   について -- one, に就いて itself (1009780). The collision here is not
-#   lexical but compositional: に + 付いて, the て-form of 付く written in kana.
+#   lexical but compositional: に + ついて, the て-form of 付く (stick, attach) or 就く (set out
+#   on, as in #108591 途に and #155840 床に) written in kana.
 #   Seven found and excluded -- #215782 (シャツについている), #199672
 #   (車についている), #126363 (下欄についている), #108591 (途についている),
 #   #143241 (後についてくる), #163673 (後について), #155840 (床についてから).
@@ -382,7 +383,8 @@
   romaji: hiroshima ni kuchiwa to iu tokoro ga arimasu.
   english: There's a place called Kuchiwa in Hiroshima.
   tatoebaId: "76174"
-  notes: The same shape for a place, and the reason it is here is that という is exactly what you reach for when you expect the listener not to know the name. ところ here is the plain noun of the previous lesson -- a place, no grammar in it.
+  recognitionOnly: true
+  notes: Read rather than typed, because 口和 is a place name whose reading no dictionary settles; you are not asked to type it back. The same shape for a place, and the reason it is here is that という is exactly what you reach for when you expect the listener not to know the name. ところ here is the plain noun of the previous lesson -- a place, no grammar in it.
 
 - id: band9.theres-a-rumor-johnson-is-going-to-be-traded
   jlpt: N3
