@@ -28,7 +28,8 @@
     "vocab": "node scripts/vocab.mjs",
     "kanji": "node scripts/kanji.mjs",
     "manifest": "node scripts/manifest.mjs",
-    "manifest:check": "node scripts/manifest.mjs check"
+    "manifest:check": "node scripts/manifest.mjs check",
+    "prototype:production": "vite --host 127.0.0.1 --port 5187 --strictPort --open /prototypes/guided-production.html"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.105.4",
