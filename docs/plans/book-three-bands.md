@@ -1,5 +1,12 @@
 # Book Three — the band skeleton
 
+> **Delivery clarification (2026-09-06, DR-038):** content is authored first and inspected through
+> the bookmap; teaching interfaces can follow. Complete the current book's agreed content before
+> creating/writing the next book's content. References below to content “shipping” or being on
+> `main` describe registration, not verified learner readiness. Record content scope, deferrals,
+> and completion evidence separately from interface status in the
+> [roadmap](99-roadmap.md#content-first-delivery-dr-038).
+
 **Status: skeleton, not breakdowns.** This is the layer above
 `docs/plans/book-three-band-NN.md`, the way `03-book-two.md` §4 sat above
 `book-two-chapter-NN.md`. It names the bands and the patterns each one owns, so band

@@ -1,5 +1,7 @@
 # Learning Paths — Overarching Plan
 
+**Planning entry point:** use the [roadmap](99-roadmap.md) for current status, priorities, and the reconciliation queue. This document holds the detailed shared learning model.
+
 > **Partly stale — read with care (2026-08-24).** This doc predates five decisions and has not
 > been rewritten: it says **"unit"** where the ladder now says **lesson** inside a **chapter**
 > (DR-024), it declares a fixed **can-do list** that is now derived from seen situations (DR-022),
@@ -13,6 +15,19 @@
 > this one wherever they disagree. The §6 build checklist is likewise frozen in time — Phase 1
 > items it shows unchecked have long since shipped. [99-roadmap.md](99-roadmap.md) is the live
 > build tracker.
+
+**Product direction:** build and validate AburunGo through the owner's own Japanese learning
+first, then develop a public, revenue-generating app if it proves effective. Personal use is the
+current phase, not a permanent noncommercial scope limit. Future launch and business-model work
+is tracked in the roadmap; the no-gamification principles remain in force (DR-037).
+
+**Delivery sequence (DR-038):** write and verify each book's agreed content first, using the
+bookmap for the owner's inspection, then build its teaching interfaces against that content.
+Complete the current book's content before creating/writing the next book's content. Content
+reviewable, content complete, and learning experience ready are separate milestones; see
+[the roadmap](99-roadmap.md#content-first-delivery-dr-038). Bookmap visibility must not be treated
+as learner-release readiness. Existing shared registration couples these today; separating them
+is pending implementation design.
 
 **Spine: a ladder of books.** Each book is a volume of the course, not a JLPT level (DR-033).
 Every book runs the *same* retention engine; what changes between books is the **content** and the

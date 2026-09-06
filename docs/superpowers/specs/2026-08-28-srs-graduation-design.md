@@ -1,10 +1,13 @@
 # SRS graduation — design
 
 **Date:** 2026-08-28
-**Status:** Approved, implementation pending
+**Status:** Eight-box client implemented; API/database compatibility and end-to-end verification pending.
+**Reconciled:** 2026-09-06 — owner confirmed keeping eight boxes and adding the missing persistence work.
 **Decision record:** DR-035
 
 ## The problem
+
+The following analysis describes the original five-box scheduler and the rationale for extending it.
 
 Leitner's top box is 30 days and nothing graduates past it, so every item the learner has ever
 met returns twelve times a year, forever. The steady-state daily review load is therefore
@@ -126,14 +129,36 @@ const MAX_BOX: LeitnerBox = 8;
 `nextBox`, `dueAtForBox`, `schedule` and `isDue` need no other change — they are written against
 `MAX_BOX` and the duration table rather than against literal box numbers.
 
-### No data migration
+### Persistence compatibility — remaining work
 
-`reviewStates` stores `box` as a number (`src/db/dexie.ts`: `"phraseId, dueAt"`), so every
-existing row remains valid and simply becomes eligible to climb further. A learner mid-Book-One
-keeps their progress and their next review lands exactly where it would have.
+**Correction, 2026-09-06:** the original “No data migration” claim considered only IndexedDB.
+No Dexie schema migration or reset is needed: `reviewStates.box` remains numeric, and existing
+rows stay valid. The server contract does need a migration and an API change.
 
-This is the whole reason the ladder extension is worth doing before the FSRS migration: it is
-the only version of this fix that touches no persisted shape.
+- **API:** update the content-progress request validator in `server/src/routes/progress.ts`
+  from integer boxes 1–5 to 1–8. Continue rejecting values outside the range.
+- **Database:** add a new append-only migration widening the `user_content_progress.box`
+  check constraint from 1–5 to 1–8. Do not edit the original migration, reset rows, or
+  recalculate existing schedules.
+- **Recovery:** verify that locally retained box 6–8 states rejected by the old API are
+  uploaded by hydration after the fix. A valid mixed batch must not fail because it contains
+  those boxes. Broader sync protocol changes remain a separate planning discussion.
+
+The frontend already schedules eight boxes. Until the API/database work lands, those higher
+boxes can remain local-only because sync failures are suppressed. This feature is not complete
+merely because scheduler unit tests pass.
+
+### Rollout and completion
+
+1. Verify the target database constraint and apply the widening migration first.
+2. Deploy the API accepting boxes 1–8; it must remain compatible with existing 1–5 clients.
+3. Verify the existing eight-box client can save and reload higher boxes through that API.
+4. Verify recovery of retained local states, then record deployment and acceptance evidence
+   in the roadmap. Production state is currently unverified.
+
+Preserve the widened constraint during rollback: narrowing it after higher-box rows exist is
+unsafe. Any API rollback must retain acceptance of boxes 1–8. Do not reset or demote learner
+progress as a compatibility workaround.
 
 ## Testing
 
@@ -147,17 +172,29 @@ the only version of this fix that touches no persisted shape.
   wrapping.
 - **A failure still drops to box 1** from every box including the three new ones, with a 1-day
   interval. The recovery path must not change.
-- **Existing box 1–5 behaviour is unchanged.** The current Leitner tests must pass untouched —
-  if any of them needs editing, the change is bigger than intended and that is the signal.
+- **Existing intervals and failure behavior remain unchanged.** Boxes 1–5 keep their durations;
+  the deliberate exception is a successful box-five review, which now advances to six. Tests
+  asserting the old box-five ceiling must be updated accordingly.
 - **A persisted box-5 row keeps working.** Construct a `ReviewState` at box 5 as an existing
   learner would have it, and assert it schedules to box 6 rather than erroring or capping.
+
+- **API boundaries:** accept integer boxes 1–8 and reject 0, 9, and fractional values.
+- **Real persistence round trip:** start with a box-five state, rate it successfully, save box
+  six through the API into a migrated test database, then hydrate in a fresh browser profile
+  for the same test account. Preserve box, due date, and last-seen timestamp. Repeat for box
+  eight. Mock-only storage tests cannot establish this acceptance criterion.
+- **Migration compatibility:** existing box 1–5 rows and their schedules survive unchanged;
+  the database accepts 6–8 and still rejects out-of-range values.
+- **Failed-sync recovery:** retain a higher-box review locally after a rejected write, restore
+  a compatible server, and verify hydration saves it. Include a batch mixing lower and higher
+  boxes and verify every entry is persisted.
 
 ## Consequences
 
 - **The ceiling moves from 600 items to 4,800.** Book One (955) and Book Two (~1,900 cumulative)
   both fit comfortably; the fix buys roughly through Book Four.
 - **Nothing changes for existing learners except that their reviews eventually space out
-  further.** No migration, no reset, no lost progress.
+  further.** A server constraint migration is required; no learner reset or local schema migration is needed.
 - **The two-scheduler split remains.** `ts-fsrs` 4.4.0 already runs server-side in
   `server/services/progress.ts` and `kanji.ts` with four-grade ratings, while `/learn` runs local
   Leitner with binary ratings and never reads server due state. This design does not unify them;

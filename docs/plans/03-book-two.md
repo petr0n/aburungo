@@ -1,7 +1,13 @@
 # Book Two — the bridge
 
-**Tier:** Free account. **Status: not started.** No content exists; `grep "jlpt: N4" src/content/`
-returns nothing.
+**Tier:** Free account. **Status:** lesson content exists and is registered; composition and
+reading interactions remain incomplete. See the [roadmap](99-roadmap.md) for current status.
+
+**Sequencing clarification (DR-038):** content precedes its interface. Missing composition UI
+alone does not mean chapter authoring happened too early. Authored model sentences and chunks
+are content requirements, however; whether those are complete or deferred must be recorded
+separately from implementing the interaction. The current book's agreed content must be complete
+before next-book content authoring begins.
 
 **Goal:** the learner moves from survival phrases to **building their own sentences** — combining
 grammar patterns, a working kanji habit, and the vocabulary to say things Book One never covered.
@@ -41,13 +47,10 @@ a boolean could not hold a third behaviour (DR-033). Recall as the default revie
 romaji display cut both work, and are provable against Book One content today via a dev-only
 `?shift=1`. Romaji→kana *input* conversion is untouched, per §6.
 
-**What is not built: the production-first produce beat.** Frame-based composition needs frames and
-their model sentences as **authored content**, which §8 has always said. An attempt to derive them
-at runtime failed twice over: kana has no word boundaries, so matching a word inside a phrase's
-reading split words in half (き lifted out of the middle of きれい), and offering same-word-type
-substitutes synthesised sentences nobody verified — the fabricated-Japanese rule. The lesson is
-that this beat is gated on authoring, not on engineering: **author the frames alongside the
-chapters** (§4) rather than expecting the engine to produce them.
+**The guided-production lesson step is not integrated yet.** DR-039 selects the visible-model,
+type-or-build interaction. A local prototype exists; authored chunks, accepted forms, bookmap
+support, and lesson/SRS integration remain work. See §8 and the linked spec. Earlier attempts to
+derive sentence substitutions at runtime are superseded; do not revive that approach.
 
 ## 1. The starting point — what a Book One graduate actually knows
 
@@ -84,7 +87,7 @@ Two things matter for sequencing:
 | Grammar | one pattern, one shape | **pattern combining** — plain form, から/ので, conditionals |
 | Kanji | introduced per lesson, flat | components become **load-bearing**; parts recombine |
 | Reading | phrases only | **hand-picked sets of cited sentences** at ~98% coverage (§7) |
-| Output beat | type the phrase | **frame-based composition** — a pattern plus chosen words (§8) |
+| Output beat | type the phrase | **guided production** — visible model, type or build (§8) |
 | Romaji | shown | **cut at the book boundary** — kana and furigana only (§6) |
 
 The through-line is **recombination**. Book Two items are deliberately built from Book One
@@ -321,21 +324,26 @@ learner-initiated, with re-modelling correction. **Hana is shelved**, switched o
 `VITE_HANA_ENABLED`, and this book must not be planned around that decision reversing. If Hana is
 ever switched back on, that is an *addition* to what follows, not the foundation of it.
 
-The replacement is the same one Book One uses, scaled from recall to composition:
+**Preferred method — DR-039:** guided production with the **full model sentence always visible**.
+The learner chooses **Type the answer** or **Build the answer** from authored chunks. Both are
+complete answer methods; building does not force a later typing step. Switching preserves drafts,
+and feedback/retry keeps the model visible.
 
-- **The per-lesson produce beat** becomes **frame-based composition**: the lesson's pattern as a
-  frame with a slot or two, the learner chooses the vocabulary and types the sentence. Constrained
-  composition is mechanically checkable — the frame plus the slotted word determines the expected
-  sentence, conjugation included — so it needs no API and no judge. Free composition ("write
-  anything about X") is not checkable without a grader and is deliberately deferred to Book
-  Three's compose-then-compare.
-- **The production checkpoint** closes the book, once, as in Book One — but where Book One asks
-  for a remembered phrase from its English, Book Two asks the learner to **compose** from a
-  pattern and a situation. A harder test than a steerable conversation, and the actual stated
-  goal of the book.
+The [guided-production spec](../superpowers/specs/2026-09-06-guided-production-design.md) owns the
+interaction, content contract, and acceptance criteria. Each exercise references a sourced model,
+its reading/meaning, explicit chunks, accepted typed variants, and an explanation. This replaces
+the earlier per-lesson frame/substitution requirement; no runtime sentence generation is needed.
 
-Frames and their model sentences are authored content and follow §9 sourcing. Learner-typed output
-is checked against them, never stored as content.
+This practices supported sentence production. It does not establish unaided recall or spontaneous
+composition. DR-040 specifies that assisted success does not promote SRS intervals.
+
+**Chapter checkpoints (DR-040):** a midpoint near five teaching lessons, then a chapter-end
+checkpoint, at coherent boundaries. Use independent attempts before revealing the model; outcomes
+feed the same SRS history, with no repeated promotion or retry erasing a miss. Follow the
+[checkpoint/SRS spec](../superpowers/specs/2026-09-06-checkpoints-and-srs-design.md). These replace
+older single-checkpoint cadence descriptions in chapter briefs when those briefs are reconciled.
+The exact book-ending production activity and later reading/output tasks still need their own
+content scope; this chapter policy does not silently remove them.
 
 ## 9. Content sourcing
 
@@ -346,7 +354,7 @@ never an authority.
 **Sentences remain the constraint.** JMdict cannot verify a composed sentence; only fixed
 expressions are headwords. `scripts/jlpt.mjs sentences` finds Tatoeba candidates whose every word
 is already taught, and Book One's experience is that it yields few enough to be a *checking* tool
-rather than a supply. Book Two sentences — pattern examples, composition frames, and graded
+rather than a supply. Book Two sentences — pattern examples, guided-production models, and graded
 passages alike — follow the same sanctioned path: training-canonical, marked, pending
 verification. Verified-only content starts at Book Three.
 
@@ -394,7 +402,7 @@ at any level.
 3. ~~Multi-book support and the Book-level difficulty shift~~ — **done** (§0, PR #90), except the
    produce beat, which moves into step 4 because it is authoring work
 4. Author Book Two chapters, rule chapters first, in skeleton order (§4) — plain form before
-   anything that stands on it — **authoring each lesson's composition frame alongside it** (§0, §8)
+   anything that stands on it — **authoring each lesson's guided-production assets alongside it** (§0, §8)
 5. Hand-picked reading sets from mid-book on (§7), once joining-sentences has shipped. Re-run
    `node scripts/reading.mjs tag` at that point so the candidate pool contains Book Two vocabulary
    — regenerated against Book One alone it is pure review — then pick by hand and size the feature

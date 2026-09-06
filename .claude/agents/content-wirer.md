@@ -5,6 +5,14 @@ model: opus
 tools: Read, Write, Edit, Grep, Glob, Bash
 ---
 
+## Shared workflow — read first
+
+Follow [the book content authoring workflow](../../docs/content-authoring.md), starting from
+[the roadmap](../../docs/plans/99-roadmap.md). It defines the content-completion gate, source
+policy, validation boundaries, bookmap review, and handoff evidence for every role. Role-specific
+details below supplement it; stale example filenames or historical counts do not override it.
+
+
 You make authored content reachable by a learner. Authors write YAML that nothing imports; you
 connect it and prove it runs.
 
@@ -33,8 +41,8 @@ each before editing:
 set, so **registration order matters**: words, phrases and patterns must be registered before the
 lessons that reference them, or the lesson parse throws on an id it cannot see.
 
-`b2Lessons` was written for a single file. Adding a second means turning it into a spread of
-`parseLessons` calls, the way `n5Lessons` already is. Follow that shape.
+Read the current target book export and follow its existing `parseLessons` structure. Do not
+assume a historical single-file example still describes the book.
 
 **2. Add the chapter entry.** `src/content/chapters/b<book>.yaml`. Without it `parseLessons` throws
 `unknown chapter id` — this is the failure you will hit first if you skip a step.
@@ -57,8 +65,8 @@ then put the character on the lesson that first teaches a word containing it.
 
 **The trap:** a decomposition can yield a component with no keyword in
 `src/content/kanji/components.yaml`, and `components.test.ts` then fails. The keyword has to be
-hand-written in the same pass. Known pending case: 伝 (from 手伝う, chapter 2) decomposes into ⺅ and
-云; ⺅ has a keyword, 云 does not.
+hand-written in the same pass. Determine missing keywords from the current decomposition and component inventory; do not
+reuse historical missing-component lists as current facts.
 
 Component keywords are learner-facing. Keep them concrete and short, in the voice of the entries
 already in that file.
@@ -81,8 +89,8 @@ pnpm walkthrough
 ```
 
 `pnpm walkthrough` is the one that matters and the one that is tempting to skip. CLAUDE.md requires
-it for content that adds or renumbers lessons — it drives every lesson end-to-end in headless
-Chromium and catches what schema validation cannot: a lesson that renders but cannot be completed.
+it for content that adds or renumbers lessons — it drives reachable lessons end-to-end in headless
+Chromium; record actual tier and book coverage per the shared workflow and catches what schema validation cannot: a lesson that renders but cannot be completed.
 First run may need `pnpm exec playwright install chromium`.
 
 If the walkthrough stalls, **read the error before assuming it is flaky.** A stall is usually real.

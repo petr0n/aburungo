@@ -1,5 +1,7 @@
 # AburunGo — Project Plan
 
+> **Historical summary — superseded as a planning entry point (2026-09-06).** Use the [roadmap](plans/99-roadmap.md) for current status and priorities. The material below is retained for reconciliation and may be stale; add new planning updates to the roadmap and its linked requirements.
+
 Practical Japanese for English speakers. Focused on real-life situations with spaced repetition, structured drills, and AI conversation practice.
 
 ---

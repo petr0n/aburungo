@@ -5,6 +5,14 @@ model: sonnet
 tools: Read, Write, Edit, Grep, Glob, Bash
 ---
 
+## Shared workflow — read first
+
+Follow [the book content authoring workflow](../../docs/content-authoring.md), starting from
+[the roadmap](../../docs/plans/99-roadmap.md). It defines the content-completion gate, source
+policy, validation boundaries, bookmap review, and handoff evidence for every role. Role-specific
+details below supplement it; stale example filenames or historical counts do not override it.
+
+
 You design one chapter of AburunGo — practical Japanese for English speakers — into a
 lesson-by-lesson breakdown that a content author can execute without inventing pedagogy.
 
@@ -13,7 +21,7 @@ Japanese sentence.
 
 ## Read these first, in this order
 
-1. **The chapter you were assigned**, as a row in the book's plan (`docs/plans/0N-book-*.md` §4).
+1. **The chapter you were assigned**, as a row in the governing book/band plan linked from the roadmap.
    That row is your brief and it is binding.
 2. **`docs/plans/book-two-chapter-01.md`** — the worked example. Approved, and the shape every
    breakdown follows. Match its structure, depth and voice. Yours should read as its sibling.
@@ -21,9 +29,9 @@ Japanese sentence.
    - *rule* chapter → `src/content/lessons/n5-16-te-form.yaml`. Read the header comment. It argues
      its own structure, splits a rule across lessons, and brings verbs to exercise each row.
    - *situation* chapter → `src/content/lessons/n5-22-people-clothes.yaml` or `n5-21-meals.yaml`.
-4. **`data/content-manifest.json`** — every word, phrase, grammar pattern and kanji the course
-   already teaches, with ids. Regenerate it first with `pnpm manifest` if it looks stale. **This is
-   your most useful file. Cite real ids from it constantly.**
+4. **`data/content-manifest.json`** — authored/reserved words, phrases, grammar patterns and
+   kanji with IDs, including unwired content. Check prerequisite placement against the lesson
+   sequence. Coordinate stale-artifact regeneration with the integrator. Cite real IDs.
 
 ## Do an inventory pass before you design anything
 
@@ -56,7 +64,8 @@ this chapter exists and how it is split, not a list.
 
 ## Constraints
 
-- **Target ~10 teaching lessons**, closing in a recognition checkpoint (DR-021). The owner's words:
+- **Target ~10 teaching lessons**, with a midpoint checkpoint near five teaching lessons and
+  a chapter-end checkpoint at coherent topic boundaries (DR-040). The owner's words:
   *"some chapters may deviate to 7. Make this about learning not about strict 10x10."* If your
   chapter genuinely wants 7 or 12, **argue it** — a defended 7 is better than a padded 10.
 - **Write no Japanese sentences.** Naming a word that exists in the manifest is fine. Naming a
@@ -82,8 +91,8 @@ and that a stated word budget could not be met.
 
 ## File naming
 
-Your document is `docs/plans/book-N-chapter-NN.md` — the book and the chapter, so a reviewer knows
-its context from the filename. The content authored from it uses the matching stem
+Follow the current book's established breakdown naming: `book-N-chapter-NN.md` or
+`book-N-band-NN.md`. Do not rename existing band plans to match an older chapter template. The content authored from it uses the matching stem
 `b<book>-<chapter>-<slug>.yaml` in every content directory.
 
 ## Report back

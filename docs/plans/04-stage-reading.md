@@ -1,7 +1,16 @@
 # The reading stage — the wall
 
-**Stage:** `reading` (DR-033). **Status: not started.** Depends on Book Two, and on a content
-pipeline that does not exist yet.
+**Stage:** `reading` (DR-033). **Status:** Book Three grammar content is registered and ingestion/
+levelling tooling exists. The reading library, reader, mining, and compose-then-compare experience
+remain incomplete. See the [roadmap](99-roadmap.md) for current status.
+
+**Sequencing clarification (DR-038):** author and inspect book content in the bookmap before
+building its teaching interfaces. Complete one book's agreed content before writing the next.
+An unbuilt reader is consistent with this approach. What remains unsettled is the content scope:
+are coherent reading texts and their vocabulary part of Book Three's content-completion
+milestone, or explicitly deferred? Existing grammar content does not settle that question.
+Registration in today's shared app/bookmap modules is not proof that the reading experience
+is ready for learners.
 
 **Goal:** carry the learner over **the intermediate wall**, the level where most learners stall and
 quit, to where they can **read real Japanese for pleasure and hold a genuine conversation**.

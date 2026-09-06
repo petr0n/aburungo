@@ -775,6 +775,9 @@ be true again — this was the free moment to move them.
 
 ## DR-020 — Mastery gates are permitted; grades are not
 
+> **Scope clarification (2026-09-06):** DR-037 supersedes the personal-only/noncommercial
+> framing in this record. The feature decision itself remains in force.
+
 **Date:** 2026-08-08
 **Status:** Approved
 
@@ -822,6 +825,9 @@ it stand as a verdict on you?* Shrinking is a gate. Standing is a grade.
   Hana. Only the vocabulary sweep is buildable today.
 
 ## DR-021 — Checkpoints run on a cadence, not at a "mid-way" point
+
+> **Partially superseded by DR-040 (2026-09-06):** midpoint near five teaching lessons plus
+> chapter-end consolidation is the new cadence. Coherent topic boundaries remain important.
 
 **Date:** 2026-08-10
 **Status:** Approved and implemented
@@ -949,6 +955,9 @@ escape hatch closes the session without marking the unit, so the checkpoint is t
 ---
 
 ## DR-023 — Hana is shelved behind a flag; a production checkpoint closes the level instead
+
+> **Scope clarification (2026-09-06):** DR-037 supersedes the personal-only/noncommercial
+> framing in this record. The feature decision itself remains in force.
 
 **Date:** 2026-08-11
 **Status:** Approved and implemented
@@ -1214,7 +1223,8 @@ books from overlapping or leaving a hole.
 
 **Date:** 2026-08-28
 **Status:** Approved; design at
-`docs/superpowers/specs/2026-08-28-srs-graduation-design.md`, implementation pending
+`docs/superpowers/specs/2026-08-28-srs-graduation-design.md`; eight-box client implemented,
+API/database compatibility and end-to-end verification pending (reconciled 2026-09-06)
 
 **Context:**
 Leitner's top box is 30 days and nothing graduates past it, so every item the learner has ever
@@ -1249,10 +1259,16 @@ to 42.
 passes roughly 5,000 items** — somewhere in Book Five. Extending the ladder buys the time to do
 that migration deliberately instead of under pressure.
 
-**It is chosen because it touches no persisted shape.** `reviewStates` stores `box` as a number,
-so every existing row stays valid and simply becomes eligible to climb further. No migration, no
-reset, no lost progress. That is the entire argument for doing it before the FSRS work rather
-than instead of it.
+**It preserves the persisted record shape, but widens the server's valid range.** `reviewStates`
+stores `box` as a number, so existing rows stay valid without a local schema migration or reset.
+
+**Correction, 2026-09-06:** the original decision incorrectly concluded that no migration was
+needed. The API validator and Postgres check constraint still allow only boxes 1–5, although
+the client now produces 1–8. The owner confirmed keeping eight boxes and adding the missing
+API change, append-only constraint migration, and real persistence round-trip verification.
+Apply the database change before deploying the compatible API, preserve existing schedules,
+and verify recovery of higher-box states retained locally after failed sync. Implementation
+and deployment remain pending; the detailed acceptance criteria live in the graduation spec.
 
 **Consequences:**
 - **The ceiling moves from 600 items to 4,800**, which covers roughly through Book Four.
@@ -1281,3 +1297,150 @@ than instead of it.
   means something.
 - **Per-item difficulty remains absent.** Fixed intervals treat every item alike; that is the
   substantive thing FSRS buys and no ladder can.
+
+
+---
+
+## DR-036 — Learning state belongs to an explicit account or guest
+
+**Date:** 2026-09-06
+**Status:** Account isolation agreed; implementation pending. Guest-import interaction is proposed
+for implementation review in the linked requirements.
+
+**Context:**
+The browser uses one shared Dexie database without user keys. Sign-out leaves its contents in
+place, and hydration merges them into the next signed-in account. Guest adoption therefore
+also adopts another account's cache. In-memory progress and asynchronous operations need the
+same ownership boundary; changing database keys alone is insufficient.
+
+**Decision:**
+The owner requested correcting this gap during the planning review. Each account and the guest
+must have separate progress storage. Reads, pending writes, and session state retain their
+originating identity across authentication changes. Never automatically transfer account progress
+to the guest or another account. Preserve unacknowledged work for its original owner.
+
+Existing unscoped data has unknown ownership: preserve it for explicit recovery rather than
+assigning it to whoever signs in next. The proposed guest-adoption interaction requires an
+explicit import choice; final presentation belongs to implementation review.
+
+**Consequences:**
+- All learning surfaces and caches must respect identity changes, including late responses
+  and auth changes in another tab.
+- Existing server records remain the account's recovery source; the change cannot automatically
+  disentangle previously mixed histories.
+- Implementation includes a local storage migration and account-switch integration tests;
+  it is independent of the future FSRS migration.
+- Requirements and acceptance scenarios live in
+  [Account ownership and session transitions](plans/05-retention-engine.md#account-ownership-and-session-transitions).
+
+
+---
+
+## DR-037 — Personal validation first, public commercial product intended
+
+**Date:** 2026-09-06
+**Status:** Agreed product direction; future commercial iteration not yet scoped.
+
+**Context:**
+The retention plan described AburunGo as a personal learning tool rather than a commercial
+product and excluded commercial concerns on that basis. The owner clarified that they are
+building it to learn Japanese now and, if it goes well, intend to make it a public app that
+makes money. The earlier wording confused the current development phase with the long-term goal.
+
+**Decision:**
+Build and validate the experience through the owner's own learning first. If effective, develop
+it into a public, commercial app. Treat public-launch and business-model work as deferred future
+planning, not permanently excluded scope. Validate with other learners before assuming that
+success for the owner generalizes to a public audience.
+
+**Consequences:**
+- Learning quality and reliable progress remain current priorities. Account isolation and data
+  durability are foundations for both current use and future users.
+- Future planning must address public-user experience, support and operations, account/data
+  lifecycle, distribution rights, pricing, and sustainable service costs. Specific requirements,
+  business model, and launch date remain unsettled.
+- Commercial measurement and optional re-engagement features can be considered on their merits
+  later. No-gamification, honest progress, and learner control remain product principles.
+- Existing tier requirements and the decision to shelve Hana are not changed by this direction.
+  Any change to them requires its own explicit decision.
+- This supersedes the retention plan's permanent commercial-scope exclusion and personal-only
+  framing in earlier decision rationales; it does not reverse their independent feature decisions.
+- The [roadmap](plans/99-roadmap.md#product-direction) owns sequencing and future scope;
+  [retention requirements](plans/05-retention-engine.md) reflect this direction.
+
+
+---
+
+## DR-038 — Content first, reviewed through the bookmap, one book at a time
+
+**Date:** 2026-09-06
+**Status:** Agreed sequencing; independent bookmap visibility and learner availability remain
+implementation work. Book Three's reading-text content scope remains unresolved.
+
+**Context:**
+The project assessment treated missing later-book interfaces as a gap without sufficiently
+separating content authoring from interface development. The owner clarified the intended order:
+write content first, inspect what each book contains through the bookmap, and create/write the
+next book's content only after the current book's content is written.
+
+**Decision:**
+Author and verify one book's agreed content before next-book authoring. Make content inspectable
+in the bookmap so the owner can review what is added. Build teaching interfaces against known
+content; their absence alone does not block writing the next book once the content milestone
+is satisfied. Keep content reviewable, content complete, and learning experience ready distinct.
+
+**Consequences:**
+- The roadmap records content scope and completion evidence separately from interface work.
+  A chapter completion or code registration does not establish whole-book content completion.
+- Planning one book ahead can continue, but is distinct from writing that book's content.
+- The current bookmap shares registered content with `/learn`. Independent review visibility
+  and learner availability need implementation design; documentation changes do not alter access.
+- Existing Book Three grammar content and Book Four work are not undone. Determine explicitly
+  whether Book Three's reading texts/vocabulary are required content or deferred; the owner has
+  not settled that scope merely by clarifying sequencing.
+- Detailed milestone definitions live in
+  [the roadmap](plans/99-roadmap.md#content-first-delivery-dr-038).
+
+
+---
+
+## DR-039 — Guided production keeps the model visible; type or build
+
+**Date:** 2026-09-06
+**Status:** Preferred method selected; prototype available, lesson integration pending.
+
+**Context:** The owner tried four guided-production prototypes and selected option 4.
+
+**Decision:** Keep the complete model sentence visible while the learner either types the answer
+or builds it from authored chunks. Both methods remain available; building does not require a
+subsequent typing task. This replaces Book Two's per-lesson frame/substitution proposal.
+
+**Consequences:** Author sourced model references, chunks, accepted typed forms, and explanations.
+Do not generate arbitrary sentences or treat model reproduction as unaided recall. Assisted-attempt
+SRS handling and checkpoint assessment remain separate decisions. The prototype defaults to option
+4; choosing it does not publish a new lesson flow or change source-verification requirements.
+
+Detailed requirements: [guided-production spec](superpowers/specs/2026-09-06-guided-production-design.md).
+
+
+---
+
+## DR-040 — Chapter checkpoints complement session-start SRS
+
+**Date:** 2026-09-06
+**Status:** Agreed planning; implementation pending.
+
+**Decision:** The owner accepted session-start SRS alongside approximately two checkpoints per
+chapter: midpoint near five teaching lessons, then chapter end. Place them at coherent boundaries.
+Midpoint consolidates the first half; chapter end covers the whole chapter. Checkpoint recall
+asks for an independent answer before showing the model; visible-model guided production remains
+supported practice. Both retrieval surfaces contribute to the same per-item review history.
+
+Independent success may promote once per item per session; a miss brings review sooner and
+outweighs earlier success. Assisted success and immediate corrected retries do not promote or
+erase a miss. New supported-only items still receive an initial review date. Persist evidence,
+not checkpoint grades. DR-021's old cadence is superseded; DR-039's assisted-SRS question is
+resolved. Exact book-ending activity content remains separate.
+
+Content, migration considerations, and acceptance checks:
+[checkpoint/SRS spec](superpowers/specs/2026-09-06-checkpoints-and-srs-design.md).

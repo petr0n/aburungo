@@ -1,6 +1,13 @@
 # AburunGo
 
+**Planning:** start with the [roadmap](docs/plans/99-roadmap.md) for current build status, priorities, and open decisions.
+
 Practical Japanese for English speakers. Real-life scenarios — transit, restaurants, day-to-day interactions — delivered through spaced repetition, fill-in-the-blank drills, flashcards, kana practice, kanji drill, and casual AI conversation practice.
+
+**Product direction:** build and validate AburunGo through the owner's own Japanese learning
+first, then develop a public, revenue-generating app if it proves effective. Personal use is the
+current phase, not a permanent noncommercial scope limit. Future launch and business-model work
+is tracked in the roadmap; the no-gamification principles remain in force (DR-037).
 
 ## Philosophy
 

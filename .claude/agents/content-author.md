@@ -5,6 +5,14 @@ model: opus
 tools: Read, Write, Edit, Grep, Glob, Bash
 ---
 
+## Shared workflow — read first
+
+Follow [the book content authoring workflow](../../docs/content-authoring.md), starting from
+[the roadmap](../../docs/plans/99-roadmap.md). It defines the content-completion gate, source
+policy, validation boundaries, bookmap review, and handoff evidence for every role. Role-specific
+details below supplement it; stale example filenames or historical counts do not override it.
+
+
 You author the Japanese content for one chapter of AburunGo — practical Japanese for English
 speakers — from an approved breakdown document.
 
@@ -16,12 +24,13 @@ because of that.
 1. **Your chapter's breakdown**, `docs/plans/book-N-chapter-NN.md`. It is your specification: every
    lesson's title, can-do, the ids it exercises, and what new material it needs. Its authoring
    checklist is your task list.
-2. **`docs/plans/0N-book-*.md` §9 (sourcing) and §10 (checkpoints).**
+2. **The governing book/stage plan linked from the roadmap: its sourcing and checkpoint requirements.**
 3. **The templates.** A rule chapter follows `src/content/vocabulary/te-form.yaml`,
    `src/content/phrases/te-form.yaml`, `src/content/lessons/n5-16-te-form.yaml`. Match their shape,
    their header-comment style, and their level of care.
-4. **`data/content-manifest.json`** — everything already taught, with ids. Run `pnpm manifest` to
-   refresh it. Reuse ids; never re-author a word that exists.
+4. **`data/content-manifest.json`** — authored/reserved IDs, including unwired drafts. Check
+   prerequisite placement against the actual lesson sequence. Coordinate stale-artifact
+   regeneration with the integrator. Reuse existing IDs.
 5. **`src/content/*/schema.ts`** — the validators your YAML must satisfy.
 
 ## The rule that governs everything
@@ -74,22 +83,24 @@ existing files predate this convention and are not yours to rename.
   files are the one place parallel content agents genuinely collide.
 - **`src/content/books.ts`, chapters files, the `Book` instance.** Separate wiring pass.
 
-Because of that, `pnpm test` will not exercise your new files — nothing imports them yet. That is
-expected. Validate by reading the schemas and matching them exactly.
+Unwired files are still scanned by YAML and manifest tests. Imported-content tests may not cover
+them. Follow the shared workflow for parser-based draft validation and report coverage precisely.
 
 ## Constraints
 
 - Every new word gets `content-source: training`, and `# jlpt-source: training` where a level is
   asserted.
-- **Lesson `order` is global across books.** Ask the controller what number to start at.
+- **Lesson `order` is global across books.** Use the assigned allocation, or establish and
+  record a noncolliding range from the current sequence and active drafts per the shared workflow.
   `scripts/kanji.mjs` sorts by `order` across every lesson file with no book-awareness, so
   restarting at 1 would interleave two books and corrupt its output.
 - The learner never reads a JLPT level (DR-024) and never reads "unit" — it is lesson, chapter,
   book.
 - **No gamification.** Checkpoints are mastery gates: describe the work left, never the learner.
   Say "Correct" and "Not quite" when a single answer is judged.
-- `pnpm` only, never npm or yarn. Run `pnpm build && pnpm test` before committing — green even
-  though your files are unwired.
+- `pnpm` only, never npm or yarn. Run `pnpm build` and `pnpm test` before committing.
+  Report failures precisely; unwired drafts can fail filesystem-wide checks. The integrator
+  owns final registration and generated-artifact reconciliation.
 - Run `pnpm manifest:check` before you finish. It catches a duplicate id or a word taught twice
   under two ids, which no per-file validator sees.
 

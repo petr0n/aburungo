@@ -1,5 +1,7 @@
 # Todo
 
+> **Historical backlog — superseded as a planning entry point (2026-09-06).** Use the [roadmap](plans/99-roadmap.md) for current work and priorities. Entries below are retained for reference, not verified current tasks; deployment claims need verification before action.
+
 ## Pending
 
 - [ ] **Apply `user_path_progress` migration to production** — `supabase db push` for `20260804000000_path_progress.sql` (DR-016). Needs `SUPABASE_DB_PASSWORD`, which is not stored in `.local/`. Until applied, the `/api/progress/path` endpoints return an error and the client silently falls back to IndexedDB — i.e. current behaviour, no breakage, but ladder position is still evictable.

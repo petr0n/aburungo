@@ -1,5 +1,12 @@
 # Book Four — the bands
 
+> **Delivery clarification (2026-09-06, DR-038):** content is authored first and inspected through
+> the bookmap; teaching interfaces can follow. Complete the current book's agreed content before
+> creating/writing the next book's content. References below to content “shipping” or being on
+> `main` describe registration, not verified learner readiness. Record content scope, deferrals,
+> and completion evidence separately from interface status in the
+> [roadmap](99-roadmap.md#content-first-delivery-dr-038).
+
 **Status: skeleton, written 2026-09-06 against Book Three as shipped.** Book Three is on `main`
 at `1a35d54`: eleven chapters, 81 lessons, global orders 196–276. Per DR-034 books are specified
 one ahead, each against the measured state of the one before it. This is that specification for

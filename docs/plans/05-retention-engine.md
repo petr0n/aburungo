@@ -8,14 +8,18 @@
 > follows DR-024: **Book → Chapter → Lesson**. Doc precedence applies — where this doc and the
 > code disagree, the code wins and this doc is wrong; file an issue rather than trusting the prose.
 
-> **Scope recalibration (important):** AburunGo is being built **primarily as a personal learning
-> tool for a self-motivated learner**, not a commercial product. So this is **not** about fighting
-> churn, conversion, or willingness-to-pay. The question is narrower and nicer: *how does the app
-> stay genuinely engaging and effective for a motivated learner over months?* — variety, novelty,
-> flow, and the real satisfaction of using Japanese. Commercial-retention concerns (re-engagement
-> notifications as anti-churn, the lapse "cliff" as a churn risk, retention telemetry, pricing) are
-> **out of scope**. The honest-motivation work that survives does so because it makes learning
-> *better*, not because it keeps a customer.
+> **Product direction (corrected 2026-09-06, DR-037):** AburunGo is being built and tested first
+> through the owner's own Japanese learning. **If it proves effective, the intended future is a
+> public, commercial app that earns revenue.** Personal use is the current development phase,
+> not a permanent limit on the product or its audience.
+>
+> For this phase, prioritize effective learning and reliable progress. Public-launch readiness,
+> broader learner validation, pricing, monetization, and sustainable operating costs belong in
+> future planning; they are deferred, not categorically out of scope. The business model, launch
+> date, and rollout scope are not settled by this direction. Commercial measurement and optional
+> re-engagement features can be evaluated later against the same product principles: honest
+> progress, learner control, and no manipulative reward loops. Revenue does not change those
+> principles, and personal success alone will not establish effectiveness for other learners.
 
 The soul of the whole plan. The brief's #1 ask was **retention**. The hard part: the techniques
 that reliably drive daily return — streaks, loss aversion, variable rewards — are exactly the
@@ -74,13 +78,20 @@ The one-table truth, checked against the code. Detail in the numbered sections b
 
 ### The scheduler, truthfully
 
-The retention engine's scheduler **as built** is **Leitner**, not FSRS. `src/srs/leitner.ts` — five
-boxes at 1/3/7/14/30 days, a miss drops the item to box 1 due tomorrow — schedules everything in
+The retention engine's scheduler **as built** is **Leitner**, not FSRS. `src/srs/leitner.ts` — eight
+boxes at 1/3/7/14/30/60/120/240 days, a miss drops the item to box 1 due tomorrow — schedules everything in
 the `/learn` daily loop: words, phrases, and grammar patterns through one `ReviewState` shape. It
 is pure (`now` is always a parameter) and the `Scheduler` interface keeps FSRS a swappable
 follow-up rather than a rewrite.
 
-For signed-in users this state is **server-durable** (DR-016/DR-018): the client computes the
+**Persistence gap confirmed 2026-09-06:** the API validator and database constraint still accept
+only boxes 1–5. The owner confirmed keeping eight boxes; widening those boundaries and verifying
+cross-device reload/recovery is approved remaining work in the
+[graduation spec](../superpowers/specs/2026-08-28-srs-graduation-design.md). Until implemented,
+box 6–8 reviews can remain local-only. Account isolation requirements are specified below;
+broader cross-device conflict resolution remains separate work.
+
+For signed-in users the **intended server-durable design** (DR-016/DR-018) is: the client computes the
 schedule, `user_content_progress` stores it keyed by content id, and merge on load is
 last-write-wins — so months of review history survive Safari's storage eviction, device loss, and
 cross-device use. Guests are local-only and ephemeral, by accepted design.
@@ -93,6 +104,108 @@ in [99-roadmap.md](99-roadmap.md). Until it lands, any claim that "FSRS powers t
 false; Leitner's fixed intervals are a deliberate, debuggable v1 (DR-001), and its retention cost
 versus FSRS is accepted.
 
+## Account ownership and session transitions
+
+**Planning correction, 2026-09-06 (DR-036):** isolate each account's progress and guest progress.
+Implementation is pending. The current shared Dexie database and automatic local/server merges
+cannot distinguish another account's cached progress from guest work.
+
+### Ownership rules
+
+- Every local progress record, pending write, and cached result belongs to an explicit owner:
+  either `guest` or a stable authenticated user ID. Email addresses are not storage keys.
+- Use an owner-scoped persistence boundary for review state and path progress, plus equivalent
+  scoping for kana localStorage and any other learner-state cache. The implementation may use
+  separate databases or compound keys, but no read/write API may silently default to whichever
+  account happens to be active when an asynchronous operation finishes.
+- Keep guest state separate. Signing out must never convert an account's progress into guest
+  progress; signing into B must never adopt A's records.
+- Scope in-memory state too: clear the visible review queue, ladder position, kana state,
+  profile statistics, and cached API mappings on identity changes before rendering the next
+  learner's state. Apply this to every practice surface, not only `/learn`.
+- Server operations derive ownership from the authenticated identity. A client owner key is
+  routing information for local storage, not authorization to read or write another user.
+
+### Transition and failure behavior
+
+1. While initial authentication is unresolved, do not read guest data or start guest imports.
+2. On sign-in, sign-out, expiry, or account replacement, invalidate the old session's work and
+   select the new owner's storage before loading a session. Token refresh for the same user
+   must not reset progress or repeat imports.
+3. Bind asynchronous reads/writes to their originating owner and session generation. Abort
+   obsolete work where possible; ignore late responses for the active UI. A queued A review
+   must never be sent with B's token or written to B's cache. Handle auth changes across tabs.
+4. Preserve unsynced A records under A while B or the guest uses the browser. Retry only after
+   A is authenticated again. Logging out is not a reason to discard unacknowledged progress.
+5. Offline account loading may use only that account's own cache. An empty or unavailable cache
+   must not fall back to a different owner's records.
+
+### Guest adoption and existing shared storage
+
+**Proposed interaction for implementation review:** when identified guest progress exists, offer
+one explicit choice to bring it into the signed-in account or keep it separate. Do not infer
+ownership merely because someone signed in on the same browser. The exact UI/copy can be settled
+at implementation; automatic cross-owner merging is prohibited.
+
+An accepted import must be bound to its destination account, retryable without duplicating kana
+counts, and acknowledged before its guest source is retired. Account switching mid-import must
+not change the destination. Successfully adopted progress must not later be offered to another
+account as if it were fresh guest work.
+
+Existing unscoped IndexedDB records do **not** contain enough evidence to determine their owner.
+A migration must preserve them separately as legacy data, excluded from automatic loading and
+sync; it must not guess that the currently signed-in account owns them. Restore that account's
+server state into its scoped cache. Provide an explicit recovery path for locally-only legacy
+progress, explaining that the old data may mix users. Do not silently delete or automatically
+upload it. Previously mixed server records cannot be reliably separated from these caches alone;
+this fix prevents new contamination and does not promise automatic historical repair.
+
+### Implementation work and acceptance evidence
+
+Affected boundaries include `src/db/dexie.ts`, both persistence stores, `src/store/auth.ts`,
+`src/store/progress.ts`, `src/store/session.ts`, `src/api/client.ts`, and the page/session loading
+paths. Audit other learner-state storage during implementation. Preserve stable content and
+book progress IDs; add ownership around them rather than renaming them.
+
+Required checks use distinct fixture accounts with distinguishable progress:
+
+- A completes a lesson and reviews items, signs out, and B signs in on the same browser.
+  B's UI, cache, and server records contain none of A's activity. Returning to A restores A.
+- Guest → A → guest keeps each state separate; guest import occurs only after the explicit
+  adoption action. Declining import leaves both histories intact.
+- Delayed A reads, review writes, and kana updates finish after switching to B. None affects
+  B's UI or storage, and no A write uses B's authentication.
+- An A write fails offline; sign out, use B, then return to A online. The write remains A's
+  and recovers once, without copying it to B or discarding it.
+- Authentication initialization, expiry, token refresh, reload, and a second tab changing the
+  account obey the same ownership rules.
+- Interrupted guest imports resume for the original destination without duplicate counts;
+  failed entries remain recoverable until acknowledged.
+- A legacy shared database remains recoverable but never merges automatically. Existing
+  server progress loads correctly into a fresh owner-scoped cache.
+
+Unit tests should cover owner selection and stale-operation guards; browser/integration checks
+must cover real persistence, auth transitions, and actual request identity. Mark verified only
+when the evidence covers all practice surfaces. This work does not require changing the SRS
+algorithm and is not deferred until FSRS.
+
+## Chapter checkpoints and scheduled reviews — current decision
+
+**DR-040 supersedes older cadence and scheduling descriptions below.** Start sessions with due
+SRS reviews, then the next lesson/checkpoint. Aim for a midpoint checkpoint near five teaching
+lessons and another at chapter end, approximately two per ten-lesson chapter, at coherent topic
+boundaries. Midpoint covers the first half; the end consolidates the whole chapter.
+
+Checkpoint recall hides the model until submission/help; guided production keeps it visible.
+Independent checkpoint responses feed the same item history as ordinary SRS reviews. Supported
+success does not promote; a miss schedules earlier review and cannot be erased by an immediate
+corrected retry. Allow at most one upward promotion per item per session; a later miss overrides
+an earlier success. Introduced items still get a first review without treating exposure as recall.
+
+[The checkpoint/SRS spec](../superpowers/specs/2026-09-06-checkpoints-and-srs-design.md) defines
+content requirements, retry/assistance rules, existing-book rollout considerations, and acceptance
+checks. This is planned behavior; current code does not yet implement all safeguards.
+
 ## The four dimensions
 
 1. **The daily-return trigger** — aspiration-pull + user-set rhythm. *Design settled (sync #1);
@@ -103,8 +216,11 @@ versus FSRS is accepted.
    sessions designed but not built (sync #3).
 4. **Pace is self-set — you can't be behind** — *substantially built* (sync #4).
 
-~~Re-engagement notifications (anti-churn)~~ and ~~retention telemetry~~ — **dropped** (out of scope
-per the recalibration; an optional gentle reminder at the user-set time, from sync #1, is enough).
+Re-engagement features and retention measurement are **deferred for future commercial planning**
+(DR-037), not permanently excluded because this begins with personal use. The current proposal
+remains an optional reminder at the learner's chosen time. Any later measurement or notification
+feature needs its own purpose, scope, and learner-control decisions; none is authorized for
+implementation by this change in direction.
 
 ## Decisions
 

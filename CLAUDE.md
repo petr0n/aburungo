@@ -1,6 +1,13 @@
 # AburunGo
 
+**Planning entry point:** [docs/plans/99-roadmap.md](docs/plans/99-roadmap.md) owns current status, priorities, and open decisions. Read it before planning work; update its relevant row and linked requirements when scope or status changes. Status lists elsewhere may be historical.
+
 Practical Japanese for English speakers, focused on real-life situations. Multi-user app with progress tracking, spaced repetition, and AI conversation practice.
+
+**Product direction:** build and validate AburunGo through the owner's own Japanese learning
+first, then develop a public, revenue-generating app if it proves effective. Personal use is the
+current phase, not a permanent noncommercial scope limit. Future launch and business-model work
+is tracked in the roadmap; the no-gamification principles remain in force (DR-037).
 
 ## Shared memory
 
@@ -14,11 +21,20 @@ Check `MEMORY.md` there at the start of every conversation. Write updated memori
 
 ## Product rules
 
+For any book content task, follow [docs/content-authoring.md](docs/content-authoring.md).
+It is the shared procedure for all contributors; role guides link to it.
+
+- **Content first, one book at a time (DR-038).** Write and verify the current book's agreed
+  content and make it inspectable in the bookmap before creating/writing the next book's
+  content. Teaching interfaces may follow content. Record content-reviewable, content-complete,
+  and learning-experience-ready milestones separately in the roadmap. Registration in the shared
+  app/bookmap modules proves neither full content completion nor interface readiness.
+
 - **No gamification.** No XP, hearts, badges, mascots, level-ups. Progress tracking (SRS state, review history, streaks) is fine — reward loops are not.
 - **Scores are reflection, not judgment.** A score may be shown as a momentary snapshot ("7 correct") but must never drive anxiety or dopamine — no percentages, no pass/fail framing, no persistent grade. The signal of what needs more work lives in the SRS queue (what surfaces next), not in a number. Say **"Correct"** and **"Not quite"** when a single answer is judged (changed 2026-08-21, replacing "recalled" / "worth another look"): at the moment of judgment a learner should not have to decode whether they got it right, and the gentleness belongs in what happens next — the item resurfaces sooner — not in hedged wording. Judging one answer is not the same as grading a session; the ban above is on the aggregate verdict, not the per-answer mark.
-- **Checkpoints run on a cadence.** Roughly every ten teaching units, placed at the next *situation boundary* — never mid-situation, since a checkpoint between "at the café" and "how much & paying" consolidates nothing. Treat ~10 as the target when authoring new content rather than a rule to retrofit against existing situations. Consolidation (a recognition checkpoint, recurring) and completion (once, at the end) are different things; do not merge them. See DR-021.
+- **Chapter checkpoints and SRS (DR-040).** Aim for a midpoint checkpoint near five teaching lessons and another at chapter end (about two per ten-lesson chapter), at coherent topic boundaries. Session-start SRS reviews precede lessons/checkpoints. Follow `docs/superpowers/specs/2026-09-06-checkpoints-and-srs-design.md`: supported success does not promote, retries do not erase misses, and an item can advance at most once per session. Preserve stable content/progress IDs when planning retrofits.
 - **No exams or drills.** Assessment lives in lightweight recognition passes and SRS re-surfacing, not timed tests or scored quizzes. The app never tells a learner they failed.
-- **Mastery gates are allowed; grades are not.** A checkpoint may have a completion condition — it finishes when the remaining set empties, with unlimited retry and nothing recorded. Describe *the work left*, never the learner: "3 more to place" and "not yet, let's do those again" are fine; "62%", "18/24" and "failed" are not. The test: does the number shrink to zero as you work, or does it stand as a verdict on you? Shrinking is a gate, standing is a grade. Misses rejoin the SRS queue rather than being tallied.
+- **Mastery gates are allowed; grades are not.** A checkpoint may have a completion condition — it finishes when the remaining set empties, with unlimited retry and no persistent grade. Per-item review evidence is recorded under DR-040. Describe *the work left*, never the learner: "3 more to place" and "not yet, let's do those again" are fine; "62%", "18/24" and "failed" are not. The test: does the number shrink to zero as you work, or does it stand as a verdict on you? Shrinking is a gate, standing is a grade. Misses rejoin the SRS queue rather than being tallied.
 - **Touch first.** Mobile-first design. No hover-only affordances. Touch targets ≥ 44px.
 - **No fabricated Japanese sentences.** Do not invent novel Japanese phrases or sentences. All Japanese sentence content must come from JMdict/Tatoeba/KANJIDIC2 or a verified source — never composed from scratch.
 - **JLPT level assignments** may be applied from training knowledge to well-established vocabulary. N5 and N4 vocabulary is canonical and consistent across all references. Mark any training-derived JLPT classification with `# jlpt-source: training` in YAML until the JMdict seed is complete and levels can be verified against the dataset.
