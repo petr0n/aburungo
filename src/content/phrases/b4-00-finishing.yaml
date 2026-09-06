@@ -62,7 +62,7 @@
 # rather than pretending の was taught. It still has not been.
 # ---------------------------------------------------------------------------
 #
-# The English is Tatoeba's own where Tatoeba's own would do. Eleven of the forty
+# The English is Tatoeba's own where Tatoeba's own would do. Ten of the forty
 # depart from it, every one listed here by id and kind so a reviewer can check
 # them rather than take them on trust. Every Japanese string is untouched.
 #
@@ -82,9 +82,6 @@
 #     of certain animals are steadily falling".
 #   #202686 -- "buy one for me as well" loses the go-and-come-back of 買ってきて.
 #     Glossed "pick one up for me while you're out".
-#   #201130 -- "I'm afraid I've eaten too much" reads as regret in English;
-#     どうやら〜みたいだ is a guess, and both halves are taught here. Glossed
-#     "It looks like I've eaten too much".
 #   #141111 -- "Down under the sea went the ship with all her crew" is a
 #     literary inversion that hides which noun is the subject and drops
 #     乗せたまま. Glossed "The ship went down under the sea with all her crew
@@ -425,15 +422,15 @@
   tatoebaId: "223720"
   notes: The base case. Take an い-adjective, drop the い, add すぎる -- 大きい, 大き, 大きすぎる -- and what comes out is an ordinary ichidan verb, which is why it can end in ます. 私には says too large for me specifically, not too large in general.
 
-- id: b4band0.it-looks-like-ive-eaten-too-much
+- id: b4band0.you-put-too-much-pepper-in-it
   jlpt: N3
   scenario: excess
-  japanese: どうやら食べ過ぎたみたいだ。
-  reading: どうやらたべすぎたみたいだ。
-  romaji: douyara tabesugita mitai da.
-  english: It looks like I've eaten too much.
-  tatoebaId: "201130"
-  notes: On a verb it is the ます-stem that takes すぎる -- 食べます gives 食べ, then 食べ過ぎる. The same stem Book Two used for やすい and にくい. Written 過ぎ here and すぎ elsewhere in this lesson; both are ordinary and you need to read both. どうやら〜みたいだ is Book Three's hedging.
+  japanese: コショウを入れすぎたね。
+  reading: コショウをいれすぎたね。
+  romaji: koshou o iresugita ne.
+  english: You put far too much pepper in it.
+  tatoebaId: "224217"
+  notes: On a verb it is the ます-stem that takes すぎる -- 入れます gives 入れ, then 入れすぎた, and 食べます gives 食べ過ぎる the same way. The same stem Book Two used for やすい and にくい. Written すぎ here and 過ぎ elsewhere in this lesson; both are ordinary and you need to read both. コショウ is also written 胡椒 and read こしょう, the homophone this chapter's 故障 card warns about.
 
 - id: b4band0.this-soup-is-too-salty-to-drink
   jlpt: N3

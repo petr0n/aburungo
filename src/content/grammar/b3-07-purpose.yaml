@@ -14,11 +14,12 @@
 #
 # Where the literals are coarse, said here rather than discovered later. This
 # chapter has the worst of it in the book to date, because three of its five
-# patterns are built from the same four kana:
+# patterns are built from the same three kana:
 #
 #   ～ように tags all 413 sentences containing that string, which is every
 #   sentence this chapter's other two ように patterns want plus the whole
-#   のように comparison family the previous chapter owns. Precision is
+#   のように comparison family, which this book never teaches -- the only card
+#   carrying the string is chapter 10's fixed いつものように. Precision is
 #   impossible from the string alone -- there is nothing in ように that says
 #   which job it is doing, which is the lesson's own teaching point turned into
 #   a tooling problem. A tagger reading this file's patterns in order and

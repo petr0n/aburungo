@@ -14,7 +14,7 @@
 # exchange, because a scripted back-and-forth is multi-sentence composed text.
 #
 # ---------------------------------------------------------------------------
-# THE ENGLISH is Tatoeba's own where Tatoeba's own would do. Thirteen of the
+# THE ENGLISH is Tatoeba's own where Tatoeba's own would do. Fourteen of the
 # thirty-three depart from it; every one is listed here by id and kind so a
 # reviewer can check them rather than take them on trust. Every Japanese string
 # is untouched.
@@ -25,7 +25,8 @@
 #     which is the one thing this card exists to rule out. Glossed "I hear
 #     Bill will go to medical school after all".
 #   #223523 -- "I didn't ask for a table here" reads この as here; この attaches
-#     to テーブル. Glossed "I didn't order this table".
+#     to テーブル, and a plain negation is the one reading のではない does not
+#     have. Glossed "It's not this table that I ordered".
 #
 #   Where the corpus English hid the grammar the card exists to teach:
 #   #196993 -- "I'd like to know how to..." conceals 教えて欲しい, the asking
@@ -42,6 +43,9 @@
 #     good?".
 #   #178376 -- "Aren't you pushing it too far?" is an idiom that hides both
 #     言うこと and 極端. Glossed "Isn't what you're saying a bit extreme?".
+#   #195298 -- "It is going to rain soon" fits 降るだろう and 降るそうだ just as
+#     well, so it left the appearance そう invisible on the one card that
+#     exists to teach it. Glossed "It looks like it's going to rain soon".
 #
 #   Wording only, meaning unchanged:
 #   #232498 "come by" -> "get hold of", and その glossed as that rather than
@@ -278,9 +282,9 @@
   japanese: まもなく雨が降りそうだ。
   reading: まもなくあめがふりそうだ。
   romaji: mamonaku ame ga furisou da.
-  english: It is going to rain soon.
+  english: It looks like it's going to rain soon.
   tatoebaId: "195298"
-  notes: The pair that defines this lesson. 降り is the ます-stem of 降る, and stem plus そうだ says the speaker is looking at the sky right now. 降るそうだ, with the dictionary form, would be I hear it is going to rain -- the previous lesson's word, the same four kana, and a different claim.
+  notes: The pair that defines this lesson. 降り is the ます-stem of 降る, and stem plus そうだ says the speaker is looking at the sky right now. 降るそうだ, with the dictionary form, would be I hear it is going to rain -- the previous lesson's word, the same three kana, and a different claim.
 
 - id: b4band2.this-problem-looks-easy-but-isnt
   jlpt: N3
@@ -360,7 +364,7 @@
   japanese: このテーブルを頼んだのではない。
   reading: このテーブルをたのんだのではない。
   romaji: kono teeburu o tanonda no de wa nai.
-  english: I didn't order this table.
+  english: It's not this table that I ordered.
   tatoebaId: "223523"
   notes: のではない with no か on the end is not a hedge at all -- it denies a conclusion. What is being contradicted is the idea that this table is what the speaker asked for, not the fact of asking; plain 頼まなかった would deny the asking instead. That is the の doing visible work.
 

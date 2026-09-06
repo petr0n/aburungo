@@ -32,9 +32,9 @@
 #   teaches ところだった). It was the breakdown's cleanest わ candidate. It is
 #   replaced by #216883 さあ劇場に着いたぜ, which fills a real hole: lesson 7
 #   teaches ぞ, ぜ and わ, and the breakdown's candidate list had no ぜ sentence
-#   in it at all. The corpus has exactly three ぜ-final sentences at thirty
-#   characters or under, and this is the only one whose other vocabulary is
-#   within reach.
+#   in it at all. The corpus has seven ぜ-final sentences at thirty characters
+#   or under, and this is the one whose other vocabulary sits closest to what
+#   the learner already has.
 #
 # ONE SENTENCE DECLINED, and this is the honest kind of gap rather than an
 # oversight. #194982 みんなソックスを引っ張り上げて was the breakdown's fourth
@@ -87,18 +87,19 @@
 #   #202478 -- "Kleenex", a brand name, for ティッシュ. Glossed "tissues".
 #
 # ---------------------------------------------------------------------------
-# NO `recognitionOnly` ANYWHERE IN THIS CHAPTER, including on the ぞ, ぜ and わ
-# cards, and that is a decision rather than an omission. The flag exists for
-# two things in this app: a reading too long to type back (over about
-# forty-one kana), and a reading nothing settles. The longest reading below is
-# thirty kana, and every one is settled. Register is a third thing and the flag
-# is the wrong tool for it -- `recognitionOnly` removes a card from typed
-# review entirely (it holds on review as well as on first meeting, since
-# 2056df2), which would quietly retire the very sentences a learner most needs
-# to keep recognising. What ぞ and ぜ need is not less practice but a warning
-# about deployment, and that lives in the notes below and in lesson 7's own
-# can-do, which asks the learner to recognise who is talking rather than to
-# talk that way.
+# `recognitionOnly` ON LESSON 7's FIVE CARDS, and nowhere else in this chapter.
+# The flag exists for two things in this app: a reading too long to type back
+# (over about forty-one kana), and a reading nothing settles. Every reading
+# below is short enough, but the five ぞ/ぜ/わ cards are not settled: FillBlankCard
+# shows the English alone and auto-grades the whole typed reading against
+# card.reading (FillBlankCard.tsx:53), and no English gloss can tell a learner
+# to reach for ぜ over よ, or to open with さあ. "Here we are at the theater."
+# cannot yield さあ劇場に着いたぜ, so a learner who understood the sentence
+# perfectly is marked wrong.
+#
+# This does not retire them. LearnPage.tsx:217-220 keeps a recognitionOnly
+# phrase in review and only stops it being TYPED, so these five keep coming
+# back as recognition -- which is exactly what lesson 7's can-do asks for.
 #
 # THE CORPUS'S OWN SKEW, said once here and again in the lessons. These
 # sentences come from one corpus, largely translated in one era, and its
@@ -448,6 +449,7 @@
   reading: こんかいはしくじれないぞ。
   romaji: konkai wa shikujirenai zo.
   english: You cannot fail this time.
+  recognitionOnly: true
   tatoebaId: "172500"
   notes: "ぞ pushes a statement out hard. In this corpus it is used overwhelmingly by male speakers, and it goes to oneself or downward -- never up. Nobody is named in the Japanese: the corpus reads it as a warning to somebody else, and read as self-talk it is just as good, a man telling himself he cannot mess this one up. しくじる (JMdict 1005500) is to blunder; しくじれない is its potential negative."
 
@@ -458,6 +460,7 @@
   reading: あんなやつをしんようしたらほねまでしゃぶられちゃうぞ。
   romaji: anna yatsu o shinyou shitara hone made shaburarechau zo.
   english: If you trust such a fellow, you'll lose everything you have.
+  recognitionOnly: true
   tatoebaId: "229559"
   notes: "The rough ending in the company it keeps -- やつ for a person, たら from Book Two, Book Three's passive, and Book Four chapter 1's ちゃう, all of them casual, and ぞ closing it. 骨までしゃぶられる is picked to the bone (骨 is ほね, JMdict 1288550 -- not the こつ of 1288540, which is a knack). しゃぶる (1005670) is to suck."
 
@@ -468,6 +471,7 @@
   reading: さあげきじょうについたぜ。
   romaji: saa gekijou ni tsuita ze.
   english: Here we are at the theater.
+  recognitionOnly: true
   tatoebaId: "216883"
   notes: "ぜ is ぞ's softer neighbour -- the same assertive push, aimed at somebody the speaker is comfortable with rather than downward, and it dates a speaker: it is heard far less now than in the fiction this corpus draws on. The corpus holds only three ぜ-final sentences short enough to card, which is itself the evidence. さあ opens the sentence as a nudge, \"right then\"."
 
@@ -478,6 +482,7 @@
   reading: おかえしにびせきぶんのノートをかしてあげるわ。
   romaji: okaeshi ni bisekibun no nooto o kashite ageru wa.
   english: I'll pay you back with my calculus notes.
+  recognitionOnly: true
   tatoebaId: "226669"
   notes: "わ, and it is not ぞ with a skirt on -- it softens rather than pushes, adding warmth to an offer. In Tokyo speech it reads as feminine and somewhat dated; in Kansai and much of western Japan a flatter わ is ordinary for any speaker, and the two are different particles doing different things with the same kana. てあげる is Book Two chapter 2. お返しに (JMdict 1002640) is \"in return\"; 微積分 is びせきぶん, calculus."
 
@@ -488,6 +493,7 @@
   reading: ほら、あなたののるでんしゃがきたわ。
   romaji: hora, anata no noru densha ga kita wa.
   english: Look, here comes your train.
+  recognitionOnly: true
   tatoebaId: "195969"
   notes: "The second わ, on a plain past verb, pointing something out gently. あなたの乗る電車 is a relative clause with の standing in for が inside it -- the train you are getting on -- which is ordinary and worth spotting. ほら (JMdict 1011710) is \"look\" as an interjection."
 

@@ -84,7 +84,7 @@
   reading: むすめ
   romaji: musume
   english: daughter; girl
-  notes: JMdict seq 1531190, sense 1 (daughter) and sense 2 (a young unmarried woman). Watch the character. 嬢 -- seq 1355930, read じょう -- is a different entry that looks similar and means an unmarried woman or, after a name, Miss; the breakdown pointed at that one by mistake. Like 母 and お母さん, 娘 is the word for one's own daughter; someone else's takes お嬢さん.
+  notes: JMdict seq 1531190, sense 1 (daughter) and sense 2 (a young unmarried woman). Watch the character. 嬢 -- seq 1355930, read じょう -- is a different entry that looks similar and means an unmarried woman or, after a name, Miss. Like 母 and お母さん, 娘 is the word for one's own daughter; someone else's takes お嬢さん.
 
 - id: vocab.otto
   jlpt: N4
@@ -138,7 +138,7 @@
   reading: やく
   romaji: yaku
   english: to burn; to grill, to bake; to tan (skin)
-  notes: JMdict seq 1350600. Sense 1 is to burn, sense 2 the cooking senses -- grill, bake, roast, toast -- and sense 5, which the breakdown left to the author and which this chapter's sentence uses, is to tan skin in the sun. One verb covers the lot because they are all doing something to a thing with heat. Its intransitive twin is 焼ける, what the thing does.
+  notes: JMdict seq 1350600. Sense 1 is to burn, sense 2 the cooking senses -- grill, bake, roast, toast -- and sense 5, which this chapter's sentence uses, is to tan skin in the sun. One verb covers the lot because they are all doing something to a thing with heat. Its intransitive twin is 焼ける, what the thing does.
 
 - id: vocab.sumasu
   jlpt: N1
@@ -149,7 +149,7 @@
   reading: すます
   romaji: sumasu
   english: to settle, to get done with
-  notes: JMdict seq 1295030. The sentence in this chapter is JMdict's own example for sense 2, to settle or pay off, rather than sense 1, to finish -- the difference is thin and the corpus put it there. Sense 3 is the で pattern, making do with something, and 電話で済ます is settling a matter by phone instead of going in person, which is exactly what the card says. Its intransitive twin is 済む. The N1 tag is what the reference lists give and says nothing about how ordinary the word is.
+  notes: JMdict seq 1295030. The sentence in this chapter is JMdict's own example for sense 2, to settle or pay off, rather than sense 1, to finish -- the difference is thin and the corpus put it there. Sense 3 is the で pattern, making do with something, and 電話で済ます is settling a matter by phone instead of going in person, which is exactly what the card says. Its intransitive twin is 済む.
 
 # ── Lesson 3: Trying to, about to ─────────────────────────────────────────────
 

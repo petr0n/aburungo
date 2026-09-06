@@ -76,7 +76,7 @@
 - id: grammar.b4-na-final
   jlpt: N3
   pattern: "～な。"
-  gloss: A remark made half to oneself -- reflection, mild emphasis, or a wish in いいな. It follows a past verb, a plain adjective or だ, never a bare dictionary form; that slot belongs to the prohibitive な of the previous chapter. In assertive use it reads male in this corpus, though いいな and だな are said by anyone.
+  gloss: A remark made half to oneself -- reflection, mild emphasis, or a wish in いいな. It follows a past verb, a plain adjective or だ, and after a bare dictionary form it shares the slot with chapter 2's prohibitive な -- 思うな is either I reckon or don't think. In assertive use it reads male in this corpus, though いいな and だな are said by anyone.
   phraseId: b4band3.those-twins-are-identical
   blank: だな
 
@@ -106,11 +106,11 @@
   pattern: "～ぞ。"
   gloss: Endings that say who is talking. ぞ pushes a statement out hard, to oneself or downward, and is overwhelmingly male in this corpus; ぜ is its softer, more dated neighbour; わ softens instead of pushing, and reads feminine and somewhat dated in Tokyo speech while a flatter わ is ordinary for any speaker in the west. Worth recognising rather than reaching for.
   phraseId: b4band3.i-cant-fail-this-time
-  blank: しくじれないぞ
+  blank: ないぞ
 
 - id: grammar.b4-te-request
   jlpt: N3
   pattern: "～て。"
-  gloss: A request with ください taken off. A bare te-form asks between intimates; てよ presses; ないで asks somebody not to, and ないでくれ says the same thing bluntly. The ladder runs て, てよ, てくれる？, てください, and ends at ていただけますか, which is the keigo chapters' business.
+  gloss: A request with ください taken off. A bare te-form asks between intimates; てよ presses; ないで asks somebody not to, and ないでくれ says the same thing bluntly. The ladder runs て and てよ together at the bottom -- てよ presses rather than softens -- then てくれる？, てください, and ends at ていただけますか, which is the keigo chapters' business.
   phraseId: b4band3.please-turn-on-the-television
   blank: つけて
