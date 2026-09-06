@@ -57,7 +57,7 @@
 - id: grammar.b3-mitai
   jlpt: N3
   pattern: "～みたい"
-  gloss: It looks like, in casual speech. Goes straight onto a plain clause or, unusually, straight onto a bare noun with nothing in between -- then takes だ or です itself and behaves like a な-adjective. みたいな before a noun, みたいに before a verb.
+  gloss: It looks like, in casual speech. Goes straight onto a plain clause or, unusually, straight onto a bare noun with nothing in between -- then takes だ or です itself and behaves like a な-adjective. みたいな before a noun, みたいに before a verb or an adjective.
   phraseId: band5.that-building-is-like-a-monster
   blank: みたいだ
 
@@ -71,14 +71,14 @@
 - id: grammar.b3-rashii
   jlpt: N3
   pattern: "～らしい"
-  gloss: What you were told, not what you saw. Attaches like ようだ but changes where the evidence came from. After a bare noun it usually does its other job instead -- every inch a, true to type.
+  gloss: What you were told, not what you saw. Attaches to a plain clause like ようだ, but takes a bare noun where ようだ needs の, and changes where the evidence came from. After a bare noun it usually does its other job instead -- every inch a, true to type.
   phraseId: band5.i-hear-youre-raking-in-the-money
   blank: らしい
 
 - id: grammar.b3-ppoi
   jlpt: N3
   pattern: "～っぽい"
-  gloss: A trait or a surface quality, not a guess about a situation. Onto a noun or a verb's ます-stem, and what comes out is an ordinary い-adjective -- 怒りっぽい, 水っぽい, 安っぽい, conjugating っぽくない and っぽかった.
+  gloss: A trait or a surface quality, not a guess about a situation. Onto a noun, an adjective's stem or a verb's ます-stem, and what comes out is an ordinary い-adjective -- 怒りっぽい, 水っぽい, 安っぽい, conjugating っぽくない and っぽかった.
   phraseId: band5.she-has-a-hot-temper
   blank: おこりっぽい
 
