@@ -1,0 +1,446 @@
+# Book Four, Chapter 2 vocabulary -- thirty-six words, every one of them lifted
+# out of a sentence this chapter cards.
+#
+# The rule is the one Book Four opened with (docs/plans/book-four-bands.md
+# section 2): a lesson teaches the untaught content words of the sentences it is
+# already quoting. Not a situation list, not a frequency list -- the words that
+# stand between the learner and the card in front of them. So nothing here was
+# chosen for its own sake, and nothing here belongs to a sentence that did not
+# survive the carding pass.
+#
+# Three words the breakdown named are absent, and one it did not name is here:
+#
+#   金 かね (from #82274) is not carded. お金 has been a word since Book One
+#     (vocab.okane) and this is the same word with the polite お stripped off;
+#     a second card for it would be one word under two ids, which is the exact
+#     thing data/content-manifest.json exists to prevent. The phrase note says
+#     what the bare form is instead.
+#   物 もの and 汽車 きしゃ were optional in the breakdown and stayed optional.
+#     vocabulary/b4-00-finishing.yaml deliberately keeps vocab.mono free for
+#     物, which every book will eventually teach; taking that id here would
+#     spend a reservation this chapter does not need.
+#   飼う かう is here although the breakdown says it is already taught. It is
+#     not: the manifest has vocab.kau for 買う and nothing at all for 飼う, and
+#     #198980 (ナンシーは犬を飼いたがっていますか) does not read without it. It
+#     takes the id vocab.kau-animal, after Book One's vocab.hana-nose.
+#
+# ---------------------------------------------------------------------------
+# ON THE JLPT TAGS.
+#
+# Tag the word at the level the reference lists in data/jlpt actually put it at,
+# not at the level of the chapter it lands in -- the rule Book Two's doctor
+# chapter set, Book Three's ところ followed and b4-00-finishing.yaml restated.
+# The learner never reads a level (DR-024); the only consumer of this field is
+# coverage tooling, and nudging a word into this chapter's band would make that
+# tooling report a lie in two directions at once.
+#
+# Followed honestly that produces a spread from N5 to N1 inside one chapter.
+# Three are N5 (ドア, 上手 and 見せる), ten are N4, twenty are N3, one is N2, two are
+# N1 (済ます and お袋, which no easier list carries), and four are on no list at
+# all in the form carded: 忍者, くどくど, 新車 and 誰も. Those four take N3, the
+# level of the chapter, and this note stands in for the citation they cannot
+# have. Every N3 and N2 mark the breakdown made was checked against
+# reference-n3.json and reference-n2.json and every one of them held.
+#
+# content-source: training -- headword, reading, part of speech and gloss
+#   verified against JMdict for Applications 3.6.2 on 2026-09-06, sequence
+#   number inline on every entry, and the sense number checked against the
+#   sentence that carries the word rather than taken from the breakdown. Four
+#   turned out not to be the sense the breakdown named -- 済ます (s2, not s1),
+#   動かす (s4 as well as s1), 触れる (s4, not s1) and 焼く (s5, which the
+#   breakdown left to the author) -- and each entry says so. All but 忍者,
+#   くどくど, 転地-adjacent rarities and お袋's kana form are flagged common in
+#   JMdict; the four that are not are noted individually.
+# jlpt-source: training -- JLPT level unverified (JMdict carries no JLPT data).
+#   Levels follow data/jlpt/reference-*.json as set out above.
+
+# ── Lesson 1: Let's, plainly ──────────────────────────────────────────────────
+
+- id: vocab.ninja
+  jlpt: N3
+  word_type: noun
+  theme: people
+  japanese: 忍者
+  reading: にんじゃ
+  romaji: ninja
+  english: ninja
+  notes: JMdict seq 1467470, sense 1, tagged historical -- a person trained in ninjutsu and employed for covert work in feudal Japan. The English word came from this one, so the card is really about the reading, にんじゃ, and about 者 しゃ, the same character that ends 医者 and that b4-00-finishing.yaml teaches as the standalone もの. 忍者ごっこ in the sentence is 忍者 plus ごっこ (seq 1004950), the suffix for playing at something.
+
+- id: vocab.kudokudo
+  jlpt: N3
+  word_type: adverb
+  theme: communication
+  japanese: くどくど
+  reading: くどくど
+  romaji: kudokudo
+  english: on and on, at tedious length
+  notes: JMdict seq 1003890, sense 1, tagged on-mim -- one of the doubled sound-words Japanese builds adverbs out of. It describes explaining or complaining repeatedly and at greater length than anyone wanted, so it is never neutral; くどくど言う is what the other person is doing wrong. Written in kana; the entry has no kanji form at all.
+
+- id: vocab.musume
+  jlpt: N4
+  word_type: noun
+  theme: family
+  japanese: 娘
+  reading: むすめ
+  romaji: musume
+  english: daughter; girl
+  notes: JMdict seq 1531190, sense 1 (daughter) and sense 2 (a young unmarried woman). Watch the character. 嬢 -- seq 1355930, read じょう -- is a different entry that looks similar and means an unmarried woman or, after a name, Miss; the breakdown pointed at that one by mistake. Like 母 and お母さん, 娘 is the word for one's own daughter; someone else's takes お嬢さん.
+
+- id: vocab.otto
+  jlpt: N4
+  word_type: noun
+  theme: family
+  japanese: 夫
+  reading: おっと
+  romaji: otto
+  english: husband
+  notes: JMdict seq 1496480, sense 1. This is the plain word for one's own husband, and it is what you use talking about him to other people. 主人 (vocab.shujin, Book One) is the older, more deferential word for the same man; ご主人 is somebody else's husband. The character is 夫, two strokes past 大, and it also appears in 大丈夫.
+
+# ── Lesson 2: Meaning to ──────────────────────────────────────────────────────
+
+- id: vocab.sanka
+  jlpt: N3
+  word_type: noun
+  theme: daily-life
+  japanese: 参加
+  reading: さんか
+  romaji: sanka
+  english: taking part, joining in
+  notes: JMdict seq 1302090, sense 1, a noun that takes する -- 参加する, to take part. What you join takes に, as in デモに参加する, joining a demonstration, and that に is the one thing worth memorising about the word. The noun on its own is what appears on forms and posters -- 参加者, participant, and 参加費, entry fee.
+
+- id: vocab.susumeru
+  jlpt: N3
+  word_type: verb
+  verb_class: ru
+  theme: communication
+  japanese: 勧める
+  reading: すすめる
+  romaji: susumeru
+  english: to recommend, to advise, to urge
+  notes: JMdict seq 1595680, sense 1 -- recommending that someone do something, which is what a doctor does in this chapter's sentence. Sense 2 is recommending a thing rather than an action and is often written 薦める; sense 3 is offering a drink or a seat. Three verbs share the reading すすめる and only this one advises -- 進める is to move something forward, 薦める is to put a name forward.
+
+- id: vocab.dokoka
+  jlpt: N3
+  word_type: noun
+  theme: basics
+  japanese: どこか
+  reading: どこか
+  romaji: dokoka
+  english: somewhere, anywhere
+  notes: JMdict seq 1189000, sense 1, usually written in kana although the entry carries 何処か. It is どこ plus か, the same か that makes 何か something out of 何 and 誰か somebody out of 誰, and it takes particles like any noun -- どこかへ行く, to go somewhere. Sense 2 is the adverb, in some way or in some respects.
+
+- id: vocab.yaku
+  jlpt: N4
+  word_type: verb
+  verb_class: u
+  theme: food
+  japanese: 焼く
+  reading: やく
+  romaji: yaku
+  english: to burn; to grill, to bake; to tan (skin)
+  notes: JMdict seq 1350600. Sense 1 is to burn, sense 2 the cooking senses -- grill, bake, roast, toast -- and sense 5, which the breakdown left to the author and which this chapter's sentence uses, is to tan skin in the sun. One verb covers the lot because they are all doing something to a thing with heat. Its intransitive twin is 焼ける, what the thing does.
+
+- id: vocab.sumasu
+  jlpt: N1
+  word_type: verb
+  verb_class: u
+  theme: daily-life
+  japanese: 済ます
+  reading: すます
+  romaji: sumasu
+  english: to settle, to get done with
+  notes: JMdict seq 1295030. The sentence in this chapter is JMdict's own example for sense 2, to settle or pay off, rather than sense 1, to finish -- the difference is thin and the corpus put it there. Sense 3 is the で pattern, making do with something, and 電話で済ます is settling a matter by phone instead of going in person, which is exactly what the card says. Its intransitive twin is 済む. The N1 tag is what the reference lists give and says nothing about how ordinary the word is.
+
+# ── Lesson 3: Trying to, about to ─────────────────────────────────────────────
+
+- id: vocab.nusumu
+  jlpt: N4
+  word_type: verb
+  verb_class: u
+  theme: trouble
+  japanese: 盗む
+  reading: ぬすむ
+  romaji: nusumu
+  english: to steal
+  notes: JMdict seq 1448440, sense 1. A godan verb ending in む, so the te-form is 盗んで and the volitional 盗もう. Sense 2 stretches to stealing an idea or a technique, and there are two set uses worth recognising rather than learning now -- 目を盗んで, doing something behind someone's back, and 暇を盗んで, snatching time you do not really have.
+
+- id: vocab.tsukamaru
+  jlpt: N3
+  word_type: verb
+  verb_class: u
+  theme: trouble
+  japanese: 捕まる
+  reading: つかまる
+  romaji: tsukamaru
+  english: to be caught, to be arrested
+  notes: JMdict seq 1514110, sense 1, which the entry marks as the sense usually written 捕まる. The same reading written 掴まる is sense 2 and means to hold on to something -- つり革に掴まる, holding the strap on a train -- so the character is doing real work here. This one is intransitive; 捕まえる is what the person doing the catching does.
+
+- id: vocab.ugokasu
+  jlpt: N3
+  word_type: verb
+  verb_class: u
+  theme: actions
+  japanese: 動かす
+  reading: うごかす
+  romaji: ugokasu
+  english: to move (something); to get (a machine) working
+  notes: JMdict seq 1451170. Sense 1 is moving a thing from one place to another; the sentence in this chapter is about making a robot go, which is sense 4, to operate or set in motion. Both are the same idea from outside -- something that was still is now not, because you did it. The intransitive twin is 動く, what moves by itself. Sense 2 is moving a person emotionally.
+
+- id: vocab.doa
+  jlpt: N5
+  word_type: noun
+  theme: home
+  japanese: ドア
+  reading: ドア
+  romaji: doa
+  english: door
+  notes: JMdict seq 1087820, sense 1. A borrowing, and it means a hinged Western-style door -- the one you pull or push. 戸 is the older word and covers sliding doors and gates; a room's sliding paper door is a 障子 or a 襖. ドアー is a variant spelling you will meet occasionally.
+
+- id: vocab.muda
+  jlpt: N3
+  word_type: na-adj
+  theme: quality
+  japanese: 無駄
+  reading: むだ
+  romaji: muda
+  english: pointless, a waste
+  notes: JMdict seq 1530510, sense 1, which is both a noun and a な-adjective. 無駄だ is the flat verdict -- it is no use -- and 無駄になる is what happens to effort that came to nothing. 無駄にする is wasting something on purpose. The kanji are 無, without, and 駄, worthless, and the word is often written in kana as ムダ in advertising.
+
+# ── Lesson 4: Do it ───────────────────────────────────────────────────────────
+
+- id: vocab.jouzu
+  jlpt: N5
+  word_type: na-adj
+  theme: quality
+  japanese: 上手
+  reading: じょうず
+  romaji: jouzu
+  english: good at, skilful
+  notes: JMdict seq 1353320, sense 1. What someone is good at takes が -- 日本語が上手ですね -- and the adverb 上手に is how this chapter's sentence uses it, do it well. Two other readings share the characters and mean other things, うわて, the upper hand, and かみて, stage left. The opposite is 下手 へた.
+
+- id: vocab.maniau
+  jlpt: N4
+  word_type: verb
+  verb_class: u
+  theme: time
+  japanese: 間に合う
+  reading: まにあう
+  romaji: maniau
+  english: to be in time for
+  notes: JMdict seq 1215260, sense 1. What you are in time for takes に, as in 汽車に間に合う, to catch the train. Sense 2 is a different everyday use -- to be good enough, to do the job, これで間に合います, this will do. Literally it is 間 (the gap) plus 合う (to fit), fitting into the gap available.
+
+- id: vocab.kangaeru
+  jlpt: N4
+  word_type: verb
+  verb_class: ru
+  theme: basics
+  japanese: 考える
+  reading: かんがえる
+  romaji: kangaeru
+  english: to think about, to think over
+  notes: JMdict seq 1281020, sense 1. Set it against 思う (vocab.omou), which you already have. 思う is what you think -- an opinion, a feeling, a hunch -- and 考える is the working, the thinking you do deliberately over time. That is why 考えている is someone deep in thought and 思っている is someone holding a view. Sense 4 is thinking of doing something, which is the next chapter's territory.
+
+- id: vocab.genjitsu
+  jlpt: N3
+  word_type: noun
+  theme: basics
+  japanese: 現実
+  reading: げんじつ
+  romaji: genjitsu
+  english: reality, the way things actually are
+  notes: JMdict seq 1263710, sense 1. 現実に is in reality and 現実的 is realistic, the adjective. Set it against 理想, the ideal, which is the pair it usually turns up in. The characters are 現, present or appearing, and 実, truth or fruit -- the same 実 as in 実は, to tell the truth.
+
+- id: vocab.yameru
+  jlpt: N4
+  word_type: verb
+  verb_class: ru
+  theme: actions
+  japanese: やめる
+  reading: やめる
+  romaji: yameru
+  english: to stop doing, to quit
+  notes: JMdict seq 1310680, sense 1, marked usually-kana, which is why this card is kana. The kanji is 止める -- and that is the trap, because 止める read とめる is a different verb meaning to bring something else to a halt. やめる is stopping what you are doing, as in タバコをやめる, giving up smoking. A second やめる, written 辞める, is leaving a job.
+
+- id: vocab.sara
+  jlpt: N3
+  word_type: noun
+  theme: food
+  japanese: 皿
+  reading: さら
+  romaji: sara
+  english: plate, dish
+  notes: JMdict seq 1299680, sense 1. Everyday speech usually says お皿 with the polite お in front, the same お that お茶 and お金 carry. Sense 2 is the counter for servings -- 一皿, one plate of something -- which is how a menu counts side dishes. 灰皿 はいざら, ashtray, is the same character.
+
+# ── Lesson 5: Don't ───────────────────────────────────────────────────────────
+
+- id: vocab.fureru
+  jlpt: N3
+  word_type: verb
+  verb_class: ru
+  theme: communication
+  japanese: 触れる
+  reading: ふれる
+  romaji: fureru
+  english: to touch; to touch on (a subject)
+  notes: JMdict seq 1357990. Sense 1 is physical touch and sense 4, which this chapter's sentence uses, is touching on a subject -- mentioning it, bringing it up. The breakdown named sense 1; the sentence is the other one. What is touched takes に. Sense 5 is a third use worth recognising on signs and in contracts, 法に触れる, to break the law.
+
+- id: vocab.tanin
+  jlpt: N3
+  word_type: noun
+  theme: people
+  japanese: 他人
+  reading: たにん
+  romaji: tanin
+  english: other people, someone outside the family
+  notes: JMdict seq 1581400, sense 1. It is colder than the English "others" -- sense 2 is a person you are not related to and sense 3 is an outsider or a stranger, and 赤の他人 is a complete stranger. So 他人のいうこと is what people outside your circle say, not simply what other people say. The characters are 他, other, and 人.
+
+- id: vocab.chikayoru
+  jlpt: N2
+  word_type: verb
+  verb_class: u
+  theme: movement
+  japanese: 近寄る
+  reading: ちかよる
+  romaji: chikayoru
+  english: to go near, to approach
+  notes: JMdict seq 1242230, sense 1. 近 is near, 寄る is to drop by or draw close, and together they are the verb on warning signs -- 近寄るな, keep away. What you approach takes に. 近づく is the everyday near-synonym and covers approaching in time as well as in space, which this one does not.
+
+- id: vocab.miseru
+  jlpt: N5
+  word_type: verb
+  verb_class: ru
+  theme: actions
+  japanese: 見せる
+  reading: みせる
+  romaji: miseru
+  english: to show, to let someone see
+  notes: JMdict seq 1259210, sense 1. It is 見る with a causative shape frozen into it -- you make the other person see -- and Book Three's causative chapter is where that pattern comes from. パスポートを見せてください is the version you will use most. Do not confuse it with 見える, which is what a thing does when it can be seen.
+
+- id: vocab.ofukuro
+  jlpt: N1
+  word_type: noun
+  theme: family
+  japanese: お袋
+  reading: おふくろ
+  romaji: ofukuro
+  english: my mum
+  notes: JMdict seq 1002370, sense 1, and the entry carries two tags that are the whole point of the word -- colloquial, and usually written in kana. It is used of one's own mother, in casual speech; in this corpus it turns up in relaxed male speech, and while that is the tendency the dictionary itself claims only the register. 母 (vocab.haha) is the neutral word for your own mother and お母さん (vocab.okaasan) is somebody else's. The characters mean honourable bag, which nobody thinks about.
+
+# ── Lesson 6: Do it, from above ───────────────────────────────────────────────
+
+- id: vocab.mayou
+  jlpt: N3
+  word_type: verb
+  verb_class: u
+  theme: transit
+  japanese: 迷う
+  reading: まよう
+  romaji: mayou
+  english: to lose one's way; to be unable to decide
+  notes: JMdict seq 1532710. Sense 1 is getting lost, and it almost always arrives as the set phrase 道に迷う, to lose the road. Sense 2 is the other half of the word and just as common -- being torn between two things, unable to make up your mind. 迷子 まいご is a lost child. 迷惑 めいわく, a nuisance, shares the character.
+
+- id: vocab.anzen
+  jlpt: N4
+  word_type: na-adj
+  theme: quality
+  japanese: 安全
+  reading: あんぜん
+  romaji: anzen
+  english: safe, safety
+  notes: JMdict seq 1153930, sense 1, which is both a noun and a な-adjective. 安全な場所 is a safe place and 安全のために, the form in this chapter's sentence, is for safety's sake -- the plain noun. The opposite is 危険 きけん. 安 is the same character as 安い, cheap, where the idea is untroubled rather than inexpensive.
+
+- id: vocab.kakusu
+  jlpt: N3
+  word_type: verb
+  verb_class: u
+  theme: actions
+  japanese: 隠す
+  reading: かくす
+  romaji: kakusu
+  english: to hide (something), to conceal
+  notes: JMdict seq 1170650, sense 1. This is the transitive one -- you hide a thing. 隠れる is what a person does when they hide themselves, and the pair works like 出す and 出る. 口を手で隠す, covering your mouth with your hand, is the sentence this chapter cards.
+
+- id: vocab.mitsukeru
+  jlpt: N4
+  word_type: verb
+  verb_class: ru
+  theme: actions
+  japanese: 見つける
+  reading: みつける
+  romaji: mitsukeru
+  english: to find, to spot
+  notes: JMdict seq 1604570, sense 1. The pair to 見つかる (vocab.mitsukaru), which you already have. 見つける is you finding it, 見つかる is the thing turning up. Same rule as 隠す and 隠れる. It also covers catching someone in the act -- sense 1 ends with to catch someone doing something.
+
+- id: vocab.nanika
+  jlpt: N3
+  word_type: noun
+  theme: basics
+  japanese: 何か
+  reading: なにか
+  romaji: nanika
+  english: something, anything
+  notes: JMdict seq 1188270, sense 1. 何 plus か, exactly like どこか and 誰か. In speech it is often なんか, and that なんか has a second life as a filler word meaning something like "kind of", which is sense 2's territory rather than this one's. 何かする is to do something; 何か食べる, to eat something.
+
+# ── Lesson 7: What someone else wants ─────────────────────────────────────────
+
+- id: vocab.shinsha
+  jlpt: N3
+  word_type: noun
+  theme: transit
+  japanese: 新車
+  reading: しんしゃ
+  romaji: shinsha
+  english: a new car
+  notes: JMdict seq 1361920, sense 1. Transparent once read -- 新, new, plus 車, car -- but the reading is not. 新 is しん here, not あたら as in 新しい, and 車 is しゃ, not くるま. That on-reading pair is what the card is for. 中古車 ちゅうこしゃ is the used one.
+
+- id: vocab.kau-animal
+  jlpt: N3
+  word_type: verb
+  verb_class: u
+  theme: home
+  japanese: 飼う
+  reading: かう
+  romaji: kau
+  english: to keep (an animal)
+  notes: JMdict seq 1312970, sense 1. The verb for keeping a pet or raising livestock -- 犬を飼う, to have a dog. It is a homophone of 買う, to buy (vocab.kau), and that is why this card carries the id vocab.kau-animal, and the two are told apart by the character and by what follows -- you buy things, and you 飼う living creatures. 飼い主 かいぬし is an owner.
+
+- id: vocab.dansei
+  jlpt: N4
+  word_type: noun
+  theme: people
+  japanese: 男性
+  reading: だんせい
+  romaji: dansei
+  english: man, male
+  notes: JMdict seq 1420160, sense 1. The formal word, the one on forms, in news reports and on toilet doors; 男の人 is what you say about someone in conversation and 男 alone can sound blunt. 女性 じょせい is the pair. Sense 2 is the grammatical masculine gender, which Japanese itself has no use for.
+
+- id: vocab.kyuuka
+  jlpt: N3
+  word_type: noun
+  theme: work
+  japanese: 休暇
+  reading: きゅうか
+  romaji: kyuuka
+  english: leave, time off
+  notes: JMdict seq 1227610, sense 1. This is leave in the workplace sense -- what you apply for and are granted. 休み is the everyday word for a day off or a holiday; 休暇 is the one in the staff handbook, as in 育児休暇, childcare leave. 休 is the character already in 休みます.
+
+- id: vocab.okoru
+  jlpt: N3
+  word_type: verb
+  verb_class: u
+  theme: basics
+  japanese: 起こる
+  reading: おこる
+  romaji: okoru
+  english: to happen, to occur
+  notes: JMdict seq 1223680, sense 1. Events are its subject, not people -- 何が起こったの, what happened. Two traps, both live. 怒る is also おこる and means to get angry. And 起きる (vocab.okiru), which you have for getting up in the morning, carries this same happening sense too -- 事故が起きる is as good as 事故が起こる.
+
+- id: vocab.daremo
+  jlpt: N3
+  word_type: noun
+  theme: basics
+  japanese: 誰も
+  reading: だれも
+  romaji: daremo
+  english: everyone; (with a negative) nobody
+  notes: JMdict seq 1416860, senses 1 and 2, and the two senses are the same two words -- what flips it is the verb at the end. 誰もが知っていた is everybody knew; 誰も知らなかった is nobody knew. So the meaning of this expression is decided several words later, which is a habit Japanese has and this is the clearest small example of it.

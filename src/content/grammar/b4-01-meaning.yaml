@@ -1,0 +1,94 @@
+# Book Four, Chapter 2 grammar patterns -- meaning to, telling to.
+#
+# One pattern per teaching lesson, each blanking the thing that lesson exists
+# for out of one of its own sentences. The blank is matched against the phrase's
+# reading, so these are kana.
+#
+# The `pattern` strings are coarser than the lessons they label, and the reason
+# is mechanical rather than stylistic -- the same one recorded in
+# grammar/b3-00-passive.yaml. scripts/levelling.mjs's grammarSurface() rejects
+# any pattern containing a Latin character or a digit and needs at least one
+# ～-delimited fragment of two or more characters, so a free English description
+# of a rule ("godan: last sound to the え row") tags nothing at all and leaves
+# the reading library unable to find text for the lesson. Every string below is
+# bare kana or kanji that grammarSurface accepts.
+#
+# What that costs, per pattern, said here rather than discovered later:
+#
+#   ～よう is the noisiest literal in this file and probably in the course. The
+#     same two kana carry ように, ようだ, ような and 用 in compounds, and the
+#     band's own attestation pass had to screen all of them out by hand. A more
+#     precise fragment does not exist, because the volitional has no fixed
+#     surface -- しよう, 呼ぼう, 開けよう and 急ごう are four strings for one rule.
+#   ～しろ labels the imperative lesson although no card in that lesson uses
+#     しろ. It is there because the imperative has the same problem twice over
+#     (やれ, 急げ, 言え, やめろ, 来い) and a taggable literal must be at least two
+#     kana; しろ is the commonest single instance in the corpus. The gloss
+#     carries the class rule that the label cannot.
+#   ～するな has the same shape of compromise. Any dictionary form can take な,
+#     but な alone is one character and would tag every sentence with a な in
+#     it, including band 3's emphatic な, which is the exact look-alike this
+#     lesson exists to separate.
+#   ～なさい will also flag ごめんなさい, a fixed phrase from Book One, and
+#     ごらんなさい, which belongs to the keigo band.
+#   ～たがる will not flag たがっている or たがらない, which is most of the real
+#     material -- fragment matching is literal. It will not flag したがって
+#     either, which is the false positive the breakdown warned about, so the
+#     noise runs the other way here.
+#
+# content-source: n/a for this file -- every pattern references an existing
+#   phrase from phrases/b4-01-meaning.yaml rather than composing new Japanese,
+#   and that file carries the Tatoeba id for each.
+# jlpt-source: training -- the level marks the band this content sits in. The
+#   volitional, the imperative and the prohibitive are canonically N4 grammar
+#   and arrive here only because Books One and Two taught the polite forms above
+#   them; the sentences carrying them are N3-band text and are tagged N3.
+
+- id: grammar.b4-volitional
+  jlpt: N3
+  pattern: "～よう"
+  gloss: Let's, in plain speech -- the form ましょう is the polite version of. A godan verb moves its last sound to the お row and adds う (呼ぶ becomes 呼ぼう, 急ぐ becomes 急ごう); an ichidan verb drops る and adds よう; する becomes しよう and 来る becomes 来よう, read こよう. Sentence-final it proposes, or announces the speaker's own decision.
+  phraseId: b4band1.lets-play-at-being-ninjas
+  blank: しよう
+
+- id: grammar.b4-you-to-omou
+  jlpt: N3
+  pattern: "～ようと思う"
+  gloss: What you mean to do. The volitional plus と思う states an intention formed as you speak; と思っている states one you have been carrying, and is also what you use about somebody else. Set it beside つもりです, which is firmer and closer to a plan.
+  phraseId: b4band1.im-going-to-join-a-demonstration
+  blank: しようとおもう
+
+- id: grammar.b4-you-to-suru
+  jlpt: N3
+  pattern: "～ようとする"
+  gloss: Trying to, or about to. With a person in front it is an attempt, and whether it succeeded is left unsaid; with a thing in front, which cannot intend anything, it means on the point of. Do not read it as failure by default, and do not confuse it with として, as.
+  phraseId: b4band1.he-tried-to-get-the-robot-going
+  blank: うごかそうとした
+
+- id: grammar.b4-imperative
+  jlpt: N3
+  pattern: "～しろ"
+  gloss: The bare command. A godan verb moves its last sound to the え row (やる becomes やれ, 急ぐ becomes 急げ, 言う becomes 言え); an ichidan verb drops る and adds ろ (やめる becomes やめろ); する becomes しろ and 来る becomes 来い, read こい. Blunt between people, and unremarkable on a sign, in a manual, in sport or to yourself.
+  phraseId: b4band1.stop-running-away-from-reality
+  blank: やめろ
+
+- id: grammar.b4-prohibitive-na
+  jlpt: N3
+  pattern: "～するな"
+  gloss: Don't, in the same register as the bare command. Dictionary form plus な, sentence-final. The form in front is the whole tell -- dictionary form makes it a prohibition, a ます-stem makes it a light order (食べな, eat up), and anything else is the emphatic な that comes later.
+  phraseId: b4band1.dont-do-wicked-things
+  blank: するな
+
+- id: grammar.b4-nasai
+  jlpt: N3
+  pattern: "～なさい"
+  gloss: An instruction from above. ます-stem plus なさい, firmer than てください and gentler than the bare imperative, from a parent, a teacher, a sign or an exam paper. JMdict describes it as a light imperative used towards someone of equal or lower standing.
+  phraseId: b4band1.stop-fiddling-with-your-hat
+  blank: やめなさい
+
+- id: grammar.b4-tagaru
+  jlpt: N3
+  pattern: "～たがる"
+  gloss: What somebody else wants. ます-stem plus たがる, where たい is your own wish -- JMdict says outright that it is not used in the first person. Usually たがっている for a current wish or たがらない for reluctance; it conjugates as a godan verb.
+  phraseId: b4band1.tom-is-eager-to-buy-a-new-car
+  blank: かいたがっている
