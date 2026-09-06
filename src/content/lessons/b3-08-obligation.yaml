@@ -68,18 +68,18 @@
 # chapter's position in the assembled book is 9, since the passive chapter
 # opens the book ahead of the connective chapters.
 #
-# WIRING. This chapter's `b3.band-8` entry does not exist yet in
-# chapters/b3.yaml. It wants `order: 9` and `title: What you have to do`, which
-# is the string every teaching lesson below carries in `situation`.
+# WIRING. This chapter's `b3.band-8` entry sits in chapters/b3.yaml at
+# `order: 9` with `title: What you have to do`, the string every teaching lesson
+# below carries in `situation`.
 #
 # KANJI. Three arrive: 必 and 要 on lesson 3, both halves of 必要, and 得 on
 # lesson 5. None is in data/content-manifest.json's 222-character set, checked
 # one character at a time. Every attested 必要がある sentence writes 必要 in
 # kanji and every attested ざるを得ない sentence writes 得, so there is no
 # honest kana-only spelling to fall back on. The other four patterns are
-# kana-only in ordinary use and cost nothing. The `kanji:` arrays below are
-# empty pending the wiring pass that fills them; this header is where that pass
-# reads which lesson takes which character. No new vocabulary ships --
+# kana-only in ordinary use and cost nothing. The `kanji:` arrays below were
+# filled by the wiring pass from this header, which records which lesson takes
+# which character. No new vocabulary ships --
 # vocabulary/b3-08-obligation.yaml carries that argument. The `wordIds` below
 # are empty, unlike the passive chapter's: that chapter pulled words whose
 # passive its own sentences built, and nothing in this chapter's sentences is a

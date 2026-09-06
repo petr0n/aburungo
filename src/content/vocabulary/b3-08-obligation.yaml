@@ -23,8 +23,8 @@
 # attested 必要がある sentences writes 必要 in kanji and every attested
 # ざるを得ない sentence writes 得 in kanji, so there is no honest kana-only
 # spelling to fall back on the way ため and せい had one. They are named in the
-# header of lessons/b3-08-obligation.yaml; the `kanji:` arrays there are empty
-# pending the wiring pass that fills them.
+# header of lessons/b3-08-obligation.yaml; the `kanji:` arrays there were filled
+# by the wiring pass.
 #
 # The chapter's cited sentences do use words the learner does not own -- 自制,
 # 骨組み, 地酒, 借金, 直視, 修繕, 便所, 干渉, 甘受, 物腰 among them. That is

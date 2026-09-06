@@ -59,8 +59,8 @@
 # a character: という, とは, について and における are written in kana in
 # ordinary use, and ところ's grammar is kana too -- 所 is already taught, via
 # 台所, and is available if a concrete "place" citation is ever wanted. The
-# `kanji:` arrays below are all empty pending the wiring pass; this header is
-# where that pass reads which lesson takes which character.
+# `kanji:` arrays below were filled by the wiring pass from this header, which
+# records which lesson takes which character.
 #
 # NEW VOCABULARY: one word, ところ, and vocabulary/b3-09-reference.yaml carries
 # the argument for it and the argument for why every other chapter of this book

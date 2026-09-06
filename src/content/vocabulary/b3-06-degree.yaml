@@ -29,8 +29,8 @@
 # the above: 比 (the に比べて lesson), 反 and 面 (the 反面 lesson). A character a
 # learner will keep meeting in the reading library is worth introducing whether
 # or not its carrier word gets a flashcard. They are named in the header of
-# lessons/b3-06-degree.yaml; the `kanji:` arrays there are empty pending the
-# wiring pass that fills them.
+# lessons/b3-06-degree.yaml; the `kanji:` arrays there were filled by the
+# wiring pass.
 #
 # The chapter's cited sentences do use words the learner does not own -- 時間稼ぎ,
 # 売却, 虚弱, 貿易収支, 違反者 among them. That is not a gap this file should

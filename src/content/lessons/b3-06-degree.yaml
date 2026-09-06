@@ -56,9 +56,8 @@
 # Three kanji arrive: 比 on lesson 6, 反 and 面 on lesson 7. None of the three
 # is in the 222-character manifest. The other four patterns ship kana, and the
 # reason is checked rather than assumed -- see the note below on what the corpus
-# actually writes. The `kanji:` arrays below are empty pending the wiring pass
-# that fills them; this header is where that pass reads which lesson takes which
-# character.
+# actually writes. The `kanji:` arrays below were filled by the wiring pass
+# from this header, which records which lesson takes which character.
 #
 # On kanji spellings, because the chapter breakdown states four of these as
 # "kana-only in ordinary use" and three of the four claims do not survive a
