@@ -8,17 +8,22 @@ type Props = {
   onSubmit: (value: string) => void;
   placeholder?: string;
   disabled?: boolean;
-  /**
-   * Drive the input method from outside. Supply both to control it; supply
-   * neither and this component keeps its own. A caller that shows the picker
-   * somewhere steadier than inside the card needs the state up there with it,
-   * and the callers that do not care should not have to hold it.
-   */
-  mode?: InputMode;
-  onModeChange?: (mode: InputMode) => void;
   /** Forwarded: hide the built-in picker when the caller renders its own. */
   showModePicker?: boolean;
-};
+} & ModeControl;
+
+/**
+ * Drive the input method from outside, or do not -- but not half of each.
+ *
+ * A caller that shows the picker somewhere steadier than inside the card needs
+ * the state up there with it; callers that do not care should not have to hold
+ * it. Splitting the pair breaks both ways -- `mode` alone emits changes nothing
+ * acts on, `onModeChange` alone never moves the mode -- so the union makes
+ * either half on its own a type error rather than a silent dead control.
+ */
+type ModeControl =
+  | { mode: InputMode; onModeChange: (mode: InputMode) => void }
+  | { mode?: undefined; onModeChange?: undefined };
 
 export function FillInput({ onSubmit, placeholder, disabled, mode: modeProp, onModeChange, showModePicker }: Props) {
   const [ownMode, setOwnMode] = useState<InputMode>("romaji");
@@ -30,7 +35,24 @@ export function FillInput({ onSubmit, placeholder, disabled, mode: modeProp, onM
   const [kanaSection, setKanaSection] = useState<KanaSection>("basic");
   const inputRef = useRef<HTMLInputElement>(null);
 
-  // Focus the active text input when mode changes
+  // Drop whatever was typed in the previous input when the mode changes.
+  //
+  // Derived during render rather than in an effect: resetting state from an
+  // effect costs a second render pass and eslint rejects it outright. This is
+  // React's own "adjust state when a prop changes" shape.
+  //
+  // It is not enough to clear inside the change handler below, which is where
+  // this used to live -- the mode can also change from outside through props,
+  // and a handler only sees the switches it makes itself, so the old romaji
+  // stayed in the buffer when the caller's own picker moved the mode.
+  const [lastMode, setLastMode] = useState(mode);
+  if (mode !== lastMode) {
+    setLastMode(mode);
+    setRomaji("");
+    setKana("");
+  }
+
+  // Focus is a DOM effect, so it stays one.
   useEffect(() => {
     inputRef.current?.focus();
   }, [mode]);
@@ -63,8 +85,6 @@ export function FillInput({ onSubmit, placeholder, disabled, mode: modeProp, onM
       inputRef={inputRef}
       showModePicker={showModePicker}
       onModeChange={(m) => {
-        setRomaji("");
-        setKana("");
         if (onModeChange !== undefined) onModeChange(m);
         else setOwnMode(m);
       }}

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import type { SVGProps } from "react";
 import type { Phrase, Word, WordType } from "@/types";
 import { isWord } from "@/types";
@@ -55,6 +55,8 @@ const INPUT_MODES = [
   { mode: "voice" as const, label: "Speak your answer", Icon: MicIcon },
 ];
 
+const INPUT_METHOD_KEY = "aburungo-input-method";
+
 const INPUT_METHODS: { value: InputMode; label: string }[] = [
   { value: "romaji", label: "Romaji" },
   { value: "kana", label: "Kana grid" },
@@ -65,9 +67,23 @@ export function FillBlankCard({ card, showRomaji = true, onNext }: Props) {
   const [phase, setPhase] = useState<Phase>("input");
   const [inputMode, setInputMode] = useState<AnswerMode>("text");
   // Which keyboard you type Japanese with is a preference, not a property of
-  // this card, so it lives here and is rendered above the card rather than
-  // inside it, between the word and the field.
-  const [inputMethod, setInputMethod] = useState<InputMode>("romaji");
+  // this card, so it is rendered above the card rather than between the word
+  // and the field -- and it has to outlive the card. Every caller mounts this
+  // component with a key of the card id, so component state alone would reset
+  // the choice on each item and make the learner re-pick it all session.
+  // Same shape as the kana-script preference on KanaPage.
+  const [inputMethod, setInputMethod] = useState<InputMode>(() => {
+    try {
+      const saved = localStorage.getItem(INPUT_METHOD_KEY);
+      return INPUT_METHODS.find((m) => m.value === saved)?.value ?? "romaji";
+    } catch {
+      return "romaji";
+    }
+  });
+
+  useEffect(() => {
+    try { localStorage.setItem(INPUT_METHOD_KEY, inputMethod); } catch { /* ignore */ }
+  }, [inputMethod]);
   const [correct, setCorrect] = useState(false);
   const [userAnswer, setUserAnswer] = useState("");
 
