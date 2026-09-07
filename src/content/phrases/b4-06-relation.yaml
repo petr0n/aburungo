@@ -154,6 +154,7 @@
   reading: かのじょはじんせいにたいしてひていてきなたいどをとっている。
   romaji: kanojo wa jinsei ni taishite hiteiteki na taido o totte iru.
   english: She has a negative attitude toward life.
+  recognitionOnly: true
   tatoebaId: "88454"
   notes: "The same に対して, now with an abstract thing on the front rather than a person: an attitude can point at life, at a proposal, at a country. 否定的 is negative, 否定 plus the 的 that turns a noun into an adjective. Notice the verb: English has an attitude, Japanese takes one -- 態度をとる -- and the ている says she is holding it still."
 
@@ -208,6 +209,7 @@
   reading: このしょうこはかれにとってふりだった。
   romaji: kono shouko wa kare ni totte furi datta.
   english: This evidence was against him.
+  recognitionOnly: true
   tatoebaId: "221114"
   notes: "English says against him and Japanese does not: 彼にとって is from his position, and 不利 carries the whole of the disadvantage. If the sentence had used 彼に対して it would have meant the evidence was directed at him, which is a different claim. This is the pair the chapter turns on and the checkpoint will come back to it."
 
@@ -220,7 +222,7 @@
   english: Poor eyesight is a handicap to a sportsman.
   tatoebaId: "214328"
   recognitionOnly: true
-  notes: "にとって can stand at the head of the sentence and set the standpoint for everything after it -- for an athlete, this is a handicap. 視力 is eyesight as a measurable thing, what an optician tests. 視力が悪い, the whole clause, is turned into the subject by の, the nominaliser you have had since Book Three. Read rather than type: nothing in the English fixes that word order."
+  notes: "にとって can stand at the head of the sentence and set the standpoint for everything after it -- for an athlete, this is a handicap. 視力 is eyesight as a measurable thing, what an optician tests. 視力が悪い, the whole clause, is turned into the subject by の, doing here what こと does -- Book Three's reference chapter pointed it out without teaching it. Read rather than type: nothing in the English fixes that word order."
 
 - id: b4band6.sunday-is-no-ordinary-day-to-me
   jlpt: N3
@@ -316,6 +318,7 @@
   reading: クリスマスがちかづくにつれてけいきはいくらかかいふくした。
   romaji: kurisumasu ga chikazuku ni tsurete keiki wa ikuraka kaifuku shita.
   english: With the approach of Christmas, business improved somewhat.
+  recognitionOnly: true
   tatoebaId: "225478"
   notes: "The same frame with the second half in the past: the two changes still ran together, and both are over. いくらか is somewhat, a hedge on how much. 景気 is trade or the economy at large -- 景気がいい is business is good, and it is what the news says every evening."
 
@@ -361,6 +364,7 @@
   reading: わたしとともにきてくれませんか。
   romaji: watashi to tomo ni kite kuremasen ka.
   english: Would you mind coming with me?
+  recognitionOnly: true
   tatoebaId: "164886"
   notes: "The plainest job of とともに: in company with, alongside. Note that the と is the ordinary with-particle and ともに is what has been added to it, which is why 私と一緒に would say the same thing in an everyday voice. と共に and とともに are one word in two spellings and both are ordinary."
 
@@ -590,5 +594,6 @@
   reading: いしゃによれば、かのじょはリューマチをわずらっている。
   romaji: isha ni yoreba, kanojo wa ryuumachi o wazuratte iru.
   english: The doctor says she suffers from rheumatism.
+  recognitionOnly: true
   tatoebaId: "190898"
   notes: "The source can be a person as easily as a document, and the back half does not have to carry そうだ: the source marker alone is enough to keep the speaker out of the claim. 患う takes を for the illness rather than に, which is unusual and worth holding on to."

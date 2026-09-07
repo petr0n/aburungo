@@ -1082,7 +1082,7 @@ never reads it.
 
 **Lesson 1 of 8** · In relation to
 **Can do:** Say what an action, an attitude or a reaction is directed at
-**Grammar:** `～に対して` — Noun plus に対して: what an attitude, an action or a reaction is aimed at. Three jobs share the one form -- a target (話し手に対して反感を持つ), an opposition or a comparison (ドルに対して弱くなる), and something given in return (サービスに対してチップ) -- and the noun in front, not the marker, tells you which. に対し is the same word in a more written voice. It marks the target and not the standpoint: for whose point of view something holds, the next lesson's にとって is the marker.
+**Grammar:** `～に対して` — Noun plus に対して: what an attitude, an action or a reaction is aimed at. Four jobs share the one form -- a target (話し手に対して反感を持つ), an opposition or a comparison (ドルに対して弱くなる), something given in return (サービスに対してチップ), and a contrast between two statements -- and the noun in front, not the marker, tells you which. に対し is the same word in a more written voice. It marks the target and not the standpoint: for whose point of view something holds, the next lesson's にとって is the marker.
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -1125,7 +1125,7 @@ never reads it.
 
 **Lesson 3 of 8** · In relation to
 **Can do:** Say in what capacity someone or something acts
-**Grammar:** `～として` — Noun plus として: in the capacity of, in the role of -- 通訳として雇う, 芸人として成功する. Add の and it modifies a noun, 教師としての経験; add は and it speaks for your own side, 私としては. What separates it from the と + して you already own is only what stands in front: a noun gives this pattern, a volitional gives 〜うとして from this book's first chapter, and an adverb gives かっとして, きちんとして.
+**Grammar:** `～として` — Noun plus として: in the capacity of, in the role of -- 通訳として雇う, 芸人として成功する. Add の and it modifies a noun, 教師としての経験; add は and it speaks for your own side, 私としては. What separates it from the と + して you already own is only what stands in front: a noun gives this pattern, a volitional gives 〜うとして from this book's second chapter, and an adverb gives かっとして, きちんとして.
 
 | Word | Reading | Meaning |
 |---|---|---|
