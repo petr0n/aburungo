@@ -1,0 +1,262 @@
+# Chapter 8 -- Only so far, and no way round it.
+#
+# Book Three taught what a speaker thinks is likely, what must be done, and how
+# to say although. This chapter fills the shapes between them: the forms that
+# put a limit on a claim, refuse a conclusion, or say that something cannot be
+# done at all.
+#
+#    1  merely                            に過ぎない / にすぎない
+#    2  no need, and never                ことはない
+#    3  it goes without saying            までもない
+#    4  no way to, can't very well        ようがない, わけにはいかない
+#    5  just because                      からといって
+#    6  so-called                         といっても
+#    7  for a, even so, even if           にしては, にしても, としても
+#    8  tends to, looks                   がち, げ
+#    9  chapter checkpoint                recognition
+#
+# The order is the corpus's as much as the grammar's. に過ぎない opens because
+# it is richly attested and because it sits directly against this book's
+# 〜すぎる. ことはない and までもない follow as the pair that both mean no need.
+# ようがない is put with わけにはいかない because each has only a handful of
+# verified sentences. からといって and といっても stand next to each other
+# because they are the pair a learner confuses -- English says just because for
+# one and though you say for the other, and both look like と言う plus a
+# particle. にしては, にしても and としても share a lesson for the same reason.
+# がち and げ close the chapter: two suffixes, both thin, both about tendency.
+#
+# WHAT THE LEARNER ALREADY HAS AND THIS CHAPTER DOES NOT REPEAT. Book Two
+# taught たことがある, so lesson 2 names its negative rather than teaching it
+# again. Book Three's chapter on conditions taught たとえ〜ても and とは限らない;
+# its stance chapter taught わけ, はず, らしい and みたい, including わけがない
+# and わけではない; its obligation chapter taught てはいけない and てはならない;
+# its contrast chapter taught とはいえ. This book's first chapter taught すぎる,
+# its third taught そうだ, でしょう, ものだ and というもの, its fourth taught the
+# casual register these sentences dip into, and its seventh taught として, which
+# lesson 7 has to be kept apart from としても.
+#
+# THREE THINGS THIS CHAPTER STATES AND DOES NOT CARD, because no verified
+# sentence supports them at a length this book uses: sentence-initial
+# だからといって, whose only short attestation is already carded in Book Three
+# (lesson 5); それにしても, attested once in a long sentence (lesson 7); and the
+# fourth ようがない sentence in the corpus, which runs to thirty-six characters
+# (lesson 4). The reasoning is in phrases/b4-07-exception.yaml, and no sentence
+# was composed to fill any of them.
+#
+# MOST OF THIS CHAPTER IS CARDED FOR RECOGNITION -- thirty-six of forty-three
+# sentences, against chapter 7's twenty-two of forty-two. These forms come out
+# in English as idioms (cannot be too careful, goes without saying, just
+# because) that give a learner no route back to the Japanese, and several of
+# the sentences turn on a word the English does not name. Lessons 2 and 3 are
+# recognition throughout. The production work in those lessons is carried by
+# their grammar cloze card and by their word cards.
+#
+# content-source: every phrase this file references is a verified Tatoeba pair,
+#   cited by id in `tatoebaId` in phrases/b4-07-exception.yaml. No
+#   training-canonical sentence is used anywhere in this chapter
+#   (04-stage-reading.md section 8).
+
+- id: b4.ni-suginai
+  order: 336
+  chapterId: b4.band-7
+  situation: Only so far
+  title: Merely
+  canDo: Say that something is no more than what it is
+  wordIds:
+    - vocab.noberu
+    - vocab.ikkai
+    - vocab.chikyuu
+    - vocab.tadayou
+    - vocab.mazushii
+    - vocab.noumin
+    - vocab.imi
+  phraseIds:
+    - b4band7.merely-stating-a-fact
+    - b4band7.nothing-but-a-businessman
+    - b4band7.the-earth-is-just-a-sphere
+    - b4band7.nothing-but-a-poor-peasant
+    - b4band7.life-is-but-a-dream
+  kanji: []
+  patternId: grammar.b4-ni-suginai
+  grammarNote: "Everything in this chapter puts a limit on something: on a claim, on an obligation, on what can be done. に過ぎない is the plainest of them. Put it after a noun and it says that is all there is — 一介のビジネスマンにすぎない, only a businessman and nothing beyond that. Put it after a plain clause and it does the same to a whole statement: 事実を述べていたに過ぎない, she was merely stating a fact, so read no more into it. Two spellings, one word. 過ぎない in kanji and すぎない in kana are both ordinary, and this lesson's cards carry both so that neither surprises you in reading. Now the connection worth making, because the same character has already appeared in this book with what looks like the opposite meaning. You learned 〜すぎる — 食べすぎる, to eat too much — where 過ぎる means to go past a line. に過ぎない is that same verb negated: it never got past the line. Too much and no more than are the two directions of one idea, and once you see that, the pattern stops looking arbitrary. What goes in front is often marked further. ただの, ほんの and 一介の all sit before the noun and pile on the belittling — a mere, nothing but, only a. None of them is required; they are the company this pattern keeps. When a speaker uses it about themselves it is modesty: 私は貧しい農民に過ぎない, I am only a poor peasant. About somebody else it is dismissal, and it can sting. This is written and formal Japanese — a report, an essay, a considered judgement. In speech people say ただの〜だ or just だけ. That is not a rule about where it may appear so much as a fact about where you will actually meet it, and this chapter's sentences show you the register it lives in."
+
+- id: b4.koto-wa-nai
+  order: 337
+  chapterId: b4.band-7
+  situation: Only so far
+  title: No need, and never
+  canDo: Say that something need not be done, or cannot be overdone
+  wordIds:
+    - vocab.unten
+    - vocab.chuui
+    - vocab.kimochi
+    - vocab.mohaya
+    - vocab.deeto
+    - vocab.okureru
+    - vocab.manabu
+  phraseIds:
+    - b4band7.cannot-be-too-careful-driving
+    - b4band7.no-need-to-hide-your-feelings
+    - b4band7.nothing-further-to-say
+    - b4band7.never-late-for-a-date
+    - b4band7.never-too-old-to-learn
+  kanji: []
+  patternId: grammar.b4-koto-wa-nai
+  grammarNote: "One string, three jobs, and only one of them is new. Start with the new one. A dictionary-form verb plus ことはない means there is no need to do it: 自分の気持ちを押し隠すことはない, you don't have to hide your feelings. Notice the tone. 必要はない, which you have from Book Three's chapter on what you have to do, is a flat statement that something is not required. ことはない is warmer than that — it is what you say to somebody who is worrying unnecessarily, and it usually comes with an ending like よ or んだよ. 心配することはない, no need to worry, is the phrase you will hear most. Then the extension worth having whole: put すぎる in front and you get いくら〜てもしすぎることはない, there is no such thing as doing it too much. 車を運転する時はいくら注意してもしすぎることはない — you cannot be too careful when you drive. Three things you already own are doing the work there: いくら〜ても, which Book Three's chapter on even though gave you; すぎる from this book's first chapter; and ことはない. Now the two older jobs, so that you recognise them rather than misread them. A た-form in front — おくれたことはない — is the negative of Book Two's たことがある: has never once been late. And ということはない, with という in front, denies that a whole state of affairs holds: 年を取りすぎているということはない, it is not the case that you are too old. Nothing in the ending distinguishes the three. What is in front does: dictionary form for no need, た-form for has never, という for it is not the case. Read backwards from ことはない before you decide which one you are looking at, and expect all three in real text — this is one of those strings that a reader has to disambiguate several times a page."
+
+- id: b4.made-mo-nai
+  order: 338
+  chapterId: b4.band-7
+  situation: Only so far
+  title: It goes without saying
+  canDo: Say that something is too obvious to need stating
+  wordIds:
+    - vocab.sekai
+    - vocab.sakka
+    - vocab.kaishaku
+    - vocab.gakusha
+  phraseIds:
+    - b4band7.english-is-a-world-language
+    - b4band7.one-of-the-best-writers
+    - b4band7.no-scholar-needed-to-interpret
+    - b4band7.let-alone-raw-fish
+  kanji: []
+  patternId: grammar.b4-made-mo-nai
+  grammarNote: "までもない says that something would be going too far to bother with. まで is the まで you know, up to, as far as; も adds even; ない takes it away. There is no need to go even as far as doing that. One phrase built on it is worth owning outright, because it is far commoner than the pattern in general: 言うまでもない, needless to say, it goes without saying. Dictionaries list it as an expression in its own right, which tells you how fixed it is. The thing that goes without saying comes in front as a clause, closed off with ことは or のは: 英語が世界語であることは言うまでもない. Both closers work and you will see both. In polite speech it becomes 言うまでもありません, and at the head of a sentence you will meet 言うまでもないが, needless to say, followed by the point itself. The frame is not stuck to 言う, though. Any dictionary-form verb can take it: その解釈は学者を待つまでもない, the interpretation doesn't require waiting for a scholar. 調べるまでもない, no need to go and look it up. 聞くまでもない, no need to ask. Each one says the same thing — the answer is obvious, so the effort would be excessive. Keep it apart from last lesson's ことはない, which is close but not the same. ことはない says the action need not be done; までもない says doing it would be going further than the situation warrants. In practice they overlap on things like 心配することはない and 心配するまでもない, and where they differ is in what the speaker is denying: need in one case, the extra step in the other. And one companion word turns up around this pattern often enough to notice: ましてや, much less, let alone, which sets up something even more obvious than what was just said."
+
+- id: b4.you-ga-nai
+  order: 339
+  chapterId: b4.band-7
+  situation: Only so far
+  title: No way to, can't very well
+  canDo: Say that something cannot be expressed or cannot be allowed
+  wordIds:
+    - vocab.nantomo
+    - vocab.hatsugen
+    - vocab.hokani
+    - vocab.bakabakashii
+    - vocab.damaru
+    - vocab.misugosu
+  phraseIds:
+    - b4band7.nothing-i-can-say
+    - b4band7.no-other-interpretation
+    - b4band7.nothing-but-absurd
+    - b4band7.cannot-become-a-loser
+    - b4band7.cannot-overlook-this-problem
+  kanji: []
+  patternId: grammar.b4-you-ga-nai
+  grammarNote: "Two ways of saying no, and they refuse for different reasons. First ようがない: there is no means of doing it. Take the ます-stem — the part left when you drop ます — and add ようがない. 言う gives 言い, so 言いようがない, there is no way to say it; 何とも言いようがない is the whole phrase, I can't put it any way at all, and it is what somebody says when news is too much for words. としか言いようがない, there is no way to put it other than, is the same phrase delivering a verdict: ばかばかしいとしか言いようがない, you can only call it absurd. する-nouns behave slightly differently and it is worth getting right. する gives the stem し, so the ending is しようがない, and the noun in front takes の: 解釈のしようがない, there is no way to interpret it. Be careful with that one, because しょうがない — different vowel — is a separate fixed phrase meaning it can't be helped, and the two are easy to blur in speech. Then わけにはいかない, which is not about means at all. Here the thing is perfectly possible and something forbids it: duty, conscience, circumstance, other people. 僕はその問題を黙って見過ごすわけにはいかない — he could stay quiet, and he will not. A dictionary-form verb goes in front. English says cannot very well, cannot afford to, must not. With a negative verb it flips into obligation: 行かないわけにはいかない, I cannot not go, so I have to. That is the same shape you know from なければならない, arrived at by a different road. This is the わけ Book Three left out. You have わけだ, that explains it; わけではない, it does not mean that; わけがない, there is no chance of it. わけにはいかない is the fourth, and the only one of the four that is about permission rather than about explanation."
+
+- id: b4.kara-to-itte
+  order: 340
+  chapterId: b4.band-7
+  situation: Only so far
+  title: Just because
+  canDo: Deny that one fact licenses a conclusion
+  wordIds:
+    - vocab.machigai
+    - vocab.warau
+    - vocab.taiseki
+    - vocab.tsuneni
+    - vocab.juuryou
+    - vocab.koi
+    - vocab.ochiru
+    - vocab.keibetsu
+  phraseIds:
+    - b4band7.laughing-at-a-mistake
+    - b4band7.bulk-is-not-weight
+    - b4band7.perfect-is-not-love
+    - b4band7.do-not-despise-the-poorly-dressed
+  kanji: []
+  patternId: grammar.b4-kara-to-itte
+  grammarNote: "からといって raises a reason in order to knock down the conclusion somebody might draw from it. A plain clause goes in front, and then the sentence refuses the inference: 体積が大きいからといって常に重量も重いとは限らない — bulk being great does not always mean weight is. It is built out of parts you know: から, because; と, the quotation particle; いって, the te-form of 言う. Literally, saying that because. And that literal reading is a good guide to the tone — the speaker is quoting an argument in order to reject it. Look at what comes after it in this lesson's four sentences: とは限らない, not necessarily; わけではない, it does not mean that; てはいけない, you must not; and a flat verdict, 無作法である, that is bad manners. All four are Book Three patterns, which is why this lesson sits where it does — you can now hear the whole argument, not just its first half. The second half of a からといって sentence is nearly always a denial or a prohibition of some kind. That is a strong habit rather than a rule of grammar, and ことにはならない, it does not follow that, is another ending you will meet in the same slot. At the head of a sentence it appears as だからといって, pointing back at what was just said: that may be so, but it does not follow that. You have met that form already in Book Three's stance chapter, in a sentence about having no objection. And keep it apart from plain から. から gives you a reason and lets it stand. からといって gives you a reason and takes it away again. One is how you explain yourself; the other is how you argue with somebody who explained themselves badly."
+
+- id: b4.to-ittemo
+  order: 341
+  chapterId: b4.band-7
+  situation: Only so far
+  title: So-called
+  canDo: Grant a label and then qualify it
+  wordIds:
+    - vocab.yadoya
+    - vocab.marude
+    - vocab.tasai
+    - vocab.kyouzai
+    - vocab.kabe
+    - vocab.saisho
+  phraseIds:
+    - b4band7.an-inn-in-name-only
+    - b4band7.a-man-of-many-talents
+    - b4band7.a-poor-excuse-for-a-singer
+    - b4band7.english-texts-vary-widely
+    - b4band7.however-high-the-wall
+  kanji: []
+  patternId: grammar.b4-to-ittemo
+  grammarNote: "といっても grants a word and then qualifies it: they call it that, but. A noun or a whole clause goes in front. 宿屋といってもまるで丸太小屋のようだった — an inn, they said, but it was more like a log cabin. 彼女は歌手といってもお粗末なものだ — a singer, in name. English reaches for so-called, or in name only, or though you call it that. The pattern looks almost identical to last lesson's からといって and does a different job, so hold the pair apart deliberately. からといって sets up a reason and denies the conclusion; といっても sets up a description and cuts it down to size. からといって wants a denial after it. といっても does not: 多才な人といってもいいだろう is a compliment, and nothing negative follows. Three shapes worth having. といってもいい means one could go so far as to call it that — a hedged claim that the label fits. 〜といっても過言ではない, it would be no exaggeration to say, is the same move in a speech or an article. And いくら〜といっても concedes a point before answering it: いくら壁が高いといっても, however high you say the wall is — granted, and here is my reply. That last one pairs naturally with the concessive ても you have had since Book Three. One relative to name. とはいえ, from Book Three's contrast chapter, is the written cousin of this: same concession, essay register, and it prefers to stand at the head of a sentence. といっても is the one people say aloud. Both are worth recognising, and this is the one to produce."
+
+- id: b4.ni-shite-wa
+  order: 342
+  chapterId: b4.band-7
+  situation: Only so far
+  title: For a, even so, even if
+  canDo: Judge against an expectation, and concede a hypothetical
+  wordIds:
+    - vocab.imagoro
+    - vocab.ude
+    - vocab.chansu
+    - vocab.mare
+    - vocab.ken
+    - vocab.fushigi
+    - vocab.kanyo
+    - vocab.shiawase
+  phraseIds:
+    - b4band7.cold-morning-for-june
+    - b4band7.warm-for-this-time-of-year
+    - b4band7.good-for-a-cub-reporter
+    - b4band7.takes-his-time-whatever-he-does
+    - b4band7.chances-are-rare-in-any-case
+    - b4band7.no-wonder-if-he-was-involved
+    - b4band7.even-if-someone-else-made-her-happy
+  kanji: []
+  patternId: grammar.b4-ni-shite-wa
+  grammarNote: "Three markers that look almost the same and are not, so take them one at a time. にしては measures something against what you would expect of it. ６月にしては寒い朝だ — cold, for June. 駆け出しの新聞記者にしては腕がいい — good, for a beginner. English does this with for in exactly the same way, which makes it the easiest of the three: the standard is named in front, the judgement follows, and there is a gap between them that the sentence is pointing at. A noun usually stands in front; a clause can too. Change は to も and the job changes. にしても means even so, or, after a question word, no matter which: 何をするにしても, whatever he does. Two fixed forms are worth owning whole — それにしても, even so, looking back at what was just said, and いずれにしても, in any case, whichever way it turns out. どっちにしても is the casual version of the second. としても supposes something and says it makes no difference: ゲンドウがこの件に関与していたとしても不思議ではない — even if he was involved, that would be no surprise. A plain clause goes in front, and たとえ can stand at the head of the sentence, exactly as it does with the ても you had in Book Three. How do にしても and としても differ? The rough division is that としても leans toward the hypothetical — even if it were so — and にしても toward something already granted or already known. It is a lean and not a law; the two overlap, and English says even if for both, which is why this lesson keeps them side by side rather than pretending they separate cleanly. Finally, keep all three apart from として, from the chapter on relations, which means in the capacity of. として plus も is not this pattern either: 教師としても, as a teacher too. What tells you is the shape in front and what the sentence is doing — judging against a standard, brushing something aside, or supposing."
+
+- id: b4.gachi
+  order: 343
+  chapterId: b4.band-7
+  situation: Only so far
+  title: Tends to, looks
+  canDo: Say what someone tends to do, and how they look while doing it
+  wordIds:
+    - vocab.sekinin
+    - vocab.undou
+    - vocab.kenkou
+    - vocab.tokui
+    - vocab.josei
+    - vocab.kanashii
+    - vocab.sonoue
+    - vocab.isu
+  phraseIds:
+    - b4band7.everybodys-business
+    - b4band7.my-son-is-often-ill
+    - b4band7.short-of-sleep-and-careless
+    - b4band7.we-forget-exercise-is-the-key
+    - b4band7.fidgeting-uneasily-in-his-chair
+    - b4band7.showing-off-her-jewels
+    - b4band7.little-birds-singing-merrily
+    - b4band7.she-looked-sad-and-tired
+  kanji: []
+  patternId: grammar.b4-gachi
+  grammarNote: "Two suffixes close the chapter. Both attach to the end of a word and turn it into a な-adjective, and both describe a leaning rather than a fact. がち says something tends to happen, and nearly always something you would rather it did not. It goes on a ます-stem — 忘れがち, apt to forget; 曇りがち, tending to be cloudy — or straight onto a noun: 病気がち, sickly. なりがち, tends to become, is the commonest of the lot: 注意が散漫になりがちです, one's attention tends to wander. The result inflects like any な-adjective, so 病気がちな子 works in front of a noun. ありがち is worth having as a word in itself — run-of-the-mill, the kind of thing you see all the time. げ goes on the stem of an adjective and makes the air a person gives off. 不安 gives 不安げ, looking uneasy; 楽しい gives 楽しげ; 悲しい gives 悲しげ; 得意 gives 得意げ, wearing a pleased-with-himself look. Add に and you have the adverb: 得意げに見せびらかした, showed it off with an air of pride. It attaches to words about feeling, which is what all four of this lesson's sentences carry — it is not free to go on any adjective you like. There is a reason げ earns its place. Japanese does not let you state another person's feelings flatly: 悲しい means I am sad, and about somebody else you need 悲しげだ or 悲しそうだ. So that leads to the contrast worth carrying out of the chapter. そう, from this book's chapter on why you are saying it, reports how a thing looks or what seems likely to happen — 雨が降りそうだ. げ is narrower and more personal: the impression a particular person is giving. And がち is neither appearance nor likelihood but habit — what someone or something does over and over."
+
+- id: b4.checkpoint-7
+  order: 344
+  chapterId: b4.band-7
+  situation: Integration & checkpoint
+  title: Chapter 8 checkpoint
+  canDo: Recognise everything this chapter taught
+  wordIds: []
+  phraseIds: []
+  kanji: []
+  checkpoint: recognition
+  grammarNote: "A wide pass over the chapter, and like the chapter itself it turns on pairs, because nearly every form here has a neighbour that English translates the same way. に過ぎない against すぎる: never reached the line, or went past it. ことはない in its no-need job against たことはない, has never once — the same string, told apart only by the verb in front of it. までもない against ことはない: going too far to bother, or not needing to be done. ようがない against わけにはいかない: no means, or no licence. And わけにはいかない against Book Three's わけがない, which says there is no chance of it. からといって against といっても: a reason refused, or a label cut down. にしては against にしても against としても: measured against a standard, brushed aside, or supposed for the sake of argument. がち against そう: what happens habitually, or what looks likely now — and げ beside them, which is neither, but the air a person is giving off. What comes back will hinge on hearing which limit a sentence is putting on things, not on translating its words. Some of it turns on something small: a dictionary form in front of ことはない rather than a た-form, a は in にしては rather than a も, a しよう rather than a しょう. Those are the places worth slowing down. Type the reading or the meaning rather than picking from a line-up. Thirty-six of this chapter's forty-three sentences come back for recognition rather than typing, which is more than any earlier chapter of this book: English renders these forms as idioms — cannot be too careful, goes without saying, just because — that leave no route back to the Japanese words, and several of the sentences turn on a word the English never names. That is the material, not a shortcut. Anything you miss comes back sooner. It finishes when the remaining set empties; retry as often as you like, and nothing is recorded."
