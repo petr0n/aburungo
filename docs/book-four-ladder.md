@@ -11,11 +11,11 @@ never reads it.
 
 | | |
 |---|---|
-| Chapters | 8 |
-| Lessons | 68 (60 teaching, 8 checkpoints) |
-| Words | 396 |
-| Phrases | 304 |
-| Grammar patterns | 59 |
+| Chapters | 9 |
+| Lessons | 76 (67 teaching, 9 checkpoints) |
+| Words | 447 |
+| Phrases | 348 |
+| Grammar patterns | 66 |
 | Kanji introduced | 0 |
 
 ---
@@ -1442,3 +1442,180 @@ never reads it.
 ### 344. Recognition checkpoint — closes the chapter
 
 > A wide pass over the chapter, and like the chapter itself it turns on pairs, because nearly every form here has a neighbour that English translates the same way. に過ぎない against すぎる: never reached the line, or went past it. ことはない in its no-need job against たことはない, has never once — the same string, told apart only by the verb in front of it. までもない against ことはない: going too far to bother, or not needing to be done. ようがない against わけにはいかない: no means, or no licence. And わけにはいかない against Book Three's わけがない, which says there is no chance of it. からといって against といっても: a reason refused, or a label cut down. にしては against にしても against としても: measured against a standard, brushed aside, or supposed for the sake of argument. がち against そう: what happens habitually, or what looks likely now — and げ beside them, which is neither, but the air a person is giving off. What comes back will hinge on hearing which limit a sentence is putting on things, not on translating its words. Some of it turns on something small: a dictionary form in front of ことはない rather than a た-form, a は in にしては rather than a も, a しよう rather than a しょう. Those are the places worth slowing down. Type the reading or the meaning rather than picking from a line-up. Thirty-six of this chapter's forty-three sentences come back for recognition rather than typing, which is more than any earlier chapter of this book: English renders these forms as idioms — cannot be too careful, goes without saying, just because — that leave no route back to the Japanese words, and several of the sentences turn on a word the English never names. That is the material, not a shortcut. Anything you miss comes back sooner. It finishes when the remaining set empties; retry as often as you like, and nothing is recorded.
+
+---
+
+## Chapter 9 — Joining an argument
+
+*Joining an argument*
+
+7 lessons · 51 words · 44 phrases
+
+### 345. That is to say
+
+**Lesson 1 of 7** · Joining an argument
+**Can do:** Restate or sum up what you have just said
+**Grammar:** `つまり` — つまり restates what was just said in other words, or sums it up. It stands after a comma inside a sentence -- 江戸、つまり東京, Edo, that is, Tokyo -- or at the head of the next one, and it needs no verb of its own. すなわち does the same work in a written register and is happiest with the restating job: a date, a name, an equivalence. 要するに compresses rather than restates -- in short, when it all comes down to it. The three overlap, and English says that is, namely and in short for all of them depending on the sentence; register and how much is being compressed tell them apart, not any rule about where each may stand. とどのつまり, after all, is a fixed idiom and not this word at ordinary work.
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 外国人 | がいこくじん | foreigner; foreign national |
+| 到着 | とうちゃく | arrival |
+| 東京 | とうきょう | Tokyo |
+| 下手 | へた | poor at; unskillful |
+| おしゃべり | おしゃべり | chatter; talkative; a chatterbox |
+| 飽きる | あきる | to get tired of; to lose interest in |
+| 行う | おこなう | to carry out; to hold (an event) |
+
+- 外国人の一団が江戸、つまり東京に到着した。 — A group of foreigners arrived in Edo, i.e. Tokyo.
+- つまり彼女は下手な踊り子だ。 — That is, she is a poor dancer.
+- すなわち彼はそれをしたくないのだ。 — In other words, he doesn't want to do it.
+- それは１週間前、すなわち４月２日に行われた。 — It was due a week ago, namely on April second.
+- 彼女は要するにおしゃべりなんだ。 — She is, in brief, a chatterbox.
+- 要するに彼は何にでも飽きるのだ。 — In a word, he tires of everything.
+
+### 346. Therefore, however, note that
+
+**Lesson 2 of 7** · Joining an argument
+**Can do:** Follow the connectives of notices, terms and reports
+**Grammar:** `したがって` — したがって at the head of a sentence draws a conclusion from the sentence before it: therefore, accordingly. Written 従って in kanji as readily as in kana -- the kanji is the verb 従う, to follow, which this course has not taught. It belongs to reports, notices and argument, where speech would use だから or それで, and Book Three's ゆえに is its heavier written twin. Two neighbours share the lesson because they live in the same documents. ただし adds the condition or the exception attached to what was just offered: however, provided that -- the small print. なお adds a postscript, one further thing worth knowing. なお is also an ordinary adverb meaning still or even more, and it is the sentence-opening position that gives it the furthermore reading.
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 生産 | せいさん | production; manufacture |
+| 削る | けずる | to cut (a budget); to shave; to delete |
+| 列 | れつ | line; row; queue |
+| 並ぶ | ならぶ | to line up; to stand in a line |
+| 説明 | せつめい | explanation; description |
+| 見学 | けんがく | a study visit; a tour of inspection |
+| 利用 | りよう | use; making use of |
+| 受け付ける | うけつける | to accept (an application); to receive |
+
+- したがって生産費を削る必要がある。 — Therefore, it is necessary to reduce the cost.
+- 生産力が落ちた。従って労働者のボーナスも少なくなるだろう。 — Productivity has fallen. Accordingly, workers' bonuses will be reduced.
+- ただし、列をつくって並ばなくてはならないが・・・。 — However, you have to queue...
+- なお、会社説明会後でも、会社見学は随時受け付けております。 — Furthermore, even after the company information session, we sometimes hold company tours.
+- なお、危険防止の為、サブアド利用をお奨めします。 — Moreover, for your safety, we advise use of a substitute email address.
+
+### 347. Or
+
+**Lesson 3 of 7** · Joining an argument
+**Can do:** Offer a choice between two things, in writing and aloud
+**Grammar:** `または` — または joins two nouns and offers a choice between them: 紅茶またはコーヒー. It is the written or of forms, menus, instructions and regulations, where speech uses か. あるいは does the same between nouns -- where two nouns are being joined either word will stand -- and it also joins two whole alternatives; as an adverb it separately means perhaps. それとも belongs to questions and only to questions: a whole question, それとも, and a second whole question. In speech people simply put か between the two nouns -- コーヒーか紅茶 -- and that is the plain everyday version of all three. What fixes それとも is the question, not the register; what separates または from あるいは is little more than how dry the writing is.
+
+| Word | Reading | Meaning |
+|---|---|---|
+| いかが | いかが | how; how about |
+| 好む | このむ | to like; to prefer |
+| 非常に | ひじょうに | very; extremely |
+| 匂い | におい | smell; scent |
+| 液体 | えきたい | liquid |
+| 気体 | きたい | gas (state of matter) |
+| 調理 | ちょうり | cooking; preparing food |
+| リンゴ | リンゴ | apple |
+| オレンジ | オレンジ | orange (fruit or colour) |
+| 表す | あらわす | to represent; to express; to stand for |
+
+- 紅茶またはコーヒーはいかが？ — Would you like some tea or coffee?
+- ビュッフェ、またはカフェテリアは９号車にあります。 — The buffet or the cafeteria is in Car 9.
+- 今は彼らは小型車または中型車を好む。 — Now they like cars of small or middle size.
+- アンモニアは、非常に強い匂いをもった液体または気体である。 — Ammonia is a colorless liquid or gas with a very strong smell.
+- ガスで調理しますか、あるいは電気ですか。 — Do you cook by gas or electricity?
+- これらは一家族あるいは一族を表すものである。 — These figures are signs of a family or clan.
+- 歩いて行きますか？それともバスで行きますか？ — Will you go on foot or by bus?
+- あなたはリンゴが好きですか、それともオレンジが好きですか。 — Do you like apples or oranges?
+
+### 348. What's more
+
+**Lesson 4 of 7** · Joining an argument
+**Can do:** Add a point that strengthens the one before it
+**Grammar:** `しかも` — しかも adds a second point to the first and marks it as telling: and what is more. Often the addition makes matters worse -- しかも頻繁にだ, and frequently at that -- and English then reaches for a contrast where the Japanese is simply adding, which is why 安くてしかも栄養がある comes out as inexpensive but nourishing. Dictionaries give it a second reading, nevertheless, for the cases where the two points really do pull against each other. さらに shares the lesson and is wider: as a connective it is furthermore, and as a plain adverb it is further or even more -- さらに悪い, worse still; さらに５ドル, five dollars more. その上, from the last chapter, is the spoken sibling of both, and the two stack: その上さらに.
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 栄養 | えいよう | nutrition; nourishment |
+| 狭い | せまい | narrow; cramped |
+| 頻繁 | ひんぱん | frequent |
+| 知識 | ちしき | knowledge; information |
+| 知恵 | ちえ | wisdom; wits; sense |
+| 乏しい | とぼしい | scarce; scanty; lacking |
+| 欠乏 | けつぼう | shortage; deficiency |
+
+- この魚は安くてしかも栄養がある。 — This fish is inexpensive but nourishing.
+- 彼はそれをした、しかも彼女のいる前で。 — He did it, and in her presence.
+- 山越えの道は狭く、しかも急勾配だった。 — The road across the mountain was narrow, and what's more, it was a steep slope.
+- 彼は不注意な過ちをおかす、しかも頻繁にだ。 — He makes careless mistakes, and does so frequently.
+- その上さらに５ドル払った。 — I paid five dollars in addition.
+- 悪い風邪をひいていて、さらに悪いことには、雪が降ってきました。 — I had a bad cold, and to make matters worse, it began snowing.
+- これでさらに困ったことになるだろう。 — This will add to our troubles.
+- 知識は欠乏しており、知恵はさらに乏しい。 — Knowledge is scarce; wisdom is scarcer.
+
+### 349. Rather
+
+**Lesson 5 of 7** · Joining an argument
+**Can do:** Prefer one description or one choice over another
+**Grammar:** `むしろ` — むしろ chooses one description or one course over another: rather, sooner, if anything. Three shapes carry it. After より, which marks what is being passed over: 金よりむしろ名誉. After というより, which is the frame to own -- X というよりむしろ Y, not so much X as Y, with は or も able to sit inside it. And alone, the alternative left unsaid: むしろ外出したくない, I would rather not go out. It does not measure quantities, which is what より does on its own; it corrects a description or picks a side. Written 寧ろ in kanji, rarely.
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 選ぶ | えらぶ | to choose; to pick |
+| 名誉 | めいよ | honour; good name |
+| 害 | がい | harm; damage |
+| 親切 | しんせつ | kind; considerate |
+| 優しい | やさしい | gentle; kind; tender |
+| 過度 | かど | excessive; immoderate |
+| 広間 | ひろま | hall; large room |
+
+- 私は金よりむしろ名誉を選ぶ。 — I would choose honor before money.
+- 過度の運動は身体のためというよりむしろ害になる。 — Too much exercise does more harm than good.
+- 彼は親切というよりむしろ気がやさしい。 — He is more gentle than kind.
+- 彼は学者というよりもむしろ流行作家だ。 — He is not so much a scholar as a popular writer.
+- 今日はむしろ外出したくない。 — I would rather not go out today.
+- それは部屋というよりはむしろ広間だ。 — It is a hall rather than a room.
+
+### 350. One side, the other
+
+**Lesson 6 of 7** · Joining an argument
+**Can do:** Set two facts or two sides against each other
+**Grammar:** `一方` — 一方 is a noun meaning one of two, and three jobs grow out of it. 一方は... もう一方は... is one and the other. At the head of a clause or a sentence, 一方, 一方で or その一方 sets a second fact beside the first -- meanwhile, whereas, then again -- marking the turn without contradicting anything, which is what separates it from が and でも. And a plain verb plus 一方だ or 一方である says that something only ever moves the one way: 募る一方である, it keeps on growing. That third job is worth recognising rather than building, and one sentence in this lesson carries it. 一方的, one-sided, is a separate adjective and not this word at work.
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 猫 | ねこ | cat |
+| 背 | せ | height (of a person); back |
+| 低い | ひくい | low; short (in height) |
+| 床 | ゆか | floor |
+| 塗る | ぬる | to paint; to spread on; to apply |
+| 住民 | じゅうみん | residents; inhabitants |
+| 備える | そなえる | to prepare for; to equip with |
+| しかし | しかし | however; but |
+
+- 一方は背が高く、もう一方は背が低い。 — One is tall and the other is short.
+- その猫の一方は黒で、もう一方は茶だ。 — One of the cats is black, the other is brown.
+- 床は緑色に塗られていたが、一方壁は黄色だった。 — The floor was painted green, while the walls were yellow.
+- 一部の住民が様子見の態度を取る一方で他の者は大洪水に備えた。 — Some residents took a wait-and-see attitude while others prepared for heavy flooding.
+- しかし、その一方、ラテン語はそのときまでに「死語」となっていた。 — But, then again, Latin was already a "dead language" by that time.
+- 社会保険庁や厚生労働省への不信感は募る一方である。 — Distrust of the Social Insurance Agency and the Ministry of Health, Labour and Welfare just keeps getting stronger.
+
+### 351. By the way
+
+**Lesson 7 of 7** · Joining an argument
+**Can do:** Change the subject, and add one more thing
+**Grammar:** `ところで` — ところで at the head of a sentence changes the subject: by the way, now then. What follows has nothing to do with what came before, and that break is the whole point of the word. It is neither formal nor casual and sits in both. Keep it apart from the other ところで, which follows a plain past verb and means even if -- 行ったところで, even if you went, and nothing comes of it. The shape in front is all that separates them. その上 shares this lesson as the spoken way of adding one more thing to what was just said, which makes it a relative of this chapter's しかも rather than a way of changing the subject.
+
+| Word | Reading | Meaning |
+|---|---|---|
+| どんな | どんな | what kind of |
+| スポーツ | スポーツ | sport; sports |
+| 住まい | すまい | residence; home; where one lives |
+| 降り出す | ふりだす | to start to rain (or snow) |
+
+- ところであなたはどんなスポーツが好きですか。 — Well, what sports do you like?
+- ところで、お住まいはどちらですか。 — By the way, where do you live?
+- ところで、ベティ、夢のマイホームはもう決まった？ — So, Betty, have you decided on your dream home yet?
+- その上雨が降り出している。 — Besides, it's starting to rain.
+- この本はおもしろい、その上、非常にためになる。 — This book is interesting and, what is more, very instructive.
+
+### 352. Recognition checkpoint — closes the chapter
+
+> A wide pass over the chapter, and like the chapter itself it turns on pairs, because every word here has a neighbour English translates the same way. つまり against すなわち: the same restatement, one of them written. つまり against 要するに: restating a phrase, or boiling down a paragraph. したがって against Book Three's ゆえに, and both against the だから you would say aloud. ただし against しかし: restricting what was just said, or contradicting it. なお against さらに: a postscript, or one more degree of the same thing. または against あるいは, which are near enough interchangeable between nouns, and both against それとも, which needs a question. しかも against さらに: the addition that is pointed, or the addition that is measured. むしろ against より alone: correcting a description, or comparing amounts. 一方は against 一方で against 一方である: one of two, meanwhile, and only ever increasing. ところで against the other ところで, which follows a plain past verb and means even if. What comes back will hinge on hearing which join a sentence is making, not on translating its words. Some of it turns on something small: a comma after ところで, a question mark behind それとも, a plain past verb in front rather than a comma. Those are the places worth slowing down. Every sentence in this chapter comes back for reading rather than typing — all forty-four of them, which no earlier chapter of this book has needed. That is what it costs to teach words English collapses into one: a card showing only the English cannot tell you whether しかも or さらに was wanted, and both would be right. The typing you do here is on the chapter's word cards and on its grammar cards, where the connective is in front of you and the clause is what you produce. This is the last chapter of Book Four. Behind you are the endings that finish an action, the forms for meaning to and telling to, the ways of saying why, the register people actually speak in, humble and honorific speech, the markers of relation, the limits a claim can be put under, and now the words that join one sentence to the next. Anything you miss comes back sooner. It finishes when the remaining set empties; retry as often as you like, and nothing is recorded.

@@ -60,6 +60,7 @@ import b4KeigoHumblePhrasesRaw from "./phrases/b4-04-keigo-humble.yaml";
 import b4KeigoHonorificPhrasesRaw from "./phrases/b4-05-keigo-honorific.yaml";
 import b4RelationPhrasesRaw from "./phrases/b4-06-relation.yaml";
 import b4ExceptionPhrasesRaw from "./phrases/b4-07-exception.yaml";
+import b4ConjunctionPhrasesRaw from "./phrases/b4-08-conjunction.yaml";
 
 export const allPhrases: Phrase[] = [
   ...parsePhrases(transitRaw, "phrases/transit.yaml"),
@@ -111,6 +112,7 @@ export const allPhrases: Phrase[] = [
   ...parsePhrases(b4KeigoHonorificPhrasesRaw, "phrases/b4-05-keigo-honorific.yaml"),
   ...parsePhrases(b4RelationPhrasesRaw, "phrases/b4-06-relation.yaml"),
   ...parsePhrases(b4ExceptionPhrasesRaw, "phrases/b4-07-exception.yaml"),
+  ...parsePhrases(b4ConjunctionPhrasesRaw, "phrases/b4-08-conjunction.yaml"),
 ];
 
 // parsePhrases only rejects duplicate ids within a single file, so the same id in

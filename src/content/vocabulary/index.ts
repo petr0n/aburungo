@@ -48,6 +48,7 @@ import b4KeigoHumbleRaw from "./b4-04-keigo-humble.yaml";
 import b4KeigoHonorificRaw from "./b4-05-keigo-honorific.yaml";
 import b4RelationRaw from "./b4-06-relation.yaml";
 import b4ExceptionRaw from "./b4-07-exception.yaml";
+import b4ConjunctionRaw from "./b4-08-conjunction.yaml";
 
 export const allWords: Word[] = [
   ...parseWords(basicsRaw, "vocabulary/basics.yaml"),
@@ -97,6 +98,7 @@ export const allWords: Word[] = [
   ...parseWords(b4KeigoHonorificRaw, "vocabulary/b4-05-keigo-honorific.yaml"),
   ...parseWords(b4RelationRaw, "vocabulary/b4-06-relation.yaml"),
   ...parseWords(b4ExceptionRaw, "vocabulary/b4-07-exception.yaml"),
+  ...parseWords(b4ConjunctionRaw, "vocabulary/b4-08-conjunction.yaml"),
 ];
 
 // parseWords only rejects duplicate ids within a single file, so the same id in
