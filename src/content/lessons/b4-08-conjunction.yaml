@@ -1,0 +1,252 @@
+# Chapter 9 -- Joining an argument.
+#
+# Every connective this course has taught so far joins two clauses inside one
+# sentence. This chapter teaches the other kind: a word at the head of a
+# sentence that ties it to the one before. That is what turns a run of
+# sentences into a paragraph, and it is most of what a reader needs to follow
+# an argument rather than merely parse it.
+#
+#    1  that is to say                     つまり, すなわち, 要するに
+#    2  therefore, however, note that      したがって, ただし, なお
+#    3  or                                 または, あるいは, それとも
+#    4  what's more                        しかも, さらに
+#    5  rather                             むしろ
+#    6  one side, the other                一方
+#    7  by the way                         ところで, その上
+#    8  chapter checkpoint                 recognition
+#
+# The order is the corpus's as much as the grammar's. つまり opens because it
+# is the easiest of them to place and is well attested. したがって, ただし and
+# なお share the second lesson because all three belong to the same documents --
+# notices, terms, reports -- and because the whole corpus holds ten
+# sentence-initial attestations of the three of them together, five of them
+# short enough to card. または, あるいは and それとも share the third because
+# English gives all three the word or. しかも and さらに share the fourth for
+# the same reason and moreover. むしろ and 一方 take one lesson each because
+# neither has a near-synonym in this chapter to be confused with. ところで
+# closes the chapter with その上, both of them the spoken end of this material.
+#
+# WHAT THE LEARNER ALREADY HAS AND THIS CHAPTER DOES NOT REPEAT. Book Two
+# taught から, ので and けど, the clause-joiners this chapter's words sit above.
+# Book Three's chapter 11 taught である and ゆえに, which lesson 2 names against
+# したがって rather than re-teaching; its chapter 10 taught the noun ところ and
+# said in passing that ところで was a different animal, which lesson 7 now
+# teaches; its chapter 1 taught the passive, chapter 2 the ために of lesson 5's
+# card, chapter 8 ことになる and chapter 9 必要がある and the なくてはならない
+# family. This book's chapter 1 taught てくる and すぎる, chapter 3 のだ and
+# だろう, chapter 5 the humble ております and お〜します, chapter 7 態度 and
+# 決まる, and chapter 8 その上, which lesson 7 puts back to work.
+#
+# THIS CHAPTER IS CARDED FOR RECOGNITION THROUGHOUT -- forty-four sentences,
+# forty-four recognition cards, which no earlier chapter of this book has
+# needed. It is not a shortcut and it is not thinness: English has one word
+# for each pair this chapter separates. Moreover is しかも and さらに; or is
+# または, あるいは and それとも; therefore is したがって and Book Three's ゆえに;
+# that is to say is つまり, すなわち and 要するに. A card that shows only the
+# English cannot tell a learner which of two right answers is wanted, so it
+# would mark a right answer wrong. The reasoning card by card, including the
+# one card that came closest to being typed, is in
+# phrases/b4-08-conjunction.yaml. The typing in this chapter is done by its
+# seven grammar cloze cards, which show the connective and ask for the clause,
+# and by its fifty-one word cards.
+#
+# TWO THINGS THIS CHAPTER STATES AND DOES NOT CARD, because no verified
+# sentence supports them: あるいは in its adverb sense, perhaps (lesson 3), and
+# the comparison between したがって and Book Three's ゆえに (lesson 2), whose
+# sentences belong to Book Three. No sentence was composed to fill either.
+#
+# content-source: every phrase this file references is a verified Tatoeba pair,
+#   cited by id in `tatoebaId` in phrases/b4-08-conjunction.yaml. No
+#   training-canonical sentence is used anywhere in this chapter
+#   (04-stage-reading.md section 8).
+
+- id: b4.tsumari
+  order: 345
+  chapterId: b4.band-8
+  situation: Joining an argument
+  title: That is to say
+  canDo: Restate or sum up what you have just said
+  wordIds:
+    - vocab.gaikokujin
+    - vocab.touchaku
+    - vocab.toukyou
+    - vocab.heta
+    - vocab.oshaberi
+    - vocab.akiru
+    - vocab.okonau
+  phraseIds:
+    - b4band8.edo-that-is-tokyo
+    - b4band8.that-is-a-poor-dancer
+    - b4band8.in-other-words-he-wont
+    - b4band8.namely-april-second
+    - b4band8.in-brief-a-chatterbox
+    - b4band8.in-a-word-he-tires-of-everything
+  kanji: []
+  patternId: grammar.b4-tsumari
+  grammarNote: "Every connective you have met so far works inside a sentence. から and ので give a reason, けど turns against one, and ながら and とき came with them in Book Two; Book Three added ために, ように and the rest. All of them join one clause to another inside a single sentence. This chapter is about a different kind of word — one that stands at the head of a sentence and ties it to the sentence before. Nothing in Japanese depends on these words to be grammatical, and everything in a paragraph depends on them to be followable. つまり is the one to start with. It says that what follows is the same thing again, put more plainly, or the whole of what the last stretch came to. Two positions, both ordinary. Inside a sentence after a comma: 外国人の一団が江戸、つまり東京に到着した — Edo, that is, Tokyo. And at the head of the next sentence: つまり彼女は下手な踊り子だ, when it comes down to it, she cannot dance. Notice how little there is to build. No particle attaches to it, it takes no verb of its own, and the sentence around it is unchanged. That is true of nearly every word in this chapter, which is why the work here is knowing which one to reach for rather than how to form anything. すなわち is the same idea in a written register — reports, contracts, translations, scholarly prose. It leans towards the exact restatement: それは１週間前、すなわち４月２日に行われた, a week ago, namely the second of April. You will read it many times for every once you say it. 要するに compresses instead of restating. In short, in a word, the long and the short of it: 要するに彼は何にでも飽きるのだ. It usually arrives after an explanation and delivers the verdict on it, and it can open the sentence or follow the topic — 彼女は要するにおしゃべりなんだ. So how do you choose? Not by rule, and any book that gives you one is tidying. All three come out in English as that is or in short, and there are sentences where any of them would do. What actually separates them is register — つまり in speech and writing both, すなわち in writing, 要するに in both with a summing-up flavour — and how much is being boiled down: つまり restates a phrase, 要するに boils down a paragraph. Two warnings before you meet them in the wild. とどのつまり is a fixed idiom meaning in the end, after all; it contains this word and does not behave like it. And つまり is also an ordinary noun meaning a blockage — 鼻づまり is a blocked nose — so not every つまり on a page is this one."
+
+- id: b4.shitagatte
+  order: 346
+  chapterId: b4.band-8
+  situation: Joining an argument
+  title: Therefore, however, note that
+  canDo: Follow the connectives of notices, terms and reports
+  wordIds:
+    - vocab.seisan
+    - vocab.kezuru
+    - vocab.retsu
+    - vocab.narabu
+    - vocab.setsumei
+    - vocab.kengaku
+    - vocab.riyou
+    - vocab.uketsukeru
+  phraseIds:
+    - b4band8.therefore-reduce-the-cost
+    - b4band8.productivity-fell-so-bonuses-will
+    - b4band8.however-you-must-queue
+    - b4band8.tours-accepted-at-any-time
+    - b4band8.we-advise-a-substitute-address
+  kanji: []
+  patternId: grammar.b4-shitagatte
+  grammarNote: "Three words that live in the same places: notices, terms and conditions, company announcements, reports. You will meet them on a form far sooner than in a conversation, and that is worth knowing before you start, because this lesson is short. There are five verified sentences behind it, and there is not much more of these three words to be had in the material this course draws on — what is left over runs long. The reason is simply that they belong to documents rather than to talk. Read them here, and expect the real practice to come from the first Japanese notice you have to get through. したがって draws a conclusion. Whatever was just said leads to this: したがって生産費を削る必要がある, therefore the production cost has to come down. It stands at the head of the sentence and needs nothing else. In kanji it is 従って, and both spellings are ordinary — this lesson's second card uses the kanji one so that neither surprises you. In speech you would say だから or それで instead; したがって is what the written version of the same thought looks like. Book Three's ゆえに is heavier still, and the two are close enough that English gives both of them therefore. ただし is the small print. Something has been stated or offered, and ただし attaches the condition on it: ただし、列をつくって並ばなくてはならない — however, you have to queue. It is not the same as しかし, which contradicts what was just said. ただし does not contradict; it restricts. Free entry, ただし children only. Open all day, ただし closed Mondays. Once you have seen that shape you will find it everywhere on Japanese signage. なお adds a postscript. One further thing you should know, arriving after the main announcement is over: なお、会社見学は随時受け付けております. It is the last paragraph of the notice, and it is followed by information rather than by argument. Be careful with this one, because なお is also an ordinary adverb meaning still or even more — なお一層, all the more. What gives it the postscript reading is standing at the head of a sentence with a comma after it. Everything in this lesson comes back for reading rather than typing, and that is the honest shape of the material: the English for all three is a single word that fits several Japanese ones."
+
+- id: b4.mataha
+  order: 347
+  chapterId: b4.band-8
+  situation: Joining an argument
+  title: Or
+  canDo: Offer a choice between two things, in writing and aloud
+  wordIds:
+    - vocab.ikaga
+    - vocab.konomu
+    - vocab.hijouni
+    - vocab.nioi
+    - vocab.ekitai
+    - vocab.kitai
+    - vocab.chouri
+    - vocab.ringo
+    - vocab.orenji
+    - vocab.arawasu
+  phraseIds:
+    - b4band8.tea-or-coffee
+    - b4band8.buffet-or-cafeteria
+    - b4band8.small-or-middle-sized-cars
+    - b4band8.ammonia-liquid-or-gas
+    - b4band8.gas-or-electricity
+    - b4band8.a-family-or-a-clan
+    - b4band8.on-foot-or-by-bus
+    - b4band8.apples-or-oranges
+  kanji: []
+  patternId: grammar.b4-mataha
+  grammarNote: "English has one word here and Japanese has three, so the work of this lesson is sorting them. または joins two nouns: 紅茶またはコーヒー, tea or coffee. It is the written or — forms, menus, timetables, instructions, regulations — and in speech you would simply say コーヒーか紅茶, with か between the nouns. Written 又は in kanji, though the kana spelling is commoner. あるいは does the same job between nouns, and this is the place to be honest rather than tidy: this lesson's あるいは card, これらは一家族あるいは一族を表すものである, would read the same with または in it, and the difference between the two words is little more than how dry the writing is. あるいは also joins two whole alternatives, as in ガスで調理しますか、あるいは電気ですか, which is a little beyond what または normally does. And it has a second life as an adverb meaning perhaps, where it pairs with かもしれない — あるいは〜かもしれない. That second sense has no card in this lesson, because no short verified sentence carries it, but you should know it exists so that a stray あるいは does not read as an or when it is not. それとも is different in a way you can rely on. It belongs to questions. A whole question, それとも, a second whole question: 歩いて行きますか？それともバスで行きますか？ Both halves are spelled out in full, where English would collapse them into one — will you walk or take the bus. This is the one you will say aloud, and it is the one to reach for when you are offering somebody a choice. It does not sit between two nouns in a statement the way または does. Two things fall out of that. First, the question mark is the real signal for それとも, not the register. Second, the split between または and あるいは is a matter of feel, not of grammar, so do not spend effort on it — recognise both, produce または, and you will be right nearly all the time. One more shape you will meet in print: A、B、または C, with the or only in front of the last item, exactly as English lists things."
+
+- id: b4.shikamo
+  order: 348
+  chapterId: b4.band-8
+  situation: Joining an argument
+  title: What's more
+  canDo: Add a point that strengthens the one before it
+  wordIds:
+    - vocab.eiyou
+    - vocab.semai
+    - vocab.hinpan
+    - vocab.chishiki
+    - vocab.chie
+    - vocab.toboshii
+    - vocab.ketsubou
+  phraseIds:
+    - b4band8.cheap-and-nourishing
+    - b4band8.and-in-her-presence
+    - b4band8.narrow-and-steep
+    - b4band8.careless-and-frequent
+    - b4band8.five-dollars-more
+    - b4band8.a-cold-and-then-snow
+    - b4band8.this-adds-to-our-troubles
+    - b4band8.knowledge-scarce-wisdom-scarcer
+  kanji: []
+  patternId: grammar.b4-shikamo
+  grammarNote: "しかも adds a second point and marks it as telling. The first fact was already enough; here is another one on top of it. 彼はそれをした、しかも彼女のいる前で — he did it, and in front of her. That second half is doing the damage, and しかも is what warns you it is coming. Much of what しかも adds is like that: the aggravating detail, the thing that makes it worse. It also joins two good points — この魚は安くてしかも栄養がある, cheap and nourishing as well. Look at the English on that card, because it is instructive: it says inexpensive but nourishing. English hears a contrast between cheap and good, where the Japanese is only adding. Dictionaries do give しかも a second reading, nevertheless, for sentences where the two halves genuinely pull against each other, so both readings are real and the sentence decides which. It can attach an adverb and stop: しかも頻繁にだ, and frequently at that. さらに is wider than しかも and does two different jobs. As a plain adverb it means further, even more: さらに悪い, worse still; その上さらに５ドル払った, paid five dollars more on top. As a connective at the head of a clause it is furthermore, and it is what さらに悪いことには, and to make matters worse, is built from. Where しかも says the addition is pointed, さらに says how much more there is. They overlap on furthermore, and in that job either will often stand where the other does. その上, which you had in the last chapter, is the spoken end of all this — on top of that — and it stacks happily with さらに, which is not redundant: その上 says more is coming, さらに says how much. Two things in this lesson's sentences that are not this pattern and are worth naming, because you will meet both constantly in writing and neither has been taught. 狭く is 狭い with its final い turned into く, joining one clause to the next where speech would say 狭くて. And ており in 欠乏しており is the written form of ていて — the おる you met in the humble ております, standing mid-sentence with the polite ending taken off. Both are marks of written Japanese, and knowing what they are is enough for now."
+
+- id: b4.mushiro
+  order: 349
+  chapterId: b4.band-8
+  situation: Joining an argument
+  title: Rather
+  canDo: Prefer one description or one choice over another
+  wordIds:
+    - vocab.erabu
+    - vocab.meiyo
+    - vocab.gai
+    - vocab.shinsetsu
+    - vocab.yasashii-kind
+    - vocab.kado-excessive
+    - vocab.hiroma
+  phraseIds:
+    - b4band8.honor-before-money
+    - b4band8.exercise-does-more-harm
+    - b4band8.gentle-rather-than-kind
+    - b4band8.a-writer-more-than-a-scholar
+    - b4band8.rather-not-go-out-today
+    - b4band8.a-hall-rather-than-a-room
+  kanji: []
+  patternId: grammar.b4-mushiro
+  grammarNote: "むしろ picks one thing over another: rather, sooner, if anything. It is not a comparison of size or amount — that is what より does on its own, and むしろ never replaces it. What むしろ does is correct a description, or state a preference, and say that the alternative is the wrong end of the stick. Three shapes carry it, and they are worth having in this order. First, after より. 私は金よりむしろ名誉を選ぶ — honour over money. より marks what is being passed over, and むしろ marks the choice as considered rather than automatic. You could drop むしろ and the sentence still works; with it, the speaker is weighing. Second, and this is the one to own, after というより. X というよりむしろ Y: not so much X as Y. 彼は親切というよりむしろ気がやさしい — not so much kind as gentle-natured. それは部屋というよりはむしろ広間だ — calling it a room understates it; it is a hall. Look at what というより is made of, because you have all of it: と, the quotation particle; いう, to say; より, than. Than saying X. The label is offered and then corrected, which is exactly what the frame does. は or も may sit inside it — というよりは, というよりも — and nothing changes but the weight. Third, alone, with the alternative unspoken: 今日はむしろ外出したくない, I would rather not go out today. The comparison is still there — going out is the thing being passed over — but it is left in the air. This is the shape closest to English would rather. Two neighbours worth keeping straight. というより corrects a description; this book's chapter 8 taught といっても, which grants a label and then cuts it down. 宿屋といっても is they call it an inn, but; 部屋というより is calling it a room is not right. Close, and not the same move. And in writing you will meet むしろ at the head of a sentence with the comparison in the sentence before it, which is this chapter's job all over again: the word does not need what it is comparing against to be inside its own sentence."
+
+- id: b4.ippou
+  order: 350
+  chapterId: b4.band-8
+  situation: Joining an argument
+  title: One side, the other
+  canDo: Set two facts or two sides against each other
+  wordIds:
+    - vocab.neko
+    - vocab.se
+    - vocab.hikui
+    - vocab.yuka
+    - vocab.nuru
+    - vocab.juumin
+    - vocab.sonaeru
+    - vocab.shikashi
+  phraseIds:
+    - b4band8.one-tall-the-other-short
+    - b4band8.one-cat-black-the-other-brown
+    - b4band8.green-floor-yellow-walls
+    - b4band8.some-waited-others-prepared
+    - b4band8.latin-was-already-dead
+    - b4band8.distrust-keeps-growing
+  kanji: []
+  patternId: grammar.b4-ippou
+  grammarNote: "一方 is a noun before it is anything else, and it means one of two. Everything else in this lesson grows out of that, so start there. 一方は背が高く、もう一方は背が低い — one is tall, the other short. The frame is 一方は... もう一方は..., and もう is the もう you already have, meaning one more. It takes の in front of it when there is a group to pick from: その猫の一方, one of the cats. Second job, and the one this chapter exists for: 一方 at the head of a clause or a sentence, meaning meanwhile or whereas. 床は緑色に塗られていたが、一方壁は黄色だった — the floor was green, while the walls were yellow. Inside one sentence it appears as 一方で, with a plain verb in front: 一部の住民が様子見の態度を取る一方で他の者は大洪水に備えた, while some residents took a wait-and-see attitude, others got ready for the flood. At the head of a new sentence it is その一方 — then again, looking back. What is it doing that が and けど do not? It sets two facts side by side without saying either is wrong. が and でも turn against what came before; 一方 marks the turn and leaves both halves standing. That is why reports and articles are full of it: it is the neutral way to show two sides. Third job, and one to recognise rather than build. A plain verb plus 一方だ or 一方である says the thing only ever moves in one direction: 不信感は募る一方である, the distrust only keeps growing. There is no coming back in it, and it is one of the standard ways written Japanese says a trend. One verified sentence in this lesson carries it. Also in this lesson, a word this course has never taught although you have certainly seen it: しかし, the written however. It stands at the head of a sentence and turns it against the one before — the formal relative of でも and けど, and one of the commonest words in print. It is a word card here rather than a pattern, because there is nothing to build: you put it in front and carry on. And one word not to confuse with any of this: 一方的, one-sided, is a separate adjective."
+
+- id: b4.tokorode
+  order: 351
+  chapterId: b4.band-8
+  situation: Joining an argument
+  title: By the way
+  canDo: Change the subject, and add one more thing
+  wordIds:
+    - vocab.donna
+    - vocab.supootsu
+    - vocab.sumai
+    - vocab.furidasu
+  phraseIds:
+    - b4band8.what-sports-do-you-like
+    - b4band8.where-do-you-live
+    - b4band8.have-you-decided-on-a-house
+    - b4band8.and-now-its-raining
+    - b4band8.interesting-and-instructive
+  kanji: []
+  patternId: grammar.b4-tokorode
+  grammarNote: "ところで changes the subject. It stands at the head of a sentence, usually with a comma after it, and what follows has nothing to do with what came before — that break is the whole point of the word. ところで、お住まいはどちらですか. ところで、ベティ、夢のマイホームはもう決まった？ It is neither formal nor casual: the same word does the work in a business meeting and between friends, which is unusual enough to be worth noticing in a language that marks register as heavily as this one. Four verified sentences carry it in the material behind this course; the three short ones are here and the fourth runs long. Now the trap, and it is a real one. There is a second ところで with a different job entirely: a plain past verb plus ところで means even if, and nothing will come of it -- 行ったところで, even if you went. The two are spelled the same and share no meaning at all, and nothing but the shape in front of them tells you which you are looking at. A verb in the plain past directly in front is the concessive one; a comma, or the start of a sentence, is the topic-changer. You met the noun ところ in Book Three's chapter on saying what you mean exactly, and it said at the time that this word was a different animal. This is the animal. Sharing the lesson is その上, from the last chapter, which is not a topic-changer but the spoken way of adding one more thing: on top of that. その上雨が降り出している — and now it is raining as well. Very often what it adds is one more thing going wrong, which puts it beside this chapter's しかも rather than beside ところで. Both are words for managing a conversation rather than a sentence, which is why they close the chapter together."
+
+- id: b4.checkpoint-8
+  order: 352
+  chapterId: b4.band-8
+  situation: Integration & checkpoint
+  title: Chapter 9 checkpoint
+  canDo: Recognise everything this chapter taught
+  wordIds: []
+  phraseIds: []
+  kanji: []
+  checkpoint: recognition
+  grammarNote: "A wide pass over the chapter, and like the chapter itself it turns on pairs, because every word here has a neighbour English translates the same way. つまり against すなわち: the same restatement, one of them written. つまり against 要するに: restating a phrase, or boiling down a paragraph. したがって against Book Three's ゆえに, and both against the だから you would say aloud. ただし against しかし: restricting what was just said, or contradicting it. なお against さらに: a postscript, or one more degree of the same thing. または against あるいは, which are near enough interchangeable between nouns, and both against それとも, which needs a question. しかも against さらに: the addition that is pointed, or the addition that is measured. むしろ against より alone: correcting a description, or comparing amounts. 一方は against 一方で against 一方である: one of two, meanwhile, and only ever increasing. ところで against the other ところで, which follows a plain past verb and means even if. What comes back will hinge on hearing which join a sentence is making, not on translating its words. Some of it turns on something small: a comma after ところで, a question mark behind それとも, a plain past verb in front rather than a comma. Those are the places worth slowing down. Every sentence in this chapter comes back for reading rather than typing — all forty-four of them, which no earlier chapter of this book has needed. That is what it costs to teach words English collapses into one: a card showing only the English cannot tell you whether しかも or さらに was wanted, and both would be right. The typing you do here is on the chapter's word cards and on its grammar cards, where the connective is in front of you and the clause is what you produce. This is the last chapter of Book Four. Behind you are the endings that finish an action, the forms for meaning to and telling to, the ways of saying why, the register people actually speak in, humble and honorific speech, the markers of relation, the limits a claim can be put under, and now the words that join one sentence to the next. Anything you miss comes back sooner. It finishes when the remaining set empties; retry as often as you like, and nothing is recorded."

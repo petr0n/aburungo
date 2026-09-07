@@ -1,0 +1,116 @@
+# Book Four, Chapter 9 grammar patterns -- joining an argument.
+#
+# Seven patterns for seven teaching lessons, one each, each blanking the thing
+# its lesson exists for out of one of that lesson's own sentences. The blank is
+# matched against the phrase's reading, so these are kana.
+#
+# WHY SEVEN AND NOT FOURTEEN. Every lesson in this chapter teaches two or three
+# connectives, because English gives them one word apiece and a learner who
+# meets them separately will not tell them apart. Every grammar pattern in this
+# course is referenced by exactly one lesson and every lesson references at
+# most one pattern, so extra entries here would be orphans no lesson points at.
+# The field names the lesson's centre and the gloss carries the rest, which is
+# the rule chapters 7 and 8 set.
+#
+# THE `pattern` FIELD IS NOT DECORATION. scripts/levelling.mjs grammarSurface()
+# reads it to tag corpus sentences: it rejects any pattern containing a Latin
+# character, a digit or a few punctuation marks, and needs at least one
+# ～-delimited fragment of two characters or more. All seven below clear that
+# floor, and none of them needs a ～ at all, because a sentence connective is a
+# whole word rather than a frame something slots into. What the tagging cannot
+# do, said here rather than discovered later:
+#
+#   ところで will tag the other ところで -- a plain past verb plus ところで,
+#   meaning even if -- exactly as readily as the topic-changer this lesson
+#   teaches. They are the same four kana doing opposite jobs, and no surface
+#   can separate them. Lesson 7 tells the learner what the tagger cannot be
+#   told.
+#
+#   一方 will tag 一方的, one-sided, and 片一方, one of a pair, neither of
+#   which is this lesson's word. つまり will tag とどのつまり, an idiom, and
+#   the noun つまり meaning a blockage. むしろ will tag 筵 when it is written
+#   in kana, which is rare and would be a mat rather than an adverb.
+#
+#   Each pattern holds one spelling, and several of these words have two.
+#   したがって does not tag 従って, which is what lesson 2's own second card uses;
+#   または does not tag 又は; しかも does not tag 然も. One field, one
+#   spelling, as chapter 8 found with に過ぎない and にすぎない.
+#
+#   さらに, ただし, なお, すなわち, 要するに, あるいは and それとも carry no
+#   pattern of their own for the reason above: their lessons already have one.
+#   なお and それとも would in any case be poor surfaces -- なお opens words
+#   like なおさら and なおす, and it is only sentence-initial なお that is this
+#   chapter's word.
+#
+# THE BLANKS run longer than the connective itself, as chapters 7 and 8's do.
+# Blanking つまり alone hands a learner a word they can already see in the
+# badge above the card; blanking つまりとうきょうに asks for the connective and
+# the phrase it introduces together, which is what actually has to be produced.
+#
+# ON HOW ABSOLUTELY THESE GLOSSES STATE THINGS. This band is the one where
+# textbooks draw the tidiest lines and the language does not, so every claim
+# below was checked against the cards it sits on. または and あるいは are
+# interchangeable where two nouns are being joined -- this chapter's あるいは
+# noun card would read the same with または in it -- and the gloss says so
+# rather than inventing a difference. しかも and さらに
+# overlap on furthermore; what the cards actually show is that しかも marks its
+# addition as telling and さらに measures how much more, and the dictionary
+# gives しかも a second reading, nevertheless, which the fish card needs. つまり,
+# すなわち and 要するに are told apart by register and by how much is being
+# compressed, not by any rule about where they may stand. Where a claim runs
+# one way only, the gloss says which way.
+#
+# content-source: n/a for this file -- every pattern references an existing
+#   phrase from phrases/b4-08-conjunction.yaml rather than composing new
+#   Japanese, and that file carries the Tatoeba id for each.
+# jlpt-source: training -- the level marks the chapter this content sits in,
+#   not each form's textbook level.
+
+- id: grammar.b4-tsumari
+  jlpt: N3
+  pattern: "つまり"
+  gloss: "つまり restates what was just said in other words, or sums it up. It stands after a comma inside a sentence -- 江戸、つまり東京, Edo, that is, Tokyo -- or at the head of the next one, and it needs no verb of its own. すなわち does the same work in a written register and is happiest with the restating job: a date, a name, an equivalence. 要するに compresses rather than restates -- in short, when it all comes down to it. The three overlap, and English says that is, namely and in short for all of them depending on the sentence; register and how much is being compressed tell them apart, not any rule about where each may stand. とどのつまり, after all, is a fixed idiom and not this word at ordinary work."
+  phraseId: b4band8.edo-that-is-tokyo
+  blank: つまりとうきょうに
+
+- id: grammar.b4-shitagatte
+  jlpt: N3
+  pattern: "したがって"
+  gloss: "したがって at the head of a sentence draws a conclusion from the sentence before it: therefore, accordingly. Written 従って in kanji as readily as in kana -- the kanji is the verb 従う, to follow, which this course has not taught. It belongs to reports, notices and argument, where speech would use だから or それで, and Book Three's ゆえに is its heavier written twin. Two neighbours share the lesson because they live in the same documents. ただし adds the condition or the exception attached to what was just offered: however, provided that -- the small print. なお adds a postscript, one further thing worth knowing. なお is also an ordinary adverb meaning still or even more, and it is the sentence-opening position that gives it the furthermore reading."
+  phraseId: b4band8.therefore-reduce-the-cost
+  blank: したがってせいさんひを
+
+- id: grammar.b4-mataha
+  jlpt: N3
+  pattern: "または"
+  gloss: "または joins two nouns and offers a choice between them: 紅茶またはコーヒー. It is the written or of forms, menus, instructions and regulations, where speech uses か. あるいは does the same between nouns -- where two nouns are being joined either word will stand -- and it also joins two whole alternatives; as an adverb it separately means perhaps. それとも belongs to questions and only to questions: a whole question, それとも, and a second whole question. In speech people simply put か between the two nouns -- コーヒーか紅茶 -- and that is the plain everyday version of all three. What fixes それとも is the question, not the register; what separates または from あるいは is little more than how dry the writing is."
+  phraseId: b4band8.tea-or-coffee
+  blank: こうちゃまたはコーヒー
+
+- id: grammar.b4-shikamo
+  jlpt: N3
+  pattern: "しかも"
+  gloss: "しかも adds a second point to the first and marks it as telling: and what is more. Often the addition makes matters worse -- しかも頻繁にだ, and frequently at that -- and English then reaches for a contrast where the Japanese is simply adding, which is why 安くてしかも栄養がある comes out as inexpensive but nourishing. Dictionaries give it a second reading, nevertheless, for the cases where the two points really do pull against each other. さらに shares the lesson and is wider: as a connective it is furthermore, and as a plain adverb it is further or even more -- さらに悪い, worse still; さらに５ドル, five dollars more. その上, from the last chapter, is the spoken sibling of both, and the two stack: その上さらに."
+  phraseId: b4band8.cheap-and-nourishing
+  blank: やすくてしかも
+
+- id: grammar.b4-mushiro
+  jlpt: N3
+  pattern: "むしろ"
+  gloss: "むしろ chooses one description or one course over another: rather, sooner, if anything. Three shapes carry it. After より, which marks what is being passed over: 金よりむしろ名誉. After というより, which is the frame to own -- X というよりむしろ Y, not so much X as Y, with は or も able to sit inside it. And alone, the alternative left unsaid: むしろ外出したくない, I would rather not go out. It does not measure quantities, which is what より does on its own; it corrects a description or picks a side. Written 寧ろ in kanji, rarely."
+  phraseId: b4band8.a-hall-rather-than-a-room
+  blank: というよりはむしろ
+
+- id: grammar.b4-ippou
+  jlpt: N3
+  pattern: "一方"
+  gloss: "一方 is a noun meaning one of two, and three jobs grow out of it. 一方は... もう一方は... is one and the other. At the head of a clause or a sentence, 一方, 一方で or その一方 sets a second fact beside the first -- meanwhile, whereas, then again -- marking the turn without contradicting anything, which is what separates it from が and でも. And a plain verb plus 一方だ or 一方である says that something only ever moves the one way: 募る一方である, it keeps on growing. That third job is worth recognising rather than building, and one sentence in this lesson carries it. 一方的, one-sided, is a separate adjective and not this word at work."
+  phraseId: b4band8.one-tall-the-other-short
+  blank: もういっぽうは
+
+- id: grammar.b4-tokorode
+  jlpt: N3
+  pattern: "ところで"
+  gloss: "ところで at the head of a sentence changes the subject: by the way, now then. What follows has nothing to do with what came before, and that break is the whole point of the word. It is neither formal nor casual and sits in both. Keep it apart from the other ところで, which follows a plain past verb and means even if -- 行ったところで, even if you went, and nothing comes of it. The shape in front is all that separates them. その上 shares this lesson as the spoken way of adding one more thing to what was just said, which makes it a relative of this chapter's しかも rather than a way of changing the subject."
+  phraseId: b4band8.where-do-you-live
+  blank: ところで、おすまいは
