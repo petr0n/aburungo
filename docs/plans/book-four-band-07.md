@@ -98,8 +98,8 @@ Conventions as band 0.
   taught わけ's other jobs; this is the one it left out.
 - **Candidates:** #187759 何とも言いようがないなあ。(なあ: band 3) · #116346 彼の発言は他に解釈のしようがない。
   · #198292 ばかばかしいとしか言いようがない。(しか: Book Two) · #84279 負け犬になるわけにはいかない。 · #82060
-  僕はその問題を黙って見過ごすわけにはいかない。(僕: band 3) · #194466 もうこれ以上延ばすわけにはいかない。 ·
-  #177201 君は自分の健康を度外視するわけにはいかない。
+  僕はその問題を黙って見過ごすわけにはいかない。(僕: band 3) · #194466 [ALREADY CARDED in b3-05-stance -- pick another] もうこれ以上延ばすわけにはいかない。 ·
+  #177201 [ALREADY CARDED in b3-05-stance -- pick another] 君は自分の健康を度外視するわけにはいかない。
 - **New words:** 黙る だまる 1534930 s1 (N3) · 健康 けんこう 1256170 s1 (N3) · 以上 いじょう 1155120 s1 (N3) ·
   延ばす のばす 1600290 (the "postpone" sense — not s1 "grow long"; author picks) (N3) · 発言 はつげん
   1477350 s1. Optional: 何とも 1188690 (N2), 他に 1203280, 見過ごす 1612560, 負け犬 1498010.
@@ -115,7 +115,7 @@ Conventions as band 0.
   `recognitionOnly`) · #137970 体積が大きいからといって常に重量も重いとは限らない。(とは限らない: Book
   Three ch.10, recognition there — now produced) · #208789 その人が申し分がないからといって、恋に落ちる
   わけではない。(わけではない: Book Three ch.6) · #85165 貧相な身なりをしているからといって、人を軽べつしては
-  いけない。(てはいけない: Book Three ch.9) · #203835 だからといって異議があるわけではない。
+  いけない。(てはいけない: Book Three ch.9) · #203835 [ALREADY CARDED in b3-05-stance -- pick another] だからといって異議があるわけではない。
 - **New words:** 間違い まちがい 1215320 s1 (N3) · 笑う わらう 1351360 s1 · 常に つねに 1355970 s1 (N3) · 重量
   じゅうりょう 1336900 s1 (N2) · 異議 いぎ 1157580 s1 (N2). Optional: 体積 1409560 (N2), 身なり 1365570.
 - **Kanji new to the manifest:** 違 笑 常 重 量 異 議 (違 Book Three ch.6; 重 taught).

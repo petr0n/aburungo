@@ -30,9 +30,9 @@ Method as band 4 (≤32 characters). Script `scratchpad/mine/band678-candidates.
 | 3 | として | **2 usable of 171** | かっとして, ぼうっとして, きちんとして are と + して. The author screens the raw set for noun + として ("in the role of") and finds two more. |
 | 4 | につれて | 14 | All genuine. |
 | 5 | とともに / と共に | 11 + 5 | Both spellings ordinary; teach both. |
-| 6 | を通して / を通じて | 10 | #237020 目を通して (band 0) and #176648 通してくれた are the verb 通す — excluded; #75809 is clinical — excluded. |
+| 6 | を通して / を通じて | 10 | #237020 [ALREADY CARDED in b4-00-finishing -- pick another] 目を通して (band 0) and #176648 通してくれた are the verb 通す — excluded; #75809 is clinical — excluded. |
 | 7 | に加えて · に基づいて | 5 · 8 | Thin but clean; two patterns in one lesson. |
-| 8 | こそ · によると/によれば | 29 (screened for こそこそ, こそ泥, そこそこ, ようこそ) · 23 | こそ's clean set is ~8; によれば pairs with band 2's そうだ hearsay (#145165 carded there — not here). |
+| 8 | こそ · によると/によれば | 29 (screened for こそこそ, こそ泥, そこそこ, ようこそ) · 23 | こそ's clean set is ~8; によれば pairs with band 2's そうだ hearsay (#145165 [ALREADY CARDED in b4-02-reason -- pick another] carded there — not here). |
 
 ## 2. Why this band exists
 

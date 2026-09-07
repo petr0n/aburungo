@@ -11,11 +11,11 @@ never reads it.
 
 | | |
 |---|---|
-| Chapters | 5 |
-| Lessons | 42 (37 teaching, 5 checkpoints) |
-| Words | 256 |
-| Phrases | 187 |
-| Grammar patterns | 37 |
+| Chapters | 6 |
+| Lessons | 50 (44 teaching, 6 checkpoints) |
+| Words | 292 |
+| Phrases | 219 |
+| Grammar patterns | 43 |
 | Kanji introduced | 0 |
 
 ---
@@ -904,3 +904,168 @@ never reads it.
 ### 318. Recognition checkpoint — closes the chapter
 
 > A wide pass over the chapter, and it is mostly about pairs — because every form here has an everyday twin, and knowing keigo means knowing which one a situation wants. あります against ございます. します against いたします. 言います against 申します and 申し上げます. います against おります, and 行きます and 来ます against 参ります. てもらえますか against ていただけますか. In each pair the meaning is the same and only the listener has changed, so what comes back will hinge on hearing the situation rather than translating the words. Then the frames, which are where production actually lives. お plus a verb stem plus する lowers what you do — お待ちします, お借りします. Noun plus いたします does the same for する-verbs, usually with ご or お on the noun. お or ご plus a noun plus 申し上げます carries thanks, congratulations and condolences. させていただきます announces your own action as something the listener permits. ていただけますか asks for a favour by receiving it rather than requesting it. One direction, said once more because it is the thing that goes wrong: all of these lower your own side. Point them at the listener and the effect is the opposite of polite. The forms that raise the listener are the next chapter's, and two sentences here previewed them — ご子息 and お忘れです — so if those two feel unfinished, that is correct. Some of what comes back will turn on something small: a ご that is raising the listener's property against one that is only smoothing a noun, an おります describing a person against a 参ります describing a train, an いただく with a te-form in front of it against one with a noun. Those are the places worth slowing down. Type the reading or the meaning rather than picking it out of a line-up. Six of this chapter's sentences come back for recognition only, because their English cannot tell you which Japanese to build — the long ones and the formulaic ones. Anything you miss comes back sooner. It finishes when the remaining set empties; retry as often as you like, and nothing is recorded.
+
+---
+
+## Chapter 6 — Speaking of others
+
+*Raising the other person*
+
+7 lessons · 41 words · 46 phrases
+
+### 319. They are here, respectfully
+
+**Lesson 1 of 7** · Raising the other person
+**Can do:** Recognise the honorific いる, 行く and 来る, and hear what a shop says as you walk in
+**Grammar:** `～いらっしゃいます` — いらっしゃる is the honorific いる, 行く and 来る at once, used of the person you are raising; the sentence decides which of the three it means. Its polite form is irregular -- いらっしゃいます, never いらっしゃります -- and the same is true of おっしゃる, なさる and くださる. After a te-form it replaces ている: 似ていらっしゃいます. いらっしゃいませ, the greeting a shop calls out, is the same verb. Its humble mirror is 参る and おる.
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 似る | にる | to resemble; to look like |
+| 紹介者 | しょうかいしゃ | the person who introduced you; referrer |
+| 何名 | なんめい | how many people |
+| 番 | ばん | number (in a series) |
+| お母さん | おかあさん | your mother, someone's mother |
+| 両親 | りょうしん | parents, both parents |
+
+- お母さんはいらっしゃいますか。 — Is your mother at home?
+- サファリパークにいらっしゃるなら５番のバスです。 — If you are going to the safari park, take the No.5 bus.
+- あなたはご両親のどちらに似ていらっしゃいますか。 — Which of your parents do you take after?
+- いらっしゃいませ、何名様ですか。 — Welcome. How many in your party?
+- 紹介者はいらっしゃいますか。 — Is there someone who referred you to us?
+
+### 320. They say, they see
+
+**Lesson 2 of 7** · Raising the other person
+**Can do:** Recognise the honorific 言う and 見る
+**Grammar:** `～おっしゃる` — おっしゃる is 言う raised to the person speaking. おっしゃってください is the polite please tell us, and 〜とおっしゃいます is how somebody else's name is given. The humble twins are 申す and 申し上げる, so one meaning stands at three heights and who is talking picks the height. 見る goes the same way: its honorific is ご覧になる, met most often as ご覧の通り and, after a te-form, as ご覧なさい.
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 意見 | いけん | opinion; view |
+| 御社 | おんしゃ | your company |
+| 考え | かんがえ | thought; view; idea |
+| 先に | さきに | first; ahead of someone else |
+| 受付 | うけつけ | reception desk; information desk |
+| 残念 | ざんねん | regrettable; disappointing |
+| なまえ | なまえ | name |
+
+- 御社のお考えを先におっしゃってください。 — Please let us know your company's thoughts on this matter first.
+- お名前と社会保障番号をおっしゃって下さい。 — State your name and social security number, please.
+- ここではどんどん意見をおっしゃってかまいません。 — You can speak out freely here.
+- 受付で聞いてご覧なさい。 — Please ask at the information desk.
+- 残念ながら昨日はご覧の通りの結果となりました。 — Unfortunately, the results yesterday were as you see.
+- ローマを訪れたことがおありなら、コロセウムをご覧になったにちがいない。 — If you have ever visited Rome, you must have seen the Coliseum.
+
+### 321. Please eat, what will you have
+
+**Lesson 3 of 7** · Raising the other person
+**Can do:** Understand a counter asking what you will have, and a host offering you food
+**Grammar:** `～なさいます` — なさる is する raised, so any noun that takes する takes it: 合格なさる, 出席なさる. なさいますか is the counter's what will you have, and になさいます is にします, choosing between things. Its polite form is なさいます and its command form is なさい, which you have already met. 食べる and 飲む have their own honorific, 召し上がる, which conjugates like an ordinary verb: 召し上がります, 召し上がれ.
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 持ち帰り | もちかえり | takeaway (food); to go |
+| ケーキ | ケーキ | cake |
+| ステーキ | ステーキ | steak |
+| デザート | デザート | dessert |
+| 試験 | しけん | examination; test |
+| 合格 | ごうかく | passing (an exam) |
+| 焼く | やく | to burn; to grill, to bake; to tan (skin) |
+
+- ここで召し上がりますか、それともお持ち帰りですか。 — Is this to eat here, or to go?
+- もう少しケーキを召し上がりませんか。 — Will you have some more cake?
+- もっとローストビーフを召し上がれ。 — Please help yourself to more roast beef.
+- ステーキの焼き方はどうなさいますか。 — How would you like your steak?
+- デザートは何になさいますか？ — What would you like for dessert?
+- お嬢さんは試験に合格なさったそうですね。 — Your daughter passed the examination, I hear.
+
+### 322. Would you kindly
+
+**Lesson 4 of 7** · Raising the other person
+**Can do:** Make a request that honours the person you are asking
+**Grammar:** `～てくださいますか` — くださる is くれる raised, so 〜てくださいますか asks somebody to do something and honours them for doing it. Set it against ていただけますか, which asks for the same favour by lowering yourself: both are polite, by opposite routes, and a customer tends to reach for the second and a host for the first. お plus a ます-stem plus くださる -- お招きくださって -- is the same verb on the general frame, and ください is its imperative.
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 招く | まねく | to invite |
+| 神 | かみ | god; deity |
+| なるべく | なるべく | as much as possible; if possible |
+| 全額 | ぜんがく | the full amount |
+| 送金 | そうきん | remittance; sending money |
+| 時間 | じかん | time, hour |
+| 一度 | いちど | once, one time |
+
+- もう一度言ってくださいますか。 — Could you repeat that, please?
+- ちょっと時間をさいてくださいますか。 — Can you spare me a few minutes?
+- お招き下さってありがとうございました。 — Thank you for inviting us.
+- 神は私に富をお恵みくださった。 — God has blessed me with riches.
+- なるべく早く、全額をご送金くださるようお願いします。 — Please remit the full amount as soon as possible.
+
+### 323. The honoured action
+
+**Lesson 5 of 7** · Raising the other person
+**Can do:** Recognise the general honorific frame and use its request form
+**Grammar:** `お～になります` — お plus a verb's ます-stem plus になる raises the listener's action, and it works on verbs that have no honorific of their own: お持ちになる, お出かけになる, お預けになる. Swap になる for ください and it becomes the request a business makes of a customer -- お待ちください, お使いください. Chapter 5's お plus stem plus する is the same shape pointed at your own action, and the ending is the whole difference.
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 雨具 | あまぐ | rain gear |
+| 預ける | あずける | to leave something in someone's care; to check (luggage) |
+| しばらく | しばらく | for a moment; for a while |
+| 切る | きる | to cut; to hang up (the phone) |
+| 荷物 | にもつ | luggage, baggage |
+| 電話 | でんわ | telephone |
+| 待つ | まつ | to wait |
+
+- 雨具をお持ちになりましたか。 — Do you have rain gear with you?
+- お預けになる荷物はございますか。 — Do you have any bags to check?
+- しばらく電話を切らずにお待ちください。 — Please hold the line a moment.
+- ちょっとお待ちください、受領書をお書きします。 — Please wait a moment while I write out your receipt.
+- いつ旅行においでになりますか。 — When will you go on a journey?
+- この雨の中をおいでにならないでください。 — Don't bother coming in this rain.
+
+### 324. The passive that is not one
+
+**Lesson 6 of 7** · Raising the other person
+**Can do:** Tell the honorific れる and られる from the passive and the potential
+**Grammar:** `～される方` — The light honorific: れる or られる on a verb whose subject is the person being honoured -- 出席される, 支持される. It is spelled exactly like the passive, and three things separate them in practice: no agent marked with に, a subject who is the one being raised, and often 方 or お客様 in front of the verb. It is a gentler lift than いらっしゃる or お～になる, common in notices and in speech about the public. 来られる also collides with the potential, which is why speakers often avoid it.
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 方 | かた | person (respectfully) |
+| 支持 | しじ | support; backing |
+| 賛成 | さんせい | agreement; approval |
+| 会合 | かいごう | meeting; gathering |
+| 望ましい | のぞましい | desirable; preferable |
+| ストレス | ストレス | stress |
+| 出席 | しゅっせき | attendance; being present |
+
+- この提議を支持される方は賛成とおっしゃって下さい。 — All in favor of this proposition will please say Aye.
+- その会合には出席されることが望ましい。 — It is desirable that you should attend the meeting.
+- ストレスでやけ食いをされる方も多いと思います。 — I think there are many who binge eat from stress.
+- てっきりあなたが我々といっしょに来られるものと思っていました。 — I took it for granted that you would come with us.
+
+### 325. Three ways to say it
+
+**Lesson 7 of 7** · Raising the other person
+**Can do:** Choose the height of a verb from whose action it is
+
+- 念のためにもう一度申しますが、締め切りは３月３１日です。 — Let me remind you again that March 31st is the due date.
+- 御社のお考えを先におっしゃってください。 — Please let us know your company's thoughts on this matter first.
+- ただいま参ります。 — I will be with you right away.
+- お母さんはいらっしゃいますか。 — Is your mother at home?
+- ただ今気流の関係で揺れております。 — We are currently experiencing some turbulence.
+- あなたはご両親のどちらに似ていらっしゃいますか。 — Which of your parents do you take after?
+- 何か飲み物をいただけますか。 — May I have something to drink?
+- もう少しケーキを召し上がりませんか。 — Will you have some more cake?
+- いずれご連絡いたします。 — We will be in touch in due course.
+- デザートは何になさいますか？ — What would you like for dessert?
+- このデータをアップデートしていただけますか。 — Could I get you to update this data for me?
+- もう一度言ってくださいますか。 — Could you repeat that, please?
+- いつでもお手伝いします。 — I am always ready to help you.
+- 雨具をお持ちになりましたか。 — Do you have rain gear with you?
+
+### 326. Recognition checkpoint — closes the chapter
+
+> A wide pass over the chapter, and like the last one it turns mostly on pairs — because every form here has a twin one register down or on the other side of the exchange, and keigo is choosing between them. います against いらっしゃいます against 参ります. 言います against おっしゃいます against 申します. 食べます against 召し上がります against いただきます. します against なさいます against いたします. てくださいますか against ていただけますか. お待ちください against お待ちします. What comes back will hinge on hearing whose action a sentence describes, not on translating its words. Then the frames. お plus a ます-stem plus になる raises what the listener does; the same stem plus ください asks them to do it; the same stem plus する, from last chapter, lowers what you do. れる and られる on somebody you are honouring do the same job lightly, and 来られる can equally be a passive or a potential — that ambiguity was a lesson, not an oversight, so if it still feels unresolved, that is the correct state. Some of what returns will turn on something small: an いらっしゃる that means いる against one that means 行く, a される with an agent against one without, a ご that raises the listener's property against one that only smooths a noun. Those are the places worth slowing down. Type the reading or the meaning rather than picking from a line-up. Nine of this chapter's sentences come back for recognition only, because their English cannot tell you which Japanese to build — the whole of lesson 6 among them, since an honorific れる is invisible in translation. Anything you miss comes back sooner. It finishes when the remaining set empties; retry as often as you like, and nothing is recorded.
