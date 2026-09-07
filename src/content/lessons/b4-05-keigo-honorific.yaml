@@ -73,7 +73,10 @@
     - b4band5.which-parent-do-you-take-after
     - b4band5.how-many-in-your-party
     - b4band5.did-anybody-recommend-us
-  kanji: []
+  kanji:
+    - 似
+    - 紹
+    - 介
   patternId: grammar.b4-irassharu
   grammarNote: "You have been hearing this chapter since your first day in a Japanese shop. いらっしゃいませ is called out at the door of every convenience store, restaurant and department store in the country, and the verb inside it is where this chapter starts. いらっしゃる does the work of three verbs at once — いる, 行く and 来る — and which one it means is settled by the sentence, never by the verb. お母さんはいらっしゃいますか is いる: is she in. サファリパークにいらっしゃるなら is 行く: if you are going. A hotel asking when you arrived in Japan would be 来る. English has no equivalent of one word covering being, going and coming, and it is less confusing in practice than it sounds, because context settles it every time. What the verb adds is not meaning but direction. It raises whoever it is about, so it goes on the listener, on a third person you are being respectful about, and never on you. About your own mother you use the plain います; about somebody else's, お母さんはいらっしゃいますか. Point it at yourself and you have praised yourself, which is the one keigo error a listener genuinely notices. Last chapter's 参る and おる are the mirror: same three verbs, lowered onto your own side. The polite form is irregular and this is the detail worth drilling. いらっしゃる does not become いらっしゃります. It becomes いらっしゃいます — the り turns into い — and the same happens to おっしゃる, なさる and くださる, the chapter's three other -aru verbs. Four verbs, one irregularity, learned once. The imperative is いらっしゃい, which survives in shop language as またいらっしゃい, come again. Two more shapes on these cards. After a te-form, いらっしゃる replaces ている: 似ています becomes 似ていらっしゃいます, and any verb can do that — 待っていらっしゃいます, 読んでいらっしゃいます. And いらっしゃいませ is the ませ ending, an old polite imperative, which now survives almost only in shop and service language. You are not expected to produce it unless you work behind a counter. One caution about how far to take any of this. These sentences come from shops, hotels and reception desks, which is where the corpus's honorific Japanese lives, and they are evidence of what that register does — not proof that anyone is obliged to use it. Between friends, います is polite and いらっしゃいます would be strange."
 
@@ -98,7 +101,11 @@
     - b4band5.ask-at-the-information-desk
     - b4band5.the-results-were-as-you-see
     - b4band5.you-must-have-seen-the-coliseum
-  kanji: []
+  kanji:
+    - 御
+    - 受
+    - 残
+    - 念
   patternId: grammar.b4-ossharu
   grammarNote: "Two more verbs swapped whole, and they complete a system you can now see from both ends. 言う has three heights. Plain 言う between friends. 申す and 申し上げる, from last chapter, when the speaking is yours. おっしゃる when the speaking is theirs. One meaning, three forms, and the form is chosen by whose mouth the words come out of — not by how formal the room feels. That is the single rule this chapter states without hedging, because it is the one that trips learners: put 申す on the customer's speaking and you have lowered the person you meant to raise. The polite form is irregular in the same way as the last lesson's: おっしゃいます, not おっしゃります. The te-form is regular — おっしゃって — so おっしゃってください is a request that raises the person being asked, and it is what a form, an operator or a receptionist says. お名前と社会保障番号をおっしゃって下さい is exactly that, and 御社のお考えを先におっしゃってください is the same request in business register, raising the listener three separate times: 御社 for their company, お on 考え, おっしゃる for their speaking. There is also 〜とおっしゃいます for giving somebody else's name, the honorific twin of と申します. Then 見る. Its honorific is ご覧になる, and here the verified sentence source is thin — which is worth telling you rather than hiding. Of the corpus's ご覧になる sentences only one is short enough to card, so you meet the form here once, in ローマを訪れたことがおありなら、コロセウムをご覧になったにちがいない, and mostly you meet its shorter relatives. ご覧の通り, as you see, is a set phrase you will read in reports and hear in presentations. ご覧なさい on its own is please look — あそこの空缶をごらんなさい — and after a te-form it is a gentle have-a-go — 受付で聞いてご覧なさい, try asking at the desk — and it is 見てごらん one register up, which makes it kind rather than commanding. Its humble twin, for when the looking is yours, is 拝見する: 拝見します, may I have a look. That one is not carded here; recognise it when a colleague says it over your shoulder. One thing to notice in that Coliseum sentence: おあり is ある in this chapter's general frame, raising the listener's having-visited. The frame arrives properly in lesson 5, and it is already at work here."
 
@@ -123,7 +130,10 @@
     - b4band5.how-would-you-like-your-steak
     - b4band5.what-would-you-like-for-dessert
     - b4band5.your-daughter-passed-the-exam
-  kanji: []
+  kanji:
+    - 帰
+    - 験
+    - 格
   patternId: grammar.b4-nasaru
   grammarNote: "This is the lesson you will use as a customer, because both verbs in it are aimed at you all day. 召し上がる is 食べる and 飲む raised. A waiter asks ここで召し上がりますか about your eating; a host asks もう少しケーキを召し上がりませんか about your appetite. You never use it about your own eating — that is いただく, from last chapter, which is why a meal opens with いただきます and not with 召し上がります. Unlike the four -aru verbs around it, this one conjugates completely normally: 召し上がります, 召し上がって, 召し上がった, and the imperative 召し上がれ. That imperative is worth a second look. Elsewhere in Japanese a plain imperative is blunt — this book's second chapter taught 行け and 待て — but because 召し上がる is already honorific, the command comes out warm rather than sharp. もっとローストビーフを召し上がれ is a host at the head of a table, not an order. なさる is する raised, and it is the productive one. Any noun that takes する takes it instead: 合格する becomes 合格なさる, 出席する becomes 出席なさる, 旅行する becomes 旅行なさる. That makes it exactly as wide-reaching as last chapter's いたす, pointed the other way — いたす for what your side does, なさる for what theirs does. Its polite form is irregular like the others: なさいます, not なさります. Two shapes carry most of its working life. なさいますか is what service Japanese asks when it wants your choice: ステーキの焼き方はどうなさいますか, デザートは何になさいますか. And になさいます is にします, choosing one thing over another, one register up — which pairs with last chapter's にいたします, the version the person serving you uses about their own action. The customer chooses, the waiter carries it out, and the two verbs mark which is which. You have also met なさる already without knowing it. なさい, the gentle imperative from this book's second chapter, is this verb's command form, and ごらんなさい in the last lesson is ご覧 plus that same なさい. Nothing new was added; a shape you owned turned out to be part of a system."
 
@@ -147,7 +157,10 @@
     - b4band5.it-was-kind-of-you-to-invite-us
     - b4band5.god-has-blessed-me-with-riches
     - b4band5.please-remit-the-full-amount
-  kanji: []
+  kanji:
+    - 招
+    - 神
+    - 額
   patternId: grammar.b4-te-kudasaimasu-ka
   grammarNote: "You have been using this verb since Book One without meeting it. ください is the imperative of くださる, and くださる is くれる raised — somebody gives something to you, and the giving is honoured. Seeing the verb behind ください is the point of this lesson; the rest is what you can do once you have it. 〜てくださいますか is the request. もう一度言ってくださいますか, could you say that again. ちょっと時間をさいてくださいますか, could you spare me a moment. It asks somebody to do something and raises them for doing it, and it lands a clear step above てください, which is polite but is still an instruction. Set it beside last chapter's ていただけますか, which asks for the identical favour by lowering yourself instead of raising them. Both are correct, both are polite, and the difference is which side of the exchange the politeness sits on — a customer tends to reach for ていただけますか, a host or an organiser for てくださいますか. There is no rule that forces either; the two are alternatives, not a ladder. ませんか instead of ますか softens it further, as it always does. The general frame comes next, and lesson 5 will teach it properly: お plus a verb's ます-stem plus くださる. お招きくださってありがとうございました thanks somebody for having invited you. 神は私に富をお恵みくださった is the same shape in the plain past, in the register of a translated scripture. A noun that takes する uses ご on the noun instead: ご送金くださるようお願いします, please kindly remit — the shape a business letter asks in. Notice what these have in common: the person doing the favour is raised, and the person receiving it is you, so nothing else needs lowering. One trap. くださる and its mirror いただく are both about a favour moving toward you, so both feel like receiving in English — but くださる keeps the other person as the subject and honours them, while いただく makes you the subject and lowers you. てくださいますか and ていただけますか ask the same thing from opposite ends. Getting them the wrong way round is not rude, only odd; it sounds like a sentence whose halves disagree about who matters."
 
@@ -172,7 +185,10 @@
     - b4band5.please-wait-while-i-write-the-receipt
     - b4band5.when-will-you-travel
     - b4band5.dont-come-out-in-this-rain
-  kanji: []
+  kanji:
+    - 具
+    - 預
+    - 荷
   patternId: grammar.b4-o-ni-naru
   grammarNote: "The special verbs cover a handful of the language. This frame covers the rest. Take a verb's ます-stem — what is left when ます comes off — put お in front and になる behind. 持ちます gives 持ち, so お持ちになる. 預けます gives 預け, so お預けになる. 出かけます gives 出かけ, so お出かけになる. That raises the listener's action, and it is the mirror image of last chapter's お plus stem plus する, which lowered your own. The two look nearly identical on the page and do opposite jobs, so read the ending, not the prefix: になる and ください point up at them, する and いたす point down at you. お預けになる荷物はございますか is a check-in desk doing both machines at once — お預けになる raises the passenger's action, ございます is simply the polite あります said about the bags. Swap になる for ください and you have the one thing in this chapter you will say daily. お待ちください. お使いください. お書きください. お知らせください. It is politer than てください, it is what a business says to a customer, and it is entirely regular: the same stem, a different ending. しばらく電話を切らずにお待ちください is a call centre; ちょっとお待ちください、受領書をお書きします is one person doing both directions in one breath — please wait, and I will write it. That sentence is the chapter in miniature and is worth reading twice. おいでになる looks like this frame but is not built from it -- 出る has a one-mora stem, which the rule above excludes -- and it behaves as a special verb beside いらっしゃる: it means 行く, 来る and いる, the same three as いらっしゃる, in a form that sounds older and slightly warmer. いつ旅行においでになりますか, when will you travel. Its negative works normally — この雨の中をおいでにならないでください, please do not come out in this rain — and おいでください is its request form. Three limits, said plainly. Verbs whose stem is one mora — 見る, 寝る, 着る, いる — do not go into this frame; Japanese uses the special verbs or a different word instead, which is part of why the special verbs exist. Nouns that take する use ご or お on the noun rather than a stem, the same shape as lesson 4's ご送金くださる. And a related frame, お plus stem plus です, says the same thing in fewer syllables: last chapter's お客様、テーブルにライターをお忘れですよ is that frame, raising the listener's forgetting. If it looked strange there, it should look ordinary now."
 
@@ -195,7 +211,10 @@
     - b4band5.it-is-desirable-that-you-attend
     - b4band5.many-people-stress-eat
     - b4band5.i-thought-you-would-come-with-us
-  kanji: []
+  kanji:
+    - 賛
+    - 成
+    - 望
   patternId: grammar.b4-honorific-reru
   grammarNote: "Book Three's passive lesson mentioned this in passing and left it: a superior's 来る can become 来られる out of respect, it said, and that belongs to a chapter about register. This is that chapter. The form is the plainest honorific there is. Put れる on a godan verb or られる on an ichidan one — the same endings you built passives with — and if the subject is somebody you are honouring, the sentence is honorific rather than passive. 出席する becomes 出席される. 支持する becomes 支持される. 来る becomes 来られる. Nothing else changes. It lifts the sentence less than いらっしゃる or お待ちになる do, which is exactly its use: it is the light touch, common in written notices and in speech about people in general, where a heavy honorific would sound like a performance. So how do you tell it from a passive? Three signals, and none of them is the verb. First, an agent. A passive usually names who did it with に, the way Book Three's passive sentences do. An honorific never has one, because the subject is the doer. Second, the subject. In a passive, the subject has something done to it. In an honorific, the subject is the person being raised, and if that person is your customer, your reader or your listener, the sentence is honorific. Third, the neighbourhood: 方, お客様, 先生 and titles cluster around the honorific, which is why 支持される方 and やけ食いをされる方 read the way they do. その会合には出席されることが望ましい has no agent, addresses whoever reads the notice, and is honorific. Then there is 来られる, which is three things on paper: passive, potential — able to come — and honorific. てっきりあなたが我々といっしょに来られるものと思っていました can be read as either of the last two, and native speakers rely on context exactly as you will have to. This is not a puzzle with a trick: it is genuinely ambiguous, which is precisely why Japanese often prefers いらっしゃる or お越しになる when it matters. One honest note about the evidence. The verified sentence source this course draws on holds about five clear examples of the honorific れる and られる, and every raw search for the form returns passives by the hundred. Four of the five are on this lesson, which is thin for something you will meet in any formal notice — so treat this lesson as a way of seeing the form when it comes, not as a form to produce. When you want to raise somebody, the last three lessons give you clearer ways to do it."
 
