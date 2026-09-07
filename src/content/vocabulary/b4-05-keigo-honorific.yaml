@@ -1,0 +1,397 @@
+# Book Four, Chapter 6 vocabulary -- thirty-one words, chosen the way chapter 5
+# chose its forty.
+#
+# The rule is mechanical and it is the previous chapter's: a word is in this
+# file if and only if it appears in a sentence this chapter cards. Nothing was
+# added because it looked useful. 04-stage-reading.md section 3 hands
+# vocabulary at this stage to the reading library and to mining, the library's
+# text source has been blocked since 2026-08-20, and
+# docs/plans/book-four-bands.md section 2 settles what to do meanwhile: every
+# Book Four lesson teaches the untaught words its own verified sentences
+# contain. Four to six per lesson is what these sentences carry, not a quota.
+#
+# The honorific verbs themselves -- いらっしゃる, おっしゃる, 召し上がる, なさる,
+# くださる, ご覧になる, おいでになる -- are not word cards here. They are what the
+# chapter's six grammar patterns teach, exactly as 申す, おる, 参る, いたす and
+# いただく were patterns rather than word cards in chapter 5. Splitting a verb
+# between a pattern and a vocabulary card would review it twice under two names.
+#
+# Words this chapter's cards contain and this file does not teach are glossed in
+# the note on the card that carries them: サファリパーク, 社会保障, ローマ,
+# コロセウム, 訪れる, おあり, かまわない, それとも, ローストビーフ, 焼き方,
+# 受領書, 富, 恵み, 提議, やけ食い, 我々, てっきり, 通り, 多い, and the 時間をさく
+# of #202764. Each is a concrete noun, a proper name, or a one-off whose
+# sentence's English already says what it means, and the chapter is teaching the
+# ending on the sentence rather than the furniture around it.
+#
+# ---------------------------------------------------------------------------
+# VERIFICATION. Every entry below was checked against JMdict for Applications
+# 3.6.2 (server/data/jmdict-examples-eng-3.6.2.json) on 2026-09-06: headword,
+# reading, part of speech and gloss, with the sequence number in `notes`. Where
+# the sense this chapter needs is not JMdict's first, the note says which sense
+# and why. Four words are in that position:
+#
+#   先に 1387280 s2 (first, ahead of someone else -- s1 is "previously")
+#   方 1516925 s2 (a person, respectfully -- s1 is direction)
+#   切る 1384830 s4 (hanging up a telephone -- s1 is cutting)
+#   しばらく 1304420 s1 and s2 together (a moment, and a while)
+#
+# Three homophone traps were checked rather than assumed, because a kana lookup
+# lands on the wrong entry silently:
+#
+#   ばん -- 番 2022640, a number in a series, is not 晩 1482110, the evening this
+#     course teaches as vocab.ban (Book One, meals.yaml). The app's precedent for
+#     a homophone is a suffixed id -- vocab.atsui-hot, vocab.tomeru-lodge -- so
+#     this one is vocab.ban-number.
+#   きる -- 切る 1384830 is a godan verb; 着る 1423000, which this course already
+#     teaches as vocab.kiru-wear, is ichidan. Same sound, different conjugation,
+#     so this one is vocab.kiru-cut.
+#   デザート -- 1082850 is the dessert; 2863580, marked rare, is the desert.
+#     The card that carries it means the first.
+#
+# ---------------------------------------------------------------------------
+# JLPT TAGS, and why they are not all the same. The tag on a Word feeds
+# vocabulary coverage tooling (scripts/jlpt.mjs) rather than describing the
+# chapter it sits in, so tagging a word by the chapter it happens to appear in
+# misreports coverage in two directions. Each word below carries the level the
+# merged reference lists in data/jlpt/ give it; where two lists disagree the
+# easier of the two is used (賛成 and ストレス are on both N1 and N3 lists and
+# carry N3). Five words -- 紹介者, 何名, 御社, 持ち帰り, 全額 -- are on no
+# reference list at any level, and those carry N3, this stretch of the course's
+# own band. That tag is a placement, not a claim about any exam. No level is
+# ever shown to a learner (DR-024), which is why none of the notes below
+# mentions one.
+#
+# jlpt-source: training -- levels read off data/jlpt/reference-*.json (Tanos
+#   CC BY 4.0 + open-anki), which is a community reference, not an authority.
+#   JMdict carries no JLPT data.
+# content-source: training -- headword, reading, part of speech and gloss
+#   verified against JMdict for Applications 3.6.2, sequence number inline.
+#   Every word is attested in a Tatoeba sentence this chapter cards; the
+#   sentence id is in phrases/b4-05-keigo-honorific.yaml.
+
+# -- Lesson 1 - They are here, respectfully ----------------------------------
+
+- id: vocab.niru
+  jlpt: N4
+  word_type: verb
+  verb_class: ru
+  theme: family
+  japanese: 似る
+  reading: にる
+  romaji: niru
+  english: to resemble; to look like
+  notes: "JMdict seq 1314600, its only sense, and it is intransitive. You will almost never meet the plain form: resembling somebody is a state rather than an event, so the working form is 似ている, and this lesson's card lifts that to 似ていらっしゃいます. Who you resemble takes に -- 父に似ている, I take after my father."
+
+- id: vocab.shoukaisha
+  jlpt: N3
+  word_type: noun
+  theme: manners
+  japanese: 紹介者
+  reading: しょうかいしゃ
+  romaji: shoukaisha
+  english: the person who introduced you; referrer
+  notes: "JMdict seq 1351440, its only sense. Built from 紹介, an introduction, plus 者, a person. A clinic, a members' club or a company asks for one when somebody has to vouch for you, which is what the card that carries it is really asking."
+
+- id: vocab.nanmei
+  jlpt: N3
+  word_type: noun
+  theme: shops
+  japanese: 何名
+  reading: なんめい
+  romaji: nanmei
+  english: how many people
+  notes: "JMdict seq 2262180, its only sense. The counting word a restaurant or a hotel uses; with 様 on the end, 何名様, it is how staff ask a customer. 何人 (なんにん) is the same question in ordinary speech, and that is the one you use when you are the customer."
+
+- id: vocab.ban-number
+  jlpt: N3
+  word_type: noun
+  theme: transit
+  japanese: 番
+  reading: ばん
+  romaji: ban
+  english: number (in a series)
+  notes: "JMdict seq 2022640, sense 1 -- a number in a sequence, so ５番のバス is the No. 5 bus and 三番線 is platform three. Sense 2 is a turn, as in 私の番, my turn. It sounds exactly like 晩, the evening you have had since Book One, and only the sentence tells them apart."
+
+# -- Lesson 2 - They say, they see -------------------------------------------
+
+- id: vocab.iken
+  jlpt: N4
+  word_type: noun
+  theme: business
+  japanese: 意見
+  reading: いけん
+  romaji: iken
+  english: opinion; view
+  notes: "JMdict seq 1156530, sense 1. Politely it takes ご: a comment form or a shop notice asks for your ご意見. Sense 2 is a different act altogether: 意見する is to tell somebody off, which is worth knowing so the phrase does not surprise you."
+
+- id: vocab.onsha
+  jlpt: N3
+  word_type: noun
+  theme: business
+  japanese: 御社
+  reading: おんしゃ
+  romaji: onsha
+  english: your company
+  notes: "JMdict seq 1270380, sense 1, marked honorific and marked as the spoken form -- in writing the same idea is 貴社. It raises the listener's company, so it never points at your own: yours is 弊社, which lowers it, or 当社, which is neutral. Sense 2 is your shrine, the same characters read the same way."
+
+- id: vocab.kangae
+  jlpt: N3
+  word_type: noun
+  theme: basics
+  japanese: 考え
+  reading: かんがえ
+  romaji: kangae
+  english: thought; view; idea
+  notes: "JMdict seq 1281000, sense 1. It is 考える, this book's second chapter's verb, worn as a noun -- the stem doing a noun's job, as 帰り and 払い do. お考え puts it on the listener's side of the table."
+
+- id: vocab.sakini
+  jlpt: N1
+  word_type: adverb
+  theme: time
+  japanese: 先に
+  reading: さきに
+  romaji: saki ni
+  english: first; ahead of someone else
+  notes: "JMdict seq 1387280, sense 2 -- doing something before somebody else does. Sense 1 is previously or earlier, and only the sentence separates them. お先に with the polite お is the fixed apology for going first, whether out of the office or through a door."
+
+- id: vocab.uketsuke
+  jlpt: N4
+  word_type: noun
+  theme: places
+  japanese: 受付
+  reading: うけつけ
+  romaji: uketsuke
+  english: reception desk; information desk
+  notes: "JMdict seq 1588060, sense 1, which JMdict marks as the sense written 受付 -- the desk you ask at, and the person behind it. Written 受け付け it is sense 2, the act of accepting applications, which is why a sign can say 受付中, now accepting."
+
+- id: vocab.zannen
+  jlpt: N4
+  word_type: na-adj
+  theme: feeling
+  japanese: 残念
+  reading: ざんねん
+  romaji: zannen
+  english: regrettable; disappointing
+  notes: "JMdict seq 1304680, its only sense, listed as a noun and a な-adjective. 残念です is what you say about bad news, yours or theirs. 残念ながら in front of a sentence is the ながら that means although -- unfortunately, regrettably -- and it is how a formal answer opens when the answer is no."
+
+# -- Lesson 3 - Please eat, what will you have -------------------------------
+
+- id: vocab.mochikaeri
+  jlpt: N3
+  word_type: noun
+  theme: food
+  japanese: 持ち帰り
+  reading: もちかえり
+  romaji: mochikaeri
+  english: takeaway (food); to go
+  notes: "JMdict seq 1770030, its only sense. Two verbs joined and worn as a noun: 持つ and 帰る, carry and go home. Across a counter it takes the polite お -- お持ち帰りですか, is it to go -- and テイクアウト says the same thing in katakana."
+
+- id: vocab.keeki
+  jlpt: N4
+  word_type: noun
+  theme: food
+  japanese: ケーキ
+  reading: ケーキ
+  romaji: keeki
+  english: cake
+  notes: "JMdict seq 1047860, its only sense. The long vowel is the whole spelling problem: ケーキ, not ケキ. A slice is 一切れ and a whole one is ホールケーキ."
+
+- id: vocab.suteeki
+  jlpt: N4
+  word_type: noun
+  theme: food
+  japanese: ステーキ
+  reading: ステーキ
+  romaji: suteeki
+  english: steak
+  notes: "JMdict seq 1070280, its only sense. Keep it apart from ステッキ, seq 1070510, which is a walking stick -- one long vowel against one small ッ, and nothing else."
+
+- id: vocab.dezaato
+  jlpt: N3
+  word_type: noun
+  theme: food
+  japanese: デザート
+  reading: デザート
+  romaji: dezaato
+  english: dessert
+  notes: "JMdict seq 1082850, its only sense. A second entry spelled the same way, 2863580, is the sandy desert and JMdict marks it rare; in a restaurant nobody will mean it. The Japanese for the sweet course after a meal is this word, not 甘いもの."
+
+- id: vocab.shiken
+  jlpt: N4
+  word_type: noun
+  theme: study
+  japanese: 試験
+  reading: しけん
+  romaji: shiken
+  english: examination; test
+  notes: "JMdict seq 1312350, sense 1. It takes する, and 試験を受ける is to sit one. Sense 2 is a trial or an experiment, which is the same word doing science rather than school."
+
+- id: vocab.goukaku
+  jlpt: N3
+  word_type: noun
+  theme: study
+  japanese: 合格
+  reading: ごうかく
+  romaji: goukaku
+  english: passing (an exam)
+  notes: "JMdict seq 1284600, sense 1. It takes する, and what you pass is marked with に rather than を: 試験に合格する. Failing is 不合格. Sense 2 is meeting a standard, which is what a part passes when it clears inspection."
+
+# -- Lesson 4 - Would you kindly ---------------------------------------------
+
+- id: vocab.maneku
+  jlpt: N3
+  word_type: verb
+  verb_class: u
+  theme: manners
+  japanese: 招く
+  reading: まねく
+  romaji: maneku
+  english: to invite
+  notes: "JMdict seq 1349590, sense 1 -- inviting somebody to a house, a dinner or a ceremony, which is a shade more formal than 呼ぶ. お招き is the noun form, and this lesson's card thanks somebody for one. Sense 4 is the same verb bringing something on yourself: 誤解を招く, to invite misunderstanding."
+
+- id: vocab.kami
+  jlpt: N3
+  word_type: noun
+  theme: basics
+  japanese: 神
+  reading: かみ
+  romaji: kami
+  english: god; deity
+  notes: "JMdict seq 1364440, sense 1 -- a god, and also the kami of Shinto, which is a wider idea than the English word carries. 神様 with 様 on the end is the ordinary respectful form. Read しん or じん it is a different entry, 2433050, and appears inside compounds."
+
+- id: vocab.narubeku
+  jlpt: N4
+  word_type: adverb
+  theme: basics
+  japanese: なるべく
+  reading: なるべく
+  romaji: narubeku
+  english: as much as possible; if possible
+  notes: "JMdict seq 1375620, its only sense, usually written in kana; the kanji 成るべく exists and is rare. It sits in front of what you want: なるべく早く, as soon as you can manage. できるだけ, which this book's previous chapter carried in 出来るだけ早く参ります, says the same thing and is the commoner spoken choice."
+
+- id: vocab.zengaku
+  jlpt: N3
+  word_type: noun
+  theme: money
+  japanese: 全額
+  reading: ぜんがく
+  romaji: zengaku
+  english: the full amount
+  notes: "JMdict seq 1394970, its only sense. 全 is whole and 額 is a sum of money, the same 額 as the 高額 and 小額 of the previous chapter's banknote card. 全額払う is to pay in full."
+
+- id: vocab.soukin
+  jlpt: N1
+  word_type: noun
+  theme: money
+  japanese: 送金
+  reading: そうきん
+  romaji: soukin
+  english: remittance; sending money
+  notes: "JMdict seq 1402750, its only sense. It takes する, and in a letter it takes ご: ご送金ください. Literally send-money, and it covers a bank transfer as much as a posted cheque."
+
+# -- Lesson 5 - The honoured action ------------------------------------------
+
+- id: vocab.amagu
+  jlpt: N1
+  word_type: noun
+  theme: weather
+  japanese: 雨具
+  reading: あまぐ
+  romaji: amagu
+  english: rain gear
+  notes: "JMdict seq 1171940, its only sense. A cover word rather than an object: umbrella, raincoat, boots, whatever keeps the rain off. 雨 read あま rather than あめ is what compounds do to it, as in 雨戸 (あまど), a storm shutter."
+
+- id: vocab.azukeru
+  jlpt: N3
+  word_type: verb
+  verb_class: ru
+  theme: travel
+  japanese: 預ける
+  reading: あずける
+  romaji: azukeru
+  english: to leave something in someone's care; to check (luggage)
+  notes: "JMdict seq 1544990, sense 1. It is one half of a pair: you 預ける a bag and the desk 預かる it, seq 1544970. The word covers checking luggage, leaving a coat, and putting money in a bank."
+
+- id: vocab.shibaraku
+  jlpt: N4
+  word_type: adverb
+  theme: time
+  japanese: しばらく
+  reading: しばらく
+  romaji: shibaraku
+  english: for a moment; for a while
+  notes: "JMdict seq 1304420, senses 1 and 2, which sit close together -- a moment on the telephone, a while in a story. Usually written in kana; the kanji 暫く exists. Sense 4 is a greeting, しばらくです, said to somebody you have not seen in a long time."
+
+- id: vocab.kiru-cut
+  jlpt: N5
+  word_type: verb
+  verb_class: u
+  theme: actions
+  japanese: 切る
+  reading: きる
+  romaji: kiru
+  english: to cut; to hang up (the phone)
+  notes: "JMdict seq 1384830, and the sense on this lesson's card is the fourth of its twenty-six: ending a telephone call. Sense 1 is cutting. It sounds exactly like 着る, to wear, which you have had since Book One, and the two conjugate differently -- 切ります against 着ます, 切って against 着て -- so hearing which is meant matters."
+
+# -- Lesson 6 - The passive that is not one ----------------------------------
+
+- id: vocab.kata-person
+  jlpt: N5
+  word_type: noun
+  theme: people
+  japanese: 方
+  reading: かた
+  romaji: kata
+  english: person (respectfully)
+  notes: "JMdict seq 1516925, sense 2, marked honorific -- 人 said with respect. あの方 is that gentleman or lady, 支持される方 the people who support it. Sense 3 of the same entry is the way of doing something, the 方 inside 仕方 and 焼き方, and the same character read ほう is the direction-and-side word, entry 1516930. Three jobs, one character, and the reading is half the clue."
+
+- id: vocab.shiji
+  jlpt: N1
+  word_type: noun
+  theme: business
+  japanese: 支持
+  reading: しじ
+  romaji: shiji
+  english: support; backing
+  notes: "JMdict seq 1310150, sense 1. It takes する: 支持する, to back somebody or something -- a candidate, a proposal, a policy. Sense 2 is physical propping up. Not to be confused with 指示, also しじ, which is an instruction."
+
+- id: vocab.sansei
+  jlpt: N3
+  word_type: noun
+  theme: business
+  japanese: 賛成
+  reading: さんせい
+  romaji: sansei
+  english: agreement; approval
+  notes: "JMdict seq 1304200, sense 1. It takes する, and what you agree to takes に: 提案に賛成する. On its own, 賛成です is a vote in favour. Its opposite is 反対."
+
+- id: vocab.kaigou
+  jlpt: N3
+  word_type: noun
+  theme: business
+  japanese: 会合
+  reading: かいごう
+  romaji: kaigou
+  english: meeting; gathering
+  notes: "JMdict seq 1198530, sense 1. Looser than 会議, which is the formal business meeting with an agenda: a 会合 can be a group of neighbours or a professional association meeting up. It takes する."
+
+- id: vocab.nozomashii
+  jlpt: N1
+  word_type: i-adj
+  theme: basics
+  japanese: 望ましい
+  reading: のぞましい
+  romaji: nozomashii
+  english: desirable; preferable
+  notes: "JMdict seq 1519610, its only sense. Built off 望む, to hope for, seq 1519630. It is how written Japanese says should without giving an order: 〜ことが望ましい, it would be preferable if. A notice uses it where English would say we ask that you."
+
+- id: vocab.sutoresu
+  jlpt: N3
+  word_type: noun
+  theme: health
+  japanese: ストレス
+  reading: ストレス
+  romaji: sutoresu
+  english: stress
+  notes: "JMdict seq 1071490, its only sense. ストレスがたまる is stress building up and ストレス解消 is working it off. The cause takes で: ストレスで, from stress."
