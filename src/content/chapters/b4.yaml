@@ -1,7 +1,7 @@
 # Book Four chapters.
 #
 # The book keeps the same chapter pattern as Book Three: the lessons make a
-# band and the chapter name is the band's theme. The seven bands here are the
+# band and the chapter name is the band's theme. The eight bands here are the
 # ones the Book Four content files already publish under `b4.band-*`.
 #
 # content-source: n/a — this file names and orders existing lessons; it adds no
@@ -34,3 +34,7 @@
 - id: b4.band-6
   order: 7
   title: In relation to
+
+- id: b4.band-7
+  order: 8
+  title: Only so far

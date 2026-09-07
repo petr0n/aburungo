@@ -27,7 +27,7 @@ Method as band 4 (≤32 characters). Script `scratchpad/mine/band678-candidates.
 | 2 | ことはない | 23 | Two jobs: "never has" (おくれたことはない — Book Two's たことがある negated) and "no need to / cannot be too" (しすぎることはない). Only the second is new; the lesson says so. |
 | 3 | までもない | 5 | 言うまでもない is a fixed phrase (4 of 5); 待つまでもない the productive one. |
 | 4 | ようがない · わけにはいかない | 3 · 6 | Thin; paired. 言いようがない is fixed. |
-| 5 | からといって | 6 | All genuine; three end in Book Three patterns (とは限らない, わけではない, てはいけない) — good callbacks. |
+| 5 | からといって | 6 | All genuine; three end in forms Book Three's sentences carry (とは限らない in ch.4, わけではない ch.6, てはいけない ch.9) -- but only わけではない and てはいけない are taught patterns; とは限らない is merely attested, so gloss it. |
 | 6 | といっても | 5 | All genuine. |
 | 7 | にしては · にしても · としても | 6 · 8 · 10 | にしては includes 無駄にしては (false positive, #165155) and 鵜呑みにしてはならない (Book Three ch.9's てはならない) — screen; にしても includes にしてもらう (#221314, #172795, #172205 — the causative-benefactive, excluded). |
 | 8 | 〜がち · 〜げ | 8 · 5 | Both suffixes, both thin, both clean once the ちくちく/げに false positives are removed. |
@@ -54,7 +54,7 @@ Conventions as band 0.
 - **Candidates:** #89191 彼女は事実を述べていたに過ぎない。 · #110032 彼は一介のビジネスマンにすぎない。 ·
   #126972 地球は宇宙空間に漂う球体にすぎない。 · #178349 君の言っていることは机上の空論にすぎないよ。(君:
   band 2) · #205286 それは贋の真珠にすぎない。 · #110027 彼は一介の事務員にすぎない。
-- **New words:** 事実 じじつ 1313960 s1 (N3) · 地球 ちきゅう 1420970 s1 (N3) · 真珠 しんじゅ 1363810 s1 · 事務員
+- **New words:** [事実 is ALREADY TAUGHT in band 6 -- reuse vocab.jijitsu] · 地球 ちきゅう 1420970 s1 (N3) · 真珠 しんじゅ 1363810 s1 · 事務員
   じむいん 1314280 s1 · 漂う ただよう 1489240 s1. Optional: 述べる (Book Three ch.10 verified), 一介 1161300
   (rare), ビジネスマン 1104920.
 - **Kanji new to the manifest:** 実 球 珠 務 員 漂 (実 band 1; 員 band 0's 乗組員 optional; 地 band 1's
@@ -96,7 +96,7 @@ Conventions as band 0.
 - **Teaches:** ます-stem + ようがない (no way to: 言いようがない, 解釈のしようがない) and plain verb +
   わけにはいかない (cannot very well, for social or moral reasons — not inability). Book Three ch.6
   taught わけ's other jobs; this is the one it left out.
-- **Candidates:** #187759 何とも言いようがないなあ。(なあ: band 3) · #116346 彼の発言は他に解釈のしようがない。
+- **Candidates:** #187759 何とも言いようがないなあ。(なあ: NOT taught -- band 3 teaches sentence-final な, of which this is the lengthened form) · #116346 彼の発言は他に解釈のしようがない。
   · #198292 ばかばかしいとしか言いようがない。(しか: Book Two) · #84279 負け犬になるわけにはいかない。 · #82060
   僕はその問題を黙って見過ごすわけにはいかない。(僕: band 3) · #194466 [ALREADY CARDED in b3-05-stance -- pick another] もうこれ以上延ばすわけにはいかない。 ·
   #177201 [ALREADY CARDED in b3-05-stance -- pick another] 君は自分の健康を度外視するわけにはいかない。
@@ -129,8 +129,8 @@ Conventions as band 0.
   多才な人といってもいいだろう。(だろう: band 2) · #90824 彼女は歌手といってもお粗末なものだ。(ものだ: band
   2) · #190639 一口に英会話教材といっても、千差万別だ。(千差万別 idiom — gloss) · #76867 いくら壁が高いと
   いっても、私も最初はおっかなびっくりでしたよ。(31 characters — `recognitionOnly`)
-- **New words:** まるで 1216280 s1 (N3) · 歌手 かしゅ 1193290 s1 (N3) · 壁 かべ 1509290 s1 · 宿屋 やどや 1337230
-  s1 · 教材 きょうざい 1237110 s1. Optional: 多才 1407690, 英会話 1174380, 最初 (band 6).
+- **New words:** まるで 1216280 s1 (N3) · [歌手 is ALREADY TAUGHT in band 6 -- reuse vocab.kashu] · 壁 かべ 1509290 s1 · 宿屋 やどや 1337230
+  s1 · 教材 きょうざい 1237110 s1. Optional: 多才 1407690, 英会話 1174380, 最初 (taught NOWHERE -- card it or gloss it).
 - **Kanji new to the manifest:** 歌 壁 宿 屋 教 材 (歌 手 — check).
 
 ### Lesson 7 — For a, even so, even if
