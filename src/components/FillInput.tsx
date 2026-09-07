@@ -8,10 +8,21 @@ type Props = {
   onSubmit: (value: string) => void;
   placeholder?: string;
   disabled?: boolean;
+  /**
+   * Drive the input method from outside. Supply both to control it; supply
+   * neither and this component keeps its own. A caller that shows the picker
+   * somewhere steadier than inside the card needs the state up there with it,
+   * and the callers that do not care should not have to hold it.
+   */
+  mode?: InputMode;
+  onModeChange?: (mode: InputMode) => void;
+  /** Forwarded: hide the built-in picker when the caller renders its own. */
+  showModePicker?: boolean;
 };
 
-export function FillInput({ onSubmit, placeholder, disabled }: Props) {
-  const [mode, setMode] = useState<InputMode>("romaji");
+export function FillInput({ onSubmit, placeholder, disabled, mode: modeProp, onModeChange, showModePicker }: Props) {
+  const [ownMode, setOwnMode] = useState<InputMode>("romaji");
+  const mode = modeProp ?? ownMode;
   const [romaji, setRomaji] = useState("");
   const [kana, setKana] = useState("");
   const [showHint, setShowHint] = useState(false);
@@ -50,10 +61,12 @@ export function FillInput({ onSubmit, placeholder, disabled }: Props) {
       placeholder={placeholder}
       showSystemHint={showHint}
       inputRef={inputRef}
+      showModePicker={showModePicker}
       onModeChange={(m) => {
         setRomaji("");
         setKana("");
-        setMode(m);
+        if (onModeChange !== undefined) onModeChange(m);
+        else setOwnMode(m);
       }}
       onRomajiChange={setRomaji}
       onKanaKey={(char) => setKana((prev) => prev + char)}

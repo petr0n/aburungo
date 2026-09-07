@@ -14,7 +14,7 @@
 # together, as their own PR.
 set -euo pipefail
 
-DS_SHA=6cc617bce893c78f5c274ab7d3c2981964e048bb
+DS_SHA=aa595793782afd26a48b1207d88313d10ae25fbf
 DS_DIR=../aburungo-design-system
 
 npm i -g pnpm@11.1.3
