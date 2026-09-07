@@ -35,7 +35,7 @@ jobs:
           # change can alter learner-facing copy, which is a product call
           # before it is a version bump. scripts/vercel-install.sh pins the
           # same sha for Vercel builds -- move the two together.
-          ref: 6cc617bce893c78f5c274ab7d3c2981964e048bb
+          ref: 3d947164751cdbb2534df967ab19ff861cda29d9
 
       - uses: pnpm/action-setup@v4
         with:

@@ -1,16 +1,17 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import type { SVGProps } from "react";
 import type { Phrase, Word, WordType } from "@/types";
 import { isWord } from "@/types";
 import { compareAnswer } from "@/lib/compareAnswer";
 import { toPoliteJapanese, toPoliteReading } from "@/lib/verbForms";
 import { AnswerResult, Badge, Button, Card, MicIcon } from "aburungo-design-system";
+import type { InputMode } from "aburungo-design-system";
 import { FillInput } from "./FillInput";
 import { VoiceInput } from "./VoiceInput";
 import { AudioButton } from "./AudioButton";
 
 type Phase = "input" | "result";
-type InputMode = "text" | "voice";
+type AnswerMode = "text" | "voice";
 
 const WORD_TYPE_LABELS: Record<WordType, string> = {
   noun: "Noun",
@@ -54,9 +55,35 @@ const INPUT_MODES = [
   { mode: "voice" as const, label: "Speak your answer", Icon: MicIcon },
 ];
 
+const INPUT_METHOD_KEY = "aburungo-input-method";
+
+const INPUT_METHODS: { value: InputMode; label: string }[] = [
+  { value: "romaji", label: "Romaji" },
+  { value: "kana", label: "Kana grid" },
+  { value: "system", label: "JP keyboard" },
+];
+
 export function FillBlankCard({ card, showRomaji = true, onNext }: Props) {
   const [phase, setPhase] = useState<Phase>("input");
-  const [inputMode, setInputMode] = useState<InputMode>("text");
+  const [inputMode, setInputMode] = useState<AnswerMode>("text");
+  // Which keyboard you type Japanese with is a preference, not a property of
+  // this card, so it is rendered above the card rather than between the word
+  // and the field -- and it has to outlive the card. Every caller mounts this
+  // component with a key of the card id, so component state alone would reset
+  // the choice on each item and make the learner re-pick it all session.
+  // Same shape as the kana-script preference on KanaPage.
+  const [inputMethod, setInputMethod] = useState<InputMode>(() => {
+    try {
+      const saved = localStorage.getItem(INPUT_METHOD_KEY);
+      return INPUT_METHODS.find((m) => m.value === saved)?.value ?? "romaji";
+    } catch {
+      return "romaji";
+    }
+  });
+
+  useEffect(() => {
+    try { localStorage.setItem(INPUT_METHOD_KEY, inputMethod); } catch { /* ignore */ }
+  }, [inputMethod]);
   const [correct, setCorrect] = useState(false);
   const [userAnswer, setUserAnswer] = useState("");
 
@@ -119,14 +146,35 @@ export function FillBlankCard({ card, showRomaji = true, onNext }: Props) {
         </Button>
       </div>
     ) : (
-      <Button type="button" onClick={() => setPhase("result")} variant="secondary" fullWidth>
+      <button
+        type="button"
+        onClick={() => setPhase("result")}
+        className="flex min-h-[44px] w-full items-center justify-center text-body-sm text-fg-subtle underline active:text-fg"
+      >
         Show answer
-      </Button>
+      </button>
     );
 
   const modeToggle =
     phase === "input" ? (
-      <div className="flex justify-end">
+      <div className="flex items-center justify-end gap-2">
+        {inputMode === "text" && (
+          <select
+            value={inputMethod}
+            onChange={(e) => {
+              const next = INPUT_METHODS.find((m) => m.value === e.target.value);
+              if (next !== undefined) setInputMethod(next.value);
+            }}
+            aria-label="Input method"
+            className="min-h-[44px] rounded-xl border border-border bg-surface px-3 text-body-sm text-fg-subtle"
+          >
+            {INPUT_METHODS.map((m) => (
+              <option key={m.value} value={m.value}>
+                {m.label}
+              </option>
+            ))}
+          </select>
+        )}
         <div className="flex gap-1 rounded-xl border border-border bg-surface p-1">
           {INPUT_MODES.map(({ mode, label, Icon }) => (
             <button
@@ -151,8 +199,8 @@ export function FillBlankCard({ card, showRomaji = true, onNext }: Props) {
   return (
     <div className="flex w-full flex-col gap-3">
       {modeToggle}
-      <Card className="w-full">
-        <div className="flex flex-col gap-6">
+      <Card compact className="w-full">
+        <div className="flex flex-col gap-3">
           <header className="flex items-center justify-between gap-4">
             <Badge emphasis>{badgeLabel}</Badge>
             <AudioButton src={card.audioUrl ?? undefined} />
@@ -171,9 +219,18 @@ export function FillBlankCard({ card, showRomaji = true, onNext }: Props) {
             {card.notes != null ? <p className="text-body-sm text-fg-subtle">{card.notes}</p> : null}
           </div>
 
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-3">
             {phase === "input" &&
-              (inputMode === "text" ? <FillInput onSubmit={handleSubmit} /> : <VoiceInput onResult={handleSubmit} />)}
+              (inputMode === "text" ? (
+                <FillInput
+                  onSubmit={handleSubmit}
+                  mode={inputMethod}
+                  onModeChange={setInputMethod}
+                  showModePicker={false}
+                />
+              ) : (
+                <VoiceInput onResult={handleSubmit} />
+              ))}
             {footer}
           </div>
         </div>
