@@ -68,7 +68,7 @@
   pattern: "～だけ"
   gloss: Only this, and nothing else. A noun, a plain verb or an い-adjective goes straight on; a な-adjective takes な first, and so does a noun when the sense is "it is merely that". It also runs the other way as "as much as" -- 好きなだけ, できるだけ -- where the limit is a ceiling rather than a floor.
   phraseId: band6.no-one-came-except-mary
-  blank: メアリーだけ
+  blank: だけだった
 
 - id: grammar.b3-bakari
   jlpt: N3
