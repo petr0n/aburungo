@@ -114,14 +114,14 @@
 #   に対して or にとって in the original, and no English sentence tells you which
 #   -- that ambiguity is exactly what lessons 1 and 2 teach, so it cannot also
 #   be what a typing card demands. FillBlankCard shows the English alone and
-#   grades the whole typed reading (FillBlankCard.tsx:53).
+#   grades the whole typed reading (FillBlankCard.tsx:102).
 #
 #   The register brings length. Six cards run past thirty-four kana, which is
 #   the ceiling the rest of Book Four types at, and several more end in a marker
 #   English simply has no counterpart for -- であろう, んだよ, だそうだ, なんだ.
 #
 # The flag does not retire a card. LearnPage.tsx:217-220 keeps a recognitionOnly
-# phrase in review and only stops it being typed, so all twenty-two keep coming
+# phrase in review and only stops it being typed, so all twenty-seven keep coming
 # back as recognition.
 #
 # content-source: Tatoeba, via the sentence pairs embedded in JMdict for

@@ -92,7 +92,7 @@
 # (over about forty-one kana), and a reading nothing settles. Every reading
 # below is short enough, but the five ぞ/ぜ/わ cards are not settled: FillBlankCard
 # shows the English alone and auto-grades the whole typed reading against
-# card.reading (FillBlankCard.tsx:53), and no English gloss can tell a learner
+# card.reading (FillBlankCard.tsx:102), and no English gloss can tell a learner
 # to reach for ぜ over よ, or to open with さあ. "Here we are at the theater."
 # cannot yield さあ劇場に着いたぜ, so a learner who understood the sentence
 # perfectly is marked wrong.

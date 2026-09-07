@@ -107,7 +107,7 @@
 # keigo a learner receives far more often than produces: the English of a
 # sentence rarely says which register the Japanese chose, so an English gloss
 # cannot tell you to build 出席される rather than 出席する. FillBlankCard shows
-# the English alone and grades the whole typed reading (FillBlankCard.tsx:53).
+# the English alone and grades the whole typed reading (FillBlankCard.tsx:102).
 # The nine:
 #
 #   #146346 -- "Is there someone who referred you to us?" does not produce

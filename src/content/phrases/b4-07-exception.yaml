@@ -63,9 +63,13 @@
 #   a noun in front (#89191). Lesson 1 cards that one and does not claim the
 #   clause use is as common as it looks in a grammar table.
 #
-# ONE ENGLISH GLOSS REPLACED, listed here so a reviewer can check it rather
+# TWO ENGLISH GLOSSES REPLACED, listed here so a reviewer can check it rather
 # than take it on trust. No Japanese string was touched anywhere in this file.
 #
+#   #84279 -- Tatoeba's English is "I can't stand getting beaten", which is the
+#     cannot-bear reading this pattern does not have; the card's own note says so
+#     and JMdict 2057580 glosses it "cannot (due to external circumstances)".
+#     Glossed "I can't allow myself to become a loser".
 #   #225195 -- Tatoeba's English is "It is no wonder to me that Gendou has
 #     something to do with.", which breaks off mid-clause and cannot be read.
 #     Glossed "It would be no wonder if Gendou had been involved in this
@@ -99,7 +103,7 @@
 #
 # ---------------------------------------------------------------------------
 # `recognitionOnly` ON THIRTY-SIX OF FORTY-THREE CARDS. That is the highest
-# share of any chapter in this book, higher than chapter 7's twenty-two of
+# share of any chapter in this book, higher than chapter 7's twenty-seven of
 # forty-two, and it is a property of what this chapter teaches rather than a
 # shortcut.
 #
@@ -109,7 +113,7 @@
 # words, so the only thing left for the learner to decide is the pattern the
 # lesson has just taught. Otherwise it is recognition, because FillBlankCard
 # shows the English alone and grades the whole typed reading against it
-# (FillBlankCard.tsx:53), and a card that cannot be derived marks a correct
+# (FillBlankCard.tsx:102), and a card that cannot be derived marks a correct
 # learner wrong.
 #
 # Two things push most of this chapter over that line. English translates
@@ -202,7 +206,7 @@
   english: You cannot be too careful when you drive a car.
   tatoebaId: "148966"
   recognitionOnly: true
-  notes: "The frame is いくら〜てもしすぎることはない: however much you do it, there is no such thing as doing it too much. It is built out of three things you already have -- いくら〜ても, which Book Three's chapter on even though gave you; すぎる from this book's first chapter; and ことはない. English collapses all of it into cannot be too, which is why this one is for reading."
+  notes: "The frame is いくら〜てもしすぎることはない: however much you do it, there is no such thing as doing it too much. It is built out of three things you already have -- いくら〜ても -- the concessive ても from Book Three's chapter on conditions, with いくら in front; すぎる from this book's first chapter; and ことはない. English collapses all of it into cannot be too, which is why this one is for reading."
 
 - id: b4band7.no-need-to-hide-your-feelings
   jlpt: N3
@@ -314,6 +318,7 @@
   reading: かれのはつげんはほかにかいしゃくのしようがない。
   romaji: kare no hatsugen wa hoka ni kaishaku no shiyou ga nai.
   english: His remarks allow of no other interpretation.
+  recognitionOnly: true
   tatoebaId: "116346"
   notes: "The same frame on a する-noun, and it takes の: 解釈のしようがない, there is no way to interpret it. する gives the stem し, so しようがない. Do not confuse it with しょうがない, which is a different fixed phrase meaning it can't be helped."
 
@@ -326,7 +331,7 @@
   english: It is neither more nor less than absurd.
   tatoebaId: "198292"
   recognitionOnly: true
-  notes: "〜としか言いようがない, there is no way to put it other than, is worth having whole: it is how a speaker delivers a verdict while claiming they had no choice about the wording. しか with a negative is Book Two's nothing but."
+  notes: "〜としか言いようがない, there is no way to put it other than, is worth having whole: it is how a speaker delivers a verdict while claiming they had no choice about the wording. しか with a negative is nothing but -- no chapter of this course teaches the pair, so take しか…ない whole."
 
 - id: b4band7.cannot-become-a-loser
   jlpt: N3
@@ -334,7 +339,7 @@
   japanese: 負け犬になるわけにはいかない。
   reading: まけいぬになるわけにはいかない。
   romaji: makeinu ni naru wake ni wa ikanai.
-  english: I can't stand getting beaten.
+  english: I can't allow myself to become a loser.
   tatoebaId: "84279"
   recognitionOnly: true
   notes: "わけにはいかない is the other half of this lesson: not I am unable to, but I cannot very well -- something outside me makes it impossible to accept. A dictionary-form verb goes in front. 負け犬 is literally a beaten dog, the loser."
@@ -416,6 +421,7 @@
   reading: ジムはたさいなひとといってもいいだろう。
   romaji: jimu wa tasai na hito to itte mo ii darou.
   english: Jim can be said to be a man of many talents.
+  recognitionOnly: true
   tatoebaId: "215953"
   notes: "といってもいい is the friendlier relative: you could go so far as to call it that. Add だろう and it becomes a careful compliment. Say 過言ではない instead of いい -- 〜といっても過言ではない -- and you have the phrase a speech uses for the same idea."
 
@@ -505,7 +511,7 @@
   english: Chances come rarely in any case.
   tatoebaId: "202966"
   recognitionOnly: true
-  notes: "いずれにしても is the set phrase: whichever way it turns out, in any case. それにしても does the same work with a backward look -- even so, given what was just said. というもの generalises, as in the chapter on why you are saying it, and まれに is seldom."
+  notes: "いずれにしても is the set phrase: whichever way it turns out, in any case. それにしても does the same work with a backward look -- even so, given what was just said. というもの generalises, as in the chapter on why you are saying it, and まれに is seldom. しか with a negative -- しかない here -- is nothing but, a pair no chapter teaches, so take it whole."
 
 - id: b4band7.no-wonder-if-he-was-involved
   jlpt: N3

@@ -1252,7 +1252,7 @@ never reads it.
 
 ### 335. Recognition checkpoint — closes the chapter
 
-> A wide pass over the chapter, and like the chapter itself it turns on pairs — because every marker here has a neighbour that English translates the same way, and choosing between them is the whole skill. に対して against にとって: pointed at somebody, or judged from where they stand. につれて against とともに: the same two-changes-in-step relation, one in speech and one in writing. を通して against によって: through what channel, or by what means and whose hand. によれば against によって: who says so, or who did it. And として against the と + して that is not this pattern at all, where the only clue is what stands in front. What comes back will hinge on hearing which relation a sentence is describing, not on translating its words. Some of it will turn on something small: an に対して after a noun against one after a whole clause, a とともに that means at the same time against one that means as well as, a こそ that singles a thing out against a こそ〜が that concedes it. Those are the places worth slowing down. Type the reading or the meaning rather than picking from a line-up. Twenty-two of this chapter's forty-two sentences come back for recognition rather than typing, which is more than any earlier chapter of this book: the English of a relation sentence rarely tells you which relation the Japanese chose, and several of these sentences are long written ones. That is the material, not a shortcut. Anything you miss comes back sooner. It finishes when the remaining set empties; retry as often as you like, and nothing is recorded.
+> A wide pass over the chapter, and like the chapter itself it turns on pairs — because every marker here has a neighbour that English translates the same way, and choosing between them is the whole skill. に対して against にとって: pointed at somebody, or judged from where they stand. につれて against とともに: the same two-changes-in-step relation, one in speech and one in writing. を通して against によって: through what channel, or by what means and whose hand. によれば against によって: who says so, or who did it. And として against the と + して that is not this pattern at all, where the only clue is what stands in front. What comes back will hinge on hearing which relation a sentence is describing, not on translating its words. Some of it will turn on something small: an に対して after a noun against one after a whole clause, a とともに that means at the same time against one that means as well as, a こそ that singles a thing out against a こそ〜が that concedes it. Those are the places worth slowing down. Type the reading or the meaning rather than picking from a line-up. Twenty-seven of this chapter's forty-two sentences come back for recognition rather than typing, which is more than any earlier chapter of this book: the English of a relation sentence rarely tells you which relation the Japanese chose, and several of these sentences are long written ones. That is the material, not a shortcut. Anything you miss comes back sooner. It finishes when the remaining set empties; retry as often as you like, and nothing is recorded.
 
 ---
 
@@ -1342,7 +1342,7 @@ never reads it.
 - 何とも言いようがないなあ。 — I just don't know what to say.
 - 彼の発言は他に解釈のしようがない。 — His remarks allow of no other interpretation.
 - ばかばかしいとしか言いようがない。 — It is neither more nor less than absurd.
-- 負け犬になるわけにはいかない。 — I can't stand getting beaten.
+- 負け犬になるわけにはいかない。 — I can't allow myself to become a loser.
 - 僕はその問題を黙って見過ごすわけにはいかない。 — I cannot silently overlook this problem.
 
 ### 340. Just because

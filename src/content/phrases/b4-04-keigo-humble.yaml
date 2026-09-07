@@ -118,7 +118,7 @@
 # reading too long to type back (over about forty-one kana), and a reading
 # nothing settles. Keigo runs long and it also runs formulaic, so both apply
 # here. FillBlankCard shows the English alone and grades the whole typed
-# reading (FillBlankCard.tsx:53), and these six English glosses cannot produce
+# reading (FillBlankCard.tsx:102), and these six English glosses cannot produce
 # their Japanese:
 #
 #   #205054 -- "The honor is more than I deserve" is the translation of an
