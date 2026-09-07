@@ -83,9 +83,9 @@
 - id: grammar.b4-mataha
   jlpt: N3
   pattern: "または"
-  gloss: "または joins two nouns and offers a choice between them: 紅茶またはコーヒー. It is the written or of forms, menus, instructions and regulations, where speech uses か. あるいは does the same between nouns -- where two nouns are being joined either word will stand -- and it also joins two whole alternatives; as an adverb it separately means perhaps. それとも belongs to questions and only to questions: a whole question, それとも, and a second whole question. In speech people simply put か between the two nouns -- コーヒーか紅茶 -- and that is the plain everyday version of all three. What fixes それとも is the question, not the register; what separates または from あるいは is little more than how dry the writing is."
-  phraseId: b4band8.tea-or-coffee
-  blank: こうちゃまたはコーヒー
+  gloss: "または joins two nouns and offers a choice between them: 紅茶またはコーヒー. It is the written or of forms, menus, instructions and regulations, where speech uses か. あるいは does the same between nouns -- where two nouns are being joined either word will stand -- and it also joins two whole alternatives; as an adverb it separately means perhaps. それとも marks a choice being asked: usually a whole question, それとも, and a second whole question, and also embedded inside 思う or わからない, where no question mark appears. In speech people simply put か between the two nouns -- コーヒーか紅茶 -- and that is the plain everyday version of all three. What fixes それとも is the question, not the register; what separates または from あるいは is little more than how dry the writing is."
+  phraseId: b4band8.small-or-middle-sized-cars
+  blank: こがたしゃまたはちゅうがたしゃ
 
 - id: grammar.b4-shikamo
   jlpt: N3
@@ -99,7 +99,7 @@
   pattern: "むしろ"
   gloss: "むしろ chooses one description or one course over another: rather, sooner, if anything. Three shapes carry it. After より, which marks what is being passed over: 金よりむしろ名誉. After というより, which is the frame to own -- X というよりむしろ Y, not so much X as Y, with は or も able to sit inside it. And alone, the alternative left unsaid: むしろ外出したくない, I would rather not go out. It does not measure quantities, which is what より does on its own; it corrects a description or picks a side. Written 寧ろ in kanji, rarely."
   phraseId: b4band8.a-hall-rather-than-a-room
-  blank: というよりはむしろ
+  blank: むしろひろまだ
 
 - id: grammar.b4-ippou
   jlpt: N3
@@ -112,5 +112,5 @@
   jlpt: N3
   pattern: "ところで"
   gloss: "ところで at the head of a sentence changes the subject: by the way, now then. What follows has nothing to do with what came before, and that break is the whole point of the word. It is neither formal nor casual and sits in both. Keep it apart from the other ところで, which follows a plain past verb and means even if -- 行ったところで, even if you went, and nothing comes of it. The shape in front is all that separates them. その上 shares this lesson as the spoken way of adding one more thing to what was just said, which makes it a relative of this chapter's しかも rather than a way of changing the subject."
-  phraseId: b4band8.where-do-you-live
-  blank: ところで、おすまいは
+  phraseId: b4band8.what-sports-do-you-like
+  blank: ところであなたは
