@@ -11,11 +11,11 @@ never reads it.
 
 | | |
 |---|---|
-| Chapters | 6 |
-| Lessons | 50 (44 teaching, 6 checkpoints) |
-| Words | 292 |
-| Phrases | 219 |
-| Grammar patterns | 43 |
+| Chapters | 7 |
+| Lessons | 59 (52 teaching, 7 checkpoints) |
+| Words | 342 |
+| Phrases | 261 |
+| Grammar patterns | 51 |
 | Kanji introduced | 0 |
 
 ---
@@ -1069,3 +1069,187 @@ never reads it.
 ### 326. Recognition checkpoint — closes the chapter
 
 > A wide pass over the chapter, and like the last one it turns mostly on pairs — because every form here has a twin one register down or on the other side of the exchange, and keigo is choosing between them. います against いらっしゃいます against 参ります. 言います against おっしゃいます against 申します. 食べます against 召し上がります against いただきます. します against なさいます against いたします. てくださいますか against ていただけますか. お待ちください against お待ちします. What comes back will hinge on hearing whose action a sentence describes, not on translating its words. Then the frames. お plus a ます-stem plus になる raises what the listener does; the same stem plus ください asks them to do it; the same stem plus する, from last chapter, lowers what you do. れる and られる on somebody you are honouring do the same job lightly, and 来られる can equally be a passive or a potential — that ambiguity was a lesson, not an oversight, so if it still feels unresolved, that is the correct state. Some of what returns will turn on something small: an いらっしゃる that means いる against one that means 行く, a される with an agent against one without, a ご that raises the listener's property against one that only smooths a noun. Those are the places worth slowing down. Type the reading or the meaning rather than picking from a line-up. Nine of this chapter's sentences come back for recognition only, because their English cannot tell you which Japanese to build — the whole of lesson 6 among them, since an honorific れる is invisible in translation. Anything you miss comes back sooner. It finishes when the remaining set empties; retry as often as you like, and nothing is recorded.
+
+---
+
+## Chapter 7 — In relation to
+
+*In relation to*
+
+8 lessons · 50 words · 42 phrases
+
+### 327. Towards, against, in return for
+
+**Lesson 1 of 8** · In relation to
+**Can do:** Say what an action, an attitude or a reaction is directed at
+**Grammar:** `～に対して` — Noun plus に対して: what an attitude, an action or a reaction is aimed at. Three jobs share the one form -- a target (話し手に対して反感を持つ), an opposition or a comparison (ドルに対して弱くなる), and something given in return (サービスに対してチップ) -- and the noun in front, not the marker, tells you which. に対し is the same word in a more written voice. It marks the target and not the standpoint: for whose point of view something holds, the next lesson's にとって is the marker.
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 反感 | はんかん | antipathy; ill feeling |
+| 態度 | たいど | attitude; manner; bearing |
+| 人生 | じんせい | (a person's) life |
+| 通貨 | つうか | currency |
+| 習慣 | しゅうかん | custom; practice; habit |
+| 払う | はらう | to pay |
+| 鈍い | にぶい | blunt; dull; insensitive |
+
+- 私は話し手に対して反感を持った。 — I experienced a feeling of antipathy towards the speaker.
+- 彼女は人生に対して否定的な態度をとっている。 — She has a negative attitude toward life.
+- 欧州通貨はドルに対して弱くなった。 — European currencies weakened against the dollar.
+- 日本には良いサービスに対してチップを払う習慣はない。 — In Japan it is not customary to tip for good service.
+- 足の裏は暑さや寒さに対して鈍い。 — Soles of the feet are insensitive to heat and cold.
+
+### 328. For someone, from their side
+
+**Lesson 2 of 8** · In relation to
+**Can do:** Say how something stands from a particular person's or group's point of view
+**Grammar:** `～にとって` — Noun plus にとって: from that person's or that group's side of things -- for me, to us, as far as a society is concerned. What follows is an evaluation in every card this chapter carries: 大事, 不利, 危険, 普通ではない. It does not mark a target, which is に対して, and it does not mark a doer. English hides the difference, because against him and to us can both be either, so the test is whether the sentence judges something from somewhere (にとって) or points something at somebody (に対して).
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 大事 | だいじ | important; precious |
+| 証拠 | しょうこ | evidence; proof |
+| 不利 | ふり | disadvantageous; unfavourable |
+| 普通 | ふつう | ordinary; usual |
+| 社会 | しゃかい | society; the community |
+| 彼ら | かれら | they; them |
+
+- 彼は私たちにとって大事な人だ。 — He is precious to us.
+- この証拠は彼にとって不利だった。 — This evidence was against him.
+- スポーツマンにとって視力が悪いのは不利だ。 — Poor eyesight is a handicap to a sportsman.
+- 日曜日は私にとって普通の日ではない。 — Sunday is not an ordinary day to me.
+- 彼らはその男を社会にとって危険人物と考えた。 — They regarded the man as a danger to society.
+
+### 329. In the role of
+
+**Lesson 3 of 8** · In relation to
+**Can do:** Say in what capacity someone or something acts
+**Grammar:** `～として` — Noun plus として: in the capacity of, in the role of -- 通訳として雇う, 芸人として成功する. Add の and it modifies a noun, 教師としての経験; add は and it speaks for your own side, 私としては. What separates it from the と + して you already own is only what stands in front: a noun gives this pattern, a volitional gives 〜うとして from this book's first chapter, and an adverb gives かっとして, きちんとして.
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 成功 | せいこう | success |
+| 通訳 | つうやく | interpreting; interpreter |
+| 雇う | やとう | to employ; to hire |
+| 歌手 | かしゅ | singer |
+| 教師 | きょうし | teacher; instructor |
+| 経験 | けいけん | experience |
+| 浅い | あさい | shallow; slight; not deep |
+
+- 彼は芸人として成功した。 — He succeeded as an entertainer.
+- 彼は彼女を通訳として雇った。 — He engaged her as an interpreter.
+- 彼女はソプラノ歌手として有名だ。 — She is famous as a soprano singer.
+- 彼は教師としての経験が浅い。 — He has little experience in teaching.
+- 私としては異存はありません。 — There is no objection on my part.
+
+### 330. As one thing changes, so does another
+
+**Lesson 4 of 8** · In relation to
+**Can do:** Tie two gradual changes together
+**Grammar:** `～につれて` — Dictionary-form verb plus につれて: as this goes on, that follows. Both halves have to be changes that unfold over time -- 冬が近づくにつれて日が短くなる -- which is why a one-off event does not sit in front of it. Every card in this chapter has a verb there; a noun of change can also stand in that slot. Book Three's 〜ば〜ほど measures one change against another the same way, and とともに does this job in writing where につれて does it in speech.
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 年 | とし | year; age |
+| 希望 | きぼう | hope; wish |
+| 我々 | われわれ | we; us |
+| 景気 | けいき | business conditions; the economy |
+| 回復 | かいふく | recovery; restoration |
+| 変わる | かわる | to change; to alter |
+
+- 冬が近づくにつれて日が短くなる。 — The days grow shorter as winter approaches.
+- クリスマスが近づくにつれて景気はいくらか回復した。 — With the approach of Christmas, business improved somewhat.
+- 時間がたつにつれて我々の希望は消えた。 — As time went on, our hopes sank.
+- 私たちは年をとるにつれて忘れっぽくなるんだよ。 — We become forgetful as we grow older.
+- その芸術家は年を取るにつれて画風が変わるであろう。 — As the artist grows older his paintings may alter.
+
+### 331. Together with
+
+**Lesson 5 of 8** · In relation to
+**Can do:** Say that two things happen, move or change together
+**Grammar:** `～とともに` — Noun plus とともに, written と共に just as often: along with. Four jobs, all attested in this lesson -- in company with somebody (私と共に来る), at the same moment as something (大音響とともに爆発する), keeping step with a change (コストとともに上昇する), and, after である, as well as (詩人であるとともに外交官). It is formal: in speech と一緒に covers the first and につれて the third.
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 瞬間 | しゅんかん | moment; instant |
+| 爆発 | ばくはつ | explosion |
+| 太陽 | たいよう | the sun |
+| 崩壊 | ほうかい | collapse; breakdown |
+| 上昇 | じょうしょう | a rise; climbing |
+| 燃料 | ねんりょう | fuel |
+
+- 私と共に来てくれませんか。 — Would you mind coming with me?
+- その瞬間、大音響とともに爆発した。 — At that instant it exploded with a great noise.
+- マリーゴールドは太陽とともに起きる。 — The marigold rises with the sun.
+- 冷戦はソビエトの崩壊と共に終わった。 — The Cold War ended when the Soviet Union collapsed.
+- 海外への航空運賃は燃料のコストとともに上昇した。 — The cost of flying overseas has risen with the cost of fuel.
+- 彼は高名な詩人であるとともに有能な外交官でもあった。 — He was a famous poet and a competent diplomat.
+
+### 332. Through
+
+**Lesson 6 of 8** · In relation to
+**Can do:** Say what something passes through, or by what means it came
+**Grammar:** `～を通して` — Noun plus を通して: through. Physically through a thing -- 葉を通して日光が差し込む -- and by way of a person or a medium, 彼を通して知り合いになる, which is the sense you will use. を通じて is its written twin and also covers a whole span of time. Keep it apart from the plain verb 通す that you met in 目を通す: there the te-form belongs to the verb, here を通して is a marker sitting on a noun.
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 冷たい | つめたい | cold (to the touch); cold-hearted |
+| 身 | み | one's body; oneself |
+| 知り合い | しりあい | an acquaintance |
+| 葉 | は | leaf; foliage |
+| 日光 | にっこう | sunlight; sunshine |
+| 霧 | きり | fog; mist |
+
+- 冷たい風が彼のコートを通して身にしみた。 — The cold wind cut through his coat.
+- 彼を通して私は町の有力者と知り合いになった。 — Through him I got acquainted with the big names of the town.
+- こんもりと茂った木々の葉を通して日光が差し込んだ。 — The sunshine penetrated the thick leaves of the trees.
+- 霧を通して、わずかに陸地をみわけることができた。 — The land could just be discerned through the mist.
+
+### 333. On top of, on the basis of
+
+**Lesson 7 of 8** · In relation to
+**Can do:** Add a factor to what you have said, or name what something rests on
+**Grammar:** `～に基づいて` — Noun plus に基づいて: on the basis of, grounded in. What it rests on takes に, and this lesson's cards ground a story on fact, a science on observation and a salary on experience. The te-form modifies the verb that follows; 基づいている describes the standing state; に基づく and に基づいた go in front of a noun. Its lesson-mate に加えて adds a factor instead of grounding one -- これに加えて, on top of that -- and takes こと first when a clause goes in front of it.
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 科学 | かがく | science |
+| 観察 | かんさつ | observation; watching |
+| 物語 | ものがたり | story; tale |
+| 事実 | じじつ | fact; the truth |
+| 給料 | きゅうりょう | salary; pay |
+| 決まる | きまる | to be decided; to be settled |
+| 急行 | きゅうこう | express train |
+
+- 濃霧に加えてうねりも高かった。 — In addition to a thick fog, there was a heavy swell.
+- これに加えて彼は、ヘブライ語を読むことが出来る。 — Above and beyond this, he can read Hebrew.
+- 急行に乗るには、普通券に加えて急行券を買う必要がある。 — To take an express train, we have to get an express ticket in addition to an ordinary ticket.
+- 科学は観察に基づいている。 — Science rests upon observation.
+- この物語は事実に基づいている。 — This story is founded on fact.
+- 給料は、経験と学歴に基づいて決まります。 — Pay will be based on experience and educational background.
+
+### 334. Precisely this, and who says so
+
+**Lesson 8 of 8** · In relation to
+**Can do:** Single out the thing that matters, and name the source of a claim
+**Grammar:** `～によれば` — Noun plus によれば or によると: according to. It names where a claim came from and leaves the speaker out of it, so it pairs naturally with the hearsay そうだ or という at the end of the clause -- 長期予報によると、暖冬だそうだ -- without requiring one. Keep it apart from によって, which you have from Book Three: that one marks an agent, a means or what something varies with, not a source. Its lesson-mate こそ does the opposite job on a noun, singling one out -- 辛抱こそ, 彼こそ -- and 〜こそ〜が concedes a point before overturning it.
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 辛抱 | しんぼう | patience; putting up with something |
+| 十分 | じゅうぶん | enough; sufficient |
+| 予報 | よほう | forecast |
+| 正直 | しょうじき | honest; straightforward |
+| 患う | わずらう | to be ill; to suffer from |
+
+- 辛抱こそ大事なんだ。 — It's patience that counts.
+- 彼こそその仕事の適任者だ。 — He is the very man for the job.
+- 彼は年こそ若いが十分その仕事をやっていける。 — Young as he is, he is equal to the task.
+- 長期予報によると、暖冬だそうだ。 — The long-range forecast says we will have a mild winter.
+- 彼のいうところによれば、彼女は正直な女だ。 — According to him, she is honest.
+- 医者によれば、彼女はリューマチをわずらっている。 — The doctor says she suffers from rheumatism.
+
+### 335. Recognition checkpoint — closes the chapter
+
+> A wide pass over the chapter, and like the chapter itself it turns on pairs — because every marker here has a neighbour that English translates the same way, and choosing between them is the whole skill. に対して against にとって: pointed at somebody, or judged from where they stand. につれて against とともに: the same two-changes-in-step relation, one in speech and one in writing. を通して against によって: through what channel, or by what means and whose hand. によれば against によって: who says so, or who did it. And として against the と + して that is not this pattern at all, where the only clue is what stands in front. What comes back will hinge on hearing which relation a sentence is describing, not on translating its words. Some of it will turn on something small: an に対して after a noun against one after a whole clause, a とともに that means at the same time against one that means as well as, a こそ that singles a thing out against a こそ〜が that concedes it. Those are the places worth slowing down. Type the reading or the meaning rather than picking from a line-up. Twenty-two of this chapter's forty-two sentences come back for recognition rather than typing, which is more than any earlier chapter of this book: the English of a relation sentence rarely tells you which relation the Japanese chose, and several of these sentences are long written ones. That is the material, not a shortcut. Anything you miss comes back sooner. It finishes when the remaining set empties; retry as often as you like, and nothing is recorded.

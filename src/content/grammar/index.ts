@@ -38,6 +38,7 @@ import b4ReasonRaw from "./b4-02-reason.yaml";
 import b4TalkRaw from "./b4-03-talk.yaml";
 import b4KeigoHumbleRaw from "./b4-04-keigo-humble.yaml";
 import b4KeigoHonorificRaw from "./b4-05-keigo-honorific.yaml";
+import b4RelationRaw from "./b4-06-relation.yaml";
 
 const phrasesById = new Map(allPhrases.map((p) => [p.id, p]));
 
@@ -70,6 +71,7 @@ export const allGrammarPatterns: GrammarPattern[] = [
   ...parseGrammarPatterns(b4TalkRaw, "grammar/b4-03-talk.yaml", phrasesById),
   ...parseGrammarPatterns(b4KeigoHumbleRaw, "grammar/b4-04-keigo-humble.yaml", phrasesById),
   ...parseGrammarPatterns(b4KeigoHonorificRaw, "grammar/b4-05-keigo-honorific.yaml", phrasesById),
+  ...parseGrammarPatterns(b4RelationRaw, "grammar/b4-06-relation.yaml", phrasesById),
 ];
 
 export function findGrammarPattern(id: string): GrammarPattern | undefined {
