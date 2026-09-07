@@ -1,7 +1,7 @@
 # Book Four chapters.
 #
 # The book keeps the same chapter pattern as Book Three: the lessons make a
-# band and the chapter name is the band's theme. The four bands here are the
+# band and the chapter name is the band's theme. The five bands here are the
 # ones the Book Four content files already publish under `b4.band-*`.
 #
 # content-source: n/a — this file names and orders existing lessons; it adds no
@@ -22,3 +22,7 @@
 - id: b4.band-3
   order: 4
   title: How people actually talk
+
+- id: b4.band-4
+  order: 5
+  title: Speaking with care

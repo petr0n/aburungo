@@ -11,11 +11,11 @@ never reads it.
 
 | | |
 |---|---|
-| Chapters | 4 |
-| Lessons | 33 (29 teaching, 4 checkpoints) |
-| Words | 206 |
-| Phrases | 147 |
-| Grammar patterns | 29 |
+| Chapters | 5 |
+| Lessons | 42 (37 teaching, 5 checkpoints) |
+| Words | 256 |
+| Phrases | 187 |
+| Grammar patterns | 37 |
 | Kanji introduced | 0 |
 
 ---
@@ -716,3 +716,191 @@ never reads it.
 ### 309. Recognition checkpoint — closes the chapter
 
 > A wide pass over the chapter, and this one is mostly about pairs, because almost everything here has a look-alike that means something else. Start with the two that cost the most. Anything but a plain non-past in front of な — past tense, だ, an adjective — is this chapter's musing な and cannot be chapter 2's prohibitive. A dictionary form in front is the ambiguous one: 思うな is I reckon or don't think, and only intonation and who the verb is aimed at will tell you. 始めるな and 始めたな differ by one kana and by their entire meaning. The second pair is one string with two tunes: sentence-final じゃない falling is a flat denial, and rising is an invitation to agree. Nothing on the page separates them, so what comes back is the sentence around them — a correction and a complaint fall, a shared observation rises. Then the ones that sort by job rather than by shape. よ hands over something new; ね hands over something shared; よね does both and only in that order. かな wonders about the world; っけ reaches for something you already knew and mislaid, which is why it arrives as だっけ and たっけ and not as るっけ. なんて holds a whole idea at arm's length; なんか hedges the noun in front of it — and 何か, which sounds identical, is the ordinary word for something and is not related to either. とか leaves a list open; と closes it. Two things here are recognition only, and the checkpoint treats them that way. ぞ, ぜ and わ tell you about the speaker, and what is being asked is whether you can hear that — not whether you would say it. Same for かしら. Everything else in the chapter is yours to use. Some of what comes back will hinge on something small: a じゃ that turns out to be では between two nouns rather than a negative, a って standing in for は rather than for と, a なんか sitting before a negative and coming out as anything but. Those are the places worth slowing down. Type the reading or the meaning rather than picking it out of a line-up. Anything you miss comes back sooner. It finishes when the remaining set empties; retry as often as you like, and nothing is recorded.
+
+---
+
+## Chapter 5 — Speaking with care
+
+*Speaking with care*
+
+8 lessons · 56 words · 40 phrases
+
+### 310. There is, politely
+
+**Lesson 1 of 8** · Speaking with care
+**Can do:** Recognise and use the polite copula and existence verb of shops, hotels and formal writing
+**Grammar:** `～ございます` — The polite existence verb and the polite copula. ございます does the work of あります and でございます the work of です, in the register a shop, a hotel or a formal letter uses; the meaning is unchanged and the particles do not move. Its negative ございません is what 申し訳ございません is built on. ありがとうございます, which you have said since Book One, is this same verb.
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 種類 | しゅるい | kind; sort; variety |
+| 当店 | とうてん | this store; our shop |
+| 申し訳 | もうしわけ | excuse; apology |
+| 光栄 | こうえい | honour; privilege |
+| 不自由 | ふじゆう | inconvenience; discomfort |
+| 部屋 | へや | room |
+| 大変 | たいへん | hard, tough |
+
+- １泊５０ドルのシングルのお部屋がございます。 — We have a single for 50 dollars per night.
+- 当店にはいろいろな種類の本がございます。 — We have a wide choice of books.
+- それは身に余る光栄でございます。 — The honor is more than I deserve.
+- 申し訳ございません、その本は在庫切れになっております。 — I'm very sorry, that book is out of stock.
+- 大変ご不自由をおかけして申し訳ございません。 — I'm sorry to have caused you such inconvenience.
+
+### 311. We will do it, formally
+
+**Lesson 2 of 8** · Speaking with care
+**Can do:** Announce what you or your side will do, in business register
+**Grammar:** `～いたします` — いたす is する lowered, used of what the speaker's own side will do. Any noun that takes する takes it -- 連絡いたします, 添付いたします -- and ご or お often sits on that noun as well. にいたします is にします, settling on one thing rather than another. どういたしまして, in your hands since Book One, is this verb inside a set phrase.
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 連絡 | れんらく | contact; getting in touch |
+| 支店 | してん | branch office; branch store |
+| 割引 | わりびき | discount; reduction |
+| 現金 | げんきん | cash |
+| 添付 | てんぷ | attaching (a document); attachment |
+| 手紙 | てがみ | letter |
+
+- ７月１０日より札幌支店を開設いたします。 — On July 10, we will open our Sapporo branch.
+- 現金払いには１０パーセント割引いたします。 — We give a 10% discount for cash.
+- いずれご連絡いたします。 — We will be in touch in due course.
+- ついては、私の手紙のコピーを添付いたします。 — I am sending a copy of my letter to you.
+- 小額の札にいたしますか、それとも高額の札にいたしましょうか。 — Do you want small bills or large?
+
+### 312. Saying it humbly
+
+**Lesson 3 of 8** · Speaking with care
+**Can do:** Thank, congratulate or offer condolences in the register of a letter or a speech
+**Grammar:** `お～申し上げます` — 申し上げる is 言う lowered, and most of what you meet is one frame: お or ご, a noun, then 申し上げます -- お礼申し上げます, お祝い申し上げます, お悔やみ申し上げます. を between the noun and the verb is optional and slightly less fixed. 申す is the plainer humble 言う, and 〜と申します is how you give your own name.
+
+| Word | Reading | Meaning |
+|---|---|---|
+| お礼 | おれい | thanks; a word of thanks |
+| 息子 | むすこ | son |
+| 結婚 | けっこん | marriage |
+| お祝い | おいわい | congratulations; a celebration |
+| お悔やみ | おくやみ | condolences |
+| 締め切り | しめきり | deadline; closing date |
+
+- 日頃のご愛顧にお礼申し上げます。 — We really thank you for your patronage.
+- 息子に成り代わってお礼を申し上げます。 — I thank you on behalf of my son.
+- 心からお悔やみ申し上げます。 — Please accept my sincerest condolences.
+- ご子息のご結婚を心よりお祝い申し上げます。 — Please accept our heartiest congratulations on the marriage of your son.
+- 念のためにもう一度申しますが、締め切りは３月３１日です。 — Let me remind you again that March 31st is the due date.
+
+### 313. We are, we go, humbly
+
+**Lesson 4 of 8** · Speaking with care
+**Can do:** State your own side's situation and movements in service register
+**Grammar:** `～ております` — おる is いる in formal register, so ております is ています with nothing about the aspect changed. 参る is 行く and 来る in the same register, and which one it means depends on who is moving towards whom. A speaker uses these of their own side, colleagues and company included; they also turn up in announcements about things belonging to nobody's side, as when a train 参ります into a station.
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 関係 | かんけい | relation; connection |
+| 揺れる | ゆれる | to shake; to sway |
+| 皆様 | みなさま | everyone (respectful) |
+| 迷惑 | めいわく | trouble; nuisance |
+| ただいま | ただいま | right now; right away |
+| 早い | はやい | early, fast |
+
+- ただ今気流の関係で揺れております。 — We are currently experiencing some turbulence.
+- 皆様にご迷惑をおかけしております。 — We apologise to everyone for the inconvenience.
+- 乗務員がただいま出入り口を開けております。 — The crew is now opening the hatch.
+- ただいま参ります。 — I will be with you right away.
+- 出来るだけ早く参ります。 — I'll come as soon as I can.
+
+### 314. Doing it for you
+
+**Lesson 5 of 8** · Speaking with care
+**Can do:** Offer to do something, or ask to borrow something, in humble form
+**Grammar:** `お～します` — お plus a verb's ます-stem plus する or いたす lowers the speaker's own action towards the listener -- お借りする, お待ちする, お送りする, お手伝いする. A noun that takes する uses ご or お in front of the noun instead: ご案内します. Which verbs sound natural in the frame is a matter of habit rather than a rule you can compute, and お願いします is the one you have been saying since Book One without knowing its shape.
+
+| Word | Reading | Meaning |
+|---|---|---|
+| よろしい | よろしい | good; all right (polite) |
+| お宅 | おたく | your home; your house |
+| 便り | たより | news from someone; a letter |
+| 楽しみ | たのしみ | looking forward to something |
+| いつでも | いつでも | any time; always |
+| 借りる | かりる | to borrow |
+| 手伝う | てつだう | to help, to assist |
+
+- このワープロをお借りしていいですか。 — May I use this word processor?
+- この本をお借りしてもよろしいですか。 — May I borrow this book?
+- いつでもお手伝いします。 — I am always ready to help you.
+- お宅までお送りしましょうか？ — May I escort you home?
+- お便り楽しみにお待ちしております。 — I am looking forward to hearing from you.
+
+### 315. Could you possibly
+
+**Lesson 6 of 8** · Speaking with care
+**Can do:** Make a request one step above てください
+**Grammar:** `～ていただけますか` — A request built from もらう lowered. いただく is humble もらう, いただける is its potential, and 〜ていただけますか asks whether you might receive the favour of the listener doing something. ませんか in place of ますか softens it further. Without a te-form in front, いただく is plain receiving -- and eating and drinking, which is where いただきます comes from.
+
+| Word | Reading | Meaning |
+|---|---|---|
+| データ | データ | data |
+| バッグ | バッグ | bag |
+| 一晩 | ひとばん | one night |
+| 泊める | とめる | to put someone up; to give lodging to |
+| 見せる | みせる | to show, to let someone see |
+| メニュー | メニュー | menu |
+| 入れる | いれる | to put in |
+| 飲み物 | のみもの | drink, beverage |
+
+- このデータをアップデートしていただけますか。 — Could I get you to update this data for me?
+- ショッピングバッグに入れていただけますか。 — Could you put it in a shopping bag for me?
+- もう一度メニューを見せていただけますか。 — Can I have the menu again, please?
+- 一晩私たちを泊めていただけませんか。 — Will you put us up for one night?
+- 何か飲み物をいただけますか。 — May I have something to drink?
+
+### 316. Allow me to
+
+**Lesson 7 of 8** · Speaking with care
+**Can do:** Announce your own action as something the listener permits
+**Grammar:** `～させていただきます` — Book Three's causative with いただく on the end: させて, being allowed to do it, plus いただきます, receiving that permission. It announces your own action as something the listener permits, which fits when the action really does touch them and reads as padding when it does not. Modern service Japanese uses it very widely and plenty of Japanese speakers find that overdone.
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 提案 | ていあん | proposal; suggestion |
+| 修正 | しゅうせい | correction; amendment |
+| 出席 | しゅっせき | attendance; being present |
+| 取引 | とりひき | business dealings; a transaction |
+| 失礼 | しつれい | rude; impolite |
+| 喜ぶ | よろこぶ | to be delighted; to be glad |
+| 都合 | つごう | convenience, whether a time suits you |
+| やめる | やめる | to stop doing, to quit |
+
+- 私この度一身上の都合でやめさせていただきます。 — I wish to resign from my work for purely personal reasons.
+- 失礼ですが御提案を修正させていただきます。 — Excuse me, but I will amend your proposal.
+- ぜひ取引させていただきたいと思います。 — We would love to work with you.
+- あなたのパーティーに喜んで出席させていただきます。 — I will be happy to attend your party.
+- お嬢さんに会わせていただきたい。 — I would like to be allowed to meet your daughter.
+
+### 317. Your name, your call
+
+**Lesson 8 of 8** · Speaking with care
+**Can do:** Put お and ご where service Japanese puts them
+**Grammar:** `お～／ご～` — お and ご in front of a noun, either raising something that belongs to the listener or simply making the word polite. The tendency is お before native Japanese words and ご before words built from Chinese roots -- お名前, お部屋 against ご連絡, ご案内 -- and it is a tendency with real exceptions, two of which this chapter cards: お電話 and お返事. 様 after a person's name or role does the same job at the other end of the word.
+
+| Word | Reading | Meaning |
+|---|---|---|
+| お客様 | おきゃくさま | customer (as staff address them) |
+| 案内 | あんない | showing someone the way; guidance |
+| 返事 | へんじ | reply; answer |
+| スペル | スペル | spelling (of a word) |
+| なまえ | なまえ | name |
+| 電話 | でんわ | telephone |
+| テーブル | テーブル | table |
+| 忘れる | わすれる | to forget, to leave behind |
+
+- あなたのお名前のスペルをお願いします。 — Could you spell your name, please?
+- ご用のときはお電話ください。 — Please phone if you need anything.
+- ベルボーイがお部屋にご案内します。 — The bellboy will show you to your room.
+- お客様、テーブルにライターをお忘れですよ。 — Sir, you have left your lighter on the table.
+- 一両日中にお返事します。 — I'll give you an answer in a day or two.
+
+### 318. Recognition checkpoint — closes the chapter
+
+> A wide pass over the chapter, and it is mostly about pairs — because every form here has an everyday twin, and knowing keigo means knowing which one a situation wants. あります against ございます. します against いたします. 言います against 申します and 申し上げます. います against おります, and 行きます and 来ます against 参ります. てもらえますか against ていただけますか. In each pair the meaning is the same and only the listener has changed, so what comes back will hinge on hearing the situation rather than translating the words. Then the frames, which are where production actually lives. お plus a verb stem plus する lowers what you do — お待ちします, お借りします. Noun plus いたします does the same for する-verbs, usually with ご or お on the noun. お or ご plus a noun plus 申し上げます carries thanks, congratulations and condolences. させていただきます announces your own action as something the listener permits. ていただけますか asks for a favour by receiving it rather than requesting it. One direction, said once more because it is the thing that goes wrong: all of these lower your own side. Point them at the listener and the effect is the opposite of polite. The forms that raise the listener are the next chapter's, and two sentences here previewed them — ご子息 and お忘れです — so if those two feel unfinished, that is correct. Some of what comes back will turn on something small: a ご that is raising the listener's property against one that is only smoothing a noun, an おります describing a person against a 参ります describing a train, an いただく with a te-form in front of it against one with a noun. Those are the places worth slowing down. Type the reading or the meaning rather than picking it out of a line-up. Six of this chapter's sentences come back for recognition only, because their English cannot tell you which Japanese to build — the long ones and the formulaic ones. Anything you miss comes back sooner. It finishes when the remaining set empties; retry as often as you like, and nothing is recorded.
