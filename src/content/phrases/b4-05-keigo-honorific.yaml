@@ -1,0 +1,481 @@
+# Book Four, Chapter 6 phrases -- raising the other person.
+#
+# Thirty-two sentences, none of them ours. 04-stage-reading.md section 8
+# withdrew the training-canonical exemption at the reading stage and above, so
+# every sentence below is a verbatim Tatoeba pair carried out of
+# server/data/jmdict-examples-eng-3.6.2.json with its id in `tatoebaId`, quoted,
+# because YAML reads a bare 226613 as a number and the schema rejects it.
+# Nothing was composed, trimmed, joined, smoothed or corrected. Every Japanese
+# string was compared character for character against the corpus after the file
+# was written rather than before: all thirty-two match, and no id and no
+# sentence in this file is carded anywhere else in src/content/phrases/.
+#
+# WHERE THIS CHAPTER'S KEIGO COMES FROM, as in chapter 5. Tatoeba's honorific
+# Japanese is shop counter, restaurant, hotel desk, air travel and business
+# letter. That is a narrow slice and it is also the slice a foreigner meets
+# first, which is why it is the chapter. None of these forms is obligatory in
+# the situation it describes: Japanese has degrees of politeness and a speaker
+# picks one.
+#
+# ---------------------------------------------------------------------------
+# ONE SENTENCE THE CHAPTER PLAN ASKED FOR AND CANNOT HAVE. #215035
+# スープは熱いうちに召し上がって下さい was proposed for lesson 3 and is already a
+# Book Three card (phrases/b3-04-time.yaml, band4.eat-your-soup-while-its-hot,
+# where it teaches うちに). Carding it again would teach one sentence twice in
+# two books. Lesson 3 uses #193314 もっとローストビーフを召し上がれ instead, which
+# adds the imperative 召し上がれ that no other candidate carries.
+#
+# FOUR MORE DROPPED, each for a stated reason rather than taste:
+#
+#   #236419 「もっと召し上がりますか」「いいえ、じゅうぶんいただきました」 -- two
+#   speakers in quotation marks. A scripted exchange is multi-sentence composed
+#   text even when both halves are attested, which is the rule chapter 5 set.
+#   #183079 記者：例を１つあげてくださいますか carries a speaker label for the
+#   same reason and is out on the same rule.
+#
+#   #217289 こんにちは。ようこそ当機へいらっしゃいませ。ごきげんいかがですか --
+#   three sentences.
+#
+#   #75886 丹精をこめてつくったこの美しい織物をごらんください -- a genuine
+#   ごらんください, but 丹精をこめる is an idiom no other card in this book needs
+#   and the sentence is a museum label. #148364 受付で聞いてご覧なさい took the
+#   ご覧 slot with nothing to guess.
+#
+#   #141203 洗濯物を持っていくために誰かよこしてくださいますか -- correct, and
+#   the てくださいますか lesson already has three requests without it. Its よこす
+#   is a verb the course never meets again and the sentence would have added
+#   three words to a lesson that already teaches five.
+#
+# ONE FORM THE CORPUS ATTESTS ONLY AT LENGTH, recorded rather than filled in.
+# The full honorific 見る, ご覧になる, appears in exactly three sentences in the
+# whole file: #192241 at thirty-five characters, which is carded below for
+# recognition, and two Gospel passages at forty and fifty-eight (#213544,
+# #424402). Everything else the corpus holds is ご覧なさい, ご覧の通り,
+# ご覧のように, ごらんください or ごらん after a te-form. Lesson 2 therefore cards
+# the shorter shapes and takes ご覧になる itself from the one usable sentence. No
+# sentence was composed to give the form a tidier example.
+#
+# ---------------------------------------------------------------------------
+# READING JUDGEMENT CALLS, stated rather than left to be discovered. Every
+# `reading` is what a learner types and FillBlankCard grades the whole string,
+# so an ambiguous transcription is a card nobody can pass.
+#
+#   The four honorific verbs in -aru -- いらっしゃる, おっしゃる, なさる, くださる
+#   -- are the v5aru class (JMdict 1000940, 1238840, 1157090, 1184280) and their
+#   polite form ends in -います, not -ります: いらっしゃいます, おっしゃいます,
+#   なさいます, くださいます. 召し上がる (1346370) is an ordinary godan verb, so
+#   its polite form is 召し上がります and its imperative 召し上がれ. Every reading
+#   below follows the entry rather than the pattern the kanji suggests.
+#   #216749's ５番 is ごばん. #74644's 昨日 is きのう, the reading JMdict marks
+#   common; さくじつ exists and belongs to formal announcements.
+#   #74644's 通り is とおり: ご覧の通り is its own entry, 2202170, read
+#   ごらんのとおり.
+#   #76660's やけ食い is やけぐい (JMdict 2127950), not やけしょく.
+#   #202233's 我々 is われわれ (1607050) and its 来られる is こられる.
+#   #226579's 社会保障 is しゃかいほしょう (1658860).
+#   #202849's 受領書 is じゅりょうしょ (1937630).
+#   Sentence punctuation is kept in the reading exactly as the corpus has it,
+#   including #202257's full-width ？, which is the convention chapter 5 set.
+#
+# ROMAJI hyphenates the honorific prefix wherever it sits on a productive frame
+# -- o-mochi ni narimashita, o-azuke ni naru, o-machi kudasai, o-maneki
+# kudasatte, go-soukin kudasaru -- and leaves it attached where the dictionary
+# lists the word with its prefix: irasshaimase, goran, oide, ojousan, gozaimasu.
+# That is a transcription convention, not a claim about the Japanese.
+#
+# ---------------------------------------------------------------------------
+# THE ENGLISH is Tatoeba's own except in five places, each listed here by id and
+# kind so a reviewer can check them rather than take them on trust. No Japanese
+# string was touched.
+#
+#   #228460 -- "Good evening. How many are in your party?" opens with a greeting
+#     the Japanese does not contain; いらっしゃいませ is the shop welcome.
+#     Glossed "Welcome. How many in your party?"
+#   #146346 -- "Did anybody recommend us to you?" hides 紹介者, the person doing
+#     the introducing. Glossed "Is there someone who referred you to us?"
+#   #193314 -- "How about some more roast beef?" turns an imperative into a
+#     question. Glossed "Please help yourself to more roast beef."
+#   #227021 -- "It was kind of you to invite us" hides that the sentence is
+#     literally a thank-you. Glossed "Thank you for inviting us."
+#   #199060 -- "May we ask you to remit the settlement in full at your earliest
+#     convenience?" is business English of about 1890 and calls 全額 a
+#     settlement. Glossed "Please remit the full amount as soon as possible."
+#
+# ---------------------------------------------------------------------------
+# `recognitionOnly` ON NINE CARDS, which is more than chapter 5's six and is the
+# point of this chapter rather than a lapse. Honorific forms are the half of
+# keigo a learner receives far more often than produces: the English of a
+# sentence rarely says which register the Japanese chose, so an English gloss
+# cannot tell you to build 出席される rather than 出席する. FillBlankCard shows
+# the English alone and grades the whole typed reading (FillBlankCard.tsx:102).
+# The nine:
+#
+#   #146346 -- "Is there someone who referred you to us?" does not produce
+#     紹介者はいらっしゃいますか.
+#   #224623 -- "You can speak out freely here" keeps none of どんどん,
+#     おっしゃって or かまいません.
+#   #74644 -- ご覧の通り and となりました are both invisible in "were as you see".
+#   #192241 -- thirty-six kana, and おありなら has no English counterpart.
+#   #144912 -- お恵みくださった is literary, and "has blessed me" gives no reason
+#     to reach for it.
+#   #220454, #211878, #76660, #202233 -- lesson 6 entire. The honorific れる and
+#     られる are invisible in English by definition: every one of these four
+#     sentences would translate identically with the plain verb. The lesson is
+#     about telling three readings of one form apart on sight, which is
+#     recognition work.
+#
+# The flag does not retire a card. LearnPage.tsx:217-220 keeps a recognitionOnly
+# phrase in review and only stops it being typed, so these nine keep coming back
+# as recognition.
+#
+# content-source: Tatoeba, via the sentence pairs embedded in JMdict for
+#   Applications 3.6.2 (server/data/jmdict-examples-eng-3.6.2.json). Every
+#   phrase carries its sentence id in `tatoebaId`. Verified by id against the
+#   corpus on 2026-09-06: all 32 resolve, each Japanese string matches its
+#   source character for character, and none is already carded elsewhere.
+#   Kana readings and romaji are transcriptions of the quoted sentence, not new
+#   content; every compound whose reading was not obvious was checked against
+#   JMdict (the list is in the reading notes above).
+# jlpt-source: training -- the level marks the chapter this content sits in,
+#   not each form's textbook level.
+
+# -- Lesson 1 - They are here, respectfully ----------------------------------
+
+- id: b4band5.is-your-mother-at-home
+  jlpt: N3
+  scenario: honorific presence
+  japanese: お母さんはいらっしゃいますか。
+  reading: おかあさんはいらっしゃいますか。
+  romaji: okaasan wa irasshaimasu ka.
+  english: Is your mother at home?
+  tatoebaId: "226613"
+  notes: "いらっしゃる is one verb doing three jobs -- いる, 行く and 来る -- raised to honour whoever it is about. Here it is いる, and the person it is about is the listener's mother, which is why she gets the honorific and you would not: about your own mother the plain います is what you use. Watch the polite form, because the verb is irregular: いらっしゃります does not exist. いらっしゃいます does."
+
+- id: b4band5.take-the-number-five-bus
+  jlpt: N3
+  scenario: honorific presence
+  japanese: サファリパークにいらっしゃるなら５番のバスです。
+  reading: サファリパークにいらっしゃるならごばんのバスです。
+  romaji: safari paaku ni irassharu nara goban no basu desu.
+  english: If you are going to the safari park, take the No.5 bus.
+  tatoebaId: "216749"
+  notes: "The same verb, now doing 行く: the listener's going, raised. Nothing else in the sentence moves -- に still marks where, and なら is Book Two's conditional, given that you are going. Said to a friend it would be 行くなら, and that is the only difference. サファリパーク is a safari park."
+
+- id: b4band5.which-parent-do-you-take-after
+  jlpt: N3
+  scenario: honorific presence
+  japanese: あなたはご両親のどちらに似ていらっしゃいますか。
+  reading: あなたはごりょうしんのどちらににていらっしゃいますか。
+  romaji: anata wa go-ryoushin no dochira ni nite irasshaimasu ka.
+  english: Which of your parents do you take after?
+  tatoebaId: "232683"
+  notes: "ていらっしゃる is ている one register up, so 似ています becomes 似ていらっしゃいます with the meaning untouched. Any te-form works that way. ご両親 raises the listener's parents with the ご this book's last chapter took apart, and 似る marks who you resemble with に."
+
+- id: b4band5.how-many-in-your-party
+  jlpt: N3
+  scenario: honorific presence
+  japanese: いらっしゃいませ、何名様ですか。
+  reading: いらっしゃいませ、なんめいさまですか。
+  romaji: irasshaimase, nanmeisama desu ka.
+  english: Welcome. How many in your party?
+  tatoebaId: "228460"
+  notes: "いらっしゃいませ is the same verb frozen into the greeting every shop, restaurant and hotel calls out as you walk in. You will hear it several times a day and say it only if you work behind a counter, which is true of a good deal of this chapter. 何名様 is 何名, how many people, with 様 on the end; as the customer you would ask 何人."
+
+- id: b4band5.did-anybody-recommend-us
+  jlpt: N3
+  scenario: honorific presence
+  japanese: 紹介者はいらっしゃいますか。
+  reading: しょうかいしゃはいらっしゃいますか。
+  romaji: shoukaisha wa irasshaimasu ka.
+  english: Is there someone who referred you to us?
+  tatoebaId: "146346"
+  recognitionOnly: true
+  notes: "いらっしゃる as いる again, this time about a person neither speaker has named: a clinic or a members' club asking whether somebody referred you. 紹介者 is that person. Read this one rather than type it -- the corpus renders it \"Did anybody recommend us to you?\", which is the sense but not a route back to the Japanese."
+
+# -- Lesson 2 - They say, they see -------------------------------------------
+
+- id: b4band5.tell-us-your-companys-thoughts
+  jlpt: N3
+  scenario: honorific speech
+  japanese: 御社のお考えを先におっしゃってください。
+  reading: おんしゃのおかんがえをさきにおっしゃってください。
+  romaji: onsha no o-kangae o saki ni osshatte kudasai.
+  english: Please let us know your company's thoughts on this matter first.
+  tatoebaId: "76178"
+  notes: "おっしゃる is 言う raised, and its humble mirror is 申す and 申し上げる from the last chapter: one meaning, three heights. The te-form is おっしゃって, so おっしゃってください is the polite please tell us. Notice the sentence raising the listener three times over -- 御社 for their company, お on 考え, おっしゃる for their speaking -- while nothing lowers the speaker."
+
+- id: b4band5.state-your-name-and-number
+  jlpt: N3
+  scenario: honorific speech
+  japanese: お名前と社会保障番号をおっしゃって下さい。
+  reading: おなまえとしゃかいほしょうばんごうをおっしゃってください。
+  romaji: o-namae to shakai hoshou bangou o osshatte kudasai.
+  english: State your name and social security number, please.
+  tatoebaId: "226579"
+  notes: "The same frame at a counter. 下さい is written in kanji here and ください in kana on the card before it; they are one word and the kana spelling is commoner in modern writing. 社会保障番号 is a social security number. お名前 raises the name because it is the listener's, which is why you never put お on your own name. The prefix does go on your own side elsewhere -- last chapter's ご連絡いたします and お待ちしております are both about the speaker."
+
+- id: b4band5.you-can-speak-freely-here
+  jlpt: N3
+  scenario: honorific speech
+  japanese: ここではどんどん意見をおっしゃってかまいません。
+  reading: ここではどんどんいけんをおっしゃってかまいません。
+  romaji: koko de wa dondon iken o osshatte kamaimasen.
+  english: You can speak out freely here.
+  tatoebaId: "224623"
+  recognitionOnly: true
+  notes: "てもかまいません, it does not matter if you, is a softer relative of Book One's てもいいです; the も is dropped here, which is ordinary. What makes the sentence worth reading is who it is aimed at: the speaker raises the listener's speaking with おっしゃる while granting them permission, which is how a chairman opens a meeting. どんどん you had in this book's first chapter."
+
+- id: b4band5.ask-at-the-information-desk
+  jlpt: N3
+  scenario: honorific speech
+  japanese: 受付で聞いてご覧なさい。
+  reading: うけつけできいてごらんなさい。
+  romaji: uketsuke de kiite goran nasai.
+  english: Please ask at the information desk.
+  tatoebaId: "148364"
+  notes: "ご覧 is the honorific 見る in its short form, and after a te-form it means try doing it -- 聞いてご覧, have a go at asking. なさい on the end is the gentle imperative from this book's second chapter, which is なさる, the honorific する, in its command form. The result is kind rather than deferential: a teacher or a parent says it, an employee does not say it to a manager."
+
+- id: b4band5.the-results-were-as-you-see
+  jlpt: N3
+  scenario: honorific speech
+  japanese: 残念ながら昨日はご覧の通りの結果となりました。
+  reading: ざんねんながらきのうはごらんのとおりのけっかとなりました。
+  romaji: zannen nagara kinou wa goran no toori no kekka to narimashita.
+  english: Unfortunately, the results yesterday were as you see.
+  tatoebaId: "74644"
+  recognitionOnly: true
+  notes: "ご覧の通り is a set phrase, as you see, and it is the commonest place a learner meets ご覧 at all -- a presenter, a report or a letter pointing at what is in front of you. 通り after a noun is just as, exactly as. 残念ながら opens the sentence with regret, and となりました is a formal ended-up-as. Reading rather than typing: the English keeps almost none of that."
+
+- id: b4band5.you-must-have-seen-the-coliseum
+  jlpt: N3
+  scenario: honorific speech
+  japanese: ローマを訪れたことがおありなら、コロセウムをご覧になったにちがいない。
+  reading: ローマをおとずれたことがおありなら、コロセウムをごらんになったにちがいない。
+  romaji: rooma o otozureta koto ga o-ari nara, koroseumu o goran ni natta ni chigainai.
+  english: If you have ever visited Rome, you must have seen the Coliseum.
+  tatoebaId: "192241"
+  recognitionOnly: true
+  notes: "ご覧になる is the full honorific 見る, and this is the only short sentence in the verified source that carries it -- which is worth knowing, because the form is common in life and thin in the corpus. おあり is ある in the same お frame, raising the listener's having visited. 訪れる is to visit, にちがいない is Book Three's must have. Long, so read it rather than build it."
+
+# -- Lesson 3 - Please eat, what will you have -------------------------------
+
+- id: b4band5.to-eat-here-or-to-go
+  jlpt: N3
+  scenario: at the counter
+  japanese: ここで召し上がりますか、それともお持ち帰りですか。
+  reading: ここでめしあがりますか、それともおもちかえりですか。
+  romaji: koko de meshiagarimasu ka, soretomo o-mochikaeri desu ka.
+  english: Is this to eat here, or to go?
+  tatoebaId: "224548"
+  notes: "召し上がる is 食べる and 飲む raised, said about the customer's eating. Unlike the -aru verbs of the last two lessons it conjugates normally: 召し上がります, 召し上がって, 召し上がった. それとも joins two questions and means or. お持ち帰り is 持ち帰り with the counter's polite お, and the whole exchange is one you will hear at any takeaway."
+
+- id: b4band5.will-you-have-some-more-cake
+  jlpt: N3
+  scenario: at the counter
+  japanese: もう少しケーキを召し上がりませんか。
+  reading: もうすこしケーキをめしあがりませんか。
+  romaji: mou sukoshi keeki o meshiagarimasen ka.
+  english: Will you have some more cake?
+  tatoebaId: "194141"
+  notes: "ませんか, Book Two's negative invitation, on an honorific verb: offering somebody more cake while raising their eating. Its humble twin is いただく, so the guest's answer uses いただきます and the host's offer uses 召し上がる -- the same act from two sides, which is the whole system in one exchange."
+
+- id: b4band5.help-yourself-to-more-roast-beef
+  jlpt: N3
+  scenario: at the counter
+  japanese: もっとローストビーフを召し上がれ。
+  reading: もっとローストビーフをめしあがれ。
+  romaji: motto roosuto biifu o meshiagare.
+  english: Please help yourself to more roast beef.
+  tatoebaId: "193314"
+  notes: "召し上がれ is the plain imperative -- the え ending this book's second chapter taught on 行け and 待て -- and because the verb underneath is honorific, the command does not land as an order. It is what a host says handing food round the table. The corpus renders it as a question, which is the tone rather than the grammar. ローストビーフ is roast beef."
+
+- id: b4band5.how-would-you-like-your-steak
+  jlpt: N3
+  scenario: at the counter
+  japanese: ステーキの焼き方はどうなさいますか。
+  reading: ステーキのやきかたはどうなさいますか。
+  romaji: suteeki no yakikata wa dou nasaimasu ka.
+  english: How would you like your steak?
+  tatoebaId: "214623"
+  notes: "なさる is する raised, and どうなさいますか is how service Japanese asks what you would like. Like いらっしゃる it is irregular in the polite form: なさります does not exist, なさいます does -- and なさい, from the last lesson, is this verb too. 焼き方 is 焼く plus 方, the way of doing it, the same 方 as in 仕方."
+
+- id: b4band5.what-would-you-like-for-dessert
+  jlpt: N3
+  scenario: at the counter
+  japanese: デザートは何になさいますか？
+  reading: デザートはなにになさいますか？
+  romaji: dezaato wa nani ni nasaimasu ka?
+  english: What would you like for dessert?
+  tatoebaId: "202257"
+  notes: "にする, settling on one thing out of several, raised into になさいます. You have met the other half of this pair already: にいたします, from the last chapter, is what the person behind the counter says about their own action. になさいます raises the listener's choosing. にいたします lowers the speaker's own -- コーヒーにいたします, I will make it coffee -- and last chapter's 小額の札にいたしますか is a teller using it as service language while asking about your choice."
+
+- id: b4band5.your-daughter-passed-the-exam
+  jlpt: N3
+  scenario: at the counter
+  japanese: お嬢さんは試験に合格なさったそうですね。
+  reading: おじょうさんはしけんにごうかくなさったそうですね。
+  romaji: ojousan wa shiken ni goukaku nasatta sou desu ne.
+  english: Your daughter passed the examination, I hear.
+  tatoebaId: "227017"
+  notes: "なさる past is なさった, and here it is doing what makes the verb worth learning: any noun that takes する can take it instead, so 合格する becomes 合格なさる. That is exactly as productive as the last chapter's いたす, pointed the other way. The person raised is not the listener but their daughter -- お嬢さん, the respectful word for somebody else's daughter, which you take whole here -- and she counts as their side. そうです is this book's third chapter's hearsay."
+
+# -- Lesson 4 - Would you kindly ---------------------------------------------
+
+- id: b4band5.could-you-repeat-that
+  jlpt: N3
+  scenario: honorific requests
+  japanese: もう一度言ってくださいますか。
+  reading: もういちどいってくださいますか。
+  romaji: mou ichido itte kudasaimasu ka.
+  english: Could you repeat that, please?
+  tatoebaId: "194302"
+  notes: "くださる is くれる raised, so てくださいますか asks the listener to do something and honours them for doing it. Set it beside the last chapter's ていただけますか, which asks for the same favour by lowering yourself instead: both are polite, by opposite routes. And ください, which you have had since Book One, is this verb's imperative -- the verb was there all along."
+
+- id: b4band5.can-you-spare-me-a-few-minutes
+  jlpt: N3
+  scenario: honorific requests
+  japanese: ちょっと時間をさいてくださいますか。
+  reading: ちょっとじかんをさいてくださいますか。
+  romaji: chotto jikan o saite kudasaimasu ka.
+  english: Can you spare me a few minutes?
+  tatoebaId: "202764"
+  notes: "時間をさく is to spare time out of a full day -- the verb is 割く, written in kana here, and it means cutting a piece off something for somebody. The request frame is the same as the card before it. ちょっと at the front does the work of a few in the English: a small ask."
+
+- id: b4band5.it-was-kind-of-you-to-invite-us
+  jlpt: N3
+  scenario: honorific requests
+  japanese: お招き下さってありがとうございました。
+  reading: おまねきくださってありがとうございました。
+  romaji: o-maneki kudasatte arigatou gozaimashita.
+  english: Thank you for inviting us.
+  tatoebaId: "227021"
+  notes: "お plus a ます-stem plus くださる: the frame for thanking somebody for something they did for you, and worth owning whole. 招きます gives 招き, so お招きくださって, and ありがとうございました closes it. A friend doing the same favour gets 招いてくれてありがとう -- plain te-form plus くれる. The お plus stem frame is itself the honorific, so it does not survive the swap."
+
+- id: b4band5.god-has-blessed-me-with-riches
+  jlpt: N3
+  scenario: honorific requests
+  japanese: 神は私に富をお恵みくださった。
+  reading: かみはわたしにとみをおめぐみくださった。
+  romaji: kami wa watashi ni tomi o o-megumi kudasatta.
+  english: God has blessed me with riches.
+  tatoebaId: "144912"
+  recognitionOnly: true
+  notes: "The same お plus stem plus くださる, in the plain past くださった rather than the polite くださいました, which is what written and literary Japanese does. 恵み is a blessing and 富 is riches. Recognise this one: the English gives you no reason to reach for the frame rather than for 恵んだ."
+
+- id: b4band5.please-remit-the-full-amount
+  jlpt: N3
+  scenario: honorific requests
+  japanese: なるべく早く、全額をご送金くださるようお願いします。
+  reading: なるべくはやく、ぜんがくをごそうきんくださるようおねがいします。
+  romaji: narubeku hayaku, zengaku o go-soukin kudasaru you onegai shimasu.
+  english: Please remit the full amount as soon as possible.
+  tatoebaId: "199060"
+  notes: "A する-noun takes ご rather than the stem frame: ご送金くださる. 〜ようお願いします, Book Three's ように with a request on the end, is how a business letter asks without giving an order -- we ask that you kindly remit. Formal, and standard: you will meet this exact shape in any invoice reminder."
+
+# -- Lesson 5 - The honoured action ------------------------------------------
+
+- id: b4band5.do-you-have-rain-gear
+  jlpt: N3
+  scenario: the honorific frame
+  japanese: 雨具をお持ちになりましたか。
+  reading: あまぐをおもちになりましたか。
+  romaji: amagu o o-mochi ni narimashita ka.
+  english: Do you have rain gear with you?
+  tatoebaId: "189528"
+  notes: "お plus a ます-stem plus になる is the general honorific frame, the one that works on verbs with no special honorific of their own. 持ちます gives 持ち, so お持ちになりました. The last chapter's お plus stem plus する is the same shape pointed at your own action, and mixing the two up is the classic keigo mistake: お持ちになる is what you did, お持ちします is what I will do for you."
+
+- id: b4band5.any-bags-to-check
+  jlpt: N3
+  scenario: the honorific frame
+  japanese: お預けになる荷物はございますか。
+  reading: おあずけになるにもつはございますか。
+  romaji: o-azuke ni naru nimotsu wa gozaimasu ka.
+  english: Do you have any bags to check?
+  tatoebaId: "226538"
+  notes: "Two registers doing two jobs in one sentence, which is what a check-in desk sounds like. お預けになる raises the passenger's action of checking a bag; ございます, from the last chapter, is the polite あります said about the bags, which belong to nobody's dignity. Raising and formality are separate machines and this sentence runs both."
+
+- id: b4band5.please-hold-the-line
+  jlpt: N3
+  scenario: the honorific frame
+  japanese: しばらく電話を切らずにお待ちください。
+  reading: しばらくでんわをきらずにおまちください。
+  romaji: shibaraku denwa o kirazu ni o-machi kudasai.
+  english: Please hold the line a moment.
+  tatoebaId: "216089"
+  notes: "お plus stem plus ください is the request form of the frame and the one thing in this chapter you will produce daily: お待ちください, お使いください, お書きください. It is politer than てください and it is what a business says to a customer. 切る here is hanging up, and ずに is this book's first chapter's without doing."
+
+- id: b4band5.please-wait-while-i-write-the-receipt
+  jlpt: N3
+  scenario: the honorific frame
+  japanese: ちょっとお待ちください、受領書をお書きします。
+  reading: ちょっとおまちください、じゅりょうしょをおかきします。
+  romaji: chotto o-machi kudasai, juryousho o o-kaki shimasu.
+  english: Please wait a moment while I write out your receipt.
+  tatoebaId: "202849"
+  notes: "Both frames side by side, and this is the card to slow down on. お待ちください raises what the listener does; お書きします lowers what the speaker does. Same お, same ます-stem, opposite direction, and the ending is what carries it: ください and になる point up, する and いたす point down. 受領書 is a written receipt."
+
+- id: b4band5.when-will-you-travel
+  jlpt: N3
+  scenario: the honorific frame
+  japanese: いつ旅行においでになりますか。
+  reading: いつりょこうにおいでになりますか。
+  romaji: itsu ryokou ni oide ni narimasu ka.
+  english: When will you go on a journey?
+  tatoebaId: "228596"
+  notes: "おいでになる is a second honorific for 行く, 来る and いる -- the same three jobs as いらっしゃる, in a form that sounds older and a shade warmer. Shops and hotels use it, and おいでください is its request form. Which of the three verbs it means is settled by the sentence, exactly as with いらっしゃる."
+
+- id: b4band5.dont-come-out-in-this-rain
+  jlpt: N3
+  scenario: the honorific frame
+  japanese: この雨の中をおいでにならないでください。
+  reading: このあめのなかをおいでにならないでください。
+  romaji: kono ame no naka o oide ni naranai de kudasai.
+  english: Don't bother coming in this rain.
+  tatoebaId: "222939"
+  notes: "The negative of the frame: になる becomes にならない, and ないでください asks somebody not to. Here おいでになる is 来る, because the speaker is asking the listener not to come out to them. 雨の中を with を rather than に marks the rain as the space moved through, the same を as 道を歩く."
+
+# -- Lesson 6 - The passive that is not one ----------------------------------
+
+- id: b4band5.all-in-favour-say-aye
+  jlpt: N3
+  scenario: the light honorific
+  japanese: この提議を支持される方は賛成とおっしゃって下さい。
+  reading: このていぎをしじされるかたはさんせいとおっしゃってください。
+  romaji: kono teigi o shiji sareru kata wa sansei to osshatte kudasai.
+  english: All in favor of this proposition will please say Aye.
+  tatoebaId: "220454"
+  recognitionOnly: true
+  notes: "支持される is not a passive: nobody is being supported by anybody. It is the light honorific -- れる and られる on a verb whose subject is the person being honoured -- and 方, the respectful word for person, is the giveaway that follows it in two of this lesson's four sentences. 提議 is a motion, a near neighbour of the 提案 you met last chapter. おっしゃって下さい from lesson 2 closes it."
+
+- id: b4band5.it-is-desirable-that-you-attend
+  jlpt: N3
+  scenario: the light honorific
+  japanese: その会合には出席されることが望ましい。
+  reading: そのかいごうにはしゅっせきされることがのぞましい。
+  romaji: sono kaigou ni wa shusseki sareru koto ga nozomashii.
+  english: It is desirable that you should attend the meeting.
+  tatoebaId: "211878"
+  recognitionOnly: true
+  notes: "Written notice register. 出席される is 出席する with the honorific ending, addressed to whoever reads the notice, and there is no に-marked agent anywhere -- which is the surest sign that a される is not a passive. 〜ことが望ましい is how formal Japanese says should without ordering anybody: it would be preferable if. 出席 you met last chapter."
+
+- id: b4band5.many-people-stress-eat
+  jlpt: N3
+  scenario: the light honorific
+  japanese: ストレスでやけ食いをされる方も多いと思います。
+  reading: ストレスでやけぐいをされるかたもおおいとおもいます。
+  romaji: sutoresu de yakegui o sareru kata mo ooi to omoimasu.
+  english: I think there are many who binge eat from stress.
+  tatoebaId: "76660"
+  recognitionOnly: true
+  notes: "される方 again, and here it is doing something worth noticing: the speaker is being polite about people in general, not about anybody present. That is the light honorific's ordinary home -- a broadcaster, a doctor or a writer speaking about members of the public. やけ食い is binge eating and ストレスで marks its cause."
+
+- id: b4band5.i-thought-you-would-come-with-us
+  jlpt: N3
+  scenario: the light honorific
+  japanese: てっきりあなたが我々といっしょに来られるものと思っていました。
+  reading: てっきりあなたがわれわれといっしょにこられるものとおもっていました。
+  romaji: tekkiri anata ga wareware to issho ni korareru mono to omotte imashita.
+  english: I took it for granted that you would come with us.
+  tatoebaId: "202233"
+  recognitionOnly: true
+  notes: "来られる is three things on paper: the passive of 来る, its potential -- able to come -- and the honorific this lesson is about. Here the subject is あなた and nothing is being done to anybody, so honorific and potential are both readable, and only knowing the speaker settles it. That ambiguity is the reason Japanese often prefers いらっしゃる or お越しになる instead. てっきり marks a belief that turned out wrong, and 我々 is a formal we."

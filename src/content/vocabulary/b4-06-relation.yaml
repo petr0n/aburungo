@@ -1,0 +1,607 @@
+# Book Four, Chapter 7 vocabulary -- fifty words, chosen the way chapters 5 and
+# 6 chose theirs.
+#
+# The rule is the previous chapters' and it is mechanical: a word is in this
+# file if and only if it appears in a sentence this chapter cards. Nothing was
+# added because it looked useful, and nothing was added to reach a number.
+# 04-stage-reading.md section 3 hands vocabulary at this stage to the reading
+# library and to mining; the library's text source has been blocked since
+# 2026-08-20, and docs/plans/book-four-bands.md section 2 settles what to do
+# meanwhile -- every Book Four lesson teaches the untaught words its own
+# verified sentences contain. Five to seven per lesson is what these sentences
+# carry. This chapter's sentences are the most abstract in the book (society,
+# economy, science, the weather report), so the count runs above chapter 6's
+# thirty-one rather than below it.
+#
+# The compound particles themselves -- に対して, にとって, として, につれて,
+# とともに, を通して, に加えて, に基づいて, こそ, によると/によれば -- are not
+# word cards here. They are what the chapter's eight grammar patterns teach,
+# exactly as the honorific verbs were patterns rather than word cards in
+# chapter 6. Splitting one form between a pattern and a vocabulary card would
+# review it twice under two names.
+#
+# Words this chapter's cards contain and this file does not teach are glossed in
+# the note on the card that carries them: 話し手, 否定的, 欧州, ドル, サービス,
+# チップ, 足の裏, 視力, スポーツマン, 危険人物, 芸人, ソプラノ, 異存, いくらか,
+# 忘れっぽい, 芸術家, 画風, 大音響, マリーゴールド, 冷戦, ソビエト, 海外,
+# 航空運賃, コスト, 高名, 詩人, 有能, 外交官, コート, 身にしみる, 有力者,
+# こんもり, 茂る, 木々, 差し込む, わずかに, 陸地, 見分ける, 濃霧, うねり,
+# ヘブライ語, 普通券, 急行券, 学歴, 適任者, 長期, 暖冬 and リューマチ. Each is a
+# proper name, a concrete one-off, or a compound whose parts this course already
+# teaches, and the chapter is teaching the particle rather than the furniture
+# around it.
+#
+# ---------------------------------------------------------------------------
+# VERIFICATION. Every entry below was checked against JMdict for Applications
+# 3.6.2 (server/data/jmdict-examples-eng-3.6.2.json) on 2026-09-06: headword,
+# reading, part of speech and gloss, with the sequence number in `notes`. Where
+# the sense this chapter needs is not JMdict's first, the note says which sense
+# and why. Seven words are in that position:
+#
+#   習慣 1333090 s2 (a social custom -- s1 is a personal habit)
+#   浅い 1390800 s2 (inadequate, of knowledge or experience -- s1 is shallow)
+#   年 1468060 s2 (age, years lived -- s1 is a year)
+#   鈍い 1582430 s5 (insensitive, unfeeling -- s1 is blunt, of a knife)
+#   身 1365520 s1 (one's body -- the card's 身にしみる uses it bodily)
+#   急行 1228690 s2, marked abbreviation (an express train -- s1 is hurrying)
+#   成功 1375690 s1 (success -- s2 is worldly success, and the sentence sits
+#     between the two)
+#
+# Five homophone and reading traps were checked rather than assumed, because a
+# kana lookup lands on the wrong entry silently:
+#
+#   は -- 葉 1546550, a leaf, is not 歯 1313000, the tooth this course already
+#     teaches as vocab.ha (Book One, people-clothes.yaml). The app's precedent
+#     for a homophone is a suffixed id -- vocab.ban-number, vocab.kiru-cut -- so
+#     this one is vocab.ha-leaf.
+#   じゅうぶん -- 十分 1335080 is enough; the same two characters are also
+#     じっぷん 1335070, ten minutes. Book Three's chapter 4 checked this once
+#     already for #189964 and reached the same reading.
+#   にぶい -- 鈍い 1582430 is にぶい, but 鈍い is also an occasional spelling of
+#     おそい 1421970, slow, and of のろい 2838553. Only the sentence decides.
+#   かがく -- 科学 1192700 is science; 化学 1186760 is chemistry, read かがく
+#     too, which is why speakers say ばけがく out loud to separate them. JMdict
+#     records that habit on the entry itself.
+#   わずらう -- 患う 1212200 is to be ill; 煩う 2861485, same reading, is to
+#     worry. The card that carries it means the first.
+#
+# ---------------------------------------------------------------------------
+# JLPT TAGS, and why they are not all the same. The tag on a Word feeds
+# vocabulary coverage tooling (scripts/jlpt.mjs) rather than describing the
+# chapter it sits in, so tagging a word by the chapter it happens to appear in
+# misreports coverage in two directions. Each word below carries the level the
+# merged reference lists in data/jlpt/ give it; where two lists disagree the
+# easier of the two is used (大事, 経験, 決まる, 十分 and 通貨 are each on two
+# lists). One word -- 患う -- is on no reference list at any level, and it
+# carries N3, this stretch of the course's own band. That tag is a placement,
+# not a claim about any exam. No level is ever shown to a learner (DR-024),
+# which is why none of the notes below mentions one.
+#
+# jlpt-source: training -- levels read off data/jlpt/reference-*.json (Tanos
+#   CC BY 4.0 + open-anki), which is a community reference, not an authority.
+#   JMdict carries no JLPT data.
+# content-source: training -- headword, reading, part of speech and gloss
+#   verified against JMdict for Applications 3.6.2, sequence number inline.
+#   Every word is attested in a Tatoeba sentence this chapter cards; the
+#   sentence id is in phrases/b4-06-relation.yaml.
+
+# -- Lesson 1 - Towards, against, in return for ------------------------------
+
+- id: vocab.hankan
+  jlpt: N1
+  word_type: noun
+  theme: feeling
+  japanese: 反感
+  reading: はんかん
+  romaji: hankan
+  english: antipathy; ill feeling
+  notes: "JMdict seq 1480260, its only sense. It is a feeling you hold rather than one that happens to you, so the verb it takes is 持つ: 反感を持つ, to feel antipathy towards somebody. 反 is the 反 of 反対, against, and 感 is the 感 of 感じる, to feel."
+
+- id: vocab.taido
+  jlpt: N3
+  word_type: noun
+  theme: people
+  japanese: 態度
+  reading: たいど
+  romaji: taido
+  english: attitude; manner; bearing
+  notes: "JMdict seq 1410780, sense 1 -- how somebody carries themselves, which is also what an observer sees. Sense 2 is a stance on a question, the attitude a government takes. English has an attitude; Japanese takes one, 態度をとる, and that collocation is what the card in this lesson uses."
+
+- id: vocab.jinsei
+  jlpt: N3
+  word_type: noun
+  theme: basics
+  japanese: 人生
+  reading: じんせい
+  romaji: jinsei
+  english: (a person's) life
+  notes: "JMdict seq 1368370, its only sense. It is a human life taken whole -- the span, the course of it -- which is why it sits under talk about attitudes and choices. 生活 is life as daily living, the routine you get up into, and 命 is the life an animal can lose. Three English 'life's, three different Japanese words."
+
+- id: vocab.tsuuka
+  jlpt: N3
+  word_type: noun
+  theme: money
+  japanese: 通貨
+  reading: つうか
+  romaji: tsuuka
+  english: currency
+  notes: "JMdict seq 1433050, its only sense. The money of a country considered as a system -- what rises and falls on a market -- not the coins in your hand, which are お金. It sounds exactly like 通過, つうか, passing through, and only the sentence tells them apart."
+
+- id: vocab.shuukan
+  jlpt: N4
+  word_type: noun
+  theme: daily-life
+  japanese: 習慣
+  reading: しゅうかん
+  romaji: shuukan
+  english: custom; practice; habit
+  notes: "JMdict seq 1333090, sense 2 in the card that carries it -- a custom a society keeps, the sense in which tipping is or is not done. Sense 1 is a personal habit, the kind one person keeps. Both are ordinary. Careful with the kana: しゅうかん is also 週間, a week's span, as in 一週間."
+
+- id: vocab.harau
+  jlpt: N4
+  word_type: verb
+  verb_class: u
+  theme: money
+  japanese: 払う
+  reading: はらう
+  romaji: harau
+  english: to pay
+  notes: "JMdict seq 1501620, sense 1 of ten. Paying money is the sense you will use daily -- お金を払う. Two of the others are worth recognising because they are common set phrases rather than money at all: sense 2 is to brush something off, and sense 5 is 注意を払う, to pay attention, the same figure English uses."
+
+- id: vocab.nibui
+  jlpt: N2
+  word_type: i-adj
+  theme: quality
+  japanese: 鈍い
+  reading: にぶい
+  romaji: nibui
+  english: blunt; dull; insensitive
+  notes: "JMdict seq 1582430. Sense 1 is a blunt knife, sense 3 a dull sound or colour, sense 5 an insensitive body or reaction -- which is the sense in this lesson's card about skin that does not feel heat. Of a person it is uncomplimentary in a mild way: 鈍い means slow to take a hint. The same two characters are also an occasional spelling of おそい, slow, so read the sentence before you trust the kanji."
+
+# -- Lesson 2 - For someone, from their side ---------------------------------
+
+- id: vocab.daiji
+  jlpt: N4
+  word_type: na-adj
+  theme: basics
+  japanese: 大事
+  reading: だいじ
+  romaji: daiji
+  english: important; precious
+  notes: "JMdict seq 1413940, senses 1 and 2 together -- important, and precious to somebody in particular. お大事に, said to somebody who is ill, is this word: take care of yourself, you matter. Written the same way but read おおごと (seq 2833293) it is a serious incident, a crisis, which is a different word wearing the same clothes."
+
+- id: vocab.shouko
+  jlpt: N1
+  word_type: noun
+  theme: trouble
+  japanese: 証拠
+  reading: しょうこ
+  romaji: shouko
+  english: evidence; proof
+  notes: "JMdict seq 1351600, its only sense. Courtroom and argument alike: 証拠がない, there is no evidence. The 証 is the 証 of 証明する, to prove, and you will meet the word far more often in reading than in speech."
+
+- id: vocab.furi
+  jlpt: N3
+  word_type: na-adj
+  theme: basics
+  japanese: 不利
+  reading: ふり
+  romaji: furi
+  english: disadvantageous; unfavourable
+  notes: "JMdict seq 1495220, its only sense, listed as a noun and a な-adjective. It is 不, the negative prefix, on 利, advantage, and its opposite 有利 is built the same way. English usually turns it into a preposition -- the evidence was against him -- where Japanese keeps it an adjective."
+
+- id: vocab.futsuu
+  jlpt: N4
+  word_type: na-adj
+  theme: basics
+  japanese: 普通
+  reading: ふつう
+  romaji: futsuu
+  english: ordinary; usual
+  notes: "JMdict seq 1497190, sense 1. Sense 2 is the adverb, 普通は, usually. Sense 3 is worth knowing before you buy a ticket: on the railways 普通 by itself means the local train, the one that stops everywhere, and 普通券 is an ordinary fare ticket -- both turn up later in this chapter."
+
+- id: vocab.shakai
+  jlpt: N4
+  word_type: noun
+  theme: basics
+  japanese: 社会
+  reading: しゃかい
+  romaji: shakai
+  english: society; the community
+  notes: "JMdict seq 1322700, sense 1. Society at large, and by extension the world you enter when you start work -- 社会人 is an adult in employment, not a socialite. Sense 2 is the school subject, social studies."
+
+- id: vocab.karera
+  jlpt: N4
+  word_type: noun
+  theme: people
+  japanese: 彼ら
+  reading: かれら
+  romaji: karera
+  english: they; them
+  notes: "JMdict seq 1483090, its only sense, which JMdict marks as usually about men or a mixed group; 彼女ら is the one for women. It is 彼, he, plus the plural ら. Written Japanese uses it freely, spoken Japanese much less: in conversation people are usually named, or left out entirely."
+
+# -- Lesson 3 - In the role of -----------------------------------------------
+
+- id: vocab.seikou
+  jlpt: N3
+  word_type: noun
+  theme: work
+  japanese: 成功
+  reading: せいこう
+  romaji: seikou
+  english: success
+  notes: "JMdict seq 1375690, sense 1, and it takes する. Sense 2 is success in life, making a career of something, which is the reading the card in this lesson sits closest to. What you succeed at is marked with に, not with を."
+
+- id: vocab.tsuuyaku
+  jlpt: N3
+  word_type: noun
+  theme: work
+  japanese: 通訳
+  reading: つうやく
+  romaji: tsuuyaku
+  english: interpreting; interpreter
+  notes: "JMdict seq 1433560. Sense 1 is the act of interpreting speech and takes する; sense 2 is the person doing it, so one word covers both. 翻訳 is the written twin, translation on the page. Confusing them in front of a professional is a small but real gaffe."
+
+- id: vocab.yatou
+  jlpt: N3
+  word_type: verb
+  verb_class: u
+  theme: work
+  japanese: 雇う
+  reading: やとう
+  romaji: yatou
+  english: to employ; to hire
+  notes: "JMdict seq 1605570, sense 1 -- to take somebody on. Sense 2 is to hire a thing with its driver, a car or a boat. The passive 雇われる is how an employee describes their own position, and 雇い主 is the employer."
+
+- id: vocab.kashu
+  jlpt: N3
+  word_type: noun
+  theme: people
+  japanese: 歌手
+  reading: かしゅ
+  romaji: kashu
+  english: singer
+  notes: "JMdict seq 1193290, its only sense. 歌, a song, plus 手, which after a noun means the person who does it -- the same 手 as in 話し手, a speaker, and 選手, an athlete. Once you see that 手, a whole family of job words reads itself."
+
+- id: vocab.kyoushi
+  jlpt: N3
+  word_type: noun
+  theme: work
+  japanese: 教師
+  reading: きょうし
+  romaji: kyoushi
+  english: teacher; instructor
+  notes: "JMdict seq 1237130, its only sense. This is the job, and the word you use about yourself. 先生 is what you call somebody else, a title rather than an occupation, and calling yourself 先生 sounds as odd in Japanese as introducing yourself as Professor would in English."
+
+- id: vocab.keiken
+  jlpt: N4
+  word_type: noun
+  theme: basics
+  japanese: 経験
+  reading: けいけん
+  romaji: keiken
+  english: experience
+  notes: "JMdict seq 1251270, its only sense, and it takes する. Experience as a track record is the noun -- 経験がある, 経験がない -- and the phrase this lesson's card uses for having little of it is 経験が浅い, thin experience."
+
+- id: vocab.asai
+  jlpt: N4
+  word_type: i-adj
+  theme: quality
+  japanese: 浅い
+  reading: あさい
+  romaji: asai
+  english: shallow; slight; not deep
+  notes: "JMdict seq 1390800. Sense 1 is literal, shallow water; sense 2 covers a slight wound, light sleep and inadequate knowledge; sense 3 is a short span of time, 日が浅い, not long since. 経験が浅い belongs to the second and third together. Its opposite everywhere is 深い."
+
+# -- Lesson 4 - As one thing changes, so does another ------------------------
+
+- id: vocab.toshi
+  jlpt: N5
+  word_type: noun
+  theme: time
+  japanese: 年
+  reading: とし
+  romaji: toshi
+  english: year; age
+  notes: "JMdict seq 1468060, sense 2 in this lesson -- the years you have lived. 年をとる is to grow older and 年上 is somebody older than you. The same character read ねん (seq 2084840) is the counting year, 一年, 去年, which is the reading you have been using since Book One; とし is the free-standing word."
+
+- id: vocab.kibou
+  jlpt: N3
+  word_type: noun
+  theme: feeling
+  japanese: 希望
+  reading: きぼう
+  romaji: kibou
+  english: hope; wish
+  notes: "JMdict seq 1219910, sense 1, and it takes する. On a form it is what you would like, and 希望者 is somebody who has put in for something. Sense 2 is prospects, the hope there is in a situation rather than the hope somebody holds."
+
+- id: vocab.wareware
+  jlpt: N3
+  word_type: noun
+  theme: people
+  japanese: 我々
+  reading: われわれ
+  romaji: wareware
+  english: we; us
+  notes: "JMdict seq 1607050, its only sense. This is the formal we -- a speech, an editorial, a company talking about itself. 私たち is the everyday one. The 々 is the repeat mark: the word is 我 said twice."
+
+- id: vocab.keiki
+  jlpt: N3
+  word_type: noun
+  theme: business
+  japanese: 景気
+  reading: けいき
+  romaji: keiki
+  english: business conditions; the economy
+  notes: "JMdict seq 1250830, sense 1 -- how trade is going, the word the news uses for the economy at large. Sense 2 is a boom, and 景気がいい can mean either business is good or somebody is in high spirits. Sense 3 is that liveliness on its own."
+
+- id: vocab.kaifuku
+  jlpt: N3
+  word_type: noun
+  theme: basics
+  japanese: 回復
+  reading: かいふく
+  romaji: kaifuku
+  english: recovery; restoration
+  notes: "JMdict seq 1199720, sense 1 -- something coming back to where it was, whether trade, the weather or a connection. Sense 2 is recovery from illness, which is also written 快復. It takes する and works both ways: trade recovers by itself, and somebody restores what was lost."
+
+- id: vocab.kawaru
+  jlpt: N4
+  word_type: verb
+  verb_class: u
+  theme: actions
+  japanese: 変わる
+  reading: かわる
+  romaji: kawaru
+  english: to change; to alter
+  notes: "JMdict seq 1510790, sense 1, and it is intransitive: the thing changes by itself. 変える is the transitive twin, you change it: a plan changes, and somebody changes a plan. Sense 3 explains 変わった人, an odd person: literally one who has changed, which is where the sense of unusual comes from."
+
+# -- Lesson 5 - Together with ------------------------------------------------
+
+- id: vocab.shunkan
+  jlpt: N3
+  word_type: noun
+  theme: time
+  japanese: 瞬間
+  reading: しゅんかん
+  romaji: shunkan
+  english: moment; instant
+  notes: "JMdict seq 1341210, its only sense. The 瞬 is the 瞬き of a blink, so the word is literally the space of one; 一瞬 is the same idea in a single breath. その瞬間, at that instant, is how it usually opens a sentence, and 〜した瞬間 is the moment something happened."
+
+- id: vocab.bakuhatsu
+  jlpt: N3
+  word_type: noun
+  theme: trouble
+  japanese: 爆発
+  reading: ばくはつ
+  romaji: bakuhatsu
+  english: explosion
+  notes: "JMdict seq 1475910, sense 1, and it takes する. Sense 2 is the same word about feelings, anger or discontent boiling over, and it is as ordinary in Japanese as the English figure is."
+
+- id: vocab.taiyou
+  jlpt: N3
+  word_type: noun
+  theme: nature
+  japanese: 太陽
+  reading: たいよう
+  romaji: taiyou
+  english: the sun
+  notes: "JMdict seq 1408370, its only sense. The sun as the body in the sky, the word an encyclopaedia uses. 日 is the everyday sun -- the sunlight you sit in, 日が当たる -- and also the day, which is why the two are not interchangeable."
+
+- id: vocab.houkai
+  jlpt: N1
+  word_type: noun
+  theme: trouble
+  japanese: 崩壊
+  reading: ほうかい
+  romaji: houkai
+  english: collapse; breakdown
+  notes: "JMdict seq 1516280, sense 1 -- a building, a system or a state falling apart. It takes する. Sense 2 is the physicists' one, radioactive decay. The word belongs to news and history writing rather than conversation."
+
+- id: vocab.joushou
+  jlpt: N1
+  word_type: noun
+  theme: basics
+  japanese: 上昇
+  reading: じょうしょう
+  romaji: joushou
+  english: a rise; climbing
+  notes: "JMdict seq 1353450, its only sense, and it takes する. Prices, temperatures and aircraft all 上昇する in writing where speech says 上がる. Keeping the plain verb and the written noun apart is most of what reading a newspaper economically requires."
+
+- id: vocab.nenryou
+  jlpt: N1
+  word_type: noun
+  theme: transit
+  japanese: 燃料
+  reading: ねんりょう
+  romaji: nenryou
+  english: fuel
+  notes: "JMdict seq 1469660, its only sense. 燃 is the 燃える of burning and 料 is the 料 of 材料, material -- burning material. 燃料費 is a fuel cost as a single compound; this lesson's card spells it out instead, as 燃料のコスト."
+
+# -- Lesson 6 - Through ------------------------------------------------------
+
+- id: vocab.tsumetai
+  jlpt: N5
+  word_type: i-adj
+  theme: quality
+  japanese: 冷たい
+  reading: つめたい
+  romaji: tsumetai
+  english: cold (to the touch); cold-hearted
+  notes: "JMdict seq 1556730. Sense 1 is cold to the touch -- water, a hand, wind on your face -- and it is the one 寒い does not cover: 寒い is how the air makes you feel, 冷たい is how a thing feels when you touch it. Sense 2 is a cold person, which English shares."
+
+- id: vocab.mi
+  jlpt: N3
+  word_type: noun
+  theme: body
+  japanese: 身
+  reading: み
+  romaji: mi
+  english: one's body; oneself
+  notes: "JMdict seq 1365520, sense 1 in this lesson's card. It is a bare, slightly literary word for the body you live in, and it carries a family of set phrases -- 身につく, to become part of you; 身にしみる, to go right through you. Sense 3 is your position in life, and sense 4 is the flesh of a fish as against its bones."
+
+- id: vocab.shiriai
+  jlpt: N2
+  word_type: noun
+  theme: people
+  japanese: 知り合い
+  reading: しりあい
+  romaji: shiriai
+  english: an acquaintance
+  notes: "JMdict seq 1595070, its only sense. Somebody you know, short of 友達 -- and Japanese draws that line harder than English does. 知り合いになる is to get to know somebody, which is how the relationship starts rather than how it stands."
+
+- id: vocab.ha-leaf
+  jlpt: N4
+  word_type: noun
+  theme: nature
+  japanese: 葉
+  reading: は
+  romaji: ha
+  english: leaf; foliage
+  notes: "JMdict seq 1546550, sense 1 -- a leaf, a blade of grass, a pine needle. It sounds exactly like 歯, the tooth you have had since Book One, and nothing but the sentence separates them. 葉っぱ is the everyday spoken form, and 木の葉 is the leaves of a tree collectively."
+
+- id: vocab.nikkou
+  jlpt: N3
+  word_type: noun
+  theme: nature
+  japanese: 日光
+  reading: にっこう
+  romaji: nikkou
+  english: sunlight; sunshine
+  notes: "JMdict seq 1464030, sense 1 -- sunlight as it falls on something. Sense 2 is Nikkō, the town north of Tokyo written with the same two characters, so a signpost and a weather report share a word. 日光浴 is sunbathing."
+
+- id: vocab.kiri
+  jlpt: N3
+  word_type: noun
+  theme: weather
+  japanese: 霧
+  reading: きり
+  romaji: kiri
+  english: fog; mist
+  notes: "JMdict seq 1531110, sense 1, the fog you drive through or wake up to. Sense 2 is spray, the fine mist a bottle throws, which is why a spray gun is a 霧吹き."
+
+# -- Lesson 7 - On top of, on the basis of -----------------------------------
+
+- id: vocab.kagaku
+  jlpt: N4
+  word_type: noun
+  theme: study
+  japanese: 科学
+  reading: かがく
+  romaji: kagaku
+  english: science
+  notes: "JMdict seq 1192700, sense 1. 化学, chemistry, is read かがく too, and the collision is real enough that speakers say ばけがく out loud for chemistry when it might be mistaken -- JMdict records that habit on the entry itself. In writing the characters keep them apart."
+
+- id: vocab.kansatsu
+  jlpt: N3
+  word_type: noun
+  theme: study
+  japanese: 観察
+  reading: かんさつ
+  romaji: kansatsu
+  english: observation; watching
+  notes: "JMdict seq 1214900, its only sense, and it takes する. Watching something closely to learn from it -- a scientist, a birdwatcher, a teacher watching a class. 観 is the 観 of 観光, sightseeing: looking, in both."
+
+- id: vocab.monogatari
+  jlpt: N3
+  word_type: noun
+  theme: leisure
+  japanese: 物語
+  reading: ものがたり
+  romaji: monogatari
+  english: story; tale
+  notes: "JMdict seq 1502480, its only sense. Literally things told: 物, a thing, on 語る, to narrate. It reaches from a children's tale to 源氏物語, The Tale of Genji, and it carries a little more weight than 話, which is any story you tell."
+
+- id: vocab.jijitsu
+  jlpt: N3
+  word_type: noun
+  theme: basics
+  japanese: 事実
+  reading: じじつ
+  romaji: jijitsu
+  english: fact; the truth
+  notes: "JMdict seq 1313960, its only sense, which JMdict lists as a noun and an adverb. 事実は小説より奇なり is the proverb -- fact is stranger than fiction. Used adverbially at the head of a sentence, 事実, it means in fact, as a matter of record."
+
+- id: vocab.kyuuryou
+  jlpt: N3
+  word_type: noun
+  theme: work
+  japanese: 給料
+  reading: きゅうりょう
+  romaji: kyuuryou
+  english: salary; pay
+  notes: "JMdict seq 1230360, its only sense. The money the job pays, whether monthly or hourly. 給料日 is payday. The more formal word on a contract is 給与, and 月給 is a monthly salary specifically."
+
+- id: vocab.kimaru
+  jlpt: N4
+  word_type: verb
+  verb_class: u
+  theme: actions
+  japanese: 決まる
+  reading: きまる
+  romaji: kimaru
+  english: to be decided; to be settled
+  notes: "JMdict seq 1591420, sense 1, and it is intransitive: the matter settles itself, nobody is named. 決める is the transitive twin: somebody decides something, and then it is decided. Sense 2, 決まっている, is how Japanese says something is always so."
+
+- id: vocab.kyuukou
+  jlpt: N4
+  word_type: noun
+  theme: transit
+  japanese: 急行
+  reading: きゅうこう
+  romaji: kyuukou
+  english: express train
+  notes: "JMdict seq 1228690, sense 2, which JMdict marks as an abbreviation -- the full form is 急行列車. Sense 1 is the literal one, hurrying to a place. On the platform it names a train that skips the small stations, and 特急 skips more of them still."
+
+# -- Lesson 8 - Precisely this, and according to whom ------------------------
+
+- id: vocab.shinbou
+  jlpt: N1
+  word_type: noun
+  theme: basics
+  japanese: 辛抱
+  reading: しんぼう
+  romaji: shinbou
+  english: patience; putting up with something
+  notes: "JMdict seq 1365930, its only sense, and it takes する. It is patience under something unpleasant -- enduring, sticking it out -- where 我慢 is the commoner word for the same act of holding out. 辛 is the 辛い of hard going."
+
+- id: vocab.juubun
+  jlpt: N4
+  word_type: na-adj
+  theme: basics
+  japanese: 十分
+  reading: じゅうぶん
+  romaji: juubun
+  english: enough; sufficient
+  notes: "JMdict seq 1335080, senses 1 and 2 -- enough as an adjective, and amply or thoroughly as an adverb, which is the job it does in this lesson's card. Also written 充分, and the two spellings are interchangeable. The same characters read じっぷん (seq 1335070) are ten minutes, so the sentence, not the kanji, gives you the reading."
+
+- id: vocab.yohou
+  jlpt: N3
+  word_type: noun
+  theme: weather
+  japanese: 予報
+  reading: よほう
+  romaji: yohou
+  english: forecast
+  notes: "JMdict seq 1543630, its only sense, and it takes する. 天気予報 is the weather forecast, the compound you will meet it in nine times out of ten; 予 is the 予 of 予定, in advance, and 報 is the 報 of 情報, information."
+
+- id: vocab.shoujiki
+  jlpt: N3
+  word_type: na-adj
+  theme: people
+  japanese: 正直
+  reading: しょうじき
+  romaji: shoujiki
+  english: honest; straightforward
+  notes: "JMdict seq 1377590, sense 1 as an adjective. Sense 2 is the adverb, and it stands at the head of a sentence the way English says honestly, before something awkward. 正直者 is an honest person as a type, and the word carries approval rather than mere accuracy."
+
+- id: vocab.wazurau
+  jlpt: N3
+  word_type: verb
+  verb_class: u
+  theme: health
+  japanese: 患う
+  reading: わずらう
+  romaji: wazurau
+  english: to be ill; to suffer from
+  notes: "JMdict seq 1212200, its only sense. The illness itself is marked with を rather than に, which is unusual enough to be worth remembering. 煩う (seq 2861485) is a different verb read exactly the same way: to worry about something. Same sound, different character, different trouble."

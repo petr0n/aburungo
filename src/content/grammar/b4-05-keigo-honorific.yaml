@@ -1,0 +1,95 @@
+# Book Four, Chapter 6 grammar patterns -- raising the other person.
+#
+# One pattern per teaching lesson, each blanking the thing that lesson exists
+# for out of one of its own sentences. The blank is matched against the phrase's
+# reading, so these are kana. Lesson 7 has no entry here: it teaches no new
+# pattern, it sets chapters 5 and 6 side by side, and inventing a pattern id for
+# it would put a seventh badge on a chapter with six forms.
+#
+# THE `pattern` FIELD IS NOT DECORATION. scripts/levelling.mjs grammarSurface()
+# reads it to tag corpus sentences: it rejects any pattern containing a Latin
+# character, a digit or a few punctuation marks, and needs at least one
+# ～-delimited fragment of two characters or more. All six below clear that
+# floor. What they cannot do, said here rather than discovered later:
+#
+#   ～いらっしゃいます misses いらっしゃる, いらっしゃいませ and ていらっしゃる,
+#   which are the same verb in three other shapes and are four of lesson 1's
+#   five cards. Any fragment short enough to catch them all would be いらっしゃ,
+#   which is a stem rather than a form.
+#
+#   ～なさいます carries lesson 3, and 召し上がる -- the lesson's other half --
+#   goes untagged. Each lesson teaches more than one verb and the field holds
+#   one. The pattern names the lesson's centre, not its whole content. The same
+#   is true of lesson 5, where お～になります is tagged and お～ください and
+#   おいでになる are not, and of lesson 2, where ご覧になる is not.
+#
+#   ～される方 is deliberately narrower than the form it teaches. The honorific
+#   れる and られる are spelled exactly like the passive Book Three taught
+#   (grammar.b3-passive-godan is ～れる), so a bare ～される would tag every
+#   passive in the corpus and detect nothing. 方 after it is the surface signal
+#   that a human reader uses, so it is the one the tagger uses too. It costs the
+#   two sentences of lesson 6 that have no 方 in them, and that is the honest
+#   trade: a pattern that tags everything is not a pattern.
+#
+# THE BLANKS run longer than the marker itself, as chapter 5's do. Handing a
+# learner ＿になりましたか asks them to fill in an ending whose shape they can
+# already see; blanking おもちになりましたか asks for the prefix, the stem and
+# the honorific verb together, which is what actually has to be produced.
+#
+# ON DIRECTION, and every gloss below holds itself to this. Keigo has degrees
+# and a speaker chooses one, so nothing here says a form is required -- these
+# sentences are evidence that shop, hotel, letter and announcement Japanese uses
+# these forms, not that anything obliges them to. What is stated as a rule is
+# direction, because direction is where the errors that matter live: every form
+# in this chapter raises somebody else, and using one of your own actions says
+# the opposite of what you meant. Chapter 5's forms lower your own side and are
+# equally wrong pointed outward. The two chapters are one system and lesson 7
+# puts them in one table.
+#
+# content-source: n/a for this file -- every pattern references an existing
+#   phrase from phrases/b4-05-keigo-honorific.yaml rather than composing new
+#   Japanese, and that file carries the Tatoeba id for each.
+# jlpt-source: training -- the level marks the chapter this content sits in,
+#   not each form's textbook level.
+
+- id: grammar.b4-irassharu
+  jlpt: N3
+  pattern: "～いらっしゃいます"
+  gloss: "いらっしゃる is the honorific いる, 行く and 来る at once, used of the person you are raising; the sentence decides which of the three it means. Its polite form is irregular -- いらっしゃいます, never いらっしゃります -- and the same is true of おっしゃる, なさる and くださる. After a te-form it replaces ている: 似ていらっしゃいます. いらっしゃいませ, the greeting a shop calls out, is the same verb. Its humble mirror is 参る and おる."
+  phraseId: b4band5.is-your-mother-at-home
+  blank: いらっしゃいますか
+
+- id: grammar.b4-ossharu
+  jlpt: N3
+  pattern: "～おっしゃる"
+  gloss: "おっしゃる is 言う raised to the person speaking. おっしゃってください is the polite please tell us, and 〜とおっしゃいます is how somebody else's name is given. The humble twins are 申す and 申し上げる, so one meaning stands at three heights and who is talking picks the height. 見る goes the same way: its honorific is ご覧になる, met most often as ご覧の通り and as ご覧なさい, which is please look on its own and a gentle have-a-go after a te-form."
+  phraseId: b4band5.tell-us-your-companys-thoughts
+  blank: おっしゃってください
+
+- id: grammar.b4-nasaru
+  jlpt: N3
+  pattern: "～なさいます"
+  gloss: "なさる is する raised, so any noun that takes する takes it: 合格なさる, 出席なさる. なさいますか is the counter's what will you have, and になさいます is にします, choosing between things. Its polite form is なさいます and its command form is なさい, which you have already met. 食べる and 飲む have their own honorific, 召し上がる, which conjugates like an ordinary verb: 召し上がります, 召し上がれ."
+  phraseId: b4band5.how-would-you-like-your-steak
+  blank: どうなさいますか
+
+- id: grammar.b4-te-kudasaimasu-ka
+  jlpt: N3
+  pattern: "～てくださいますか"
+  gloss: "くださる is くれる raised, so 〜てくださいますか asks somebody to do something and honours them for doing it. Set it against ていただけますか, which asks for the same favour by lowering yourself: both are polite, by opposite routes, and a customer tends to reach for the second and a host for the first. お plus a ます-stem plus くださる -- お招きくださって -- is the same verb on the general frame, and ください is its imperative."
+  phraseId: b4band5.could-you-repeat-that
+  blank: いってくださいますか
+
+- id: grammar.b4-o-ni-naru
+  jlpt: N3
+  pattern: "お～になります"
+  gloss: "お plus a verb's ます-stem plus になる raises the listener's action, and it works on verbs that have no honorific of their own: お持ちになる, お出かけになる, お預けになる. Swap になる for ください and it becomes the request a business makes of a customer -- お待ちください, お使いください. Chapter 5's お plus stem plus する is the same shape pointed at your own action, and the ending is the whole difference."
+  phraseId: b4band5.do-you-have-rain-gear
+  blank: おもちになりましたか
+
+- id: grammar.b4-honorific-reru
+  jlpt: N3
+  pattern: "～される方"
+  gloss: "The light honorific: れる or られる on a verb whose subject is the person being honoured -- 出席される, 支持される. It is spelled exactly like the passive, and three things separate them in practice: no agent marked with に, a subject who is the one being raised, and often 方 after the verb, as in 支持される方, or お客様 as its subject. It is a gentler lift than いらっしゃる or お～になる, common in notices and in speech about the public. 来られる also collides with the potential, which is why speakers often avoid it."
+  phraseId: b4band5.all-in-favour-say-aye
+  blank: しじされるかた

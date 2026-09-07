@@ -1,0 +1,109 @@
+# Book Four, Chapter 5 grammar patterns -- speaking with care.
+#
+# One pattern per teaching lesson, each blanking the thing that lesson exists
+# for out of one of its own sentences. The blank is matched against the
+# phrase's reading, so these are kana.
+#
+# THE `pattern` FIELD IS NOT DECORATION. scripts/levelling.mjs grammarSurface()
+# reads it to tag corpus sentences: it rejects any pattern containing a Latin
+# character, a digit or a few punctuation marks, and needs at least one
+# ～-delimited fragment of two characters or more. Seven of the eight below
+# clear that floor and tag exactly what their lesson teaches. What they cannot
+# do, said here rather than discovered later:
+#
+#   ～ございます also tags ありがとうございます, おはようございます and
+#   おめでとうございます, which are the same verb frozen into greetings the
+#   learner has had since Book One. That is not a false positive so much as a
+#   true one nobody needs; lesson 1 says so out loud.
+#
+#   お～します tags お願いします, which is again not a false positive: お願い
+#   します IS お plus a stem plus する, and pointing that out is half of what
+#   lesson 5 does.
+#
+#   ～ております misses 参ります, and ～いたします misses どういたしまして.
+#   Each lesson teaches more than one string and the field holds one. The
+#   pattern names the lesson's centre, not its whole content.
+#
+#   Lesson 8's お～／ご～ is deliberately untaggable -- grammarSurface returns
+#   null on it, as it does for the ／ in Book One's
+#   ありがとうございます／どういたしまして. Any two-character surface that would
+#   pass the floor would tag every お and ご in the corpus, most of them inside
+#   words like お茶 and ご飯 that have nothing to do with this lesson. A pattern
+#   that tags everything detects nothing, and a null is the honest answer.
+#
+# THE BLANKS run longer than the marker itself in most of these, and that is
+# deliberate. Handing a learner ごれんらく＿ asks them to supply an ending whose
+# shape they can already see; blanking ごれんらくいたします asks for the prefix,
+# the noun and the humble verb together, which is what actually has to be
+# produced.
+#
+# ON REGISTER, and every gloss below holds itself to this. Keigo has degrees
+# and a speaker chooses one, so nothing here says a form is required. What is
+# stated as a rule is direction, because direction is where the real errors
+# are: the forms in this chapter lower the speaker's own side, and pointing
+# them at the listener is the mistake that stings. The other direction --
+# raising the listener -- is the next chapter's, and the two sentences in this
+# one that carry both halves (#217155, #227316) say which half is which on the
+# card itself.
+#
+# content-source: n/a for this file -- every pattern references an existing
+#   phrase from phrases/b4-04-keigo-humble.yaml rather than composing new
+#   Japanese, and that file carries the Tatoeba id for each.
+# jlpt-source: training -- the level marks the chapter this content sits in,
+#   not each form's textbook level.
+
+- id: grammar.b4-gozaimasu
+  jlpt: N3
+  pattern: "～ございます"
+  gloss: "The polite existence verb and the polite copula. ございます does the work of あります and でございます the work of です, in the register a shop, a hotel or a formal letter uses; the meaning is unchanged and the particles do not move. Its negative ございません is what 申し訳ございません is built on. ありがとうございます, which you have said since Book One, is this same verb."
+  phraseId: b4band4.we-have-a-wide-choice-of-books
+  blank: がございます
+
+- id: grammar.b4-itasu
+  jlpt: N3
+  pattern: "～いたします"
+  gloss: "いたす is する lowered, used of what the speaker's own side will do. Any noun that takes する takes it -- 連絡いたします, 添付いたします -- and ご or お often sits on that noun as well. にいたします is にします, settling on one thing rather than another. どういたしまして, in your hands since Book One, is this verb inside a set phrase."
+  phraseId: b4band4.we-will-be-in-touch
+  blank: ごれんらくいたします
+
+- id: grammar.b4-moushiageru
+  jlpt: N3
+  pattern: "お～申し上げます"
+  gloss: "申し上げる is 言う lowered, and most of what you meet is one frame: お or ご, a noun, then 申し上げます -- お礼申し上げます, お祝い申し上げます, お悔やみ申し上げます. を between the noun and the verb is optional and slightly less fixed. 申す is the plainer humble 言う, and 〜と申します is how you give your own name."
+  phraseId: b4band4.we-thank-you-for-your-patronage
+  blank: おれいもうしあげます
+
+- id: grammar.b4-orimasu
+  jlpt: N3
+  pattern: "～ております"
+  gloss: "おる is いる in formal register, so ております is ています with nothing about the aspect changed. 参る is 行く and 来る in the same register, and which one it means depends on who is moving towards whom. A speaker uses these of their own side, colleagues and company included; they also turn up in announcements about things belonging to nobody's side, as when a train 参ります into a station."
+  phraseId: b4band4.we-are-experiencing-turbulence
+  blank: ゆれております
+
+- id: grammar.b4-o-suru
+  jlpt: N3
+  pattern: "お～します"
+  gloss: "お plus a verb's ます-stem plus する or いたす lowers the speaker's own action towards the listener -- お借りする, お待ちする, お送りする, お手伝いする. A noun that takes する uses ご or お in front of the noun instead: ご案内します. Which verbs sound natural in the frame is a matter of habit rather than a rule you can compute, and お願いします is the one you have been saying since Book One without knowing its shape."
+  phraseId: b4band4.i-am-always-ready-to-help
+  blank: おてつだいします
+
+- id: grammar.b4-te-itadakemasu-ka
+  jlpt: N3
+  pattern: "～ていただけますか"
+  gloss: "A request built from もらう lowered. いただく is humble もらう, いただける is its potential, and 〜ていただけますか asks whether you might receive the favour of the listener doing something. ませんか in place of ますか softens it further. Without a te-form in front, いただく is plain receiving -- and eating and drinking, which is where いただきます comes from."
+  phraseId: b4band4.could-you-update-this-data
+  blank: していただけますか
+
+- id: grammar.b4-sasete-itadaku
+  jlpt: N3
+  pattern: "～させていただきます"
+  gloss: "Book Three's causative with いただく on the end: させて, being allowed to do it, plus いただきます, receiving that permission. It announces your own action as something the listener permits, which fits when the action really does touch them and reads as padding when it does not. Modern service Japanese uses it very widely and plenty of Japanese speakers find that overdone."
+  phraseId: b4band4.i-will-be-happy-to-attend-your-party
+  blank: させていただきます
+
+- id: grammar.b4-o-go-noun
+  jlpt: N3
+  pattern: "お～／ご～"
+  gloss: "お and ご in front of a noun, either raising something that belongs to the listener or simply making the word polite. The tendency is お before native Japanese words and ご before words built from Chinese roots -- お名前, お部屋 against ご連絡, ご案内 -- and it is a tendency with real exceptions, two of which this chapter cards: お電話 and お返事. 様 after a person's name or role does the same job at the other end of the word."
+  phraseId: b4band4.the-bellboy-will-show-you-to-your-room
+  blank: おへやにごあんないします

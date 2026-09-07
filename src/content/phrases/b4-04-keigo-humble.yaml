@@ -1,0 +1,577 @@
+# Book Four, Chapter 5 phrases -- speaking with care.
+#
+# Forty sentences, none of them ours. 04-stage-reading.md section 8 withdrew the
+# training-canonical exemption at the reading stage and above, so every sentence
+# below is a verbatim Tatoeba pair carried out of
+# server/data/jmdict-examples-eng-3.6.2.json with its id in `tatoebaId`, quoted,
+# because YAML reads a bare 235665 as a number and the schema rejects it.
+# Nothing was composed, trimmed, joined, smoothed or corrected. Every Japanese
+# string was compared character for character against the corpus after the file
+# was written rather than before: all forty match.
+#
+# WHERE THIS CHAPTER'S KEIGO COMES FROM, said once so no note has to repeat it.
+# Tatoeba's polite Japanese is business-letter, hotel-desk, shop-counter and
+# telephone register. That is a narrow slice of the language and it is also
+# exactly the slice a learner meets first, so the slice is the chapter. It is
+# not a survey of how anyone speaks at home, and none of these forms is
+# obligatory in the situations they describe -- Japanese has degrees of
+# politeness and a speaker picks one.
+#
+# ---------------------------------------------------------------------------
+# ONE UTTERANCE PER CARD. Keigo is counter language, so the corpus keeps it in
+# two-speaker exchanges, and several otherwise perfect sentences were left out
+# for that alone: #224154 こちらはスミスと申します。ジョンソンさんはおいででしょうか。
+# is two sentences and would have been the chapter's only attestation of the
+# self-introduction 〜と申します. Lesson 3 describes that frame in English
+# instead of carding it. A scripted exchange is multi-sentence composed text
+# even when both halves are separately attested.
+#
+# ONE SENTENCE THE CHAPTER PLAN ASKED FOR AND CANNOT HAVE. #140433
+# 相席させていただいてよろしいですか is already a Book Three card
+# (phrases/b3-00-passive.yaml, band0.may-i-share-this-table, where it closes
+# the causative lesson). Carding it again would teach one sentence twice in two
+# books. Lesson 7 replaces it with #227020 お嬢さんに会わせていただきたい, which
+# is the same construction in its たい form.
+#
+# THREE MORE DROPPED, each for a stated reason rather than taste:
+#
+#   #196950 フリーダイヤル１―８００―４４６―２５８１にお電話ください -- the
+#   sentence is thirty characters of telephone number, and this app spells every
+#   digit out in the `reading` a learner types. Whether that string is read as
+#   digits or as grouped numbers could not be settled, so it is out. #216999
+#   ご用のときはお電話ください carries the same お電話 with nothing to guess.
+#
+#   #199615 トロント国際空港に近い部屋をとっていただけませんか -- twenty-six
+#   characters, and its とる is the reserve-a-room sense, which the English
+#   ("reserve") gives away in a way the Japanese does not. #188051
+#   何か飲み物をいただけますか took the slot and does a job no other lesson 6
+#   sentence does: it shows いただく as plain humble receiving, without a
+#   te-form in front of it.
+#
+#   #216998 ご用は承っておりますか -- a genuine service-counter ております, but
+#   its corpus English is "Is anybody waiting on you?", which maps onto nothing
+#   in the Japanese. 承る is described in lesson 4 instead. #146127
+#   乗務員がただいま出入り口を開けております took the slot.
+#
+#   #192582 ラスト・オーダーは締め切らせていただきました and #170904
+#   差し出がましいようですが、私から意見を述べさせて頂きます -- the two
+#   remaining させていただく sentences, both declined. The first has "Last call!"
+#   for its whole English, which settles nothing about the Japanese, and its
+#   katakana middle dot has no place in a typed reading; the second runs to
+#   twenty-nine characters and opens with 差し出がましい. Lesson 7 therefore
+#   cards five of the eight short examples the corpus holds.
+#
+#   #217164 ご好意に対し厚くお礼を申し上げます -- correct and unused, but it
+#   would have made three お礼 sentences out of lesson 3's five, and its に対し
+#   is a form no chapter of this course has taught. #145612
+#   心からお悔やみ申し上げます took the slot and gives the frame a second noun.
+#
+# ---------------------------------------------------------------------------
+# READING JUDGEMENT CALLS, stated rather than left to be discovered. Every
+# `reading` is what a learner types, and FillBlankCard grades the whole string,
+# so an ambiguous transcription is a card nobody can pass.
+#
+#   #174932's １０パーセント is transcribed じゅっパーセント, matching the
+#   ごじゅっパーセント of phrases/b3-10-register.yaml. じっ is the older
+#   prescriptive reading and is still heard.
+#   #145612's 心から is transcribed こころから. JMdict 1853490 lists しんから as
+#   a second reading; こころから is the one it marks common and the one this
+#   fixed condolence phrase takes.
+#   #146743's 札 is さつ, banknotes (JMdict 1298960). The same character read
+#   ふだ (1298970) is a tag or a ticket, and nothing but the sentence separates
+#   them.
+#   #227316's ライター is the lighter, JMdict 1137880, not the writer, 2844121.
+#   #235007's ７月１０日 is しちがつとおか; #121768's ３月３１日 is
+#   さんがつさんじゅういちにち; #190029's 一両日中 is いちりょうじつちゅう
+#   (JMdict 2061030 gives the whole compound with that reading).
+#   #146127 and #203616 and #203657 all carry ただいま, written 出入り口 sentence
+#   in kana and the other two as ただ今 and ただいま; the reading is ただいま in
+#   every case.
+#
+# ROMAJI in this chapter hyphenates the polite prefix -- go-renraku, o-heya,
+# o-kari shite -- wherever the word underneath the prefix is itself taught, and
+# leaves it attached where the prefix is part of the word as the dictionary
+# lists it: orei, oiwai, okuyami, okyakusama, otaku, onegai shimasu. That is a
+# transcription convention, not a claim about the Japanese.
+#
+# ---------------------------------------------------------------------------
+# THE ENGLISH is Tatoeba's own except in six places, each listed here by id and
+# kind so a reviewer can check them rather than take them on trust. No Japanese
+# string was touched.
+#
+#   #206670 -- "Sorry" for 申し訳ございません, which is several steps above
+#     sorry. Glossed "I'm very sorry, that book is out of stock."
+#   #229119 -- "I will get in touch with you" drops いずれ, which is the word
+#     carrying the vagueness. Glossed "We will be in touch in due course."
+#   #184955 -- "Excuse us for the inconvenience" hides 皆様, which is a word
+#     card on this lesson. Glossed "We apologise to everyone for the
+#     inconvenience."
+#   #149555 -- "I beg to modify your proposal" is business English of about
+#     1890. Glossed "Excuse me, but I will amend your proposal."
+#   #227020 -- "I ask to see your daughter" hides the いただきたい the card
+#     exists for. Glossed "I would like to be allowed to meet your daughter."
+#   #216999 -- "Please call me up if you want me" is dated and hides ご用.
+#     Glossed "Please phone if you need anything."
+#
+# ---------------------------------------------------------------------------
+# `recognitionOnly` ON SIX CARDS. The flag exists for two things in this app: a
+# reading too long to type back (over about forty-one kana), and a reading
+# nothing settles. Keigo runs long and it also runs formulaic, so both apply
+# here. FillBlankCard shows the English alone and grades the whole typed
+# reading (FillBlankCard.tsx:102), and these six English glosses cannot produce
+# their Japanese:
+#
+#   #205054 -- "The honor is more than I deserve" is the translation of an
+#     idiom, 身に余る, that no learner reconstructs from those words.
+#   #202685 -- ついては is a letter-opening connector the English drops
+#     entirely.
+#   #146743 -- a two-clause choice question rendered as seven English words.
+#   #121768 -- thirty-seven kana, and the English keeps none of 念のために.
+#   #140082 -- "on behalf of" is 代わりに far more often than 成り代わって.
+#   #227316 -- お忘れです is the honorific noun frame, and "you have left"
+#     gives a learner no reason to reach for it rather than 忘れました.
+#
+# The flag does not retire a card. LearnPage.tsx:217-220 keeps a
+# recognitionOnly phrase in review and only stops it being typed, so these six
+# keep coming back as recognition.
+#
+# content-source: Tatoeba, via the sentence pairs embedded in JMdict for
+#   Applications 3.6.2 (server/data/jmdict-examples-eng-3.6.2.json). Every
+#   phrase carries its sentence id in `tatoebaId`. Verified by id against the
+#   corpus on 2026-09-06: all 40 resolve, each Japanese string matches its
+#   source character for character, and no id and no sentence is already carded
+#   anywhere else in src/content/phrases/. Kana readings and romaji are
+#   transcriptions of the quoted sentence, not new content; every compound
+#   whose reading was not obvious was checked against JMdict (在庫切れ ざいこぎれ
+#   2260860, 現金払い げんきんばらい 1263620, 身に余る みにあまる 2741150,
+#   成り代わる なりかわる 1848840, 子息 しそく 1307980, 念のため ねんのため
+#   1469350, 気流 きりゅう 1222680, 乗務員 じょうむいん 1355440, 出入り口
+#   でいりぐち 1598540, この度 このたび 1004740, 一身上 いっしんじょう 1163680,
+#   一両日中 いちりょうじつちゅう 2061030, お嬢さん おじょうさん 1002170,
+#   会わせる あわせる 1198200, 小額 しょうがく 1348960, 高額 こうがく 1283320,
+#   愛顧 あいこ 1150660, 日頃 ひごろ 1464070, ベルボーイ 1120120, アップデート
+#   1016650, ショッピングバッグ 1062790).
+# jlpt-source: training -- the level marks the chapter this content sits in,
+#   not each form's textbook level.
+
+# -- Lesson 1 - There is, politely ------------------------------------------
+
+- id: b4band4.we-have-a-single-for-fifty-dollars
+  jlpt: N3
+  scenario: polite existence
+  japanese: １泊５０ドルのシングルのお部屋がございます。
+  reading: いっぱくごじゅうドルのシングルのおへやがございます。
+  romaji: ippaku gojuu doru no shinguru no o-heya ga gozaimasu.
+  english: We have a single for 50 dollars per night.
+  tatoebaId: "235665"
+  notes: "ございます is あります with its register lifted, and a hotel or a shop uses it about its own rooms and its own goods. Nothing else in the sentence changes: が still marks what exists. シングル here is the hotel sense of the word, a single room, and 一泊 is one night's stay. お部屋 carries the polite お this chapter's last lesson takes apart."
+
+- id: b4band4.we-have-a-wide-choice-of-books
+  jlpt: N3
+  scenario: polite existence
+  japanese: 当店にはいろいろな種類の本がございます。
+  reading: とうてんにはいろいろなしゅるいのほんがございます。
+  romaji: touten ni wa iroiro na shurui no hon ga gozaimasu.
+  english: We have a wide choice of books.
+  tatoebaId: "123970"
+  notes: "当店 is how a shop refers to itself in print -- this store. には is に with は on top of it, making the place the topic, which is the ordinary shape when a shop says what it stocks. Read the ending against あります: 本があります and 本がございます say the same thing to two different listeners."
+
+- id: b4band4.the-honour-is-more-than-i-deserve
+  jlpt: N3
+  scenario: polite existence
+  japanese: それは身に余る光栄でございます。
+  reading: それはみにあまるこうえいでございます。
+  romaji: sore wa mi ni amaru kouei de gozaimasu.
+  english: The honor is more than I deserve.
+  tatoebaId: "205054"
+  recognitionOnly: true
+  notes: "でございます stands where です stands, and that is the whole of it -- the sentence is a plain X は Y です underneath. 身に余る is a set expression, literally more than one's body can hold, used of an honour or a compliment that outsizes the person receiving it. Recognise this one rather than build it: the English is a translation of the idiom, not a route back to it."
+
+- id: b4band4.im-sorry-the-book-is-out-of-stock
+  jlpt: N3
+  scenario: polite existence
+  japanese: 申し訳ございません、その本は在庫切れになっております。
+  reading: もうしわけございません、そのほんはざいこぎれになっております。
+  romaji: moushiwake gozaimasen, sono hon wa zaikogire ni natte orimasu.
+  english: I'm very sorry, that book is out of stock.
+  tatoebaId: "206670"
+  notes: "申し訳ございません takes 申し訳, an excuse, and says there is none: there is no excuse I can offer. It is the formal end of the apology ladder that starts at ごめんなさい and runs through すみません; 申し訳ありません sits one step below it and is the commoner spoken form. The second half is ています one register up -- おります arrives properly in lesson 4."
+
+- id: b4band4.im-sorry-to-have-caused-you-inconvenience
+  jlpt: N3
+  scenario: polite existence
+  japanese: 大変ご不自由をおかけして申し訳ございません。
+  reading: たいへんごふじゆうをおかけしてもうしわけございません。
+  romaji: taihen go-fujiyuu o o-kake shite moushiwake gozaimasen.
+  english: I'm sorry to have caused you such inconvenience.
+  tatoebaId: "137270"
+  notes: "ご不自由をおかけする, to put somebody to inconvenience, is the frame most formal apologies are built on -- ご迷惑をおかけする in lesson 4 is the same shape with a different noun. おかけして is お plus a verb stem plus する, which is lesson 5's whole subject; here it is simply the humble form of かける. 不自由 is the discomfort sense of the word rather than its disability sense."
+
+# -- Lesson 2 - We will do it, formally --------------------------------------
+
+- id: b4band4.we-will-open-our-sapporo-branch
+  jlpt: N3
+  scenario: business register
+  japanese: ７月１０日より札幌支店を開設いたします。
+  reading: しちがつとおかよりさっぽろしてんをかいせついたします。
+  romaji: shichigatsu tooka yori sapporo shiten o kaisetsu itashimasu.
+  english: On July 10, we will open our Sapporo branch.
+  tatoebaId: "235007"
+  notes: "いたします is します said about your own side in business register: a notice, a letter, an announcement. Any noun that takes する takes it -- 開設する becomes 開設いたします with nothing else moved. より here is the written から, marking a starting point in time; it is not the comparative より, and only the sentence tells you which is meant."
+
+- id: b4band4.we-give-a-ten-percent-discount-for-cash
+  jlpt: N3
+  scenario: business register
+  japanese: 現金払いには１０パーセント割引いたします。
+  reading: げんきんばらいにはじゅっパーセントわりびきいたします。
+  romaji: genkin barai ni wa juppaasento waribiki itashimasu.
+  english: We give a 10% discount for cash.
+  tatoebaId: "174932"
+  notes: "Another noun with いたします on it: 割引 is a discount, 割引いたします is we discount. 現金払い is paying in cash, and 払い is the stem of 払う worn as a noun -- the same trick as 割引 itself. には again marks the condition as the topic: as for cash payment."
+
+- id: b4band4.we-will-be-in-touch
+  jlpt: N3
+  scenario: business register
+  japanese: いずれご連絡いたします。
+  reading: いずれごれんらくいたします。
+  romaji: izure go-renraku itashimasu.
+  english: We will be in touch in due course.
+  tatoebaId: "229119"
+  notes: "ご連絡いたします is the commonest sentence in Japanese business life: ご on the noun, いたす on the verb, both of them lowering the speaker's side rather than raising anyone. Worth keeping whole. いずれ here is the sooner-or-later sense of the word, not the which-one sense that the dictionary lists first."
+
+- id: b4band4.i-am-attaching-a-copy-of-my-letter
+  jlpt: N3
+  scenario: business register
+  japanese: ついては、私の手紙のコピーを添付いたします。
+  reading: ついては、わたしのてがみのコピーをてんぷいたします。
+  romaji: tsuite wa, watashi no tegami no kopii o tenpu itashimasu.
+  english: I am sending a copy of my letter to you.
+  tatoebaId: "202685"
+  recognitionOnly: true
+  notes: "添付 is what an attachment is called, on paper then and on email now. ついては opens the next move in a letter -- that being so, accordingly -- and it is the kind of connector that has no single English word, which is why this card asks you to recognise it rather than produce it. 手紙 you have had since this book's first chapter."
+
+- id: b4band4.small-bills-or-large
+  jlpt: N3
+  scenario: business register
+  japanese: 小額の札にいたしますか、それとも高額の札にいたしましょうか。
+  reading: しょうがくのさつにいたしますか、それともこうがくのさつにいたしましょうか。
+  romaji: shougaku no satsu ni itashimasu ka, soretomo kougaku no satsu ni itashimashou ka.
+  english: Do you want small bills or large?
+  tatoebaId: "146743"
+  recognitionOnly: true
+  notes: "にいたします is にします -- settling on one thing rather than another -- with the same register lift. A bank teller offering two options runs it twice, once as a question and once as ましょうか, the offer form. 札 here is さつ, banknotes; the same character read ふだ is a tag or a ticket. Long and two-sided, so this one is for reading rather than typing."
+
+# -- Lesson 3 - Saying it humbly ---------------------------------------------
+
+- id: b4band4.we-thank-you-for-your-patronage
+  jlpt: N3
+  scenario: humble speech
+  japanese: 日頃のご愛顧にお礼申し上げます。
+  reading: ひごろのごあいこにおれいもうしあげます。
+  romaji: higoro no go-aiko ni orei moushiagemasu.
+  english: We really thank you for your patronage.
+  tatoebaId: "122872"
+  notes: "申し上げる is 言う lowered: I say it, upward, to you. It is almost always met inside the frame お or ご plus a noun plus 申し上げます, and that frame is what to learn -- お礼申し上げます, thanks offered. 日頃 is the everyday, the long-standing; ご愛顧 is a customer's continued custom, and a shop says it to the customer, never about itself."
+
+- id: b4band4.i-thank-you-on-behalf-of-my-son
+  jlpt: N3
+  scenario: humble speech
+  japanese: 息子に成り代わってお礼を申し上げます。
+  reading: むすこになりかわっておれいをもうしあげます。
+  romaji: musuko ni narikawatte orei o moushiagemasu.
+  english: I thank you on behalf of my son.
+  tatoebaId: "140082"
+  recognitionOnly: true
+  notes: "The same frame with を put back in: お礼を申し上げます. Both joins are ordinary, and the one without を is a shade more fixed. 成り代わる is standing in for somebody, which English says with on behalf of -- and English says that with 代わりに far more often, so read this one rather than reach for it. 息子 is your own son; another person's is ご子息 or 息子さん."
+
+- id: b4band4.please-accept-my-sincerest-condolences
+  jlpt: N3
+  scenario: humble speech
+  japanese: 心からお悔やみ申し上げます。
+  reading: こころからおくやみもうしあげます。
+  romaji: kokoro kara okuyami moushiagemasu.
+  english: Please accept my sincerest condolences.
+  tatoebaId: "145612"
+  notes: "The frame again, with the noun that matters most: お悔やみ, condolences. This is the sentence said at a funeral and written in a card, and it is worth owning whole. 心から is from the heart, read こころから here; the same two characters can also be read しんから -- one dictionary entry, two readings, the second more emphatic."
+
+- id: b4band4.congratulations-on-your-sons-marriage
+  jlpt: N3
+  scenario: humble speech
+  japanese: ご子息のご結婚を心よりお祝い申し上げます。
+  reading: ごしそくのごけっこんをこころよりおいわいもうしあげます。
+  romaji: go-shisoku no go-kekkon o kokoro yori oiwai moushiagemasu.
+  english: Please accept our heartiest congratulations on the marriage of your son.
+  tatoebaId: "217155"
+  notes: "Both halves of keigo in one line, and they point in opposite directions. ご子息 and ご結婚 raise the listener's son and the listener's wedding; お祝い申し上げます lowers the speaker's own act of congratulating. Raising the other side is the next chapter's subject. 心より is 心から in written dress, and the pair 心から／心より is worth noticing."
+
+- id: b4band4.the-deadline-is-march-thirty-first
+  jlpt: N3
+  scenario: humble speech
+  japanese: 念のためにもう一度申しますが、締め切りは３月３１日です。
+  reading: ねんのためにもういちどもうしますが、しめきりはさんがつさんじゅういちにちです。
+  romaji: nen no tame ni mou ichido moushimasu ga, shimekiri wa sangatsu sanjuuichinichi desu.
+  english: Let me remind you again that March 31st is the due date.
+  tatoebaId: "121768"
+  recognitionOnly: true
+  notes: "申す is the plainer humble 言う, and 申します is what it looks like in use. Do not let one example understate it: 〜と申します, giving your own name, is among the first things said on a business telephone call. 念のために is just to be sure. Long, so read it rather than type it."
+
+# -- Lesson 4 - We are, we go, humbly ----------------------------------------
+
+- id: b4band4.we-are-experiencing-turbulence
+  jlpt: N3
+  scenario: service register
+  japanese: ただ今気流の関係で揺れております。
+  reading: ただいまきりゅうのかんけいでゆれております。
+  romaji: tadaima kiryuu no kankei de yurete orimasu.
+  english: We are currently experiencing some turbulence.
+  tatoebaId: "203616"
+  notes: "ております is ています one register up, and nothing about the aspect changes: 揺れています and 揺れております both say the shaking is going on now. This is the cabin-announcement voice. 〜の関係で is because of, literally by the connection of; ただ今 is ただいま in the now sense rather than the I'm-home sense."
+
+- id: b4band4.we-apologise-for-the-inconvenience
+  jlpt: N3
+  scenario: service register
+  japanese: 皆様にご迷惑をおかけしております。
+  reading: みなさまにごめいわくをおかけしております。
+  romaji: minasama ni go-meiwaku o o-kake shite orimasu.
+  english: We apologise to everyone for the inconvenience.
+  tatoebaId: "184955"
+  notes: "ご迷惑をおかけする is the apology frame from lesson 1 with its other noun, and here it is in the ております form -- the trouble is ongoing, so the apology is too. 皆様 is everyone with the listeners raised, the word a station announcement and a company notice both use. 迷惑 alone is a nuisance or a bother."
+
+- id: b4band4.the-crew-are-opening-the-doors
+  jlpt: N3
+  scenario: service register
+  japanese: 乗務員がただいま出入り口を開けております。
+  reading: じょうむいんがただいまでいりぐちをあけております。
+  romaji: joumuin ga tadaima deiriguchi o akete orimasu.
+  english: The crew is now opening the hatch.
+  tatoebaId: "146127"
+  notes: "The same ております, and this time about somebody else on the speaker's own side -- the crew, from the airline's mouth. That is the rule worth carrying: おる lowers your side, so it covers your colleagues as readily as yourself, and it is not used of the customer. 乗務員 is the crew, 出入り口 the way in and out."
+
+- id: b4band4.i-will-be-with-you-right-away
+  jlpt: N3
+  scenario: service register
+  japanese: ただいま参ります。
+  reading: ただいままいります。
+  romaji: tadaima mairimasu.
+  english: I will be with you right away.
+  tatoebaId: "203657"
+  notes: "参る is 行く and 来る lowered into one verb, and which of the two it means is decided by where the speaker and listener are standing. Here a waiter is coming to you, so it is 来る. ただいま carries its right-away sense: 只今参ります is what somebody says on being called from across a room."
+
+- id: b4band4.ill-come-as-soon-as-i-can
+  jlpt: N3
+  scenario: service register
+  japanese: 出来るだけ早く参ります。
+  reading: できるだけはやくまいります。
+  romaji: dekiru dake hayaku mairimasu.
+  english: I'll come as soon as I can.
+  tatoebaId: "147784"
+  notes: "参ります again, and again as 来る. 出来るだけ, as much as is possible, you met in Book Three's chapter on だけ and again in this book's first chapter; it is written either 出来るだけ or できるだけ and both are ordinary. Say 行きます to a friend and 参ります across a counter -- the errand is the same."
+
+# -- Lesson 5 - Doing it for you ---------------------------------------------
+
+- id: b4band4.may-i-use-this-word-processor
+  jlpt: N3
+  scenario: humble offers
+  japanese: このワープロをお借りしていいですか。
+  reading: このワープロをおかりしていいですか。
+  romaji: kono waapuro o o-kari shite ii desu ka.
+  english: May I use this word processor?
+  tatoebaId: "222986"
+  notes: "お plus a verb stem plus する is the humble form of that verb: 借りる gives 借り, and お借りする is I borrow, said downward about yourself. The English says use; the Japanese says borrow, because the machine is somebody else's. 〜ていいですか, asking permission, is the 〜てもいいですか you have had since Book One with its も dropped, and it is untouched by the keigo in front of it."
+
+- id: b4band4.may-i-borrow-this-book
+  jlpt: N3
+  scenario: humble offers
+  japanese: この本をお借りしてもよろしいですか。
+  reading: このほんをおかりしてもよろしいですか。
+  romaji: kono hon o o-kari shite mo yoroshii desu ka.
+  english: May I borrow this book?
+  tatoebaId: "219525"
+  notes: "The same request one step further up. よろしい is いい made polite, so 〜てもよろしいですか is Book One's 〜てもいいですか with one word swapped -- the version you use with somebody you do not know. Nothing else about the request changes."
+
+- id: b4band4.i-am-always-ready-to-help
+  jlpt: N3
+  scenario: humble offers
+  japanese: いつでもお手伝いします。
+  reading: いつでもおてつだいします。
+  romaji: itsudemo o-tetsudai shimasu.
+  english: I am always ready to help you.
+  tatoebaId: "228856"
+  notes: "The frame used to offer rather than to ask: お手伝いします is I will help, with the helping lowered. 手伝う has been yours since Book Two's giving-and-receiving chapter. いつでも is any time at all -- built from いつ and でも, the same でも that makes 何でも and 誰でも."
+
+- id: b4band4.may-i-see-you-home
+  jlpt: N3
+  scenario: humble offers
+  japanese: お宅までお送りしましょうか？
+  reading: おたくまでおおくりしましょうか？
+  romaji: otaku made o-okuri shimashou ka?
+  english: May I escort you home?
+  tatoebaId: "226886"
+  notes: "Book Two's ましょうか, offering to do something, wearing keigo: お送りしましょうか. Both halves are doing their usual work and the sentence is an ordinary offer, only politer. お宅 is your home with the listener raised -- your house, not mine, and it never refers to the speaker's own."
+
+- id: b4band4.i-look-forward-to-hearing-from-you
+  jlpt: N3
+  scenario: humble offers
+  japanese: お便り楽しみにお待ちしております。
+  reading: おたよりたのしみにおまちしております。
+  romaji: o-tayori tanoshimi ni o-machi shite orimasu.
+  english: I am looking forward to hearing from you.
+  tatoebaId: "161715"
+  notes: "お待ちする with lesson 4's おります on the end: お待ちしております, the sign-off of a great many letters and emails. 便り is news from somebody, a letter in the sense of word from you; 楽しみに is the anticipation sense of 楽しみ rather than its enjoyment sense. Which verbs take this frame is a matter of habit, and 待つ, 送る, 借りる, 手伝う, 願う are among the ones that do."
+
+# -- Lesson 6 - Could you possibly -------------------------------------------
+
+- id: b4band4.could-you-update-this-data
+  jlpt: N3
+  scenario: polite requests
+  japanese: このデータをアップデートしていただけますか。
+  reading: このデータをアップデートしていただけますか。
+  romaji: kono deeta o appudeeto shite itadakemasu ka.
+  english: Could I get you to update this data for me?
+  tatoebaId: "223546"
+  notes: "〜ていただけますか is the request you will use most at work. Take it apart: いただく is もらう lowered, いただける is its potential, could I receive, and ますか makes the question. Put together it asks whether the listener would let you have the favour -- which is why it sounds so much softer than てください, an instruction with please on it."
+
+- id: b4band4.could-you-put-it-in-a-shopping-bag
+  jlpt: N3
+  scenario: polite requests
+  japanese: ショッピングバッグに入れていただけますか。
+  reading: ショッピングバッグにいれていただけますか。
+  romaji: shoppingu baggu ni irete itadakemasu ka.
+  english: Could you put it in a shopping bag for me?
+  tatoebaId: "215552"
+  notes: "The same request across a shop counter. Any te-form goes in front of it, exactly as it goes in front of Book Two's てもらう -- 入れてもらえますか and 入れていただけますか are the same request at two heights. 入れる has been yours since Book One."
+
+- id: b4band4.can-i-see-the-menu-again
+  jlpt: N3
+  scenario: polite requests
+  japanese: もう一度メニューを見せていただけますか。
+  reading: もういちどメニューをみせていただけますか。
+  romaji: mou ichido menyuu o misete itadakemasu ka.
+  english: Can I have the menu again, please?
+  tatoebaId: "194316"
+  notes: "Note who does what. The listener does the showing; the speaker receives the favour of it -- so 見せて, not 見て. 見せる, to let somebody see, came in this book's second chapter and is exactly the verb this frame wants. Said in a restaurant this is about as polite as a customer needs to be."
+
+- id: b4band4.will-you-put-us-up-for-one-night
+  jlpt: N3
+  scenario: polite requests
+  japanese: 一晩私たちを泊めていただけませんか。
+  reading: ひとばんわたしたちをとめていただけませんか。
+  romaji: hitoban watashitachi o tomete itadakemasen ka.
+  english: Will you put us up for one night?
+  tatoebaId: "190141"
+  notes: "ませんか instead of ますか, and the request softens again: a negative question leaves the listener more room to decline, in Japanese as in English. 泊める is to put somebody up, the transitive partner of 泊まる, to stay -- and it is not the とめる that means to stop something. 一晩 is one night."
+
+- id: b4band4.may-i-have-something-to-drink
+  jlpt: N3
+  scenario: polite requests
+  japanese: 何か飲み物をいただけますか。
+  reading: なにかのみものをいただけますか。
+  romaji: nanika nomimono o itadakemasu ka.
+  english: May I have something to drink?
+  tatoebaId: "188051"
+  notes: "いただく on its own, with no te-form in front of it: humble もらう, to receive. It is also the humble 食べる and 飲む, which is why a meal opens with いただきます -- the word you have had since Book One is this verb. Here the potential いただける asks whether receiving is possible: could I have something to drink."
+
+# -- Lesson 7 - Allow me to --------------------------------------------------
+
+- id: b4band4.i-wish-to-resign
+  jlpt: N3
+  scenario: asking leave
+  japanese: 私この度一身上の都合でやめさせていただきます。
+  reading: わたしこのたびいっしんじょうのつごうでやめさせていただきます。
+  romaji: watashi kono tabi isshinjou no tsugou de yamesasete itadakimasu.
+  english: I wish to resign from my work for purely personal reasons.
+  tatoebaId: "167353"
+  notes: "Book Three's causative plus いただく: させて, being allowed to do it, and いただきます, receiving that permission. So やめさせていただきます is I will resign, with your leave -- the announcement of a decision already taken, dressed as permission. 一身上の都合 is the fixed phrase for personal reasons on a resignation; 都合 alone came in Book Two's chapter on making plans."
+
+- id: b4band4.i-will-amend-your-proposal
+  jlpt: N3
+  scenario: asking leave
+  japanese: 失礼ですが御提案を修正させていただきます。
+  reading: しつれいですがごていあんをしゅうせいさせていただきます。
+  romaji: shitsurei desu ga go-teian o shuusei sasete itadakimasu.
+  english: Excuse me, but I will amend your proposal.
+  tatoebaId: "149555"
+  notes: "The genuine use of this form: the speaker is about to do something that touches the listener's property -- their proposal -- so the doing is framed as permitted. 御提案 is ご提案 with the prefix written in kanji, which is ordinary in formal writing and read the same. 失礼ですが softens what follows, roughly it is rude of me, but."
+
+- id: b4band4.we-would-love-to-work-with-you
+  jlpt: N3
+  scenario: asking leave
+  japanese: ぜひ取引させていただきたいと思います。
+  reading: ぜひとりひきさせていただきたいとおもいます。
+  romaji: zehi torihiki sasete itadakitai to omoimasu.
+  english: We would love to work with you.
+  tatoebaId: "214004"
+  notes: "いただく takes たい like any other verb, and いただきたいと思います softens the wish one step further -- I am thinking that I would like to be allowed. Business Japanese piles hedges like this and means nothing hesitant by it. ぜひ is by all means; 取引 is doing business with somebody."
+
+- id: b4band4.i-will-be-happy-to-attend-your-party
+  jlpt: N3
+  scenario: asking leave
+  japanese: あなたのパーティーに喜んで出席させていただきます。
+  reading: あなたのパーティーによろこんでしゅっせきさせていただきます。
+  romaji: anata no paatii ni yorokonde shusseki sasete itadakimasu.
+  english: I will be happy to attend your party.
+  tatoebaId: "233498"
+  notes: "Accepting an invitation with the same form: attending is something the host permits, so 出席させていただきます. 喜んで, gladly, is the te-form of 喜ぶ used as an adverb -- the same shape as 急いで. Modern service Japanese uses させていただく far more widely than this, and plenty of Japanese speakers find it overdone; in a sentence like this one it is doing real work."
+
+- id: b4band4.i-would-like-to-meet-your-daughter
+  jlpt: N3
+  scenario: asking leave
+  japanese: お嬢さんに会わせていただきたい。
+  reading: おじょうさんにあわせていただきたい。
+  romaji: ojousan ni awasete itadakitai.
+  english: I would like to be allowed to meet your daughter.
+  tatoebaId: "227020"
+  notes: "The shortest example of the form, and the plainest reading of it: 会わせる is to let somebody meet, so 会わせていただきたい is I would like to be allowed to meet. Asking a parent, which is where the politeness comes from. お嬢さん is another person's daughter with the honorific on it -- your own is 娘."
+
+# -- Lesson 8 - Your name, your call -----------------------------------------
+
+- id: b4band4.could-you-spell-your-name
+  jlpt: N3
+  scenario: polite nouns
+  japanese: あなたのお名前のスペルをお願いします。
+  reading: あなたのおなまえのスペルをおねがいします。
+  romaji: anata no onamae no superu o onegai shimasu.
+  english: Could you spell your name, please?
+  tatoebaId: "233571"
+  notes: "お名前 is なまえ, which you have had since Book One, with お in front of it -- the name belongs to the listener, so it gets the prefix. お願いします is the same お on 願い, and it is a request you have used since Book One without anyone naming the machinery. スペル is how a name is spelled."
+
+- id: b4band4.please-phone-if-you-need-anything
+  jlpt: N3
+  scenario: polite nouns
+  japanese: ご用のときはお電話ください。
+  reading: ごようのときはおでんわください。
+  romaji: goyou no toki wa o-denwa kudasai.
+  english: Please phone if you need anything.
+  tatoebaId: "216999"
+  notes: "Both prefixes in one short line. ご用 is the listener's business or errand, お電話 the listener's phone call -- and 電話 is a Sino-Japanese word taking お rather than the ご the tendency predicts, which is why the tendency is only a tendency. お電話ください is politer than 電話してください and is what a hotel says. Note the frame itself -- お plus a noun plus ください raises what the listener does, so it is honorific rather than humble, and the next chapter is where it belongs; recognise it here."
+
+- id: b4band4.the-bellboy-will-show-you-to-your-room
+  jlpt: N3
+  scenario: polite nouns
+  japanese: ベルボーイがお部屋にご案内します。
+  reading: ベルボーイがおへやにごあんないします。
+  romaji: berubooi ga o-heya ni go-annai shimasu.
+  english: The bellboy will show you to your room.
+  tatoebaId: "196688"
+  notes: "お on a native word, ご on a Sino-Japanese one, in the same sentence: お部屋 and ご案内. That is the tendency at its cleanest. ご案内します is also lesson 5's frame -- ご or お plus a noun plus する -- so the hotel is lowering its own act of guiding while raising your room."
+
+- id: b4band4.you-have-left-your-lighter
+  jlpt: N3
+  scenario: polite nouns
+  japanese: お客様、テーブルにライターをお忘れですよ。
+  reading: おきゃくさま、テーブルにライターをおわすれですよ。
+  romaji: okyakusama, teeburu ni raitaa o o-wasure desu yo.
+  english: Sir, you have left your lighter on the table.
+  tatoebaId: "227316"
+  recognitionOnly: true
+  notes: "お客様 is how staff address a customer, 様 being 〜さん raised as far as it goes. お忘れです is a different thing from the rest of this lesson: お plus a verb stem plus です raises the listener's action rather than lowering the speaker's, which is the next chapter's subject and is why this card is for recognition. ライター here is a lighter, not a writer."
+
+- id: b4band4.ill-answer-in-a-day-or-two
+  jlpt: N3
+  scenario: polite nouns
+  japanese: 一両日中にお返事します。
+  reading: いちりょうじつちゅうにおへんじします。
+  romaji: ichiryoujitsuchuu ni o-henji shimasu.
+  english: I'll give you an answer in a day or two.
+  tatoebaId: "190029"
+  notes: "お返事 is the second word in this lesson that takes お while the tendency predicts ご -- 返事 is Sino-Japanese, like 電話. Both are so much a part of daily service language that the native-word prefix stuck to them. お返事します is lesson 5's frame again -- お or ご plus a noun plus する, the same shape as ご案内します one card back -- and it lowers the speaker's own reply rather than raising the listener. 一両日中 is within the next day or two."

@@ -1,0 +1,639 @@
+# Book Four, Chapter 9 vocabulary -- fifty-one words, chosen the way chapters
+# 5 to 8 chose theirs.
+#
+# The rule is mechanical and is the previous chapters': a word is in this file
+# if and only if it appears in a sentence this chapter cards, and is not
+# already taught somewhere in the course. Nothing was added because it looked
+# useful and nothing was added to reach a number. 04-stage-reading.md section 3
+# hands vocabulary at this stage to the reading library and to mining; the
+# library's text source has been blocked since 2026-08-20, and
+# docs/plans/book-four-bands.md section 2 settles what to do meanwhile -- each
+# lesson teaches the untaught words its own verified sentences contain.
+#
+# The connectives this chapter exists for -- つまり, すなわち, 要するに,
+# したがって, ただし, なお, または, あるいは, それとも, しかも, さらに, むしろ,
+# 一方, ところで -- are not word cards here. They are what the chapter's seven
+# grammar patterns and seven lesson notes teach. Splitting one form between a
+# pattern and a vocabulary card would review it twice under two names. しかし is
+# the one conjunction below that does get a card, because this chapter does not
+# teach it: it is furniture in one of lesson 6's sentences, and nothing earlier
+# in the course ever carded it, which is the same reason chapter 8 carded
+# その上.
+#
+# WORDS THIS CHAPTER'S SENTENCES CONTAIN AND THIS FILE DOES NOT TEACH, each
+# glossed in the note on the card that carries it: 江戸, 一団, 踊り子, 生産費,
+# 生産力, 労働者, ボーナス, 随時, 説明会, 防止, サブアド, ビュッフェ,
+# カフェテリア, 号車, 小型車, 中型車, アンモニア, 一家族, 山越え, 急勾配,
+# 不注意, 過ち, おかす, 身体, 流行作家, 気がやさしい, 様子見, 大洪水, 一部,
+# 他の者, 募る, 社会保険庁, 厚生労働省, 不信感, ラテン語, ベティ, マイホーム,
+# これら and ためになる. Each is a proper name, a number-plus-counter, a vivid
+# one-off, or a compound whose parts this course already teaches, and the
+# chapter is teaching the connective rather than the furniture around it.
+#
+# WORDS THE PLAN CALLED NEW THAT THE COURSE ALREADY TEACHES, reused rather than
+# authored a second time: 紅茶 vocab.koucha (Book One), 流行 vocab.ryuukou and
+# 降る vocab.furu (chapter 3), 危険 vocab.kiken, 外出 vocab.gaishutsu, 必要
+# vocab.hitsuyou and 少ない vocab.sukunai (chapter 1), 彼ら vocab.karera, 払う
+# vocab.harau, 決まる vocab.kimaru and 態度 vocab.taido (chapter 7), 落ちる
+# vocab.ochiru, 学者 vocab.gakusha, 作家 vocab.sakka, 壁 vocab.kabe, 運動
+# vocab.undou and その上 vocab.sonoue (chapter 8), 夢 vocab.yume and 死語
+# vocab.shigo (chapter 4), 勧める vocab.susumeru (chapter 2), 緑 vocab.midori,
+# 黄色 vocab.kiiro, 茶色 vocab.chairo, 黒 vocab.kuro, 電気 vocab.denki, 部屋
+# vocab.heya, 体 vocab.karada, 家族 vocab.kazoku, お金 vocab.okane and 出かける
+# vocab.dekakeru (all Book One).
+#
+# ---------------------------------------------------------------------------
+# VERIFICATION. Every entry below was checked against JMdict for Applications
+# 3.6.2 (server/data/jmdict-examples-eng-3.6.2.json) on 2026-09-06: headword,
+# reading, part of speech and gloss, with the sequence number in `notes`. Where
+# the sense this chapter needs is not JMdict's first, the note says which sense
+# and why. Five words are in that position:
+#
+#   削る 1298090 s2 (to cut a budget -- s1 is to shave or plane wood, which is
+#     the sense a learner meets first and not the one the card uses)
+#   おしゃべり 1002450 s2 (talkative, a chatterbox -- s1 is the chatter itself)
+#   備える 1244960 s2 (to prepare for -- s1 is to equip or furnish with)
+#   背 2147990 s3 (height -- s1 of that entry is the back of the body)
+#   非常に 1484930 is its own adverb entry; the noun 非常 1484920 means an
+#     emergency, which is the 非常 of 非常口, and they are two entries.
+#
+# Homophone and reading traps checked rather than assumed, because a kana
+# lookup lands on the wrong entry silently:
+#
+#   下手 -- へた 1185200, poor at something. The same two characters are also
+#     したて 1185190 (an inferior position, and a sumo grip) and しもて 1185195
+#     (the lower part, and one side of a stage). Three entries, one spelling.
+#   背 -- せ 2147990 in 背が高い and 背が低い, which JMdict lists as expressions
+#     of their own (1472660, 1472670). The same character read せい 1472650
+#     also means height, so both readings are live and the card gives the one
+#     its sentence uses.
+#   むしろ -- 寧ろ 1604870, the adverb. 筵 1604880, read the same, is a woven
+#     straw mat.
+#   一方 -- いっぽう 1166510. Read ひとかた 2258660 it is a polite word for one
+#     person.
+#   なお -- 尚 1349300, whose third sense is the conjunction this chapter
+#     teaches. 直 1430580, read the same, is an old adjective meaning straight.
+#   しかし -- 然し 1505990, however. 私窩子 2586170, read the same, is an
+#     obsolete word for a prostitute.
+#   過度 -- かど 1196310, excessive. This course already teaches 角 vocab.kado,
+#     a corner, read the same way, so this card's id says which is which.
+#   優しい -- やさしい 1539040, kind. This course already teaches 易しい
+#     vocab.yasashii, easy, read the same way; the id here says which is which.
+#   生産 -- せいさん 1378990, production. 生産 read せいざん 2092600 is a live
+#     birth, and is a separate entry.
+#   気体 -- きたい 1222460, a gas. 期待, expectation, is read the same and is a
+#     different word entirely; this course does not teach it yet.
+#   床 -- ゆか 1349380, the floor. Read とこ 1349370 the same character is a
+#     bed, and read しょう 2085520 it is the counter for beds.
+#   削る -- けずる 1298090. Read はつる 1298100 it is a different entry meaning
+#     to chip concrete away.
+#   表す -- あらわす 1263490. The same spelling read ひょうす 2410100 is a
+#     separate entry, and 現す is the spelling for revealing rather than
+#     representing.
+#   匂い -- におい 1599760. 臭い is the spelling used when the smell is a bad
+#     one, and it is also read くさい as an adjective meaning smelly.
+#   東京 -- とうきょう 1447690, which JMdict also lists as とうけい, a reading
+#     that belongs to the nineteenth century.
+#
+# content-source: training -- these are dictionary entries, not composed
+#   Japanese. Every headword, reading and gloss is JMdict's, cited by sequence
+#   number in each note; no sentence in this file is authored, and the example
+#   sentences the chapter teaches live in phrases/b4-08-conjunction.yaml with
+#   their Tatoeba ids.
+# jlpt-source: training -- the level marks roughly where a word sits in the
+#   standard vocabulary lists. No learner ever sees it.
+
+# -- Lesson 1 - That is to say ----------------------------------------------
+
+- id: vocab.gaikokujin
+  jlpt: N4
+  word_type: noun
+  theme: people
+  japanese: 外国人
+  reading: がいこくじん
+  romaji: gaikokujin
+  english: foreigner; foreign national
+  notes: "JMdict seq 1203650, its only sense. 外国 is a foreign country and 人 a person. In writing it is the neutral word; the clipped 外人 that you will also hear is felt by many people to be rude, so this is the one to use."
+
+- id: vocab.touchaku
+  jlpt: N3
+  word_type: noun
+  theme: travel
+  japanese: 到着
+  reading: とうちゃく
+  romaji: touchaku
+  english: arrival
+  notes: "JMdict seq 1449870, its only sense. It takes する, and it is the word of timetables, announcements and reports -- 到着時刻 is arrival time. In conversation people say 着く."
+
+- id: vocab.toukyou
+  jlpt: N5
+  word_type: noun
+  theme: places
+  japanese: 東京
+  reading: とうきょう
+  romaji: toukyou
+  english: Tokyo
+  notes: "JMdict seq 1447690, its only sense. 東 east and 京 capital: the eastern capital, named that in 1868 when the court moved there from Kyoto, whose 京 is the same character. Until then the city was 江戸, which is why this lesson's sentence has to say that the two are one place."
+
+- id: vocab.heta
+  jlpt: N5
+  word_type: na-adj
+  theme: quality
+  japanese: 下手
+  reading: へた
+  romaji: heta
+  english: poor at; unskillful
+  notes: "JMdict seq 1185200, sense 1. The opposite of 上手, which this book's chapter 2 taught, and it works the same way: ピアノが下手だ, bad at the piano. Said of yourself it is ordinary modesty; said of somebody else it is blunt. The same two characters read したて and しもて are different words."
+
+- id: vocab.oshaberi
+  jlpt: N3
+  word_type: noun
+  theme: communication
+  japanese: おしゃべり
+  reading: おしゃべり
+  romaji: oshaberi
+  english: chatter; talkative; a chatterbox
+  notes: "JMdict seq 1002450. Sense 1 is the chatting itself -- おしゃべりをする, to have a chat. Sense 2, which this lesson's card uses, describes the person: おしゃべりな人, a talkative one. Written 御喋り in kanji and almost never seen that way."
+
+- id: vocab.akiru
+  jlpt: N3
+  word_type: verb
+  verb_class: ru
+  theme: feeling
+  japanese: 飽きる
+  reading: あきる
+  romaji: akiru
+  english: to get tired of; to lose interest in
+  notes: "JMdict seq 1586250, sense 1. What you are tired of takes に: この歌に飽きた, I am sick of this song. It is boredom from repetition rather than the tiredness of 疲れる. Sense 2 is to have had one's fill of food, which survives mostly in 飽きるほど, as much as you could want."
+
+- id: vocab.okonau
+  jlpt: N3
+  word_type: verb
+  verb_class: u
+  theme: actions
+  japanese: 行う
+  reading: おこなう
+  romaji: okonau
+  english: to carry out; to hold (an event)
+  notes: "JMdict seq 1589060, its only sense. A ceremony, an examination, an investigation -- anything conducted formally is 行う, and it is very often passive, 行われる, because the interest is in the event rather than who ran it. The same character is 行く, to go; only the kana on the end tell you which verb you are looking at."
+
+# -- Lesson 2 - Therefore, however, note that -------------------------------
+
+- id: vocab.seisan
+  jlpt: N3
+  word_type: noun
+  theme: business
+  japanese: 生産
+  reading: せいさん
+  romaji: seisan
+  english: production; manufacture
+  notes: "JMdict seq 1378990, its only sense. It takes する. It builds compounds freely, and this lesson's sentences use two of them: 生産費, production cost, and 生産力, productive capacity. Read せいざん the same two characters are a separate entry meaning a live birth."
+
+- id: vocab.kezuru
+  jlpt: N2
+  word_type: verb
+  verb_class: u
+  theme: actions
+  japanese: 削る
+  reading: けずる
+  romaji: kezuru
+  english: to cut (a budget); to shave; to delete
+  notes: "JMdict seq 1298090, sense 2 in this lesson's card -- to cut costs, staff or time. Sense 1 is the physical one, shaving wood or sharpening a pencil, and sense 3 is deleting a line of text. All three are the same picture: taking a layer off something."
+
+- id: vocab.retsu
+  jlpt: N3
+  word_type: noun
+  theme: basics
+  japanese: 列
+  reading: れつ
+  romaji: retsu
+  english: line; row; queue
+  notes: "JMdict seq 1558330, sense 1. 列に並ぶ is to stand in the queue and 列をつくる is to form one. Sense 5 makes it a counter for rows of seats, so 前から三列目 is the third row from the front."
+
+- id: vocab.narabu
+  jlpt: N4
+  word_type: verb
+  verb_class: u
+  theme: actions
+  japanese: 並ぶ
+  reading: ならぶ
+  romaji: narabu
+  english: to line up; to stand in a line
+  notes: "JMdict seq 1508380, sense 1. This is the one that happens by itself -- people 並ぶ at a counter. Its partner 並べる is the one somebody does to things: 皿を並べる, to lay out the plates. Sense 2 is to be a match for somebody, in the frame 〜に並ぶ者はいない, nobody to rival them."
+
+- id: vocab.setsumei
+  jlpt: N4
+  word_type: noun
+  theme: communication
+  japanese: 説明
+  reading: せつめい
+  romaji: setsumei
+  english: explanation; description
+  notes: "JMdict seq 1386460, its only sense. With する it is to explain. 説明書 is an instruction manual and 説明会 -- the word in this lesson's notice -- is an information session, the meeting a company holds to explain itself to applicants."
+
+- id: vocab.kengaku
+  jlpt: N2
+  word_type: noun
+  theme: study
+  japanese: 見学
+  reading: けんがく
+  romaji: kengaku
+  english: a study visit; a tour of inspection
+  notes: "JMdict seq 1259440, sense 1. 見 to look and 学 to learn: going somewhere to see how it works. A school trip to a factory is 工場見学, and a company open day is 会社見学. Sense 2 is sitting out of a PE class and watching instead."
+
+- id: vocab.riyou
+  jlpt: N3
+  word_type: noun
+  theme: basics
+  japanese: 利用
+  reading: りよう
+  romaji: riyou
+  english: use; making use of
+  notes: "JMdict seq 1549660, its only sense, and it takes する. It is the written word for using a service or a facility -- 利用者 is a user, ご利用ください is please use. Of people it turns cold: 人を利用する is to use somebody."
+
+- id: vocab.uketsukeru
+  jlpt: N2
+  word_type: verb
+  verb_class: ru
+  theme: work
+  japanese: 受け付ける
+  reading: うけつける
+  romaji: uketsukeru
+  english: to accept (an application); to receive
+  notes: "JMdict seq 1329690, sense 1. What an office does with your form. The noun 受付 is the reception desk, and the sign 受付中 means applications are open. Sense 2 is the body accepting food or medicine, which is why 何も受け付けない can mean somebody cannot keep anything down."
+
+# -- Lesson 3 - Or ----------------------------------------------------------
+
+- id: vocab.ikaga
+  jlpt: N4
+  word_type: adverb
+  theme: manners
+  japanese: いかが
+  reading: いかが
+  romaji: ikaga
+  english: how; how about
+  notes: "JMdict seq 2845606, sense 1. The polite どう: いかがですか asks how something is, and on its own it offers -- コーヒーはいかが. Written 如何 in kanji and usually left in kana. Sense 2 makes it doubtful, いかがなものか being a very polite way of saying that something is not on."
+
+- id: vocab.konomu
+  jlpt: N3
+  word_type: verb
+  verb_class: u
+  theme: feeling
+  japanese: 好む
+  reading: このむ
+  romaji: konomu
+  english: to like; to prefer
+  notes: "JMdict seq 1277520, its only sense. The written relative of 好き, and unlike 好き it is a verb, so what is liked takes を. 好んで飲む is to drink something by choice. In speech people say 好き; in a survey or an article you meet this one."
+
+- id: vocab.hijouni
+  jlpt: N3
+  word_type: adverb
+  theme: basics
+  japanese: 非常に
+  reading: ひじょうに
+  romaji: hijou ni
+  english: very; extremely
+  notes: "JMdict seq 1484930, its own entry. It is a step up from とても and belongs to writing. The noun behind it, 非常 (seq 1484920), means an emergency -- 非常口 is the emergency exit -- so the two meanings sit oddly together until you read it as out of the ordinary."
+
+- id: vocab.nioi
+  jlpt: N3
+  word_type: noun
+  theme: nature
+  japanese: 匂い
+  reading: におい
+  romaji: nioi
+  english: smell; scent
+  notes: "JMdict seq 1599760, sense 1. Neutral in this spelling, and pleasant more often than not. The same word spelled 臭い is the bad kind, and that spelling read くさい is the adjective smelly. 匂いがする is how you say something smells of anything at all."
+
+- id: vocab.ekitai
+  jlpt: N2
+  word_type: noun
+  theme: nature
+  japanese: 液体
+  reading: えきたい
+  romaji: ekitai
+  english: liquid
+  notes: "JMdict seq 1175030, its only sense. 液 is fluid and 体 is body or form. The three states of matter are built the same way: 液体, 気体 gas, and 固体 solid."
+
+- id: vocab.kitai
+  jlpt: N2
+  word_type: noun
+  theme: nature
+  japanese: 気体
+  reading: きたい
+  romaji: kitai
+  english: gas (state of matter)
+  notes: "JMdict seq 1222460, its only sense. The gas of physics, not the gas you cook with, which is ガス. 期待, expectation, is read the same way and is a much commoner word, so listen for the context."
+
+- id: vocab.chouri
+  jlpt: N2
+  word_type: noun
+  theme: food
+  japanese: 調理
+  reading: ちょうり
+  romaji: chouri
+  english: cooking; preparing food
+  notes: "JMdict seq 1429310, its only sense, and it takes する. The word of recipes, kitchens and packaging: 調理法 is a cooking method and 調理師 a trained cook. 料理 is what you say at home."
+
+- id: vocab.ringo
+  jlpt: N5
+  word_type: noun
+  theme: food
+  japanese: リンゴ
+  reading: リンゴ
+  romaji: ringo
+  english: apple
+  notes: "JMdict seq 1555480. The kanji 林檎 exists and is almost never used; the word is written リンゴ or りんご, and this lesson's sentence uses katakana as fruit names often do."
+
+- id: vocab.orenji
+  jlpt: N5
+  word_type: noun
+  theme: food
+  japanese: オレンジ
+  reading: オレンジ
+  romaji: orenji
+  english: orange (fruit or colour)
+  notes: "JMdict seq 1035860, its only sense, which covers both the fruit and the colour. The Japanese orange you will actually be handed is a みかん, a mandarin, and that is a different word."
+
+- id: vocab.arawasu
+  jlpt: N3
+  word_type: verb
+  verb_class: u
+  theme: communication
+  japanese: 表す
+  reading: あらわす
+  romaji: arawasu
+  english: to represent; to express; to stand for
+  notes: "JMdict seq 1263490, sense 1 in this lesson's card -- a sign standing for something. Sense 3 is expressing a feeling in words. Spelled 現す the same verb means to reveal or bring into view, and the spelling is what tells the two apart."
+
+# -- Lesson 4 - What's more -------------------------------------------------
+
+- id: vocab.eiyou
+  jlpt: N3
+  word_type: noun
+  theme: health
+  japanese: 栄養
+  reading: えいよう
+  romaji: eiyou
+  english: nutrition; nourishment
+  notes: "JMdict seq 1173990, its only sense. 栄養がある is the standing phrase for nutritious and 栄養をとる is to get one's nourishment. 栄養失調 is malnutrition."
+
+- id: vocab.semai
+  jlpt: N5
+  word_type: i-adj
+  theme: quality
+  japanese: 狭い
+  reading: せまい
+  romaji: semai
+  english: narrow; cramped
+  notes: "JMdict seq 1237680, sense 1. The opposite of 広い. It covers both a narrow road and a small room, because in Japanese a cramped flat is 狭い rather than 小さい. Sense 2 is narrow-minded: 心が狭い."
+
+- id: vocab.hinpan
+  jlpt: N2
+  word_type: na-adj
+  theme: time
+  japanese: 頻繁
+  reading: ひんぱん
+  romaji: hinpan
+  english: frequent
+  notes: "JMdict seq 1491050, its only sense. 頻繁に is the adverb, frequently, and it is what a report writes where speech says よく. 頻繁に起こる, to happen often."
+
+- id: vocab.chishiki
+  jlpt: N3
+  word_type: noun
+  theme: study
+  japanese: 知識
+  reading: ちしき
+  romaji: chishiki
+  english: knowledge; information
+  notes: "JMdict seq 1420590, its only sense. What you know about a subject: 知識がある, to be knowledgeable. Keep it apart from 知恵, which is knowing what to do."
+
+- id: vocab.chie
+  jlpt: N3
+  word_type: noun
+  theme: study
+  japanese: 知恵
+  reading: ちえ
+  romaji: chie
+  english: wisdom; wits; sense
+  notes: "JMdict seq 1420530, sense 1. Practical good sense rather than book learning -- 知恵を借りる is to pick somebody's brains and 知恵がつく is said of a child getting cunning. Sense 2 is the Buddhist term, usually spelled 智慧."
+
+- id: vocab.toboshii
+  jlpt: N2
+  word_type: i-adj
+  theme: quality
+  japanese: 乏しい
+  reading: とぼしい
+  romaji: toboshii
+  english: scarce; scanty; lacking
+  notes: "JMdict seq 1584130, its only sense; the dictionary also lists an older reading ともしい. What is lacking takes が: 経験が乏しい, short of experience. It is a written word, and 少ない is the everyday one."
+
+- id: vocab.ketsubou
+  jlpt: N2
+  word_type: noun
+  theme: quality
+  japanese: 欠乏
+  reading: けつぼう
+  romaji: ketsubou
+  english: shortage; deficiency
+  notes: "JMdict seq 1254100, its only sense, and it takes する. 欠 is to lack and 乏 is the same character as 乏しい, so the two words in this lesson's card share it: 欠乏している and 乏しい say nearly the same thing, one as a noun and one as an adjective."
+
+# -- Lesson 5 - Rather ------------------------------------------------------
+
+- id: vocab.erabu
+  jlpt: N4
+  word_type: verb
+  verb_class: u
+  theme: actions
+  japanese: 選ぶ
+  reading: えらぶ
+  romaji: erabu
+  english: to choose; to pick
+  notes: "JMdict seq 1588730, its only sense. What is chosen takes を and what it is chosen from takes から or の中から. 選挙 is an election, built on the same character."
+
+- id: vocab.meiyo
+  jlpt: N2
+  word_type: noun
+  theme: people
+  japanese: 名誉
+  reading: めいよ
+  romaji: meiyo
+  english: honour; good name
+  notes: "JMdict seq 1531870, sense 1. Honour as a thing one can hold or lose: 名誉を守る, 名誉を傷つける. Sense 3 puts it in front of a title to make it honorary -- 名誉教授 is an emeritus professor."
+
+- id: vocab.gai
+  jlpt: N3
+  word_type: noun
+  theme: trouble
+  japanese: 害
+  reading: がい
+  romaji: gai
+  english: harm; damage
+  notes: "JMdict seq 1204330, its only sense. 害になる is to be bad for you and 害を与える is to do harm. It is everywhere as a suffix: 公害 pollution, 被害 damage suffered, 損害 loss."
+
+- id: vocab.shinsetsu
+  jlpt: N5
+  word_type: na-adj
+  theme: people
+  japanese: 親切
+  reading: しんせつ
+  romaji: shinsetsu
+  english: kind; considerate
+  notes: "JMdict seq 1365250, its only sense. Kindness in what somebody does for you -- 親切な人, ご親切にありがとうございます. This lesson's card sets it against 優しい, which is kindness in how somebody is."
+
+- id: vocab.yasashii-kind
+  jlpt: N4
+  word_type: i-adj
+  theme: people
+  japanese: 優しい
+  reading: やさしい
+  romaji: yasashii
+  english: gentle; kind; tender
+  notes: "JMdict seq 1539040, its only sense. Two words share this sound and this course teaches both: 易しい, which you already have, means easy, and 優しい means gentle. Only the kanji separates them, and both are often written in kana. 気がやさしい, in this lesson's card, is soft-hearted."
+
+- id: vocab.kado-excessive
+  jlpt: N2
+  word_type: na-adj
+  theme: quality
+  japanese: 過度
+  reading: かど
+  romaji: kado
+  english: excessive; immoderate
+  notes: "JMdict seq 1196310, its only sense. 過度の運動, too much exercise; 過度に is the adverb. The 過 is the one you know from 過ぎる and に過ぎない -- going past a line. Read the same way, 角, a corner, is a different word this course already teaches."
+
+- id: vocab.hiroma
+  jlpt: N2
+  word_type: noun
+  theme: home
+  japanese: 広間
+  reading: ひろま
+  romaji: hiroma
+  english: hall; large room
+  notes: "JMdict seq 1633240, its only sense. 広 wide and 間 a room: the big room of a house or an inn, where people are received. 大広間 is a banqueting hall."
+
+# -- Lesson 6 - One side, the other -----------------------------------------
+
+- id: vocab.neko
+  jlpt: N5
+  word_type: noun
+  theme: nature
+  japanese: 猫
+  reading: ねこ
+  romaji: neko
+  english: cat
+  notes: "JMdict seq 1467640, sense 1. Written ネコ in katakana when the animal is meant scientifically. The word carries a great many sayings -- 猫舌 is being unable to drink anything hot, and 猫の手も借りたい is being so busy you would take help from a cat."
+
+- id: vocab.se
+  jlpt: N4
+  word_type: noun
+  theme: body
+  japanese: 背
+  reading: せ
+  romaji: se
+  english: height (of a person); back
+  notes: "JMdict seq 2147990. Sense 3, height, is what this lesson's card uses: 背が高い tall, 背が低い short, both listed as set expressions of their own. Sense 1 is the back of the body. The same character read せい (seq 1472650) also means height, so you will hear せがたかい and せいがたかい both."
+
+- id: vocab.hikui
+  jlpt: N5
+  word_type: i-adj
+  theme: quality
+  japanese: 低い
+  reading: ひくい
+  romaji: hikui
+  english: low; short (in height)
+  notes: "JMdict seq 1434180. Sense 3 is short of a person, which needs 背が低い rather than the adjective alone; sense 1 and 2 cover a low wall, a low price, a low position. Sense 4 is a deep voice -- 低い声 is low-pitched, not quiet."
+
+- id: vocab.yuka
+  jlpt: N3
+  word_type: noun
+  theme: home
+  japanese: 床
+  reading: ゆか
+  romaji: yuka
+  english: floor
+  notes: "JMdict seq 1349380, sense 1. The floor you walk on. The same character read とこ (seq 1349370) is a bed, which is where 床につく, to turn in for the night, comes from -- two words, one spelling."
+
+- id: vocab.nuru
+  jlpt: N4
+  word_type: verb
+  verb_class: u
+  theme: actions
+  japanese: 塗る
+  reading: ぬる
+  romaji: nuru
+  english: to paint; to spread on; to apply
+  notes: "JMdict seq 1444270, its only sense. It covers painting a wall, buttering bread and putting cream on your hands. The colour or substance takes に or を depending on which way round you say it: 壁を白く塗る, 緑色に塗る."
+
+- id: vocab.juumin
+  jlpt: N3
+  word_type: noun
+  theme: people
+  japanese: 住民
+  reading: じゅうみん
+  romaji: juumin
+  english: residents; inhabitants
+  notes: "JMdict seq 1334210, its only sense. 住 to live and 民 the people: the people of a place taken together, which is why it turns up in news reports. 住民票 is your residence certificate, a document you will meet at a city office."
+
+- id: vocab.sonaeru
+  jlpt: N3
+  word_type: verb
+  verb_class: ru
+  theme: actions
+  japanese: 備える
+  reading: そなえる
+  romaji: sonaeru
+  english: to prepare for; to equip with
+  notes: "JMdict seq 1244960, sense 2 in this lesson's card -- preparing for something that may come, with に marking it: 地震に備える. Sense 1 is fitting a building out with something. 備え is the noun, and 備えあれば憂いなし is the proverb: prepared, you have nothing to fear."
+
+- id: vocab.shikashi
+  jlpt: N4
+  word_type: adverb
+  theme: basics
+  japanese: しかし
+  reading: しかし
+  romaji: shikashi
+  english: however (in writing); but
+  notes: "JMdict seq 1505990, its only sense. It stands at the head of a sentence and turns it against the one before -- the written and spoken-formal relative of でも and けど, and one of the commonest words in print. 然し in kanji, almost never seen. A different, obsolete word is read the same way, and you will not meet it."
+
+# -- Lesson 7 - By the way --------------------------------------------------
+
+- id: vocab.donna
+  jlpt: N5
+  word_type: noun
+  theme: pointing
+  japanese: どんな
+  reading: どんな
+  romaji: donna
+  english: what kind of
+  notes: "JMdict seq 1009330, sense 1. It stands directly in front of a noun with nothing between: どんな音楽, what sort of music. It belongs to the family この, その, あの, どの and こんな, そんな, あんな. Sense 2 is whatever, any at all, and shows up in どんなことがあっても, no matter what happens."
+
+- id: vocab.supootsu
+  jlpt: N5
+  word_type: noun
+  theme: leisure
+  japanese: スポーツ
+  reading: スポーツ
+  romaji: supootsu
+  english: sport; sports
+  notes: "JMdict seq 1073210, its only sense. Borrowed from English and used for organised sport; 運動 is the wider word for exercise and physical activity, and 運動する is what you do at the gym."
+
+- id: vocab.sumai
+  jlpt: N2
+  word_type: noun
+  theme: home
+  japanese: 住まい
+  reading: すまい
+  romaji: sumai
+  english: residence; home; where one lives
+  notes: "JMdict seq 1595750, sense 1. Built on 住む, to live somewhere. お住まい with the polite お is how you ask a stranger where they live without saying 家 -- お住まいはどちらですか."
+
+- id: vocab.furidasu
+  jlpt: N3
+  word_type: verb
+  verb_class: u
+  theme: weather
+  japanese: 降り出す
+  reading: ふりだす
+  romaji: furidasu
+  english: to start to rain (or snow)
+  notes: "JMdict seq 1282770, its only sense. 降る plus 出す, which is a live pattern: a ます-stem plus 出す means the action starts, often suddenly. 泣き出す is to burst into tears and 走り出す is to break into a run."

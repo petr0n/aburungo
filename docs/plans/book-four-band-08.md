@@ -64,12 +64,12 @@ Conventions as band 0.
 
 - **Order:** 346 · **Title:** Therefore, however, furthermore · **Can-do:** Recognise the connectives
   of notices and reports
-- **Teaches:** sentence-initial したがって (therefore; 従って in kanji — the same word as Book Three's
+- **Teaches:** sentence-initial したがって (therefore; 従って in kanji. NOT a callback: no book teaches 従う, so treat it as new) [was: the same word as Book Three's
   したがって "in accordance with" one step further), ただし (however / provided that — the exception
   clause of a rule), なお (furthermore / note that — the postscript word). Four sentences; recognition;
   the lesson says where the learner will actually meet them (notices, terms, reports) and that the
   corpus has almost none.
-- **Candidates:** #216172 したがって生産費を削る必要がある。(必要がある: Book Three ch.9; 生産: band 6) ·
+- **Candidates:** #216172 したがって生産費を削る必要がある。(必要がある: Book Three ch.9; 生産: taught NOWHERE, not band 6) ·
   #203649 ただし、列をつくって並ばなくてはならないが・・・。(なくてはならない: Book Three ch.9) · #74313 なお、
   会社説明会後でも、会社見学は随時受け付けております。(おります: band 4; 32 characters — `recognitionOnly`) ·
   #75118 なお、危険防止の為、サブアド利用をお奨めします。(危険: band 0; お奨めします: band 4's お〜する)
@@ -132,7 +132,7 @@ Conventions as band 0.
   #216343 しかし、その一方、ラテン語はそのときまでに「死語」となっていた。(brackets — `recognitionOnly`;
   死語: band 3; しかし: teach as a word here — never taught) · #76047 社会保険庁や厚生労働省への不信感は
   募る一方である。(the "keeps on" job — recognition; 30 characters)
-- **New words:** 猫 ねこ 1467640 s1 (untaught — check) · 背 せい 1472650 (the "height" sense — not s1
+- **New words:** 猫 ねこ 1467640 s1 (untaught — check) · 背 せ 1472650 (せ, not せい, in these sentences) (the "height" sense — not s1
   "back"; author picks) (N3) · 住民 じゅうみん 1334210 s1 (N3) · 備える そなえる 1244960 s1 (N3) · しかし
   1505990 s1 (untaught as a word — check the manifest; Book Two's けど family never included it).
   Optional: 一部 1166180, 募る 1514800, 態度 (author verifies).
@@ -146,7 +146,7 @@ Conventions as band 0.
   clean ところで sentences; the lesson says so and leans on the callback.
 - **Candidates:** #200846 ところであなたはどんなスポーツが好きですか。 · #200866 ところで、お住まいはどちら
   ですか。(お住まい: band 4's お + noun) · #200862 ところで、ベティ、夢のマイホームはもう決まった？(夢: band 3;
-  決まった: Book Three ch.2 verified 決まる) · #209336 その女性は悲しげで、その上疲れているようだった。(reused
+  決まった: 決まる is band 6 / chapter 7, NOT Book Three ch.2) · #209336 その女性は悲しげで、その上疲れているようだった。(reused
   from band 7 lesson 8 for その上 — precedent b3-03 lesson 4)
 - **New words:** どんな 1009330 s1 (N3; check the manifest — Book One may carry it) · スポーツ 1073210 s1 ·
   住まい すまい 1595750 s1 (N2). Optional: マイホーム 1127040.

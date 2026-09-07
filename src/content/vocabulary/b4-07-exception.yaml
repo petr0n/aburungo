@@ -1,0 +1,641 @@
+# Book Four, Chapter 8 vocabulary -- fifty-four words, chosen the way chapters
+# 5, 6 and 7 chose theirs.
+#
+# The rule is mechanical and is the previous chapters': a word is in this file
+# if and only if it appears in a sentence this chapter cards, and is not
+# already taught somewhere in the course. Nothing was added because it looked
+# useful and nothing was added to reach a number. 04-stage-reading.md section 3
+# hands vocabulary at this stage to the reading library and to mining; the
+# library's text source has been blocked since 2026-08-20, and
+# docs/plans/book-four-bands.md section 2 settles what to do meanwhile -- each
+# lesson teaches the untaught words its own verified sentences contain.
+#
+# The forms this chapter exists for -- に過ぎない, ことはない, までもない,
+# ようがない, わけにはいかない, からといって, といっても, にしては, にしても,
+# としても, がち, げ -- are not word cards here. They are what the chapter's
+# eight grammar patterns teach. Splitting one form between a pattern and a
+# vocabulary card would review it twice under two names.
+#
+# WORDS THIS CHAPTER'S SENTENCES CONTAIN AND THIS FILE DOES NOT TEACH, each
+# glossed in the note on the card that carries it: ビジネスマン, 宇宙空間, 球体,
+# 押し隠す, ましてや, 焼き魚, 生魚, 世界語, 当代, 随一, 負け犬, 無作法,
+# 申し分, 貧相, 身なり, 丸太小屋, お粗末, 一口に, 英会話,
+# 千差万別, おっかなびっくり, 駆け出し, 新聞記者, いずれ, 共同, 無責任,
+# 寝不足, 散漫, とかく, もじもじ, 見せびらかす, 小さな and さえずる. Each is a
+# proper name, a vivid one-off, or a compound whose parts this course already
+# teaches, and the chapter is teaching the pattern rather than the furniture
+# around it.
+#
+# WORDS THE PLAN CALLED NEW THAT THE COURSE ALREADY TEACHES, reused rather than
+# authored a second time: 事実 vocab.jijitsu and 歌手 vocab.kashu (both chapter
+# 7), 人生 vocab.jinsei (chapter 7), 夢 vocab.yume and 決して vocab.kesshite
+# (chapter 4), 息子 vocab.musuko (chapter 5), 宝石 vocab.houseki (chapter 1),
+# 不安 vocab.fuan and 問題 vocab.mondai (chapter 3), 鍵 vocab.kagi, 病気
+# vocab.byouki, 忘れる vocab.wasureru, 疲れる vocab.tsukareru, 鳥 vocab.tori,
+# 楽しい vocab.tanoshii, 年 vocab.toshi, 自分 vocab.jibun.
+#
+# ---------------------------------------------------------------------------
+# VERIFICATION. Every entry below was checked against JMdict for Applications
+# 3.6.2 (server/data/jmdict-examples-eng-3.6.2.json) on 2026-09-06: headword,
+# reading, part of speech and gloss, with the sequence number in `notes`. Where
+# the sense this chapter needs is not JMdict's first, the note says which sense
+# and why. Six words are in that position:
+#
+#   落ちる 1548550 s11 (to fall in love -- s1 is to fall physically, and the
+#     card's 恋に落ちる is the fixed pair, JMdict 2147170)
+#   運転 1172830 s2 (driving a vehicle -- s1 is running a machine)
+#   注意 1426530 s2 (care, caution -- s1 is attention)
+#   得意 1454510 s1 (pride, elation -- the 得意げ of the card is this one, not
+#     s2's strong point, which is the sense a learner meets first)
+#   腕 1562850 s2 (skill, ability -- s1 is the arm on your body)
+#   遅れる 1589040 s1 (to be late -- the card negates it with ことはない)
+#
+# Homophone and reading traps checked rather than assumed, because a kana
+# lookup lands on the wrong entry silently:
+#
+#   がち -- 勝ち 2016470, the suffix meaning prone to, is not 雅致 1197950
+#     (artistry) and not the colloquial ガチ 2653620 (serious, for real).
+#   げ -- 気 2006580, the suffix meaning seeming, is not 下 2080200, not 夏
+#     2457950, and not the interjection げっ 2151700.
+#   件 -- けん 1255940 is a matter or a case; the same character read くだん
+#     1255930 means the aforementioned. Book Three's chapter 10 made this call
+#     once already.
+#   壁 -- かべ 1509290; the same character is also read へき in the name of a
+#     constellation.
+#   腕 -- うで 1562850, not the dated かいな 2139850.
+#   女性 -- じょせい 1345250, not にょしょう.
+#   その上 -- そのうえ 1006880, in addition; そのかみ 2714080 is a different
+#     word meaning long ago.
+#   まれ -- 稀 1604280, written in kana in the sentence that carries it.
+#
+# content-source: training -- these are dictionary entries, not composed
+#   Japanese. Every headword, reading and gloss is JMdict's, cited by sequence
+#   number in each note; no sentence in this file is authored, and the example
+#   sentences the chapter teaches live in phrases/b4-07-exception.yaml with
+#   their Tatoeba ids.
+# jlpt-source: training -- the level marks roughly where a word sits in the
+#   standard vocabulary lists. No learner ever sees it.
+
+# -- Lesson 1 - Nothing more than -------------------------------------------
+
+- id: vocab.noberu
+  jlpt: N3
+  word_type: verb
+  verb_class: ru
+  theme: communication
+  japanese: 述べる
+  reading: のべる
+  romaji: noberu
+  english: to state; to express; to say
+  notes: "JMdict seq 1340820, its only sense. It is the written and formal word for saying something: an opinion is 述べる, a fact is 述べる, and a witness 述べる what they saw. In conversation you would use 言う; in a report or a courtroom you meet this one."
+
+- id: vocab.ikkai
+  jlpt: N1
+  word_type: noun
+  theme: people
+  japanese: 一介
+  reading: いっかい
+  romaji: ikkai
+  english: a mere; only a
+  notes: "JMdict seq 1161300, its only sense. It goes in front of a noun with の and belittles it -- 一介の学生, a mere student. Speakers use it about themselves as modesty and about others as dismissal, so listen for which. It sounds like 一回, once, and is a different word."
+
+- id: vocab.chikyuu
+  jlpt: N3
+  word_type: noun
+  theme: nature
+  japanese: 地球
+  reading: ちきゅう
+  romaji: chikyuu
+  english: the Earth; the globe
+  notes: "JMdict seq 1420970, its only sense. The planet, written with the characters for ground and sphere. 地球温暖化 is global warming and 地球上 is on Earth, so the word carries a good deal of the language of climate and science."
+
+- id: vocab.tadayou
+  jlpt: N2
+  word_type: verb
+  verb_class: u
+  theme: movement
+  japanese: 漂う
+  reading: ただよう
+  romaji: tadayou
+  english: to drift; to float
+  notes: "JMdict seq 1489240, sense 1 in this chapter's card -- something floating with nothing holding it. Sense 2 is a smell hanging in the air and sense 3 a mood hanging over a room, both of them common. 浮かぶ is to float in one place; 漂う is to float and be carried."
+
+- id: vocab.mazushii
+  jlpt: N3
+  word_type: i-adj
+  theme: quality
+  japanese: 貧しい
+  reading: まずしい
+  romaji: mazushii
+  english: poor; needy
+  notes: "JMdict seq 1490740, sense 1. Poor in the sense of having little -- a poor family, a poor country. Sense 2 stretches it to anything thin or inadequate: 貧しい知識, scanty knowledge. お金がない is what people actually say about themselves; 貧しい is the written word."
+
+- id: vocab.noumin
+  jlpt: N2
+  word_type: noun
+  theme: work
+  japanese: 農民
+  reading: のうみん
+  romaji: noumin
+  english: farmer; peasant
+  notes: "JMdict seq 1470770, its only sense. 農 is agriculture and 民 is the people, so it is the farming population taken as a class -- the word a history book uses. For one person with a farm today, 農家 is the ordinary word."
+
+- id: vocab.imi
+  jlpt: N5
+  word_type: noun
+  theme: basics
+  japanese: 意味
+  reading: いみ
+  romaji: imi
+  english: meaning; sense
+  notes: "JMdict seq 1156800, its only sense. どういう意味ですか asks what something means, and 意味がない is the flat verdict that something is pointless. ある意味で, in this lesson's card, is the fixed phrase for in a sense."
+
+# -- Lesson 2 - No need, and never ------------------------------------------
+
+- id: vocab.unten
+  jlpt: N4
+  word_type: noun
+  theme: transit
+  japanese: 運転
+  reading: うんてん
+  romaji: unten
+  english: driving; operation
+  notes: "JMdict seq 1172830, sense 2 in this lesson's card -- driving a vehicle, 車を運転する. Sense 1 is running a machine or a plant, which is where you meet 運転中 on a sign. A 運転手 is a driver by trade."
+
+- id: vocab.chuui
+  jlpt: N4
+  word_type: noun
+  theme: basics
+  japanese: 注意
+  reading: ちゅうい
+  romaji: chuui
+  english: care; caution; attention
+  notes: "JMdict seq 1426530, sense 2 in this lesson's card -- being careful. Sense 1 is attention, as in 注意を払う, to pay attention; sense 4 is a telling-off, so 注意された means somebody was warned about their behaviour rather than merely alerted."
+
+- id: vocab.kimochi
+  jlpt: N4
+  word_type: noun
+  theme: feeling
+  japanese: 気持ち
+  reading: きもち
+  romaji: kimochi
+  english: feeling; mood
+  notes: "JMdict seq 1591430, sense 1. How you feel, inside -- 気持ちがいい is the standing phrase for something that feels good. Keep it apart from 気分, which is the mood of a moment, and from 心, the heart as a place."
+
+- id: vocab.mohaya
+  jlpt: N2
+  word_type: adverb
+  theme: time
+  japanese: もはや
+  reading: もはや
+  romaji: mohaya
+  english: already; no longer (with a negative)
+  notes: "JMdict seq 1294170, written 最早 in kanji and marked as a word usually written in kana. With a positive verb it is already; with a negative it is no longer, which is this lesson's card. It is a step more formal than もう, which does both jobs in speech."
+
+- id: vocab.deeto
+  jlpt: N4
+  word_type: noun
+  theme: leisure
+  japanese: デート
+  reading: デート
+  romaji: deeto
+  english: a date (with someone)
+  notes: "JMdict seq 1081430, sense 1 -- an outing with somebody you are seeing. It takes する: デートする, to go on a date. Sense 2 is a date on a calendar, but for that day-of-the-month sense Japanese normally uses 日付."
+
+- id: vocab.okureru
+  jlpt: N4
+  word_type: verb
+  verb_class: ru
+  theme: time
+  japanese: 遅れる
+  reading: おくれる
+  romaji: okureru
+  english: to be late; to be delayed
+  notes: "JMdict seq 1589040, sense 1. The thing that is late takes が: 電車が遅れる. Sense 2 is falling behind in a race or in your studies, and sense 4 is a clock running slow. It is intransitive -- something is late; you do not make it late with this verb."
+
+- id: vocab.manabu
+  jlpt: N3
+  word_type: verb
+  verb_class: u
+  theme: study
+  japanese: 学ぶ
+  reading: まなぶ
+  romaji: manabu
+  english: to learn; to study
+  notes: "JMdict seq 1206530, its only sense. 勉強する is the everyday word for studying; 学ぶ is what you do with a subject, a lesson or an experience, and it carries the sense of taking something in rather than putting hours in."
+
+# -- Lesson 3 - It goes without saying ---------------------------------------
+
+- id: vocab.sekai
+  jlpt: N5
+  word_type: noun
+  theme: basics
+  japanese: 世界
+  reading: せかい
+  romaji: sekai
+  english: the world
+  notes: "JMdict seq 1373860, sense 1. The world as a whole. Sense 2 narrows it to a sphere or a circle -- 音楽の世界, the world of music -- which is how the 世界語 of this lesson's card is built: a language of the whole world."
+
+- id: vocab.sakka
+  jlpt: N3
+  word_type: noun
+  theme: work
+  japanese: 作家
+  reading: さっか
+  romaji: sakka
+  english: author; writer
+  notes: "JMdict seq 1297510, its only sense. Somebody who writes as their work, usually of fiction. 著者 is the author of one particular book, and 筆者 the writer of a particular piece -- three English 'writer's, three different Japanese words."
+
+- id: vocab.kaishaku
+  jlpt: N2
+  word_type: noun
+  theme: communication
+  japanese: 解釈
+  reading: かいしゃく
+  romaji: kaishaku
+  english: interpretation; reading
+  notes: "JMdict seq 1199010, its only sense. Reading a meaning out of something that does not state it outright -- a law, a poem, a remark. It takes する: 解釈する, to interpret. This lesson's card and the next lesson's both turn on it."
+
+- id: vocab.gakusha
+  jlpt: N3
+  word_type: noun
+  theme: work
+  japanese: 学者
+  reading: がくしゃ
+  romaji: gakusha
+  english: scholar; academic
+  notes: "JMdict seq 1206800, sense 1. Somebody who studies a field seriously, whether or not they hold a post; sense 2 is a learned person generally. 学 is the 学 of 学ぶ and 者 names the person, the same 者 as in 医者."
+
+# -- Lesson 4 - No way to, can't very well -----------------------------------
+
+- id: vocab.nantomo
+  jlpt: N2
+  word_type: adverb
+  theme: basics
+  japanese: 何とも
+  reading: なんとも
+  romaji: nantomo
+  english: (not) in any way; really
+  notes: "JMdict seq 1188690. Sense 2 is the one in this lesson's card: with a negative it means not at all, not in any way -- 何とも言いようがない, there is no way at all to put it. Sense 1, with a positive, is the opposite: really, terribly."
+
+- id: vocab.hatsugen
+  jlpt: N2
+  word_type: noun
+  theme: communication
+  japanese: 発言
+  reading: はつげん
+  romaji: hatsugen
+  english: statement; remark
+  notes: "JMdict seq 1477350, its only sense. Something said in public and on the record -- what a politician's 発言 gets reported as. It takes する, and 発言権 is the right to speak. Ordinary chat is not 発言."
+
+- id: vocab.hokani
+  jlpt: N4
+  word_type: adverb
+  theme: basics
+  japanese: 他に
+  reading: ほかに
+  romaji: hoka ni
+  english: besides; else; in addition
+  notes: "JMdict seq 1203280, its only sense. 他に何かありますか asks whether there is anything else. It is 他, other, plus に, and the same noun gives 他の with a noun after it: 他の人, someone else."
+
+- id: vocab.bakabakashii
+  jlpt: N2
+  word_type: i-adj
+  theme: quality
+  japanese: ばかばかしい
+  reading: ばかばかしい
+  romaji: bakabakashii
+  english: absurd; ridiculous
+  notes: "JMdict seq 1471740, its only sense, written 馬鹿馬鹿しい in kanji and normally left in kana. It is ばか doubled, which is how Japanese intensifies: not merely foolish but so foolish it is not worth discussing. Said of a situation or a claim rather than to a person's face."
+
+- id: vocab.damaru
+  jlpt: N3
+  word_type: verb
+  verb_class: u
+  theme: communication
+  japanese: 黙る
+  reading: だまる
+  romaji: damaru
+  english: to be silent; to say nothing
+  notes: "JMdict seq 1534930, its only sense. The te-form 黙って is where you will meet it most: 黙って見ている, to watch without saying anything, which is this lesson's card. 黙れ as a command is rude enough to avoid."
+
+- id: vocab.misugosu
+  jlpt: N1
+  word_type: verb
+  verb_class: u
+  theme: actions
+  japanese: 見過ごす
+  reading: みすごす
+  romaji: misugosu
+  english: to overlook; to let pass
+  notes: "JMdict seq 1612560, its only sense. 見る plus 過ごす: to see something and let it go by. It covers both missing something by accident and letting something slide on purpose, which is the sense this lesson's card refuses to do."
+
+# -- Lesson 5 - Just because ------------------------------------------------
+
+- id: vocab.machigai
+  jlpt: N4
+  word_type: noun
+  theme: trouble
+  japanese: 間違い
+  reading: まちがい
+  romaji: machigai
+  english: mistake; error
+  notes: "JMdict seq 1215320, sense 1. The noun of 間違える, to get something wrong. 間違いない is a useful negative: there is no mistake, meaning certainly. Sense 2 stretches it to an accident or a mishap."
+
+- id: vocab.warau
+  jlpt: N4
+  word_type: verb
+  verb_class: u
+  theme: actions
+  japanese: 笑う
+  reading: わらう
+  romaji: warau
+  english: to laugh; to smile
+  notes: "JMdict seq 1351360. Senses 1 and 2 are laughing and smiling -- Japanese uses one verb for both, and 微笑む is the narrower word for smiling. Sense 3 is the one in this lesson's card: with を it means to laugh at somebody, which is not friendly."
+
+- id: vocab.taiseki
+  jlpt: N2
+  word_type: noun
+  theme: quality
+  japanese: 体積
+  reading: たいせき
+  romaji: taiseki
+  english: volume; capacity
+  notes: "JMdict seq 1409560, its only sense. How much space a thing takes up, the classroom word. 面積 is area by the same construction, and 重量 in this same lesson is what it weighs -- the pair this lesson's card sets against each other."
+
+- id: vocab.tsuneni
+  jlpt: N3
+  word_type: adverb
+  theme: time
+  japanese: 常に
+  reading: つねに
+  romaji: tsuneni
+  english: always; at all times
+  notes: "JMdict seq 1355970, its only sense. The written always. いつも is what people say; 常に is what a report or a rule says, and it sits comfortably in front of a negative claim -- 常に...とは限らない, not always."
+
+- id: vocab.juuryou
+  jlpt: N2
+  word_type: noun
+  theme: quality
+  japanese: 重量
+  reading: じゅうりょう
+  romaji: juuryou
+  english: weight
+  notes: "JMdict seq 1336900, its only sense. The formal word for weight -- freight, machinery, a weight class in sport. 重さ, built from 重い with さ, is the everyday one, and both appear in this lesson's card's neighbourhood."
+
+- id: vocab.koi
+  jlpt: N3
+  word_type: noun
+  theme: feeling
+  japanese: 恋
+  reading: こい
+  romaji: koi
+  english: (romantic) love
+  notes: "JMdict seq 1558670, its only sense. Being in love with somebody -- the feeling, and specifically the romantic one. 愛 is love in the broader sense that covers family and country, and 恋に落ちる (JMdict 2147170) is the fixed way to say fall in love."
+
+- id: vocab.ochiru
+  jlpt: N4
+  word_type: verb
+  verb_class: ru
+  theme: movement
+  japanese: 落ちる
+  reading: おちる
+  romaji: ochiru
+  english: to fall; to drop
+  notes: "JMdict seq 1548550. Sense 1 is falling physically. It has twenty-seven senses, and two are worth having now: sense 8, to fail an exam, and sense 11, to fall in love or asleep, which is the 恋に落ちる of this lesson's card. It is intransitive; 落とす is to drop something."
+
+- id: vocab.keibetsu
+  jlpt: N2
+  word_type: noun
+  theme: feeling
+  japanese: 軽蔑
+  reading: けいべつ
+  romaji: keibetsu
+  english: contempt; scorn
+  notes: "JMdict seq 1252860, its only sense, and the dictionary lists the half-kana spelling 軽べつ that this lesson's card uses. 軽 is light and 蔑 is to slight, so it is holding somebody cheap. It takes する."
+
+# -- Lesson 6 - So-called ----------------------------------------------------
+
+- id: vocab.yadoya
+  jlpt: N2
+  word_type: noun
+  theme: travel
+  japanese: 宿屋
+  reading: やどや
+  romaji: yadoya
+  english: inn
+  notes: "JMdict seq 1337230, its only sense. 宿, lodging, plus the 屋 that names a shop or a house. It is the old-fashioned word for a small Japanese inn; 旅館 is what one calls itself today, and ホテル is a hotel."
+
+- id: vocab.marude
+  jlpt: N3
+  word_type: adverb
+  theme: basics
+  japanese: まるで
+  reading: まるで
+  romaji: marude
+  english: just like; (not) at all
+  notes: "JMdict seq 1216280, written 丸で and normally left in kana. Sense 1 pairs with ようだ or みたい to make a comparison: まるで...のようだ, just like. Sense 2, with a negative, means not in the slightest. The sentence around it tells you which."
+
+- id: vocab.tasai
+  jlpt: N1
+  word_type: na-adj
+  theme: quality
+  japanese: 多才
+  reading: たさい
+  romaji: tasai
+  english: talented; versatile
+  notes: "JMdict seq 1407690, its only sense. 多い, many, on 才, talent: good at many things rather than very good at one. 多才な人 is the standing phrase, and it is the compliment in this lesson's card."
+
+- id: vocab.kyouzai
+  jlpt: N2
+  word_type: noun
+  theme: study
+  japanese: 教材
+  reading: きょうざい
+  romaji: kyouzai
+  english: teaching materials
+  notes: "JMdict seq 1237110, its only sense. Anything used to teach with -- a textbook, a recording, a worksheet. 教 is the 教 of 教える and 材 is material, the same 材 as in 材料."
+
+- id: vocab.kabe
+  jlpt: N3
+  word_type: noun
+  theme: home
+  japanese: 壁
+  reading: かべ
+  romaji: kabe
+  english: wall
+  notes: "JMdict seq 1509290, sense 1 -- a wall in a building. Sense 2 is the figurative one English shares: an obstacle, the wall you hit. Read かべ; the same character read へき names a constellation and is not this word."
+
+- id: vocab.saisho
+  jlpt: N4
+  word_type: noun
+  theme: time
+  japanese: 最初
+  reading: さいしょ
+  romaji: saisho
+  english: the first; the beginning
+  notes: "JMdict seq 1293990, its only sense. 最初は means at first, with the implication that things changed later, which is exactly what this lesson's card does with it. Its opposite is 最後, and 最初に is first of all in a sequence."
+
+# -- Lesson 7 - For a, even so, even if --------------------------------------
+
+- id: vocab.imagoro
+  jlpt: N3
+  word_type: noun
+  theme: time
+  japanese: 今頃
+  reading: いまごろ
+  romaji: imagoro
+  english: about this time; about now
+  notes: "JMdict seq 1289160, its only sense. 今 plus 頃, the ころ that means around a time and voices to ごろ in compounds. 今頃 can mean this time of year, as in this lesson's card, or this time of day -- 今頃どこにいるだろう, where would he be by now."
+
+- id: vocab.ude
+  jlpt: N4
+  word_type: noun
+  theme: body
+  japanese: 腕
+  reading: うで
+  romaji: ude
+  english: arm; skill
+  notes: "JMdict seq 1562850. Sense 1 is the arm you carry things with. Sense 2 is the one in this lesson's card and the reason the word is worth having early: skill at doing something. 腕がいい means good at the job, and 腕を上げる is to get better at it."
+
+- id: vocab.chansu
+  jlpt: N3
+  word_type: noun
+  theme: basics
+  japanese: チャンス
+  reading: チャンス
+  romaji: chansu
+  english: chance; opportunity
+  notes: "JMdict seq 1078040, its only sense. Narrower than the English word: a チャンス is an opportunity, never a probability and never a risk. For the chance that something happens, Japanese uses 可能性."
+
+- id: vocab.mare
+  jlpt: N2
+  word_type: na-adj
+  theme: quality
+  japanese: まれ
+  reading: まれ
+  romaji: mare
+  english: rare; seldom
+  notes: "JMdict seq 1604280, its only sense, written 稀 in kanji and usually left in kana. まれに is the adverb, seldom, which is what this lesson's card uses. 珍しい is rare in the sense of unusual and pleasing; まれ is rare in the sense of infrequent."
+
+- id: vocab.ken
+  jlpt: N3
+  word_type: noun
+  theme: basics
+  japanese: 件
+  reading: けん
+  romaji: ken
+  english: matter; case; item
+  notes: "JMdict seq 1255940, sense 1. この件 is this matter, the phrase an email or a meeting opens with. It is also a counter for cases and messages. Read けん; the same character read くだん is a different word meaning the aforementioned."
+
+- id: vocab.fushigi
+  jlpt: N3
+  word_type: na-adj
+  theme: quality
+  japanese: 不思議
+  reading: ふしぎ
+  romaji: fushigi
+  english: strange; mysterious; wonderful
+  notes: "JMdict seq 1492570, sense 1. It covers everything from odd to marvellous, and the sentence decides which. 不思議ではない, in this lesson's card, is the standing phrase for it would be no surprise. 不 is the negative prefix on 思議, which no longer stands alone."
+
+- id: vocab.kanyo
+  jlpt: N1
+  word_type: noun
+  theme: work
+  japanese: 関与
+  reading: かんよ
+  romaji: kanyo
+  english: involvement; participation
+  notes: "JMdict seq 1216050, its only sense. It takes する and it is the word a newspaper uses about somebody being mixed up in something: 事件に関与する, to be involved in an incident. 参加 is joining in something you were invited to."
+
+- id: vocab.shiawase
+  jlpt: N3
+  word_type: na-adj
+  theme: feeling
+  japanese: 幸せ
+  reading: しあわせ
+  romaji: shiawase
+  english: happy; fortunate; happiness
+  notes: "JMdict seq 1594060, its only sense, and it works as both a noun and a な-adjective. 幸せな人生 is a happy life; 幸せにする, in this lesson's card, is to make somebody happy. 嬉しい is the pleasure of a moment; 幸せ is the state you live in."
+
+# -- Lesson 8 - Tends to, looks ---------------------------------------------
+
+- id: vocab.sekinin
+  jlpt: N3
+  word_type: noun
+  theme: work
+  japanese: 責任
+  reading: せきにん
+  romaji: sekinin
+  english: responsibility; duty
+  notes: "JMdict seq 1383180, sense 1. 責任がある is to be responsible and 責任を取る is to take responsibility, which in Japanese working life often means to resign. Sense 2 is legal liability. This lesson's card builds 無責任, irresponsibility, on it with the negative prefix 無."
+
+- id: vocab.undou
+  jlpt: N4
+  word_type: noun
+  theme: health
+  japanese: 運動
+  reading: うんどう
+  romaji: undou
+  english: exercise; sport
+  notes: "JMdict seq 1172910, sense 1 in this lesson's card -- physical exercise, taken with する. Sense 2 is a campaign or a movement, 選挙運動; sense 3 is motion in the physics sense. One word, three registers, and the sentence decides."
+
+- id: vocab.kenkou
+  jlpt: N3
+  word_type: noun
+  theme: health
+  japanese: 健康
+  reading: けんこう
+  romaji: kenkou
+  english: health; healthy
+  notes: "JMdict seq 1256170, senses 1 and 2 -- health as a noun and healthy as a な-adjective. 健康にいい is good for you; 健康診断 is a medical check-up. 元気 is how you feel today; 健康 is the state of the body over time."
+
+- id: vocab.tokui
+  jlpt: N3
+  word_type: na-adj
+  theme: quality
+  japanese: 得意
+  reading: とくい
+  romaji: tokui
+  english: proud; one's strong point
+  notes: "JMdict seq 1454510. Sense 2 is the one you will use first: 数学が得意だ, good at maths. Sense 1 is the one in this lesson's card -- pleased with yourself, showing it, which is what 得意げ turns into an air. Sense 3, a regular customer, is the shopkeeper's word."
+
+- id: vocab.josei
+  jlpt: N3
+  word_type: noun
+  theme: people
+  japanese: 女性
+  reading: じょせい
+  romaji: josei
+  english: woman; female
+  notes: "JMdict seq 1345250, sense 1. The neutral word for a woman in writing and in public speech, where 女の人 is the spoken one and 女 on its own can sound blunt. Read じょせい; にょしょう is an old reading of the same characters."
+
+- id: vocab.kanashii
+  jlpt: N4
+  word_type: i-adj
+  theme: feeling
+  japanese: 悲しい
+  reading: かなしい
+  romaji: kanashii
+  english: sad; sorrowful
+  notes: "JMdict seq 1483190, sense 1. It describes the person feeling it -- 悲しい, I am sad -- and to say somebody else looks it you need this lesson's げ, 悲しげ, or そう. That restriction holds for feeling adjectives generally."
+
+- id: vocab.sonoue
+  jlpt: N3
+  word_type: adverb
+  theme: basics
+  japanese: その上
+  reading: そのうえ
+  romaji: sono ue
+  english: in addition; on top of that
+  notes: "JMdict seq 1006880, sense 1. It joins a second point to the first at the front of a clause, a step more written than それに. Read そのうえ; the same characters read そのかみ are a different word meaning long ago."
+
+- id: vocab.isu
+  jlpt: N5
+  word_type: noun
+  theme: home
+  japanese: 椅子
+  reading: いす
+  romaji: isu
+  english: chair; seat
+  notes: "JMdict seq 1157070, sense 1. Written in kana as often as in kanji, which is how this lesson's card writes it. Sense 2 is a post or a position -- 大臣の椅子, the minister's seat -- the same figure English uses."

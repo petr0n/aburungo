@@ -36,6 +36,11 @@ import b4FinishingRaw from "./b4-00-finishing.yaml";
 import b4MeaningRaw from "./b4-01-meaning.yaml";
 import b4ReasonRaw from "./b4-02-reason.yaml";
 import b4TalkRaw from "./b4-03-talk.yaml";
+import b4KeigoHumbleRaw from "./b4-04-keigo-humble.yaml";
+import b4KeigoHonorificRaw from "./b4-05-keigo-honorific.yaml";
+import b4RelationRaw from "./b4-06-relation.yaml";
+import b4ExceptionRaw from "./b4-07-exception.yaml";
+import b4ConjunctionRaw from "./b4-08-conjunction.yaml";
 
 const phrasesById = new Map(allPhrases.map((p) => [p.id, p]));
 
@@ -66,6 +71,11 @@ export const allGrammarPatterns: GrammarPattern[] = [
   ...parseGrammarPatterns(b4MeaningRaw, "grammar/b4-01-meaning.yaml", phrasesById),
   ...parseGrammarPatterns(b4ReasonRaw, "grammar/b4-02-reason.yaml", phrasesById),
   ...parseGrammarPatterns(b4TalkRaw, "grammar/b4-03-talk.yaml", phrasesById),
+  ...parseGrammarPatterns(b4KeigoHumbleRaw, "grammar/b4-04-keigo-humble.yaml", phrasesById),
+  ...parseGrammarPatterns(b4KeigoHonorificRaw, "grammar/b4-05-keigo-honorific.yaml", phrasesById),
+  ...parseGrammarPatterns(b4RelationRaw, "grammar/b4-06-relation.yaml", phrasesById),
+  ...parseGrammarPatterns(b4ExceptionRaw, "grammar/b4-07-exception.yaml", phrasesById),
+  ...parseGrammarPatterns(b4ConjunctionRaw, "grammar/b4-08-conjunction.yaml", phrasesById),
 ];
 
 export function findGrammarPattern(id: string): GrammarPattern | undefined {

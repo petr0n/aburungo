@@ -44,6 +44,11 @@ import b4FinishingRaw from "./b4-00-finishing.yaml";
 import b4MeaningRaw from "./b4-01-meaning.yaml";
 import b4ReasonRaw from "./b4-02-reason.yaml";
 import b4TalkRaw from "./b4-03-talk.yaml";
+import b4KeigoHumbleRaw from "./b4-04-keigo-humble.yaml";
+import b4KeigoHonorificRaw from "./b4-05-keigo-honorific.yaml";
+import b4RelationRaw from "./b4-06-relation.yaml";
+import b4ExceptionRaw from "./b4-07-exception.yaml";
+import b4ConjunctionRaw from "./b4-08-conjunction.yaml";
 
 export const allWords: Word[] = [
   ...parseWords(basicsRaw, "vocabulary/basics.yaml"),
@@ -89,6 +94,11 @@ export const allWords: Word[] = [
   ...parseWords(b4MeaningRaw, "vocabulary/b4-01-meaning.yaml"),
   ...parseWords(b4ReasonRaw, "vocabulary/b4-02-reason.yaml"),
   ...parseWords(b4TalkRaw, "vocabulary/b4-03-talk.yaml"),
+  ...parseWords(b4KeigoHumbleRaw, "vocabulary/b4-04-keigo-humble.yaml"),
+  ...parseWords(b4KeigoHonorificRaw, "vocabulary/b4-05-keigo-honorific.yaml"),
+  ...parseWords(b4RelationRaw, "vocabulary/b4-06-relation.yaml"),
+  ...parseWords(b4ExceptionRaw, "vocabulary/b4-07-exception.yaml"),
+  ...parseWords(b4ConjunctionRaw, "vocabulary/b4-08-conjunction.yaml"),
 ];
 
 // parseWords only rejects duplicate ids within a single file, so the same id in

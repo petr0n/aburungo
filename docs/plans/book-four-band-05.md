@@ -27,8 +27,8 @@ Method as band 4 (≤32 characters). Script `scratchpad/mine/band45-candidates.m
 | Lesson | Pattern | Clean | Notes |
 |---|---|---|---|
 | 1 | いらっしゃる | 11 | Includes いらっしゃいませ (set phrase) and またいらっしゃい (imperative form). |
-| 2 | おっしゃる · ご覧になる | 4 · 2 | Both thin; ご覧なさい (#148364) and ご覧の通り (#74644) are the corpus's only ご覧 — recognition. |
-| 3 | 召し上がる · なさる | 5 · 5 | なさる survives in the corpus almost only as なさいますか at counters (#214623, #202257); its imperative なさい is band 1's. |
+| 2 | おっしゃる · ご覧になる | 4 · 2 | Both thin; the corpus holds SEVEN ご覧 sentences (#76299, #148364, #213544, #74644, #424402, #216987, #192241), not two -- but the three carrying ご覧になる run 35, 40 and 58 characters, so recognition. |
+| 3 | 召し上がる · なさる | 5 · 5 | なさいますか appears FIVE times, not two, and the なさる family runs to 346 sentences; its imperative なさい is band 1's. |
 | 4 | くださる | 10 (excluding ください) | てくださいますか ×3 (request), お恵みくださった (お + stem + くださる). |
 | 5 | お + ます-stem + になる · お + ます-stem + ください · おいでになる | 3 · 4 · ~6 | お〜になる is thin (#189528, #229032, #141440); おいで matches におい (smell) and the imperative おいで — screened. |
 | 6 | れる / られる as honorific | ~5 genuine of 75 raw | Almost all raw hits are passives (Book Three ch.1). Genuine: #220454 支持される方, #211878 出席されること, #76660 やけ食いをされる方, #202233 来られる (ambiguous with potential — the ambiguity is the lesson). |
@@ -99,7 +99,7 @@ Conventions as band 0. Register notes as tendencies with the corpus as evidence.
 - **Candidates:**
   - #224548 ここで召し上がりますか、それともお持ち帰りですか。 — Is this to eat here, or to go?
     (お持ち帰り: お + noun, band 4)
-  - #215035 スープは熱いうちに召し上がって下さい。 — Eat your soup while it is hot. (うちに: band 0;
+  - #215035 スープは熱いうちに召し上がって下さい。 — Eat your soup while it is hot. (うちに: Book Three ch.5, NOT band 0;
     スープ: band 0)
   - #194141 もう少しケーキを召し上がりませんか。 — Will you have some more cake? (ませんか: Book Two)
   - #214623 ステーキの焼き方はどうなさいますか。 — How would you like your steak? (焼き方 — 方 かた
@@ -146,7 +146,7 @@ Conventions as band 0. Register notes as tendencies with the corpus as evidence.
     receipt. (both frames in one sentence — the contrast card)
   - #228596 いつ旅行においでになりますか。 — When will you go on a journey?
   - #222939 この雨の中をおいでにならないでください。 — Don't bother coming in this rain.
-- **New words:** 雨具 あまぐ 1171940 s1 · しばらく 1304420 s1 · 切る (taught — the "hang up" sense; note) ·
+- **New words:** 雨具 あまぐ 1171940 s1 · しばらく 1304420 s1 · 切る (NOT taught anywhere -- card it; the "hang up" sense) ·
   受領書 じゅりょうしょ 1937630 (rare — optional) · お出かけ 1338475 (N2). Firm: 雨具, しばらく, お出かけ.
 - **Kanji new to the manifest:** 具 (受 lesson 2; 領 書 if 受領書 is carded; 雨 旅 電 話 待 — 話 band 0).
 

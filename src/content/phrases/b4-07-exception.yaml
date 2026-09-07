@@ -1,0 +1,626 @@
+# Book Four, Chapter 8 phrases -- only so far, and no way round it.
+#
+# Forty-three sentences, none of them ours. 04-stage-reading.md section 8
+# withdrew the training-canonical exemption at the reading stage and above, so
+# every sentence below is a verbatim Tatoeba pair carried out of
+# server/data/jmdict-examples-eng-3.6.2.json with its id in `tatoebaId`,
+# quoted, because YAML reads a bare 148966 as a number and the schema rejects
+# it. Nothing was composed, trimmed, joined, smoothed or corrected. Every
+# Japanese string was compared character for character against the corpus by
+# script after the file was written rather than before: all forty-three match,
+# and no id and no sentence in this file is carded anywhere else in
+# src/content/phrases/ or quoted as a word example in src/content/vocabulary/.
+#
+# WHERE THIS CHAPTER'S JAPANESE COMES FROM. These are the forms that put a
+# limit on a claim -- merely, no need, no way, just because, though you call it
+# that, even for, even if -- and the corpus attests them in argument and
+# commentary rather than in conversation: proverbs, judgements, editorial
+# sentences. That register is why so many cards below are marked for
+# recognition; see the section on that at the end of this header.
+#
+# ---------------------------------------------------------------------------
+# FOUR SENTENCES THIS CHAPTER'S PLAN ASKED FOR AND CANNOT HAVE.
+#
+#   #194466 もうこれ以上延ばすわけにはいかない and #177201 君は自分の健康を
+#   度外視するわけにはいかない -- both already carded in Book Three's stance
+#   chapter (phrases/b3-05-stance.yaml). Lesson 4 uses #84279 and #82060
+#   instead, and the two lost ones took 延ばす and 健康 out of lesson 4's word
+#   list with them; 健康 comes back in lesson 8, where a carded sentence
+#   actually contains it.
+#
+#   #203835 だからといって異議があるわけではない -- already carded in the same
+#   Book Three chapter. It is the only sentence-initial だからといって in the
+#   corpus under forty characters, so lesson 5 teaches that position in prose
+#   and cards none. Nothing was composed to fill the gap, and 異議 therefore
+#   does not appear in this chapter's vocabulary.
+#
+#   #174777 言うまでもないことだがローマは１日にしては成らず -- proposed for
+#   lesson 3 and declined on grammar rather than on length. Its にしては is not
+#   lesson 7's marker at all: it is the classical にして, meaning in one day,
+#   with は on it, and 成らず is a classical negative. Carding it would plant a
+#   false friend under this very chapter's own heading. The plan's note that it
+#   previews lesson 7 is wrong, and this is the one place where following the
+#   plan would have taught something untrue.
+#
+# ONE MORE ALREADY-CARDED SENTENCE FOUND BY THE SCAN rather than by the plan:
+# #82274 僕に金をせびろうとしても無駄だ, carded in phrases/b4-01-meaning.yaml,
+# where it teaches 〜ようとする. It answers a search for としても and is not this
+# chapter's pattern anyway -- it is a volitional plus して plus も.
+#
+# THREE CELLS WITH NO CARD, recorded rather than filled in with something
+# weaker.
+#
+#   それにしても, the fixed even so at the head of a sentence, is attested once
+#   under thirty-five characters (#76610, thirty-one characters and four words
+#   no other card needs). Lesson 7 states it in prose and cards いずれにしても,
+#   its neighbour, from #202966.
+#
+#   ようがない is attested four times in the whole corpus. Three are carded in
+#   lesson 4; the fourth runs to thirty-six characters. That thinness is why
+#   the lesson pairs it with わけにはいかない rather than standing on its own.
+#
+#   に過ぎない has plenty of attestations but only one with a clause rather than
+#   a noun in front (#89191). Lesson 1 cards that one and does not claim the
+#   clause use is as common as it looks in a grammar table.
+#
+# TWO ENGLISH GLOSSES REPLACED, listed here so a reviewer can check it rather
+# than take it on trust. No Japanese string was touched anywhere in this file.
+#
+#   #84279 -- Tatoeba's English is "I can't stand getting beaten", which is the
+#     cannot-bear reading this pattern does not have; the card's own note says so
+#     and JMdict 2057580 glosses it "cannot (due to external circumstances)".
+#     Glossed "I can't allow myself to become a loser".
+#   #225195 -- Tatoeba's English is "It is no wonder to me that Gendou has
+#     something to do with.", which breaks off mid-clause and cannot be read.
+#     Glossed "It would be no wonder if Gendou had been involved in this
+#     matter." ゲンドウ is a character name and is left as it stands.
+#
+# ---------------------------------------------------------------------------
+# READING JUDGEMENT CALLS, stated rather than left to be discovered. Every
+# `reading` is what a learner types when a card is typed and what they are
+# shown when it is not, so an ambiguous transcription is a card nobody can
+# pass. Each of these was checked against JMdict rather than guessed:
+#
+#   #116346's 解釈のしようがない is しよう, the ます-stem of する plus よう --
+#     not しょう. The look-alike 仕様がない (1305510), read しょうがない, is a
+#     different fixed expression meaning it can't be helped.
+#   #119606's 随一 is ずいいち (1372730), which the dictionary lists ahead of
+#     ずいいつ, and 当代 is とうだい (1783920).
+#   #146385's 焼き魚 is やきざかな (1350490) and its 生魚 is なまざかな
+#     (1650760, which also allows なまうお; the parallel with やきざかな
+#     settles it). Both voice the さ, which is why they are worth hearing.
+#   #190639's 千差万別 is せんさばんべつ (1388840), which the dictionary lists
+#     ahead of せんさまんべつ. Two live readings, so the card is recognition.
+#   #225195's 件 is けん (1255940), a matter, not くだん; Book Three's chapter
+#     10 made the same call.
+#   #235070's ６月 is ろくがつ and #172415's 今頃 is いまごろ (1289160).
+#   #74902's それで良い is それでよい; いい is the same word's colloquial
+#     reading and the card shows the citation form.
+#   #180618's 共同 is きょうどう (1591660) and #145631's 寝不足 is ねぶそく
+#     (1360270).
+#   #85165's 軽べつ is けいべつ -- the half-kana spelling is one JMdict lists
+#     for 軽蔑 (1252860), so the sentence is not a typo.
+#
+# ---------------------------------------------------------------------------
+# `recognitionOnly` ON THIRTY-SIX OF FORTY-THREE CARDS. That is the highest
+# share of any chapter in this book, higher than chapter 7's twenty-seven of
+# forty-two, and it is a property of what this chapter teaches rather than a
+# shortcut.
+#
+# A card is typed here only when three things hold: its reading is at or under
+# thirty kana, which is where the rest of Book Four types to; every content
+# word in it is taught in this course; and the English names each of those
+# words, so the only thing left for the learner to decide is the pattern the
+# lesson has just taught. Otherwise it is recognition, because FillBlankCard
+# shows the English alone and grades the whole typed reading against it
+# (FillBlankCard.tsx:102), and a card that cannot be derived marks a correct
+# learner wrong.
+#
+# Two things push most of this chapter over that line. English translates
+# these forms with idioms -- "You cannot be too careful", "It goes without
+# saying", "Two wrongs don't make a right" -- which give a learner no route
+# back to the Japanese words. And several of the sentences turn on a word the
+# English does not name at all: 一介の in "nothing but a businessman", けっして
+# in "is never late", うちの in "my son". Two lessons, 2 and 3, are recognition
+# throughout, and that is worth knowing rather than hiding: their production
+# work is carried by the grammar cloze card each lesson has and by the
+# fifty-four word cards this chapter teaches.
+#
+# The flag does not retire a card. LearnPage.tsx:217-220 keeps a
+# recognitionOnly phrase in review and only stops it being typed, so all
+# thirty-six keep coming back as recognition.
+#
+# content-source: Tatoeba, via the sentence pairs embedded in JMdict for
+#   Applications 3.6.2 (server/data/jmdict-examples-eng-3.6.2.json). Every
+#   phrase carries its sentence id in `tatoebaId`. Verified by id against the
+#   corpus on 2026-09-06: all 43 resolve, each Japanese string matches its
+#   source character for character, and none is carded elsewhere in the course.
+#   Kana readings and romaji are transcriptions of the quoted sentence, not new
+#   content; every compound whose reading was not obvious was checked against
+#   JMdict (the list is in the reading notes above).
+# jlpt-source: training -- the level marks the chapter this content sits in,
+#   not each form's textbook level.
+
+# -- Lesson 1 - Nothing more than -------------------------------------------
+
+- id: b4band7.merely-stating-a-fact
+  jlpt: N3
+  scenario: nothing more than
+  japanese: 彼女は事実を述べていたに過ぎない。
+  reading: かのじょはじじつをのべていたにすぎない。
+  romaji: kanojo wa jijitsu o nobete ita ni suginai.
+  english: She was merely stating a fact.
+  tatoebaId: "89191"
+  notes: "に過ぎない puts a ceiling on a claim: what came before it is all there is, and nothing more should be read into it. This is the one card in the chapter with a whole clause in front of it -- 述べていた, she was stating -- where the others have a noun. The kanji spelling 過ぎない and the kana すぎない are the same word, and both are used."
+
+- id: b4band7.nothing-but-a-businessman
+  jlpt: N3
+  scenario: nothing more than
+  japanese: 彼は一介のビジネスマンにすぎない。
+  reading: かれはいっかいのビジネスマンにすぎない。
+  romaji: kare wa ikkai no bijinesuman ni suginai.
+  english: He is nothing but a businessman.
+  tatoebaId: "110032"
+  recognitionOnly: true
+  notes: "The ordinary shape: a noun, then にすぎない. 一介の doubles the belittling -- a mere businessman -- and the English does not say it, which is why this one comes back for reading rather than typing. ビジネスマン is the borrowed word for a company man; 会社員 is the plain one."
+
+- id: b4band7.the-earth-is-just-a-sphere
+  jlpt: N3
+  scenario: nothing more than
+  japanese: 地球は宇宙空間に漂う球体にすぎない。
+  reading: ちきゅうはうちゅうくうかんにただようきゅうたいにすぎない。
+  romaji: chikyuu wa uchuu kuukan ni tadayou kyuutai ni suginai.
+  english: The earth is just a sphere suspended in space.
+  tatoebaId: "126972"
+  recognitionOnly: true
+  notes: "にすぎない with a noun that has a whole relative clause built onto it -- 宇宙空間に漂う球体, a sphere drifting in space. 宇宙空間 is outer space, 宇宙 plus 空間, room or space; 球体 is a sphere, 球 plus 体. This is the register the marker belongs to: something being cut down to size in writing."
+
+- id: b4band7.nothing-but-a-poor-peasant
+  jlpt: N3
+  scenario: nothing more than
+  japanese: 私は貧しい農民に過ぎない。
+  reading: わたしはまずしいのうみんにすぎない。
+  romaji: watashi wa mazushii noumin ni suginai.
+  english: I am nothing but a poor peasant.
+  tatoebaId: "153068"
+  notes: "Said about oneself, に過ぎない is modesty rather than dismissal -- I am only this, expect no more of me. An adjective may stand in front of the noun as usual. The kanji spelling is the one this sentence uses."
+
+- id: b4band7.life-is-but-a-dream
+  jlpt: N3
+  scenario: nothing more than
+  japanese: ある意味で、人生は夢にすぎない。
+  reading: あるいみで、じんせいはゆめにすぎない。
+  romaji: aru imi de, jinsei wa yume ni suginai.
+  english: In a sense, life is but a dream.
+  tatoebaId: "229915"
+  notes: "ある意味で is the fixed phrase for in a sense -- ある is the ある that means a certain, not the verb. It softens the claim before にすぎない makes it, which is a common pairing: hedge first, then cut down."
+
+# -- Lesson 2 - No need, and never ------------------------------------------
+
+- id: b4band7.cannot-be-too-careful-driving
+  jlpt: N3
+  scenario: no need, and never
+  japanese: 車を運転する時はいくら注意してもしすぎることはない。
+  reading: くるまをうんてんするときはいくらちゅういしてもしすぎることはない。
+  romaji: kuruma o unten suru toki wa ikura chuui shite mo shisugiru koto wa nai.
+  english: You cannot be too careful when you drive a car.
+  tatoebaId: "148966"
+  recognitionOnly: true
+  notes: "The frame is いくら〜てもしすぎることはない: however much you do it, there is no such thing as doing it too much. It is built out of three things you already have -- いくら〜ても -- the concessive ても from Book Three's chapter on conditions, with いくら in front; すぎる from this book's first chapter; and ことはない. English collapses all of it into cannot be too, which is why this one is for reading."
+
+- id: b4band7.no-need-to-hide-your-feelings
+  jlpt: N3
+  scenario: no need, and never
+  japanese: 自分の気持ちを押し隠すことはないんだよ。
+  reading: じぶんのきもちをおしかくすことはないんだよ。
+  romaji: jibun no kimochi o oshikakusu koto wa nai n da yo.
+  english: You don't have to hide your feelings.
+  tatoebaId: "149883"
+  recognitionOnly: true
+  notes: "This is ことはない doing its main new job: there is no need to. A dictionary-form verb goes in front of it. 押し隠す is 隠す, to hide, with 押し on the front adding force -- to keep something firmly hidden. The んだよ at the end is the softening explanation you met in the chapter on how people talk."
+
+- id: b4band7.nothing-further-to-say
+  jlpt: N3
+  scenario: no need, and never
+  japanese: もはや言うことはない。
+  reading: もはやいうことはない。
+  romaji: mohaya iu koto wa nai.
+  english: I have nothing further to say.
+  tatoebaId: "193171"
+  recognitionOnly: true
+  notes: "Short, and it carries the other reading of the same string: there is nothing to say, rather than no need to say it. Which one a sentence means comes from context alone. もはや with a negative is no longer, a written step up from もう."
+
+- id: b4band7.never-late-for-a-date
+  jlpt: N3
+  scenario: no need, and never
+  japanese: アンディはけっしてデートにおくれたことはない。
+  reading: アンディはけっしてデートにおくれたことはない。
+  romaji: andi wa kesshite deeto ni okureta koto wa nai.
+  english: Andy is never late for a date.
+  tatoebaId: "229595"
+  recognitionOnly: true
+  notes: "The same five sounds, an older job: た-form plus ことはない is the negative of Book Two's たことがある, so it means has never once. けっして sharpens it to never at all and needs a negative to lean on. Nothing here is new except noticing which ことはない you are looking at."
+
+- id: b4band7.never-too-old-to-learn
+  jlpt: N3
+  scenario: no need, and never
+  japanese: 学ぶのに年を取りすぎているということはない。
+  reading: まなぶのにとしをとりすぎているということはない。
+  romaji: manabu no ni toshi o torisugite iru to iu koto wa nai.
+  english: You're never too old to learn.
+  tatoebaId: "184519"
+  recognitionOnly: true
+  notes: "And a third one: ということはない, with という in front, denies that a whole state of affairs holds -- it is not the case that. 年を取る is the fixed way to say grow old, and 〜のに here is for the purpose of, not the although you know from the contrast chapter."
+
+# -- Lesson 3 - It goes without saying ---------------------------------------
+
+- id: b4band7.english-is-a-world-language
+  jlpt: N3
+  scenario: it goes without saying
+  japanese: 英語が世界語であることは言うまでもない。
+  reading: えいごがせかいごであることはいうまでもない。
+  romaji: eigo ga sekaigo de aru koto wa iu made mo nai.
+  english: It goes without saying that English is an international language.
+  tatoebaId: "189239"
+  recognitionOnly: true
+  notes: "言うまでもない is the fixed form of this pattern and the one to own: there is no need to go so far as to say it. What is obvious goes in front as a clause closed with ことは. である is the written copula from Book Three's chapter on register. 世界語 is a world language, built from 世界 plus 語."
+
+- id: b4band7.one-of-the-best-writers
+  jlpt: N3
+  scenario: it goes without saying
+  japanese: 彼が当代随一の作家のひとりであるのは言うまでもない。
+  reading: かれがとうだいずいいちのさっかのひとりであるのはいうまでもない。
+  romaji: kare ga toudai zuiichi no sakka no hitori de aru no wa iu made mo nai.
+  english: Needless to say he is one of the best writers of the present generation.
+  tatoebaId: "119606"
+  recognitionOnly: true
+  notes: "The same frame with のは instead of ことは -- both nominalise the clause and either can stand there. 当代 is the present age and 随一 is the foremost of a group, so 当代随一の is a set phrase for the leading one of the day. A long written sentence: read it, do not type it."
+
+- id: b4band7.no-scholar-needed-to-interpret
+  jlpt: N3
+  scenario: it goes without saying
+  japanese: その解釈は学者を待つまでもない。
+  reading: そのかいしゃくはがくしゃをまつまでもない。
+  romaji: sono kaishaku wa gakusha o matsu made mo nai.
+  english: It doesn't require a scholar to interpret.
+  tatoebaId: "211757"
+  recognitionOnly: true
+  notes: "Proof that までもない is not stuck to 言う: any dictionary-form verb can take it. 学者を待つまでもない is literally there is no need to wait for a scholar -- no need to go that far. The English rebuilds the sentence entirely, which is why it comes back for reading."
+
+- id: b4band7.let-alone-raw-fish
+  jlpt: N3
+  scenario: it goes without saying
+  japanese: 焼き魚は好きではありません、ましてや生魚は言うまでもありません。
+  reading: やきざかなはすきではありません、ましてやなまざかなはいうまでもありません。
+  romaji: yakizakana wa suki de wa arimasen, mashiteya namazakana wa iu made mo arimasen.
+  english: I don't like grilled fish, let alone raw fish.
+  tatoebaId: "146385"
+  recognitionOnly: true
+  notes: "The polite form of the same phrase: 言うまでもありません. ましてや is much less, let alone -- it sets up the second thing as even more obvious than the first. Notice the voicing in 焼き魚 やきざかな and 生魚 なまざかな, where 魚 さかな becomes ざかな inside a compound."
+
+# -- Lesson 4 - No way to, can't very well -----------------------------------
+
+- id: b4band7.nothing-i-can-say
+  jlpt: N3
+  scenario: no way to
+  japanese: 何とも言いようがないなあ。
+  reading: なんともいいようがないなあ。
+  romaji: nantomo iiyou ga nai naa.
+  english: I just don't know what to say.
+  tatoebaId: "187759"
+  recognitionOnly: true
+  notes: "言いようがない is the fixed one: there is no way to say it. The frame is a ます-stem plus ようがない, so 言う gives 言い, and ようがない says no means of doing it exists. 何とも with a negative is not in any way, and なあ is the musing な from the chapter on how people talk, drawn out into a sigh."
+
+- id: b4band7.no-other-interpretation
+  jlpt: N3
+  scenario: no way to
+  japanese: 彼の発言は他に解釈のしようがない。
+  reading: かれのはつげんはほかにかいしゃくのしようがない。
+  romaji: kare no hatsugen wa hoka ni kaishaku no shiyou ga nai.
+  english: His remarks allow of no other interpretation.
+  recognitionOnly: true
+  tatoebaId: "116346"
+  notes: "The same frame on a する-noun, and it takes の: 解釈のしようがない, there is no way to interpret it. する gives the stem し, so しようがない. Do not confuse it with しょうがない, which is a different fixed phrase meaning it can't be helped."
+
+- id: b4band7.nothing-but-absurd
+  jlpt: N3
+  scenario: no way to
+  japanese: ばかばかしいとしか言いようがない。
+  reading: ばかばかしいとしかいいようがない。
+  romaji: bakabakashii to shika iiyou ga nai.
+  english: It is neither more nor less than absurd.
+  tatoebaId: "198292"
+  recognitionOnly: true
+  notes: "〜としか言いようがない, there is no way to put it other than, is worth having whole: it is how a speaker delivers a verdict while claiming they had no choice about the wording. しか with a negative is nothing but -- no chapter of this course teaches the pair, so take しか…ない whole."
+
+- id: b4band7.cannot-become-a-loser
+  jlpt: N3
+  scenario: no way to
+  japanese: 負け犬になるわけにはいかない。
+  reading: まけいぬになるわけにはいかない。
+  romaji: makeinu ni naru wake ni wa ikanai.
+  english: I can't allow myself to become a loser.
+  tatoebaId: "84279"
+  recognitionOnly: true
+  notes: "わけにはいかない is the other half of this lesson: not I am unable to, but I cannot very well -- something outside me makes it impossible to accept. A dictionary-form verb goes in front. 負け犬 is literally a beaten dog, the loser."
+
+- id: b4band7.cannot-overlook-this-problem
+  jlpt: N3
+  scenario: no way to
+  japanese: 僕はその問題を黙って見過ごすわけにはいかない。
+  reading: ぼくはそのもんだいをだまってみすごすわけにはいかない。
+  romaji: boku wa sono mondai o damatte misugosu wake ni wa ikanai.
+  english: I cannot silently overlook this problem.
+  tatoebaId: "82060"
+  recognitionOnly: true
+  notes: "The clearest case of what わけにはいかない means: he could stay quiet, and he will not, because conscience does not allow it. 黙って is the te-form of 黙る doing adverbial duty -- silently, without a word. 僕 is the men's casual I from the chapter on how people talk."
+
+# -- Lesson 5 - Just because ------------------------------------------------
+
+- id: b4band7.laughing-at-a-mistake
+  jlpt: N3
+  scenario: just because
+  japanese: ある人が間違いをしたからといってそれを笑うのは無作法である。
+  reading: あるひとがまちがいをしたからといってそれをわらうのはぶさほうである。
+  romaji: aru hito ga machigai o shita kara to itte sore o warau no wa busahou de aru.
+  english: It is not good manners to laugh at someone when he makes mistakes.
+  tatoebaId: "229853"
+  recognitionOnly: true
+  notes: "からといって takes a plain clause and refuses the conclusion that seems to follow from it: they made a mistake, and that does not license laughing. 無作法 is bad manners, and である is the written copula. 笑う with を means to laugh at, which is not friendly."
+
+- id: b4band7.bulk-is-not-weight
+  jlpt: N3
+  scenario: just because
+  japanese: 体積が大きいからといって常に重量も重いとは限らない。
+  reading: たいせきがおおきいからといってつねにじゅうりょうもおもいとはかぎらない。
+  romaji: taiseki ga ookii kara to itte tsune ni juuryou mo omoi to wa kagiranai.
+  english: Great bulk does not always mean great weight.
+  tatoebaId: "137970"
+  recognitionOnly: true
+  notes: "Here is the shape to expect: からといって at the front and a denial at the back. とは限らない, not necessarily, is the one Book Three taught in the chapter on conditions, and this is the first time you produce the pair together. 体積 is volume and 重量 is weight."
+
+- id: b4band7.perfect-is-not-love
+  jlpt: N3
+  scenario: just because
+  japanese: その人が申し分がないからといって、恋に落ちるわけではない。
+  reading: そのひとがもうしぶんがないからといって、こいにおちるわけではない。
+  romaji: sono hito ga moushibun ga nai kara to itte, koi ni ochiru wake de wa nai.
+  english: You don't fall in love with somebody because he's perfect.
+  tatoebaId: "208789"
+  recognitionOnly: true
+  notes: "The same shape with a different denial at the back: わけではない, it does not mean that, from Book Three's stance chapter. 申し分がない is a fixed phrase -- there is nothing to complain of, so, faultless. 恋に落ちる is the set way to say fall in love."
+
+- id: b4band7.do-not-despise-the-poorly-dressed
+  jlpt: N3
+  scenario: just because
+  japanese: 貧相な身なりをしているからといって、人を軽べつしてはいけない。
+  reading: ひんそうなみなりをしているからといって、ひとをけいべつしてはいけない。
+  romaji: hinsou na minari o shite iru kara to itte, hito o keibetsu shite wa ikenai.
+  english: You must not despise a man because he is poorly dressed.
+  tatoebaId: "85165"
+  recognitionOnly: true
+  notes: "A third ending, and the strongest: てはいけない, you must not, from Book Three's chapter on obligation. 身なり is how somebody is dressed and 貧相 is shabby-looking. Written 軽べつ here, half in kanji and half in kana, which is one of the spellings the dictionary lists for 軽蔑."
+
+# -- Lesson 6 - So-called ----------------------------------------------------
+
+- id: b4band7.an-inn-in-name-only
+  jlpt: N3
+  scenario: so-called
+  japanese: 宿屋といってもまるで丸太小屋のようだった。
+  reading: やどやといってもまるでまるたごやのようだった。
+  romaji: yadoya to itte mo marude marutagoya no you datta.
+  english: The inn was no better than a log cabin.
+  tatoebaId: "147897"
+  recognitionOnly: true
+  notes: "といっても grants the label and then takes most of it back: they called it an inn, but. A noun or a whole clause goes in front. まるで〜のようだ is the standing pair for just like, and 丸太小屋 is a log cabin, 丸太 being a log."
+
+- id: b4band7.a-man-of-many-talents
+  jlpt: N3
+  scenario: so-called
+  japanese: ジムは多才な人といってもいいだろう。
+  reading: ジムはたさいなひとといってもいいだろう。
+  romaji: jimu wa tasai na hito to itte mo ii darou.
+  english: Jim can be said to be a man of many talents.
+  recognitionOnly: true
+  tatoebaId: "215953"
+  notes: "といってもいい is the friendlier relative: you could go so far as to call it that. Add だろう and it becomes a careful compliment. Say 過言ではない instead of いい -- 〜といっても過言ではない -- and you have the phrase a speech uses for the same idea."
+
+- id: b4band7.a-poor-excuse-for-a-singer
+  jlpt: N3
+  scenario: so-called
+  japanese: 彼女は歌手といってもお粗末なものだ。
+  reading: かのじょはかしゅといってもおそまつなものだ。
+  romaji: kanojo wa kashu to itte mo osomatsu na mono da.
+  english: She is a poor excuse for a singer.
+  tatoebaId: "90824"
+  recognitionOnly: true
+  notes: "The label granted and then flatly withdrawn. お粗末 is poor, ill-made, and it is a word people use about their own work to play it down as well as about somebody else's to dismiss it. ものだ is the generalising ending from the chapter on why you are saying it."
+
+- id: b4band7.english-texts-vary-widely
+  jlpt: N3
+  scenario: so-called
+  japanese: 一口に英会話教材といっても、千差万別だ。
+  reading: ひとくちにえいかいわきょうざいといっても、せんさばんべつだ。
+  romaji: hitokuchi ni eikaiwa kyouzai to itte mo, sensabanbetsu da.
+  english: They all get lumped together as English texts. But in fact these books are extremely varied and wide-ranging.
+  tatoebaId: "190639"
+  recognitionOnly: true
+  notes: "一口に〜といっても is the fuller frame: to put them all under one word is to hide how different they are. 千差万別 is a four-character phrase meaning an infinite variety; it has two live readings, so read it here rather than typing it. 英会話教材 is English-conversation teaching material."
+
+- id: b4band7.however-high-the-wall
+  jlpt: N3
+  scenario: so-called
+  japanese: いくら壁が高いといっても、私も最初はおっかなびっくりでしたよ。
+  reading: いくらかべがたかいといっても、わたしもさいしょはおっかなびっくりでしたよ。
+  romaji: ikura kabe ga takai to itte mo, watashi mo saisho wa okkanabikkuri deshita yo.
+  english: You're right when you say how high the wall is; I was nervous at first, too.
+  tatoebaId: "76867"
+  recognitionOnly: true
+  notes: "いくら〜といっても concedes the point before answering it: however high you say the wall is. おっかなびっくり is a vivid word for doing something gingerly, half afraid. 最初は, at first, quietly promises that things changed afterwards."
+
+# -- Lesson 7 - For a, even so, even if --------------------------------------
+
+- id: b4band7.cold-morning-for-june
+  jlpt: N3
+  scenario: measured against expectation
+  japanese: ６月にしては寒い朝だ。
+  reading: ろくがつにしてはさむいあさだ。
+  romaji: rokugatsu ni shite wa samui asa da.
+  english: It is a cold morning for June.
+  tatoebaId: "235070"
+  notes: "にしては measures something against what you would expect of it: June should not be cold, and this morning is. A noun goes in front. English uses for in exactly this way -- cold for June, good for a beginner -- and the two match up well."
+
+- id: b4band7.warm-for-this-time-of-year
+  jlpt: N3
+  scenario: measured against expectation
+  japanese: 今頃にしては暖かい。
+  reading: いまごろにしてはあたたかい。
+  romaji: imagoro ni shite wa atatakai.
+  english: It's warm for this time of year.
+  tatoebaId: "172415"
+  notes: "The same marker on a time expression. 今頃 is around now, this time of year or this time of day, and the sentence is a small piece of weather talk you can use as it stands."
+
+- id: b4band7.good-for-a-cub-reporter
+  jlpt: N3
+  scenario: measured against expectation
+  japanese: 駆け出しの新聞記者にしては腕がいい。
+  reading: かけだしのしんぶんきしゃにしてはうでがいい。
+  romaji: kakedashi no shinbun kisha ni shite wa ude ga ii.
+  english: You are doing well for a cub reporter.
+  tatoebaId: "179511"
+  recognitionOnly: true
+  notes: "にしては on a person: judged against what a beginner is expected to manage. 駆け出し is somebody just starting out in a trade, and 新聞記者 is a newspaper reporter. 腕がいい is the fixed way to say skilled -- literally the arm is good."
+
+- id: b4band7.takes-his-time-whatever-he-does
+  jlpt: N3
+  scenario: measured against expectation
+  japanese: 彼はいつも何をするにしてもゆっくりやる。
+  reading: かれはいつもなにをするにしてもゆっくりやる。
+  romaji: kare wa itsumo nani o suru ni shite mo yukkuri yaru.
+  english: He always takes his time in everything he does.
+  tatoebaId: "114575"
+  recognitionOnly: true
+  notes: "Add も and the marker changes job: 何をするにしても is whatever he does, no matter which. This is にしても after a question word, where it means it makes no difference which -- and notice how far that is from にしては one card above."
+
+- id: b4band7.chances-are-rare-in-any-case
+  jlpt: N3
+  scenario: measured against expectation
+  japanese: チャンスというものはいずれにしても、まれにしかない。
+  reading: チャンスというものはいずれにしても、まれにしかない。
+  romaji: chansu to iu mono wa izure ni shite mo, mare ni shika nai.
+  english: Chances come rarely in any case.
+  tatoebaId: "202966"
+  recognitionOnly: true
+  notes: "いずれにしても is the set phrase: whichever way it turns out, in any case. それにしても does the same work with a backward look -- even so, given what was just said. というもの generalises, as in the chapter on why you are saying it, and まれに is seldom. しか with a negative -- しかない here -- is nothing but, a pair no chapter teaches, so take it whole."
+
+- id: b4band7.no-wonder-if-he-was-involved
+  jlpt: N3
+  scenario: measured against expectation
+  japanese: ゲンドウがこの件に関与していたとしても不思議ではない。
+  reading: ゲンドウがこのけんにかんよしていたとしてもふしぎではない。
+  romaji: gendou ga kono ken ni kanyo shite ita to shite mo fushigi de wa nai.
+  english: It would be no wonder if Gendou had been involved in this matter.
+  tatoebaId: "225195"
+  recognitionOnly: true
+  notes: "としても supposes something and then says it changes nothing: even if he was involved, that would be no surprise. A plain clause goes in front. 〜としても不思議ではない is a common pairing for it would be no wonder if. 件 here is a matter or a case, read けん."
+
+- id: b4band7.even-if-someone-else-made-her-happy
+  jlpt: N3
+  scenario: measured against expectation
+  japanese: 他の誰かが彼女を幸せにしたとしても彼女が幸せなら、それで良い。
+  reading: ほかのだれかがかのじょをしあわせにしたとしてもかのじょがしあわせなら、それでよい。
+  romaji: hoka no dareka ga kanojo o shiawase ni shita to shite mo kanojo ga shiawase nara, sore de yoi.
+  english: Even if it was somebody else who made her happy, as long as she is happy, that's fine.
+  tatoebaId: "74902"
+  recognitionOnly: true
+  notes: "としても on a past clause: even if it turned out that way. Book Three's たとえ〜ても is its close relative, and たとえ can stand in front of this one too. 幸せにする is to make somebody happy, and なら sets the condition that follows."
+
+# -- Lesson 8 - Tends to, looks ---------------------------------------------
+
+- id: b4band7.everybodys-business
+  jlpt: N3
+  scenario: tendencies and airs
+  japanese: 共同責任は無責任になりがちだ。
+  reading: きょうどうせきにんはむせきにんになりがちだ。
+  romaji: kyoudou sekinin wa musekinin ni narigachi da.
+  english: Everybody's business is nobody's business.
+  tatoebaId: "180618"
+  recognitionOnly: true
+  notes: "がち goes on a ます-stem or a noun and says something tends to happen -- usually something you would rather avoid. なりがち is the commonest of all: tends to become. 共同責任 is shared responsibility and 無責任 is none at all; the English is a proverb rather than a translation."
+
+- id: b4band7.my-son-is-often-ill
+  jlpt: N3
+  scenario: tendencies and airs
+  japanese: うちの息子は病気がちだ。
+  reading: うちのむすこはびょうきがちだ。
+  romaji: uchi no musuko wa byoukigachi da.
+  english: My son is subject to ill health.
+  tatoebaId: "163123"
+  recognitionOnly: true
+  notes: "がち straight onto a noun: 病気がち, prone to illness, sickly. The result behaves as a な-adjective, so 病気がちな子 works in front of a noun. うちの is our household's, which is how a parent says my here."
+
+- id: b4band7.short-of-sleep-and-careless
+  jlpt: N3
+  scenario: tendencies and airs
+  japanese: 寝不足だと注意が散漫になりがちです。
+  reading: ねぶそくだとちゅういがさんまんになりがちです。
+  romaji: nebusoku da to chuui ga sanman ni narigachi desu.
+  english: When you lack sleep, you are apt to be careless.
+  tatoebaId: "145631"
+  recognitionOnly: true
+  notes: "The same なりがち in polite form. 寝不足 is lack of sleep, 寝る plus 不足; 注意が散漫になる is the standing phrase for one's attention scattering. と here is the conditional whenever, not the and."
+
+- id: b4band7.we-forget-exercise-is-the-key
+  jlpt: N3
+  scenario: tendencies and airs
+  japanese: 運動が健康の鍵であるのを私たちはとかく忘れがちだ。
+  reading: うんどうがけんこうのかぎであるのをわたしたちはとかくわすれがちだ。
+  romaji: undou ga kenkou no kagi de aru no o watashitachi wa tokaku wasuregachi da.
+  english: We tend to forget that exercise is a key to good health.
+  tatoebaId: "189416"
+  recognitionOnly: true
+  notes: "忘れがち on the ます-stem of 忘れる: prone to forgetting. とかく reinforces it -- people are apt to, as things go. 鍵 is a key, both the one in your pocket and the one to good health, exactly as in English."
+
+- id: b4band7.fidgeting-uneasily-in-his-chair
+  jlpt: N3
+  scenario: tendencies and airs
+  japanese: 彼は不安げにいすの上でもじもじした。
+  reading: かれはふあんげにいすのうえでもじもじした。
+  romaji: kare wa fuange ni isu no ue de mojimoji shita.
+  english: He shifted about uneasily in his chair.
+  tatoebaId: "100488"
+  recognitionOnly: true
+  notes: "げ is the other suffix in this lesson: it goes on the stem of an adjective and turns the feeling into the air somebody gives off. 不安 is anxious, 不安げ is looking anxious, and 不安げに is the adverb. もじもじ is the sound-word for fidgeting."
+
+- id: b4band7.showing-off-her-jewels
+  jlpt: N3
+  scenario: tendencies and airs
+  japanese: 彼女は宝石を得意げに見せびらかした。
+  reading: かのじょはほうせきをとくいげにみせびらかした。
+  romaji: kanojo wa houseki o tokuige ni misebirakashita.
+  english: She proudly displayed her jewels.
+  tatoebaId: "86737"
+  recognitionOnly: true
+  notes: "得意げに, with the air of being pleased with oneself. 得意 you will meet more often meaning good at something; here it is its other sense, proud. 見せびらかす is to show off, a step beyond 見せる, to show."
+
+- id: b4band7.little-birds-singing-merrily
+  jlpt: N3
+  scenario: tendencies and airs
+  japanese: 小さな鳥が楽しげにさえずっている。
+  reading: ちいさなとりがたのしげにさえずっている。
+  romaji: chiisana tori ga tanoshige ni saezutte iru.
+  english: Little birds are singing merrily.
+  tatoebaId: "146991"
+  recognitionOnly: true
+  notes: "楽しげに, seeming to enjoy it -- and here of birds, which shows the suffix is not limited to people. 小さな is the form of 小さい that only goes in front of a noun, and さえずる is the verb for a small bird's singing."
+
+- id: b4band7.she-looked-sad-and-tired
+  jlpt: N3
+  scenario: tendencies and airs
+  japanese: その女性は悲しげで、その上疲れているようだった。
+  reading: そのじょせいはかなしげで、そのうえつかれているようだった。
+  romaji: sono josei wa kanashige de, sono ue tsukarete iru you datta.
+  english: The lady looked sad, also tired.
+  tatoebaId: "209336"
+  recognitionOnly: true
+  notes: "悲しげ shows what げ is for. 悲しい describes how you feel yourself; about somebody else you need 悲しげ or 悲しそう, because Japanese does not let you state another person's feelings flatly. その上 adds the second observation, and ようだった reports the impression."

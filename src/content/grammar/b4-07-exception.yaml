@@ -1,0 +1,117 @@
+# Book Four, Chapter 8 grammar patterns -- only so far, and no way round it.
+#
+# Eight patterns for eight teaching lessons, one each, each blanking the thing
+# its lesson exists for out of one of that lesson's own sentences. The blank is
+# matched against the phrase's reading, so these are kana.
+#
+# WHY EIGHT AND NOT TWELVE. Three lessons teach two forms apiece -- ようがない
+# with わけにはいかない, にしては with にしても and としても, がち with げ --
+# because the corpus attests each too thinly to fill a lesson alone. Every
+# grammar pattern in this course is referenced by exactly one lesson and every
+# lesson references at most one pattern, so extra entries here would be orphans
+# no lesson points at. The field names the lesson's centre, not its whole
+# content, which is the rule chapters 6 and 7 set.
+#
+# THE `pattern` FIELD IS NOT DECORATION. scripts/levelling.mjs grammarSurface()
+# reads it to tag corpus sentences: it rejects any pattern containing a Latin
+# character, a digit or a few punctuation marks, and needs at least one
+# ～-delimited fragment of two characters or more. All eight below clear that
+# floor. What they cannot do, said here rather than discovered later:
+#
+#   ～がち is two kana and will tag あながち, which is a different word that
+#   happens to contain them, and ガチ, the slang for serious. Lesson 8's other
+#   half, げ, is one kana and cannot be a pattern at all -- it would tag げんき,
+#   かげ, おかげ and every other word with that sound in it. Lesson 8 is
+#   therefore tagged by ～がち only, and its note tells the learner what the
+#   tagger cannot be told.
+#
+#   ～にしては will not tag にしても or としても, which is correct here and is
+#   also why lesson 7's other two forms go untagged: ～にしても would sweep up
+#   にしてもらう, the causative-benefactive that is not this pattern, and
+#   ～としても would sweep up every volitional 〜うとして with も after it,
+#   including this book's own せびろうとしても.
+#
+#   ～に過ぎない tags only the kanji spelling. The kana にすぎない is the more
+#   common of the two in the corpus and is a second spelling of one word, and
+#   one field holds one spelling.
+#
+#   ～ことはない will tag たことはない, the has-never-once frame from Book Two,
+#   as readily as the no-need-to one this lesson teaches. They are the same
+#   string doing two jobs, so no surface can separate them; lesson 2 exists
+#   because of that, and cards both.
+#
+# THE BLANKS run longer than the marker itself, as chapters 6 and 7's do.
+# Blanking ＿にすぎない hands a learner an ending they can already see; blanking
+# のべていたにすぎない asks for the clause and the marker together, which is
+# what actually has to be produced.
+#
+# ON HOW ABSOLUTELY THESE GLOSSES STATE THINGS. This band is the one where
+# tidy textbook rules are traditionally taught and the corpus does not support
+# them, so every claim below was checked against the cards it sits on. からと
+# いって is followed by a denial in all four of its cards, which is a strong
+# tendency and not a law. にしては takes a noun in all three of its cards and a
+# clause is also possible. げ attaches to feeling adjectives in all four of its
+# cards, and it is not free to go on any adjective at all. Where a claim runs
+# one way only, the gloss says which way.
+#
+# content-source: n/a for this file -- every pattern references an existing
+#   phrase from phrases/b4-07-exception.yaml rather than composing new Japanese,
+#   and that file carries the Tatoeba id for each.
+# jlpt-source: training -- the level marks the chapter this content sits in,
+#   not each form's textbook level.
+
+- id: grammar.b4-ni-suginai
+  jlpt: N3
+  pattern: "～に過ぎない"
+  gloss: "Noun or plain clause plus に過ぎない, written にすぎない just as often: no more than this, and nothing should be read into it beyond it. 一介のビジネスマンにすぎない, only a businessman; 事実を述べていたに過ぎない, merely stating a fact. It is the same 過ぎる as this book's 〜すぎる, too much, pointing the other way: すぎる says something went over a line, に過ぎない says it never reached one. Formal and written; ただの〜だ does the same work in speech. It often has ただ, ほんの or 一介の in front of the noun, which double the belittling rather than being required by the pattern. Dictionaries list it as a single expression rather than as grammar."
+  phraseId: b4band7.merely-stating-a-fact
+  blank: のべていたにすぎない
+
+- id: grammar.b4-koto-wa-nai
+  jlpt: N3
+  pattern: "～ことはない"
+  gloss: "Dictionary-form verb plus ことはない: there is no need to. 押し隠すことはない, no need to hide it. It reassures rather than instructs, which is what separates it from 必要はない, the flat statement that something is not required. With すぎる in front it gives いくら〜てもしすぎることはない, you cannot do it too much. Two older jobs wear the same string and this lesson names rather than re-teaches them: た-form plus ことはない is the negative of Book Two's たことがある, has never once, and ということはない denies that a whole state of affairs holds. Nothing in the string tells them apart -- the form of the verb in front does. Dictionaries list the first two of those together under one entry for exactly that reason."
+  phraseId: b4band7.cannot-be-too-careful-driving
+  blank: しすぎることはない
+
+- id: grammar.b4-made-mo-nai
+  jlpt: N3
+  pattern: "～までもない"
+  gloss: "Dictionary-form verb plus までもない: there is no need to go so far as to. 言うまでもない, needless to say, is its fixed form and by far its commonest use -- dictionaries list that whole phrase as an entry of its own. The frame is productive: 待つまでもない, no need to wait for one. The clause it comments on goes in front, closed with ことは or のは. Polite speech gives までもありません. It is not the same as ことはない: ことはない says the thing need not be done, までもない says it would be going too far to bother."
+  phraseId: b4band7.english-is-a-world-language
+  blank: いうまでもない
+
+- id: grammar.b4-you-ga-nai
+  jlpt: N3
+  pattern: "～ようがない"
+  gloss: "ます-stem plus ようがない: there is no way to do it, no means available. 言う gives 言い, so 言いようがない, there is no way to say it; する gives し, so a する-noun takes の and gives 解釈のしようがない, there is no way to interpret it. Keep しようがない apart from しょうがない, a different fixed phrase meaning it can't be helped. This lesson's other half, わけにはいかない, refuses on different grounds: not no means but no licence -- 見過ごすわけにはいかない, I cannot very well let it pass, because conscience, duty or circumstance forbids it. A dictionary-form verb goes in front of that one, and Book Three's わけがない, which says something is impossible, is a different member of the same family."
+  phraseId: b4band7.no-other-interpretation
+  blank: かいしゃくのしようがない
+
+- id: grammar.b4-kara-to-itte
+  jlpt: N3
+  pattern: "～からといって"
+  gloss: "Plain clause plus からといって: just because this is so, it does not follow that. It sets up a reason only in order to refuse the conclusion drawn from it, and in all four of this lesson's cards the second half is a denial -- とは限らない, わけではない, てはいけない, or a negative verdict. That pairing is a strong tendency rather than a rule of grammar, and the ones the corpus does not attest here are ことにはならない and a plain ない. At the head of a sentence it appears as だからといって, referring back to what was just said. It is not the same as から on its own: から gives the reason, からといって takes it away again."
+  phraseId: b4band7.bulk-is-not-weight
+  blank: おおきいからといって
+
+- id: grammar.b4-to-ittemo
+  jlpt: N3
+  pattern: "～といっても"
+  gloss: "Noun or clause plus といっても: though it is called that, though I say so. The label is granted and then cut down -- 宿屋といっても, they call it an inn, but. Unlike からといって it does not require a negative behind it: といってもいい means one could go so far as to call it that, and 〜といっても過言ではない is the same idea in a speech. いくら〜といっても concedes a point before answering it. Book Three's とはいえ is its written cousin and carries the same concession in an essay register."
+  phraseId: b4band7.an-inn-in-name-only
+  blank: やどやといっても
+
+- id: grammar.b4-ni-shite-wa
+  jlpt: N3
+  pattern: "～にしては"
+  gloss: "Noun plus にしては: judged against what you would expect of it. ６月にしては寒い, cold for June; 新聞記者にしては腕がいい, good for a reporter. A clause can also stand in front, though every card in this lesson has a noun there. Change the last kana and the job changes. にしても, with も, is even so or no matter which, and after a question word it means it makes no difference -- 何をするにしても. それにしても and いずれにしても are its fixed forms, even so and in any case. としても supposes something and says it changes nothing: 関与していたとしても不思議ではない, no wonder even if he was involved. The rough division is that としても leans hypothetical and にしても leans toward something already granted, but the two overlap and English says even if for both. The last chapter's として, in the capacity of, is a different marker again -- it is も that makes this one."
+  phraseId: b4band7.cold-morning-for-june
+  blank: ろくがつにしては
+
+- id: grammar.b4-gachi
+  jlpt: N3
+  pattern: "～がち"
+  gloss: "ます-stem or noun plus がち: prone to, tends to, and almost always of something unwelcome. 忘れがち, apt to forget; 病気がち, sickly; なりがち, tends to become, which is the commonest of all. The result behaves as a な-adjective. This lesson's other half is げ, which goes on the stem of an adjective and makes the air a person gives off: 不安げ anxious-looking, 悲しげ, 楽しげ, 得意げ, with げに as the adverb. げ attaches to feeling adjectives, which is what all four of its cards carry, rather than to any adjective at all. Both differ from this book's そう: そう reports how a thing looks or what seems likely to happen, while げ is the impression a person gives and がち is what someone or something habitually does."
+  phraseId: b4band7.my-son-is-often-ill
+  blank: びょうきがちだ

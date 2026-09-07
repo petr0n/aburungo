@@ -9,7 +9,8 @@ two: this band is the **humble and polite** half, 謙譲語 and 丁重語/丁寧
 half, 尊敬語), §4, §6, §7, §9. Shape: `book-four-band-00.md`. The learner has Books One–Three and
 Book Four bands 0–3 (orders 277–309). Keigo is taught nowhere before this band; the learner has
 met fragments as set phrases (ありがとうございます, ごめんなさい, いただきます, お願いします — Book One)
-and as glossed strings inside Book Three sentences (お伴, ご面会, 恐縮ですが).
+and as glossed strings inside shipped sentences (恐縮ですが in Book Three; お伴 and
+ご面会 are Book Four bands 2-3, not Book Three).
 
 **Shape landed: 8 teaching lessons + 1 recognition checkpoint, global orders 310–318.** Every
 pattern is attested; two (申す, させていただく) are thin and say so. Tatoeba's keigo is business-letter
@@ -35,7 +36,7 @@ Script `scratchpad/mine/band45-candidates.mjs` (throwaway).
 | 5 | お + ます-stem + する | 18 | お借りして ×3, お待ちして, お送りしましょうか, お手伝いします. |
 | 6 | いただく · 〜ていただけますか | 9 / 33 | ていただけますか is the richest keigo frame in the corpus and the one a learner uses most. |
 | 7 | させていただく | 5 | Thin, all genuine; two are 30+ characters. |
-| 8 | お / ご + noun | 35 | お名前, お電話, お部屋, お客様, ご案内, ご連絡, お返事. The お/ご choice by word origin is stated as a strong tendency with exceptions named (お電話, お返事 on Sino-Japanese nouns). |
+| 8 | お / ご + noun | 35 | お名前, お電話, お部屋, お客様, ご案内, ご連絡, お返事. Note 名前 is taught only as kana (なまえ, basics.yaml); the kanji is new here. The お/ご choice by word origin is stated as a strong tendency with exceptions named (お電話, お返事 on Sino-Japanese nouns). |
 
 ## 2. Why this band exists
 
@@ -81,7 +82,8 @@ shops, phone) and say that keigo has degrees; nothing here says a form is "alway
   in a set phrase the learner already has.
 - **Candidates:**
   - #235007 ７月１０日より札幌支店を開設いたします。 — On July 10, we will open our Sapporo branch.
-    (より "from": Book Three ch.10's より? — check; else gloss)
+    (より "from": NOT taught -- no grammar file in the course carries より. Book
+    Three ch.2 teaches により, "by/according to", which is a different word. Gloss it.)
   - #174932 現金払いには１０パーセント割引いたします。 — We give a 10% discount for cash.
   - #229119 いずれご連絡いたします。 — I will get in touch with you.
   - #202685 ついては、私の手紙のコピーを添付いたします。 — I am sending a copy of my letter to you.
@@ -183,7 +185,8 @@ shops, phone) and say that keigo has degrees; nothing here says a form is "alway
   - #167353 私この度一身上の都合でやめさせていただきます。 — I wish to resign from my work for purely
     personal reasons. (都合 taught; 一身上 gloss whole)
   - #149555 失礼ですが御提案を修正させていただきます。 — I beg to modify your proposal.
-  - #140433 相席させていただいてよろしいですか。 — May I share this table with you?
+  - ~~#140433 相席させていただいてよろしいですか。~~ ALREADY CARDED in Book Three ch.1
+    (phrases/b3-00-passive.yaml). Authored with #227020 instead.
   - #214004 ぜひ取引させていただきたいと思います。 — We would love to work with you. (たいと思います:
     Book Two)
   - #233498 あなたのパーティーに喜んで出席させていただきます。 — I will be happy to attend your party.

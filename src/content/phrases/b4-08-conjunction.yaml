@@ -1,0 +1,632 @@
+# Book Four, Chapter 9 phrases -- joining an argument.
+#
+# Forty-four sentences, none of them ours. 04-stage-reading.md section 8
+# withdrew the training-canonical exemption at the reading stage and above, so
+# every sentence below is a verbatim Tatoeba pair carried out of
+# server/data/jmdict-examples-eng-3.6.2.json with its id in `tatoebaId`,
+# quoted, because YAML reads a bare 236874 as a number and the schema rejects
+# it. Nothing was composed, trimmed, joined, smoothed or corrected: the
+# Japanese and the English strings in this file were written into it by script
+# straight from the corpus, and then compared against the corpus again, string
+# by string, after the file was finished. All forty-four match.
+#
+# WHERE THIS CHAPTER'S JAPANESE COMES FROM. Every connective Book Three taught
+# joins two clauses inside one sentence. These join whole sentences, standing
+# at the head of the second one -- つまり, したがって, ただし, なお, または,
+# しかも, さらに, むしろ, 一方, ところで. That is a paragraph's furniture, and
+# Tatoeba is a sentence corpus, so the attestation is thin in exactly the
+# places the grammar tables are fullest. Where a lesson is running on the last
+# sentences the corpus has, the lesson says so.
+#
+# WHAT THE SCAN OF THE WHOLE COURSE TURNED UP. No id and no Japanese string in
+# this file is carded anywhere else in src/content/phrases/ or quoted as a word
+# example in src/content/vocabulary/. Three sentences that answered searches
+# for this chapter's forms are already carded elsewhere and were left alone:
+#
+#   #209336 その女性は悲しげで、その上疲れているようだった -- carded in
+#   phrases/b4-07-exception.yaml, where it teaches げ. The plan proposed
+#   reusing it for その上 in lesson 7; lesson 7 cards #208980 and #219716
+#   instead, which are its own sentences and not carded anywhere.
+#
+#   #224548 ここで召し上がりますか、それともお持ち帰りですか -- carded in
+#   phrases/b4-05-keigo-honorific.yaml, and #146743 小額の札にいたしますか、
+#   それとも高額の札にいたしましょうか -- carded in phrases/b4-04-keigo-humble.yaml.
+#   Both are それとも sentences and both were found by searching the corpus
+#   rather than by the plan naming them. Lesson 3 uses #231584 and #232338.
+#
+# TWO CELLS WITH NO CARD, recorded rather than filled with something weaker.
+#
+#   ゆえに, the written therefore, is Book Three's chapter 11 and is not
+#   re-taught here; lesson 2's したがって is named against it in prose because
+#   the two are the same English word, and no sentence was written for the
+#   comparison.
+#
+#   あるいは in its second job -- the adverb meaning perhaps -- has no sentence
+#   in this corpus at a length this book cards. Lesson 3 states the meaning so
+#   that a reader is not ambushed by it and cards only the conjunction: five
+#   sentences carry あるいは in all, and the two that fit this book's length --
+#   twenty and twenty-two characters -- are both carded, the other three
+#   running to forty-four, fifty-four and sixty.
+#
+# HOW THIN THE THIN LESSONS ACTUALLY ARE, counted in the corpus rather than
+# asserted. Sentence-opening したがって has four attestations, of which two are
+# carded and the others run to thirty-three and fifty characters. ただし has
+# four, of which one is carded and the other three run to thirty-seven
+# characters and beyond. Sentence-opening なお has exactly two, and both are
+# carded. Sentence-opening ところで has four, of which the three under
+# twenty-five characters are carded and the fourth runs to thirty-five. That
+# is lesson 2 built on five sentences and lesson 7 on five, and both lessons
+# say so to the learner.
+#
+# TWO ENGLISH GLOSSES LEFT AS THEY STAND although they are loose. #74313's
+# Tatoeba English says "we sometimes hold company tours" where the Japanese
+# says 随時受け付けております, we accept applications at any time; the note on
+# the card gives 随時. #229465's English calls ammonia "colorless", a word its
+# Japanese does not contain at all. Neither was rewritten: no English in this
+# file was edited and no Japanese was touched anywhere.
+#
+# ---------------------------------------------------------------------------
+# READING JUDGEMENT CALLS, stated rather than left to be discovered. Every
+# `reading` is what a learner is shown, so an ambiguous transcription is a card
+# that teaches the wrong sound. Each of these was checked against JMdict rather
+# than guessed:
+#
+#   #190048's 背 is せ, not せい: 背が高い is せがたかい (1472660) and 背が低い
+#     is せがひくい (1472670), both listed as expressions in their own right.
+#     The same character read せい (1472650) also means height, which is why
+#     the word card below says which one this sentence uses.
+#   #186476's 身体 is からだ. JMdict lists the spelling twice -- 1409140, where
+#     体 is the head spelling and the reading is からだ, and 2830705, where the
+#     reading is しんたい. からだのため is the everyday phrase, and 体 is the
+#     spelling this course already teaches.
+#   #146465's 緑色 is みどりいろ (1555320, which also allows りょくしょく), and
+#     its 床 is ゆか, the floor (1349380) -- not とこ, a bed (1349370).
+#   #205590's ４月２日 is しがつふつか and #197448's ９号車 is きゅうごうしゃ
+#     (号車 1284270 is the counter for railway carriages).
+#   #74305's 勾配 is こうばい (1275300) and its 山越え is やまごえ (1755550).
+#   #76346's 洪水 is こうずい (1279930) and 様子見 is ようすみ (2088950).
+#   #76047's 社会保険庁 is しゃかいほけんちょう (1658850) and 厚生労働省 is
+#     こうせいろうどうしょう (1980230).
+#   #172631's 小型車 is こがたしゃ (2011310) and 中型 is ちゅうがた (1424010).
+#   #202527's 下手 is へた (1185200). The same two characters are also read
+#     したて (1185190, an inferior position) and しもて (1185195, the lower
+#     part, and stage right) -- three entries, one spelling.
+#   #100465's おかす is written in kana in the sentence; the kanji is 犯す
+#     (1481550), and 過ちを犯す is the standing pair.
+#   #219716's ためになる is 為になる (2104500), written in kana here.
+#
+# ---------------------------------------------------------------------------
+# `recognitionOnly` ON ALL FORTY-FOUR CARDS, which no earlier chapter of this
+# book has needed, and it is a property of what this chapter teaches rather
+# than a shortcut. FillBlankCard shows the English alone and grades the whole
+# typed reading against `card.reading`, so a card the English cannot determine
+# marks a right answer wrong.
+#
+# English has one word for each pair this chapter spends a lesson separating.
+# Moreover is しかも and it is also さらに. Or is または, あるいは and それとも.
+# Therefore is したがって and it is also Book Three's ゆえに. That is to say is
+# つまり and すなわち and 要するに. A card whose English reads "In short, ..."
+# cannot tell a learner whether the Japanese in front of them was 要するに or
+# つまり, and both would be good Japanese for that English.
+#
+# Each card was checked against that test individually rather than by rule, and
+# the closest thing to an exception is #171717 今日はむしろ外出したくない: short,
+# every word taught, and むしろ is the only word in this course for rather. It
+# is recognition anyway, because English "go out" is 外出する here and 出かける
+# elsewhere in this course, and the learner has both.
+#
+# The flag does not retire a card. A recognitionOnly phrase stays in review and
+# only stops being typed, so all forty-four keep coming back. The typing in
+# this chapter is done by its seven grammar cloze cards, where the connective
+# is shown on the card and the learner produces the clause it attaches to, and
+# by its fifty-one word cards.
+#
+# content-source: Tatoeba, via the sentence pairs embedded in JMdict for
+#   Applications 3.6.2 (server/data/jmdict-examples-eng-3.6.2.json). Every
+#   phrase carries its sentence id in `tatoebaId`. Verified by id against the
+#   corpus on 2026-09-06: all 44 resolve, each Japanese string matches its
+#   source character for character, each English string likewise, and none is
+#   carded elsewhere in the course. Kana readings and romaji are
+#   transcriptions of the quoted sentence, not new content; every compound
+#   whose reading was not obvious was checked against JMdict (the list is in
+#   the reading notes above).
+# jlpt-source: training -- the level marks the chapter this content sits in,
+#   not each form's textbook level.
+
+# -- Lesson 1 - That is to say ----------------------------------------------
+
+- id: b4band8.edo-that-is-tokyo
+  jlpt: N3
+  scenario: that is to say
+  japanese: 外国人の一団が江戸、つまり東京に到着した。
+  reading: がいこくじんのいちだんがえど、つまりとうきょうにとうちゃくした。
+  romaji: gaikokujin no ichidan ga edo, tsumari toukyou ni touchaku shita.
+  english: "A group of foreigners arrived in Edo, i.e. Tokyo."
+  tatoebaId: "236874"
+  recognitionOnly: true
+  notes: "The shape to own: X、つまりY, two names for one thing. 江戸 is what Tokyo was called before 1868, so the sentence gives the old name and then the one a reader knows. つまり sits after a comma and needs no verb of its own. 一団 is a party or group of people, and 到着する is the written word for arriving that you meet on timetables and in reports."
+
+- id: b4band8.that-is-a-poor-dancer
+  jlpt: N3
+  scenario: that is to say
+  japanese: つまり彼女は下手な踊り子だ。
+  reading: つまりかのじょはへたなおどりこだ。
+  romaji: tsumari kanojo wa heta na odoriko da.
+  english: "That is, she is a poor dancer."
+  tatoebaId: "202527"
+  recognitionOnly: true
+  notes: "Here つまり opens the sentence instead, and what follows is the summing-up of whatever was said before it: when it all comes down to it, she cannot dance. 下手な is the opposite of the 上手な this book's chapter 2 taught, and 踊り子 is a dancer, 踊る plus 子."
+
+- id: b4band8.in-other-words-he-wont
+  jlpt: N3
+  scenario: that is to say
+  japanese: すなわち彼はそれをしたくないのだ。
+  reading: すなわちかれはそれをしたくないのだ。
+  romaji: sunawachi kare wa sore o shitakunai no da.
+  english: "In other words, he doesn't want to do it."
+  tatoebaId: "214578"
+  recognitionOnly: true
+  notes: "すなわち does the same work as つまり and belongs to writing: essays, reports, legal text, translations of formal English. Hearing it in conversation is rare. The のだ ending is the explaining ending from the chapter on why you are saying it, and it fits this word well, because both are pointing at what the facts amount to."
+
+- id: b4band8.namely-april-second
+  jlpt: N3
+  scenario: that is to say
+  japanese: それは１週間前、すなわち４月２日に行われた。
+  reading: それはいっしゅうかんまえ、すなわちしがつふつかにおこなわれた。
+  romaji: sore wa isshuukan mae, sunawachi shigatsu futsuka ni okonawareta.
+  english: "It was due a week ago, namely on April second."
+  tatoebaId: "205590"
+  recognitionOnly: true
+  notes: "すなわち between a rough statement and an exact one: a week ago, namely the second of April. This restating job is the one it does most. 行われた is the passive of 行う, to carry out, which is the formal way of saying an event took place -- the passive came from Book Three's first chapter."
+
+- id: b4band8.in-brief-a-chatterbox
+  jlpt: N3
+  scenario: that is to say
+  japanese: 彼女は要するにおしゃべりなんだ。
+  reading: かのじょはようするにおしゃべりなんだ。
+  romaji: kanojo wa yousuru ni oshaberi na n da.
+  english: "She is, in brief, a chatterbox."
+  tatoebaId: "86369"
+  recognitionOnly: true
+  notes: "要するに means in short, and unlike つまり it is happiest summing a person or a situation up rather than restating a phrase. It can stand at the head of the sentence or, as here, after the topic. おしゃべり is chatter, and said of a person it means talkative. なんだ is な plus んだ, the explaining ending from the chapter on why you are saying it, in the casual form this book's chapter on how people actually talk gave you."
+
+- id: b4band8.in-a-word-he-tires-of-everything
+  jlpt: N3
+  scenario: that is to say
+  japanese: 要するに彼は何にでも飽きるのだ。
+  reading: ようするにかれはなににでもあきるのだ。
+  romaji: yousuru ni kare wa nani ni demo akiru no da.
+  english: "In a word, he tires of everything."
+  tatoebaId: "78816"
+  recognitionOnly: true
+  notes: "要するに at the head of the sentence, which is where you will meet it most. It boils a long account down to one line, so it tends to arrive after an explanation rather than before one. 何にでも is 何 plus に plus でも, of anything at all; 飽きる is to get tired of something."
+
+# -- Lesson 2 - Therefore, however, note that -------------------------------
+
+- id: b4band8.therefore-reduce-the-cost
+  jlpt: N3
+  scenario: therefore, however, note that
+  japanese: したがって生産費を削る必要がある。
+  reading: したがってせいさんひをけずるひつようがある。
+  romaji: shitagatte seisanhi o kezuru hitsuyou ga aru.
+  english: "Therefore, it is necessary to reduce the cost."
+  tatoebaId: "216172"
+  recognitionOnly: true
+  notes: "したがって draws a conclusion from the sentence before it, and it is the word a report uses where speech would use だから. 生産費 is production cost, 生産 plus 費; 削る is literally to shave or pare, and applied to a budget it is to cut. 必要がある is the there-is-a-need frame from Book Three."
+
+- id: b4band8.productivity-fell-so-bonuses-will
+  jlpt: N3
+  scenario: therefore, however, note that
+  japanese: 生産力が落ちた。従って労働者のボーナスも少なくなるだろう。
+  reading: せいさんりょくがおちた。したがってろうどうしゃのボーナスもすくなくなるだろう。
+  romaji: seisanryoku ga ochita. shitagatte roudousha no boonasu mo sukunaku naru darou.
+  english: "Productivity has fallen. Accordingly, workers' bonuses will be reduced."
+  tatoebaId: "142780"
+  recognitionOnly: true
+  notes: "The same word written 従って, and standing after a full stop where the join between two whole sentences is. Both spellings are ordinary. 生産力 is productive capacity, 労働者 is a worker (労働, labour, plus 者, person), and ボーナス is the borrowed word for a bonus."
+
+- id: b4band8.however-you-must-queue
+  jlpt: N3
+  scenario: therefore, however, note that
+  japanese: ただし、列をつくって並ばなくてはならないが・・・。
+  reading: ただし、れつをつくってならばなくてはならないが・・・。
+  romaji: tadashi, retsu o tsukutte narabanakute wa naranai ga...
+  english: "However, you have to queue..."
+  tatoebaId: "203649"
+  recognitionOnly: true
+  notes: "ただし is the small print. Something has been offered or stated, and this adds the condition attached to it -- the word you meet in notices, terms and opening hours. 列をつくって並ぶ is to form a line and queue. The が at the end trails off into dots: the speaker leaves the rest of the objection unsaid."
+
+- id: b4band8.tours-accepted-at-any-time
+  jlpt: N3
+  scenario: therefore, however, note that
+  japanese: なお、会社説明会後でも、会社見学は随時受け付けております。
+  reading: なお、かいしゃせつめいかいごでも、かいしゃけんがくはずいじうけつけております。
+  romaji: nao, kaisha setsumeikai go demo, kaisha kengaku wa zuiji uketsukete orimasu.
+  english: "Furthermore, even after the company information session, we sometimes hold company tours."
+  tatoebaId: "74313"
+  recognitionOnly: true
+  notes: "なお adds a postscript to a notice: one more thing you should know. It is the last paragraph of a company announcement, and this sentence is exactly that. 説明会 is an information session, 随時 means at any time or as the occasion arises, and ております is the humble ending from the chapter on speaking with care."
+
+- id: b4band8.we-advise-a-substitute-address
+  jlpt: N3
+  scenario: therefore, however, note that
+  japanese: なお、危険防止の為、サブアド利用をお奨めします。
+  reading: なお、きけんぼうしのため、サブアドりようをおすすめします。
+  romaji: nao, kiken boushi no tame, sabuado riyou o o-susume shimasu.
+  english: "Moreover, for your safety, we advise use of a substitute email address."
+  tatoebaId: "75118"
+  recognitionOnly: true
+  notes: "なお again, opening the safety note at the foot of a web page. 危険防止 is danger prevention, 防止 being prevention; サブアド is clipped internet Japanese for a second, throwaway email address. お奨めします is the humble お〜します pattern on すすめる, to recommend, which is normally 勧める -- 奨める, as here, is a rare variant, and 薦める is for recommending a book or a person."
+
+# -- Lesson 3 - Or ----------------------------------------------------------
+
+- id: b4band8.tea-or-coffee
+  jlpt: N3
+  scenario: or
+  japanese: 紅茶またはコーヒーはいかが？
+  reading: こうちゃまたはコーヒーはいかが？
+  romaji: koucha mata wa koohii wa ikaga?
+  english: "Would you like some tea or coffee?"
+  tatoebaId: "173494"
+  recognitionOnly: true
+  notes: "または joins two nouns and offers a choice between them. It is the written or -- a menu, a form, a set of instructions -- where speech would use か. いかが is the polite how about, the word behind いかがですか."
+
+- id: b4band8.buffet-or-cafeteria
+  jlpt: N3
+  scenario: or
+  japanese: ビュッフェ、またはカフェテリアは９号車にあります。
+  reading: ビュッフェ、またはカフェテリアはきゅうごうしゃにあります。
+  romaji: byuffe, mata wa kafeteria wa kyuu-gousha ni arimasu.
+  english: "The buffet or the cafeteria is in Car 9."
+  tatoebaId: "197448"
+  recognitionOnly: true
+  notes: "または after a comma, which is how it looks when the two nouns are long. ９号車 is car number 9; 号車 is the counter for railway carriages, so 三号車 is car 3. The whole sentence is the register the word lives in: an announcement."
+
+- id: b4band8.small-or-middle-sized-cars
+  jlpt: N3
+  scenario: or
+  japanese: 今は彼らは小型車または中型車を好む。
+  reading: いまはかれらはこがたしゃまたはちゅうがたしゃをこのむ。
+  romaji: ima wa karera wa kogatasha mata wa chuugatasha o konomu.
+  english: "Now they like cars of small or middle size."
+  tatoebaId: "172631"
+  recognitionOnly: true
+  notes: "Two nouns of the same kind side by side, which is または at its plainest. 小型 is small-sized and 中型 medium-sized, both with 型, a type or model. 好む is the written word for to like or prefer; 好き is what people say."
+
+- id: b4band8.ammonia-liquid-or-gas
+  jlpt: N3
+  scenario: or
+  japanese: アンモニアは、非常に強い匂いをもった液体または気体である。
+  reading: アンモニアは、ひじょうにつよいにおいをもったえきたいまたはきたいである。
+  romaji: anmonia wa, hijou ni tsuyoi nioi o motta ekitai mata wa kitai de aru.
+  english: "Ammonia is a colorless liquid or gas with a very strong smell."
+  tatoebaId: "229465"
+  recognitionOnly: true
+  notes: "Scientific writing, where または is at home. 液体 is a liquid and 気体 a gas, the two of them built on 体, body, the way English builds them on state. 非常に is very or extremely, もった is 持つ describing the noun after it, and である is the written copula from Book Three's chapter on register."
+
+- id: b4band8.gas-or-electricity
+  jlpt: N3
+  scenario: or
+  japanese: ガスで調理しますか、あるいは電気ですか。
+  reading: ガスでちょうりしますか、あるいはでんきですか。
+  romaji: gasu de chouri shimasu ka, arui wa denki desu ka.
+  english: "Do you cook by gas or electricity?"
+  tatoebaId: "226408"
+  recognitionOnly: true
+  notes: "あるいは joins two whole alternatives here rather than two nouns. It is as written as または and a little heavier; it also has a second life as an adverb meaning perhaps, which is worth knowing before you meet it. 調理する is to cook in the sense of preparing food, the word of recipes and kitchens."
+
+- id: b4band8.a-family-or-a-clan
+  jlpt: N3
+  scenario: or
+  japanese: これらは一家族あるいは一族を表すものである。
+  reading: これらはひとかぞくあるいはいちぞくをあらわすものである。
+  romaji: korera wa hitokazoku arui wa ichizoku o arawasu mono de aru.
+  english: "These figures are signs of a family or clan."
+  tatoebaId: "217720"
+  recognitionOnly: true
+  notes: "あるいは between two nouns, joined the same way または joins them; the two words are interchangeable in this position, and あるいは is the drier of the pair. It is the word of reference books and definitions, which is the kind of sentence this is. 一族 is a clan or family line, 表す is to represent or stand for, and これら is these -- これ with the same ら that makes 彼ら them."
+
+- id: b4band8.on-foot-or-by-bus
+  jlpt: N3
+  scenario: or
+  japanese: 歩いて行きますか？それともバスで行きますか？
+  reading: あるいていきますか？それともバスでいきますか？
+  romaji: aruite ikimasu ka? soretomo basu de ikimasu ka?
+  english: "Will you go on foot or by bus?"
+  tatoebaId: "231584"
+  recognitionOnly: true
+  notes: "それとも belongs to questions, and this is its clearest shape: a whole question, then それとも, then a second whole question. It is what you say aloud when you are offering somebody a choice between two things, and it does not join two nouns inside a statement the way または does."
+
+- id: b4band8.apples-or-oranges
+  jlpt: N3
+  scenario: or
+  japanese: あなたはリンゴが好きですか、それともオレンジが好きですか。
+  reading: あなたはリンゴがすきですか、それともオレンジがすきですか。
+  romaji: anata wa ringo ga suki desu ka, soretomo orenji ga suki desu ka.
+  english: "Do you like apples or oranges?"
+  tatoebaId: "232338"
+  recognitionOnly: true
+  notes: "The textbook shape of それとも, with the two halves fully spelled out -- Japanese repeats が好きですか rather than shortening the second half the way English does. リンゴ is an apple and オレンジ an orange; katakana is common for fruit names, though りんご in hiragana is just as ordinary."
+
+# -- Lesson 4 - What's more -------------------------------------------------
+
+- id: b4band8.cheap-and-nourishing
+  jlpt: N3
+  scenario: what's more
+  japanese: この魚は安くてしかも栄養がある。
+  reading: このさかなはやすくてしかもえいようがある。
+  romaji: kono sakana wa yasukute shikamo eiyou ga aru.
+  english: "This fish is inexpensive but nourishing."
+  tatoebaId: "222368"
+  recognitionOnly: true
+  notes: "しかも adds a second point that pulls the same way as the first: cheap, and on top of that good for you. Notice the English here says but -- when the two points are the kind that usually pull against each other, English reaches for a contrast where Japanese simply adds. 栄養がある is to be nutritious."
+
+- id: b4band8.and-in-her-presence
+  jlpt: N3
+  scenario: what's more
+  japanese: 彼はそれをした、しかも彼女のいる前で。
+  reading: かれはそれをした、しかもかのじょのいるまえで。
+  romaji: kare wa sore o shita, shikamo kanojo no iru mae de.
+  english: "He did it, and in her presence."
+  tatoebaId: "112214"
+  recognitionOnly: true
+  notes: "This is しかも at its most pointed: the added fact makes the first one worse, and the speaker knows it. Much of what しかも adds is like this -- an aggravating detail. 彼女のいる前で is in the presence of her being there, 前 in its meaning of in front of somebody rather than of time."
+
+- id: b4band8.narrow-and-steep
+  jlpt: N3
+  scenario: what's more
+  japanese: 山越えの道は狭く、しかも急勾配だった。
+  reading: やまごえのみちはせまく、しかもきゅうこうばいだった。
+  romaji: yamagoe no michi wa semaku, shikamo kyuu-koubai datta.
+  english: "The road across the mountain was narrow, and what's more, it was a steep slope."
+  tatoebaId: "74305"
+  recognitionOnly: true
+  notes: "狭く is 狭い with its final い changed to く, and here that く is joining clauses rather than modifying a verb -- narrow, and then the sentence goes on. It is the written equivalent of the 狭くて you already build, and you will meet it constantly in writing. 山越え is a mountain crossing and 急勾配 a steep gradient."
+
+- id: b4band8.careless-and-frequent
+  jlpt: N3
+  scenario: what's more
+  japanese: 彼は不注意な過ちをおかす、しかも頻繁にだ。
+  reading: かれはふちゅういなあやまちをおかす、しかもひんぱんにだ。
+  romaji: kare wa fuchuui na ayamachi o okasu, shikamo hinpan ni da.
+  english: "He makes careless mistakes, and does so frequently."
+  tatoebaId: "100465"
+  recognitionOnly: true
+  notes: "しかも can add an adverb rather than a clause, and the sentence stops there -- しかも頻繁にだ, and frequently at that. 不注意 is carelessness, 不 on the 注意 you already have; 過ちをおかす is the set phrase for making a mistake, written 犯す when it is in kanji."
+
+- id: b4band8.five-dollars-more
+  jlpt: N3
+  scenario: what's more
+  japanese: その上さらに５ドル払った。
+  reading: そのうえさらにごドルはらった。
+  romaji: sono ue sarani go-doru haratta.
+  english: "I paid five dollars in addition."
+  tatoebaId: "208985"
+  recognitionOnly: true
+  notes: "その上 and さらに stacked together, which is common and not redundant: その上 says there is more to come, さらに says how much more. This is さらに as a plain adverb of degree, further, rather than as a sentence connective."
+
+- id: b4band8.a-cold-and-then-snow
+  jlpt: N3
+  scenario: what's more
+  japanese: 悪い風邪をひいていて、さらに悪いことには、雪が降ってきました。
+  reading: わるいかぜをひいていて、さらにわるいことには、ゆきがふってきました。
+  romaji: warui kaze o hiite ite, sarani warui koto ni wa, yuki ga futte kimashita.
+  english: "I had a bad cold, and to make matters worse, it began snowing."
+  tatoebaId: "191457"
+  recognitionOnly: true
+  notes: "さらに悪いことには is a fixed phrase worth having whole: and to make matters worse. It is built out of さらに, further, plus 悪い, worse, plus ことには, and it always introduces the extra misfortune. 降ってきました is 降る with the てくる you had in the chapter on finishing what was started."
+
+- id: b4band8.this-adds-to-our-troubles
+  jlpt: N3
+  scenario: what's more
+  japanese: これでさらに困ったことになるだろう。
+  reading: これでさらにこまったことになるだろう。
+  romaji: kore de sarani komatta koto ni naru darou.
+  english: "This will add to our troubles."
+  tatoebaId: "218776"
+  recognitionOnly: true
+  notes: "さらに in front of a whole predicate: this will make things more troublesome still. ことになる, it comes about that, is from Book Three's chapter on purpose, and だろう is the plain probably from earlier in this book."
+
+- id: b4band8.knowledge-scarce-wisdom-scarcer
+  jlpt: N3
+  scenario: what's more
+  japanese: 知識は欠乏しており、知恵はさらに乏しい。
+  reading: ちしきはけつぼうしており、ちえはさらにとぼしい。
+  romaji: chishiki wa ketsubou shite ori, chie wa sarani toboshii.
+  english: "Knowledge is scarce; wisdom is scarcer."
+  tatoebaId: "127046"
+  recognitionOnly: true
+  notes: "さらに with an adjective is even more of it: scarce, and this one scarcer. ており is the written form of ていて -- the same おる you met in ております, standing mid-sentence with the polite ending stripped off. 知識 is knowledge and 知恵 wisdom; 欠乏 is a shortage and 乏しい is scanty, sharing the character 乏."
+
+# -- Lesson 5 - Rather ------------------------------------------------------
+
+- id: b4band8.honor-before-money
+  jlpt: N3
+  scenario: rather
+  japanese: 私は金よりむしろ名誉を選ぶ。
+  reading: わたしはかねよりむしろめいよをえらぶ。
+  romaji: watashi wa kane yori mushiro meiyo o erabu.
+  english: "I would choose honor before money."
+  tatoebaId: "157565"
+  recognitionOnly: true
+  notes: "The plainest frame: X より むしろ Y, where より marks what is being passed over. むしろ is not doing anything より could not do alone -- it sharpens it, and marks the choice as deliberate. 金 is the same word as お金 with the polite お taken off -- blunter, and the form a written sentence like this one uses."
+
+- id: b4band8.exercise-does-more-harm
+  jlpt: N3
+  scenario: rather
+  japanese: 過度の運動は身体のためというよりむしろ害になる。
+  reading: かどのうんどうはからだのためというよりむしろがいになる。
+  romaji: kado no undou wa karada no tame to iu yori mushiro gai ni naru.
+  english: "Too much exercise does more harm than good."
+  tatoebaId: "186476"
+  recognitionOnly: true
+  notes: "というよりむしろ is the frame to own: not so much X as Y. What comes before というより is the description being rejected, what comes after むしろ is the truer one. 過度の is excessive, 害になる is to do harm, and 身体 is another spelling of the 体 you know, read the same way in this everyday phrase."
+
+- id: b4band8.gentle-rather-than-kind
+  jlpt: N3
+  scenario: rather
+  japanese: 彼は親切というよりむしろ気がやさしい。
+  reading: かれはしんせつというよりむしろきがやさしい。
+  romaji: kare wa shinsetsu to iu yori mushiro ki ga yasashii.
+  english: "He is more gentle than kind."
+  tatoebaId: "103674"
+  recognitionOnly: true
+  notes: "The same frame with two adjectives that overlap: not so much kind as gentle-natured. This is what むしろ is for -- picking the more accurate of two near-synonyms. 気がやさしい is soft-hearted, with やさしい written 優しい in kanji; the 易しい you learned meaning easy is a different word with the same sound."
+
+- id: b4band8.a-writer-more-than-a-scholar
+  jlpt: N3
+  scenario: rather
+  japanese: 彼は学者というよりもむしろ流行作家だ。
+  reading: かれはがくしゃというよりもむしろりゅうこうさっかだ。
+  romaji: kare wa gakusha to iu yori mo mushiro ryuukou sakka da.
+  english: "He is not so much a scholar as a popular writer."
+  tatoebaId: "108842"
+  recognitionOnly: true
+  notes: "というよりも, with も added, is the same frame and slightly more emphatic. は may stand there instead. 流行作家 is a popular writer, 流行 being fashion or vogue."
+
+- id: b4band8.rather-not-go-out-today
+  jlpt: N3
+  scenario: rather
+  japanese: 今日はむしろ外出したくない。
+  reading: きょうはむしろがいしゅつしたくない。
+  romaji: kyou wa mushiro gaishutsu shitakunai.
+  english: "I would rather not go out today."
+  tatoebaId: "171717"
+  recognitionOnly: true
+  notes: "むしろ standing alone, with nothing named to compare against: I would rather not, all things considered. The comparison is still there, but it is the unspoken alternative -- going out. This is the shape closest to English would rather."
+
+- id: b4band8.a-hall-rather-than-a-room
+  jlpt: N3
+  scenario: rather
+  japanese: それは部屋というよりはむしろ広間だ。
+  reading: それはへやというよりはむしろひろまだ。
+  romaji: sore wa heya to iu yori wa mushiro hiroma da.
+  english: "It is a hall rather than a room."
+  tatoebaId: "204882"
+  recognitionOnly: true
+  notes: "というよりは, this time with は, correcting the label rather than the fact: calling it a room understates it. 広間 is a hall or large reception room."
+
+# -- Lesson 6 - One side, the other -----------------------------------------
+
+- id: b4band8.one-tall-the-other-short
+  jlpt: N3
+  scenario: one side, the other
+  japanese: 一方は背が高く、もう一方は背が低い。
+  reading: いっぽうはせがたかく、もういっぽうはせがひくい。
+  romaji: ippou wa se ga takaku, mou ippou wa se ga hikui.
+  english: "One is tall and the other is short."
+  tatoebaId: "190048"
+  recognitionOnly: true
+  notes: "一方は... もう一方は... is the frame for two of something: one, and the other. 一方 here is an ordinary noun meaning one of a pair. 背が高い and 背が低い are the set phrases for tall and short of a person, with 背 read せ. 高く is the joining form of 高い, the same く you met with 狭く."
+
+- id: b4band8.one-cat-black-the-other-brown
+  jlpt: N3
+  scenario: one side, the other
+  japanese: その猫の一方は黒で、もう一方は茶だ。
+  reading: そのねこのいっぽうはくろで、もういっぽうはちゃだ。
+  romaji: sono neko no ippou wa kuro de, mou ippou wa cha da.
+  english: "One of the cats is black, the other is brown."
+  tatoebaId: "207316"
+  recognitionOnly: true
+  notes: "The same frame with の in front of it: その猫の一方, one of the cats. 茶 by itself is short for 茶色, brown, as 黒 is for the colour black. で is the て-form of だ, linking the first half to the second."
+
+- id: b4band8.green-floor-yellow-walls
+  jlpt: N3
+  scenario: one side, the other
+  japanese: 床は緑色に塗られていたが、一方壁は黄色だった。
+  reading: ゆかはみどりいろにぬられていたが、いっぽうかべはきいろだった。
+  romaji: yuka wa midoriiro ni nurarete ita ga, ippou kabe wa kiiro datta.
+  english: "The floor was painted green, while the walls were yellow."
+  tatoebaId: "146465"
+  recognitionOnly: true
+  notes: "The second job: 一方 at the head of the second clause, meaning meanwhile or whereas. It sets two facts against each other without saying either is wrong -- which is what separates it from が or けど, whose job is contrast proper. Here が does that work and 一方 marks the turn. 塗られていた is the passive of 塗る, to paint."
+
+- id: b4band8.some-waited-others-prepared
+  jlpt: N3
+  scenario: one side, the other
+  japanese: 一部の住民が様子見の態度を取る一方で他の者は大洪水に備えた。
+  reading: いちぶのじゅうみんがようすみのたいどをとるいっぽうでほかのものはだいこうずいにそなえた。
+  romaji: ichibu no juumin ga yousumi no taido o toru ippou de hoka no mono wa daikouzui ni sonaeta.
+  english: "Some residents took a wait-and-see attitude while others prepared for heavy flooding."
+  tatoebaId: "76346"
+  recognitionOnly: true
+  notes: "一方で inside one sentence, joining two clauses: while some did this, others did that. A plain verb stands in front of it. 一部の住民 is some of the residents, 様子見の態度 a wait-and-see attitude, 他の者 the others, and 備える is to prepare for something that may come."
+
+- id: b4band8.latin-was-already-dead
+  jlpt: N3
+  scenario: one side, the other
+  japanese: しかし、その一方、ラテン語はそのときまでに「死語」となっていた。
+  reading: しかし、そのいっぽう、ラテンごはそのときまでに「しご」となっていた。
+  romaji: shikashi, sono ippou, ratengo wa sono toki made ni shigo to natte ita.
+  english: "But, then again, Latin was already a \"dead language\" by that time."
+  tatoebaId: "216343"
+  recognitionOnly: true
+  notes: "その一方 at the head of a sentence: then again, looking back at what was just said. しかし is the written however -- the word behind でも and けど when the register lifts, and one you will meet on every page of anything printed. となっていた is なる with と in front of it rather than に: the more formal of the two, and it suggests a settled outcome."
+
+- id: b4band8.distrust-keeps-growing
+  jlpt: N3
+  scenario: one side, the other
+  japanese: 社会保険庁や厚生労働省への不信感は募る一方である。
+  reading: しゃかいほけんちょうやこうせいろうどうしょうへのふしんかんはつのるいっぽうである。
+  romaji: shakai hoken chou ya kousei roudou shou e no fushinkan wa tsunoru ippou de aru.
+  english: "Distrust of the Social Insurance Agency and the Ministry of Health, Labour and Welfare just keeps getting stronger."
+  tatoebaId: "76047"
+  recognitionOnly: true
+  notes: "A third job, and one to recognise rather than build: a plain verb plus 一方である or 一方だ says the thing only ever goes one way -- it keeps on growing, and never the reverse. 募る is to grow in intensity, 不信感 is distrust, and the two long names are the Social Insurance Agency and the Ministry of Health, Labour and Welfare."
+
+# -- Lesson 7 - By the way --------------------------------------------------
+
+- id: b4band8.what-sports-do-you-like
+  jlpt: N3
+  scenario: by the way
+  japanese: ところであなたはどんなスポーツが好きですか。
+  reading: ところであなたはどんなスポーツがすきですか。
+  romaji: tokorode anata wa donna supootsu ga suki desu ka.
+  english: "Well, what sports do you like?"
+  tatoebaId: "200846"
+  recognitionOnly: true
+  notes: "ところで changes the subject. It goes at the head of the sentence, and what follows has nothing to do with what came before -- that break is the whole point of the word. どんな asks what kind of, and it stands in front of a noun with nothing between them."
+
+- id: b4band8.where-do-you-live
+  jlpt: N3
+  scenario: by the way
+  japanese: ところで、お住まいはどちらですか。
+  reading: ところで、おすまいはどちらですか。
+  romaji: tokorode, o-sumai wa dochira desu ka.
+  english: "By the way, where do you live?"
+  tatoebaId: "200866"
+  recognitionOnly: true
+  notes: "ところで with a comma, which is how it is usually written. お住まい is 住まい, a residence, with the polite お from the chapter on speaking with care; どちら is the polite どこ, which matches the register the rest of the sentence is in."
+
+- id: b4band8.have-you-decided-on-a-house
+  jlpt: N3
+  scenario: by the way
+  japanese: ところで、ベティ、夢のマイホームはもう決まった？
+  reading: ところで、ベティ、ゆめのマイホームはもうきまった？
+  romaji: tokorode, beti, yume no mai hoomu wa mou kimatta?
+  english: "So, Betty, have you decided on your dream home yet?"
+  tatoebaId: "200862"
+  recognitionOnly: true
+  notes: "The same word among friends -- ところで is neither formal nor casual, and this sentence is as casual as they come, ending in a plain past with a rising tone. マイホーム is a house of one's own, a borrowing English does not use this way."
+
+- id: b4band8.and-now-its-raining
+  jlpt: N3
+  scenario: by the way
+  japanese: その上雨が降り出している。
+  reading: そのうえあめがふりだしている。
+  romaji: sono ue ame ga furidashite iru.
+  english: "Besides, it's starting to rain."
+  tatoebaId: "208980"
+  recognitionOnly: true
+  notes: "その上 is the spoken sibling of しかも: on top of that. It stands at the head of the sentence and adds one more thing -- often one more thing going wrong, though it carries good news just as readily. 降り出す is 降る plus 出す, to start coming down."
+
+- id: b4band8.interesting-and-instructive
+  jlpt: N3
+  scenario: by the way
+  japanese: この本はおもしろい、その上、非常にためになる。
+  reading: このほんはおもしろい、そのうえ、ひじょうにためになる。
+  romaji: kono hon wa omoshiroi, sono ue, hijou ni tame ni naru.
+  english: "This book is interesting and, what is more, very instructive."
+  tatoebaId: "219716"
+  recognitionOnly: true
+  notes: "その上 between two commas, adding a second good point to the first. ためになる is a fixed phrase meaning to do you good or to be worth your while."
