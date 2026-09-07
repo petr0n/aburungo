@@ -87,7 +87,7 @@ Conventions as band 0.
   31 characters — `recognitionOnly`) · #197448 ビュッフェ、またはカフェテリアは９号車にあります。 · #173494
   紅茶またはコーヒーはいかが？ · #172631 今は彼らは小型車または中型車を好む。(彼ら: band 6) · #226408 ガスで
   調理しますか、あるいは電気ですか。 · #232338 あなたはリンゴが好きですか、それともオレンジが好きですか。
-  (オレンジ: band 1) · #208754 その人は慎み深いのか、それとも怠惰なのかと人は思うだろう。(のか; だろう: band 2)
+  (オレンジ is taught nowhere in the course -- it needs a word card or a gloss) · #208754 その人は慎み深いのか、それとも怠惰なのかと人は思うだろう。(のか; だろう: band 2)
 - **New words:** 非常に ひじょうに 1484930 s1 · 匂い におい 1599760 s1 (N3) · 好む このむ 1277520 s1 (N3) · 調理
   ちょうり 1429310 s1 · 液体 えきたい 1175030 s1 (N2). Optional: 気体 1222460 (N3), 中型 1424010, 紅茶 (check
   taught), 怠惰 1410730.
@@ -99,11 +99,11 @@ Conventions as band 0.
 - **Teaches:** しかも (moreover — and, pointedly, "and on top of that"), さらに (further / furthermore;
   also the adverb "even more": さらに強まった). その上 (band 7's sentence) is the spoken sibling.
 - **Candidates:** #222368 この魚は安くてしかも栄養がある。 · #112214 彼はそれをした、しかも彼女のいる前で。 ·
-  #74305 山越えの道は狭く、しかも急勾配だった。(狭く continuative: Book Three ch.11) · #100465 彼は不注意な
+  #74305 山越えの道は狭く、しかも急勾配だった。(狭く is the adjectival continuative -- NOT taught: no book teaches it, gloss it in the card note) · #100465 彼は不注意な
   過ちをおかす、しかも頻繁にだ。 · #208985 その上さらに５ドル払った。(払う: band 6) · #191457 悪い風邪をひいて
   いて、さらに悪いことには、雪が降ってきました。(31 characters — `recognitionOnly`; てくる: band 0) ·
   #218776 これでさらに困ったことになるだろう。(ことになる: Book Three ch.8; だろう: band 2) · #127046 知識は
-  欠乏しており、知恵はさらに乏しい。(おり: Book Three ch.11)
+  欠乏しており、知恵はさらに乏しい。(ており is the continuative -- NOT taught: no book teaches it, gloss it in the card note)
 - **New words:** 栄養 えいよう 1173990 s1 (N3) · 知識 ちしき 1420590 s1 (N3) · 知恵 ちえ 1420530 s1 (N3) · 頻繁
   ひんぱん 1491050 s1 · 乏しい とぼしい 1584130 s1. Optional: 不注意 1493830, 過ち 1196010, 欠乏 1254100.
 - **Kanji new to the manifest:** 栄 養 識 恵 頻 繁 乏 (栄 band 4; 知 band 6; 恵 band 5 optional).
