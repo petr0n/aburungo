@@ -212,7 +212,7 @@
   romaji: o-namae to shakai hoshou bangou o osshatte kudasai.
   english: State your name and social security number, please.
   tatoebaId: "226579"
-  notes: "The same frame at a counter. 下さい is written in kanji here and ください in kana on the card before it; they are one word and the kana spelling is commoner in modern writing. 社会保障番号 is a social security number. お名前 raises the name because it is the listener's, which is why you never put お on your own."
+  notes: "The same frame at a counter. 下さい is written in kanji here and ください in kana on the card before it; they are one word and the kana spelling is commoner in modern writing. 社会保障番号 is a social security number. お名前 raises the name because it is the listener's, which is why you never put お on your own name. The prefix does go on your own side elsewhere -- last chapter's ご連絡いたします and お待ちしております are both about the speaker."
 
 - id: b4band5.you-can-speak-freely-here
   jlpt: N3
@@ -307,7 +307,7 @@
   romaji: dezaato wa nani ni nasaimasu ka?
   english: What would you like for dessert?
   tatoebaId: "202257"
-  notes: "にする, settling on one thing out of several, raised into になさいます. You have met the other half of this pair already: にいたします, from the last chapter, is what the person behind the counter says about their own action. The customer chooses -- になさいます -- and the waiter carries it out -- にいたします."
+  notes: "にする, settling on one thing out of several, raised into になさいます. You have met the other half of this pair already: にいたします, from the last chapter, is what the person behind the counter says about their own action. になさいます raises the listener's choosing. にいたします lowers the speaker's own -- コーヒーにいたします, I will make it coffee -- and last chapter's 小額の札にいたしますか is a teller using it as service language while asking about your choice."
 
 - id: b4band5.your-daughter-passed-the-exam
   jlpt: N3
@@ -317,7 +317,7 @@
   romaji: ojousan wa shiken ni goukaku nasatta sou desu ne.
   english: Your daughter passed the examination, I hear.
   tatoebaId: "227017"
-  notes: "なさる past is なさった, and here it is doing what makes the verb worth learning: any noun that takes する can take it instead, so 合格する becomes 合格なさる. That is exactly as productive as the last chapter's いたす, pointed the other way. The person raised is not the listener but their daughter, which counts as their side. そうです is this book's third chapter's hearsay."
+  notes: "なさる past is なさった, and here it is doing what makes the verb worth learning: any noun that takes する can take it instead, so 合格する becomes 合格なさる. That is exactly as productive as the last chapter's いたす, pointed the other way. The person raised is not the listener but their daughter -- お嬢さん, the respectful word for somebody else's daughter, which you take whole here -- and she counts as their side. そうです is this book's third chapter's hearsay."
 
 # -- Lesson 4 - Would you kindly ---------------------------------------------
 
@@ -349,7 +349,7 @@
   romaji: o-maneki kudasatte arigatou gozaimashita.
   english: Thank you for inviting us.
   tatoebaId: "227021"
-  notes: "お plus a ます-stem plus くださる: the frame for thanking somebody for something they did for you, and worth owning whole. 招きます gives 招き, so お招きくださって, and ありがとうございました closes it. A friend doing the same favour would get the same thanks with くれて in place of くださって -- same act, different height."
+  notes: "お plus a ます-stem plus くださる: the frame for thanking somebody for something they did for you, and worth owning whole. 招きます gives 招き, so お招きくださって, and ありがとうございました closes it. A friend doing the same favour gets 招いてくれてありがとう -- plain te-form plus くれる. The お plus stem frame is itself the honorific, so it does not survive the swap."
 
 - id: b4band5.god-has-blessed-me-with-riches
   jlpt: N3
@@ -445,7 +445,7 @@
   english: All in favor of this proposition will please say Aye.
   tatoebaId: "220454"
   recognitionOnly: true
-  notes: "支持される is not a passive: nobody is being supported by anybody. It is the light honorific -- れる and られる on a verb whose subject is the person being honoured -- and 方, the respectful word for person, is the giveaway that follows it in three of this lesson's four sentences. 提議 is a motion, a near neighbour of the 提案 you met last chapter. おっしゃって下さい from lesson 2 closes it."
+  notes: "支持される is not a passive: nobody is being supported by anybody. It is the light honorific -- れる and られる on a verb whose subject is the person being honoured -- and 方, the respectful word for person, is the giveaway that follows it in two of this lesson's four sentences. 提議 is a motion, a near neighbour of the 提案 you met last chapter. おっしゃって下さい from lesson 2 closes it."
 
 - id: b4band5.it-is-desirable-that-you-attend
   jlpt: N3

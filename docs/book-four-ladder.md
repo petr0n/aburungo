@@ -938,7 +938,7 @@ never reads it.
 
 **Lesson 2 of 7** · Raising the other person
 **Can do:** Recognise the honorific 言う and 見る
-**Grammar:** `～おっしゃる` — おっしゃる is 言う raised to the person speaking. おっしゃってください is the polite please tell us, and 〜とおっしゃいます is how somebody else's name is given. The humble twins are 申す and 申し上げる, so one meaning stands at three heights and who is talking picks the height. 見る goes the same way: its honorific is ご覧になる, met most often as ご覧の通り and, after a te-form, as ご覧なさい.
+**Grammar:** `～おっしゃる` — おっしゃる is 言う raised to the person speaking. おっしゃってください is the polite please tell us, and 〜とおっしゃいます is how somebody else's name is given. The humble twins are 申す and 申し上げる, so one meaning stands at three heights and who is talking picks the height. 見る goes the same way: its honorific is ご覧になる, met most often as ご覧の通り and as ご覧なさい, which is please look on its own and a gentle have-a-go after a te-form.
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -1029,7 +1029,7 @@ never reads it.
 
 **Lesson 6 of 7** · Raising the other person
 **Can do:** Tell the honorific れる and られる from the passive and the potential
-**Grammar:** `～される方` — The light honorific: れる or られる on a verb whose subject is the person being honoured -- 出席される, 支持される. It is spelled exactly like the passive, and three things separate them in practice: no agent marked with に, a subject who is the one being raised, and often 方 or お客様 in front of the verb. It is a gentler lift than いらっしゃる or お～になる, common in notices and in speech about the public. 来られる also collides with the potential, which is why speakers often avoid it.
+**Grammar:** `～される方` — The light honorific: れる or られる on a verb whose subject is the person being honoured -- 出席される, 支持される. It is spelled exactly like the passive, and three things separate them in practice: no agent marked with に, a subject who is the one being raised, and often 方 after the verb, as in 支持される方, or お客様 as its subject. It is a gentler lift than いらっしゃる or お～になる, common in notices and in speech about the public. 来られる also collides with the potential, which is why speakers often avoid it.
 
 | Word | Reading | Meaning |
 |---|---|---|

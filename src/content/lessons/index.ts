@@ -65,6 +65,8 @@ import b4FinishingRaw from "./b4-00-finishing.yaml";
 import b4MeaningRaw from "./b4-01-meaning.yaml";
 import b4ReasonRaw from "./b4-02-reason.yaml";
 import b4TalkRaw from "./b4-03-talk.yaml";
+import b4KeigoHumbleRaw from "./b4-04-keigo-humble.yaml";
+import b4KeigoHonorificRaw from "./b4-05-keigo-honorific.yaml";
 
 const knownWordIds = new Set(allWords.map((w) => w.id));
 const knownPhraseIds = new Set(allPhrases.map((p) => p.id));
@@ -469,6 +471,8 @@ export const b4Lessons: Lesson[] = [
     b4ChapterIds,
   ),
   ...parseLessons(b4TalkRaw, "lessons/b4-03-talk.yaml", knownWordIds, knownPhraseIds, knownPatternIds, b4ChapterIds),
+  ...parseLessons(b4KeigoHumbleRaw, "lessons/b4-04-keigo-humble.yaml", knownWordIds, knownPhraseIds, knownPatternIds, b4ChapterIds),
+  ...parseLessons(b4KeigoHonorificRaw, "lessons/b4-05-keigo-honorific.yaml", knownWordIds, knownPhraseIds, knownPatternIds, b4ChapterIds),
 ].sort((a, b) => a.order - b.order);
 
 export function findLesson(id: string): Lesson | undefined {
