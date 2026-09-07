@@ -176,6 +176,1758 @@
   on: ["カン"]
   kun: ["せき", "-ぜき", "かか.わる", "からくり", "かんぬき"]
   strokes: 14
+- character: "故"
+  meanings: ["happenstance", "especially", "intentionally", "reason"]
+  allMeanings: ["happenstance", "especially", "intentionally", "reason", "cause", "circumstances", "the late", "therefore", "consequently"]
+  on: ["コ"]
+  kun: ["ゆえ", "ふる.い", "もと"]
+  strokes: 9
+- character: "障"
+  meanings: ["hinder", "hurt", "harm"]
+  allMeanings: ["hinder", "hurt", "harm"]
+  on: ["ショウ"]
+  kun: ["さわ.る"]
+  strokes: 14
+- character: "場"
+  meanings: ["location", "place"]
+  allMeanings: ["location", "place"]
+  on: ["ジョウ", "チョウ"]
+  kun: ["ば"]
+  strokes: 12
+- character: "退"
+  meanings: ["retreat", "withdraw", "retire", "resign"]
+  allMeanings: ["retreat", "withdraw", "retire", "resign", "repel", "expel", "reject"]
+  on: ["タイ"]
+  kun: ["しりぞ.く", "しりぞ.ける", "ひ.く", "の.く", "の.ける", "ど.く"]
+  strokes: 9
+- character: "屈"
+  meanings: ["yield", "bend", "flinch", "submit"]
+  allMeanings: ["yield", "bend", "flinch", "submit"]
+  on: ["クツ"]
+  kun: ["かが.む", "かが.める"]
+  strokes: 8
+- character: "少"
+  meanings: ["few", "little"]
+  allMeanings: ["few", "little"]
+  on: ["ショウ"]
+  kun: ["すく.ない", "すこ.し"]
+  strokes: 4
+- character: "無"
+  meanings: ["nothingness", "none", "ain't", "nothing"]
+  allMeanings: ["nothingness", "none", "ain't", "nothing", "nil", "not"]
+  on: ["ム", "ブ"]
+  kun: ["な.い"]
+  strokes: 12
+- character: "部"
+  meanings: ["section", "bureau", "dept", "class"]
+  allMeanings: ["section", "bureau", "dept", "class", "copy", "part", "portion", "counter for copies of a newspaper or magazine"]
+  on: ["ブ"]
+  kun: ["-べ"]
+  strokes: 11
+- character: "屋"
+  meanings: ["roof", "house", "shop", "dealer"]
+  allMeanings: ["roof", "house", "shop", "dealer", "seller"]
+  on: ["オク"]
+  kun: ["や"]
+  strokes: 9
+- character: "用"
+  meanings: ["utilize", "business", "service", "use"]
+  allMeanings: ["utilize", "business", "service", "use", "employ"]
+  on: ["ヨウ"]
+  kun: ["もち.いる"]
+  strokes: 5
+- character: "意"
+  meanings: ["idea", "mind", "heart", "taste"]
+  allMeanings: ["idea", "mind", "heart", "taste", "thought", "desire", "care", "liking"]
+  on: ["イ"]
+  kun: []
+  strokes: 13
+- character: "自"
+  meanings: ["oneself"]
+  allMeanings: ["oneself"]
+  on: ["ジ", "シ"]
+  kun: ["みずか.ら", "おの.ずから", "おの.ずと"]
+  strokes: 6
+- character: "任"
+  meanings: ["responsibility", "duty", "term", "entrust to"]
+  allMeanings: ["responsibility", "duty", "term", "entrust to", "appoint"]
+  on: ["ニン"]
+  kun: ["まか.せる", "まか.す"]
+  strokes: 6
+- character: "安"
+  meanings: ["relax", "cheap", "low", "quiet"]
+  allMeanings: ["relax", "cheap", "low", "quiet", "rested", "contented", "peaceful"]
+  on: ["アン"]
+  kun: ["やす.い", "やす.まる", "やす", "やす.らか"]
+  strokes: 6
+- character: "心"
+  meanings: ["heart", "mind", "spirit", "heart radical (no. 61)"]
+  allMeanings: ["heart", "mind", "spirit", "heart radical (no. 61)"]
+  on: ["シン"]
+  kun: ["こころ", "-ごころ"]
+  strokes: 4
+- character: "調"
+  meanings: ["tune", "tone", "meter", "key (music)"]
+  allMeanings: ["tune", "tone", "meter", "key (music)", "writing style", "prepare", "exorcise", "investigate", "harmonize", "mediate"]
+  on: ["チョウ"]
+  kun: ["しら.べる", "しら.べ", "ととの.う", "ととの.える"]
+  strokes: 15
+- character: "試"
+  meanings: ["test", "try", "attempt", "experiment"]
+  allMeanings: ["test", "try", "attempt", "experiment", "ordeal"]
+  on: ["シ"]
+  kun: ["こころ.みる", "ため.す"]
+  strokes: 13
+- character: "営"
+  meanings: ["camp", "perform", "build", "conduct (business)"]
+  allMeanings: ["camp", "perform", "build", "conduct (business)"]
+  on: ["エイ"]
+  kun: ["いとな.む", "いとな.み"]
+  strokes: 12
+- character: "業"
+  meanings: ["business", "vocation", "arts", "performance"]
+  allMeanings: ["business", "vocation", "arts", "performance"]
+  on: ["ギョウ", "ゴウ"]
+  kun: ["わざ"]
+  strokes: 13
+- character: "宝"
+  meanings: ["treasure", "wealth", "valuables"]
+  allMeanings: ["treasure", "wealth", "valuables"]
+  on: ["ホウ"]
+  kun: ["たから"]
+  strokes: 8
+- character: "石"
+  meanings: ["stone"]
+  allMeanings: ["stone"]
+  on: ["セキ", "シャク", "コク"]
+  kun: ["いし"]
+  strokes: 5
+- character: "度"
+  meanings: ["degrees", "occurrence", "time", "counter for occurrences"]
+  allMeanings: ["degrees", "occurrence", "time", "counter for occurrences", "consider", "attitude"]
+  on: ["ド", "ト", "タク"]
+  kun: ["たび", "-た.い"]
+  strokes: 9
+- character: "追"
+  meanings: ["chase", "drive away", "follow", "pursue"]
+  allMeanings: ["chase", "drive away", "follow", "pursue", "meanwhile"]
+  on: ["ツイ"]
+  kun: ["お.う"]
+  strokes: 9
+- character: "行"
+  meanings: ["going", "journey", "carry out", "conduct"]
+  allMeanings: ["going", "journey", "carry out", "conduct", "act", "line", "row", "bank"]
+  on: ["コウ", "ギョウ", "アン"]
+  kun: ["い.く", "ゆ.く", "-ゆ.き", "-ゆき", "-い.き", "-いき", "おこな.う", "おこ.なう"]
+  strokes: 6
+- character: "動"
+  meanings: ["move", "motion", "change", "confusion"]
+  allMeanings: ["move", "motion", "change", "confusion", "shift", "shake"]
+  on: ["ドウ"]
+  kun: ["うご.く", "うご.かす"]
+  strokes: 11
+- character: "数"
+  meanings: ["number", "strength", "fate", "law"]
+  allMeanings: ["number", "strength", "fate", "law", "figures"]
+  on: ["スウ", "ス", "サク", "ソク", "シュ"]
+  kun: ["かず", "かぞ.える", "しばしば", "せ.める", "わずらわ.しい"]
+  strokes: 13
+- character: "減"
+  meanings: ["dwindle", "decrease", "reduce", "decline"]
+  allMeanings: ["dwindle", "decrease", "reduce", "decline", "curtail", "get hungry"]
+  on: ["ゲン"]
+  kun: ["へ.る", "へ.らす"]
+  strokes: 12
+- character: "犬"
+  meanings: ["dog"]
+  allMeanings: ["dog"]
+  on: ["ケン"]
+  kun: ["いぬ", "いぬ-"]
+  strokes: 4
+- character: "危"
+  meanings: ["dangerous", "fear", "uneasy"]
+  allMeanings: ["dangerous", "fear", "uneasy"]
+  on: ["キ"]
+  kun: ["あぶ.ない", "あや.うい", "あや.ぶむ"]
+  strokes: 6
+- character: "険"
+  meanings: ["precipitous", "inaccessible place", "impregnable position", "steep place"]
+  allMeanings: ["precipitous", "inaccessible place", "impregnable position", "steep place", "sharp eyes"]
+  on: ["ケン"]
+  kun: ["けわ.しい"]
+  strokes: 11
+- character: "役"
+  meanings: ["duty", "war", "campaign", "drafted labor"]
+  allMeanings: ["duty", "war", "campaign", "drafted labor", "office", "service", "role"]
+  on: ["ヤク", "エキ"]
+  kun: []
+  strokes: 7
+- character: "飲"
+  meanings: ["drink", "smoke", "take"]
+  allMeanings: ["drink", "smoke", "take"]
+  on: ["イン", "オン"]
+  kun: ["の.む", "-の.み"]
+  strokes: 12
+- character: "出"
+  meanings: ["exit", "leave", "go out", "come out"]
+  allMeanings: ["exit", "leave", "go out", "come out", "put out", "protrude"]
+  on: ["シュツ", "スイ"]
+  kun: ["で.る", "-で", "だ.す", "-だ.す", "い.でる", "い.だす"]
+  strokes: 5
+- character: "話"
+  meanings: ["tale", "talk"]
+  allMeanings: ["tale", "talk"]
+  on: ["ワ"]
+  kun: ["はな.す", "はなし"]
+  strokes: 13
+- character: "船"
+  meanings: ["ship", "boat"]
+  allMeanings: ["ship", "boat"]
+  on: ["セン"]
+  kun: ["ふね", "ふな-"]
+  strokes: 11
+- character: "戻"
+  meanings: ["re-", "return", "revert", "resume"]
+  allMeanings: ["re-", "return", "revert", "resume", "restore", "go backwards"]
+  on: ["レイ"]
+  kun: ["もど.す", "もど.る"]
+  strokes: 7
+- character: "割"
+  meanings: ["proportion", "comparatively", "divide", "cut"]
+  allMeanings: ["proportion", "comparatively", "divide", "cut", "separate", "split"]
+  on: ["カツ"]
+  kun: ["わ.る", "わり", "わ.り", "わ.れる", "さ.く"]
+  strokes: 12
+- character: "講"
+  meanings: ["lecture", "club", "association"]
+  allMeanings: ["lecture", "club", "association"]
+  on: ["コウ"]
+  kun: []
+  strokes: 17
+- character: "義"
+  meanings: ["righteousness", "justice", "morality", "honor"]
+  allMeanings: ["righteousness", "justice", "morality", "honor", "loyalty", "meaning"]
+  on: ["ギ"]
+  kun: []
+  strokes: 13
+- character: "紙"
+  meanings: ["paper"]
+  allMeanings: ["paper"]
+  on: ["シ"]
+  kun: ["かみ"]
+  strokes: 10
+- character: "送"
+  meanings: ["escort", "send"]
+  allMeanings: ["escort", "send"]
+  on: ["ソウ"]
+  kun: ["おく.る"]
+  strokes: 9
+- character: "湯"
+  meanings: ["hot water", "bath", "hot spring"]
+  allMeanings: ["hot water", "bath", "hot spring"]
+  on: ["トウ"]
+  kun: ["ゆ"]
+  strokes: 12
+- character: "学"
+  meanings: ["study", "learning", "science"]
+  allMeanings: ["study", "learning", "science"]
+  on: ["ガク"]
+  kun: ["まな.ぶ"]
+  strokes: 8
+- character: "全"
+  meanings: ["whole", "entire", "all", "complete"]
+  allMeanings: ["whole", "entire", "all", "complete", "fulfill"]
+  on: ["ゼン"]
+  kun: ["まった.く", "すべ.て"]
+  strokes: 6
+- character: "忍"
+  meanings: ["endure", "bear", "put up with", "conceal"]
+  allMeanings: ["endure", "bear", "put up with", "conceal", "secrete", "spy", "sneak"]
+  on: ["ニン"]
+  kun: ["しの.ぶ", "しの.ばせる"]
+  strokes: 7
+- character: "娘"
+  meanings: ["daughter", "girl"]
+  allMeanings: ["daughter", "girl"]
+  on: ["ジョウ"]
+  kun: ["むすめ", "こ"]
+  strokes: 10
+- character: "参"
+  meanings: ["nonplussed", "three (in documents)", "going", "coming"]
+  allMeanings: ["nonplussed", "three (in documents)", "going", "coming", "visiting", "visit", "be defeated", "die", "be madly in love", "participate", "take part in"]
+  on: ["サン", "シン"]
+  kun: ["まい.る", "まい-", "まじわる", "みつ"]
+  strokes: 8
+- character: "加"
+  meanings: ["add", "addition", "increase", "join"]
+  allMeanings: ["add", "addition", "increase", "join", "include", "Canada"]
+  on: ["カ"]
+  kun: ["くわ.える", "くわ.わる"]
+  strokes: 5
+- character: "勧"
+  meanings: ["persuade", "recommend", "advise", "encourage"]
+  allMeanings: ["persuade", "recommend", "advise", "encourage", "offer"]
+  on: ["カン", "ケン"]
+  kun: ["すす.める"]
+  strokes: 13
+- character: "焼"
+  meanings: ["bake", "burning"]
+  allMeanings: ["bake", "burning"]
+  on: ["ショウ"]
+  kun: ["や.く", "や.き", "や.き-", "-や.き", "や.ける"]
+  strokes: 12
+- character: "済"
+  meanings: ["settle (debt, etc.)", "relieve (burden)", "finish", "come to an end"]
+  allMeanings: ["settle (debt, etc.)", "relieve (burden)", "finish", "come to an end", "excusable", "need not"]
+  on: ["サイ", "セイ"]
+  kun: ["す.む", "-ず.み", "-ずみ", "す.まない", "す.ます", "-す.ます", "すく.う", "な.す", "わたし", "わた.る"]
+  strokes: 11
+- character: "思"
+  meanings: ["think"]
+  allMeanings: ["think"]
+  on: ["シ"]
+  kun: ["おも.う", "おもえら.く", "おぼ.す"]
+  strokes: 9
+- character: "盗"
+  meanings: ["steal", "rob", "pilfer"]
+  allMeanings: ["steal", "rob", "pilfer"]
+  on: ["トウ"]
+  kun: ["ぬす.む", "ぬす.み"]
+  strokes: 11
+- character: "捕"
+  meanings: ["catch", "capture"]
+  allMeanings: ["catch", "capture"]
+  on: ["ホ"]
+  kun: ["と.らえる", "と.らわれる", "と.る", "とら.える", "とら.われる", "つか.まえる", "つか.まる"]
+  strokes: 10
+- character: "駄"
+  meanings: ["burdensome", "pack horse", "horse load", "send by horse"]
+  allMeanings: ["burdensome", "pack horse", "horse load", "send by horse", "trivial", "worthless"]
+  on: ["ダ", "タ"]
+  kun: []
+  strokes: 14
+- character: "考"
+  meanings: ["consider", "think over"]
+  allMeanings: ["consider", "think over"]
+  on: ["コウ"]
+  kun: ["かんが.える", "かんが.え"]
+  strokes: 6
+- character: "現"
+  meanings: ["present", "existing", "actual"]
+  allMeanings: ["present", "existing", "actual"]
+  on: ["ゲン"]
+  kun: ["あらわ.れる", "あらわ.す", "うつつ", "うつ.つ"]
+  strokes: 11
+- character: "実"
+  meanings: ["reality", "truth", "seed", "fruit"]
+  allMeanings: ["reality", "truth", "seed", "fruit", "nut"]
+  on: ["ジツ", "シツ"]
+  kun: ["み", "みの.る", "まこと", "みの", "みち.る"]
+  strokes: 8
+- character: "皿"
+  meanings: ["dish", "a helping", "plate"]
+  allMeanings: ["dish", "a helping", "plate"]
+  on: ["ベイ"]
+  kun: ["さら"]
+  strokes: 5
+- character: "触"
+  meanings: ["contact", "touch", "feel", "hit"]
+  allMeanings: ["contact", "touch", "feel", "hit", "proclaim", "announce", "conflict"]
+  on: ["ショク"]
+  kun: ["ふ.れる", "さわ.る", "さわ"]
+  strokes: 13
+- character: "他"
+  meanings: ["other", "another", "the others"]
+  allMeanings: ["other", "another", "the others"]
+  on: ["タ"]
+  kun: ["ほか"]
+  strokes: 5
+- character: "寄"
+  meanings: ["draw near", "stop in", "bring near", "gather"]
+  allMeanings: ["draw near", "stop in", "bring near", "gather", "collect", "send", "forward"]
+  on: ["キ"]
+  kun: ["よ.る", "-よ.り", "よ.せる"]
+  strokes: 11
+- character: "見"
+  meanings: ["see", "hopes", "chances", "idea"]
+  allMeanings: ["see", "hopes", "chances", "idea", "opinion", "look at", "visible"]
+  on: ["ケン"]
+  kun: ["み.る", "み.える", "み.せる"]
+  strokes: 7
+- character: "袋"
+  meanings: ["sack", "bag", "pouch"]
+  allMeanings: ["sack", "bag", "pouch"]
+  on: ["タイ", "ダイ"]
+  kun: ["ふくろ"]
+  strokes: 11
+- character: "迷"
+  meanings: ["astray", "be perplexed", "in doubt", "lost"]
+  allMeanings: ["astray", "be perplexed", "in doubt", "lost", "err", "illusion"]
+  on: ["メイ"]
+  kun: ["まよ.う"]
+  strokes: 9
+- character: "隠"
+  meanings: ["conceal", "hide", "cover"]
+  allMeanings: ["conceal", "hide", "cover"]
+  on: ["イン", "オン"]
+  kun: ["かく.す", "かく.し", "かく.れる", "よ.る"]
+  strokes: 14
+- character: "道"
+  meanings: ["road-way", "street", "district", "journey"]
+  allMeanings: ["road-way", "street", "district", "journey", "course", "moral", "teachings"]
+  on: ["ドウ", "トウ"]
+  kun: ["みち", "いう"]
+  strokes: 12
+- character: "地"
+  meanings: ["ground", "earth"]
+  allMeanings: ["ground", "earth"]
+  on: ["チ", "ジ"]
+  kun: []
+  strokes: 6
+- character: "図"
+  meanings: ["map", "drawing", "plan", "extraordinary"]
+  allMeanings: ["map", "drawing", "plan", "extraordinary", "audacious"]
+  on: ["ズ", "ト"]
+  kun: ["え", "はか.る"]
+  strokes: 7
+- character: "咳"
+  meanings: ["cough", "clear throat"]
+  allMeanings: ["cough", "clear throat"]
+  on: ["カイ", "ガイ"]
+  kun: ["せ.く", "しわぶ.く", "せき", "しわぶき"]
+  strokes: 9
+- character: "新"
+  meanings: ["new"]
+  allMeanings: ["new"]
+  on: ["シン"]
+  kun: ["あたら.しい", "あら.た", "あら-", "にい-"]
+  strokes: 13
+- character: "飼"
+  meanings: ["domesticate", "raise", "keep", "feed"]
+  allMeanings: ["domesticate", "raise", "keep", "feed"]
+  on: ["シ"]
+  kun: ["か.う"]
+  strokes: 13
+- character: "性"
+  meanings: ["sex", "gender", "nature"]
+  allMeanings: ["sex", "gender", "nature"]
+  on: ["セイ", "ショウ"]
+  kun: ["さが"]
+  strokes: 8
+- character: "起"
+  meanings: ["rouse", "wake up", "get up"]
+  allMeanings: ["rouse", "wake up", "get up"]
+  on: ["キ"]
+  kun: ["お.きる", "お.こる", "お.こす", "おこ.す", "た.つ"]
+  strokes: 10
+- character: "誰"
+  meanings: ["who", "someone", "somebody"]
+  allMeanings: ["who", "someone", "somebody"]
+  on: ["スイ"]
+  kun: ["だれ", "たれ", "た"]
+  strokes: 15
+- character: "入"
+  meanings: ["enter", "insert"]
+  allMeanings: ["enter", "insert"]
+  on: ["ニュウ", "ジュ"]
+  kun: ["い.る", "-い.る", "-い.り", "い.れる", "-い.れ", "はい.る"]
+  strokes: 2
+- character: "方"
+  meanings: ["direction", "person", "alternative"]
+  allMeanings: ["direction", "person", "alternative"]
+  on: ["ホウ"]
+  kun: ["かた", "-かた", "-がた"]
+  strokes: 4
+- character: "流"
+  meanings: ["current", "a sink", "flow", "forfeit"]
+  allMeanings: ["current", "a sink", "flow", "forfeit"]
+  on: ["リュウ", "ル"]
+  kun: ["なが.れる", "なが.れ", "なが.す", "-なが.す"]
+  strokes: 10
+- character: "最"
+  meanings: ["utmost", "most", "extreme"]
+  allMeanings: ["utmost", "most", "extreme"]
+  on: ["サイ", "シュ"]
+  kun: ["もっと.も", "つま"]
+  strokes: 12
+- character: "結"
+  meanings: ["tie", "bind", "contract", "join"]
+  allMeanings: ["tie", "bind", "contract", "join", "organize", "do up hair", "fasten"]
+  on: ["ケツ", "ケチ"]
+  kun: ["むす.ぶ", "ゆ.う", "ゆ.わえる"]
+  strokes: 12
+- character: "果"
+  meanings: ["fruit", "reward", "carry out", "achieve"]
+  allMeanings: ["fruit", "reward", "carry out", "achieve", "complete", "end", "finish", "succeed"]
+  on: ["カ"]
+  kun: ["は.たす", "はた.す", "-は.たす", "は.てる", "-は.てる", "は.て"]
+  strokes: 8
+- character: "内"
+  meanings: ["inside", "within", "between", "among"]
+  allMeanings: ["inside", "within", "between", "among", "house", "home"]
+  on: ["ナイ", "ダイ"]
+  kun: ["うち"]
+  strokes: 4
+- character: "復"
+  meanings: ["restore", "return to", "revert", "resume"]
+  allMeanings: ["restore", "return to", "revert", "resume"]
+  on: ["フク"]
+  kun: ["また"]
+  strokes: 12
+- character: "活"
+  meanings: ["lively", "resuscitation", "being helped", "living"]
+  allMeanings: ["lively", "resuscitation", "being helped", "living"]
+  on: ["カツ"]
+  kun: ["い.きる", "い.かす", "い.ける"]
+  strokes: 9
+- character: "政"
+  meanings: ["politics", "government"]
+  allMeanings: ["politics", "government"]
+  on: ["セイ", "ショウ"]
+  kun: ["まつりごと", "まん"]
+  strokes: 9
+- character: "府"
+  meanings: ["borough", "urban prefecture", "govt office", "representative body"]
+  allMeanings: ["borough", "urban prefecture", "govt office", "representative body", "storehouse"]
+  on: ["フ"]
+  kun: []
+  strokes: 8
+- character: "機"
+  meanings: ["loom", "mechanism", "machine", "airplane"]
+  allMeanings: ["loom", "mechanism", "machine", "airplane", "opportunity", "potency", "efficacy", "occasion"]
+  on: ["キ"]
+  kun: ["はた"]
+  strokes: 16
+- character: "局"
+  meanings: ["bureau", "board", "office", "affair"]
+  allMeanings: ["bureau", "board", "office", "affair", "conclusion", "court lady", "lady-in-waiting", "her apartment"]
+  on: ["キョク"]
+  kun: ["つぼね"]
+  strokes: 7
+- character: "叔"
+  meanings: ["uncle", "youth"]
+  allMeanings: ["uncle", "youth"]
+  on: ["シュク"]
+  kun: []
+  strokes: 8
+- character: "聞"
+  meanings: ["hear", "ask", "listen"]
+  allMeanings: ["hear", "ask", "listen"]
+  on: ["ブン", "モン"]
+  kun: ["き.く", "き.こえる"]
+  strokes: 14
+- character: "町"
+  meanings: ["town", "village", "block", "street"]
+  allMeanings: ["town", "village", "block", "street"]
+  on: ["チョウ"]
+  kun: ["まち"]
+  strokes: 7
+- character: "翻"
+  meanings: ["flip", "turn over", "wave", "flutter"]
+  allMeanings: ["flip", "turn over", "wave", "flutter", "change (mind)"]
+  on: ["ホン", "ハン"]
+  kun: ["ひるがえ.る", "ひるがえ.す"]
+  strokes: 18
+- character: "訳"
+  meanings: ["translate", "reason", "circumstance", "case"]
+  allMeanings: ["translate", "reason", "circumstance", "case"]
+  on: ["ヤク"]
+  kun: ["わけ"]
+  strokes: 11
+- character: "問"
+  meanings: ["question", "ask", "problem"]
+  allMeanings: ["question", "ask", "problem"]
+  on: ["モン"]
+  kun: ["と.う", "と.い", "とん"]
+  strokes: 11
+- character: "題"
+  meanings: ["topic", "subject"]
+  allMeanings: ["topic", "subject"]
+  on: ["ダイ"]
+  kun: []
+  strokes: 18
+- character: "簡"
+  meanings: ["simplicity", "brevity"]
+  allMeanings: ["simplicity", "brevity"]
+  on: ["カン", "ケン"]
+  kun: ["えら.ぶ", "ふだ"]
+  strokes: 18
+- character: "単"
+  meanings: ["simple", "one", "single", "merely"]
+  allMeanings: ["simple", "one", "single", "merely"]
+  on: ["タン"]
+  kun: ["ひとえ"]
+  strokes: 9
+- character: "不"
+  meanings: ["negative", "non-", "bad", "ugly"]
+  allMeanings: ["negative", "non-", "bad", "ugly", "clumsy"]
+  on: ["フ", "ブ"]
+  kun: []
+  strokes: 4
+- character: "降"
+  meanings: ["descend", "precipitate", "fall", "surrender"]
+  allMeanings: ["descend", "precipitate", "fall", "surrender"]
+  on: ["コウ", "ゴ"]
+  kun: ["お.りる", "お.ろす", "ふ.る", "ふ.り", "くだ.る", "くだ.す"]
+  strokes: 10
+- character: "極"
+  meanings: ["extreme", "pole", "extremely", "very"]
+  allMeanings: ["extreme", "pole", "extremely", "very", "highly", "most", "end", "settlement", "conclusion", "highest rank"]
+  on: ["キョク", "ゴク"]
+  kun: ["きわ.める", "きわ.まる", "きわ.まり", "きわ.み", "き.める", "-ぎ.め", "き.まる"]
+  strokes: 12
+- character: "端"
+  meanings: ["edge", "origin", "end", "point"]
+  allMeanings: ["edge", "origin", "end", "point", "border", "verge", "cape"]
+  on: ["タン"]
+  kun: ["はし", "は", "はた", "-ばた", "はな"]
+  strokes: 14
+- character: "君"
+  meanings: ["mister", "you", "ruler", "male name suffix"]
+  allMeanings: ["mister", "you", "ruler", "male name suffix"]
+  on: ["クン"]
+  kun: ["きみ", "-ぎみ"]
+  strokes: 7
+- character: "増"
+  meanings: ["increase", "add", "augment", "gain"]
+  allMeanings: ["increase", "add", "augment", "gain", "promote"]
+  on: ["ゾウ"]
+  kun: ["ま.す", "ま.し", "ふ.える", "ふ.やす"]
+  strokes: 14
+- character: "衰"
+  meanings: ["decline", "wane", "weaken"]
+  allMeanings: ["decline", "wane", "weaken"]
+  on: ["スイ"]
+  kun: ["おとろ.える"]
+  strokes: 10
+- character: "今"
+  meanings: ["now"]
+  allMeanings: ["now"]
+  on: ["コン", "キン"]
+  kun: ["いま"]
+  strokes: 4
+- character: "別"
+  meanings: ["separate", "branch off", "diverge", "fork"]
+  allMeanings: ["separate", "branch off", "diverge", "fork", "another", "extra", "specially"]
+  on: ["ベツ"]
+  kun: ["わか.れる", "わ.ける"]
+  strokes: 7
+- character: "語"
+  meanings: ["word", "speech", "language"]
+  allMeanings: ["word", "speech", "language"]
+  on: ["ゴ"]
+  kun: ["かた.る", "かた.らう"]
+  strokes: 14
+- character: "滅"
+  meanings: ["destroy", "ruin", "overthrow", "perish"]
+  allMeanings: ["destroy", "ruin", "overthrow", "perish"]
+  on: ["メツ"]
+  kun: ["ほろ.びる", "ほろ.ぶ", "ほろ.ぼす"]
+  strokes: 13
+- character: "始"
+  meanings: ["commence", "begin"]
+  allMeanings: ["commence", "begin"]
+  on: ["シ"]
+  kun: ["はじ.める", "-はじ.める", "はじ.まる"]
+  strokes: 8
+- character: "双"
+  meanings: ["pair", "set", "comparison", "counter for pairs"]
+  allMeanings: ["pair", "set", "comparison", "counter for pairs"]
+  on: ["ソウ"]
+  kun: ["ふた", "たぐい", "ならぶ", "ふたつ"]
+  strokes: 4
+- character: "付"
+  meanings: ["adhere", "attach", "refer to", "append"]
+  allMeanings: ["adhere", "attach", "refer to", "append"]
+  on: ["フ"]
+  kun: ["つ.ける", "-つ.ける", "-づ.ける", "つ.け", "つ.け-", "-つ.け", "-づ.け", "-づけ", "つ.く", "-づ.く", "つ.き", "-つ.き", "-つき", "-づ.き", "-づき"]
+  strokes: 5
+- character: "僕"
+  meanings: ["me", "I (male)", "servant", "manservant"]
+  allMeanings: ["me", "I (male)", "servant", "manservant"]
+  on: ["ボク"]
+  kun: ["しもべ"]
+  strokes: 14
+- character: "張"
+  meanings: ["counter for bows & stringed instruments", "stretch", "spread", "put up (tent)"]
+  allMeanings: ["counter for bows & stringed instruments", "stretch", "spread", "put up (tent)"]
+  on: ["チョウ"]
+  kun: ["は.る", "-は.り", "-ば.り"]
+  strokes: 11
+- character: "前"
+  meanings: ["in front", "before"]
+  allMeanings: ["in front", "before"]
+  on: ["ゼン"]
+  kun: ["まえ", "-まえ"]
+  strokes: 9
+- character: "夢"
+  meanings: ["dream", "vision", "illusion"]
+  allMeanings: ["dream", "vision", "illusion"]
+  on: ["ム", "ボウ"]
+  kun: ["ゆめ", "ゆめ.みる", "くら.い"]
+  strokes: 13
+- character: "失"
+  meanings: ["lose", "error", "fault", "disadvantage"]
+  allMeanings: ["lose", "error", "fault", "disadvantage", "loss"]
+  on: ["シツ"]
+  kun: ["うしな.う", "う.せる"]
+  strokes: 5
+- character: "敗"
+  meanings: ["failure", "defeat", "reversal"]
+  allMeanings: ["failure", "defeat", "reversal"]
+  on: ["ハイ"]
+  kun: ["やぶ.れる"]
+  strokes: 11
+- character: "決"
+  meanings: ["decide", "fix", "agree upon", "appoint"]
+  allMeanings: ["decide", "fix", "agree upon", "appoint"]
+  on: ["ケツ"]
+  kun: ["き.める", "-ぎ.め", "き.まる", "さ.く"]
+  strokes: 7
+- character: "愚"
+  meanings: ["foolish", "folly", "absurdity", "stupid"]
+  allMeanings: ["foolish", "folly", "absurdity", "stupid"]
+  on: ["グ"]
+  kun: ["おろ.か"]
+  strokes: 13
+- character: "鍋"
+  meanings: ["pot", "pan", "kettle"]
+  allMeanings: ["pot", "pan", "kettle"]
+  on: ["カ"]
+  kun: ["なべ"]
+  strokes: 17
+- character: "包"
+  meanings: ["wrap", "pack up", "cover", "conceal"]
+  allMeanings: ["wrap", "pack up", "cover", "conceal"]
+  on: ["ホウ"]
+  kun: ["つつ.む", "くる.む"]
+  strokes: 5
+- character: "丁"
+  meanings: ["street", "ward", "town", "counter for guns, tools, leaves or cakes of something"]
+  allMeanings: ["street", "ward", "town", "counter for guns, tools, leaves or cakes of something", "even number", "4th calendar sign"]
+  on: ["チョウ", "テイ", "チン", "トウ", "チ"]
+  kun: ["ひのと"]
+  strokes: 2
+- character: "親"
+  meanings: ["parent", "intimacy", "relative", "familiarity"]
+  allMeanings: ["parent", "intimacy", "relative", "familiarity", "dealer (cards)"]
+  on: ["シン"]
+  kun: ["おや", "おや-", "した.しい", "した.しむ"]
+  strokes: 16
+- character: "倒"
+  meanings: ["overthrow", "fall", "collapse", "drop"]
+  allMeanings: ["overthrow", "fall", "collapse", "drop", "break down"]
+  on: ["トウ"]
+  kun: ["たお.れる", "-だお.れ", "たお.す", "さかさま", "さかさ", "さかしま"]
+  strokes: 10
+- character: "回"
+  meanings: ["-times", "round", "game", "revolve"]
+  allMeanings: ["-times", "round", "game", "revolve", "counter for occurrences"]
+  on: ["カイ", "エ"]
+  kun: ["まわ.る", "-まわ.る", "-まわ.り", "まわ.す", "-まわ.す", "まわ.し-", "-まわ.し", "もとお.る", "か.える"]
+  strokes: 6
+- character: "信"
+  meanings: ["faith", "truth", "fidelity", "trust"]
+  allMeanings: ["faith", "truth", "fidelity", "trust"]
+  on: ["シン"]
+  kun: []
+  strokes: 9
+- character: "劇"
+  meanings: ["drama", "play"]
+  allMeanings: ["drama", "play"]
+  on: ["ゲキ"]
+  kun: []
+  strokes: 15
+- character: "謝"
+  meanings: ["apologize", "thank", "refuse"]
+  allMeanings: ["apologize", "thank", "refuse"]
+  on: ["シャ"]
+  kun: ["あやま.る"]
+  strokes: 17
+- character: "種"
+  meanings: ["species", "kind", "class", "variety"]
+  allMeanings: ["species", "kind", "class", "variety", "seed"]
+  on: ["シュ"]
+  kun: ["たね", "-ぐさ"]
+  strokes: 14
+- character: "類"
+  meanings: ["sort", "kind", "variety", "class"]
+  allMeanings: ["sort", "kind", "variety", "class", "genus"]
+  on: ["ルイ"]
+  kun: ["たぐ.い"]
+  strokes: 18
+- character: "申"
+  meanings: ["have the honor to", "sign of the monkey", "3-5PM", "ninth sign of Chinese zodiac"]
+  allMeanings: ["have the honor to", "sign of the monkey", "3-5PM", "ninth sign of Chinese zodiac"]
+  on: ["シン"]
+  kun: ["もう.す", "もう.し-", "さる"]
+  strokes: 5
+- character: "光"
+  meanings: ["ray", "light"]
+  allMeanings: ["ray", "light"]
+  on: ["コウ"]
+  kun: ["ひか.る", "ひかり"]
+  strokes: 6
+- character: "栄"
+  meanings: ["flourish", "prosperity", "honor", "glory"]
+  allMeanings: ["flourish", "prosperity", "honor", "glory", "splendor"]
+  on: ["エイ", "ヨウ"]
+  kun: ["さか.える", "は.え", "-ば.え", "は.える", "え"]
+  strokes: 9
+- character: "由"
+  meanings: ["wherefore", "a reason"]
+  allMeanings: ["wherefore", "a reason"]
+  on: ["ユ", "ユウ", "ユイ"]
+  kun: ["よし", "よ.る"]
+  strokes: 5
+- character: "連"
+  meanings: ["take along", "lead", "join", "connect"]
+  allMeanings: ["take along", "lead", "join", "connect", "party", "gang", "clique"]
+  on: ["レン"]
+  kun: ["つら.なる", "つら.ねる", "つ.れる", "-づ.れ"]
+  strokes: 10
+- character: "絡"
+  meanings: ["entwine", "coil around", "get caught in"]
+  allMeanings: ["entwine", "coil around", "get caught in"]
+  on: ["ラク"]
+  kun: ["から.む", "から.まる"]
+  strokes: 12
+- character: "支"
+  meanings: ["branch", "support", "sustain", "branch radical (no. 65)"]
+  allMeanings: ["branch", "support", "sustain", "branch radical (no. 65)"]
+  on: ["シ"]
+  kun: ["ささ.える", "つか.える", "か.う"]
+  strokes: 4
+- character: "引"
+  meanings: ["pull", "tug", "jerk", "admit"]
+  allMeanings: ["pull", "tug", "jerk", "admit", "install", "quote", "refer to"]
+  on: ["イン"]
+  kun: ["ひ.く", "ひ.ける"]
+  strokes: 4
+- character: "金"
+  meanings: ["gold"]
+  allMeanings: ["gold"]
+  on: ["キン", "コン", "ゴン"]
+  kun: ["かね", "かな-", "-がね"]
+  strokes: 8
+- character: "添"
+  meanings: ["annexed", "accompany", "marry", "suit"]
+  allMeanings: ["annexed", "accompany", "marry", "suit", "meet", "satisfy", "attach", "append", "garnish", "imitate"]
+  on: ["テン"]
+  kun: ["そ.える", "そ.う"]
+  strokes: 11
+- character: "礼"
+  meanings: ["salute", "bow", "ceremony", "thanks"]
+  allMeanings: ["salute", "bow", "ceremony", "thanks", "remuneration"]
+  on: ["レイ", "ライ"]
+  kun: []
+  strokes: 5
+- character: "息"
+  meanings: ["breath", "respiration", "son", "interest (on money)"]
+  allMeanings: ["breath", "respiration", "son", "interest (on money)", "rest", "coming to an end"]
+  on: ["ソク"]
+  kun: ["いき"]
+  strokes: 10
+- character: "婚"
+  meanings: ["marriage"]
+  allMeanings: ["marriage"]
+  on: ["コン"]
+  kun: []
+  strokes: 11
+- character: "祝"
+  meanings: ["celebrate", "congratulate"]
+  allMeanings: ["celebrate", "congratulate"]
+  on: ["シュク", "シュウ"]
+  kun: ["いわ.う"]
+  strokes: 9
+- character: "悔"
+  meanings: ["repent", "regret"]
+  allMeanings: ["repent", "regret"]
+  on: ["カイ"]
+  kun: ["く.いる", "く.やむ", "くや.しい"]
+  strokes: 9
+- character: "締"
+  meanings: ["tighten", "tie", "shut", "lock"]
+  allMeanings: ["tighten", "tie", "shut", "lock", "fasten"]
+  on: ["テイ"]
+  kun: ["し.まる", "し.まり", "し.める", "-し.め", "-じ.め"]
+  strokes: 15
+- character: "切"
+  meanings: ["cut", "cutoff", "be sharp"]
+  allMeanings: ["cut", "cutoff", "be sharp"]
+  on: ["セツ", "サイ"]
+  kun: ["き.る", "-き.る", "き.り", "-き.り", "-ぎ.り", "き.れる", "-き.れる", "き.れ", "-き.れ", "-ぎ.れ"]
+  strokes: 4
+- character: "係"
+  meanings: ["person in charge", "connection", "duty", "concern oneself"]
+  allMeanings: ["person in charge", "connection", "duty", "concern oneself"]
+  on: ["ケイ"]
+  kun: ["かか.る", "かかり", "-がかり", "かか.わる"]
+  strokes: 9
+- character: "揺"
+  meanings: ["swing", "shake", "sway", "rock"]
+  allMeanings: ["swing", "shake", "sway", "rock", "tremble", "vibrate"]
+  on: ["ヨウ"]
+  kun: ["ゆ.れる", "ゆ.る", "ゆ.らぐ", "ゆ.るぐ", "ゆ.する", "ゆ.さぶる", "ゆ.すぶる", "うご.く"]
+  strokes: 12
+- character: "皆"
+  meanings: ["all", "everything"]
+  allMeanings: ["all", "everything"]
+  on: ["カイ"]
+  kun: ["みな", "みんな"]
+  strokes: 9
+- character: "様"
+  meanings: ["Esq.", "way", "manner", "situation"]
+  allMeanings: ["Esq.", "way", "manner", "situation", "polite suffix"]
+  on: ["ヨウ", "ショウ"]
+  kun: ["さま", "さん"]
+  strokes: 14
+- character: "惑"
+  meanings: ["beguile", "delusion", "perplexity"]
+  allMeanings: ["beguile", "delusion", "perplexity"]
+  on: ["ワク"]
+  kun: ["まど.う"]
+  strokes: 12
+- character: "宅"
+  meanings: ["home", "house", "residence", "our house"]
+  allMeanings: ["home", "house", "residence", "our house", "my husband"]
+  on: ["タク"]
+  kun: []
+  strokes: 6
+- character: "泊"
+  meanings: ["overnight stay", "put up at", "ride at anchor"]
+  allMeanings: ["overnight stay", "put up at", "ride at anchor"]
+  on: ["ハク"]
+  kun: ["と.まる", "と.める"]
+  strokes: 8
+- character: "提"
+  meanings: ["propose", "take along", "carry in hand"]
+  allMeanings: ["propose", "take along", "carry in hand"]
+  on: ["テイ", "チョウ", "ダイ"]
+  kun: ["さ.げる"]
+  strokes: 12
+- character: "案"
+  meanings: ["plan", "suggestion", "draft", "ponder"]
+  allMeanings: ["plan", "suggestion", "draft", "ponder", "fear", "proposition", "idea", "expectation", "worry", "table", "bench"]
+  on: ["アン"]
+  kun: ["つくえ"]
+  strokes: 10
+- character: "修"
+  meanings: ["discipline", "conduct oneself well", "study", "master"]
+  allMeanings: ["discipline", "conduct oneself well", "study", "master"]
+  on: ["シュウ", "シュ"]
+  kun: ["おさ.める", "おさ.まる"]
+  strokes: 10
+- character: "正"
+  meanings: ["correct", "justice", "righteous", "10**40"]
+  allMeanings: ["correct", "justice", "righteous", "10**40"]
+  on: ["セイ", "ショウ"]
+  kun: ["ただ.しい", "ただ.す", "まさ", "まさ.に"]
+  strokes: 5
+- character: "席"
+  meanings: ["seat", "mat", "occasion", "place"]
+  allMeanings: ["seat", "mat", "occasion", "place"]
+  on: ["セキ"]
+  kun: ["むしろ"]
+  strokes: 10
+- character: "喜"
+  meanings: ["rejoice", "take pleasure in"]
+  allMeanings: ["rejoice", "take pleasure in"]
+  on: ["キ"]
+  kun: ["よろこ.ぶ", "よろこ.ばす"]
+  strokes: 12
+- character: "客"
+  meanings: ["guest", "visitor", "customer", "client"]
+  allMeanings: ["guest", "visitor", "customer", "client"]
+  on: ["キャク", "カク"]
+  kun: []
+  strokes: 9
+- character: "似"
+  meanings: ["becoming", "resemble", "counterfeit", "imitate"]
+  allMeanings: ["becoming", "resemble", "counterfeit", "imitate", "suitable"]
+  on: ["ジ"]
+  kun: ["に.る", "ひ.る"]
+  strokes: 7
+- character: "紹"
+  meanings: ["introduce", "inherit", "help"]
+  allMeanings: ["introduce", "inherit", "help"]
+  on: ["ショウ"]
+  kun: []
+  strokes: 11
+- character: "介"
+  meanings: ["jammed in", "shellfish", "mediate", "concern oneself with"]
+  allMeanings: ["jammed in", "shellfish", "mediate", "concern oneself with"]
+  on: ["カイ"]
+  kun: []
+  strokes: 4
+- character: "御"
+  meanings: ["honorable", "manipulate", "govern"]
+  allMeanings: ["honorable", "manipulate", "govern"]
+  on: ["ギョ", "ゴ"]
+  kun: ["おん-", "お-", "み-"]
+  strokes: 12
+- character: "受"
+  meanings: ["accept", "undergo", "answer (phone)", "take"]
+  allMeanings: ["accept", "undergo", "answer (phone)", "take", "get", "catch", "receive"]
+  on: ["ジュ"]
+  kun: ["う.ける", "-う.け", "う.かる"]
+  strokes: 8
+- character: "残"
+  meanings: ["remainder", "leftover", "balance"]
+  allMeanings: ["remainder", "leftover", "balance"]
+  on: ["ザン", "サン"]
+  kun: ["のこ.る", "のこ.す", "そこな.う", "のこ.り"]
+  strokes: 10
+- character: "念"
+  meanings: ["wish", "sense", "idea", "thought"]
+  allMeanings: ["wish", "sense", "idea", "thought", "feeling", "desire", "attention"]
+  on: ["ネン"]
+  kun: []
+  strokes: 8
+- character: "帰"
+  meanings: ["homecoming", "arrive at", "lead to", "result in"]
+  allMeanings: ["homecoming", "arrive at", "lead to", "result in"]
+  on: ["キ"]
+  kun: ["かえ.る", "かえ.す", "おく.る", "とつ.ぐ"]
+  strokes: 10
+- character: "験"
+  meanings: ["verification", "effect", "testing"]
+  allMeanings: ["verification", "effect", "testing"]
+  on: ["ケン", "ゲン"]
+  kun: ["あかし", "しるし", "ため.す", "ためし"]
+  strokes: 18
+- character: "格"
+  meanings: ["status", "rank", "capacity", "character"]
+  allMeanings: ["status", "rank", "capacity", "character", "case (law, grammar)"]
+  on: ["カク", "コウ", "キャク", "ゴウ"]
+  kun: []
+  strokes: 10
+- character: "招"
+  meanings: ["beckon", "invite", "summon", "engage"]
+  allMeanings: ["beckon", "invite", "summon", "engage"]
+  on: ["ショウ"]
+  kun: ["まね.く"]
+  strokes: 8
+- character: "神"
+  meanings: ["gods", "mind", "soul"]
+  allMeanings: ["gods", "mind", "soul"]
+  on: ["シン", "ジン"]
+  kun: ["かみ", "かん-", "こう-"]
+  strokes: 9
+- character: "額"
+  meanings: ["forehead", "tablet", "plaque", "framed picture"]
+  allMeanings: ["forehead", "tablet", "plaque", "framed picture", "sum", "amount", "volume"]
+  on: ["ガク"]
+  kun: ["ひたい"]
+  strokes: 18
+- character: "具"
+  meanings: ["tool", "utensil", "means", "possess"]
+  allMeanings: ["tool", "utensil", "means", "possess", "ingredients", "counter for armor, suits, sets of furniture"]
+  on: ["グ"]
+  kun: ["そな.える", "つぶさ.に"]
+  strokes: 8
+- character: "預"
+  meanings: ["deposit", "custody", "leave with", "entrust to"]
+  allMeanings: ["deposit", "custody", "leave with", "entrust to"]
+  on: ["ヨ"]
+  kun: ["あず.ける", "あず.かる"]
+  strokes: 13
+- character: "荷"
+  meanings: ["baggage", "shoulder-pole load", "bear (a burden)", "shoulder (a gun)"]
+  allMeanings: ["baggage", "shoulder-pole load", "bear (a burden)", "shoulder (a gun)", "load", "cargo", "freight"]
+  on: ["カ"]
+  kun: ["に"]
+  strokes: 10
+- character: "賛"
+  meanings: ["approve", "praise", "title or inscription on picture", "assist"]
+  allMeanings: ["approve", "praise", "title or inscription on picture", "assist", "agree with"]
+  on: ["サン"]
+  kun: ["たす.ける", "たた.える"]
+  strokes: 15
+- character: "成"
+  meanings: ["turn into", "become", "get", "grow"]
+  allMeanings: ["turn into", "become", "get", "grow", "elapse", "reach"]
+  on: ["セイ", "ジョウ"]
+  kun: ["な.る", "な.す", "-な.す"]
+  strokes: 6
+- character: "望"
+  meanings: ["ambition", "full moon", "hope", "desire"]
+  allMeanings: ["ambition", "full moon", "hope", "desire", "aspire to", "expect"]
+  on: ["ボウ", "モウ"]
+  kun: ["のぞ.む", "もち"]
+  strokes: 11
+- character: "感"
+  meanings: ["emotion", "feeling", "sensation"]
+  allMeanings: ["emotion", "feeling", "sensation"]
+  on: ["カン"]
+  kun: []
+  strokes: 13
+- character: "態"
+  meanings: ["attitude", "condition", "figure", "appearance"]
+  allMeanings: ["attitude", "condition", "figure", "appearance", "voice (of verbs)"]
+  on: ["タイ"]
+  kun: ["わざ.と"]
+  strokes: 14
+- character: "通"
+  meanings: ["traffic", "pass through", "avenue", "commute"]
+  allMeanings: ["traffic", "pass through", "avenue", "commute", "counter for letters, notes, documents, etc."]
+  on: ["ツウ", "ツ"]
+  kun: ["とお.る", "とお.り", "-とお.り", "-どお.り", "とお.す", "とお.し", "-どお.し", "かよ.う"]
+  strokes: 10
+- character: "貨"
+  meanings: ["freight", "goods", "property"]
+  allMeanings: ["freight", "goods", "property"]
+  on: ["カ"]
+  kun: ["たから"]
+  strokes: 11
+- character: "慣"
+  meanings: ["accustomed", "get used to", "become experienced"]
+  allMeanings: ["accustomed", "get used to", "become experienced"]
+  on: ["カン"]
+  kun: ["な.れる", "な.らす"]
+  strokes: 14
+- character: "払"
+  meanings: ["pay", "clear out", "prune", "banish"]
+  allMeanings: ["pay", "clear out", "prune", "banish", "dispose of"]
+  on: ["フツ", "ヒツ", "ホツ"]
+  kun: ["はら.う", "-はら.い", "-ばら.い"]
+  strokes: 5
+- character: "鈍"
+  meanings: ["dull", "slow", "foolish", "blunt"]
+  allMeanings: ["dull", "slow", "foolish", "blunt"]
+  on: ["ドン"]
+  kun: ["にぶ.い", "にぶ.る", "にぶ-", "なま.る", "なまく.ら"]
+  strokes: 12
+- character: "証"
+  meanings: ["evidence", "proof", "certificate"]
+  allMeanings: ["evidence", "proof", "certificate"]
+  on: ["ショウ"]
+  kun: ["あかし"]
+  strokes: 12
+- character: "拠"
+  meanings: ["foothold", "based on", "follow", "therefore"]
+  allMeanings: ["foothold", "based on", "follow", "therefore"]
+  on: ["キョ", "コ"]
+  kun: ["よ.る"]
+  strokes: 8
+- character: "普"
+  meanings: ["universal", "wide(ly)", "generally", "Prussia"]
+  allMeanings: ["universal", "wide(ly)", "generally", "Prussia"]
+  on: ["フ"]
+  kun: ["あまね.く", "あまねし"]
+  strokes: 12
+- character: "彼"
+  meanings: ["he", "that", "the"]
+  allMeanings: ["he", "that", "the"]
+  on: ["ヒ"]
+  kun: ["かれ", "かの", "か.の"]
+  strokes: 8
+- character: "功"
+  meanings: ["achievement", "merits", "success", "honor"]
+  allMeanings: ["achievement", "merits", "success", "honor", "credit"]
+  on: ["コウ", "ク"]
+  kun: ["いさお"]
+  strokes: 5
+- character: "雇"
+  meanings: ["employ", "hire"]
+  allMeanings: ["employ", "hire"]
+  on: ["コ"]
+  kun: ["やと.う"]
+  strokes: 12
+- character: "師"
+  meanings: ["expert", "teacher", "master", "model"]
+  allMeanings: ["expert", "teacher", "master", "model", "exemplar", "army (incl. counter)", "war"]
+  on: ["シ"]
+  kun: ["いくさ"]
+  strokes: 10
+- character: "経"
+  meanings: ["sutra", "longitude", "pass thru", "expire"]
+  allMeanings: ["sutra", "longitude", "pass thru", "expire", "warp"]
+  on: ["ケイ", "キョウ", "キン"]
+  kun: ["へ.る", "た.つ", "たていと", "はか.る", "のり"]
+  strokes: 11
+- character: "浅"
+  meanings: ["shallow", "superficial", "frivolous", "wretched"]
+  allMeanings: ["shallow", "superficial", "frivolous", "wretched", "shameful"]
+  on: ["セン"]
+  kun: ["あさ.い"]
+  strokes: 9
+- character: "希"
+  meanings: ["hope", "beg", "request", "pray"]
+  allMeanings: ["hope", "beg", "request", "pray", "beseech", "Greece", "dilute (acid)", "rare", "few", "phenomenal"]
+  on: ["キ", "ケ"]
+  kun: ["まれ", "こいねが.う"]
+  strokes: 7
+- character: "我"
+  meanings: ["ego", "I", "selfish", "our"]
+  allMeanings: ["ego", "I", "selfish", "our", "oneself"]
+  on: ["ガ"]
+  kun: ["われ", "わ", "わ.が-", "わが-"]
+  strokes: 7
+- character: "景"
+  meanings: ["scenery", "view"]
+  allMeanings: ["scenery", "view"]
+  on: ["ケイ"]
+  kun: []
+  strokes: 12
+- character: "瞬"
+  meanings: ["wink", "blink", "twinkle"]
+  allMeanings: ["wink", "blink", "twinkle"]
+  on: ["シュン"]
+  kun: ["またた.く", "まじろ.ぐ"]
+  strokes: 18
+- character: "爆"
+  meanings: ["bomb", "burst open", "pop", "split"]
+  allMeanings: ["bomb", "burst open", "pop", "split"]
+  on: ["バク"]
+  kun: ["は.ぜる"]
+  strokes: 19
+- character: "発"
+  meanings: ["departure", "discharge", "publish", "emit"]
+  allMeanings: ["departure", "discharge", "publish", "emit", "start from", "disclose", "counter for gunshots"]
+  on: ["ハツ", "ホツ"]
+  kun: ["た.つ", "あば.く", "おこ.る", "つか.わす", "はな.つ"]
+  strokes: 9
+- character: "陽"
+  meanings: ["sunshine", "yang principle", "positive", "male"]
+  allMeanings: ["sunshine", "yang principle", "positive", "male", "heaven", "daytime"]
+  on: ["ヨウ"]
+  kun: ["ひ"]
+  strokes: 12
+- character: "崩"
+  meanings: ["crumble", "die", "demolish", "level"]
+  allMeanings: ["crumble", "die", "demolish", "level"]
+  on: ["ホウ"]
+  kun: ["くず.れる", "-くず.れ", "くず.す"]
+  strokes: 11
+- character: "昇"
+  meanings: ["rise up"]
+  allMeanings: ["rise up"]
+  on: ["ショウ"]
+  kun: ["のぼ.る"]
+  strokes: 8
+- character: "燃"
+  meanings: ["burn", "blaze", "glow"]
+  allMeanings: ["burn", "blaze", "glow"]
+  on: ["ネン"]
+  kun: ["も.える", "も.やす", "も.す"]
+  strokes: 16
+- character: "冷"
+  meanings: ["cool", "cold (beer, person)", "chill"]
+  allMeanings: ["cool", "cold (beer, person)", "chill"]
+  on: ["レイ"]
+  kun: ["つめ.たい", "ひ.える", "ひ.や", "ひ.ややか", "ひ.やす", "ひ.やかす", "さ.める", "さ.ます"]
+  strokes: 7
+- character: "身"
+  meanings: ["somebody", "person", "one's station in life"]
+  allMeanings: ["somebody", "person", "one's station in life"]
+  on: ["シン"]
+  kun: ["み"]
+  strokes: 7
+- character: "葉"
+  meanings: ["leaf", "plane", "lobe", "needle"]
+  allMeanings: ["leaf", "plane", "lobe", "needle", "blade", "spear", "counter for flat things", "fragment", "piece"]
+  on: ["ヨウ"]
+  kun: ["は"]
+  strokes: 12
+- character: "霧"
+  meanings: ["fog", "mist"]
+  allMeanings: ["fog", "mist"]
+  on: ["ム", "ボウ", "ブ"]
+  kun: ["きり"]
+  strokes: 19
+- character: "科"
+  meanings: ["department", "course", "section"]
+  allMeanings: ["department", "course", "section"]
+  on: ["カ"]
+  kun: []
+  strokes: 9
+- character: "観"
+  meanings: ["outlook", "look", "appearance", "condition"]
+  allMeanings: ["outlook", "look", "appearance", "condition", "view"]
+  on: ["カン"]
+  kun: ["み.る", "しめ.す"]
+  strokes: 18
+- character: "察"
+  meanings: ["guess", "presume", "surmise", "judge"]
+  allMeanings: ["guess", "presume", "surmise", "judge", "understand"]
+  on: ["サツ"]
+  kun: []
+  strokes: 14
+- character: "給"
+  meanings: ["salary", "wage", "gift", "allow"]
+  allMeanings: ["salary", "wage", "gift", "allow", "grant", "bestow on"]
+  on: ["キュウ"]
+  kun: ["たま.う", "たも.う", "-たま.え"]
+  strokes: 12
+- character: "辛"
+  meanings: ["spicy", "bitter", "hot", "acrid"]
+  allMeanings: ["spicy", "bitter", "hot", "acrid"]
+  on: ["シン"]
+  kun: ["から.い", "つら.い", "-づら.い", "かのと"]
+  strokes: 7
+- character: "抱"
+  meanings: ["embrace", "hug", "hold in arms"]
+  allMeanings: ["embrace", "hug", "hold in arms"]
+  on: ["ホウ"]
+  kun: ["だ.く", "いだ.く", "かか.える"]
+  strokes: 8
+- character: "十"
+  meanings: ["ten"]
+  allMeanings: ["ten"]
+  on: ["ジュウ", "ジッ", "ジュッ"]
+  kun: ["とお", "と", "そ"]
+  strokes: 2
+- character: "報"
+  meanings: ["report", "news", "reward", "retribution"]
+  allMeanings: ["report", "news", "reward", "retribution"]
+  on: ["ホウ"]
+  kun: ["むく.いる"]
+  strokes: 12
+- character: "患"
+  meanings: ["afflicted", "disease", "suffer from", "be ill"]
+  allMeanings: ["afflicted", "disease", "suffer from", "be ill"]
+  on: ["カン"]
+  kun: ["わずら.う"]
+  strokes: 11
+- character: "述"
+  meanings: ["mention", "state", "speak", "relate"]
+  allMeanings: ["mention", "state", "speak", "relate"]
+  on: ["ジュツ"]
+  kun: ["の.べる"]
+  strokes: 8
+- character: "球"
+  meanings: ["ball", "sphere"]
+  allMeanings: ["ball", "sphere"]
+  on: ["キュウ"]
+  kun: ["たま"]
+  strokes: 11
+- character: "漂"
+  meanings: ["drift", "float (on liquid)"]
+  allMeanings: ["drift", "float (on liquid)"]
+  on: ["ヒョウ"]
+  kun: ["ただよ.う"]
+  strokes: 14
+- character: "貧"
+  meanings: ["poverty", "poor"]
+  allMeanings: ["poverty", "poor"]
+  on: ["ヒン", "ビン"]
+  kun: ["まず.しい"]
+  strokes: 11
+- character: "農"
+  meanings: ["agriculture", "farmers"]
+  allMeanings: ["agriculture", "farmers"]
+  on: ["ノウ"]
+  kun: []
+  strokes: 13
+- character: "民"
+  meanings: ["people", "nation", "subjects"]
+  allMeanings: ["people", "nation", "subjects"]
+  on: ["ミン"]
+  kun: ["たみ"]
+  strokes: 5
+- character: "味"
+  meanings: ["flavor", "taste"]
+  allMeanings: ["flavor", "taste"]
+  on: ["ミ"]
+  kun: ["あじ", "あじ.わう"]
+  strokes: 8
+- character: "運"
+  meanings: ["carry", "luck", "destiny", "fate"]
+  allMeanings: ["carry", "luck", "destiny", "fate", "lot", "transport", "progress", "advance"]
+  on: ["ウン"]
+  kun: ["はこ.ぶ"]
+  strokes: 12
+- character: "転"
+  meanings: ["revolve", "turn around", "change"]
+  allMeanings: ["revolve", "turn around", "change"]
+  on: ["テン"]
+  kun: ["ころ.がる", "ころ.げる", "ころ.がす", "ころ.ぶ", "まろ.ぶ", "うたた", "うつ.る", "くる.めく"]
+  strokes: 11
+- character: "注"
+  meanings: ["pour", "irrigate", "shed (tears)", "flow into"]
+  allMeanings: ["pour", "irrigate", "shed (tears)", "flow into", "concentrate on", "notes", "comment", "annotate"]
+  on: ["チュウ"]
+  kun: ["そそ.ぐ", "さ.す", "つ.ぐ"]
+  strokes: 8
+- character: "世"
+  meanings: ["generation", "world", "society", "public"]
+  allMeanings: ["generation", "world", "society", "public"]
+  on: ["セイ", "セ", "ソウ"]
+  kun: ["よ"]
+  strokes: 5
+- character: "界"
+  meanings: ["world", "boundary"]
+  allMeanings: ["world", "boundary"]
+  on: ["カイ"]
+  kun: []
+  strokes: 9
+- character: "家"
+  meanings: ["house", "home", "family", "professional"]
+  allMeanings: ["house", "home", "family", "professional", "expert", "performer"]
+  on: ["カ", "ケ"]
+  kun: ["いえ", "や", "うち"]
+  strokes: 10
+- character: "解"
+  meanings: ["unravel", "notes", "key", "explanation"]
+  allMeanings: ["unravel", "notes", "key", "explanation", "understanding", "untie", "undo", "solve", "answer", "cancel", "absolve", "explain", "minute"]
+  on: ["カイ", "ゲ"]
+  kun: ["と.く", "と.かす", "と.ける", "ほど.く", "ほぐ.す", "わか.る", "さと.る"]
+  strokes: 13
+- character: "釈"
+  meanings: ["explanation"]
+  allMeanings: ["explanation"]
+  on: ["シャク", "セキ"]
+  kun: ["とく", "す.てる", "ゆる.す"]
+  strokes: 11
+- character: "黙"
+  meanings: ["silence", "become silent", "stop speaking", "leave as is"]
+  allMeanings: ["silence", "become silent", "stop speaking", "leave as is"]
+  on: ["モク", "ボク"]
+  kun: ["だま.る", "もだ.す"]
+  strokes: 15
+- character: "過"
+  meanings: ["overdo", "exceed", "go beyond", "error"]
+  allMeanings: ["overdo", "exceed", "go beyond", "error"]
+  on: ["カ"]
+  kun: ["す.ぎる", "す.ごす", "あやま.ち", "あやま.つ", "よぎ.る", "よ.ぎる"]
+  strokes: 12
+- character: "笑"
+  meanings: ["laugh"]
+  allMeanings: ["laugh"]
+  on: ["ショウ"]
+  kun: ["わら.う", "え.む"]
+  strokes: 10
+- character: "積"
+  meanings: ["volume", "product (x*y)", "acreage", "contents"]
+  allMeanings: ["volume", "product (x*y)", "acreage", "contents", "pile up", "stack", "load", "amass"]
+  on: ["セキ"]
+  kun: ["つ.む", "-づ.み", "つ.もる", "つ.もり"]
+  strokes: 16
+- character: "常"
+  meanings: ["usual", "ordinary", "normal", "common"]
+  allMeanings: ["usual", "ordinary", "normal", "common", "regular", "continually", "always", "long-lasting"]
+  on: ["ジョウ"]
+  kun: ["つね", "とこ-"]
+  strokes: 11
+- character: "量"
+  meanings: ["quantity", "measure", "weight", "amount"]
+  allMeanings: ["quantity", "measure", "weight", "amount", "consider", "estimate", "surmise"]
+  on: ["リョウ"]
+  kun: ["はか.る"]
+  strokes: 12
+- character: "恋"
+  meanings: ["romance", "in love", "yearn for", "miss"]
+  allMeanings: ["romance", "in love", "yearn for", "miss", "darling"]
+  on: ["レン"]
+  kun: ["こ.う", "こい", "こい.しい"]
+  strokes: 10
+- character: "落"
+  meanings: ["fall", "drop", "come down", "village"]
+  allMeanings: ["fall", "drop", "come down", "village", "hamlet"]
+  on: ["ラク"]
+  kun: ["お.ちる", "お.ち", "お.とす"]
+  strokes: 12
+- character: "蔑"
+  meanings: ["ignore", "despise", "neglect", "ridicule"]
+  allMeanings: ["ignore", "despise", "neglect", "ridicule"]
+  on: ["ベツ"]
+  kun: ["ないがしろ", "なみ.する", "くらい", "さげす.む"]
+  strokes: 14
+- character: "宿"
+  meanings: ["inn", "lodging", "relay station", "dwell"]
+  allMeanings: ["inn", "lodging", "relay station", "dwell", "lodge", "be pregnant", "home", "dwelling"]
+  on: ["シュク"]
+  kun: ["やど", "やど.る", "やど.す"]
+  strokes: 11
+- character: "多"
+  meanings: ["many", "frequent", "much"]
+  allMeanings: ["many", "frequent", "much"]
+  on: ["タ"]
+  kun: ["おお.い", "まさ.に", "まさ.る"]
+  strokes: 6
+- character: "才"
+  meanings: ["genius", "years old", "cubic shaku"]
+  allMeanings: ["genius", "years old", "cubic shaku"]
+  on: ["サイ"]
+  kun: []
+  strokes: 3
+- character: "材"
+  meanings: ["lumber", "log", "timber", "wood"]
+  allMeanings: ["lumber", "log", "timber", "wood", "materials", "ingredients", "talent"]
+  on: ["ザイ"]
+  kun: []
+  strokes: 7
+- character: "壁"
+  meanings: ["wall", "lining (stomach)", "fence"]
+  allMeanings: ["wall", "lining (stomach)", "fence"]
+  on: ["ヘキ"]
+  kun: ["かべ"]
+  strokes: 16
+- character: "初"
+  meanings: ["first time", "beginning"]
+  allMeanings: ["first time", "beginning"]
+  on: ["ショ"]
+  kun: ["はじ.め", "はじ.めて", "はつ", "はつ-", "うい-", "-そ.める", "-ぞ.め"]
+  strokes: 7
+- character: "頃"
+  meanings: ["time", "about", "toward"]
+  allMeanings: ["time", "about", "toward"]
+  on: ["ケイ", "キョウ"]
+  kun: ["ころ", "ごろ", "しばら.く"]
+  strokes: 11
+- character: "腕"
+  meanings: ["arm", "ability", "talent"]
+  allMeanings: ["arm", "ability", "talent"]
+  on: ["ワン"]
+  kun: ["うで"]
+  strokes: 12
+- character: "件"
+  meanings: ["affair", "case", "matter", "item"]
+  allMeanings: ["affair", "case", "matter", "item"]
+  on: ["ケン"]
+  kun: ["くだん"]
+  strokes: 6
+- character: "議"
+  meanings: ["deliberation", "consultation", "debate", "consideration"]
+  allMeanings: ["deliberation", "consultation", "debate", "consideration"]
+  on: ["ギ"]
+  kun: []
+  strokes: 20
+- character: "与"
+  meanings: ["bestow", "participate in", "give", "award"]
+  allMeanings: ["bestow", "participate in", "give", "award", "impart", "provide", "cause", "gift", "godsend"]
+  on: ["ヨ"]
+  kun: ["あた.える", "あずか.る", "くみ.する", "ともに"]
+  strokes: 3
+- character: "幸"
+  meanings: ["happiness", "blessing", "fortune"]
+  allMeanings: ["happiness", "blessing", "fortune"]
+  on: ["コウ"]
+  kun: ["さいわ.い", "さち", "しあわ.せ"]
+  strokes: 8
+- character: "責"
+  meanings: ["blame", "condemn", "censure"]
+  allMeanings: ["blame", "condemn", "censure"]
+  on: ["セキ"]
+  kun: ["せ.める"]
+  strokes: 11
+- character: "健"
+  meanings: ["healthy", "health", "strength", "persistence"]
+  allMeanings: ["healthy", "health", "strength", "persistence"]
+  on: ["ケン"]
+  kun: ["すこ.やか"]
+  strokes: 11
+- character: "康"
+  meanings: ["ease", "peace"]
+  allMeanings: ["ease", "peace"]
+  on: ["コウ"]
+  kun: []
+  strokes: 11
+- character: "悲"
+  meanings: ["grieve", "sad", "deplore", "regret"]
+  allMeanings: ["grieve", "sad", "deplore", "regret"]
+  on: ["ヒ"]
+  kun: ["かな.しい", "かな.しむ"]
+  strokes: 12
+- character: "椅"
+  meanings: ["chair"]
+  allMeanings: ["chair"]
+  on: ["イ"]
+  kun: []
+  strokes: 12
+- character: "到"
+  meanings: ["arrival", "proceed", "reach", "attain"]
+  allMeanings: ["arrival", "proceed", "reach", "attain", "result in"]
+  on: ["トウ"]
+  kun: ["いた.る"]
+  strokes: 8
+- character: "東"
+  meanings: ["east"]
+  allMeanings: ["east"]
+  on: ["トウ"]
+  kun: ["ひがし"]
+  strokes: 8
+- character: "京"
+  meanings: ["capital", "10**16"]
+  allMeanings: ["capital", "10**16"]
+  on: ["キョウ", "ケイ", "キン"]
+  kun: ["みやこ"]
+  strokes: 8
+- character: "飽"
+  meanings: ["sated", "tired of", "bored", "satiate"]
+  allMeanings: ["sated", "tired of", "bored", "satiate"]
+  on: ["ホウ"]
+  kun: ["あ.きる", "あ.かす", "あ.く"]
+  strokes: 13
+- character: "産"
+  meanings: ["products", "bear", "give birth", "yield"]
+  allMeanings: ["products", "bear", "give birth", "yield", "childbirth", "native", "property"]
+  on: ["サン"]
+  kun: ["う.む", "う.まれる", "うぶ-", "む.す"]
+  strokes: 11
+- character: "削"
+  meanings: ["plane", "sharpen", "whittle", "pare"]
+  allMeanings: ["plane", "sharpen", "whittle", "pare", "shave"]
+  on: ["サク"]
+  kun: ["けず.る", "はつ.る", "そ.ぐ"]
+  strokes: 9
+- character: "列"
+  meanings: ["file", "row", "rank", "tier"]
+  allMeanings: ["file", "row", "rank", "tier", "column"]
+  on: ["レツ", "レ"]
+  kun: []
+  strokes: 6
+- character: "並"
+  meanings: ["row", "and", "besides", "as well as"]
+  allMeanings: ["row", "and", "besides", "as well as", "line up", "rank with", "rival", "equal"]
+  on: ["ヘイ", "ホウ"]
+  kun: ["な.み", "なみ", "なら.べる", "なら.ぶ", "なら.びに"]
+  strokes: 8
+- character: "説"
+  meanings: ["opinion", "theory", "explanation", "rumor"]
+  allMeanings: ["opinion", "theory", "explanation", "rumor"]
+  on: ["セツ", "ゼイ"]
+  kun: ["と.く"]
+  strokes: 14
+- character: "非"
+  meanings: ["un-", "mistake", "negative", "injustice"]
+  allMeanings: ["un-", "mistake", "negative", "injustice", "non-"]
+  on: ["ヒ"]
+  kun: ["あら.ず"]
+  strokes: 8
+- character: "匂"
+  meanings: ["fragrant", "stink", "glow", "insinuate"]
+  allMeanings: ["fragrant", "stink", "glow", "insinuate", "(kokuji)"]
+  on: []
+  kun: ["にお.う", "にお.い", "にお.わせる"]
+  strokes: 4
+- character: "液"
+  meanings: ["fluid", "liquid", "juice", "sap"]
+  allMeanings: ["fluid", "liquid", "juice", "sap", "secretion"]
+  on: ["エキ"]
+  kun: []
+  strokes: 11
+- character: "表"
+  meanings: ["surface", "table", "chart", "diagram"]
+  allMeanings: ["surface", "table", "chart", "diagram"]
+  on: ["ヒョウ"]
+  kun: ["おもて", "-おもて", "あらわ.す", "あらわ.れる", "あら.わす"]
+  strokes: 8
+- character: "養"
+  meanings: ["foster", "bring up", "rear", "develop"]
+  allMeanings: ["foster", "bring up", "rear", "develop", "nurture"]
+  on: ["ヨウ", "リョウ"]
+  kun: ["やしな.う"]
+  strokes: 15
+- character: "狭"
+  meanings: ["cramped", "narrow", "contract", "tight"]
+  allMeanings: ["cramped", "narrow", "contract", "tight"]
+  on: ["キョウ", "コウ"]
+  kun: ["せま.い", "せば.める", "せば.まる", "さ"]
+  strokes: 9
+- character: "頻"
+  meanings: ["repeatedly", "recur"]
+  allMeanings: ["repeatedly", "recur"]
+  on: ["ヒン"]
+  kun: ["しき.りに"]
+  strokes: 17
+- character: "繁"
+  meanings: ["luxuriant", "thick", "overgrown", "frequency"]
+  allMeanings: ["luxuriant", "thick", "overgrown", "frequency", "complexity", "trouble"]
+  on: ["ハン"]
+  kun: ["しげ.る", "しげ.く"]
+  strokes: 16
+- character: "識"
+  meanings: ["discriminating", "know", "write"]
+  allMeanings: ["discriminating", "know", "write"]
+  on: ["シキ"]
+  kun: ["し.る", "しる.す"]
+  strokes: 19
+- character: "恵"
+  meanings: ["favor", "blessing", "grace", "kindness"]
+  allMeanings: ["favor", "blessing", "grace", "kindness"]
+  on: ["ケイ", "エ"]
+  kun: ["めぐ.む", "めぐ.み"]
+  strokes: 10
+- character: "乏"
+  meanings: ["destitution", "scarce", "limited"]
+  allMeanings: ["destitution", "scarce", "limited"]
+  on: ["ボウ"]
+  kun: ["とぼ.しい", "とも.しい"]
+  strokes: 4
+- character: "欠"
+  meanings: ["lack", "gap", "fail", "yawning radical (no. 76)"]
+  allMeanings: ["lack", "gap", "fail", "yawning radical (no. 76)"]
+  on: ["ケツ", "ケン"]
+  kun: ["か.ける", "か.く"]
+  strokes: 4
+- character: "選"
+  meanings: ["elect", "select", "choose", "prefer"]
+  allMeanings: ["elect", "select", "choose", "prefer"]
+  on: ["セン"]
+  kun: ["えら.ぶ", "え.る", "よ.る"]
+  strokes: 15
+- character: "誉"
+  meanings: ["reputation", "praise", "honor", "glory"]
+  allMeanings: ["reputation", "praise", "honor", "glory"]
+  on: ["ヨ"]
+  kun: ["ほま.れ", "ほ.める"]
+  strokes: 13
+- character: "害"
+  meanings: ["harm", "injury"]
+  allMeanings: ["harm", "injury"]
+  on: ["ガイ"]
+  kun: []
+  strokes: 10
+- character: "優"
+  meanings: ["tenderness", "excel", "surpass", "actor"]
+  allMeanings: ["tenderness", "excel", "surpass", "actor", "superiority", "gentleness"]
+  on: ["ユウ", "ウ"]
+  kun: ["やさ.しい", "すぐ.れる", "まさ.る"]
+  strokes: 17
+- character: "広"
+  meanings: ["wide", "broad", "spacious"]
+  allMeanings: ["wide", "broad", "spacious"]
+  on: ["コウ"]
+  kun: ["ひろ.い", "ひろ.まる", "ひろ.める", "ひろ.がる", "ひろ.げる"]
+  strokes: 5
+- character: "猫"
+  meanings: ["cat"]
+  allMeanings: ["cat"]
+  on: ["ビョウ"]
+  kun: ["ねこ"]
+  strokes: 11
+- character: "背"
+  meanings: ["stature", "height", "back", "behind"]
+  allMeanings: ["stature", "height", "back", "behind", "disobey", "defy", "go back on", "rebel"]
+  on: ["ハイ"]
+  kun: ["せ", "せい", "そむ.く", "そむ.ける"]
+  strokes: 9
+- character: "低"
+  meanings: ["lower", "short", "humble"]
+  allMeanings: ["lower", "short", "humble"]
+  on: ["テイ"]
+  kun: ["ひく.い", "ひく.める", "ひく.まる"]
+  strokes: 7
+- character: "床"
+  meanings: ["bed", "counter for beds", "floor", "padding"]
+  allMeanings: ["bed", "counter for beds", "floor", "padding", "tatami"]
+  on: ["ショウ"]
+  kun: ["とこ", "ゆか"]
+  strokes: 7
+- character: "塗"
+  meanings: ["paint", "plaster", "daub", "smear"]
+  allMeanings: ["paint", "plaster", "daub", "smear", "coating"]
+  on: ["ト"]
+  kun: ["ぬ.る", "ぬ.り", "まみ.れる"]
+  strokes: 13
+- character: "備"
+  meanings: ["equip", "provision", "preparation"]
+  allMeanings: ["equip", "provision", "preparation"]
+  on: ["ビ"]
+  kun: ["そな.える", "そな.わる", "つぶさ.に"]
+  strokes: 12
 - character: "国"
   meanings: ["country"]
   allMeanings: ["country"]

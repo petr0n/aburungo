@@ -16,7 +16,7 @@ never reads it.
 | Words | 447 |
 | Phrases | 348 |
 | Grammar patterns | 66 |
-| Kanji introduced | 0 |
+| Kanji introduced | 292 |
 
 ---
 
@@ -31,6 +31,7 @@ never reads it.
 **Lesson 1 of 8** · Finishing what was started
 **Can do:** Say that something is finished, or that it happened and you wish it hadn't
 **Grammar:** `～てしまう` — It is finished, or it happened and cannot be undone. te-form plus しまう. The same form carries completion and regret and the sentence around it decides which; after a voiced て it is でしまう, 読んでしまう. In speech it contracts to ちゃう and じゃう -- 忘れちゃった, 読んじゃった.
+**New kanji:** 故 障 場 退 屈 少 無 部 屋
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -55,6 +56,7 @@ never reads it.
 **Lesson 2 of 8** · Finishing what was started
 **Can do:** Say you did something ahead of time, or left something the way it was
 **Grammar:** `～ておく` — Do it now, for later. te-form plus おく, either getting something ready in advance or leaving a state in place on purpose. After a voiced て it is でおく. Speech contracts it to とく and どく -- 買っとく, 読んどく -- which this chapter names and does not card.
+**New kanji:** 用 意 自 任 安 心
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -79,6 +81,7 @@ never reads it.
 **Lesson 3 of 8** · Finishing what was started
 **Can do:** Say you tried something to see what would happen, or suggest that someone does
 **Grammar:** `～てみる` — Do it and see. te-form plus みる. てみてください softens an instruction, てみたら offers a suggestion, てみると reports what turned up on trying, and てみたい is wanting to give it a go. Not てみせる, which is doing something to show somebody.
+**New kanji:** 調 試 営 業 宝 石 度
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -101,6 +104,7 @@ never reads it.
 **Lesson 4 of 8** · Finishing what was started
 **Can do:** Say that something moves away from you, or keeps going from now on
 **Grammar:** `～ていく` — Away from here, or on from now. te-form plus いく. Either something physically moves away from where the speaker is, or a change carries forward into the future. Written 行く or in kana, both ordinary.
+**New kanji:** 追 行
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -124,6 +128,7 @@ never reads it.
 **Lesson 5 of 8** · Finishing what was started
 **Can do:** Say that something comes your way, or has been changing up to now
 **Grammar:** `～てくる` — Towards you, or up to now. te-form plus くる, the mirror of ていく. Either something moves towards the speaker -- including go, do it, and come back, as in 買ってくる -- or a change has been building up to the present.
+**New kanji:** 動 数 減 犬
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -150,6 +155,7 @@ never reads it.
 **Lesson 6 of 8** · Finishing what was started
 **Can do:** Say that something is more than it should be
 **Grammar:** `～すぎる` — More than it should be. Onto an い-adjective stem, a な-adjective stem, or a verb's ます-stem -- 大きすぎる, 食べすぎる. Cut the る and it is a noun, 飲みすぎ. Written 過ぎる or in kana. Not に過ぎない, which means merely and comes later in this book.
+**New kanji:** 危 険 役 飲 出
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -175,6 +181,7 @@ never reads it.
 **Lesson 7 of 8** · Finishing what was started
 **Can do:** Say that a state was left unchanged while something else happened
 **Grammar:** `～まま` — Left as it was. After a past-tense verb, a negative, a noun with の, or a demonstrative -- つけたまま, 噛み合わないまま, そのまま. One state holds unchanged while something else happens. ままにする is leaving it that way on purpose.
+**New kanji:** 話 船 戻
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -197,6 +204,7 @@ never reads it.
 **Lesson 8 of 8** · Finishing what was started
 **Can do:** Say that something was done without doing something else
 **Grammar:** `～ずに` — Without doing it. Take the ない form, drop the ない, put ずに there -- 割らずに, かぶらずに. する is the one irregular and gives せずに, never しずに. 〜ないで says the same thing one register down, and is also how Book Two asked you not to do something.
+**New kanji:** 割 講 義 紙 送 湯 学 全
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -236,6 +244,7 @@ never reads it.
 **Lesson 1 of 7** · Meaning to, telling to
 **Can do:** Propose something in plain speech, the way ましょう does politely
 **Grammar:** `～よう` — Let's, in plain speech -- the form ましょう is the polite version of. A godan verb moves its last sound to the お row and adds う (呼ぶ becomes 呼ぼう, 急ぐ becomes 急ごう); an ichidan verb drops る and adds よう; する becomes しよう and 来る becomes 来よう, read こよう. Sentence-final it proposes, or announces the speaker's own decision.
+**New kanji:** 忍 娘
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -257,6 +266,7 @@ never reads it.
 **Lesson 2 of 7** · Meaning to, telling to
 **Can do:** Say what you intend to do
 **Grammar:** `～ようと思う` — What you mean to do. The volitional plus と思う states an intention formed as you speak; と思っている states one you have been carrying, and is also what you use about somebody else. Set it beside つもりです, which is firmer and closer to a plan.
+**New kanji:** 参 加 勧 焼 済 思
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -278,6 +288,7 @@ never reads it.
 **Lesson 3 of 7** · Meaning to, telling to
 **Can do:** Say that someone tried to do something, or was on the point of it
 **Grammar:** `～ようとする` — Trying to, or about to. With a person in front it is an attempt, and whether it succeeded is left unsaid; with a thing in front, which cannot intend anything, it means on the point of. Do not read it as failure by default, and do not confuse it with として, as.
+**New kanji:** 盗 捕 駄
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -300,6 +311,7 @@ never reads it.
 **Lesson 4 of 7** · Meaning to, telling to
 **Can do:** Recognise a blunt command, and know when one is and is not rude
 **Grammar:** `～しろ` — The bare command. A godan verb moves its last sound to the え row (やる becomes やれ, 急ぐ becomes 急げ, 言う becomes 言え); an ichidan verb drops る and adds ろ (やめる becomes やめろ); する becomes しろ and 来る becomes 来い, read こい. Blunt between people, and unremarkable on a sign, in a manual, in sport or to yourself.
+**New kanji:** 考 現 実 皿
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -323,6 +335,7 @@ never reads it.
 **Lesson 5 of 7** · Meaning to, telling to
 **Can do:** Recognise a blunt prohibition
 **Grammar:** `～するな` — Don't, in the same register as the bare command. Dictionary form plus な, sentence-final. The form in front is the whole tell -- dictionary form makes it a prohibition, a ます-stem makes it a light order (食べな, eat up), and anything else is the emphatic な that comes later.
+**New kanji:** 触 他 寄 見 袋
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -344,6 +357,7 @@ never reads it.
 **Lesson 6 of 7** · Meaning to, telling to
 **Can do:** Give an instruction the way a parent or teacher does
 **Grammar:** `～なさい` — An instruction from above. ます-stem plus なさい, firmer than てください and gentler than the bare imperative, from a parent, a teacher, a sign or an exam paper. JMdict describes it as a light imperative used towards someone of equal or lower standing.
+**New kanji:** 迷 隠 道 地 図 咳
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -367,6 +381,7 @@ never reads it.
 **Lesson 7 of 7** · Meaning to, telling to
 **Can do:** Say what another person wants to do
 **Grammar:** `～たがる` — What somebody else wants. ます-stem plus たがる, where たい is your own wish -- JMdict says outright that it is not used in the first person. Usually たがっている for a current wish or たがらない for reluctance; it conjugates as a godan verb.
+**New kanji:** 新 飼 性 起 誰
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -402,6 +417,7 @@ never reads it.
 **Lesson 1 of 6** · Why you're saying it
 **Can do:** Explain yourself, ask for someone's reason, or open a request the way Japanese does
 **Grammar:** `～んです` — Marks the whole sentence as an explanation. A plain clause takes it directly; a noun or な-adjective takes な first -- 流行なのだ. んです in speech, のです when careful, のだ in writing. With か it asks for the reason behind something both people can see; with が it opens a request and leaves the rest unsaid.
+**New kanji:** 入 方 流 最
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -424,6 +440,7 @@ never reads it.
 **Lesson 2 of 6** · Why you're saying it
 **Can do:** Say what you think will happen, and check something you already believe
 **Grammar:** `～でしょう` — Probably. A plain clause goes in front, and a noun or な-adjective goes in bare with no copula -- ダイヤでしょう. だろう is the same word in plain form. Said on a rising tone it stops guessing and asks the listener to agree. Weaker than に違いない, stronger than かもしれない.
+**New kanji:** 結 果 内 復 活 政 府 機
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -446,6 +463,7 @@ never reads it.
 **Lesson 3 of 6** · Why you're saying it
 **Can do:** Pass on something you were told
 **Grammar:** `～そうだ` — I hear that. Goes on the end of a plain clause and passes on what someone else said -- including the copula, 忠実だそうだ, and the past, 癌だったそうです. Nothing is trimmed off the clause in front. によると or によれば can name the source at the front of the sentence.
+**New kanji:** 局 叔 聞 町 翻 訳
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -466,6 +484,7 @@ never reads it.
 **Lesson 4 of 6** · Why you're saying it
 **Can do:** Say how something looks about to turn out
 **Grammar:** `～そうだ` — It looks like it. The same three kana as the hearsay ending, on a stem rather than a clause -- a verb's ます-stem, 降りそうだ, or an adjective with its ending removed, 簡単そう, 面白そう. いい gives よさそう and ない gives なさそう. Then it inflects like a な-adjective -- そうな before a noun, そうに before a verb.
+**New kanji:** 問 題 簡 単 不 降
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -488,6 +507,7 @@ never reads it.
 **Lesson 5 of 6** · Why you're saying it
 **Can do:** Put forward a view while leaving room to be wrong
 **Grammar:** `～のではないか` — I suspect that. A claim put forward as a question the speaker has half answered already. Spoken, it contracts to んじゃない(か) and takes on two more jobs -- a suggestion on a rising tone, いいんじゃない, and a prohibition on a falling one after a dictionary verb. Without the か it denies a conclusion rather than hedging one.
+**New kanji:** 極 端 君 増
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -509,6 +529,7 @@ never reads it.
 **Lesson 6 of 6** · Why you're saying it
 **Can do:** State a general truth, or recall how things used to be
 **Grammar:** `～ものだ` — That is how it is. After a plain non-past it states what is in the nature of a thing, and ものではない says what is not; after a past verb it is usually a memory, I used to; with たい it is a wish held at a distance. というものだ names what something amounts to. A noun plus の plus ものだ is the ordinary noun instead.
+**New kanji:** 衰
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -541,6 +562,7 @@ never reads it.
 **Lesson 1 of 8** · How people actually talk
 **Can do:** Say not X but Y, and hear it isn't, the way speech says them
 **Grammar:** `～じゃなくて` — Not X but Y, the way speech says it. じゃ is では contracted, so じゃなくて is ではなくて and じゃない is ではない -- the negative you already own, in its spoken clothes. Sentence-final じゃない with a falling tone asserts that something is not so; with a rising one, or after a noun, it invites agreement.
+**New kanji:** 今 別 語
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -564,6 +586,7 @@ never reads it.
 **Lesson 2 of 8** · How people actually talk
 **Can do:** Add to a plain statement what it is for -- telling, agreeing, or both
 **Grammar:** `～よね` — What a statement is for. よ tells you something the speaker thinks you do not know; ね hands you something they think you already share; よね does both, in that order only -- fairly sure, and asking you to confirm. All three sit on です／ます as readily as on plain forms.
+**New kanji:** 滅
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -585,6 +608,7 @@ never reads it.
 **Lesson 3 of 8** · How people actually talk
 **Can do:** Recognise a remark made half to oneself, and the って that marks its topic
 **Grammar:** `～な。` — A remark made half to oneself -- reflection, mild emphasis, or a wish in いいな. It follows a past verb, a plain adjective or だ, and after a bare dictionary form it shares the slot with chapter 2's prohibitive な -- 思うな is either I reckon or don't think. In assertive use it reads male in this corpus, though いいな and だな are said by anyone.
+**New kanji:** 始 双 付 僕
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -607,6 +631,7 @@ never reads it.
 **Lesson 4 of 8** · How people actually talk
 **Can do:** Wonder aloud, and check your own memory
 **Grammar:** `～かな` — Wondering aloud. かな after a plain clause is I wonder; after a volitional it is maybe I will. かしら is the same job and leans older and feminine in Tokyo speech. っけ is the third of the set and asks a different question -- was it...? -- checking a memory rather than a fact, usually as だっけ or たっけ.
+**New kanji:** 張 前
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -631,6 +656,7 @@ never reads it.
 **Lesson 5 of 8** · How people actually talk
 **Can do:** Play something down, or be amazed by it
 **Grammar:** `～なんて` — Holding something at arm's length. After a clause or a noun, なんて waves the idea away or marvels at it; in front of a clause, なんて〜だろう is what a ...! なんか is its shorter relative, hedging a noun or, wedged before a negative, giving anything but. Both are built from 何 and neither is rude by itself.
+**New kanji:** 夢 失 敗 決 愚
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -653,6 +679,7 @@ never reads it.
 **Lesson 6 of 8** · How people actually talk
 **Can do:** List loosely, or report a name loosely
 **Grammar:** `～とか` — A list that does not claim to be finished, or a suggestion that does not insist. Noun とか noun とか names examples; one noun plus とか offers it and leaves room; とかいう holds a name or a claim at arm's length. Softer and vaguer than や, which lists without the shrug.
+**New kanji:** 鍋 包 丁 親 倒
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -674,6 +701,7 @@ never reads it.
 **Lesson 7 of 8** · How people actually talk
 **Can do:** Recognise who is talking from the last syllable
 **Grammar:** `～ぞ。` — Endings that say who is talking. ぞ pushes a statement out hard, to oneself or downward, and is overwhelmingly male in this corpus; ぜ is its softer, more dated neighbour; わ softens instead of pushing, and reads feminine and somewhat dated in Tokyo speech while a flatter わ is ordinary for any speaker in the west. Worth recognising rather than reaching for.
+**New kanji:** 回 信 劇
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -696,6 +724,7 @@ never reads it.
 **Lesson 8 of 8** · How people actually talk
 **Can do:** Ask for something the short way, and hear how short is too short
 **Grammar:** `～て。` — A request with ください taken off. A bare te-form asks between intimates; てよ presses; ないで asks somebody not to, and ないでくれ says the same thing bluntly. The ladder runs て and てよ together at the bottom -- てよ presses rather than softens -- then てくれる？, てください, and ends at ていただけますか, which is the keigo chapters' business.
+**New kanji:** 謝
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -730,6 +759,7 @@ never reads it.
 **Lesson 1 of 8** · Speaking with care
 **Can do:** Recognise and use the polite copula and existence verb of shops, hotels and formal writing
 **Grammar:** `～ございます` — The polite existence verb and the polite copula. ございます does the work of あります and でございます the work of です, in the register a shop, a hotel or a formal letter uses; the meaning is unchanged and the particles do not move. Its negative ございません is what 申し訳ございません is built on. ありがとうございます, which you have said since Book One, is this same verb.
+**New kanji:** 種 類 申 光 栄 由
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -752,6 +782,7 @@ never reads it.
 **Lesson 2 of 8** · Speaking with care
 **Can do:** Announce what you or your side will do, in business register
 **Grammar:** `～いたします` — いたす is する lowered, used of what the speaker's own side will do. Any noun that takes する takes it -- 連絡いたします, 添付いたします -- and ご or お often sits on that noun as well. にいたします is にします, settling on one thing rather than another. どういたしまして, in your hands since Book One, is this verb inside a set phrase.
+**New kanji:** 連 絡 支 引 金 添
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -773,6 +804,7 @@ never reads it.
 **Lesson 3 of 8** · Speaking with care
 **Can do:** Thank, congratulate or offer condolences in the register of a letter or a speech
 **Grammar:** `お～申し上げます` — 申し上げる is 言う lowered, and most of what you meet is one frame: お or ご, a noun, then 申し上げます -- お礼申し上げます, お祝い申し上げます, お悔やみ申し上げます. を between the noun and the verb is optional and slightly less fixed. 申す is the plainer humble 言う, and 〜と申します is how you give your own name.
+**New kanji:** 礼 息 婚 祝 悔 締 切
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -794,6 +826,7 @@ never reads it.
 **Lesson 4 of 8** · Speaking with care
 **Can do:** State your own side's situation and movements in service register
 **Grammar:** `～ております` — おる is いる in formal register, so ております is ています with nothing about the aspect changed. 参る is 行く and 来る in the same register, and which one it means depends on who is moving towards whom. A speaker uses these of their own side, colleagues and company included; they also turn up in announcements about things belonging to nobody's side, as when a train 参ります into a station.
+**New kanji:** 係 揺 皆 様 惑
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -815,6 +848,7 @@ never reads it.
 **Lesson 5 of 8** · Speaking with care
 **Can do:** Offer to do something, or ask to borrow something, in humble form
 **Grammar:** `お～します` — お plus a verb's ます-stem plus する or いたす lowers the speaker's own action towards the listener -- お借りする, お待ちする, お送りする, お手伝いする. A noun that takes する uses ご or お in front of the noun instead: ご案内します. Which verbs sound natural in the frame is a matter of habit rather than a rule you can compute, and お願いします is the one you have been saying since Book One without knowing its shape.
+**New kanji:** 宅
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -837,6 +871,7 @@ never reads it.
 **Lesson 6 of 8** · Speaking with care
 **Can do:** Make a request one step above てください
 **Grammar:** `～ていただけますか` — A request built from もらう lowered. いただく is humble もらう, いただける is its potential, and 〜ていただけますか asks whether you might receive the favour of the listener doing something. ませんか in place of ますか softens it further. Without a te-form in front, いただく is plain receiving -- and eating and drinking, which is where いただきます comes from.
+**New kanji:** 泊
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -860,6 +895,7 @@ never reads it.
 **Lesson 7 of 8** · Speaking with care
 **Can do:** Announce your own action as something the listener permits
 **Grammar:** `～させていただきます` — Book Three's causative with いただく on the end: させて, being allowed to do it, plus いただきます, receiving that permission. It announces your own action as something the listener permits, which fits when the action really does touch them and reads as padding when it does not. Modern service Japanese uses it very widely and plenty of Japanese speakers find that overdone.
+**New kanji:** 提 案 修 正 席 喜
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -883,6 +919,7 @@ never reads it.
 **Lesson 8 of 8** · Speaking with care
 **Can do:** Put お and ご where service Japanese puts them
 **Grammar:** `お～／ご～` — お and ご in front of a noun, either raising something that belongs to the listener or simply making the word polite. The tendency is お before native Japanese words and ご before words built from Chinese roots -- お名前, お部屋 against ご連絡, ご案内 -- and it is a tendency with real exceptions, two of which this chapter cards: お電話 and お返事. 様 after a person's name or role does the same job at the other end of the word.
+**New kanji:** 客
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -918,6 +955,7 @@ never reads it.
 **Lesson 1 of 7** · Raising the other person
 **Can do:** Recognise the honorific いる, 行く and 来る, and hear what a shop says as you walk in
 **Grammar:** `～いらっしゃいます` — いらっしゃる is the honorific いる, 行く and 来る at once, used of the person you are raising; the sentence decides which of the three it means. Its polite form is irregular -- いらっしゃいます, never いらっしゃります -- and the same is true of おっしゃる, なさる and くださる. After a te-form it replaces ている: 似ていらっしゃいます. いらっしゃいませ, the greeting a shop calls out, is the same verb. Its humble mirror is 参る and おる.
+**New kanji:** 似 紹 介
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -939,6 +977,7 @@ never reads it.
 **Lesson 2 of 7** · Raising the other person
 **Can do:** Recognise the honorific 言う and 見る
 **Grammar:** `～おっしゃる` — おっしゃる is 言う raised to the person speaking. おっしゃってください is the polite please tell us, and 〜とおっしゃいます is how somebody else's name is given. The humble twins are 申す and 申し上げる, so one meaning stands at three heights and who is talking picks the height. 見る goes the same way: its honorific is ご覧になる, met most often as ご覧の通り and as ご覧なさい, which is please look on its own and a gentle have-a-go after a te-form.
+**New kanji:** 御 受 残 念
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -962,6 +1001,7 @@ never reads it.
 **Lesson 3 of 7** · Raising the other person
 **Can do:** Understand a counter asking what you will have, and a host offering you food
 **Grammar:** `～なさいます` — なさる is する raised, so any noun that takes する takes it: 合格なさる, 出席なさる. なさいますか is the counter's what will you have, and になさいます is にします, choosing between things. Its polite form is なさいます and its command form is なさい, which you have already met. 食べる and 飲む have their own honorific, 召し上がる, which conjugates like an ordinary verb: 召し上がります, 召し上がれ.
+**New kanji:** 帰 験 格
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -985,6 +1025,7 @@ never reads it.
 **Lesson 4 of 7** · Raising the other person
 **Can do:** Make a request that honours the person you are asking
 **Grammar:** `～てくださいますか` — くださる is くれる raised, so 〜てくださいますか asks somebody to do something and honours them for doing it. Set it against ていただけますか, which asks for the same favour by lowering yourself: both are polite, by opposite routes, and a customer tends to reach for the second and a host for the first. お plus a ます-stem plus くださる -- お招きくださって -- is the same verb on the general frame, and ください is its imperative.
+**New kanji:** 招 神 額
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -1007,6 +1048,7 @@ never reads it.
 **Lesson 5 of 7** · Raising the other person
 **Can do:** Recognise the general honorific frame and use its request form
 **Grammar:** `お～になります` — お plus a verb's ます-stem plus になる raises the listener's action, and it works on verbs that have no honorific of their own: お持ちになる, お出かけになる, お預けになる. Swap になる for ください and it becomes the request a business makes of a customer -- お待ちください, お使いください. Chapter 5's お plus stem plus する is the same shape pointed at your own action, and the ending is the whole difference.
+**New kanji:** 具 預 荷
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -1030,6 +1072,7 @@ never reads it.
 **Lesson 6 of 7** · Raising the other person
 **Can do:** Tell the honorific れる and られる from the passive and the potential
 **Grammar:** `～される方` — The light honorific: れる or られる on a verb whose subject is the person being honoured -- 出席される, 支持される. It is spelled exactly like the passive, and three things separate them in practice: no agent marked with に, a subject who is the one being raised, and often 方 after the verb, as in 支持される方, or お客様 as its subject. It is a gentler lift than いらっしゃる or お～になる, common in notices and in speech about the public. 来られる also collides with the potential, which is why speakers often avoid it.
+**New kanji:** 賛 成 望
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -1083,6 +1126,7 @@ never reads it.
 **Lesson 1 of 8** · In relation to
 **Can do:** Say what an action, an attitude or a reaction is directed at
 **Grammar:** `～に対して` — Noun plus に対して: what an attitude, an action or a reaction is aimed at. Four jobs share the one form -- a target (話し手に対して反感を持つ), an opposition or a comparison (ドルに対して弱くなる), something given in return (サービスに対してチップ), and a contrast between two statements -- and the noun in front, not the marker, tells you which. に対し is the same word in a more written voice. It marks the target and not the standpoint: for whose point of view something holds, the next lesson's にとって is the marker.
+**New kanji:** 感 態 通 貨 慣 払 鈍
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -1105,6 +1149,7 @@ never reads it.
 **Lesson 2 of 8** · In relation to
 **Can do:** Say how something stands from a particular person's or group's point of view
 **Grammar:** `～にとって` — Noun plus にとって: from that person's or that group's side of things -- for me, to us, as far as a society is concerned. What follows is an evaluation in every card this chapter carries: 大事, 不利, 危険, 普通ではない. It does not mark a target, which is に対して, and it does not mark a doer. English hides the difference, because against him and to us can both be either, so the test is whether the sentence judges something from somewhere (にとって) or points something at somebody (に対して).
+**New kanji:** 証 拠 普 彼
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -1126,6 +1171,7 @@ never reads it.
 **Lesson 3 of 8** · In relation to
 **Can do:** Say in what capacity someone or something acts
 **Grammar:** `～として` — Noun plus として: in the capacity of, in the role of -- 通訳として雇う, 芸人として成功する. Add の and it modifies a noun, 教師としての経験; add は and it speaks for your own side, 私としては. What separates it from the と + して you already own is only what stands in front: a noun gives this pattern, a volitional gives 〜うとして from this book's second chapter, and an adverb gives かっとして, きちんとして.
+**New kanji:** 功 雇 師 経 浅
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -1148,6 +1194,7 @@ never reads it.
 **Lesson 4 of 8** · In relation to
 **Can do:** Tie two gradual changes together
 **Grammar:** `～につれて` — Dictionary-form verb plus につれて: as this goes on, that follows. Both halves have to be changes that unfold over time -- 冬が近づくにつれて日が短くなる -- which is why a one-off event does not sit in front of it. Every card in this chapter has a verb there; a noun of change can also stand in that slot. Book Three's 〜ば〜ほど measures one change against another the same way, and とともに does this job in writing where につれて does it in speech.
+**New kanji:** 希 我 景
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -1169,6 +1216,7 @@ never reads it.
 **Lesson 5 of 8** · In relation to
 **Can do:** Say that two things happen, move or change together
 **Grammar:** `～とともに` — Noun plus とともに, written と共に just as often: along with. Four jobs, all attested in this lesson -- in company with somebody (私と共に来る), at the same moment as something (大音響とともに爆発する), keeping step with a change (コストとともに上昇する), and, after である, as well as (詩人であるとともに外交官). It is formal: in speech と一緒に covers the first and につれて the third.
+**New kanji:** 瞬 爆 発 陽 崩 昇 燃
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -1191,6 +1239,7 @@ never reads it.
 **Lesson 6 of 8** · In relation to
 **Can do:** Say what something passes through, or by what means it came
 **Grammar:** `～を通して` — Noun plus を通して: through. Physically through a thing -- 葉を通して日光が差し込む -- and by way of a person or a medium, 彼を通して知り合いになる, which is the sense you will use. を通じて is its written twin and also covers a whole span of time. Keep it apart from the plain verb 通す that you met in 目を通す: there the te-form belongs to the verb, here を通して is a marker sitting on a noun.
+**New kanji:** 冷 身 葉 霧
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -1211,6 +1260,7 @@ never reads it.
 **Lesson 7 of 8** · In relation to
 **Can do:** Add a factor to what you have said, or name what something rests on
 **Grammar:** `～に基づいて` — Noun plus に基づいて: on the basis of, grounded in. What it rests on takes に, and this lesson's cards ground a story on fact, a science on observation and a salary on experience. The te-form modifies the verb that follows; 基づいている describes the standing state; に基づく and に基づいた go in front of a noun. Its lesson-mate に加えて adds a factor instead of grounding one -- これに加えて, on top of that -- and takes こと first when a clause goes in front of it.
+**New kanji:** 科 観 察 給
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -1234,6 +1284,7 @@ never reads it.
 **Lesson 8 of 8** · In relation to
 **Can do:** Single out the thing that matters, and name the source of a claim
 **Grammar:** `～によれば` — Noun plus によれば or によると: according to. It names where a claim came from and leaves the speaker out of it, so it pairs naturally with the hearsay そうだ or という at the end of the clause -- 長期予報によると、暖冬だそうだ -- without requiring one. Keep it apart from によって, which you have from Book Three: that one marks an agent, a means or what something varies with, not a source. Its lesson-mate こそ does the opposite job on a noun, singling one out -- 辛抱こそ, 彼こそ -- and 〜こそ〜が concedes a point before overturning it.
+**New kanji:** 辛 抱 十 報 患
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -1267,6 +1318,7 @@ never reads it.
 **Lesson 1 of 8** · Only so far
 **Can do:** Say that something is no more than what it is
 **Grammar:** `～に過ぎない` — Noun or plain clause plus に過ぎない, written にすぎない just as often: no more than this, and nothing should be read into it beyond it. 一介のビジネスマンにすぎない, only a businessman; 事実を述べていたに過ぎない, merely stating a fact. It is the same 過ぎる as this book's 〜すぎる, too much, pointing the other way: すぎる says something went over a line, に過ぎない says it never reached one. Formal and written; ただの〜だ does the same work in speech. It often has ただ, ほんの or 一介の in front of the noun, which double the belittling rather than being required by the pattern. Dictionaries list it as a single expression rather than as grammar.
+**New kanji:** 述 球 漂 貧 農 民 味
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -1289,6 +1341,7 @@ never reads it.
 **Lesson 2 of 8** · Only so far
 **Can do:** Say that something need not be done, or cannot be overdone
 **Grammar:** `～ことはない` — Dictionary-form verb plus ことはない: there is no need to. 押し隠すことはない, no need to hide it. It reassures rather than instructs, which is what separates it from 必要はない, the flat statement that something is not required. With すぎる in front it gives いくら〜てもしすぎることはない, you cannot do it too much. Two older jobs wear the same string and this lesson names rather than re-teaches them: た-form plus ことはない is the negative of Book Two's たことがある, has never once, and ということはない denies that a whole state of affairs holds. Nothing in the string tells them apart -- the form of the verb in front does. Dictionaries list the first two of those together under one entry for exactly that reason.
+**New kanji:** 運 転 注
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -1311,6 +1364,7 @@ never reads it.
 **Lesson 3 of 8** · Only so far
 **Can do:** Say that something is too obvious to need stating
 **Grammar:** `～までもない` — Dictionary-form verb plus までもない: there is no need to go so far as to. 言うまでもない, needless to say, is its fixed form and by far its commonest use -- dictionaries list that whole phrase as an entry of its own. The frame is productive: 待つまでもない, no need to wait for one. The clause it comments on goes in front, closed with ことは or のは. Polite speech gives までもありません. It is not the same as ことはない: ことはない says the thing need not be done, までもない says it would be going too far to bother.
+**New kanji:** 世 界 家 解 釈
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -1329,6 +1383,7 @@ never reads it.
 **Lesson 4 of 8** · Only so far
 **Can do:** Say that something cannot be expressed or cannot be allowed
 **Grammar:** `～ようがない` — ます-stem plus ようがない: there is no way to do it, no means available. 言う gives 言い, so 言いようがない, there is no way to say it; する gives し, so a する-noun takes の and gives 解釈のしようがない, there is no way to interpret it. Keep しようがない apart from しょうがない, a different fixed phrase meaning it can't be helped. This lesson's other half, わけにはいかない, refuses on different grounds: not no means but no licence -- 見過ごすわけにはいかない, I cannot very well let it pass, because conscience, duty or circumstance forbids it. A dictionary-form verb goes in front of that one, and Book Three's わけがない, which says something is impossible, is a different member of the same family.
+**New kanji:** 黙 過
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -1350,6 +1405,7 @@ never reads it.
 **Lesson 5 of 8** · Only so far
 **Can do:** Deny that one fact licenses a conclusion
 **Grammar:** `～からといって` — Plain clause plus からといって: just because this is so, it does not follow that. It sets up a reason only in order to refuse the conclusion drawn from it, and in all four of this lesson's cards the second half is a denial -- とは限らない, わけではない, てはいけない, or a negative verdict. That pairing is a strong tendency rather than a rule of grammar, and the ones the corpus does not attest here are ことにはならない and a plain ない. At the head of a sentence it appears as だからといって, referring back to what was just said. It is not the same as から on its own: から gives the reason, からといって takes it away again.
+**New kanji:** 笑 積 常 量 恋 落 蔑
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -1372,6 +1428,7 @@ never reads it.
 **Lesson 6 of 8** · Only so far
 **Can do:** Grant a label and then qualify it
 **Grammar:** `～といっても` — Noun or clause plus といっても: though it is called that, though I say so. The label is granted and then cut down -- 宿屋といっても, they call it an inn, but. Unlike からといって it does not require a negative behind it: といってもいい means one could go so far as to call it that, and 〜といっても過言ではない is the same idea in a speech. いくら〜といっても concedes a point before answering it. Book Three's とはいえ is its written cousin and carries the same concession in an essay register.
+**New kanji:** 宿 多 才 材 壁 初
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -1393,6 +1450,7 @@ never reads it.
 **Lesson 7 of 8** · Only so far
 **Can do:** Judge against an expectation, and concede a hypothetical
 **Grammar:** `～にしては` — Noun plus にしては: judged against what you would expect of it. ６月にしては寒い, cold for June; 新聞記者にしては腕がいい, good for a reporter. A clause can also stand in front, though every card in this lesson has a noun there. Change the last kana and the job changes. にしても, with も, is even so or no matter which, and after a question word it means it makes no difference -- 何をするにしても. それにしても and いずれにしても are its fixed forms, even so and in any case. としても supposes something and says it changes nothing: 関与していたとしても不思議ではない, no wonder even if he was involved. The rough division is that としても leans hypothetical and にしても leans toward something already granted, but the two overlap and English says even if for both. The last chapter's として, in the capacity of, is a different marker again -- it is も that makes this one.
+**New kanji:** 頃 腕 件 議 与 幸
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -1418,6 +1476,7 @@ never reads it.
 **Lesson 8 of 8** · Only so far
 **Can do:** Say what someone tends to do, and how they look while doing it
 **Grammar:** `～がち` — ます-stem or noun plus がち: prone to, tends to, and almost always of something unwelcome. 忘れがち, apt to forget; 病気がち, sickly; なりがち, tends to become, which is the commonest of all. The result behaves as a な-adjective. This lesson's other half is げ, which goes on the stem of an adjective and makes the air a person gives off: 不安げ anxious-looking, 悲しげ, 楽しげ, 得意げ, with げに as the adverb. げ attaches to feeling adjectives, which is what all four of its cards carry, rather than to any adjective at all. Both differ from this book's そう: そう reports how a thing looks or what seems likely to happen, while げ is the impression a person gives and がち is what someone or something habitually does.
+**New kanji:** 責 健 康 悲 椅
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -1456,6 +1515,7 @@ never reads it.
 **Lesson 1 of 7** · Joining an argument
 **Can do:** Restate or sum up what you have just said
 **Grammar:** `つまり` — つまり restates what was just said in other words, or sums it up. It stands after a comma inside a sentence -- 江戸、つまり東京, Edo, that is, Tokyo -- or at the head of the next one, and it needs no verb of its own. すなわち does the same work in a written register and is happiest with the restating job: a date, a name, an equivalence. 要するに compresses rather than restates -- in short, when it all comes down to it. The three overlap, and English says that is, namely and in short for all of them depending on the sentence; register and how much is being compressed tell them apart, not any rule about where each may stand. とどのつまり, after all, is a fixed idiom and not this word at ordinary work.
+**New kanji:** 到 東 京 飽
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -1479,6 +1539,7 @@ never reads it.
 **Lesson 2 of 7** · Joining an argument
 **Can do:** Follow the connectives of notices, terms and reports
 **Grammar:** `したがって` — したがって at the head of a sentence draws a conclusion from the sentence before it: therefore, accordingly. Written 従って in kanji as readily as in kana -- the kanji is the verb 従う, to follow, which this course has not taught. It belongs to reports, notices and argument, where speech would use だから or それで, and Book Three's ゆえに is its heavier written twin. Two neighbours share the lesson because they live in the same documents. ただし adds the condition or the exception attached to what was just offered: however, provided that -- the small print. なお adds a postscript, one further thing worth knowing. なお is also an ordinary adverb meaning still or even more, and it is the sentence-opening position that gives it the furthermore reading.
+**New kanji:** 産 削 列 並 説
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -1502,6 +1563,7 @@ never reads it.
 **Lesson 3 of 7** · Joining an argument
 **Can do:** Offer a choice between two things, in writing and aloud
 **Grammar:** `または` — または joins two nouns and offers a choice between them: 紅茶またはコーヒー. It is the written or of forms, menus, instructions and regulations, where speech uses か. あるいは does the same between nouns -- where two nouns are being joined either word will stand -- and it also joins two whole alternatives; as an adverb it separately means perhaps. それとも marks a choice being asked: usually a whole question, それとも, and a second whole question, and also embedded inside 思う or わからない, where no question mark appears. In speech people simply put か between the two nouns -- コーヒーか紅茶 -- and that is the plain everyday version of all three. What fixes それとも is the question, not the register; what separates または from あるいは is little more than how dry the writing is.
+**New kanji:** 非 匂 液 表
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -1530,6 +1592,7 @@ never reads it.
 **Lesson 4 of 7** · Joining an argument
 **Can do:** Add a point that strengthens the one before it
 **Grammar:** `しかも` — しかも adds a second point to the first and marks it as telling: and what is more. Often the addition makes matters worse -- しかも頻繁にだ, and frequently at that -- and English then reaches for a contrast where the Japanese is simply adding, which is why 安くてしかも栄養がある comes out as inexpensive but nourishing. Dictionaries give it a second reading, nevertheless, for the cases where the two points really do pull against each other. さらに shares the lesson and is wider: as a connective it is furthermore, and as a plain adverb it is further or even more -- さらに悪い, worse still; さらに５ドル, five dollars more. その上, from the last chapter, is the spoken sibling of both, and the two stack: その上さらに.
+**New kanji:** 養 狭 頻 繁 識 恵 乏 欠
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -1555,6 +1618,7 @@ never reads it.
 **Lesson 5 of 7** · Joining an argument
 **Can do:** Prefer one description or one choice over another
 **Grammar:** `むしろ` — むしろ chooses one description or one course over another: rather, sooner, if anything. Three shapes carry it. After より, which marks what is being passed over: 金よりむしろ名誉. After というより, which is the frame to own -- X というよりむしろ Y, not so much X as Y, with は or も able to sit inside it. And alone, the alternative left unsaid: むしろ外出したくない, I would rather not go out. It does not measure quantities, which is what より does on its own; it corrects a description or picks a side. Written 寧ろ in kanji, rarely.
+**New kanji:** 選 誉 害 優 広
 
 | Word | Reading | Meaning |
 |---|---|---|
@@ -1578,6 +1642,7 @@ never reads it.
 **Lesson 6 of 7** · Joining an argument
 **Can do:** Set two facts or two sides against each other
 **Grammar:** `一方` — 一方 is a noun meaning one of two, and three jobs grow out of it. 一方は... もう一方は... is one and the other. At the head of a clause or a sentence, 一方, 一方で or その一方 sets a second fact beside the first -- meanwhile, whereas, then again -- marking the turn without contradicting anything, which is what separates it from が and でも. And a plain verb plus 一方だ or 一方である says that something only ever moves the one way: 募る一方である, it keeps on growing. That third job is worth recognising rather than building, and one sentence in this lesson carries it. 一方的, one-sided, is a separate adjective and not this word at work.
+**New kanji:** 猫 背 低 床 塗 備
 
 | Word | Reading | Meaning |
 |---|---|---|

@@ -90,7 +90,9 @@
     - b4band1.lets-call-the-dog-skipper
     - b4band1.lets-not-go-on-about-it
     - b4band1.you-shall-be-my-daughters-husband
-  kanji: []
+  kanji:
+    - 忍
+    - 娘
   patternId: grammar.b4-volitional
   grammarNote: "ましょう has been in your deck since Book Two's chapter on deciding — 行きましょう, let's go, said politely. This is what is underneath it. The plain form is called the volitional, and among friends, in your own head, and in most of what you will read, it is the form that actually turns up. Godan verbs move their last sound to the お row and add う. 呼ぶ → 呼ぼう. 急ぐ → 急ごう. 待つ → 待とう. 割る → 割ろう. A verb ending in う goes to お and then adds う as well, so 言う → 言おう, and the sound that comes out is a long おー rather than anything new. Ichidan verbs are simpler: drop る, add よう. 見る → 見よう. 食べる → 食べよう. 開ける → 開けよう. する → しよう, and every noun+する verb follows it — 参加する → 参加しよう, 掃除する → 掃除しよう — which is most of the volitionals in the corpus. 来る → 来よう, read こよう, the same shift as 来ない. Now what it means, which is not always let's. Sentence-final, spoken to somebody, it proposes: ３時はお茶にしよう, 忍者ごっこをしよう, その犬をスキッパーと呼ぼう. Said about yourself, to yourself, it decides: I'll do this. お前を娘の夫にしよう is nobody's invitation — it is one person announcing what will happen to another, and the word お前 in front of it is a speaker who outranks the person he is addressing. What tells the two readings apart is the situation, never the verb. くどくど言わないようにしよう puts the volitional on ようにする, the make-a-point-of-doing-it pattern from Book Three's purpose chapter, and the result is a resolution rather than a plan for the afternoon. Two more things worth having now. Add か and you get a question — 行こうか, shall we go, the plain twin of ましょうか. And the look-alike, which will catch you if nobody names it: だろう and であろう look exactly like the volitional of だ and ある, and they are not this at all. They are conjecture — probably, I suppose — and they come later in this book. If a sentence ends in だろう, nobody is proposing anything."
 
@@ -113,7 +115,13 @@
     - b4band1.this-summer-im-getting-a-tan
     - b4band1.i-thought-id-settle-it-by-phone
     - b4band1.im-thinking-of-going-away-for-my-health
-  kanji: []
+  kanji:
+    - 参
+    - 加
+    - 勧
+    - 焼
+    - 済
+    - 思
   patternId: grammar.b4-you-to-omou
   grammarNote: "Put と思う after the volitional and you have the ordinary way of saying what you mean to do. デモに参加しようと思う — I'm going to join a demonstration. The volitional carries the intention, 思う says it is yours, and the whole thing is softer than announcing 参加します, which states it as fact. Three things you already own are in this pattern and each of them is doing a slightly different job than before. 思う, from Book Two's chapter on quoted speech, took a plain clause in front of it and gave you an opinion: 高いと思います, I think it's expensive. Put a volitional in front of the same verb instead and it is no longer an opinion at all — it is a decision. The verb did not change; what precedes it did. つもりです, from the deciding chapter, sits next door and is firmer: a つもり is a plan you have made, and ようと思う is a decision you are making as you speak. And 思っています, which that chapter also gave you, does exactly what it does here — 医者が勧めるので、どこかへ転地療養に行こうと思っています is an intention the speaker has been carrying for a while, which is why English reaches for I'm thinking of rather than I'm going to. Politeness lives on the last verb only. Everything in front of と stays plain, always, so この夏はこんがり焼こうと思います is polite and 焼こう inside it is not. Past tense works the same way and is worth watching for, because 電話で済まそうと思いました reports an intention the speaker had — often one that then ran into something. One limit to know now. About somebody else, plain ようと思う is not what you will meet; stating another person's intention as flatly as your own is not something the language does here. 思っている is the form used instead, and it is the one you will read in reports and biographies."
 
@@ -137,7 +145,10 @@
     - b4band1.i-tried-to-open-the-door
     - b4band1.the-small-car-boom-is-about-to-end
     - b4band1.its-no-use-trying-to-get-money-out-of-me
-  kanji: []
+  kanji:
+    - 盗
+    - 捕
+    - 駄
   patternId: grammar.b4-you-to-suru
   grammarNote: "The same volitional, now with とする after it, and the pattern has two jobs that look identical on the page. With a person in front, it is an attempt. 彼はロボットを動かそうとした — he tried to get the robot going. Nothing in the Japanese says whether it worked, and English tried to is just as silent, so do not read failure into the form itself; what usually tells you is the clause after it. 彼女は宝石を盗もうとして捕まった says how that attempt ended, and it is the と捕まった doing that, not the ようとして. Pair it with たら from Book Two and you get the shape a story uses constantly: ドアを開けようとしたら、ドアの握りがとれた — I went to open the door, and this is what I found. 開ける is ichidan, so its volitional is 開けよう, and this is the one place in the chapter you meet that shape on a card. Pair it with Book Three's ても and you get 僕に金をせびろうとしても無駄だ, even if you try, it is no use. The second job belongs to subjects that cannot intend anything. 小型車のブームは終わろうとしている — a boom has no intentions, so the sentence can only mean the thing is on the point of happening. That is where about to lives, and it is common in writing about weather, seasons, economies and eras. When the subject is a thing, take this reading first. Two collisions to keep off. として without a volitional in front of it means as, in the capacity of, and is a different pattern entirely — 教師として, as a teacher — so check what comes before it. And うとうと is one word, the sound-word for dozing off, which carries the same うと a volitional plus と does and means nothing like it; the corpus is full of it."
 
@@ -162,7 +173,11 @@
     - b4band1.think-before-you-speak
     - b4band1.stop-running-away-from-reality
     - b4band1.bring-a-plate
-  kanji: []
+  kanji:
+    - 考
+    - 現
+    - 実
+    - 皿
   patternId: grammar.b4-imperative
   grammarNote: "Every request you have made so far went through てください. Underneath it is a form with nothing softening it at all. Godan verbs move their last sound to the え row and stop there — no extra syllable. やる → やれ. 急ぐ → 急げ. 言う → 言え. 書く → 書け. 待つ → 待て. Ichidan verbs drop る and add ろ. やめる → やめろ. 考える → 考えろ. 見る → 見ろ. する → しろ, and 来る → 来い, read こい, which is irregular in both books' senses of the word. Now the part that matters more than the endings. This form is not simply rude, and treating it as a word you must never say leaves you unable to read half of what it appears in. In this chapter's own sentences it is a father calling a son to bring a plate for the tempura, and an older speaker telling somebody that if they are going to do a thing at all they should do it properly. Neither is an insult. What the corpus does show, over and over, is where it is at home: signs and instructions, sport and emergencies, quoted speech and slogans, a person talking to himself, and adults speaking downward to children or between close friends. Spoken between adults who are not close, it is blunt, and it is more common in men's casual speech than in women's — a tendency you can see in the corpus, not a rule, and one that is loosening. There is a ladder here, and you now hold all of it. てください asks. なさい, the next lesson, instructs from above. This form commands. Choosing between them is not a matter of politeness levels to be memorised but of who you are to the person in front of you. Two smaller facts. Written Japanese, slogans and older texts use 見よ where speech uses 見ろ — the same job with an older ending, which ichidan verbs and する (せよ) take and godan verbs do not. And a negative command is not made from this form at all; it has a shape of its own, which is the next lesson."
 
@@ -185,7 +200,12 @@
     - b4band1.dont-worry-what-others-say
     - b4band1.dont-let-your-feelings-show
     - b4band1.dont-go-near-the-bulldog
-  kanji: []
+  kanji:
+    - 触
+    - 他
+    - 寄
+    - 見
+    - 袋
   patternId: grammar.b4-prohibitive-na
   grammarNote: "The imperative's negative twin, and it is built differently from anything else you have learned. Take the dictionary form — not the ます-stem, not the ない form, the plain dictionary form — and put な on the end. するな. 触れるな. 見せるな. 近寄るな. That is the whole rule, and it applies to every verb in the language with no classes and no exceptions. The register is the imperative's: blunt, downward or between equals, ordinary on a warning sign, and in this chapter's sentences it is one friend telling another what not to bring up in front of his mother. Now the two look-alikes, because な is one syllable doing three jobs and the only thing separating them is what stands immediately in front. Dictionary form plus な is this lesson: 食べるな, don't eat it. A ます-stem plus な is the opposite instruction — a light, friendly command: 食べな, go on, eat. The dictionary itself lists these as two separate senses of the same particle. And な after anything else, at the end of a sentence, is neither: it is emphasis or reflection, closer to English isn't it or a sighed well, and it comes later in this book. A ている form plus な — してるな at the end of a remark about somebody's good work — is that one, and nobody there is being told to stop. So read backwards from the な and check the form in front of it. That is the whole test. You already have gentler ways to say the same thing, and you should reach for them first with anyone you are not close to. ないでください, from Book Two, asks. Book Three's てはならない, and its everyday cousin てはいけない, state a rule. The form here does neither — it tells."
 
@@ -210,7 +230,13 @@
     - b4band1.cover-your-mouth-when-you-cough
     - b4band1.stop-lazing-about-and-find-something-to-do
     - b4band1.take-a-map-in-case-you-get-lost
-  kanji: []
+  kanji:
+    - 迷
+    - 隠
+    - 道
+    - 地
+    - 図
+    - 咳
   patternId: grammar.b4-nasai
   grammarNote: "Between てください and the bare imperative there is one more rung, and it is the one you have been reading for two books without a lesson to hang it on. Take the ます-stem and add なさい. 行きます → 行きなさい. 隠します → 隠しなさい. やめます → やめなさい. 見つけます → 見つけなさい. する becomes しなさい and 来る becomes 来なさい, read きなさい, and there is nothing irregular anywhere in it, because the ます-stem has already done the work. It is firmer than てください and gentler than やめろ, and what makes it what it is, is not softness but position: なさい is spoken downward. A parent to a child, a teacher to a class, an exam paper to a candidate, a public sign to whoever reads it. 帽子を弄り回すのはやめなさい is a mother, not a friend. Used upward or sideways between adults it can easily sound like being talked down to rather than like politeness, which is why a learner meets it far more often than they say it. It comes from なさる, the honorific verb for do, and that is worth knowing so the ending does not look arbitrary — but なさる itself belongs to the chapters on honorific language later in this book and is not something you need now. Two things it is not. ごめんなさい is a fixed phrase from Book One and there is no instruction in it. ごらんなさい, please look, is built on an honorific and belongs with なさる. One more link worth making now, because it ties this lesson to the last one: なさい contracts in casual speech to な on the ます-stem. 食べなさい becomes 食べな, eat up. That is the friendly な of the previous lesson, and it is why the form in front of な decides everything — 食べな invites, 食べるな forbids."
 
@@ -235,7 +261,12 @@
     - b4band1.does-nancy-want-a-dog
     - b4band1.only-a-handful-of-men-take-childcare-leave
     - b4band1.everybody-wanted-to-know-what-had-happened
-  kanji: []
+  kanji:
+    - 新
+    - 飼
+    - 性
+    - 起
+    - 誰
   patternId: grammar.b4-tagaru
   grammarNote: "たい, from Book Two's deciding chapter, says what you want: 買いたい, I want to buy it. It is for you and, in a question, for the person you are asking. On its own it is not used to assert what a third person wants — you can report what they said about it, with と言っている, but that is reporting — and that has left a hole. Until now there has been no way to say what somebody else wants. たがる fills it. Take the ます-stem and add たがる instead of たい. 買います → 買いたがる. 売ります → 売りたがる. 知ります → 知りたがる. The dictionary says the restriction outright — not used in the first person — so these two forms divide the world between you and everyone else. In practice you will meet たがっている far more often than bare たがる, because a wish somebody has right now is a state: トムはしきりに新車を買いたがっている. The negative, たがらない, is reluctance rather than mere absence of wanting: ほんの一握りの男性しか育児休暇を取りたがらない. And the past, たがっていた, is what they wanted at the time. It conjugates as an ordinary godan verb throughout, so nothing new is needed to bend it. One particle change comes with it. たい lets you mark what you want with が or を; たがる takes を, because it describes an action somebody is doing rather than a feeling they hold. Tone, stated carefully because it is easy to over-learn. Bare たがる, non-past, often describes a habit, and in that use it frequently carries a note of disapproval — the corpus's clearest example is a sentence about a government that tends to want to control the media. Frequently is not always: ナンシーは犬を飼いたがっていますか is a plain question about a friend's wishes with no judgement in it anywhere. Read the tone from the sentence, not from the ending. Last, the noun version. ほしい, want a thing, has the same problem and the same fix — 欲しがる is what somebody else wants to have."
 
