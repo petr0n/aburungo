@@ -3,7 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <!-- interactive-widget=resizes-content: without it Chrome on Android shrinks only the
+         visual viewport when the soft keyboard opens, leaving the layout viewport full
+         height. Anything positioned against the viewport -- sticky, fixed, svh units --
+         then anchors to a top edge that is scrolled off the visible area, so a pinned
+         prompt survives the first focus and is gone by the second. -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover, interactive-widget=resizes-content"
+    />
     <meta name="description" content="AburunGo — practical Japanese for real-life situations." />
     <meta name="theme-color" content="#ffffff" />
 

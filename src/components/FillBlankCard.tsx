@@ -119,9 +119,13 @@ export function FillBlankCard({ card, showRomaji = true, onNext }: Props) {
         </Button>
       </div>
     ) : (
-      <Button type="button" onClick={() => setPhase("result")} variant="secondary" fullWidth>
+      <button
+        type="button"
+        onClick={() => setPhase("result")}
+        className="flex min-h-[44px] w-full items-center justify-center text-body-sm text-fg-subtle underline active:text-fg"
+      >
         Show answer
-      </Button>
+      </button>
     );
 
   const modeToggle =
@@ -151,8 +155,8 @@ export function FillBlankCard({ card, showRomaji = true, onNext }: Props) {
   return (
     <div className="flex w-full flex-col gap-3">
       {modeToggle}
-      <Card className="w-full">
-        <div className="flex flex-col gap-6">
+      <Card compact className="w-full">
+        <div className="flex flex-col gap-3">
           <header className="flex items-center justify-between gap-4">
             <Badge emphasis>{badgeLabel}</Badge>
             <AudioButton src={card.audioUrl ?? undefined} />
@@ -171,7 +175,7 @@ export function FillBlankCard({ card, showRomaji = true, onNext }: Props) {
             {card.notes != null ? <p className="text-body-sm text-fg-subtle">{card.notes}</p> : null}
           </div>
 
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-3">
             {phase === "input" &&
               (inputMode === "text" ? <FillInput onSubmit={handleSubmit} /> : <VoiceInput onResult={handleSubmit} />)}
             {footer}
