@@ -1,0 +1,594 @@
+# Book Four, Chapter 7 phrases -- saying what something stands in relation to.
+#
+# Forty-two sentences, none of them ours. 04-stage-reading.md section 8
+# withdrew the training-canonical exemption at the reading stage and above, so
+# every sentence below is a verbatim Tatoeba pair carried out of
+# server/data/jmdict-examples-eng-3.6.2.json with its id in `tatoebaId`, quoted,
+# because YAML reads a bare 152241 as a number and the schema rejects it.
+# Nothing was composed, trimmed, joined, smoothed or corrected. Every Japanese
+# string was compared character for character against the corpus after the file
+# was written rather than before: all forty-two match, and no id and no sentence
+# in this file is carded anywhere else in src/content/phrases/ or quoted as a
+# word example in src/content/vocabulary/.
+#
+# WHERE THIS CHAPTER'S JAPANESE COMES FROM. These compound particles belong to
+# the written register -- newspaper, report, notice, essay -- so the corpus
+# hands them over in sentences about currencies, societies, the economy and
+# science rather than about lunch. That is the register the chapter teaches and
+# the reason its vocabulary is the most abstract in the book. It is also why so
+# many cards below are marked for recognition: see the last section of this
+# header.
+#
+# ---------------------------------------------------------------------------
+# THREE SENTENCES THIS CHAPTER'S PLAN ASKED FOR AND CANNOT HAVE, each already
+# carded elsewhere in the course. Carding one twice would teach one sentence
+# under two ids in two chapters.
+#
+#   #237020 プレゼンテーションの前に資料に目を通しておくのが一番いい -- proposed
+#   for lesson 6 and already a Book Four card (phrases/b4-00-finishing.yaml),
+#   where it teaches ておく. Its を通して is the verb 通す in 目を通す anyway, not
+#   this chapter's compound particle, and lesson 6's note separates the two.
+#
+#   #145165 新聞によれば、その町に大火があったそうだ -- proposed for lesson 8 and
+#   already a Book Four card (phrases/b4-02-reason.yaml), where it teaches the
+#   hearsay そうだ and where its note promises this lesson. Lesson 8 uses
+#   #125882 長期予報によると、暖冬だそうだ instead, which is the same pairing --
+#   source at the front, そうだ at the back -- in a sentence nothing else owns.
+#
+#   #122956 日が経つにつれて、天気は次第に悪化しつつあった -- the only につれて
+#   sentence the course already holds (phrases/b3-10-register.yaml, teaching
+#   つつある). Its note there says につれて is taught nowhere in the course; once
+#   this chapter lands that line is out of date, and correcting it belongs to
+#   whoever owns that file rather than to this one.
+#
+# TWO CELLS WITH NO CARD, recorded rather than filled in with something weaker.
+#
+#   を通じて, the written twin of を通して, is attested three times in the whole
+#   corpus. One is a public-health sentence about how syphilis is transmitted --
+#   correct Japanese, three heavy medical words, and no way to justify putting
+#   them in a learner's review queue to demonstrate a particle. The other two
+#   run to forty-two and forty-nine characters, well past anything this book
+#   cards. Lesson 6 therefore teaches を通じて in its note as the form to
+#   recognise in writing and cards only を通して. No sentence was composed to
+#   give it an example.
+#
+#   に対して meaning "whereas" -- the contrastive job, X なのに対して Y -- has
+#   exactly one attestation, at seventy-six characters, three times longer than
+#   anything this book cards. Lesson 1's note states the job in English and
+#   tells the learner where they will meet it. It is not carded.
+#
+# ONE SENTENCE DECLINED ON REGISTER. #122337 日本語は外人にとって覚えにくい was
+# proposed for lesson 2. 外人 is a term many people find slighting; the neutral
+# word is 外国人, and it is not in the sentence. にとって is attested fifty-eight
+# times under thirty-five characters, so nothing is lost by taking one of the
+# others, and lesson 2 does.
+#
+# ---------------------------------------------------------------------------
+# READING JUDGEMENT CALLS, stated rather than left to be discovered. Every
+# `reading` is what a learner types and FillBlankCard grades the whole string,
+# so an ambiguous transcription is a card nobody can pass. Each of these was
+# checked against JMdict rather than guessed:
+#
+#   #211172, #165355 and #101380 -- 年 is とし, the free-standing word (1468060),
+#     not the ねん of 一年.
+#   #101380's 十分 is じゅうぶん, enough (1335080), not じっぷん, ten minutes
+#     (1335070). Book Three's chapter 4 made the same call for #189964.
+#   #139859's 鈍い is にぶい (1582430); the same characters also spell おそい.
+#   #217221's 木々 is きぎ (1591090) and its 日光 is にっこう (1464030).
+#   #107274's 高名 is こうめい, which JMdict (1578900) lists ahead of こうみょう.
+#   #74572's 大音響 is だいおんきょう (2779950).
+#   #185070's 航空運賃 is こうくううんちん (1983490).
+#   #80850's 陸地 is りくち (1644320).
+#   #125882's 長期予報 is ちょうきよほう -- 長期 (1429850) plus 予報 (1543630).
+#   #182439's 急行券 is きゅうこうけん (1228700). 普通券 is in no JMdict entry;
+#     it is 普通 (1497190) plus 券, and ふつうけん is the only reading its parts
+#     allow. That card is marked for recognition, so nobody has to type it.
+#   Katakana stays katakana in the reading -- サービス, スポーツマン, クリスマス,
+#     マリーゴールド, ソビエト, コート, コスト, ヘブライ, リューマチ, ドル,
+#     チップ, ソプラノ -- and sentence punctuation is kept exactly as the corpus
+#     has it, both conventions set by chapters 5 and 6.
+#
+# ROMAJI follows the previous chapters: word-spaced Hepburn with long vowels
+# doubled, a Japanese comma written as a comma, and the compound particles
+# spaced as they are pronounced -- ni taishite, ni totte, toshite, ni tsurete,
+# to tomo ni, o tooshite, ni kuwaete, ni motozuite, ni yoreba.
+#
+# ---------------------------------------------------------------------------
+# THE ENGLISH is Tatoeba's own except in two places, listed here by id and kind
+# so a reviewer can check them rather than take them on trust. No Japanese
+# string was touched.
+#
+#   #107914 -- "He made good as an entertainer." is an idiom that gives a
+#     learner no route back to 成功した. Glossed "He succeeded as an
+#     entertainer."
+#   #92257 -- "She is famed as a soprano." drops 歌手, singer, which is half of
+#     what has to be typed. Glossed "She is famous as a soprano singer."
+#
+# ---------------------------------------------------------------------------
+# `recognitionOnly` ON TWENTY-TWO OF FORTY-TWO CARDS, which is the highest
+# share of any chapter in this book and is a property of the material rather
+# than a lapse. Two things drive it.
+#
+#   The English of a relation sentence rarely says which relation Japanese
+#   chose. "against him", "to us", "for a sportsman" and "toward life" are all
+#   に対して or にとって in the original, and no English sentence tells you which
+#   -- that ambiguity is exactly what lessons 1 and 2 teach, so it cannot also
+#   be what a typing card demands. FillBlankCard shows the English alone and
+#   grades the whole typed reading (FillBlankCard.tsx:53).
+#
+#   The register brings length. Six cards run past thirty-four kana, which is
+#   the ceiling the rest of Book Four types at, and several more end in a marker
+#   English simply has no counterpart for -- であろう, んだよ, だそうだ, なんだ.
+#
+# The flag does not retire a card. LearnPage.tsx:217-220 keeps a recognitionOnly
+# phrase in review and only stops it being typed, so all twenty-two keep coming
+# back as recognition.
+#
+# content-source: Tatoeba, via the sentence pairs embedded in JMdict for
+#   Applications 3.6.2 (server/data/jmdict-examples-eng-3.6.2.json). Every
+#   phrase carries its sentence id in `tatoebaId`. Verified by id against the
+#   corpus on 2026-09-06: all 42 resolve, each Japanese string matches its
+#   source character for character, and none is carded elsewhere in the course.
+#   Kana readings and romaji are transcriptions of the quoted sentence, not new
+#   content; every compound whose reading was not obvious was checked against
+#   JMdict (the list is in the reading notes above).
+# jlpt-source: training -- the level marks the chapter this content sits in,
+#   not each form's textbook level.
+
+# -- Lesson 1 - Towards, against, in return for ------------------------------
+
+- id: b4band6.antipathy-towards-the-speaker
+  jlpt: N3
+  scenario: directed at
+  japanese: 私は話し手に対して反感を持った。
+  reading: わたしははなしてにたいしてはんかんをもった。
+  romaji: watashi wa hanashite ni taishite hankan o motta.
+  english: I experienced a feeling of antipathy towards the speaker.
+  tatoebaId: "152241"
+  notes: "に対して goes on a noun and marks what an attitude or an action is aimed at. Here it is a feeling aimed at a person, which is the commonest use of all. 話し手 is the speaker -- 話す plus the 手 that names the doer, the same 手 as in 歌手. 反感を持つ is the standing collocation: you hold antipathy rather than feel it."
+
+- id: b4band6.a-negative-attitude-to-life
+  jlpt: N3
+  scenario: directed at
+  japanese: 彼女は人生に対して否定的な態度をとっている。
+  reading: かのじょはじんせいにたいしてひていてきなたいどをとっている。
+  romaji: kanojo wa jinsei ni taishite hiteiteki na taido o totte iru.
+  english: She has a negative attitude toward life.
+  tatoebaId: "88454"
+  notes: "The same に対して, now with an abstract thing on the front rather than a person: an attitude can point at life, at a proposal, at a country. 否定的 is negative, 否定 plus the 的 that turns a noun into an adjective. Notice the verb: English has an attitude, Japanese takes one -- 態度をとる -- and the ている says she is holding it still."
+
+- id: b4band6.currencies-weakened-against-the-dollar
+  jlpt: N3
+  scenario: directed at
+  japanese: 欧州通貨はドルに対して弱くなった。
+  reading: おうしゅうつうかはドルにたいしてよわくなった。
+  romaji: oushuu tsuuka wa doru ni taishite yowaku natta.
+  english: European currencies weakened against the dollar.
+  tatoebaId: "188511"
+  notes: "The second job of に対して: measured against, set opposite. A currency against a currency, a team against a team, a claim against a claim. 欧州 is Europe in the register of a financial page; in speech people say ヨーロッパ. Nothing here is hostile -- against in this sense only means the other side of the comparison."
+
+- id: b4band6.no-custom-of-tipping-in-japan
+  jlpt: N3
+  scenario: directed at
+  japanese: 日本には良いサービスに対してチップを払う習慣はない。
+  reading: にほんにはよいサービスにたいしてチップをはらうしゅうかんはない。
+  romaji: nihon ni wa yoi saabisu ni taishite chippu o harau shuukan wa nai.
+  english: In Japan it is not customary to tip for good service.
+  tatoebaId: "122704"
+  recognitionOnly: true
+  notes: "The third job: in return for. Something is given back in exchange for what came before -- a tip for service, a fee for work, a reward for cooperation. And the sentence is worth reading for what it says as well as how it says it: tipping is not done in Japan, and pressing money on a waiter causes confusion rather than pleasure. Read this one rather than type it; the English keeps none of the 習慣はない frame."
+
+- id: b4band6.soles-insensitive-to-heat-and-cold
+  jlpt: N3
+  scenario: directed at
+  japanese: 足の裏は暑さや寒さに対して鈍い。
+  reading: あしのうらはあつさやさむさにたいしてにぶい。
+  romaji: ashi no ura wa atsusa ya samusa ni taishite nibui.
+  english: Soles of the feet are insensitive to heat and cold.
+  tatoebaId: "139859"
+  notes: "に対して with a reaction rather than an attitude: how something responds to what is done to it. 足の裏 is the sole, literally the underside of the foot. 暑さ and 寒さ are 暑い and 寒い turned into nouns by さ, the heat and the cold -- a swap that works on most adjectives and is worth trying whenever you need the noun of a quality."
+
+# -- Lesson 2 - For someone, from their side ---------------------------------
+
+- id: b4band6.he-is-precious-to-us
+  jlpt: N3
+  scenario: from their side
+  japanese: 彼は私たちにとって大事な人だ。
+  reading: かれはわたしたちにとってだいじなひとだ。
+  romaji: kare wa watashitachi ni totte daiji na hito da.
+  english: He is precious to us.
+  tatoebaId: "106339"
+  recognitionOnly: true
+  notes: "にとって sets up a point of view: from where we stand, he is important. Nothing is being done to us and nothing is aimed at us, which is what separates it from last lesson's に対して. What follows にとって is almost always an evaluation -- 大事, 不利, 危険, 難しい -- and that is a reliable signal when you meet a sentence cold. Read this rather than type it: the English drops 人 altogether."
+
+- id: b4band6.the-evidence-was-against-him
+  jlpt: N3
+  scenario: from their side
+  japanese: この証拠は彼にとって不利だった。
+  reading: このしょうこはかれにとってふりだった。
+  romaji: kono shouko wa kare ni totte furi datta.
+  english: This evidence was against him.
+  tatoebaId: "221114"
+  notes: "English says against him and Japanese does not: 彼にとって is from his position, and 不利 carries the whole of the disadvantage. If the sentence had used 彼に対して it would have meant the evidence was directed at him, which is a different claim. This is the pair the chapter turns on and the checkpoint will come back to it."
+
+- id: b4band6.poor-eyesight-handicaps-a-sportsman
+  jlpt: N3
+  scenario: from their side
+  japanese: スポーツマンにとって視力が悪いのは不利だ。
+  reading: スポーツマンにとってしりょくがわるいのはふりだ。
+  romaji: supootsuman ni totte shiryoku ga warui no wa furi da.
+  english: Poor eyesight is a handicap to a sportsman.
+  tatoebaId: "214328"
+  recognitionOnly: true
+  notes: "にとって can stand at the head of the sentence and set the standpoint for everything after it -- for an athlete, this is a handicap. 視力 is eyesight as a measurable thing, what an optician tests. 視力が悪い, the whole clause, is turned into the subject by の, the nominaliser you have had since Book Three. Read rather than type: nothing in the English fixes that word order."
+
+- id: b4band6.sunday-is-no-ordinary-day-to-me
+  jlpt: N3
+  scenario: from their side
+  japanese: 日曜日は私にとって普通の日ではない。
+  reading: にちようびはわたしにとってふつうのひではない。
+  romaji: nichiyoubi wa watashi ni totte futsuu no hi de wa nai.
+  english: Sunday is not an ordinary day to me.
+  tatoebaId: "122131"
+  notes: "English reaches for to me here, and that is the closest single rendering of にとって there is: for me, to me, in my book. The topic は marks what is being talked about and にとって marks whose view it is being talked from, so both can sit in one short sentence without competing."
+
+- id: b4band6.a-danger-to-society
+  jlpt: N3
+  scenario: from their side
+  japanese: 彼らはその男を社会にとって危険人物と考えた。
+  reading: かれらはそのおとこをしゃかいにとってきけんじんぶつとかんがえた。
+  romaji: karera wa sono otoko o shakai ni totte kiken jinbutsu to kangaeta.
+  english: They regarded the man as a danger to society.
+  tatoebaId: "97879"
+  recognitionOnly: true
+  notes: "The standpoint does not have to be a person: a society, a company or a country can be the one something is dangerous for. 危険人物 is a dangerous individual, a set compound. The frame around it is 〜を〜と考える, to regard something as something, which you have had since this book's chapter on thinking. Read rather than type -- the English gives you a danger, not 危険人物."
+
+# -- Lesson 3 - In the role of -----------------------------------------------
+
+- id: b4band6.he-succeeded-as-an-entertainer
+  jlpt: N3
+  scenario: in the role of
+  japanese: 彼は芸人として成功した。
+  reading: かれはげいにんとしてせいこうした。
+  romaji: kare wa geinin toshite seikou shita.
+  english: He succeeded as an entertainer.
+  tatoebaId: "107914"
+  notes: "として goes on a noun and says in what capacity: as an entertainer, in the role of one. 芸人 is a performer, and in modern usage most often a television comedian. The whole pattern is one of the simplest in this chapter and one of the most useful -- 学生として, 通訳として, 芸人として."
+
+- id: b4band6.he-hired-her-as-an-interpreter
+  jlpt: N3
+  scenario: in the role of
+  japanese: 彼は彼女を通訳として雇った。
+  reading: かれはかのじょをつうやくとしてやとった。
+  romaji: kare wa kanojo o tsuuyaku toshite yatotta.
+  english: He engaged her as an interpreter.
+  tatoebaId: "100792"
+  notes: "The capacity somebody is taken on in. Note where として sits: after the role, not after the person -- 彼女を通訳として, her as an interpreter. 通訳 is interpreting and also the interpreter doing it; the written twin is 翻訳, translation on the page."
+
+- id: b4band6.famous-as-a-soprano
+  jlpt: N3
+  scenario: in the role of
+  japanese: 彼女はソプラノ歌手として有名だ。
+  reading: かのじょはソプラノかしゅとしてゆうめいだ。
+  romaji: kanojo wa sopurano kashu toshite yuumei da.
+  english: She is famous as a soprano singer.
+  tatoebaId: "92257"
+  notes: "として with 有名 is the frame for what somebody or somewhere is known for: 軽井沢は避暑地として有名だ, Karuizawa is famous as a summer resort. It works on places and things as readily as on people, and it is the sentence a guidebook writes."
+
+- id: b4band6.little-experience-as-a-teacher
+  jlpt: N3
+  scenario: in the role of
+  japanese: 彼は教師としての経験が浅い。
+  reading: かれはきょうしとしてのけいけんがあさい。
+  romaji: kare wa kyoushi toshite no keiken ga asai.
+  english: He has little experience in teaching.
+  tatoebaId: "108333"
+  recognitionOnly: true
+  notes: "Add の and として can modify a noun: 教師としての経験, experience as a teacher. That の is the same one that turns について into についての. 経験が浅い is how Japanese says thin experience -- shallow rather than short -- and the opposite is plenty of it. Read rather than type; the English says in teaching and hides both halves."
+
+- id: b4band6.no-objection-on-my-part
+  jlpt: N3
+  scenario: in the role of
+  japanese: 私としては異存はありません。
+  reading: わたしとしてはいぞんはありません。
+  romaji: watashi toshite wa izon wa arimasen.
+  english: There is no objection on my part.
+  tatoebaId: "164927"
+  recognitionOnly: true
+  notes: "としては, として with the topic particle on it, is speaking for one's own side: as far as I am concerned, from where our department sits. It is what a negotiator says before conceding something. 異存 is an objection in the formal sense of a stated one. Read rather than type -- on my part gives no route to としては."
+
+# -- Lesson 4 - As one thing changes, so does another ------------------------
+
+- id: b4band6.days-grow-shorter-as-winter-approaches
+  jlpt: N3
+  scenario: changing together
+  japanese: 冬が近づくにつれて日が短くなる。
+  reading: ふゆがちかづくにつれてひがみじかくなる。
+  romaji: fuyu ga chikazuku ni tsurete hi ga mijikaku naru.
+  english: The days grow shorter as winter approaches.
+  tatoebaId: "124386"
+  notes: "につれて takes a plain-form verb in front of it and ties two changes together: as this goes on, that follows. Both halves have to be gradual -- winter approaching, days shortening -- which is why a one-off event does not fit in front of it. 日 here is the daylight, not the sun and not the date."
+
+- id: b4band6.business-improved-as-christmas-approached
+  jlpt: N3
+  scenario: changing together
+  japanese: クリスマスが近づくにつれて景気はいくらか回復した。
+  reading: クリスマスがちかづくにつれてけいきはいくらかかいふくした。
+  romaji: kurisumasu ga chikazuku ni tsurete keiki wa ikuraka kaifuku shita.
+  english: With the approach of Christmas, business improved somewhat.
+  tatoebaId: "225478"
+  notes: "The same frame with the second half in the past: the two changes still ran together, and both are over. いくらか is somewhat, a hedge on how much. 景気 is trade or the economy at large -- 景気がいい is business is good, and it is what the news says every evening."
+
+- id: b4band6.our-hopes-sank-as-time-went-on
+  jlpt: N3
+  scenario: changing together
+  japanese: 時間がたつにつれて我々の希望は消えた。
+  reading: じかんがたつにつれてわれわれのきぼうはきえた。
+  romaji: jikan ga tatsu ni tsurete wareware no kibou wa kieta.
+  english: As time went on, our hopes sank.
+  tatoebaId: "150630"
+  recognitionOnly: true
+  notes: "時間がたつ, time passing, is the commonest thing to put in front of につれて, and you will meet it as 時がたつ and 日がたつ too. 我々 is the formal we of a report or a speech. Read rather than type: sank is 消えた, vanished, and our could be either 我々の or 私たちの."
+
+- id: b4band6.we-grow-forgetful-as-we-age
+  jlpt: N3
+  scenario: changing together
+  japanese: 私たちは年をとるにつれて忘れっぽくなるんだよ。
+  reading: わたしたちはとしをとるにつれてわすれっぽくなるんだよ。
+  romaji: watashitachi wa toshi o toru ni tsurete wasureppoku naru n da yo.
+  english: We become forgetful as we grow older.
+  tatoebaId: "165355"
+  recognitionOnly: true
+  notes: "につれて is not confined to writing, and this is what it sounds like in speech: 年をとる, to grow older, plus the explanatory んだ and a friendly よ. 忘れっぽい is the っぽい suffix on 忘れる -- prone to forgetting. Read rather than type; nothing in the English asks for んだよ."
+
+- id: b4band6.the-artists-style-changes-with-age
+  jlpt: N3
+  scenario: changing together
+  japanese: その芸術家は年を取るにつれて画風が変わるであろう。
+  reading: そのげいじゅつかはとしをとるにつれてがふうがかわるであろう。
+  romaji: sono geijutsuka wa toshi o toru ni tsurete gafuu ga kawaru de arou.
+  english: As the artist grows older his paintings may alter.
+  tatoebaId: "211172"
+  recognitionOnly: true
+  notes: "The same 年を取る as the card before it, in kanji this time, and the whole sentence one register up. であろう is だろう built on である, the written copula from Book Three: probably, in the voice of an essay. 芸術家 is an artist and 画風 is a painting style. Read rather than type -- may alter does not tell you to write であろう."
+
+# -- Lesson 5 - Together with ------------------------------------------------
+
+- id: b4band6.would-you-come-with-me
+  jlpt: N3
+  scenario: along with
+  japanese: 私と共に来てくれませんか。
+  reading: わたしとともにきてくれませんか。
+  romaji: watashi to tomo ni kite kuremasen ka.
+  english: Would you mind coming with me?
+  tatoebaId: "164886"
+  notes: "The plainest job of とともに: in company with, alongside. Note that the と is the ordinary with-particle and ともに is what has been added to it, which is why 私と一緒に would say the same thing in an everyday voice. と共に and とともに are one word in two spellings and both are ordinary."
+
+- id: b4band6.it-exploded-with-a-great-noise
+  jlpt: N3
+  scenario: along with
+  japanese: その瞬間、大音響とともに爆発した。
+  reading: そのしゅんかん、だいおんきょうとともにばくはつした。
+  romaji: sono shunkan, daionkyou to tomo ni bakuhatsu shita.
+  english: At that instant it exploded with a great noise.
+  tatoebaId: "74572"
+  notes: "The second job: two things happening at one moment. Here the noise and the explosion are simultaneous, so とともに reads as accompanied by. 大音響 is a huge noise, a compound of 大 and 音響, sound. その瞬間 at the head of a sentence is at that instant."
+
+- id: b4band6.the-marigold-rises-with-the-sun
+  jlpt: N3
+  scenario: along with
+  japanese: マリーゴールドは太陽とともに起きる。
+  reading: マリーゴールドはたいようとともにおきる。
+  romaji: mariigoorudo wa taiyou to tomo ni okiru.
+  english: The marigold rises with the sun.
+  tatoebaId: "195178"
+  notes: "Simultaneity again, and this time the second thing keeps time with the first: the flower opens when the sun comes up, every day. マリーゴールド is the marigold. 太陽 is the sun as a body in the sky; the sunshine that falls on you is 日 or 日光."
+
+- id: b4band6.the-cold-war-ended-with-the-collapse
+  jlpt: N3
+  scenario: along with
+  japanese: 冷戦はソビエトの崩壊と共に終わった。
+  reading: れいせんはソビエトのほうかいとともにおわった。
+  romaji: reisen wa sobieto no houkai to tomo ni owatta.
+  english: The Cold War ended when the Soviet Union collapsed.
+  tatoebaId: "77649"
+  recognitionOnly: true
+  notes: "と共に where English uses when: one event ended as the other happened. This is the register the form belongs to -- history, news, the written record. 冷戦 is the Cold War and 崩壊 is a collapse, of a state or a building alike. Read rather than type; when ... collapsed would send you to a とき clause instead."
+
+- id: b4band6.airfares-rose-with-fuel-costs
+  jlpt: N3
+  scenario: along with
+  japanese: 海外への航空運賃は燃料のコストとともに上昇した。
+  reading: かいがいへのこうくううんちんはねんりょうのコストとともにじょうしょうした。
+  romaji: kaigai e no koukuu unchin wa nenryou no kosuto to tomo ni joushou shita.
+  english: The cost of flying overseas has risen with the cost of fuel.
+  tatoebaId: "185070"
+  recognitionOnly: true
+  notes: "The third job, and the one that puts this lesson beside the last: two things changing in step, which is what につれて also says. In writing とともに does that work; in speech につれて is the ordinary choice. 航空運賃 is an airfare and 上昇する is the written rise that speech calls 上がる. Read rather than type -- it runs long."
+
+- id: b4band6.a-poet-and-a-diplomat
+  jlpt: N3
+  scenario: along with
+  japanese: 彼は高名な詩人であるとともに有能な外交官でもあった。
+  reading: かれはこうめいなしじんであるとともにゆうのうながいこうかんでもあった。
+  romaji: kare wa koumei na shijin de aru to tomo ni yuunou na gaikoukan de mo atta.
+  english: He was a famous poet and a competent diplomat.
+  tatoebaId: "107274"
+  recognitionOnly: true
+  notes: "A fourth job worth recognising: after である, とともに means as well as -- he was both these things at once. English flattens it to and. 高名 is renowned, 有能 is able, 詩人 is a poet and 外交官 is a diplomat. Read rather than type: the English gives you no reason to build であるとともに."
+
+# -- Lesson 6 - Through ------------------------------------------------------
+
+- id: b4band6.the-cold-wind-cut-through-his-coat
+  jlpt: N3
+  scenario: by way of
+  japanese: 冷たい風が彼のコートを通して身にしみた。
+  reading: つめたいかぜがかれのコートをとおしてみにしみた。
+  romaji: tsumetai kaze ga kare no kooto o tooshite mi ni shimita.
+  english: The cold wind cut through his coat.
+  tatoebaId: "77662"
+  recognitionOnly: true
+  notes: "を通して in its physical sense: passing through something and out the other side. 身にしみる is the set phrase for cold or kindness that goes right through you, and it is why the English says cut. Read rather than type -- nothing in cut through asks for 身にしみた."
+
+- id: b4band6.i-met-them-through-him
+  jlpt: N3
+  scenario: by way of
+  japanese: 彼を通して私は町の有力者と知り合いになった。
+  reading: かれをとおしてわたしはまちのゆうりょくしゃとしりあいになった。
+  romaji: kare o tooshite watashi wa machi no yuuryokusha to shiriai ni natta.
+  english: Through him I got acquainted with the big names of the town.
+  tatoebaId: "95807"
+  notes: "The sense you will use: through a person, by their agency. An introduction, a job, a rented flat -- all of them come 誰々を通して. 有力者 is somebody with influence, which is what the English calls a big name, and 知り合いになる is to get to know somebody."
+
+- id: b4band6.sunshine-through-the-leaves
+  jlpt: N3
+  scenario: by way of
+  japanese: こんもりと茂った木々の葉を通して日光が差し込んだ。
+  reading: こんもりとしげったきぎのはをとおしてにっこうがさしこんだ。
+  romaji: konmori to shigetta kigi no ha o tooshite nikkou ga sashikonda.
+  english: The sunshine penetrated the thick leaves of the trees.
+  tatoebaId: "217221"
+  recognitionOnly: true
+  notes: "Physical again, and this is the sentence to keep for the shape of the pattern: light through leaves. 茂る is to grow thick and こんもりと is the adverb for a dense round mass of foliage; 木々 is trees, 木 with the repeat mark; 差し込む is light streaming in. Read rather than type -- four of those words are in this sentence only."
+
+- id: b4band6.land-through-the-mist
+  jlpt: N3
+  scenario: by way of
+  japanese: 霧を通して、わずかに陸地をみわけることができた。
+  reading: きりをとおして、わずかにりくちをみわけることができた。
+  romaji: kiri o tooshite, wazuka ni rikuchi o miwakeru koto ga dekita.
+  english: The land could just be discerned through the mist.
+  tatoebaId: "80850"
+  recognitionOnly: true
+  notes: "Seeing through something is the other half of the physical sense: 望遠鏡を通して, 霧を通して. わずかに is barely, 陸地 is land as against sea, and 見分ける -- written in kana here -- is to make something out. Read rather than type; the English is a passive and the Japanese is not."
+
+# -- Lesson 7 - On top of, on the basis of -----------------------------------
+
+- id: b4band6.thick-fog-and-a-heavy-swell
+  jlpt: N3
+  scenario: added and grounded
+  japanese: 濃霧に加えてうねりも高かった。
+  reading: のうむにくわえてうねりもたかかった。
+  romaji: noumu ni kuwaete uneri mo takakatta.
+  english: In addition to a thick fog, there was a heavy swell.
+  tatoebaId: "121748"
+  recognitionOnly: true
+  notes: "に加えて adds a second factor to the first, and the second half usually carries も -- on top of X, Y as well. 濃霧 is thick fog and うねり is the swell of the sea. Read rather than type: the Japanese says the swell was high, which is not what the English sentence says."
+
+- id: b4band6.on-top-of-that-he-reads-hebrew
+  jlpt: N3
+  scenario: added and grounded
+  japanese: これに加えて彼は、ヘブライ語を読むことが出来る。
+  reading: これにくわえてかれは、ヘブライごをよむことができる。
+  romaji: kore ni kuwaete kare wa, heburai-go o yomu koto ga dekiru.
+  english: Above and beyond this, he can read Hebrew.
+  tatoebaId: "218723"
+  notes: "これに加えて at the head of a sentence is on top of that, and it is one of the standard ways a written argument moves to its next point. Anything already said can be picked up as これ. ヘブライ語 is Hebrew -- 語 on a country or people makes its language."
+
+- id: b4band6.an-express-ticket-as-well
+  jlpt: N3
+  scenario: added and grounded
+  japanese: 急行に乗るには、普通券に加えて急行券を買う必要がある。
+  reading: きゅうこうにのるには、ふつうけんにくわえてきゅうこうけんをかうひつようがある。
+  romaji: kyuukou ni noru ni wa, futsuuken ni kuwaete kyuukouken o kau hitsuyou ga aru.
+  english: To take an express train, we have to get an express ticket in addition to an ordinary ticket.
+  tatoebaId: "182439"
+  recognitionOnly: true
+  notes: "The most practical sentence in the lesson: Japanese railways really do charge a base fare plus a supplement, so 普通券 gets you on a train and 急行券 gets you on that one. 〜には at the front is in order to. Read rather than type -- it is the longest card in the chapter."
+
+- id: b4band6.science-rests-on-observation
+  jlpt: N3
+  scenario: added and grounded
+  japanese: 科学は観察に基づいている。
+  reading: かがくはかんさつにもとづいている。
+  romaji: kagaku wa kansatsu ni motozuite iru.
+  english: Science rests upon observation.
+  tatoebaId: "186870"
+  notes: "に基づく is to rest on, to be grounded in, and it lives in the ている form because resting on something is a state rather than an event. What it rests on is marked with に. The kanji 基 is the 基本 of a foundation, which is the whole idea of the word."
+
+- id: b4band6.this-story-is-founded-on-fact
+  jlpt: N3
+  scenario: added and grounded
+  japanese: この物語は事実に基づいている。
+  reading: このものがたりはじじつにもとづいている。
+  romaji: kono monogatari wa jijitsu ni motozuite iru.
+  english: This story is founded on fact.
+  tatoebaId: "219938"
+  notes: "The line at the front of a film, and one of the phrases 基づく is commonest in. 物語 is a story or tale -- literally things told -- and 事実 is fact as against 小説, fiction. Swap in 実話, a true story, or 実際の出来事, actual events, and the frame is unchanged."
+
+- id: b4band6.pay-is-based-on-experience
+  jlpt: N3
+  scenario: added and grounded
+  japanese: 給料は、経験と学歴に基づいて決まります。
+  reading: きゅうりょうは、けいけんとがくれきにもとづいてきまります。
+  romaji: kyuuryou wa, keiken to gakureki ni motozuite kimarimasu.
+  english: Pay will be based on experience and educational background.
+  tatoebaId: "182350"
+  recognitionOnly: true
+  notes: "に基づいて, the te-form, works as an adverb on the verb that follows: decided on the basis of these things. That is the shape a contract, a rule or a job advertisement uses. 学歴 is your educational record and 決まる is to be settled, with nobody named as settling it. Read rather than type -- English has no counterpart for 決まります here."
+
+# -- Lesson 8 - Precisely this, and according to whom ------------------------
+
+- id: b4band6.patience-is-what-counts
+  jlpt: N3
+  scenario: singled out, and sourced
+  japanese: 辛抱こそ大事なんだ。
+  reading: しんぼうこそだいじなんだ。
+  romaji: shinbou koso daiji na n da.
+  english: It's patience that counts.
+  tatoebaId: "144721"
+  recognitionOnly: true
+  notes: "こそ goes straight onto a noun and singles it out: this one, precisely this, and not the others you might have named. English does the same job with a cleft sentence -- it is patience that counts -- which is why the two sentences look so different. 辛抱 is patience under something hard. Read rather than type; なんだ is invisible in the English."
+
+- id: b4band6.he-is-the-man-for-the-job
+  jlpt: N3
+  scenario: singled out, and sourced
+  japanese: 彼こそその仕事の適任者だ。
+  reading: かれこそそのしごとのてきにんしゃだ。
+  romaji: kare koso sono shigoto no tekininsha da.
+  english: He is the very man for the job.
+  tatoebaId: "119304"
+  notes: "こそ on a person: he and no one else. English marks it with the very, or with stress in the voice. 適任者 is the right person for a task, a word a committee uses. こそ replaces は or が rather than stacking on them, so 彼こそ, never 彼はこそ."
+
+- id: b4band6.young-as-he-is
+  jlpt: N3
+  scenario: singled out, and sourced
+  japanese: 彼は年こそ若いが十分その仕事をやっていける。
+  reading: かれはとしこそわかいがじゅうぶんそのしごとをやっていける。
+  romaji: kare wa toshi koso wakai ga juubun sono shigoto o yatte ikeru.
+  english: Young as he is, he is equal to the task.
+  tatoebaId: "101380"
+  recognitionOnly: true
+  notes: "こそ followed by が is a concession: granted that his age is young, he can still do the work. The shape is 〜こそ〜が, and it concedes the first half in order to overturn it in the second -- exactly what English does with young as he is. 十分 here is じゅうぶん, amply. Read rather than type."
+
+- id: b4band6.the-forecast-says-a-mild-winter
+  jlpt: N3
+  scenario: singled out, and sourced
+  japanese: 長期予報によると、暖冬だそうだ。
+  reading: ちょうきよほうによると、だんとうだそうだ。
+  romaji: chouki yohou ni yoru to, dantou da sou da.
+  english: The long-range forecast says we will have a mild winter.
+  tatoebaId: "125882"
+  recognitionOnly: true
+  notes: "The matched pair this lesson exists for: によると names the source at the front and そうだ marks the whole clause as somebody else's report at the back. This book's chapter on reasons taught そうだ and promised this half. 長期予報 is the long-range forecast and 暖冬 a mild winter. Read rather than type -- says we will have hides both halves."
+
+- id: b4band6.according-to-him-she-is-honest
+  jlpt: N3
+  scenario: singled out, and sourced
+  japanese: 彼のいうところによれば、彼女は正直な女だ。
+  reading: かれのいうところによれば、かのじょはしょうじきなおんなだ。
+  romaji: kare no iu tokoro ni yoreba, kanojo wa shoujiki na onna da.
+  english: According to him, she is honest.
+  tatoebaId: "118423"
+  recognitionOnly: true
+  notes: "によれば is によると in its other spelling -- a conditional によれば, if we go by it -- and the two are interchangeable in this job. 彼のいうところ, what he says, uses the ところ from Book Three: 言うところによれば is according to what he says. Read rather than type; the English is four words and the Japanese is a clause."
+
+- id: b4band6.the-doctor-says-she-has-rheumatism
+  jlpt: N3
+  scenario: singled out, and sourced
+  japanese: 医者によれば、彼女はリューマチをわずらっている。
+  reading: いしゃによれば、かのじょはリューマチをわずらっている。
+  romaji: isha ni yoreba, kanojo wa ryuumachi o wazuratte iru.
+  english: The doctor says she suffers from rheumatism.
+  tatoebaId: "190898"
+  notes: "The source can be a person as easily as a document, and the back half does not have to carry そうだ: the source marker alone is enough to keep the speaker out of the claim. 患う takes を for the illness rather than に, which is unusual and worth holding on to."

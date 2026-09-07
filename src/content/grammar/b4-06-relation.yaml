@@ -1,0 +1,116 @@
+# Book Four, Chapter 7 grammar patterns -- saying what something stands in
+# relation to.
+#
+# Eight patterns for eight teaching lessons, one each, each blanking the thing
+# its lesson exists for out of one of that lesson's own sentences. The blank is
+# matched against the phrase's reading, so these are kana.
+#
+# WHY EIGHT AND NOT TEN. Lessons 7 and 8 teach two markers apiece -- に加えて
+# with に基づいて, こそ with によると/によれば -- because the corpus is thin
+# enough in each that neither fills a lesson alone. Every grammar pattern in
+# this course is referenced by exactly one lesson and every lesson references at
+# most one pattern, so a tenth and ninth entry here would be orphans no lesson
+# points at. The field names the lesson's centre, not its whole content, which
+# is the rule chapter 6 set.
+#
+# THE `pattern` FIELD IS NOT DECORATION. scripts/levelling.mjs grammarSurface()
+# reads it to tag corpus sentences: it rejects any pattern containing a Latin
+# character, a digit or a few punctuation marks, and needs at least one
+# ～-delimited fragment of two characters or more. All eight below clear that
+# floor. What they cannot do, said here rather than discovered later:
+#
+#   ～こそ was the obvious surface for lesson 8 and is not usable. Two kana are
+#   enough to pass the floor and far too few to detect anything: こそこそ,
+#   ようこそ, そこそこ and こそ泥 would all tag, and they are different words that
+#   happen to share a sound. ～によれば is exact, so lesson 8 is tagged by its
+#   other half and こそ goes untagged. A pattern that tags everything is not a
+#   pattern.
+#
+#   ～に加えて is likewise untagged: lesson 7 is tagged by ～に基づいて, which is
+#   unambiguous in a way に加えて -- next to 加える, 加わる and 付け加える -- is
+#   not.
+#
+#   ～として will tag a good deal of と + して as well: かっとして, きちんとして,
+#   依然として and, from this book's first chapter, the volitional 〜うとして. The
+#   fragment cannot see what stands in front of it. Lesson 3's note tells the
+#   learner what the tagger cannot be told.
+#
+#   ～とともに misses と共に, the same word in kanji, which is two of lesson 5's
+#   six cards. One field, one spelling.
+#
+# THE BLANKS run longer than the marker itself, as chapters 5 and 6's do.
+# Blanking ＿にたいして hands a learner an ending they can already see; blanking
+# はなしてにたいして asks for the noun and the marker together, which is what
+# actually has to be produced.
+#
+# ON HOW ABSOLUTELY THESE GLOSSES STATE THINGS. This is the band where tidy
+# rules are traditionally taught and the corpus disproves them, so each gloss
+# below was checked against the cards it sits on and states rules in the
+# direction they hold. に対して marks what something is aimed at; that does not
+# make every English "toward" a に対して. にとって is followed by an evaluation
+# in every card in this chapter, which is a strong tendency and not a law.
+# につれて takes a dictionary-form verb in all five of its cards, and a noun of
+# change is also possible though none is carded here. Where a claim runs one way
+# only, the gloss says which way.
+#
+# content-source: n/a for this file -- every pattern references an existing
+#   phrase from phrases/b4-06-relation.yaml rather than composing new Japanese,
+#   and that file carries the Tatoeba id for each.
+# jlpt-source: training -- the level marks the chapter this content sits in,
+#   not each form's textbook level.
+
+- id: grammar.b4-ni-taishite
+  jlpt: N3
+  pattern: "～に対して"
+  gloss: "Noun plus に対して: what an attitude, an action or a reaction is aimed at. Three jobs share the one form -- a target (話し手に対して反感を持つ), an opposition or a comparison (ドルに対して弱くなる), and something given in return (サービスに対してチップ) -- and the noun in front, not the marker, tells you which. に対し is the same word in a more written voice. It marks the target and not the standpoint: for whose point of view something holds, the next lesson's にとって is the marker."
+  phraseId: b4band6.antipathy-towards-the-speaker
+  blank: はなしてにたいして
+
+- id: grammar.b4-ni-totte
+  jlpt: N3
+  pattern: "～にとって"
+  gloss: "Noun plus にとって: from that person's or that group's side of things -- for me, to us, as far as a society is concerned. What follows is an evaluation in every card this chapter carries: 大事, 不利, 危険, 普通ではない. It does not mark a target, which is に対して, and it does not mark a doer. English hides the difference, because against him and to us can both be either, so the test is whether the sentence judges something from somewhere (にとって) or points something at somebody (に対して)."
+  phraseId: b4band6.the-evidence-was-against-him
+  blank: かれにとって
+
+- id: grammar.b4-toshite
+  jlpt: N3
+  pattern: "～として"
+  gloss: "Noun plus として: in the capacity of, in the role of -- 通訳として雇う, 芸人として成功する. Add の and it modifies a noun, 教師としての経験; add は and it speaks for your own side, 私としては. What separates it from the と + して you already own is only what stands in front: a noun gives this pattern, a volitional gives 〜うとして from this book's first chapter, and an adverb gives かっとして, きちんとして."
+  phraseId: b4band6.he-hired-her-as-an-interpreter
+  blank: つうやくとして
+
+- id: grammar.b4-ni-tsurete
+  jlpt: N3
+  pattern: "～につれて"
+  gloss: "Dictionary-form verb plus につれて: as this goes on, that follows. Both halves have to be changes that unfold over time -- 冬が近づくにつれて日が短くなる -- which is why a one-off event does not sit in front of it. Every card in this chapter has a verb there; a noun of change can also stand in that slot. Book Three's 〜ば〜ほど measures one change against another the same way, and とともに does this job in writing where につれて does it in speech."
+  phraseId: b4band6.days-grow-shorter-as-winter-approaches
+  blank: ちかづくにつれて
+
+- id: grammar.b4-to-tomo-ni
+  jlpt: N3
+  pattern: "～とともに"
+  gloss: "Noun plus とともに, written と共に just as often: along with. Four jobs, all attested in this lesson -- in company with somebody (私と共に来る), at the same moment as something (大音響とともに爆発する), keeping step with a change (コストとともに上昇する), and, after である, as well as (詩人であるとともに外交官). It is formal: in speech と一緒に covers the first and につれて the third."
+  phraseId: b4band6.it-exploded-with-a-great-noise
+  blank: だいおんきょうとともに
+
+- id: grammar.b4-o-tooshite
+  jlpt: N3
+  pattern: "～を通して"
+  gloss: "Noun plus を通して: through. Physically through a thing -- 葉を通して日光が差し込む -- and by way of a person or a medium, 彼を通して知り合いになる, which is the sense you will use. を通じて is its written twin and also covers a whole span of time. Keep it apart from the plain verb 通す that you met in 目を通す: there the te-form belongs to the verb, here を通して is a marker sitting on a noun."
+  phraseId: b4band6.i-met-them-through-him
+  blank: かれをとおして
+
+- id: grammar.b4-ni-motozuite
+  jlpt: N3
+  pattern: "～に基づいて"
+  gloss: "Noun plus に基づいて: on the basis of, grounded in. What it rests on takes に, and this lesson's cards ground a story on fact, a science on observation and a salary on experience. The te-form modifies the verb that follows; 基づいている describes the standing state; に基づく and に基づいた go in front of a noun. Its lesson-mate に加えて adds a factor instead of grounding one -- これに加えて, on top of that -- and takes こと first when a clause goes in front of it."
+  phraseId: b4band6.science-rests-on-observation
+  blank: かんさつにもとづいている
+
+- id: grammar.b4-ni-yoreba
+  jlpt: N3
+  pattern: "～によれば"
+  gloss: "Noun plus によれば or によると: according to. It names where a claim came from and leaves the speaker out of it, so it pairs naturally with the hearsay そうだ or という at the end of the clause -- 長期予報によると、暖冬だそうだ -- without requiring one. Keep it apart from によって, which you have from Book Three: that one marks an agent, a means or what something varies with, not a source. Its lesson-mate こそ does the opposite job on a noun, singling one out -- 辛抱こそ, 彼こそ -- and 〜こそ〜が concedes a point before overturning it."
+  phraseId: b4band6.the-doctor-says-she-has-rheumatism
+  blank: いしゃによれば
