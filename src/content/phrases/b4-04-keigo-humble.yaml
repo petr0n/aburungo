@@ -205,7 +205,7 @@
   romaji: taihen go-fujiyuu o o-kake shite moushiwake gozaimasen.
   english: I'm sorry to have caused you such inconvenience.
   tatoebaId: "137270"
-  notes: "ご不自由をおかける, to put somebody to inconvenience, is the frame most formal apologies are built on -- ご迷惑をおかける in lesson 4 is the same shape with a different noun. おかけして is お plus a verb stem plus する, which is lesson 5's whole subject; here it is simply the humble form of かける. 不自由 is the discomfort sense of the word rather than its disability sense."
+  notes: "ご不自由をおかけする, to put somebody to inconvenience, is the frame most formal apologies are built on -- ご迷惑をおかけする in lesson 4 is the same shape with a different noun. おかけして is お plus a verb stem plus する, which is lesson 5's whole subject; here it is simply the humble form of かける. 不自由 is the discomfort sense of the word rather than its disability sense."
 
 # -- Lesson 2 - We will do it, formally --------------------------------------
 
@@ -292,7 +292,7 @@
   romaji: kokoro kara okuyami moushiagemasu.
   english: Please accept my sincerest condolences.
   tatoebaId: "145612"
-  notes: "The frame again, with the noun that matters most: お悔やみ, condolences. This is the sentence said at a funeral and written in a card, and it is worth owning whole. 心から is from the heart, read こころから here; the same two characters can be read しんから, which is a different word for thoroughly."
+  notes: "The frame again, with the noun that matters most: お悔やみ, condolences. This is the sentence said at a funeral and written in a card, and it is worth owning whole. 心から is from the heart, read こころから here; the same two characters can also be read しんから -- one dictionary entry, two readings, the second more emphatic."
 
 - id: b4band4.congratulations-on-your-sons-marriage
   jlpt: N3
@@ -543,7 +543,7 @@
   romaji: goyou no toki wa o-denwa kudasai.
   english: Please phone if you need anything.
   tatoebaId: "216999"
-  notes: "Both prefixes in one short line. ご用 is the listener's business or errand, お電話 the listener's phone call -- and 電話 is a Sino-Japanese word taking お rather than the ご the tendency predicts, which is why the tendency is only a tendency. お電話ください is politer than 電話してください and is what a hotel says."
+  notes: "Both prefixes in one short line. ご用 is the listener's business or errand, お電話 the listener's phone call -- and 電話 is a Sino-Japanese word taking お rather than the ご the tendency predicts, which is why the tendency is only a tendency. お電話ください is politer than 電話してください and is what a hotel says. Note the frame itself -- お plus a noun plus ください raises what the listener does, so it is honorific rather than humble, and the next chapter is where it belongs; recognise it here."
 
 - id: b4band4.the-bellboy-will-show-you-to-your-room
   jlpt: N3
@@ -574,4 +574,4 @@
   romaji: ichiryoujitsuchuu ni o-henji shimasu.
   english: I'll give you an answer in a day or two.
   tatoebaId: "190029"
-  notes: "お返事 is the second word in this lesson that takes お while the tendency predicts ご -- 返事 is Sino-Japanese, like 電話. Both are so much a part of daily service language that the native-word prefix stuck to them. お返事します is the reply the speaker will make, lowered, so the prefix here is beautifying the noun rather than raising the listener. 一両日中 is within the next day or two."
+  notes: "お返事 is the second word in this lesson that takes お while the tendency predicts ご -- 返事 is Sino-Japanese, like 電話. Both are so much a part of daily service language that the native-word prefix stuck to them. お返事します is lesson 5's frame again -- お or ご plus a noun plus する, the same shape as ご案内します one card back -- and it lowers the speaker's own reply rather than raising the listener. 一両日中 is within the next day or two."
