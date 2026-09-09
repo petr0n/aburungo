@@ -26,6 +26,5 @@ export { AuthForm } from "./AuthForm";
 export { FillBlankCard } from "./FillBlankCard";
 export { FillBlankScreen } from "./FillBlankScreen";
 export { FillInput } from "./FillInput";
-export { KanaKeyboard } from "./KanaKeyboard";
 export { ProtectedRoute } from "./ProtectedRoute";
 export { VoiceInput } from "./VoiceInput";
