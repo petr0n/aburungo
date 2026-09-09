@@ -77,5 +77,72 @@ excerpting · DRM requirements.
 
 ---
 
+## Candidates verified 2026-09-06 — NOT adopted
+
+Researched for the two bands deferred from Book Four (`04b` band 4 news/reportage,
+band 8 exposition at length), which `book-four-bands.md` §5 records as waiting on
+texts. They stay Book Four's until a roadmap change says otherwise.
+**Nothing here is adopted.** Adopting one is an owner decision plus a row in
+CLAUDE.md's data-sources table.
+
+Every license below was read on the publisher's own terms page and the line is
+quoted. That matters because the last time this was researched, search results
+and dataset cards said Tadoku was CC BY-NC while the rights holder's own page
+said CC BY-NC-**ND** — and the same trap caught a second source below.
+
+### Global Voices 日本語 — <https://jp.globalvoices.org/>
+
+Citizen-journalism reportage and commentary translated into Japanese and
+editorially reviewed. ~2,894 posts, articles running 3,800–6,400 characters,
+still publishing. Clean WordPress REST API at `/wp-json/wp/v2/posts`.
+
+**CC BY 3.0**, attribution only, no SA/NC/ND. Verified on
+<https://jp.globalvoices.org/about>: 「このサイトは Creative Commons Attribution 3.0
+ライセンスで公開しています」. Derivatives and commercial use both permitted.
+
+Two constraints, both real: their attribution policy requires a link to the
+original and the author's name **at the top** of the republished text, which is a
+reading-screen design constraint; and embedded photos/video may sit under other
+terms, so take text only. It is also translated Japanese rather than natively
+composed — professional, but worth a human pass.
+
+### Japanese Wikinews — <https://ja.wikinews.org/>
+
+Volunteer news wire, 2005–2026. 4,110 articles, median ~900 characters — sized
+well for a reading unit. Full XML dump at
+<https://dumps.wikimedia.org/jawikinews/latest/>.
+
+**CC BY 4.0**, verified in the site footer: 「2005年9月25日以降に投稿されたテキストは、
+一部の例外を除き、クリエイティブ・コモンズ 表示 4.0 (CC BY 4.0) で提供されます。」 Note this is
+CC BY, **not** the CC BY-SA Wikipedia uses — Wikinews is the Wikimedia exception.
+Filter to articles after 2005-09-25 to stay inside the grant.
+
+**The project is closed.** The site carries the banner 「ウィキニュース全言語版は
+2026年5月4日をもって閉鎖されました。」 so this is a frozen archive: plan a one-shot
+import, never a recurring sync. 4,110 articles is all there will ever be.
+
+### Held in reserve — Japanese government sites
+
+公共データ利用規約 (PDL 1.0, 2024) is explicitly CC BY compatible and permits 翻案 and
+commercial use. White papers are genuine long-form but bureaucratic and closer to
+N1. Worth having only if the two above run short on volume.
+
+### Rejected, with evidence
+
+- **livedoor ニュースコーパス** — **CC BY-ND 2.1 JP**. The distributor's own page
+  <https://www.rondhuit.com/download.html> reads 「各記事ファイルにはクリエイティブ・
+  コモンズライセンス『表示 – 改変禁止』が適用されます」. This is the Tadoku trap repeating:
+  Hugging Face dataset cards and NLP tutorials describe it loosely as "Creative
+  Commons licensed". It is ND, and ND blocks a pipeline that adds furigana.
+- **BCCWJ (NINJAL)** — paid, contract auto-renews every two years, commercial use
+  case-by-case, covers only 1976–2005, and ships sampled fragments with no
+  redistribution right. Three of those are this brief's own walk-away flags.
+- **NHK News Web Easy** — 「許可なく転載することを禁じます」. Link-out only: no storage,
+  no furigana layer, no TTS, no mining into SRS. That is the non-purchase
+  fallback already in the plans, not a corpus.
+
+---
+
 *When a source is chosen: vet the actual license text against this checklist, then record the
-decision in 04 §5 and add a row to CLAUDE.md's data-sources table so commits can cite it.*
+decision in `book-four-bands.md` §5 and add a row to CLAUDE.md's data-sources table so
+commits can cite it.*
