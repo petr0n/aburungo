@@ -77,16 +77,15 @@ excerpting · DRM requirements.
 
 ---
 
----
-
 ## Candidates verified 2026-09-06 — NOT adopted
 
-Researched for Book Five's two blocked bands (`04b` band 4 news/reportage, band 8
-exposition at length), which `book-four-bands.md` §5 says are waiting on texts.
+Researched for the two bands deferred from Book Four (`04b` band 4 news/reportage,
+band 8 exposition at length), which `book-four-bands.md` §5 records as waiting on
+texts. They stay Book Four's until a roadmap change says otherwise.
 **Nothing here is adopted.** Adopting one is an owner decision plus a row in
 CLAUDE.md's data-sources table.
 
-Every licence below was read on the publisher's own terms page and the line is
+Every license below was read on the publisher's own terms page and the line is
 quoted. That matters because the last time this was researched, search results
 and dataset cards said Tadoku was CC BY-NC while the rights holder's own page
 said CC BY-NC-**ND** — and the same trap caught a second source below.
@@ -145,4 +144,5 @@ N1. Worth having only if the two above run short on volume.
 ---
 
 *When a source is chosen: vet the actual license text against this checklist, then record the
-decision in 04 §5 and add a row to CLAUDE.md's data-sources table so commits can cite it.*
+decision in `book-four-bands.md` §5 and add a row to CLAUDE.md's data-sources table so
+commits can cite it.*
