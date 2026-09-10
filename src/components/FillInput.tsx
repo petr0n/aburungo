@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { FillInput as FillInputDisplay } from "aburungo-design-system";
 import type { InputMode } from "aburungo-design-system";
-import type { KanaScript, KanaSection } from "aburungo-design-system";
+import type { KanaScript } from "aburungo-design-system";
 import { convertRomaji, finalizeRomaji } from "@/lib/romajiToKana";
 
 type Props = {
@@ -32,7 +32,6 @@ export function FillInput({ onSubmit, placeholder, disabled, mode: modeProp, onM
   const [kana, setKana] = useState("");
   const [showHint, setShowHint] = useState(false);
   const [kanaScript, setKanaScript] = useState<KanaScript>("hiragana");
-  const [kanaSection, setKanaSection] = useState<KanaSection>("basic");
   const inputRef = useRef<HTMLInputElement>(null);
 
   // Drop whatever was typed in the previous input when the mode changes.
@@ -77,7 +76,6 @@ export function FillInput({ onSubmit, placeholder, disabled, mode: modeProp, onM
       converted={converted}
       pending={pending}
       kanaScript={kanaScript}
-      kanaSection={kanaSection}
       canSubmit={canSubmit}
       disabled={disabled}
       placeholder={placeholder}
@@ -92,7 +90,10 @@ export function FillInput({ onSubmit, placeholder, disabled, mode: modeProp, onM
       onKanaKey={(char) => setKana((prev) => prev + char)}
       onKanaBackspace={() => setKana((prev) => [...prev].slice(0, -1).join(""))}
       onKanaScriptChange={setKanaScript}
-      onKanaSectionChange={setKanaSection}
+      // Replace, not backspace-then-key: the mark keys act on the character
+      // just typed, and a backspace followed by a key press only composes
+      // correctly because this updater is functional.
+      onKanaReplaceLast={(char) => setKana((prev) => [...prev].slice(0, -1).join("") + char)}
       onSystemChange={setKana}
       onSubmit={handleSubmit}
       onToggleSystemHint={() => setShowHint((h) => !h)}
