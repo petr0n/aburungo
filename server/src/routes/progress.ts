@@ -134,7 +134,12 @@ progressRoutes.post(
         .array(
           z.object({
             contentId: z.string().min(1).max(128),
-            box: z.number().int().min(1).max(5),
+            // 1-8, matching the client's ladder. It said 5 while the client
+            // scheduled 8, and because this validator runs on the whole array,
+            // a single box-6 item rejected every OTHER item in the same batch
+            // -- so review sync stopped for the account entirely, silently,
+            // once any one card was answered correctly six times.
+            box: z.number().int().min(1).max(8),
             dueAt: z.number().int().positive(),
             lastSeenAt: z.number().int().positive().nullable(),
           }),

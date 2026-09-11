@@ -33,6 +33,34 @@ beforeEach(() => {
   saveContentProgress.mockResolvedValue(undefined);
 });
 
+/**
+ * The recovery half of the eight-box fix (graduation spec, 2026-08-28).
+ *
+ * While the API capped the box at 5, a locally retained box 6-8 state was
+ * rejected every time it was pushed — and because the API validates the whole
+ * batch, it took every other unsynced item with it. Nothing repaired that: the
+ * next hydrate rebuilt the same batch and got the same rejection.
+ *
+ * Once the API accepts 1-8, recovery has to be automatic rather than a
+ * migration: the state is still in the local cache with a newer lastSeenAt
+ * than the server's, so the ordinary push picks it up. This pins that, because
+ * the recovery path is otherwise only exercised by an account that already hit
+ * the bug.
+ */
+describe("box 6-8 states stranded by the old API", () => {
+  it("are pushed on the next hydrate, with the rest of the batch", async () => {
+    store.set("high", { phraseId: "high", box: 7, dueAt: 9000, lastSeenAt: 800 });
+    store.set("low", { phraseId: "low", box: 2, dueAt: 400, lastSeenAt: 700 });
+    fetchContentProgress.mockResolvedValue([]);
+
+    await hydrateFromServer(true);
+
+    const pushed = saveContentProgress.mock.calls[0]?.[0] as Array<{ contentId: string; box: number }>;
+    expect(pushed.map((e) => e.contentId).sort()).toEqual(["high", "low"]);
+    expect(pushed.find((e) => e.contentId === "high")?.box).toBe(7);
+  });
+});
+
 describe("guest", () => {
   it("never contacts the server", async () => {
     store.set("a", { phraseId: "a", box: 2, dueAt: 100, lastSeenAt: 50 });
