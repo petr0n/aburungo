@@ -1,24 +1,27 @@
 import { useState } from "react";
 import { KanaKeyboard as KanaKeyboardDisplay } from "aburungo-design-system";
-import type { KanaScript, KanaSection } from "aburungo-design-system";
+import type { KanaScript } from "aburungo-design-system";
 
 type Props = {
+  /** The kana entered so far. The mark keys read its last character. */
+  value: string;
   onKey: (kana: string) => void;
   onBackspace: () => void;
+  onReplaceLast: (kana: string) => void;
 };
 
-export function KanaKeyboard({ onKey, onBackspace }: Props) {
+/** Holds the script toggle; everything else belongs to whoever owns the buffer. */
+export function KanaKeyboard({ value, onKey, onBackspace, onReplaceLast }: Props) {
   const [script, setScript] = useState<KanaScript>("hiragana");
-  const [section, setSection] = useState<KanaSection>("basic");
 
   return (
     <KanaKeyboardDisplay
       script={script}
-      section={section}
+      value={value}
       onScriptChange={setScript}
-      onSectionChange={setSection}
       onKey={onKey}
       onBackspace={onBackspace}
+      onReplaceLast={onReplaceLast}
     />
   );
 }
