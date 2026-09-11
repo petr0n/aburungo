@@ -63,6 +63,7 @@
   reading: ともだちにはなをあげました。
   romaji: tomodachi ni hana o agemashita.
   english: I gave a friend flowers.
+  chunks: ["友達に", "花を", "あげました。"]
 
 - id: giving.ill-give-my-sister-sweets
   jlpt: N4
@@ -71,6 +72,7 @@
   reading: いもうとにおかしをあげます。
   romaji: imouto ni okashi o agemasu.
   english: I'll give my little sister some sweets.
+  chunks: ["妹に", "お菓子を", "あげます。"]
 
 - id: giving.what-will-you-give-for-the-birthday
   jlpt: N4
@@ -79,6 +81,7 @@
   reading: たんじょうびになにをあげますか。
   romaji: tanjoubi ni nani o agemasu ka.
   english: What are you going to give for the birthday?
+  chunks: ["誕生日に", "何を", "あげますか。"]
 
 # ── Receiving something from someone (Lesson 2) ───────────────────────────────
 
@@ -89,6 +92,7 @@
   reading: たんじょうびにともだちからほんをもらいました。
   romaji: tanjoubi ni tomodachi kara hon o moraimashita.
   english: I got a book from a friend for my birthday.
+  chunks: ["誕生日に", "友達から", "本を", "もらいました。"]
 
 - id: giving.i-got-money-from-my-mother
   jlpt: N4
@@ -97,6 +101,7 @@
   reading: ははにおかねをもらいました。
   romaji: haha ni okane o moraimashita.
   english: I got some money from my mother.
+  chunks: ["母に", "お金を", "もらいました。"]
 
 - id: giving.who-did-you-get-it-from
   jlpt: N4
@@ -105,6 +110,7 @@
   reading: だれからもらいましたか。
   romaji: dare kara moraimashita ka.
   english: Who did you get it from?
+  chunks: ["誰から", "もらいましたか。"]
 
 # ── When someone gives it to you (Lesson 3) ───────────────────────────────────
 
@@ -115,6 +121,7 @@
   reading: ともだちがはなをくれました。
   romaji: tomodachi ga hana o kuremashita.
   english: A friend gave me flowers.
+  chunks: ["友達が", "花を", "くれました。"]
 
 - id: giving.my-mother-gave-me-sweets
   jlpt: N4
@@ -123,6 +130,7 @@
   reading: ははがおかしをくれました。
   romaji: haha ga okashi o kuremashita.
   english: My mother gave me some sweets.
+  chunks: ["母が", "お菓子を", "くれました。"]
 
 - id: giving.my-teacher-gave-me-an-umbrella
   jlpt: N4
@@ -131,6 +139,7 @@
   reading: せんせいがわたしにかさをくれました。
   romaji: sensei ga watashi ni kasa o kuremashita.
   english: My teacher gave me an umbrella.
+  chunks: ["先生が", "私に", "傘を", "くれました。"]
 
 - id: giving.who-gave-it-to-you
   jlpt: N4
@@ -139,6 +148,7 @@
   reading: だれがくれましたか。
   romaji: dare ga kuremashita ka.
   english: Who gave it to you?
+  chunks: ["誰が", "くれましたか。"]
 
 # ── Choosing the right one (Lesson 4) ─────────────────────────────────────────
 # Same two people, same book, three verbs. Only the direction changes.
@@ -150,6 +160,7 @@
   reading: ははにほんをあげました。
   romaji: haha ni hon o agemashita.
   english: I gave my mother a book.
+  chunks: ["母に", "本を", "あげました。"]
 
 - id: giving.my-mother-gave-me-a-book
   jlpt: N4
@@ -158,6 +169,7 @@
   reading: ははがほんをくれました。
   romaji: haha ga hon o kuremashita.
   english: My mother gave me a book.
+  chunks: ["母が", "本を", "くれました。"]
 
 - id: giving.i-got-a-book-from-my-mother
   jlpt: N4
@@ -166,6 +178,7 @@
   reading: ははにほんをもらいました。
   romaji: haha ni hon o moraimashita.
   english: I got a book from my mother.
+  chunks: ["母に", "本を", "もらいました。"]
 
 # ── Not the same as lending (Lesson 5) ────────────────────────────────────────
 
@@ -176,6 +189,7 @@
   reading: かさをかしてください。
   romaji: kasa o kashite kudasai.
   english: Please lend me an umbrella.
+  chunks: ["傘を", "貸して", "ください。"]
 
 - id: giving.please-give-me-an-umbrella
   jlpt: N4
@@ -184,6 +198,7 @@
   reading: かさをください。
   romaji: kasa o kudasai.
   english: Please give me an umbrella.
+  chunks: ["傘を", "ください。"]
 
 - id: giving.ill-return-the-book-tomorrow
   jlpt: N4
@@ -192,6 +207,7 @@
   reading: あした、ほんをかえします。
   romaji: ashita, hon o kaeshimasu.
   english: I'll give the book back tomorrow.
+  chunks: ["明日、", "本を", "返します。"]
 
 # ── Doing something for someone (Lesson 6) ────────────────────────────────────
 
@@ -202,6 +218,7 @@
   reading: いもうとのしゅくだいをてつだってあげました。
   romaji: imouto no shukudai o tetsudatte agemashita.
   english: I helped my little sister with her homework.
+  chunks: ["妹の", "宿題を", "手伝って", "あげました。"]
 
 - id: giving.i-taught-my-friend-english
   jlpt: N4
@@ -210,6 +227,7 @@
   reading: ともだちにえいごをおしえてあげました。
   romaji: tomodachi ni eigo o oshiete agemashita.
   english: I taught my friend English.
+  chunks: ["友達に", "英語を", "教えて", "あげました。"]
 
 - id: giving.i-made-my-brother-a-lunch
   jlpt: N4
@@ -218,6 +236,7 @@
   reading: おとうとにおべんとうをつくってあげました。
   romaji: otouto ni obentou o tsukutte agemashita.
   english: I made my little brother a boxed lunch.
+  chunks: ["弟に", "お弁当を", "作って", "あげました。"]
 
 # ── When someone does something for you (Lesson 7) ────────────────────────────
 
@@ -228,6 +247,7 @@
   reading: ははがおべんとうをつくってくれました。
   romaji: haha ga obentou o tsukutte kuremashita.
   english: My mother made me a boxed lunch.
+  chunks: ["母が", "お弁当を", "作って", "くれました。"]
 
 - id: giving.a-friend-lent-me-an-umbrella
   jlpt: N4
@@ -236,6 +256,7 @@
   reading: ともだちがかさをかしてくれました。
   romaji: tomodachi ga kasa o kashite kuremashita.
   english: A friend lent me an umbrella.
+  chunks: ["友達が", "傘を", "貸して", "くれました。"]
 
 - id: giving.my-teacher-taught-me-english
   jlpt: N4
@@ -244,6 +265,7 @@
   reading: せんせいがえいごをおしえてくれました。
   romaji: sensei ga eigo o oshiete kuremashita.
   english: My teacher taught me English.
+  chunks: ["先生が", "英語を", "教えて", "くれました。"]
 
 # ── Asking for the favour (Lesson 8) ──────────────────────────────────────────
 # Four separate things a person might say, not four turns of one conversation.
@@ -255,6 +277,7 @@
   reading: まってくれますか。
   romaji: matte kuremasu ka.
   english: Will you wait for me?
+  chunks: ["待って", "くれますか。"]
 
 - id: giving.could-you-lend-me-an-umbrella
   jlpt: N4
@@ -263,6 +286,7 @@
   reading: かさをかしてくれませんか。
   romaji: kasa o kashite kuremasen ka.
   english: Could you lend me an umbrella?
+  chunks: ["傘を", "貸して", "くれませんか。"]
 
 - id: giving.could-you-teach-me-english
   jlpt: N4
@@ -271,6 +295,7 @@
   reading: えいごをおしえてくれませんか。
   romaji: eigo o oshiete kuremasen ka.
   english: Could you teach me English?
+  chunks: ["英語を", "教えて", "くれませんか。"]
 
 - id: giving.will-you-help-me
   jlpt: N4
@@ -279,6 +304,7 @@
   reading: てつだってくれますか。
   romaji: tetsudatte kuremasu ka.
   english: Will you help me?
+  chunks: ["手伝って", "くれますか。"]
 
 # ── Having someone do it for you (Lesson 9) ───────────────────────────────────
 # The same three favours as Lesson 7, told from the other side of the table.
@@ -290,6 +316,7 @@
   reading: せんせいにえいごをおしえてもらいました。
   romaji: sensei ni eigo o oshiete moraimashita.
   english: I had my teacher teach me English.
+  chunks: ["先生に", "英語を", "教えて", "もらいました。"]
 
 - id: giving.i-got-a-friend-to-lend-me-an-umbrella
   jlpt: N4
@@ -298,6 +325,7 @@
   reading: ともだちにかさをかしてもらいました。
   romaji: tomodachi ni kasa o kashite moraimashita.
   english: I got a friend to lend me an umbrella.
+  chunks: ["友達に", "傘を", "貸して", "もらいました。"]
 
 - id: giving.i-had-my-mother-make-a-lunch
   jlpt: N4
@@ -306,3 +334,4 @@
   reading: ははにおべんとうをつくってもらいました。
   romaji: haha ni obentou o tsukutte moraimashita.
   english: I had my mother make me a boxed lunch.
+  chunks: ["母に", "お弁当を", "作って", "もらいました。"]
