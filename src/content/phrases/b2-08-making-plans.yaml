@@ -57,6 +57,7 @@
   reading: あした、ともだちとやくそくがあります。
   romaji: ashita, tomodachi to yakusoku ga arimasu.
   english: I have plans with a friend tomorrow.
+  chunks: ["明日、", "友達と", "約束が", "あります。"]
   notes: と marks the person you made the arrangement with. 約束 takes ある, not する, when you are saying you have one already.
 
 - id: plans.do-you-have-plans-tomorrow
@@ -66,6 +67,7 @@
   reading: あしたはやくそくがありますか。
   romaji: ashita wa yakusoku ga arimasu ka.
   english: Do you have plans tomorrow?
+  chunks: ["明日は", "約束が", "ありますか。"]
 
 - id: plans.i-have-plans-so-im-not-free
   jlpt: N4
@@ -74,6 +76,7 @@
   reading: どようびはやくそくがあるので、ひまじゃありません。
   romaji: doyoubi wa yakusoku ga aru node, hima ja arimasen.
   english: I have plans on Saturday, so I'm not free.
+  chunks: ["土曜日は", "約束が", "ある", "ので、", "暇じゃありません。"]
   notes: The sentence 暇 could never say on its own. 暇じゃありません tells someone your day is full; 約束があるので tells them why, and that a second person is involved.
 
 # ── Would you like to? ────────────────────────────────────────────────────────
@@ -85,6 +88,7 @@
   reading: しゅうまつ、いっしょにごはんをたべませんか。
   romaji: shuumatsu, issho ni gohan o tabemasen ka.
   english: Would you like to get something to eat together this weekend?
+  chunks: ["週末、", "一緒に", "ご飯を", "食べませんか。"]
   notes: ご飯を食べる is the ordinary way to say "have a meal", not specifically rice. 一緒に says together outright; ませんか is what makes it an invitation.
 
 - id: plans.lets-meet-on-saturday-next-week
@@ -94,6 +98,7 @@
   reading: らいしゅうのどようびにあいましょう。
   romaji: raishuu no doyoubi ni aimashou.
   english: Let's meet on Saturday next week.
+  chunks: ["来週の", "土曜日に", "会いましょう。"]
   notes: 来週の土曜日 — the の joins the two time words, the wider one first. Days of the week take に.
 
 - id: plans.what-time-shall-we-meet
@@ -103,6 +108,7 @@
   reading: なんじにあいましょうか。
   romaji: nanji ni aimashou ka.
   english: What time shall we meet?
+  chunks: ["何時に", "会いましょうか。"]
 
 - id: plans.what-are-you-doing-this-weekend
   jlpt: N4
@@ -111,6 +117,7 @@
   reading: しゅうまつはなにをしますか。
   romaji: shuumatsu wa nani o shimasu ka.
   english: What are you doing this weekend?
+  chunks: ["週末は", "何を", "しますか。"]
   notes: The sentence most invitations start with. 何 in front of を is なに, not なん.
 
 # ── Wanna? ────────────────────────────────────────────────────────────────────
@@ -122,6 +129,7 @@
   reading: いっしょにいかない？
   romaji: issho ni ikanai?
   english: Want to go together?
+  chunks: ["一緒に", "行かない？"]
   notes: Friends only. The plain negative asked as a question — no か, and the voice rises at the end.
 
 - id: plans.wanna-see-a-film
@@ -131,6 +139,7 @@
   reading: えいがをみない？
   romaji: eiga o minai?
   english: Want to see a film?
+  chunks: ["映画を", "見ない？"]
   notes: 見る is ichidan, so the ない form is just 見ない. In relaxed speech you will also hear 映画見ない？ with を dropped altogether.
 
 - id: plans.wanna-hang-out-this-weekend
@@ -140,6 +149,7 @@
   reading: しゅうまつ、あそばない？
   romaji: shuumatsu, asobanai?
   english: Want to hang out this weekend?
+  chunks: ["週末、", "遊ばない？"]
   notes: 遊ぶ is godan and its ぶ becomes ば. Between adults 遊ぶ is not childish — it is spending time together with nothing else planned.
 
 # ── Saying yes, saying no ─────────────────────────────────────────────────────
@@ -151,6 +161,7 @@
   reading: いいですね、いきましょう。
   romaji: ii desu ne, ikimashou.
   english: That sounds good, let's go.
+  chunks: ["いいですね、", "行きましょう。"]
 
 - id: plans.sorry-i-have-plans-tomorrow
   jlpt: N4
@@ -159,6 +170,7 @@
   reading: すみません、あしたはやくそくがあるので、いけません。
   romaji: sumimasen, ashita wa yakusoku ga aru node, ikemasen.
   english: I'm sorry, I have plans tomorrow, so I can't go.
+  chunks: ["すみません、", "明日は", "約束が", "ある", "ので、", "行けません。"]
   notes: The full polite decline — apology, reason, then the no. ので is the softer of the two reason words, which is what you want when you are turning someone down. 行けません is the potential of 行く, built by the same rule that gave you 会えますか.
 
 - id: plans.yeah-ill-go
@@ -168,6 +180,7 @@
   reading: うん、いく。
   romaji: un, iku.
   english: Yeah, I'll go.
+  chunks: ["うん、", "行く。"]
   notes: The casual accept is just the plain form. Nothing is missing from it.
 
 - id: plans.sorry-i-cant-i-have-plans
@@ -177,6 +190,7 @@
   reading: ごめん、あしたはやくそくがあるから、いけない。
   romaji: gomen, ashita wa yakusoku ga aru kara, ikenai.
   english: Sorry, I've got plans tomorrow, so I can't go.
+  chunks: ["ごめん、", "明日は", "約束が", "ある", "から、", "行けない。"]
   notes: The same decline one register down. ごめん is ごめんなさい with the polite tail cut off, から is the casual reason word, and 行けない is the plain potential negative.
 
 - id: plans.no-thanks-im-fine
@@ -186,6 +200,7 @@
   reading: いいえ、だいじょうぶです。
   romaji: iie, daijoubu desu.
   english: No thanks, I'm fine.
+  chunks: ["いいえ、", "大丈夫です。"]
   notes: Aimed at an offer, 大丈夫です is a refusal, not an agreement. English "I'm fine with that" pulls the wrong way here, and it is worth practising as a no.
 
 - id: plans.tomorrow-is-a-bit-difficult
@@ -195,6 +210,7 @@
   reading: あしたはちょっと…。
   romaji: ashita wa chotto...
   english: Tomorrow is a bit difficult, sorry.
+  chunks: ["明日は", "ちょっと…。"]
   notes: Not an unfinished sentence — the trailing off is the whole message, and everybody hears it as a no. Saying the rest out loud would be blunter than the situation wants.
 
 # ── Does that work for you? ───────────────────────────────────────────────────
@@ -206,6 +222,7 @@
   reading: どようびはつごうがいいですか。
   romaji: doyoubi wa tsugou ga ii desu ka.
   english: Does Saturday work for you?
+  chunks: ["土曜日は", "都合が", "いいですか。"]
 
 - id: plans.the-weekend-works-for-me
   jlpt: N4
@@ -214,6 +231,7 @@
   reading: しゅうまつはつごうがいいです。
   romaji: shuumatsu wa tsugou ga ii desu.
   english: The weekend works for me.
+  chunks: ["週末は", "都合が", "いいです。"]
 
 - id: plans.monday-doesnt-work
   jlpt: N4
@@ -222,6 +240,7 @@
   reading: げつようびはつごうがわるいです。
   romaji: getsuyoubi wa tsugou ga warui desu.
   english: Monday doesn't work for me.
+  chunks: ["月曜日は", "都合が", "悪いです。"]
   notes: A complete answer on its own. Unlike 忙しいです it says nothing about why, which is often exactly what you want.
 
 - id: plans.this-week-is-bad-how-about-next-week
@@ -231,6 +250,7 @@
   reading: こんしゅうはつごうがわるいので、らいしゅうはどうですか。
   romaji: konshuu wa tsugou ga warui node, raishuu wa dou desu ka.
   english: This week doesn't work for me, so how about next week?
+  chunks: ["今週は", "都合が", "悪い", "ので、", "来週は", "どうですか。"]
   notes: A no with a way forward attached. 〜はどうですか is how you put the alternative on the table.
 
 # ── Where should we meet? ─────────────────────────────────────────────────────
@@ -242,6 +262,7 @@
   reading: どこであいましょうか。
   romaji: doko de aimashou ka.
   english: Where shall we meet?
+  chunks: ["どこで", "会いましょうか。"]
   notes: で, not に. 会う takes に (or と) for the person you meet and で for the place you meet them in.
 
 - id: plans.lets-meet-at-the-station
@@ -251,6 +272,7 @@
   reading: えきであいましょう。
   romaji: eki de aimashou.
   english: Let's meet at the station.
+  chunks: ["駅で", "会いましょう。"]
 
 - id: plans.ill-be-waiting-at-the-park
   jlpt: N4
@@ -259,6 +281,7 @@
   reading: こうえんでまっています。
   romaji: kouen de matte imasu.
   english: I'll be waiting at the park.
+  chunks: ["公園で", "待っています。"]
   notes: 待っています rather than 待ちます — the ています form you already have is what says you will be there, waiting, when the other person arrives.
 
 # ── Confirming the plan ───────────────────────────────────────────────────────
@@ -270,6 +293,7 @@
   reading: わかりました、どようびにあいましょう。
   romaji: wakarimashita, doyoubi ni aimashou.
   english: Understood — let's meet on Saturday.
+  chunks: ["わかりました、", "土曜日に", "会いましょう。"]
   notes: わかりました is the past of わかる and it is how Japanese says "got it", even though English reaches for a present tense there.
 
 - id: plans.got-it-see-you
@@ -279,6 +303,7 @@
   reading: わかった、またね。
   romaji: wakatta, mata ne.
   english: Got it, see you.
+  chunks: ["わかった、", "またね。"]
   notes: The casual close. またね is for friends only — with anyone else the sign-off is しつれいします or さようなら.
 
 - id: plans.dont-forget-our-plans
@@ -288,4 +313,5 @@
   reading: やくそくをわすれないでください。
   romaji: yakusoku o wasurenaide kudasai.
   english: Please don't forget our plans.
+  chunks: ["約束を", "忘れないで", "ください。"]
   notes: Your own 忘れないでください with the thing named. Said lightly between friends it is a nudge, not a reprimand.

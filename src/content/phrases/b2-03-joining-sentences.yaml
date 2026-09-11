@@ -51,6 +51,7 @@
   reading: つかれたから、かえる。
   romaji: tsukareta kara, kaeru.
   english: I'm tired, so I'm going home.
+  chunks: ["疲れた", "から、", "帰る。"]
 
 - id: join.im-busy-so-im-not-going
   jlpt: N4
@@ -59,6 +60,7 @@
   reading: きょうはいそがしいから、いかない。
   romaji: kyou wa isogashii kara, ikanai.
   english: I'm busy today, so I'm not going.
+  chunks: ["今日は", "忙しい", "から、", "行かない。"]
 
 - id: join.because-its-raining
   jlpt: N4
@@ -67,6 +69,7 @@
   reading: あめだから。
   romaji: ame da kara.
   english: Because it's raining.
+  chunks: ["雨", "だから。"]
 
 # ── Saying why, more carefully ────────────────────────────────────────────────
 
@@ -77,6 +80,7 @@
   reading: つかれたので、きょうはやすみます。
   romaji: tsukareta node, kyou wa yasumimasu.
   english: I'm tired, so I'll take today off.
+  chunks: ["疲れた", "ので、", "今日は", "休みます。"]
 
 - id: join.the-station-is-close-so-ill-walk
   jlpt: N4
@@ -85,6 +89,7 @@
   reading: えきがちかいので、あるきます。
   romaji: eki ga chikai node, arukimasu.
   english: The station is close, so I'll walk.
+  chunks: ["駅が", "近い", "ので、", "歩きます。"]
 
 - id: join.its-quiet-so-i-like-it-here
   jlpt: N4
@@ -93,6 +98,7 @@
   reading: しずかなので、ここがすきです。
   romaji: shizuka na node, koko ga suki desu.
   english: It's quiet, so I like it here.
+  chunks: ["静か", "なので、", "ここが", "好きです。"]
 
 - id: join.im-a-student-so-i-dont-have-money
   jlpt: N4
@@ -101,6 +107,7 @@
   reading: がくせいなので、おかねがありません。
   romaji: gakusei na node, okane ga arimasen.
   english: I'm a student, so I don't have any money.
+  chunks: ["学生", "なので、", "お金が", "ありません。"]
 
 # ── Saying "but" ──────────────────────────────────────────────────────────────
 
@@ -111,6 +118,7 @@
   reading: このみせはたかいけど、おいしい。
   romaji: kono mise wa takai kedo, oishii.
   english: This shop is expensive, but the food's good.
+  chunks: ["この店は", "高い", "けど、", "おいしい。"]
 
 - id: join.difficult-but-interesting
   jlpt: N4
@@ -119,6 +127,7 @@
   reading: むずかしいですけど、おもしろいです。
   romaji: muzukashii desu kedo, omoshiroi desu.
   english: It's difficult, but it's interesting.
+  chunks: ["難しいです", "けど、", "面白いです。"]
 
 - id: join.i-like-it-but-im-not-buying-it
   jlpt: N4
@@ -127,6 +136,7 @@
   reading: すきだけど、かわない。
   romaji: suki da kedo, kawanai.
   english: I like it, but I'm not going to buy it.
+  chunks: ["好き", "だけど、", "買わない。"]
 
 # ── Doing one thing, then another ─────────────────────────────────────────────
 
@@ -137,6 +147,7 @@
   reading: うみでおよいで、いえにかえった。
   romaji: umi de oyoide, ie ni kaetta.
   english: I swam in the sea and went home.
+  chunks: ["海で", "泳いで、", "家に", "帰った。"]
 
 - id: join.i-walked-to-the-station-and-took-the-train
   jlpt: N4
@@ -145,6 +156,7 @@
   reading: えきまであるいて、でんしゃにのった。
   romaji: eki made aruite, densha ni notta.
   english: I walked to the station and got on the train.
+  chunks: ["駅まで", "歩いて、", "電車に", "のった。"]
 
 - id: join.i-read-a-book-and-listened-to-music
   jlpt: N4
@@ -153,6 +165,7 @@
   reading: きのうはほんをよんで、おんがくをきいた。
   romaji: kinou wa hon o yonde, ongaku o kiita.
   english: Yesterday I read a book and then listened to music.
+  chunks: ["昨日は", "本を", "読んで、", "音楽を", "聞いた。"]
 
 - id: join.i-ate-and-then-read-a-book
   jlpt: N4
@@ -161,6 +174,7 @@
   reading: ごはんをたべて、ほんをよんだ。
   romaji: gohan o tabete, hon o yonda.
   english: I ate, and then read a book.
+  chunks: ["ご飯を", "食べて、", "本を", "読んだ。"]
 
 # ── Doing two things at once ──────────────────────────────────────────────────
 
@@ -171,6 +185,7 @@
   reading: えきまであるきながらはなしました。
   romaji: eki made arukinagara hanashimashita.
   english: We talked while we walked to the station.
+  chunks: ["駅まで", "歩き", "ながら", "話しました。"]
 
 - id: join.i-read-while-i-eat
   jlpt: N4
@@ -179,6 +194,7 @@
   reading: ごはんをたべながら、ほんをよみます。
   romaji: gohan o tabenagara, hon o yomimasu.
   english: I read a book while I eat.
+  chunks: ["ご飯を", "食べ", "ながら、", "本を", "読みます。"]
 
 - id: join.i-cook-while-listening-to-music
   jlpt: N4
@@ -187,6 +203,7 @@
   reading: おんがくをききながらりょうりをします。
   romaji: ongaku o kikinagara ryouri o shimasu.
   english: I cook while listening to music.
+  chunks: ["音楽を", "聞き", "ながら", "料理を", "します。"]
 
 # ── Saying when ───────────────────────────────────────────────────────────────
 
@@ -197,6 +214,7 @@
   reading: バスにのるとき、きっぷをかいます。
   romaji: basu ni noru toki, kippu o kaimasu.
   english: When I get on the bus, I buy a ticket.
+  chunks: ["バスに", "のる", "時、", "切符を", "買います。"]
 
 - id: join.when-i-get-home-ill-call
   jlpt: N4
@@ -205,6 +223,7 @@
   reading: いえについたとき、でんわします。
   romaji: ie ni tsuita toki, denwa shimasu.
   english: When I get home, I'll call.
+  chunks: ["家に", "着いた", "時、", "電話します。"]
 
 - id: join.when-its-cold-i-close-the-window
   jlpt: N4
@@ -213,6 +232,7 @@
   reading: さむいとき、まどをしめます。
   romaji: samui toki, mado o shimemasu.
   english: When it's cold, I close the window.
+  chunks: ["寒い", "時、", "窓を", "閉めます。"]
 
 - id: join.when-its-quiet-i-read
   jlpt: N4
@@ -221,6 +241,7 @@
   reading: しずかなとき、ほんをよみます。
   romaji: shizuka na toki, hon o yomimasu.
   english: When it's quiet, I read.
+  chunks: ["静かな", "時、", "本を", "読みます。"]
 
 - id: join.when-i-was-a-child
   jlpt: N4
@@ -229,6 +250,7 @@
   reading: こどものとき、このこうえんであそびました。
   romaji: kodomo no toki, kono kouen de asobimashita.
   english: When I was a child, I played in this park.
+  chunks: ["子供の", "時、", "この公園で", "遊びました。"]
 
 # ── The book, the person, the place ───────────────────────────────────────────
 
@@ -239,6 +261,7 @@
   reading: きのうかったほんはおもしろかったです。
   romaji: kinou katta hon wa omoshirokatta desu.
   english: The book I bought yesterday was interesting.
+  chunks: ["昨日", "買った", "本は", "面白かったです。"]
 
 - id: join.someone-who-speaks-english
   jlpt: N4
@@ -247,6 +270,7 @@
   reading: えいごをはなすひとはいますか。
   romaji: eigo o hanasu hito wa imasu ka.
   english: Is there anyone who speaks English?
+  chunks: ["英語を", "話す", "人は", "いますか。"]
 
 - id: join.the-house-i-live-in
   jlpt: N4
@@ -255,6 +279,7 @@
   reading: わたしがすんでいるいえはえきからちかいです。
   romaji: watashi ga sunde iru ie wa eki kara chikai desu.
   english: The house I live in is close to the station.
+  chunks: ["私が", "住んでいる", "家は", "駅から", "近いです。"]
 
 - id: join.a-shop-thats-not-expensive
   jlpt: N4
@@ -263,6 +288,7 @@
   reading: たかくないみせをおしえてください。
   romaji: takakunai mise o oshiete kudasai.
   english: Please tell me about a shop that isn't expensive.
+  chunks: ["高くない", "店を", "教えて", "ください。"]
 
 - id: join.the-friend-i-met-last-year
   jlpt: N4
@@ -271,3 +297,4 @@
   reading: きょねんあったともだちにでんわしました。
   romaji: kyonen atta tomodachi ni denwa shimashita.
   english: I called the friend I met last year.
+  chunks: ["去年", "会った", "友達に", "電話しました。"]

@@ -74,6 +74,7 @@
   reading: ともだちはあしたいくといいました。
   romaji: tomodachi wa ashita iku to iimashita.
   english: My friend said they're going tomorrow.
+  chunks: ["友達は", "明日", "行く", "と", "言いました。"]
 
 - id: quote.my-friend-said-they-ate-sushi
   jlpt: N4
@@ -82,6 +83,7 @@
   reading: ともだちはすしをたべたといいました。
   romaji: tomodachi wa sushi o tabeta to iimashita.
   english: My friend said they ate sushi.
+  chunks: ["友達は", "すしを", "食べた", "と", "言いました。"]
 
 - id: quote.my-friend-said-theyre-not-buying-anything
   jlpt: N4
@@ -90,6 +92,7 @@
   reading: ともだちはなにもかわないといいました。
   romaji: tomodachi wa nanimo kawanai to iimashita.
   english: My friend said they're not buying anything.
+  chunks: ["友達は", "何も", "買わない", "と", "言いました。"]
 
 - id: quote.my-friend-said-its-cold
   jlpt: N4
@@ -98,6 +101,7 @@
   reading: ともだちはさむいといいました。
   romaji: tomodachi wa samui to iimashita.
   english: My friend said it's cold.
+  chunks: ["友達は", "寒い", "と", "言いました。"]
 
 # ── The word you can't leave out ──────────────────────────────────────────────
 
@@ -108,6 +112,7 @@
   reading: ともだちはがくせいだといいました。
   romaji: tomodachi wa gakusei da to iimashita.
   english: My friend said they're a student.
+  chunks: ["友達は", "学生だ", "と", "言いました。"]
 
 - id: quote.the-teacher-said-its-fine
   jlpt: N4
@@ -116,6 +121,7 @@
   reading: せんせいはだいじょうぶだといいました。
   romaji: sensei wa daijoubu da to iimashita.
   english: The teacher said it's fine.
+  chunks: ["先生は", "大丈夫だ", "と", "言いました。"]
 
 - id: quote.my-friend-said-they-were-well
   jlpt: N4
@@ -124,6 +130,7 @@
   reading: ともだちはげんきだったといいました。
   romaji: tomodachi wa genki datta to iimashita.
   english: My friend said they were well.
+  chunks: ["友達は", "元気だった", "と", "言いました。"]
 
 # ── What they've been saying ──────────────────────────────────────────────────
 
@@ -134,6 +141,7 @@
   reading: ともだちはあしたりょこうにいくといっていました。
   romaji: tomodachi wa ashita ryokou ni iku to itte imashita.
   english: My friend was saying they're going on a trip tomorrow.
+  chunks: ["友達は", "明日", "旅行に", "行く", "と", "言っていました。"]
 
 - id: quote.the-teacher-was-saying-work-is-busy
   jlpt: N4
@@ -142,6 +150,7 @@
   reading: せんせいはしごとがいそがしいといっていました。
   romaji: sensei wa shigoto ga isogashii to itte imashita.
   english: The teacher was saying work is busy.
+  chunks: ["先生は", "仕事が", "忙しい", "と", "言っていました。"]
 
 - id: quote.my-friend-was-saying-theyre-not-coming
   jlpt: N4
@@ -150,6 +159,7 @@
   reading: ともだちはきょうはこないといっていました。
   romaji: tomodachi wa kyou wa konai to itte imashita.
   english: My friend was saying they're not coming today.
+  chunks: ["友達は", "今日は", "来ない", "と", "言っていました。"]
 
 - id: quote.my-mother-was-saying-it-will-rain
   jlpt: N4
@@ -158,6 +168,7 @@
   reading: はははあしたはあめだといっていました。
   romaji: haha wa ashita wa ame da to itte imashita.
   english: My mother was saying it's going to rain tomorrow.
+  chunks: ["母は", "明日は", "雨だ", "と", "言っていました。"]
 
 # ── They say... (recognition only — see the blocked note above) ───────────────
 
@@ -194,6 +205,7 @@
   reading: あしたはあめだとききました。
   romaji: ashita wa ame da to kikimashita.
   english: I heard it's going to rain tomorrow.
+  chunks: ["明日は", "雨だ", "と", "聞きました。"]
 
 - id: quote.i-heard-the-teacher-is-going-on-a-trip
   jlpt: N4
@@ -202,6 +214,7 @@
   reading: せんせいはらいしゅうりょこうにいくとききました。
   romaji: sensei wa raishuu ryokou ni iku to kikimashita.
   english: I heard the teacher is going on a trip next week.
+  chunks: ["先生は", "来週", "旅行に", "行く", "と", "聞きました。"]
 
 - id: quote.i-hear-that-shop-is-expensive
   jlpt: N4
@@ -210,6 +223,7 @@
   reading: あのみせはたかいときいています。
   romaji: ano mise wa takai to kiite imasu.
   english: I hear that shop is expensive.
+  chunks: ["あの店は", "高い", "と", "聞いています。"]
 
 # ── What I think ──────────────────────────────────────────────────────────────
 
@@ -220,6 +234,7 @@
   reading: このほんはおもしろいとおもいます。
   romaji: kono hon wa omoshiroi to omoimasu.
   english: I think this book is interesting.
+  chunks: ["この本は", "面白い", "と", "思います。"]
 
 - id: quote.i-think-my-friend-likes-sushi
   jlpt: N4
@@ -228,6 +243,7 @@
   reading: ともだちはすしがすきだとおもいます。
   romaji: tomodachi wa sushi ga suki da to omoimasu.
   english: I think my friend likes sushi.
+  chunks: ["友達は", "すしが", "好きだ", "と", "思います。"]
 
 - id: quote.i-think-my-friend-will-come-tomorrow
   jlpt: N4
@@ -236,6 +252,7 @@
   reading: ともだちはあしたくるとおもいます。
   romaji: tomodachi wa ashita kuru to omoimasu.
   english: I think my friend will come tomorrow.
+  chunks: ["友達は", "明日", "来る", "と", "思います。"]
 
 - id: quote.i-think-the-teacher-will-go-too
   jlpt: N4
@@ -244,6 +261,7 @@
   reading: せんせいもいくとおもいます。
   romaji: sensei mo iku to omoimasu.
   english: I think the teacher will go too.
+  chunks: ["先生も", "行く", "と", "思います。"]
 
 # ── Saying you don't think so ─────────────────────────────────────────────────
 
@@ -254,6 +272,7 @@
   reading: ともだちはえいごがわからないとおもいます。
   romaji: tomodachi wa eigo ga wakaranai to omoimasu.
   english: I don't think my friend understands.
+  chunks: ["友達は", "英語が", "わからない", "と", "思います。"]
 
 - id: quote.i-dont-think-theres-time
   jlpt: N4
@@ -262,6 +281,7 @@
   reading: じかんがないとおもいます。
   romaji: jikan ga nai to omoimasu.
   english: I don't think there's time.
+  chunks: ["時間が", "ない", "と", "思います。"]
 
 - id: quote.i-dont-think-my-friend-came-yesterday
   jlpt: N4
@@ -270,6 +290,7 @@
   reading: ともだちはきのうこなかったとおもいます。
   romaji: tomodachi wa kinou konakatta to omoimasu.
   english: I don't think my friend came yesterday.
+  chunks: ["友達は", "昨日", "来なかった", "と", "思います。"]
 
 # ── What I've been thinking ───────────────────────────────────────────────────
 
@@ -280,6 +301,7 @@
   reading: このしごとはおもしろいとおもっています。
   romaji: kono shigoto wa omoshiroi to omotte imasu.
   english: I think this work is interesting, and have for a while.
+  chunks: ["この仕事は", "面白い", "と", "思っています。"]
 
 - id: quote.i-thought-work-would-be-fine
   jlpt: N4
@@ -288,6 +310,7 @@
   reading: しごとはだいじょうぶだとおもっていました。
   romaji: shigoto wa daijoubu da to omotte imashita.
   english: I thought work was going to be fine.
+  chunks: ["仕事は", "大丈夫だ", "と", "思っていました。"]
 
 - id: quote.i-believe-my-friend-is-well
   jlpt: N4
@@ -296,6 +319,7 @@
   reading: ともだちはげんきだとおもっています。
   romaji: tomodachi wa genki da to omotte imasu.
   english: I believe my friend is doing well.
+  chunks: ["友達は", "元気だ", "と", "思っています。"]
 
 # ── Passing it on ─────────────────────────────────────────────────────────────
 
@@ -306,6 +330,7 @@
   reading: あしたはあめだとききましたけど、だいじょうぶだとおもいます。
   romaji: ashita wa ame da to kikimashita kedo, daijoubu da to omoimasu.
   english: I heard it's going to rain tomorrow, but I think it'll be fine.
+  chunks: ["明日は", "雨だ", "と", "聞きました", "けど、", "大丈夫だ", "と", "思います。"]
 
 - id: quote.my-friend-said-theyre-busy-but-i-think-theyll-come
   jlpt: N4
@@ -314,6 +339,7 @@
   reading: ともだちはいそがしいといっていましたけど、あしたはくるとおもいます。
   romaji: tomodachi wa isogashii to itte imashita kedo, ashita wa kuru to omoimasu.
   english: My friend said they're busy, but I think they'll come tomorrow.
+  chunks: ["友達は", "忙しい", "と", "言っていました", "けど、", "明日は", "来る", "と", "思います。"]
 
 - id: quote.my-friend-said-that-shop-is-famous-but-i-wont-go
   jlpt: N4
@@ -322,3 +348,4 @@
   reading: ともだちはあのみせがゆうめいだといっていましたけど、わたしはいかないとおもいます。
   romaji: tomodachi wa ano mise ga yuumei da to itte imashita kedo, watashi wa ikanai to omoimasu.
   english: My friend said that shop is famous, but I don't think I'll go.
+  chunks: ["友達は", "あの店が", "有名だ", "と", "言っていました", "けど、", "私は", "行かない", "と", "思います。"]
