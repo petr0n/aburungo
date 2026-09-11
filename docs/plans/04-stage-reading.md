@@ -22,15 +22,20 @@ and **the input cliff** (real Japanese is suddenly too hard).
 
 **This is not "Book Three" (DR-033).** A book is a volume; a stage is a difficulty band; they are
 no longer the same axis. Book Two is `building`; whichever book comes after it opens the `reading`
-stage — but whether the stage needs one book or several is unsettled, and the two ways of counting
-disagree. By word exposure it looks large: a reference would call the stage's target JLPT N3
+stage — and when this was written, whether the stage needed one book or several was unsettled,
+because the two ways of counting disagree. By word exposure it looks large: a reference would call the stage's target JLPT N3
 (2,347 words), which at Book One's measured ~570 words a book is roughly four books' worth. By
 taught lesson count it looks like one: §3 finds ~100 connective patterns fits the standard
 10-chapter, ~100-lesson shape exactly, because mining moves vocabulary out of lessons and into the
 reading library — lesson count decouples from word count. Both readings can be true at once: one
 book's worth of taught grammar, sitting on top of a reading library sized for several. This
-document describes **the stage**, not a numbered book, and does not resolve which reading is
+document describes **the stage**, not a numbered book, and did not resolve which reading is
 right — DR-034 leaves book count to be "specified one ahead, not all at once."
+
+**Settled since (DR-042, 2026-09-11): one book.** Book Three shipped at 81 lessons, and the course
+is five books in total. The word-exposure reading is answered the way this paragraph proposed —
+a library sized for several sitting under one book's worth of taught grammar — so the extra volumes
+that reading implied are mining surface, not chapters.
 
 **Tier:** unsettled — see §10. Not "the first paywall": Book Two is already free, and the free
 tier reaches two books past it before the paywall arrives (`TIER_BOOK_LIMIT.free = 4`,

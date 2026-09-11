@@ -1487,3 +1487,50 @@ decision. Tier is unchanged: Book Five remains the first paid volume
 
 Scope, sizing and the open questions:
 [Book Five plan](plans/book-five-review.md).
+
+## DR-042 — Book Five ends the course; its review rules bind per chapter
+
+**Date:** 2026-09-11
+**Status:** Agreed. Settles the three questions [DR-041](#dr-041--book-five-is-a-review-volume-not-a-new-content-volume)
+left open.
+
+**Decision, in three parts.**
+
+**1. The course is five books.** One and Two (foundation, building), Three (reading), Four and Five
+(fluency). DR-034 puts the endpoint at roughly N2; Book Four carries the grammar that reaches it and
+Book Five adds none, so the taught spine is complete after Book Five.
+
+This also closes the reading stage's own open count ([04](plans/04-stage-reading.md)), which asked
+whether that stage needed one book or several and declined to answer. It is one: Book Three shipped
+at 81 lessons. The doc's other reading — that by word exposure the stage looks like four books'
+worth — is answered the way the doc itself proposed, by **a reading library sized for several
+sitting under one book's worth of taught grammar.** Words arrive by mining, not by volumes.
+The three items Book Four deferred do not need a sixth volume, because none of them is a volume:
+news reading and exposition at length want a **reading library**, formal written production wants a
+**compose-then-compare engine** with a frame slot in `buildProductionQueue`
+([book-four-bands §5](plans/book-four-bands.md)). A library is a surface and an engine is code.
+When they unblock they attach to the books that already exist. A sixth book would have been a
+container invented to hold two features.
+
+**2. "Already met" is decided by the content, not by the learner.** A word is already met if any
+lesson in Books One to Four teaches it, read from the same `wordIds` the ladder is generated from.
+The learner's own review state is more accurate and is rejected anyway: it makes the book different
+per learner, and a book whose content varies per learner cannot be rendered as a fixed ladder,
+which is what makes content inspectable at all. Adaptivity stays with the SRS, which has it.
+The staleness that rule would have caught is handled in authoring: **each chapter's revisited words
+must come from at least three of the four prior books**, which forbids a Book Five chapter that
+quietly reviews only Book Four.
+
+**3. The 25% ceiling binds per chapter, not per book.** A per-book ceiling permits an all-new
+chapter offset by an all-revision one, and a learner meeting that chapter is doing new content
+wearing a review book's cover. Per chapter is also checkable: on ~40 word slots a chapter the
+ceiling is **at most 10 new words**, caught by a sweep over each chapter's `wordIds` counting those
+absent from Books One to Four. The check is unwritten because there is no content to read yet.
+A book whose every chapter holds the ceiling holds it overall, so DR-041's ~100-new figure is a
+consequence rather than a second rule.
+
+**Accepted cost:** chapter 9 teaches compounds of already-taught kanji, and a compound the learner
+cannot read counts as a new word — so ten of them is a thin chapter. Taken rather than waived. An
+exception would be a chapter plan arguing for one, not a ceiling quietly raised.
+
+Detail: [Book Five plan §6](plans/book-five-review.md).

@@ -100,17 +100,60 @@ The three items Book Four deferred keep their own blockers and do **not** land h
 If any of them unblocks, it is a scope question for whichever book is being written at the time,
 not an inheritance Book Five accepts in advance.
 
-## 6. Open questions
+## 6. The three questions this plan opened, settled
 
-- **Does Book Five end the course?** DR-034 puts the endpoint at roughly N2, and Book Four carries
-  the grammar that reaches it. Whether consolidation is the last volume or whether a sixth follows
-  is not settled here.
-- **How is "already met" decided in authoring?** A word taught in Book One and never seen since is
-  differently familiar from one taught in Book Four. The chapter plans need a rule; the obvious
-  candidate is the learner's own review state, which would make the book adaptive and is a much
-  larger change than this decision makes.
-- **Does the 25% ceiling bind per chapter or per book?** Written as per book above. Per chapter is
-  stricter and easier to verify mechanically.
+[DR-042](../decision-records.md), 2026-09-11.
+
+### Book Five ends the course
+
+Five volumes, and the course stops. DR-034 puts the endpoint at roughly N2; Book Four carries the
+grammar that reaches it and Book Five adds none, so after Book Five the taught spine is complete.
+
+The obvious objection is the three items Book Four deferred — news reading, exposition at length,
+formal written production. They do not need a sixth volume, because **none of them is a volume.**
+Read what each is actually blocked on ([book-four-bands §5](book-four-bands.md)): two want a
+reading library, and one wants a compose-then-compare engine with a frame slot in
+`buildProductionQueue`. A library is a surface the learner mines, described by
+[the reading stage](04-stage-reading.md); an engine is code. Neither is authored chapters.
+
+So when they unblock they attach to the books that already exist, as surfaces over the material
+those books teach. "Book Six" would have been a container invented to hold two features.
+
+### "Already met" is decided by the content, not by the learner
+
+A word is already met if any lesson in Books One to Four teaches it — read from the same
+`wordIds` the ladder is generated from, so it is derivable rather than remembered.
+
+The tempting alternative was the learner's own review state, which is genuinely more accurate: a
+Book One word never seen since really is less familiar than a Book Four one. It is rejected because
+it makes the book different for every learner, and a book whose content varies per learner cannot
+be rendered as a fixed ladder — which is the thing that makes content inspectable at all
+(CLAUDE.md, "content ships with the book map"). Adaptivity belongs to the SRS, which already has it.
+
+The staleness the review state would have caught is handled in authoring instead, with a rule that
+is checkable: **each chapter's revisited words must be drawn from at least three of the four prior
+books.** That forbids the failure mode this question was really about — a Book Five chapter that
+quietly reviews only Book Four.
+
+### The 25% ceiling binds per chapter
+
+Not per book. A per-book ceiling permits a chapter that is entirely new words as long as another is
+entirely revision, and a learner meeting that chapter is not doing review — they are doing a
+new-content chapter wearing a review book's cover.
+
+Per chapter also survives contact with a machine: on ~40 word slots a chapter, the ceiling is
+**at most 10 new words**, and a chapter that breaks it can be caught the way a bad chunk split is
+caught, by a check that reads the content rather than by an author remembering. The check is not
+written, because there is no Book Five content for it to read; the shape it takes is a sweep over
+each chapter's `wordIds`, counting those absent from Books One to Four.
+
+A book whose every chapter holds the ceiling holds it overall, so the book-level figure in §3 —
+roughly 100 new against 300 revisited — is a consequence rather than a second rule.
+
+**The one place this pinches** is chapter 9, kanji in compounds: a compound the learner cannot read
+counts as a new word, and ten of them is a thin chapter. That is a real cost and it is accepted
+rather than waived. If it turns out to be wrong, it is a chapter plan arguing for an exception with
+a reason, not a ceiling quietly raised.
 
 ## 7. When to write the real plan
 
