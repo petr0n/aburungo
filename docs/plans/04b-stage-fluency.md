@@ -95,6 +95,14 @@ This is one book-shaped skeleton (~10 bands of ~10 lessons), same shape as every
 question the reading stage leaves for itself (04, intro) — this skeleton is what the first book
 in the stage holds regardless.
 
+**Book Four took all of it (2026-09-07), and the volume after it is a review book (DR-041).**
+[book-four-bands §3](book-four-bands.md) went through these ten bands one at a time and absorbed
+every grammar band into Book Four; what stayed unbuilt — news reading, exposition at length, formal
+written production — is blocked on a library and an engine, not waiting for a later volume. So this
+skeleton is spent, and Book Five consolidates rather than continuing it: at most 25% new words, no
+new patterns. See the [Book Five plan](book-five-review.md). The count of books this stage needs is
+still open; what is settled is that the next one does not carry new grammar.
+
 ## 4. N1 — out of scope (DR-034), and what this section used to hold
 
 This document originally gave N1 the same treatment as N2 above: a ten-band skeleton titled "Book
@@ -158,3 +166,7 @@ When the reading stage ships and its library has real usage. Not before. The lev
 behaviour on real learners is the input that makes a real fluency-stage plan worth more than a
 guess — including the one open structural question this doc leaves alone: whether the stage is
 one book or several (§3).
+
+Partly answered since: the stage is at least two books, and the second one's purpose is settled
+(DR-041) even though its content is not. That does not change the timing — a review of Books One to
+Four cannot be written while Book Three's scope is still open.

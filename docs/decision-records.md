@@ -1444,3 +1444,46 @@ resolved. Exact book-ending activity content remains separate.
 
 Content, migration considerations, and acceptance checks:
 [checkpoint/SRS spec](superpowers/specs/2026-09-06-checkpoints-and-srs-design.md).
+
+## DR-041 — Book Five is a review volume, not a new-content volume
+
+**Date:** 2026-09-10
+**Status:** Agreed. Plan updated; content authoring not started (DR-038 — Book Three's scope is
+still open, and Book Five is not next in the queue).
+
+**Decision:** Book Five reviews everything Books One to Four taught. **At most 25% of the words it
+carries may be new**; the rest are words the learner has already met, recombined into new
+situations. It teaches no new grammar patterns.
+
+**Why this costs almost nothing to change.** The fluency stage's skeleton
+([04b §3](plans/04b-stage-fluency.md)) listed ten bands. Book Four's planning
+([book-four-bands §3](plans/book-four-bands.md)) went through them one at a time and **absorbed
+every grammar band into Book Four**. What remains unbuilt there — news reading, exposition at
+length, formal written production — is deferred on a reading library and a compose-then-compare
+engine, not on grammar waiting for a later volume. So Book Five never held a settled grammar
+payload to displace. This decision assigns a purpose to a volume that had a number and little
+else.
+
+**Why a review volume is worth a book at all**, given the SRS already resurfaces items: the SRS
+returns an item *as it was taught*, on its own, when its interval comes due. It cannot put a Book
+One word into a Book Four register, or ask for two patterns from different books in one sentence.
+Recombination is a content problem, and content is what a book is.
+
+**Measured inventory this rests on** (2026-09-10, derived from `src/content/books.ts`, not
+asserted): Books One to Four are 350 lessons teaching **901 unique words, 1,232 unique phrases and
+521 kanji** — 100/93/81/76 lessons and 484/231/126/447 words per book.
+
+**What 25% means, and what it does not.** It is 25% of the words Book Five carries, not 25% of the
+course. On the ~10x10 skeleton every other book uses, a Book Five carrying roughly 400 word slots
+introduces about 100 new words and revisits about 300. **It does not mean every one of the 901
+prior words appears in Book Five.** Exhaustive per-item coverage is the SRS's job; the book's job
+is breadth — every prior book and theme represented, in new combinations.
+
+**Consequences.** Book Five stops being the fluency stage's second grammar volume, so DR-034's
+endpoint is reached by Book Four's grammar plus consolidation rather than by more patterns. The
+three deferred items above keep their own blockers and are not moved into Book Five by this
+decision. Tier is unchanged: Book Five remains the first paid volume
+([01 §](plans/01-overarching-plan.md)).
+
+Scope, sizing and the open questions:
+[Book Five plan](plans/book-five-review.md).
