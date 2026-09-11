@@ -86,6 +86,39 @@ describe("content integrity", () => {
  * are simply filtered out of the ladder, and this is the guard that says so.
  * Flip VITE_HANA_ENABLED and these expectations change by design.
  */
+/**
+ * Chunks are the pieces a learner taps together in guided production (DR-039).
+ * They are authored by hand — Japanese has no spaces and this repo has no
+ * morphological tokenizer, so the only honest source of a boundary is someone
+ * who read the sentence.
+ *
+ * Which means the one thing worth checking mechanically is that the pieces
+ * still add up. `parsePhrase` throws on a mismatch at load, and this proves
+ * that guard is live rather than assumed — the same reason every other check in
+ * this file exists in a test and not at module scope.
+ */
+describe("guided-production chunks", () => {
+  const chunked = allPhrases.filter((p) => p.chunks !== undefined);
+
+  it("rebuild their sentence exactly", () => {
+    const broken = chunked
+      .filter((p) => p.chunks!.join("") !== p.japanese)
+      .map((p) => p.id);
+    expect(broken).toEqual([]);
+  });
+
+  it("are never empty, and never a single piece covering the whole sentence", () => {
+    // One chunk is not an exercise: tapping it is transcription, not assembly.
+    const useless = chunked.filter((p) => p.chunks!.length < 2).map((p) => p.id);
+    expect(useless).toEqual([]);
+  });
+
+  it("only appear on phrases the learner is asked to produce", () => {
+    const contradictory = chunked.filter((p) => p.recognitionOnly === true).map((p) => p.id);
+    expect(contradictory).toEqual([]);
+  });
+});
+
 describe("the ladder with Hana shelved", () => {
   it("ends on the production checkpoint", () => {
     const last = n5Lessons[n5Lessons.length - 1];

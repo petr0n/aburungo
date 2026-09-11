@@ -65,6 +65,24 @@ export function parsePhrase(raw: unknown, source: string): Phrase {
       raw,
     );
   }
+  if (o.chunks !== undefined) {
+    if (!Array.isArray(o.chunks) || o.chunks.some((c) => typeof c !== "string" || c === "")) {
+      throw new PhraseSchemaError(
+        `${source}: entry "${String(o.id)}" has invalid chunks — must be a list of non-empty strings`,
+        raw,
+      );
+    }
+    // The check that makes a bad split impossible to ship. Boundaries are
+    // authored by hand, so the one thing a machine can verify is that they
+    // still add up to the sentence they came from.
+    const joined = (o.chunks as string[]).join("");
+    if (joined !== o.japanese) {
+      throw new PhraseSchemaError(
+        `${source}: entry "${String(o.id)}" chunks rebuild "${joined}" but japanese is "${String(o.japanese)}"`,
+        raw,
+      );
+    }
+  }
   if (o.jlpt !== undefined && (typeof o.jlpt !== "string" || !JLPT_LEVELS.has(o.jlpt))) {
     throw new PhraseSchemaError(
       `${source}: entry "${String(o.id)}" has invalid jlpt "${String(o.jlpt)}" — must be N5/N4/N3/N2/N1`,
@@ -83,6 +101,7 @@ export function parsePhrase(raw: unknown, source: string): Phrase {
     notes: o.notes as string | undefined,
     jlpt: o.jlpt as JlptLevel | undefined,
     recognitionOnly: o.recognitionOnly as boolean | undefined,
+    chunks: o.chunks as string[] | undefined,
     tatoebaId: o.tatoebaId as string | undefined,
   };
 }
