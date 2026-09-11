@@ -35,7 +35,7 @@ const words = [word("w1", "water", "みず"), word("w2", "cat", "ねこ")];
 const phrases: Phrase[] = [];
 
 function setup(over: Partial<Parameters<typeof ProductionCheckpoint>[0]> = {}) {
-  const props = { lesson, words, phrases, onMissed: vi.fn(), onDone: vi.fn(), ...over };
+  const props = { lesson, words, phrases, onMissed: vi.fn(), onAnswered: vi.fn(), onDone: vi.fn(), ...over };
   render(<ProductionCheckpoint {...props} />);
   return props;
 }
@@ -126,6 +126,25 @@ describe("the gate", () => {
 
     expect(onDone).not.toHaveBeenCalled();
     expect(screen.getByText("Checkpoint · round 2")).toBeTruthy();
+  });
+
+  /**
+   * The half the schedule never saw. A checkpoint used to report misses only,
+   * so answering correctly in one changed nothing about when the item came
+   * back -- DR-040 rule 1. What an answer is then worth is the caller's
+   * decision, and src/srs/sessionEvidence.ts makes it.
+   */
+  it("reports a correct answer, not only a miss", async () => {
+    const user = userEvent.setup();
+    const onAnswered = vi.fn();
+    const { onMissed } = setup({ onAnswered });
+    await start(user);
+
+    await answer(user, ROMAJI[currentEnglish()] as string);
+
+    expect(onAnswered).toHaveBeenCalledTimes(1);
+    expect(onAnswered.mock.calls[0]?.[1]).toBe(true);
+    expect(onMissed).not.toHaveBeenCalled();
   });
 
   it("reports each miss so it rejoins the review queue", async () => {

@@ -12,6 +12,8 @@ type Props = {
   phrases: Phrase[];
   /** Reported per miss so the caller can return the item to the SRS queue. */
   onMissed?: (item: Word | Phrase) => void;
+  /** Every answered card, right or wrong, for the session's review evidence. */
+  onAnswered?: (item: Word | Phrase, correct: boolean) => void;
   /** Passed through to the answer cards. Off in a difficulty-shifted book (03 §6). */
   showRomaji?: boolean;
   onDone: () => void;
@@ -34,7 +36,7 @@ type Props = {
  * against the reading, so kana and romaji both count; the point is recall, not
  * orthography.
  */
-export function ProductionCheckpoint({ lesson, words, phrases, onMissed, showRomaji = true, onDone }: Props) {
+export function ProductionCheckpoint({ lesson, words, phrases, onMissed, onAnswered, showRomaji = true, onDone }: Props) {
   const [started, setStarted] = useState(false);
   const [round, setRound] = useState<Array<Word | Phrase>>(() => buildProductionQueue(words, phrases));
   const [index, setIndex] = useState(0);
@@ -43,6 +45,7 @@ export function ProductionCheckpoint({ lesson, words, phrases, onMissed, showRom
 
   function handleNext(correct: boolean) {
     const item = round[index];
+    if (item !== undefined) onAnswered?.(item, correct);
     if (item !== undefined && !correct) {
       // Re-queue for this checkpoint *and* hand it back for the SRS queue. The
       // gate and the schedule are separate concerns.

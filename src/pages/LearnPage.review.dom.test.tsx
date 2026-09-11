@@ -82,31 +82,38 @@ describe("ReviewStep", () => {
   // never registers and renders leak between tests.
   afterEach(cleanup);
 
-  it("persists the rating on click, with no animation event", async () => {
+  // The step reports the answer rather than writing the rating itself: DR-040
+  // shares one promotion budget between the review and the chapter checkpoints,
+  // so the decision moved up to whoever owns the session. What this file exists
+  // to prove is unchanged -- the answer is not dropped when no animationend
+  // arrives -- and it is now the report that must not be dropped.
+  it("reports the answer on click, with no animation event", async () => {
     const user = userEvent.setup();
-    render(<ReviewStep items={[word("vocab.a", "朝")]} onDone={() => {}} />);
+    const onAnswered = vi.fn();
+    render(<ReviewStep items={[word("vocab.a", "朝")]} onAnswered={onAnswered} onDone={() => {}} />);
 
     await user.click(screen.getByRole("button", { name: /Reveal/ }));
     await user.click(screen.getByRole("button", { name: /Got it/ }));
 
     // Nothing dispatched animationend — under the old code this was zero.
-    expect(recordRating).toHaveBeenCalledTimes(1);
-    expect(recordRating).toHaveBeenCalledWith("vocab.a", "got-it", false);
+    expect(onAnswered).toHaveBeenCalledTimes(1);
+    expect(onAnswered).toHaveBeenCalledWith("vocab.a", true);
   });
 
-  it("records a miss as 'didnt' rather than skipping it", async () => {
+  it("reports a miss rather than skipping it", async () => {
     const user = userEvent.setup();
-    render(<ReviewStep items={[word("vocab.b", "夜")]} onDone={() => {}} />);
+    const onAnswered = vi.fn();
+    render(<ReviewStep items={[word("vocab.b", "夜")]} onAnswered={onAnswered} onDone={() => {}} />);
 
     await user.click(screen.getByRole("button", { name: /Reveal/ }));
     await user.click(screen.getByRole("button", { name: /Didn't know/ }));
 
-    expect(recordRating).toHaveBeenCalledWith("vocab.b", "didnt", false);
+    expect(onAnswered).toHaveBeenCalledWith("vocab.b", false);
   });
 
   it("advances to the next card so the queue cannot deadlock", async () => {
     const user = userEvent.setup();
-    render(<ReviewStep items={[word("vocab.a", "朝"), word("vocab.b", "夜")]} onDone={() => {}} />);
+    render(<ReviewStep items={[word("vocab.a", "朝"), word("vocab.b", "夜")]} onAnswered={() => {}} onDone={() => {}} />);
 
     expect(screen.getByText("Review · 1 / 2")).toBeTruthy();
     await user.click(screen.getByRole("button", { name: /Reveal/ }));
@@ -119,7 +126,7 @@ describe("ReviewStep", () => {
   it("calls onDone after the last card instead of stalling", async () => {
     const user = userEvent.setup();
     const onDone = vi.fn();
-    render(<ReviewStep items={[word("vocab.a", "朝")]} onDone={onDone} />);
+    render(<ReviewStep items={[word("vocab.a", "朝")]} onAnswered={() => {}} onDone={onDone} />);
 
     await user.click(screen.getByRole("button", { name: /Reveal/ }));
     await user.click(screen.getByRole("button", { name: /Got it/ }));
@@ -147,12 +154,13 @@ describe("ReviewStep with the difficulty shift", () => {
 
   it("asks for a typed recall instead of a flip card", async () => {
     const user = userEvent.setup();
-    render(<ReviewStep items={[mizu]} shifted onDone={() => {}} />);
+    const onAnswered = vi.fn();
+    render(<ReviewStep items={[mizu]} shifted onAnswered={onAnswered} onDone={() => {}} />);
 
     expect(screen.queryByRole("button", { name: /Reveal/ })).toBeNull();
     await typeAnswer(user, "mizu");
 
-    expect(recordRating).toHaveBeenCalledWith("vocab.mizu", "got-it", false);
+    expect(onAnswered).toHaveBeenCalledWith("vocab.mizu", true);
   });
 
   it("shows a recognition-only phrase as a flip card, never a typed one", () => {
@@ -166,23 +174,25 @@ describe("ReviewStep with the difficulty shift", () => {
       scenario: "naming",
       recognitionOnly: true,
     } as Phrase;
-    render(<ReviewStep items={[kuchiwa]} shifted onDone={() => {}} />);
+    render(<ReviewStep items={[kuchiwa]} shifted onAnswered={() => {}} onDone={() => {}} />);
 
     expect(screen.queryByRole("button", { name: "Check answer" })).toBeNull();
     expect(screen.getByRole("button", { name: /Reveal/ })).toBeTruthy();
   });
 
-  it("records a typed miss as 'didnt'", async () => {
+  it("reports a typed miss as incorrect", async () => {
     const user = userEvent.setup();
-    render(<ReviewStep items={[mizu]} shifted onDone={() => {}} />);
+    const onAnswered = vi.fn();
+    render(<ReviewStep items={[mizu]} shifted onAnswered={onAnswered} onDone={() => {}} />);
 
     await typeAnswer(user, "ocha");
-    expect(recordRating).toHaveBeenCalledWith("vocab.mizu", "didnt", false);
+    expect(onAnswered).toHaveBeenCalledWith("vocab.mizu", false);
   });
 
   it("never renders romaji, though typing romaji still converts", async () => {
     const user = userEvent.setup();
-    render(<ReviewStep items={[mizu]} shifted onDone={() => {}} />);
+    const onAnswered = vi.fn();
+    render(<ReviewStep items={[mizu]} shifted onAnswered={onAnswered} onDone={() => {}} />);
 
     await user.type(screen.getByPlaceholderText("Type romaji here…"), "mizu");
     await user.click(screen.getByRole("button", { name: "Check answer" }));
@@ -218,7 +228,7 @@ describe("ReviewStep with a due kanji", () => {
 
   it("drills the character rather than falling through to a flashcard", async () => {
     const user = userEvent.setup();
-    render(<ReviewStep items={[mizuKanji]} onDone={() => {}} />);
+    render(<ReviewStep items={[mizuKanji]} onAnswered={() => {}} onDone={() => {}} />);
 
     await user.click(screen.getByRole("button", { name: /Reveal/ }));
     expect(screen.getByText("water")).toBeTruthy();
@@ -228,7 +238,7 @@ describe("ReviewStep with a due kanji", () => {
 
   it("actually turns the card over when Reveal is pressed", async () => {
     const user = userEvent.setup();
-    render(<ReviewStep items={[mizuKanji]} onDone={() => {}} />);
+    render(<ReviewStep items={[mizuKanji]} onAnswered={() => {}} onDone={() => {}} />);
 
     // FlipCard keeps both faces mounted and hides one with a CSS rotation, so
     // "the meaning is in the DOM" proves nothing — only the transform does.
@@ -239,22 +249,23 @@ describe("ReviewStep with a due kanji", () => {
     expect(flipTransform()).toContain("rotateY(180deg)");
   });
 
-  it("records the rating against the kanji id and advances", async () => {
+  it("reports the answer against the kanji id and advances", async () => {
+    const onAnswered = vi.fn();
     const user = userEvent.setup();
     const onDone = vi.fn();
-    render(<ReviewStep items={[mizuKanji]} onDone={onDone} />);
+    render(<ReviewStep items={[mizuKanji]} onAnswered={onAnswered} onDone={onDone} />);
 
     await user.click(screen.getByRole("button", { name: /Reveal/ }));
     await user.click(screen.getByRole("button", { name: /Got it/ }));
 
-    expect(recordReview).toHaveBeenCalledWith("kanji.水", true, false);
+    expect(onAnswered).toHaveBeenCalledWith("kanji.水", true);
     // If onRate never reached advance(), the whole daily loop deadlocks here.
     expect(onDone).toHaveBeenCalledTimes(1);
   });
 
   it("still drills, not types, under the recall shift", async () => {
     const user = userEvent.setup();
-    render(<ReviewStep items={[mizuKanji]} shifted onDone={() => {}} />);
+    render(<ReviewStep items={[mizuKanji]} shifted onAnswered={() => {}} onDone={() => {}} />);
 
     // The kanji guard has to run before the shifted branch: FillBlankCard reads
     // romaji and english off the card, which a Kanji does not carry, and the
@@ -265,8 +276,9 @@ describe("ReviewStep with a due kanji", () => {
   });
 
   it("keeps a kanji out of the flashcard staging path", async () => {
+    const onAnswered = vi.fn();
     const user = userEvent.setup();
-    render(<ReviewStep items={[mizuKanji]} onDone={() => {}} />);
+    render(<ReviewStep items={[mizuKanji]} onAnswered={onAnswered} onDone={() => {}} />);
 
     await user.click(screen.getByRole("button", { name: /Reveal/ }));
     await user.click(screen.getByRole("button", { name: /Didn't know/ }));
@@ -274,7 +286,7 @@ describe("ReviewStep with a due kanji", () => {
     // Staging a kanji would re-render it through FlashCard, which reads
     // fields it does not have.
     expect(recordRating).not.toHaveBeenCalled();
-    expect(recordReview).toHaveBeenCalledWith("kanji.水", false, false);
+    expect(onAnswered).toHaveBeenCalledWith("kanji.水", false);
   });
 });
 

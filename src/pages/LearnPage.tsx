@@ -17,7 +17,7 @@
  * shown on KanjiIntroCard in the new-lesson step and come back through the
  * review step on KanjiDrillCard, recognition only.
  */
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { Link } from "react-router";
 import type { Book, GrammarPattern, Kanji, Phrase, ReviewRating, Lesson, UserTier, Word } from "@/types";
 import { isGrammarPattern, isKanji, isWord } from "@/types";
@@ -29,9 +29,10 @@ import { findPhrase } from "@/content";
 import { produceItemsFor } from "./produceItems";
 import { getPathProgress, markLessonSeen } from "@/db/pathProgressStore";
 import { buildCanDoScope, buildCrossSituationScope, canDoMarkerId, taughtSituations, verifiedCanDos } from "@/srs/canDo";
-import { getOne, hydrateFromServer, recordRating, recordReview, upsertSynced } from "@/db/reviewStore";
+import { getOne, hydrateFromServer, recordRating, upsertSynced } from "@/db/reviewStore";
 import { schedule } from "@/srs/leitner";
 import { buildDailySession, type DailySession } from "@/srs/dailyLoop";
+import { createSessionEvidence } from "@/srs/sessionEvidence";
 import { allGrammarPatterns } from "@/content/grammar";
 import { allKanji, piecesByCharacter } from "@/content/kanji";
 import { PageShell } from "@/components/PageShell";
@@ -101,13 +102,19 @@ function isShifted(book: Book): boolean {
 export function ReviewStep({
   items,
   shifted = false,
+  onAnswered,
   onDone,
 }: {
   items: Array<Phrase | Word | GrammarPattern | Kanji>;
   shifted?: boolean;
+  /**
+   * Every answered card. The step no longer writes a rating itself: DR-040
+   * shares one promotion budget between this and the chapter checkpoints, so
+   * the decision belongs to whoever owns the session, not to each activity.
+   */
+  onAnswered: (itemId: string, correct: boolean) => void;
   onDone: () => void;
 }) {
-  const signedIn = useAuth((s) => s.user !== null);
   const [index, setIndex] = useState(0);
   const [phase, setPhase] = useState<FlashCardPhase>("entering");
   const [staged, setStaged] = useState<Phrase | Word | null>(null);
@@ -133,7 +140,7 @@ export function ReviewStep({
     const item = items[index];
     if (item !== undefined) {
       setStaged(!isGrammarPattern(item) && !isKanji(item) ? item : null);
-      void recordRating(item.id, rating, signedIn);
+      onAnswered(item.id, rating === "got-it");
     }
     advance();
   }
@@ -151,7 +158,7 @@ export function ReviewStep({
 
   function handleGrammarNext(correct: boolean) {
     const item = items[index];
-    if (item !== undefined) void recordReview(item.id, correct, signedIn);
+    if (item !== undefined) onAnswered(item.id, correct);
     advance();
   }
 
@@ -162,14 +169,14 @@ export function ReviewStep({
    */
   function handleKanjiNext(correct: boolean) {
     const item = items[index];
-    if (item !== undefined) void recordReview(item.id, correct, signedIn);
+    if (item !== undefined) onAnswered(item.id, correct);
     advance();
   }
 
   /** The recall gate: a checked typed answer maps onto the same binary rating. */
   function handleRecallNext(correct: boolean) {
     const item = items[index];
-    if (item !== undefined) void recordRating(item.id, correct ? "got-it" : "didnt", signedIn);
+    if (item !== undefined) onAnswered(item.id, correct);
     advance();
   }
 
@@ -732,6 +739,16 @@ export function LearnPage({ book: pinnedBook }: { book?: Book } = {}) {
   const [step, setStep] = useState<Step>("loading");
   const [session, setSession] = useState<DailySession | null>(null);
   /**
+   * One promotion budget for the whole session (DR-040 rule 5), shared by the
+   * opening review and every checkpoint in it. A ref rather than state: nothing
+   * renders from it, and it must not be reset by a re-render mid-session.
+   *
+   * Known limit: this lives in memory, so a reload starts a fresh budget and an
+   * item could advance twice across the two. The spec asks for durable event
+   * identity; that needs a server-side session id and is not here yet.
+   */
+  const evidence = useRef(createSessionEvidence());
+  /**
    * The learner's progress list, kept here as well as inside the built session
    * because the two terminal checkpoints read it directly: which situations
    * have been taught, and which can-dos are already verified. Updated
@@ -769,6 +786,7 @@ export function LearnPage({ book: pinnedBook }: { book?: Book } = {}) {
       // here (03 §6) — review is cumulative, new material is not.
       const prior = priorBooks(active).map((b) => ({ book: b, progress: progressFor(b) }));
       const built = buildDailySession(active, progress, words, phrases, allGrammarPatterns, allKanji, reviewStates, Date.now(), prior);
+      evidence.current = createSessionEvidence();
       setSession(built);
       if (built.reviewItems.length > 0) {
         setStep("review");
@@ -818,6 +836,21 @@ export function LearnPage({ book: pinnedBook }: { book?: Book } = {}) {
     }
   }, [session, userId, finishUnitAndClose]);
 
+  /**
+   * Turn one answered card into a schedule change, or into nothing.
+   *
+   * Every activity in the session routes through here, which is the point:
+   * DR-040's safeguards are shared across the opening review and the
+   * checkpoints, so they cannot live inside either one.
+   */
+  const recordAttempt = useCallback(
+    (itemId: string, correct: boolean) => {
+      const rating = evidence.current.ratingFor(itemId, correct);
+      if (rating !== null) void recordRating(itemId, rating, userId !== null);
+    },
+    [userId],
+  );
+
   function afterProduce() {
     if (session !== null && session.newWords.length > 0) {
       setStep("recognition");
@@ -830,7 +863,14 @@ export function LearnPage({ book: pinnedBook }: { book?: Book } = {}) {
   if (step === "loading" || session === null) {
     content = <LoadingPlaceholder label="Preparing today's session…" />;
   } else if (step === "review") {
-    content = <ReviewStep items={session.reviewItems} shifted={shifted} onDone={afterReview} />;
+    content = (
+      <ReviewStep
+        items={session.reviewItems}
+        shifted={shifted}
+        onAnswered={recordAttempt}
+        onDone={afterReview}
+      />
+    );
   } else if (step === "new-lesson" && session.lesson !== null) {
     content = (
       <NewLessonStep
@@ -855,7 +895,7 @@ export function LearnPage({ book: pinnedBook }: { book?: Book } = {}) {
       <RecognitionCheckpoint
         lesson={session.lesson}
         words={wordsForTier(tier).filter((w) => taughtIds.has(w.id))}
-        onMissed={(word) => void demoteMissedWord(word.id, userId !== null)}
+        onAnswered={(word, correct) => recordAttempt(word.id, correct)}
         onDone={() => void finishUnitAndClose()}
       />
     );
@@ -870,7 +910,7 @@ export function LearnPage({ book: pinnedBook }: { book?: Book } = {}) {
         words={wordsForTier(tier).filter((w) => taughtWordIds.has(w.id))}
         phrases={phrasesForTier(tier).filter((p) => taughtPhraseIds.has(p.id))}
         showRomaji={!shifted}
-        onMissed={(item) => void demoteMissedWord(item.id, userId !== null)}
+        onAnswered={(item, correct) => recordAttempt(item.id, correct)}
         onDone={() => void finishUnitAndClose()}
       />
     );
