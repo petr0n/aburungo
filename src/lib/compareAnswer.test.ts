@@ -42,4 +42,38 @@ describe("compareAnswer", () => {
     const card = allPhrases.find((p) => p.id === "band0.english-is-spoken-in-canada")!;
     expect(compareAnswer("eigohakanadadehanasareteiru", card.reading)).toBe(true);
   });
+
+  // Every case above was written by thinking of a character. That is exactly
+  // how the first version of this rule shipped with 。 and 、 and missed … and
+  // 「」, which are really in the content. So this one derives its own scope:
+  // strip each reading down to kana by a definition the comparator does not
+  // share, and require that a learner typing only that is marked right. A
+  // punctuation mark added to any card in future fails here by itself.
+  it("accepts the kana alone for every reading in the content", () => {
+    const NOT_KANA = /[^\u3041-\u309F\u30A0-\u30FF]/gu;
+    const rejected = allPhrases
+      .filter((phrase) => typeof phrase.reading === "string" && phrase.reading !== "")
+      .filter((phrase) => !compareAnswer(phrase.reading.replace(NOT_KANA, ""), phrase.reading))
+      .map((phrase) => `${phrase.id}: ${phrase.reading}`);
+    expect(rejected).toEqual([]);
+  });
+
+  // The two the enumerated list missed, named so a regression says which.
+  it("does not require a trailing …", () => {
+    const card = allPhrases.find((p) => p.id === "plans.tomorrow-is-a-bit-difficult")!;
+    expect(compareAnswer("あしたはちょっと", card.reading)).toBe(true);
+    expect(compareAnswer("ashitahachotto", card.reading)).toBe(true);
+  });
+
+  it("does not require the 「」 around a quoted word", () => {
+    const card = allPhrases.find((p) => p.id === "b4band2.this-is-what-we-call-tempura")!;
+    expect(compareAnswer("これがいわゆるてんぷらというものです", card.reading)).toBe(true);
+  });
+
+  // Stripping by Unicode category keeps LETTERS, kana and Latin alike. That is
+  // load-bearing: romaji that only half converts leaves Latin behind, and a
+  // rule that swept every non-kana character away would mark it correct.
+  it("still rejects romaji that only half converts", () => {
+    expect(compareAnswer("nekodesuzzz", "ねこです。")).toBe(false);
+  });
 });

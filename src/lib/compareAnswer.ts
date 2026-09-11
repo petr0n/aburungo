@@ -6,17 +6,27 @@ function toHiragana(str: string): string {
 }
 
 /**
- * Punctuation and spacing are not part of what a reading tests, and in the two
- * input modes the app offers they cannot be produced at all: the romaji
- * converter turns a typed "." into a Latin period rather than 。, and the kana
- * keyboard has no 。 or 、 key. Every one of the 851 typed readings in Books Two
- * to Four ends in 。, and 183 carry 、 inside the sentence — so before this,
- * a learner who knew a card perfectly was marked wrong in either mode.
+ * Punctuation and spacing are not part of what a reading tests, and the romaji
+ * converter cannot produce them anyway — a typed "." becomes a Latin period,
+ * never 。. Of the 2133 readings in the content, 1129 end in 。 and 270 carry 、
+ * inside the sentence, so before this a learner who knew a card perfectly was
+ * marked wrong.
+ *
+ * By Unicode category rather than by a list of characters. The list this
+ * replaced was written from the two marks anyone thinks of and silently missed
+ * three more that are really in the content: … in three readings and 「」 in
+ * two. Scanning every reading finds exactly seven non-kana characters — 。、
+ * ？！…「」 — and the next one added to a card would have gone unnoticed the
+ * same way.
+ *
+ * Letters are deliberately kept, kana and Latin alike. ー is a modifier letter
+ * rather than punctuation, so it survives; and a romaji answer that only half
+ * converts leaves Latin behind, which has to stay wrong.
  *
  * Both sides are stripped, so a learner who does type the punctuation with a
  * system IME is still right.
  */
-const IGNORED = /[\s。、．，,.！!？?]/g;
+const IGNORED = /[\s\p{P}\p{S}]/gu;
 
 function normalize(str: string): string {
   return toHiragana(str.trim()).replace(IGNORED, "");
