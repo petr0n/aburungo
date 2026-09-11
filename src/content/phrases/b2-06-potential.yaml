@@ -64,6 +64,7 @@
   reading: わたしはすしがたべられます。
   romaji: watashi wa sushi ga taberaremasu.
   english: I can eat sushi.
+  chunks: ["私は", "すしが", "食べられます。"]
 
 - id: dekiru.i-cant-go-shopping-today
   jlpt: N4
@@ -72,6 +73,7 @@
   reading: きょうはかいものができません。
   romaji: kyou wa kaimono ga dekimasen.
   english: I can't go shopping today.
+  chunks: ["今日は", "買い物が", "できません。"]
 
 - id: dekiru.i-cant-come-tomorrow
   jlpt: N4
@@ -80,6 +82,7 @@
   reading: あしたはこられません。
   romaji: ashita wa koraremasen.
   english: I can't come tomorrow.
+  chunks: ["明日は", "来られません。"]
   notes: 来られる is こられる. The reading moves the same way it did for 来ない (こない) and 来ます (きます) — the kanji stays put while the sound underneath it changes.
 
 # ── Saying what you can do, the rest ──────────────────────────────────────────
@@ -91,6 +94,7 @@
   reading: わたしはおよげます。
   romaji: watashi wa oyogemasu.
   english: I can swim.
+  chunks: ["私は", "泳げます。"]
 
 - id: dekiru.can-we-meet-tomorrow
   jlpt: N4
@@ -99,6 +103,7 @@
   reading: あした、あえますか。
   romaji: ashita, aemasu ka.
   english: Can we meet tomorrow?
+  chunks: ["明日、", "会えますか。"]
   notes: 会う is the ending that had an exception under ない — 会わない, not 会あない. Under the potential it has none at all — 会える, straight off the え row.
 
 - id: dekiru.i-cant-go-home-early-today
@@ -108,6 +113,7 @@
   reading: きょうははやくかえれません。
   romaji: kyou wa hayaku kaeremasen.
   english: I can't get home early today.
+  chunks: ["今日は", "早く", "帰れません。"]
   notes: 帰る ends in る and is godan, so it is 帰れません. 帰られません would be the ichidan shape, and 帰る is not one.
 
 - id: dekiru.i-cant-read-the-menu
@@ -117,6 +123,7 @@
   reading: メニューがよめません。
   romaji: menyuu ga yomemasen.
   english: I can't read the menu.
+  chunks: ["メニューが", "読めません。"]
 
 # ── What you can, and can't, do ───────────────────────────────────────────────
 
@@ -127,6 +134,7 @@
   reading: わたしはえいごがすこしはなせます。
   romaji: watashi wa eigo ga sukoshi hanasemasu.
   english: I can speak a little English.
+  chunks: ["私は", "英語が", "少し", "話せます。"]
   notes: 英語を話します becomes 英語が話せます. The を does not survive the potential in a sentence like this one.
 
 - id: dekiru.i-cant-swim-at-all
@@ -136,6 +144,7 @@
   reading: わたしはぜんぜんおよげません。
   romaji: watashi wa zenzen oyogemasen.
   english: I can't swim at all.
+  chunks: ["私は", "ぜんぜん", "泳げません。"]
 
 - id: dekiru.can-you-speak-english
   jlpt: N4
@@ -144,6 +153,7 @@
   reading: えいごがはなせますか。
   romaji: eigo ga hanasemasu ka.
   english: Can you speak English?
+  chunks: ["英語が", "話せますか。"]
 
 - id: dekiru.i-cant-use-chopsticks-yet
   jlpt: N4
@@ -152,6 +162,7 @@
   reading: まだはしがつかえません。
   romaji: mada hashi ga tsukaemasen.
   english: I can't use chopsticks yet.
+  chunks: ["まだ", "箸が", "使えません。"]
 
 # ── Skills without a verb ─────────────────────────────────────────────────────
 
@@ -162,6 +173,7 @@
   reading: わたしはえいごがすこしできます。
   romaji: watashi wa eigo ga sukoshi dekimasu.
   english: I know a little English.
+  chunks: ["私は", "英語が", "少し", "できます。"]
   notes: No verb in the sentence at all — できる sits straight on the noun. Wider than 話せます, which is only the speaking.
 
 - id: dekiru.i-cant-work-today
@@ -171,6 +183,7 @@
   reading: きょうはしごとができません。
   romaji: kyou wa shigoto ga dekimasen.
   english: I can't work today.
+  chunks: ["今日は", "仕事が", "できません。"]
 
 - id: dekiru.can-you-cook
   jlpt: N4
@@ -179,6 +192,7 @@
   reading: りょうりができますか。
   romaji: ryouri ga dekimasu ka.
   english: Can you cook?
+  chunks: ["料理が", "できますか。"]
 
 # ── The other way to say it ───────────────────────────────────────────────────
 
@@ -189,6 +203,7 @@
   reading: わたしはおよぐことができます。
   romaji: watashi wa oyogu koto ga dekimasu.
   english: I am able to swim.
+  chunks: ["私は", "泳ぐ", "ことが", "できます。"]
   notes: The same claim as 私は泳げます, built without conjugating 泳ぐ at all. This one reads a shade more formal.
 
 - id: dekiru.i-cant-read-the-menu-koto
@@ -198,6 +213,7 @@
   reading: メニューをよむことができません。
   romaji: menyuu o yomu koto ga dekimasen.
   english: I am not able to read the menu.
+  chunks: ["メニューを", "読む", "ことが", "できません。"]
   notes: を here, against が in メニューが読めません. 読む is still an ordinary dictionary-form verb inside this pattern, so it keeps its ordinary object.
 
 - id: dekiru.you-can-borrow-books-here
@@ -207,6 +223,7 @@
   reading: ここでほんをかりることができます。
   romaji: koko de hon o kariru koto ga dekimasu.
   english: You can borrow books here.
+  chunks: ["ここで", "本を", "借りる", "ことが", "できます。"]
 
 # ── Easy to, hard to ──────────────────────────────────────────────────────────
 
@@ -217,6 +234,7 @@
   reading: このくつはあるきやすいです。
   romaji: kono kutsu wa arukiyasui desu.
   english: These shoes are easy to walk in.
+  chunks: ["この靴は", "歩きやすいです。"]
 
 - id: dekiru.this-bag-is-hard-to-use
   jlpt: N4
@@ -225,6 +243,7 @@
   reading: このかばんはつかいにくいです。
   romaji: kono kaban wa tsukainikui desu.
   english: This bag is hard to use.
+  chunks: ["このかばんは", "使いにくいです。"]
 
 - id: dekiru.this-book-was-easy-to-read
   jlpt: N4
@@ -233,6 +252,7 @@
   reading: このほんはよみやすかったです。
   romaji: kono hon wa yomiyasukatta desu.
   english: This book was easy to read.
+  chunks: ["この本は", "読みやすかったです。"]
   notes: 読みやすい ends in い and inflects like 高い — 読みやすかった, and the polite です goes on after it, never ました.
 
 - id: dekiru.these-shoes-are-cheap
@@ -242,4 +262,5 @@
   reading: このくつはやすいです。
   romaji: kono kutsu wa yasui desu.
   english: These shoes are cheap.
+  chunks: ["この靴は", "安いです。"]
   notes: The same noun as この靴は歩きやすいです and the same sound at the end, and no connection between the two words. 安い is a word on its own; 〜やすい only ever appears stuck to a verb.

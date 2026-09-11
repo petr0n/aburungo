@@ -68,6 +68,7 @@
   reading: おかねをなくしたので、こまっています。
   romaji: okane o nakushita node, komatte imasu.
   english: I've lost my money, so I'm in trouble.
+  chunks: ["お金を", "無くした", "ので、", "困っています。"]
 
 - id: trouble.lost-bag-so-im-stuck
   jlpt: N4
@@ -76,6 +77,7 @@
   reading: かばんをなくしたから、こまっています。
   romaji: kaban o nakushita kara, komatte imasu.
   english: I've lost my bag, so I'm in trouble.
+  chunks: ["かばんを", "無くした", "から、", "困っています。"]
 
 - id: trouble.lost-bag-so-im-stuck-plain
   jlpt: N4
@@ -84,6 +86,7 @@
   reading: かばんをなくしたから、こまっている。
   romaji: kaban o nakushita kara, komatte iru.
   english: I've lost my bag, so I'm stuck.
+  chunks: ["かばんを", "無くした", "から、", "困っている。"]
 
 # ── Losing something ──────────────────────────────────────────────────────────
 
@@ -94,6 +97,7 @@
   reading: さいふをなくしました。
   romaji: saifu o nakushimashita.
   english: I've lost my wallet.
+  chunks: ["財布を", "無くしました。"]
 
 - id: trouble.i-lost-my-glasses-plain
   jlpt: N4
@@ -102,6 +106,7 @@
   reading: めがねをなくした。
   romaji: megane o nakushita.
   english: I've lost my glasses.
+  chunks: ["めがねを", "無くした。"]
 
 - id: trouble.did-you-lose-your-key
   jlpt: N5
@@ -110,6 +115,7 @@
   reading: かぎをなくしましたか。
   romaji: kagi o nakushimashita ka.
   english: Did you lose your key?
+  chunks: ["鍵を", "無くしましたか。"]
 
 # ── It's not turning up ───────────────────────────────────────────────────────
 
@@ -120,6 +126,7 @@
   reading: かばんがみつかりません。
   romaji: kaban ga mitsukarimasen.
   english: I can't find my bag.
+  chunks: ["かばんが", "見つかりません。"]
 
 - id: trouble.im-looking-for-my-glasses
   jlpt: N4
@@ -128,6 +135,7 @@
   reading: めがねをさがしています。
   romaji: megane o sagashite imasu.
   english: I'm looking for my glasses.
+  chunks: ["めがねを", "探しています。"]
 
 - id: trouble.did-the-key-turn-up
   jlpt: N4
@@ -136,6 +144,7 @@
   reading: かぎはみつかりましたか。
   romaji: kagi wa mitsukarimashita ka.
   english: Did the key turn up?
+  chunks: ["鍵は", "見つかりましたか。"]
 
 # ── What you left, and where ──────────────────────────────────────────────────
 
@@ -146,6 +155,7 @@
   reading: でんしゃにわすれものをしました。
   romaji: densha ni wasuremono o shimashita.
   english: I left something behind on the train.
+  chunks: ["電車に", "忘れ物を", "しました。"]
 
 - id: trouble.when-i-got-to-the-station-my-bag-was-gone
   jlpt: N4
@@ -154,6 +164,7 @@
   reading: えきについたとき、かばんがありませんでした。
   romaji: eki ni tsuita toki, kaban ga arimasen deshita.
   english: When I got to the station, my bag wasn't there.
+  chunks: ["駅に", "着いた", "とき、", "かばんが", "ありませんでした。"]
 
 - id: trouble.where-did-you-leave-it
   jlpt: N4
@@ -162,6 +173,7 @@
   reading: どこにわすれましたか。
   romaji: doko ni wasuremashita ka.
   english: Where did you leave it?
+  chunks: ["どこに", "忘れましたか。"]
 
 # ── It's broken ───────────────────────────────────────────────────────────────
 
@@ -172,6 +184,7 @@
   reading: でんわがこわれています。
   romaji: denwa ga kowarete imasu.
   english: My phone is broken.
+  chunks: ["電話が", "壊れています。"]
 
 - id: trouble.the-key-is-broken
   jlpt: N4
@@ -180,6 +193,7 @@
   reading: かぎがこわれています。
   romaji: kagi ga kowarete imasu.
   english: The key is broken.
+  chunks: ["鍵が", "壊れています。"]
 
 - id: trouble.these-glasses-are-broken
   jlpt: N4
@@ -188,6 +202,7 @@
   reading: このめがねはこわれています。
   romaji: kono megane wa kowarete imasu.
   english: These glasses are broken.
+  chunks: ["このめがねは", "壊れています。"]
 
 # ── And now it doesn't work ───────────────────────────────────────────────────
 
@@ -198,6 +213,7 @@
   reading: でんわがこわれて、つかえません。
   romaji: denwa ga kowarete, tsukaemasen.
   english: My phone broke, so I can't use it.
+  chunks: ["電話が", "壊れて、", "使えません。"]
 
 - id: trouble.key-broke-so-i-cant-use-it
   jlpt: N4
@@ -206,6 +222,7 @@
   reading: かぎがこわれて、つかえません。
   romaji: kagi ga kowarete, tsukaemasen.
   english: The key broke, so I can't use it.
+  chunks: ["鍵が", "壊れて、", "使えません。"]
 
 - id: trouble.can-i-use-this-phone
   jlpt: N4
@@ -214,6 +231,7 @@
   reading: このでんわはつかえますか。
   romaji: kono denwa wa tsukaemasu ka.
   english: Can I use this phone?
+  chunks: ["この電話は", "使えますか。"]
 
 # ── Asking for help ───────────────────────────────────────────────────────────
 # Four separate things a person might say, not four turns of one conversation.
@@ -225,6 +243,7 @@
   reading: てつだってもらえますか。
   romaji: tetsudatte moraemasu ka.
   english: Could you help me?
+  chunks: ["手伝って", "もらえますか。"]
 
 - id: trouble.could-you-fix-it
   jlpt: N4
@@ -233,6 +252,7 @@
   reading: なおしてもらえますか。
   romaji: naoshite moraemasu ka.
   english: Could you fix it?
+  chunks: ["直して", "もらえますか。"]
 
 - id: trouble.could-you-tell-me
   jlpt: N4
@@ -241,6 +261,7 @@
   reading: おしえてくれますか。
   romaji: oshiete kuremasu ka.
   english: Could you tell me?
+  chunks: ["教えて", "くれますか。"]
 
 - id: trouble.give-me-a-hand-plain
   jlpt: N4
@@ -249,6 +270,7 @@
   reading: てつだってくれない？
   romaji: tetsudatte kurenai?
   english: Give me a hand?
+  chunks: ["手伝って", "くれない？"]
 
 # ── What you need now ─────────────────────────────────────────────────────────
 
@@ -259,6 +281,7 @@
   reading: でんわをなおしてほしいです。
   romaji: denwa o naoshite hoshii desu.
   english: I'd like you to fix the phone.
+  chunks: ["電話を", "直して", "ほしいです。"]
 
 - id: trouble.i-want-a-new-bag
   jlpt: N4
@@ -267,6 +290,7 @@
   reading: あたらしいかばんがほしいです。
   romaji: atarashii kaban ga hoshii desu.
   english: I want a new bag.
+  chunks: ["新しい", "かばんが", "ほしいです。"]
 
 - id: trouble.not-a-new-one-just-fixed
   jlpt: N4
@@ -275,6 +299,7 @@
   reading: あたらしいめがねはほしくないけど、なおしてほしいです。
   romaji: atarashii megane wa hoshikunai kedo, naoshite hoshii desu.
   english: I don't want new glasses, but I'd like these fixed.
+  chunks: ["新しい", "めがねは", "ほしくない", "けど、", "直して", "ほしいです。"]
 
 # ── What you think happened ───────────────────────────────────────────────────
 
@@ -285,6 +310,7 @@
   reading: でんしゃにわすれたとおもいます。
   romaji: densha ni wasureta to omoimasu.
   english: I think I left it on the train.
+  chunks: ["電車に", "忘れた", "と", "思います。"]
 
 - id: trouble.where-do-you-think-you-lost-it
   jlpt: N4
@@ -293,6 +319,7 @@
   reading: どこでなくしたとおもいますか。
   romaji: doko de nakushita to omoimasu ka.
   english: Where do you think you lost it?
+  chunks: ["どこで", "無くした", "と", "思いますか。"]
 
 - id: trouble.you-should-go-to-the-police-box
   jlpt: N4
@@ -301,6 +328,7 @@
   reading: こうばんにいったほうがいいとおもいます。
   romaji: kouban ni itta hou ga ii to omoimasu.
   english: I think you'd better go to the police box.
+  chunks: ["交番に", "行った", "ほうが", "いい", "と", "思います。"]
 
 - id: trouble.my-friend-said-it-turned-up
   jlpt: N4
@@ -309,6 +337,7 @@
   reading: ともだちはかばんがみつかったといっていました。
   romaji: tomodachi wa kaban ga mitsukatta to itte imashita.
   english: My friend was saying the bag turned up.
+  chunks: ["友達は", "かばんが", "見つかった", "と", "言っていました。"]
 
 # ── If it turns up ────────────────────────────────────────────────────────────
 
@@ -319,6 +348,7 @@
   reading: みつかったら、でんわしてください。
   romaji: mitsukattara, denwa shite kudasai.
   english: If it turns up, please call me.
+  chunks: ["見つかったら、", "電話して", "ください。"]
 
 - id: trouble.if-it-turns-up-could-you-call-this-number
   jlpt: N4
@@ -327,6 +357,7 @@
   reading: みつかったら、このばんごうにでんわしてもらえますか。
   romaji: mitsukattara, kono bangou ni denwa shite moraemasu ka.
   english: If it turns up, could you call this number?
+  chunks: ["見つかったら、", "この番号に", "電話して", "もらえますか。"]
 
 - id: trouble.if-it-doesnt-turn-up-ill-go-to-the-police-box
   jlpt: N4
@@ -335,6 +366,7 @@
   reading: みつからなければ、こうばんにいきます。
   romaji: mitsukaranakereba, kouban ni ikimasu.
   english: If it doesn't turn up, I'll go to the police box.
+  chunks: ["見つからなければ、", "交番に", "行きます。"]
 
 - id: trouble.this-is-my-phone-number
   jlpt: N5
@@ -343,3 +375,4 @@
   reading: これはわたしのでんわばんごうです。
   romaji: kore wa watashi no denwa bangou desu.
   english: This is my phone number.
+  chunks: ["これは", "わたしの", "電話番号です。"]

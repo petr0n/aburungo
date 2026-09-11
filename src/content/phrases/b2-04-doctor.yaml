@@ -57,6 +57,7 @@
   reading: びょうきになりました。
   romaji: byouki ni narimashita.
   english: I got sick.
+  chunks: ["病気に", "なりました。"]
 
 - id: doctor.i-feel-unwell
   jlpt: N4
@@ -65,6 +66,7 @@
   reading: きぶんがわるいです。
   romaji: kibun ga warui desu.
   english: I don't feel well.
+  chunks: ["気分が", "悪いです。"]
 
 - id: doctor.are-you-ok
   jlpt: N5
@@ -73,6 +75,7 @@
   reading: だいじょうぶですか。
   romaji: daijoubu desu ka.
   english: Are you all right?
+  chunks: ["大丈夫", "ですか。"]
 
 # ── Where else it hurts ───────────────────────────────────────────────────────
 
@@ -83,6 +86,7 @@
   reading: おなかがいたいです。
   romaji: onaka ga itai desu.
   english: My stomach hurts.
+  chunks: ["お腹が", "痛いです。"]
 
 - id: doctor.my-throat-hurts
   jlpt: N4
@@ -91,6 +95,7 @@
   reading: のどがいたいです。
   romaji: nodo ga itai desu.
   english: My throat hurts.
+  chunks: ["喉が", "痛いです。"]
 
 - id: doctor.head-and-stomach-hurt
   jlpt: N5
@@ -99,6 +104,7 @@
   reading: あたまとおなかがいたいです。
   romaji: atama to onaka ga itai desu.
   english: My head and my stomach hurt.
+  chunks: ["頭と", "お腹が", "痛いです。"]
 
 # ── A fever, and a cold ───────────────────────────────────────────────────────
 
@@ -109,6 +115,7 @@
   reading: ねつがあります。
   romaji: netsu ga arimasu.
   english: I have a fever.
+  chunks: ["熱が", "あります。"]
 
 - id: doctor.i-caught-a-cold
   jlpt: N5
@@ -117,6 +124,7 @@
   reading: かぜをひきました。
   romaji: kaze o hikimashita.
   english: I caught a cold.
+  chunks: ["風邪を", "引きました。"]
 
 - id: doctor.i-dont-have-a-fever
   jlpt: N4
@@ -125,6 +133,7 @@
   reading: ねつはありません。
   romaji: netsu wa arimasen.
   english: I don't have a fever.
+  chunks: ["熱は", "ありません。"]
 
 # ── A cough, and how long ─────────────────────────────────────────────────────
 
@@ -135,6 +144,7 @@
   reading: せきがでます。
   romaji: seki ga demasu.
   english: I have a cough.
+  chunks: ["咳が", "出ます。"]
 
 - id: doctor.since-when
   jlpt: N5
@@ -143,6 +153,7 @@
   reading: いつからですか。
   romaji: itsu kara desu ka.
   english: Since when?
+  chunks: ["いつから", "ですか。"]
   notes: What the doctor says to you. Recognise it; you are not the one saying it.
 
 - id: doctor.coughing-since-yesterday
@@ -152,6 +163,7 @@
   reading: きのうからせきがでます。
   romaji: kinou kara seki ga demasu.
   english: I've had a cough since yesterday.
+  chunks: ["昨日から", "咳が", "出ます。"]
 
 - id: doctor.fever-so-ill-rest
   jlpt: N4
@@ -160,6 +172,7 @@
   reading: ねつがあるので、きょうはやすみます。
   romaji: netsu ga aru node, kyou wa yasumimasu.
   english: I have a fever, so I'm taking today off.
+  chunks: ["熱が", "ある", "ので、", "今日は", "休みます。"]
 
 - id: doctor.cold-so-im-not-going
   jlpt: N4
@@ -168,6 +181,7 @@
   reading: かぜをひいたので、きょうはいきません。
   romaji: kaze o hiita node, kyou wa ikimasen.
   english: I caught a cold, so I'm not going today.
+  chunks: ["風邪を", "引いた", "ので、", "今日は", "行きません。"]
 
 # ── What's wrong? ─────────────────────────────────────────────────────────────
 
@@ -178,6 +192,7 @@
   reading: どうしましたか。
   romaji: dou shimashita ka.
   english: What's wrong?
+  chunks: ["どう", "しましたか。"]
   notes: What the doctor says to you. Recognise it; you are not the one saying it.
 
 - id: doctor.fever-so-i-came
@@ -187,6 +202,7 @@
   reading: ねつがあるので、びょういんにきました。
   romaji: netsu ga aru node, byouin ni kimashita.
   english: I have a fever, so I came to the hospital.
+  chunks: ["熱が", "ある", "ので、", "病院に", "来ました。"]
 
 - id: doctor.unwell-so-going-to-the-doctor
   jlpt: N4
@@ -195,6 +211,7 @@
   reading: きぶんがわるいので、いしゃにいきます。
   romaji: kibun ga warui node, isha ni ikimasu.
   english: I don't feel well, so I'm going to the doctor.
+  chunks: ["気分が", "悪い", "ので、", "医者に", "行きます。"]
 
 - id: doctor.stomach-hurts-since-yesterday
   jlpt: N5
@@ -203,6 +220,7 @@
   reading: きのうからおなかがいたいです。
   romaji: kinou kara onaka ga itai desu.
   english: My stomach has hurt since yesterday.
+  chunks: ["昨日から", "お腹が", "痛いです。"]
 
 # ── What the doctor says ──────────────────────────────────────────────────────
 
@@ -213,6 +231,7 @@
   reading: やすんでください。
   romaji: yasunde kudasai.
   english: Please rest.
+  chunks: ["休んで", "ください。"]
   notes: What the doctor says to you. Recognise it; you are not the one saying it.
 
 - id: doctor.please-take-this-medicine
@@ -222,6 +241,7 @@
   reading: このくすりをのんでください。
   romaji: kono kusuri o nonde kudasai.
   english: Please take this medicine.
+  chunks: ["この薬を", "飲んで", "ください。"]
   notes: What the doctor says to you. Recognise it; you are not the one saying it.
 
 - id: doctor.appointment-please
@@ -231,6 +251,7 @@
   reading: よやくをおねがいします。
   romaji: yoyaku o onegai shimasu.
   english: I'd like to make an appointment.
+  chunks: ["予約を", "お願いします。"]
 
 - id: doctor.ill-call-the-hospital
   jlpt: N5
@@ -239,6 +260,7 @@
   reading: びょういんにでんわします。
   romaji: byouin ni denwa shimasu.
   english: I'll call the hospital.
+  chunks: ["病院に", "電話します。"]
 
 # ── Getting better ────────────────────────────────────────────────────────────
 
@@ -249,6 +271,7 @@
   reading: すこしよくなりました。
   romaji: sukoshi yoku narimashita.
   english: I'm a little better.
+  chunks: ["少し", "よく", "なりました。"]
 
 - id: doctor.i-feel-worse
   jlpt: N4
@@ -257,6 +280,7 @@
   reading: きぶんがわるくなりました。
   romaji: kibun ga waruku narimashita.
   english: I've started feeling worse.
+  chunks: ["気分が", "悪く", "なりました。"]
 
 - id: doctor.im-well-again
   jlpt: N4
@@ -265,3 +289,4 @@
   reading: げんきになりました。
   romaji: genki ni narimashita.
   english: I'm well again.
+  chunks: ["元気に", "なりました。"]

@@ -40,6 +40,7 @@
   reading: にほんにいきたいです。
   romaji: nihon ni ikitai desu.
   english: I want to go to Japan.
+  chunks: ["日本に", "行きたいです。"]
 
 - id: want.i-want-to-see-a-film
   jlpt: N4
@@ -48,6 +49,7 @@
   reading: えいががみたいです。
   romaji: eiga ga mitai desu.
   english: I want to see a film.
+  chunks: ["映画が", "見たいです。"]
 
 - id: want.i-want-to-go-shopping
   jlpt: N4
@@ -56,6 +58,7 @@
   reading: かいものがしたいです。
   romaji: kaimono ga shitai desu.
   english: I want to go shopping.
+  chunks: ["買い物が", "したいです。"]
 
 - id: want.i-want-to-buy-a-new-car
   jlpt: N4
@@ -64,6 +67,7 @@
   reading: あたらしいくるまがかいたいです。
   romaji: atarashii kuruma ga kaitai desu.
   english: I want to buy a new car.
+  chunks: ["新しい", "車が", "買いたいです。"]
 
 # ── Not wanting to, and having wanted to ──────────────────────────────────────
 
@@ -74,6 +78,7 @@
   reading: きょうはなにもたべたくないです。
   romaji: kyou wa nanimo tabetakunai desu.
   english: I don't want to eat anything today.
+  chunks: ["今日は", "何も", "食べたくないです。"]
 
 - id: want.i-wanted-to-see-a-film-yesterday
   jlpt: N4
@@ -82,6 +87,7 @@
   reading: きのう、えいががみたかったです。
   romaji: kinou, eiga ga mitakatta desu.
   english: I wanted to see a film yesterday.
+  chunks: ["昨日、", "映画が", "見たかったです。"]
 
 - id: want.i-wanted-to-go-too
   jlpt: N4
@@ -90,6 +96,7 @@
   reading: わたしもいきたかったです。
   romaji: watashi mo ikitakatta desu.
   english: I wanted to go too.
+  chunks: ["私も", "行きたかったです。"]
 
 - id: want.i-didnt-want-to-go-to-work
   jlpt: N4
@@ -98,6 +105,7 @@
   reading: せんしゅうはしごとにいきたくなかったです。
   romaji: senshuu wa shigoto ni ikitakunakatta desu.
   english: I didn't want to go to work last week.
+  chunks: ["先週は", "仕事に", "行きたくなかったです。"]
 
 # ── Wanting a thing ───────────────────────────────────────────────────────────
 
@@ -108,6 +116,7 @@
   reading: あたらしいくるまがほしいです。
   romaji: atarashii kuruma ga hoshii desu.
   english: I want a new car.
+  chunks: ["新しい", "車が", "ほしいです。"]
 
 - id: want.i-dont-want-anything
   jlpt: N4
@@ -116,6 +125,7 @@
   reading: なにもほしくないです。
   romaji: nanimo hoshikunai desu.
   english: I don't want anything.
+  chunks: ["何も", "ほしくないです。"]
 
 - id: want.i-want-money-to-go-to-japan
   jlpt: N4
@@ -124,6 +134,7 @@
   reading: にほんにいきたいから、おかねがほしいです。
   romaji: nihon ni ikitai kara, okane ga hoshii desu.
   english: I want to go to Japan, so I want money.
+  chunks: ["日本に", "行きたい", "から、", "お金が", "ほしいです。"]
 
 # ── Asking what someone wants ─────────────────────────────────────────────────
 
@@ -134,6 +145,7 @@
   reading: なにがたべたいですか。
   romaji: nani ga tabetai desu ka.
   english: What do you want to eat?
+  chunks: ["何が", "食べたいですか。"]
 
 - id: want.what-do-you-want
   jlpt: N4
@@ -142,6 +154,7 @@
   reading: なにがほしいですか。
   romaji: nani ga hoshii desu ka.
   english: What do you want?
+  chunks: ["何が", "ほしいですか。"]
 
 - id: want.i-want-to-eat-sushi
   jlpt: N4
@@ -150,6 +163,7 @@
   reading: すしがたべたいです。
   romaji: sushi ga tabetai desu.
   english: I want to eat sushi.
+  chunks: ["すしが", "食べたいです。"]
 
 # ── What you've decided ───────────────────────────────────────────────────────
 
@@ -160,6 +174,7 @@
   reading: らいねん、にほんにいくつもりです。
   romaji: rainen, nihon ni iku tsumori desu.
   english: I'm planning to go to Japan next year.
+  chunks: ["来年、", "日本に", "行く", "つもりです。"]
 
 - id: want.im-meeting-a-friend-next-week
   jlpt: N4
@@ -168,6 +183,7 @@
   reading: らいしゅう、ともだちにあうつもりです。
   romaji: raishuu, tomodachi ni au tsumori desu.
   english: I'm planning to meet a friend next week.
+  chunks: ["来週、", "友達に", "会う", "つもりです。"]
 
 - id: want.i-plan-to-eat-at-a-restaurant
   jlpt: N4
@@ -176,6 +192,7 @@
   reading: レストランでたべるつもりです。
   romaji: resutoran de taberu tsumori desu.
   english: I'm planning to eat at a restaurant.
+  chunks: ["レストランで", "食べる", "つもりです。"]
 
 # ── Plans that changed ────────────────────────────────────────────────────────
 
@@ -186,6 +203,7 @@
   reading: きょうはいくつもりはありません。
   romaji: kyou wa iku tsumori wa arimasen.
   english: I have no plans to go today.
+  chunks: ["今日は", "行く", "つもりは", "ありません。"]
 
 - id: want.i-was-going-to-meet-a-friend
   jlpt: N4
@@ -194,6 +212,7 @@
   reading: きのう、ともだちにあうつもりでした。
   romaji: kinou, tomodachi ni au tsumori deshita.
   english: I was going to meet a friend yesterday.
+  chunks: ["昨日、", "友達に", "会う", "つもりでした。"]
 
 - id: want.i-was-going-to-buy-a-car
   jlpt: N4
@@ -202,6 +221,7 @@
   reading: せんしゅう、くるまをかうつもりでしたけど、かいませんでした。
   romaji: senshuu, kuruma o kau tsumori deshita kedo, kaimasen deshita.
   english: I was going to buy a car last week, but I didn't.
+  chunks: ["先週、", "車を", "買う", "つもりでした", "けど、", "買いませんでした。"]
 
 # ── Let's ─────────────────────────────────────────────────────────────────────
 
@@ -212,6 +232,7 @@
   reading: いっしょにいきましょう。
   romaji: issho ni ikimashou.
   english: Let's go together.
+  chunks: ["一緒に", "行きましょう。"]
 
 - id: want.lets-meet-on-sunday
   jlpt: N4
@@ -220,6 +241,7 @@
   reading: にちようびにあいましょう。
   romaji: nichiyoubi ni aimashou.
   english: Let's meet on Sunday.
+  chunks: ["日曜日に", "会いましょう。"]
 
 - id: want.lets-stop-for-today
   jlpt: N4
@@ -228,6 +250,7 @@
   reading: きょうはもうやすみましょう。
   romaji: kyou wa mou yasumimashou.
   english: Let's take a break for today.
+  chunks: ["今日は", "もう", "休みましょう。"]
 
 - id: want.sounds-good
   jlpt: N4
@@ -236,6 +259,7 @@
   reading: いいですね。
   romaji: ii desu ne.
   english: Sounds good.
+  chunks: ["いい", "ですね。"]
 
 # ── Would you like to ─────────────────────────────────────────────────────────
 
@@ -246,6 +270,7 @@
   reading: いっしょにいきませんか。
   romaji: issho ni ikimasen ka.
   english: Would you like to go together?
+  chunks: ["一緒に", "行きませんか。"]
 
 - id: want.would-you-like-some-tea
   jlpt: N4
@@ -254,6 +279,7 @@
   reading: おちゃをのみませんか。
   romaji: ocha o nomimasen ka.
   english: Would you like some tea?
+  chunks: ["お茶を", "飲みませんか。"]
 
 - id: want.would-you-like-to-see-a-film-on-sunday
   jlpt: N4
@@ -262,6 +288,7 @@
   reading: にちようびにえいがをみませんか。
   romaji: nichiyoubi ni eiga o mimasen ka.
   english: Would you like to see a film on Sunday?
+  chunks: ["日曜日に", "映画を", "見ませんか。"]
 
 - id: want.sorry-im-busy-on-sunday
   jlpt: N4
@@ -270,3 +297,4 @@
   reading: すみません、にちようびはいそがしいです。
   romaji: sumimasen, nichiyoubi wa isogashii desu.
   english: Sorry, I'm busy on Sunday.
+  chunks: ["すみません、", "日曜日は", "忙しいです。"]
