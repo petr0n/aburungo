@@ -34,6 +34,7 @@
   reading: まいにちコーヒーをのむ。
   romaji: mainichi koohii o nomu.
   english: I drink coffee every day.
+  chunks: ["毎日", "コーヒーを", "飲む。"]
 
 - id: plain.im-seeing-a-film-tomorrow
   jlpt: N4
@@ -42,6 +43,7 @@
   reading: あした、えいがをみる。
   romaji: ashita, eiga o miru.
   english: I'm going to see a film tomorrow.
+  chunks: ["明日、", "映画を", "見る。"]
 
 # ── ない, the easy half ───────────────────────────────────────────────────────
 
@@ -52,6 +54,7 @@
   reading: きょうはでかけない。
   romaji: kyou wa dekakenai.
   english: I'm not going out today.
+  chunks: ["今日は", "出かけない。"]
 
 - id: plain.i-dont-eat-breakfast
   jlpt: N4
@@ -60,6 +63,7 @@
   reading: あさごはんはたべない。
   romaji: asagohan wa tabenai.
   english: I don't eat breakfast.
+  chunks: ["朝ご飯は", "食べない。"]
 
 - id: plain.i-do-nothing-on-sundays
   jlpt: N4
@@ -68,6 +72,7 @@
   reading: にちようびはなにもしない。
   romaji: nichiyoubi wa nanimo shinai.
   english: I don't do anything on Sundays.
+  chunks: ["日曜日は", "何も", "しない。"]
 
 # ── ない, the rest ────────────────────────────────────────────────────────────
 
@@ -78,6 +83,7 @@
   reading: コーヒーはのまない。
   romaji: koohii wa nomanai.
   english: I don't drink coffee.
+  chunks: ["コーヒーは", "飲まない。"]
 
 - id: plain.im-not-buying-anything-today
   jlpt: N4
@@ -86,6 +92,7 @@
   reading: きょうはなにもかわない。
   romaji: kyou wa nanimo kawanai.
   english: I'm not buying anything today.
+  chunks: ["今日は", "何も", "買わない。"]
 
 - id: plain.i-dont-have-time
   jlpt: N4
@@ -94,6 +101,7 @@
   reading: じかんがない。
   romaji: jikan ga nai.
   english: I don't have time.
+  chunks: ["時間が", "ない。"]
 
 - id: plain.im-not-going-to-work-tomorrow
   jlpt: N4
@@ -102,6 +110,7 @@
   reading: あしたはかいしゃにいかない。
   romaji: ashita wa kaisha ni ikanai.
   english: I'm not going to work tomorrow.
+  chunks: ["明日は", "会社に", "行かない。"]
 
 # ── なかった ─────────────────────────────────────────────────────────────────
 
@@ -112,6 +121,7 @@
   reading: きのうはなにもたべなかった。
   romaji: kinou wa nanimo tabenakatta.
   english: I didn't eat anything yesterday.
+  chunks: ["昨日は", "何も", "食べなかった。"]
 
 - id: plain.i-didnt-go-to-japan-last-year
   jlpt: N4
@@ -120,6 +130,7 @@
   reading: きょねんはにほんにいかなかった。
   romaji: kyonen wa nihon ni ikanakatta.
   english: I didn't go to Japan last year.
+  chunks: ["去年は", "日本に", "行かなかった。"]
 
 - id: plain.i-didnt-have-any-money
   jlpt: N4
@@ -128,6 +139,7 @@
   reading: おかねがなかった。
   romaji: okane ga nakatta.
   english: I didn't have any money.
+  chunks: ["お金が", "なかった。"]
 
 # ── た ───────────────────────────────────────────────────────────────────────
 
@@ -138,6 +150,7 @@
   reading: ゆうべほんをよんだ。
   romaji: yuube hon o yonda.
   english: I read a book last night.
+  chunks: ["昨夜", "本を", "読んだ。"]
 
 - id: plain.i-met-a-friend
   jlpt: N4
@@ -146,6 +159,7 @@
   reading: ともだちにあった。
   romaji: tomodachi ni atta.
   english: I met a friend.
+  chunks: ["友達に", "会った。"]
 
 - id: plain.i-watched-a-film
   jlpt: N4
@@ -154,6 +168,7 @@
   reading: えいがをみた。
   romaji: eiga o mita.
   english: I watched a film.
+  chunks: ["映画を", "見た。"]
 
 - id: plain.i-went-to-school
   jlpt: N4
@@ -162,6 +177,7 @@
   reading: がっこうにいった。
   romaji: gakkou ni itta.
   english: I went to school.
+  chunks: ["学校に", "行った。"]
 
 # ── だ ───────────────────────────────────────────────────────────────────────
 
@@ -172,6 +188,7 @@
   reading: わたしはがくせいだ。
   romaji: watashi wa gakusei da.
   english: I'm a student.
+  chunks: ["私は", "学生だ。"]
 
 - id: plain.its-quiet-here
   jlpt: N4
@@ -180,6 +197,7 @@
   reading: ここはしずかだ。
   romaji: koko wa shizuka da.
   english: It's quiet here.
+  chunks: ["ここは", "静かだ。"]
 
 - id: plain.i-was-free-yesterday
   jlpt: N4
@@ -188,6 +206,7 @@
   reading: きのうはひまだった。
   romaji: kinou wa hima datta.
   english: I was free yesterday.
+  chunks: ["昨日は", "暇だった。"]
 
 - id: plain.that-person-isnt-a-teacher
   jlpt: N4
@@ -196,6 +215,7 @@
   reading: あのひとはせんせいじゃない。
   romaji: ano hito wa sensei ja nai.
   english: That person isn't a teacher.
+  chunks: ["あの人は", "先生", "じゃない。"]
 
 # ── Talking like a friend ─────────────────────────────────────────────────────
 # Four separate things a person might say, not four turns of one conversation.
@@ -207,6 +227,7 @@
   reading: きょう、いそがしい？
   romaji: kyou, isogashii?
   english: Busy today?
+  chunks: ["今日、", "忙しい？"]
 
 - id: plain.yes-got-it
   jlpt: N4
@@ -215,6 +236,7 @@
   reading: うん、わかった。
   romaji: un, wakatta.
   english: Yeah, got it.
+  chunks: ["うん、", "わかった。"]
 
 - id: plain.no-im-not-going
   jlpt: N4
@@ -223,6 +245,7 @@
   reading: ううん、いかない。
   romaji: uun, ikanai.
   english: No, I'm not going.
+  chunks: ["ううん、", "行かない。"]
 
 - id: plain.im-meeting-a-friend-tomorrow
   jlpt: N4
@@ -231,6 +254,7 @@
   reading: あした、ともだちにあう。
   romaji: ashita, tomodachi ni au.
   english: I'm meeting a friend tomorrow.
+  chunks: ["明日、", "友達に", "会う。"]
 
 # ── Things you have done ──────────────────────────────────────────────────────
 
@@ -241,6 +265,7 @@
   reading: にほんにいちどいったことがあります。
   romaji: nihon ni ichido itta koto ga arimasu.
   english: I have been to Japan once.
+  chunks: ["日本に", "一度", "行った", "ことがあります。"]
 
 - id: plain.ive-never-swum-in-the-sea
   jlpt: N4
@@ -249,6 +274,7 @@
   reading: うみでおよいだことがない。
   romaji: umi de oyoida koto ga nai.
   english: I have never swum in the sea.
+  chunks: ["海で", "泳いだ", "ことがない。"]
 
 - id: plain.have-you-ever-eaten-sushi
   jlpt: N4
@@ -257,6 +283,7 @@
   reading: すしをたべたことがありますか。
   romaji: sushi o tabeta koto ga arimasu ka.
   english: Have you ever eaten sushi?
+  chunks: ["すしを", "食べた", "ことがありますか。"]
 
 - id: plain.ive-climbed-the-mountain-twice
   jlpt: N4
@@ -265,6 +292,7 @@
   reading: やまににかいのぼったことがあります。
   romaji: yama ni nikai nobotta koto ga arimasu.
   english: I have climbed the mountain twice.
+  chunks: ["山に", "二回", "登った", "ことがあります。"]
 
 # ── Doing this and that ───────────────────────────────────────────────────────
 
@@ -275,6 +303,7 @@
   reading: にちようびはほんをよんだりおんがくをきいたりします。
   romaji: nichiyoubi wa hon o yondari ongaku o kiitari shimasu.
   english: On Sundays I read, listen to music, that sort of thing.
+  chunks: ["日曜日は", "本を", "読んだり", "音楽を", "聞いたり", "します。"]
 
 - id: plain.on-saturdays-i-shop-and-cook
   jlpt: N4
@@ -283,6 +312,7 @@
   reading: どようびはかいものをしたりりょうりをしたりします。
   romaji: doyoubi wa kaimono o shitari ryouri o shitari shimasu.
   english: On Saturdays I shop, cook, that sort of thing.
+  chunks: ["土曜日は", "買い物を", "したり", "料理を", "したり", "します。"]
 
 - id: plain.do-you-see-friends-and-watch-films
   jlpt: N4
@@ -291,6 +321,7 @@
   reading: ともだちとあそんだりえいがをみたりしますか。
   romaji: tomodachi to asondari eiga o mitari shimasu ka.
   english: Do you see friends, watch films, that sort of thing?
+  chunks: ["友達と", "遊んだり", "映画を", "見たり", "しますか。"]
 
 # ── Asking someone not to ─────────────────────────────────────────────────────
 
@@ -301,6 +332,7 @@
   reading: まどをあけないでください。
   romaji: mado o akenaide kudasai.
   english: Please don't open the window.
+  chunks: ["窓を", "開けないで", "ください。"]
 
 - id: plain.please-dont-forget
   jlpt: N4
@@ -309,6 +341,7 @@
   reading: わすれないでください。
   romaji: wasurenaide kudasai.
   english: Please don't forget.
+  chunks: ["忘れないで", "ください。"]
 
 - id: plain.please-dont-run-here
   jlpt: N4
@@ -317,3 +350,4 @@
   reading: ここではしらないでください。
   romaji: koko de hashiranaide kudasai.
   english: Please don't run here.
+  chunks: ["ここで", "走らないで", "ください。"]

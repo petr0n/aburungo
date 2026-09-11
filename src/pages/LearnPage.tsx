@@ -38,6 +38,7 @@ import { PageShell } from "@/components/PageShell";
 import { FlashCard, type FlashCardPhase } from "@/components/FlashCard";
 import { WordLearnCard } from "@/components/WordLearnCard";
 import { FillBlankCard } from "@/components/FillBlankCard";
+import { GuidedProductionCard } from "@/components/GuidedProductionCard";
 import { GrammarClozeCard } from "@/components/GrammarClozeCard";
 import { RecognitionPass } from "@/components/RecognitionPass";
 import { RecognitionCheckpoint } from "@/components/RecognitionCheckpoint";
@@ -496,6 +497,19 @@ export function ProduceStep({
   function handleNext(correct: boolean) {
     if (current === undefined) return;
     void recordRating(current.id, correct ? "got-it" : "didnt", signedIn);
+    advance();
+  }
+
+  // Guided production records no rating at all, in either direction. DR-040:
+  // success with the model visible does not promote, and re-meeting an item in
+  // a supported exercise does not reset what it has already earned.
+  function handleGuidedNext() {
+    if (current === undefined) return;
+    void seedWithoutPromotion(current.id, signedIn);
+    advance();
+  }
+
+  function advance() {
     const nextIndex = index + 1;
     if (nextIndex >= items.length) {
       onDone();
@@ -528,6 +542,21 @@ export function ProduceStep({
           showRomaji={!shifted}
           onNext={(correct) => void handleNext(correct)}
         />
+      </div>
+    );
+  }
+
+  // A phrase with authored chunks is practised with the model visible (DR-039)
+  // rather than recalled from the English alone. It reports whether the answer
+  // matched, which the interface uses -- but nothing here rates the item:
+  // succeeding with the sentence on screen says nothing about recall, so
+  // `handleGuidedNext` seeds a first review and leaves any existing one alone.
+  if (!isWord(current) && current.chunks !== undefined) {
+    const chunked = current as Phrase & { chunks: readonly string[] };
+    return (
+      <div className="flex w-full flex-col gap-4 py-4">
+        {header}
+        <GuidedProductionCard key={current.id} phrase={chunked} onNext={() => void handleGuidedNext()} />
       </div>
     );
   }
@@ -578,11 +607,21 @@ async function demoteMissedWord(wordId: string, signedIn: boolean): Promise<void
  * already progressing back to box 1.
  */
 async function seedNewKanji(kanji: Kanji[], signedIn: boolean): Promise<void> {
-  for (const k of kanji) {
-    if ((await getOne(k.id)) === undefined) {
-      await upsertSynced(schedule(undefined, "didnt", Date.now(), k.id), signedIn);
-    }
-  }
+  for (const k of kanji) await seedWithoutPromotion(k.id, signedIn);
+}
+
+/**
+ * Give an item its first review date without touching one it already has.
+ *
+ * DR-040 rule 6: an item whose only exposure was supported practice still needs
+ * a first scheduled review, so a brand-new id starts at box 1 due tomorrow. An
+ * id that already has a schedule is left exactly as it is -- meeting it again
+ * in a supported exercise is not evidence about recall in either direction, so
+ * it must neither promote it nor reset the progress it has earned.
+ */
+async function seedWithoutPromotion(id: string, signedIn: boolean): Promise<void> {
+  if ((await getOne(id)) !== undefined) return;
+  await upsertSynced(schedule(undefined, "didnt", Date.now(), id), signedIn);
 }
 
 // ── Close step ───────────────────────────────────────────────────────────────

@@ -75,6 +75,17 @@ export type Phrase = {
    */
   recognitionOnly?: boolean;
   /**
+   * Where this sentence may be cut, for the build-it-from-pieces answer method
+   * (DR-039). Joined in order they must equal `japanese` exactly, which the
+   * schema enforces — a sentence that cannot be rebuilt from its own pieces is
+   * a broken exercise, not a lenient one.
+   *
+   * Authored, never derived. Japanese is written without spaces and the app has
+   * no morphological tokenizer, so the only honest source of a boundary is a
+   * person who read the sentence. Absent means this phrase is typed, not built.
+   */
+  chunks?: readonly string[];
+  /**
    * Tatoeba sentence id, when this phrase is quoted rather than composed.
    *
    * Books One and Two allow canonical composed sentences marked
