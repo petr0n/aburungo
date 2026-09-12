@@ -31,6 +31,7 @@ For future book work, follow the [shared content authoring workflow](../content-
 | [Book Three bands](book-three-bands.md) | Grammar spine and detailed band briefs |
 | [Fluency stage](04b-stage-fluency.md) | Later-stage requirements |
 | [Book Four bands](book-four-bands.md) | Book Four scope and vocabulary policy |
+| [Book Five plan](book-five-review.md) | Book Five as a review volume (DR-041) |
 | [Retention engine](05-retention-engine.md) | Scheduling, review, and session behavior |
 | [Onboarding](06-onboarding.md) | Proposed first-session preferences |
 | [Old N5 unit map](02b-n5-units.md) | Historical; superseded by generated book maps |

@@ -1444,3 +1444,93 @@ resolved. Exact book-ending activity content remains separate.
 
 Content, migration considerations, and acceptance checks:
 [checkpoint/SRS spec](superpowers/specs/2026-09-06-checkpoints-and-srs-design.md).
+
+## DR-041 — Book Five is a review volume, not a new-content volume
+
+**Date:** 2026-09-10
+**Status:** Agreed. Plan updated; content authoring not started (DR-038 — Book Three's scope is
+still open, and Book Five is not next in the queue).
+
+**Decision:** Book Five reviews everything Books One to Four taught. **At most 25% of the words it
+carries may be new**; the rest are words the learner has already met, recombined into new
+situations. It teaches no new grammar patterns.
+
+**Why this costs almost nothing to change.** The fluency stage's skeleton
+([04b §3](plans/04b-stage-fluency.md)) listed ten bands. Book Four's planning
+([book-four-bands §3](plans/book-four-bands.md)) went through them one at a time and **absorbed
+every grammar band into Book Four**. What remains unbuilt there — news reading, exposition at
+length, formal written production — is deferred on a reading library and a compose-then-compare
+engine, not on grammar waiting for a later volume. So Book Five never held a settled grammar
+payload to displace. This decision assigns a purpose to a volume that had a number and little
+else.
+
+**Why a review volume is worth a book at all**, given the SRS already resurfaces items: the SRS
+returns an item *as it was taught*, on its own, when its interval comes due. It cannot put a Book
+One word into a Book Four register, or ask for two patterns from different books in one sentence.
+Recombination is a content problem, and content is what a book is.
+
+**Measured inventory this rests on** (2026-09-10, derived from `src/content/books.ts`, not
+asserted): Books One to Four are 350 lessons teaching **901 unique words, 1,232 unique phrases and
+521 kanji** — 100/93/81/76 lessons and 484/231/126/447 words per book.
+
+**What 25% means, and what it does not.** It is 25% of the words Book Five carries, not 25% of the
+course. On the ~10x10 skeleton every other book uses, a Book Five carrying roughly 400 word slots
+introduces about 100 new words and revisits about 300. **It does not mean every one of the 901
+prior words appears in Book Five.** Exhaustive per-item coverage is the SRS's job; the book's job
+is breadth — every prior book and theme represented, in new combinations.
+
+**Consequences.** Book Five stops being the fluency stage's second grammar volume, so DR-034's
+endpoint is reached by Book Four's grammar plus consolidation rather than by more patterns. The
+three deferred items above keep their own blockers and are not moved into Book Five by this
+decision. Tier is unchanged: Book Five remains the first paid volume
+([01 §](plans/01-overarching-plan.md)).
+
+Scope, sizing and the open questions:
+[Book Five plan](plans/book-five-review.md).
+
+## DR-042 — Book Five ends the course; its review rules bind per chapter
+
+**Date:** 2026-09-11
+**Status:** Agreed. Settles the three questions [DR-041](#dr-041--book-five-is-a-review-volume-not-a-new-content-volume)
+left open.
+
+**Decision, in three parts.**
+
+**1. The course is five books.** One and Two (foundation, building), Three (reading), Four and Five
+(fluency). DR-034 puts the endpoint at roughly N2; Book Four carries the grammar that reaches it and
+Book Five adds none, so the taught spine is complete after Book Five.
+
+This also closes the reading stage's own open count ([04](plans/04-stage-reading.md)), which asked
+whether that stage needed one book or several and declined to answer. It is one: Book Three shipped
+at 81 lessons. The doc's other reading — that by word exposure the stage looks like four books'
+worth — is answered the way the doc itself proposed, by **a reading library sized for several
+sitting under one book's worth of taught grammar.** Words arrive by mining, not by volumes.
+The three items Book Four deferred do not need a sixth volume, because none of them is a volume:
+news reading and exposition at length want a **reading library**, formal written production wants a
+**compose-then-compare engine** with a frame slot in `buildProductionQueue`
+([book-four-bands §5](plans/book-four-bands.md)). A library is a surface and an engine is code.
+When they unblock they attach to the books that already exist. A sixth book would have been a
+container invented to hold two features.
+
+**2. "Already met" is decided by the content, not by the learner.** A word is already met if any
+lesson in Books One to Four teaches it, read from the same `wordIds` the ladder is generated from.
+The learner's own review state is more accurate and is rejected anyway: it makes the book different
+per learner, and a book whose content varies per learner cannot be rendered as a fixed ladder,
+which is what makes content inspectable at all. Adaptivity stays with the SRS, which has it.
+The staleness that rule would have caught is handled in authoring: **each chapter's revisited words
+must come from at least three of the four prior books**, which forbids a Book Five chapter that
+quietly reviews only Book Four.
+
+**3. The 25% ceiling binds per chapter, not per book.** A per-book ceiling permits an all-new
+chapter offset by an all-revision one, and a learner meeting that chapter is doing new content
+wearing a review book's cover. Per chapter is also checkable: on ~40 word slots a chapter the
+ceiling is **at most 10 new words**, caught by a sweep over each chapter's `wordIds` counting those
+absent from Books One to Four. The check is unwritten because there is no content to read yet.
+A book whose every chapter holds the ceiling holds it overall, so DR-041's ~100-new figure is a
+consequence rather than a second rule.
+
+**Accepted cost:** chapter 9 teaches compounds of already-taught kanji, and a compound the learner
+cannot read counts as a new word — so ten of them is a thin chapter. Taken rather than waived. An
+exception would be a chapter plan arguing for one, not a ceiling quietly raised.
+
+Detail: [Book Five plan §6](plans/book-five-review.md).

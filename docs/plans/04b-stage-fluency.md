@@ -91,9 +91,16 @@ production checkpoint closes each book this stage turns out to need (DR-033).
 10. **Formal written production** — requests, apologies, opinion paragraphs, compose-then-compare
 
 This is one book-shaped skeleton (~10 bands of ~10 lessons), same shape as every other book
-(DR-033). Whether the fluency stage needs exactly one book or more than one is the same open
-question the reading stage leaves for itself (04, intro) — this skeleton is what the first book
-in the stage holds regardless.
+(DR-033). The stage turned out to be **two** books (DR-042): this skeleton is Book Four, and Book
+Five consolidates it without adding grammar.
+
+**Book Four took all of it (2026-09-07), and the volume after it is a review book (DR-041).**
+[book-four-bands §3](book-four-bands.md) went through these ten bands one at a time and absorbed
+every grammar band into Book Four; what stayed unbuilt — news reading, exposition at length, formal
+written production — is blocked on a library and an engine, not waiting for a later volume. So this
+skeleton is spent, and Book Five consolidates rather than continuing it: at most 25% new words, no
+new patterns. See the [Book Five plan](book-five-review.md). The count of books this stage needs is
+still open; what is settled is that the next one does not carry new grammar.
 
 ## 4. N1 — out of scope (DR-034), and what this section used to hold
 
@@ -156,5 +163,11 @@ needs to not be forgotten.
 
 When the reading stage ships and its library has real usage. Not before. The levelling pipeline's
 behaviour on real learners is the input that makes a real fluency-stage plan worth more than a
-guess — including the one open structural question this doc leaves alone: whether the stage is
-one book or several (§3).
+guess — including the structural question this doc used to leave alone: whether the stage is one
+book or several (§3).
+
+Answered since: the stage is **exactly two books** (DR-042). Book Four took the grammar, Book Five
+consolidates it and adds none, and there is no sixth — the three deferred items are a library and an
+engine, which attach to the books that already exist rather than needing a volume of their own.
+That does not change the timing: a review of Books One to Four cannot be written while Book Three's
+scope is still open.
