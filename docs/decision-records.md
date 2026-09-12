@@ -1451,9 +1451,14 @@ Content, migration considerations, and acceptance checks:
 **Status:** Agreed. Plan updated; content authoring not started (DR-038 — Book Three's scope is
 still open, and Book Five is not next in the queue).
 
-**Decision:** Book Five reviews everything Books One to Four taught. **At most 25% of the words it
-carries may be new**; the rest are words the learner has already met, recombined into new
-situations. It teaches no new grammar patterns.
+**Decision:** Book Five consolidates material across every prior book and theme. **At most 25% of
+the words it carries may be new** — counted as unique word ids first taught in Book Five over all
+unique word ids its teaching lessons carry; the rest are words the learner has already met,
+recombined into new situations. It teaches no new grammar patterns.
+
+This is a claim about scope, not a checklist: Book Five may draw on anything Books One to Four
+taught and does not have to name all 901 prior words. Exhaustive per-item coverage is the SRS's
+job.
 
 **Why this costs almost nothing to change.** The fluency stage's skeleton
 ([04b §3](plans/04b-stage-fluency.md)) listed ten bands. Book Four's planning
@@ -1469,9 +1474,11 @@ returns an item *as it was taught*, on its own, when its interval comes due. It 
 One word into a Book Four register, or ask for two patterns from different books in one sentence.
 Recombination is a content problem, and content is what a book is.
 
-**Measured inventory this rests on** (2026-09-10, derived from `src/content/books.ts`, not
-asserted): Books One to Four are 350 lessons teaching **901 unique words, 1,232 unique phrases and
-521 kanji** — 100/93/81/76 lessons and 484/231/126/447 words per book.
+**Measured inventory this rests on** (2026-09-10), read from the generated ladders
+`docs/book-*-ladder.md`, where `bookCounts` in `scripts/ladder.mjs` emits them — rerun `pnpm ladder`
+to refresh, and `pnpm test` fails while they are stale. Books One to Four are 350 lessons teaching
+**901 unique words, 1,232 unique phrases and 521 kanji** — 100/93/81/76 lessons and
+484/231/126/447 words per book.
 
 **What 25% means, and what it does not.** It is 25% of the words Book Five carries, not 25% of the
 course. On the ~10x10 skeleton every other book uses, a Book Five carrying roughly 400 word slots

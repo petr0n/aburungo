@@ -12,8 +12,11 @@ and Book Four is the book behind us rather than the book beside us (DR-038).
 
 ## 1. What the learner has, before this book opens
 
-Measured 2026-09-10 from `src/content/books.ts` rather than asserted. Regenerate with `pnpm ladder`
-and read the per-book files; do not copy these totals into other documents.
+Read 2026-09-10 from the **generated ladders**, `docs/book-*-ladder.md`, which are where
+`bookCounts` in `scripts/ladder.mjs` emits them. That is the reproducible source: `pnpm ladder`
+regenerates it and `pnpm test` fails while it is stale, so the numbers cannot drift from the
+content behind them. `src/content/books.ts` registers the books but computes nothing.
+Do not copy these totals into other documents — cite the ladder.
 
 | Book | Lessons | Words | Phrases | Kanji |
 |---|---|---|---|---|
@@ -32,10 +35,13 @@ This is the objection to answer first, and it is a fair one. The daily loop alre
 item on its own schedule, so a volume whose purpose is "see it again" would be a book competing
 with a feature that is already built and works.
 
-It is not that. **The SRS returns an item as it was taught** — the same word, the same phrase, in
-the register and situation it arrived in, alone, when its interval comes due. What it cannot do is
-put a Book One word into a Book Four register, or ask for two patterns from different books inside
-one sentence, or take a situation the learner met in polite form and run it again in plain.
+It is not that, though the first draft of this paragraph overstated it. **The SRS resurfaces items
+one at a time.** `buildDailySession` schedules ids and `ReviewStep` renders each one on a
+standalone card; it does not preserve the situation a phrase was taught in, because it never
+carries one. What it has no way to do is *deliberate* recombination: put a Book One word into a
+Book Four register, ask for two patterns from different books inside one sentence, or run a
+situation met in polite form again in plain. Nothing chooses those pairings, because nothing is
+choosing at all — the queue is per item and due-date ordered.
 
 Recombination is a content problem. Content is what a book is.
 
@@ -54,8 +60,14 @@ that promised to would be promising a book roughly three times the size of Book 
 
 At most one word in four is new to the learner.
 
+Counted as **unique word ids first taught in Book Five, over all unique word ids its teaching
+lessons carry** — the same `wordIds` sets `bookCounts` already reduces, so the ratio is derivable
+rather than estimated. Repetition does not move it: a word referenced by four lessons is one id on
+both sides, and a word occurring three times inside one phrase is not counted at all, because
+phrases are not the denominator.
+
 On the ~10 chapters x ~10 lessons skeleton every other book uses, a Book Five carrying roughly
-**400 word slots introduces about 100 new words and revisits about 300**. The new quarter exists so
+**400 unique word ids introduces about 100 new ones and revisits about 300**. The new quarter exists so
 the book is not airless — a review volume with no new vocabulary reads as a test, and DR-020 is
 explicit that this course does not test.
 
@@ -81,11 +93,15 @@ takes material the learner already has and changes one thing about it.
 7. **Keigo over familiar ground** — Book Four's honorifics applied to Book One's errands
 8. **Explaining yourself** — reason and concession patterns, recombined
 9. **Kanji in company** — taught characters in compounds the learner has not met
-10. **A day, end to end** — long-form production over the whole course
+10. **A day, end to end** — one day's situations run through in sequence, in the guided-production
+    format DR-039 already ships (model visible, type or build). Not "long-form written production":
+    that is the capability §5 records as still blocked, and a review volume must not quietly
+    reintroduce it.
 
-Chapter 9 is the one place new *characters* are plausible rather than new words: compounds built
-from the 521 kanji already taught. Whether a compound counts against the 25% is a content-authoring
-question, and the answer is yes — a compound the learner cannot read is a new word.
+Chapter 9 introduces **no new characters.** It builds compounds out of the 521 kanji already
+taught — familiar characters, unfamiliar words. Those compounds are new *vocabulary* and they
+**consume the 25% allowance** like any other new word: a compound the learner cannot read is a new
+word whatever its parts.
 
 ## 5. What this does not move
 
