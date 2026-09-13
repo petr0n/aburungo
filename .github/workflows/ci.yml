@@ -66,3 +66,22 @@ jobs:
 
       - name: Test
         run: pnpm test
+
+      - name: Write .env.local from secrets
+        run: |
+          echo "VITE_SUPABASE_URL=${{ secrets.VITE_SUPABASE_URL }}" > .env.local
+          echo "VITE_SUPABASE_PUBLISHABLE_KEY=${{ secrets.VITE_SUPABASE_PUBLISHABLE_KEY }}" >> .env.local
+          echo "VITE_SUPABASE_ANON_KEY=${{ secrets.VITE_SUPABASE_ANON_KEY }}" >> .env.local
+          echo "FRONTEND_URL=http://localhost:4173" >> .env.local
+        working-directory: aburungo
+        env:
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_PUBLISHABLE_KEY: ${{ secrets.VITE_SUPABASE_PUBLISHABLE_KEY }}
+
+      - name: Install Playwright browsers
+        run: pnpm exec playwright install chromium
+        working-directory: aburungo
+
+      - name: Walkthrough (guest)
+        run: pnpm walkthrough
+        working-directory: aburungo
