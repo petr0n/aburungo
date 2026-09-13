@@ -10,6 +10,8 @@ type Props = {
   words: Word[];
   /** Reported per miss so the caller can return the word to the SRS queue. */
   onMissed?: (word: Word) => void;
+  /** Every answered card, right or wrong, for the session's review evidence. */
+  onAnswered?: (word: Word, correct: boolean) => void;
   onDone: () => void;
 };
 
@@ -28,7 +30,7 @@ type Props = {
  * The retry loop is composition rather than a new card UI: each round is a
  * RecognitionPass over the words still to place.
  */
-export function RecognitionCheckpoint({ lesson, words, onMissed, onDone }: Props) {
+export function RecognitionCheckpoint({ lesson, words, onMissed, onAnswered, onDone }: Props) {
   const [started, setStarted] = useState(false);
   const [round, setRound] = useState<Word[]>(() => buildRecognitionQueue(words));
   const [missedThisRound, setMissedThisRound] = useState<Word[]>([]);
@@ -103,6 +105,7 @@ export function RecognitionCheckpoint({ lesson, words, onMissed, onDone }: Props
         queue={round}
         pool={words}
         onMissed={handleMissed}
+        onAnswered={onAnswered}
         onDone={handleRoundDone}
         doneLabel={missedThisRound.length > 0 ? "Place these again" : "Done — all placed"}
       />

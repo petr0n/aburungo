@@ -17,6 +17,15 @@ type Props = {
    * presentation only — see the layer boundaries in CLAUDE.md.
    */
   onMissed?: (word: Word) => void;
+  /**
+   * Every answered card, right or wrong (DR-040).
+   *
+   * `onMissed` reports half the truth, which was all the schedule used to take
+   * from a checkpoint: getting something right in one changed nothing about
+   * when it came back. The caller decides what an answer is worth -- a first
+   * independent success promotes, a retry after a miss does not.
+   */
+  onAnswered?: (word: Word, correct: boolean) => void;
   /** Label for the closing button. Defaults to the WordsPage context. */
   doneLabel?: string;
 };
@@ -29,7 +38,7 @@ function buildOptions(current: Word, pool: Word[]): Word[] {
   return [current, ...distractors].sort(() => Math.random() - 0.5);
 }
 
-export function RecognitionPass({ queue, pool, onDone, onMissed, doneLabel = "Back to words" }: Props) {
+export function RecognitionPass({ queue, pool, onDone, onMissed, onAnswered, doneLabel = "Back to words" }: Props) {
   const [index, setIndex] = useState(0);
   const [missed, setMissed] = useState<Word[]>([]);
   const [selectedId, setSelectedId] = useState<string | null>(null);
@@ -46,6 +55,7 @@ export function RecognitionPass({ queue, pool, onDone, onMissed, doneLabel = "Ba
     // Report per card, not as a list at the end: a session abandoned midway
     // should still re-schedule what was already missed.
     if (!wasCorrect) onMissed?.(current);
+    onAnswered?.(current, wasCorrect);
     const nextMissed = wasCorrect ? missed : [...missed, current];
     const nextIndex = index + 1;
     if (nextIndex >= queue.length) {
