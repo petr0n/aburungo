@@ -157,6 +157,7 @@ pnpm test            vitest, one shot
 pnpm test:watch      vitest, watch mode
 pnpm walkthrough     drive every /learn unit end-to-end in headless Chromium
 pnpm ladder          regenerate the book map record: docs/<book>-ladder.md, every book
+pnpm jmdict check    verify every "JMdict seq NNNNNNN" in the content resolves
 pnpm bookmap         run the book map SPA (bookmap/) and open it in the browser
 ```
 
