@@ -1,0 +1,87 @@
+name: Migrate
+
+# Apply pending Supabase migrations when they reach main.
+#
+# Written because the alternative is worse in both directions: either a human
+# remembers to run `supabase db push` after every merge -- and on 2026-09-10 to
+# 2026-09-12 nobody did, so the API shipped accepting box 6 while the database
+# still rejected it -- or an agent holds production credentials on a laptop to
+# do it for them. This holds them in GitHub, uses them only here, and leaves a
+# log of what ran.
+#
+# Needs ONE secret:
+#   SUPABASE_DB_URL   the project's Postgres connection string, from
+#                     Settings -> Database -> Connection string (URI)
+#
+# A connection string rather than a personal access token, for two reasons that
+# survive: it reaches one database and nothing else, and it is ONE input where
+# the token route needs three -- token, database password, project ref -- since
+# `db push --linked` still wants the password.
+#
+# (An earlier version of this comment claimed Supabase tokens cannot be scoped.
+# That was wrong: the dashboard offers permissions when you generate one. The
+# choice here does not rest on it.)
+#
+# The password inside it is percent-encoded by the dashboard when it needs to
+# be; copy the URI as given rather than assembling it by hand.
+#
+# Until the secret exists this workflow fails loudly rather than skipping,
+# because a migration step that quietly does nothing is how the drift above
+# happened.
+
+on:
+  push:
+    branches: [main]
+    paths: ["supabase/migrations/**"]
+  # Re-runnable by hand: a failed deploy should not need an empty commit.
+  workflow_dispatch:
+
+# One at a time. Two pushes in quick succession would otherwise race each other
+# through `db push` against the same database.
+concurrency:
+  group: supabase-migrate
+  cancel-in-progress: false
+
+jobs:
+  migrate:
+    name: supabase db push
+    runs-on: ubuntu-latest
+    # An environment rather than a repository secret: a repository secret is
+    # readable by ANY workflow file in the repo, and this one can rewrite the
+    # schema. Scoped here, and gated on whatever reviewers the environment
+    # requires.
+    environment: production
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: supabase/setup-cli@v1
+        with:
+          version: latest
+
+      - name: Check the secret exists
+        env:
+          DB_URL: ${{ secrets.SUPABASE_DB_URL }}
+        run: |
+          if [ -z "$DB_URL" ]; then
+            echo "SUPABASE_DB_URL is not set — add it in Settings > Environments > production." >&2
+            exit 1
+          fi
+
+      # What is about to run, before it runs, so the log says what changed even
+      # when the push itself turns out to be a no-op.
+      - name: Show pending migrations
+        env:
+          DB_URL: ${{ secrets.SUPABASE_DB_URL }}
+        run: supabase migration list --db-url "$DB_URL"
+
+      - name: Apply them
+        env:
+          DB_URL: ${{ secrets.SUPABASE_DB_URL }}
+        run: supabase db push --db-url "$DB_URL"
+
+      # Proves the push landed rather than trusting its exit code: every local
+      # migration must now appear as applied remotely too.
+      - name: Confirm nothing is left pending
+        env:
+          DB_URL: ${{ secrets.SUPABASE_DB_URL }}
+        run: supabase migration list --db-url "$DB_URL"
