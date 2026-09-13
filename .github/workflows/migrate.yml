@@ -13,11 +13,14 @@ name: Migrate
 #   SUPABASE_DB_URL   the project's Postgres connection string, from
 #                     Settings -> Database -> Connection string (URI)
 #
-# Deliberately not a personal access token. Supabase PATs have no permission
-# picker -- they are account-wide, granting whatever the account can do across
-# every organisation and project it belongs to. A connection string reaches one
-# database and nothing else, which is all this workflow needs. It also removes
-# the link step and the project-ref variable: three inputs become one.
+# A connection string rather than a personal access token, for two reasons that
+# survive: it reaches one database and nothing else, and it is ONE input where
+# the token route needs three -- token, database password, project ref -- since
+# `db push --linked` still wants the password.
+#
+# (An earlier version of this comment claimed Supabase tokens cannot be scoped.
+# That was wrong: the dashboard offers permissions when you generate one. The
+# choice here does not rest on it.)
 #
 # The password inside it is percent-encoded by the dashboard when it needs to
 # be; copy the URI as given rather than assembling it by hand.
