@@ -10,8 +10,16 @@ name: Migrate
 # log of what ran.
 #
 # Needs ONE secret:
-#   SUPABASE_DB_URL   the project's Postgres connection string, from
-#                     Settings -> Database -> Connection string (URI)
+#   SUPABASE_DB_URL   the project's Postgres connection string, from the
+#                     Connect button in the dashboard's top bar.
+#
+# It must be the SESSION POOLER string, port 5432 -- host
+# aws-0-<region>.pooler.supabase.com, user postgres.<project-ref>. Not the
+# direct connection: db.<ref>.supabase.co resolves to IPv6 only on this plan,
+# GitHub's runners are IPv4-only, and the run dies with
+# "dial error (connect ECONNREFUSED 2600:...)" pointing at network
+# restrictions, which is not what is wrong. Not the transaction pooler (6543)
+# either: it cannot run the statements migrations need.
 #
 # A connection string rather than a personal access token, for two reasons that
 # survive: it reaches one database and nothing else, and it is ONE input where
