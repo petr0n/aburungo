@@ -35,7 +35,12 @@ Rough deployment plan for AburunGo. Details to be refined as the app matures.
 
 ### Steps
 1. Merge PR to main
-2. **Database first** — run any pending migrations: `supabase db push`
+2. **Database first** — migrations apply themselves. `.github/workflows/migrate.yml` runs
+   `supabase db push` when anything under `supabase/migrations/` reaches `main`, and fails
+   loudly if its credentials are missing rather than skipping. Run it by hand from the
+   Actions tab if needed. Doing it manually was the old step, and on 2026-09-10 nobody did:
+   the API shipped accepting box 6 while the database still rejected it, which moved a
+   silent sync failure from the API layer to the database rather than fixing it.
 3. **API server** — Railway/Fly.io auto-deploys from main; confirm deploy completes and `/health` returns `ok: true`
 4. **Frontend** — Vercel auto-deploys from main; confirm preview looks correct before promoting
 5. Smoke test the golden path on production:

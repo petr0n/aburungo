@@ -1,0 +1,86 @@
+name: Migrate
+
+# Apply pending Supabase migrations when they reach main.
+#
+# Written because the alternative is worse in both directions: either a human
+# remembers to run `supabase db push` after every merge -- and on 2026-09-10 to
+# 2026-09-12 nobody did, so the API shipped accepting box 6 while the database
+# still rejected it -- or an agent holds production credentials on a laptop to
+# do it for them. This holds them in GitHub, uses them only here, and leaves a
+# log of what ran.
+#
+# Needs two repository secrets (Settings -> Secrets and variables -> Actions):
+#   SUPABASE_ACCESS_TOKEN  a personal access token from supabase.com/dashboard/account/tokens
+#   SUPABASE_DB_PASSWORD   the database password for the project
+# and one variable:
+#   SUPABASE_PROJECT_REF   ecwzexrjgnecpfyvrsdb
+#
+# Until they exist this workflow fails loudly rather than skipping, because a
+# migration step that quietly does nothing is how the drift above happened.
+
+on:
+  push:
+    branches: [main]
+    paths: ["supabase/migrations/**"]
+  # Re-runnable by hand: a failed deploy should not need an empty commit.
+  workflow_dispatch:
+
+# One at a time. Two pushes in quick succession would otherwise race each other
+# through `db push` against the same database.
+concurrency:
+  group: supabase-migrate
+  cancel-in-progress: false
+
+jobs:
+  migrate:
+    name: supabase db push
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: supabase/setup-cli@v1
+        with:
+          version: latest
+
+      - name: Check the credentials exist
+        env:
+          ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+          DB_PASSWORD: ${{ secrets.SUPABASE_DB_PASSWORD }}
+          PROJECT_REF: ${{ vars.SUPABASE_PROJECT_REF }}
+        run: |
+          missing=""
+          [ -n "$ACCESS_TOKEN" ] || missing="$missing SUPABASE_ACCESS_TOKEN"
+          [ -n "$DB_PASSWORD" ] || missing="$missing SUPABASE_DB_PASSWORD"
+          [ -n "$PROJECT_REF" ] || missing="$missing SUPABASE_PROJECT_REF"
+          if [ -n "$missing" ]; then
+            echo "Missing:$missing — add them in Settings > Secrets and variables > Actions." >&2
+            exit 1
+          fi
+
+      - name: Link the project
+        env:
+          SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+          SUPABASE_DB_PASSWORD: ${{ secrets.SUPABASE_DB_PASSWORD }}
+        run: supabase link --project-ref "${{ vars.SUPABASE_PROJECT_REF }}"
+
+      # What is about to run, before it runs, so the log says what changed even
+      # when the push itself is a no-op.
+      - name: Show pending migrations
+        env:
+          SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+          SUPABASE_DB_PASSWORD: ${{ secrets.SUPABASE_DB_PASSWORD }}
+        run: supabase migration list
+
+      - name: Apply them
+        env:
+          SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+          SUPABASE_DB_PASSWORD: ${{ secrets.SUPABASE_DB_PASSWORD }}
+        run: supabase db push
+
+      # Proves the push landed rather than trusting its exit code: every local
+      # migration must now appear as applied remotely too.
+      - name: Confirm nothing is left pending
+        env:
+          SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+          SUPABASE_DB_PASSWORD: ${{ secrets.SUPABASE_DB_PASSWORD }}
+        run: supabase migration list
