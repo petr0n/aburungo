@@ -39,7 +39,10 @@ Rough deployment plan for AburunGo. Details to be refined as the app matures.
    `supabase db push` when anything under `supabase/migrations/` reaches `main`, and fails
    loudly if its secret is missing rather than skipping. It runs in the `production`
    environment, so it waits for whatever reviewers that environment requires. Run it by hand
-   from the Actions tab if needed. Doing it manually was the old step, and on 2026-09-10 nobody did:
+   from the Actions tab if needed. Its `SUPABASE_DB_URL` must be the **session pooler**
+   string (port 5432): the direct connection is IPv6-only on this plan and GitHub's runners
+   are IPv4-only, so it fails with a misleading network-restrictions message.
+   Doing it manually was the old step, and on 2026-09-10 nobody did:
    the API shipped accepting box 6 while the database still rejected it, which moved a
    silent sync failure from the API layer to the database rather than fixing it.
 3. **API server** — Railway/Fly.io auto-deploys from main; confirm deploy completes and `/health` returns `ok: true`
