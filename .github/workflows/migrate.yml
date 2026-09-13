@@ -9,14 +9,22 @@ name: Migrate
 # do it for them. This holds them in GitHub, uses them only here, and leaves a
 # log of what ran.
 #
-# Needs two repository secrets (Settings -> Secrets and variables -> Actions):
-#   SUPABASE_ACCESS_TOKEN  a personal access token from supabase.com/dashboard/account/tokens
-#   SUPABASE_DB_PASSWORD   the database password for the project
-# and one variable:
-#   SUPABASE_PROJECT_REF   ecwzexrjgnecpfyvrsdb
+# Needs ONE secret:
+#   SUPABASE_DB_URL   the project's Postgres connection string, from
+#                     Settings -> Database -> Connection string (URI)
 #
-# Until they exist this workflow fails loudly rather than skipping, because a
-# migration step that quietly does nothing is how the drift above happened.
+# Deliberately not a personal access token. Supabase PATs have no permission
+# picker -- they are account-wide, granting whatever the account can do across
+# every organisation and project it belongs to. A connection string reaches one
+# database and nothing else, which is all this workflow needs. It also removes
+# the link step and the project-ref variable: three inputs become one.
+#
+# The password inside it is percent-encoded by the dashboard when it needs to
+# be; copy the URI as given rather than assembling it by hand.
+#
+# Until the secret exists this workflow fails loudly rather than skipping,
+# because a migration step that quietly does nothing is how the drift above
+# happened.
 
 on:
   push:
@@ -35,6 +43,11 @@ jobs:
   migrate:
     name: supabase db push
     runs-on: ubuntu-latest
+    # An environment rather than a repository secret: a repository secret is
+    # readable by ANY workflow file in the repo, and this one can rewrite the
+    # schema. Scoped here, and gated on whatever reviewers the environment
+    # requires.
+    environment: production
     steps:
       - uses: actions/checkout@v4
 
@@ -42,45 +55,30 @@ jobs:
         with:
           version: latest
 
-      - name: Check the credentials exist
+      - name: Check the secret exists
         env:
-          ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
-          DB_PASSWORD: ${{ secrets.SUPABASE_DB_PASSWORD }}
-          PROJECT_REF: ${{ vars.SUPABASE_PROJECT_REF }}
+          DB_URL: ${{ secrets.SUPABASE_DB_URL }}
         run: |
-          missing=""
-          [ -n "$ACCESS_TOKEN" ] || missing="$missing SUPABASE_ACCESS_TOKEN"
-          [ -n "$DB_PASSWORD" ] || missing="$missing SUPABASE_DB_PASSWORD"
-          [ -n "$PROJECT_REF" ] || missing="$missing SUPABASE_PROJECT_REF"
-          if [ -n "$missing" ]; then
-            echo "Missing:$missing — add them in Settings > Secrets and variables > Actions." >&2
+          if [ -z "$DB_URL" ]; then
+            echo "SUPABASE_DB_URL is not set — add it in Settings > Environments > production." >&2
             exit 1
           fi
 
-      - name: Link the project
-        env:
-          SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
-          SUPABASE_DB_PASSWORD: ${{ secrets.SUPABASE_DB_PASSWORD }}
-        run: supabase link --project-ref "${{ vars.SUPABASE_PROJECT_REF }}"
-
       # What is about to run, before it runs, so the log says what changed even
-      # when the push itself is a no-op.
+      # when the push itself turns out to be a no-op.
       - name: Show pending migrations
         env:
-          SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
-          SUPABASE_DB_PASSWORD: ${{ secrets.SUPABASE_DB_PASSWORD }}
-        run: supabase migration list
+          DB_URL: ${{ secrets.SUPABASE_DB_URL }}
+        run: supabase migration list --db-url "$DB_URL"
 
       - name: Apply them
         env:
-          SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
-          SUPABASE_DB_PASSWORD: ${{ secrets.SUPABASE_DB_PASSWORD }}
-        run: supabase db push
+          DB_URL: ${{ secrets.SUPABASE_DB_URL }}
+        run: supabase db push --db-url "$DB_URL"
 
       # Proves the push landed rather than trusting its exit code: every local
       # migration must now appear as applied remotely too.
       - name: Confirm nothing is left pending
         env:
-          SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
-          SUPABASE_DB_PASSWORD: ${{ secrets.SUPABASE_DB_PASSWORD }}
-        run: supabase migration list
+          DB_URL: ${{ secrets.SUPABASE_DB_URL }}
+        run: supabase migration list --db-url "$DB_URL"
