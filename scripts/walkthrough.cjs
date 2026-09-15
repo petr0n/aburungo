@@ -449,10 +449,18 @@ async function handleProductionCheckpointIfPresent(page, sessionIndex) {
     // loop never empties the set. I deleted this branch once on the theory
     // that revealing was enough; the next run stalled at round 17.
     //
-    // "JP keyboard" is a real button — it comes from the design system's
-    // FillInput, not from src/, which is why grepping src/ said it did not
-    // exist. That mode is what renders the input placeholdered
-    // "Type the Japanese...", so the click has to happen before the wait.
+    // Switching to the system keyboard is a <select>, not a button. It was a
+    // button once, from the design system's own FillInput picker, and this
+    // driver still clicked for it long after FillBlankCard started passing
+    // showModePicker={false} and rendering its own <select aria-label="Input
+    // method"> instead. The text "JP keyboard" stayed on the page throughout,
+    // as an <option>, so the failure read as a 20s timeout on a control that
+    // was plainly visible in the body text.
+    //
+    // Match the placeholder loosely for the same reason: no placeholder is
+    // passed here, so the input carries the design system's default, and the
+    // literal string this once waited for ("Type the Japanese...") is neither
+    // the current copy nor the current ellipsis.
     if (known === undefined) {
       await clickWhenReady(page, "button:has-text('Show answer')", "Show answer (production)");
       const reading = await page
@@ -462,8 +470,8 @@ async function handleProductionCheckpointIfPresent(page, sessionIndex) {
         .catch(() => null);
       if (reading !== null) answers.set(prompt.trim(), reading.split("·")[0].trim());
     } else {
-      await clickWhenReady(page, "button:has-text('JP keyboard')", "JP keyboard (production)");
-      const input = page.locator('input[placeholder="Type the Japanese..."]').first();
+      await page.selectOption('select[aria-label="Input method"]', "system");
+      const input = page.getByPlaceholder(/Japanese/i).first();
       await input.waitFor({ state: "visible", timeout: CLICK_TIMEOUT_RETRY });
       await input.fill(known);
       await page.waitForTimeout(150);

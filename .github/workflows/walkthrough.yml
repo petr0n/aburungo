@@ -100,6 +100,7 @@ jobs:
           {
             echo "VITE_SUPABASE_URL=${{ secrets.VITE_SUPABASE_URL }}"
             echo "VITE_SUPABASE_PUBLISHABLE_KEY=${{ secrets.VITE_SUPABASE_PUBLISHABLE_KEY }}"
+            echo "VITE_API_URL=http://localhost:3000"
             echo "FRONTEND_URL=http://localhost:4173"
           } > .env.local
 
