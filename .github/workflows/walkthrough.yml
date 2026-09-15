@@ -1,0 +1,112 @@
+name: Walkthrough
+
+# The runtime smoke test, deliberately NOT part of the CI job.
+#
+# CI's gates are compile-and-test; this one drives the real app in a browser and
+# is the slowest and most fragile thing here. Bolted onto `ci` it gates every
+# merge from day one, which is the opposite of what this plan's rollout section
+# asks for -- watch it on real PRs first, and require it in branch protection
+# only once it has earned that.
+#
+# Layer 1 runs its own walkthrough locally on session start. This is the PR-side
+# copy of the same smoke test: it catches what a local hook cannot, which is a
+# branch nobody ran the hook against.
+#
+# It walks as a guest, so it reaches Book One and stops (TIER_BOOK_LIMIT). That
+# is the access tier working, not a gap. Signing it in would need the API server
+# on :3000, which a runner does not have.
+
+on:
+  pull_request:
+    branches: ["**"]
+  workflow_dispatch:
+
+jobs:
+  walkthrough:
+    name: Walkthrough (guest)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: aburungo
+
+    steps:
+      # Until the two repository secrets exist, the app cannot boot and every
+      # run would post a red X that says nothing about the branch. Skip loudly
+      # instead of failing falsely; the day they are set, this starts working
+      # with no other change.
+      - name: Are the Supabase secrets set?
+        id: secrets
+        working-directory: .
+        run: |
+          if [ -n "${{ secrets.VITE_SUPABASE_URL }}" ] && [ -n "${{ secrets.VITE_SUPABASE_PUBLISHABLE_KEY }}" ]; then
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::Walkthrough skipped. Set repository secrets VITE_SUPABASE_URL and VITE_SUPABASE_PUBLISHABLE_KEY to enable it."
+          fi
+
+      - name: Checkout app
+        if: steps.secrets.outputs.ready == 'true'
+        uses: actions/checkout@v4
+        with:
+          path: aburungo
+          # The content audit measures this branch against main, so it needs
+          # history rather than the default single commit.
+          fetch-depth: 0
+
+      - name: Checkout design system
+        if: steps.secrets.outputs.ready == 'true'
+        uses: actions/checkout@v4
+        with:
+          repository: petr0n/aburungo-design-system
+          path: aburungo-design-system
+          # Same pin as ci.yml, for the same reason. Move the two together.
+          ref: b4d04312880fb0086b9d3a1c6c5f01d71caf181b
+
+      - uses: pnpm/action-setup@v4
+        if: steps.secrets.outputs.ready == 'true'
+        with:
+          package_json_file: aburungo/package.json
+
+      - uses: actions/setup-node@v4
+        if: steps.secrets.outputs.ready == 'true'
+        with:
+          node-version: "22"
+          cache: "pnpm"
+          cache-dependency-path: "aburungo/pnpm-lock.yaml"
+
+      - name: Install ADS dependencies
+        if: steps.secrets.outputs.ready == 'true'
+        run: pnpm install --frozen-lockfile
+        working-directory: aburungo-design-system
+
+      - name: Build ADS
+        if: steps.secrets.outputs.ready == 'true'
+        run: pnpm build
+        working-directory: aburungo-design-system
+
+      - name: Install app dependencies
+        if: steps.secrets.outputs.ready == 'true'
+        run: pnpm install --frozen-lockfile
+
+      - name: Write .env.local from secrets
+        if: steps.secrets.outputs.ready == 'true'
+        # src/lib/supabase.ts throws at module scope without these two, and
+        # Playwright reports that as "promise was garbage collected" -- which is
+        # exactly what happened on 2026-09-14, because the secrets did not exist
+        # and the file was written with empty values. walkthrough.sh now checks
+        # the values rather than the file, so an unset secret says so.
+        run: |
+          {
+            echo "VITE_SUPABASE_URL=${{ secrets.VITE_SUPABASE_URL }}"
+            echo "VITE_SUPABASE_PUBLISHABLE_KEY=${{ secrets.VITE_SUPABASE_PUBLISHABLE_KEY }}"
+            echo "FRONTEND_URL=http://localhost:4173"
+          } > .env.local
+
+      - name: Install Chromium
+        if: steps.secrets.outputs.ready == 'true'
+        run: pnpm exec playwright install --with-deps chromium
+
+      - name: Walkthrough
+        if: steps.secrets.outputs.ready == 'true'
+        run: pnpm walkthrough
