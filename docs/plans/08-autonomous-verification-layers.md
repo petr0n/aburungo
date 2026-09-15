@@ -227,8 +227,11 @@ human look," not "this passes/fails the naturalness bar."
 ### Open eval (`pnpm open-eval`)
 
 A thin wrapper around an LLM-judge harness: `package.json` has
-`"open-eval": "npx agent-in-the-loop eval ./open-evals"`. The harness reads
-`./open-evals/` and calls your Claude MCP server for judgment. The eval set lives in
+Not wired yet, deliberately: the script pointed at `./open-evals` while this section
+said `docs/open-evals/`, and neither directory exists, so `pnpm open-eval` could only
+fail. Add `"open-eval": "npx agent-in-the-loop eval docs/open-evals"` to package.json in
+the same commit that adds the first eval case, not before. The harness reads that
+directory and calls your Claude MCP server for judgment. The eval set lives in
 `docs/open-evals/` — it is the model-calibration layer, distinct from the content
 audit. Start at ~5 evals (length, classification, extraction, instruction-following,
 one aburungo-specific prompt) and add more as the app's prompt surface grows.
@@ -269,9 +272,9 @@ consistency, contradictions), that's a separate scope; not in this layer as spec
   Hermes session, and skips when the tree is clean. The `pull_request` review is a later
   add-on — not in this layer.
 - `pnpm jmdict check` (the content citation check) is the one part of this plan that has
-  landed — `scripts/jmdict.mjs` + `data/jmdict-index.json` (PR #131, merged,
-  693 citations verified, 0 bad, 106 tests). It runs as a gate in CI and as a
-  source-citation check in the audit.
+  landed — `scripts/jmdict.mjs` + `data/jmdict-index.json`, in PR #131. Its 12 tests run
+  inside `pnpm test`, so it gates CI that way; the audit script does not call it. Run the
+  command for the current citation count rather than quoting one from here.
 - Everything else in Layer 1 — Claude/Codex CLI review, combined verdict JSON, blocking
   rubric, review prompt — is still spec. Use the current text as the spec for that work.
 
@@ -280,14 +283,18 @@ consistency, contradictions), that's a separate scope; not in this layer as spec
 - **Seed data**: `server/data/jmdict-examples-eng-3.6.2.json` — present locally (122
   MB). Too large to commit to GitHub (GitHub rejects files >100 MB), so it stays local
   and is gitignored.
-- **Index + provenance check**: the provenance verification in this layer is currently
-  a spec hook, not yet wired for CI. When a CI path is needed, build a generated index
-  from the seed file (building on the existing `scripts/jmdict.mjs`
-  `build`/`check` path, which already validates every `JMdict seq NNNNNNN` marker
-  against the seed and reports conjugation-stem mismatches using `conjugationStem` from
-  `scripts/jlpt.mjs`). The raw seed file is the source of truth for the index build;
-  the index is what CI and the agent consume. Today, `node scripts/jmdict.mjs check`
-  reports 693 citations, 0 bad locally.
+- **Index + provenance check**: built and running, not a spec hook.
+  `data/jmdict-index.json` is committed — entry number plus every kanji and kana
+  spelling, for the whole dictionary — and `pnpm jmdict check` reads every
+  `JMdict seq NNNNNNN` in the content back against it. Two questions: does the number
+  name a real entry, and is the item's own word cited anywhere on that entry. The second
+  is asked of the entry rather than of each citation, because a note properly cites the
+  words it contrasts with as well as its headword.
+  `pnpm jmdict build` regenerates the index; the gitignored seed stays the source of
+  truth for that build, and CI only ever reads the index.
+  Note it does **not** use `conjugationStem` from `scripts/jlpt.mjs` — that helper
+  returns a kana-only word untouched by design, which is exactly the inflected verbs
+  this needs (せびる under せびろう). `spellings()` in `scripts/jmdict.mjs` covers them.
 - **Source markers**: content files carry `# content-source`, `# jlpt-source`, or
   `# Source:` markers. The audit (`scripts/aburungo-content-audit.py`) accepts any of
   the three. Today it is ~60 lines, trimmed from a longer form that duplicated checks

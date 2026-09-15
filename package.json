@@ -14,7 +14,6 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "walkthrough": "bash scripts/walkthrough.sh",
-    "open-eval": "npx agent-in-the-loop eval ./open-evals",
     "verify:persistence": "bash -c \"pnpm build && (pnpm exec vite preview --port 4173 --strictPort &) && until curl -fsS -o /dev/null http://localhost:4173/; do sleep 0.5; done && node scripts/verify-persistence.cjs; pkill -f \"vite preview\"\"",
     "typecheck": "tsc -b",
     "prepare": "git config core.hooksPath .githooks || true",

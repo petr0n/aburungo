@@ -25,6 +25,19 @@ cd "$ROOT"
 # collected" — a misdiagnosis that costs ~15 minutes. Fail with the real reason.
 [ -f .env.local ] || { echo "no .env.local — copy it from the main checkout" >&2; exit 1; }
 
+# Existing is not the same as populated. CI wrote this file from repository
+# secrets that had never been created, so every key came out empty, the file
+# passed the check above, and the run died with the exact "garbage collected"
+# error the comment above exists to prevent. Check the values, not the file.
+for key in VITE_SUPABASE_URL VITE_SUPABASE_PUBLISHABLE_KEY; do
+  value="$(sed -n "s/^${key}=//p" .env.local | tr -d '"' | head -1)"
+  [ -n "$value" ] || {
+    echo "$key is empty in .env.local — the app throws at module scope without it." >&2
+    echo "In CI, set the repository secret of the same name." >&2
+    exit 1
+  }
+done
+
 # A leftover preview from an earlier run holds the port, --strictPort then
 # refuses to start, and the walkthrough silently drives the STALE bundle and
 # reports a pass. Free the port first rather than trusting it is free.

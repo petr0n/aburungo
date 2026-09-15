@@ -87,32 +87,59 @@ def check_source_markers() -> None:
 
 # ── 5. Commit message source citation ───────────────────────────────────
 
+def merge_base() -> Optional[str]:
+    """What this branch adds, measured against main.
+
+    A PR runner checks out shallow, so origin/main is often absent. Falling back
+    to "the last N commits from HEAD" is not a smaller version of this question,
+    it is a different one: every commit in the history gets re-audited against a
+    rule written after most of them landed. Measured, that fallback flagged 87 of
+    the last 100 content commits, all of them correct and long since merged.
+
+    So resolve a real base, or say plainly that none could be resolved.
+    """
+    for ref in ("origin/main", "main"):
+        code, out, _ = run(["git", "merge-base", ref, "HEAD"], timeout=10)
+        if code == 0 and out.strip():
+            return out.strip()
+    return None
+
+
 def check_commit_citations() -> None:
-    """Content changes in the current branch must cite a source per CLAUDE.md."""
-    # Try the full-clone range first.
+    """Content changes on this branch must cite a source per CLAUDE.md."""
+    base = merge_base()
+    if base is None:
+        add_finding("git", None, "advisory",
+            "Could not resolve a merge base, so no commit was audited",
+            "origin/main and main both failed to resolve -- on a CI runner, deepen "
+            "the checkout with fetch-depth: 0. Reported rather than falling back to "
+            "the last N commits from HEAD, which re-audits merged history against a "
+            "rule written after it landed.")
+        return
+
+    # %B is the whole message. The subject alone is the wrong field: this repo
+    # writes the citation in the body, so reading %s flagged 87 of the last 100
+    # content commits -- every one of them correctly cited. Record-separate the
+    # commits so a multi-line body cannot be read as the next entry.
     code, stdout, _ = run(
-        ["git", "log", "origin/main..HEAD", "--format=%H %s", "--", "src/content/"],
+        ["git", "log", f"{base}..HEAD", "--format=%H%x1f%B%x1e", "--", "src/content/"],
         timeout=10,
     )
-    if code == 0 and stdout.strip():
-        lines = stdout.strip().split("\n")
-    else:
-        # Shallow checkout (CI PR runner): origin/main may not resolve.
-        # Scan recent content-touching commits from HEAD instead.
-        code2, stdout2, _ = run(
-            ["git", "log", "--format=%H %s", "-n", "100", "--", "src/content/"],
-            timeout=10,
-        )
-        if code2 != 0 or not stdout2.strip():
-            return
-        lines = stdout2.strip().split("\n")
-    for line in lines:
-        sha, msg = line.split(" ", 1)
-        if not re.search(r"Source:", msg, re.IGNORECASE):
-            add_finding(f"commit {sha[:7]}", None, "blocking",
-                f"Commit {sha[:7]} modifies content without a source citation",
-                f"Subject: '{msg}'. CLAUDE.md requires source citation in the commit "
-                "message for any commit that adds or modifies Japanese content.")
+    if code != 0 or not stdout.strip():
+        return
+
+    for record in stdout.split("\x1e"):
+        if not record.strip():
+            continue
+        sha, _, message = record.strip().partition("\x1f")
+        if re.search(r"Source:", message, re.IGNORECASE):
+            continue
+        subject = message.strip().split("\n", 1)[0]
+        add_finding(f"commit {sha[:7]}", None, "blocking",
+            f"Commit {sha[:7]} modifies content without a source citation",
+            f"Subject: '{subject}'. CLAUDE.md requires a source citation in the "
+            "commit message -- subject or body -- for any commit that adds or "
+            "modifies Japanese content.")
 
 
 def main() -> None:
