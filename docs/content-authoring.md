@@ -107,6 +107,11 @@ sentences or silently substitute a weaker source policy when a dataset is unavai
 - Run `pnpm exec vitest run scripts/yaml.test.mjs` for YAML parsing and `pnpm manifest:check`
   for collisions. They scan unwired files too. Neither proves full schema conformance or
   linguistic correctness.
+- Write JMdict citations as a sequence number — `JMdict seq 1497610` — in the entry's `notes`.
+  `pnpm jmdict check` reads every one of them back against `data/jmdict-index.json` and fails
+  on a number that names no entry, or on an entry whose citations are all about some other
+  word. Cite the contrasts a note discusses as well as the headword; only the headword is
+  required. This proves attestation, never naturalness or sense.
 - Validate assigned drafts with the real `src/content/*/schema.ts` parsers and appropriate
   reference sets. If no draft-validation runner covers them, report that gap and arrange a
   parser-based check; merely reading a schema or passing unrelated schema tests is insufficient.

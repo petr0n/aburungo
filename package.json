@@ -27,6 +27,7 @@
     "aozora": "node scripts/aozora.mjs",
     "vocab": "node scripts/vocab.mjs",
     "kanji": "node scripts/kanji.mjs",
+    "jmdict": "node scripts/jmdict.mjs",
     "manifest": "node scripts/manifest.mjs",
     "manifest:check": "node scripts/manifest.mjs check",
     "prototype:production": "vite --host 127.0.0.1 --port 5187 --strictPort --open /prototypes/guided-production.html"
