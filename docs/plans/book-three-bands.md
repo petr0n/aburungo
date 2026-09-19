@@ -39,6 +39,7 @@ The state of each option as of today, which the plan does not yet record:
 | Option | State | Verdict |
 |---|---|---|
 | (a) License a graded-reader corpus | **Requested 2026-09-05.** Owner emailed japanese@tadoku.org for the text of the Level 2-4 よむよむ文庫 (45) and にほんご多読ブックス Vol.2-6 (27), plus the 56 Level 2-4 Web Tadoku Books under a derivatives-allowed licence. Reply pending. | Best fit; waiting on their terms |
+| (a2) KC よむよむ (Japan Foundation Kansai) | **Found 2026-09-19.** 28 A1–A2/B1 stories, CC BY-NC 2.1 JP — modification allowed, non-commercial only. Text-extractable PDFs. See `docs/text-source-brief.md`. | Usable now in the personal-use phase; ask JF Kansai for commercial terms |
 | (b) Aozora Bunko | **Built.** `scripts/aozora.mjs`, 202 texts fetched, ~11,200 filtered as public-domain + modern orthography | Wrong register for this book — its own header says "Book Five material by difficulty" |
 | (c) Clustered sentence sequences | **Prototyped.** `data/reading/micro-readings.json` | Stopgap; must never be dressed up as a story |
 
