@@ -141,6 +141,46 @@ N1. Worth having only if the two above run short on volume.
   no furigana layer, no TTS, no mining into SRS. That is the non-purchase
   fallback already in the plans, not a corpus.
 
+## Candidates verified 2026-09-19 — Book Three story texts
+
+Searched after the owner ruled Book Three incomplete without coherent texts and the
+2026-09-05 email to NPO Tadoku went two weeks unanswered. Twelve sources, every licence
+read on the publisher's own page. **One clears "modification allowed".**
+
+### KC よむよむ — <https://www.jpf.go.jp/j/kansai/clip/yomyom/>
+
+**CC BY-NC 2.1 日本**, verbatim on the page: 「クリエイティブ・コモンズ 表示 - 非営利 2.1 日本
+ライセンスの下に提供されています。」 Attribution and non-commercial; **no ND**, so furigana,
+segmentation and audio are allowed. Japan Foundation Kansai Center.
+
+- 28 illustrated stories about life in Osaka: A1 ×7, A2 ×20, A2/B1 ×1. PDF + MP3.
+- **PDFs carry real text.** Tested 2026-09-19 with pypdf on 001_taro and 006_kisetsu: ~800
+  Japanese characters per book, furigana extracted as a separate kana run after each kanji
+  (strippable). Not the baked-in-furigana walk-away case.
+- Volume is small — roughly 20,000 characters across the set. A start for the library, not
+  the library.
+- **NC is the constraint.** Usable now, in the personal-use phase. A paid app needs JF Kansai's
+  permission — they are one reachable licensor, unlike the ND wall at Tadoku. Ask them.
+
+### Rejected, with evidence
+
+- **読み物いっぱい** — 著作権フリー in name only: 「読み物の改変、編集、販売はできません」. ND and NC.
+- **福娘童話集** (3,200 tales) — all rights reserved; 掲載について: 「個人・家庭・学校・図書館などの
+  ほか他での使用は出来ません」.
+- **Watanoc**, **たどくのひろば** (tadoku.info), **多読 日本語学習読本** (nihongotokuhon) — plain
+  「All Rights Reserved」 footers, no licence.
+- **Japan Foundation main site and Hirogaru/Marugoto** — 「private use」 only, no commercial
+  use. KC よむよむ is the exception because it carries its own CC notice.
+- **Wikijunior 日本語** — CC BY-SA 4.0, but ~15 encyclopedic books, mostly stubs. Not stories.
+- **出入国在留管理庁 やさしい日本語** — the site is under 公共データ利用規約 (PDL 1.0): attribution,
+  adaptation allowed. But the downloads are teaching guidance and workbooks, not passages.
+  Nothing to ingest; the agency route stays "held in reserve" for exposition.
+- **Japanese-language MCP servers** (mcp-jisho, JP-Organizer, japanophile-mcp, NihonGen) —
+  dictionaries, flashcards and furigana tools. None serves texts, and Jisho is JMdict,
+  which the repo already holds offline. Not a source.
+- **Hugging Face** — no Japanese graded-reader or children's-story set under CC BY; the story
+  sets there are synthetic (LLM-generated, banned here) and CC BY-NC.
+
 ---
 
 *When a source is chosen: vet the actual license text against this checklist, then record the
