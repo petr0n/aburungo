@@ -1,0 +1,8924 @@
+{
+ "generated": "2026-09-23",
+ "attribution": {
+  "source": "KC よむよむ, The Japan Foundation Japanese-Language Institute, Kansai",
+  "sourceUrl": "https://www.jpf.go.jp/j/kansai/clip/yomyom/",
+  "licence": "CC BY-NC 2.1 JP",
+  "licenceUrl": "https://creativecommons.org/licenses/by-nc/2.1/jp/",
+  "note": "Text is verbatim from the PDFs, furigana removed. Attribution must appear wherever a story is shown. Non-commercial: a paid release needs the Kansai Center's permission first."
+ },
+ "knownSet": "words taught by Book One through Book Three at generation time; coverageAllBooks uses every taught word",
+ "counts": {
+  "stories": 26,
+  "sentences": 685,
+  "chars": 11054,
+  "byBand": {
+   "below": 26
+  }
+ },
+ "stories": [
+  {
+   "id": "kc.taro",
+   "title": "太郎くんの夏休み",
+   "level": "A1",
+   "pdfUrl": "https://www.jpf.go.jp/j/kansai/clip/images/page/yomyom/001_taro.pdf",
+   "mp3Url": "https://www.jpf.go.jp/j/kansai/clip/sound/page/yomyom/001_taro.mp3",
+   "pages": 13,
+   "chars": 598,
+   "sentences": [
+    {
+     "jpn": "太郎くんは小学生です。",
+     "coverage": 0.6,
+     "coverageAllBooks": 0.6,
+     "totalTokens": 5,
+     "unknownRuns": [
+      "郎くん",
+      "小学生"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "とても元気な男の子です。",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 5,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "いまは夏休みです。",
+     "coverage": 0.75,
+     "coverageAllBooks": 0.75,
+     "totalTokens": 4,
+     "unknownRuns": [
+      "夏休み"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "学校は休みです。",
+     "coverage": 0.8,
+     "coverageAllBooks": 1,
+     "totalTokens": 5,
+     "unknownRuns": [],
+     "unknownItemIds": [
+      "vocab.mi"
+     ]
+    },
+    {
+     "jpn": "太郎くんはいろいろなことをしました。",
+     "coverage": 0.7778,
+     "coverageAllBooks": 0.7778,
+     "totalTokens": 9,
+     "unknownRuns": [
+      "郎くん",
+      "ろ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "7月24日（金）晴れ今日は、友だちと公園に行きました。",
+     "coverage": 0.9333,
+     "coverageAllBooks": 0.9333,
+     "totalTokens": 15,
+     "unknownRuns": [
+      "ち"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "みんなで木にのぼりました。",
+     "coverage": 0.6667,
+     "coverageAllBooks": 0.7778,
+     "totalTokens": 9,
+     "unknownRuns": [
+      "ん",
+      "ぼり"
+     ],
+     "unknownItemIds": [
+      "vocab.mi"
+     ]
+    },
+    {
+     "jpn": "木の上で遊びました。",
+     "coverage": 0.8333,
+     "coverageAllBooks": 1,
+     "totalTokens": 6,
+     "unknownRuns": [],
+     "unknownItemIds": [
+      "vocab.asobi"
+     ]
+    },
+    {
+     "jpn": "とても楽しかったです。",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 5,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "8月1日（土）くもり家でスイカを食べました。",
+     "coverage": 0.9,
+     "coverageAllBooks": 0.9,
+     "totalTokens": 10,
+     "unknownRuns": [
+      "スイカ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "とてもあまかったです。",
+     "coverage": 0.8,
+     "coverageAllBooks": 0.8,
+     "totalTokens": 5,
+     "unknownRuns": [
+      "あま"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "スイカのたねを、庭にとばしました。",
+     "coverage": 0.8,
+     "coverageAllBooks": 0.8,
+     "totalTokens": 10,
+     "unknownRuns": [
+      "スイカ",
+      "庭"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "庭でスイカを作りたいなあ・・・。",
+     "coverage": 0.5556,
+     "coverageAllBooks": 0.5556,
+     "totalTokens": 9,
+     "unknownRuns": [
+      "庭",
+      "スイカ",
+      "り",
+      "あ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "ぷっ8月6日（木）晴れ今日もとても暑かったですから、妹と川で遊びました。",
+     "coverage": 0.8421,
+     "coverageAllBooks": 0.8947,
+     "totalTokens": 19,
+     "unknownRuns": [
+      "ぷっ",
+      "ら"
+     ],
+     "unknownItemIds": [
+      "vocab.asobi"
+     ]
+    },
+    {
+     "jpn": "川の水はとても冷たかったです。",
+     "coverage": 0.8889,
+     "coverageAllBooks": 1,
+     "totalTokens": 9,
+     "unknownRuns": [],
+     "unknownItemIds": [
+      "vocab.tsumetai"
+     ]
+    },
+    {
+     "jpn": "そして、とてもきれいでした。",
+     "coverage": 0.8,
+     "coverageAllBooks": 0.8,
+     "totalTokens": 5,
+     "unknownRuns": [
+      "そ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "川に魚がいました。",
+     "coverage": 0.8,
+     "coverageAllBooks": 1,
+     "totalTokens": 5,
+     "unknownRuns": [],
+     "unknownItemIds": [
+      "vocab.gai"
+     ]
+    },
+    {
+     "jpn": "とても気持ちがよかったです。",
+     "coverage": 0.8571,
+     "coverageAllBooks": 1,
+     "totalTokens": 7,
+     "unknownRuns": [],
+     "unknownItemIds": [
+      "vocab.kimochi"
+     ]
+    },
+    {
+     "jpn": "バシャバシャ8月12日（水）晴れお母さんと妹と、デパートに買い物に行きました。",
+     "coverage": 0.875,
+     "coverageAllBooks": 0.875,
+     "totalTokens": 16,
+     "unknownRuns": [
+      "バシャバシャ",
+      "デパート"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "それから、喫茶店でアイスクリームを食べました。",
+     "coverage": 0.8,
+     "coverageAllBooks": 0.8,
+     "totalTokens": 10,
+     "unknownRuns": [
+      "喫",
+      "アイスクリーム"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "とてもおいしかったです。",
+     "coverage": 0.8,
+     "coverageAllBooks": 0.8,
+     "totalTokens": 5,
+     "unknownRuns": [
+      "おい"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "8月15日（土）くもり夜、友だちと祭りに行きました。",
+     "coverage": 0.7857,
+     "coverageAllBooks": 0.7857,
+     "totalTokens": 14,
+     "unknownRuns": [
+      "夜",
+      "ち",
+      "祭り"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "たくさん、おどりました。",
+     "coverage": 0.6667,
+     "coverageAllBooks": 0.6667,
+     "totalTokens": 3,
+     "unknownRuns": [
+      "おどり"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "とても楽しかったです。",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 5,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "8月16日（日）晴れ朝、6時に起きました。",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 9,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "お父さんと、車で山に行きました。",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 9,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "山で虫とりをしました。",
+     "coverage": 0.8333,
+     "coverageAllBooks": 0.8333,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "虫"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "お父さんはとても上手でした。",
+     "coverage": 0.8,
+     "coverageAllBooks": 1,
+     "totalTokens": 5,
+     "unknownRuns": [],
+     "unknownItemIds": [
+      "vocab.jouzu"
+     ]
+    },
+    {
+     "jpn": "ぼくは、セミやチョウが好きです。",
+     "coverage": 0.625,
+     "coverageAllBooks": 0.75,
+     "totalTokens": 8,
+     "unknownRuns": [
+      "セミ",
+      "チョウ"
+     ],
+     "unknownItemIds": [
+      "vocab.boku"
+     ]
+    },
+    {
+     "jpn": "8月25日（火）雨今日は雨でしたから、家で遊びました。",
+     "coverage": 0.9231,
+     "coverageAllBooks": 1,
+     "totalTokens": 13,
+     "unknownRuns": [],
+     "unknownItemIds": [
+      "vocab.asobi"
+     ]
+    },
+    {
+     "jpn": "2時から5時までゲームをしました。",
+     "coverage": 0.8571,
+     "coverageAllBooks": 0.8571,
+     "totalTokens": 7,
+     "unknownRuns": [
+      "ゲーム"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "これは新しいゲームです。",
+     "coverage": 0.8,
+     "coverageAllBooks": 0.8,
+     "totalTokens": 5,
+     "unknownRuns": [
+      "ゲーム"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "ちょっと難しかったですが、とてもおもしろかったです。",
+     "coverage": 0.9231,
+     "coverageAllBooks": 0.9231,
+     "totalTokens": 13,
+     "unknownRuns": [
+      "お"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "ぴこぴこ8月31日（月）・・・・・・・・・・・・・・・・・・太郎くん。",
+     "coverage": 0.6667,
+     "coverageAllBooks": 0.6667,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "ぴこぴこ",
+      "郎くん"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "・・・宿題は？",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 2,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    }
+   ],
+   "passageCoverage": 0.8345,
+   "passageCoverageAllBooks": 0.8705,
+   "band": "below",
+   "unknownRuns": [
+    "郎くん",
+    "小学生",
+    "夏休み",
+    "ろ",
+    "ち",
+    "ん",
+    "ぼり",
+    "スイカ",
+    "あま",
+    "庭",
+    "り",
+    "あ",
+    "ぷっ",
+    "ら",
+    "そ",
+    "バシャバシャ",
+    "デパート",
+    "喫",
+    "アイスクリーム",
+    "おい",
+    "夜",
+    "祭り",
+    "おどり",
+    "虫",
+    "セミ",
+    "チョウ",
+    "ゲーム",
+    "お",
+    "ぴこぴこ"
+   ]
+  },
+  {
+   "id": "kc.toshokan",
+   "title": "図書館",
+   "level": "A1",
+   "pdfUrl": "https://www.jpf.go.jp/j/kansai/clip/images/page/yomyom/003_toshokan.pdf",
+   "mp3Url": "https://www.jpf.go.jp/j/kansai/clip/sound/page/yomyom/003_toshokan.mp3",
+   "pages": 11,
+   "chars": 235,
+   "sentences": [
+    {
+     "jpn": "ここは関西国際センターです。",
+     "coverage": 0.6,
+     "coverageAllBooks": 0.6,
+     "totalTokens": 5,
+     "unknownRuns": [
+      "関西",
+      "国際センター"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "大阪の田尻町にあります。",
+     "coverage": 0.5,
+     "coverageAllBooks": 0.6667,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "大阪",
+      "田尻"
+     ],
+     "unknownItemIds": [
+      "vocab.machi"
+     ]
+    },
+    {
+     "jpn": "関西国際センターの中に図書館があります。",
+     "coverage": 0.75,
+     "coverageAllBooks": 0.75,
+     "totalTokens": 8,
+     "unknownRuns": [
+      "関西",
+      "国際センター"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "図書館には本や雑誌がたくさんあります。",
+     "coverage": 0.875,
+     "coverageAllBooks": 0.875,
+     "totalTokens": 8,
+     "unknownRuns": [
+      "雑誌"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "本は50,000冊あります。",
+     "coverage": 0.75,
+     "coverageAllBooks": 0.75,
+     "totalTokens": 4,
+     "unknownRuns": [
+      "冊"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "図書館で何をしますか？",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 6,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "本を探します。",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 4,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "司書が手伝います。",
+     "coverage": 0.8,
+     "coverageAllBooks": 0.8,
+     "totalTokens": 5,
+     "unknownRuns": [
+      "司"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "いろいろな、おもしろい本があります。",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 7,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "本を借ります。",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 4,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "本は2週間借りることができます。",
+     "coverage": 0.8889,
+     "coverageAllBooks": 0.8889,
+     "totalTokens": 9,
+     "unknownRuns": [
+      "週間"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "何冊でも借りることができます。",
+     "coverage": 0.8889,
+     "coverageAllBooks": 0.8889,
+     "totalTokens": 9,
+     "unknownRuns": [
+      "冊"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "勉強します。",
+     "coverage": 0.6667,
+     "coverageAllBooks": 0.6667,
+     "totalTokens": 3,
+     "unknownRuns": [
+      "勉"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "友だちとたくさん勉強します。",
+     "coverage": 0.75,
+     "coverageAllBooks": 0.75,
+     "totalTokens": 8,
+     "unknownRuns": [
+      "ち",
+      "勉"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "宿題をします。",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 3,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "勉強は難しいですが、楽しいです。",
+     "coverage": 0.875,
+     "coverageAllBooks": 0.875,
+     "totalTokens": 8,
+     "unknownRuns": [
+      "勉"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "本を返します。",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 4,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "ありがとうございました。",
+     "coverage": 0.5714,
+     "coverageAllBooks": 0.5714,
+     "totalTokens": 7,
+     "unknownRuns": [
+      "あり",
+      "う",
+      "ざ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "また明日会いましょう！",
+     "coverage": 0.6667,
+     "coverageAllBooks": 0.6667,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "ま",
+      "しょう"
+     ],
+     "unknownItemIds": []
+    }
+   ],
+   "passageCoverage": 0.8158,
+   "passageCoverageAllBooks": 0.8246,
+   "band": "below",
+   "unknownRuns": [
+    "関西",
+    "国際センター",
+    "大阪",
+    "田尻",
+    "雑誌",
+    "冊",
+    "司",
+    "週間",
+    "勉",
+    "ち",
+    "あり",
+    "う",
+    "ざ",
+    "ま",
+    "しょう"
+   ]
+  },
+  {
+   "id": "kc.tennoji",
+   "title": "天王寺動物園",
+   "level": "A1",
+   "pdfUrl": "https://www.jpf.go.jp/j/kansai/clip/images/page/yomyom/004_tennoji.pdf",
+   "mp3Url": "https://www.jpf.go.jp/j/kansai/clip/sound/page/yomyom/004_tennoji.mp3",
+   "pages": 11,
+   "chars": 349,
+   "sentences": [
+    {
+     "jpn": "天王寺動物園には、たくさん人が来ます。",
+     "coverage": 0.7778,
+     "coverageAllBooks": 0.7778,
+     "totalTokens": 9,
+     "unknownRuns": [
+      "王寺",
+      "動物園"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "日本で、2番目に大きい動物園です。",
+     "coverage": 0.7143,
+     "coverageAllBooks": 0.7143,
+     "totalTokens": 7,
+     "unknownRuns": [
+      "番目",
+      "動物園"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "子どもも、大人も、動物が大好きです。",
+     "coverage": 0.6,
+     "coverageAllBooks": 0.7,
+     "totalTokens": 10,
+     "unknownRuns": [
+      "ど",
+      "大人",
+      "大好き"
+     ],
+     "unknownItemIds": [
+      "vocab.doubutsu"
+     ]
+    },
+    {
+     "jpn": "天王寺動物園には、いろいろな動物がいます。",
+     "coverage": 0.6,
+     "coverageAllBooks": 0.8,
+     "totalTokens": 10,
+     "unknownRuns": [
+      "王寺",
+      "動物園"
+     ],
+     "unknownItemIds": [
+      "vocab.doubutsu",
+      "vocab.gai"
+     ]
+    },
+    {
+     "jpn": "ゾウやコアラを見ることができます。",
+     "coverage": 0.8,
+     "coverageAllBooks": 0.8,
+     "totalTokens": 10,
+     "unknownRuns": [
+      "ゾウ",
+      "コアラ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "ほかに、とてもめずらしい動物もいます。",
+     "coverage": 0.5714,
+     "coverageAllBooks": 0.8571,
+     "totalTokens": 7,
+     "unknownRuns": [
+      "ずらしい"
+     ],
+     "unknownItemIds": [
+      "vocab.hokani",
+      "vocab.doubutsu"
+     ]
+    },
+    {
+     "jpn": "それは、キーウィです。",
+     "coverage": 0.75,
+     "coverageAllBooks": 0.75,
+     "totalTokens": 4,
+     "unknownRuns": [
+      "キーウィ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "キーウィは、ニュージーランドにすんでいます。",
+     "coverage": 0.5714,
+     "coverageAllBooks": 0.5714,
+     "totalTokens": 7,
+     "unknownRuns": [
+      "キーウィ",
+      "ニュージーランド",
+      "すん"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "日本に、ぜんぜんいませんでした。",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 5,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "でも、今天王寺動物園にだけいます。",
+     "coverage": 0.75,
+     "coverageAllBooks": 0.75,
+     "totalTokens": 8,
+     "unknownRuns": [
+      "王寺",
+      "動物園"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "キーウィは鳥です。",
+     "coverage": 0.75,
+     "coverageAllBooks": 0.75,
+     "totalTokens": 4,
+     "unknownRuns": [
+      "キーウィ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "でも、飛ぶことができません。",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 7,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "ホッキョクグマも、とても有名です。",
+     "coverage": 0.8,
+     "coverageAllBooks": 0.8,
+     "totalTokens": 5,
+     "unknownRuns": [
+      "ホッキョクグマ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "大人のホッキョクグマも、子どものホッキョクグマもいます。",
+     "coverage": 0.5,
+     "coverageAllBooks": 0.6,
+     "totalTokens": 10,
+     "unknownRuns": [
+      "大人",
+      "ホッキョクグマ",
+      "ど"
+     ],
+     "unknownItemIds": [
+      "vocab.mono-person"
+     ]
+    },
+    {
+     "jpn": "子どものホッキョクグマは、水の中が大好きです。",
+     "coverage": 0.6364,
+     "coverageAllBooks": 0.7273,
+     "totalTokens": 11,
+     "unknownRuns": [
+      "ど",
+      "ホッキョクグマ",
+      "大好き"
+     ],
+     "unknownItemIds": [
+      "vocab.mono-person"
+     ]
+    },
+    {
+     "jpn": "動物園の外で、ピクニックができます。",
+     "coverage": 0.7778,
+     "coverageAllBooks": 0.7778,
+     "totalTokens": 9,
+     "unknownRuns": [
+      "動物園",
+      "ピクニック"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "休みに、ピクニックに来てください。",
+     "coverage": 0.7143,
+     "coverageAllBooks": 0.8571,
+     "totalTokens": 7,
+     "unknownRuns": [
+      "ピクニック"
+     ],
+     "unknownItemIds": [
+      "vocab.mi"
+     ]
+    },
+    {
+     "jpn": "かわいい動物がみなさんを待っています！",
+     "coverage": 0.8182,
+     "coverageAllBooks": 1,
+     "totalTokens": 11,
+     "unknownRuns": [],
+     "unknownItemIds": [
+      "vocab.doubutsu",
+      "vocab.mi"
+     ]
+    },
+    {
+     "jpn": "ぜひ遊びにきてくださいね！",
+     "coverage": 0.6667,
+     "coverageAllBooks": 0.8333,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "ぜひ"
+     ],
+     "unknownItemIds": [
+      "vocab.asobi"
+     ]
+    },
+    {
+     "jpn": "大阪りんくうタウン天王寺ＪＲ",
+     "coverage": 0.3333,
+     "coverageAllBooks": 0.3333,
+     "totalTokens": 3,
+     "unknownRuns": [
+      "大阪りんくうタウン",
+      "王寺"
+     ],
+     "unknownItemIds": []
+    }
+   ],
+   "passageCoverage": 0.7067,
+   "passageCoverageAllBooks": 0.78,
+   "band": "below",
+   "unknownRuns": [
+    "王寺",
+    "動物園",
+    "番目",
+    "ど",
+    "大人",
+    "大好き",
+    "ゾウ",
+    "コアラ",
+    "ずらしい",
+    "キーウィ",
+    "ニュージーランド",
+    "すん",
+    "ホッキョクグマ",
+    "ピクニック",
+    "ぜひ",
+    "大阪りんくうタウン"
+   ]
+  },
+  {
+   "id": "kc.watashi",
+   "title": "私の一日",
+   "level": "A1",
+   "pdfUrl": "https://www.jpf.go.jp/j/kansai/clip/images/page/yomyom/005_watashi.pdf",
+   "mp3Url": "https://www.jpf.go.jp/j/kansai/clip/sound/page/yomyom/005_watashi.mp3",
+   "pages": 12,
+   "chars": 460,
+   "sentences": [
+    {
+     "jpn": "みなさん、こんにちは。",
+     "coverage": 0.5714,
+     "coverageAllBooks": 0.7143,
+     "totalTokens": 7,
+     "unknownRuns": [
+      "こん",
+      "ち"
+     ],
+     "unknownItemIds": [
+      "vocab.mi"
+     ]
+    },
+    {
+     "jpn": "私は東です。",
+     "coverage": 0.75,
+     "coverageAllBooks": 1,
+     "totalTokens": 4,
+     "unknownRuns": [],
+     "unknownItemIds": [
+      "vocab.toukyou"
+     ]
+    },
+    {
+     "jpn": "関西国際センターの教師です。",
+     "coverage": 0.4,
+     "coverageAllBooks": 0.6,
+     "totalTokens": 5,
+     "unknownRuns": [
+      "関西",
+      "国際センター"
+     ],
+     "unknownItemIds": [
+      "vocab.kyoushi"
+     ]
+    },
+    {
+     "jpn": "私の家族は3人です。",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 6,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "妻と息子と私です。",
+     "coverage": 0.6667,
+     "coverageAllBooks": 0.8333,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "妻"
+     ],
+     "unknownItemIds": [
+      "vocab.musuko"
+     ]
+    },
+    {
+     "jpn": "私は毎日4時半に起きます。",
+     "coverage": 0.8571,
+     "coverageAllBooks": 0.8571,
+     "totalTokens": 7,
+     "unknownRuns": [
+      "時半"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "顔を洗います。",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 4,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "それから、おいのりをします。",
+     "coverage": 0.7143,
+     "coverageAllBooks": 0.7143,
+     "totalTokens": 7,
+     "unknownRuns": [
+      "おい",
+      "り"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "5時から6時まで、1時間ジョギングをします。",
+     "coverage": 0.875,
+     "coverageAllBooks": 0.875,
+     "totalTokens": 8,
+     "unknownRuns": [
+      "ジョギング"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "家でシャワーを浴びます。",
+     "coverage": 0.8333,
+     "coverageAllBooks": 0.8333,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "浴び"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "それから、そうじをします。",
+     "coverage": 0.8333,
+     "coverageAllBooks": 0.8333,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "じ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "6時40分に出かけます。",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 5,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "地下鉄の駅まで歩きます。",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 7,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "家から10分です。",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 4,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "それから、地下鉄で難波に行きます。",
+     "coverage": 0.8889,
+     "coverageAllBooks": 0.8889,
+     "totalTokens": 9,
+     "unknownRuns": [
+      "難波"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "そして、難波から電車でりんくうタウンに行きます。",
+     "coverage": 0.7273,
+     "coverageAllBooks": 0.7273,
+     "totalTokens": 11,
+     "unknownRuns": [
+      "そ",
+      "難波",
+      "りんくうタウン"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "毎日、電車で新聞を読みます。",
+     "coverage": 0.75,
+     "coverageAllBooks": 1,
+     "totalTokens": 8,
+     "unknownRuns": [],
+     "unknownItemIds": [
+      "vocab.shinbun",
+      "vocab.mi"
+     ]
+    },
+    {
+     "jpn": "8時15分にセンターに来ます。",
+     "coverage": 0.8571,
+     "coverageAllBooks": 0.8571,
+     "totalTokens": 7,
+     "unknownRuns": [
+      "センター"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "ときどき、オフィスで朝ごはんを食べます。",
+     "coverage": 0.7778,
+     "coverageAllBooks": 0.7778,
+     "totalTokens": 9,
+     "unknownRuns": [
+      "オフィス",
+      "ん"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "仕事は8時半から5時までです。",
+     "coverage": 0.8571,
+     "coverageAllBooks": 0.8571,
+     "totalTokens": 7,
+     "unknownRuns": [
+      "時半"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "仕事は大変ですが、とてもおもしろいです。",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 8,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "私は授業が一番好きです。",
+     "coverage": 0.7143,
+     "coverageAllBooks": 0.8571,
+     "totalTokens": 7,
+     "unknownRuns": [
+      "授業"
+     ],
+     "unknownItemIds": [
+      "vocab.ichiban"
+     ]
+    },
+    {
+     "jpn": "デスクワークはちょっと…。",
+     "coverage": 0.5,
+     "coverageAllBooks": 0.5,
+     "totalTokens": 4,
+     "unknownRuns": [
+      "デスクワーク",
+      "ょっ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "午後7時に家に帰ります。",
+     "coverage": 0.75,
+     "coverageAllBooks": 0.75,
+     "totalTokens": 8,
+     "unknownRuns": [
+      "午後",
+      "り"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "息子と遊びます。",
+     "coverage": 0.5,
+     "coverageAllBooks": 1,
+     "totalTokens": 4,
+     "unknownRuns": [],
+     "unknownItemIds": [
+      "vocab.musuko",
+      "vocab.asobi"
+     ]
+    },
+    {
+     "jpn": "絵本を読みます。",
+     "coverage": 0.6667,
+     "coverageAllBooks": 0.8333,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "絵"
+     ],
+     "unknownItemIds": [
+      "vocab.mi"
+     ]
+    },
+    {
+     "jpn": "それから、息子とお風呂に入ります。",
+     "coverage": 0.7778,
+     "coverageAllBooks": 0.8889,
+     "totalTokens": 9,
+     "unknownRuns": [
+      "り"
+     ],
+     "unknownItemIds": [
+      "vocab.musuko"
+     ]
+    },
+    {
+     "jpn": "8時に息子を寝かせます。",
+     "coverage": 0.75,
+     "coverageAllBooks": 1,
+     "totalTokens": 8,
+     "unknownRuns": [],
+     "unknownItemIds": [
+      "vocab.musuko",
+      "vocab.se"
+     ]
+    },
+    {
+     "jpn": "妻と晩ごはんを食べます。",
+     "coverage": 0.75,
+     "coverageAllBooks": 0.75,
+     "totalTokens": 8,
+     "unknownRuns": [
+      "妻",
+      "ん"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "妻の料理はおいしいです。",
+     "coverage": 0.8333,
+     "coverageAllBooks": 0.8333,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "妻"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "それから、テレビを見ます。",
+     "coverage": 0.8333,
+     "coverageAllBooks": 1,
+     "totalTokens": 6,
+     "unknownRuns": [],
+     "unknownItemIds": [
+      "vocab.terebi"
+     ]
+    },
+    {
+     "jpn": "そして、皿を洗います。",
+     "coverage": 0.6667,
+     "coverageAllBooks": 0.8333,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "そ"
+     ],
+     "unknownItemIds": [
+      "vocab.sara"
+     ]
+    },
+    {
+     "jpn": "ときどきアイロンをします。",
+     "coverage": 0.75,
+     "coverageAllBooks": 0.75,
+     "totalTokens": 4,
+     "unknownRuns": [
+      "アイロン"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "毎晩11時ごろ寝ます。",
+     "coverage": 0.6667,
+     "coverageAllBooks": 0.6667,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "毎晩",
+      "ろ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "今日も疲れました。",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 4,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "おやすみなさい。",
+     "coverage": 0.2,
+     "coverageAllBooks": 0.6,
+     "totalTokens": 5,
+     "unknownRuns": [
+      "す",
+      "さい"
+     ],
+     "unknownItemIds": [
+      "vocab.oya",
+      "vocab.mi"
+     ]
+    }
+   ],
+   "passageCoverage": 0.7759,
+   "passageCoverageAllBooks": 0.8491,
+   "band": "below",
+   "unknownRuns": [
+    "こん",
+    "ち",
+    "関西",
+    "国際センター",
+    "妻",
+    "時半",
+    "おい",
+    "り",
+    "ジョギング",
+    "浴び",
+    "じ",
+    "難波",
+    "そ",
+    "りんくうタウン",
+    "センター",
+    "オフィス",
+    "ん",
+    "授業",
+    "デスクワーク",
+    "ょっ",
+    "午後",
+    "絵",
+    "アイロン",
+    "毎晩",
+    "ろ",
+    "す",
+    "さい"
+   ]
+  },
+  {
+   "id": "kc.kongozan",
+   "title": "金剛山",
+   "level": "A1",
+   "pdfUrl": "https://www.jpf.go.jp/j/kansai/clip/images/page/yomyom/018_kongozan.pdf",
+   "mp3Url": "https://www.jpf.go.jp/j/kansai/clip/sound/page/yomyom/018_kongoozan.mp3",
+   "pages": 15,
+   "chars": 470,
+   "sentences": [
+    {
+     "jpn": "（大和葛城山から見た金剛山）今日は金剛山に登ります。",
+     "coverage": 0.7647,
+     "coverageAllBooks": 0.7647,
+     "totalTokens": 17,
+     "unknownRuns": [
+      "大和葛城",
+      "剛",
+      "り"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "金剛山は、大阪府と奈良県の間にあります。",
+     "coverage": 0.6,
+     "coverageAllBooks": 0.7,
+     "totalTokens": 10,
+     "unknownRuns": [
+      "剛",
+      "大阪府",
+      "奈良県"
+     ],
+     "unknownItemIds": [
+      "vocab.maniau"
+     ]
+    },
+    {
+     "jpn": "高さは、1125mです。",
+     "coverage": 0.75,
+     "coverageAllBooks": 0.75,
+     "totalTokens": 4,
+     "unknownRuns": [
+      "さ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "山登りの前に、準備運動をしましょう。",
+     "coverage": 0.4,
+     "coverageAllBooks": 0.6,
+     "totalTokens": 10,
+     "unknownRuns": [
+      "山登り",
+      "前",
+      "準",
+      "し"
+     ],
+     "unknownItemIds": [
+      "vocab.sonaeru",
+      "vocab.undou"
+     ]
+    },
+    {
+     "jpn": "準備はいいですか。",
+     "coverage": 0.4,
+     "coverageAllBooks": 0.6,
+     "totalTokens": 5,
+     "unknownRuns": [
+      "準",
+      "い"
+     ],
+     "unknownItemIds": [
+      "vocab.sonaeru"
+     ]
+    },
+    {
+     "jpn": "では、登りましょう。",
+     "coverage": 0.75,
+     "coverageAllBooks": 0.75,
+     "totalTokens": 4,
+     "unknownRuns": [
+      "り"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "一、二、三、四…山ではみんなあいさつをします。",
+     "coverage": 0.7692,
+     "coverageAllBooks": 0.8462,
+     "totalTokens": 13,
+     "unknownRuns": [
+      "ん",
+      "あいさ"
+     ],
+     "unknownItemIds": [
+      "vocab.mi"
+     ]
+    },
+    {
+     "jpn": "「こんにちは」「こんにちは」「今日はいい天気ですね」「そうですね。",
+     "coverage": 0.7059,
+     "coverageAllBooks": 0.7059,
+     "totalTokens": 17,
+     "unknownRuns": [
+      "こん",
+      "ち",
+      "い"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "気持ちがいいですね」「がんばってください」「ありがとうございます」きれいな水がありますよ。",
+     "coverage": 0.6957,
+     "coverageAllBooks": 0.7826,
+     "totalTokens": 23,
+     "unknownRuns": [
+      "い",
+      "ん",
+      "あり",
+      "う",
+      "ざ"
+     ],
+     "unknownItemIds": [
+      "vocab.kimochi",
+      "vocab.gai"
+     ]
+    },
+    {
+     "jpn": "ちょっと飲んでみましょう。",
+     "coverage": 0.6667,
+     "coverageAllBooks": 0.8333,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "ん"
+     ],
+     "unknownItemIds": [
+      "vocab.mi"
+     ]
+    },
+    {
+     "jpn": "とてもおいしいです！",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 3,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "あれは何と読みますか。",
+     "coverage": 0.7143,
+     "coverageAllBooks": 1,
+     "totalTokens": 7,
+     "unknownRuns": [],
+     "unknownItemIds": [
+      "vocab.nantomo",
+      "vocab.mi"
+     ]
+    },
+    {
+     "jpn": "「ななごうめ」と読みます。",
+     "coverage": 0.75,
+     "coverageAllBooks": 0.875,
+     "totalTokens": 8,
+     "unknownRuns": [
+      "う"
+     ],
+     "unknownItemIds": [
+      "vocab.mi"
+     ]
+    },
+    {
+     "jpn": "「70％登りましたよ」という意味です。",
+     "coverage": 0.75,
+     "coverageAllBooks": 0.875,
+     "totalTokens": 8,
+     "unknownRuns": [
+      "り"
+     ],
+     "unknownItemIds": [
+      "vocab.imi"
+     ]
+    },
+    {
+     "jpn": "山は緑がいっぱいです。",
+     "coverage": 0.6667,
+     "coverageAllBooks": 0.8333,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "っぱい"
+     ],
+     "unknownItemIds": [
+      "vocab.gai"
+     ]
+    },
+    {
+     "jpn": "空気がとてもきれいです。",
+     "coverage": 0.8,
+     "coverageAllBooks": 0.8,
+     "totalTokens": 5,
+     "unknownRuns": [
+      "空気"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "山の上に着きました！",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 7,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "天気がいい日は関西国際空港が見えますよ。",
+     "coverage": 0.5385,
+     "coverageAllBooks": 0.6154,
+     "totalTokens": 13,
+     "unknownRuns": [
+      "い",
+      "関西",
+      "国際",
+      "空港",
+      "え"
+     ],
+     "unknownItemIds": [
+      "vocab.gai"
+     ]
+    },
+    {
+     "jpn": "近くの山もきれいですね。",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 7,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "山の上でスタンプがもらえます。",
+     "coverage": 0.7778,
+     "coverageAllBooks": 0.7778,
+     "totalTokens": 9,
+     "unknownRuns": [
+      "スタンプ",
+      "らえ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "私は9回登りました。",
+     "coverage": 0.8333,
+     "coverageAllBooks": 0.8333,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "り"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "山の上には神社があります。",
+     "coverage": 0.8571,
+     "coverageAllBooks": 0.8571,
+     "totalTokens": 7,
+     "unknownRuns": [
+      "神社"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "おそば屋さんもあります。",
+     "coverage": 0.6667,
+     "coverageAllBooks": 0.6667,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "お",
+      "屋"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "今日はてんぷらそばを食べます。",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 7,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "おいしそうですね。",
+     "coverage": 0.75,
+     "coverageAllBooks": 0.75,
+     "totalTokens": 4,
+     "unknownRuns": [
+      "おいし"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "いただきます！",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 1,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "さあ、帰りましょう。",
+     "coverage": 0.5,
+     "coverageAllBooks": 0.5,
+     "totalTokens": 4,
+     "unknownRuns": [
+      "さあ",
+      "り"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "あれ、ロープウェイもありますね。",
+     "coverage": 0.8,
+     "coverageAllBooks": 0.8,
+     "totalTokens": 5,
+     "unknownRuns": [
+      "ロープウェイ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "でも、やっぱり歩いて帰りましょう。",
+     "coverage": 0.7143,
+     "coverageAllBooks": 0.7143,
+     "totalTokens": 7,
+     "unknownRuns": [
+      "っぱり",
+      "り"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "お疲れさまでした！",
+     "coverage": 0.6,
+     "coverageAllBooks": 0.6,
+     "totalTokens": 5,
+     "unknownRuns": [
+      "お",
+      "さ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "また、登りましょう。",
+     "coverage": 0.6,
+     "coverageAllBooks": 0.6,
+     "totalTokens": 5,
+     "unknownRuns": [
+      "ま",
+      "り"
+     ],
+     "unknownItemIds": []
+    }
+   ],
+   "passageCoverage": 0.7197,
+   "passageCoverageAllBooks": 0.7782,
+   "band": "below",
+   "unknownRuns": [
+    "大和葛城",
+    "剛",
+    "り",
+    "大阪府",
+    "奈良県",
+    "さ",
+    "山登り",
+    "前",
+    "準",
+    "し",
+    "い",
+    "ん",
+    "あいさ",
+    "こん",
+    "ち",
+    "あり",
+    "う",
+    "ざ",
+    "っぱい",
+    "空気",
+    "関西",
+    "国際",
+    "空港",
+    "え",
+    "スタンプ",
+    "らえ",
+    "神社",
+    "お",
+    "屋",
+    "おいし",
+    "さあ",
+    "ロープウェイ",
+    "っぱり",
+    "ま"
+   ]
+  },
+  {
+   "id": "kc.hajimemashite",
+   "title": "はじめまして、私はアインです",
+   "level": "A1",
+   "pdfUrl": "https://www.jpf.go.jp/j/kansai/clip/images/page/yomyom/024_hajimemashite.pdf",
+   "mp3Url": "https://www.jpf.go.jp/j/kansai/clip/sound/page/yomyom/024_hajimemashite,watahiwa-aindesu.mp3",
+   "pages": 16,
+   "chars": 243,
+   "sentences": [
+    {
+     "jpn": "みなさん、おはようございます。",
+     "coverage": 0.6667,
+     "coverageAllBooks": 0.7778,
+     "totalTokens": 9,
+     "unknownRuns": [
+      "お",
+      "ざ"
+     ],
+     "unknownItemIds": [
+      "vocab.mi"
+     ]
+    },
+    {
+     "jpn": "私はアインです。",
+     "coverage": 0.75,
+     "coverageAllBooks": 0.75,
+     "totalTokens": 4,
+     "unknownRuns": [
+      "アイン"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "まゆげはまだない。",
+     "coverage": 0.75,
+     "coverageAllBooks": 0.75,
+     "totalTokens": 4,
+     "unknownRuns": [
+      "まゆげ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "毎朝、1時間ぐらいメイクをします。",
+     "coverage": 0.6667,
+     "coverageAllBooks": 0.6667,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "毎朝",
+      "メイク"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "私はベトナム人です。",
+     "coverage": 0.8,
+     "coverageAllBooks": 0.8,
+     "totalTokens": 5,
+     "unknownRuns": [
+      "ベトナム"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "今、日本に留学しています。",
+     "coverage": 0.8571,
+     "coverageAllBooks": 0.8571,
+     "totalTokens": 7,
+     "unknownRuns": [
+      "留"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "子どもの頃、はじめて日本のアニメを見ました。",
+     "coverage": 0.6429,
+     "coverageAllBooks": 0.7143,
+     "totalTokens": 14,
+     "unknownRuns": [
+      "ど",
+      "頃",
+      "じ",
+      "アニメ"
+     ],
+     "unknownItemIds": [
+      "vocab.mono-person"
+     ]
+    },
+    {
+     "jpn": "おもしろい！",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 1,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "高校生の時から、日本語を勉強しています。",
+     "coverage": 0.7,
+     "coverageAllBooks": 0.7,
+     "totalTokens": 10,
+     "unknownRuns": [
+      "高校生",
+      "日本語",
+      "勉"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "日本の生活は楽しいです。",
+     "coverage": 0.8333,
+     "coverageAllBooks": 0.8333,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "生活"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "大学の授業はちょっと大変です。",
+     "coverage": 0.625,
+     "coverageAllBooks": 0.625,
+     "totalTokens": 8,
+     "unknownRuns": [
+      "大学",
+      "授業",
+      "ょっ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "私には好きなアイドルがいます。",
+     "coverage": 0.7143,
+     "coverageAllBooks": 0.8571,
+     "totalTokens": 7,
+     "unknownRuns": [
+      "アイドル"
+     ],
+     "unknownItemIds": [
+      "vocab.gai"
+     ]
+    },
+    {
+     "jpn": "それは…SENSHU BOYZのいずみくん来週の日曜日、日本の友だちとSENSHU BOYZのコンサートに行きます。",
+     "coverage": 0.7619,
+     "coverageAllBooks": 0.8095,
+     "totalTokens": 21,
+     "unknownRuns": [
+      "いず",
+      "くん",
+      "ち",
+      "コンサート"
+     ],
+     "unknownItemIds": [
+      "vocab.mi"
+     ]
+    },
+    {
+     "jpn": "楽しみです！",
+     "coverage": 0.5,
+     "coverageAllBooks": 1,
+     "totalTokens": 2,
+     "unknownRuns": [],
+     "unknownItemIds": [
+      "vocab.tanoshimi"
+     ]
+    },
+    {
+     "jpn": "きれいになります！",
+     "coverage": 0.8,
+     "coverageAllBooks": 0.8,
+     "totalTokens": 5,
+     "unknownRuns": [
+      "り"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "おやすみなさい！",
+     "coverage": 0.2,
+     "coverageAllBooks": 0.6,
+     "totalTokens": 5,
+     "unknownRuns": [
+      "す",
+      "さい"
+     ],
+     "unknownItemIds": [
+      "vocab.oya",
+      "vocab.mi"
+     ]
+    }
+   ],
+   "passageCoverage": 0.7018,
+   "passageCoverageAllBooks": 0.7632,
+   "band": "below",
+   "unknownRuns": [
+    "お",
+    "ざ",
+    "アイン",
+    "まゆげ",
+    "毎朝",
+    "メイク",
+    "ベトナム",
+    "留",
+    "ど",
+    "頃",
+    "じ",
+    "アニメ",
+    "高校生",
+    "日本語",
+    "勉",
+    "生活",
+    "大学",
+    "授業",
+    "ょっ",
+    "アイドル",
+    "いず",
+    "くん",
+    "ち",
+    "コンサート",
+    "り",
+    "す",
+    "さい"
+   ]
+  },
+  {
+   "id": "kc.anhsaninterview",
+   "title": "アインさんインタビュー",
+   "level": "A1",
+   "pdfUrl": "https://www.jpf.go.jp/j/kansai/clip/images/page/yomyom/025_anhsaninterview.pdf",
+   "mp3Url": "https://www.jpf.go.jp/j/kansai/clip/sound/page/yomyom/025_ainsan-intabyuu.mp3",
+   "pages": 13,
+   "chars": 375,
+   "sentences": [
+    {
+     "jpn": "みなさん、こんにちは。",
+     "coverage": 0.5714,
+     "coverageAllBooks": 0.7143,
+     "totalTokens": 7,
+     "unknownRuns": [
+      "こん",
+      "ち"
+     ],
+     "unknownItemIds": [
+      "vocab.mi"
+     ]
+    },
+    {
+     "jpn": "今日は尾西大学の留学生、アインさんにインタビューします。",
+     "coverage": 0.5833,
+     "coverageAllBooks": 0.5833,
+     "totalTokens": 12,
+     "unknownRuns": [
+      "尾西",
+      "大学",
+      "留",
+      "アイン",
+      "インタビュー"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "アインさん、こんにちは。",
+     "coverage": 0.5,
+     "coverageAllBooks": 0.5,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "アイン",
+      "こん",
+      "ち"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "「こんにちは」今日はよろしくお願いします。",
+     "coverage": 0.6667,
+     "coverageAllBooks": 0.6667,
+     "totalTokens": 9,
+     "unknownRuns": [
+      "こん",
+      "ち",
+      "ろしく"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "「こちらこそよろしくお願いします」アインさん、どこから来ましたか？",
+     "coverage": 0.5833,
+     "coverageAllBooks": 0.6667,
+     "totalTokens": 12,
+     "unknownRuns": [
+      "こそ",
+      "ろしく",
+      "アイン",
+      "ら"
+     ],
+     "unknownItemIds": [
+      "vocab.dokoka"
+     ]
+    },
+    {
+     "jpn": "「ベトナムから来ました」何の勉強をしていますか？",
+     "coverage": 0.8333,
+     "coverageAllBooks": 0.8333,
+     "totalTokens": 12,
+     "unknownRuns": [
+      "ベトナム",
+      "勉"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "「私は経済の勉強をしています」経済ですか。",
+     "coverage": 0.7273,
+     "coverageAllBooks": 0.7273,
+     "totalTokens": 11,
+     "unknownRuns": [
+      "経済",
+      "勉"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "「ええ。",
+     "coverage": 0,
+     "coverageAllBooks": 0,
+     "totalTokens": 1,
+     "unknownRuns": [
+      "ええ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "将来、ベトナムで、日本の会社で働きたいです」週末は何をしますか？",
+     "coverage": 0.8235,
+     "coverageAllBooks": 0.8824,
+     "totalTokens": 17,
+     "unknownRuns": [
+      "将",
+      "ベトナム"
+     ],
+     "unknownItemIds": [
+      "vocab.kitai"
+     ]
+    },
+    {
+     "jpn": "「そうですね…図書館で勉強します」そうですか、まじめですね。",
+     "coverage": 0.8571,
+     "coverageAllBooks": 0.8571,
+     "totalTokens": 14,
+     "unknownRuns": [
+      "勉",
+      "まじ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "「いいえ、いつもではありません。",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 3,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "先週の週末は、日本の友だちとコンサートに行きました」コンサートですか。",
+     "coverage": 0.8235,
+     "coverageAllBooks": 0.8235,
+     "totalTokens": 17,
+     "unknownRuns": [
+      "ち",
+      "コンサート"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "どうでしたか？",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 3,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "「私はSENSHU BOYZが大好きです。",
+     "coverage": 0.8,
+     "coverageAllBooks": 0.8,
+     "totalTokens": 5,
+     "unknownRuns": [
+      "大好き"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "いずみくんは本当にかっこいいです。",
+     "coverage": 0.3,
+     "coverageAllBooks": 0.5,
+     "totalTokens": 10,
+     "unknownRuns": [
+      "いず",
+      "くん",
+      "本当に",
+      "っ",
+      "い"
+     ],
+     "unknownItemIds": [
+      "vocab.mi",
+      "vocab.koi"
+     ]
+    },
+    {
+     "jpn": "歌も上手です。",
+     "coverage": 0.75,
+     "coverageAllBooks": 1,
+     "totalTokens": 4,
+     "unknownRuns": [],
+     "unknownItemIds": [
+      "vocab.jouzu"
+     ]
+    },
+    {
+     "jpn": "ダンスもすばらしいです。",
+     "coverage": 0.5,
+     "coverageAllBooks": 0.5,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "ダンス",
+      "す",
+      "らしい"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "それから…」え、えーと…。",
+     "coverage": 0.6,
+     "coverageAllBooks": 0.6,
+     "totalTokens": 5,
+     "unknownRuns": [
+      "え",
+      "えー"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "インタビューはこれで終わりです。",
+     "coverage": 0.7143,
+     "coverageAllBooks": 0.7143,
+     "totalTokens": 7,
+     "unknownRuns": [
+      "インタビュー",
+      "り"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "どうもありがとうございました。",
+     "coverage": 0.6667,
+     "coverageAllBooks": 0.6667,
+     "totalTokens": 9,
+     "unknownRuns": [
+      "あり",
+      "う",
+      "ざ"
+     ],
+     "unknownItemIds": []
+    }
+   ],
+   "passageCoverage": 0.6941,
+   "passageCoverageAllBooks": 0.7294,
+   "band": "below",
+   "unknownRuns": [
+    "こん",
+    "ち",
+    "尾西",
+    "大学",
+    "留",
+    "アイン",
+    "インタビュー",
+    "ろしく",
+    "こそ",
+    "ら",
+    "ベトナム",
+    "勉",
+    "経済",
+    "ええ",
+    "将",
+    "まじ",
+    "コンサート",
+    "大好き",
+    "いず",
+    "くん",
+    "本当に",
+    "っ",
+    "い",
+    "ダンス",
+    "す",
+    "らしい",
+    "え",
+    "えー",
+    "り",
+    "あり",
+    "う",
+    "ざ"
+   ]
+  },
+  {
+   "id": "kc.tsukimi",
+   "title": "月見",
+   "level": "A2",
+   "pdfUrl": "https://www.jpf.go.jp/j/kansai/clip/images/page/yomyom/002_tsukimi.pdf",
+   "mp3Url": null,
+   "pages": 11,
+   "chars": 272,
+   "sentences": [
+    {
+     "jpn": "みなさんは月が好きですか？",
+     "coverage": 0.875,
+     "coverageAllBooks": 1,
+     "totalTokens": 8,
+     "unknownRuns": [],
+     "unknownItemIds": [
+      "vocab.mi"
+     ]
+    },
+    {
+     "jpn": "秋は月がとてもきれいです。",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 7,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "日本では、秋にきれいな月を見ます。",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 10,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "「月見」といいます。",
+     "coverage": 0.75,
+     "coverageAllBooks": 0.75,
+     "totalTokens": 4,
+     "unknownRuns": [
+      "月見"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "「月見」では団子を食べます。",
+     "coverage": 0.7143,
+     "coverageAllBooks": 0.7143,
+     "totalTokens": 7,
+     "unknownRuns": [
+      "月見",
+      "団"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "団子は白くて丸いので、月に似ています。",
+     "coverage": 0.6667,
+     "coverageAllBooks": 0.75,
+     "totalTokens": 12,
+     "unknownRuns": [
+      "団",
+      "く",
+      "丸い"
+     ],
+     "unknownItemIds": [
+      "vocab.niru"
+     ]
+    },
+    {
+     "jpn": "月の中に何が見えますか？",
+     "coverage": 0.9,
+     "coverageAllBooks": 0.9,
+     "totalTokens": 10,
+     "unknownRuns": [
+      "え"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "日本では、月にウサギがいると言われています。",
+     "coverage": 0.75,
+     "coverageAllBooks": 0.8333,
+     "totalTokens": 12,
+     "unknownRuns": [
+      "ウサギ",
+      "れ"
+     ],
+     "unknownItemIds": [
+      "vocab.gai"
+     ]
+    },
+    {
+     "jpn": "ウサギはもちを作っています。",
+     "coverage": 0.75,
+     "coverageAllBooks": 0.75,
+     "totalTokens": 8,
+     "unknownRuns": [
+      "ウサギ",
+      "ち"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "南アメリカでは、ロバ。",
+     "coverage": 0.3333,
+     "coverageAllBooks": 0.3333,
+     "totalTokens": 3,
+     "unknownRuns": [
+      "南アメリカ",
+      "ロバ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "アラビアでは、ライオン。",
+     "coverage": 0.3333,
+     "coverageAllBooks": 0.3333,
+     "totalTokens": 3,
+     "unknownRuns": [
+      "アラビア",
+      "ライオン"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "東ヨーロッパや北アメリカでは、髪の長い女の人。",
+     "coverage": 0.5556,
+     "coverageAllBooks": 0.6667,
+     "totalTokens": 9,
+     "unknownRuns": [
+      "ヨーロッパ",
+      "北アメリカ",
+      "髪"
+     ],
+     "unknownItemIds": [
+      "vocab.toukyou"
+     ]
+    },
+    {
+     "jpn": "北ヨーロッパでは、本を読む女の人がいる、と言われています。",
+     "coverage": 0.7692,
+     "coverageAllBooks": 0.8462,
+     "totalTokens": 13,
+     "unknownRuns": [
+      "北ヨーロッパ",
+      "れ"
+     ],
+     "unknownItemIds": [
+      "vocab.gai"
+     ]
+    },
+    {
+     "jpn": "おもしろいですね。",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 3,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "みなさんの国では、どんな時に月を見ますか？",
+     "coverage": 0.8571,
+     "coverageAllBooks": 1,
+     "totalTokens": 14,
+     "unknownRuns": [],
+     "unknownItemIds": [
+      "vocab.mi",
+      "vocab.donna"
+     ]
+    },
+    {
+     "jpn": "月の中に何が見えますか？",
+     "coverage": 0.9,
+     "coverageAllBooks": 0.9,
+     "totalTokens": 10,
+     "unknownRuns": [
+      "え"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "ぜひ、秋にはきれいな月を楽しんでください。",
+     "coverage": 0.8182,
+     "coverageAllBooks": 0.8182,
+     "totalTokens": 11,
+     "unknownRuns": [
+      "ぜひ",
+      "ん"
+     ],
+     "unknownItemIds": []
+    }
+   ],
+   "passageCoverage": 0.7917,
+   "passageCoverageAllBooks": 0.8403,
+   "band": "below",
+   "unknownRuns": [
+    "月見",
+    "団",
+    "く",
+    "丸い",
+    "え",
+    "ウサギ",
+    "れ",
+    "ち",
+    "南アメリカ",
+    "ロバ",
+    "アラビア",
+    "ライオン",
+    "ヨーロッパ",
+    "北アメリカ",
+    "髪",
+    "北ヨーロッパ",
+    "ぜひ",
+    "ん"
+   ]
+  },
+  {
+   "id": "kc.kisetsu",
+   "title": "季節",
+   "level": "A2",
+   "pdfUrl": "https://www.jpf.go.jp/j/kansai/clip/images/page/yomyom/006_kisetsu.pdf",
+   "mp3Url": "https://www.jpf.go.jp/j/kansai/clip/sound/page/yomyom/006_kisetsu.mp3",
+   "pages": 13,
+   "chars": 336,
+   "sentences": [
+    {
+     "jpn": "待っています。",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 3,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "わたしは、春を待っています。",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 7,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "春は、公園に行きます。",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 7,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "花を見て、お弁当を食べます。",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 8,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "そらまめと、たけのこをいただきます。",
+     "coverage": 0.7,
+     "coverageAllBooks": 0.7,
+     "totalTokens": 10,
+     "unknownRuns": [
+      "ま",
+      "け",
+      "こ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "待っています。",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 3,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "わたしは、夏を待っています。",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 7,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "夏は、海に行きます。",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 7,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "貝をひろって、波の音を聞きます。",
+     "coverage": 0.7273,
+     "coverageAllBooks": 0.7273,
+     "totalTokens": 11,
+     "unknownRuns": [
+      "貝",
+      "ひろ",
+      "波"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "つかれたら、すずしい部屋でトウモロコシとスイカをいただきます。",
+     "coverage": 0.75,
+     "coverageAllBooks": 0.75,
+     "totalTokens": 12,
+     "unknownRuns": [
+      "れ",
+      "トウモロコシ",
+      "スイカ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "待っています。",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 3,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "わたしは、秋を待っています。",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 7,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "秋は、山に行きます。",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 7,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "木を見て、栗をひろいます。",
+     "coverage": 0.75,
+     "coverageAllBooks": 0.75,
+     "totalTokens": 8,
+     "unknownRuns": [
+      "栗",
+      "ひろ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "月を見ながら、栗ごはんとさんまをいただきます。",
+     "coverage": 0.7692,
+     "coverageAllBooks": 0.7692,
+     "totalTokens": 13,
+     "unknownRuns": [
+      "ら",
+      "栗",
+      "ま"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "待っています。",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 3,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "わたしは、冬を待っています。",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 7,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "冬は、温泉に行きます。",
+     "coverage": 0.8571,
+     "coverageAllBooks": 0.8571,
+     "totalTokens": 7,
+     "unknownRuns": [
+      "温泉"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "あたたかいお風呂に入って、星を見ます。",
+     "coverage": 0.8,
+     "coverageAllBooks": 0.8,
+     "totalTokens": 10,
+     "unknownRuns": [
+      "お",
+      "星"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "みんなでカニ鍋とミカンをいただきます。",
+     "coverage": 0.5,
+     "coverageAllBooks": 0.7,
+     "totalTokens": 10,
+     "unknownRuns": [
+      "ん",
+      "カニ",
+      "ミカン"
+     ],
+     "unknownItemIds": [
+      "vocab.mi",
+      "vocab.nabe"
+     ]
+    },
+    {
+     "jpn": "待っています。",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 3,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "いま、新しい年を待っています。",
+     "coverage": 0.8571,
+     "coverageAllBooks": 1,
+     "totalTokens": 7,
+     "unknownRuns": [],
+     "unknownItemIds": [
+      "vocab.toshi"
+     ]
+    },
+    {
+     "jpn": "あ、かねの音が聞こえます。",
+     "coverage": 0.7778,
+     "coverageAllBooks": 0.7778,
+     "totalTokens": 9,
+     "unknownRuns": [
+      "あ",
+      "こえ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "新しい年が来ました。",
+     "coverage": 0.8,
+     "coverageAllBooks": 1,
+     "totalTokens": 5,
+     "unknownRuns": [],
+     "unknownItemIds": [
+      "vocab.toshi"
+     ]
+    },
+    {
+     "jpn": "あけまして、おめでとう！",
+     "coverage": 0.5714,
+     "coverageAllBooks": 0.5714,
+     "totalTokens": 7,
+     "unknownRuns": [
+      "あけま",
+      "お",
+      "う"
+     ],
+     "unknownItemIds": []
+    }
+   ],
+   "passageCoverage": 0.8398,
+   "passageCoverageAllBooks": 0.8619,
+   "band": "below",
+   "unknownRuns": [
+    "ま",
+    "け",
+    "こ",
+    "貝",
+    "ひろ",
+    "波",
+    "れ",
+    "トウモロコシ",
+    "スイカ",
+    "栗",
+    "ら",
+    "温泉",
+    "お",
+    "星",
+    "ん",
+    "カニ",
+    "ミカン",
+    "あ",
+    "こえ",
+    "あけま",
+    "う"
+   ]
+  },
+  {
+   "id": "kc.obake",
+   "title": "お化け",
+   "level": "A2",
+   "pdfUrl": "https://www.jpf.go.jp/j/kansai/clip/images/page/yomyom/007_obake.pdf",
+   "mp3Url": "https://www.jpf.go.jp/j/kansai/clip/sound/page/yomyom/007_obake.mp3",
+   "pages": 14,
+   "chars": 279,
+   "sentences": [
+    {
+     "jpn": "「お化け」を知っていますか？",
+     "coverage": 0.8333,
+     "coverageAllBooks": 0.8333,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "お化け"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "お化けは、幽霊や妖怪です。",
+     "coverage": 0.5,
+     "coverageAllBooks": 0.5,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "お化け",
+      "幽霊",
+      "妖怪"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "幽霊は、死んだ人です。",
+     "coverage": 0.8333,
+     "coverageAllBooks": 0.8333,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "幽霊"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "妖怪は、日本のモンスターです。",
+     "coverage": 0.6667,
+     "coverageAllBooks": 0.6667,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "妖怪",
+      "モンスター"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "これは、古い幽霊の絵です。",
+     "coverage": 0.7143,
+     "coverageAllBooks": 0.7143,
+     "totalTokens": 7,
+     "unknownRuns": [
+      "幽霊",
+      "絵"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "体の前に、いつも手を出しています。",
+     "coverage": 0.9,
+     "coverageAllBooks": 0.9,
+     "totalTokens": 10,
+     "unknownRuns": [
+      "前"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "そして、足がありません。",
+     "coverage": 0.8,
+     "coverageAllBooks": 0.8,
+     "totalTokens": 5,
+     "unknownRuns": [
+      "そ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "頭に白い三角（△）をつけています。",
+     "coverage": 0.75,
+     "coverageAllBooks": 0.75,
+     "totalTokens": 8,
+     "unknownRuns": [
+      "三角",
+      "け"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "そして、白い着物を着ています。",
+     "coverage": 0.7143,
+     "coverageAllBooks": 0.7143,
+     "totalTokens": 7,
+     "unknownRuns": [
+      "そ",
+      "着物"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "よく、木の近くにいます。",
+     "coverage": 0.8571,
+     "coverageAllBooks": 0.8571,
+     "totalTokens": 7,
+     "unknownRuns": [
+      "く"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "これは妖怪です。",
+     "coverage": 0.75,
+     "coverageAllBooks": 0.75,
+     "totalTokens": 4,
+     "unknownRuns": [
+      "妖怪"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "いろいろな妖怪がいます。",
+     "coverage": 0.6667,
+     "coverageAllBooks": 0.8333,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "妖怪"
+     ],
+     "unknownItemIds": [
+      "vocab.gai"
+     ]
+    },
+    {
+     "jpn": "これは動物の妖怪です。",
+     "coverage": 0.6667,
+     "coverageAllBooks": 0.8333,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "妖怪"
+     ],
+     "unknownItemIds": [
+      "vocab.doubutsu"
+     ]
+    },
+    {
+     "jpn": "これは楽器の妖怪です。",
+     "coverage": 0.6667,
+     "coverageAllBooks": 0.6667,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "楽器",
+      "妖怪"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "日本には、幽霊や妖怪の怖い話がたくさんあります。",
+     "coverage": 0.7273,
+     "coverageAllBooks": 0.7273,
+     "totalTokens": 11,
+     "unknownRuns": [
+      "幽霊",
+      "妖怪",
+      "怖い"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "夏には、よく怖い話をします。",
+     "coverage": 0.8571,
+     "coverageAllBooks": 0.8571,
+     "totalTokens": 7,
+     "unknownRuns": [
+      "く怖い"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "怖い話を聞くと寒くなります。",
+     "coverage": 0.7,
+     "coverageAllBooks": 0.7,
+     "totalTokens": 10,
+     "unknownRuns": [
+      "怖い",
+      "く",
+      "り"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "ですから、暑い夏にとてもいいです。",
+     "coverage": 0.875,
+     "coverageAllBooks": 0.875,
+     "totalTokens": 8,
+     "unknownRuns": [
+      "ら"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "みなさんも怖い話を楽しんでください。",
+     "coverage": 0.7273,
+     "coverageAllBooks": 0.8182,
+     "totalTokens": 11,
+     "unknownRuns": [
+      "怖い",
+      "ん"
+     ],
+     "unknownItemIds": [
+      "vocab.mi"
+     ]
+    },
+    {
+     "jpn": "それでは、さようなら。",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 3,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    }
+   ],
+   "passageCoverage": 0.7571,
+   "passageCoverageAllBooks": 0.7786,
+   "band": "below",
+   "unknownRuns": [
+    "お化け",
+    "幽霊",
+    "妖怪",
+    "モンスター",
+    "絵",
+    "前",
+    "そ",
+    "三角",
+    "け",
+    "着物",
+    "く",
+    "楽器",
+    "怖い",
+    "く怖い",
+    "り",
+    "ら",
+    "ん"
+   ]
+  },
+  {
+   "id": "kc.hijoguchi",
+   "title": "非常口",
+   "level": "A2",
+   "pdfUrl": "https://www.jpf.go.jp/j/kansai/clip/images/page/yomyom/008_hijoguchi.pdf",
+   "mp3Url": null,
+   "pages": 13,
+   "chars": 339,
+   "sentences": [
+    {
+     "jpn": "ここにあります。",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 3,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "そこにもあります。",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 3,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "あそこにもあります。",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 3,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "これは何ですか？",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 4,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "見たことがありますか？",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 6,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "これは「非常口」のサインです。",
+     "coverage": 0.6667,
+     "coverageAllBooks": 0.6667,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "非常口",
+      "サイン"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "非常口は、火事や地震などで逃げるときに使います。",
+     "coverage": 0.6429,
+     "coverageAllBooks": 0.6429,
+     "totalTokens": 14,
+     "unknownRuns": [
+      "非常口",
+      "火事",
+      "地震",
+      "ど",
+      "逃げ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "1970年頃、日本ではデパートなど人が多い場所で火事がたくさんありました。",
+     "coverage": 0.5625,
+     "coverageAllBooks": 0.625,
+     "totalTokens": 16,
+     "unknownRuns": [
+      "年頃",
+      "デパート",
+      "ど",
+      "い",
+      "場所",
+      "火事"
+     ],
+     "unknownItemIds": [
+      "vocab.tasai"
+     ]
+    },
+    {
+     "jpn": "ですから、わかりやすい非常口のサインを作ることにしました。",
+     "coverage": 0.7143,
+     "coverageAllBooks": 0.7143,
+     "totalTokens": 14,
+     "unknownRuns": [
+      "ら",
+      "り",
+      "非常口",
+      "サイン"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "はじめは「非常口」という文字だけのサインでしたが、子どもや外国人にもわかりやすいように、絵のサインを作りました。",
+     "coverage": 0.6875,
+     "coverageAllBooks": 0.7188,
+     "totalTokens": 32,
+     "unknownRuns": [
+      "じ",
+      "非常口",
+      "文字",
+      "サイン",
+      "ど",
+      "り",
+      "絵"
+     ],
+     "unknownItemIds": [
+      "vocab.gaikokujin"
+     ]
+    },
+    {
+     "jpn": "1982年に、今の非常口のサインが決まりました。",
+     "coverage": 0.5455,
+     "coverageAllBooks": 0.7273,
+     "totalTokens": 11,
+     "unknownRuns": [
+      "非常口",
+      "サイン",
+      "り"
+     ],
+     "unknownItemIds": [
+      "vocab.toshi",
+      "vocab.kimaru"
+     ]
+    },
+    {
+     "jpn": "そして、1987年に国際的なサインになりました。",
+     "coverage": 0.5455,
+     "coverageAllBooks": 0.6364,
+     "totalTokens": 11,
+     "unknownRuns": [
+      "そ",
+      "国際的",
+      "サイン",
+      "り"
+     ],
+     "unknownItemIds": [
+      "vocab.toshi"
+     ]
+    },
+    {
+     "jpn": "非常口のサインは、白いサインと緑のサインがあります。",
+     "coverage": 0.6667,
+     "coverageAllBooks": 0.6667,
+     "totalTokens": 12,
+     "unknownRuns": [
+      "非常口",
+      "サイン"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "白いサインは、非常口のある場所を教えます。",
+     "coverage": 0.7,
+     "coverageAllBooks": 0.7,
+     "totalTokens": 10,
+     "unknownRuns": [
+      "サイン",
+      "非常口",
+      "場所"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "緑のサインは、非常口です。",
+     "coverage": 0.6667,
+     "coverageAllBooks": 0.6667,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "サイン",
+      "非常口"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "危ないときは、気をつけて逃げましょう！",
+     "coverage": 0.7273,
+     "coverageAllBooks": 0.8182,
+     "totalTokens": 11,
+     "unknownRuns": [
+      "け",
+      "逃げ"
+     ],
+     "unknownItemIds": [
+      "vocab.kiken"
+     ]
+    },
+    {
+     "jpn": "さようなら",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 1,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    }
+   ],
+   "passageCoverage": 0.6933,
+   "passageCoverageAllBooks": 0.7301,
+   "band": "below",
+   "unknownRuns": [
+    "非常口",
+    "サイン",
+    "火事",
+    "地震",
+    "ど",
+    "逃げ",
+    "年頃",
+    "デパート",
+    "い",
+    "場所",
+    "ら",
+    "り",
+    "じ",
+    "文字",
+    "絵",
+    "そ",
+    "国際的",
+    "け"
+   ]
+  },
+  {
+   "id": "kc.kabocha",
+   "title": "かぼちゃ",
+   "level": "A2",
+   "pdfUrl": "https://www.jpf.go.jp/j/kansai/clip/images/page/yomyom/009_kabocha.pdf",
+   "mp3Url": null,
+   "pages": 12,
+   "chars": 417,
+   "sentences": [
+    {
+     "jpn": "これはかぼちゃです。",
+     "coverage": 0.8,
+     "coverageAllBooks": 0.8,
+     "totalTokens": 5,
+     "unknownRuns": [
+      "ぼちゃ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "「かぼちゃ」はどんな意味ですか？",
+     "coverage": 0.5,
+     "coverageAllBooks": 0.8333,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "ぼちゃ"
+     ],
+     "unknownItemIds": [
+      "vocab.donna",
+      "vocab.imi"
+     ]
+    },
+    {
+     "jpn": "「かぼちゃ」はポルトガル語です。",
+     "coverage": 0.6,
+     "coverageAllBooks": 0.6,
+     "totalTokens": 5,
+     "unknownRuns": [
+      "ぼちゃ",
+      "ポルトガル語"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "ポルトガル語の「Cambodia（カンボジア）」が「かぼちゃ」という名前になりました。",
+     "coverage": 0.6154,
+     "coverageAllBooks": 0.6154,
+     "totalTokens": 13,
+     "unknownRuns": [
+      "ポルトガル語",
+      "カンボジア",
+      "ぼちゃ",
+      "名前",
+      "り"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "カンボジアは国の名前です。",
+     "coverage": 0.6667,
+     "coverageAllBooks": 0.6667,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "カンボジア",
+      "名前"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "どうして「カンボジア」が「かぼちゃ」になりましたか？",
+     "coverage": 0.7273,
+     "coverageAllBooks": 0.7273,
+     "totalTokens": 11,
+     "unknownRuns": [
+      "カンボジア",
+      "ぼちゃ",
+      "り"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "？",
+     "coverage": 0,
+     "coverageAllBooks": 0,
+     "totalTokens": 0,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "？",
+     "coverage": 0,
+     "coverageAllBooks": 0,
+     "totalTokens": 0,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "かぼちゃはアメリカ大陸でできて、世界に広がりました。",
+     "coverage": 0.6,
+     "coverageAllBooks": 0.7333,
+     "totalTokens": 15,
+     "unknownRuns": [
+      "ぼちゃ",
+      "アメリカ",
+      "大陸",
+      "り"
+     ],
+     "unknownItemIds": [
+      "vocab.sekai",
+      "vocab.hiroma"
+     ]
+    },
+    {
+     "jpn": "1550年頃に、日本にかぼちゃが来たと言われています。",
+     "coverage": 0.7857,
+     "coverageAllBooks": 0.7857,
+     "totalTokens": 14,
+     "unknownRuns": [
+      "年頃",
+      "ぼちゃ",
+      "れ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "ポルトガル人が、カンボジアから日本にかぼちゃを持ってきました。",
+     "coverage": 0.7692,
+     "coverageAllBooks": 0.7692,
+     "totalTokens": 13,
+     "unknownRuns": [
+      "ポルトガル",
+      "カンボジア",
+      "ぼちゃ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "そのとき、日本人はかぼちゃがカンボジアの野菜だと思いました。",
+     "coverage": 0.7857,
+     "coverageAllBooks": 0.7857,
+     "totalTokens": 14,
+     "unknownRuns": [
+      "日本人",
+      "ぼちゃ",
+      "カンボジア"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "それで、この野菜の名前を「かぼちゃ」にしました。",
+     "coverage": 0.8182,
+     "coverageAllBooks": 0.8182,
+     "totalTokens": 11,
+     "unknownRuns": [
+      "名前",
+      "ぼちゃ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "かぼちゃは夏の野菜ですが、長く保存できます。",
+     "coverage": 0.8462,
+     "coverageAllBooks": 0.8462,
+     "totalTokens": 13,
+     "unknownRuns": [
+      "ぼちゃ",
+      "く保存"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "冬にも食べることができるので、便利な野菜です。",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 11,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "春夏秋冬かぼちゃを食べると風邪をひかないと言われています。",
+     "coverage": 0.75,
+     "coverageAllBooks": 0.75,
+     "totalTokens": 16,
+     "unknownRuns": [
+      "春夏秋冬",
+      "ぼちゃ",
+      "ひ",
+      "れ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "ですから、日本では一年で一番昼が短くなる日にかぼちゃを食べる習慣があります。",
+     "coverage": 0.7143,
+     "coverageAllBooks": 0.8095,
+     "totalTokens": 21,
+     "unknownRuns": [
+      "ら",
+      "一年",
+      "く",
+      "ぼちゃ"
+     ],
+     "unknownItemIds": [
+      "vocab.ichiban",
+      "vocab.shuukan"
+     ]
+    },
+    {
+     "jpn": "かぼちゃ料理はいろいろあります。",
+     "coverage": 0.7143,
+     "coverageAllBooks": 0.7143,
+     "totalTokens": 7,
+     "unknownRuns": [
+      "ぼちゃ",
+      "ろ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "かぼちゃを食べて、風邪をひかないようにしましょう！",
+     "coverage": 0.7857,
+     "coverageAllBooks": 0.7857,
+     "totalTokens": 14,
+     "unknownRuns": [
+      "ぼちゃ",
+      "ひ",
+      "し"
+     ],
+     "unknownItemIds": []
+    }
+   ],
+   "passageCoverage": 0.7436,
+   "passageCoverageAllBooks": 0.7744,
+   "band": "below",
+   "unknownRuns": [
+    "ぼちゃ",
+    "ポルトガル語",
+    "カンボジア",
+    "名前",
+    "り",
+    "アメリカ",
+    "大陸",
+    "年頃",
+    "れ",
+    "ポルトガル",
+    "日本人",
+    "く保存",
+    "春夏秋冬",
+    "ひ",
+    "ら",
+    "一年",
+    "く",
+    "ろ",
+    "し"
+   ]
+  },
+  {
+   "id": "kc.senshuyasai",
+   "title": "泉州野菜",
+   "level": "A2",
+   "pdfUrl": "https://www.jpf.go.jp/j/kansai/clip/images/page/yomyom/010_senshuyasai.pdf",
+   "mp3Url": "https://www.jpf.go.jp/j/kansai/clip/sound/page/yomyom/010_senshuyasai_native.mp3",
+   "pages": 20,
+   "chars": 825,
+   "sentences": [
+    {
+     "jpn": "こんにちは。",
+     "coverage": 0.5,
+     "coverageAllBooks": 0.5,
+     "totalTokens": 4,
+     "unknownRuns": [
+      "こん",
+      "ち"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "Ｋくんでーす。",
+     "coverage": 0.3333,
+     "coverageAllBooks": 0.3333,
+     "totalTokens": 3,
+     "unknownRuns": [
+      "くん",
+      "ーす"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "こんにちは。",
+     "coverage": 0.5,
+     "coverageAllBooks": 0.5,
+     "totalTokens": 4,
+     "unknownRuns": [
+      "こん",
+      "ち"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "Ｃちゃんでーす。",
+     "coverage": 0.3333,
+     "coverageAllBooks": 0.3333,
+     "totalTokens": 3,
+     "unknownRuns": [
+      "ちゃん",
+      "ーす"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "ふたりあわせてKCでーす。",
+     "coverage": 0.5714,
+     "coverageAllBooks": 0.7143,
+     "totalTokens": 7,
+     "unknownRuns": [
+      "あ",
+      "ーす"
+     ],
+     "unknownItemIds": [
+      "vocab.se"
+     ]
+    },
+    {
+     "jpn": "ねえねえ、Kくんはどうしてそんな形なのですか？",
+     "coverage": 0.6,
+     "coverageAllBooks": 0.6,
+     "totalTokens": 15,
+     "unknownRuns": [
+      "え",
+      "くん",
+      "そん",
+      "形",
+      "す"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "これはね、関 西センター「Kansai」のKですよ。",
+     "coverage": 0.75,
+     "coverageAllBooks": 0.875,
+     "totalTokens": 8,
+     "unknownRuns": [
+      "西センター"
+     ],
+     "unknownItemIds": [
+      "vocab.kankei",
+      "vocab.kanyo"
+     ]
+    },
+    {
+     "jpn": "それに、この形がわかりませんか？",
+     "coverage": 0.7778,
+     "coverageAllBooks": 0.7778,
+     "totalTokens": 9,
+     "unknownRuns": [
+      "形",
+      "り"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "泉 州の水ナスは有 名ですよ。",
+     "coverage": 0.6,
+     "coverageAllBooks": 0.7,
+     "totalTokens": 10,
+     "unknownRuns": [
+      "泉",
+      "州",
+      "ナス"
+     ],
+     "unknownItemIds": [
+      "vocab.meiyo"
+     ]
+    },
+    {
+     "jpn": "普通のナスより水 分が多くて、柔らかいんです。",
+     "coverage": 0.6154,
+     "coverageAllBooks": 0.7692,
+     "totalTokens": 13,
+     "unknownRuns": [
+      "ナス",
+      "く",
+      "柔ら"
+     ],
+     "unknownItemIds": [
+      "vocab.futsuu",
+      "vocab.tasai"
+     ]
+    },
+    {
+     "jpn": "そういうCちゃんは、どうしてそんな形なのですか？",
+     "coverage": 0.6923,
+     "coverageAllBooks": 0.6923,
+     "totalTokens": 13,
+     "unknownRuns": [
+      "ちゃん",
+      "そん",
+      "形",
+      "す"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "これですか？",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 2,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "これは関 西センター「Center」の「C」ですよ。",
+     "coverage": 0.7143,
+     "coverageAllBooks": 0.8571,
+     "totalTokens": 7,
+     "unknownRuns": [
+      "西センター"
+     ],
+     "unknownItemIds": [
+      "vocab.kankei",
+      "vocab.kanyo"
+     ]
+    },
+    {
+     "jpn": "それで、この形がわかりませんか？",
+     "coverage": 0.7778,
+     "coverageAllBooks": 0.7778,
+     "totalTokens": 9,
+     "unknownRuns": [
+      "形",
+      "り"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "泉 州たまねぎですよ！",
+     "coverage": 0.5,
+     "coverageAllBooks": 0.5,
+     "totalTokens": 8,
+     "unknownRuns": [
+      "泉",
+      "州",
+      "ま",
+      "ぎ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "普通のたまねぎより柔らかくて、甘いし、有 名です。",
+     "coverage": 0.6,
+     "coverageAllBooks": 0.7333,
+     "totalTokens": 15,
+     "unknownRuns": [
+      "ま",
+      "ぎ",
+      "柔ら",
+      "し"
+     ],
+     "unknownItemIds": [
+      "vocab.futsuu",
+      "vocab.meiyo"
+     ]
+    },
+    {
+     "jpn": "私たちは2人とも大阪の泉 州野菜だったんですね。",
+     "coverage": 0.7857,
+     "coverageAllBooks": 0.7857,
+     "totalTokens": 14,
+     "unknownRuns": [
+      "大阪",
+      "泉",
+      "州"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "長い間一緒にいますけど、全然気がつきませんでした。",
+     "coverage": 0.8,
+     "coverageAllBooks": 0.8,
+     "totalTokens": 10,
+     "unknownRuns": [
+      "長い間",
+      "全然"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "わからないものですねえ。",
+     "coverage": 0.7143,
+     "coverageAllBooks": 0.8571,
+     "totalTokens": 7,
+     "unknownRuns": [
+      "え"
+     ],
+     "unknownItemIds": [
+      "vocab.mono-person"
+     ]
+    },
+    {
+     "jpn": "本当ですねえ。",
+     "coverage": 0.5,
+     "coverageAllBooks": 0.5,
+     "totalTokens": 4,
+     "unknownRuns": [
+      "本当",
+      "え"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "水ナスは江戸時代から泉 州地域で作られています。",
+     "coverage": 0.4615,
+     "coverageAllBooks": 0.4615,
+     "totalTokens": 13,
+     "unknownRuns": [
+      "ナス",
+      "江戸",
+      "時代",
+      "泉",
+      "州",
+      "地域",
+      "られ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "4月から9月くらいにとれる野菜です。",
+     "coverage": 0.9,
+     "coverageAllBooks": 0.9,
+     "totalTokens": 10,
+     "unknownRuns": [
+      "れ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "特に、水ナスの浅漬けという漬物がおいしくて有名です。",
+     "coverage": 0.5625,
+     "coverageAllBooks": 0.6875,
+     "totalTokens": 16,
+     "unknownRuns": [
+      "特",
+      "ナス",
+      "漬け",
+      "漬",
+      "おいしく"
+     ],
+     "unknownItemIds": [
+      "vocab.asai",
+      "vocab.monogatari"
+     ]
+    },
+    {
+     "jpn": "へえ、おいしそうですね。",
+     "coverage": 0.6667,
+     "coverageAllBooks": 0.6667,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "え",
+      "おいし"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "ごはんと一緒に食べたいです。",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 6,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "泉 州たまねぎは明治時代から作られています。",
+     "coverage": 0.4615,
+     "coverageAllBooks": 0.4615,
+     "totalTokens": 13,
+     "unknownRuns": [
+      "泉",
+      "州",
+      "ま",
+      "ぎ",
+      "明治",
+      "時代",
+      "られ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "「日本のたまねぎ作りの最初の場所」だと言われるくらい泉 州は有名なんですよ。",
+     "coverage": 0.6923,
+     "coverageAllBooks": 0.7308,
+     "totalTokens": 26,
+     "unknownRuns": [
+      "ま",
+      "ぎ",
+      "り",
+      "場所",
+      "れ",
+      "泉",
+      "州"
+     ],
+     "unknownItemIds": [
+      "vocab.saisho"
+     ]
+    },
+    {
+     "jpn": "5月くらいが一番おいしい野菜です。",
+     "coverage": 0.8571,
+     "coverageAllBooks": 1,
+     "totalTokens": 7,
+     "unknownRuns": [],
+     "unknownItemIds": [
+      "vocab.ichiban"
+     ]
+    },
+    {
+     "jpn": "へえ。",
+     "coverage": 0.5,
+     "coverageAllBooks": 0.5,
+     "totalTokens": 2,
+     "unknownRuns": [
+      "え"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "泉 州のたまねぎがそんなに有名だなんて、全然知りませんでした。",
+     "coverage": 0.5294,
+     "coverageAllBooks": 0.6471,
+     "totalTokens": 17,
+     "unknownRuns": [
+      "泉",
+      "州",
+      "ま",
+      "ぎ",
+      "ん",
+      "全然"
+     ],
+     "unknownItemIds": [
+      "vocab.sonnani",
+      "vocab.shiriai"
+     ]
+    },
+    {
+     "jpn": "私たちの住んでいる関 西センターは、大 阪の泉 州という地域にありますよね。",
+     "coverage": 0.6667,
+     "coverageAllBooks": 0.7143,
+     "totalTokens": 21,
+     "unknownRuns": [
+      "ん",
+      "西センター",
+      "阪",
+      "泉",
+      "州",
+      "地域"
+     ],
+     "unknownItemIds": [
+      "vocab.kankei",
+      "vocab.kanyo"
+     ]
+    },
+    {
+     "jpn": "他にもおいしいものがたくさんあります。",
+     "coverage": 0.7143,
+     "coverageAllBooks": 1,
+     "totalTokens": 7,
+     "unknownRuns": [],
+     "unknownItemIds": [
+      "vocab.hokani",
+      "vocab.mono-person"
+     ]
+    },
+    {
+     "jpn": "ですから、太ってしまって困りますね。",
+     "coverage": 0.7,
+     "coverageAllBooks": 0.7,
+     "totalTokens": 10,
+     "unknownRuns": [
+      "ら",
+      "しま",
+      "り"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "まあ、それは仕方がないですね。",
+     "coverage": 0.625,
+     "coverageAllBooks": 0.75,
+     "totalTokens": 8,
+     "unknownRuns": [
+      "まあ",
+      "す"
+     ],
+     "unknownItemIds": [
+      "vocab.shikata"
+     ]
+    },
+    {
+     "jpn": "はい、仕方がありません。",
+     "coverage": 0.75,
+     "coverageAllBooks": 1,
+     "totalTokens": 4,
+     "unknownRuns": [],
+     "unknownItemIds": [
+      "vocab.shikata"
+     ]
+    },
+    {
+     "jpn": "まあ幸せ太りという言葉もありますし、いいと思います。",
+     "coverage": 0.6429,
+     "coverageAllBooks": 0.7143,
+     "totalTokens": 14,
+     "unknownRuns": [
+      "まあ",
+      "り",
+      "言葉",
+      "し"
+     ],
+     "unknownItemIds": [
+      "vocab.shiawase"
+     ]
+    },
+    {
+     "jpn": "Kくんは幸せだったんですか？",
+     "coverage": 0.6667,
+     "coverageAllBooks": 0.8333,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "くん"
+     ],
+     "unknownItemIds": [
+      "vocab.shiawase"
+     ]
+    },
+    {
+     "jpn": "初耳です。",
+     "coverage": 0.6667,
+     "coverageAllBooks": 0.6667,
+     "totalTokens": 3,
+     "unknownRuns": [
+      "初"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "うるさいなあ。",
+     "coverage": 0.5,
+     "coverageAllBooks": 0.5,
+     "totalTokens": 4,
+     "unknownRuns": [
+      "さい",
+      "あ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "これから幸せになりますよ。",
+     "coverage": 0.75,
+     "coverageAllBooks": 0.875,
+     "totalTokens": 8,
+     "unknownRuns": [
+      "り"
+     ],
+     "unknownItemIds": [
+      "vocab.shiawase"
+     ]
+    },
+    {
+     "jpn": "じゃあ、そろそろ帰りましょうか。",
+     "coverage": 0.5,
+     "coverageAllBooks": 0.6667,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "じゃあ",
+      "り"
+     ],
+     "unknownItemIds": [
+      "vocab.sorosoro"
+     ]
+    },
+    {
+     "jpn": "そうですね。",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 3,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "みなさん、さようなら。",
+     "coverage": 0.75,
+     "coverageAllBooks": 1,
+     "totalTokens": 4,
+     "unknownRuns": [],
+     "unknownItemIds": [
+      "vocab.mi"
+     ]
+    },
+    {
+     "jpn": "私たちは今日何をしに来たんでしょうか？",
+     "coverage": 0.8333,
+     "coverageAllBooks": 0.8333,
+     "totalTokens": 12,
+     "unknownRuns": [
+      "し",
+      "ん"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "よく知りませんが、私たちの話を授 業で使うらしいですよ。",
+     "coverage": 0.6875,
+     "coverageAllBooks": 0.75,
+     "totalTokens": 16,
+     "unknownRuns": [
+      "く",
+      "授",
+      "業",
+      "らしい"
+     ],
+     "unknownItemIds": [
+      "vocab.shiriai"
+     ]
+    },
+    {
+     "jpn": "私たちが出るんですから、とてもおもしろい授 業なんでしょうねえ。",
+     "coverage": 0.6429,
+     "coverageAllBooks": 0.6429,
+     "totalTokens": 14,
+     "unknownRuns": [
+      "ら",
+      "授",
+      "業",
+      "ん",
+      "え"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "後でお金をしっかりもらわないといけませんね。",
+     "coverage": 0.7333,
+     "coverageAllBooks": 0.7333,
+     "totalTokens": 15,
+     "unknownRuns": [
+      "後",
+      "しっ",
+      "り",
+      "ら"
+     ],
+     "unknownItemIds": []
+    }
+   ],
+   "passageCoverage": 0.6628,
+   "passageCoverageAllBooks": 0.7225,
+   "band": "below",
+   "unknownRuns": [
+    "こん",
+    "ち",
+    "くん",
+    "ーす",
+    "ちゃん",
+    "あ",
+    "え",
+    "そん",
+    "形",
+    "す",
+    "西センター",
+    "り",
+    "泉",
+    "州",
+    "ナス",
+    "く",
+    "柔ら",
+    "ま",
+    "ぎ",
+    "し",
+    "大阪",
+    "長い間",
+    "全然",
+    "本当",
+    "江戸",
+    "時代",
+    "地域",
+    "られ",
+    "れ",
+    "特",
+    "漬け",
+    "漬",
+    "おいしく",
+    "おいし",
+    "明治",
+    "場所",
+    "ん",
+    "阪",
+    "ら",
+    "しま",
+    "まあ",
+    "言葉",
+    "初",
+    "さい",
+    "じゃあ",
+    "授",
+    "業",
+    "らしい",
+    "後",
+    "しっ"
+   ]
+  },
+  {
+   "id": "kc.yadokari",
+   "title": "ヤドカリにげた",
+   "level": "A2",
+   "pdfUrl": "https://www.jpf.go.jp/j/kansai/clip/images/page/yomyom/011_yadokari.pdf",
+   "mp3Url": null,
+   "pages": 10,
+   "chars": 550,
+   "sentences": [
+    {
+     "jpn": "たかしくんは、ヤドカリをかっています。",
+     "coverage": 0.7778,
+     "coverageAllBooks": 0.7778,
+     "totalTokens": 9,
+     "unknownRuns": [
+      "しくん",
+      "ヤドカリ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "名前はヤドリンです。",
+     "coverage": 0.5,
+     "coverageAllBooks": 0.5,
+     "totalTokens": 4,
+     "unknownRuns": [
+      "名前",
+      "ヤドリン"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "たかしくん「おかあさーん」おかあさん「はーい」たかしくん「ヤドリン、ごはん食べないよ」おかあさん「どうしてかしら。",
+     "coverage": 0.6957,
+     "coverageAllBooks": 0.6957,
+     "totalTokens": 23,
+     "unknownRuns": [
+      "しくん",
+      "お",
+      "ーん",
+      "ーい",
+      "ヤドリン",
+      "しら"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "しらべてみなさい」たかしくん「チーズあげてもいい？",
+     "coverage": 0.5455,
+     "coverageAllBooks": 0.6364,
+     "totalTokens": 11,
+     "unknownRuns": [
+      "しらべ",
+      "さい",
+      "しくん",
+      "チーズあげ"
+     ],
+     "unknownItemIds": [
+      "vocab.mi"
+     ]
+    },
+    {
+     "jpn": "」おかあさん「じゃあ、あげなさい」たかしくん「はーい、チーズどこ？",
+     "coverage": 0.5,
+     "coverageAllBooks": 0.5,
+     "totalTokens": 12,
+     "unknownRuns": [
+      "じゃあ",
+      "あげ",
+      "さい",
+      "しくん",
+      "ーい",
+      "チーズ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "」おかあさん「冷蔵庫よ」ヤドリン「ムシャムシャムシャー」たかしくん「あっ、やったぁ、食べた」つぎの日。",
+     "coverage": 0.625,
+     "coverageAllBooks": 0.625,
+     "totalTokens": 16,
+     "unknownRuns": [
+      "冷蔵庫",
+      "ヤドリン",
+      "ムシャムシャムシャー",
+      "しくん",
+      "あっ",
+      "ぁ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "たかしくん「おとうさーん」おとうさん「はーい」たかしくん「ポップコーン食べさせていい？",
+     "coverage": 0.5556,
+     "coverageAllBooks": 0.6111,
+     "totalTokens": 18,
+     "unknownRuns": [
+      "しくん",
+      "お",
+      "うさーん",
+      "ーい",
+      "ポップコーン",
+      "さ"
+     ],
+     "unknownItemIds": [
+      "vocab.se"
+     ]
+    },
+    {
+     "jpn": "」おとうさん「いいよ。",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 3,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "でも、食べるかなあ」たかしくん「はい、どうぞ」ヤドリン「ムシャムシャムシャー」つぎの日。",
+     "coverage": 0.6875,
+     "coverageAllBooks": 0.6875,
+     "totalTokens": 16,
+     "unknownRuns": [
+      "あ",
+      "しくん",
+      "ぞ",
+      "ヤドリン",
+      "ムシャムシャムシャー"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "たかしくん「ヤドリンがいないよー」おとうさん「ヤドリンにげた！",
+     "coverage": 0.5385,
+     "coverageAllBooks": 0.6154,
+     "totalTokens": 13,
+     "unknownRuns": [
+      "しくん",
+      "ヤドリン",
+      "ー",
+      "げ"
+     ],
+     "unknownItemIds": [
+      "vocab.gai"
+     ]
+    },
+    {
+     "jpn": "」おかあさん「たいへん！",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 2,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "さがさないと！",
+     "coverage": 0.6,
+     "coverageAllBooks": 0.6,
+     "totalTokens": 5,
+     "unknownRuns": [
+      "さ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "！",
+     "coverage": 0,
+     "coverageAllBooks": 0,
+     "totalTokens": 0,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "」たかしくん「もし車にひかれたらどうしよう」ヤドリンは家のまわりにはいません。",
+     "coverage": 0.6818,
+     "coverageAllBooks": 0.6818,
+     "totalTokens": 22,
+     "unknownRuns": [
+      "しくん",
+      "し",
+      "ひ",
+      "れ",
+      "ヤドリン",
+      "ま",
+      "り"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "どこに行ったのかなあ。",
+     "coverage": 0.875,
+     "coverageAllBooks": 0.875,
+     "totalTokens": 8,
+     "unknownRuns": [
+      "あ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "おとうさん「さぁ、車にのって」おかあさん「早く早く」たかしくん「ヤドリンはどこに行ったのかなあ。",
+     "coverage": 0.75,
+     "coverageAllBooks": 0.75,
+     "totalTokens": 24,
+     "unknownRuns": [
+      "さぁ",
+      "く",
+      "しくん",
+      "ヤドリン",
+      "あ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "もしかしたら、海へ行ったのかもしれない」そのときです。",
+     "coverage": 0.8571,
+     "coverageAllBooks": 0.9286,
+     "totalTokens": 14,
+     "unknownRuns": [
+      "しれ"
+     ],
+     "unknownItemIds": [
+      "vocab.shikashi"
+     ]
+    },
+    {
+     "jpn": "はまべにたくさんのヤドカリがいます。",
+     "coverage": 0.625,
+     "coverageAllBooks": 0.75,
+     "totalTokens": 8,
+     "unknownRuns": [
+      "まべ",
+      "ヤドカリ"
+     ],
+     "unknownItemIds": [
+      "vocab.gai"
+     ]
+    },
+    {
+     "jpn": "たかしくん「あっ、ヤドリンがいるよ」おかあさん「新しい友だちとあそんでいるよ」おとうさん「ヤドリンは友だちがほしかったんだね」",
+     "coverage": 0.7,
+     "coverageAllBooks": 0.7333,
+     "totalTokens": 30,
+     "unknownRuns": [
+      "しくん",
+      "あっ",
+      "ヤドリン",
+      "ち",
+      "あそん",
+      "ほ"
+     ],
+     "unknownItemIds": [
+      "vocab.gai"
+     ]
+    }
+   ],
+   "passageCoverage": 0.6765,
+   "passageCoverageAllBooks": 0.7017,
+   "band": "below",
+   "unknownRuns": [
+    "しくん",
+    "ヤドカリ",
+    "名前",
+    "ヤドリン",
+    "お",
+    "ーん",
+    "ーい",
+    "しら",
+    "しらべ",
+    "さい",
+    "チーズあげ",
+    "じゃあ",
+    "あげ",
+    "チーズ",
+    "冷蔵庫",
+    "ムシャムシャムシャー",
+    "あっ",
+    "ぁ",
+    "うさーん",
+    "ポップコーン",
+    "さ",
+    "あ",
+    "ぞ",
+    "ー",
+    "げ",
+    "し",
+    "ひ",
+    "れ",
+    "ま",
+    "り",
+    "さぁ",
+    "く",
+    "しれ",
+    "まべ",
+    "ち",
+    "あそん",
+    "ほ"
+   ]
+  },
+  {
+   "id": "kc.ramen",
+   "title": "ラーメン麺太の冒険",
+   "level": "A2",
+   "pdfUrl": "https://www.jpf.go.jp/j/kansai/clip/images/page/yomyom/012_ramen.pdf",
+   "mp3Url": "https://www.jpf.go.jp/j/kansai/clip/sound/page/yomyom/012_ramen.mp3",
+   "pages": 13,
+   "chars": 429,
+   "sentences": [
+    {
+     "jpn": "やあ、こんにちは！",
+     "coverage": 0.5,
+     "coverageAllBooks": 0.5,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "あ",
+      "こん",
+      "ち"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "ぼくの名前は、ラーメン麺太！",
+     "coverage": 0.5714,
+     "coverageAllBooks": 0.7143,
+     "totalTokens": 7,
+     "unknownRuns": [
+      "名前",
+      "麺"
+     ],
+     "unknownItemIds": [
+      "vocab.boku"
+     ]
+    },
+    {
+     "jpn": "ラーメンの世界の王子だよ！",
+     "coverage": 0.75,
+     "coverageAllBooks": 0.875,
+     "totalTokens": 8,
+     "unknownRuns": [
+      "王"
+     ],
+     "unknownItemIds": [
+      "vocab.sekai"
+     ]
+    },
+    {
+     "jpn": "ぼくはお金持ちだから、家にプールがあるんだ。",
+     "coverage": 0.7273,
+     "coverageAllBooks": 0.8182,
+     "totalTokens": 11,
+     "unknownRuns": [
+      "お金持ち",
+      "プール"
+     ],
+     "unknownItemIds": [
+      "vocab.boku"
+     ]
+    },
+    {
+     "jpn": "ラーメンのスープのプールは、とてもおいしいんだ！",
+     "coverage": 0.7778,
+     "coverageAllBooks": 0.8889,
+     "totalTokens": 9,
+     "unknownRuns": [
+      "プール"
+     ],
+     "unknownItemIds": [
+      "vocab.suupu"
+     ]
+    },
+    {
+     "jpn": "さあ、今日もたくさん泳ごう。",
+     "coverage": 0.7143,
+     "coverageAllBooks": 0.7143,
+     "totalTokens": 7,
+     "unknownRuns": [
+      "さあ",
+      "う"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "ざっぶ～ん！",
+     "coverage": 0,
+     "coverageAllBooks": 0,
+     "totalTokens": 2,
+     "unknownRuns": [
+      "ざっぶ",
+      "ん"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "今日は塩スープだな。",
+     "coverage": 0.8333,
+     "coverageAllBooks": 1,
+     "totalTokens": 6,
+     "unknownRuns": [],
+     "unknownItemIds": [
+      "vocab.suupu"
+     ]
+    },
+    {
+     "jpn": "白くてきれいなスープ。",
+     "coverage": 0.6667,
+     "coverageAllBooks": 0.8333,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "く"
+     ],
+     "unknownItemIds": [
+      "vocab.suupu"
+     ]
+    },
+    {
+     "jpn": "ネギがよく似合う。",
+     "coverage": 0.4,
+     "coverageAllBooks": 0.4,
+     "totalTokens": 5,
+     "unknownRuns": [
+      "ネギ",
+      "く",
+      "似合う"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "白いスープにネギの緑が美しい。",
+     "coverage": 0.625,
+     "coverageAllBooks": 0.75,
+     "totalTokens": 8,
+     "unknownRuns": [
+      "ネギ",
+      "美しい"
+     ],
+     "unknownItemIds": [
+      "vocab.suupu"
+     ]
+    },
+    {
+     "jpn": "ゴマの香りにうとうとしていると…。",
+     "coverage": 0.5,
+     "coverageAllBooks": 0.6,
+     "totalTokens": 10,
+     "unknownRuns": [
+      "ゴマ",
+      "香り",
+      "う"
+     ],
+     "unknownItemIds": [
+      "vocab.toshi"
+     ]
+    },
+    {
+     "jpn": "ん？",
+     "coverage": 0,
+     "coverageAllBooks": 0,
+     "totalTokens": 1,
+     "unknownRuns": [
+      "ん"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "なんだ？",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 2,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "ごぼごぼごぼごぼ！",
+     "coverage": 0.5,
+     "coverageAllBooks": 0.5,
+     "totalTokens": 8,
+     "unknownRuns": [
+      "ぼ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "わあ～、おぼれる～！",
+     "coverage": 0.5,
+     "coverageAllBooks": 0.5,
+     "totalTokens": 4,
+     "unknownRuns": [
+      "あ",
+      "おぼれ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "ぷはあ！",
+     "coverage": 0.3333,
+     "coverageAllBooks": 0.3333,
+     "totalTokens": 3,
+     "unknownRuns": [
+      "ぷ",
+      "あ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "あ～、びっくりした。",
+     "coverage": 0.3333,
+     "coverageAllBooks": 0.3333,
+     "totalTokens": 3,
+     "unknownRuns": [
+      "あ",
+      "びっくり"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "ん？",
+     "coverage": 0,
+     "coverageAllBooks": 0,
+     "totalTokens": 1,
+     "unknownRuns": [
+      "ん"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "ここはどこ？",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 3,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "？",
+     "coverage": 0,
+     "coverageAllBooks": 0,
+     "totalTokens": 0,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "おお、これは醤油スープ。",
+     "coverage": 0.4,
+     "coverageAllBooks": 0.6,
+     "totalTokens": 5,
+     "unknownRuns": [
+      "おお",
+      "醤油"
+     ],
+     "unknownItemIds": [
+      "vocab.suupu"
+     ]
+    },
+    {
+     "jpn": "昆布と鰹のすばらしい香り、醤油味のきれいなスープ。",
+     "coverage": 0.5,
+     "coverageAllBooks": 0.5833,
+     "totalTokens": 12,
+     "unknownRuns": [
+      "昆布",
+      "鰹",
+      "す",
+      "らしい香り",
+      "醤油味"
+     ],
+     "unknownItemIds": [
+      "vocab.suupu"
+     ]
+    },
+    {
+     "jpn": "おいしいなあ。",
+     "coverage": 0.6667,
+     "coverageAllBooks": 0.6667,
+     "totalTokens": 3,
+     "unknownRuns": [
+      "あ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "おお！",
+     "coverage": 0,
+     "coverageAllBooks": 0,
+     "totalTokens": 1,
+     "unknownRuns": [
+      "おお"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "なんて美しく、つやつやのメンマのお嬢さん。",
+     "coverage": 0.6923,
+     "coverageAllBooks": 0.6923,
+     "totalTokens": 13,
+     "unknownRuns": [
+      "ん",
+      "美しく",
+      "メンマ",
+      "お嬢"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "ぼくと一緒に泳ぎませんか？",
+     "coverage": 0.7143,
+     "coverageAllBooks": 0.8571,
+     "totalTokens": 7,
+     "unknownRuns": [
+      "ぎ"
+     ],
+     "unknownItemIds": [
+      "vocab.boku"
+     ]
+    },
+    {
+     "jpn": "ん？",
+     "coverage": 0,
+     "coverageAllBooks": 0,
+     "totalTokens": 1,
+     "unknownRuns": [
+      "ん"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "なんだ？",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 2,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "ごぼごぼごぼごぼ！",
+     "coverage": 0.5,
+     "coverageAllBooks": 0.5,
+     "totalTokens": 8,
+     "unknownRuns": [
+      "ぼ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "わあ～、おぼれる～！",
+     "coverage": 0.5,
+     "coverageAllBooks": 0.5,
+     "totalTokens": 4,
+     "unknownRuns": [
+      "あ",
+      "おぼれ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "ぷはあ！",
+     "coverage": 0.3333,
+     "coverageAllBooks": 0.3333,
+     "totalTokens": 3,
+     "unknownRuns": [
+      "ぷ",
+      "あ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "あ～、びっくりした。",
+     "coverage": 0.3333,
+     "coverageAllBooks": 0.3333,
+     "totalTokens": 3,
+     "unknownRuns": [
+      "あ",
+      "びっくり"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "ん？",
+     "coverage": 0,
+     "coverageAllBooks": 0,
+     "totalTokens": 1,
+     "unknownRuns": [
+      "ん"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "ここはどこだ？",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 4,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "？",
+     "coverage": 0,
+     "coverageAllBooks": 0,
+     "totalTokens": 0,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "おお、これは豚骨スープ。",
+     "coverage": 0.5,
+     "coverageAllBooks": 0.6667,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "おお",
+      "骨"
+     ],
+     "unknownItemIds": [
+      "vocab.suupu"
+     ]
+    },
+    {
+     "jpn": "濃くて、深い味。",
+     "coverage": 0.3333,
+     "coverageAllBooks": 0.3333,
+     "totalTokens": 3,
+     "unknownRuns": [
+      "濃く",
+      "深い味"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "おいしいなあ。",
+     "coverage": 0.6667,
+     "coverageAllBooks": 0.6667,
+     "totalTokens": 3,
+     "unknownRuns": [
+      "あ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "は！",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 1,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "白い肌が美しい、卵のお嬢さん。",
+     "coverage": 0.5,
+     "coverageAllBooks": 0.5,
+     "totalTokens": 8,
+     "unknownRuns": [
+      "肌",
+      "美しい",
+      "卵",
+      "お嬢"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "は！",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 1,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "あちらには肉厚のチャーシュー美女！",
+     "coverage": 0.7143,
+     "coverageAllBooks": 0.7143,
+     "totalTokens": 7,
+     "unknownRuns": [
+      "厚",
+      "チャーシュー美"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "どちらと一緒に泳ごうかなぁ・・・・・。",
+     "coverage": 0.8,
+     "coverageAllBooks": 0.8,
+     "totalTokens": 10,
+     "unknownRuns": [
+      "う",
+      "ぁ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "ちゅるん！",
+     "coverage": 0.3333,
+     "coverageAllBooks": 0.3333,
+     "totalTokens": 3,
+     "unknownRuns": [
+      "ちゅ",
+      "ん"
+     ],
+     "unknownItemIds": []
+    }
+   ],
+   "passageCoverage": 0.5982,
+   "passageCoverageAllBooks": 0.653,
+   "band": "below",
+   "unknownRuns": [
+    "あ",
+    "こん",
+    "ち",
+    "名前",
+    "麺",
+    "王",
+    "お金持ち",
+    "プール",
+    "さあ",
+    "う",
+    "ざっぶ",
+    "ん",
+    "く",
+    "ネギ",
+    "似合う",
+    "美しい",
+    "ゴマ",
+    "香り",
+    "ぼ",
+    "おぼれ",
+    "ぷ",
+    "びっくり",
+    "おお",
+    "醤油",
+    "昆布",
+    "鰹",
+    "す",
+    "らしい香り",
+    "醤油味",
+    "美しく",
+    "メンマ",
+    "お嬢",
+    "ぎ",
+    "骨",
+    "濃く",
+    "深い味",
+    "肌",
+    "卵",
+    "厚",
+    "チャーシュー美",
+    "ぁ",
+    "ちゅ"
+   ]
+  },
+  {
+   "id": "kc.okikusan",
+   "title": "お菊さん",
+   "level": "A2",
+   "pdfUrl": "https://www.jpf.go.jp/j/kansai/clip/images/page/yomyom/013_okikusan.pdf",
+   "mp3Url": "https://www.jpf.go.jp/j/kansai/clip/sound/page/yomyom/013_okikusan.mp3",
+   "pages": 11,
+   "chars": 200,
+   "sentences": [
+    {
+     "jpn": "昔、お菊さんという女の人がいました。",
+     "coverage": 0.625,
+     "coverageAllBooks": 0.75,
+     "totalTokens": 8,
+     "unknownRuns": [
+      "昔",
+      "お菊"
+     ],
+     "unknownItemIds": [
+      "vocab.gai"
+     ]
+    },
+    {
+     "jpn": "お菊さんは侍の家で働いていました。",
+     "coverage": 0.8,
+     "coverageAllBooks": 0.8,
+     "totalTokens": 10,
+     "unknownRuns": [
+      "お菊",
+      "侍"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "毎日よく働きました。",
+     "coverage": 0.8333,
+     "coverageAllBooks": 0.8333,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "く"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "でもある日、侍の大事な皿を1枚割ってしまいました。",
+     "coverage": 0.6667,
+     "coverageAllBooks": 0.8667,
+     "totalTokens": 15,
+     "unknownRuns": [
+      "侍",
+      "し"
+     ],
+     "unknownItemIds": [
+      "vocab.daiji",
+      "vocab.sara",
+      "vocab.waru",
+      "vocab.waribiki"
+     ]
+    },
+    {
+     "jpn": "お菊さんは心からあやまりました。",
+     "coverage": 0.5556,
+     "coverageAllBooks": 0.5556,
+     "totalTokens": 9,
+     "unknownRuns": [
+      "お菊",
+      "心",
+      "あ",
+      "り"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "でも大事な皿でしたから、侍はとても怒りました。",
+     "coverage": 0.6364,
+     "coverageAllBooks": 0.8182,
+     "totalTokens": 11,
+     "unknownRuns": [
+      "侍",
+      "怒り"
+     ],
+     "unknownItemIds": [
+      "vocab.daiji",
+      "vocab.sara"
+     ]
+    },
+    {
+     "jpn": "侍はお菊さんを殺そうとしました。",
+     "coverage": 0.5556,
+     "coverageAllBooks": 0.6667,
+     "totalTokens": 9,
+     "unknownRuns": [
+      "侍",
+      "お菊",
+      "殺"
+     ],
+     "unknownItemIds": [
+      "vocab.toshi"
+     ]
+    },
+    {
+     "jpn": "お菊さんは、井戸の中に落ちて死にました。",
+     "coverage": 0.75,
+     "coverageAllBooks": 0.8333,
+     "totalTokens": 12,
+     "unknownRuns": [
+      "お菊",
+      "井戸"
+     ],
+     "unknownItemIds": [
+      "vocab.ochiru"
+     ]
+    },
+    {
+     "jpn": "ある日の夜。",
+     "coverage": 0.75,
+     "coverageAllBooks": 0.75,
+     "totalTokens": 4,
+     "unknownRuns": [
+      "夜"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "井戸から声が聞こえます。",
+     "coverage": 0.5714,
+     "coverageAllBooks": 0.5714,
+     "totalTokens": 7,
+     "unknownRuns": [
+      "井戸",
+      "声",
+      "こえ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "お菊さんは死んで幽霊になりました。",
+     "coverage": 0.6364,
+     "coverageAllBooks": 0.6364,
+     "totalTokens": 11,
+     "unknownRuns": [
+      "お菊",
+      "ん",
+      "幽霊",
+      "り"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "そして、今も毎晩皿を数えて泣いています。",
+     "coverage": 0.5385,
+     "coverageAllBooks": 0.6923,
+     "totalTokens": 13,
+     "unknownRuns": [
+      "そ",
+      "毎晩",
+      "え",
+      "泣"
+     ],
+     "unknownItemIds": [
+      "vocab.sara",
+      "vocab.kazu"
+     ]
+    }
+   ],
+   "passageCoverage": 0.6522,
+   "passageCoverageAllBooks": 0.7391,
+   "band": "below",
+   "unknownRuns": [
+    "昔",
+    "お菊",
+    "侍",
+    "く",
+    "し",
+    "心",
+    "あ",
+    "り",
+    "怒り",
+    "殺",
+    "井戸",
+    "夜",
+    "声",
+    "こえ",
+    "ん",
+    "幽霊",
+    "そ",
+    "毎晩",
+    "え",
+    "泣"
+   ]
+  },
+  {
+   "id": "kc.kiyohime",
+   "title": "清姫",
+   "level": "A2",
+   "pdfUrl": "https://www.jpf.go.jp/j/kansai/clip/images/page/yomyom/014_kiyohime.pdf",
+   "mp3Url": null,
+   "pages": 14,
+   "chars": 502,
+   "sentences": [
+    {
+     "jpn": "昔、安珍というお坊さんがいました。",
+     "coverage": 0.5556,
+     "coverageAllBooks": 0.6667,
+     "totalTokens": 9,
+     "unknownRuns": [
+      "昔",
+      "珍",
+      "お坊"
+     ],
+     "unknownItemIds": [
+      "vocab.gai"
+     ]
+    },
+    {
+     "jpn": "安珍は熊野神社へ行くために、旅をしていました。",
+     "coverage": 0.8,
+     "coverageAllBooks": 0.8,
+     "totalTokens": 15,
+     "unknownRuns": [
+      "珍",
+      "熊",
+      "神社"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "安珍は、ある家に泊まりました。",
+     "coverage": 0.6667,
+     "coverageAllBooks": 0.7778,
+     "totalTokens": 9,
+     "unknownRuns": [
+      "珍",
+      "まり"
+     ],
+     "unknownItemIds": [
+      "vocab.tomeru-lodge"
+     ]
+    },
+    {
+     "jpn": "その家には、清姫という女の人がいました。",
+     "coverage": 0.7778,
+     "coverageAllBooks": 0.8889,
+     "totalTokens": 9,
+     "unknownRuns": [
+      "清姫"
+     ],
+     "unknownItemIds": [
+      "vocab.gai"
+     ]
+    },
+    {
+     "jpn": "清姫は、安珍が好きになりました。",
+     "coverage": 0.7,
+     "coverageAllBooks": 0.7,
+     "totalTokens": 10,
+     "unknownRuns": [
+      "清姫",
+      "珍",
+      "り"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "そして安珍に、「結婚してください」と言いました。",
+     "coverage": 0.7273,
+     "coverageAllBooks": 0.8182,
+     "totalTokens": 11,
+     "unknownRuns": [
+      "そ",
+      "珍"
+     ],
+     "unknownItemIds": [
+      "vocab.kekkon"
+     ]
+    },
+    {
+     "jpn": "安珍は、「私は熊野神社に行かなくてはいけません。",
+     "coverage": 0.7333,
+     "coverageAllBooks": 0.7333,
+     "totalTokens": 15,
+     "unknownRuns": [
+      "珍",
+      "熊",
+      "神社",
+      "け"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "でも、必ずまた来ます」と約束しました。",
+     "coverage": 0.7778,
+     "coverageAllBooks": 0.8889,
+     "totalTokens": 9,
+     "unknownRuns": [
+      "ずま"
+     ],
+     "unknownItemIds": [
+      "vocab.hitsuyou"
+     ]
+    },
+    {
+     "jpn": "安珍は熊野神社に行きました。",
+     "coverage": 0.7,
+     "coverageAllBooks": 0.7,
+     "totalTokens": 10,
+     "unknownRuns": [
+      "珍",
+      "熊",
+      "神社"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "安珍は清姫と約束をしましたが、お坊さんなので、本当は結婚したくありませんでした。",
+     "coverage": 0.7,
+     "coverageAllBooks": 0.75,
+     "totalTokens": 20,
+     "unknownRuns": [
+      "珍",
+      "清姫",
+      "お坊",
+      "本当",
+      "く"
+     ],
+     "unknownItemIds": [
+      "vocab.kekkon"
+     ]
+    },
+    {
+     "jpn": "それで、清姫の家には行かないで帰りました。",
+     "coverage": 0.8333,
+     "coverageAllBooks": 0.8333,
+     "totalTokens": 12,
+     "unknownRuns": [
+      "清姫",
+      "り"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "約束の日に安珍が来ないので、清姫は安珍を探しました。",
+     "coverage": 0.8235,
+     "coverageAllBooks": 0.8235,
+     "totalTokens": 17,
+     "unknownRuns": [
+      "珍",
+      "清姫"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "安珍は清姫を見て、逃げ出しました。",
+     "coverage": 0.7,
+     "coverageAllBooks": 0.7,
+     "totalTokens": 10,
+     "unknownRuns": [
+      "珍",
+      "清姫",
+      "逃げ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "「待ってください、安珍さま！",
+     "coverage": 0.8,
+     "coverageAllBooks": 0.8,
+     "totalTokens": 5,
+     "unknownRuns": [
+      "珍さま"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "」「いいえ、私は安珍ではありません！",
+     "coverage": 0.8333,
+     "coverageAllBooks": 0.8333,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "珍"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "！",
+     "coverage": 0,
+     "coverageAllBooks": 0,
+     "totalTokens": 0,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "！",
+     "coverage": 0,
+     "coverageAllBooks": 0,
+     "totalTokens": 0,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "」大きな川がありました。",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 5,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "安珍は船で川を渡りました。",
+     "coverage": 0.7,
+     "coverageAllBooks": 0.8,
+     "totalTokens": 10,
+     "unknownRuns": [
+      "珍",
+      "り"
+     ],
+     "unknownItemIds": [
+      "vocab.fune"
+     ]
+    },
+    {
+     "jpn": "清姫は船に乗ることができませんでした。",
+     "coverage": 0.7273,
+     "coverageAllBooks": 0.8182,
+     "totalTokens": 11,
+     "unknownRuns": [
+      "清姫",
+      "乗"
+     ],
+     "unknownItemIds": [
+      "vocab.fune"
+     ]
+    },
+    {
+     "jpn": "清姫は川に入りました。",
+     "coverage": 0.7143,
+     "coverageAllBooks": 0.7143,
+     "totalTokens": 7,
+     "unknownRuns": [
+      "清姫",
+      "り"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "すると、大きな蛇になりました。",
+     "coverage": 0.7778,
+     "coverageAllBooks": 0.7778,
+     "totalTokens": 9,
+     "unknownRuns": [
+      "蛇",
+      "り"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "安珍は逃げて逃げて逃げて、道成寺に来ました。",
+     "coverage": 0.6,
+     "coverageAllBooks": 0.6667,
+     "totalTokens": 15,
+     "unknownRuns": [
+      "珍",
+      "逃げ",
+      "寺"
+     ],
+     "unknownItemIds": [
+      "vocab.seikou"
+     ]
+    },
+    {
+     "jpn": "道成寺のお坊さんたちは、安珍をお寺の大きな鐘の中に入れました。",
+     "coverage": 0.6818,
+     "coverageAllBooks": 0.7273,
+     "totalTokens": 22,
+     "unknownRuns": [
+      "寺",
+      "お坊",
+      "ち",
+      "珍",
+      "お寺",
+      "鐘"
+     ],
+     "unknownItemIds": [
+      "vocab.seikou"
+     ]
+    },
+    {
+     "jpn": "そこに、清姫が来ました。",
+     "coverage": 0.8333,
+     "coverageAllBooks": 0.8333,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "清姫"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "「安珍さま！",
+     "coverage": 0.5,
+     "coverageAllBooks": 0.5,
+     "totalTokens": 2,
+     "unknownRuns": [
+      "珍さま"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "」清姫は鐘にぐるぐる巻きついて、口からゴウッと火を吐きました。",
+     "coverage": 0.6667,
+     "coverageAllBooks": 0.6667,
+     "totalTokens": 21,
+     "unknownRuns": [
+      "清姫",
+      "鐘",
+      "ぐ",
+      "巻",
+      "ゴウッ",
+      "吐"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "鐘の中の安珍は、焼け死んでしまいました。",
+     "coverage": 0.6,
+     "coverageAllBooks": 0.6667,
+     "totalTokens": 15,
+     "unknownRuns": [
+      "鐘",
+      "珍",
+      "け",
+      "ん",
+      "し"
+     ],
+     "unknownItemIds": [
+      "vocab.yaku"
+     ]
+    }
+   ],
+   "passageCoverage": 0.7207,
+   "passageCoverageAllBooks": 0.7586,
+   "band": "below",
+   "unknownRuns": [
+    "昔",
+    "珍",
+    "お坊",
+    "熊",
+    "神社",
+    "まり",
+    "清姫",
+    "り",
+    "そ",
+    "け",
+    "ずま",
+    "本当",
+    "く",
+    "逃げ",
+    "珍さま",
+    "乗",
+    "蛇",
+    "寺",
+    "ち",
+    "お寺",
+    "鐘",
+    "ぐ",
+    "巻",
+    "ゴウッ",
+    "吐",
+    "ん",
+    "し"
+   ]
+  },
+  {
+   "id": "kc.manhole",
+   "title": "マンホール",
+   "level": "A2",
+   "pdfUrl": "https://www.jpf.go.jp/j/kansai/clip/images/page/yomyom/015_manhole.pdf",
+   "mp3Url": null,
+   "pages": 14,
+   "chars": 540,
+   "sentences": [
+    {
+     "jpn": "道路にある、これは何ですか？",
+     "coverage": 0.8571,
+     "coverageAllBooks": 0.8571,
+     "totalTokens": 7,
+     "unknownRuns": [
+      "道路"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "これは「マンホール」です。",
+     "coverage": 0.75,
+     "coverageAllBooks": 0.75,
+     "totalTokens": 4,
+     "unknownRuns": [
+      "マンホール"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "人が入って作業をする穴です。",
+     "coverage": 0.7778,
+     "coverageAllBooks": 0.7778,
+     "totalTokens": 9,
+     "unknownRuns": [
+      "作業",
+      "穴"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "日本のマンホールを見たことがありますか？",
+     "coverage": 0.9,
+     "coverageAllBooks": 0.9,
+     "totalTokens": 10,
+     "unknownRuns": [
+      "マンホール"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "ふたの形は丸くて、60cmくらいの大きさが多いです。",
+     "coverage": 0.6,
+     "coverageAllBooks": 0.6667,
+     "totalTokens": 15,
+     "unknownRuns": [
+      "ふ",
+      "形",
+      "丸く",
+      "さ",
+      "い"
+     ],
+     "unknownItemIds": [
+      "vocab.tasai"
+     ]
+    },
+    {
+     "jpn": "重い鉄でできていますが、雨の日に歩く人がすべらないように、でこぼこ（凹凸）しています。",
+     "coverage": 0.8261,
+     "coverageAllBooks": 0.8261,
+     "totalTokens": 23,
+     "unknownRuns": [
+      "鉄",
+      "すべら",
+      "こぼこ",
+      "凹凸"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "マンホールのふたには、いろいろな絵があります。",
+     "coverage": 0.7273,
+     "coverageAllBooks": 0.7273,
+     "totalTokens": 11,
+     "unknownRuns": [
+      "マンホール",
+      "ふ",
+      "絵"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "市や町のシンボルマーク、花や木などの絵が多いです。",
+     "coverage": 0.6,
+     "coverageAllBooks": 0.7333,
+     "totalTokens": 15,
+     "unknownRuns": [
+      "市",
+      "シンボルマーク",
+      "絵",
+      "い"
+     ],
+     "unknownItemIds": [
+      "vocab.machi",
+      "vocab.tasai"
+     ]
+    },
+    {
+     "jpn": "これは泉佐野市のものです。",
+     "coverage": 0.625,
+     "coverageAllBooks": 0.75,
+     "totalTokens": 8,
+     "unknownRuns": [
+      "泉佐",
+      "市"
+     ],
+     "unknownItemIds": [
+      "vocab.mono-person"
+     ]
+    },
+    {
+     "jpn": "泉佐野市の木、「イチョウ」の絵があります。",
+     "coverage": 0.6,
+     "coverageAllBooks": 0.6,
+     "totalTokens": 10,
+     "unknownRuns": [
+      "泉佐",
+      "市",
+      "イチョウ",
+      "絵"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "これは堺市のものです。",
+     "coverage": 0.6667,
+     "coverageAllBooks": 0.8333,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "堺市"
+     ],
+     "unknownItemIds": [
+      "vocab.mono-person"
+     ]
+    },
+    {
+     "jpn": "堺市の鳥「モズ」と、堺市の花「ハナショウブ」の絵があります。",
+     "coverage": 0.6154,
+     "coverageAllBooks": 0.6154,
+     "totalTokens": 13,
+     "unknownRuns": [
+      "堺市",
+      "モズ",
+      "ハナショウブ",
+      "絵"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "マスコットキャラクターの絵もあります。",
+     "coverage": 0.6,
+     "coverageAllBooks": 0.6,
+     "totalTokens": 5,
+     "unknownRuns": [
+      "マスコットキャラクター",
+      "絵"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "これは熊取町のものです。",
+     "coverage": 0.625,
+     "coverageAllBooks": 0.875,
+     "totalTokens": 8,
+     "unknownRuns": [
+      "熊"
+     ],
+     "unknownItemIds": [
+      "vocab.machi",
+      "vocab.mono-person"
+     ]
+    },
+    {
+     "jpn": "熊取町の花「ヒマワリ」と、町のキャラクター「ジャンプ君」の絵があります。",
+     "coverage": 0.5,
+     "coverageAllBooks": 0.6875,
+     "totalTokens": 16,
+     "unknownRuns": [
+      "熊",
+      "ヒマワリ",
+      "キャラクター",
+      "ジャンプ",
+      "絵"
+     ],
+     "unknownItemIds": [
+      "vocab.machi",
+      "vocab.kimi"
+     ]
+    },
+    {
+     "jpn": "有名なものの絵もあります。",
+     "coverage": 0.7143,
+     "coverageAllBooks": 0.8571,
+     "totalTokens": 7,
+     "unknownRuns": [
+      "絵"
+     ],
+     "unknownItemIds": [
+      "vocab.mono-person"
+     ]
+    },
+    {
+     "jpn": "これは田尻町のものです。",
+     "coverage": 0.5714,
+     "coverageAllBooks": 0.8571,
+     "totalTokens": 7,
+     "unknownRuns": [
+      "田尻"
+     ],
+     "unknownItemIds": [
+      "vocab.machi",
+      "vocab.mono-person"
+     ]
+    },
+    {
+     "jpn": "田尻町は「泉州たまねぎ」というたまねぎが有名です。",
+     "coverage": 0.5882,
+     "coverageAllBooks": 0.6471,
+     "totalTokens": 17,
+     "unknownRuns": [
+      "田尻",
+      "泉州",
+      "ま",
+      "ぎ"
+     ],
+     "unknownItemIds": [
+      "vocab.machi"
+     ]
+    },
+    {
+     "jpn": "最近はカラフルなものも多いです。",
+     "coverage": 0.4444,
+     "coverageAllBooks": 0.6667,
+     "totalTokens": 9,
+     "unknownRuns": [
+      "最近",
+      "カラフル",
+      "い"
+     ],
+     "unknownItemIds": [
+      "vocab.mono-person",
+      "vocab.tasai"
+     ]
+    },
+    {
+     "jpn": "これは大阪市のものです。",
+     "coverage": 0.6667,
+     "coverageAllBooks": 0.8333,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "大阪市"
+     ],
+     "unknownItemIds": [
+      "vocab.mono-person"
+     ]
+    },
+    {
+     "jpn": "大阪市で有名なものは何ですか？",
+     "coverage": 0.75,
+     "coverageAllBooks": 0.875,
+     "totalTokens": 8,
+     "unknownRuns": [
+      "大阪市"
+     ],
+     "unknownItemIds": [
+      "vocab.mono-person"
+     ]
+    },
+    {
+     "jpn": "もちろん、「大阪城」ですね！",
+     "coverage": 0.6,
+     "coverageAllBooks": 0.6,
+     "totalTokens": 5,
+     "unknownRuns": [
+      "ちろん",
+      "大阪城"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "マンホールのふたはカラフルできれいなものが多くなったので、日本にはたくさんのファンがいます。",
+     "coverage": 0.6522,
+     "coverageAllBooks": 0.7826,
+     "totalTokens": 23,
+     "unknownRuns": [
+      "マンホール",
+      "ふ",
+      "カラフル",
+      "く",
+      "ファン"
+     ],
+     "unknownItemIds": [
+      "vocab.mono-person",
+      "vocab.tasai",
+      "vocab.gai"
+     ]
+    },
+    {
+     "jpn": "マンホールの本や、マンホールサミットもあります。",
+     "coverage": 0.7143,
+     "coverageAllBooks": 0.7143,
+     "totalTokens": 7,
+     "unknownRuns": [
+      "マンホール",
+      "マンホールサミット"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "ぜひ、いろいろなものを探してください！",
+     "coverage": 0.7778,
+     "coverageAllBooks": 0.8889,
+     "totalTokens": 9,
+     "unknownRuns": [
+      "ぜひ"
+     ],
+     "unknownItemIds": [
+      "vocab.mono-person"
+     ]
+    },
+    {
+     "jpn": "…でも、下ばかり見て歩いているとあぶないですよ。",
+     "coverage": 0.7857,
+     "coverageAllBooks": 0.7857,
+     "totalTokens": 14,
+     "unknownRuns": [
+      "り",
+      "あぶ",
+      "す"
+     ],
+     "unknownItemIds": []
+    }
+   ],
+   "passageCoverage": 0.6728,
+   "passageCoverageAllBooks": 0.7537,
+   "band": "below",
+   "unknownRuns": [
+    "道路",
+    "マンホール",
+    "作業",
+    "穴",
+    "ふ",
+    "形",
+    "丸く",
+    "さ",
+    "い",
+    "鉄",
+    "すべら",
+    "こぼこ",
+    "凹凸",
+    "絵",
+    "市",
+    "シンボルマーク",
+    "泉佐",
+    "イチョウ",
+    "堺市",
+    "モズ",
+    "ハナショウブ",
+    "マスコットキャラクター",
+    "熊",
+    "ヒマワリ",
+    "キャラクター",
+    "ジャンプ",
+    "田尻",
+    "泉州",
+    "ま",
+    "ぎ",
+    "最近",
+    "カラフル",
+    "大阪市",
+    "ちろん",
+    "大阪城",
+    "く",
+    "ファン",
+    "マンホールサミット",
+    "ぜひ",
+    "り",
+    "あぶ",
+    "す"
+   ]
+  },
+  {
+   "id": "kc.anata",
+   "title": "あなたへの3つのおねがい",
+   "level": "A2",
+   "pdfUrl": "https://www.jpf.go.jp/j/kansai/clip/images/page/yomyom/016_anata.pdf",
+   "mp3Url": null,
+   "pages": 22,
+   "chars": 407,
+   "sentences": [
+    {
+     "jpn": "雨の日は外を歩いてください。",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 8,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "傘をさして歩いてください。",
+     "coverage": 0.8333,
+     "coverageAllBooks": 0.8333,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "さ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "雨の音を聞いてください。",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 7,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "どんな音ですか。",
+     "coverage": 0.6667,
+     "coverageAllBooks": 1,
+     "totalTokens": 3,
+     "unknownRuns": [],
+     "unknownItemIds": [
+      "vocab.donna"
+     ]
+    },
+    {
+     "jpn": "ポツポツ？",
+     "coverage": 0,
+     "coverageAllBooks": 0,
+     "totalTokens": 1,
+     "unknownRuns": [
+      "ポツポツ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "ポロンポロン？",
+     "coverage": 0,
+     "coverageAllBooks": 0,
+     "totalTokens": 1,
+     "unknownRuns": [
+      "ポロンポロン"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "ピシャピシャ？",
+     "coverage": 0,
+     "coverageAllBooks": 0,
+     "totalTokens": 1,
+     "unknownRuns": [
+      "ピシャピシャ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "雨の音は地球の音です。",
+     "coverage": 0.875,
+     "coverageAllBooks": 1,
+     "totalTokens": 8,
+     "unknownRuns": [],
+     "unknownItemIds": [
+      "vocab.chikyuu"
+     ]
+    },
+    {
+     "jpn": "雨は命を育みます。",
+     "coverage": 0.5714,
+     "coverageAllBooks": 0.7143,
+     "totalTokens": 7,
+     "unknownRuns": [
+      "命",
+      "育"
+     ],
+     "unknownItemIds": [
+      "vocab.mi"
+     ]
+    },
+    {
+     "jpn": "雨の音を聞いてください。",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 7,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "晴れの日は空を見てください。",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 8,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "窓を開けて見てください。",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 6,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "風を感じて空を見てください。",
+     "coverage": 0.875,
+     "coverageAllBooks": 0.875,
+     "totalTokens": 8,
+     "unknownRuns": [
+      "感じ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "空はどんな色ですか。",
+     "coverage": 0.6,
+     "coverageAllBooks": 0.8,
+     "totalTokens": 5,
+     "unknownRuns": [
+      "色"
+     ],
+     "unknownItemIds": [
+      "vocab.donna"
+     ]
+    },
+    {
+     "jpn": "青？",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 1,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "白？",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 1,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "オレンジ？",
+     "coverage": 0,
+     "coverageAllBooks": 1,
+     "totalTokens": 1,
+     "unknownRuns": [],
+     "unknownItemIds": [
+      "vocab.orenji"
+     ]
+    },
+    {
+     "jpn": "黒？",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 1,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "空は広いです。",
+     "coverage": 0.6,
+     "coverageAllBooks": 0.8,
+     "totalTokens": 5,
+     "unknownRuns": [
+      "い"
+     ],
+     "unknownItemIds": [
+      "vocab.hiroma"
+     ]
+    },
+    {
+     "jpn": "空はとても広いです。",
+     "coverage": 0.6667,
+     "coverageAllBooks": 0.8333,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "い"
+     ],
+     "unknownItemIds": [
+      "vocab.hiroma"
+     ]
+    },
+    {
+     "jpn": "そして、いつでも、だれの上にも空はあります。",
+     "coverage": 0.8,
+     "coverageAllBooks": 0.9,
+     "totalTokens": 10,
+     "unknownRuns": [
+      "そ"
+     ],
+     "unknownItemIds": [
+      "vocab.itsudemo"
+     ]
+    },
+    {
+     "jpn": "ときどき、空を見てください。",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 5,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "くもりの日はあたたかいお茶を飲んでください。",
+     "coverage": 0.9091,
+     "coverageAllBooks": 0.9091,
+     "totalTokens": 11,
+     "unknownRuns": [
+      "ん"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "好きないすにすわってお茶を飲んでください。",
+     "coverage": 0.7692,
+     "coverageAllBooks": 0.7692,
+     "totalTokens": 13,
+     "unknownRuns": [
+      "す",
+      "ん"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "好きなカップでお茶を飲んでください。",
+     "coverage": 0.8,
+     "coverageAllBooks": 0.8,
+     "totalTokens": 10,
+     "unknownRuns": [
+      "カップ",
+      "ん"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "ゆっくりお茶を飲んでください。",
+     "coverage": 0.8571,
+     "coverageAllBooks": 0.8571,
+     "totalTokens": 7,
+     "unknownRuns": [
+      "ん"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "あたたかいお茶が体の中に入ります。",
+     "coverage": 0.9,
+     "coverageAllBooks": 0.9,
+     "totalTokens": 10,
+     "unknownRuns": [
+      "り"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "おなかがあたたかくなります。",
+     "coverage": 0.7778,
+     "coverageAllBooks": 0.7778,
+     "totalTokens": 9,
+     "unknownRuns": [
+      "あ",
+      "り"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "手があたたかくなります。",
+     "coverage": 0.7778,
+     "coverageAllBooks": 0.7778,
+     "totalTokens": 9,
+     "unknownRuns": [
+      "あ",
+      "り"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "心も少しあたたかくなります。",
+     "coverage": 0.7,
+     "coverageAllBooks": 0.7,
+     "totalTokens": 10,
+     "unknownRuns": [
+      "心",
+      "あ",
+      "り"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "あなたは、だれといっしょにお茶を飲みたいですか。",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 10,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "何を話したいですか。",
+     "coverage": 0.8,
+     "coverageAllBooks": 1,
+     "totalTokens": 5,
+     "unknownRuns": [],
+     "unknownItemIds": [
+      "vocab.hanashiau"
+     ]
+    },
+    {
+     "jpn": "ゆっくりお茶を飲んでその人をゆっくり思い出してください。",
+     "coverage": 0.8462,
+     "coverageAllBooks": 0.8462,
+     "totalTokens": 13,
+     "unknownRuns": [
+      "ん",
+      "思い出"
+     ],
+     "unknownItemIds": []
+    }
+   ],
+   "passageCoverage": 0.8263,
+   "passageCoverageAllBooks": 0.8685,
+   "band": "below",
+   "unknownRuns": [
+    "さ",
+    "ポツポツ",
+    "ポロンポロン",
+    "ピシャピシャ",
+    "命",
+    "育",
+    "感じ",
+    "色",
+    "い",
+    "そ",
+    "ん",
+    "す",
+    "カップ",
+    "り",
+    "あ",
+    "心",
+    "思い出"
+   ]
+  },
+  {
+   "id": "kc.concert",
+   "title": "コンサートに行こう！",
+   "level": "A2",
+   "pdfUrl": "https://www.jpf.go.jp/j/kansai/clip/images/page/yomyom/017_concert.pdf",
+   "mp3Url": null,
+   "pages": 13,
+   "chars": 453,
+   "sentences": [
+    {
+     "jpn": "こんにちは！",
+     "coverage": 0.5,
+     "coverageAllBooks": 0.5,
+     "totalTokens": 4,
+     "unknownRuns": [
+      "こん",
+      "ち"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "ぼくは人気アイドルグループ・SENSHUBOYZの佐野いずみです。",
+     "coverage": 0.4444,
+     "coverageAllBooks": 0.6667,
+     "totalTokens": 9,
+     "unknownRuns": [
+      "人気アイドルグループ",
+      "佐",
+      "いず"
+     ],
+     "unknownItemIds": [
+      "vocab.boku",
+      "vocab.mi"
+     ]
+    },
+    {
+     "jpn": "これからコンサートが始まります。",
+     "coverage": 0.5714,
+     "coverageAllBooks": 0.7143,
+     "totalTokens": 7,
+     "unknownRuns": [
+      "コンサート",
+      "まり"
+     ],
+     "unknownItemIds": [
+      "vocab.hajimeru"
+     ]
+    },
+    {
+     "jpn": "コンサートには色々な人が来ます。",
+     "coverage": 0.75,
+     "coverageAllBooks": 0.75,
+     "totalTokens": 8,
+     "unknownRuns": [
+      "コンサート",
+      "色々"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "はあー、きんちょうします。",
+     "coverage": 0.5,
+     "coverageAllBooks": 0.6667,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "あー",
+      "んちょ"
+     ],
+     "unknownItemIds": [
+      "vocab.ushi"
+     ]
+    },
+    {
+     "jpn": "さあ、いきましょう！",
+     "coverage": 0.5,
+     "coverageAllBooks": 0.5,
+     "totalTokens": 4,
+     "unknownRuns": [
+      "さあ",
+      "い"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "まずは、元気な歌から始まります。",
+     "coverage": 0.6667,
+     "coverageAllBooks": 0.7778,
+     "totalTokens": 9,
+     "unknownRuns": [
+      "まず",
+      "まり"
+     ],
+     "unknownItemIds": [
+      "vocab.hajimeru"
+     ]
+    },
+    {
+     "jpn": "ジャンプ！",
+     "coverage": 0,
+     "coverageAllBooks": 0,
+     "totalTokens": 1,
+     "unknownRuns": [
+      "ジャンプ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "ジャンプ！",
+     "coverage": 0,
+     "coverageAllBooks": 0,
+     "totalTokens": 1,
+     "unknownRuns": [
+      "ジャンプ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "みんな、たてに動きます。",
+     "coverage": 0.6667,
+     "coverageAllBooks": 0.8889,
+     "totalTokens": 9,
+     "unknownRuns": [
+      "ん"
+     ],
+     "unknownItemIds": [
+      "vocab.mi",
+      "vocab.doubutsu",
+      "vocab.ugokasu"
+     ]
+    },
+    {
+     "jpn": "そして、ぼくはウィンクをします。",
+     "coverage": 0.5714,
+     "coverageAllBooks": 0.7143,
+     "totalTokens": 7,
+     "unknownRuns": [
+      "そ",
+      "ウィンク"
+     ],
+     "unknownItemIds": [
+      "vocab.boku"
+     ]
+    },
+    {
+     "jpn": "女の子が「きゃー」とさけびます。",
+     "coverage": 0.7143,
+     "coverageAllBooks": 0.7143,
+     "totalTokens": 7,
+     "unknownRuns": [
+      "ゃー",
+      "さけび"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "かなしい歌を歌いましょう。",
+     "coverage": 0.6667,
+     "coverageAllBooks": 0.8333,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "しょう"
+     ],
+     "unknownItemIds": [
+      "vocab.kanashii"
+     ]
+    },
+    {
+     "jpn": "男の人が恋人を思う歌です。",
+     "coverage": 0.8571,
+     "coverageAllBooks": 0.8571,
+     "totalTokens": 7,
+     "unknownRuns": [
+      "恋人"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "みんな体を横に動かします。",
+     "coverage": 0.5556,
+     "coverageAllBooks": 0.7778,
+     "totalTokens": 9,
+     "unknownRuns": [
+      "ん",
+      "横"
+     ],
+     "unknownItemIds": [
+      "vocab.mi",
+      "vocab.ugokasu"
+     ]
+    },
+    {
+     "jpn": "泣いている人もいますね。",
+     "coverage": 0.8571,
+     "coverageAllBooks": 0.8571,
+     "totalTokens": 7,
+     "unknownRuns": [
+      "泣"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "コンサートもだんだん盛り上がってきました。",
+     "coverage": 0.8,
+     "coverageAllBooks": 0.8,
+     "totalTokens": 10,
+     "unknownRuns": [
+      "コンサート",
+      "ん盛り"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "ん？",
+     "coverage": 0,
+     "coverageAllBooks": 0,
+     "totalTokens": 1,
+     "unknownRuns": [
+      "ん"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "座って聞いている人がいますね。",
+     "coverage": 0.8889,
+     "coverageAllBooks": 1,
+     "totalTokens": 9,
+     "unknownRuns": [],
+     "unknownItemIds": [
+      "vocab.gai"
+     ]
+    },
+    {
+     "jpn": "ぼくたちの歌をよく聞きたいんですね。",
+     "coverage": 0.6667,
+     "coverageAllBooks": 0.8333,
+     "totalTokens": 12,
+     "unknownRuns": [
+      "ち",
+      "く"
+     ],
+     "unknownItemIds": [
+      "vocab.boku",
+      "vocab.kitai"
+     ]
+    },
+    {
+     "jpn": "ん？",
+     "coverage": 0,
+     "coverageAllBooks": 0,
+     "totalTokens": 1,
+     "unknownRuns": [
+      "ん"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "あの人はぼくたちを見ないで、へんなダンスをしていますよ。",
+     "coverage": 0.6667,
+     "coverageAllBooks": 0.8,
+     "totalTokens": 15,
+     "unknownRuns": [
+      "あの人",
+      "ち",
+      "ダンス"
+     ],
+     "unknownItemIds": [
+      "vocab.boku",
+      "vocab.hen"
+     ]
+    },
+    {
+     "jpn": "ん？",
+     "coverage": 0,
+     "coverageAllBooks": 0,
+     "totalTokens": 1,
+     "unknownRuns": [
+      "ん"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "あの人たちは歌っていますね。",
+     "coverage": 0.75,
+     "coverageAllBooks": 0.75,
+     "totalTokens": 8,
+     "unknownRuns": [
+      "あの人",
+      "ち"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "あれ？",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 1,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "服もぼくと同じです。",
+     "coverage": 0.6667,
+     "coverageAllBooks": 0.8333,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "同じ"
+     ],
+     "unknownItemIds": [
+      "vocab.boku"
+     ]
+    },
+    {
+     "jpn": "ぼくたちのダンスも完璧に踊っています！",
+     "coverage": 0.5455,
+     "coverageAllBooks": 0.6364,
+     "totalTokens": 11,
+     "unknownRuns": [
+      "ち",
+      "ダンス",
+      "完璧",
+      "踊"
+     ],
+     "unknownItemIds": [
+      "vocab.boku"
+     ]
+    },
+    {
+     "jpn": "きっと楽しいでしょうね。",
+     "coverage": 0.8333,
+     "coverageAllBooks": 0.8333,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "っ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "ん？",
+     "coverage": 0,
+     "coverageAllBooks": 0,
+     "totalTokens": 1,
+     "unknownRuns": [
+      "ん"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "あの人は頭をはげしく上下に動かしています。",
+     "coverage": 0.6364,
+     "coverageAllBooks": 0.7273,
+     "totalTokens": 11,
+     "unknownRuns": [
+      "あの人",
+      "げしく",
+      "上下"
+     ],
+     "unknownItemIds": [
+      "vocab.ugokasu"
+     ]
+    },
+    {
+     "jpn": "ぼくたちの歌、聞こえますかー？",
+     "coverage": 0.6,
+     "coverageAllBooks": 0.7,
+     "totalTokens": 10,
+     "unknownRuns": [
+      "ち",
+      "こえ",
+      "ー"
+     ],
+     "unknownItemIds": [
+      "vocab.boku"
+     ]
+    },
+    {
+     "jpn": "ぼくたちのコンサートはどうでしたか？",
+     "coverage": 0.6667,
+     "coverageAllBooks": 0.7778,
+     "totalTokens": 9,
+     "unknownRuns": [
+      "ち",
+      "コンサート"
+     ],
+     "unknownItemIds": [
+      "vocab.boku"
+     ]
+    },
+    {
+     "jpn": "みんな愛しています！",
+     "coverage": 0.5,
+     "coverageAllBooks": 0.6667,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "ん",
+      "愛"
+     ],
+     "unknownItemIds": [
+      "vocab.mi"
+     ]
+    },
+    {
+     "jpn": "次は、あなたのまちに行きます。",
+     "coverage": 0.8889,
+     "coverageAllBooks": 1,
+     "totalTokens": 9,
+     "unknownRuns": [],
+     "unknownItemIds": [
+      "vocab.machi"
+     ]
+    },
+    {
+     "jpn": "待っていてくださいね。",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 5,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    }
+   ],
+   "passageCoverage": 0.6609,
+   "passageCoverageAllBooks": 0.7597,
+   "band": "below",
+   "unknownRuns": [
+    "こん",
+    "ち",
+    "人気アイドルグループ",
+    "佐",
+    "いず",
+    "コンサート",
+    "まり",
+    "色々",
+    "あー",
+    "んちょ",
+    "さあ",
+    "い",
+    "まず",
+    "ジャンプ",
+    "ん",
+    "そ",
+    "ウィンク",
+    "ゃー",
+    "さけび",
+    "しょう",
+    "恋人",
+    "横",
+    "泣",
+    "ん盛り",
+    "く",
+    "あの人",
+    "ダンス",
+    "同じ",
+    "完璧",
+    "踊",
+    "っ",
+    "げしく",
+    "上下",
+    "こえ",
+    "ー",
+    "愛"
+   ]
+  },
+  {
+   "id": "kc.iwawakisan",
+   "title": "岩湧山",
+   "level": "A2",
+   "pdfUrl": "https://www.jpf.go.jp/j/kansai/clip/images/page/yomyom/019_iwawakisan.pdf",
+   "mp3Url": null,
+   "pages": 18,
+   "chars": 378,
+   "sentences": [
+    {
+     "jpn": "岩湧山に登ります。",
+     "coverage": 0.6667,
+     "coverageAllBooks": 0.6667,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "岩湧",
+      "り"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "みどりの中を歩きます。",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 7,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "葉っぱのみどりがきれいです。",
+     "coverage": 0.7143,
+     "coverageAllBooks": 0.8571,
+     "totalTokens": 7,
+     "unknownRuns": [
+      "っぱ"
+     ],
+     "unknownItemIds": [
+      "vocab.ha-leaf"
+     ]
+    },
+    {
+     "jpn": "光の中を歩きます。",
+     "coverage": 0.8571,
+     "coverageAllBooks": 1,
+     "totalTokens": 7,
+     "unknownRuns": [],
+     "unknownItemIds": [
+      "vocab.kouei"
+     ]
+    },
+    {
+     "jpn": "岩湧山はこちらです。",
+     "coverage": 0.8,
+     "coverageAllBooks": 0.8,
+     "totalTokens": 5,
+     "unknownRuns": [
+      "岩湧"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "木の葉の道を歩きます。",
+     "coverage": 0.8571,
+     "coverageAllBooks": 0.8571,
+     "totalTokens": 7,
+     "unknownRuns": [
+      "木の葉"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "やわらかくて、気持ちがいいです。",
+     "coverage": 0.5556,
+     "coverageAllBooks": 0.7778,
+     "totalTokens": 9,
+     "unknownRuns": [
+      "ら",
+      "い"
+     ],
+     "unknownItemIds": [
+      "vocab.kimochi",
+      "vocab.gai"
+     ]
+    },
+    {
+     "jpn": "木の階段を登ります。",
+     "coverage": 0.7143,
+     "coverageAllBooks": 0.7143,
+     "totalTokens": 7,
+     "unknownRuns": [
+      "階段",
+      "り"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "一段一段登ります。",
+     "coverage": 0.4,
+     "coverageAllBooks": 0.4,
+     "totalTokens": 5,
+     "unknownRuns": [
+      "一段",
+      "り"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "木陰のベンチで休みます。",
+     "coverage": 0.5714,
+     "coverageAllBooks": 0.7143,
+     "totalTokens": 7,
+     "unknownRuns": [
+      "木陰",
+      "ベンチ"
+     ],
+     "unknownItemIds": [
+      "vocab.mi"
+     ]
+    },
+    {
+     "jpn": "涼しい風が吹いています。",
+     "coverage": 0.8333,
+     "coverageAllBooks": 0.8333,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "吹"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "青空の下を歩きます。",
+     "coverage": 0.8571,
+     "coverageAllBooks": 0.8571,
+     "totalTokens": 7,
+     "unknownRuns": [
+      "青空"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "雲がゆっくり流れます。",
+     "coverage": 0.6667,
+     "coverageAllBooks": 0.8333,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "れ"
+     ],
+     "unknownItemIds": [
+      "vocab.ryuukou"
+     ]
+    },
+    {
+     "jpn": "高い木の下を歩きます。",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 8,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "林の中を歩きます。",
+     "coverage": 0.8571,
+     "coverageAllBooks": 0.8571,
+     "totalTokens": 7,
+     "unknownRuns": [
+      "林"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "木の根の上を歩きます。",
+     "coverage": 0.8889,
+     "coverageAllBooks": 0.8889,
+     "totalTokens": 9,
+     "unknownRuns": [
+      "根"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "まるで階段みたいです。",
+     "coverage": 0.4,
+     "coverageAllBooks": 0.8,
+     "totalTokens": 5,
+     "unknownRuns": [
+      "階段"
+     ],
+     "unknownItemIds": [
+      "vocab.marude",
+      "vocab.mi"
+     ]
+    },
+    {
+     "jpn": "すすきの中を歩きます。",
+     "coverage": 0.875,
+     "coverageAllBooks": 0.875,
+     "totalTokens": 8,
+     "unknownRuns": [
+      "す"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "頂上はもうすこしです。",
+     "coverage": 0.8333,
+     "coverageAllBooks": 0.8333,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "頂"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "頂上に着きました。",
+     "coverage": 0.8333,
+     "coverageAllBooks": 0.8333,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "頂"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "山の景色を見ながら、お弁当を食べましょう。",
+     "coverage": 0.8333,
+     "coverageAllBooks": 0.8333,
+     "totalTokens": 12,
+     "unknownRuns": [
+      "景色",
+      "ら"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "すすきの中を帰ります。",
+     "coverage": 0.75,
+     "coverageAllBooks": 0.75,
+     "totalTokens": 8,
+     "unknownRuns": [
+      "す",
+      "り"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "遠くの山もきれいです。",
+     "coverage": 0.8571,
+     "coverageAllBooks": 0.8571,
+     "totalTokens": 7,
+     "unknownRuns": [
+      "く"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "階段を降りて、帰ります。",
+     "coverage": 0.5714,
+     "coverageAllBooks": 0.7143,
+     "totalTokens": 7,
+     "unknownRuns": [
+      "階段",
+      "り"
+     ],
+     "unknownItemIds": [
+      "vocab.furidasu"
+     ]
+    },
+    {
+     "jpn": "林の中を帰ります。",
+     "coverage": 0.7143,
+     "coverageAllBooks": 0.7143,
+     "totalTokens": 7,
+     "unknownRuns": [
+      "林",
+      "り"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "小川のそばを通ります。",
+     "coverage": 0.5714,
+     "coverageAllBooks": 0.7143,
+     "totalTokens": 7,
+     "unknownRuns": [
+      "小川",
+      "り"
+     ],
+     "unknownItemIds": [
+      "vocab.tsuuka",
+      "vocab.tsuuyaku"
+     ]
+    },
+    {
+     "jpn": "せせらぎを聞きながら、帰ります。",
+     "coverage": 0.5833,
+     "coverageAllBooks": 0.75,
+     "totalTokens": 12,
+     "unknownRuns": [
+      "らぎ",
+      "ら",
+      "り"
+     ],
+     "unknownItemIds": [
+      "vocab.se"
+     ]
+    },
+    {
+     "jpn": "サインを見ながら帰ります。",
+     "coverage": 0.6667,
+     "coverageAllBooks": 0.6667,
+     "totalTokens": 9,
+     "unknownRuns": [
+      "サイン",
+      "ら",
+      "り"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "ふもとの駅はもうすぐです。",
+     "coverage": 0.8889,
+     "coverageAllBooks": 0.8889,
+     "totalTokens": 9,
+     "unknownRuns": [
+      "ふ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "なんば天下茶屋関西国際空港りんくうタウン河内長野紀見峠滝畑ダム岩湧山南海線南海高野線バス",
+     "coverage": 0.5,
+     "coverageAllBooks": 0.5,
+     "totalTokens": 22,
+     "unknownRuns": [
+      "ん",
+      "天下",
+      "茶屋",
+      "関西",
+      "国際",
+      "空港りんくうタウン河内",
+      "紀",
+      "峠滝畑ダム岩湧",
+      "南",
+      "線南",
+      "線"
+     ],
+     "unknownItemIds": []
+    }
+   ],
+   "passageCoverage": 0.7277,
+   "passageCoverageAllBooks": 0.7787,
+   "band": "below",
+   "unknownRuns": [
+    "岩湧",
+    "り",
+    "っぱ",
+    "木の葉",
+    "ら",
+    "い",
+    "階段",
+    "一段",
+    "木陰",
+    "ベンチ",
+    "吹",
+    "青空",
+    "れ",
+    "林",
+    "根",
+    "す",
+    "頂",
+    "景色",
+    "く",
+    "小川",
+    "らぎ",
+    "サイン",
+    "ふ",
+    "ん",
+    "天下",
+    "茶屋",
+    "関西",
+    "国際",
+    "空港りんくうタウン河内",
+    "紀",
+    "峠滝畑ダム岩湧",
+    "南",
+    "線南",
+    "線"
+   ]
+  },
+  {
+   "id": "kc.idolnoshigoto",
+   "title": "アイドルの仕事",
+   "level": "A2",
+   "pdfUrl": "https://www.jpf.go.jp/j/kansai/clip/images/page/yomyom/021_idolnoshigoto.pdf",
+   "mp3Url": null,
+   "pages": 13,
+   "chars": 383,
+   "sentences": [
+    {
+     "jpn": "こんにちは。",
+     "coverage": 0.5,
+     "coverageAllBooks": 0.5,
+     "totalTokens": 4,
+     "unknownRuns": [
+      "こん",
+      "ち"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "ぼくはアイドルグループ・SENSHU BOYZの、岸和田ジョーです。",
+     "coverage": 0.5,
+     "coverageAllBooks": 0.6667,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "アイドルグループ",
+      "岸和田ジョー"
+     ],
+     "unknownItemIds": [
+      "vocab.boku"
+     ]
+    },
+    {
+     "jpn": "きょうは、ぼくたちの仕事をみなさんに紹介します。",
+     "coverage": 0.7143,
+     "coverageAllBooks": 0.9286,
+     "totalTokens": 14,
+     "unknownRuns": [
+      "ち"
+     ],
+     "unknownItemIds": [
+      "vocab.boku",
+      "vocab.mi",
+      "vocab.shoukaisha"
+     ]
+    },
+    {
+     "jpn": "ダンスの練習をします。",
+     "coverage": 0.6667,
+     "coverageAllBooks": 0.6667,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "ダンス",
+      "練"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "ぼくはダンスが上手じゃありません。",
+     "coverage": 0.5,
+     "coverageAllBooks": 0.8333,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "ダンス"
+     ],
+     "unknownItemIds": [
+      "vocab.boku",
+      "vocab.jouzu"
+     ]
+    },
+    {
+     "jpn": "毎日毎日練習をします。",
+     "coverage": 0.8333,
+     "coverageAllBooks": 0.8333,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "練"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "歌の練習をします。",
+     "coverage": 0.8333,
+     "coverageAllBooks": 0.8333,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "練"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "来月コンサートがあります。",
+     "coverage": 0.75,
+     "coverageAllBooks": 0.75,
+     "totalTokens": 4,
+     "unknownRuns": [
+      "コンサート"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "たくさんの歌を覚えます。",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 6,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "ファンの人たちと会います。",
+     "coverage": 0.75,
+     "coverageAllBooks": 0.75,
+     "totalTokens": 8,
+     "unknownRuns": [
+      "ファン",
+      "ち"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "みんなと握手をします。",
+     "coverage": 0.625,
+     "coverageAllBooks": 0.75,
+     "totalTokens": 8,
+     "unknownRuns": [
+      "ん",
+      "握"
+     ],
+     "unknownItemIds": [
+      "vocab.mi"
+     ]
+    },
+    {
+     "jpn": "「きゃー、ジョー！",
+     "coverage": 0.3333,
+     "coverageAllBooks": 0.3333,
+     "totalTokens": 3,
+     "unknownRuns": [
+      "ゃー",
+      "ジョー"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "かっこいい～！",
+     "coverage": 0.25,
+     "coverageAllBooks": 0.5,
+     "totalTokens": 4,
+     "unknownRuns": [
+      "っ",
+      "い"
+     ],
+     "unknownItemIds": [
+      "vocab.koi"
+     ]
+    },
+    {
+     "jpn": "好きです！",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 2,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "」「ありがとう」ファンの人たちはとても大切です。",
+     "coverage": 0.6154,
+     "coverageAllBooks": 0.6154,
+     "totalTokens": 13,
+     "unknownRuns": [
+      "あり",
+      "う",
+      "ファン",
+      "ち",
+      "大切"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "本当にうれしいです。",
+     "coverage": 0.5,
+     "coverageAllBooks": 0.5,
+     "totalTokens": 2,
+     "unknownRuns": [
+      "本当にうれしい"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "美容室に行きます。",
+     "coverage": 0.8,
+     "coverageAllBooks": 0.8,
+     "totalTokens": 5,
+     "unknownRuns": [
+      "美容室"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "髪の毛を切ります。",
+     "coverage": 0.5714,
+     "coverageAllBooks": 0.5714,
+     "totalTokens": 7,
+     "unknownRuns": [
+      "髪",
+      "毛",
+      "り"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "これも、大切な仕事です。",
+     "coverage": 0.8333,
+     "coverageAllBooks": 0.8333,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "大切"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "時々、家族と電話で話します。",
+     "coverage": 0.7143,
+     "coverageAllBooks": 0.8571,
+     "totalTokens": 7,
+     "unknownRuns": [
+      "時々"
+     ],
+     "unknownItemIds": [
+      "vocab.hanashiau"
+     ]
+    },
+    {
+     "jpn": "いつもありがとう、お母さん。",
+     "coverage": 0.6667,
+     "coverageAllBooks": 0.6667,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "あり",
+      "う"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "これからテレビに出ます。",
+     "coverage": 0.8333,
+     "coverageAllBooks": 1,
+     "totalTokens": 6,
+     "unknownRuns": [],
+     "unknownItemIds": [
+      "vocab.terebi"
+     ]
+    },
+    {
+     "jpn": "今夜８時からの「SENSHU BOYZ SHOW」を見てくださいね！",
+     "coverage": 0.875,
+     "coverageAllBooks": 0.875,
+     "totalTokens": 8,
+     "unknownRuns": [
+      "今夜"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "毎日忙しいですから、眠いです。",
+     "coverage": 0.8333,
+     "coverageAllBooks": 0.8333,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "ら"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "でも、大丈夫です。",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 3,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "アイドルはとっても楽しいです！",
+     "coverage": 0.8571,
+     "coverageAllBooks": 0.8571,
+     "totalTokens": 7,
+     "unknownRuns": [
+      "アイドル"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "あなたも、SENSHU BOYZに入りませんか？",
+     "coverage": 0.8333,
+     "coverageAllBooks": 0.8333,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "り"
+     ],
+     "unknownItemIds": []
+    }
+   ],
+   "passageCoverage": 0.7152,
+   "passageCoverageAllBooks": 0.7758,
+   "band": "below",
+   "unknownRuns": [
+    "こん",
+    "ち",
+    "アイドルグループ",
+    "岸和田ジョー",
+    "ダンス",
+    "練",
+    "コンサート",
+    "ファン",
+    "ん",
+    "握",
+    "ゃー",
+    "ジョー",
+    "っ",
+    "い",
+    "あり",
+    "う",
+    "大切",
+    "本当にうれしい",
+    "美容室",
+    "髪",
+    "毛",
+    "り",
+    "時々",
+    "今夜",
+    "ら",
+    "アイドル"
+   ]
+  },
+  {
+   "id": "kc.tsurinikki",
+   "title": "釣り日記 秋の大阪湾編",
+   "level": "A2",
+   "pdfUrl": "https://www.jpf.go.jp/j/kansai/clip/images/page/yomyom/023_tsurinikki.pdf",
+   "mp3Url": null,
+   "pages": 13,
+   "chars": 593,
+   "sentences": [
+    {
+     "jpn": "今日は釣りに行きました。",
+     "coverage": 0.8571,
+     "coverageAllBooks": 0.8571,
+     "totalTokens": 7,
+     "unknownRuns": [
+      "釣り"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "私は大阪に住んでいます。",
+     "coverage": 0.75,
+     "coverageAllBooks": 0.75,
+     "totalTokens": 8,
+     "unknownRuns": [
+      "大阪",
+      "ん"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "私の住んでいる町は、海の近くです。",
+     "coverage": 0.8333,
+     "coverageAllBooks": 0.9167,
+     "totalTokens": 12,
+     "unknownRuns": [
+      "ん"
+     ],
+     "unknownItemIds": [
+      "vocab.machi"
+     ]
+    },
+    {
+     "jpn": "大阪の近くの海は、大阪湾といいます。",
+     "coverage": 0.8,
+     "coverageAllBooks": 0.8,
+     "totalTokens": 10,
+     "unknownRuns": [
+      "大阪",
+      "大阪湾"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "大阪湾にはいろいろな魚がいます。",
+     "coverage": 0.75,
+     "coverageAllBooks": 0.875,
+     "totalTokens": 8,
+     "unknownRuns": [
+      "大阪湾"
+     ],
+     "unknownItemIds": [
+      "vocab.gai"
+     ]
+    },
+    {
+     "jpn": "休みの日は、たくさんの人が釣りをしています。",
+     "coverage": 0.8462,
+     "coverageAllBooks": 0.9231,
+     "totalTokens": 13,
+     "unknownRuns": [
+      "釣り"
+     ],
+     "unknownItemIds": [
+      "vocab.mi"
+     ]
+    },
+    {
+     "jpn": "「すみません、今日は何が釣れますか？",
+     "coverage": 0.7,
+     "coverageAllBooks": 0.8,
+     "totalTokens": 10,
+     "unknownRuns": [
+      "す",
+      "釣れ"
+     ],
+     "unknownItemIds": [
+      "vocab.mi"
+     ]
+    },
+    {
+     "jpn": "」「今日はアジがたくさん釣れるよ！",
+     "coverage": 0.75,
+     "coverageAllBooks": 0.75,
+     "totalTokens": 8,
+     "unknownRuns": [
+      "アジ",
+      "釣れ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "」みなさん、上手です。",
+     "coverage": 0.6,
+     "coverageAllBooks": 1,
+     "totalTokens": 5,
+     "unknownRuns": [],
+     "unknownItemIds": [
+      "vocab.mi",
+      "vocab.jouzu"
+     ]
+    },
+    {
+     "jpn": "アジ：Horse mackerel私が釣りたい魚は、「タチウオ」です。",
+     "coverage": 0.6667,
+     "coverageAllBooks": 0.6667,
+     "totalTokens": 9,
+     "unknownRuns": [
+      "アジ",
+      "釣り",
+      "タチウオ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "大阪湾では、秋によく釣れます。",
+     "coverage": 0.7143,
+     "coverageAllBooks": 0.7143,
+     "totalTokens": 7,
+     "unknownRuns": [
+      "大阪湾",
+      "く釣れ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "顔はちょっとこわいですが、とてもおいしい魚です。",
+     "coverage": 0.7692,
+     "coverageAllBooks": 0.7692,
+     "totalTokens": 13,
+     "unknownRuns": [
+      "ょっ",
+      "こ",
+      "い"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "タチウオ：Largehead hairtailどうして「タチウオ」という名前なのでしょうか？",
+     "coverage": 0.6364,
+     "coverageAllBooks": 0.6364,
+     "totalTokens": 11,
+     "unknownRuns": [
+      "タチウオ",
+      "名前",
+      "しょう"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "「タチウオ」という名前になったのは、①「太刀（刀の種類です）」に似ているからとか、②泳ぐときに、水の中で「立っている」ように見えるからとか、いろいろな意見があります。",
+     "coverage": 0.8182,
+     "coverageAllBooks": 0.8864,
+     "totalTokens": 44,
+     "unknownRuns": [
+      "タチウオ",
+      "名前",
+      "太刀",
+      "刀",
+      "え"
+     ],
+     "unknownItemIds": [
+      "vocab.shurui",
+      "vocab.niru",
+      "vocab.iken"
+     ]
+    },
+    {
+     "jpn": "夕方、釣りを始めます。",
+     "coverage": 0.6,
+     "coverageAllBooks": 0.8,
+     "totalTokens": 5,
+     "unknownRuns": [
+      "釣り"
+     ],
+     "unknownItemIds": [
+      "vocab.hajimeru"
+     ]
+    },
+    {
+     "jpn": "今日は「ルアー」を使います。",
+     "coverage": 0.8333,
+     "coverageAllBooks": 0.8333,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "ルアー"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "タチウオは、このルアーを本当の魚だと思って食べます。",
+     "coverage": 0.7857,
+     "coverageAllBooks": 0.7857,
+     "totalTokens": 14,
+     "unknownRuns": [
+      "タチウオ",
+      "ルアー",
+      "本当"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "釣りを始めて1時間。",
+     "coverage": 0.6,
+     "coverageAllBooks": 0.8,
+     "totalTokens": 5,
+     "unknownRuns": [
+      "釣り"
+     ],
+     "unknownItemIds": [
+      "vocab.hajimeru"
+     ]
+    },
+    {
+     "jpn": "なかなか釣れません…。",
+     "coverage": 0.75,
+     "coverageAllBooks": 0.75,
+     "totalTokens": 4,
+     "unknownRuns": [
+      "釣れ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "夜になりました。",
+     "coverage": 0.6,
+     "coverageAllBooks": 0.6,
+     "totalTokens": 5,
+     "unknownRuns": [
+      "夜",
+      "り"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "少し寒いです。",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 3,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "ん？",
+     "coverage": 0,
+     "coverageAllBooks": 0,
+     "totalTokens": 1,
+     "unknownRuns": [
+      "ん"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "魚がルアーを追いかけているようです。",
+     "coverage": 0.6364,
+     "coverageAllBooks": 0.7273,
+     "totalTokens": 11,
+     "unknownRuns": [
+      "ルアー",
+      "い",
+      "け"
+     ],
+     "unknownItemIds": [
+      "vocab.ou"
+     ]
+    },
+    {
+     "jpn": "あ！",
+     "coverage": 0,
+     "coverageAllBooks": 0,
+     "totalTokens": 1,
+     "unknownRuns": [
+      "あ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "ルアーを食べました！",
+     "coverage": 0.75,
+     "coverageAllBooks": 0.75,
+     "totalTokens": 4,
+     "unknownRuns": [
+      "ルアー"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "暴れるタチウオ！",
+     "coverage": 0.3333,
+     "coverageAllBooks": 0.3333,
+     "totalTokens": 3,
+     "unknownRuns": [
+      "暴れ",
+      "タチウオ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "逃げないように、ゆっくり釣り上げます。",
+     "coverage": 0.6667,
+     "coverageAllBooks": 0.6667,
+     "totalTokens": 9,
+     "unknownRuns": [
+      "逃げ",
+      "釣り",
+      "げ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "ついに！",
+     "coverage": 0.6667,
+     "coverageAllBooks": 0.6667,
+     "totalTokens": 3,
+     "unknownRuns": [
+      "い"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "タチウオが釣れました！",
+     "coverage": 0.5,
+     "coverageAllBooks": 0.5,
+     "totalTokens": 4,
+     "unknownRuns": [
+      "タチウオ",
+      "釣れ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "きれいな銀色です。",
+     "coverage": 0.75,
+     "coverageAllBooks": 0.75,
+     "totalTokens": 4,
+     "unknownRuns": [
+      "銀色"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "かっこいい…。",
+     "coverage": 0.25,
+     "coverageAllBooks": 0.5,
+     "totalTokens": 4,
+     "unknownRuns": [
+      "っ",
+      "い"
+     ],
+     "unknownItemIds": [
+      "vocab.koi"
+     ]
+    },
+    {
+     "jpn": "そして、おいしそう…。",
+     "coverage": 0.5,
+     "coverageAllBooks": 0.5,
+     "totalTokens": 4,
+     "unknownRuns": [
+      "そ",
+      "おいし"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "このあとも、たくさん釣れました。",
+     "coverage": 0.7143,
+     "coverageAllBooks": 0.7143,
+     "totalTokens": 7,
+     "unknownRuns": [
+      "あ",
+      "釣れ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "この日の晩ご飯は、もちろんタチウオでした。",
+     "coverage": 0.875,
+     "coverageAllBooks": 0.875,
+     "totalTokens": 8,
+     "unknownRuns": [
+      "ちろんタチウオ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "とてもおいしかったです。",
+     "coverage": 0.8,
+     "coverageAllBooks": 0.8,
+     "totalTokens": 5,
+     "unknownRuns": [
+      "おい"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "ごちそうさまでした！",
+     "coverage": 0.6667,
+     "coverageAllBooks": 0.6667,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "ち",
+      "さ"
+     ],
+     "unknownItemIds": []
+    }
+   ],
+   "passageCoverage": 0.7295,
+   "passageCoverageAllBooks": 0.7758,
+   "band": "below",
+   "unknownRuns": [
+    "釣り",
+    "大阪",
+    "ん",
+    "大阪湾",
+    "す",
+    "釣れ",
+    "アジ",
+    "タチウオ",
+    "く釣れ",
+    "ょっ",
+    "こ",
+    "い",
+    "名前",
+    "しょう",
+    "太刀",
+    "刀",
+    "え",
+    "ルアー",
+    "本当",
+    "夜",
+    "り",
+    "け",
+    "あ",
+    "暴れ",
+    "逃げ",
+    "げ",
+    "銀色",
+    "っ",
+    "そ",
+    "おいし",
+    "ちろんタチウオ",
+    "おい",
+    "ち",
+    "さ"
+   ]
+  },
+  {
+   "id": "kc.kekkonshiki",
+   "title": "結婚式",
+   "level": "A2",
+   "pdfUrl": "https://www.jpf.go.jp/j/kansai/clip/images/page/yomyom/026_kekkonshiki.pdf",
+   "mp3Url": null,
+   "pages": 13,
+   "chars": 542,
+   "sentences": [
+    {
+     "jpn": "2016年10月、私たちは神社で結婚式をしました。",
+     "coverage": 0.6667,
+     "coverageAllBooks": 0.7778,
+     "totalTokens": 9,
+     "unknownRuns": [
+      "神社",
+      "結婚式"
+     ],
+     "unknownItemIds": [
+      "vocab.toshi"
+     ]
+    },
+    {
+     "jpn": "この日は、暑くなくて、寒くなくて、とてもいい天気でした。",
+     "coverage": 0.8462,
+     "coverageAllBooks": 0.8462,
+     "totalTokens": 13,
+     "unknownRuns": [
+      "く"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "私たちの結婚式を紹介します。",
+     "coverage": 0.6667,
+     "coverageAllBooks": 0.8333,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "結婚式"
+     ],
+     "unknownItemIds": [
+      "vocab.shoukaisha"
+     ]
+    },
+    {
+     "jpn": "私が新郎です私が新婦です神社でする結婚式は、「神前式」と言います。",
+     "coverage": 0.6667,
+     "coverageAllBooks": 0.7222,
+     "totalTokens": 18,
+     "unknownRuns": [
+      "新郎",
+      "新婦",
+      "神社",
+      "結婚式",
+      "前式"
+     ],
+     "unknownItemIds": [
+      "vocab.kami"
+     ]
+    },
+    {
+     "jpn": "神前式のとき、新郎は紋付はかまを着て、新婦は白むくを着ます。",
+     "coverage": 0.619,
+     "coverageAllBooks": 0.7143,
+     "totalTokens": 21,
+     "unknownRuns": [
+      "前式",
+      "新郎",
+      "紋",
+      "ま",
+      "新婦",
+      "むく"
+     ],
+     "unknownItemIds": [
+      "vocab.kami",
+      "vocab.tsuki"
+     ]
+    },
+    {
+     "jpn": "紋付はかま神前式では、神社の神さまに結婚を報告します。",
+     "coverage": 0.4118,
+     "coverageAllBooks": 0.6471,
+     "totalTokens": 17,
+     "unknownRuns": [
+      "紋",
+      "ま",
+      "前式",
+      "神社",
+      "さま",
+      "報告"
+     ],
+     "unknownItemIds": [
+      "vocab.tsuki",
+      "vocab.kami",
+      "vocab.kekkon"
+     ]
+    },
+    {
+     "jpn": "夫婦になるために、おみき（神さまのお酒）を飲みます。",
+     "coverage": 0.625,
+     "coverageAllBooks": 0.75,
+     "totalTokens": 16,
+     "unknownRuns": [
+      "夫婦",
+      "お",
+      "さま",
+      "お酒"
+     ],
+     "unknownItemIds": [
+      "vocab.mi",
+      "vocab.kami"
+     ]
+    },
+    {
+     "jpn": "おみきを飲むとき、一回で全部飲んではいけません。",
+     "coverage": 0.7143,
+     "coverageAllBooks": 0.7857,
+     "totalTokens": 14,
+     "unknownRuns": [
+      "お",
+      "一回",
+      "ん"
+     ],
+     "unknownItemIds": [
+      "vocab.mi"
+     ]
+    },
+    {
+     "jpn": "一回目は、少し飲みます。",
+     "coverage": 0.8333,
+     "coverageAllBooks": 0.8333,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "一回"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "二回目も、少し飲みます。",
+     "coverage": 0.8333,
+     "coverageAllBooks": 0.8333,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "二回"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "そして、三回目に、全部飲みます。",
+     "coverage": 0.75,
+     "coverageAllBooks": 0.75,
+     "totalTokens": 8,
+     "unknownRuns": [
+      "そ",
+      "三回"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "新郎と新婦は、同じさかずきでおみきを飲みます。",
+     "coverage": 0.5714,
+     "coverageAllBooks": 0.7143,
+     "totalTokens": 14,
+     "unknownRuns": [
+      "新郎",
+      "新婦",
+      "同じさ",
+      "お"
+     ],
+     "unknownItemIds": [
+      "vocab.kazu",
+      "vocab.mi"
+     ]
+    },
+    {
+     "jpn": "全部で九回飲みます。",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 6,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "これを「三三九度」と言います。",
+     "coverage": 0.8889,
+     "coverageAllBooks": 0.8889,
+     "totalTokens": 9,
+     "unknownRuns": [
+      "度"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "これで、新郎と新婦は夫婦になりました。",
+     "coverage": 0.6364,
+     "coverageAllBooks": 0.6364,
+     "totalTokens": 11,
+     "unknownRuns": [
+      "新郎",
+      "新婦",
+      "夫婦",
+      "り"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "さかずき結婚式の後で、「披露宴」というパーティーをしました。",
+     "coverage": 0.5385,
+     "coverageAllBooks": 0.6154,
+     "totalTokens": 13,
+     "unknownRuns": [
+      "さ",
+      "結婚式",
+      "後",
+      "披露宴",
+      "パーティー"
+     ],
+     "unknownItemIds": [
+      "vocab.kazu"
+     ]
+    },
+    {
+     "jpn": "披露宴の最初に、「かがみびらき」をしました。",
+     "coverage": 0.6364,
+     "coverageAllBooks": 0.8182,
+     "totalTokens": 11,
+     "unknownRuns": [
+      "披露宴",
+      "びら"
+     ],
+     "unknownItemIds": [
+      "vocab.saisho",
+      "vocab.mi"
+     ]
+    },
+    {
+     "jpn": "かがみびらきは、夫婦のはじまりという意味があります。",
+     "coverage": 0.6667,
+     "coverageAllBooks": 0.8,
+     "totalTokens": 15,
+     "unknownRuns": [
+      "びら",
+      "夫婦",
+      "じまり"
+     ],
+     "unknownItemIds": [
+      "vocab.mi",
+      "vocab.imi"
+     ]
+    },
+    {
+     "jpn": "披露宴では、新婦はウエディングドレスを着ました。",
+     "coverage": 0.625,
+     "coverageAllBooks": 0.625,
+     "totalTokens": 8,
+     "unknownRuns": [
+      "披露宴",
+      "新婦",
+      "ウエディングドレス"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "披露宴の最後に、両親に花たばをあげました。",
+     "coverage": 0.75,
+     "coverageAllBooks": 0.75,
+     "totalTokens": 12,
+     "unknownRuns": [
+      "披露宴",
+      "最後",
+      "あげ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "両親に「ありがとう」と言いたかったからです。",
+     "coverage": 0.75,
+     "coverageAllBooks": 0.75,
+     "totalTokens": 12,
+     "unknownRuns": [
+      "あり",
+      "う",
+      "い"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "両親は、とても喜んで、笑ったり、泣いたりしていました。",
+     "coverage": 0.5714,
+     "coverageAllBooks": 0.7143,
+     "totalTokens": 14,
+     "unknownRuns": [
+      "ん",
+      "り",
+      "泣い"
+     ],
+     "unknownItemIds": [
+      "vocab.yorokobu",
+      "vocab.warau"
+     ]
+    },
+    {
+     "jpn": "結婚式と披露宴には、私たちの家族や友だちがたくさん集まってくれて、とても楽しかったです。",
+     "coverage": 0.7727,
+     "coverageAllBooks": 0.7727,
+     "totalTokens": 22,
+     "unknownRuns": [
+      "結婚式",
+      "披露宴",
+      "ち",
+      "集ま",
+      "くれ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "本当に幸せな一日でした。",
+     "coverage": 0.6,
+     "coverageAllBooks": 0.8,
+     "totalTokens": 5,
+     "unknownRuns": [
+      "本当に"
+     ],
+     "unknownItemIds": [
+      "vocab.shiawase"
+     ]
+    }
+   ],
+   "passageCoverage": 0.6748,
+   "passageCoverageAllBooks": 0.7517,
+   "band": "below",
+   "unknownRuns": [
+    "神社",
+    "結婚式",
+    "く",
+    "新郎",
+    "新婦",
+    "前式",
+    "紋",
+    "ま",
+    "むく",
+    "さま",
+    "報告",
+    "夫婦",
+    "お",
+    "お酒",
+    "一回",
+    "ん",
+    "二回",
+    "そ",
+    "三回",
+    "同じさ",
+    "度",
+    "り",
+    "さ",
+    "後",
+    "披露宴",
+    "パーティー",
+    "びら",
+    "じまり",
+    "ウエディングドレス",
+    "最後",
+    "あげ",
+    "あり",
+    "う",
+    "い",
+    "泣い",
+    "ち",
+    "集ま",
+    "くれ",
+    "本当に"
+   ]
+  },
+  {
+   "id": "kc.anhsanarbeitwosuru",
+   "title": "アインさんアルバイトをする？",
+   "level": "A2",
+   "pdfUrl": "https://www.jpf.go.jp/j/kansai/clip/images/page/yomyom/027_anhsanarbeitwosuru.pdf",
+   "mp3Url": null,
+   "pages": 15,
+   "chars": 490,
+   "sentences": [
+    {
+     "jpn": "アインさん、どうしたんですか？",
+     "coverage": 0.8,
+     "coverageAllBooks": 0.8,
+     "totalTokens": 5,
+     "unknownRuns": [
+      "アイン"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "「お金がないんです！",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 4,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "」「先週、SENSHU BOYZのコンサートに行きました。",
+     "coverage": 0.8571,
+     "coverageAllBooks": 0.8571,
+     "totalTokens": 7,
+     "unknownRuns": [
+      "コンサート"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "コンサートのグッズをたくさん買いました」そうですか…。",
+     "coverage": 0.7778,
+     "coverageAllBooks": 0.7778,
+     "totalTokens": 9,
+     "unknownRuns": [
+      "コンサート",
+      "グッズ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "じゃあ、私と一緒にアルバイトをしませんか？",
+     "coverage": 0.7778,
+     "coverageAllBooks": 0.7778,
+     "totalTokens": 9,
+     "unknownRuns": [
+      "じゃあ",
+      "アルバイト"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "私はファミリーレストランでアルバイトをしています。",
+     "coverage": 0.7778,
+     "coverageAllBooks": 0.7778,
+     "totalTokens": 9,
+     "unknownRuns": [
+      "ファミリー",
+      "アルバイト"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "「アルバイト…？",
+     "coverage": 0,
+     "coverageAllBooks": 0,
+     "totalTokens": 1,
+     "unknownRuns": [
+      "アルバイト"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "」制服がとてもかわいいんですよ。",
+     "coverage": 0.875,
+     "coverageAllBooks": 0.875,
+     "totalTokens": 8,
+     "unknownRuns": [
+      "制"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "「私、この制服を着たいです！",
+     "coverage": 0.875,
+     "coverageAllBooks": 0.875,
+     "totalTokens": 8,
+     "unknownRuns": [
+      "制"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "」プルルルル…。",
+     "coverage": 0,
+     "coverageAllBooks": 0,
+     "totalTokens": 1,
+     "unknownRuns": [
+      "プルルルル"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "『はい、ファミリーレストラン「ファウンテン」です』「もしもし、そちらのレストランでアルバイトをしたいんですが」『そうですか、ありがとうございます。",
+     "coverage": 0.6786,
+     "coverageAllBooks": 0.6786,
+     "totalTokens": 28,
+     "unknownRuns": [
+      "ファミリー",
+      "ファウンテン",
+      "し",
+      "アルバイト",
+      "い",
+      "あり",
+      "う",
+      "ざ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "レストランでアルバイトをしたことがありますか？",
+     "coverage": 0.8889,
+     "coverageAllBooks": 0.8889,
+     "totalTokens": 9,
+     "unknownRuns": [
+      "アルバイト"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "』「いいえ、ありません」『そうですか。",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 4,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "では、週に何回働けますか？",
+     "coverage": 0.75,
+     "coverageAllBooks": 0.75,
+     "totalTokens": 8,
+     "unknownRuns": [
+      "何回",
+      "け"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "』「そうですね…。",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 3,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "木曜日なら大丈夫です」『週末はどうですか？",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 8,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "』「週末はだめです！",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 5,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "絶対にだめです！",
+     "coverage": 0.8,
+     "coverageAllBooks": 0.8,
+     "totalTokens": 5,
+     "unknownRuns": [
+      "絶対"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "」『え？",
+     "coverage": 0,
+     "coverageAllBooks": 0,
+     "totalTokens": 1,
+     "unknownRuns": [
+      "え"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "あのー…？",
+     "coverage": 0.5,
+     "coverageAllBooks": 0.5,
+     "totalTokens": 2,
+     "unknownRuns": [
+      "ー"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "』「週末はよくSENSHU BOYZのライブがあるんです！",
+     "coverage": 0.7778,
+     "coverageAllBooks": 0.7778,
+     "totalTokens": 9,
+     "unknownRuns": [
+      "く",
+      "ライブ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "だから、アルバイトはできません！",
+     "coverage": 0.8571,
+     "coverageAllBooks": 0.8571,
+     "totalTokens": 7,
+     "unknownRuns": [
+      "アルバイト"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "」『それでは、けっこうです。",
+     "coverage": 0.4,
+     "coverageAllBooks": 0.6,
+     "totalTokens": 5,
+     "unknownRuns": [
+      "けっこ",
+      "す"
+     ],
+     "unknownItemIds": [
+      "vocab.ude"
+     ]
+    },
+    {
+     "jpn": "お電話ありがとうございました』ガチャン。",
+     "coverage": 0.5,
+     "coverageAllBooks": 0.5,
+     "totalTokens": 10,
+     "unknownRuns": [
+      "お",
+      "あり",
+      "う",
+      "ざ",
+      "ガチャン"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "プーッ、プーッ、プーッ「え？",
+     "coverage": 0,
+     "coverageAllBooks": 0,
+     "totalTokens": 4,
+     "unknownRuns": [
+      "プーッ",
+      "え"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "あれ？",
+     "coverage": 1,
+     "coverageAllBooks": 1,
+     "totalTokens": 1,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "もしもーし？",
+     "coverage": 0.5,
+     "coverageAllBooks": 0.5,
+     "totalTokens": 4,
+     "unknownRuns": [
+      "し",
+      "ーし"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "もしもーし？",
+     "coverage": 0.5,
+     "coverageAllBooks": 0.5,
+     "totalTokens": 4,
+     "unknownRuns": [
+      "し",
+      "ーし"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "？",
+     "coverage": 0,
+     "coverageAllBooks": 0,
+     "totalTokens": 0,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "」…アインさん、他のアルバイトを探しましょう。",
+     "coverage": 0.5556,
+     "coverageAllBooks": 0.6667,
+     "totalTokens": 9,
+     "unknownRuns": [
+      "アイン",
+      "アルバイト",
+      "し"
+     ],
+     "unknownItemIds": [
+      "vocab.tanin",
+      "vocab.hokani"
+     ]
+    }
+   ],
+   "passageCoverage": 0.7326,
+   "passageCoverageAllBooks": 0.7433,
+   "band": "below",
+   "unknownRuns": [
+    "アイン",
+    "コンサート",
+    "グッズ",
+    "じゃあ",
+    "アルバイト",
+    "ファミリー",
+    "制",
+    "プルルルル",
+    "ファウンテン",
+    "し",
+    "い",
+    "あり",
+    "う",
+    "ざ",
+    "何回",
+    "け",
+    "絶対",
+    "え",
+    "ー",
+    "く",
+    "ライブ",
+    "けっこ",
+    "す",
+    "お",
+    "ガチャン",
+    "プーッ",
+    "ーし"
+   ]
+  },
+  {
+   "id": "kc.idolyametai",
+   "title": "アイドルやめたい",
+   "level": "A2/B1",
+   "pdfUrl": "https://www.jpf.go.jp/j/kansai/clip/images/page/yomyom/022_idolyametai.pdf",
+   "mp3Url": null,
+   "pages": 15,
+   "chars": 389,
+   "sentences": [
+    {
+     "jpn": "ぼくは、SENSHU BOYZの羽倉サキ。",
+     "coverage": 0.5,
+     "coverageAllBooks": 0.75,
+     "totalTokens": 4,
+     "unknownRuns": [
+      "羽倉サキ"
+     ],
+     "unknownItemIds": [
+      "vocab.boku"
+     ]
+    },
+    {
+     "jpn": "ぼくの仕事はアイドルです。",
+     "coverage": 0.6667,
+     "coverageAllBooks": 0.8333,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "アイドル"
+     ],
+     "unknownItemIds": [
+      "vocab.boku"
+     ]
+    },
+    {
+     "jpn": "最近、悩みがあるんです･･･。",
+     "coverage": 0.5,
+     "coverageAllBooks": 0.6667,
+     "totalTokens": 6,
+     "unknownRuns": [
+      "最近",
+      "悩"
+     ],
+     "unknownItemIds": [
+      "vocab.mi"
+     ]
+    },
+    {
+     "jpn": "実はぼく…アイドルやめたいんです。",
+     "coverage": 0.5714,
+     "coverageAllBooks": 0.8571,
+     "totalTokens": 7,
+     "unknownRuns": [
+      "アイドル"
+     ],
+     "unknownItemIds": [
+      "vocab.jitsuwa",
+      "vocab.boku"
+     ]
+    },
+    {
+     "jpn": "ぼくは、みんなみたいにダンスも歌も上手じゃないし、おもしろいわけでもないです。",
+     "coverage": 0.5714,
+     "coverageAllBooks": 0.7619,
+     "totalTokens": 21,
+     "unknownRuns": [
+      "ん",
+      "ダンス",
+      "し",
+      "け",
+      "す"
+     ],
+     "unknownItemIds": [
+      "vocab.boku",
+      "vocab.mi",
+      "vocab.jouzu"
+     ]
+    },
+    {
+     "jpn": "顔だって地味だし･･･メンバーの中でも目立たないから、スタッフの人が、ぼくの名前を忘れることがよくあります。",
+     "coverage": 0.7586,
+     "coverageAllBooks": 0.7931,
+     "totalTokens": 29,
+     "unknownRuns": [
+      "地味",
+      "し",
+      "メンバー",
+      "スタッフ",
+      "名前",
+      "く"
+     ],
+     "unknownItemIds": [
+      "vocab.boku"
+     ]
+    },
+    {
+     "jpn": "昨日も聞いてしまいました。",
+     "coverage": 0.8571,
+     "coverageAllBooks": 0.8571,
+     "totalTokens": 7,
+     "unknownRuns": [
+      "し"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "「あれ、あの人名前なんだっけ?あの一番目立たない人」「えー、なんだっけ。",
+     "coverage": 0.6471,
+     "coverageAllBooks": 0.7059,
+     "totalTokens": 17,
+     "unknownRuns": [
+      "あの人",
+      "名前",
+      "っけ",
+      "えー"
+     ],
+     "unknownItemIds": [
+      "vocab.ichiban"
+     ]
+    },
+    {
+     "jpn": "私も思い出せないや」ショックでした。",
+     "coverage": 0.625,
+     "coverageAllBooks": 0.75,
+     "totalTokens": 8,
+     "unknownRuns": [
+      "思い出",
+      "ショック"
+     ],
+     "unknownItemIds": [
+      "vocab.se"
+     ]
+    },
+    {
+     "jpn": "アイドルをやめたら、何になろうかな。",
+     "coverage": 0.8182,
+     "coverageAllBooks": 0.8182,
+     "totalTokens": 11,
+     "unknownRuns": [
+      "アイドル",
+      "ろう"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "農家になって、ナスや玉ねぎを作るのもいいかもな。",
+     "coverage": 0.75,
+     "coverageAllBooks": 0.75,
+     "totalTokens": 16,
+     "unknownRuns": [
+      "農家",
+      "ナス",
+      "玉",
+      "ぎ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "あ、大学に行って、青春を楽しむのもいいかもな。",
+     "coverage": 0.7143,
+     "coverageAllBooks": 0.7143,
+     "totalTokens": 14,
+     "unknownRuns": [
+      "あ",
+      "大学",
+      "青春",
+      "む"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "最近元気がないのを心配して、マネージャーさんが、ファンレターを持ってきてくれました。",
+     "coverage": 0.7222,
+     "coverageAllBooks": 0.7222,
+     "totalTokens": 18,
+     "unknownRuns": [
+      "最近",
+      "心配",
+      "マネージャー",
+      "ファンレター",
+      "くれ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "どうせ、「もっと目立つようにがんばって」とか「顔が地味ですね」とか書いてあるんでしょ。",
+     "coverage": 0.76,
+     "coverageAllBooks": 0.8,
+     "totalTokens": 25,
+     "unknownRuns": [
+      "目立つ",
+      "ん",
+      "地味",
+      "しょ"
+     ],
+     "unknownItemIds": [
+      "vocab.se"
+     ]
+    },
+    {
+     "jpn": "アイドルやめないっ！",
+     "coverage": 0.6,
+     "coverageAllBooks": 0.6,
+     "totalTokens": 5,
+     "unknownRuns": [
+      "アイドル",
+      "っ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "！",
+     "coverage": 0,
+     "coverageAllBooks": 0,
+     "totalTokens": 0,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "！",
+     "coverage": 0,
+     "coverageAllBooks": 0,
+     "totalTokens": 0,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "！",
+     "coverage": 0,
+     "coverageAllBooks": 0,
+     "totalTokens": 0,
+     "unknownRuns": [],
+     "unknownItemIds": []
+    }
+   ],
+   "passageCoverage": 0.6959,
+   "passageCoverageAllBooks": 0.7629,
+   "band": "below",
+   "unknownRuns": [
+    "羽倉サキ",
+    "アイドル",
+    "最近",
+    "悩",
+    "ん",
+    "ダンス",
+    "し",
+    "け",
+    "す",
+    "地味",
+    "メンバー",
+    "スタッフ",
+    "名前",
+    "く",
+    "あの人",
+    "っけ",
+    "えー",
+    "思い出",
+    "ショック",
+    "ろう",
+    "農家",
+    "ナス",
+    "玉",
+    "ぎ",
+    "あ",
+    "大学",
+    "青春",
+    "む",
+    "心配",
+    "マネージャー",
+    "ファンレター",
+    "くれ",
+    "目立つ",
+    "しょ",
+    "っ"
+   ]
+  }
+ ]
+}

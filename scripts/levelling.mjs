@@ -57,6 +57,14 @@ export const STRUCTURAL = [
   "る", "て", "た", "だ", "って", "った", "ない", "なかった", "なくて", "ないで",
   "たい", "たかった", "ている", "ています", "ていました", "ていた", "てください", "ください",
   "そう", "よう", "ので", "のに", "けど", "けれど", "たら", "なら", "ば", "ても",
+  // The three kana verbs every text leans on. They have no kanji stem for
+  // the prefix trick to find, so their inflections fell out as し, あり and
+  // す -- the three most frequent "unknowns" in the first KC yomu yomu build,
+  // 2026-09-22, at 68, 45 and 46 occurrences across 5,476 tokens.
+  "います", "いました", "いません", "いない", "いて",
+  "あります", "ありました", "ありません", "あって", "あった",
+  "します", "しました", "しません", "して", "しない", "しよう",
+  "んです", "んですか", "んだ",
 ];
 const STRUCTURAL_SET = new Set(STRUCTURAL);
 const STRUCT_MAX = Math.max(...STRUCTURAL.map((s) => s.length));
@@ -82,7 +90,17 @@ export function buildLexicon(words, dictForms) {
       add(t, w.id);
       // Prefixes only for kanji forms: 食 stands for 食べます, but a loanword
       // must match whole — a katakana prefix would wave anything through.
-      if (hasKanji(t)) for (let i = 1; i < t.length; i++) add(t.slice(0, i), w.id);
+      // And only prefixes that still hold a kanji: この前 must not donate こ
+      // and この, or every こんにちは and ここ tokenizes as "this-before" plus
+      // debris. Measured on real text, 2026-09-22: five such kana prefixes
+      // (お, こ, この, そ, その) were in the lexicon and こ alone split the
+      // greeting in every story that opened with one.
+      if (hasKanji(t)) {
+        for (let i = 1; i < t.length; i++) {
+          const prefix = t.slice(0, i);
+          if (hasKanji(prefix)) add(prefix, w.id);
+        }
+      }
     }
   }
   let maxLen = 0;
@@ -120,10 +138,27 @@ export function tokenize(jpn, lexicon) {
       const hit = forms.get(jpn.slice(i, i + len));
       if (hit) { matched = len; itemIds = hit; break; }
     }
+    // Longest match across both tables, not "taught first". A taught reading
+    // that is a substring of grammar machinery — いま inside います — used to
+    // win on the strength of being tried first, leaving す as an unknown on
+    // every polite verb in a text. Structure that reaches further is the
+    // reading the author meant.
+    let structAhead = 0;
+    for (let len = Math.min(STRUCT_MAX, jpn.length - i); len > matched; len--) {
+      if (STRUCTURAL_SET.has(jpn.slice(i, i + len))) { structAhead = len; break; }
+    }
+    if (structAhead) matched = 0;
     if (matched) {
       let compound = 0;
       if (dictForms) {
         for (let len = Math.min(COMPOUND_MAX, jpn.length - i); len > matched; len--) {
+          // A compound is the stem plus more *kanji or katakana*: 何人 past
+          // 何. Stem plus hiragana is the stem inflecting -- 行き past 行,
+          // 帰り past 帰 -- and JMdict listing 行き as a noun does not make a
+          // learner who knows 行く a stranger to it. Only the first shape is
+          // a word they have not met.
+          const tail = jpn.slice(i + matched, i + len);
+          if (/^[ぁ-ゖー]+$/.test(tail)) continue;
           if (dictForms.has(jpn.slice(i, i + len))) { compound = len; break; }
         }
       }

@@ -39,6 +39,48 @@ describe("tokenize", () => {
     expect(tokens.filter((t) => t.kind === "other").map((t) => t.text)).toEqual(["3ＣＤ。"]);
   });
 
+  it("never lets a kanji word donate a kana-only prefix", () => {
+    // この前 used to put こ and この in the lexicon as stems, and every
+    // こんにちは in a real text then began with "this-before". Found on the
+    // first KC yomu yomu build, 2026-09-22.
+    const lex = buildLexicon([{ id: "vocab.kono-mae", japanese: "この前", reading: "このまえ" }]);
+    expect(lex.forms.has("こ")).toBe(false);
+    expect(lex.forms.has("この")).toBe(false);
+    expect(lex.forms.has("この前")).toBe(true);
+    // Nothing in こんにちは is "this-before" any more. It still splits at its
+    // に and は, which the tokenizer cannot tell from particles without a
+    // morphological analyser -- the documented limit, not this bug.
+    expect(tokenize("こんにちは", lex).some((t) => t.kind === "item")).toBe(false);
+  });
+
+  it("does not call an inflected stem a compound because JMdict lists the noun", () => {
+    // 行き is in JMdict as a noun, so the guard used to flag 行きます as the
+    // unknown compound 行き and cost seventeen sentences in one build. The
+    // stem plus hiragana is the verb inflecting; only kanji or katakana
+    // past the stem makes a word the learner has not met.
+    const lex = buildLexicon(
+      [{ id: "vocab.iku", japanese: "行く", reading: "いく" }, { id: "vocab.nani", japanese: "何", reading: "なに" }],
+      new Set(["行き", "何人"]),
+    );
+    expect(tokenize("行きます", lex).map((t) => `${t.text}:${t.kind}`)).toEqual(["行:item", "き:unknown", "ます:structural"]);
+    expect(tokenize("何人", lex)).toEqual([{ text: "何人", kind: "unknown" }]);
+  });
+
+  it("lets grammar that reaches further beat a shorter taught reading", () => {
+    // いま is a taught reading of 今; います is the polite form of いる, which
+    // has no kanji stem for the prefix trick. Taught used to win for being
+    // tried first, leaving す unknown on every ています in a text. Longest
+    // match, whichever table it comes from.
+    const lex = buildLexicon([
+      { id: "vocab.ima", japanese: "今", reading: "いま" },
+      { id: "vocab.matsu", japanese: "待つ", reading: "まつ" },
+    ]);
+    const kinds = tokenize("待っています。", lex).map((t) => `${t.text}:${t.kind}`);
+    expect(kinds).toEqual(["待:item", "って:structural", "います:structural", "。:other"]);
+    // And 今 on its own is still the word, not swallowed by anything.
+    expect(tokenize("いま", lex)[0].kind).toBe("item");
+  });
+
   it("rejects a compound whose parts are taught but whose whole is not", () => {
     // The jlpt.mjs trap: 何人 splits into 何 + 人, both taught, so without the
     // guard the tokenizer calls 何人 known. The JMdict common-form guard makes
