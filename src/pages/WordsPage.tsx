@@ -9,6 +9,7 @@ import { Furigana } from "@/components/Furigana";
 import { RecognitionPass } from "@/components/RecognitionPass";
 import { PageShell, SectionNav } from "@/components/PageShell";
 import { ProgressWidget } from "@/components/ProgressWidget";
+import { useSpeak } from "@/hooks/useSpeak";
 import { LoadingPlaceholder, ProgressBar, ScoreCard } from "aburungo-design-system";
 
 type Screen = "browse" | "learn" | "recognition" | "drill" | "result";
@@ -47,9 +48,11 @@ type BrowseScreenProps = {
   selected: Word | null;
   onSelect: (w: Word) => void;
   onStartDrill: () => void;
+  soundOn: boolean;
+  onToggleSound: () => void;
 };
 
-function BrowseScreen({ words, selected, onSelect, onStartDrill }: BrowseScreenProps) {
+function BrowseScreen({ words, selected, onSelect, onStartDrill, soundOn, onToggleSound }: BrowseScreenProps) {
   const grouped = new Map<string, Word[]>();
   for (const w of words) {
     const theme = w.theme ?? "other";
@@ -63,6 +66,30 @@ function BrowseScreen({ words, selected, onSelect, onStartDrill }: BrowseScreenP
 
   return (
     <div className="flex flex-1 flex-col gap-6 py-4">
+      <button
+        type="button"
+        role="switch"
+        aria-checked={soundOn}
+        onClick={onToggleSound}
+        className="flex min-h-[44px] items-center gap-3 self-end text-body-sm text-fg-subtle"
+      >
+        Play sound on tap
+        <span
+          aria-hidden="true"
+          className={[
+            "relative h-6 w-11 rounded-full transition-colors",
+            soundOn ? "bg-brand-600" : "bg-surface-2 border border-border",
+          ].join(" ")}
+        >
+          <span
+            className={[
+              "absolute top-0.5 h-5 w-5 rounded-full bg-white shadow transition-transform",
+              soundOn ? "translate-x-[22px]" : "translate-x-0.5",
+            ].join(" ")}
+          />
+        </span>
+      </button>
+
       {selected !== null && (
         <div className="rounded-2xl border border-brand-200 bg-brand-50 p-4">
           <div className="flex items-start gap-4">
@@ -132,6 +159,29 @@ export function WordsPage() {
 
   const [screen, setScreen] = useState<Screen>("browse");
   const [selected, setSelected] = useState<Word | null>(null);
+  const [soundOn, setSoundOn] = useState(() => {
+    try {
+      return localStorage.getItem("words.sound") !== "off";
+    } catch {
+      return true;
+    }
+  });
+  const speak = useSpeak();
+
+  function toggleSound() {
+    const next = !soundOn;
+    setSoundOn(next);
+    try {
+      localStorage.setItem("words.sound", next ? "on" : "off");
+    } catch {
+      // storage blocked — the toggle still works for this visit
+    }
+  }
+
+  function selectWord(w: Word) {
+    setSelected(w);
+    if (soundOn) speak(w.reading);
+  }
 
   const [queue, setQueue] = useState<Word[]>([]);
   const [learnIndex, setLearnIndex] = useState(0);
@@ -323,7 +373,16 @@ export function WordsPage() {
       </div>
     );
   } else {
-    content = <BrowseScreen words={words} selected={selected} onSelect={setSelected} onStartDrill={startLearn} />;
+    content = (
+      <BrowseScreen
+        words={words}
+        selected={selected}
+        onSelect={selectWord}
+        onStartDrill={startLearn}
+        soundOn={soundOn}
+        onToggleSound={toggleSound}
+      />
+    );
   }
 
   return (

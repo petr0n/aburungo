@@ -1,4 +1,5 @@
-import { useState, useEffect, useRef, useCallback, Fragment } from "react";
+import { useState, useEffect, Fragment } from "react";
+import { useSpeak } from "@/hooks/useSpeak";
 import { Link } from "react-router";
 import { PageShell, SectionNav } from "@/components/PageShell";
 import { ProgressWidget } from "@/components/ProgressWidget";
@@ -56,39 +57,6 @@ const KANA_YOON: KanaSectionData = {
     { cells: [{h:"ぴゃ",k:"ピャ",r:"pya"}, {h:"ぴゅ",k:"ピュ",r:"pyu"}, {h:"ぴょ",k:"ピョ",r:"pyo"}] },
   ],
 };
-
-// ── TTS hook ──────────────────────────────────────────────────────────────────
-
-function useSpeak(): (text: string) => void {
-  const voiceRef = useRef<SpeechSynthesisVoice | null>(null);
-
-  useEffect(() => {
-    if (!("speechSynthesis" in window)) return;
-    const synth = window.speechSynthesis;
-    const pick = () => {
-      const voices = synth.getVoices();
-      voiceRef.current =
-        voices.find((v) => v.name === "Kyoko") ??
-        voices.find((v) => v.lang === "ja-JP") ??
-        voices.find((v) => v.lang.toLowerCase().startsWith("ja")) ??
-        null;
-    };
-    pick();
-    synth.addEventListener("voiceschanged", pick);
-    return () => synth.removeEventListener("voiceschanged", pick);
-  }, []);
-
-  return useCallback((text: string) => {
-    if (!("speechSynthesis" in window)) return;
-    const synth = window.speechSynthesis;
-    synth.cancel();
-    const utt = new SpeechSynthesisUtterance(text);
-    utt.lang = "ja-JP";
-    utt.rate = 0.6;
-    if (voiceRef.current) utt.voice = voiceRef.current;
-    synth.speak(utt);
-  }, []);
-}
 
 // ── KanaKey — a single tappable character cell ────────────────────────────────
 
