@@ -43,6 +43,8 @@ The state of each option as of today, which the plan does not yet record:
 | (b) Aozora Bunko | **Built.** `scripts/aozora.mjs`, 202 texts fetched, ~11,200 filtered as public-domain + modern orthography | Wrong register for this book — its own header says "Book Five material by difficulty" |
 | (c) Clustered sentence sequences | **Prototyped.** `data/reading/micro-readings.json` | Stopgap; must never be dressed up as a story |
 
+The vocabulary those texts need is planned in [book-three-reading-glossary.md](book-three-reading-glossary.md).
+
 **Nothing in this document depends on that decision.** The grammar spine is the same whichever
 way the library is sourced, which is why it can be drafted now.
 
