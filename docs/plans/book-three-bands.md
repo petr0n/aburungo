@@ -39,7 +39,7 @@ The state of each option as of today, which the plan does not yet record:
 | Option | State | Verdict |
 |---|---|---|
 | (a) License a graded-reader corpus | **Requested 2026-09-05.** Owner emailed japanese@tadoku.org for the text of the Level 2-4 よむよむ文庫 (45) and にほんご多読ブックス Vol.2-6 (27), plus the 56 Level 2-4 Web Tadoku Books under a derivatives-allowed licence. Reply pending. | Best fit; waiting on their terms |
-| (a2) KC よむよむ (Japan Foundation Kansai) | **Found 2026-09-19.** 28 A1–A2/B1 stories, CC BY-NC 2.1 JP — modification allowed, non-commercial only. Text-extractable PDFs. See `docs/text-source-brief.md`. | Usable now in the personal-use phase; ask JF Kansai for commercial terms |
+| (a2) KC よむよむ (Japan Foundation Kansai) | **Ingested 2026-09-22** — `node scripts/kc-yomyom.mjs fetch && build` writes `data/reading/kc-yomyom.json`: 26 stories, 685 sentences, levelled against Books One–Three. CC BY-NC 2.1 JP — modification allowed, non-commercial only. **Measured: every story sits at 60–84% coverage of the taught inventory**, against a 98% flow target; the gap is vocabulary the books do not teach (名前, 神社, 大学, 場所, 本当…) plus proper nouns, not grammar. The ranked list of untaught JMdict-common words in the stories is the vocabulary Book Three's reading band must supply. | In use for the personal phase; ask JF Kansai for commercial terms; reader UI still unbuilt |
 | (b) Aozora Bunko | **Built.** `scripts/aozora.mjs`, 202 texts fetched, ~11,200 filtered as public-domain + modern orthography | Wrong register for this book — its own header says "Book Five material by difficulty" |
 | (c) Clustered sentence sequences | **Prototyped.** `data/reading/micro-readings.json` | Stopgap; must never be dressed up as a story |
 

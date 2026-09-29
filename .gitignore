@@ -39,6 +39,9 @@ server/data/
 # by `pnpm reading ingest|tag`. micro-readings.json stays committed.
 data/reading/corpus.json
 data/reading/tagged.json
+# KC yomu yomu PDFs, fetched by `node scripts/kc-yomyom.mjs fetch`; the levelled
+# text lives in the committed kc-yomyom.json
+data/reading/kc/
 
 # Railway generates a local lockfile when building in the server/ subdirectory;
 # the root workspace pnpm-lock.yaml is authoritative
