@@ -93,3 +93,44 @@ describe("the cleaner", () => {
     ]);
   });
 });
+
+/**
+ * The unknowns inventory is generated from the 122 MB dictionary, so it cannot
+ * be rebuilt here. What can be checked is that the committed file does not
+ * carry the mistakes its first drafts made -- each of these was in an early
+ * run and is the reason a rule in `unknowns` exists.
+ */
+describe("data/reading/kc-unknowns.json", () => {
+  const inv = JSON.parse(readFileSync(join(ROOT, "data/reading/kc-unknowns.json"), "utf8"));
+  const newForms = new Set(inv.new.map((r) => r.form));
+
+  it("has headwords to check, so the assertions below cannot pass vacuously", () => {
+    expect(inv.new.length).toBeGreaterThan(100);
+    expect(inv.perStory).toHaveLength(26);
+  });
+
+  it("files a known word in an unfamiliar spelling as spelling, not new", () => {
+    // Book One teaches なまえ in kana; the stories write 名前.
+    expect(newForms.has("名前")).toBe(false);
+    expect(inv.spelling.map((r) => r.form)).toContain("名前");
+  });
+
+  it("does not let grammar debris pose as vocabulary", () => {
+    // しょう is 商 "quotient" in JMdict and debris from でしょう in the text;
+    // じゃあく is じゃあ + く read as 邪悪 "wicked".
+    for (const debris of ["しょう", "じゃあく", "しょうう"]) expect(newForms.has(debris), debris).toBe(false);
+  });
+
+  it("does not trade a common word for a rare restored one", () => {
+    expect(newForms.has("侍る")).toBe(false);
+    expect(newForms.has("侍")).toBe(true);
+  });
+
+  it("resolves a verb stem to its dictionary form", () => {
+    expect(newForms.has("逃げる")).toBe(true);
+  });
+
+  it("never proposes a word Books One to Three already teach", () => {
+    for (const r of inv.new) expect(r.taughtIn ?? null, r.form).toBeNull();
+  });
+});

@@ -94,6 +94,8 @@ why the reader/mining interface can remain unbuilt, but does not by itself settl
 must be written before the next book. This review does not retrospectively declare a book
 incomplete or require undoing existing Book Four work.
 
+**Progress (2026-09-28):** owner ruled texts in scope (2026-09-19). Texts: 26 KC よむよむ stories ingested and levelled (#136). Vocabulary: inventoried and planned in [the reading glossary breakdown](book-three-reading-glossary.md) — a per-story, JMdict-cited glossary for the mining model, not new lessons. Blocked on one decision there (§4, where the glossary lives) before authoring.
+
 ## Capability inventory
 
 **Status vocabulary:** *planned* means described; *authored* means assets exist; *wired* means
