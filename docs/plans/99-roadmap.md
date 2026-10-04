@@ -42,7 +42,7 @@ planning review.
 |---|---|---|---|
 | 1 | Eight-box scheduler versus five-box API/database constraints | [Graduation spec](../superpowers/specs/2026-08-28-srs-graduation-design.md), [retention engine](05-retention-engine.md), DR-035 | **Planning resolved 2026-09-06:** keep eight boxes; API validation, database migration, recovery checks, and cross-device round-trip verification added to spec. Implementation pending. |
 | 2 | Progress isolation when accounts share a browser | [Account ownership requirements](05-retention-engine.md#account-ownership-and-session-transitions), DR-036 | **Isolation agreed 2026-09-06:** scoped storage, safe auth transitions, legacy recovery, and acceptance checks specified; implementation pending. Guest-import interaction proposed for implementation review. |
-| 3 | Book Three reading experience and vocabulary prerequisites | [Reading stage](04-stage-reading.md), [Book Three bands](book-three-bands.md), [Book Four bands](book-four-bands.md), [text sourcing](../text-source-brief.md) | **Sequencing clarified (DR-038):** content first, bookmap review, current-book content complete before next-book authoring. Reading-text/vocabulary scope remains open; interface absence alone is expected sequencing. |
+| 3 | Book Three reading experience and vocabulary prerequisites | [Reading stage](04-stage-reading.md), [Book Three bands](book-three-bands.md), [Book Four bands](book-four-bands.md), [text sourcing](../text-source-brief.md) | **Content written; completion awaits one owner decision** (2026-10-04). Texts, per-story glossaries and five of eleven gate texts are in; six gate texts have no licensed source. See the [content contract](book-three-bands.md#content-contract). |
 | 4 | Book Two composition and later-book checkpoint behavior | [Book Two](03-book-two.md), [reading stage](04-stage-reading.md), [guided-production prototypes](../../prototypes/README.md) | **Method selected (DR-039):** option 4, full model visible with type/build choice. [Spec](../superpowers/specs/2026-09-06-guided-production-design.md) added; DR-040 adds midpoint/end chapter checkpoints and shared SRS evidence rules; [spec](../superpowers/specs/2026-09-06-checkpoints-and-srs-design.md). Implementation and exact book-ending activity scope remain pending. |
 | 5 | Progress reporting for the main course versus legacy practice | [Retention engine](05-retention-engine.md), [admin plan](../admin-dashboard-plan.md) | Awaiting discussion |
 | 6 | What shelving Hana must mean on the server | [Decision records](../decision-records.md) — DR-023; [server routes](../../server/src/routes/conversation.ts) | Awaiting discussion |
@@ -94,7 +94,12 @@ why the reader/mining interface can remain unbuilt, but does not by itself settl
 must be written before the next book. This review does not retrospectively declare a book
 incomplete or require undoing existing Book Four work.
 
-**Progress (2026-09-28):** owner ruled texts in scope (2026-09-19). Texts: 26 KC よむよむ stories ingested and levelled (#136). Vocabulary: inventoried and planned in [the reading glossary breakdown](book-three-reading-glossary.md) — a per-story, JMdict-cited glossary for the mining model, not new lessons. Blocked on one decision there (§4, where the glossary lives) before authoring.
+**Progress (2026-10-04):** texts and their vocabulary are written. The 26 KC よむよむ stories are
+levelled (#136); every story has a JMdict-cited glossary in `src/content/reading/`, and five of the
+eleven bands have a gate text. The other six cannot: their N3 patterns appear in none of the A1–A2
+stories. **Content complete is not yet recorded** — it waits on the owner either accepting that
+gate-text deferral or keeping the book open for an N3 story source. Evidence and every open item:
+[the content contract](book-three-bands.md#content-contract).
 
 ## Capability inventory
 
