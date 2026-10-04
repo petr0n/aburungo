@@ -42,7 +42,7 @@ planning review.
 |---|---|---|---|
 | 1 | Eight-box scheduler versus five-box API/database constraints | [Graduation spec](../superpowers/specs/2026-08-28-srs-graduation-design.md), [retention engine](05-retention-engine.md), DR-035 | **Planning resolved 2026-09-06:** keep eight boxes; API validation, database migration, recovery checks, and cross-device round-trip verification added to spec. Implementation pending. |
 | 2 | Progress isolation when accounts share a browser | [Account ownership requirements](05-retention-engine.md#account-ownership-and-session-transitions), DR-036 | **Isolation agreed 2026-09-06:** scoped storage, safe auth transitions, legacy recovery, and acceptance checks specified; implementation pending. Guest-import interaction proposed for implementation review. |
-| 3 | Book Three reading experience and vocabulary prerequisites | [Reading stage](04-stage-reading.md), [Book Three bands](book-three-bands.md), [Book Four bands](book-four-bands.md), [text sourcing](../text-source-brief.md) | **Content written; completion awaits one owner decision** (2026-10-04). Texts, per-story glossaries and five of eleven gate texts are in; six gate texts have no licensed source. See the [content contract](book-three-bands.md#content-contract). |
+| 3 | Book Three reading experience and vocabulary prerequisites | [Reading stage](04-stage-reading.md), [Book Three bands](book-three-bands.md), [Book Four bands](book-four-bands.md), [text sourcing](../text-source-brief.md) | **Content complete (2026-10-04).** Grammar, stories, gate passages, glossaries and gate texts written and verified; reader and mining interfaces still to build. See the [content contract](book-three-bands.md#content-contract). |
 | 4 | Book Two composition and later-book checkpoint behavior | [Book Two](03-book-two.md), [reading stage](04-stage-reading.md), [guided-production prototypes](../../prototypes/README.md) | **Method selected (DR-039):** option 4, full model visible with type/build choice. [Spec](../superpowers/specs/2026-09-06-guided-production-design.md) added; DR-040 adds midpoint/end chapter checkpoints and shared SRS evidence rules; [spec](../superpowers/specs/2026-09-06-checkpoints-and-srs-design.md). Implementation and exact book-ending activity scope remain pending. |
 | 5 | Progress reporting for the main course versus legacy practice | [Retention engine](05-retention-engine.md), [admin plan](../admin-dashboard-plan.md) | Awaiting discussion |
 | 6 | What shelving Hana must mean on the server | [Decision records](../decision-records.md) — DR-023; [server routes](../../server/src/routes/conversation.ts) | Awaiting discussion |
@@ -94,12 +94,12 @@ why the reader/mining interface can remain unbuilt, but does not by itself settl
 must be written before the next book. This review does not retrospectively declare a book
 incomplete or require undoing existing Book Four work.
 
-**Progress (2026-10-04):** texts and their vocabulary are written. The 26 KC よむよむ stories are
-levelled (#136); every story has a JMdict-cited glossary in `src/content/reading/`, and five of the
-eleven bands have a gate text. The other six cannot: their N3 patterns appear in none of the A1–A2
-stories. **Content complete is not yet recorded** — it waits on the owner either accepting that
-gate-text deferral or keeping the book open for an N3 story source. Evidence and every open item:
-[the content contract](book-three-bands.md#content-contract).
+**Settled (2026-10-04): Book Three is content complete.** Reading texts are in scope (owner,
+2026-09-19): 26 KC よむよむ stories plus six Global Voices 日本語 passages that close the bands
+whose N3 grammar no graded reader uses (owner, option A). Every text has a hand-checked,
+JMdict-cited glossary in `src/content/reading/`, and every band has a gate text. Evidence:
+[the content contract](book-three-bands.md#content-contract). The reader and mining interfaces
+remain interface work.
 
 ## Capability inventory
 
@@ -115,7 +115,7 @@ hold work. A wired book does not imply every experience in its plan is complete.
 | Book Two content and difficulty shift | Content, recall default, and romaji cut wired; preferred guided production is prototyped; lesson integration remains pending | [Book plan](03-book-two.md), [generated map](../book-two-ladder.md); discussion 4 |
 | Book Three grammar content and reading stage | Grammar content wired; reader, library, mining, and compose-then-compare remain unbuilt; ingestion/levelling tooling exists | [Stage plan](04-stage-reading.md), [bands](book-three-bands.md), [generated map](../book-three-ladder.md), [pipeline](../../scripts/reading.mjs); discussion 3 |
 | Book Four | All nine bands authored, audited and wired (2026-09-07): 352 lessons, 901 words, 1232 phrases, 241 patterns. Its 292 kanji are placed and taught (2026-09-07), taking the course's taught set from 229 to 521. Bands 4 and 8 of `04b` (news, exposition at length) stay deferred on text sourcing. | [Bands](book-four-bands.md), [generated map](../book-four-ladder.md), [book registry](../../src/content/books.ts) |
-| Book Five | Planned as a **review volume** (DR-041, 2026-09-10): reviews Books One to Four, at most 25% new words, no new grammar. The fluency skeleton was fully absorbed by Book Four, so this displaces no planned grammar. No content authored; blocked behind Book Three's open scope (DR-038). | [Book Five plan](book-five-review.md), DR-041 |
+| Book Five | Planned as a **review volume** (DR-041, 2026-09-10): reviews Books One to Four, at most 25% new words, no new grammar. The fluency skeleton was fully absorbed by Book Four, so this displaces no planned grammar. No content authored; **unblocked** — Book Three reached content complete on 2026-10-04 (DR-038). | [Book Five plan](book-five-review.md), DR-041 |
 | Later books | **None. The course is five books (DR-042, 2026-09-11).** Book Four carries the grammar that reaches DR-034's endpoint and Book Five adds none. The three items Book Four deferred are a reading library and a production engine -- surfaces and code, not volumes -- and attach to existing books when they unblock. | [Book Five plan](book-five-review.md), DR-042 |
 | Kanji introduction, review, and components | Wired, and placement now caught up with Book Four: 218 / 19 / 10 / 292 across Books One to Four, 521 characters taught, 180 components keyworded. Kanji are introduced on KanjiIntroCard and reviewed on KanjiDrillCard, recognition only; `dailyLoop` puts a seen lesson's due kanji in `reviewItems`, which its own test pins. The 2026-08-24 'shown but never reviewed' finding was closed by the two specs in PR #105 | [Ladder spec](../superpowers/specs/2026-08-24-kanji-in-the-ladder-design.md), [component spec](../superpowers/specs/2026-08-24-kanji-components-design.md), [content](../../src/content/kanji/index.ts) |
 | Scheduling and progress sync | Partial: eight-box client, five-box API/database; compatibility fix approved in plan, implementation pending; legacy server FSRS also exists | [Graduation spec](../superpowers/specs/2026-08-28-srs-graduation-design.md), [retention plan](05-retention-engine.md); discussions 1–2 |
