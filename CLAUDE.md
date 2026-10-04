@@ -73,33 +73,17 @@ It is the shared procedure for all contributors; role guides link to it.
 
 ## Stack
 
-### Frontend
+Dependencies, build flags and the route list live in `package.json`, `tsconfig.*.json`
+and `server/`. What those files cannot tell you:
 
-- **Build:** Vite + React 19 + TypeScript (strict; `verbatimModuleSyntax`, `erasableSyntaxOnly`, `noUnusedLocals`)
-- **Styling:** Tailwind v4 via `@tailwindcss/vite` (theme tokens in `src/index.css`)
-- **State (in-session, transient):** Zustand
-- **Auth client:** Supabase JS client (token management only — all data calls go through the API server)
-- **Tests:** Vitest
-
-### API Server
-
-- **Runtime:** Node + TypeScript
-- **Framework:** Hono
-- **Auth:** Validate Supabase JWTs on every protected route
-- **Routes:** `/api/auth`, `/api/vocabulary`, `/api/kanji`, `/api/progress`, `/api/audio`, `/api/stt`, `/api/conversation`
-
-### Repo & Deployment
-
-- **Structure:** Monorepo — `src/` (frontend) + `server/` (Hono API) in one repo
-- **Deployment:** Separate — frontend on Vercel/Netlify, server on Railway/Fly.io/Render
-- **Containers:** Podman preferred over Docker Desktop. Use `podman run` / `podman-compose` wherever Docker commands appear.
-- **VOICEVOX:** Pre-generate audio locally with Podman, upload to Supabase Storage. Do not host VOICEVOX in production for V1.
-
-### Infrastructure (Supabase)
-
-- **Database:** Postgres — JMdict vocabulary, KANJIDIC2 kanji, user progress, SRS state, conversation history
-- **Auth:** Supabase Auth (JWT, OAuth) — validated server-side, never trusted client-side
-- **Storage:** Pre-generated VOICEVOX audio files, user assets
+- **Auth:** the frontend Supabase client is for token management only. The Hono server
+  validates Supabase JWTs on every protected route and is the only thing that touches data.
+- **Deployment:** separate — frontend on Vercel/Netlify, server on Railway/Fly.io/Render.
+- **Containers:** Podman preferred over Docker Desktop. Use `podman run` / `podman-compose`
+  wherever Docker commands appear.
+- **VOICEVOX:** pre-generate audio locally with Podman, upload to Supabase Storage. Do not
+  host VOICEVOX in production for V1.
+- **Styling:** Tailwind v4 — theme tokens live in `src/index.css`.
 
 ### SRS
 
@@ -117,20 +101,9 @@ It is the shared procedure for all contributors; role guides link to it.
 
 ## Data Sources
 
-| Data                 | Source                                     | License               |
-| -------------------- | ------------------------------------------ | --------------------- |
-| Vocabulary / phrases | JMdict ("JMdict for Applications" variant) | CC BY 4.0             |
-| Example sentences    | Tatoeba TSV download + `jpn_indices.csv`   | CC BY 2.0 FR          |
-| Graded readers (Book Three library) | KC よむよむ, Japan Foundation Kansai Center — `data/reading/kc-yomyom.json` | CC BY-NC 2.1 JP (non-commercial; ask JF Kansai before any paid release) |
-| Kanji (~2136 Joyo)   | KANJIDIC2 / KanjiAPI.dev                   | CC BY-SA 4.0          |
-| Stroke order SVGs    | KanjiVG (bundled)                          | CC BY-SA 3.0          |
-| Kanji components     | KRADFILE via krad-unicode                  | CC BY-SA 3.0          |
-| TTS audio (static)   | VOICEVOX (self-hosted, pre-generated)      | Per-voice terms       |
-| TTS audio (dynamic)  | Google Neural2 / Azure Nanami              | Paid                  |
-| STT                  | Web Speech API (V1) → OpenAI Whisper API   | Free / $0.006/min     |
-| Conversation AI      | Claude Haiku via Anthropic API             | $0.80/$4 per M tokens |
-
-**Licensing note:** Use "JMdict for Applications" (CC BY 4.0) not base JMdict (CC BY-SA 4.0) — avoids share-alike if the app is monetized.
+Sources and licenses: the `aburungo-data-sources` skill. **Licensing note:** use "JMdict for
+Applications" (CC BY 4.0) not base JMdict (CC BY-SA 4.0) — avoids share-alike if the app is
+monetized. The Book Three graded readers are CC BY-NC: ask JF Kansai before any paid release.
 
 ## Git workflow and commits
 
@@ -151,11 +124,6 @@ It is the shared procedure for all contributors; role guides link to it.
 ## Commands
 
 ```
-pnpm dev             frontend dev server
-pnpm build           type-check + bundle
-pnpm lint            eslint
-pnpm test            vitest, one shot
-pnpm test:watch      vitest, watch mode
 pnpm walkthrough     drive every /learn unit end-to-end in headless Chromium
 pnpm ladder          regenerate the book map record: docs/<book>-ladder.md, every book
 pnpm jmdict check    verify every "JMdict seq NNNNNNN" in the content resolves
@@ -204,12 +172,9 @@ false stall. First run needs `pnpm exec playwright install chromium`.
 - **Do not read binary image files** (`.png`, `.jpg`, `.gif`, `.webp`) with the Read tool — causes conversation context errors. Reference image paths as strings only.
 - **Always run `pnpm build` and `pnpm test` before concluding code changes.**
 
-## Not built yet (planned)
+## What is not built yet
 
-- Database schema + Supabase migrations
-- Hono server scaffold
-- JMdict / Tatoeba / KANJIDIC2 seed scripts
-- VOICEVOX audio pre-generation pipeline
-- All learning mechanic UIs (flashcard, fill-in-the-blank, kana practice, kanji, audio, conversation)
-- Routing — add `react-router` when first multi-view need arises
-- Furigana via `<ruby>` — needs kana tokenizer; show reading as separate line for now
+See [docs/plans/99-roadmap.md](docs/plans/99-roadmap.md) — it owns status.
+
+One standing rendering convention: furigana via `<ruby>` needs a kana tokenizer we do
+not have, so show the reading as a separate line for now.
