@@ -71,3 +71,6 @@ data/aozora/
 # file. Regenerate with `pnpm vocab candidates <level>`.
 # review aid written by `node scripts/kc-yomyom.mjs draft`
 data/reading/draft-senses.txt
+# Global Voices article cache, fetched by `node scripts/global-voices.mjs fetch`;
+# the chosen passages live in the committed gv-passages.json
+data/reading/gv/

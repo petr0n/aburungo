@@ -1,0 +1,703 @@
+{
+ "generated": "2026-10-04",
+ "attribution": {
+  "source": "Global Voices 日本語",
+  "sourceUrl": "https://jp.globalvoices.org/",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "note": "Text only, verbatim. Credit the author and translator with a link to the article at the top of wherever a passage is shown."
+ },
+ "knownSet": "words taught by Book One through Book Three at generation time; coverageAllBooks uses every taught word",
+ "counts": {
+  "stories": 6,
+  "sentences": 29,
+  "chars": 1062
+ },
+ "stories": [
+  {
+   "id": "gv.65377-13",
+   "title": "アフガニスタン：タリバンの女子教育禁止を私は乗り越える",
+   "level": "news",
+   "link": "https://jp.globalvoices.org/2026/05/18/65377/",
+   "date": "2026-05-18",
+   "author": "Global Voices Eurasia",
+   "translator": "Moegi Tanaka",
+   "proofreader": "Miyu Yamamoto",
+   "gateFor": "b3.band-1",
+   "chars": 121,
+   "sentences": [
+    {
+     "jpn": "10代の私にはこの暗闇から抜け出すのは困難だった。",
+     "coverage": 0.7143,
+     "coverageAllBooks": 0.7143,
+     "totalTokens": 14,
+     "unknownRuns": [
+      "代",
+      "暗闇",
+      "抜け",
+      "困難"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "でも私は家族のおかげで一つの道を見つけた。",
+     "coverage": 0.8125,
+     "coverageAllBooks": 0.875,
+     "totalTokens": 16,
+     "unknownRuns": [
+      "お",
+      "げ"
+     ],
+     "unknownItemIds": [
+      "vocab.mitsukeru"
+     ]
+    },
+    {
+     "jpn": "私は人目につかないよう運営されているヘラートの英語センターに行くようになった。",
+     "coverage": 0.8,
+     "coverageAllBooks": 0.8,
+     "totalTokens": 20,
+     "unknownRuns": [
+      "人目",
+      "運営され",
+      "ヘラート",
+      "センター"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "実は、そこでは勇気ある先生たちが女の子たちに秘かに英語を教えていたのだ。",
+     "coverage": 0.7826,
+     "coverageAllBooks": 0.8261,
+     "totalTokens": 23,
+     "unknownRuns": [
+      "勇",
+      "ち",
+      "秘"
+     ],
+     "unknownItemIds": [
+      "vocab.jitsuwa"
+     ]
+    }
+   ],
+   "passageCoverage": 0.7808,
+   "passageCoverageAllBooks": 0.8082,
+   "band": "below",
+   "unknownRuns": [
+    "代",
+    "暗闇",
+    "抜け",
+    "困難",
+    "お",
+    "げ",
+    "人目",
+    "運営され",
+    "ヘラート",
+    "センター",
+    "勇",
+    "ち",
+    "秘"
+   ]
+  },
+  {
+   "id": "gv.62448-1",
+   "title": "カモノハシが野生で生息できるために",
+   "level": "news",
+   "link": "https://jp.globalvoices.org/2024/04/02/62448/",
+   "date": "2024-04-02",
+   "author": "Kevin Rennie",
+   "translator": "Moegi Tanaka",
+   "proofreader": "Motoko Saito",
+   "gateFor": "b3.band-2",
+   "chars": 113,
+   "sentences": [
+    {
+     "jpn": "私はこれまでオーストラリアの広大な地をくまなく旅してきたにもかかわらず、私が生きてきた4分の3世紀の間に野生のカモノハシを見たのはわずか一度である。",
+     "coverage": 0.7609,
+     "coverageAllBooks": 0.8043,
+     "totalTokens": 46,
+     "unknownRuns": [
+      "オーストラリア",
+      "広大",
+      "くま",
+      "く",
+      "らず",
+      "世紀",
+      "野生",
+      "カモノハシ",
+      "ず"
+     ],
+     "unknownItemIds": [
+      "vocab.ikiru",
+      "vocab.maniau"
+     ]
+    },
+    {
+     "jpn": "それはノース・クイーンズランドのアサートン高原にある滝の下の池でのことだった。",
+     "coverage": 0.7368,
+     "coverageAllBooks": 0.7368,
+     "totalTokens": 19,
+     "unknownRuns": [
+      "ノース",
+      "クイーンズランド",
+      "アサートン",
+      "高原",
+      "滝"
+     ],
+     "unknownItemIds": []
+    }
+   ],
+   "passageCoverage": 0.7538,
+   "passageCoverageAllBooks": 0.7846,
+   "band": "below",
+   "unknownRuns": [
+    "オーストラリア",
+    "広大",
+    "くま",
+    "く",
+    "らず",
+    "世紀",
+    "野生",
+    "カモノハシ",
+    "ず",
+    "ノース",
+    "クイーンズランド",
+    "アサートン",
+    "高原",
+    "滝"
+   ]
+  },
+  {
+   "id": "gv.63643-20",
+   "title": "日本で生まれ育ったネパール人の子どもたちは、なぜ祖国へ帰ろうとするのか",
+   "level": "news",
+   "link": "https://jp.globalvoices.org/2025/05/16/63643/",
+   "date": "2025-05-16",
+   "author": "Nepali Times",
+   "translator": "Masako Seno",
+   "proofreader": "Moegi Tanaka",
+   "gateFor": "b3.band-3",
+   "chars": 91,
+   "sentences": [
+    {
+     "jpn": "たとえ日本で永住権を得たとしても、子どもたちのために何としてでもネパールへ帰ると言う人もいる。",
+     "coverage": 0.7273,
+     "coverageAllBooks": 0.8182,
+     "totalTokens": 33,
+     "unknownRuns": [
+      "え",
+      "永",
+      "権",
+      "ど",
+      "ち",
+      "ネパール"
+     ],
+     "unknownItemIds": [
+      "vocab.toku",
+      "vocab.tokui",
+      "vocab.toshi",
+      "vocab.nantomo"
+     ]
+    },
+    {
+     "jpn": "実際すでに永住権を持っているのに、子どもたちを連れてネパールへ帰ることにした母親もいる。",
+     "coverage": 0.6786,
+     "coverageAllBooks": 0.7143,
+     "totalTokens": 28,
+     "unknownRuns": [
+      "実際す",
+      "永",
+      "権",
+      "ど",
+      "ち",
+      "れ",
+      "ネパール",
+      "母親"
+     ],
+     "unknownItemIds": [
+      "vocab.renraku"
+     ]
+    }
+   ],
+   "passageCoverage": 0.7049,
+   "passageCoverageAllBooks": 0.7705,
+   "band": "below",
+   "unknownRuns": [
+    "え",
+    "永",
+    "権",
+    "ど",
+    "ち",
+    "ネパール",
+    "実際す",
+    "れ",
+    "母親"
+   ]
+  },
+  {
+   "id": "gv.58290-32",
+   "title": "ロマ音楽家の語るチェコ社会の両面性",
+   "level": "news",
+   "link": "https://jp.globalvoices.org/2021/08/18/58290/",
+   "date": "2021-08-18",
+   "author": "Elmira Lyapina",
+   "translator": "Yasuhisa Miyata",
+   "proofreader": "Mitsuo Sugano",
+   "gateFor": "b3.band-4",
+   "chars": 251,
+   "sentences": [
+    {
+     "jpn": "チェコの人たちはよく私たちを祝祭に呼んでくれますが、それは個人的なものです。",
+     "coverage": 0.64,
+     "coverageAllBooks": 0.68,
+     "totalTokens": 25,
+     "unknownRuns": [
+      "チェコ",
+      "ち",
+      "く",
+      "祝祭",
+      "ん",
+      "くれ",
+      "個",
+      "人的"
+     ],
+     "unknownItemIds": [
+      "vocab.mono-person"
+     ]
+    },
+    {
+     "jpn": "音楽フェスでもよく演奏しますよ。",
+     "coverage": 0.7143,
+     "coverageAllBooks": 0.7143,
+     "totalTokens": 7,
+     "unknownRuns": [
+      "フェス",
+      "く演奏"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "この国の人たちは私たちの演奏が好きなんです。",
+     "coverage": 0.8571,
+     "coverageAllBooks": 0.8571,
+     "totalTokens": 14,
+     "unknownRuns": [
+      "ち",
+      "演奏"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "5分もたたないうちに踊り出す人がいます。",
+     "coverage": 0.75,
+     "coverageAllBooks": 0.9167,
+     "totalTokens": 12,
+     "unknownRuns": [
+      "踊り"
+     ],
+     "unknownItemIds": [
+      "vocab.uchi",
+      "vocab.gai"
+     ]
+    },
+    {
+     "jpn": "でも、チェコの音楽業界で「踊れる音楽を演るバンド」だと言われていても、全国的に売れているわけではありません。",
+     "coverage": 0.6897,
+     "coverageAllBooks": 0.6897,
+     "totalTokens": 29,
+     "unknownRuns": [
+      "チェコ",
+      "業界",
+      "踊れ",
+      "演",
+      "バンド",
+      "れ",
+      "全国的",
+      "け"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "私たちの出自が問題だからだと思います。",
+     "coverage": 0.9091,
+     "coverageAllBooks": 1,
+     "totalTokens": 11,
+     "unknownRuns": [],
+     "unknownItemIds": [
+      "vocab.mondai"
+     ]
+    },
+    {
+     "jpn": "何度かチェコのテレビやラジオのインタビューを受けましたが、私たちの音楽が放送されることはありませんでした。",
+     "coverage": 0.64,
+     "coverageAllBooks": 0.76,
+     "totalTokens": 25,
+     "unknownRuns": [
+      "何度",
+      "チェコ",
+      "ラジオ",
+      "インタビュー",
+      "放",
+      "され"
+     ],
+     "unknownItemIds": [
+      "vocab.terebi",
+      "vocab.uketsukeru",
+      "vocab.okurikaesu",
+      "vocab.soukin"
+     ]
+    },
+    {
+     "jpn": "どちらにして彼らには私たちを売り込む気はなかったんです……",
+     "coverage": 0.8462,
+     "coverageAllBooks": 0.9231,
+     "totalTokens": 13,
+     "unknownRuns": [
+      "売り込む"
+     ],
+     "unknownItemIds": [
+      "vocab.karera"
+     ]
+    }
+   ],
+   "passageCoverage": 0.7279,
+   "passageCoverageAllBooks": 0.7868,
+   "band": "below",
+   "unknownRuns": [
+    "チェコ",
+    "ち",
+    "く",
+    "祝祭",
+    "ん",
+    "くれ",
+    "個",
+    "人的",
+    "フェス",
+    "く演奏",
+    "演奏",
+    "踊り",
+    "業界",
+    "踊れ",
+    "演",
+    "バンド",
+    "れ",
+    "全国的",
+    "け",
+    "何度",
+    "ラジオ",
+    "インタビュー",
+    "放",
+    "され",
+    "売り込む"
+   ]
+  },
+  {
+   "id": "gv.58639-14",
+   "title": "「女性だからと夢をあきらめないで」トルコ人航空宇宙エンジニアは語る",
+   "level": "news",
+   "link": "https://jp.globalvoices.org/2021/11/07/58639/",
+   "date": "2021-11-07",
+   "author": "Sevgi Yagmur Bulut",
+   "translator": "Moegi Tanaka",
+   "proofreader": "Eiko Iwama",
+   "gateFor": "b3.band-8",
+   "chars": 269,
+   "sentences": [
+    {
+     "jpn": "親戚や教師、まったくの他人から批判を受けるとは考えもしませんでした。",
+     "coverage": 0.5556,
+     "coverageAllBooks": 0.7778,
+     "totalTokens": 18,
+     "unknownRuns": [
+      "親戚",
+      "ま",
+      "く",
+      "批判"
+     ],
+     "unknownItemIds": [
+      "vocab.kyoushi",
+      "vocab.tanin",
+      "vocab.uketsukeru",
+      "vocab.kangaeru",
+      "vocab.kangae"
+     ]
+    },
+    {
+     "jpn": "多くの人は航空宇宙工学に私の未来はないと思っていました。",
+     "coverage": 0.7,
+     "coverageAllBooks": 0.75,
+     "totalTokens": 20,
+     "unknownRuns": [
+      "く",
+      "航",
+      "宇宙工",
+      "未",
+      "い"
+     ],
+     "unknownItemIds": [
+      "vocab.tasai"
+     ]
+    },
+    {
+     "jpn": "私が、明らかに女性にもっと向いている医学を選ばないなんて、入試の点数を無駄にしていると言う人もいましたし、工学を学びたいのならもっと女子向きのものを選ぶべきだという人もいました。",
+     "coverage": 0.6949,
+     "coverageAllBooks": 0.7966,
+     "totalTokens": 59,
+     "unknownRuns": [
+      "ら",
+      "っ",
+      "向",
+      "医学",
+      "ん",
+      "入試",
+      "点",
+      "し",
+      "工",
+      "び",
+      "女子向",
+      "べ"
+     ],
+     "unknownItemIds": [
+      "vocab.josei",
+      "vocab.erabu",
+      "vocab.kazu",
+      "vocab.muda",
+      "vocab.mono-person"
+     ]
+    },
+    {
+     "jpn": "しかし私はそんなことには耳を貸しませんでした。",
+     "coverage": 0.8333,
+     "coverageAllBooks": 0.9167,
+     "totalTokens": 12,
+     "unknownRuns": [
+      "そん"
+     ],
+     "unknownItemIds": [
+      "vocab.shikashi"
+     ]
+    },
+    {
+     "jpn": "私は自分に確信を持ち、絶対にやりたいことがわかっていましたから、何を言われても私の人生には影響しませんでした。",
+     "coverage": 0.7273,
+     "coverageAllBooks": 0.8485,
+     "totalTokens": 33,
+     "unknownRuns": [
+      "確",
+      "絶対",
+      "り",
+      "れ",
+      "影響"
+     ],
+     "unknownItemIds": [
+      "vocab.jibun",
+      "vocab.shinyou",
+      "vocab.mochikaeri",
+      "vocab.jinsei"
+     ]
+    },
+    {
+     "jpn": "両親はずっと私を応援してくれたので、そういう意味では私は恵まれていたと思います。",
+     "coverage": 0.7391,
+     "coverageAllBooks": 0.8261,
+     "totalTokens": 23,
+     "unknownRuns": [
+      "ずっ",
+      "応援",
+      "くれ",
+      "恵"
+     ],
+     "unknownItemIds": [
+      "vocab.imi",
+      "vocab.mare"
+     ]
+    }
+   ],
+   "passageCoverage": 0.703,
+   "passageCoverageAllBooks": 0.8121,
+   "band": "below",
+   "unknownRuns": [
+    "親戚",
+    "ま",
+    "く",
+    "批判",
+    "航",
+    "宇宙工",
+    "未",
+    "い",
+    "ら",
+    "っ",
+    "向",
+    "医学",
+    "ん",
+    "入試",
+    "点",
+    "し",
+    "工",
+    "び",
+    "女子向",
+    "べ",
+    "そん",
+    "確",
+    "絶対",
+    "り",
+    "れ",
+    "影響",
+    "ずっ",
+    "応援",
+    "くれ",
+    "恵"
+   ]
+  },
+  {
+   "id": "gv.63627-1",
+   "title": "アゼルバイジャンとトルコの紅茶文化の違い",
+   "level": "news",
+   "link": "https://jp.globalvoices.org/2025/02/14/63627/",
+   "date": "2025-02-14",
+   "author": "Arzu Geybullayeva",
+   "translator": "Moegi Tanaka",
+   "proofreader": "Mitsuo Sugano",
+   "gateFor": "b3.band-10",
+   "chars": 217,
+   "sentences": [
+    {
+     "jpn": "もうだいぶ前のことだが、私が初めてトルコの紅茶を味わったとき、まず感じたのは何て苦いのだろうということだった。",
+     "coverage": 0.8,
+     "coverageAllBooks": 0.8,
+     "totalTokens": 35,
+     "unknownRuns": [
+      "ぶ前",
+      "初",
+      "トルコ",
+      "味",
+      "まず感じ",
+      "苦い",
+      "ろう"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "この国に住んで20年になるが、今でも紅茶を注文するとき必ず2つのことを尋ねる。",
+     "coverage": 0.8,
+     "coverageAllBooks": 0.88,
+     "totalTokens": 25,
+     "unknownRuns": [
+      "ん",
+      "ず",
+      "尋"
+     ],
+     "unknownItemIds": [
+      "vocab.toshi",
+      "vocab.hitsuyou"
+     ]
+    },
+    {
+     "jpn": "それは淹（い）れたてかどうか、また薄くしてもらえるかどうかである。",
+     "coverage": 0.6364,
+     "coverageAllBooks": 0.6364,
+     "totalTokens": 22,
+     "unknownRuns": [
+      "淹",
+      "い",
+      "れ",
+      "う",
+      "ま",
+      "薄く",
+      "らえ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "そうでなければ、私には苦すぎる。",
+     "coverage": 0.7778,
+     "coverageAllBooks": 0.7778,
+     "totalTokens": 9,
+     "unknownRuns": [
+      "けれ",
+      "苦すぎ"
+     ],
+     "unknownItemIds": []
+    },
+    {
+     "jpn": "私のふるさとアゼルバイジャンでは、紅茶は澄んでいて軽やか。",
+     "coverage": 0.7333,
+     "coverageAllBooks": 0.8,
+     "totalTokens": 15,
+     "unknownRuns": [
+      "さ",
+      "アゼルバイジャン",
+      "澄ん"
+     ],
+     "unknownItemIds": [
+      "vocab.furu"
+     ]
+    },
+    {
+     "jpn": "茶葉もかなり大きい。",
+     "coverage": 0.7143,
+     "coverageAllBooks": 0.8571,
+     "totalTokens": 7,
+     "unknownRuns": [
+      "り"
+     ],
+     "unknownItemIds": [
+      "vocab.ha-leaf"
+     ]
+    },
+    {
+     "jpn": "実際に紅茶文化の何から何まで、淹れ方からもてなしまで、全然違っている。",
+     "coverage": 0.619,
+     "coverageAllBooks": 0.7143,
+     "totalTokens": 21,
+     "unknownRuns": [
+      "実際",
+      "文化",
+      "ら",
+      "淹れ",
+      "し",
+      "全然"
+     ],
+     "unknownItemIds": [
+      "vocab.nanika",
+      "vocab.kata-person"
+     ]
+    }
+   ],
+   "passageCoverage": 0.7313,
+   "passageCoverageAllBooks": 0.7761,
+   "band": "below",
+   "unknownRuns": [
+    "ぶ前",
+    "初",
+    "トルコ",
+    "味",
+    "まず感じ",
+    "苦い",
+    "ろう",
+    "ん",
+    "ず",
+    "尋",
+    "淹",
+    "い",
+    "れ",
+    "う",
+    "ま",
+    "薄く",
+    "らえ",
+    "けれ",
+    "苦すぎ",
+    "さ",
+    "アゼルバイジャン",
+    "澄ん",
+    "り",
+    "実際",
+    "文化",
+    "ら",
+    "淹れ",
+    "し",
+    "全然"
+   ]
+  }
+ ]
+}

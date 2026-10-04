@@ -255,6 +255,21 @@ async function build() {
   console.log(`\n  ${stories.length} stories, ${byBand["100"] ?? 0} at band 100, ${byBand["95"] ?? 0} at 95, ${byBand["90"] ?? 0} at 90, ${byBand.below ?? 0} below -> ${OUT}\n`);
 }
 
+// ── which library: KC yomu yomu by default, any levelled library with --library
+
+/**
+ * `unknowns` and `draft` serve every levelled library with the same shape: the
+ * KC stories, and the Global Voices gate passages. `--library <file>` picks one;
+ * the prefix of its story ids names the inventory and the glossary files.
+ */
+function libraryArgs() {
+  const i = process.argv.indexOf("--library");
+  const file = i > 0 ? join(ROOT, process.argv[i + 1]) : OUT;
+  const lib = JSON.parse(readFileSync(file, "utf8"));
+  const prefix = lib.stories[0].id.split(".")[0];
+  return { lib, prefix, inventory: join(ROOT, `data/reading/${prefix}-unknowns.json`) };
+}
+
 // ── unknowns: what the stories need that the books do not teach ─────────────
 
 /** Endings that turn a verb or adjective stem back into its dictionary form. */
@@ -383,7 +398,7 @@ async function unknowns() {
     }
   }
 
-  const lib = JSON.parse(readFileSync(OUT, "utf8"));
+  const { lib, inventory } = libraryArgs();
   const buckets = { new: new Map(), spelling: new Map(), bookFour: new Map() };
   const unresolved = new Map();
   const gained = new Map();
@@ -528,7 +543,7 @@ async function unknowns() {
     const glossary = new Set([...fresh, ...spelling, ...bookFour].filter((r) => r.stories.includes(st.id)).map((r) => r.seq ?? r.id)).size;
     return { id: st.id, title: st.title, level: st.level, now: st.passageCoverage, withGlossary: Number(Math.min(1, (known + (gained.get(st.id) ?? 0)) / tokens).toFixed(4)), glossaryWords: glossary };
   });
-  const out = join(ROOT, "data/reading/kc-unknowns.json");
+  const out = inventory;
   writeFileSync(
     out,
     JSON.stringify(
@@ -577,8 +592,8 @@ async function unknowns() {
  * content, and regenerating over it would silently undo the review.
  */
 async function draftGlossaries() {
-  const inv = JSON.parse(readFileSync(join(ROOT, "data/reading/kc-unknowns.json"), "utf8"));
-  const lib = JSON.parse(readFileSync(OUT, "utf8"));
+  const { lib, prefix, inventory } = libraryArgs();
+  const inv = JSON.parse(readFileSync(inventory, "utf8"));
   const jm = JSON.parse(readFileSync(join(ROOT, "server/data/jmdict-examples-eng-3.6.2.json"), "utf8"));
   const bySeq = new Map(jm.words.map((e) => [e.id, e]));
   const dir = join(ROOT, "src/content/reading");
@@ -588,19 +603,20 @@ async function draftGlossaries() {
   let written = 0;
 
   for (const story of lib.stories) {
-    const slug = story.id.replace(/^kc\./, "");
-    const file = join(dir, `kc-${slug}.yaml`);
-    if (existsSync(file)) { console.log(`  keep    kc-${slug}.yaml (exists)`); continue; }
+    const slug = story.id.replace(/^[a-z]+\./, "");
+    const file = join(dir, `${prefix}-${slug}.yaml`);
+    if (existsSync(file)) { console.log(`  keep    ${prefix}-${slug}.yaml (exists)`); continue; }
     const rows = [
       ...inv.new.map((r) => ({ ...r, kind: "new" })),
       ...inv.spelling.map((r) => ({ ...r, kind: "spelling" })),
       ...inv.bookFour.map((r) => ({ ...r, kind: "book-four", taughtId: r.id })),
     ].filter((r) => r.stories.includes(story.id) && r.seq);
     const lines = [
-      `# Reading glossary: KC よむよむ — ${story.title} (${story.id}, ${story.level})`,
+      `# Reading glossary: ${lib.attribution.source} — ${story.title} (${story.id}, ${story.level})`,
       "# Words this story uses that Books One to Three do not teach. Not lesson vocabulary:",
       "# Book Three's words arrive by mining from the library (book-three-bands.md section 1).",
-      "# Text: KC よむよむ, Japan Foundation Kansai Center, CC BY-NC 2.1 JP, sentences verbatim.",
+      `# Text: ${lib.attribution.source}, ${lib.attribution.licence}, sentences verbatim.`,
+      ...(story.author ? [`# Article: ${story.link} -- by ${story.author}, translated by ${story.translator}.`] : []),
       "# Entries: JMdict for Applications 3.6.2 (CC BY 4.0), seq cited per entry, sense checked",
       "# against the sentence it came from.",
       "",
