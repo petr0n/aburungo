@@ -85,6 +85,12 @@ describe("the cleaner", () => {
     expect(joined).toContain("太郎たろう");
   });
 
+  it("closes layout spaces between Japanese characters, and only those", () => {
+    // Book 010 padded its furigana-bearing kanji with spaces: 泉 州, 有 名.
+    expect(sentences(["泉 州の水ナスは有 名です。"])).toEqual(["泉州の水ナスは有名です。"]);
+    expect(sentences(["SENSHU BOYZのコンサート。"])).toEqual(["SENSHU BOYZのコンサート。"]);
+  });
+
   it("splits on sentence enders and keeps them", () => {
     expect(sentences(["今日は雨でした。", "家で遊びました！楽しかった？"])).toEqual([
       "今日は雨でした。",

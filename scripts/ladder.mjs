@@ -99,7 +99,17 @@ function readContent() {
     book.lessons.push(lesson);
   }
 
-  return { books, words, phrases, patterns };
+  // The reading library (Book Three): stories from the levelled library file,
+  // their glossaries and the band gate texts from src/content/reading/.
+  const readingYaml = loadDir("reading");
+  const library = JSON.parse(readFileSync(join(ROOT, "data/reading/kc-yomyom.json"), "utf8"));
+  const reading = {
+    stories: library.stories,
+    glossary: readingYaml.filter((e) => e.kind !== undefined),
+    gates: readingYaml.filter((e) => e.band !== undefined),
+  };
+
+  return { books, words, phrases, patterns, reading };
 }
 
 /** Unique word/phrase/pattern ids a book's lessons reach — its content, counted. */
@@ -143,6 +153,9 @@ function buildMarkdown(book, ctx) {
   w(`| Phrases | ${counts.phrases} |`);
   w(`| Grammar patterns | ${counts.patterns} |`);
   w(`| Kanji introduced | ${kanji.size} |`);
+  if (book.key === "b3") {
+    w(`| Reading library | ${ctx.reading.stories.length} stories, ${ctx.reading.glossary.length} glossary entries |`);
+  }
   w();
 
   for (const chapter of chapters) {
@@ -232,7 +245,50 @@ function buildMarkdown(book, ctx) {
     w();
   }
 
+  if (book.key === "b3") readingSection(w, ctx.reading);
+
   return out.join("\n");
+}
+
+const KIND_LABEL = { new: "new", spelling: "taught, other spelling", "book-four": "Book Four word", name: "name" };
+
+/**
+ * Book Three's reading library: which story closes each band, then every
+ * story's glossary. Not lessons -- the glossary is what the mining feature
+ * reads (book-three-bands.md section 1) -- so it sits after the ladder.
+ */
+function readingSection(w, reading) {
+  const byStory = new Map(reading.stories.map((s) => [s.id, s]));
+  w();
+  w("## Reading library");
+  w();
+  w("The KC よむよむ graded readers (Japan Foundation Kansai Center, CC BY-NC 2.1 JP), levelled");
+  w("against Books One to Three, with the words each story needs that those books do not teach.");
+  w("Vocabulary at this stage arrives by mining from these stories, not from lessons.");
+  w();
+  w("### Gate texts");
+  w();
+  w("| Chapter | Closes with | Grammar it uses |");
+  w("|---|---|---|");
+  for (const g of reading.gates) {
+    const chapter = g.band.replace(/^b3\.band-/, "");
+    if (g.story === null) w(`| ${chapter} | — | *${g.reason}* |`);
+    else w(`| ${chapter} | ${byStory.get(g.story)?.title ?? g.story} | ${g.evidence.map((e) => `<span lang="ja">${e}</span>`).join("<br>")} |`);
+  }
+  w();
+  w("### Stories");
+  for (const story of reading.stories) {
+    const entries = reading.glossary.filter((e) => e.story === story.id);
+    w();
+    w(`#### ${story.title}`);
+    w();
+    w(`${story.level} · ${story.sentences.length} sentences · ${entries.length} glossary entries`);
+    w();
+    w("| Word | Reading | Meaning | |");
+    w("|---|---|---|---|");
+    for (const e of entries) w(`| ${e.japanese} | ${e.reading} | ${e.english} | ${KIND_LABEL[e.kind]} |`);
+  }
+  w();
 }
 
 /** Every file the map is made of — one Markdown record per book. */

@@ -6,6 +6,7 @@ import { allPhrases } from "@/content";
 import { allGrammarPatterns } from "@/content/grammar";
 import { BookNav } from "./BookNav";
 import { ChapterNav } from "./ChapterNav";
+import { ReadingLibrary } from "./ReadingLibrary";
 
 const words = new Map(allWords.map((w) => [w.id, w]));
 const phrases = new Map(allPhrases.map((p) => [p.id, p]));
@@ -184,6 +185,8 @@ export function App() {
         {book.chapters.map((chapter) => (
           <ChapterSection key={chapter.id} book={book} chapter={chapter} />
         ))}
+
+        {book.order === 3 && <ReadingLibrary />}
 
         {closers.length > 0 && (
           <section className="closers">

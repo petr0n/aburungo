@@ -1,0 +1,78 @@
+# Book Three gate texts: the library story that closes each band.
+#
+# docs/plans/book-three-bands.md section 1: a band's checkpoint gains "a gate text
+# the learner could not have read when the band opened". The evidence here is the
+# band's own grammar, quoted verbatim from the story -- a pattern the learner
+# meets in that band, standing in running text they read at its end.
+#
+# Matched by hand, not by surface search. A string search for the band patterns
+# also finds めずらしい and すばらしい for らしい, しまいました for まい, 飲みたい
+# for みたい, もの+の for ものの, and 「県の間に」 ("between") for the time sense
+# of 間に. None of those are the pattern, and none are used.
+#
+# Six bands have no gate text. Their patterns are N3 grammar and the library's 26
+# stories are A1-A2: no sentence in any of them uses causal ために, concessive
+# ものの, sharpened conditions, the time sense of 間に, obligation, or written
+# register. Nothing is forced to fit. The follow-up is a text source with
+# N3-level stories (book-three-bands.md section 2, option (a), parked by the
+# owner on 2026-09-22).
+#
+# Text: KC よむよむ, Japan Foundation Kansai Center, CC BY-NC 2.1 JP, verbatim.
+
+- band: b3.band-0
+  story: kc.senshuyasai
+  patterns: [grammar.b3-passive-godan]
+  evidence:
+    - 水ナスは江戸時代から泉州地域で作られています。
+    - 泉州たまねぎは明治時代から作られています。
+    - 「日本のたまねぎ作りの最初の場所」だと言われるくらい泉州は有名なんですよ。
+
+- band: b3.band-1
+  story: null
+  reason: No story uses causal ために. Both hits (行くために, 夫婦になるために) are purpose, which band 7 owns.
+
+- band: b3.band-2
+  story: null
+  reason: No story uses concession. The one ものの in the library is もの + の (有名なものの絵).
+
+- band: b3.band-3
+  story: null
+  reason: No story uses any of 限り, 次第, さえ〜ば or たとえ〜ても.
+
+- band: b3.band-4
+  story: null
+  reason: No story uses this band's time patterns. The one 間に is "between" (大阪府と奈良県の間に), not "while".
+
+- band: b3.band-5
+  story: kc.idolyametai
+  patterns: [grammar.b3-mitai, grammar.b3-wake]
+  evidence:
+    - ぼくは、みんなみたいにダンスも歌も上手じゃないし、おもしろいわけでもないです。
+
+- band: b3.band-6
+  story: kc.manhole
+  patterns: [grammar.b3-bakari, grammar.b3-kurai]
+  evidence:
+    - …でも、下ばかり見て歩いているとあぶないですよ。
+    - ふたの形は丸くて、60cmくらいの大きさが多いです。
+
+- band: b3.band-7
+  story: kc.kabocha
+  patterns: [grammar.b3-you-ni-suru]
+  evidence:
+    - かぼちゃを食べて、風邪をひかないようにしましょう！
+
+- band: b3.band-8
+  story: null
+  reason: No story uses obligation -- not なければならない, べき, 必要がある, てはならない or ざるを得ない.
+
+- band: b3.band-9
+  story: kc.hijoguchi
+  patterns: [grammar.b3-toiu, grammar.b3-koto]
+  evidence:
+    - はじめは「非常口」という文字だけのサインでしたが、子どもや外国人にもわかりやすいように、絵のサインを作りました。
+    - 見たことがありますか？
+
+- band: b3.band-10
+  story: null
+  reason: No story is written in the written register -- no である, つつある, ゆえに or において.

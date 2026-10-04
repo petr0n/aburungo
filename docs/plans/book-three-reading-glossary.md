@@ -1,6 +1,6 @@
 # Book Three — the reading glossary
 
-**Status:** planner breakdown, 2026-09-28. No content authored yet.
+**Status:** authored 2026-10-04 — `src/content/reading/` (decision §4: a new content kind). Contract and open items: [book-three-bands.md](book-three-bands.md#content-contract).
 **Owner ruling (2026-09-19):** Book Three is incomplete without coherent reading texts.
 **Texts:** the 26 KC よむよむ stories, `data/reading/kc-yomyom.json` (#136).
 

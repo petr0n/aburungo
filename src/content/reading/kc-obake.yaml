@@ -1,0 +1,107 @@
+# Reading glossary: KC よむよむ — お化け (kc.obake, A2)
+# Words this story uses that Books One to Three do not teach. Not lesson vocabulary:
+# Book Three's words arrive by mining from the library (book-three-bands.md section 1).
+# Text: KC よむよむ, Japan Foundation Kansai Center, CC BY-NC 2.1 JP, sentences verbatim.
+# Entries: JMdict for Applications 3.6.2 (CC BY 4.0), seq cited per entry, sense checked
+# against the sentence it came from.
+
+- id: gloss.obake.1202270
+  story: kc.obake
+  kind: new
+  japanese: "絵"
+  reading: "え"
+  english: "picture; drawing; painting"
+  sentence: "これは、古い幽霊の絵です。"
+  notes: "JMdict seq 1202270."
+
+- id: gloss.obake.1540590
+  story: kc.obake
+  kind: new
+  japanese: "幽霊"
+  reading: "ゆうれい"
+  english: "ghost; specter; spectre"
+  sentence: "お化けは、幽霊や妖怪です。"
+  notes: "JMdict seq 1540590."
+
+- id: gloss.obake.1545300
+  story: kc.obake
+  kind: new
+  japanese: "妖怪"
+  reading: "ようかい"
+  english: "ghost; apparition; phantom"
+  sentence: "お化けは、幽霊や妖怪です。"
+  notes: "JMdict seq 1545300."
+
+- id: gloss.obake.1593480
+  story: kc.obake
+  kind: new
+  japanese: "怖い"
+  reading: "こわい"
+  english: "scary; frightening; eerie"
+  sentence: "日本には、幽霊や妖怪の怖い話がたくさんあります。"
+  notes: "JMdict seq 1593480."
+
+- id: gloss.obake.1001670
+  story: kc.obake
+  kind: new
+  japanese: "お化け"
+  reading: "おばけ"
+  english: "ghost; apparition"
+  sentence: "「お化け」を知っていますか？"
+  notes: "JMdict seq 1001670."
+
+- id: gloss.obake.1136110
+  story: kc.obake
+  kind: new
+  japanese: "モンスター"
+  reading: "モンスター"
+  english: "monster; monstrosity"
+  sentence: "妖怪は、日本のモンスターです。"
+  notes: "JMdict seq 1136110."
+
+- id: gloss.obake.1299970
+  story: kc.obake
+  kind: new
+  japanese: "三角"
+  reading: "さんかく"
+  english: "triangle; triangular shape"
+  sentence: "頭に白い三角（△）をつけています。"
+  notes: "JMdict seq 1299970."
+
+- id: gloss.obake.1423240
+  story: kc.obake
+  kind: new
+  japanese: "着物"
+  reading: "きもの"
+  english: "kimono; Japanese traditional clothing (esp. full-length)"
+  sentence: "そして、白い着物を着ています。"
+  notes: "JMdict seq 1423240."
+
+- id: gloss.obake.1207340
+  story: kc.obake
+  kind: new
+  japanese: "楽器"
+  reading: "がっき"
+  english: "musical instrument"
+  sentence: "これは楽器の妖怪です。"
+  notes: "JMdict seq 1207340."
+
+- id: gloss.obake.1392580
+  story: kc.obake
+  kind: spelling
+  japanese: "前"
+  reading: "まえ"
+  english: "in front (of); before (e.g. a building)"
+  sentence: "体の前に、いつも手を出しています。"
+  taughtId: vocab.mae
+  notes: "JMdict seq 1392580."
+
+- id: gloss.obake.1451470
+  story: kc.obake
+  kind: book-four
+  japanese: "動物"
+  reading: "どうぶつ"
+  english: "animal"
+  sentence: "これは動物の妖怪です。"
+  taughtId: vocab.doubutsu
+  notes: "JMdict seq 1451470. Taught in Book Four."

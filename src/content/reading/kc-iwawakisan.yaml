@@ -1,0 +1,188 @@
+# Reading glossary: KC よむよむ — 岩湧山 (kc.iwawakisan, A2)
+# Words this story uses that Books One to Three do not teach. Not lesson vocabulary:
+# Book Three's words arrive by mining from the library (book-three-bands.md section 1).
+# Text: KC よむよむ, Japan Foundation Kansai Center, CC BY-NC 2.1 JP, sentences verbatim.
+# Entries: JMdict for Applications 3.6.2 (CC BY 4.0), seq cited per entry, sense checked
+# against the sentence it came from.
+
+- id: gloss.iwawakisan.1056230
+  story: kc.iwawakisan
+  kind: new
+  japanese: "サイン"
+  reading: "サイン"
+  english: "sign; signpost"
+  sentence: "サインを見ながら帰ります。"
+  notes: "JMdict seq 1056230."
+
+- id: gloss.iwawakisan.1203090
+  story: kc.iwawakisan
+  kind: new
+  japanese: "階段"
+  reading: "かいだん"
+  english: "stairs; stairway; staircase"
+  sentence: "木の階段を登ります。"
+  notes: "JMdict seq 1203090."
+
+- id: gloss.iwawakisan.1164690
+  story: kc.iwawakisan
+  kind: new
+  japanese: "一段"
+  reading: "いちだん"
+  english: "one step (of a staircase)"
+  sentence: "一段一段登ります。"
+  notes: "JMdict seq 1164690."
+
+- id: gloss.iwawakisan.1555440
+  story: kc.iwawakisan
+  kind: new
+  japanese: "林"
+  reading: "はやし"
+  english: "wood; woods; forest"
+  sentence: "林の中を歩きます。"
+  notes: "JMdict seq 1555440."
+
+- id: gloss.iwawakisan.1430220
+  story: kc.iwawakisan
+  kind: new
+  japanese: "頂上"
+  reading: "ちょうじょう"
+  english: "top; summit; peak"
+  sentence: "頂上はもうすこしです。"
+  notes: "JMdict seq 1430220."
+
+- id: gloss.iwawakisan.1534560
+  story: kc.iwawakisan
+  kind: new
+  japanese: "木の葉"
+  reading: "このは"
+  english: "leaf (of a tree); tree leaves; foliage"
+  sentence: "木の葉の道を歩きます。"
+  notes: "JMdict seq 1534560."
+
+- id: gloss.iwawakisan.1534570
+  story: kc.iwawakisan
+  kind: new
+  japanese: "木陰"
+  reading: "こかげ"
+  english: "shade of a tree; bower"
+  sentence: "木陰のベンチで休みます。"
+  notes: "JMdict seq 1534570."
+
+- id: gloss.iwawakisan.1120280
+  story: kc.iwawakisan
+  kind: new
+  japanese: "ベンチ"
+  reading: "ベンチ"
+  english: "bench"
+  sentence: "木陰のベンチで休みます。"
+  notes: "JMdict seq 1120280."
+
+- id: gloss.iwawakisan.1370760
+  story: kc.iwawakisan
+  kind: new
+  japanese: "吹く"
+  reading: "ふく"
+  english: "to blow (of the wind)"
+  sentence: "涼しい風が吹いています。"
+  notes: "JMdict seq 1370760."
+
+- id: gloss.iwawakisan.1381470
+  story: kc.iwawakisan
+  kind: new
+  japanese: "青空"
+  reading: "あおぞら"
+  english: "blue sky"
+  sentence: "青空の下を歩きます。"
+  notes: "JMdict seq 1381470."
+
+- id: gloss.iwawakisan.1290020
+  story: kc.iwawakisan
+  kind: new
+  japanese: "根"
+  reading: "ね"
+  english: "root (of a plant)"
+  sentence: "木の根の上を歩きます。"
+  notes: "JMdict seq 1290020."
+
+- id: gloss.iwawakisan.1250870
+  story: kc.iwawakisan
+  kind: new
+  japanese: "景色"
+  reading: "けしき"
+  english: "scenery; scene; landscape"
+  sentence: "山の景色を見ながら、お弁当を食べましょう。"
+  notes: "JMdict seq 1250870."
+
+- id: gloss.iwawakisan.1348460
+  story: kc.iwawakisan
+  kind: new
+  japanese: "小川"
+  reading: "おがわ"
+  english: "stream; brook; creek"
+  sentence: "小川のそばを通ります。"
+  notes: "JMdict seq 1348460."
+
+- id: gloss.iwawakisan.1591430
+  story: kc.iwawakisan
+  kind: book-four
+  japanese: "気持ち"
+  reading: "きもち"
+  english: "feeling; mood"
+  sentence: "やわらかくて、気持ちがいいです。"
+  taughtId: vocab.kimochi
+  notes: "JMdict seq 1591430. Taught in Book Four."
+
+- id: gloss.iwawakisan.1216280
+  story: kc.iwawakisan
+  kind: book-four
+  japanese: "まるで"
+  reading: "まるで"
+  english: "just like; (not) at all"
+  sentence: "まるで階段みたいです。"
+  taughtId: vocab.marude
+  notes: "JMdict seq 1216280. Taught in Book Four."
+
+- id: gloss.iwawakisan.1611230
+  story: kc.iwawakisan
+  kind: new
+  japanese: "葉っぱ"
+  reading: "はっぱ"
+  english: "leaf; blade (of grass); (pine) needle"
+  sentence: "葉っぱのみどりがきれいです。"
+  notes: "JMdict seq 1611230."
+
+- id: gloss.iwawakisan.1272780
+  story: kc.iwawakisan
+  kind: new
+  japanese: "光"
+  reading: "ひかり"
+  english: "light"
+  sentence: "光の中を歩きます。"
+  notes: "JMdict seq 1272780."
+
+- id: gloss.iwawakisan.1552140
+  story: kc.iwawakisan
+  kind: new
+  japanese: "流れる"
+  reading: "ながれる"
+  english: "to stream; to flow (liquid, time, etc.); to run (ink)"
+  sentence: "雲がゆっくり流れます。"
+  notes: "JMdict seq 1552140."
+
+- id: gloss.iwawakisan.1433030
+  story: kc.iwawakisan
+  kind: new
+  japanese: "通る"
+  reading: "とおる"
+  english: "to go by; to go past; to go along"
+  sentence: "小川のそばを通ります。"
+  notes: "JMdict seq 1433030."
+
+- id: gloss.iwawakisan.name-iwawakisan
+  story: kc.iwawakisan
+  kind: name
+  japanese: "岩湧山"
+  reading: "いわわきさん"
+  english: "Mount Iwawaki, in southern Osaka"
+  sentence: "岩湧山に登ります。"
+  notes: "A name in this story (a mountain); not vocabulary."

@@ -1,0 +1,89 @@
+# Reading glossary: KC よむよむ — ヤドカリにげた (kc.yadokari, A2)
+# Words this story uses that Books One to Three do not teach. Not lesson vocabulary:
+# Book Three's words arrive by mining from the library (book-three-bands.md section 1).
+# Text: KC よむよむ, Japan Foundation Kansai Center, CC BY-NC 2.1 JP, sentences verbatim.
+# Entries: JMdict for Applications 3.6.2 (CC BY 4.0), seq cited per entry, sense checked
+# against the sentence it came from.
+
+- id: gloss.yadokari.1337250
+  story: kc.yadokari
+  kind: new
+  japanese: "ヤドカリ"
+  reading: "ヤドカリ"
+  english: "hermit crab"
+  sentence: "たかしくんは、ヤドカリをかっています。"
+  notes: "JMdict seq 1337250."
+
+- id: gloss.yadokari.1077330
+  story: kc.yadokari
+  kind: new
+  japanese: "チーズ"
+  reading: "チーズ"
+  english: "cheese"
+  sentence: "」おかあさん「じゃあ、あげなさい」たかしくん「はーい、チーズどこ？"
+  notes: "JMdict seq 1077330."
+
+- id: gloss.yadokari.1557110
+  story: kc.yadokari
+  kind: new
+  japanese: "冷蔵庫"
+  reading: "れいぞうこ"
+  english: "refrigerator; fridge"
+  sentence: "」おかあさん「冷蔵庫よ」ヤドリン「ムシャムシャムシャー」たかしくん「あっ、やったぁ、食べた」つぎの日。"
+  notes: "JMdict seq 1557110."
+
+- id: gloss.yadokari.2074740
+  story: kc.yadokari
+  kind: new
+  japanese: "ポップコーン"
+  reading: "ポップコーン"
+  english: "popcorn"
+  sentence: "たかしくん「おとうさーん」おとうさん「はーい」たかしくん「ポップコーン食べさせていい？"
+  notes: "JMdict seq 2074740."
+
+- id: gloss.yadokari.1429060
+  story: kc.yadokari
+  kind: book-four
+  japanese: "しらべる"
+  reading: "しらべる"
+  english: "to look up; to find out"
+  sentence: "しらべてみなさい」たかしくん「チーズあげてもいい？"
+  taughtId: vocab.shiraberu
+  notes: "JMdict seq 1429060."
+
+- id: gloss.yadokari.1531710
+  story: kc.yadokari
+  kind: spelling
+  japanese: "名前"
+  reading: "なまえ"
+  english: "name"
+  sentence: "名前はヤドリンです。"
+  taughtId: vocab.namae
+  notes: "JMdict seq 1531710."
+
+- id: gloss.yadokari.name-yadorin
+  story: kc.yadokari
+  kind: name
+  japanese: "ヤドリン"
+  reading: "ヤドリン"
+  english: "Yadorin — Takashi's pet hermit crab"
+  sentence: "名前はヤドリンです。"
+  notes: "A name in this story; not vocabulary."
+
+- id: gloss.yadokari.1463770
+  story: kc.yadokari
+  kind: new
+  japanese: "日"
+  reading: "ひ"
+  english: "day"
+  sentence: "」おかあさん「冷蔵庫よ」ヤドリン「ムシャムシャムシャー」たかしくん「あっ、やったぁ、食べた」つぎの日。"
+  notes: "JMdict seq 1463770."
+
+- id: gloss.yadokari.name-takashi
+  story: kc.yadokari
+  kind: name
+  japanese: "たかし"
+  reading: "たかし"
+  english: "Takashi — the boy who keeps the hermit crab"
+  sentence: "たかしくんは、ヤドカリをかっています。"
+  notes: "A name in this story; not vocabulary."

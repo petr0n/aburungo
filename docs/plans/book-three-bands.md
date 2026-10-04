@@ -218,3 +218,57 @@ The same shape as `book-two-chapter-NN.md`, plus two things that book had no nee
 Bands 1-4 are safe to break down now: their patterns are the ones Tatoeba attests most densely,
 and none of them depends on the library's shape. Bands 5-10 should wait for the text-source
 decision, because their patterns are the ones a levelled corpus is most likely to re-order.
+
+## Content contract
+
+*Filled 2026-10-04 (content-authoring.md §2). Run the commands named here for current counts.*
+
+- **Book / stage / plan:** Book Three, the reading stage. Plans: this document,
+  [04-stage-reading.md](04-stage-reading.md), [book-three-reading-glossary.md](book-three-reading-glossary.md).
+- **Preceding book completion evidence:** Book Two's row in the [roadmap](99-roadmap.md).
+- **Included chapters:** all eleven bands, `b3.band-0` (the passive) to `b3.band-10` (register).
+- **Required assets, and their state:**
+  - *Grammar, phrases, lessons, checkpoints, kanji* — written and wired before this contract;
+    one recognition checkpoint closes each band. See [the generated map](../book-three-ladder.md).
+  - *Reading texts* — **in scope** (owner ruling 2026-09-19). The 26 KC よむよむ stories, levelled:
+    `data/reading/kc-yomyom.json`, built by `node scripts/kc-yomyom.mjs fetch && build`.
+  - *Reading vocabulary* — **in scope.** Per this plan (§1) it arrives by mining from the
+    library, not from lessons, so it is a per-story glossary rather than lesson words:
+    `src/content/reading/kc-*.yaml`, every story, every untaught word the story uses, JMdict-cited,
+    sense checked against the sentence it came from. Names get a note and never enter SRS.
+  - *Gate texts* (§1) — `src/content/reading/gates.yaml`, one line per band. **Five of eleven bands
+    have one** (0, 5, 6, 7, 9), each with the verbatim sentences that use the band's grammar.
+    **Six do not** (1, 2, 3, 4, 8, 10), each with the reason: their patterns are N3 grammar and
+    the library's stories are A1–A2, so no sentence in any of them uses those patterns.
+  - *Composition frames and model answers* — none to author. This stage's production is
+    compose-then-compare over existing Tatoeba sentences (04-stage-reading.md §7), selected at
+    run time; guided-production chunks (DR-039) are not part of this book's plan.
+  - *Audio* — not in this milestone; the VOICEVOX pipeline is a separate roadmap item.
+- **Source policy and local datasets:** verified sources only from this book up
+  (content-authoring.md §4). Phrases are Tatoeba-cited; glossary entries cite JMdict for
+  Applications 3.6.2 by sequence number; story text is KC よむよむ, CC BY-NC 2.1 JP, verbatim.
+- **Prerequisite gaps (§3a–3d):** the passive became band 0; なければならない is band 8's first
+  lesson; だろう/でしょう, the plain volitional and 敬語 are taught by Book Four
+  ([book-four-bands.md](book-four-bands.md), bands 1–2 and the keigo chapters), confirmed in
+  `src/content/grammar/b4-0*.yaml`.
+- **Explicitly agreed deferrals:** none yet. Two items wait on an owner decision:
+  1. *The six missing gate texts* — no licensed text exercises those bands. Follow-up is an
+     N3-level story source: §2 option (a), the Tadoku request, parked by the owner 2026-09-22.
+  2. *DR-040 midpoint checkpoints* — Book Three has one checkpoint per band. The spec makes
+     retrofitting existing books a separate migration with progress-compatibility work
+     (checkpoints-and-srs-design.md, "Existing books"), so it is not done here.
+- **ID prefix and lesson orders:** `b3`, orders 196–276. The glossary and gate texts add no
+  lessons and renumber nothing.
+- **Map evidence:** `pnpm ladder` regenerates `docs/book-three-ladder.md` with a Reading library
+  section (gate texts, then every story's glossary). The bookmap shows the same under Book
+  Three, inspected 2026-10-04 at a 420px viewport: 26 stories, 11 gate rows, glossaries and
+  story text expandable, no console errors, no horizontal overflow.
+- **Validation evidence:** `pnpm test` (including `src/content/reading/reading.test.ts`, whose
+  guards were each shown to fail on a deliberately broken entry), `pnpm jmdict check`,
+  `pnpm build`, `pnpm lint`.
+- **Remaining content work:** the six gate texts, blocked on a source.
+- **Content-completion evidence:** **not recorded.** Every asset that available licensed sources
+  can supply is written and verified. Recording completion needs the owner to accept the
+  gate-text deferral above, or to keep the book open until a source arrives.
+- **Interface work still required (separate):** the reader, the library, sentence mining from
+  the glossary, compose-then-compare, and gate-text checkpoints.

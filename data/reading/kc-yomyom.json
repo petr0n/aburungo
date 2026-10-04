@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-23",
+ "generated": "2026-10-04",
  "attribution": {
   "source": "KC よむよむ, The Japan Foundation Japanese-Language Institute, Kansai",
   "sourceUrl": "https://www.jpf.go.jp/j/kansai/clip/yomyom/",
@@ -11,7 +11,7 @@
  "counts": {
   "stories": 26,
   "sentences": 685,
-  "chars": 11054,
+  "chars": 11037,
   "byBand": {
    "below": 26
   }
@@ -3462,7 +3462,7 @@
    "pdfUrl": "https://www.jpf.go.jp/j/kansai/clip/images/page/yomyom/010_senshuyasai.pdf",
    "mp3Url": "https://www.jpf.go.jp/j/kansai/clip/sound/page/yomyom/010_senshuyasai_native.mp3",
    "pages": 20,
-   "chars": 825,
+   "chars": 808,
    "sentences": [
     {
      "jpn": "こんにちは。",
@@ -3536,17 +3536,14 @@
      "unknownItemIds": []
     },
     {
-     "jpn": "これはね、関 西センター「Kansai」のKですよ。",
-     "coverage": 0.75,
-     "coverageAllBooks": 0.875,
-     "totalTokens": 8,
+     "jpn": "これはね、関西センター「Kansai」のKですよ。",
+     "coverage": 0.8571,
+     "coverageAllBooks": 0.8571,
+     "totalTokens": 7,
      "unknownRuns": [
-      "西センター"
+      "関西センター"
      ],
-     "unknownItemIds": [
-      "vocab.kankei",
-      "vocab.kanyo"
-     ]
+     "unknownItemIds": []
     },
     {
      "jpn": "それに、この形がわかりませんか？",
@@ -3560,26 +3557,24 @@
      "unknownItemIds": []
     },
     {
-     "jpn": "泉 州の水ナスは有 名ですよ。",
-     "coverage": 0.6,
-     "coverageAllBooks": 0.7,
-     "totalTokens": 10,
+     "jpn": "泉州の水ナスは有名ですよ。",
+     "coverage": 0.75,
+     "coverageAllBooks": 0.75,
+     "totalTokens": 8,
      "unknownRuns": [
-      "泉",
-      "州",
+      "泉州",
       "ナス"
      ],
-     "unknownItemIds": [
-      "vocab.meiyo"
-     ]
+     "unknownItemIds": []
     },
     {
-     "jpn": "普通のナスより水 分が多くて、柔らかいんです。",
-     "coverage": 0.6154,
-     "coverageAllBooks": 0.7692,
-     "totalTokens": 13,
+     "jpn": "普通のナスより水分が多くて、柔らかいんです。",
+     "coverage": 0.5,
+     "coverageAllBooks": 0.6667,
+     "totalTokens": 12,
      "unknownRuns": [
       "ナス",
+      "水分",
       "く",
       "柔ら"
      ],
@@ -3610,17 +3605,14 @@
      "unknownItemIds": []
     },
     {
-     "jpn": "これは関 西センター「Center」の「C」ですよ。",
-     "coverage": 0.7143,
-     "coverageAllBooks": 0.8571,
-     "totalTokens": 7,
+     "jpn": "これは関西センター「Center」の「C」ですよ。",
+     "coverage": 0.8333,
+     "coverageAllBooks": 0.8333,
+     "totalTokens": 6,
      "unknownRuns": [
-      "西センター"
+      "関西センター"
      ],
-     "unknownItemIds": [
-      "vocab.kankei",
-      "vocab.kanyo"
-     ]
+     "unknownItemIds": []
     },
     {
      "jpn": "それで、この形がわかりませんか？",
@@ -3634,23 +3626,22 @@
      "unknownItemIds": []
     },
     {
-     "jpn": "泉 州たまねぎですよ！",
-     "coverage": 0.5,
-     "coverageAllBooks": 0.5,
-     "totalTokens": 8,
+     "jpn": "泉州たまねぎですよ！",
+     "coverage": 0.5714,
+     "coverageAllBooks": 0.5714,
+     "totalTokens": 7,
      "unknownRuns": [
-      "泉",
-      "州",
+      "泉州",
       "ま",
       "ぎ"
      ],
      "unknownItemIds": []
     },
     {
-     "jpn": "普通のたまねぎより柔らかくて、甘いし、有 名です。",
-     "coverage": 0.6,
-     "coverageAllBooks": 0.7333,
-     "totalTokens": 15,
+     "jpn": "普通のたまねぎより柔らかくて、甘いし、有名です。",
+     "coverage": 0.6429,
+     "coverageAllBooks": 0.7143,
+     "totalTokens": 14,
      "unknownRuns": [
       "ま",
       "ぎ",
@@ -3658,19 +3649,17 @@
       "し"
      ],
      "unknownItemIds": [
-      "vocab.futsuu",
-      "vocab.meiyo"
+      "vocab.futsuu"
      ]
     },
     {
-     "jpn": "私たちは2人とも大阪の泉 州野菜だったんですね。",
-     "coverage": 0.7857,
-     "coverageAllBooks": 0.7857,
-     "totalTokens": 14,
+     "jpn": "私たちは2人とも大阪の泉州野菜だったんですね。",
+     "coverage": 0.8462,
+     "coverageAllBooks": 0.8462,
+     "totalTokens": 13,
      "unknownRuns": [
       "大阪",
-      "泉",
-      "州"
+      "泉州"
      ],
      "unknownItemIds": []
     },
@@ -3709,16 +3698,15 @@
      "unknownItemIds": []
     },
     {
-     "jpn": "水ナスは江戸時代から泉 州地域で作られています。",
-     "coverage": 0.4615,
-     "coverageAllBooks": 0.4615,
-     "totalTokens": 13,
+     "jpn": "水ナスは江戸時代から泉州地域で作られています。",
+     "coverage": 0.5,
+     "coverageAllBooks": 0.5,
+     "totalTokens": 12,
      "unknownRuns": [
       "ナス",
       "江戸",
       "時代",
-      "泉",
-      "州",
+      "泉州",
       "地域",
       "られ"
      ],
@@ -3771,13 +3759,12 @@
      "unknownItemIds": []
     },
     {
-     "jpn": "泉 州たまねぎは明治時代から作られています。",
-     "coverage": 0.4615,
-     "coverageAllBooks": 0.4615,
-     "totalTokens": 13,
+     "jpn": "泉州たまねぎは明治時代から作られています。",
+     "coverage": 0.5,
+     "coverageAllBooks": 0.5,
+     "totalTokens": 12,
      "unknownRuns": [
-      "泉",
-      "州",
+      "泉州",
       "ま",
       "ぎ",
       "明治",
@@ -3787,18 +3774,17 @@
      "unknownItemIds": []
     },
     {
-     "jpn": "「日本のたまねぎ作りの最初の場所」だと言われるくらい泉 州は有名なんですよ。",
-     "coverage": 0.6923,
-     "coverageAllBooks": 0.7308,
-     "totalTokens": 26,
+     "jpn": "「日本のたまねぎ作りの最初の場所」だと言われるくらい泉州は有名なんですよ。",
+     "coverage": 0.72,
+     "coverageAllBooks": 0.76,
+     "totalTokens": 25,
      "unknownRuns": [
       "ま",
       "ぎ",
       "り",
       "場所",
       "れ",
-      "泉",
-      "州"
+      "泉州"
      ],
      "unknownItemIds": [
       "vocab.saisho"
@@ -3825,13 +3811,12 @@
      "unknownItemIds": []
     },
     {
-     "jpn": "泉 州のたまねぎがそんなに有名だなんて、全然知りませんでした。",
-     "coverage": 0.5294,
-     "coverageAllBooks": 0.6471,
-     "totalTokens": 17,
+     "jpn": "泉州のたまねぎがそんなに有名だなんて、全然知りませんでした。",
+     "coverage": 0.5625,
+     "coverageAllBooks": 0.6875,
+     "totalTokens": 16,
      "unknownRuns": [
-      "泉",
-      "州",
+      "泉州",
       "ま",
       "ぎ",
       "ん",
@@ -3843,22 +3828,18 @@
      ]
     },
     {
-     "jpn": "私たちの住んでいる関 西センターは、大 阪の泉 州という地域にありますよね。",
-     "coverage": 0.6667,
-     "coverageAllBooks": 0.7143,
-     "totalTokens": 21,
+     "jpn": "私たちの住んでいる関西センターは、大阪の泉州という地域にありますよね。",
+     "coverage": 0.7222,
+     "coverageAllBooks": 0.7222,
+     "totalTokens": 18,
      "unknownRuns": [
       "ん",
-      "西センター",
-      "阪",
-      "泉",
-      "州",
+      "関西センター",
+      "大阪",
+      "泉州",
       "地域"
      ],
-     "unknownItemIds": [
-      "vocab.kankei",
-      "vocab.kanyo"
-     ]
+     "unknownItemIds": []
     },
     {
      "jpn": "他にもおいしいものがたくさんあります。",
@@ -4009,14 +3990,13 @@
      "unknownItemIds": []
     },
     {
-     "jpn": "よく知りませんが、私たちの話を授 業で使うらしいですよ。",
-     "coverage": 0.6875,
-     "coverageAllBooks": 0.75,
-     "totalTokens": 16,
+     "jpn": "よく知りませんが、私たちの話を授業で使うらしいですよ。",
+     "coverage": 0.7333,
+     "coverageAllBooks": 0.8,
+     "totalTokens": 15,
      "unknownRuns": [
       "く",
-      "授",
-      "業",
+      "授業",
       "らしい"
      ],
      "unknownItemIds": [
@@ -4024,14 +4004,13 @@
      ]
     },
     {
-     "jpn": "私たちが出るんですから、とてもおもしろい授 業なんでしょうねえ。",
-     "coverage": 0.6429,
-     "coverageAllBooks": 0.6429,
-     "totalTokens": 14,
+     "jpn": "私たちが出るんですから、とてもおもしろい授業なんでしょうねえ。",
+     "coverage": 0.6923,
+     "coverageAllBooks": 0.6923,
+     "totalTokens": 13,
      "unknownRuns": [
       "ら",
-      "授",
-      "業",
+      "授業",
       "ん",
       "え"
      ],
@@ -4051,8 +4030,8 @@
      "unknownItemIds": []
     }
    ],
-   "passageCoverage": 0.6628,
-   "passageCoverageAllBooks": 0.7225,
+   "passageCoverage": 0.6826,
+   "passageCoverageAllBooks": 0.7327,
    "band": "below",
    "unknownRuns": [
     "こん",
@@ -4065,11 +4044,11 @@
     "そん",
     "形",
     "す",
-    "西センター",
+    "関西センター",
     "り",
-    "泉",
-    "州",
+    "泉州",
     "ナス",
+    "水分",
     "く",
     "柔ら",
     "ま",
@@ -4092,7 +4071,6 @@
     "明治",
     "場所",
     "ん",
-    "阪",
     "ら",
     "しま",
     "まあ",
@@ -4100,8 +4078,7 @@
     "初",
     "さい",
     "じゃあ",
-    "授",
-    "業",
+    "授業",
     "らしい",
     "後",
     "しっ"

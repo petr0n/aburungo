@@ -1,0 +1,236 @@
+# Reading glossary: KC よむよむ — アイドルやめたい (kc.idolyametai, A2/B1)
+# Words this story uses that Books One to Three do not teach. Not lesson vocabulary:
+# Book Three's words arrive by mining from the library (book-three-bands.md section 1).
+# Text: KC よむよむ, Japan Foundation Kansai Center, CC BY-NC 2.1 JP, sentences verbatim.
+# Entries: JMdict for Applications 3.6.2 (CC BY 4.0), seq cited per entry, sense checked
+# against the sentence it came from.
+
+- id: gloss.idolyametai.1077250
+  story: kc.idolyametai
+  kind: new
+  japanese: "ダンス"
+  reading: "ダンス"
+  english: "dance; dancing"
+  sentence: "ぼくは、みんなみたいにダンスも歌も上手じゃないし、おもしろいわけでもないです。"
+  notes: "JMdict seq 1077250."
+
+- id: gloss.idolyametai.1014340
+  story: kc.idolyametai
+  kind: new
+  japanese: "アイドル"
+  reading: "アイドル"
+  english: "performer (usu. in a boy band or girl group) with an image cultivated to foster a dedicated fan following; Japanese idol"
+  sentence: "ぼくの仕事はアイドルです。"
+  notes: "JMdict seq 1014340."
+
+- id: gloss.idolyametai.1413240
+  story: kc.idolyametai
+  kind: new
+  japanese: "大学"
+  reading: "だいがく"
+  english: "university; college"
+  sentence: "あ、大学に行って、青春を楽しむのもいいかもな。"
+  notes: "JMdict seq 1413240."
+
+- id: gloss.idolyametai.1195240
+  story: kc.idolyametai
+  kind: new
+  japanese: "ナス"
+  reading: "なす"
+  english: "eggplant; aubergine"
+  sentence: "農家になって、ナスや玉ねぎを作るのもいいかもな。"
+  notes: "JMdict seq 1195240."
+
+- id: gloss.idolyametai.1000440
+  story: kc.idolyametai
+  kind: new
+  japanese: "あの人"
+  reading: "あのひと"
+  english: "he; she; that person"
+  sentence: "「あれ、あの人名前なんだっけ?あの一番目立たない人」「えー、なんだっけ。"
+  notes: "JMdict seq 1000440."
+
+- id: gloss.idolyametai.1293780
+  story: kc.idolyametai
+  kind: new
+  japanese: "最近"
+  reading: "さいきん"
+  english: "recently; lately; these days"
+  sentence: "最近、悩みがあるんです･･･。"
+  notes: "JMdict seq 1293780."
+
+- id: gloss.idolyametai.1309260
+  story: kc.idolyametai
+  kind: new
+  japanese: "思い出す"
+  reading: "おもいだす"
+  english: "to recall; to remember; to recollect"
+  sentence: "私も思い出せないや」ショックでした。"
+  notes: "JMdict seq 1309260."
+
+- id: gloss.idolyametai.1421490
+  story: kc.idolyametai
+  kind: new
+  japanese: "地味"
+  reading: "じみ"
+  english: "plain; simple; subdued"
+  sentence: "顔だって地味だし･･･メンバーの中でも目立たないから、スタッフの人が、ぼくの名前を忘れることがよくあります。"
+  notes: "JMdict seq 1421490."
+
+- id: gloss.idolyametai.1469850
+  story: kc.idolyametai
+  kind: new
+  japanese: "悩み"
+  reading: "なやみ"
+  english: "trouble; troubles; worry"
+  sentence: "最近、悩みがあるんです･･･。"
+  notes: "JMdict seq 1469850."
+
+- id: gloss.idolyametai.1134370
+  story: kc.idolyametai
+  kind: new
+  japanese: "メンバー"
+  reading: "メンバー"
+  english: "member; participant; attendee"
+  sentence: "顔だって地味だし･･･メンバーの中でも目立たないから、スタッフの人が、ぼくの名前を忘れることがよくあります。"
+  notes: "JMdict seq 1134370."
+
+- id: gloss.idolyametai.1069720
+  story: kc.idolyametai
+  kind: new
+  japanese: "スタッフ"
+  reading: "スタッフ"
+  english: "staff; staff member"
+  sentence: "顔だって地味だし･･･メンバーの中でも目立たないから、スタッフの人が、ぼくの名前を忘れることがよくあります。"
+  notes: "JMdict seq 1069720."
+
+- id: gloss.idolyametai.1062660
+  story: kc.idolyametai
+  kind: new
+  japanese: "ショック"
+  reading: "ショック"
+  english: "shock (emotional)"
+  sentence: "私も思い出せないや」ショックでした。"
+  notes: "JMdict seq 1062660."
+
+- id: gloss.idolyametai.1470620
+  story: kc.idolyametai
+  kind: new
+  japanese: "農家"
+  reading: "のうか"
+  english: "farmer; farming family"
+  sentence: "農家になって、ナスや玉ねぎを作るのもいいかもな。"
+  notes: "JMdict seq 1470620."
+
+- id: gloss.idolyametai.1240670
+  story: kc.idolyametai
+  kind: new
+  japanese: "玉ねぎ"
+  reading: "たまねぎ"
+  english: "onion"
+  sentence: "農家になって、ナスや玉ねぎを作るのもいいかもな。"
+  notes: "JMdict seq 1240670."
+
+- id: gloss.idolyametai.1381550
+  story: kc.idolyametai
+  kind: new
+  japanese: "青春"
+  reading: "せいしゅん"
+  english: "youth; adolescence; springtime of life"
+  sentence: "あ、大学に行って、青春を楽しむのもいいかもな。"
+  notes: "JMdict seq 1381550."
+
+- id: gloss.idolyametai.1360930
+  story: kc.idolyametai
+  kind: new
+  japanese: "心配"
+  reading: "しんぱい"
+  english: "worry; concern; anxiety"
+  sentence: "最近元気がないのを心配して、マネージャーさんが、ファンレターを持ってきてくれました。"
+  notes: "JMdict seq 1360930."
+
+- id: gloss.idolyametai.1129040
+  story: kc.idolyametai
+  kind: new
+  japanese: "マネージャー"
+  reading: "マネージャー"
+  english: "manager"
+  sentence: "最近元気がないのを心配して、マネージャーさんが、ファンレターを持ってきてくれました。"
+  notes: "JMdict seq 1129040."
+
+- id: gloss.idolyametai.1535700
+  story: kc.idolyametai
+  kind: new
+  japanese: "目立つ"
+  reading: "めだつ"
+  english: "to be conspicuous; to stand out"
+  sentence: "どうせ、「もっと目立つようにがんばって」とか「顔が地味ですね」とか書いてあるんでしょ。"
+  notes: "JMdict seq 1535700."
+
+- id: gloss.idolyametai.2079380
+  story: kc.idolyametai
+  kind: new
+  japanese: "ファンレター"
+  reading: "ファンレター"
+  english: "fan letter; fan mail"
+  sentence: "最近元気がないのを心配して、マネージャーさんが、ファンレターを持ってきてくれました。"
+  notes: "JMdict seq 2079380."
+
+- id: gloss.idolyametai.1531710
+  story: kc.idolyametai
+  kind: spelling
+  japanese: "名前"
+  reading: "なまえ"
+  english: "name"
+  sentence: "顔だって地味だし･･･メンバーの中でも目立たないから、スタッフの人が、ぼくの名前を忘れることがよくあります。"
+  taughtId: vocab.namae
+  notes: "JMdict seq 1531710."
+
+- id: gloss.idolyametai.1353320
+  story: kc.idolyametai
+  kind: book-four
+  japanese: "上手"
+  reading: "じょうず"
+  english: "good at, skilful"
+  sentence: "ぼくは、みんなみたいにダンスも歌も上手じゃないし、おもしろいわけでもないです。"
+  taughtId: vocab.jouzu
+  notes: "JMdict seq 1353320. Taught in Book Four."
+
+- id: gloss.idolyametai.1165970
+  story: kc.idolyametai
+  kind: book-four
+  japanese: "一番"
+  reading: "いちばん"
+  english: "most, best"
+  sentence: "「あれ、あの人名前なんだっけ?あの一番目立たない人」「えー、なんだっけ。"
+  taughtId: vocab.ichiban
+  notes: "JMdict seq 1165970. Taught in Book Four."
+
+- id: gloss.idolyametai.1320830
+  story: kc.idolyametai
+  kind: book-four
+  japanese: "実は"
+  reading: "じつは"
+  english: "actually, to tell the truth"
+  sentence: "実はぼく…アイドルやめたいんです。"
+  taughtId: vocab.jitsuwa
+  notes: "JMdict seq 1320830. Taught in Book Four."
+
+- id: gloss.idolyametai.1311110
+  story: kc.idolyametai
+  kind: spelling
+  japanese: "私"
+  reading: "わたし"
+  english: "I; me"
+  sentence: "私も思い出せないや」ショックでした。"
+  taughtId: vocab.watashi
+  notes: "JMdict seq 1311110."
+
+- id: gloss.idolyametai.name-saki
+  story: kc.idolyametai
+  kind: name
+  japanese: "サキ"
+  reading: "サキ"
+  english: "Saki — the SENSHU BOYZ member who wants to quit"
+  sentence: "ぼくは、SENSHU BOYZの羽倉サキ。"
+  notes: "A name in this story; not vocabulary."

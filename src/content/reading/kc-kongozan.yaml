@@ -1,0 +1,191 @@
+# Reading glossary: KC よむよむ — 金剛山 (kc.kongozan, A1)
+# Words this story uses that Books One to Three do not teach. Not lesson vocabulary:
+# Book Three's words arrive by mining from the library (book-three-bands.md section 1).
+# Text: KC よむよむ, Japan Foundation Kansai Center, CC BY-NC 2.1 JP, sentences verbatim.
+# Entries: JMdict for Applications 3.6.2 (CC BY 4.0), seq cited per entry, sense checked
+# against the sentence it came from.
+
+- id: gloss.kongozan.1215910
+  story: kc.kongozan
+  kind: new
+  japanese: "関西"
+  reading: "かんさい"
+  english: "Kansai (region comprising Kyoto, Osaka, Kobe and surrounding prefectures)"
+  sentence: "天気がいい日は関西国際空港が見えますよ。"
+  notes: "JMdict seq 1215910."
+
+- id: gloss.kongozan.1364670
+  story: kc.kongozan
+  kind: new
+  japanese: "神社"
+  reading: "じんじゃ"
+  english: "Shinto shrine"
+  sentence: "山の上には神社があります。"
+  notes: "JMdict seq 1364670."
+
+- id: gloss.kongozan.1303070
+  story: kc.kongozan
+  kind: new
+  japanese: "山登り"
+  reading: "やまのぼり"
+  english: "mountain climbing; mountaineering"
+  sentence: "山登りの前に、準備運動をしましょう。"
+  notes: "JMdict seq 1303070."
+
+- id: gloss.kongozan.1341670
+  story: kc.kongozan
+  kind: new
+  japanese: "準備"
+  reading: "じゅんび"
+  english: "preparation; arrangements; getting ready"
+  sentence: "準備はいいですか。"
+  notes: "JMdict seq 1341670."
+
+- id: gloss.kongozan.1245470
+  story: kc.kongozan
+  kind: new
+  japanese: "空気"
+  reading: "くうき"
+  english: "air; atmosphere"
+  sentence: "空気がとてもきれいです。"
+  notes: "JMdict seq 1245470."
+
+- id: gloss.kongozan.1245570
+  story: kc.kongozan
+  kind: new
+  japanese: "空港"
+  reading: "くうこう"
+  english: "airport"
+  sentence: "天気がいい日は関西国際空港が見えますよ。"
+  notes: "JMdict seq 1245570."
+
+- id: gloss.kongozan.1070030
+  story: kc.kongozan
+  kind: new
+  japanese: "スタンプ"
+  reading: "スタンプ"
+  english: "stamp"
+  sentence: "山の上でスタンプがもらえます。"
+  notes: "JMdict seq 1070030."
+
+- id: gloss.kongozan.1146760
+  story: kc.kongozan
+  kind: new
+  japanese: "ロープウェイ"
+  reading: "ロープウェイ"
+  english: "ropeway; cableway; aerial lift"
+  sentence: "あれ、ロープウェイもありますね。"
+  notes: "JMdict seq 1146760."
+
+- id: gloss.kongozan.1413820
+  story: kc.kongozan
+  kind: new
+  japanese: "大阪府"
+  reading: "おおさかふ"
+  english: "Osaka Prefecture"
+  sentence: "金剛山は、大阪府と奈良県の間にあります。"
+  notes: "JMdict seq 1413820."
+
+- id: gloss.kongozan.1457700
+  story: kc.kongozan
+  kind: new
+  japanese: "奈良県"
+  reading: "ならけん"
+  english: "Nara Prefecture"
+  sentence: "金剛山は、大阪府と奈良県の間にあります。"
+  notes: "JMdict seq 1457700."
+
+- id: gloss.kongozan.1938210
+  story: kc.kongozan
+  kind: new
+  japanese: "準備運動"
+  reading: "じゅんびうんどう"
+  english: "warming (limbering) up; warming-up exercises"
+  sentence: "山登りの前に、準備運動をしましょう。"
+  notes: "JMdict seq 1938210."
+
+- id: gloss.kongozan.1151120
+  story: kc.kongozan
+  kind: new
+  japanese: "あいさつ"
+  reading: "あいさつ"
+  english: "greeting"
+  sentence: "一、二、三、四…山ではみんなあいさつをします。"
+  notes: "JMdict seq 1151120."
+
+- id: gloss.kongozan.2082160
+  story: kc.kongozan
+  kind: new
+  japanese: "屋"
+  reading: "や"
+  english: "shop (as in おそば屋, a soba shop)"
+  sentence: "おそば屋さんもあります。"
+  notes: "JMdict seq 2082160."
+
+- id: gloss.kongozan.1392580
+  story: kc.kongozan
+  kind: spelling
+  japanese: "前"
+  reading: "まえ"
+  english: "in front (of); before (e.g. a building)"
+  sentence: "山登りの前に、準備運動をしましょう。"
+  taughtId: vocab.mae
+  notes: "JMdict seq 1392580."
+
+- id: gloss.kongozan.name-kongozan
+  story: kc.kongozan
+  kind: name
+  japanese: "金剛山"
+  reading: "こんごうさん"
+  english: "Mount Kongō, on the Osaka–Nara border"
+  sentence: "（大和葛城山から見た金剛山）今日は金剛山に登ります。"
+  notes: "A name in this story; not vocabulary."
+
+- id: gloss.kongozan.1591430
+  story: kc.kongozan
+  kind: book-four
+  japanese: "気持ち"
+  reading: "きもち"
+  english: "feeling; mood"
+  sentence: "気持ちがいいですね」「がんばってください」「ありがとうございます」きれいな水がありますよ。"
+  taughtId: vocab.kimochi
+  notes: "JMdict seq 1591430. Taught in Book Four."
+
+- id: gloss.kongozan.1156800
+  story: kc.kongozan
+  kind: book-four
+  japanese: "意味"
+  reading: "いみ"
+  english: "meaning; sense"
+  sentence: "「70％登りましたよ」という意味です。"
+  taughtId: vocab.imi
+  notes: "JMdict seq 1156800. Taught in Book Four."
+
+- id: gloss.kongozan.1172910
+  story: kc.kongozan
+  kind: book-four
+  japanese: "運動"
+  reading: "うんどう"
+  english: "exercise; sport"
+  sentence: "山登りの前に、準備運動をしましょう。"
+  taughtId: vocab.undou
+  notes: "JMdict seq 1172910. Taught in Book Four."
+
+- id: gloss.kongozan.1463770
+  story: kc.kongozan
+  kind: new
+  japanese: "日"
+  reading: "ひ"
+  english: "day"
+  sentence: "天気がいい日は関西国際空港が見えますよ。"
+  notes: "JMdict seq 1463770."
+
+- id: gloss.kongozan.1311110
+  story: kc.kongozan
+  kind: spelling
+  japanese: "私"
+  reading: "わたし"
+  english: "I; me"
+  sentence: "私は9回登りました。"
+  taughtId: vocab.watashi
+  notes: "JMdict seq 1311110."

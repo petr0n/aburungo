@@ -1,0 +1,223 @@
+# Reading glossary: KC よむよむ — マンホール (kc.manhole, A2)
+# Words this story uses that Books One to Three do not teach. Not lesson vocabulary:
+# Book Three's words arrive by mining from the library (book-three-bands.md section 1).
+# Text: KC よむよむ, Japan Foundation Kansai Center, CC BY-NC 2.1 JP, sentences verbatim.
+# Entries: JMdict for Applications 3.6.2 (CC BY 4.0), seq cited per entry, sense checked
+# against the sentence it came from.
+
+- id: gloss.manhole.1202270
+  story: kc.manhole
+  kind: new
+  japanese: "絵"
+  reading: "え"
+  english: "picture; drawing; painting"
+  sentence: "マンホールのふたには、いろいろな絵があります。"
+  notes: "JMdict seq 1202270."
+
+- id: gloss.manhole.1250220
+  story: kc.manhole
+  kind: new
+  japanese: "形"
+  reading: "かたち"
+  english: "(physical) form; shape; figure"
+  sentence: "ふたの形は丸くて、60cmくらいの大きさが多いです。"
+  notes: "JMdict seq 1250220."
+
+- id: gloss.manhole.1293780
+  story: kc.manhole
+  kind: new
+  japanese: "最近"
+  reading: "さいきん"
+  english: "recently; lately; these days"
+  sentence: "最近はカラフルなものも多いです。"
+  notes: "JMdict seq 1293780."
+
+- id: gloss.manhole.1108540
+  story: kc.manhole
+  kind: new
+  japanese: "ファン"
+  reading: "ファン"
+  english: "fan; enthusiast; lover (of)"
+  sentence: "マンホールのふたはカラフルできれいなものが多くなったので、日本にはたくさんのファンがいます。"
+  notes: "JMdict seq 1108540."
+
+- id: gloss.manhole.1130270
+  story: kc.manhole
+  kind: new
+  japanese: "マンホール"
+  reading: "マンホール"
+  english: "manhole"
+  sentence: "これは「マンホール」です。"
+  notes: "JMdict seq 1130270."
+
+- id: gloss.manhole.1308090
+  story: kc.manhole
+  kind: new
+  japanese: "市"
+  reading: "し"
+  english: "city"
+  sentence: "市や町のシンボルマーク、花や木などの絵が多いです。"
+  notes: "JMdict seq 1308090."
+
+- id: gloss.manhole.1038700
+  story: kc.manhole
+  kind: new
+  japanese: "カラフル"
+  reading: "カラフル"
+  english: "colorful; colourful"
+  sentence: "最近はカラフルなものも多いです。"
+  notes: "JMdict seq 1038700."
+
+- id: gloss.manhole.1454290
+  story: kc.manhole
+  kind: new
+  japanese: "道路"
+  reading: "どうろ"
+  english: "road; highway"
+  sentence: "道路にある、これは何ですか？"
+  notes: "JMdict seq 1454290."
+
+- id: gloss.manhole.1297540
+  story: kc.manhole
+  kind: new
+  japanese: "作業"
+  reading: "さぎょう"
+  english: "work; operation; task"
+  sentence: "人が入って作業をする穴です。"
+  notes: "JMdict seq 1297540."
+
+- id: gloss.manhole.1254480
+  story: kc.manhole
+  kind: new
+  japanese: "穴"
+  reading: "あな"
+  english: "hole; opening; orifice"
+  sentence: "人が入って作業をする穴です。"
+  notes: "JMdict seq 1254480."
+
+- id: gloss.manhole.1437780
+  story: kc.manhole
+  kind: new
+  japanese: "鉄"
+  reading: "てつ"
+  english: "iron (Fe)"
+  sentence: "重い鉄でできていますが、雨の日に歩く人がすべらないように、でこぼこ（凹凸）しています。"
+  notes: "JMdict seq 1437780."
+
+- id: gloss.manhole.1179280
+  story: kc.manhole
+  kind: new
+  japanese: "凹凸"
+  reading: "おうとつ"
+  english: "unevenness; bumpiness; roughness"
+  sentence: "重い鉄でできていますが、雨の日に歩く人がすべらないように、でこぼこ（凹凸）しています。"
+  notes: "JMdict seq 1179280."
+
+- id: gloss.manhole.1041920
+  story: kc.manhole
+  kind: new
+  japanese: "キャラクター"
+  reading: "キャラクター"
+  english: "character (a mascot or cartoon figure)"
+  sentence: "熊取町の花「ヒマワリ」と、町のキャラクター「ジャンプ君」の絵があります。"
+  notes: "JMdict seq 1041920."
+
+- id: gloss.manhole.1604230
+  story: kc.manhole
+  kind: new
+  japanese: "丸い"
+  reading: "まるい"
+  english: "round; circular"
+  sentence: "ふたの形は丸くて、60cmくらいの大きさが多いです。"
+  notes: "JMdict seq 1604230."
+
+- id: gloss.manhole.1063960
+  story: kc.manhole
+  kind: new
+  japanese: "シンボルマーク"
+  reading: "シンボルマーク"
+  english: "logo; banner"
+  sentence: "市や町のシンボルマーク、花や木などの絵が多いです。"
+  notes: "JMdict seq 1063960."
+
+- id: gloss.manhole.1243420
+  story: kc.manhole
+  kind: new
+  japanese: "イチョウ"
+  reading: "いちょう"
+  english: "ginkgo; gingko; maidenhair tree"
+  sentence: "泉佐野市の木、「イチョウ」の絵があります。"
+  notes: "JMdict seq 1243420."
+
+- id: gloss.manhole.1488290
+  story: kc.manhole
+  kind: new
+  japanese: "モズ"
+  reading: "もず"
+  english: "shrike (any bird of family Laniidae)"
+  sentence: "堺市の鳥「モズ」と、堺市の花「ハナショウブ」の絵があります。"
+  notes: "JMdict seq 1488290."
+
+- id: gloss.manhole.1194750
+  story: kc.manhole
+  kind: new
+  japanese: "ハナショウブ"
+  reading: "はなしょうぶ"
+  english: "Japanese iris; blue flag; Iris ensata"
+  sentence: "堺市の鳥「モズ」と、堺市の花「ハナショウブ」の絵があります。"
+  notes: "JMdict seq 1194750."
+
+- id: gloss.manhole.2825891
+  story: kc.manhole
+  kind: new
+  japanese: "マスコットキャラクター"
+  reading: "マスコットキャラクター"
+  english: "mascot character; mascot"
+  sentence: "マスコットキャラクターの絵もあります。"
+  notes: "JMdict seq 2825891."
+
+- id: gloss.manhole.1277290
+  story: kc.manhole
+  kind: new
+  japanese: "ヒマワリ"
+  reading: "ひまわり"
+  english: "sunflower"
+  sentence: "熊取町の花「ヒマワリ」と、町のキャラクター「ジャンプ君」の絵があります。"
+  notes: "JMdict seq 1277290."
+
+- id: gloss.manhole.name-senshu
+  story: kc.manhole
+  kind: name
+  japanese: "泉州"
+  reading: "せんしゅう"
+  english: "Senshū — the southern part of Osaka Prefecture"
+  sentence: "田尻町は「泉州たまねぎ」というたまねぎが有名です。"
+  notes: "A name in this story (a region); not vocabulary."
+
+- id: gloss.manhole.1603990
+  story: kc.manhole
+  kind: book-four
+  japanese: "町"
+  reading: "まち"
+  english: "town, neighbourhood"
+  sentence: "市や町のシンボルマーク、花や木などの絵が多いです。"
+  taughtId: vocab.machi
+  notes: "JMdict seq 1603990. Taught in Book Four."
+
+- id: gloss.manhole.1463770
+  story: kc.manhole
+  kind: new
+  japanese: "日"
+  reading: "ひ"
+  english: "day"
+  sentence: "重い鉄でできていますが、雨の日に歩く人がすべらないように、でこぼこ（凹凸）しています。"
+  notes: "JMdict seq 1463770."
+
+- id: gloss.manhole.1407460
+  story: kc.manhole
+  kind: new
+  japanese: "多い"
+  reading: "おおい"
+  english: "many; numerous; a lot"
+  sentence: "ふたの形は丸くて、60cmくらいの大きさが多いです。"
+  notes: "JMdict seq 1407460."

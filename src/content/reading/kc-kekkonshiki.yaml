@@ -1,0 +1,284 @@
+# Reading glossary: KC よむよむ — 結婚式 (kc.kekkonshiki, A2)
+# Words this story uses that Books One to Three do not teach. Not lesson vocabulary:
+# Book Three's words arrive by mining from the library (book-three-bands.md section 1).
+# Text: KC よむよむ, Japan Foundation Kansai Center, CC BY-NC 2.1 JP, sentences verbatim.
+# Entries: JMdict for Applications 3.6.2 (CC BY 4.0), seq cited per entry, sense checked
+# against the sentence it came from.
+
+- id: gloss.kekkonshiki.1364670
+  story: kc.kekkonshiki
+  kind: new
+  japanese: "神社"
+  reading: "じんじゃ"
+  english: "Shinto shrine"
+  sentence: "2016年10月、私たちは神社で結婚式をしました。"
+  notes: "JMdict seq 1364670."
+
+- id: gloss.kekkonshiki.1611580
+  story: kc.kekkonshiki
+  kind: new
+  japanese: "本当に"
+  reading: "ほんとうに"
+  english: "really; truly"
+  sentence: "本当に幸せな一日でした。"
+  notes: "JMdict seq 1611580."
+
+- id: gloss.kekkonshiki.1269320
+  story: kc.kekkonshiki
+  kind: new
+  japanese: "後"
+  reading: "あと"
+  english: "after; later"
+  sentence: "さかずき結婚式の後で、「披露宴」というパーティーをしました。"
+  notes: "JMdict seq 1269320."
+
+- id: gloss.kekkonshiki.1254810
+  story: kc.kekkonshiki
+  kind: new
+  japanese: "結婚式"
+  reading: "けっこんしき"
+  english: "marriage ceremony; wedding; nuptials"
+  sentence: "2016年10月、私たちは神社で結婚式をしました。"
+  notes: "JMdict seq 1254810."
+
+- id: gloss.kekkonshiki.1362340
+  story: kc.kekkonshiki
+  kind: new
+  japanese: "新婦"
+  reading: "しんぷ"
+  english: "bride"
+  sentence: "私が新郎です私が新婦です神社でする結婚式は、「神前式」と言います。"
+  notes: "JMdict seq 1362340."
+
+- id: gloss.kekkonshiki.1483500
+  story: kc.kekkonshiki
+  kind: new
+  japanese: "披露宴"
+  reading: "ひろうえん"
+  english: "reception (e.g. wedding); banquet; celebration"
+  sentence: "さかずき結婚式の後で、「披露宴」というパーティーをしました。"
+  notes: "JMdict seq 1483500."
+
+- id: gloss.kekkonshiki.1362470
+  story: kc.kekkonshiki
+  kind: new
+  japanese: "新郎"
+  reading: "しんろう"
+  english: "bridegroom"
+  sentence: "私が新郎です私が新婦です神社でする結婚式は、「神前式」と言います。"
+  notes: "JMdict seq 1362470."
+
+- id: gloss.kekkonshiki.1583640
+  story: kc.kekkonshiki
+  kind: new
+  japanese: "夫婦"
+  reading: "ふうふ"
+  english: "married couple; husband and wife; man and wife"
+  sentence: "夫婦になるために、おみき（神さまのお酒）を飲みます。"
+  notes: "JMdict seq 1583640."
+
+- id: gloss.kekkonshiki.2846215
+  story: kc.kekkonshiki
+  kind: new
+  japanese: "神前式"
+  reading: "しんぜんしき"
+  english: "traditional Japanese wedding ceremony (usu. at a shrine or temple)"
+  sentence: "私が新郎です私が新婦です神社でする結婚式は、「神前式」と言います。"
+  notes: "JMdict seq 2846215."
+
+- id: gloss.kekkonshiki.1656070
+  story: kc.kekkonshiki
+  kind: new
+  japanese: "紋付"
+  reading: "もんつき"
+  english: "kimono decorated with the family crest"
+  sentence: "神前式のとき、新郎は紋付はかまを着て、新婦は白むくを着ます。"
+  notes: "JMdict seq 1656070."
+
+- id: gloss.kekkonshiki.1161310
+  story: kc.kekkonshiki
+  kind: new
+  japanese: "一回"
+  reading: "いっかい"
+  english: "once; one time; one round"
+  sentence: "おみきを飲むとき、一回で全部飲んではいけません。"
+  notes: "JMdict seq 1161310."
+
+- id: gloss.kekkonshiki.1515670
+  story: kc.kekkonshiki
+  kind: new
+  japanese: "報告"
+  reading: "ほうこく"
+  english: "report; information"
+  sentence: "紋付はかま神前式では、神社の神さまに結婚を報告します。"
+  notes: "JMdict seq 1515670."
+
+- id: gloss.kekkonshiki.1461410
+  story: kc.kekkonshiki
+  kind: new
+  japanese: "二回"
+  reading: "にかい"
+  english: "twice"
+  sentence: "二回目も、少し飲みます。"
+  notes: "JMdict seq 1461410."
+
+- id: gloss.kekkonshiki.1299940
+  story: kc.kekkonshiki
+  kind: new
+  japanese: "三回"
+  reading: "さんかい"
+  english: "three times"
+  sentence: "そして、三回目に、全部飲みます。"
+  notes: "JMdict seq 1299940."
+
+- id: gloss.kekkonshiki.1593960
+  story: kc.kekkonshiki
+  kind: new
+  japanese: "三三九度"
+  reading: "さんさんくど"
+  english: "san-san-kudo: the three-times-three exchange of nuptial cups"
+  sentence: "これを「三三九度」と言います。"
+  notes: "JMdict seq 1593960."
+
+- id: gloss.kekkonshiki.1100760
+  story: kc.kekkonshiki
+  kind: new
+  japanese: "パーティー"
+  reading: "パーティー"
+  english: "party (social gathering)"
+  sentence: "さかずき結婚式の後で、「披露宴」というパーティーをしました。"
+  notes: "JMdict seq 1100760."
+
+- id: gloss.kekkonshiki.1026230
+  story: kc.kekkonshiki
+  kind: new
+  japanese: "ウエディングドレス"
+  reading: "ウェディングドレス"
+  english: "wedding dress"
+  sentence: "披露宴では、新婦はウエディングドレスを着ました。"
+  notes: "JMdict seq 1026230."
+
+- id: gloss.kekkonshiki.1293810
+  story: kc.kekkonshiki
+  kind: new
+  japanese: "最後"
+  reading: "さいご"
+  english: "end; conclusion"
+  sentence: "披露宴の最後に、両親に花たばをあげました。"
+  notes: "JMdict seq 1293810."
+
+- id: gloss.kekkonshiki.1333550
+  story: kc.kekkonshiki
+  kind: new
+  japanese: "集まる"
+  reading: "あつまる"
+  english: "to gather; to collect; to assemble"
+  sentence: "結婚式と披露宴には、私たちの家族や友だちがたくさん集まってくれて、とても楽しかったです。"
+  notes: "JMdict seq 1333550."
+
+- id: gloss.kekkonshiki.1329015
+  story: kc.kekkonshiki
+  kind: new
+  japanese: "お酒"
+  reading: "おさけ"
+  english: "alcohol; sake"
+  sentence: "夫婦になるために、おみき（神さまのお酒）を飲みます。"
+  notes: "JMdict seq 1329015."
+
+- id: gloss.kekkonshiki.1156800
+  story: kc.kekkonshiki
+  kind: book-four
+  japanese: "意味"
+  reading: "いみ"
+  english: "meaning; sense"
+  sentence: "かがみびらきは、夫婦のはじまりという意味があります。"
+  taughtId: vocab.imi
+  notes: "JMdict seq 1156800. Taught in Book Four."
+
+- id: gloss.kekkonshiki.1594060
+  story: kc.kekkonshiki
+  kind: book-four
+  japanese: "幸せ"
+  reading: "しあわせ"
+  english: "happy; fortunate; happiness"
+  sentence: "本当に幸せな一日でした。"
+  taughtId: vocab.shiawase
+  notes: "JMdict seq 1594060. Taught in Book Four."
+
+- id: gloss.kekkonshiki.1254790
+  story: kc.kekkonshiki
+  kind: book-four
+  japanese: "結婚"
+  reading: "けっこん"
+  english: "marriage"
+  sentence: "紋付はかま神前式では、神社の神さまに結婚を報告します。"
+  taughtId: vocab.kekkon
+  notes: "JMdict seq 1254790. Taught in Book Four."
+
+- id: gloss.kekkonshiki.1293990
+  story: kc.kekkonshiki
+  kind: book-four
+  japanese: "最初"
+  reading: "さいしょ"
+  english: "the first; the beginning"
+  sentence: "披露宴の最初に、「かがみびらき」をしました。"
+  taughtId: vocab.saisho
+  notes: "JMdict seq 1293990. Taught in Book Four."
+
+- id: gloss.kekkonshiki.1364440
+  story: kc.kekkonshiki
+  kind: book-four
+  japanese: "神"
+  reading: "かみ"
+  english: "god; deity (神さま)"
+  sentence: "紋付はかま神前式では、神社の神さまに結婚を報告します。"
+  taughtId: vocab.kami
+  notes: "JMdict seq 1364440. Taught in Book Four."
+
+- id: gloss.kekkonshiki.1218760
+  story: kc.kekkonshiki
+  kind: book-four
+  japanese: "喜ぶ"
+  reading: "よろこぶ"
+  english: "to be delighted; to be glad"
+  sentence: "両親は、とても喜んで、笑ったり、泣いたりしていました。"
+  taughtId: vocab.yorokobu
+  notes: "JMdict seq 1218760. Taught in Book Four."
+
+- id: gloss.kekkonshiki.1351360
+  story: kc.kekkonshiki
+  kind: book-four
+  japanese: "笑う"
+  reading: "わらう"
+  english: "to laugh; to smile"
+  sentence: "両親は、とても喜んで、笑ったり、泣いたりしていました。"
+  taughtId: vocab.warau
+  notes: "JMdict seq 1351360. Taught in Book Four."
+
+- id: gloss.kekkonshiki.1463770
+  story: kc.kekkonshiki
+  kind: new
+  japanese: "日"
+  reading: "ひ"
+  english: "day"
+  sentence: "この日は、暑くなくて、寒くなくて、とてもいい天気でした。"
+  notes: "JMdict seq 1463770."
+
+- id: gloss.kekkonshiki.1311110
+  story: kc.kekkonshiki
+  kind: spelling
+  japanese: "私"
+  reading: "わたし"
+  english: "I; me"
+  sentence: "私が新郎です私が新婦です神社でする結婚式は、「神前式」と言います。"
+  taughtId: vocab.watashi
+  notes: "JMdict seq 1311110."
+
+- id: gloss.kekkonshiki.1351430
+  story: kc.kekkonshiki
+  kind: new
+  japanese: "紹介"
+  reading: "しょうかい"
+  english: "introduction (紹介する: to introduce)"
+  sentence: "私たちの結婚式を紹介します。"
+  notes: "JMdict seq 1351430."

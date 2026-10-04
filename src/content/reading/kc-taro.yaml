@@ -1,0 +1,181 @@
+# Reading glossary: KC よむよむ — 太郎くんの夏休み (kc.taro, A1)
+# Words this story uses that Books One to Three do not teach. Not lesson vocabulary:
+# Book Three's words arrive by mining from the library (book-three-bands.md section 1).
+# Text: KC よむよむ, Japan Foundation Kansai Center, CC BY-NC 2.1 JP, sentences verbatim.
+# Entries: JMdict for Applications 3.6.2 (CC BY 4.0), seq cited per entry, sense checked
+# against the sentence it came from.
+
+- id: gloss.taro.1380890
+  story: kc.taro
+  kind: new
+  japanese: "スイカ"
+  reading: "すいか"
+  english: "watermelon"
+  sentence: "8月1日（土）くもり家でスイカを食べました。"
+  notes: "JMdict seq 1380890."
+
+- id: gloss.taro.1083590
+  story: kc.taro
+  kind: new
+  japanese: "デパート"
+  reading: "デパート"
+  english: "department store"
+  sentence: "バシャバシャ8月12日（水）晴れお母さんと妹と、デパートに買い物に行きました。"
+  notes: "JMdict seq 1083590."
+
+- id: gloss.taro.1436130
+  story: kc.taro
+  kind: new
+  japanese: "庭"
+  reading: "にわ"
+  english: "garden; yard; courtyard"
+  sentence: "スイカのたねを、庭にとばしました。"
+  notes: "JMdict seq 1436130."
+
+- id: gloss.taro.1048400
+  story: kc.taro
+  kind: new
+  japanese: "ゲーム"
+  reading: "ゲーム"
+  english: "game"
+  sentence: "2時から5時までゲームをしました。"
+  notes: "JMdict seq 1048400."
+
+- id: gloss.taro.1347880
+  story: kc.taro
+  kind: new
+  japanese: "小学生"
+  reading: "しょうがくせい"
+  english: "elementary school student; primary school student; grade school student"
+  sentence: "太郎くんは小学生です。"
+  notes: "JMdict seq 1347880."
+
+- id: gloss.taro.1191420
+  story: kc.taro
+  kind: new
+  japanese: "夏休み"
+  reading: "なつやすみ"
+  english: "summer vacation; summer holiday"
+  sentence: "いまは夏休みです。"
+  notes: "JMdict seq 1191420."
+
+- id: gloss.taro.1226440
+  story: kc.taro
+  kind: new
+  japanese: "喫茶店"
+  reading: "きっさてん"
+  english: "coffee shop; tearoom; coffee lounge"
+  sentence: "それから、喫茶店でアイスクリームを食べました。"
+  notes: "JMdict seq 1226440."
+
+- id: gloss.taro.1013980
+  story: kc.taro
+  kind: new
+  japanese: "アイスクリーム"
+  reading: "アイスクリーム"
+  english: "ice cream"
+  sentence: "それから、喫茶店でアイスクリームを食べました。"
+  notes: "JMdict seq 1013980."
+
+- id: gloss.taro.1604130
+  story: kc.taro
+  kind: new
+  japanese: "祭り"
+  reading: "まつり"
+  english: "festival; feast; matsuri"
+  sentence: "8月15日（土）くもり夜、友だちと祭りに行きました。"
+  notes: "JMdict seq 1604130."
+
+- id: gloss.taro.1426680
+  story: kc.taro
+  kind: new
+  japanese: "虫"
+  reading: "むし"
+  english: "insect; bug; cricket"
+  sentence: "山で虫とりをしました。"
+  notes: "JMdict seq 1426680."
+
+- id: gloss.taro.1387080
+  story: kc.taro
+  kind: new
+  japanese: "セミ"
+  reading: "せみ"
+  english: "cicada; locust"
+  sentence: "ぼくは、セミやチョウが好きです。"
+  notes: "JMdict seq 1387080."
+
+- id: gloss.taro.1429010
+  story: kc.taro
+  kind: new
+  japanese: "チョウ"
+  reading: "ちょう"
+  english: "butterfly"
+  sentence: "ぼくは、セミやチョウが好きです。"
+  notes: "JMdict seq 1429010."
+
+- id: gloss.taro.2755540
+  story: kc.taro
+  kind: new
+  japanese: "バシャバシャ"
+  reading: "バシャバシャ"
+  english: "splish-splash; with a splash"
+  sentence: "バシャバシャ8月12日（水）晴れお母さんと妹と、デパートに買い物に行きました。"
+  notes: "JMdict seq 2755540."
+
+- id: gloss.taro.2694430
+  story: kc.taro
+  kind: new
+  japanese: "ぴこぴこ"
+  reading: "ピコピコ"
+  english: "blip bleep"
+  sentence: "ぴこぴこ8月31日（月）・・・・・・・・・・・・・・・・・・太郎くん。"
+  notes: "JMdict seq 2694430."
+
+- id: gloss.taro.1536350
+  story: kc.taro
+  kind: spelling
+  japanese: "夜"
+  reading: "よる"
+  english: "night; evening"
+  sentence: "8月15日（土）くもり夜、友だちと祭りに行きました。"
+  taughtId: vocab.yoru
+  notes: "JMdict seq 1536350."
+
+- id: gloss.taro.1353320
+  story: kc.taro
+  kind: book-four
+  japanese: "上手"
+  reading: "じょうず"
+  english: "good at, skilful"
+  sentence: "お父さんはとても上手でした。"
+  taughtId: vocab.jouzu
+  notes: "JMdict seq 1353320. Taught in Book Four."
+
+- id: gloss.taro.1591430
+  story: kc.taro
+  kind: book-four
+  japanese: "気持ち"
+  reading: "きもち"
+  english: "feeling; mood"
+  sentence: "とても気持ちがよかったです。"
+  taughtId: vocab.kimochi
+  notes: "JMdict seq 1591430. Taught in Book Four."
+
+- id: gloss.taro.1556730
+  story: kc.taro
+  kind: book-four
+  japanese: "冷たい"
+  reading: "つめたい"
+  english: "cold (to the touch); cold-hearted"
+  sentence: "川の水はとても冷たかったです。"
+  taughtId: vocab.tsumetai
+  notes: "JMdict seq 1556730. Taught in Book Four."
+
+- id: gloss.taro.name-taro
+  story: kc.taro
+  kind: name
+  japanese: "太郎"
+  reading: "たろう"
+  english: "Tarō — the boy whose summer diary this is"
+  sentence: "太郎くんは小学生です。"
+  notes: "A name in this story; not vocabulary."

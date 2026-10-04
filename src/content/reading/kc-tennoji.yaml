@@ -1,0 +1,115 @@
+# Reading glossary: KC よむよむ — 天王寺動物園 (kc.tennoji, A1)
+# Words this story uses that Books One to Three do not teach. Not lesson vocabulary:
+# Book Three's words arrive by mining from the library (book-three-bands.md section 1).
+# Text: KC よむよむ, Japan Foundation Kansai Center, CC BY-NC 2.1 JP, sentences verbatim.
+# Entries: JMdict for Applications 3.6.2 (CC BY 4.0), seq cited per entry, sense checked
+# against the sentence it came from.
+
+- id: gloss.tennoji.1413660
+  story: kc.tennoji
+  kind: new
+  japanese: "大好き"
+  reading: "だいすき"
+  english: "liking very much; loving (something or someone); adoring"
+  sentence: "子どもも、大人も、動物が大好きです。"
+  notes: "JMdict seq 1413660."
+
+- id: gloss.tennoji.1451490
+  story: kc.tennoji
+  kind: new
+  japanese: "動物園"
+  reading: "どうぶつえん"
+  english: "zoo; zoological gardens"
+  sentence: "天王寺動物園には、たくさん人が来ます。"
+  notes: "JMdict seq 1451490."
+
+- id: gloss.tennoji.1520910
+  story: kc.tennoji
+  kind: new
+  japanese: "ホッキョクグマ"
+  reading: "ほっきょくぐま"
+  english: "polar bear"
+  sentence: "ホッキョクグマも、とても有名です。"
+  notes: "JMdict seq 1520910."
+
+- id: gloss.tennoji.1040990
+  story: kc.tennoji
+  kind: new
+  japanese: "キーウィ"
+  reading: "キウイ"
+  english: "kiwifruit; kiwi fruit; kiwi"
+  sentence: "それは、キーウィです。"
+  notes: "JMdict seq 1040990."
+
+- id: gloss.tennoji.1414170
+  story: kc.tennoji
+  kind: new
+  japanese: "大人"
+  reading: "おとな"
+  english: "adult; grown-up"
+  sentence: "子どもも、大人も、動物が大好きです。"
+  notes: "JMdict seq 1414170."
+
+- id: gloss.tennoji.1106530
+  story: kc.tennoji
+  kind: new
+  japanese: "ピクニック"
+  reading: "ピクニック"
+  english: "picnic"
+  sentence: "動物園の外で、ピクニックができます。"
+  notes: "JMdict seq 1106530."
+
+- id: gloss.tennoji.1482410
+  story: kc.tennoji
+  kind: new
+  japanese: "番目"
+  reading: "ばんめ"
+  english: "the nth ..."
+  sentence: "日本で、2番目に大きい動物園です。"
+  notes: "JMdict seq 1482410."
+
+- id: gloss.tennoji.1351830
+  story: kc.tennoji
+  kind: new
+  japanese: "ゾウ"
+  reading: "ぞう"
+  english: "elephant"
+  sentence: "ゾウやコアラを見ることができます。"
+  notes: "JMdict seq 1351830."
+
+- id: gloss.tennoji.1049830
+  story: kc.tennoji
+  kind: new
+  japanese: "コアラ"
+  reading: "コアラ"
+  english: "koala"
+  sentence: "ゾウやコアラを見ることができます。"
+  notes: "JMdict seq 1049830."
+
+- id: gloss.tennoji.1091460
+  story: kc.tennoji
+  kind: new
+  japanese: "ニュージーランド"
+  reading: "ニュージーランド"
+  english: "New Zealand"
+  sentence: "キーウィは、ニュージーランドにすんでいます。"
+  notes: "JMdict seq 1091460."
+
+- id: gloss.tennoji.1451470
+  story: kc.tennoji
+  kind: book-four
+  japanese: "動物"
+  reading: "どうぶつ"
+  english: "animal"
+  sentence: "子どもも、大人も、動物が大好きです。"
+  taughtId: vocab.doubutsu
+  notes: "JMdict seq 1451470. Taught in Book Four."
+
+- id: gloss.tennoji.name-tennoji
+  story: kc.tennoji
+  kind: name
+  japanese: "天王寺"
+  reading: "てんのうじ"
+  english: "Tennōji — a district of Osaka, and its zoo"
+  sentence: "天王寺動物園には、たくさん人が来ます。"
+  notes: "A name in this story (a place); not vocabulary."

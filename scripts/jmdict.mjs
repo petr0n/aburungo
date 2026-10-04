@@ -31,7 +31,7 @@ const SOURCE = join(ROOT, "server/data/jmdict-examples-eng-3.6.2.json");
 const INDEX = join(ROOT, "data/jmdict-index.json");
 
 /** Content directories whose entries can cite a dictionary entry. */
-const DIRS = ["vocabulary", "phrases", "grammar", "lessons"];
+const DIRS = ["vocabulary", "phrases", "grammar", "lessons", "reading"];
 
 /**
  * A citation, however it is written. The content says "JMdict seq 1497610",

@@ -21,7 +21,7 @@ import { load } from "js-yaml";
  * written, which is the window the schema tests cannot see.
  */
 const CONTENT = join(dirname(fileURLToPath(import.meta.url)), "../src/content");
-const DIRS = ["vocabulary", "phrases", "grammar", "lessons", "chapters", "kanji"];
+const DIRS = ["vocabulary", "phrases", "grammar", "lessons", "chapters", "kanji", "reading"];
 
 const files = DIRS.flatMap((dir) =>
   readdirSync(join(CONTENT, dir))

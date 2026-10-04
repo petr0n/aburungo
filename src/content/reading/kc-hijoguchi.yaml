@@ -1,0 +1,152 @@
+# Reading glossary: KC よむよむ — 非常口 (kc.hijoguchi, A2)
+# Words this story uses that Books One to Three do not teach. Not lesson vocabulary:
+# Book Three's words arrive by mining from the library (book-three-bands.md section 1).
+# Text: KC よむよむ, Japan Foundation Kansai Center, CC BY-NC 2.1 JP, sentences verbatim.
+# Entries: JMdict for Applications 3.6.2 (CC BY 4.0), seq cited per entry, sense checked
+# against the sentence it came from.
+
+- id: gloss.hijoguchi.1202270
+  story: kc.hijoguchi
+  kind: new
+  japanese: "絵"
+  reading: "え"
+  english: "picture; drawing; painting"
+  sentence: "はじめは「非常口」という文字だけのサインでしたが、子どもや外国人にもわかりやすいように、絵のサインを作りました。"
+  notes: "JMdict seq 1202270."
+
+- id: gloss.hijoguchi.1450330
+  story: kc.hijoguchi
+  kind: new
+  japanese: "逃げる"
+  reading: "にげる"
+  english: "to run away; to flee; to get away (e.g. from danger)"
+  sentence: "非常口は、火事や地震などで逃げるときに使います。"
+  notes: "JMdict seq 1450330."
+
+- id: gloss.hijoguchi.1056230
+  story: kc.hijoguchi
+  kind: new
+  japanese: "サイン"
+  reading: "サイン"
+  english: "sign; signal"
+  sentence: "これは「非常口」のサインです。"
+  notes: "JMdict seq 1056230."
+
+- id: gloss.hijoguchi.1355850
+  story: kc.hijoguchi
+  kind: new
+  japanese: "場所"
+  reading: "ばしょ"
+  english: "place; location; spot"
+  sentence: "1970年頃、日本ではデパートなど人が多い場所で火事がたくさんありました。"
+  notes: "JMdict seq 1355850."
+
+- id: gloss.hijoguchi.1083590
+  story: kc.hijoguchi
+  kind: new
+  japanese: "デパート"
+  reading: "デパート"
+  english: "department store"
+  sentence: "1970年頃、日本ではデパートなど人が多い場所で火事がたくさんありました。"
+  notes: "JMdict seq 1083590."
+
+- id: gloss.hijoguchi.1579080
+  story: kc.hijoguchi
+  kind: new
+  japanese: "頃"
+  reading: "ごろ"
+  english: "around; about (a time)"
+  sentence: "1970年頃、日本ではデパートなど人が多い場所で火事がたくさんありました。"
+  notes: "JMdict seq 1579080."
+
+- id: gloss.hijoguchi.1484950
+  story: kc.hijoguchi
+  kind: new
+  japanese: "非常口"
+  reading: "ひじょうぐち"
+  english: "emergency exit"
+  sentence: "これは「非常口」のサインです。"
+  notes: "JMdict seq 1484950."
+
+- id: gloss.hijoguchi.1193950
+  story: kc.hijoguchi
+  kind: new
+  japanese: "火事"
+  reading: "かじ"
+  english: "fire; conflagration"
+  sentence: "非常口は、火事や地震などで逃げるときに使います。"
+  notes: "JMdict seq 1193950."
+
+- id: gloss.hijoguchi.1421210
+  story: kc.hijoguchi
+  kind: new
+  japanese: "地震"
+  reading: "じしん"
+  english: "earthquake"
+  sentence: "非常口は、火事や地震などで逃げるときに使います。"
+  notes: "JMdict seq 1421210."
+
+- id: gloss.hijoguchi.1505390
+  story: kc.hijoguchi
+  kind: new
+  japanese: "文字"
+  reading: "もじ"
+  english: "letter (of an alphabet); character"
+  sentence: "はじめは「非常口」という文字だけのサインでしたが、子どもや外国人にもわかりやすいように、絵のサインを作りました。"
+  notes: "JMdict seq 1505390."
+
+- id: gloss.hijoguchi.1286520
+  story: kc.hijoguchi
+  kind: new
+  japanese: "国際的"
+  reading: "こくさいてき"
+  english: "international; worldwide; cross-border"
+  sentence: "そして、1987年に国際的なサインになりました。"
+  notes: "JMdict seq 1286520."
+
+- id: gloss.hijoguchi.1203650
+  story: kc.hijoguchi
+  kind: book-four
+  japanese: "外国人"
+  reading: "がいこくじん"
+  english: "foreigner; foreign national"
+  sentence: "はじめは「非常口」という文字だけのサインでしたが、子どもや外国人にもわかりやすいように、絵のサインを作りました。"
+  taughtId: vocab.gaikokujin
+  notes: "JMdict seq 1203650. Taught in Book Four."
+
+- id: gloss.hijoguchi.1591420
+  story: kc.hijoguchi
+  kind: book-four
+  japanese: "決まる"
+  reading: "きまる"
+  english: "to be decided; to be settled"
+  sentence: "1982年に、今の非常口のサインが決まりました。"
+  taughtId: vocab.kimaru
+  notes: "JMdict seq 1591420. Taught in Book Four."
+
+- id: gloss.hijoguchi.1407460
+  story: kc.hijoguchi
+  kind: new
+  japanese: "多い"
+  reading: "おおい"
+  english: "many; numerous; a lot"
+  sentence: "1970年頃、日本ではデパートなど人が多い場所で火事がたくさんありました。"
+  notes: "JMdict seq 1407460."
+
+- id: gloss.hijoguchi.1591990
+  story: kc.hijoguchi
+  kind: new
+  japanese: "気をつける"
+  reading: "きをつける"
+  english: "to be careful; to watch out"
+  sentence: "危ないときは、気をつけて逃げましょう！"
+  notes: "JMdict seq 1591990."
+
+- id: gloss.hijoguchi.1218380
+  story: kc.hijoguchi
+  kind: new
+  japanese: "危ない"
+  reading: "あぶない"
+  english: "dangerous; risky; hazardous"
+  sentence: "危ないときは、気をつけて逃げましょう！"
+  notes: "JMdict seq 1218380."
