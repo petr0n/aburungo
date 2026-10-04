@@ -17,6 +17,7 @@ never reads it.
 | Phrases | 379 |
 | Grammar patterns | 68 |
 | Kanji introduced | 10 |
+| Reading library | 26 stories, 473 glossary entries |
 
 ---
 
@@ -1498,3 +1499,683 @@ never reads it.
 ### 276. Recognition checkpoint — closes the chapter
 
 > A wide pass over everything this chapter has taught. Type the reading or the meaning rather than picking it out of a line-up. Four words, one register: the copula writing uses, the ending for a change still under way, the written because, and the written in. What is being checked is not whether you can recite four rules. It is whether, when one of these words comes past, you know without being told what kind of text you are standing in — because that is the actual skill this chapter is for. A sentence ending in である was written to be read, and read the rest of it accordingly. Some of what comes back has more than one of these words in it, and that is deliberate rather than showing off. 古代において塩は希少で貴重な商品であった carries a locative において and a past copula in twenty-one characters. The sentence about amateurs and professionals carries において and つつある together. These words travel in company, and a passage that uses one usually uses several — that is what a register is, as opposed to a decorated word. One thing to watch for that no single lesson could ask you about. Formal writing of this kind tends not to say who. The atmosphere is being polluted, computers are being introduced, the charges were dropped — every one of those is a passive with no agent anywhere in the sentence, and none of them is being coy about it. Naming nobody is the normal way this register reports what happened, and noticing that is worth as much as knowing any of the four words. ゆえ is thin, and some of what comes back will be sentences you have already seen in its lesson. There are six of them in the whole corpus this book draws on; nothing has been invented to make a larger pool. Anything you miss comes back sooner. It finishes when the remaining set empties; retry as often as you like, nothing is recorded.
+
+
+## Reading library
+
+The KC よむよむ graded readers (Japan Foundation Kansai Center, CC BY-NC 2.1 JP), levelled
+against Books One to Three, with the words each story needs that those books do not teach.
+Vocabulary at this stage arrives by mining from these stories, not from lessons.
+
+### Gate texts
+
+| Chapter | Closes with | Grammar it uses |
+|---|---|---|
+| 0 | 泉州野菜 | <span lang="ja">水ナスは江戸時代から泉州地域で作られています。</span><br><span lang="ja">泉州たまねぎは明治時代から作られています。</span><br><span lang="ja">「日本のたまねぎ作りの最初の場所」だと言われるくらい泉州は有名なんですよ。</span> |
+| 1 | — | *No story uses causal ために. Both hits (行くために, 夫婦になるために) are purpose, which band 7 owns.* |
+| 2 | — | *No story uses concession. The one ものの in the library is もの + の (有名なものの絵).* |
+| 3 | — | *No story uses any of 限り, 次第, さえ〜ば or たとえ〜ても.* |
+| 4 | — | *No story uses this band's time patterns. The one 間に is "between" (大阪府と奈良県の間に), not "while".* |
+| 5 | アイドルやめたい | <span lang="ja">ぼくは、みんなみたいにダンスも歌も上手じゃないし、おもしろいわけでもないです。</span> |
+| 6 | マンホール | <span lang="ja">…でも、下ばかり見て歩いているとあぶないですよ。</span><br><span lang="ja">ふたの形は丸くて、60cmくらいの大きさが多いです。</span> |
+| 7 | かぼちゃ | <span lang="ja">かぼちゃを食べて、風邪をひかないようにしましょう！</span> |
+| 8 | — | *No story uses obligation -- not なければならない, べき, 必要がある, てはならない or ざるを得ない.* |
+| 9 | 非常口 | <span lang="ja">はじめは「非常口」という文字だけのサインでしたが、子どもや外国人にもわかりやすいように、絵のサインを作りました。</span><br><span lang="ja">見たことがありますか？</span> |
+| 10 | — | *No story is written in the written register -- no である, つつある, ゆえに or において.* |
+
+### Stories
+
+#### 太郎くんの夏休み
+
+A1 · 35 sentences · 19 glossary entries
+
+| Word | Reading | Meaning | |
+|---|---|---|---|
+| スイカ | すいか | watermelon | new |
+| デパート | デパート | department store | new |
+| 庭 | にわ | garden; yard; courtyard | new |
+| ゲーム | ゲーム | game | new |
+| 小学生 | しょうがくせい | elementary school student; primary school student; grade school student | new |
+| 夏休み | なつやすみ | summer vacation; summer holiday | new |
+| 喫茶店 | きっさてん | coffee shop; tearoom; coffee lounge | new |
+| アイスクリーム | アイスクリーム | ice cream | new |
+| 祭り | まつり | festival; feast; matsuri | new |
+| 虫 | むし | insect; bug; cricket | new |
+| セミ | せみ | cicada; locust | new |
+| チョウ | ちょう | butterfly | new |
+| バシャバシャ | バシャバシャ | splish-splash; with a splash | new |
+| ぴこぴこ | ピコピコ | blip bleep | new |
+| 夜 | よる | night; evening | taught, other spelling |
+| 上手 | じょうず | good at, skilful | Book Four word |
+| 気持ち | きもち | feeling; mood | Book Four word |
+| 冷たい | つめたい | cold (to the touch); cold-hearted | Book Four word |
+| 太郎 | たろう | Tarō — the boy whose summer diary this is | name |
+
+#### 図書館
+
+A1 · 19 sentences · 9 glossary entries
+
+| Word | Reading | Meaning | |
+|---|---|---|---|
+| 関西 | かんさい | Kansai (region comprising Kyoto, Osaka, Kobe and surrounding prefectures) | new |
+| 勉強 | べんきょう | study | new |
+| 大阪 | おおさか | Osaka (city, prefecture) | new |
+| 冊 | さつ | counter for books | new |
+| 雑誌 | ざっし | magazine; journal; periodical | new |
+| 司書 | ししょ | librarian | new |
+| 週間 | しゅうかん | week | new |
+| 町 | まち | town, neighbourhood | Book Four word |
+| 田尻町 | たじりちょう | Tajiri — a town in southern Osaka, home of the Kansai Center | name |
+
+#### 天王寺動物園
+
+A1 · 20 sentences · 12 glossary entries
+
+| Word | Reading | Meaning | |
+|---|---|---|---|
+| 大好き | だいすき | liking very much; loving (something or someone); adoring | new |
+| 動物園 | どうぶつえん | zoo; zoological gardens | new |
+| ホッキョクグマ | ほっきょくぐま | polar bear | new |
+| キーウィ | キウイ | kiwifruit; kiwi fruit; kiwi | new |
+| 大人 | おとな | adult; grown-up | new |
+| ピクニック | ピクニック | picnic | new |
+| 番目 | ばんめ | the nth ... | new |
+| ゾウ | ぞう | elephant | new |
+| コアラ | コアラ | koala | new |
+| ニュージーランド | ニュージーランド | New Zealand | new |
+| 動物 | どうぶつ | animal | Book Four word |
+| 天王寺 | てんのうじ | Tennōji — a district of Osaka, and its zoo | name |
+
+#### 私の一日
+
+A1 · 36 sentences · 20 glossary entries
+
+| Word | Reading | Meaning | |
+|---|---|---|---|
+| 関西 | かんさい | Kansai (region comprising Kyoto, Osaka, Kobe and surrounding prefectures) | new |
+| 授業 | じゅぎょう | lesson; class; teaching | new |
+| 毎晩 | まいばん | every night | new |
+| 妻 | つま | wife | new |
+| 難波 | なんば | Namba — a district in central Osaka | name |
+| ジョギング | ジョギング | jogging | new |
+| 浴びる | あびる | to dash over oneself (e.g. water); to take (e.g. shower); to bask in (e.g. the sun) | new |
+| センター | センター | centre (here: the Kansai Center where the narrator works) | new |
+| オフィス | オフィス | office | new |
+| 絵本 | えほん | picture book | new |
+| アイロン | アイロン | iron (for pressing clothes) | new |
+| デスクワーク | デスクワーク | desk work | new |
+| 午後 | ごご | afternoon; p.m. | taught, other spelling |
+| 一番 | いちばん | most, best | Book Four word |
+| 皿 | さら | plate, dish | Book Four word |
+| テレビ | テレビ | a television; TV | Book Four word |
+| 息子 | むすこ | son | Book Four word |
+| 教師 | きょうし | teacher; instructor | Book Four word |
+| 新聞 | しんぶん | newspaper | Book Four word |
+| 私 | わたし | I; me | taught, other spelling |
+
+#### 金剛山
+
+A1 · 31 sentences · 20 glossary entries
+
+| Word | Reading | Meaning | |
+|---|---|---|---|
+| 関西 | かんさい | Kansai (region comprising Kyoto, Osaka, Kobe and surrounding prefectures) | new |
+| 神社 | じんじゃ | Shinto shrine | new |
+| 山登り | やまのぼり | mountain climbing; mountaineering | new |
+| 準備 | じゅんび | preparation; arrangements; getting ready | new |
+| 空気 | くうき | air; atmosphere | new |
+| 空港 | くうこう | airport | new |
+| スタンプ | スタンプ | stamp | new |
+| ロープウェイ | ロープウェイ | ropeway; cableway; aerial lift | new |
+| 大阪府 | おおさかふ | Osaka Prefecture | new |
+| 奈良県 | ならけん | Nara Prefecture | new |
+| 準備運動 | じゅんびうんどう | warming (limbering) up; warming-up exercises | new |
+| あいさつ | あいさつ | greeting | new |
+| 屋 | や | shop (as in おそば屋, a soba shop) | new |
+| 前 | まえ | in front (of); before (e.g. a building) | taught, other spelling |
+| 金剛山 | こんごうさん | Mount Kongō, on the Osaka–Nara border | name |
+| 気持ち | きもち | feeling; mood | Book Four word |
+| 意味 | いみ | meaning; sense | Book Four word |
+| 運動 | うんどう | exercise; sport | Book Four word |
+| 日 | ひ | day | new |
+| 私 | わたし | I; me | taught, other spelling |
+
+#### はじめまして、私はアインです
+
+A1 · 16 sentences · 18 glossary entries
+
+| Word | Reading | Meaning | |
+|---|---|---|---|
+| コンサート | コンサート | concert | new |
+| 勉強 | べんきょう | study | new |
+| アイドル | アイドル | performer (usu. in a boy band or girl group) with an image cultivated to foster a dedicated fan following; Japanese idol | new |
+| 大学 | だいがく | university; college | new |
+| 授業 | じゅぎょう | lesson; class; teaching | new |
+| 毎朝 | まいあさ | every morning | new |
+| メイク | メイク | make-up; makeup | new |
+| 留学 | りゅうがく | studying abroad | new |
+| 頃 | ころ | (approximate) time; around; about | new |
+| アニメ | アニメ | animation; animated film; animated cartoon | new |
+| 高校生 | こうこうせい | senior high school student | new |
+| 日本語 | にほんご | Japanese (language) | new |
+| 生活 | せいかつ | life; living | new |
+| ベトナム人 | ベトナムじん | Vietnamese (person) | new |
+| 楽しみ | たのしみ | looking forward to something | Book Four word |
+| 私 | わたし | I; me | taught, other spelling |
+| 子どもの頃 | こどものころ | (time of) one's childhood; when one was a child | new |
+| アイン | アイン | Ain — a Vietnamese exchange student in Osaka, the narrator | name |
+
+#### アインさんインタビュー
+
+A1 · 20 sentences · 14 glossary entries
+
+| Word | Reading | Meaning | |
+|---|---|---|---|
+| コンサート | コンサート | concert | new |
+| ダンス | ダンス | dance; dancing | new |
+| 勉強 | べんきょう | study | new |
+| 大学 | だいがく | university; college | new |
+| 大好き | だいすき | liking very much; loving (something or someone); adoring | new |
+| 本当に | ほんとうに | really; truly | new |
+| インタビュー | インタビュー | interview (on television, in a newspaper, etc.) | new |
+| 経済 | けいざい | economy; economics | new |
+| ベトナム | ベトナム | Vietnam | new |
+| 留学生 | りゅうがくせい | overseas student; exchange student | new |
+| 将来 | しょうらい | future; (future) prospects | new |
+| 上手 | じょうず | good at, skilful | Book Four word |
+| 私 | わたし | I; me | taught, other spelling |
+| アイン | アイン | Ain — the exchange student being interviewed | name |
+
+#### 月見
+
+A2 · 17 sentences · 15 glossary entries
+
+| Word | Reading | Meaning | |
+|---|---|---|---|
+| 月見 | つきみ | moon viewing (esp. during the eight month of the lunar calendar) | new |
+| ウサギ | うさぎ | rabbit; hare; coney | new |
+| 団子 | だんご | dango; dumpling (usu. sweet); doughboy | new |
+| 丸い | まるい | round; circular; spherical | new |
+| ライオン | ライオン | lion | new |
+| ヨーロッパ | ヨーロッパ | Europe | new |
+| 髪 | かみ | hair (on the head) | new |
+| 南アメリカ | みなみアメリカ | South America | new |
+| ロバ | ろば | donkey; ass | new |
+| アラビア | アラビア | Arabia | new |
+| 北アメリカ | きたアメリカ | North America | new |
+| 北ヨーロッパ | きたヨーロッパ | Northern Europe | new |
+| どんな | どんな | what kind of | Book Four word |
+| 似る | にる | to resemble; to look like | Book Four word |
+| 東 | ひがし | east | new |
+
+#### 季節
+
+A2 · 25 sentences · 12 glossary entries
+
+| Word | Reading | Meaning | |
+|---|---|---|---|
+| スイカ | すいか | watermelon | new |
+| 栗 | くり | Japanese chestnut | new |
+| 貝 | かい | shellfish | new |
+| 波 | なみ | wave; billow; ripple | new |
+| トウモロコシ | とうもろこし | corn; maize | new |
+| 温泉 | おんせん | hot spring | new |
+| 星 | ほし | star (usu. excluding the Sun); planet (usu. excluding Earth); heavenly body | new |
+| カニ | かに | crab | new |
+| ミカン | みかん | mandarin; mandarin orange; tangerine | new |
+| 年 | とし | year (新しい年: the new year) | Book Four word |
+| 鍋 | なべ | a pot; a pan | Book Four word |
+| 音 | おと | sound; noise | new |
+
+#### お化け
+
+A2 · 20 sentences · 11 glossary entries
+
+| Word | Reading | Meaning | |
+|---|---|---|---|
+| 絵 | え | picture; drawing; painting | new |
+| 幽霊 | ゆうれい | ghost; specter; spectre | new |
+| 妖怪 | ようかい | ghost; apparition; phantom | new |
+| 怖い | こわい | scary; frightening; eerie | new |
+| お化け | おばけ | ghost; apparition | new |
+| モンスター | モンスター | monster; monstrosity | new |
+| 三角 | さんかく | triangle; triangular shape | new |
+| 着物 | きもの | kimono; Japanese traditional clothing (esp. full-length) | new |
+| 楽器 | がっき | musical instrument | new |
+| 前 | まえ | in front (of); before (e.g. a building) | taught, other spelling |
+| 動物 | どうぶつ | animal | Book Four word |
+
+#### 非常口
+
+A2 · 17 sentences · 16 glossary entries
+
+| Word | Reading | Meaning | |
+|---|---|---|---|
+| 絵 | え | picture; drawing; painting | new |
+| 逃げる | にげる | to run away; to flee; to get away (e.g. from danger) | new |
+| サイン | サイン | sign; signal | new |
+| 場所 | ばしょ | place; location; spot | new |
+| デパート | デパート | department store | new |
+| 頃 | ごろ | around; about (a time) | new |
+| 非常口 | ひじょうぐち | emergency exit | new |
+| 火事 | かじ | fire; conflagration | new |
+| 地震 | じしん | earthquake | new |
+| 文字 | もじ | letter (of an alphabet); character | new |
+| 国際的 | こくさいてき | international; worldwide; cross-border | new |
+| 外国人 | がいこくじん | foreigner; foreign national | Book Four word |
+| 決まる | きまる | to be decided; to be settled | Book Four word |
+| 多い | おおい | many; numerous; a lot | new |
+| 気をつける | きをつける | to be careful; to watch out | new |
+| 危ない | あぶない | dangerous; risky; hazardous | new |
+
+#### かぼちゃ
+
+A2 · 19 sentences · 17 glossary entries
+
+| Word | Reading | Meaning | |
+|---|---|---|---|
+| 頃 | ごろ | around; about (a time) | new |
+| カンボジア | カンボジア | Cambodia | new |
+| ポルトガル語 | ポルトガルご | Portuguese (language) | new |
+| アメリカ | アメリカ | America (here: the Americas, in アメリカ大陸) | new |
+| 大陸 | たいりく | continent | new |
+| ポルトガル | ポルトガル | Portugal | new |
+| 日本人 | にほんじん | Japanese person | new |
+| 春夏秋冬 | しゅんかしゅうとう | spring, summer, autumn (fall) and winter; the four seasons | new |
+| 一年 | いちねん | one year; some time ago | new |
+| 名前 | なまえ | name | taught, other spelling |
+| 一番 | いちばん | most, best | Book Four word |
+| どんな | どんな | what kind of | Book Four word |
+| 意味 | いみ | meaning; sense | Book Four word |
+| 世界 | せかい | the world | Book Four word |
+| 習慣 | しゅうかん | custom; practice; habit | Book Four word |
+| 日 | ひ | day | new |
+| 広がる | ひろがる | to spread (out); to extend; to stretch | new |
+
+#### 泉州野菜
+
+A2 · 47 sentences · 31 glossary entries
+
+| Word | Reading | Meaning | |
+|---|---|---|---|
+| 大阪 | おおさか | Osaka (city, prefecture) | new |
+| 授業 | じゅぎょう | lesson; class; teaching | new |
+| 本当 | ほんとう | true; real | new |
+| 泉州 | せんしゅう | Senshū — the southern part of Osaka Prefecture, known for its vegetables | name |
+| 形 | かたち | (physical) form; shape; figure | new |
+| ナス | なす | eggplant; aubergine | new |
+| 場所 | ばしょ | place; location; spot | new |
+| 後 | あと | after; later (後で) | new |
+| 時代 | じだい | period; epoch; era | new |
+| 地域 | ちいき | area; region; district | new |
+| 水分 | すいぶん | water; liquid; fluid | new |
+| 柔らかい | やわらかい | soft; tender; supple | new |
+| 長い間 | ながいあいだ | long time; long interval; for quite some time | new |
+| 江戸時代 | えどじだい | Edo period (1603-1868) | new |
+| 特に | とくに | particularly; especially; in particular | new |
+| 浅漬け | あさづけ | lightly pickled vegetables | new |
+| 漬物 | つけもの | tsukemono (pickled vegetables) | new |
+| 明治 | めいじ | Meiji era (1868.9.8-1912.7.30) | new |
+| 言葉 | ことば | word; expression | new |
+| 初耳 | はつみみ | news to me; something heard for the first time | new |
+| 全然 | ぜんぜん | (not) at all; (not) in the slightest | taught, other spelling |
+| 一番 | いちばん | most, best | Book Four word |
+| 幸せ | しあわせ | happy; fortunate; happiness | Book Four word |
+| 最初 | さいしょ | the first; the beginning | Book Four word |
+| 普通 | ふつう | ordinary; usual | Book Four word |
+| 仕方 | しかた | way of doing something, method | Book Four word |
+| そんなに | そんなに | that much, like that | Book Four word |
+| 他に | ほかに | besides; else; in addition | Book Four word |
+| そろそろ | そろそろ | soon; about time to | Book Four word |
+| 気がつく | きがつく | to notice; to realize | new |
+| 多い | おおい | many; a lot | new |
+
+#### ヤドカリにげた
+
+A2 · 19 sentences · 9 glossary entries
+
+| Word | Reading | Meaning | |
+|---|---|---|---|
+| ヤドカリ | ヤドカリ | hermit crab | new |
+| チーズ | チーズ | cheese | new |
+| 冷蔵庫 | れいぞうこ | refrigerator; fridge | new |
+| ポップコーン | ポップコーン | popcorn | new |
+| しらべる | しらべる | to look up; to find out | Book Four word |
+| 名前 | なまえ | name | taught, other spelling |
+| ヤドリン | ヤドリン | Yadorin — Takashi's pet hermit crab | name |
+| 日 | ひ | day | new |
+| たかし | たかし | Takashi — the boy who keeps the hermit crab | name |
+
+#### ラーメン麺太の冒険
+
+A2 · 45 sentences · 23 glossary entries
+
+| Word | Reading | Meaning | |
+|---|---|---|---|
+| プール | プール | (swimming) pool | new |
+| ネギ | ねぎ | Welsh onion; Japanese bunching onion; green onion | new |
+| 美しい | うつくしい | beautiful; pretty; lovely | new |
+| びっくり | びっくり | to be surprised; to be amazed; to be frightened | new |
+| お嬢さん | おじょうさん | young lady | new |
+| 麺 | めん | noodles | new |
+| 王子 | おうじ | prince | new |
+| お金持ち | おかねもち | rich person; wealthy person | new |
+| 似合う | にあう | to suit; to match; to become | new |
+| ゴマ | ごま | sesame seeds | new |
+| 香り | かおり | aroma; fragrance; scent | new |
+| 醤油 | しょうゆ | soy sauce; soya sauce; shoyu | new |
+| 昆布 | こんぶ | kombu (usu. Saccharina japonica); konbu; kelp | new |
+| 豚骨 | とんこつ | tonkotsu: broth made from pork bones | new |
+| 肌 | はだ | skin | new |
+| 肉厚 | にくあつ | thick; meaty | new |
+| 鰹 | かつお | bonito (skipjack tuna) | new |
+| メンマ | めんま | bamboo shoots boiled, sliced, fermented, dried or preserved in salt, then soaked in hot water and sea salt | new |
+| 名前 | なまえ | name | taught, other spelling |
+| 卵 | たまご | eggs; egg; spawn | taught, other spelling |
+| 麺太 | めんた | Menta — Ramen Menta, the noodle-prince narrator | name |
+| 世界 | せかい | the world | Book Four word |
+| スープ | スープ | soup (Western) | Book Four word |
+
+#### お菊さん
+
+A2 · 12 sentences · 18 glossary entries
+
+| Word | Reading | Meaning | |
+|---|---|---|---|
+| 幽霊 | ゆうれい | ghost; specter; spectre | new |
+| 毎晩 | まいばん | every night | new |
+| 昔 | むかし | the old days; the past; former times | new |
+| 泣く | なく | to cry; to shed tears; to weep | new |
+| 侍 | さむらい | warrior (esp. of military retainers of daimyos in the Edo period); samurai | new |
+| 井戸 | いど | water well | new |
+| 心から | こころから | from the bottom of one's heart; heartily; sincerely | new |
+| 怒る | おこる | to get angry | new |
+| 声 | こえ | voice | new |
+| 殺す | ころす | to kill | new |
+| 夜 | よる | night; evening | taught, other spelling |
+| お菊 | おきく | Okiku — the servant who becomes a ghost | name |
+| 皿 | さら | plate, dish | Book Four word |
+| 大事 | だいじ | important; precious | Book Four word |
+| 割る | わる | to break, to crack, to split | Book Four word |
+| 落ちる | おちる | to fall; to drop | Book Four word |
+| 日 | ひ | day | new |
+| 数える | かぞえる | to count | new |
+
+#### 清姫
+
+A2 · 28 sentences · 22 glossary entries
+
+| Word | Reading | Meaning | |
+|---|---|---|---|
+| 神社 | じんじゃ | Shinto shrine | new |
+| 逃げる | にげる | to run away; to flee; to get away (e.g. from danger) | new |
+| 本当 | ほんとう | truth; reality; actuality | new |
+| 昔 | むかし | the old days; the past; former times | new |
+| 安珍 | あんちん | Anchin — the travelling monk Kiyohime pursues | name |
+| お坊さん | おぼうさん | Buddhist priest; monk | new |
+| 鐘 | かね | bell (often a large hanging bell); chime | new |
+| 蛇 | へび | snake | new |
+| 巻きつく | まきつく | to coil around; to twine around | new |
+| 吐く | はく | to breathe out; to spit (fire) | new |
+| お寺 | おてら | temple | new |
+| 乗る | のる | to get on (train, plane, bus, ship, etc.); to get in; to board | taught, other spelling |
+| 清姫 | きよひめ | Kiyohime — the young woman who becomes a serpent | name |
+| 結婚 | けっこん | marriage | Book Four word |
+| 船 | ふね | ship, boat | Book Four word |
+| 焼く | やく | to burn (焼け死ぬ: to burn to death) | Book Four word |
+| 日 | ひ | day | new |
+| 私 | わたし | I; me | taught, other spelling |
+| 火 | ひ | fire; flame; blaze | new |
+| 旅 | たび | travel; trip; journey | new |
+| 泊まる | とまる | to stay at (e.g. hotel) | new |
+| 必ず | かならず | always; without exception; necessarily | new |
+
+#### マンホール
+
+A2 · 26 sentences · 24 glossary entries
+
+| Word | Reading | Meaning | |
+|---|---|---|---|
+| 絵 | え | picture; drawing; painting | new |
+| 形 | かたち | (physical) form; shape; figure | new |
+| 最近 | さいきん | recently; lately; these days | new |
+| ファン | ファン | fan; enthusiast; lover (of) | new |
+| マンホール | マンホール | manhole | new |
+| 市 | し | city | new |
+| カラフル | カラフル | colorful; colourful | new |
+| 道路 | どうろ | road; highway | new |
+| 作業 | さぎょう | work; operation; task | new |
+| 穴 | あな | hole; opening; orifice | new |
+| 鉄 | てつ | iron (Fe) | new |
+| 凹凸 | おうとつ | unevenness; bumpiness; roughness | new |
+| キャラクター | キャラクター | character (a mascot or cartoon figure) | new |
+| 丸い | まるい | round; circular | new |
+| シンボルマーク | シンボルマーク | logo; banner | new |
+| イチョウ | いちょう | ginkgo; gingko; maidenhair tree | new |
+| モズ | もず | shrike (any bird of family Laniidae) | new |
+| ハナショウブ | はなしょうぶ | Japanese iris; blue flag; Iris ensata | new |
+| マスコットキャラクター | マスコットキャラクター | mascot character; mascot | new |
+| ヒマワリ | ひまわり | sunflower | new |
+| 泉州 | せんしゅう | Senshū — the southern part of Osaka Prefecture | name |
+| 町 | まち | town, neighbourhood | Book Four word |
+| 日 | ひ | day | new |
+| 多い | おおい | many; numerous; a lot | new |
+
+#### あなたへの3つのおねがい
+
+A2 · 33 sentences · 17 glossary entries
+
+| Word | Reading | Meaning | |
+|---|---|---|---|
+| 思い出す | おもいだす | to recall; to remember; to recollect | new |
+| 命 | いのち | life; life force | new |
+| 育む | はぐくむ | to foster; to nurture | new |
+| 感じる | かんじる | to feel; to sense; to experience | new |
+| カップ | カップ | cup (drinking vessel, measure, brassiere, prize, etc.) | new |
+| 心 | こころ | mind; heart; spirit | new |
+| ポツポツ | ポツポツ | pitter-patter (of rain falling in drops) | new |
+| ポロンポロン | ポロン | plink-plonk (of raindrops, like a plucked string) | new |
+| ピシャピシャ | ピシャピシャ | splish-splash | new |
+| 色 | いろ | colour; color; hue | taught, other spelling |
+| どんな | どんな | what kind of | Book Four word |
+| 地球 | ちきゅう | the Earth; the globe | Book Four word |
+| オレンジ | オレンジ | orange (fruit or colour) | Book Four word |
+| いつでも | いつでも | any time; always | Book Four word |
+| 日 | ひ | day | new |
+| 音 | おと | sound; noise | new |
+| 広い | ひろい | spacious; vast; wide | new |
+
+#### コンサートに行こう！
+
+A2 · 35 sentences · 18 glossary entries
+
+| Word | Reading | Meaning | |
+|---|---|---|---|
+| コンサート | コンサート | concert | new |
+| ダンス | ダンス | dance; dancing | new |
+| あの人 | あのひと | he; she; that person | new |
+| ジャンプ | ジャンプ | jump | new |
+| 泣く | なく | to cry; to shed tears; to weep | new |
+| 色々 | いろいろ | various; a variety of; all sorts of | new |
+| ウィンク | ウインク | wink | new |
+| 恋人 | こいびと | lover; sweetheart; boyfriend | new |
+| 横 | よこ | side; sideways (side to side) | new |
+| 完璧 | かんぺき | perfect; complete; flawless | new |
+| 踊る | おどる | to dance (orig. a hopping dance) | new |
+| 上下 | じょうげ | up and down | new |
+| 愛 | あい | love; affection; care | new |
+| 同じ | おなじ | same; identical; equal | taught, other spelling |
+| 動かす | うごかす | to move (something); to get (a machine) working | Book Four word |
+| 始まる | はじまる | to begin; to start; to commence | new |
+| 動く | うごく | to move; to stir; to shift | new |
+| いずみ | いずみ | Izumi — the SENSHU BOYZ member who narrates | name |
+
+#### 岩湧山
+
+A2 · 30 sentences · 20 glossary entries
+
+| Word | Reading | Meaning | |
+|---|---|---|---|
+| サイン | サイン | sign; signpost | new |
+| 階段 | かいだん | stairs; stairway; staircase | new |
+| 一段 | いちだん | one step (of a staircase) | new |
+| 林 | はやし | wood; woods; forest | new |
+| 頂上 | ちょうじょう | top; summit; peak | new |
+| 木の葉 | このは | leaf (of a tree); tree leaves; foliage | new |
+| 木陰 | こかげ | shade of a tree; bower | new |
+| ベンチ | ベンチ | bench | new |
+| 吹く | ふく | to blow (of the wind) | new |
+| 青空 | あおぞら | blue sky | new |
+| 根 | ね | root (of a plant) | new |
+| 景色 | けしき | scenery; scene; landscape | new |
+| 小川 | おがわ | stream; brook; creek | new |
+| 気持ち | きもち | feeling; mood | Book Four word |
+| まるで | まるで | just like; (not) at all | Book Four word |
+| 葉っぱ | はっぱ | leaf; blade (of grass); (pine) needle | new |
+| 光 | ひかり | light | new |
+| 流れる | ながれる | to stream; to flow (liquid, time, etc.); to run (ink) | new |
+| 通る | とおる | to go by; to go past; to go along | new |
+| 岩湧山 | いわわきさん | Mount Iwawaki, in southern Osaka | name |
+
+#### アイドルの仕事
+
+A2 · 27 sentences · 17 glossary entries
+
+| Word | Reading | Meaning | |
+|---|---|---|---|
+| コンサート | コンサート | concert | new |
+| ダンス | ダンス | dance; dancing | new |
+| アイドル | アイドル | performer (usu. in a boy band or girl group) with an image cultivated to foster a dedicated fan following; Japanese idol | new |
+| ファン | ファン | fan; enthusiast; lover (of) | new |
+| 練習 | れんしゅう | practice; training; drill | new |
+| 大切 | たいせつ | important; significant; serious | new |
+| 握手 | あくしゅ | handshake | new |
+| 髪の毛 | かみのけ | hair (on the head); (a) hair | new |
+| 今夜 | こんや | this evening; tonight | new |
+| アイドルグループ | アイドルグループ | idol group; boy band; girl group | new |
+| ジョー | ジョー | Joe — Kishiwada Joe, the idol who narrates | name |
+| 美容室 | びようしつ | beauty parlor | new |
+| 時々 | ときどき | sometimes; occasionally; at times | taught, other spelling |
+| 上手 | じょうず | good at, skilful | Book Four word |
+| テレビ | テレビ | a television; TV | Book Four word |
+| 紹介 | しょうかい | introduction (紹介する: to introduce) | new |
+| 切る | きる | to cut; to hang up (the phone) | Book Four word |
+
+#### 釣り日記 秋の大阪湾編
+
+A2 · 36 sentences · 22 glossary entries
+
+| Word | Reading | Meaning | |
+|---|---|---|---|
+| 大阪 | おおさか | Osaka (city, prefecture) | new |
+| 逃げる | にげる | to run away; to flee; to get away (e.g. from danger) | new |
+| 本当 | ほんとう | true; real | new |
+| タチウオ | たちうお | largehead hairtail (a long silver fish) | new |
+| 釣り | つり | fishing; angling | new |
+| ルアー | ルアー | lure | new |
+| アジ | アジ | horse mackerel; jack mackerel; pompano | new |
+| 太刀 | たち | long sword (as opposed to the shorter katana) | new |
+| 刀 | かたな | sword (esp. Japanese single-edged); katana | new |
+| 暴れる | あばれる | to act violently; to rage; to struggle | new |
+| 銀色 | ぎんいろ | silver (color, colour) | new |
+| 名前 | なまえ | name | taught, other spelling |
+| 夜 | よる | night; evening | taught, other spelling |
+| 上手 | じょうず | good at, skilful | Book Four word |
+| 町 | まち | town, neighbourhood | Book Four word |
+| 始める | はじめる | to start; to begin (something) | Book Four word |
+| 似る | にる | to resemble; to look like | Book Four word |
+| 種類 | しゅるい | kind; sort; variety | Book Four word |
+| 意見 | いけん | opinion; view | Book Four word |
+| 追う | おう | to chase, to drive (animals) along | Book Four word |
+| 日 | ひ | day | new |
+| 私 | わたし | I; me | taught, other spelling |
+
+#### 結婚式
+
+A2 · 24 sentences · 30 glossary entries
+
+| Word | Reading | Meaning | |
+|---|---|---|---|
+| 神社 | じんじゃ | Shinto shrine | new |
+| 本当に | ほんとうに | really; truly | new |
+| 後 | あと | after; later | new |
+| 結婚式 | けっこんしき | marriage ceremony; wedding; nuptials | new |
+| 新婦 | しんぷ | bride | new |
+| 披露宴 | ひろうえん | reception (e.g. wedding); banquet; celebration | new |
+| 新郎 | しんろう | bridegroom | new |
+| 夫婦 | ふうふ | married couple; husband and wife; man and wife | new |
+| 神前式 | しんぜんしき | traditional Japanese wedding ceremony (usu. at a shrine or temple) | new |
+| 紋付 | もんつき | kimono decorated with the family crest | new |
+| 一回 | いっかい | once; one time; one round | new |
+| 報告 | ほうこく | report; information | new |
+| 二回 | にかい | twice | new |
+| 三回 | さんかい | three times | new |
+| 三三九度 | さんさんくど | san-san-kudo: the three-times-three exchange of nuptial cups | new |
+| パーティー | パーティー | party (social gathering) | new |
+| ウエディングドレス | ウェディングドレス | wedding dress | new |
+| 最後 | さいご | end; conclusion | new |
+| 集まる | あつまる | to gather; to collect; to assemble | new |
+| お酒 | おさけ | alcohol; sake | new |
+| 意味 | いみ | meaning; sense | Book Four word |
+| 幸せ | しあわせ | happy; fortunate; happiness | Book Four word |
+| 結婚 | けっこん | marriage | Book Four word |
+| 最初 | さいしょ | the first; the beginning | Book Four word |
+| 神 | かみ | god; deity (神さま) | Book Four word |
+| 喜ぶ | よろこぶ | to be delighted; to be glad | Book Four word |
+| 笑う | わらう | to laugh; to smile | Book Four word |
+| 日 | ひ | day | new |
+| 私 | わたし | I; me | taught, other spelling |
+| 紹介 | しょうかい | introduction (紹介する: to introduce) | new |
+
+#### アインさんアルバイトをする？
+
+A2 · 30 sentences · 14 glossary entries
+
+| Word | Reading | Meaning | |
+|---|---|---|---|
+| コンサート | コンサート | concert | new |
+| アルバイト | アルバイト | part-time job; side job | new |
+| プーッ | プー | beep (of a telephone tone) | new |
+| ファミリーレストラン | ファミリーレストラン | family restaurant | new |
+| 制服 | せいふく | uniform | new |
+| グッズ | グッズ | goods; merchandise; commercial items | new |
+| 何回 | なんかい | how many times | new |
+| 絶対に | ぜったいに | absolutely; definitely; unconditionally | new |
+| ライブ | ライブ | live (broadcasting, music, etc.) | new |
+| ファウンテン | ファウンテン | Fountain — the family restaurant Ain calls | name |
+| ガチャン | ガチャン | with a slamming noise (e.g. door, telephone receiver); with a banging noise; with a clash | new |
+| 私 | わたし | I; me | taught, other spelling |
+| 週 | しゅう | week | new |
+| アイン | アイン | Ain — the exchange student looking for a part-time job | name |
+
+#### アイドルやめたい
+
+A2/B1 · 18 sentences · 25 glossary entries
+
+| Word | Reading | Meaning | |
+|---|---|---|---|
+| ダンス | ダンス | dance; dancing | new |
+| アイドル | アイドル | performer (usu. in a boy band or girl group) with an image cultivated to foster a dedicated fan following; Japanese idol | new |
+| 大学 | だいがく | university; college | new |
+| ナス | なす | eggplant; aubergine | new |
+| あの人 | あのひと | he; she; that person | new |
+| 最近 | さいきん | recently; lately; these days | new |
+| 思い出す | おもいだす | to recall; to remember; to recollect | new |
+| 地味 | じみ | plain; simple; subdued | new |
+| 悩み | なやみ | trouble; troubles; worry | new |
+| メンバー | メンバー | member; participant; attendee | new |
+| スタッフ | スタッフ | staff; staff member | new |
+| ショック | ショック | shock (emotional) | new |
+| 農家 | のうか | farmer; farming family | new |
+| 玉ねぎ | たまねぎ | onion | new |
+| 青春 | せいしゅん | youth; adolescence; springtime of life | new |
+| 心配 | しんぱい | worry; concern; anxiety | new |
+| マネージャー | マネージャー | manager | new |
+| 目立つ | めだつ | to be conspicuous; to stand out | new |
+| ファンレター | ファンレター | fan letter; fan mail | new |
+| 名前 | なまえ | name | taught, other spelling |
+| 上手 | じょうず | good at, skilful | Book Four word |
+| 一番 | いちばん | most, best | Book Four word |
+| 実は | じつは | actually, to tell the truth | Book Four word |
+| 私 | わたし | I; me | taught, other spelling |
+| サキ | サキ | Saki — the SENSHU BOYZ member who wants to quit | name |
