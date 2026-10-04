@@ -1,6 +1,6 @@
 /**
- * Reading-library glossaries (Book Three). One file per story in
- * data/reading/kc-yomyom.json: the words that story uses which Books One to
+ * Reading-library glossaries (Book Three). One file per story or passage in
+ * data/reading/kc-yomyom.json and data/reading/gv-passages.json: the words that story uses which Books One to
  * Three do not teach. Not lesson vocabulary -- Book Three's words arrive by
  * mining from the library (docs/plans/book-three-bands.md section 1) -- so
  * nothing here is ever referenced by a lesson.
@@ -35,6 +35,12 @@ import kcTsukimiRaw from "./kc-tsukimi.yaml";
 import kcTsurinikkiRaw from "./kc-tsurinikki.yaml";
 import kcWatashiRaw from "./kc-watashi.yaml";
 import kcYadokariRaw from "./kc-yadokari.yaml";
+import gv5829032Raw from "./gv-58290-32.yaml";
+import gv5863914Raw from "./gv-58639-14.yaml";
+import gv624481Raw from "./gv-62448-1.yaml";
+import gv636271Raw from "./gv-63627-1.yaml";
+import gv6364320Raw from "./gv-63643-20.yaml";
+import gv6537713Raw from "./gv-65377-13.yaml";
 
 export const allGlossaryEntries: GlossaryEntry[] = [
   ...parseGlossary(kcAnataRaw, "reading/kc-anata.yaml"),
@@ -63,6 +69,12 @@ export const allGlossaryEntries: GlossaryEntry[] = [
   ...parseGlossary(kcTsurinikkiRaw, "reading/kc-tsurinikki.yaml"),
   ...parseGlossary(kcWatashiRaw, "reading/kc-watashi.yaml"),
   ...parseGlossary(kcYadokariRaw, "reading/kc-yadokari.yaml"),
+  ...parseGlossary(gv5829032Raw, "reading/gv-58290-32.yaml"),
+  ...parseGlossary(gv5863914Raw, "reading/gv-58639-14.yaml"),
+  ...parseGlossary(gv624481Raw, "reading/gv-62448-1.yaml"),
+  ...parseGlossary(gv636271Raw, "reading/gv-63627-1.yaml"),
+  ...parseGlossary(gv6364320Raw, "reading/gv-63643-20.yaml"),
+  ...parseGlossary(gv6537713Raw, "reading/gv-65377-13.yaml"),
 ];
 
 export const bookThreeGates: GateText[] = parseGates(gatesRaw, "reading/gates.yaml");

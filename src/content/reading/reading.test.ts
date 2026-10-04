@@ -3,7 +3,8 @@ import { allWords } from "../vocabulary";
 import { books } from "../books";
 import { allGlossaryEntries, bookThreeGates } from "./index";
 import { allGrammarPatterns } from "../grammar";
-import library from "../../../data/reading/kc-yomyom.json";
+import kcLibrary from "../../../data/reading/kc-yomyom.json";
+import gvLibrary from "../../../data/reading/gv-passages.json";
 import index from "../../../data/jmdict-index.json";
 
 /** The literal pieces of a pattern, in order: ～を～れる is を then れる. */
@@ -25,7 +26,10 @@ import { parseGlossaryEntry, stemOf } from "./schema";
  * (data/reading/kc-yomyom.json) and against the taught inventory. Both move,
  * so the cross-references are checked here rather than trusted.
  */
-const stories = new Map(library.stories.map((s) => [s.id, s]));
+/** Both libraries: the KC stories, and the Global Voices gate passages. */
+const stories = new Map<string, { id: string; sentences: { jpn: string }[] }>(
+  [...kcLibrary.stories, ...gvLibrary.stories].map((s) => [s.id, s]),
+);
 
 /** The order of the first book that teaches each word. */
 const firstBook = new Map<string, number>();
@@ -66,6 +70,12 @@ const seqOf = (notes: string | undefined) => notes?.match(/JMdict seq (\d{7})/)?
 describe("reading glossaries", () => {
   it("has entries to check, so the assertions below cannot pass vacuously", () => {
     expect(allGlossaryEntries.length).toBeGreaterThan(300);
+  });
+
+  it("credits every Global Voices passage, as CC BY requires", () => {
+    const uncredited = gvLibrary.stories.filter((s) => !s.author || !s.translator || !s.link.startsWith("https://jp.globalvoices.org/"));
+    expect(uncredited.map((s) => s.id)).toEqual([]);
+    expect(gvLibrary.attribution.licence).toBe("CC BY 3.0");
   });
 
   it("gives every story in the library a glossary, and no glossary to a story that is not there", () => {
@@ -121,6 +131,10 @@ describe("reading glossaries", () => {
 describe("Book Three gate texts", () => {
   const bandIds = books.find((b) => b.order === 3)!.chapters.map((c) => c.id);
   const patterns = new Map(allGrammarPatterns.map((g) => [g.id, g]));
+
+  it("closes every band with a passage -- no band is left without a gate text", () => {
+    expect(bookThreeGates.filter((g) => g.story === null).map((g) => g.band)).toEqual([]);
+  });
 
   it("accounts for every band exactly once, with a story or a stated reason", () => {
     expect(bookThreeGates.map((g) => g.band).sort()).toEqual([...bandIds].sort());

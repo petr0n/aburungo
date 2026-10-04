@@ -1,0 +1,199 @@
+# Reading glossary: Global Voices 日本語 — ロマ音楽家の語るチェコ社会の両面性 (gv.58290-32, news)
+# Words this story uses that Books One to Three do not teach. Not lesson vocabulary:
+# Book Three's words arrive by mining from the library (book-three-bands.md section 1).
+# Text: Global Voices 日本語, CC BY 3.0, sentences verbatim.
+# Article: https://jp.globalvoices.org/2021/08/18/58290/ -- by Elmira Lyapina, translated by Yasuhisa Miyata.
+# Entries: JMdict for Applications 3.6.2 (CC BY 4.0), seq cited per entry, sense checked
+# against the sentence it came from.
+
+- id: gloss.58290-32.1221520
+  story: gv.58290-32
+  kind: new
+  japanese: "気"
+  reading: "き"
+  english: "intention (〜気はない: to have no intention of)"
+  sentence: "どちらにして彼らには私たちを売り込む気はなかったんです……"
+  notes: "JMdict seq 1221520."
+
+- id: gloss.58290-32.1329590
+  story: gv.58290-32
+  kind: new
+  japanese: "受ける"
+  reading: "うける"
+  english: "to receive (インタビューを受ける: to give an interview)"
+  sentence: "何度かチェコのテレビやラジオのインタビューを受けましたが、私たちの音楽が放送されることはありませんでした。"
+  notes: "JMdict seq 1329590."
+
+- id: gloss.58290-32.1077470
+  story: gv.58290-32
+  kind: new
+  japanese: "チェコ"
+  reading: "チェコ"
+  english: "Czech Republic; Czechia"
+  sentence: "チェコの人たちはよく私たちを祝祭に呼んでくれますが、それは個人的なものです。"
+  notes: "JMdict seq 1077470."
+
+- id: gloss.58290-32.1264890
+  story: gv.58290-32
+  kind: new
+  japanese: "個人的"
+  reading: "こじんてき"
+  english: "personal; individual; private"
+  sentence: "チェコの人たちはよく私たちを祝祭に呼んでくれますが、それは個人的なものです。"
+  notes: "JMdict seq 1264890."
+
+- id: gloss.58290-32.1607520
+  story: gv.58290-32
+  kind: new
+  japanese: "演奏"
+  reading: "えんそう"
+  english: "musical performance"
+  sentence: "この国の人たちは私たちの演奏が好きなんです。"
+  notes: "JMdict seq 1607520."
+
+- id: gloss.58290-32.2015690
+  story: gv.58290-32
+  kind: new
+  japanese: "踊り出す"
+  reading: "おどりだす"
+  english: "to break into a dance"
+  sentence: "5分もたたないうちに踊り出す人がいます。"
+  notes: "JMdict seq 2015690."
+
+- id: gloss.58290-32.1239380
+  story: gv.58290-32
+  kind: new
+  japanese: "業界"
+  reading: "ぎょうかい"
+  english: "business world; business circles; (the) industry"
+  sentence: "でも、チェコの音楽業界で「踊れる音楽を演るバンド」だと言われていても、全国的に売れているわけではありません。"
+  notes: "JMdict seq 1239380."
+
+- id: gloss.58290-32.1100240
+  story: gv.58290-32
+  kind: new
+  japanese: "バンド"
+  reading: "バンド"
+  english: "band (group of musicians)"
+  sentence: "でも、チェコの音楽業界で「踊れる音楽を演るバンド」だと言われていても、全国的に売れているわけではありません。"
+  notes: "JMdict seq 1100240."
+
+- id: gloss.58290-32.1395220
+  story: gv.58290-32
+  kind: new
+  japanese: "全国的"
+  reading: "ぜんこくてき"
+  english: "nationwide; countrywide; national"
+  sentence: "でも、チェコの音楽業界で「踊れる音楽を演るバンド」だと言われていても、全国的に売れているわけではありません。"
+  notes: "JMdict seq 1395220."
+
+- id: gloss.58290-32.1189170
+  story: gv.58290-32
+  kind: new
+  japanese: "何度"
+  reading: "なんど"
+  english: "how many times (何度か: several times)"
+  sentence: "何度かチェコのテレビやラジオのインタビューを受けましたが、私たちの音楽が放送されることはありませんでした。"
+  notes: "JMdict seq 1189170."
+
+- id: gloss.58290-32.1138860
+  story: gv.58290-32
+  kind: new
+  japanese: "ラジオ"
+  reading: "ラジオ"
+  english: "radio"
+  sentence: "何度かチェコのテレビやラジオのインタビューを受けましたが、私たちの音楽が放送されることはありませんでした。"
+  notes: "JMdict seq 1138860."
+
+- id: gloss.58290-32.1023100
+  story: gv.58290-32
+  kind: new
+  japanese: "インタビュー"
+  reading: "インタビュー"
+  english: "interview (on television, in a newspaper, etc.)"
+  sentence: "何度かチェコのテレビやラジオのインタビューを受けましたが、私たちの音楽が放送されることはありませんでした。"
+  notes: "JMdict seq 1023100."
+
+- id: gloss.58290-32.1516750
+  story: gv.58290-32
+  kind: new
+  japanese: "放送"
+  reading: "ほうそう"
+  english: "broadcasting; broadcast; program"
+  sentence: "何度かチェコのテレビやラジオのインタビューを受けましたが、私たちの音楽が放送されることはありませんでした。"
+  notes: "JMdict seq 1516750."
+
+- id: gloss.58290-32.1473850
+  story: gv.58290-32
+  kind: new
+  japanese: "売り込む"
+  reading: "うりこむ"
+  english: "to build a market for; to promote (a product); to sell"
+  sentence: "どちらにして彼らには私たちを売り込む気はなかったんです……"
+  notes: "JMdict seq 1473850."
+
+- id: gloss.58290-32.1337430
+  story: gv.58290-32
+  kind: new
+  japanese: "祝祭"
+  reading: "しゅくさい"
+  english: "festivals; feasts"
+  sentence: "チェコの人たちはよく私たちを祝祭に呼んでくれますが、それは個人的なものです。"
+  notes: "JMdict seq 1337430."
+
+- id: gloss.58290-32.2602950
+  story: gv.58290-32
+  kind: new
+  japanese: "フェス"
+  reading: "フェス"
+  english: "festival (esp. music, film, etc.)"
+  sentence: "音楽フェスでもよく演奏しますよ。"
+  notes: "JMdict seq 2602950."
+
+- id: gloss.58290-32.2446940
+  story: gv.58290-32
+  kind: new
+  japanese: "演る"
+  reading: "やる"
+  english: "to play; to perform (music)"
+  sentence: "でも、チェコの音楽業界で「踊れる音楽を演るバンド」だと言われていても、全国的に売れているわけではありません。"
+  notes: "JMdict seq 2446940."
+
+- id: gloss.58290-32.1995090
+  story: gv.58290-32
+  kind: new
+  japanese: "出自"
+  reading: "しゅつじ"
+  english: "origin; descent"
+  sentence: "私たちの出自が問題だからだと思います。"
+  notes: "JMdict seq 1995090."
+
+- id: gloss.58290-32.1536010
+  story: gv.58290-32
+  kind: book-four
+  japanese: "問題"
+  reading: "もんだい"
+  english: "question, problem"
+  sentence: "私たちの出自が問題だからだと思います。"
+  taughtId: vocab.mondai
+  notes: "JMdict seq 1536010. Taught in Book Four."
+
+- id: gloss.58290-32.1080510
+  story: gv.58290-32
+  kind: book-four
+  japanese: "テレビ"
+  reading: "テレビ"
+  english: "a television; TV"
+  sentence: "何度かチェコのテレビやラジオのインタビューを受けましたが、私たちの音楽が放送されることはありませんでした。"
+  taughtId: vocab.terebi
+  notes: "JMdict seq 1080510. Taught in Book Four."
+
+- id: gloss.58290-32.1483090
+  story: gv.58290-32
+  kind: book-four
+  japanese: "彼ら"
+  reading: "かれら"
+  english: "they; them"
+  sentence: "どちらにして彼らには私たちを売り込む気はなかったんです……"
+  taughtId: vocab.karera
+  notes: "JMdict seq 1483090. Taught in Book Four."

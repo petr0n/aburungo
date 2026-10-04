@@ -1,0 +1,109 @@
+# Reading glossary: Global Voices 日本語 — アフガニスタン：タリバンの女子教育禁止を私は乗り越える (gv.65377-13, news)
+# Words this story uses that Books One to Three do not teach. Not lesson vocabulary:
+# Book Three's words arrive by mining from the library (book-three-bands.md section 1).
+# Text: Global Voices 日本語, CC BY 3.0, sentences verbatim.
+# Article: https://jp.globalvoices.org/2026/05/18/65377/ -- by Global Voices Eurasia, translated by Moegi Tanaka.
+# Entries: JMdict for Applications 3.6.2 (CC BY 4.0), seq cited per entry, sense checked
+# against the sentence it came from.
+
+- id: gloss.65377-13.1311110
+  story: gv.65377-13
+  kind: spelling
+  japanese: "私"
+  reading: "わたし"
+  english: "I; me"
+  sentence: "10代の私にはこの暗闇から抜け出すのは困難だった。"
+  taughtId: vocab.watashi
+  notes: "JMdict seq 1311110."
+
+- id: gloss.65377-13.1982860
+  story: gv.65377-13
+  kind: new
+  japanese: "代"
+  reading: "だい"
+  english: "(10代) one's teens"
+  sentence: "10代の私にはこの暗闇から抜け出すのは困難だった。"
+  notes: "JMdict seq 1982860."
+
+- id: gloss.65377-13.1154370
+  story: gv.65377-13
+  kind: new
+  japanese: "暗闇"
+  reading: "くらやみ"
+  english: "darkness; the dark"
+  sentence: "10代の私にはこの暗闇から抜け出すのは困難だった。"
+  notes: "JMdict seq 1154370."
+
+- id: gloss.65377-13.1478220
+  story: gv.65377-13
+  kind: new
+  japanese: "抜け出す"
+  reading: "ぬけだす"
+  english: "to slip out; to break free"
+  sentence: "10代の私にはこの暗闇から抜け出すのは困難だった。"
+  notes: "JMdict seq 1478220."
+
+- id: gloss.65377-13.1289620
+  story: gv.65377-13
+  kind: new
+  japanese: "困難"
+  reading: "こんなん"
+  english: "difficulty; hardship; trouble"
+  sentence: "10代の私にはこの暗闇から抜け出すのは困難だった。"
+  notes: "JMdict seq 1289620."
+
+- id: gloss.65377-13.1580760
+  story: gv.65377-13
+  kind: new
+  japanese: "人目"
+  reading: "ひとめ"
+  english: "(public) notice; attention; public eye"
+  sentence: "私は人目につかないよう運営されているヘラートの英語センターに行くようになった。"
+  notes: "JMdict seq 1580760."
+
+- id: gloss.65377-13.1075040
+  story: gv.65377-13
+  kind: new
+  japanese: "センター"
+  reading: "センター"
+  english: "centre; center"
+  sentence: "私は人目につかないよう運営されているヘラートの英語センターに行くようになった。"
+  notes: "JMdict seq 1075040."
+
+- id: gloss.65377-13.1612520
+  story: gv.65377-13
+  kind: new
+  japanese: "秘か"
+  reading: "ひそか"
+  english: "secret; private; surreptitious"
+  sentence: "実は、そこでは勇気ある先生たちが女の子たちに秘かに英語を教えていたのだ。"
+  notes: "JMdict seq 1612520."
+
+- id: gloss.65377-13.2841316
+  story: gv.65377-13
+  kind: new
+  japanese: "勇気ある"
+  reading: "ゆうきある"
+  english: "courageous; brave; bold"
+  sentence: "実は、そこでは勇気ある先生たちが女の子たちに秘かに英語を教えていたのだ。"
+  notes: "JMdict seq 2841316."
+
+- id: gloss.65377-13.1604570
+  story: gv.65377-13
+  kind: book-four
+  japanese: "見つける"
+  reading: "みつける"
+  english: "to find; to discover; to come across"
+  sentence: "でも私は家族のおかげで一つの道を見つけた。"
+  taughtId: vocab.mitsukeru
+  notes: "JMdict seq 1604570."
+
+- id: gloss.65377-13.1320830
+  story: gv.65377-13
+  kind: book-four
+  japanese: "実は"
+  reading: "じつは"
+  english: "actually, to tell the truth"
+  sentence: "実は、そこでは勇気ある先生たちが女の子たちに秘かに英語を教えていたのだ。"
+  taughtId: vocab.jitsuwa
+  notes: "JMdict seq 1320830. Taught in Book Four."

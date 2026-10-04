@@ -1,0 +1,136 @@
+# Reading glossary: Global Voices 日本語 — アゼルバイジャンとトルコの紅茶文化の違い (gv.63627-1, news)
+# Words this story uses that Books One to Three do not teach. Not lesson vocabulary:
+# Book Three's words arrive by mining from the library (book-three-bands.md section 1).
+# Text: Global Voices 日本語, CC BY 3.0, sentences verbatim.
+# Article: https://jp.globalvoices.org/2025/02/14/63627/ -- by Arzu Geybullayeva, translated by Moegi Tanaka.
+# Entries: JMdict for Applications 3.6.2 (CC BY 4.0), seq cited per entry, sense checked
+# against the sentence it came from.
+
+- id: gloss.63627-1.1311110
+  story: gv.63627-1
+  kind: spelling
+  japanese: "私"
+  reading: "わたし"
+  english: "I; me"
+  sentence: "もうだいぶ前のことだが、私が初めてトルコの紅茶を味わったとき、まず感じたのは何て苦いのだろうということだった。"
+  taughtId: vocab.watashi
+  notes: "JMdict seq 1311110."
+
+- id: gloss.63627-1.1342550
+  story: gv.63627-1
+  kind: new
+  japanese: "初めて"
+  reading: "はじめて"
+  english: "for the first time"
+  sentence: "もうだいぶ前のことだが、私が初めてトルコの紅茶を味わったとき、まず感じたのは何て苦いのだろうということだった。"
+  notes: "JMdict seq 1342550."
+
+- id: gloss.63627-1.1086880
+  story: gv.63627-1
+  kind: new
+  japanese: "トルコ"
+  reading: "トルコ"
+  english: "Turkey; Türkiye"
+  sentence: "もうだいぶ前のことだが、私が初めてトルコの紅茶を味わったとき、まず感じたのは何て苦いのだろうということだった。"
+  notes: "JMdict seq 1086880."
+
+- id: gloss.63627-1.1527010
+  story: gv.63627-1
+  kind: new
+  japanese: "味わう"
+  reading: "あじわう"
+  english: "to taste; to savour"
+  sentence: "もうだいぶ前のことだが、私が初めてトルコの紅茶を味わったとき、まず感じたのは何て苦いのだろうということだった。"
+  notes: "JMdict seq 1527010."
+
+- id: gloss.63627-1.1244310
+  story: gv.63627-1
+  kind: new
+  japanese: "苦い"
+  reading: "にがい"
+  english: "bitter"
+  sentence: "もうだいぶ前のことだが、私が初めてトルコの紅茶を味わったとき、まず感じたのは何て苦いのだろうということだった。"
+  notes: "JMdict seq 1244310."
+
+- id: gloss.63627-1.1487400
+  story: gv.63627-1
+  kind: new
+  japanese: "必ず"
+  reading: "かならず"
+  english: "always; without exception; necessarily"
+  sentence: "この国に住んで20年になるが、今でも紅茶を注文するとき必ず2つのことを尋ねる。"
+  notes: "JMdict seq 1487400."
+
+- id: gloss.63627-1.1369940
+  story: gv.63627-1
+  kind: new
+  japanese: "尋ねる"
+  reading: "たずねる"
+  english: "to ask; to enquire; to inquire"
+  sentence: "この国に住んで20年になるが、今でも紅茶を注文するとき必ず2つのことを尋ねる。"
+  notes: "JMdict seq 1369940."
+
+- id: gloss.63627-1.2111810
+  story: gv.63627-1
+  kind: new
+  japanese: "茶葉"
+  reading: "ちゃば"
+  english: "tea leaves"
+  sentence: "茶葉もかなり大きい。"
+  notes: "JMdict seq 2111810."
+
+- id: gloss.63627-1.1321110
+  story: gv.63627-1
+  kind: new
+  japanese: "実際"
+  reading: "じっさい"
+  english: "reality (実際に: in fact, actually)"
+  sentence: "実際に紅茶文化の何から何まで、淹れ方からもてなしまで、全然違っている。"
+  notes: "JMdict seq 1321110."
+
+- id: gloss.63627-1.1505120
+  story: gv.63627-1
+  kind: new
+  japanese: "文化"
+  reading: "ぶんか"
+  english: "culture; civilization; civilisation"
+  sentence: "実際に紅茶文化の何から何まで、淹れ方からもてなしまで、全然違っている。"
+  notes: "JMdict seq 1505120."
+
+- id: gloss.63627-1.2746460
+  story: gv.63627-1
+  kind: new
+  japanese: "アゼルバイジャン"
+  reading: "アゼルバイジャン"
+  english: "Azerbaijan"
+  sentence: "私のふるさとアゼルバイジャンでは、紅茶は澄んでいて軽やか。"
+  notes: "JMdict seq 2746460."
+
+- id: gloss.63627-1.2035700
+  story: gv.63627-1
+  kind: new
+  japanese: "淹れる"
+  reading: "いれる"
+  english: "to make (tea, coffee, etc.); to brew a beverage (with hot water)"
+  sentence: "実際に紅茶文化の何から何まで、淹れ方からもてなしまで、全然違っている。"
+  notes: "JMdict seq 2035700."
+
+- id: gloss.63627-1.1395620
+  story: gv.63627-1
+  kind: spelling
+  japanese: "全然"
+  reading: "ぜんぜん"
+  english: "completely (here: 全然違う, completely different)"
+  sentence: "実際に紅茶文化の何から何まで、淹れ方からもてなしまで、全然違っている。"
+  taughtId: vocab.zenzen
+  notes: "JMdict seq 1395620."
+
+- id: gloss.63627-1.1516925
+  story: gv.63627-1
+  kind: book-four
+  japanese: "方"
+  reading: "かた"
+  english: "way of doing (淹れ方: how to brew)"
+  sentence: "実際に紅茶文化の何から何まで、淹れ方からもてなしまで、全然違っている。"
+  taughtId: vocab.kata-person
+  notes: "JMdict seq 1516925."

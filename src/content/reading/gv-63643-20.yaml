@@ -1,0 +1,70 @@
+# Reading glossary: Global Voices 日本語 — 日本で生まれ育ったネパール人の子どもたちは、なぜ祖国へ帰ろうとするのか (gv.63643-20, news)
+# Words this story uses that Books One to Three do not teach. Not lesson vocabulary:
+# Book Three's words arrive by mining from the library (book-three-bands.md section 1).
+# Text: Global Voices 日本語, CC BY 3.0, sentences verbatim.
+# Article: https://jp.globalvoices.org/2025/05/16/63643/ -- by Nepali Times, translated by Masako Seno.
+# Entries: JMdict for Applications 3.6.2 (CC BY 4.0), seq cited per entry, sense checked
+# against the sentence it came from.
+
+- id: gloss.63643-20.1307870
+  story: gv.63643-20
+  kind: new
+  japanese: "子どもたち"
+  reading: "こどもたち"
+  english: "children; kids"
+  sentence: "たとえ日本で永住権を得たとしても、子どもたちのために何としてでもネパールへ帰ると言う人もいる。"
+  notes: "JMdict seq 1307870."
+
+- id: gloss.63643-20.1174170
+  story: gv.63643-20
+  kind: new
+  japanese: "永住権"
+  reading: "えいじゅうけん"
+  english: "(right of) permanent residence; permanent residency"
+  sentence: "たとえ日本で永住権を得たとしても、子どもたちのために何としてでもネパールへ帰ると言う人もいる。"
+  notes: "JMdict seq 1174170."
+
+- id: gloss.63643-20.2006900
+  story: gv.63643-20
+  kind: new
+  japanese: "ネパール"
+  reading: "ネパール"
+  english: "Nepal"
+  sentence: "たとえ日本で永住権を得たとしても、子どもたちのために何としてでもネパールへ帰ると言う人もいる。"
+  notes: "JMdict seq 2006900."
+
+- id: gloss.63643-20.1588760
+  story: gv.63643-20
+  kind: new
+  japanese: "得る"
+  reading: "える"
+  english: "to get; to obtain"
+  sentence: "たとえ日本で永住権を得たとしても、子どもたちのために何としてでもネパールへ帰ると言う人もいる。"
+  notes: "JMdict seq 1588760."
+
+- id: gloss.63643-20.2771880
+  story: gv.63643-20
+  kind: new
+  japanese: "何としてでも"
+  reading: "なんとしてでも"
+  english: "no matter what it takes"
+  sentence: "たとえ日本で永住権を得たとしても、子どもたちのために何としてでもネパールへ帰ると言う人もいる。"
+  notes: "JMdict seq 2771880."
+
+- id: gloss.63643-20.1559290
+  story: gv.63643-20
+  kind: new
+  japanese: "連れる"
+  reading: "つれる"
+  english: "to take (someone) with one; to bring along; to go with"
+  sentence: "実際すでに永住権を持っているのに、子どもたちを連れてネパールへ帰ることにした母親もいる。"
+  notes: "JMdict seq 1559290."
+
+- id: gloss.63643-20.1515120
+  story: gv.63643-20
+  kind: new
+  japanese: "母親"
+  reading: "ははおや"
+  english: "mother"
+  sentence: "実際すでに永住権を持っているのに、子どもたちを連れてネパールへ帰ることにした母親もいる。"
+  notes: "JMdict seq 1515120."

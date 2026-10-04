@@ -92,6 +92,10 @@ said CC BY-NC-**ND** — and the same trap caught a second source below.
 
 ### Global Voices 日本語 — <https://jp.globalvoices.org/>
 
+**Adopted 2026-10-04 for Book Three's gate passages** — six paragraphs closing the bands whose
+N3 grammar no graded reader uses (`scripts/global-voices.mjs`, `data/reading/gv-passages.json`).
+Still not adopted for Book Four's deferred news and exposition bands; that is a separate decision.
+
 Citizen-journalism reportage and commentary translated into Japanese and
 editorially reviewed. ~2,894 posts, articles running 3,800–6,400 characters,
 still publishing. Clean WordPress REST API at `/wp-json/wp/v2/posts`.
