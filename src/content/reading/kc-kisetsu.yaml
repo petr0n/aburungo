@@ -1,0 +1,116 @@
+# Reading glossary: KC よむよむ — 季節 (kc.kisetsu, A2)
+# Words this story uses that Books One to Three do not teach. Not lesson vocabulary:
+# Book Three's words arrive by mining from the library (book-three-bands.md section 1).
+# Text: KC よむよむ, Japan Foundation Kansai Center, CC BY-NC 2.1 JP, sentences verbatim.
+# Entries: JMdict for Applications 3.6.2 (CC BY 4.0), seq cited per entry, sense checked
+# against the sentence it came from.
+
+- id: gloss.kisetsu.1380890
+  story: kc.kisetsu
+  kind: new
+  japanese: "スイカ"
+  reading: "すいか"
+  english: "watermelon"
+  sentence: "つかれたら、すずしい部屋でトウモロコシとスイカをいただきます。"
+  notes: "JMdict seq 1380890."
+
+- id: gloss.kisetsu.1246880
+  story: kc.kisetsu
+  kind: new
+  japanese: "栗"
+  reading: "くり"
+  english: "Japanese chestnut"
+  sentence: "木を見て、栗をひろいます。"
+  notes: "JMdict seq 1246880."
+
+- id: gloss.kisetsu.1203100
+  story: kc.kisetsu
+  kind: new
+  japanese: "貝"
+  reading: "かい"
+  english: "shellfish"
+  sentence: "貝をひろって、波の音を聞きます。"
+  notes: "JMdict seq 1203100."
+
+- id: gloss.kisetsu.1470970
+  story: kc.kisetsu
+  kind: new
+  japanese: "波"
+  reading: "なみ"
+  english: "wave; billow; ripple"
+  sentence: "貝をひろって、波の音を聞きます。"
+  notes: "JMdict seq 1470970."
+
+- id: gloss.kisetsu.1240700
+  story: kc.kisetsu
+  kind: new
+  japanese: "トウモロコシ"
+  reading: "とうもろこし"
+  english: "corn; maize"
+  sentence: "つかれたら、すずしい部屋でトウモロコシとスイカをいただきます。"
+  notes: "JMdict seq 1240700."
+
+- id: gloss.kisetsu.1183450
+  story: kc.kisetsu
+  kind: new
+  japanese: "温泉"
+  reading: "おんせん"
+  english: "hot spring"
+  sentence: "冬は、温泉に行きます。"
+  notes: "JMdict seq 1183450."
+
+- id: gloss.kisetsu.1376310
+  story: kc.kisetsu
+  kind: new
+  japanese: "星"
+  reading: "ほし"
+  english: "star (usu. excluding the Sun); planet (usu. excluding Earth); heavenly body"
+  sentence: "あたたかいお風呂に入って、星を見ます。"
+  notes: "JMdict seq 1376310."
+
+- id: gloss.kisetsu.1202410
+  story: kc.kisetsu
+  kind: new
+  japanese: "カニ"
+  reading: "かに"
+  english: "crab"
+  sentence: "みんなでカニ鍋とミカンをいただきます。"
+  notes: "JMdict seq 1202410."
+
+- id: gloss.kisetsu.1528410
+  story: kc.kisetsu
+  kind: new
+  japanese: "ミカン"
+  reading: "みかん"
+  english: "mandarin; mandarin orange; tangerine"
+  sentence: "みんなでカニ鍋とミカンをいただきます。"
+  notes: "JMdict seq 1528410."
+
+- id: gloss.kisetsu.1468060
+  story: kc.kisetsu
+  kind: book-four
+  japanese: "年"
+  reading: "とし"
+  english: "year (新しい年: the new year)"
+  sentence: "いま、新しい年を待っています。"
+  taughtId: vocab.toshi
+  notes: "JMdict seq 1468060. Taught in Book Four."
+
+- id: gloss.kisetsu.1459720
+  story: kc.kisetsu
+  kind: book-four
+  japanese: "鍋"
+  reading: "なべ"
+  english: "a pot; a pan"
+  sentence: "みんなでカニ鍋とミカンをいただきます。"
+  taughtId: vocab.nabe
+  notes: "JMdict seq 1459720. Taught in Book Four."
+
+- id: gloss.kisetsu.1576900
+  story: kc.kisetsu
+  kind: new
+  japanese: "音"
+  reading: "おと"
+  english: "sound; noise"
+  sentence: "貝をひろって、波の音を聞きます。"
+  notes: "JMdict seq 1576900."

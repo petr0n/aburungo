@@ -1,0 +1,143 @@
+# Reading glossary: KC よむよむ — 月見 (kc.tsukimi, A2)
+# Words this story uses that Books One to Three do not teach. Not lesson vocabulary:
+# Book Three's words arrive by mining from the library (book-three-bands.md section 1).
+# Text: KC よむよむ, Japan Foundation Kansai Center, CC BY-NC 2.1 JP, sentences verbatim.
+# Entries: JMdict for Applications 3.6.2 (CC BY 4.0), seq cited per entry, sense checked
+# against the sentence it came from.
+
+- id: gloss.tsukimi.1255630
+  story: kc.tsukimi
+  kind: new
+  japanese: "月見"
+  reading: "つきみ"
+  english: "moon viewing (esp. during the eight month of the lunar calendar)"
+  sentence: "「月見」といいます。"
+  notes: "JMdict seq 1255630."
+
+- id: gloss.tsukimi.1443970
+  story: kc.tsukimi
+  kind: new
+  japanese: "ウサギ"
+  reading: "うさぎ"
+  english: "rabbit; hare; coney"
+  sentence: "日本では、月にウサギがいると言われています。"
+  notes: "JMdict seq 1443970."
+
+- id: gloss.tsukimi.1419240
+  story: kc.tsukimi
+  kind: new
+  japanese: "団子"
+  reading: "だんご"
+  english: "dango; dumpling (usu. sweet); doughboy"
+  sentence: "「月見」では団子を食べます。"
+  notes: "JMdict seq 1419240."
+
+- id: gloss.tsukimi.1604230
+  story: kc.tsukimi
+  kind: new
+  japanese: "丸い"
+  reading: "まるい"
+  english: "round; circular; spherical"
+  sentence: "団子は白くて丸いので、月に似ています。"
+  notes: "JMdict seq 1604230."
+
+- id: gloss.tsukimi.1137760
+  story: kc.tsukimi
+  kind: new
+  japanese: "ライオン"
+  reading: "ライオン"
+  english: "lion"
+  sentence: "アラビアでは、ライオン。"
+  notes: "JMdict seq 1137760."
+
+- id: gloss.tsukimi.1137570
+  story: kc.tsukimi
+  kind: new
+  japanese: "ヨーロッパ"
+  reading: "ヨーロッパ"
+  english: "Europe"
+  sentence: "東ヨーロッパや北アメリカでは、髪の長い女の人。"
+  notes: "JMdict seq 1137570."
+
+- id: gloss.tsukimi.1477950
+  story: kc.tsukimi
+  kind: new
+  japanese: "髪"
+  reading: "かみ"
+  english: "hair (on the head)"
+  sentence: "東ヨーロッパや北アメリカでは、髪の長い女の人。"
+  notes: "JMdict seq 1477950."
+
+- id: gloss.tsukimi.1641680
+  story: kc.tsukimi
+  kind: new
+  japanese: "南アメリカ"
+  reading: "みなみアメリカ"
+  english: "South America"
+  sentence: "南アメリカでは、ロバ。"
+  notes: "JMdict seq 1641680."
+
+- id: gloss.tsukimi.1574640
+  story: kc.tsukimi
+  kind: new
+  japanese: "ロバ"
+  reading: "ろば"
+  english: "donkey; ass"
+  sentence: "南アメリカでは、ロバ。"
+  notes: "JMdict seq 1574640."
+
+- id: gloss.tsukimi.1149970
+  story: kc.tsukimi
+  kind: new
+  japanese: "アラビア"
+  reading: "アラビア"
+  english: "Arabia"
+  sentence: "アラビアでは、ライオン。"
+  notes: "JMdict seq 1149970."
+
+- id: gloss.tsukimi.1520720
+  story: kc.tsukimi
+  kind: new
+  japanese: "北アメリカ"
+  reading: "きたアメリカ"
+  english: "North America"
+  sentence: "東ヨーロッパや北アメリカでは、髪の長い女の人。"
+  notes: "JMdict seq 1520720."
+
+- id: gloss.tsukimi.2840006
+  story: kc.tsukimi
+  kind: new
+  japanese: "北ヨーロッパ"
+  reading: "きたヨーロッパ"
+  english: "Northern Europe"
+  sentence: "北ヨーロッパでは、本を読む女の人がいる、と言われています。"
+  notes: "JMdict seq 2840006."
+
+- id: gloss.tsukimi.1009330
+  story: kc.tsukimi
+  kind: book-four
+  japanese: "どんな"
+  reading: "どんな"
+  english: "what kind of"
+  sentence: "みなさんの国では、どんな時に月を見ますか？"
+  taughtId: vocab.donna
+  notes: "JMdict seq 1009330. Taught in Book Four."
+
+- id: gloss.tsukimi.1314600
+  story: kc.tsukimi
+  kind: book-four
+  japanese: "似る"
+  reading: "にる"
+  english: "to resemble; to look like"
+  sentence: "団子は白くて丸いので、月に似ています。"
+  taughtId: vocab.niru
+  notes: "JMdict seq 1314600. Taught in Book Four."
+
+- id: gloss.tsukimi.1447440
+  story: kc.tsukimi
+  kind: new
+  japanese: "東"
+  reading: "ひがし"
+  english: "east"
+  sentence: "東ヨーロッパや北アメリカでは、髪の長い女の人。"
+  notes: "JMdict seq 1447440."

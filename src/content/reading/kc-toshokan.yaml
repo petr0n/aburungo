@@ -1,0 +1,88 @@
+# Reading glossary: KC よむよむ — 図書館 (kc.toshokan, A1)
+# Words this story uses that Books One to Three do not teach. Not lesson vocabulary:
+# Book Three's words arrive by mining from the library (book-three-bands.md section 1).
+# Text: KC よむよむ, Japan Foundation Kansai Center, CC BY-NC 2.1 JP, sentences verbatim.
+# Entries: JMdict for Applications 3.6.2 (CC BY 4.0), seq cited per entry, sense checked
+# against the sentence it came from.
+
+- id: gloss.toshokan.1215910
+  story: kc.toshokan
+  kind: new
+  japanese: "関西"
+  reading: "かんさい"
+  english: "Kansai (region comprising Kyoto, Osaka, Kobe and surrounding prefectures)"
+  sentence: "ここは関西国際センターです。"
+  notes: "JMdict seq 1215910."
+
+- id: gloss.toshokan.1512670
+  story: kc.toshokan
+  kind: new
+  japanese: "勉強"
+  reading: "べんきょう"
+  english: "study"
+  sentence: "勉強します。"
+  notes: "JMdict seq 1512670."
+
+- id: gloss.toshokan.2078800
+  story: kc.toshokan
+  kind: new
+  japanese: "大阪"
+  reading: "おおさか"
+  english: "Osaka (city, prefecture)"
+  sentence: "大阪の田尻町にあります。"
+  notes: "JMdict seq 2078800."
+
+- id: gloss.toshokan.1298520
+  story: kc.toshokan
+  kind: new
+  japanese: "冊"
+  reading: "さつ"
+  english: "counter for books"
+  sentence: "本は50,000冊あります。"
+  notes: "JMdict seq 1298520."
+
+- id: gloss.toshokan.1299400
+  story: kc.toshokan
+  kind: new
+  japanese: "雑誌"
+  reading: "ざっし"
+  english: "magazine; journal; periodical"
+  sentence: "図書館には本や雑誌がたくさんあります。"
+  notes: "JMdict seq 1299400."
+
+- id: gloss.toshokan.1306670
+  story: kc.toshokan
+  kind: new
+  japanese: "司書"
+  reading: "ししょ"
+  english: "librarian"
+  sentence: "司書が手伝います。"
+  notes: "JMdict seq 1306670."
+
+- id: gloss.toshokan.1333500
+  story: kc.toshokan
+  kind: new
+  japanese: "週間"
+  reading: "しゅうかん"
+  english: "week"
+  sentence: "本は2週間借りることができます。"
+  notes: "JMdict seq 1333500."
+
+- id: gloss.toshokan.1603990
+  story: kc.toshokan
+  kind: book-four
+  japanese: "町"
+  reading: "まち"
+  english: "town, neighbourhood"
+  sentence: "大阪の田尻町にあります。"
+  taughtId: vocab.machi
+  notes: "JMdict seq 1603990. Taught in Book Four."
+
+- id: gloss.toshokan.name-tajiricho
+  story: kc.toshokan
+  kind: name
+  japanese: "田尻町"
+  reading: "たじりちょう"
+  english: "Tajiri — a town in southern Osaka, home of the Kansai Center"
+  sentence: "大阪の田尻町にあります。"
+  notes: "A name in this story (a town); not vocabulary."

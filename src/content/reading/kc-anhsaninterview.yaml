@@ -1,0 +1,134 @@
+# Reading glossary: KC よむよむ — アインさんインタビュー (kc.anhsaninterview, A1)
+# Words this story uses that Books One to Three do not teach. Not lesson vocabulary:
+# Book Three's words arrive by mining from the library (book-three-bands.md section 1).
+# Text: KC よむよむ, Japan Foundation Kansai Center, CC BY-NC 2.1 JP, sentences verbatim.
+# Entries: JMdict for Applications 3.6.2 (CC BY 4.0), seq cited per entry, sense checked
+# against the sentence it came from.
+
+- id: gloss.anhsaninterview.1051970
+  story: kc.anhsaninterview
+  kind: new
+  japanese: "コンサート"
+  reading: "コンサート"
+  english: "concert"
+  sentence: "先週の週末は、日本の友だちとコンサートに行きました」コンサートですか。"
+  notes: "JMdict seq 1051970."
+
+- id: gloss.anhsaninterview.1077250
+  story: kc.anhsaninterview
+  kind: new
+  japanese: "ダンス"
+  reading: "ダンス"
+  english: "dance; dancing"
+  sentence: "ダンスもすばらしいです。"
+  notes: "JMdict seq 1077250."
+
+- id: gloss.anhsaninterview.1512670
+  story: kc.anhsaninterview
+  kind: new
+  japanese: "勉強"
+  reading: "べんきょう"
+  english: "study"
+  sentence: "「ベトナムから来ました」何の勉強をしていますか？"
+  notes: "JMdict seq 1512670."
+
+- id: gloss.anhsaninterview.1413240
+  story: kc.anhsaninterview
+  kind: new
+  japanese: "大学"
+  reading: "だいがく"
+  english: "university; college"
+  sentence: "今日は尾西大学の留学生、アインさんにインタビューします。"
+  notes: "JMdict seq 1413240."
+
+- id: gloss.anhsaninterview.1413660
+  story: kc.anhsaninterview
+  kind: new
+  japanese: "大好き"
+  reading: "だいすき"
+  english: "liking very much; loving (something or someone); adoring"
+  sentence: "「私はSENSHU BOYZが大好きです。"
+  notes: "JMdict seq 1413660."
+
+- id: gloss.anhsaninterview.1611580
+  story: kc.anhsaninterview
+  kind: new
+  japanese: "本当に"
+  reading: "ほんとうに"
+  english: "really; truly"
+  sentence: "いずみくんは本当にかっこいいです。"
+  notes: "JMdict seq 1611580."
+
+- id: gloss.anhsaninterview.1023100
+  story: kc.anhsaninterview
+  kind: new
+  japanese: "インタビュー"
+  reading: "インタビュー"
+  english: "interview (on television, in a newspaper, etc.)"
+  sentence: "今日は尾西大学の留学生、アインさんにインタビューします。"
+  notes: "JMdict seq 1023100."
+
+- id: gloss.anhsaninterview.1251320
+  story: kc.anhsaninterview
+  kind: new
+  japanese: "経済"
+  reading: "けいざい"
+  english: "economy; economics"
+  sentence: "「私は経済の勉強をしています」経済ですか。"
+  notes: "JMdict seq 1251320."
+
+- id: gloss.anhsaninterview.2829945
+  story: kc.anhsaninterview
+  kind: new
+  japanese: "ベトナム"
+  reading: "ベトナム"
+  english: "Vietnam"
+  sentence: "「ベトナムから来ました」何の勉強をしていますか？"
+  notes: "JMdict seq 2829945."
+
+- id: gloss.anhsaninterview.1552750
+  story: kc.anhsaninterview
+  kind: new
+  japanese: "留学生"
+  reading: "りゅうがくせい"
+  english: "overseas student; exchange student"
+  sentence: "今日は尾西大学の留学生、アインさんにインタビューします。"
+  notes: "JMdict seq 1552750."
+
+- id: gloss.anhsaninterview.1347710
+  story: kc.anhsaninterview
+  kind: new
+  japanese: "将来"
+  reading: "しょうらい"
+  english: "future; (future) prospects"
+  sentence: "将来、ベトナムで、日本の会社で働きたいです」週末は何をしますか？"
+  notes: "JMdict seq 1347710."
+
+- id: gloss.anhsaninterview.1353320
+  story: kc.anhsaninterview
+  kind: book-four
+  japanese: "上手"
+  reading: "じょうず"
+  english: "good at, skilful"
+  sentence: "歌も上手です。"
+  taughtId: vocab.jouzu
+  notes: "JMdict seq 1353320. Taught in Book Four."
+
+- id: gloss.anhsaninterview.1311110
+  story: kc.anhsaninterview
+  kind: spelling
+  japanese: "私"
+  reading: "わたし"
+  english: "I; me"
+  sentence: "「私は経済の勉強をしています」経済ですか。"
+  taughtId: vocab.watashi
+  notes: "JMdict seq 1311110."
+
+- id: gloss.anhsaninterview.name-ain
+  story: kc.anhsaninterview
+  kind: name
+  japanese: "アイン"
+  reading: "アイン"
+  english: "Ain — the exchange student being interviewed"
+  sentence: "今日は尾西大学の留学生、アインさんにインタビューします。"
+  notes: "A name in this story; not vocabulary."

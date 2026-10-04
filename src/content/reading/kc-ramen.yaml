@@ -1,0 +1,217 @@
+# Reading glossary: KC よむよむ — ラーメン麺太の冒険 (kc.ramen, A2)
+# Words this story uses that Books One to Three do not teach. Not lesson vocabulary:
+# Book Three's words arrive by mining from the library (book-three-bands.md section 1).
+# Text: KC よむよむ, Japan Foundation Kansai Center, CC BY-NC 2.1 JP, sentences verbatim.
+# Entries: JMdict for Applications 3.6.2 (CC BY 4.0), seq cited per entry, sense checked
+# against the sentence it came from.
+
+- id: gloss.ramen.1115150
+  story: kc.ramen
+  kind: new
+  japanese: "プール"
+  reading: "プール"
+  english: "(swimming) pool"
+  sentence: "ぼくはお金持ちだから、家にプールがあるんだ。"
+  notes: "JMdict seq 1115150."
+
+- id: gloss.ramen.1467630
+  story: kc.ramen
+  kind: new
+  japanese: "ネギ"
+  reading: "ねぎ"
+  english: "Welsh onion; Japanese bunching onion; green onion"
+  sentence: "ネギがよく似合う。"
+  notes: "JMdict seq 1467630."
+
+- id: gloss.ramen.1486360
+  story: kc.ramen
+  kind: new
+  japanese: "美しい"
+  reading: "うつくしい"
+  english: "beautiful; pretty; lovely"
+  sentence: "白いスープにネギの緑が美しい。"
+  notes: "JMdict seq 1486360."
+
+- id: gloss.ramen.1226360
+  story: kc.ramen
+  kind: new
+  japanese: "びっくり"
+  reading: "びっくり"
+  english: "to be surprised; to be amazed; to be frightened"
+  sentence: "あ～、びっくりした。"
+  notes: "JMdict seq 1226360."
+
+- id: gloss.ramen.1002170
+  story: kc.ramen
+  kind: new
+  japanese: "お嬢さん"
+  reading: "おじょうさん"
+  english: "young lady"
+  sentence: "なんて美しく、つやつやのメンマのお嬢さん。"
+  notes: "JMdict seq 1002170."
+
+- id: gloss.ramen.1533610
+  story: kc.ramen
+  kind: new
+  japanese: "麺"
+  reading: "めん"
+  english: "noodles"
+  sentence: "ぼくの名前は、ラーメン麺太！"
+  notes: "JMdict seq 1533610."
+
+- id: gloss.ramen.1181500
+  story: kc.ramen
+  kind: new
+  japanese: "王子"
+  reading: "おうじ"
+  english: "prince"
+  sentence: "ラーメンの世界の王子だよ！"
+  notes: "JMdict seq 1181500."
+
+- id: gloss.ramen.2429350
+  story: kc.ramen
+  kind: new
+  japanese: "お金持ち"
+  reading: "おかねもち"
+  english: "rich person; wealthy person"
+  sentence: "ぼくはお金持ちだから、家にプールがあるんだ。"
+  notes: "JMdict seq 2429350."
+
+- id: gloss.ramen.1314680
+  story: kc.ramen
+  kind: new
+  japanese: "似合う"
+  reading: "にあう"
+  english: "to suit; to match; to become"
+  sentence: "ネギがよく似合う。"
+  notes: "JMdict seq 1314680."
+
+- id: gloss.ramen.1267560
+  story: kc.ramen
+  kind: new
+  japanese: "ゴマ"
+  reading: "ごま"
+  english: "sesame seeds"
+  sentence: "ゴマの香りにうとうとしていると…。"
+  notes: "JMdict seq 1267560."
+
+- id: gloss.ramen.1589820
+  story: kc.ramen
+  kind: new
+  japanese: "香り"
+  reading: "かおり"
+  english: "aroma; fragrance; scent"
+  sentence: "ゴマの香りにうとうとしていると…。"
+  notes: "JMdict seq 1589820."
+
+- id: gloss.ramen.1595020
+  story: kc.ramen
+  kind: new
+  japanese: "醤油"
+  reading: "しょうゆ"
+  english: "soy sauce; soya sauce; shoyu"
+  sentence: "おお、これは醤油スープ。"
+  notes: "JMdict seq 1595020."
+
+- id: gloss.ramen.1579150
+  story: kc.ramen
+  kind: new
+  japanese: "昆布"
+  reading: "こんぶ"
+  english: "kombu (usu. Saccharina japonica); konbu; kelp"
+  sentence: "昆布と鰹のすばらしい香り、醤油味のきれいなスープ。"
+  notes: "JMdict seq 1579150."
+
+- id: gloss.ramen.2014050
+  story: kc.ramen
+  kind: new
+  japanese: "豚骨"
+  reading: "とんこつ"
+  english: "tonkotsu: broth made from pork bones"
+  sentence: "おお、これは豚骨スープ。"
+  notes: "JMdict seq 2014050."
+
+- id: gloss.ramen.1476450
+  story: kc.ramen
+  kind: new
+  japanese: "肌"
+  reading: "はだ"
+  english: "skin"
+  sentence: "白い肌が美しい、卵のお嬢さん。"
+  notes: "JMdict seq 1476450."
+
+- id: gloss.ramen.2642270
+  story: kc.ramen
+  kind: new
+  japanese: "肉厚"
+  reading: "にくあつ"
+  english: "thick; meaty"
+  sentence: "あちらには肉厚のチャーシュー美女！"
+  notes: "JMdict seq 2642270."
+
+- id: gloss.ramen.1208850
+  story: kc.ramen
+  kind: new
+  japanese: "鰹"
+  reading: "かつお"
+  english: "bonito (skipjack tuna)"
+  sentence: "昆布と鰹のすばらしい香り、醤油味のきれいなスープ。"
+  notes: "JMdict seq 1208850."
+
+- id: gloss.ramen.2014820
+  story: kc.ramen
+  kind: new
+  japanese: "メンマ"
+  reading: "めんま"
+  english: "bamboo shoots boiled, sliced, fermented, dried or preserved in salt, then soaked in hot water and sea salt"
+  sentence: "なんて美しく、つやつやのメンマのお嬢さん。"
+  notes: "JMdict seq 2014820."
+
+- id: gloss.ramen.1531710
+  story: kc.ramen
+  kind: spelling
+  japanese: "名前"
+  reading: "なまえ"
+  english: "name"
+  sentence: "ぼくの名前は、ラーメン麺太！"
+  taughtId: vocab.namae
+  notes: "JMdict seq 1531710."
+
+- id: gloss.ramen.1549140
+  story: kc.ramen
+  kind: spelling
+  japanese: "卵"
+  reading: "たまご"
+  english: "eggs; egg; spawn"
+  sentence: "白い肌が美しい、卵のお嬢さん。"
+  taughtId: vocab.tamago
+  notes: "JMdict seq 1549140."
+
+- id: gloss.ramen.name-menta
+  story: kc.ramen
+  kind: name
+  japanese: "麺太"
+  reading: "めんた"
+  english: "Menta — Ramen Menta, the noodle-prince narrator"
+  sentence: "ぼくの名前は、ラーメン麺太！"
+  notes: "A name in this story; not vocabulary."
+
+- id: gloss.ramen.1373860
+  story: kc.ramen
+  kind: book-four
+  japanese: "世界"
+  reading: "せかい"
+  english: "the world"
+  sentence: "ラーメンの世界の王子だよ！"
+  taughtId: vocab.sekai
+  notes: "JMdict seq 1373860. Taught in Book Four."
+
+- id: gloss.ramen.1067040
+  story: kc.ramen
+  kind: book-four
+  japanese: "スープ"
+  reading: "スープ"
+  english: "soup (Western)"
+  sentence: "ラーメンのスープのプールは、とてもおいしいんだ！"
+  taughtId: vocab.suupu
+  notes: "JMdict seq 1067040. Taught in Book Four."

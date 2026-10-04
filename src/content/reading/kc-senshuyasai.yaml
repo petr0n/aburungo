@@ -1,0 +1,294 @@
+# Reading glossary: KC よむよむ — 泉州野菜 (kc.senshuyasai, A2)
+# Words this story uses that Books One to Three do not teach. Not lesson vocabulary:
+# Book Three's words arrive by mining from the library (book-three-bands.md section 1).
+# Text: KC よむよむ, Japan Foundation Kansai Center, CC BY-NC 2.1 JP, sentences verbatim.
+# Entries: JMdict for Applications 3.6.2 (CC BY 4.0), seq cited per entry, sense checked
+# against the sentence it came from.
+
+- id: gloss.senshuyasai.2078800
+  story: kc.senshuyasai
+  kind: new
+  japanese: "大阪"
+  reading: "おおさか"
+  english: "Osaka (city, prefecture)"
+  sentence: "私たちは2人とも大阪の泉州野菜だったんですね。"
+  notes: "JMdict seq 2078800."
+
+- id: gloss.senshuyasai.1330290
+  story: kc.senshuyasai
+  kind: new
+  japanese: "授業"
+  reading: "じゅぎょう"
+  english: "lesson; class; teaching"
+  sentence: "よく知りませんが、私たちの話を授業で使うらしいですよ。"
+  notes: "JMdict seq 1330290."
+
+- id: gloss.senshuyasai.1523060
+  story: kc.senshuyasai
+  kind: new
+  japanese: "本当"
+  reading: "ほんとう"
+  english: "true; real"
+  sentence: "本当ですねえ。"
+  notes: "JMdict seq 1523060."
+
+- id: gloss.senshuyasai.name-senshu
+  story: kc.senshuyasai
+  kind: name
+  japanese: "泉州"
+  reading: "せんしゅう"
+  english: "Senshū — the southern part of Osaka Prefecture, known for its vegetables"
+  sentence: "泉州の水ナスは有名ですよ。"
+  notes: "A name in this story (a region); not vocabulary. JMdict's only 泉州 is Quanzhou in China, which this is not."
+
+- id: gloss.senshuyasai.1250220
+  story: kc.senshuyasai
+  kind: new
+  japanese: "形"
+  reading: "かたち"
+  english: "(physical) form; shape; figure"
+  sentence: "ねえねえ、Kくんはどうしてそんな形なのですか？"
+  notes: "JMdict seq 1250220."
+
+- id: gloss.senshuyasai.1195240
+  story: kc.senshuyasai
+  kind: new
+  japanese: "ナス"
+  reading: "なす"
+  english: "eggplant; aubergine"
+  sentence: "泉州の水ナスは有名ですよ。"
+  notes: "JMdict seq 1195240."
+
+- id: gloss.senshuyasai.1355850
+  story: kc.senshuyasai
+  kind: new
+  japanese: "場所"
+  reading: "ばしょ"
+  english: "place; location; spot"
+  sentence: "「日本のたまねぎ作りの最初の場所」だと言われるくらい泉州は有名なんですよ。"
+  notes: "JMdict seq 1355850."
+
+- id: gloss.senshuyasai.1269320
+  story: kc.senshuyasai
+  kind: new
+  japanese: "後"
+  reading: "あと"
+  english: "after; later (後で)"
+  sentence: "後でお金をしっかりもらわないといけませんね。"
+  notes: "JMdict seq 1269320."
+
+- id: gloss.senshuyasai.1316300
+  story: kc.senshuyasai
+  kind: new
+  japanese: "時代"
+  reading: "じだい"
+  english: "period; epoch; era"
+  sentence: "水ナスは江戸時代から泉州地域で作られています。"
+  notes: "JMdict seq 1316300."
+
+- id: gloss.senshuyasai.1420800
+  story: kc.senshuyasai
+  kind: new
+  japanese: "地域"
+  reading: "ちいき"
+  english: "area; region; district"
+  sentence: "水ナスは江戸時代から泉州地域で作られています。"
+  notes: "JMdict seq 1420800."
+
+- id: gloss.senshuyasai.1372010
+  story: kc.senshuyasai
+  kind: new
+  japanese: "水分"
+  reading: "すいぶん"
+  english: "water; liquid; fluid"
+  sentence: "普通のナスより水分が多くて、柔らかいんです。"
+  notes: "JMdict seq 1372010."
+
+- id: gloss.senshuyasai.1605630
+  story: kc.senshuyasai
+  kind: new
+  japanese: "柔らかい"
+  reading: "やわらかい"
+  english: "soft; tender; supple"
+  sentence: "普通のナスより水分が多くて、柔らかいんです。"
+  notes: "JMdict seq 1605630."
+
+- id: gloss.senshuyasai.1429760
+  story: kc.senshuyasai
+  kind: new
+  japanese: "長い間"
+  reading: "ながいあいだ"
+  english: "long time; long interval; for quite some time"
+  sentence: "長い間一緒にいますけど、全然気がつきませんでした。"
+  notes: "JMdict seq 1429760."
+
+- id: gloss.senshuyasai.1279890
+  story: kc.senshuyasai
+  kind: new
+  japanese: "江戸時代"
+  reading: "えどじだい"
+  english: "Edo period (1603-1868)"
+  sentence: "水ナスは江戸時代から泉州地域で作られています。"
+  notes: "JMdict seq 1279890."
+
+- id: gloss.senshuyasai.1454670
+  story: kc.senshuyasai
+  kind: new
+  japanese: "特に"
+  reading: "とくに"
+  english: "particularly; especially; in particular"
+  sentence: "特に、水ナスの浅漬けという漬物がおいしくて有名です。"
+  notes: "JMdict seq 1454670."
+
+- id: gloss.senshuyasai.1754090
+  story: kc.senshuyasai
+  kind: new
+  japanese: "浅漬け"
+  reading: "あさづけ"
+  english: "lightly pickled vegetables"
+  sentence: "特に、水ナスの浅漬けという漬物がおいしくて有名です。"
+  notes: "JMdict seq 1754090."
+
+- id: gloss.senshuyasai.1433700
+  story: kc.senshuyasai
+  kind: new
+  japanese: "漬物"
+  reading: "つけもの"
+  english: "tsukemono (pickled vegetables)"
+  sentence: "特に、水ナスの浅漬けという漬物がおいしくて有名です。"
+  notes: "JMdict seq 1433700."
+
+- id: gloss.senshuyasai.1611970
+  story: kc.senshuyasai
+  kind: new
+  japanese: "明治"
+  reading: "めいじ"
+  english: "Meiji era (1868.9.8-1912.7.30)"
+  sentence: "泉州たまねぎは明治時代から作られています。"
+  notes: "JMdict seq 1611970."
+
+- id: gloss.senshuyasai.1264540
+  story: kc.senshuyasai
+  kind: new
+  japanese: "言葉"
+  reading: "ことば"
+  english: "word; expression"
+  sentence: "まあ幸せ太りという言葉もありますし、いいと思います。"
+  notes: "JMdict seq 1264540."
+
+- id: gloss.senshuyasai.1342770
+  story: kc.senshuyasai
+  kind: new
+  japanese: "初耳"
+  reading: "はつみみ"
+  english: "news to me; something heard for the first time"
+  sentence: "初耳です。"
+  notes: "JMdict seq 1342770."
+
+- id: gloss.senshuyasai.1395620
+  story: kc.senshuyasai
+  kind: spelling
+  japanese: "全然"
+  reading: "ぜんぜん"
+  english: "(not) at all; (not) in the slightest"
+  sentence: "長い間一緒にいますけど、全然気がつきませんでした。"
+  taughtId: vocab.zenzen
+  notes: "JMdict seq 1395620."
+
+- id: gloss.senshuyasai.1165970
+  story: kc.senshuyasai
+  kind: book-four
+  japanese: "一番"
+  reading: "いちばん"
+  english: "most, best"
+  sentence: "5月くらいが一番おいしい野菜です。"
+  taughtId: vocab.ichiban
+  notes: "JMdict seq 1165970. Taught in Book Four."
+
+- id: gloss.senshuyasai.1594060
+  story: kc.senshuyasai
+  kind: book-four
+  japanese: "幸せ"
+  reading: "しあわせ"
+  english: "happy; fortunate; happiness"
+  sentence: "まあ幸せ太りという言葉もありますし、いいと思います。"
+  taughtId: vocab.shiawase
+  notes: "JMdict seq 1594060. Taught in Book Four."
+
+- id: gloss.senshuyasai.1293990
+  story: kc.senshuyasai
+  kind: book-four
+  japanese: "最初"
+  reading: "さいしょ"
+  english: "the first; the beginning"
+  sentence: "「日本のたまねぎ作りの最初の場所」だと言われるくらい泉州は有名なんですよ。"
+  taughtId: vocab.saisho
+  notes: "JMdict seq 1293990. Taught in Book Four."
+
+- id: gloss.senshuyasai.1497190
+  story: kc.senshuyasai
+  kind: book-four
+  japanese: "普通"
+  reading: "ふつう"
+  english: "ordinary; usual"
+  sentence: "普通のナスより水分が多くて、柔らかいんです。"
+  taughtId: vocab.futsuu
+  notes: "JMdict seq 1497190. Taught in Book Four."
+
+- id: gloss.senshuyasai.1594110
+  story: kc.senshuyasai
+  kind: book-four
+  japanese: "仕方"
+  reading: "しかた"
+  english: "way of doing something, method"
+  sentence: "まあ、それは仕方がないですね。"
+  taughtId: vocab.shikata
+  notes: "JMdict seq 1594110. Taught in Book Four."
+
+- id: gloss.senshuyasai.2008740
+  story: kc.senshuyasai
+  kind: book-four
+  japanese: "そんなに"
+  reading: "そんなに"
+  english: "that much, like that"
+  sentence: "泉州のたまねぎがそんなに有名だなんて、全然知りませんでした。"
+  taughtId: vocab.sonnani
+  notes: "JMdict seq 2008740. Taught in Book Four."
+
+- id: gloss.senshuyasai.1203280
+  story: kc.senshuyasai
+  kind: book-four
+  japanese: "他に"
+  reading: "ほかに"
+  english: "besides; else; in addition"
+  sentence: "他にもおいしいものがたくさんあります。"
+  taughtId: vocab.hokani
+  notes: "JMdict seq 1203280. Taught in Book Four."
+
+- id: gloss.senshuyasai.1345605
+  story: kc.senshuyasai
+  kind: book-four
+  japanese: "そろそろ"
+  reading: "そろそろ"
+  english: "soon; about time to"
+  sentence: "じゃあ、そろそろ帰りましょうか。"
+  taughtId: vocab.sorosoro
+  notes: "JMdict seq 1345605. Taught in Book Four."
+
+- id: gloss.senshuyasai.1591050
+  story: kc.senshuyasai
+  kind: new
+  japanese: "気がつく"
+  reading: "きがつく"
+  english: "to notice; to realize"
+  sentence: "長い間一緒にいますけど、全然気がつきませんでした。"
+  notes: "JMdict seq 1591050."
+
+- id: gloss.senshuyasai.1407460
+  story: kc.senshuyasai
+  kind: new
+  japanese: "多い"
+  reading: "おおい"
+  english: "many; a lot"
+  sentence: "普通のナスより水分が多くて、柔らかいんです。"
+  notes: "JMdict seq 1407460."

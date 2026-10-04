@@ -1,0 +1,209 @@
+# Reading glossary: KC よむよむ — 清姫 (kc.kiyohime, A2)
+# Words this story uses that Books One to Three do not teach. Not lesson vocabulary:
+# Book Three's words arrive by mining from the library (book-three-bands.md section 1).
+# Text: KC よむよむ, Japan Foundation Kansai Center, CC BY-NC 2.1 JP, sentences verbatim.
+# Entries: JMdict for Applications 3.6.2 (CC BY 4.0), seq cited per entry, sense checked
+# against the sentence it came from.
+
+- id: gloss.kiyohime.1364670
+  story: kc.kiyohime
+  kind: new
+  japanese: "神社"
+  reading: "じんじゃ"
+  english: "Shinto shrine"
+  sentence: "安珍は熊野神社へ行くために、旅をしていました。"
+  notes: "JMdict seq 1364670."
+
+- id: gloss.kiyohime.1450330
+  story: kc.kiyohime
+  kind: new
+  japanese: "逃げる"
+  reading: "にげる"
+  english: "to run away; to flee; to get away (e.g. from danger)"
+  sentence: "安珍は清姫を見て、逃げ出しました。"
+  notes: "JMdict seq 1450330."
+
+- id: gloss.kiyohime.1523060
+  story: kc.kiyohime
+  kind: new
+  japanese: "本当"
+  reading: "ほんとう"
+  english: "truth; reality; actuality"
+  sentence: "安珍は清姫と約束をしましたが、お坊さんなので、本当は結婚したくありませんでした。"
+  notes: "JMdict seq 1523060."
+
+- id: gloss.kiyohime.1382370
+  story: kc.kiyohime
+  kind: new
+  japanese: "昔"
+  reading: "むかし"
+  english: "the old days; the past; former times"
+  sentence: "昔、安珍というお坊さんがいました。"
+  notes: "JMdict seq 1382370."
+
+- id: gloss.kiyohime.name-anchin
+  story: kc.kiyohime
+  kind: name
+  japanese: "安珍"
+  reading: "あんちん"
+  english: "Anchin — the travelling monk Kiyohime pursues"
+  sentence: "昔、安珍というお坊さんがいました。"
+  notes: "A name in this story; not vocabulary."
+
+- id: gloss.kiyohime.1612830
+  story: kc.kiyohime
+  kind: new
+  japanese: "お坊さん"
+  reading: "おぼうさん"
+  english: "Buddhist priest; monk"
+  sentence: "昔、安珍というお坊さんがいました。"
+  notes: "JMdict seq 1612830."
+
+- id: gloss.kiyohime.1352030
+  story: kc.kiyohime
+  kind: new
+  japanese: "鐘"
+  reading: "かね"
+  english: "bell (often a large hanging bell); chime"
+  sentence: "道成寺のお坊さんたちは、安珍をお寺の大きな鐘の中に入れました。"
+  notes: "JMdict seq 1352030."
+
+- id: gloss.kiyohime.1323350
+  story: kc.kiyohime
+  kind: new
+  japanese: "蛇"
+  reading: "へび"
+  english: "snake"
+  sentence: "すると、大きな蛇になりました。"
+  notes: "JMdict seq 1323350."
+
+- id: gloss.kiyohime.1211180
+  story: kc.kiyohime
+  kind: new
+  japanese: "巻きつく"
+  reading: "まきつく"
+  english: "to coil around; to twine around"
+  sentence: "」清姫は鐘にぐるぐる巻きついて、口からゴウッと火を吐きました。"
+  notes: "JMdict seq 1211180."
+
+- id: gloss.kiyohime.2646460
+  story: kc.kiyohime
+  kind: new
+  japanese: "吐く"
+  reading: "はく"
+  english: "to breathe out; to spit (fire)"
+  sentence: "」清姫は鐘にぐるぐる巻きついて、口からゴウッと火を吐きました。"
+  notes: "JMdict seq 2646460."
+
+- id: gloss.kiyohime.2271230
+  story: kc.kiyohime
+  kind: new
+  japanese: "お寺"
+  reading: "おてら"
+  english: "temple"
+  sentence: "道成寺のお坊さんたちは、安珍をお寺の大きな鐘の中に入れました。"
+  notes: "JMdict seq 2271230."
+
+- id: gloss.kiyohime.1355120
+  story: kc.kiyohime
+  kind: spelling
+  japanese: "乗る"
+  reading: "のる"
+  english: "to get on (train, plane, bus, ship, etc.); to get in; to board"
+  sentence: "清姫は船に乗ることができませんでした。"
+  taughtId: vocab.noru
+  notes: "JMdict seq 1355120."
+
+- id: gloss.kiyohime.name-kiyohime
+  story: kc.kiyohime
+  kind: name
+  japanese: "清姫"
+  reading: "きよひめ"
+  english: "Kiyohime — the young woman who becomes a serpent"
+  sentence: "清姫は船に乗ることができませんでした。"
+  notes: "A name in this story; not vocabulary."
+
+- id: gloss.kiyohime.1254790
+  story: kc.kiyohime
+  kind: book-four
+  japanese: "結婚"
+  reading: "けっこん"
+  english: "marriage"
+  sentence: "そして安珍に、「結婚してください」と言いました。"
+  taughtId: vocab.kekkon
+  notes: "JMdict seq 1254790. Taught in Book Four."
+
+- id: gloss.kiyohime.1602800
+  story: kc.kiyohime
+  kind: book-four
+  japanese: "船"
+  reading: "ふね"
+  english: "ship, boat"
+  sentence: "安珍は船で川を渡りました。"
+  taughtId: vocab.fune
+  notes: "JMdict seq 1602800. Taught in Book Four."
+
+- id: gloss.kiyohime.1350600
+  story: kc.kiyohime
+  kind: book-four
+  japanese: "焼く"
+  reading: "やく"
+  english: "to burn (焼け死ぬ: to burn to death)"
+  sentence: "鐘の中の安珍は、焼け死んでしまいました。"
+  taughtId: vocab.yaku
+  notes: "JMdict seq 1350600. Taught in Book Four."
+
+- id: gloss.kiyohime.1463770
+  story: kc.kiyohime
+  kind: new
+  japanese: "日"
+  reading: "ひ"
+  english: "day"
+  sentence: "約束の日に安珍が来ないので、清姫は安珍を探しました。"
+  notes: "JMdict seq 1463770."
+
+- id: gloss.kiyohime.1311110
+  story: kc.kiyohime
+  kind: spelling
+  japanese: "私"
+  reading: "わたし"
+  english: "I; me"
+  sentence: "安珍は、「私は熊野神社に行かなくてはいけません。"
+  taughtId: vocab.watashi
+  notes: "JMdict seq 1311110."
+
+- id: gloss.kiyohime.1193610
+  story: kc.kiyohime
+  kind: new
+  japanese: "火"
+  reading: "ひ"
+  english: "fire; flame; blaze"
+  sentence: "」清姫は鐘にぐるぐる巻きついて、口からゴウッと火を吐きました。"
+  notes: "JMdict seq 1193610."
+
+- id: gloss.kiyohime.1553120
+  story: kc.kiyohime
+  kind: new
+  japanese: "旅"
+  reading: "たび"
+  english: "travel; trip; journey"
+  sentence: "安珍は熊野神社へ行くために、旅をしていました。"
+  notes: "JMdict seq 1553120."
+
+- id: gloss.kiyohime.1474850
+  story: kc.kiyohime
+  kind: new
+  japanese: "泊まる"
+  reading: "とまる"
+  english: "to stay at (e.g. hotel)"
+  sentence: "安珍は、ある家に泊まりました。"
+  notes: "JMdict seq 1474850."
+
+- id: gloss.kiyohime.1487400
+  story: kc.kiyohime
+  kind: new
+  japanese: "必ず"
+  reading: "かならず"
+  english: "always; without exception; necessarily"
+  sentence: "でも、必ずまた来ます」と約束しました。"
+  notes: "JMdict seq 1487400."

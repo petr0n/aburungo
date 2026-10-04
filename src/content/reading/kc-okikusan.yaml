@@ -1,0 +1,173 @@
+# Reading glossary: KC よむよむ — お菊さん (kc.okikusan, A2)
+# Words this story uses that Books One to Three do not teach. Not lesson vocabulary:
+# Book Three's words arrive by mining from the library (book-three-bands.md section 1).
+# Text: KC よむよむ, Japan Foundation Kansai Center, CC BY-NC 2.1 JP, sentences verbatim.
+# Entries: JMdict for Applications 3.6.2 (CC BY 4.0), seq cited per entry, sense checked
+# against the sentence it came from.
+
+- id: gloss.okikusan.1540590
+  story: kc.okikusan
+  kind: new
+  japanese: "幽霊"
+  reading: "ゆうれい"
+  english: "ghost; specter; spectre"
+  sentence: "お菊さんは死んで幽霊になりました。"
+  notes: "JMdict seq 1540590."
+
+- id: gloss.okikusan.1524730
+  story: kc.okikusan
+  kind: new
+  japanese: "毎晩"
+  reading: "まいばん"
+  english: "every night"
+  sentence: "そして、今も毎晩皿を数えて泣いています。"
+  notes: "JMdict seq 1524730."
+
+- id: gloss.okikusan.1382370
+  story: kc.okikusan
+  kind: new
+  japanese: "昔"
+  reading: "むかし"
+  english: "the old days; the past; former times"
+  sentence: "昔、お菊さんという女の人がいました。"
+  notes: "JMdict seq 1382370."
+
+- id: gloss.okikusan.1229840
+  story: kc.okikusan
+  kind: new
+  japanese: "泣く"
+  reading: "なく"
+  english: "to cry; to shed tears; to weep"
+  sentence: "そして、今も毎晩皿を数えて泣いています。"
+  notes: "JMdict seq 1229840."
+
+- id: gloss.okikusan.1314780
+  story: kc.okikusan
+  kind: new
+  japanese: "侍"
+  reading: "さむらい"
+  english: "warrior (esp. of military retainers of daimyos in the Edo period); samurai"
+  sentence: "お菊さんは侍の家で働いていました。"
+  notes: "JMdict seq 1314780."
+
+- id: gloss.okikusan.1160330
+  story: kc.okikusan
+  kind: new
+  japanese: "井戸"
+  reading: "いど"
+  english: "water well"
+  sentence: "お菊さんは、井戸の中に落ちて死にました。"
+  notes: "JMdict seq 1160330."
+
+- id: gloss.okikusan.1853490
+  story: kc.okikusan
+  kind: new
+  japanese: "心から"
+  reading: "こころから"
+  english: "from the bottom of one's heart; heartily; sincerely"
+  sentence: "お菊さんは心からあやまりました。"
+  notes: "JMdict seq 1853490."
+
+- id: gloss.okikusan.1445690
+  story: kc.okikusan
+  kind: new
+  japanese: "怒る"
+  reading: "おこる"
+  english: "to get angry"
+  sentence: "でも大事な皿でしたから、侍はとても怒りました。"
+  notes: "JMdict seq 1445690."
+
+- id: gloss.okikusan.1380440
+  story: kc.okikusan
+  kind: new
+  japanese: "声"
+  reading: "こえ"
+  english: "voice"
+  sentence: "井戸から声が聞こえます。"
+  notes: "JMdict seq 1380440."
+
+- id: gloss.okikusan.1299030
+  story: kc.okikusan
+  kind: new
+  japanese: "殺す"
+  reading: "ころす"
+  english: "to kill"
+  sentence: "侍はお菊さんを殺そうとしました。"
+  notes: "JMdict seq 1299030."
+
+- id: gloss.okikusan.1536350
+  story: kc.okikusan
+  kind: spelling
+  japanese: "夜"
+  reading: "よる"
+  english: "night; evening"
+  sentence: "ある日の夜。"
+  taughtId: vocab.yoru
+  notes: "JMdict seq 1536350."
+
+- id: gloss.okikusan.name-okiku
+  story: kc.okikusan
+  kind: name
+  japanese: "お菊"
+  reading: "おきく"
+  english: "Okiku — the servant who becomes a ghost"
+  sentence: "昔、お菊さんという女の人がいました。"
+  notes: "A name in this story; not vocabulary."
+
+- id: gloss.okikusan.1299680
+  story: kc.okikusan
+  kind: book-four
+  japanese: "皿"
+  reading: "さら"
+  english: "plate, dish"
+  sentence: "でもある日、侍の大事な皿を1枚割ってしまいました。"
+  taughtId: vocab.sara
+  notes: "JMdict seq 1299680. Taught in Book Four."
+
+- id: gloss.okikusan.1413940
+  story: kc.okikusan
+  kind: book-four
+  japanese: "大事"
+  reading: "だいじ"
+  english: "important; precious"
+  sentence: "でもある日、侍の大事な皿を1枚割ってしまいました。"
+  taughtId: vocab.daiji
+  notes: "JMdict seq 1413940. Taught in Book Four."
+
+- id: gloss.okikusan.1208000
+  story: kc.okikusan
+  kind: book-four
+  japanese: "割る"
+  reading: "わる"
+  english: "to break, to crack, to split"
+  sentence: "でもある日、侍の大事な皿を1枚割ってしまいました。"
+  taughtId: vocab.waru
+  notes: "JMdict seq 1208000. Taught in Book Four."
+
+- id: gloss.okikusan.1548550
+  story: kc.okikusan
+  kind: book-four
+  japanese: "落ちる"
+  reading: "おちる"
+  english: "to fall; to drop"
+  sentence: "お菊さんは、井戸の中に落ちて死にました。"
+  taughtId: vocab.ochiru
+  notes: "JMdict seq 1548550. Taught in Book Four."
+
+- id: gloss.okikusan.1463770
+  story: kc.okikusan
+  kind: new
+  japanese: "日"
+  reading: "ひ"
+  english: "day"
+  sentence: "でもある日、侍の大事な皿を1枚割ってしまいました。"
+  notes: "JMdict seq 1463770."
+
+- id: gloss.okikusan.1372900
+  story: kc.okikusan
+  kind: new
+  japanese: "数える"
+  reading: "かぞえる"
+  english: "to count"
+  sentence: "そして、今も毎晩皿を数えて泣いています。"
+  notes: "JMdict seq 1372900."

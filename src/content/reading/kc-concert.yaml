@@ -1,0 +1,170 @@
+# Reading glossary: KC よむよむ — コンサートに行こう！ (kc.concert, A2)
+# Words this story uses that Books One to Three do not teach. Not lesson vocabulary:
+# Book Three's words arrive by mining from the library (book-three-bands.md section 1).
+# Text: KC よむよむ, Japan Foundation Kansai Center, CC BY-NC 2.1 JP, sentences verbatim.
+# Entries: JMdict for Applications 3.6.2 (CC BY 4.0), seq cited per entry, sense checked
+# against the sentence it came from.
+
+- id: gloss.concert.1051970
+  story: kc.concert
+  kind: new
+  japanese: "コンサート"
+  reading: "コンサート"
+  english: "concert"
+  sentence: "これからコンサートが始まります。"
+  notes: "JMdict seq 1051970."
+
+- id: gloss.concert.1077250
+  story: kc.concert
+  kind: new
+  japanese: "ダンス"
+  reading: "ダンス"
+  english: "dance; dancing"
+  sentence: "あの人はぼくたちを見ないで、へんなダンスをしていますよ。"
+  notes: "JMdict seq 1077250."
+
+- id: gloss.concert.1000440
+  story: kc.concert
+  kind: new
+  japanese: "あの人"
+  reading: "あのひと"
+  english: "he; she; that person"
+  sentence: "あの人はぼくたちを見ないで、へんなダンスをしていますよ。"
+  notes: "JMdict seq 1000440."
+
+- id: gloss.concert.1065860
+  story: kc.concert
+  kind: new
+  japanese: "ジャンプ"
+  reading: "ジャンプ"
+  english: "jump"
+  sentence: "ジャンプ！"
+  notes: "JMdict seq 1065860."
+
+- id: gloss.concert.1229840
+  story: kc.concert
+  kind: new
+  japanese: "泣く"
+  reading: "なく"
+  english: "to cry; to shed tears; to weep"
+  sentence: "泣いている人もいますね。"
+  notes: "JMdict seq 1229840."
+
+- id: gloss.concert.1587850
+  story: kc.concert
+  kind: new
+  japanese: "色々"
+  reading: "いろいろ"
+  english: "various; a variety of; all sorts of"
+  sentence: "コンサートには色々な人が来ます。"
+  notes: "JMdict seq 1587850."
+
+- id: gloss.concert.1025470
+  story: kc.concert
+  kind: new
+  japanese: "ウィンク"
+  reading: "ウインク"
+  english: "wink"
+  sentence: "そして、ぼくはウィンクをします。"
+  notes: "JMdict seq 1025470."
+
+- id: gloss.concert.1558920
+  story: kc.concert
+  kind: new
+  japanese: "恋人"
+  reading: "こいびと"
+  english: "lover; sweetheart; boyfriend"
+  sentence: "男の人が恋人を思う歌です。"
+  notes: "JMdict seq 1558920."
+
+- id: gloss.concert.1180570
+  story: kc.concert
+  kind: new
+  japanese: "横"
+  reading: "よこ"
+  english: "side; sideways (side to side)"
+  sentence: "みんな体を横に動かします。"
+  notes: "JMdict seq 1180570."
+
+- id: gloss.concert.1590970
+  story: kc.concert
+  kind: new
+  japanese: "完璧"
+  reading: "かんぺき"
+  english: "perfect; complete; flawless"
+  sentence: "ぼくたちのダンスも完璧に踊っています！"
+  notes: "JMdict seq 1590970."
+
+- id: gloss.concert.1538440
+  story: kc.concert
+  kind: new
+  japanese: "踊る"
+  reading: "おどる"
+  english: "to dance (orig. a hopping dance)"
+  sentence: "ぼくたちのダンスも完璧に踊っています！"
+  notes: "JMdict seq 1538440."
+
+- id: gloss.concert.1352710
+  story: kc.concert
+  kind: new
+  japanese: "上下"
+  reading: "じょうげ"
+  english: "up and down"
+  sentence: "あの人は頭をはげしく上下に動かしています。"
+  notes: "JMdict seq 1352710."
+
+- id: gloss.concert.1150410
+  story: kc.concert
+  kind: new
+  japanese: "愛"
+  reading: "あい"
+  english: "love; affection; care"
+  sentence: "みんな愛しています！"
+  notes: "JMdict seq 1150410."
+
+- id: gloss.concert.1451750
+  story: kc.concert
+  kind: spelling
+  japanese: "同じ"
+  reading: "おなじ"
+  english: "same; identical; equal"
+  sentence: "服もぼくと同じです。"
+  taughtId: vocab.onaji
+  notes: "JMdict seq 1451750."
+
+- id: gloss.concert.1451170
+  story: kc.concert
+  kind: book-four
+  japanese: "動かす"
+  reading: "うごかす"
+  english: "to move (something); to get (a machine) working"
+  sentence: "みんな体を横に動かします。"
+  taughtId: vocab.ugokasu
+  notes: "JMdict seq 1451170. Taught in Book Four."
+
+- id: gloss.concert.1307500
+  story: kc.concert
+  kind: new
+  japanese: "始まる"
+  reading: "はじまる"
+  english: "to begin; to start; to commence"
+  sentence: "これからコンサートが始まります。"
+  notes: "JMdict seq 1307500."
+
+- id: gloss.concert.1451210
+  story: kc.concert
+  kind: new
+  japanese: "動く"
+  reading: "うごく"
+  english: "to move; to stir; to shift"
+  sentence: "みんな、たてに動きます。"
+  notes: "JMdict seq 1451210."
+
+- id: gloss.concert.name-izumi
+  story: kc.concert
+  kind: name
+  japanese: "いずみ"
+  reading: "いずみ"
+  english: "Izumi — the SENSHU BOYZ member who narrates"
+  sentence: "ぼくは人気アイドルグループ・SENSHUBOYZの佐野いずみです。"
+  notes: "A name in this story; not vocabulary."

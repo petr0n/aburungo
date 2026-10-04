@@ -1,0 +1,165 @@
+# Reading glossary: KC よむよむ — かぼちゃ (kc.kabocha, A2)
+# Words this story uses that Books One to Three do not teach. Not lesson vocabulary:
+# Book Three's words arrive by mining from the library (book-three-bands.md section 1).
+# Text: KC よむよむ, Japan Foundation Kansai Center, CC BY-NC 2.1 JP, sentences verbatim.
+# Entries: JMdict for Applications 3.6.2 (CC BY 4.0), seq cited per entry, sense checked
+# against the sentence it came from.
+
+- id: gloss.kabocha.1579080
+  story: kc.kabocha
+  kind: new
+  japanese: "頃"
+  reading: "ごろ"
+  english: "around; about (a time)"
+  sentence: "1550年頃に、日本にかぼちゃが来たと言われています。"
+  notes: "JMdict seq 1579080."
+
+- id: gloss.kabocha.1039610
+  story: kc.kabocha
+  kind: new
+  japanese: "カンボジア"
+  reading: "カンボジア"
+  english: "Cambodia"
+  sentence: "ポルトガル語の「Cambodia（カンボジア）」が「かぼちゃ」という名前になりました。"
+  notes: "JMdict seq 1039610."
+
+- id: gloss.kabocha.1125950
+  story: kc.kabocha
+  kind: new
+  japanese: "ポルトガル語"
+  reading: "ポルトガルご"
+  english: "Portuguese (language)"
+  sentence: "「かぼちゃ」はポルトガル語です。"
+  notes: "JMdict seq 1125950."
+
+- id: gloss.kabocha.1149830
+  story: kc.kabocha
+  kind: new
+  japanese: "アメリカ"
+  reading: "アメリカ"
+  english: "America (here: the Americas, in アメリカ大陸)"
+  sentence: "かぼちゃはアメリカ大陸でできて、世界に広がりました。"
+  notes: "JMdict seq 1149830."
+
+- id: gloss.kabocha.1415150
+  story: kc.kabocha
+  kind: new
+  japanese: "大陸"
+  reading: "たいりく"
+  english: "continent"
+  sentence: "かぼちゃはアメリカ大陸でできて、世界に広がりました。"
+  notes: "JMdict seq 1415150."
+
+- id: gloss.kabocha.1125940
+  story: kc.kabocha
+  kind: new
+  japanese: "ポルトガル"
+  reading: "ポルトガル"
+  english: "Portugal"
+  sentence: "ポルトガル人が、カンボジアから日本にかぼちゃを持ってきました。"
+  notes: "JMdict seq 1125940."
+
+- id: gloss.kabocha.1464700
+  story: kc.kabocha
+  kind: new
+  japanese: "日本人"
+  reading: "にほんじん"
+  english: "Japanese person"
+  sentence: "そのとき、日本人はかぼちゃがカンボジアの野菜だと思いました。"
+  notes: "JMdict seq 1464700."
+
+- id: gloss.kabocha.1341040
+  story: kc.kabocha
+  kind: new
+  japanese: "春夏秋冬"
+  reading: "しゅんかしゅうとう"
+  english: "spring, summer, autumn (fall) and winter; the four seasons"
+  sentence: "春夏秋冬かぼちゃを食べると風邪をひかないと言われています。"
+  notes: "JMdict seq 1341040."
+
+- id: gloss.kabocha.1576280
+  story: kc.kabocha
+  kind: new
+  japanese: "一年"
+  reading: "いちねん"
+  english: "one year; some time ago"
+  sentence: "ですから、日本では一年で一番昼が短くなる日にかぼちゃを食べる習慣があります。"
+  notes: "JMdict seq 1576280."
+
+- id: gloss.kabocha.1531710
+  story: kc.kabocha
+  kind: spelling
+  japanese: "名前"
+  reading: "なまえ"
+  english: "name"
+  sentence: "ポルトガル語の「Cambodia（カンボジア）」が「かぼちゃ」という名前になりました。"
+  taughtId: vocab.namae
+  notes: "JMdict seq 1531710."
+
+- id: gloss.kabocha.1165970
+  story: kc.kabocha
+  kind: book-four
+  japanese: "一番"
+  reading: "いちばん"
+  english: "most, best"
+  sentence: "ですから、日本では一年で一番昼が短くなる日にかぼちゃを食べる習慣があります。"
+  taughtId: vocab.ichiban
+  notes: "JMdict seq 1165970. Taught in Book Four."
+
+- id: gloss.kabocha.1009330
+  story: kc.kabocha
+  kind: book-four
+  japanese: "どんな"
+  reading: "どんな"
+  english: "what kind of"
+  sentence: "「かぼちゃ」はどんな意味ですか？"
+  taughtId: vocab.donna
+  notes: "JMdict seq 1009330. Taught in Book Four."
+
+- id: gloss.kabocha.1156800
+  story: kc.kabocha
+  kind: book-four
+  japanese: "意味"
+  reading: "いみ"
+  english: "meaning; sense"
+  sentence: "「かぼちゃ」はどんな意味ですか？"
+  taughtId: vocab.imi
+  notes: "JMdict seq 1156800. Taught in Book Four."
+
+- id: gloss.kabocha.1373860
+  story: kc.kabocha
+  kind: book-four
+  japanese: "世界"
+  reading: "せかい"
+  english: "the world"
+  sentence: "かぼちゃはアメリカ大陸でできて、世界に広がりました。"
+  taughtId: vocab.sekai
+  notes: "JMdict seq 1373860. Taught in Book Four."
+
+- id: gloss.kabocha.1333090
+  story: kc.kabocha
+  kind: book-four
+  japanese: "習慣"
+  reading: "しゅうかん"
+  english: "custom; practice; habit"
+  sentence: "ですから、日本では一年で一番昼が短くなる日にかぼちゃを食べる習慣があります。"
+  taughtId: vocab.shuukan
+  notes: "JMdict seq 1333090. Taught in Book Four."
+
+- id: gloss.kabocha.1463770
+  story: kc.kabocha
+  kind: new
+  japanese: "日"
+  reading: "ひ"
+  english: "day"
+  sentence: "ですから、日本では一年で一番昼が短くなる日にかぼちゃを食べる習慣があります。"
+  notes: "JMdict seq 1463770."
+
+- id: gloss.kabocha.1602360
+  story: kc.kabocha
+  kind: new
+  japanese: "広がる"
+  reading: "ひろがる"
+  english: "to spread (out); to extend; to stretch"
+  sentence: "かぼちゃはアメリカ大陸でできて、世界に広がりました。"
+  notes: "JMdict seq 1602360."

@@ -1,0 +1,163 @@
+# Reading glossary: KC よむよむ — アイドルの仕事 (kc.idolnoshigoto, A2)
+# Words this story uses that Books One to Three do not teach. Not lesson vocabulary:
+# Book Three's words arrive by mining from the library (book-three-bands.md section 1).
+# Text: KC よむよむ, Japan Foundation Kansai Center, CC BY-NC 2.1 JP, sentences verbatim.
+# Entries: JMdict for Applications 3.6.2 (CC BY 4.0), seq cited per entry, sense checked
+# against the sentence it came from.
+
+- id: gloss.idolnoshigoto.1051970
+  story: kc.idolnoshigoto
+  kind: new
+  japanese: "コンサート"
+  reading: "コンサート"
+  english: "concert"
+  sentence: "来月コンサートがあります。"
+  notes: "JMdict seq 1051970."
+
+- id: gloss.idolnoshigoto.1077250
+  story: kc.idolnoshigoto
+  kind: new
+  japanese: "ダンス"
+  reading: "ダンス"
+  english: "dance; dancing"
+  sentence: "ダンスの練習をします。"
+  notes: "JMdict seq 1077250."
+
+- id: gloss.idolnoshigoto.1014340
+  story: kc.idolnoshigoto
+  kind: new
+  japanese: "アイドル"
+  reading: "アイドル"
+  english: "performer (usu. in a boy band or girl group) with an image cultivated to foster a dedicated fan following; Japanese idol"
+  sentence: "アイドルはとっても楽しいです！"
+  notes: "JMdict seq 1014340."
+
+- id: gloss.idolnoshigoto.1108540
+  story: kc.idolnoshigoto
+  kind: new
+  japanese: "ファン"
+  reading: "ファン"
+  english: "fan; enthusiast; lover (of)"
+  sentence: "ファンの人たちと会います。"
+  notes: "JMdict seq 1108540."
+
+- id: gloss.idolnoshigoto.1559160
+  story: kc.idolnoshigoto
+  kind: new
+  japanese: "練習"
+  reading: "れんしゅう"
+  english: "practice; training; drill"
+  sentence: "ダンスの練習をします。"
+  notes: "JMdict seq 1559160."
+
+- id: gloss.idolnoshigoto.1414340
+  story: kc.idolnoshigoto
+  kind: new
+  japanese: "大切"
+  reading: "たいせつ"
+  english: "important; significant; serious"
+  sentence: "」「ありがとう」ファンの人たちはとても大切です。"
+  notes: "JMdict seq 1414340."
+
+- id: gloss.idolnoshigoto.1152730
+  story: kc.idolnoshigoto
+  kind: new
+  japanese: "握手"
+  reading: "あくしゅ"
+  english: "handshake"
+  sentence: "みんなと握手をします。"
+  notes: "JMdict seq 1152730."
+
+- id: gloss.idolnoshigoto.1477960
+  story: kc.idolnoshigoto
+  kind: new
+  japanese: "髪の毛"
+  reading: "かみのけ"
+  english: "hair (on the head); (a) hair"
+  sentence: "髪の毛を切ります。"
+  notes: "JMdict seq 1477960."
+
+- id: gloss.idolnoshigoto.1289520
+  story: kc.idolnoshigoto
+  kind: new
+  japanese: "今夜"
+  reading: "こんや"
+  english: "this evening; tonight"
+  sentence: "今夜８時からの「SENSHU BOYZ SHOW」を見てくださいね！"
+  notes: "JMdict seq 1289520."
+
+- id: gloss.idolnoshigoto.2842544
+  story: kc.idolnoshigoto
+  kind: new
+  japanese: "アイドルグループ"
+  reading: "アイドルグループ"
+  english: "idol group; boy band; girl group"
+  sentence: "ぼくはアイドルグループ・SENSHU BOYZの、岸和田ジョーです。"
+  notes: "JMdict seq 2842544."
+
+- id: gloss.idolnoshigoto.name-joe
+  story: kc.idolnoshigoto
+  kind: name
+  japanese: "ジョー"
+  reading: "ジョー"
+  english: "Joe — Kishiwada Joe, the idol who narrates"
+  sentence: "「きゃー、ジョー！"
+  notes: "A name in this story; not vocabulary."
+
+- id: gloss.idolnoshigoto.2456950
+  story: kc.idolnoshigoto
+  kind: new
+  japanese: "美容室"
+  reading: "びようしつ"
+  english: "beauty parlor"
+  sentence: "美容室に行きます。"
+  notes: "JMdict seq 2456950."
+
+- id: gloss.idolnoshigoto.1598680
+  story: kc.idolnoshigoto
+  kind: spelling
+  japanese: "時々"
+  reading: "ときどき"
+  english: "sometimes; occasionally; at times"
+  sentence: "時々、家族と電話で話します。"
+  taughtId: vocab.tokidoki
+  notes: "JMdict seq 1598680."
+
+- id: gloss.idolnoshigoto.1353320
+  story: kc.idolnoshigoto
+  kind: book-four
+  japanese: "上手"
+  reading: "じょうず"
+  english: "good at, skilful"
+  sentence: "ぼくはダンスが上手じゃありません。"
+  taughtId: vocab.jouzu
+  notes: "JMdict seq 1353320. Taught in Book Four."
+
+- id: gloss.idolnoshigoto.1080510
+  story: kc.idolnoshigoto
+  kind: book-four
+  japanese: "テレビ"
+  reading: "テレビ"
+  english: "a television; TV"
+  sentence: "これからテレビに出ます。"
+  taughtId: vocab.terebi
+  notes: "JMdict seq 1080510. Taught in Book Four."
+
+- id: gloss.idolnoshigoto.1351430
+  story: kc.idolnoshigoto
+  kind: new
+  japanese: "紹介"
+  reading: "しょうかい"
+  english: "introduction (紹介する: to introduce)"
+  sentence: "きょうは、ぼくたちの仕事をみなさんに紹介します。"
+  notes: "JMdict seq 1351430."
+
+- id: gloss.idolnoshigoto.1384830
+  story: kc.idolnoshigoto
+  kind: book-four
+  japanese: "切る"
+  reading: "きる"
+  english: "to cut; to hang up (the phone)"
+  sentence: "髪の毛を切ります。"
+  taughtId: vocab.kiru-cut
+  notes: "JMdict seq 1384830. Taught in Book Four."

@@ -1,0 +1,194 @@
+# Reading glossary: KC よむよむ — 私の一日 (kc.watashi, A1)
+# Words this story uses that Books One to Three do not teach. Not lesson vocabulary:
+# Book Three's words arrive by mining from the library (book-three-bands.md section 1).
+# Text: KC よむよむ, Japan Foundation Kansai Center, CC BY-NC 2.1 JP, sentences verbatim.
+# Entries: JMdict for Applications 3.6.2 (CC BY 4.0), seq cited per entry, sense checked
+# against the sentence it came from.
+
+- id: gloss.watashi.1215910
+  story: kc.watashi
+  kind: new
+  japanese: "関西"
+  reading: "かんさい"
+  english: "Kansai (region comprising Kyoto, Osaka, Kobe and surrounding prefectures)"
+  sentence: "関西国際センターの教師です。"
+  notes: "JMdict seq 1215910."
+
+- id: gloss.watashi.1330290
+  story: kc.watashi
+  kind: new
+  japanese: "授業"
+  reading: "じゅぎょう"
+  english: "lesson; class; teaching"
+  sentence: "私は授業が一番好きです。"
+  notes: "JMdict seq 1330290."
+
+- id: gloss.watashi.1524730
+  story: kc.watashi
+  kind: new
+  japanese: "毎晩"
+  reading: "まいばん"
+  english: "every night"
+  sentence: "毎晩11時ごろ寝ます。"
+  notes: "JMdict seq 1524730."
+
+- id: gloss.watashi.1294330
+  story: kc.watashi
+  kind: new
+  japanese: "妻"
+  reading: "つま"
+  english: "wife"
+  sentence: "妻と息子と私です。"
+  notes: "JMdict seq 1294330."
+
+- id: gloss.watashi.name-namba
+  story: kc.watashi
+  kind: name
+  japanese: "難波"
+  reading: "なんば"
+  english: "Namba — a district in central Osaka"
+  sentence: "それから、地下鉄で難波に行きます。"
+  notes: "A name in this story; not vocabulary. JMdict reads 難波 as なにわ, the old name for the Osaka region; the district is なんば."
+
+- id: gloss.watashi.1066360
+  story: kc.watashi
+  kind: new
+  japanese: "ジョギング"
+  reading: "ジョギング"
+  english: "jogging"
+  sentence: "5時から6時まで、1時間ジョギングをします。"
+  notes: "JMdict seq 1066360."
+
+- id: gloss.watashi.1547450
+  story: kc.watashi
+  kind: new
+  japanese: "浴びる"
+  reading: "あびる"
+  english: "to dash over oneself (e.g. water); to take (e.g. shower); to bask in (e.g. the sun)"
+  sentence: "家でシャワーを浴びます。"
+  notes: "JMdict seq 1547450."
+
+- id: gloss.watashi.1075040
+  story: kc.watashi
+  kind: new
+  japanese: "センター"
+  reading: "センター"
+  english: "centre (here: the Kansai Center where the narrator works)"
+  sentence: "8時15分にセンターに来ます。"
+  notes: "JMdict seq 1075040."
+
+- id: gloss.watashi.1034660
+  story: kc.watashi
+  kind: new
+  japanese: "オフィス"
+  reading: "オフィス"
+  english: "office"
+  sentence: "ときどき、オフィスで朝ごはんを食べます。"
+  notes: "JMdict seq 1034660."
+
+- id: gloss.watashi.1202380
+  story: kc.watashi
+  kind: new
+  japanese: "絵本"
+  reading: "えほん"
+  english: "picture book"
+  sentence: "絵本を読みます。"
+  notes: "JMdict seq 1202380."
+
+- id: gloss.watashi.1014590
+  story: kc.watashi
+  kind: new
+  japanese: "アイロン"
+  reading: "アイロン"
+  english: "iron (for pressing clothes)"
+  sentence: "ときどきアイロンをします。"
+  notes: "JMdict seq 1014590."
+
+- id: gloss.watashi.1083160
+  story: kc.watashi
+  kind: new
+  japanese: "デスクワーク"
+  reading: "デスクワーク"
+  english: "desk work"
+  sentence: "デスクワークはちょっと…。"
+  notes: "JMdict seq 1083160."
+
+- id: gloss.watashi.1268990
+  story: kc.watashi
+  kind: spelling
+  japanese: "午後"
+  reading: "ごご"
+  english: "afternoon; p.m."
+  sentence: "午後7時に家に帰ります。"
+  taughtId: vocab.gogo
+  notes: "JMdict seq 1268990."
+
+- id: gloss.watashi.1165970
+  story: kc.watashi
+  kind: book-four
+  japanese: "一番"
+  reading: "いちばん"
+  english: "most, best"
+  sentence: "私は授業が一番好きです。"
+  taughtId: vocab.ichiban
+  notes: "JMdict seq 1165970. Taught in Book Four."
+
+- id: gloss.watashi.1299680
+  story: kc.watashi
+  kind: book-four
+  japanese: "皿"
+  reading: "さら"
+  english: "plate, dish"
+  sentence: "そして、皿を洗います。"
+  taughtId: vocab.sara
+  notes: "JMdict seq 1299680. Taught in Book Four."
+
+- id: gloss.watashi.1080510
+  story: kc.watashi
+  kind: book-four
+  japanese: "テレビ"
+  reading: "テレビ"
+  english: "a television; TV"
+  sentence: "それから、テレビを見ます。"
+  taughtId: vocab.terebi
+  notes: "JMdict seq 1080510. Taught in Book Four."
+
+- id: gloss.watashi.1404390
+  story: kc.watashi
+  kind: book-four
+  japanese: "息子"
+  reading: "むすこ"
+  english: "son"
+  sentence: "妻と息子と私です。"
+  taughtId: vocab.musuko
+  notes: "JMdict seq 1404390. Taught in Book Four."
+
+- id: gloss.watashi.1237130
+  story: kc.watashi
+  kind: book-four
+  japanese: "教師"
+  reading: "きょうし"
+  english: "teacher; instructor"
+  sentence: "関西国際センターの教師です。"
+  taughtId: vocab.kyoushi
+  notes: "JMdict seq 1237130. Taught in Book Four."
+
+- id: gloss.watashi.1362360
+  story: kc.watashi
+  kind: book-four
+  japanese: "新聞"
+  reading: "しんぶん"
+  english: "newspaper"
+  sentence: "毎日、電車で新聞を読みます。"
+  taughtId: vocab.shinbun
+  notes: "JMdict seq 1362360. Taught in Book Four."
+
+- id: gloss.watashi.1311110
+  story: kc.watashi
+  kind: spelling
+  japanese: "私"
+  reading: "わたし"
+  english: "I; me"
+  sentence: "私は東です。"
+  taughtId: vocab.watashi
+  notes: "JMdict seq 1311110."

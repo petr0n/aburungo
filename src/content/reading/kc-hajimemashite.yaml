@@ -1,0 +1,170 @@
+# Reading glossary: KC よむよむ — はじめまして、私はアインです (kc.hajimemashite, A1)
+# Words this story uses that Books One to Three do not teach. Not lesson vocabulary:
+# Book Three's words arrive by mining from the library (book-three-bands.md section 1).
+# Text: KC よむよむ, Japan Foundation Kansai Center, CC BY-NC 2.1 JP, sentences verbatim.
+# Entries: JMdict for Applications 3.6.2 (CC BY 4.0), seq cited per entry, sense checked
+# against the sentence it came from.
+
+- id: gloss.hajimemashite.1051970
+  story: kc.hajimemashite
+  kind: new
+  japanese: "コンサート"
+  reading: "コンサート"
+  english: "concert"
+  sentence: "それは…SENSHU BOYZのいずみくん来週の日曜日、日本の友だちとSENSHU BOYZのコンサートに行きます。"
+  notes: "JMdict seq 1051970."
+
+- id: gloss.hajimemashite.1512670
+  story: kc.hajimemashite
+  kind: new
+  japanese: "勉強"
+  reading: "べんきょう"
+  english: "study"
+  sentence: "高校生の時から、日本語を勉強しています。"
+  notes: "JMdict seq 1512670."
+
+- id: gloss.hajimemashite.1014340
+  story: kc.hajimemashite
+  kind: new
+  japanese: "アイドル"
+  reading: "アイドル"
+  english: "performer (usu. in a boy band or girl group) with an image cultivated to foster a dedicated fan following; Japanese idol"
+  sentence: "私には好きなアイドルがいます。"
+  notes: "JMdict seq 1014340."
+
+- id: gloss.hajimemashite.1413240
+  story: kc.hajimemashite
+  kind: new
+  japanese: "大学"
+  reading: "だいがく"
+  english: "university; college"
+  sentence: "大学の授業はちょっと大変です。"
+  notes: "JMdict seq 1413240."
+
+- id: gloss.hajimemashite.1330290
+  story: kc.hajimemashite
+  kind: new
+  japanese: "授業"
+  reading: "じゅぎょう"
+  english: "lesson; class; teaching"
+  sentence: "大学の授業はちょっと大変です。"
+  notes: "JMdict seq 1330290."
+
+- id: gloss.hajimemashite.1524700
+  story: kc.hajimemashite
+  kind: new
+  japanese: "毎朝"
+  reading: "まいあさ"
+  english: "every morning"
+  sentence: "毎朝、1時間ぐらいメイクをします。"
+  notes: "JMdict seq 1524700."
+
+- id: gloss.hajimemashite.1132460
+  story: kc.hajimemashite
+  kind: new
+  japanese: "メイク"
+  reading: "メイク"
+  english: "make-up; makeup"
+  sentence: "毎朝、1時間ぐらいメイクをします。"
+  notes: "JMdict seq 1132460."
+
+- id: gloss.hajimemashite.1552740
+  story: kc.hajimemashite
+  kind: new
+  japanese: "留学"
+  reading: "りゅうがく"
+  english: "studying abroad"
+  sentence: "今、日本に留学しています。"
+  notes: "JMdict seq 1552740."
+
+- id: gloss.hajimemashite.1579080
+  story: kc.hajimemashite
+  kind: new
+  japanese: "頃"
+  reading: "ころ"
+  english: "(approximate) time; around; about"
+  sentence: "子どもの頃、はじめて日本のアニメを見ました。"
+  notes: "JMdict seq 1579080."
+
+- id: gloss.hajimemashite.1017590
+  story: kc.hajimemashite
+  kind: new
+  japanese: "アニメ"
+  reading: "アニメ"
+  english: "animation; animated film; animated cartoon"
+  sentence: "子どもの頃、はじめて日本のアニメを見ました。"
+  notes: "JMdict seq 1017590."
+
+- id: gloss.hajimemashite.1283510
+  story: kc.hajimemashite
+  kind: new
+  japanese: "高校生"
+  reading: "こうこうせい"
+  english: "senior high school student"
+  sentence: "高校生の時から、日本語を勉強しています。"
+  notes: "JMdict seq 1283510."
+
+- id: gloss.hajimemashite.1464530
+  story: kc.hajimemashite
+  kind: new
+  japanese: "日本語"
+  reading: "にほんご"
+  english: "Japanese (language)"
+  sentence: "高校生の時から、日本語を勉強しています。"
+  notes: "JMdict seq 1464530."
+
+- id: gloss.hajimemashite.1378860
+  story: kc.hajimemashite
+  kind: new
+  japanese: "生活"
+  reading: "せいかつ"
+  english: "life; living"
+  sentence: "日本の生活は楽しいです。"
+  notes: "JMdict seq 1378860."
+
+- id: gloss.hajimemashite.1119730
+  story: kc.hajimemashite
+  kind: new
+  japanese: "ベトナム人"
+  reading: "ベトナムじん"
+  english: "Vietnamese (person)"
+  sentence: "私はベトナム人です。"
+  notes: "JMdict seq 1119730."
+
+- id: gloss.hajimemashite.1207250
+  story: kc.hajimemashite
+  kind: book-four
+  japanese: "楽しみ"
+  reading: "たのしみ"
+  english: "looking forward to something"
+  sentence: "楽しみです！"
+  taughtId: vocab.tanoshimi
+  notes: "JMdict seq 1207250. Taught in Book Four."
+
+- id: gloss.hajimemashite.1311110
+  story: kc.hajimemashite
+  kind: spelling
+  japanese: "私"
+  reading: "わたし"
+  english: "I; me"
+  sentence: "私はアインです。"
+  taughtId: vocab.watashi
+  notes: "JMdict seq 1311110."
+
+- id: gloss.hajimemashite.2827554
+  story: kc.hajimemashite
+  kind: new
+  japanese: "子どもの頃"
+  reading: "こどものころ"
+  english: "(time of) one's childhood; when one was a child"
+  sentence: "子どもの頃、はじめて日本のアニメを見ました。"
+  notes: "JMdict seq 2827554."
+
+- id: gloss.hajimemashite.name-ain
+  story: kc.hajimemashite
+  kind: name
+  japanese: "アイン"
+  reading: "アイン"
+  english: "Ain — a Vietnamese exchange student in Osaka, the narrator"
+  sentence: "私はアインです。"
+  notes: "A name in this story; not vocabulary."

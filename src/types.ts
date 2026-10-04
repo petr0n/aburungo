@@ -125,6 +125,50 @@ export type WordExample = {
   tatoebaId: string;
 };
 
+/**
+ * What a reading-library entry is, relative to what the books teach.
+ *
+ * - `new`        no book teaches this JMdict entry
+ * - `spelling`   a book teaches the word in another written form (なまえ vs 名前)
+ * - `book-four`  Book Four teaches it; the entry points at that word, never duplicates it
+ * - `name`       a person, place or thing named in the story; not vocabulary, never in SRS
+ */
+export type GlossaryKind = "new" | "spelling" | "book-four" | "name";
+
+/**
+ * One word a reading-library story needs that Books One to Three do not supply.
+ *
+ * Book Three's vocabulary arrives by mining from the library, not from lessons
+ * (docs/plans/book-three-bands.md §1), so these are not taught words and never
+ * appear in a lesson. They are what the mining feature reads.
+ */
+export type GlossaryEntry = {
+  /** Stable slug, e.g. "gloss.taro.shougakusei". */
+  id: string;
+  /** Story id in data/reading/kc-yomyom.json, e.g. "kc.taro". */
+  story: string;
+  kind: GlossaryKind;
+  /** The JMdict headword, or for a name the form the story writes. */
+  japanese: string;
+  reading: string;
+  /** The sense the story uses, not necessarily JMdict's first. */
+  english: string;
+  /** A sentence from the story, verbatim, that uses the word. */
+  sentence: string;
+  /** The taught word this points at; required for `spelling` and `book-four`. */
+  taughtId?: string;
+  /** Carries the "JMdict seq NNNNNNN" citation; required except for names. */
+  notes?: string;
+};
+
+/**
+ * The library story that closes a Book Three band, or the reason none does.
+ * `evidence` quotes the story verbatim at the points it uses the band's grammar.
+ */
+export type GateText =
+  | { band: string; story: string; patterns: string[]; evidence: string[] }
+  | { band: string; story: null; reason: string };
+
 export type Word = {
   id: string;
   japanese: string;

@@ -1,0 +1,214 @@
+# Reading glossary: KC よむよむ — 釣り日記 秋の大阪湾編 (kc.tsurinikki, A2)
+# Words this story uses that Books One to Three do not teach. Not lesson vocabulary:
+# Book Three's words arrive by mining from the library (book-three-bands.md section 1).
+# Text: KC よむよむ, Japan Foundation Kansai Center, CC BY-NC 2.1 JP, sentences verbatim.
+# Entries: JMdict for Applications 3.6.2 (CC BY 4.0), seq cited per entry, sense checked
+# against the sentence it came from.
+
+- id: gloss.tsurinikki.2078800
+  story: kc.tsurinikki
+  kind: new
+  japanese: "大阪"
+  reading: "おおさか"
+  english: "Osaka (city, prefecture)"
+  sentence: "私は大阪に住んでいます。"
+  notes: "JMdict seq 2078800."
+
+- id: gloss.tsurinikki.1450330
+  story: kc.tsurinikki
+  kind: new
+  japanese: "逃げる"
+  reading: "にげる"
+  english: "to run away; to flee; to get away (e.g. from danger)"
+  sentence: "逃げないように、ゆっくり釣り上げます。"
+  notes: "JMdict seq 1450330."
+
+- id: gloss.tsurinikki.1523060
+  story: kc.tsurinikki
+  kind: new
+  japanese: "本当"
+  reading: "ほんとう"
+  english: "true; real"
+  sentence: "タチウオは、このルアーを本当の魚だと思って食べます。"
+  notes: "JMdict seq 1523060."
+
+- id: gloss.tsurinikki.1787280
+  story: kc.tsurinikki
+  kind: new
+  japanese: "タチウオ"
+  reading: "たちうお"
+  english: "largehead hairtail (a long silver fish)"
+  sentence: "アジ：Horse mackerel私が釣りたい魚は、「タチウオ」です。"
+  notes: "JMdict seq 1787280."
+
+- id: gloss.tsurinikki.1434040
+  story: kc.tsurinikki
+  kind: new
+  japanese: "釣り"
+  reading: "つり"
+  english: "fishing; angling"
+  sentence: "今日は釣りに行きました。"
+  notes: "JMdict seq 1434040."
+
+- id: gloss.tsurinikki.1143950
+  story: kc.tsurinikki
+  kind: new
+  japanese: "ルアー"
+  reading: "ルアー"
+  english: "lure"
+  sentence: "今日は「ルアー」を使います。"
+  notes: "JMdict seq 1143950."
+
+- id: gloss.tsurinikki.1586400
+  story: kc.tsurinikki
+  kind: new
+  japanese: "アジ"
+  reading: "アジ"
+  english: "horse mackerel; jack mackerel; pompano"
+  sentence: "」「今日はアジがたくさん釣れるよ！"
+  notes: "JMdict seq 1586400."
+
+- id: gloss.tsurinikki.1408340
+  story: kc.tsurinikki
+  kind: new
+  japanese: "太刀"
+  reading: "たち"
+  english: "long sword (as opposed to the shorter katana)"
+  sentence: "「タチウオ」という名前になったのは、①「太刀（刀の種類です）」に似ているからとか、②泳ぐときに、水の中で「立っている」ように見えるからとか、いろいろな意見があります。"
+  notes: "JMdict seq 1408340."
+
+- id: gloss.tsurinikki.1446420
+  story: kc.tsurinikki
+  kind: new
+  japanese: "刀"
+  reading: "かたな"
+  english: "sword (esp. Japanese single-edged); katana"
+  sentence: "「タチウオ」という名前になったのは、①「太刀（刀の種類です）」に似ているからとか、②泳ぐときに、水の中で「立っている」ように見えるからとか、いろいろな意見があります。"
+  notes: "JMdict seq 1446420."
+
+- id: gloss.tsurinikki.1519340
+  story: kc.tsurinikki
+  kind: new
+  japanese: "暴れる"
+  reading: "あばれる"
+  english: "to act violently; to rage; to struggle"
+  sentence: "暴れるタチウオ！"
+  notes: "JMdict seq 1519340."
+
+- id: gloss.tsurinikki.1243560
+  story: kc.tsurinikki
+  kind: new
+  japanese: "銀色"
+  reading: "ぎんいろ"
+  english: "silver (color, colour)"
+  sentence: "きれいな銀色です。"
+  notes: "JMdict seq 1243560."
+
+- id: gloss.tsurinikki.1531710
+  story: kc.tsurinikki
+  kind: spelling
+  japanese: "名前"
+  reading: "なまえ"
+  english: "name"
+  sentence: "タチウオ：Largehead hairtailどうして「タチウオ」という名前なのでしょうか？"
+  taughtId: vocab.namae
+  notes: "JMdict seq 1531710."
+
+- id: gloss.tsurinikki.1536350
+  story: kc.tsurinikki
+  kind: spelling
+  japanese: "夜"
+  reading: "よる"
+  english: "night; evening"
+  sentence: "夜になりました。"
+  taughtId: vocab.yoru
+  notes: "JMdict seq 1536350."
+
+- id: gloss.tsurinikki.1353320
+  story: kc.tsurinikki
+  kind: book-four
+  japanese: "上手"
+  reading: "じょうず"
+  english: "good at, skilful"
+  sentence: "」みなさん、上手です。"
+  taughtId: vocab.jouzu
+  notes: "JMdict seq 1353320. Taught in Book Four."
+
+- id: gloss.tsurinikki.1603990
+  story: kc.tsurinikki
+  kind: book-four
+  japanese: "町"
+  reading: "まち"
+  english: "town, neighbourhood"
+  sentence: "私の住んでいる町は、海の近くです。"
+  taughtId: vocab.machi
+  notes: "JMdict seq 1603990. Taught in Book Four."
+
+- id: gloss.tsurinikki.1307550
+  story: kc.tsurinikki
+  kind: book-four
+  japanese: "始める"
+  reading: "はじめる"
+  english: "to start; to begin (something)"
+  sentence: "夕方、釣りを始めます。"
+  taughtId: vocab.hajimeru
+  notes: "JMdict seq 1307550. Taught in Book Four."
+
+- id: gloss.tsurinikki.1314600
+  story: kc.tsurinikki
+  kind: book-four
+  japanese: "似る"
+  reading: "にる"
+  english: "to resemble; to look like"
+  sentence: "「タチウオ」という名前になったのは、①「太刀（刀の種類です）」に似ているからとか、②泳ぐときに、水の中で「立っている」ように見えるからとか、いろいろな意見があります。"
+  taughtId: vocab.niru
+  notes: "JMdict seq 1314600. Taught in Book Four."
+
+- id: gloss.tsurinikki.1328890
+  story: kc.tsurinikki
+  kind: book-four
+  japanese: "種類"
+  reading: "しゅるい"
+  english: "kind; sort; variety"
+  sentence: "「タチウオ」という名前になったのは、①「太刀（刀の種類です）」に似ているからとか、②泳ぐときに、水の中で「立っている」ように見えるからとか、いろいろな意見があります。"
+  taughtId: vocab.shurui
+  notes: "JMdict seq 1328890. Taught in Book Four."
+
+- id: gloss.tsurinikki.1156530
+  story: kc.tsurinikki
+  kind: book-four
+  japanese: "意見"
+  reading: "いけん"
+  english: "opinion; view"
+  sentence: "「タチウオ」という名前になったのは、①「太刀（刀の種類です）」に似ているからとか、②泳ぐときに、水の中で「立っている」ように見えるからとか、いろいろな意見があります。"
+  taughtId: vocab.iken
+  notes: "JMdict seq 1156530. Taught in Book Four."
+
+- id: gloss.tsurinikki.1432410
+  story: kc.tsurinikki
+  kind: book-four
+  japanese: "追う"
+  reading: "おう"
+  english: "to chase, to drive (animals) along"
+  sentence: "魚がルアーを追いかけているようです。"
+  taughtId: vocab.ou
+  notes: "JMdict seq 1432410. Taught in Book Four."
+
+- id: gloss.tsurinikki.1463770
+  story: kc.tsurinikki
+  kind: new
+  japanese: "日"
+  reading: "ひ"
+  english: "day"
+  sentence: "休みの日は、たくさんの人が釣りをしています。"
+  notes: "JMdict seq 1463770."
+
+- id: gloss.tsurinikki.1311110
+  story: kc.tsurinikki
+  kind: spelling
+  japanese: "私"
+  reading: "わたし"
+  english: "I; me"
+  sentence: "私は大阪に住んでいます。"
+  taughtId: vocab.watashi
+  notes: "JMdict seq 1311110."

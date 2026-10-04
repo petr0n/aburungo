@@ -1,0 +1,164 @@
+# Reading glossary: KC よむよむ — あなたへの3つのおねがい (kc.anata, A2)
+# Words this story uses that Books One to Three do not teach. Not lesson vocabulary:
+# Book Three's words arrive by mining from the library (book-three-bands.md section 1).
+# Text: KC よむよむ, Japan Foundation Kansai Center, CC BY-NC 2.1 JP, sentences verbatim.
+# Entries: JMdict for Applications 3.6.2 (CC BY 4.0), seq cited per entry, sense checked
+# against the sentence it came from.
+
+- id: gloss.anata.1309260
+  story: kc.anata
+  kind: new
+  japanese: "思い出す"
+  reading: "おもいだす"
+  english: "to recall; to remember; to recollect"
+  sentence: "ゆっくりお茶を飲んでその人をゆっくり思い出してください。"
+  notes: "JMdict seq 1309260."
+
+- id: gloss.anata.1531940
+  story: kc.anata
+  kind: new
+  japanese: "命"
+  reading: "いのち"
+  english: "life; life force"
+  sentence: "雨は命を育みます。"
+  notes: "JMdict seq 1531940."
+
+- id: gloss.anata.1600700
+  story: kc.anata
+  kind: new
+  japanese: "育む"
+  reading: "はぐくむ"
+  english: "to foster; to nurture"
+  sentence: "雨は命を育みます。"
+  notes: "JMdict seq 1600700."
+
+- id: gloss.anata.1212260
+  story: kc.anata
+  kind: new
+  japanese: "感じる"
+  reading: "かんじる"
+  english: "to feel; to sense; to experience"
+  sentence: "風を感じて空を見てください。"
+  notes: "JMdict seq 1212260."
+
+- id: gloss.anata.1037670
+  story: kc.anata
+  kind: new
+  japanese: "カップ"
+  reading: "カップ"
+  english: "cup (drinking vessel, measure, brassiere, prize, etc.)"
+  sentence: "好きなカップでお茶を飲んでください。"
+  notes: "JMdict seq 1037670."
+
+- id: gloss.anata.1360480
+  story: kc.anata
+  kind: new
+  japanese: "心"
+  reading: "こころ"
+  english: "mind; heart; spirit"
+  sentence: "心も少しあたたかくなります。"
+  notes: "JMdict seq 1360480."
+
+- id: gloss.anata.1012010
+  story: kc.anata
+  kind: new
+  japanese: "ポツポツ"
+  reading: "ポツポツ"
+  english: "pitter-patter (of rain falling in drops)"
+  sentence: "ポツポツ？"
+  notes: "JMdict seq 1012010."
+
+- id: gloss.anata.2663570
+  story: kc.anata
+  kind: new
+  japanese: "ポロンポロン"
+  reading: "ポロン"
+  english: "plink-plonk (of raindrops, like a plucked string)"
+  sentence: "ポロンポロン？"
+  notes: "JMdict seq 2663570."
+
+- id: gloss.anata.2121700
+  story: kc.anata
+  kind: new
+  japanese: "ピシャピシャ"
+  reading: "ピシャピシャ"
+  english: "splish-splash"
+  sentence: "ピシャピシャ？"
+  notes: "JMdict seq 2121700."
+
+- id: gloss.anata.1357600
+  story: kc.anata
+  kind: spelling
+  japanese: "色"
+  reading: "いろ"
+  english: "colour; color; hue"
+  sentence: "空はどんな色ですか。"
+  taughtId: vocab.iro
+  notes: "JMdict seq 1357600."
+
+- id: gloss.anata.1009330
+  story: kc.anata
+  kind: book-four
+  japanese: "どんな"
+  reading: "どんな"
+  english: "what kind of"
+  sentence: "どんな音ですか。"
+  taughtId: vocab.donna
+  notes: "JMdict seq 1009330. Taught in Book Four."
+
+- id: gloss.anata.1420970
+  story: kc.anata
+  kind: book-four
+  japanese: "地球"
+  reading: "ちきゅう"
+  english: "the Earth; the globe"
+  sentence: "雨の音は地球の音です。"
+  taughtId: vocab.chikyuu
+  notes: "JMdict seq 1420970. Taught in Book Four."
+
+- id: gloss.anata.1035860
+  story: kc.anata
+  kind: book-four
+  japanese: "オレンジ"
+  reading: "オレンジ"
+  english: "orange (fruit or colour)"
+  sentence: "オレンジ？"
+  taughtId: vocab.orenji
+  notes: "JMdict seq 1035860. Taught in Book Four."
+
+- id: gloss.anata.1577130
+  story: kc.anata
+  kind: book-four
+  japanese: "いつでも"
+  reading: "いつでも"
+  english: "any time; always"
+  sentence: "そして、いつでも、だれの上にも空はあります。"
+  taughtId: vocab.itsudemo
+  notes: "JMdict seq 1577130. Taught in Book Four."
+
+- id: gloss.anata.1463770
+  story: kc.anata
+  kind: new
+  japanese: "日"
+  reading: "ひ"
+  english: "day"
+  sentence: "雨の日は外を歩いてください。"
+  notes: "JMdict seq 1463770."
+
+- id: gloss.anata.1576900
+  story: kc.anata
+  kind: new
+  japanese: "音"
+  reading: "おと"
+  english: "sound; noise"
+  sentence: "雨の音を聞いてください。"
+  notes: "JMdict seq 1576900."
+
+- id: gloss.anata.1278410
+  story: kc.anata
+  kind: new
+  japanese: "広い"
+  reading: "ひろい"
+  english: "spacious; vast; wide"
+  sentence: "空は広いです。"
+  notes: "JMdict seq 1278410."

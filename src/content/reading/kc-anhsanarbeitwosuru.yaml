@@ -1,0 +1,133 @@
+# Reading glossary: KC よむよむ — アインさんアルバイトをする？ (kc.anhsanarbeitwosuru, A2)
+# Words this story uses that Books One to Three do not teach. Not lesson vocabulary:
+# Book Three's words arrive by mining from the library (book-three-bands.md section 1).
+# Text: KC よむよむ, Japan Foundation Kansai Center, CC BY-NC 2.1 JP, sentences verbatim.
+# Entries: JMdict for Applications 3.6.2 (CC BY 4.0), seq cited per entry, sense checked
+# against the sentence it came from.
+
+- id: gloss.anhsanarbeitwosuru.1051970
+  story: kc.anhsanarbeitwosuru
+  kind: new
+  japanese: "コンサート"
+  reading: "コンサート"
+  english: "concert"
+  sentence: "」「先週、SENSHU BOYZのコンサートに行きました。"
+  notes: "JMdict seq 1051970."
+
+- id: gloss.anhsanarbeitwosuru.1019420
+  story: kc.anhsanarbeitwosuru
+  kind: new
+  japanese: "アルバイト"
+  reading: "アルバイト"
+  english: "part-time job; side job"
+  sentence: "じゃあ、私と一緒にアルバイトをしませんか？"
+  notes: "JMdict seq 1019420."
+
+- id: gloss.anhsanarbeitwosuru.2826715
+  story: kc.anhsanarbeitwosuru
+  kind: new
+  japanese: "プーッ"
+  reading: "プー"
+  english: "beep (of a telephone tone)"
+  sentence: "プーッ、プーッ、プーッ「え？"
+  notes: "JMdict seq 2826715."
+
+- id: gloss.anhsanarbeitwosuru.1108460
+  story: kc.anhsanarbeitwosuru
+  kind: new
+  japanese: "ファミリーレストラン"
+  reading: "ファミリーレストラン"
+  english: "family restaurant"
+  sentence: "私はファミリーレストランでアルバイトをしています。"
+  notes: "JMdict seq 1108460."
+
+- id: gloss.anhsanarbeitwosuru.1374940
+  story: kc.anhsanarbeitwosuru
+  kind: new
+  japanese: "制服"
+  reading: "せいふく"
+  english: "uniform"
+  sentence: "」制服がとてもかわいいんですよ。"
+  notes: "JMdict seq 1374940."
+
+- id: gloss.anhsanarbeitwosuru.1046170
+  story: kc.anhsanarbeitwosuru
+  kind: new
+  japanese: "グッズ"
+  reading: "グッズ"
+  english: "goods; merchandise; commercial items"
+  sentence: "コンサートのグッズをたくさん買いました」そうですか…。"
+  notes: "JMdict seq 1046170."
+
+- id: gloss.anhsanarbeitwosuru.1188650
+  story: kc.anhsanarbeitwosuru
+  kind: new
+  japanese: "何回"
+  reading: "なんかい"
+  english: "how many times"
+  sentence: "では、週に何回働けますか？"
+  notes: "JMdict seq 1188650."
+
+- id: gloss.anhsanarbeitwosuru.1610070
+  story: kc.anhsanarbeitwosuru
+  kind: new
+  japanese: "絶対に"
+  reading: "ぜったいに"
+  english: "absolutely; definitely; unconditionally"
+  sentence: "絶対にだめです！"
+  notes: "JMdict seq 1610070."
+
+- id: gloss.anhsanarbeitwosuru.1138270
+  story: kc.anhsanarbeitwosuru
+  kind: new
+  japanese: "ライブ"
+  reading: "ライブ"
+  english: "live (broadcasting, music, etc.)"
+  sentence: "』「週末はよくSENSHU BOYZのライブがあるんです！"
+  notes: "JMdict seq 1138270."
+
+- id: gloss.anhsanarbeitwosuru.name-fountain
+  story: kc.anhsanarbeitwosuru
+  kind: name
+  japanese: "ファウンテン"
+  reading: "ファウンテン"
+  english: "Fountain — the family restaurant Ain calls"
+  sentence: "『はい、ファミリーレストラン「ファウンテン」です』「もしもし、そちらのレストランでアルバイトをしたいんですが」『そうですか、ありがとうございます。"
+  notes: "A name in this story (the restaurant); not vocabulary."
+
+- id: gloss.anhsanarbeitwosuru.1003140
+  story: kc.anhsanarbeitwosuru
+  kind: new
+  japanese: "ガチャン"
+  reading: "ガチャン"
+  english: "with a slamming noise (e.g. door, telephone receiver); with a banging noise; with a clash"
+  sentence: "お電話ありがとうございました』ガチャン。"
+  notes: "JMdict seq 1003140."
+
+- id: gloss.anhsanarbeitwosuru.1311110
+  story: kc.anhsanarbeitwosuru
+  kind: spelling
+  japanese: "私"
+  reading: "わたし"
+  english: "I; me"
+  sentence: "じゃあ、私と一緒にアルバイトをしませんか？"
+  taughtId: vocab.watashi
+  notes: "JMdict seq 1311110."
+
+- id: gloss.anhsanarbeitwosuru.1333450
+  story: kc.anhsanarbeitwosuru
+  kind: new
+  japanese: "週"
+  reading: "しゅう"
+  english: "week"
+  sentence: "では、週に何回働けますか？"
+  notes: "JMdict seq 1333450."
+
+- id: gloss.anhsanarbeitwosuru.name-ain
+  story: kc.anhsanarbeitwosuru
+  kind: name
+  japanese: "アイン"
+  reading: "アイン"
+  english: "Ain — the exchange student looking for a part-time job"
+  sentence: "アインさん、どうしたんですか？"
+  notes: "A name in this story; not vocabulary."
