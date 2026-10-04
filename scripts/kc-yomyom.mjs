@@ -140,6 +140,12 @@ export function modalHeight(pages) {
 export function sentences(lines) {
   return lines
     .join("")
+    // One book (010, 泉州野菜) sets its furigana-bearing kanji as separate text
+    // items padded with spaces, so they came out as 泉 州 and 有 名 -- junk to
+    // a tokenizer and to a learner mining the sentence. Japanese does not put
+    // spaces between its own characters; a space with Japanese on both sides is
+    // layout, not text. Latin spacing (SENSHU BOYZ) is left alone.
+    .replace(/(?<=[぀-ヿ一-鿿])[ 　]+(?=[぀-ヿ一-鿿])/g, "")
     .split(/(?<=[。！？])/)
     .map((s) => s.trim())
     .filter(Boolean);
@@ -274,6 +280,11 @@ export function candidateForms(sentence, offset, run) {
   return out;
 }
 
+
+/** Godan masu-stem endings back to their dictionary endings. */
+const I_TO_U = { い: "う", き: "く", ぎ: "ぐ", し: "す", ち: "つ", に: "ぬ", び: "ぶ", み: "む", り: "る" };
+const VERB_FOLLOWS = /^(ま[すしせ]|たい|たく|たかっ|ながら|に(行|来|い|き)|て|た)/;
+
 /** Parts of speech that are grammar, not vocabulary: Book Three teaches those as patterns. */
 const GRAMMAR_POS = /^(aux|prt|cop|suf|pref|conj)/;
 
@@ -309,6 +320,23 @@ async function unknowns() {
       byForm.get(f.text).push(entry);
     }
   }
+
+  // The verb a stem stands for, when the text says it is one.
+  const verbFor = (f, next) => {
+    let candidates = [];
+    if (VERB_FOLLOWS.test(next)) {
+      const last = f.at(-1);
+      if (I_TO_U[last]) candidates.push(f.slice(0, -1) + I_TO_U[last]);
+      candidates.push(f + "る");
+    } else if (/[てで]$/.test(f) && f.length > 2) {
+      candidates.push(f.slice(0, -1) + "る");
+    }
+    for (const c of candidates) {
+      const v = (byForm.get(c) ?? []).find((e) => e.common && e.pos.some((p) => /^v/.test(p)));
+      if (v) return { form: c, entry: v };
+    }
+    return null;
+  };
 
   const words = ourWords();
   const lexicon = buildLexicon(words, dictForms);
@@ -360,11 +388,76 @@ async function unknowns() {
   const unresolved = new Map();
   const gained = new Map();
   const note = (bucket, key, base, story, jpn) => {
-    const w = bucket.get(key) ?? { ...base, count: 0, stories: new Set(), example: jpn };
-    w.count++; w.stories.add(story); bucket.set(key, w);
+    const w = bucket.get(key) ?? { ...base, count: 0, stories: new Set(), example: jpn, sentences: {} };
+    w.count++; w.stories.add(story); w.sentences[story] ??= jpn; bucket.set(key, w);
     if (bucket !== unresolved) gained.set(story, (gained.get(story) ?? 0) + 1);
   };
 
+  /**
+   * The dictionary word standing at `at`, given the run the tokenizer saw
+   * there. Returns { pick } with the entry, "taught" when Books One to Three
+   * already teach it, "grammar" when only a grammar entry fits, or null.
+   */
+  const resolve = (jpn, at, run) => {
+    const forms = candidateForms(jpn, at, run);
+    // A taught word the tokenizer missed -- おいし before そう, a kana-only
+    // adjective with no kanji stem to match -- is a tokenizer limit, not a gap.
+    if (forms.some((f) => (taughtForm.get(f)?.book ?? 9) <= 3)) return "taught";
+    let grammarOnly = false;
+    for (const f of forms) {
+      const all = byForm.get(f) ?? [];
+      if (!all.length) continue;
+      const entries = all.filter((e) => !e.pos.some((p) => GRAMMAR_POS.test(p)));
+      if (!entries.length) { grammarOnly = true; continue; }
+      // A candidate reaching past the run into hiragana is only a word if
+      // it carries kanji (okurigana: 逃げる, 大好き). A kana-only reach is
+      // two words glued together -- じゃあ + く read as 邪悪, "wicked".
+      const reachedKana = f.length > run.length && /[ぁ-ゖ]/.test(f.slice(run.length)) && !/\p{Script=Han}/u.test(f);
+      if (reachedKana) continue;
+      if (f.length < 2 && !/\p{Script=Han}/u.test(f)) continue;
+      // A hiragana-only form counts only for a word normally written that
+      // way. しょう is 商, "quotient", in JMdict -- and debris from でしょう
+      // in every story. かぼちゃ is usually kana, so it passes.
+      const kanaOnly = /^[ぁ-ゖー]+$/.test(f);
+      const usable = kanaOnly ? entries.filter((e) => !e.hasKanji || e.usuallyKana) : entries;
+      if (!usable.length) continue;
+      const taught = usable.find((e) => (taughtBySeq.get(e.seq)?.book ?? 9) <= 4);
+      const entry = taught ?? usable.find((e) => e.common) ?? usable[0];
+      // A restored ending must not beat the run itself when the run is a
+      // common word and the restoration is not: 侍 (samurai) over 侍る.
+      const bare = (byForm.get(run) ?? []).find((e) => e.common && !e.pos.some((p) => GRAMMAR_POS.test(p)));
+      if (f !== run && f.startsWith(run) && !entry.common && bare) return { pick: { form: run, entry: bare } };
+      // A particle straight after the run means the run was the word: 光の
+      // is the noun 光, not the verb 光る restored from it.
+      if (f !== run && f.startsWith(run) && bare && jpn.startsWith(run, at) && /^[のがをにでとはもへや]/.test(jpn.slice(at + run.length))) {
+        return { pick: { form: run, entry: bare } };
+      }
+      if (jpn.startsWith(f, at)) {
+        const next = jpn.slice(at + f.length);
+        // A stem followed by ます, たい or ながら is a verb, whatever noun JMdict
+        // also spells that way: 動きます is 動く, not 動き "movement"; 流れます is
+        // 流れる, not 流れ "flow". て after a stem is the same verb's te-form.
+        const verb = verbFor(f, next);
+        if (verb) return { pick: verb };
+      }
+      return { pick: { form: f, entry } };
+    }
+    return grammarOnly ? "grammar" : null;
+  };
+
+  const classify = (pick, jpn, at, storyId) => {
+    const { form, entry } = pick;
+    const taught = taughtBySeq.get(entry.seq);
+    // 珍さま, アインさん: a form followed by an honorific is someone's name
+    // in this story, whatever JMdict says the characters mean.
+    const probableName = /^(さま|さん|くん|ちゃん|様)/.test(jpn.slice(jpn.indexOf(form, Math.max(0, at - 2)) + form.length));
+    const base = { form, seq: entry.seq, reading: entry.reading, gloss: entry.gloss, pos: entry.pos, common: entry.common, probableName };
+    if (taught && taught.book <= 3) note(buckets.spelling, entry.seq, { ...base, taughtAs: taught.japanese, taughtId: taught.id, taughtIn: taught.book }, storyId, jpn);
+    else if (taught && taught.book === 4) note(buckets.bookFour, taught.id, { id: taught.id, form, reading: entry.reading, seq: entry.seq }, storyId, jpn);
+    else note(buckets.new, entry.seq, base, storyId, jpn);
+  };
+
+  const wordById = new Map(words.map((w) => [w.id, w]));
   for (const story of lib.stories) {
     for (const { jpn } of story.sentences) {
       let offset = 0;
@@ -372,18 +465,38 @@ async function unknowns() {
         const at = offset;
         offset += t.text.length;
 
-        // Book Four words tokenize as known items against the full lexicon,
-        // so they never surface as unknown runs. Catch them here.
         if (t.kind === "item") {
+          // A token matched only by a taught word's kanji stem may be some
+          // other word entirely: 多 is the head of Book Four's 多才, and of the
+          // untaught 多い. Ask what word actually stands here. Found 2026-10-04
+          // when 多い, 広い, 動く, 始まる and 必ず turned out to be taught nowhere
+          // in the course and invisible to the first version of this report.
+          const exact = t.itemIds.some((id) => {
+            const w = wordById.get(id);
+            return w && (w.japanese?.trim() === t.text || w.reading?.trim() === t.text);
+          });
+          // A one-kanji word followed by kana may be the stem of another word:
+          // 数 is Book Four's "number", 数えて is the untaught 数える.
+          const stemOfOther = exact && t.text.length === 1 && /\p{Script=Han}/u.test(t.text) && /^[ぁ-ゖ]/.test(jpn.slice(at + 1));
+          if ((!exact || stemOfOther) && /\p{Script=Han}/u.test(t.text)) {
+            const r = resolve(jpn, at, t.text);
+            if (r === "taught" || r === "grammar") continue;
+            if (r) {
+              const known = taughtBySeq.get(r.pick.entry.seq);
+              if (known && known.book <= 3) continue; // the word is known, under another id
+              classify(r.pick, jpn, at, story.id);
+              continue;
+            }
+          }
+          // Book Four words tokenize as known items against the full lexicon,
+          // so they never surface as unknown runs. Catch them here.
           const books = t.itemIds.map((id) => firstBook.get(id)).filter((b) => b !== undefined);
           if (books.length && Math.min(...books) === 4) {
             const id = t.itemIds.find((i) => firstBook.get(i) === 4);
-            const w = words.find((x) => x.id === id);
+            const w = wordById.get(id);
             // A short kana reading -- 身 read み, 背 read せ -- matches inside
-            // any word that happens to contain that kana. Only a token that is
-            // the written word, or its kanji stem, is the word.
-            const written = w?.japanese?.trim() ?? "";
-            if (!(t.text === written || (/\p{Script=Han}/u.test(t.text) && written.startsWith(t.text)))) continue;
+            // any word that happens to contain that kana. Only the written word is the word.
+            if (t.text !== w?.japanese?.trim()) continue;
             note(buckets.bookFour, id, { id, form: w?.japanese, reading: w?.reading }, story.id, jpn);
           }
           continue;
@@ -391,54 +504,10 @@ async function unknowns() {
         if (t.kind !== "unknown") continue;
         if (/^[ぁ-ゖー]{1,2}$/.test(t.text)) continue; // segmentation debris, measured in #136
 
-        const forms = candidateForms(jpn, at, t.text);
-        // A taught word the tokenizer missed -- おいし before そう, a kana-only
-        // adjective with no kanji stem to match -- is a tokenizer limit, not a gap.
-        if (forms.some((f) => (taughtForm.get(f)?.book ?? 9) <= 3)) continue;
-
-        let pick = null;
-        let grammarOnly = false;
-        for (const f of forms) {
-          const all = byForm.get(f) ?? [];
-          if (!all.length) continue;
-          const entries = all.filter((e) => !e.pos.some((p) => GRAMMAR_POS.test(p)));
-          if (!entries.length) { grammarOnly = true; continue; }
-          // A candidate reaching past the run into hiragana is only a word if
-          // it carries kanji (okurigana: 逃げる, 大好き). A kana-only reach is
-          // two words glued together -- じゃあ + く read as 邪悪, "wicked".
-          const reachedKana = f.length > t.text.length && /[ぁ-ゖ]/.test(f.slice(t.text.length)) && !/\p{Script=Han}/u.test(f);
-          if (reachedKana) continue;
-          if (f.length < 2 && !/\p{Script=Han}/u.test(f)) continue;
-          // A hiragana-only form counts only for a word normally written that
-          // way. しょう is 商, "quotient", in JMdict -- and debris from でしょう
-          // in every story. かぼちゃ is usually kana, so it passes.
-          const kanaOnly = /^[ぁ-ゖー]+$/.test(f);
-          const usable = kanaOnly ? entries.filter((e) => !e.hasKanji || e.usuallyKana) : entries;
-          if (!usable.length) continue;
-          const taught = usable.find((e) => (taughtBySeq.get(e.seq)?.book ?? 9) <= 4);
-          const entry = taught ?? usable.find((e) => e.common) ?? usable[0];
-          // A restored ending must not beat the run itself when the run is a
-          // common word and the restoration is not: 侍 (samurai) over 侍る.
-          const bare = (byForm.get(t.text) ?? []).find((e) => e.common && !e.pos.some((p) => GRAMMAR_POS.test(p)));
-          if (f !== t.text && f.startsWith(t.text) && !entry.common && bare) { pick = { form: t.text, entry: bare }; break; }
-          pick = { form: f, entry };
-          break;
-        }
-        if (!pick && grammarOnly) continue; // じゃあ, らしい: Book Three teaches these as patterns
-        if (!pick) {
-          note(unresolved, t.text, { run: t.text }, story.id, jpn);
-          continue;
-        }
-        const { form, entry } = pick;
-        const taught = taughtBySeq.get(entry.seq);
-        // 珍さま, アインさん: a form followed by an honorific is someone's name
-        // in this story, whatever JMdict says the characters mean.
-        const after = jpn.slice(at + form.length - (form.startsWith(t.text) ? 0 : 0));
-        const probableName = /^(さま|さん|くん|ちゃん|様)/.test(jpn.slice(jpn.indexOf(form, Math.max(0, at - 2)) + form.length));
-        const base = { form, seq: entry.seq, reading: entry.reading, gloss: entry.gloss, pos: entry.pos, common: entry.common, probableName };
-        if (taught && taught.book <= 3) note(buckets.spelling, entry.seq, { ...base, taughtAs: taught.japanese, taughtId: taught.id, taughtIn: taught.book }, story.id, jpn);
-        else if (taught && taught.book === 4) note(buckets.bookFour, taught.id, { id: taught.id, form, reading: entry.reading, seq: entry.seq }, story.id, jpn);
-        else note(buckets.new, entry.seq, base, story.id, jpn);
+        const r = resolve(jpn, at, t.text);
+        if (r === "taught" || r === "grammar") continue;
+        if (!r) { note(unresolved, t.text, { run: t.text }, story.id, jpn); continue; }
+        classify(r.pick, jpn, at, story.id);
       }
     }
   }
@@ -492,10 +561,81 @@ async function unknowns() {
   show("UNRESOLVED, top 15", names.slice(0, 15), (r) => `${String(r.stories.length).padStart(2)}st ${r.count}x ${r.run}`);
 }
 
+
+// ── draft: starter glossary files for src/content/reading/ ──────────────────
+
+/**
+ * One starter YAML per story from the inventory, for an author to verify.
+ *
+ * The english is JMdict's FIRST sense, which is a guess: the author's job is to
+ * check every entry against its sentence and replace it with the sense the story
+ * means. `draft-senses.txt` beside the output lists every sense of every entry so
+ * that check does not need the dictionary open. Names are not drafted -- there
+ * is no entry to draft from -- and debris is never vocabulary.
+ *
+ * Refuses to overwrite: a drafted file that has been reviewed is authored
+ * content, and regenerating over it would silently undo the review.
+ */
+async function draftGlossaries() {
+  const inv = JSON.parse(readFileSync(join(ROOT, "data/reading/kc-unknowns.json"), "utf8"));
+  const lib = JSON.parse(readFileSync(OUT, "utf8"));
+  const jm = JSON.parse(readFileSync(join(ROOT, "server/data/jmdict-examples-eng-3.6.2.json"), "utf8"));
+  const bySeq = new Map(jm.words.map((e) => [e.id, e]));
+  const dir = join(ROOT, "src/content/reading");
+  mkdirSync(dir, { recursive: true });
+  const q = (v) => JSON.stringify(v);
+  const review = [];
+  let written = 0;
+
+  for (const story of lib.stories) {
+    const slug = story.id.replace(/^kc\./, "");
+    const file = join(dir, `kc-${slug}.yaml`);
+    if (existsSync(file)) { console.log(`  keep    kc-${slug}.yaml (exists)`); continue; }
+    const rows = [
+      ...inv.new.map((r) => ({ ...r, kind: "new" })),
+      ...inv.spelling.map((r) => ({ ...r, kind: "spelling" })),
+      ...inv.bookFour.map((r) => ({ ...r, kind: "book-four", taughtId: r.id })),
+    ].filter((r) => r.stories.includes(story.id) && r.seq);
+    const lines = [
+      `# Reading glossary: KC よむよむ — ${story.title} (${story.id}, ${story.level})`,
+      "# Words this story uses that Books One to Three do not teach. Not lesson vocabulary:",
+      "# Book Three's words arrive by mining from the library (book-three-bands.md section 1).",
+      "# Text: KC よむよむ, Japan Foundation Kansai Center, CC BY-NC 2.1 JP, sentences verbatim.",
+      "# Entries: JMdict for Applications 3.6.2 (CC BY 4.0), seq cited per entry, sense checked",
+      "# against the sentence it came from.",
+      "",
+    ];
+    review.push(`\n==== ${story.id} — ${story.title}`);
+    for (const r of rows) {
+      const e = bySeq.get(r.seq);
+      const senses = (e?.sense ?? []).map((x, i) => `${i + 1}. ${x.gloss.map((g) => g.text).join("; ")}`);
+      const sentence = r.sentences?.[story.id] ?? r.example;
+      lines.push(
+        `- id: gloss.${slug}.${r.seq}`,
+        `  story: ${story.id}`,
+        `  kind: ${r.kind}`,
+        `  japanese: ${q(r.form)}`,
+        `  reading: ${q(r.reading)}`,
+        `  english: ${q((e?.sense[0]?.gloss ?? []).slice(0, 3).map((g) => g.text).join("; "))}`,
+        `  sentence: ${q(sentence)}`,
+        ...(r.taughtId ? [`  taughtId: ${r.taughtId}`] : []),
+        `  notes: ${q(`JMdict seq ${r.seq}.`)}`,
+        "",
+      );
+      review.push(`${r.kind.padEnd(9)} ${r.form} [${r.reading}] seq ${r.seq}  «${sentence}»`, ...senses.slice(0, 6).map((x) => `      ${x}`));
+    }
+    writeFileSync(file, lines.join("\n"));
+    written++;
+  }
+  writeFileSync(join(ROOT, "data/reading/draft-senses.txt"), review.join("\n") + "\n");
+  console.log(`\n  drafted ${written} files; every sense listed in data/reading/draft-senses.txt\n`);
+}
+
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const cmd = process.argv[2];
   if (cmd === "fetch") await fetchAll();
   else if (cmd === "build") await build();
   else if (cmd === "unknowns") await unknowns();
-  else { console.log("usage: node scripts/kc-yomyom.mjs <fetch | build | unknowns>"); process.exitCode = 1; }
+  else if (cmd === "draft") await draftGlossaries();
+  else { console.log("usage: node scripts/kc-yomyom.mjs <fetch | build | unknowns | draft>"); process.exitCode = 1; }
 }
