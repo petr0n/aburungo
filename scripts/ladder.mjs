@@ -103,8 +103,10 @@ function readContent() {
   // their glossaries and the band gate texts from src/content/reading/.
   const readingYaml = loadDir("reading");
   const library = JSON.parse(readFileSync(join(ROOT, "data/reading/kc-yomyom.json"), "utf8"));
+  const gv = JSON.parse(readFileSync(join(ROOT, "data/reading/gv-passages.json"), "utf8"));
   const reading = {
     stories: library.stories,
+    passages: gv.stories,
     glossary: readingYaml.filter((e) => e.kind !== undefined),
     gates: readingYaml.filter((e) => e.band !== undefined),
   };
@@ -154,7 +156,7 @@ function buildMarkdown(book, ctx) {
   w(`| Grammar patterns | ${counts.patterns} |`);
   w(`| Kanji introduced | ${kanji.size} |`);
   if (book.key === "b3") {
-    w(`| Reading library | ${ctx.reading.stories.length} stories, ${ctx.reading.glossary.length} glossary entries |`);
+    w(`| Reading library | ${ctx.reading.stories.length} stories, ${ctx.reading.passages.length} gate passages, ${ctx.reading.glossary.length} glossary entries |`);
   }
   w();
 
@@ -258,13 +260,14 @@ const KIND_LABEL = { new: "new", spelling: "taught, other spelling", "book-four"
  * reads (book-three-bands.md section 1) -- so it sits after the ladder.
  */
 function readingSection(w, reading) {
-  const byStory = new Map(reading.stories.map((s) => [s.id, s]));
+  const byStory = new Map([...reading.stories, ...reading.passages].map((s) => [s.id, s]));
   w();
   w("## Reading library");
   w();
-  w("The KC よむよむ graded readers (Japan Foundation Kansai Center, CC BY-NC 2.1 JP), levelled");
-  w("against Books One to Three, with the words each story needs that those books do not teach.");
-  w("Vocabulary at this stage arrives by mining from these stories, not from lessons.");
+  w("The KC よむよむ graded readers (Japan Foundation Kansai Center, CC BY-NC 2.1 JP) and six");
+  w("Global Voices 日本語 passages (CC BY 3.0) that close the chapters whose N3 grammar no graded");
+  w("reader uses. Each is levelled against Books One to Three and carries the words it needs that");
+  w("those books do not teach. Vocabulary at this stage arrives by mining, not from lessons.");
   w();
   w("### Gate texts");
   w();
@@ -276,6 +279,25 @@ function readingSection(w, reading) {
     else w(`| ${chapter} | ${byStory.get(g.story)?.title ?? g.story} | ${g.evidence.map((e) => `<span lang="ja">${e}</span>`).join("<br>")} |`);
   }
   w();
+  const glossaryTable = (id) => {
+    w("| Word | Reading | Meaning | |");
+    w("|---|---|---|---|");
+    for (const e of reading.glossary.filter((g) => g.story === id)) w(`| ${e.japanese} | ${e.reading} | ${e.english} | ${KIND_LABEL[e.kind]} |`);
+  };
+  w("### Gate passages");
+  for (const p of reading.passages) {
+    const entries = reading.glossary.filter((e) => e.story === p.id);
+    w();
+    w(`#### ${p.title}`);
+    w();
+    // CC BY 3.0: author and link at the top of wherever the passage is shown.
+    w(`By ${p.author}, translated by ${p.translator} · [Global Voices 日本語](${p.link}) · CC BY 3.0`);
+    w();
+    w(`Closes chapter ${p.gateFor.replace(/^b3\.band-/, "")} · ${p.sentences.length} sentences · ${entries.length} glossary entries`);
+    w();
+    glossaryTable(p.id);
+  }
+  w();
   w("### Stories");
   for (const story of reading.stories) {
     const entries = reading.glossary.filter((e) => e.story === story.id);
@@ -284,9 +306,7 @@ function readingSection(w, reading) {
     w();
     w(`${story.level} · ${story.sentences.length} sentences · ${entries.length} glossary entries`);
     w();
-    w("| Word | Reading | Meaning | |");
-    w("|---|---|---|---|");
-    for (const e of entries) w(`| ${e.japanese} | ${e.reading} | ${e.english} | ${KIND_LABEL[e.kind]} |`);
+    glossaryTable(story.id);
   }
   w();
 }

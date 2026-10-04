@@ -1,0 +1,260 @@
+# Reading glossary: Global Voices 日本語 — 「女性だからと夢をあきらめないで」トルコ人航空宇宙エンジニアは語る (gv.58639-14, news)
+# Words this story uses that Books One to Three do not teach. Not lesson vocabulary:
+# Book Three's words arrive by mining from the library (book-three-bands.md section 1).
+# Text: Global Voices 日本語, CC BY 3.0, sentences verbatim.
+# Article: https://jp.globalvoices.org/2021/11/07/58639/ -- by Sevgi Yagmur Bulut, translated by Moegi Tanaka.
+# Entries: JMdict for Applications 3.6.2 (CC BY 4.0), seq cited per entry, sense checked
+# against the sentence it came from.
+
+- id: gloss.58639-14.1311110
+  story: gv.58639-14
+  kind: spelling
+  japanese: "私"
+  reading: "わたし"
+  english: "I; me"
+  sentence: "多くの人は航空宇宙工学に私の未来はないと思っていました。"
+  taughtId: vocab.watashi
+  notes: "JMdict seq 1311110."
+
+- id: gloss.58639-14.1329590
+  story: gv.58639-14
+  kind: new
+  japanese: "受ける"
+  reading: "うける"
+  english: "to receive (批判を受ける: to be criticised)"
+  sentence: "親戚や教師、まったくの他人から批判を受けるとは考えもしませんでした。"
+  notes: "JMdict seq 1329590."
+
+- id: gloss.58639-14.1365230
+  story: gv.58639-14
+  kind: new
+  japanese: "親戚"
+  reading: "しんせき"
+  english: "relative; relation; kin"
+  sentence: "親戚や教師、まったくの他人から批判を受けるとは考えもしませんでした。"
+  notes: "JMdict seq 1365230."
+
+- id: gloss.58639-14.1483420
+  story: gv.58639-14
+  kind: new
+  japanese: "批判"
+  reading: "ひはん"
+  english: "criticism; judgement; judgment"
+  sentence: "親戚や教師、まったくの他人から批判を受けるとは考えもしませんでした。"
+  notes: "JMdict seq 1483420."
+
+- id: gloss.58639-14.1861770
+  story: gv.58639-14
+  kind: new
+  japanese: "多く"
+  reading: "おおく"
+  english: "many; most (多くの人: many people)"
+  sentence: "多くの人は航空宇宙工学に私の未来はないと思っていました。"
+  notes: "JMdict seq 1861770."
+
+- id: gloss.58639-14.1528060
+  story: gv.58639-14
+  kind: new
+  japanese: "未来"
+  reading: "みらい"
+  english: "(distant) future"
+  sentence: "多くの人は航空宇宙工学に私の未来はないと思っていました。"
+  notes: "JMdict seq 1528060."
+
+- id: gloss.58639-14.1532310
+  story: gv.58639-14
+  kind: new
+  japanese: "明らか"
+  reading: "あきらか"
+  english: "clear; obvious; evident"
+  sentence: "私が、明らかに女性にもっと向いている医学を選ばないなんて、入試の点数を無駄にしていると言う人もいましたし、工学を学びたいのならもっと女子向きのものを選ぶべきだという人もいました。"
+  notes: "JMdict seq 1532310."
+
+- id: gloss.58639-14.1159810
+  story: gv.58639-14
+  kind: new
+  japanese: "医学"
+  reading: "いがく"
+  english: "medicine; medical science"
+  sentence: "私が、明らかに女性にもっと向いている医学を選ばないなんて、入試の点数を無駄にしていると言う人もいましたし、工学を学びたいのならもっと女子向きのものを選ぶべきだという人もいました。"
+  notes: "JMdict seq 1159810."
+
+- id: gloss.58639-14.1588730
+  story: gv.58639-14
+  kind: book-four
+  japanese: "選ぶ"
+  reading: "えらぶ"
+  english: "to choose"
+  sentence: "私が、明らかに女性にもっと向いている医学を選ばないなんて、入試の点数を無駄にしていると言う人もいましたし、工学を学びたいのならもっと女子向きのものを選ぶべきだという人もいました。"
+  taughtId: vocab.erabu
+  notes: "JMdict seq 1588730."
+
+- id: gloss.58639-14.1466200
+  story: gv.58639-14
+  kind: new
+  japanese: "入試"
+  reading: "にゅうし"
+  english: "entrance examination"
+  sentence: "私が、明らかに女性にもっと向いている医学を選ばないなんて、入試の点数を無駄にしていると言う人もいましたし、工学を学びたいのならもっと女子向きのものを選ぶべきだという人もいました。"
+  notes: "JMdict seq 1466200."
+
+- id: gloss.58639-14.1441660
+  story: gv.58639-14
+  kind: new
+  japanese: "点数"
+  reading: "てんすう"
+  english: "marks; points; score"
+  sentence: "私が、明らかに女性にもっと向いている医学を選ばないなんて、入試の点数を無駄にしていると言う人もいましたし、工学を学びたいのならもっと女子向きのものを選ぶべきだという人もいました。"
+  notes: "JMdict seq 1441660."
+
+- id: gloss.58639-14.1278010
+  story: gv.58639-14
+  kind: new
+  japanese: "工学"
+  reading: "こうがく"
+  english: "engineering"
+  sentence: "私が、明らかに女性にもっと向いている医学を選ばないなんて、入試の点数を無駄にしていると言う人もいましたし、工学を学びたいのならもっと女子向きのものを選ぶべきだという人もいました。"
+  notes: "JMdict seq 1278010."
+
+- id: gloss.58639-14.1205870
+  story: gv.58639-14
+  kind: new
+  japanese: "確信"
+  reading: "かくしん"
+  english: "conviction; belief; confidence"
+  sentence: "私は自分に確信を持ち、絶対にやりたいことがわかっていましたから、何を言われても私の人生には影響しませんでした。"
+  notes: "JMdict seq 1205870."
+
+- id: gloss.58639-14.1386840
+  story: gv.58639-14
+  kind: new
+  japanese: "絶対"
+  reading: "ぜったい"
+  english: "absolutely; definitely; unconditionally"
+  sentence: "私は自分に確信を持ち、絶対にやりたいことがわかっていましたから、何を言われても私の人生には影響しませんでした。"
+  notes: "JMdict seq 1386840."
+
+- id: gloss.58639-14.1173660
+  story: gv.58639-14
+  kind: new
+  japanese: "影響"
+  reading: "えいきょう"
+  english: "influence; effect; impact"
+  sentence: "私は自分に確信を持ち、絶対にやりたいことがわかっていましたから、何を言われても私の人生には影響しませんでした。"
+  notes: "JMdict seq 1173660."
+
+- id: gloss.58639-14.1179840
+  story: gv.58639-14
+  kind: new
+  japanese: "応援"
+  reading: "おうえん"
+  english: "support; cheering someone on"
+  sentence: "両親はずっと私を応援してくれたので、そういう意味では私は恵まれていたと思います。"
+  notes: "JMdict seq 1179840."
+
+- id: gloss.58639-14.1611980
+  story: gv.58639-14
+  kind: new
+  japanese: "恵まれる"
+  reading: "めぐまれる"
+  english: "to be blessed; to be fortunate"
+  sentence: "両親はずっと私を応援してくれたので、そういう意味では私は恵まれていたと思います。"
+  notes: "JMdict seq 1611980."
+
+- id: gloss.58639-14.2828857
+  story: gv.58639-14
+  kind: new
+  japanese: "航空宇宙工学"
+  reading: "こうくううちゅうこうがく"
+  english: "aerospace engineering"
+  sentence: "多くの人は航空宇宙工学に私の未来はないと思っていました。"
+  notes: "JMdict seq 2828857."
+
+- id: gloss.58639-14.1870130
+  story: gv.58639-14
+  kind: new
+  japanese: "向いている"
+  reading: "むいている"
+  english: "to be cut out for (e.g. a job); to be suited (to)"
+  sentence: "私が、明らかに女性にもっと向いている医学を選ばないなんて、入試の点数を無駄にしていると言う人もいましたし、工学を学びたいのならもっと女子向きのものを選ぶべきだという人もいました。"
+  notes: "JMdict seq 1870130."
+
+- id: gloss.58639-14.1237130
+  story: gv.58639-14
+  kind: book-four
+  japanese: "教師"
+  reading: "きょうし"
+  english: "teacher; instructor"
+  sentence: "親戚や教師、まったくの他人から批判を受けるとは考えもしませんでした。"
+  taughtId: vocab.kyoushi
+  notes: "JMdict seq 1237130. Taught in Book Four."
+
+- id: gloss.58639-14.1581400
+  story: gv.58639-14
+  kind: book-four
+  japanese: "他人"
+  reading: "たにん"
+  english: "other people, someone outside the family"
+  sentence: "親戚や教師、まったくの他人から批判を受けるとは考えもしませんでした。"
+  taughtId: vocab.tanin
+  notes: "JMdict seq 1581400. Taught in Book Four."
+
+- id: gloss.58639-14.1345250
+  story: gv.58639-14
+  kind: book-four
+  japanese: "女性"
+  reading: "じょせい"
+  english: "woman; female"
+  sentence: "私が、明らかに女性にもっと向いている医学を選ばないなんて、入試の点数を無駄にしていると言う人もいましたし、工学を学びたいのならもっと女子向きのものを選ぶべきだという人もいました。"
+  taughtId: vocab.josei
+  notes: "JMdict seq 1345250. Taught in Book Four."
+
+- id: gloss.58639-14.1530510
+  story: gv.58639-14
+  kind: book-four
+  japanese: "無駄"
+  reading: "むだ"
+  english: "pointless, a waste"
+  sentence: "私が、明らかに女性にもっと向いている医学を選ばないなんて、入試の点数を無駄にしていると言う人もいましたし、工学を学びたいのならもっと女子向きのものを選ぶべきだという人もいました。"
+  taughtId: vocab.muda
+  notes: "JMdict seq 1530510. Taught in Book Four."
+
+- id: gloss.58639-14.1505990
+  story: gv.58639-14
+  kind: book-four
+  japanese: "しかし"
+  reading: "しかし"
+  english: "however (in writing); but"
+  sentence: "しかし私はそんなことには耳を貸しませんでした。"
+  taughtId: vocab.shikashi
+  notes: "JMdict seq 1505990. Taught in Book Four."
+
+- id: gloss.58639-14.1318610
+  story: gv.58639-14
+  kind: book-four
+  japanese: "自分"
+  reading: "じぶん"
+  english: "oneself"
+  sentence: "私は自分に確信を持ち、絶対にやりたいことがわかっていましたから、何を言われても私の人生には影響しませんでした。"
+  taughtId: vocab.jibun
+  notes: "JMdict seq 1318610. Taught in Book Four."
+
+- id: gloss.58639-14.1368370
+  story: gv.58639-14
+  kind: book-four
+  japanese: "人生"
+  reading: "じんせい"
+  english: "(a person's) life"
+  sentence: "私は自分に確信を持ち、絶対にやりたいことがわかっていましたから、何を言われても私の人生には影響しませんでした。"
+  taughtId: vocab.jinsei
+  notes: "JMdict seq 1368370. Taught in Book Four."
+
+- id: gloss.58639-14.1156800
+  story: gv.58639-14
+  kind: book-four
+  japanese: "意味"
+  reading: "いみ"
+  english: "meaning; sense"
+  sentence: "両親はずっと私を応援してくれたので、そういう意味では私は恵まれていたと思います。"
+  taughtId: vocab.imi
+  notes: "JMdict seq 1156800. Taught in Book Four."

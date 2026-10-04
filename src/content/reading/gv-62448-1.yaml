@@ -1,0 +1,117 @@
+# Reading glossary: Global Voices 日本語 — カモノハシが野生で生息できるために (gv.62448-1, news)
+# Words this story uses that Books One to Three do not teach. Not lesson vocabulary:
+# Book Three's words arrive by mining from the library (book-three-bands.md section 1).
+# Text: Global Voices 日本語, CC BY 3.0, sentences verbatim.
+# Article: https://jp.globalvoices.org/2024/04/02/62448/ -- by Kevin Rennie, translated by Moegi Tanaka.
+# Entries: JMdict for Applications 3.6.2 (CC BY 4.0), seq cited per entry, sense checked
+# against the sentence it came from.
+
+- id: gloss.62448-1.1311110
+  story: gv.62448-1
+  kind: spelling
+  japanese: "私"
+  reading: "わたし"
+  english: "I; me"
+  sentence: "私はこれまでオーストラリアの広大な地をくまなく旅してきたにもかかわらず、私が生きてきた4分の3世紀の間に野生のカモノハシを見たのはわずか一度である。"
+  taughtId: vocab.watashi
+  notes: "JMdict seq 1311110."
+
+- id: gloss.62448-1.1031680
+  story: gv.62448-1
+  kind: new
+  japanese: "オーストラリア"
+  reading: "オーストラリア"
+  english: "Australia"
+  sentence: "私はこれまでオーストラリアの広大な地をくまなく旅してきたにもかかわらず、私が生きてきた4分の3世紀の間に野生のカモノハシを見たのはわずか一度である。"
+  notes: "JMdict seq 1031680."
+
+- id: gloss.62448-1.1278600
+  story: gv.62448-1
+  kind: new
+  japanese: "広大"
+  reading: "こうだい"
+  english: "vast; extensive; immense"
+  sentence: "私はこれまでオーストラリアの広大な地をくまなく旅してきたにもかかわらず、私が生きてきた4分の3世紀の間に野生のカモノハシを見たのはわずか一度である。"
+  notes: "JMdict seq 1278600."
+
+- id: gloss.62448-1.1420730
+  story: gv.62448-1
+  kind: new
+  japanese: "地"
+  reading: "ち"
+  english: "land (広大な地: a vast land)"
+  sentence: "私はこれまでオーストラリアの広大な地をくまなく旅してきたにもかかわらず、私が生きてきた4分の3世紀の間に野生のカモノハシを見たのはわずか一度である。"
+  notes: "JMdict seq 1420730."
+
+- id: gloss.62448-1.1553120
+  story: gv.62448-1
+  kind: new
+  japanese: "旅"
+  reading: "たび"
+  english: "travel; trip; journey"
+  sentence: "私はこれまでオーストラリアの広大な地をくまなく旅してきたにもかかわらず、私が生きてきた4分の3世紀の間に野生のカモノハシを見たのはわずか一度である。"
+  notes: "JMdict seq 1553120."
+
+- id: gloss.62448-1.1373990
+  story: gv.62448-1
+  kind: new
+  japanese: "世紀"
+  reading: "せいき"
+  english: "century"
+  sentence: "私はこれまでオーストラリアの広大な地をくまなく旅してきたにもかかわらず、私が生きてきた4分の3世紀の間に野生のカモノハシを見たのはわずか一度である。"
+  notes: "JMdict seq 1373990."
+
+- id: gloss.62448-1.1537470
+  story: gv.62448-1
+  kind: new
+  japanese: "野生"
+  reading: "やせい"
+  english: "wild"
+  sentence: "私はこれまでオーストラリアの広大な地をくまなく旅してきたにもかかわらず、私が生きてきた4分の3世紀の間に野生のカモノハシを見たのはわずか一度である。"
+  notes: "JMdict seq 1537470."
+
+- id: gloss.62448-1.1283490
+  story: gv.62448-1
+  kind: new
+  japanese: "高原"
+  reading: "こうげん"
+  english: "tableland; plateau"
+  sentence: "それはノース・クイーンズランドのアサートン高原にある滝の下の池でのことだった。"
+  notes: "JMdict seq 1283490."
+
+- id: gloss.62448-1.1415520
+  story: gv.62448-1
+  kind: new
+  japanese: "滝"
+  reading: "たき"
+  english: "waterfall"
+  sentence: "それはノース・クイーンズランドのアサートン高原にある滝の下の池でのことだった。"
+  notes: "JMdict seq 1415520."
+
+- id: gloss.62448-1.1209260
+  story: gv.62448-1
+  kind: new
+  japanese: "カモノハシ"
+  reading: "かものはし"
+  english: "platypus"
+  sentence: "私はこれまでオーストラリアの広大な地をくまなく旅してきたにもかかわらず、私が生きてきた4分の3世紀の間に野生のカモノハシを見たのはわずか一度である。"
+  notes: "JMdict seq 1209260."
+
+- id: gloss.62448-1.1043460
+  story: gv.62448-1
+  kind: new
+  japanese: "クイーンズランド"
+  reading: "クイーンズランド"
+  english: "Queensland (Australia)"
+  sentence: "それはノース・クイーンズランドのアサートン高原にある滝の下の池でのことだった。"
+  notes: "JMdict seq 1043460."
+
+- id: gloss.62448-1.1378520
+  story: gv.62448-1
+  kind: book-four
+  japanese: "生きる"
+  reading: "いきる"
+  english: "to live; to exist"
+  sentence: "私はこれまでオーストラリアの広大な地をくまなく旅してきたにもかかわらず、私が生きてきた4分の3世紀の間に野生のカモノハシを見たのはわずか一度である。"
+  taughtId: vocab.ikiru
+  notes: "JMdict seq 1378520."

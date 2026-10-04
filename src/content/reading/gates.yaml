@@ -1,23 +1,21 @@
-# Book Three gate texts: the library story that closes each band.
+# Book Three gate texts: the passage that closes each band.
 #
 # docs/plans/book-three-bands.md section 1: a band's checkpoint gains "a gate text
 # the learner could not have read when the band opened". The evidence here is the
-# band's own grammar, quoted verbatim from the story -- a pattern the learner
+# band's own grammar, quoted verbatim from the passage -- a pattern the learner
 # meets in that band, standing in running text they read at its end.
 #
 # Matched by hand, not by surface search. A string search for the band patterns
-# also finds めずらしい and すばらしい for らしい, しまいました for まい, 飲みたい
-# for みたい, もの+の for ものの, and 「県の間に」 ("between") for the time sense
-# of 間に. None of those are the pattern, and none are used.
+# also finds めずらしい and すばらしい for らしい, しまいました for まい, 時間には for
+# 間に, 実際に for 際に, and なくてはならない (obligation) for てはならない
+# (prohibition). None of those are the pattern, and none are used.
 #
-# Six bands have no gate text. Their patterns are N3 grammar and the library's 26
-# stories are A1-A2: no sentence in any of them uses causal ために, concessive
-# ものの, sharpened conditions, the time sense of 間に, obligation, or written
-# register. Nothing is forced to fit. The follow-up is a text source with
-# N3-level stories (book-three-bands.md section 2, option (a), parked by the
-# owner on 2026-09-22).
-#
-# Text: KC よむよむ, Japan Foundation Kansai Center, CC BY-NC 2.1 JP, verbatim.
+# Two sources. kc.* are KC よむよむ stories (Japan Foundation Kansai Center,
+# CC BY-NC 2.1 JP), data/reading/kc-yomyom.json. They are A1-A2, and six bands
+# teach N3 grammar none of them uses, so those six close with gv.* passages:
+# one paragraph each from Global Voices 日本語 (CC BY 3.0), chosen 2026-10-04
+# from 300 articles, data/reading/gv-passages.json, which carries the author and
+# translator credit the licence requires.
 
 - band: b3.band-0
   story: kc.senshuyasai
@@ -28,20 +26,28 @@
     - 「日本のたまねぎ作りの最初の場所」だと言われるくらい泉州は有名なんですよ。
 
 - band: b3.band-1
-  story: null
-  reason: No story uses causal ために. Both hits (行くために, 夫婦になるために) are purpose, which band 7 owns.
+  story: gv.65377-13
+  patterns: [grammar.b3-okage-de]
+  evidence:
+    - でも私は家族のおかげで一つの道を見つけた。
 
 - band: b3.band-2
-  story: null
-  reason: No story uses concession. The one ものの in the library is もの + の (有名なものの絵).
+  story: gv.62448-1
+  patterns: [grammar.b3-nimokakawarazu]
+  evidence:
+    - 私はこれまでオーストラリアの広大な地をくまなく旅してきたにもかかわらず、私が生きてきた4分の3世紀の間に野生のカモノハシを見たのはわずか一度である。
 
 - band: b3.band-3
-  story: null
-  reason: No story uses any of 限り, 次第, さえ〜ば or たとえ〜ても.
+  story: gv.63643-20
+  patterns: [grammar.b3-cond-tatoe-temo]
+  evidence:
+    - たとえ日本で永住権を得たとしても、子どもたちのために何としてでもネパールへ帰ると言う人もいる。
 
 - band: b3.band-4
-  story: null
-  reason: No story uses this band's time patterns. The one 間に is "between" (大阪府と奈良県の間に), not "while".
+  story: gv.58290-32
+  patterns: [grammar.b3-uchini]
+  evidence:
+    - 5分もたたないうちに踊り出す人がいます。
 
 - band: b3.band-5
   story: kc.idolyametai
@@ -63,8 +69,10 @@
     - かぼちゃを食べて、風邪をひかないようにしましょう！
 
 - band: b3.band-8
-  story: null
-  reason: No story uses obligation -- not なければならない, べき, 必要がある, てはならない or ざるを得ない.
+  story: gv.58639-14
+  patterns: [grammar.b3-beki]
+  evidence:
+    - 私が、明らかに女性にもっと向いている医学を選ばないなんて、入試の点数を無駄にしていると言う人もいましたし、工学を学びたいのならもっと女子向きのものを選ぶべきだという人もいました。
 
 - band: b3.band-9
   story: kc.hijoguchi
@@ -74,5 +82,7 @@
     - 見たことがありますか？
 
 - band: b3.band-10
-  story: null
-  reason: No story is written in the written register -- no である, つつある, ゆえに or において.
+  story: gv.63627-1
+  patterns: [grammar.b3-de-aru]
+  evidence:
+    - それは淹（い）れたてかどうか、また薄くしてもらえるかどうかである。

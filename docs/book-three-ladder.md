@@ -17,7 +17,7 @@ never reads it.
 | Phrases | 379 |
 | Grammar patterns | 68 |
 | Kanji introduced | 10 |
-| Reading library | 26 stories, 473 glossary entries |
+| Reading library | 26 stories, 6 gate passages, 565 glossary entries |
 
 ---
 
@@ -1503,25 +1503,174 @@ never reads it.
 
 ## Reading library
 
-The KC よむよむ graded readers (Japan Foundation Kansai Center, CC BY-NC 2.1 JP), levelled
-against Books One to Three, with the words each story needs that those books do not teach.
-Vocabulary at this stage arrives by mining from these stories, not from lessons.
+The KC よむよむ graded readers (Japan Foundation Kansai Center, CC BY-NC 2.1 JP) and six
+Global Voices 日本語 passages (CC BY 3.0) that close the chapters whose N3 grammar no graded
+reader uses. Each is levelled against Books One to Three and carries the words it needs that
+those books do not teach. Vocabulary at this stage arrives by mining, not from lessons.
 
 ### Gate texts
 
 | Chapter | Closes with | Grammar it uses |
 |---|---|---|
 | 0 | 泉州野菜 | <span lang="ja">水ナスは江戸時代から泉州地域で作られています。</span><br><span lang="ja">泉州たまねぎは明治時代から作られています。</span><br><span lang="ja">「日本のたまねぎ作りの最初の場所」だと言われるくらい泉州は有名なんですよ。</span> |
-| 1 | — | *No story uses causal ために. Both hits (行くために, 夫婦になるために) are purpose, which band 7 owns.* |
-| 2 | — | *No story uses concession. The one ものの in the library is もの + の (有名なものの絵).* |
-| 3 | — | *No story uses any of 限り, 次第, さえ〜ば or たとえ〜ても.* |
-| 4 | — | *No story uses this band's time patterns. The one 間に is "between" (大阪府と奈良県の間に), not "while".* |
+| 1 | アフガニスタン：タリバンの女子教育禁止を私は乗り越える | <span lang="ja">でも私は家族のおかげで一つの道を見つけた。</span> |
+| 2 | カモノハシが野生で生息できるために | <span lang="ja">私はこれまでオーストラリアの広大な地をくまなく旅してきたにもかかわらず、私が生きてきた4分の3世紀の間に野生のカモノハシを見たのはわずか一度である。</span> |
+| 3 | 日本で生まれ育ったネパール人の子どもたちは、なぜ祖国へ帰ろうとするのか | <span lang="ja">たとえ日本で永住権を得たとしても、子どもたちのために何としてでもネパールへ帰ると言う人もいる。</span> |
+| 4 | ロマ音楽家の語るチェコ社会の両面性 | <span lang="ja">5分もたたないうちに踊り出す人がいます。</span> |
 | 5 | アイドルやめたい | <span lang="ja">ぼくは、みんなみたいにダンスも歌も上手じゃないし、おもしろいわけでもないです。</span> |
 | 6 | マンホール | <span lang="ja">…でも、下ばかり見て歩いているとあぶないですよ。</span><br><span lang="ja">ふたの形は丸くて、60cmくらいの大きさが多いです。</span> |
 | 7 | かぼちゃ | <span lang="ja">かぼちゃを食べて、風邪をひかないようにしましょう！</span> |
-| 8 | — | *No story uses obligation -- not なければならない, べき, 必要がある, てはならない or ざるを得ない.* |
+| 8 | 「女性だからと夢をあきらめないで」トルコ人航空宇宙エンジニアは語る | <span lang="ja">私が、明らかに女性にもっと向いている医学を選ばないなんて、入試の点数を無駄にしていると言う人もいましたし、工学を学びたいのならもっと女子向きのものを選ぶべきだという人もいました。</span> |
 | 9 | 非常口 | <span lang="ja">はじめは「非常口」という文字だけのサインでしたが、子どもや外国人にもわかりやすいように、絵のサインを作りました。</span><br><span lang="ja">見たことがありますか？</span> |
-| 10 | — | *No story is written in the written register -- no である, つつある, ゆえに or において.* |
+| 10 | アゼルバイジャンとトルコの紅茶文化の違い | <span lang="ja">それは淹（い）れたてかどうか、また薄くしてもらえるかどうかである。</span> |
+
+### Gate passages
+
+#### アフガニスタン：タリバンの女子教育禁止を私は乗り越える
+
+By Global Voices Eurasia, translated by Moegi Tanaka · [Global Voices 日本語](https://jp.globalvoices.org/2026/05/18/65377/) · CC BY 3.0
+
+Closes chapter 1 · 4 sentences · 11 glossary entries
+
+| Word | Reading | Meaning | |
+|---|---|---|---|
+| 私 | わたし | I; me | taught, other spelling |
+| 代 | だい | (10代) one's teens | new |
+| 暗闇 | くらやみ | darkness; the dark | new |
+| 抜け出す | ぬけだす | to slip out; to break free | new |
+| 困難 | こんなん | difficulty; hardship; trouble | new |
+| 人目 | ひとめ | (public) notice; attention; public eye | new |
+| センター | センター | centre; center | new |
+| 秘か | ひそか | secret; private; surreptitious | new |
+| 勇気ある | ゆうきある | courageous; brave; bold | new |
+| 見つける | みつける | to find; to discover; to come across | Book Four word |
+| 実は | じつは | actually, to tell the truth | Book Four word |
+
+#### カモノハシが野生で生息できるために
+
+By Kevin Rennie, translated by Moegi Tanaka · [Global Voices 日本語](https://jp.globalvoices.org/2024/04/02/62448/) · CC BY 3.0
+
+Closes chapter 2 · 2 sentences · 12 glossary entries
+
+| Word | Reading | Meaning | |
+|---|---|---|---|
+| 私 | わたし | I; me | taught, other spelling |
+| オーストラリア | オーストラリア | Australia | new |
+| 広大 | こうだい | vast; extensive; immense | new |
+| 地 | ち | land (広大な地: a vast land) | new |
+| 旅 | たび | travel; trip; journey | new |
+| 世紀 | せいき | century | new |
+| 野生 | やせい | wild | new |
+| 高原 | こうげん | tableland; plateau | new |
+| 滝 | たき | waterfall | new |
+| カモノハシ | かものはし | platypus | new |
+| クイーンズランド | クイーンズランド | Queensland (Australia) | new |
+| 生きる | いきる | to live; to exist | Book Four word |
+
+#### 日本で生まれ育ったネパール人の子どもたちは、なぜ祖国へ帰ろうとするのか
+
+By Nepali Times, translated by Masako Seno · [Global Voices 日本語](https://jp.globalvoices.org/2025/05/16/63643/) · CC BY 3.0
+
+Closes chapter 3 · 2 sentences · 7 glossary entries
+
+| Word | Reading | Meaning | |
+|---|---|---|---|
+| 子どもたち | こどもたち | children; kids | new |
+| 永住権 | えいじゅうけん | (right of) permanent residence; permanent residency | new |
+| ネパール | ネパール | Nepal | new |
+| 得る | える | to get; to obtain | new |
+| 何としてでも | なんとしてでも | no matter what it takes | new |
+| 連れる | つれる | to take (someone) with one; to bring along; to go with | new |
+| 母親 | ははおや | mother | new |
+
+#### ロマ音楽家の語るチェコ社会の両面性
+
+By Elmira Lyapina, translated by Yasuhisa Miyata · [Global Voices 日本語](https://jp.globalvoices.org/2021/08/18/58290/) · CC BY 3.0
+
+Closes chapter 4 · 8 sentences · 21 glossary entries
+
+| Word | Reading | Meaning | |
+|---|---|---|---|
+| 気 | き | intention (〜気はない: to have no intention of) | new |
+| 受ける | うける | to receive (インタビューを受ける: to give an interview) | new |
+| チェコ | チェコ | Czech Republic; Czechia | new |
+| 個人的 | こじんてき | personal; individual; private | new |
+| 演奏 | えんそう | musical performance | new |
+| 踊り出す | おどりだす | to break into a dance | new |
+| 業界 | ぎょうかい | business world; business circles; (the) industry | new |
+| バンド | バンド | band (group of musicians) | new |
+| 全国的 | ぜんこくてき | nationwide; countrywide; national | new |
+| 何度 | なんど | how many times (何度か: several times) | new |
+| ラジオ | ラジオ | radio | new |
+| インタビュー | インタビュー | interview (on television, in a newspaper, etc.) | new |
+| 放送 | ほうそう | broadcasting; broadcast; program | new |
+| 売り込む | うりこむ | to build a market for; to promote (a product); to sell | new |
+| 祝祭 | しゅくさい | festivals; feasts | new |
+| フェス | フェス | festival (esp. music, film, etc.) | new |
+| 演る | やる | to play; to perform (music) | new |
+| 出自 | しゅつじ | origin; descent | new |
+| 問題 | もんだい | question, problem | Book Four word |
+| テレビ | テレビ | a television; TV | Book Four word |
+| 彼ら | かれら | they; them | Book Four word |
+
+#### 「女性だからと夢をあきらめないで」トルコ人航空宇宙エンジニアは語る
+
+By Sevgi Yagmur Bulut, translated by Moegi Tanaka · [Global Voices 日本語](https://jp.globalvoices.org/2021/11/07/58639/) · CC BY 3.0
+
+Closes chapter 8 · 6 sentences · 27 glossary entries
+
+| Word | Reading | Meaning | |
+|---|---|---|---|
+| 私 | わたし | I; me | taught, other spelling |
+| 受ける | うける | to receive (批判を受ける: to be criticised) | new |
+| 親戚 | しんせき | relative; relation; kin | new |
+| 批判 | ひはん | criticism; judgement; judgment | new |
+| 多く | おおく | many; most (多くの人: many people) | new |
+| 未来 | みらい | (distant) future | new |
+| 明らか | あきらか | clear; obvious; evident | new |
+| 医学 | いがく | medicine; medical science | new |
+| 選ぶ | えらぶ | to choose | Book Four word |
+| 入試 | にゅうし | entrance examination | new |
+| 点数 | てんすう | marks; points; score | new |
+| 工学 | こうがく | engineering | new |
+| 確信 | かくしん | conviction; belief; confidence | new |
+| 絶対 | ぜったい | absolutely; definitely; unconditionally | new |
+| 影響 | えいきょう | influence; effect; impact | new |
+| 応援 | おうえん | support; cheering someone on | new |
+| 恵まれる | めぐまれる | to be blessed; to be fortunate | new |
+| 航空宇宙工学 | こうくううちゅうこうがく | aerospace engineering | new |
+| 向いている | むいている | to be cut out for (e.g. a job); to be suited (to) | new |
+| 教師 | きょうし | teacher; instructor | Book Four word |
+| 他人 | たにん | other people, someone outside the family | Book Four word |
+| 女性 | じょせい | woman; female | Book Four word |
+| 無駄 | むだ | pointless, a waste | Book Four word |
+| しかし | しかし | however (in writing); but | Book Four word |
+| 自分 | じぶん | oneself | Book Four word |
+| 人生 | じんせい | (a person's) life | Book Four word |
+| 意味 | いみ | meaning; sense | Book Four word |
+
+#### アゼルバイジャンとトルコの紅茶文化の違い
+
+By Arzu Geybullayeva, translated by Moegi Tanaka · [Global Voices 日本語](https://jp.globalvoices.org/2025/02/14/63627/) · CC BY 3.0
+
+Closes chapter 10 · 7 sentences · 14 glossary entries
+
+| Word | Reading | Meaning | |
+|---|---|---|---|
+| 私 | わたし | I; me | taught, other spelling |
+| 初めて | はじめて | for the first time | new |
+| トルコ | トルコ | Turkey; Türkiye | new |
+| 味わう | あじわう | to taste; to savour | new |
+| 苦い | にがい | bitter | new |
+| 必ず | かならず | always; without exception; necessarily | new |
+| 尋ねる | たずねる | to ask; to enquire; to inquire | new |
+| 茶葉 | ちゃば | tea leaves | new |
+| 実際 | じっさい | reality (実際に: in fact, actually) | new |
+| 文化 | ぶんか | culture; civilization; civilisation | new |
+| アゼルバイジャン | アゼルバイジャン | Azerbaijan | new |
+| 淹れる | いれる | to make (tea, coffee, etc.); to brew a beverage (with hot water) | new |
+| 全然 | ぜんぜん | completely (here: 全然違う, completely different) | taught, other spelling |
+| 方 | かた | way of doing (淹れ方: how to brew) | Book Four word |
 
 ### Stories
 
