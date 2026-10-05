@@ -6,7 +6,12 @@ const path = require("path");
 const SCREEN_DIR = path.join(__dirname, ".walkthrough-out");
 fs.mkdirSync(SCREEN_DIR, { recursive: true });
 const BASE = process.env.BASE || "http://localhost:5173";
-const WAIT_SHORT = 500; // generous, per task-6 brief guidance re: timing stalls
+// Fixed pauses after every click. At 500 + 150 they were most of a 47-minute CI
+// run (2026-10-04: a session took ~27s, none of it in retries), and Playwright's
+// click already waits for the button to be actionable. Env-tunable so a stall
+// can be retried slower without an edit.
+const WAIT_SHORT = Number(process.env.WALKTHROUGH_WAIT ?? 150);
+const SETTLE = Number(process.env.WALKTHROUGH_SETTLE ?? 50);
 const CLICK_TIMEOUT = 10000;
 const CLICK_TIMEOUT_RETRY = 20000;
 // A stop so a genuine stall cannot loop forever -- not a statement about how
@@ -30,6 +35,9 @@ let currentPage = null;
 
 const results = {
   sessionsCompleted: 0,
+  // Sessions that taught a lesson or ran a checkpoint, as opposed to ones that
+  // only cleared reviews. See the zero-lesson check at the end of main().
+  lessonsWalked: 0,
   grammarClozeScreenshots: [],
   consoleErrors: [],
   pageErrors: [],
@@ -123,7 +131,7 @@ async function clickWhenReady(page, sel, label) {
     log(`  (retry) '${label}' not visible after ${CLICK_TIMEOUT}ms, waiting longer...`);
     await loc.waitFor({ state: "visible", timeout: CLICK_TIMEOUT_RETRY });
   }
-  await page.waitForTimeout(150); // let React settle before clicking
+  await page.waitForTimeout(SETTLE); // let React settle before clicking
   await loc.click();
 }
 
@@ -633,6 +641,7 @@ async function main() {
     // Unit intro
     if (await visible(page, "button:has-text('Start')")) {
       log(`  Unit intro visible, clicking Start`);
+      results.lessonsWalked++;
       await clickWhenReady(page, "button:has-text('Start')", "Start");
       await page.waitForTimeout(WAIT_SHORT);
     } else {
@@ -644,6 +653,7 @@ async function main() {
     if (await handleProductionCheckpointIfPresent(page, sessionIndex)) {
       await page.locator("text=Nice work today.").first().waitFor({ state: "visible", timeout: CLICK_TIMEOUT });
       log(`  Session ${sessionIndex} CLOSED (production checkpoint)`);
+      results.lessonsWalked++;
       results.sessionsCompleted++;
       continue;
     }
@@ -652,6 +662,7 @@ async function main() {
     if (await handleCheckpointIfPresent(page, sessionIndex)) {
       await page.locator("text=Nice work today.").first().waitFor({ state: "visible", timeout: CLICK_TIMEOUT });
       log(`  Session ${sessionIndex} CLOSED (checkpoint)`);
+      results.lessonsWalked++;
       results.sessionsCompleted++;
       // No sessionIndex++ here — the loop increments at the top, and doing it
       // again made every checkpoint skip a number (43 sessions labelled up to 46).
@@ -754,7 +765,7 @@ async function main() {
 
   log(
     `=== SUMMARY: walkedAs=${signedIn ? "signed-in (reaches Book Four)" : "GUEST (Book One only)"}, ` +
-      `sessionsCompleted=${results.sessionsCompleted}, ladderEndReached=${ladderEndReached}, ` +
+      `sessionsCompleted=${results.sessionsCompleted}, lessonsWalked=${results.lessonsWalked}, ladderEndReached=${ladderEndReached}, ` +
       `allCaughtUpReached=${allCaughtUpReached}, grammarClozeCardsSeen=${grammarClozeCount}, ` +
       `consoleErrors=${results.consoleErrors.length}, pageErrors=${results.pageErrors.length} ===`,
   );
@@ -766,7 +777,15 @@ async function main() {
 
   await browser.close();
 
-  if (!ladderEndReached || results.consoleErrors.length > 0 || results.pageErrors.length > 0) {
+  // A signed-in account keeps every lesson it has ever seen (DR-018), so once one
+  // walk has finished the ladder, the next reaches "All caught up" having taught
+  // nothing -- and reported green. 2026-10-05: admin@aburungo.com cleared 1000
+  // reviews and walked zero lessons. Reaching the end proves nothing on its own.
+  if (results.lessonsWalked === 0) {
+    log("FAIL: reached the end without walking a single lesson -- this account has already seen the whole ladder. Use an account with no lesson progress.");
+  }
+
+  if (!ladderEndReached || results.lessonsWalked === 0 || results.consoleErrors.length > 0 || results.pageErrors.length > 0) {
     process.exitCode = 2;
   }
 }
