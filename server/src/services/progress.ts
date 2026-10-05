@@ -458,15 +458,27 @@ export type ContentProgressEntry = {
   lastSeenAt: number | null
 }
 
+// PostgREST silently stops at max-rows (Supabase default 1000). An unpaged
+// select dropped every review state past the 1000th -- a learner deep in Book
+// Three lost them from a new device, and the client's re-push of the "missing"
+// rows broke the 500-entry route cap on every load.
+const PAGE = 1000
+
 export async function fetchContentProgress(userId: string): Promise<ContentProgressEntry[]> {
-  const { data, error } = await supabase
-    .from('user_content_progress')
-    .select('content_id, box, due_at, last_seen_at')
-    .eq('user_id', userId)
+  const data: Array<Record<string, unknown>> = []
+  for (let from = 0; ; from += PAGE) {
+    const { data: page, error } = await supabase
+      .from('user_content_progress')
+      .select('content_id, box, due_at, last_seen_at')
+      .eq('user_id', userId)
+      .order('content_id')
+      .range(from, from + PAGE - 1)
+    if (error) throw new Error(error.message)
+    data.push(...(page ?? []))
+    if ((page ?? []).length < PAGE) break
+  }
 
-  if (error) throw new Error(error.message)
-
-  return (data ?? []).map((row) => ({
+  return data.map((row) => ({
     contentId: row.content_id as string,
     box: row.box as number,
     dueAt: Date.parse(row.due_at as string),

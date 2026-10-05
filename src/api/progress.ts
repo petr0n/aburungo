@@ -119,10 +119,15 @@ export async function fetchContentProgress(): Promise<ContentProgressEntry[]> {
   return res.data;
 }
 
+// The route rejects a batch over 500 whole, so hydrateFromServer's catch-up
+// push for a large history must go in pieces or none of it lands.
+const SAVE_BATCH = 500;
+
 export async function saveContentProgress(entries: ContentProgressEntry[]): Promise<void> {
-  if (entries.length === 0) return;
-  await apiFetch("/api/progress/content", {
-    method: "POST",
-    body: JSON.stringify({ entries }),
-  });
+  for (let i = 0; i < entries.length; i += SAVE_BATCH) {
+    await apiFetch("/api/progress/content", {
+      method: "POST",
+      body: JSON.stringify({ entries: entries.slice(i, i + SAVE_BATCH) }),
+    });
+  }
 }
