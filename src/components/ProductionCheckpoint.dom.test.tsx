@@ -100,6 +100,22 @@ describe("the gate", () => {
     expect(onMissed).not.toHaveBeenCalled();
   });
 
+  it("does not offer the last card again while the lesson is saved", async () => {
+    // The parent awaits a server write after onDone before swapping this out;
+    // the card had reset to its input phase, so a signed-in learner could
+    // answer the last item a second time (2026-10-05 signed-in walkthrough).
+    const user = userEvent.setup();
+    const { onDone, onAnswered } = setup();
+    await start(user);
+
+    await answer(user, ROMAJI[currentEnglish()] as string);
+    await answer(user, ROMAJI[currentEnglish()] as string);
+
+    expect(onDone).toHaveBeenCalledTimes(1);
+    expect(onAnswered).toHaveBeenCalledTimes(2);
+    expect(screen.queryByRole("button", { name: "Check answer" })).toBeNull();
+  });
+
   it("brings a missed item back instead of finishing", async () => {
     const user = userEvent.setup();
     const { onDone } = setup();

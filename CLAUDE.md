@@ -168,7 +168,10 @@ guest, and a guest's reach is Book One (`TIER_BOOK_LIMIT` in `src/content/access
 a guest run says nothing about Book Two or past it** — CI's walkthrough is always a guest
 run. Locally, set `WALKTHROUGH_EMAIL` / `WALKTHROUGH_PASSWORD` in `.env.local` and run the
 API server with `FRONTEND_URL` pointing at the preview: the walk signs in, reaches Book
-Four, and its summary line says which way it walked. From a second checkout, set
+Four, and its summary line says which way it walked. Use the throwaway
+`walkthrough@aburungo.app` account: `walkthrough.sh` wipes its lesson progress first
+(`scripts/walkthrough-reset.mjs`), because an account that has seen the ladder teaches
+nothing and the driver fails a walk that walked zero lessons. From a second checkout, set
 `WALKTHROUGH_PORT` and `VITE_API_URL` (with your own API on a matching `PORT`) so you do
 not kill or share another agent's :4173 / :3000. Run it before merging content that
 adds or renumbers units. It deliberately does **not** use the dev server: HMR from another

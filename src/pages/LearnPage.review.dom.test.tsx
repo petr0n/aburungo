@@ -422,4 +422,22 @@ describe("ProduceStep", () => {
     expect(onDone).not.toHaveBeenCalled();
     expect(recordRating).toHaveBeenCalledWith("vocab.mizu", "didnt", false);
   });
+
+  it("does not offer the last card again while the lesson is saved", async () => {
+    // onDone's parent awaits markLessonSeen -- a server write when signed in --
+    // before it swaps the step out. The card had already reset to its input
+    // phase, so the last item could be answered and rated a second time
+    // (2026-10-05 signed-in walkthrough; DR-040: one advance per session).
+    const user = userEvent.setup();
+    const onDone = vi.fn();
+    const mizu = { ...word("vocab.mizu", "みず"), romaji: "mizu", english: "water" } as Word;
+    render(<ProduceStep items={[mizu]} shifted onDone={onDone} />);
+
+    await user.click(screen.getByRole("button", { name: "Show answer" }));
+    await user.click(screen.getByRole("button", { name: "Next" }));
+
+    expect(onDone).toHaveBeenCalledTimes(1);
+    expect(screen.queryByRole("button", { name: "Show answer" })).toBeNull();
+    expect(recordRating).toHaveBeenCalledTimes(1);
+  });
 });

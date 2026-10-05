@@ -516,13 +516,13 @@ export function ProduceStep({
     advance();
   }
 
+  // Past the last item, render nothing. The parent awaits a server write before
+  // swapping this step out, and the card has already reset to its input phase,
+  // so leaving it up let a signed-in learner answer the last item twice.
   function advance() {
     const nextIndex = index + 1;
-    if (nextIndex >= items.length) {
-      onDone();
-      return;
-    }
     setIndex(nextIndex);
+    if (nextIndex >= items.length) onDone();
   }
 
   if (current === undefined) return null;

@@ -653,7 +653,6 @@ async function main() {
     if (await handleProductionCheckpointIfPresent(page, sessionIndex)) {
       await page.locator("text=Nice work today.").first().waitFor({ state: "visible", timeout: CLICK_TIMEOUT });
       log(`  Session ${sessionIndex} CLOSED (production checkpoint)`);
-      results.lessonsWalked++;
       results.sessionsCompleted++;
       continue;
     }
@@ -662,7 +661,6 @@ async function main() {
     if (await handleCheckpointIfPresent(page, sessionIndex)) {
       await page.locator("text=Nice work today.").first().waitFor({ state: "visible", timeout: CLICK_TIMEOUT });
       log(`  Session ${sessionIndex} CLOSED (checkpoint)`);
-      results.lessonsWalked++;
       results.sessionsCompleted++;
       // No sessionIndex++ here — the loop increments at the top, and doing it
       // again made every checkpoint skip a number (43 sessions labelled up to 46).
