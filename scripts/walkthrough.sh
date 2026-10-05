@@ -16,7 +16,9 @@
 # Usage:  pnpm walkthrough
 set -euo pipefail
 
-PORT=4173
+# Overridable so a second checkout (another agent's worktree) can walk without
+# the port-freeing step below killing the first one's preview.
+PORT="${WALKTHROUGH_PORT:-4173}"
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$ROOT"
 
@@ -84,10 +86,13 @@ export WALKTHROUGH_EMAIL WALKTHROUGH_PASSWORD
 # every /api call from it is blocked at preflight unless the server was started
 # with FRONTEND_URL pointing here. A signed-in walk needs those calls: progress
 # is server-durable (DR-018).
-if [ -n "${WALKTHROUGH_EMAIL:-}" ] && lsof -ti:3000 >/dev/null 2>&1; then
+# A VITE_API_URL in the shell wins over .env.local (Vite's own precedence), which
+# is how a second checkout points its build at its own API server.
+API_URL="${VITE_API_URL:-$(sed -n 's/^VITE_API_URL=//p' .env.local | tr -d '"' | head -1)}"
+if [ -n "${WALKTHROUGH_EMAIL:-}" ] && curl -fsS -o /dev/null "$API_URL/health" 2>/dev/null; then
   if ! curl -fsS -o /dev/null -H "Origin: http://localhost:$PORT" \
-       -D- "http://localhost:3000/health" 2>/dev/null | grep -qi "access-control-allow-origin"; then
-    echo "WARNING: API server on :3000 does not allow origin http://localhost:$PORT." >&2
+       -D- "$API_URL/health" 2>/dev/null | grep -qi "access-control-allow-origin"; then
+    echo "WARNING: API server at $API_URL does not allow origin http://localhost:$PORT." >&2
     echo "         Restart it as: FRONTEND_URL=http://localhost:$PORT pnpm dev:api" >&2
   fi
 fi
