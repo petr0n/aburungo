@@ -81,6 +81,13 @@ if [ -z "${WALKTHROUGH_EMAIL:-}" ]; then
 fi
 export WALKTHROUGH_EMAIL WALKTHROUGH_PASSWORD
 
+# An account keeps every lesson it has seen (DR-018), so after one full walk the
+# next teaches nothing. The throwaway walk account is wiped first; any other
+# account walks as-is, and the driver fails if that turns out to teach nothing.
+if [ "${WALKTHROUGH_EMAIL:-}" = "walkthrough@aburungo.app" ]; then
+  node scripts/walkthrough-reset.mjs
+fi
+
 # The API server's CORS allowlist is FRONTEND_URL, defaulting to the dev server
 # on :5173 (server/src/index.ts). This walk serves a preview build on :4173, so
 # every /api call from it is blocked at preflight unless the server was started
