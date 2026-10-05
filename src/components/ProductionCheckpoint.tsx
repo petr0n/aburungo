@@ -42,6 +42,10 @@ export function ProductionCheckpoint({ lesson, words, phrases, onMissed, onAnswe
   const [index, setIndex] = useState(0);
   const [missedThisRound, setMissedThisRound] = useState<Array<Word | Phrase>>([]);
   const [roundNumber, setRoundNumber] = useState(1);
+  // Set when the gate empties. The parent awaits a server write before swapping
+  // this out, and the card has already reset to its input phase, so without it
+  // a signed-in learner could answer the last item twice.
+  const [finished, setFinished] = useState(false);
 
   function handleNext(correct: boolean) {
     const item = round[index];
@@ -68,6 +72,7 @@ export function ProductionCheckpoint({ lesson, words, phrases, onMissed, onAnswe
         : missedThisRound;
 
     if (finalMissed.length === 0) {
+      setFinished(true);
       onDone();
       return;
     }
@@ -96,6 +101,8 @@ export function ProductionCheckpoint({ lesson, words, phrases, onMissed, onAnswe
       </div>
     );
   }
+
+  if (finished) return null;
 
   const current = round[index];
   if (current === undefined) {
