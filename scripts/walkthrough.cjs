@@ -544,8 +544,42 @@ async function handleTerminalCheckpointIfPresent(page, sessionIndex) {
   return null;
 }
 
+/**
+ * Every guest-reachable screen, not just /learn, which is all the walk below
+ * drives. A screen that throws on load passed CI unseen, and an unknown URL
+ * rendered a blank page until 2026-10-11 -- hence the deliberate miss here.
+ *
+ * Connection-refused is tolerated: /kanji fetches from the API even for a
+ * guest, and the CI runner has no API server. An HTTP error status, a page
+ * error or an empty app root still fails.
+ */
+const SMOKE_ROUTES = ["/", "/learn", "/words", "/practice", "/kana", "/kana/practice",
+  "/flashcard", "/kanji", "/how-to", "/profile", "/admin", "/no-such-page"];
+
+async function verifyRoutes(browser) {
+  const failures = [];
+  for (const route of SMOKE_ROUTES) {
+    const ctx = await browser.newContext({ viewport: { width: 420, height: 900 } });
+    const page = await ctx.newPage();
+    const errors = [];
+    page.on("console", (m) => {
+      if (m.type() === "error" && !m.text().includes("net::ERR_CONNECTION_REFUSED")) errors.push(m.text());
+    });
+    page.on("pageerror", (e) => errors.push(String(e)));
+    await page.goto(`${BASE}${route}`, { waitUntil: "networkidle" });
+    const text = (await page.locator("#root").innerText().catch(() => "")).trim();
+    if (text === "") errors.push("blank page");
+    if (errors.length) failures.push(`${route}: ${errors.join(" | ")}`);
+    await ctx.close();
+  }
+  if (failures.length) throw new Error(`ROUTE CHECK:\n  ${failures.join("\n  ")}`);
+  log(`  every route renders — ${SMOKE_ROUTES.length} checked`);
+}
+
 async function main() {
   const browser = await chromium.launch({ args: ["--no-sandbox"] });
+  log("=== Pre-flight: every route ===");
+  await verifyRoutes(browser);
   log("=== Pre-flight: review step ===");
   await verifyReviewStep(browser);
   log("=== Pre-flight: kanji seeding ===");
