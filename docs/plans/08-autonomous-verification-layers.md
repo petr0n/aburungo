@@ -191,6 +191,14 @@ For each Japanese item changed in the PR:
   position in the ladder. Doesn't introduce kanji/vocab the book hasn't taught yet,
   unless the lesson's job is to introduce it. The ladder gives the progression; the
   agent checks the item against what's been taught up to that point.
+  **Built (2026-10-11) as `src/content/wordScope.test.ts`, in CI through `pnpm test`.**
+  The rule as implemented: a lesson's phrases and its grammar pattern's example may not
+  use a word the course teaches in a *later* lesson, counting books in order. Only
+  kanji-written tokens equal to that word's written form, reading or stem count; kana
+  matching was measured as noise. Kanji are deliberately *not* checked: words are taught
+  in their written form from the first lesson and character study comes later, so most
+  lessons show a kanji before its intro by design (measured 2026-10-11). Cases found on landing are frozen
+  in `wordScope.baseline.txt` (owner: freeze, block new); the baseline may only shrink.
 - **JLPT rule compliance**: N5 from training OK (with `# jlpt-source: training` mark
   until JMdict seed complete); N4+ needs verification against JMdict; marks follow the
   CLAUDE.md rules.
@@ -335,10 +343,8 @@ consistency, contradictions), that's a separate scope; not in this layer as spec
   everything flagged; too tight → real problems slip. This is the tuning lever; not
   specified yet. Start conservative (flag clearly awkward / register-mismatched /
   implausible-usage items) and tune.
-- **2a scope rule wording**: "appropriate for its position in the ladder" is the intent;
-  the exact rule (e.g. "item's kanji must be in the set taught up to and including this
-  lesson, unless the lesson is a kanji-intro lesson") should be written down during build
-  so the agent applies it consistently.
+- ~~**2a scope rule wording**~~ Settled 2026-10-11: see "Scope per ladder" above. It is a
+  deterministic test, not an agent judgment, and checks words, not kanji.
 - **Which agent(s)** for Layer 2: not yet specified. Same Claude+Codex as Layer 1, or
   one agent, or a different one — architecture doesn't change either way.
 - **Open eval set size and coverage**: start at ~5 evals; what to add first? Length,

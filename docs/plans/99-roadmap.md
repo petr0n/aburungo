@@ -126,6 +126,7 @@ hold work. A wired book does not imply every experience in its plan is complete.
 | Audio | Partial: generator for database cards exists; course-wide audio integration remains incomplete | [Generator](../../server/scripts/generate-audio.ts), [admin audio plan](../admin-dashboard-plan.md) |
 | Onboarding and session preferences | Planned, not wired | [Onboarding](06-onboarding.md), [retention engine](05-retention-engine.md) |
 | Paid access | Stubbed; payment integration deferred | DR-033, [tier implementation](../../src/store/auth.ts); no payment choice settled by this review |
+| Testing and verification | Partial. CI: lint, build and the unit suite on every push, including content integrity, JMdict citation resolution and word scope (a sentence may not use a word the course teaches later; cases found when the check landed are frozen in a shrink-only baseline, owner 2026-10-11). Guest walkthrough (Book One) on every PR, not yet required. Signed-in walkthrough of all four books runs locally only (needs the API server), against a throwaway account reset each run. Not built: naturalness review (2b), API route tests for progress, nightly agent | [Verification layers](08-autonomous-verification-layers.md), [testing](../testing.md), [word scope check](../../src/content/wordScope.test.ts), [walkthrough](../../scripts/walkthrough.cjs) |
 
 Use generated book maps for counts and ordering; do not copy changing totals into this ledger.
 Detailed documents may still contain old status claims. Until reconciled, use this inventory for
@@ -143,7 +144,10 @@ These preserve existing backlog items, without assigning them a new priority:
   [legacy todo](../todo.md). Their production status is unverified; do not act on old assumptions.
 - Admin Phase 3: flags, announcements, and rate-limit visibility — [admin plan](../admin-dashboard-plan.md).
 - Audio input/Whisper follow-up, Apple Sign-In, and mobile/PWA/offline expansion.
-- Content QA, authoring workflow validation, and learner walkthrough coverage.
+- Content QA: work down the word-scope baseline (`src/content/wordScope.baseline.txt`), which
+  lists sentences using a word the course teaches later. Largest single gap: 彼 ("he") is used
+  throughout Book Three and Four sentences and is never taught as a word (found 2026-10-11).
+- Authoring workflow validation.
 - Release verification, performance, and monitoring — [testing](../testing.md),
   [release guide](../release.md), and [infrastructure](../infrastructure.md).
 
