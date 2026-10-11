@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Routes, Route } from "react-router";
+import { Routes, Route, Navigate } from "react-router";
 import { useAuth } from "@/store/auth";
 import { useProgress } from "@/store/progress";
 import { AdminRoute } from "@/components/AdminRoute";
@@ -76,6 +76,10 @@ export default function App() {
           <Route path="/admin/logs" element={<AdminLogsPage />} />
         </Route>
       </Route>
+
+      {/* Anything else -- an old link, a typo, /conversation while Hana is
+          shelved -- rendered a blank page with no way back. Send it home. */}
+      <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );
 }
