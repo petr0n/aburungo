@@ -224,6 +224,12 @@ For each sentence/phrase in the changed lessons:
 - Is it consistent with the lesson's stated topic/goal?
 - Flag suspicious items with explanation, for human review.
 
+**Served today (2026-10-11) by the `content-verifier` agent's sentence check**
+(`.claude/agents/content-verifier.md`), which runs on every chapter before wiring, on the
+owner's own account — no API key, no per-run cost. Its naturalness flags are reported in a
+separate section and never on their own withhold "ready to wire". A CI-side 2b would need
+an API key; not built, for the same fixed-cost reason as DR-023.
+
 **This is flagging, not pass/fail.** The agent posts flagged items per lesson as an
 advisory comment. A human decides each.
 

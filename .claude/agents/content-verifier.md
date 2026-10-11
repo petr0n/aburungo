@@ -42,6 +42,12 @@ Read the phrases as a Japanese speaker would. Flag anything that reads as invent
 subtly wrong — a wrong sentence ships to a learner and gets memorised. Flag scripted dialogue:
 lessons take independent single utterances, never exchanges.
 
+**Naturalness flags are advisory** (plan 08, Layer 2b). Your judgment of how natural a sentence
+reads can be wrong in both directions, so list those flags in their own section for the owner to
+decide; they never on their own withhold **ready to wire**. A sentence that is *wrong* — bad
+grammar, a mismatch with its citation, a gloss that misleads — is not a naturalness flag and
+still blocks.
+
 **3. Collisions.** Run `pnpm manifest:check`. It catches a duplicate id across files, and the same
 word taught twice under two ids. Neither fails any per-file validator.
 
@@ -82,5 +88,6 @@ sentences — say that plainly rather than implying coverage you do not have.
 ## Report back
 
 Under 20 lines: status, counts checked, findings ranked by consequence with file:line, what you
-verified and found sound, and what you could not verify. End with an explicit verdict: **ready to
-wire**, or the findings that must be fixed first.
+verified and found sound, and what you could not verify. Then any naturalness flags, separately,
+each with the suggested wording. End with an explicit verdict: **ready to wire**, or the findings
+that must be fixed first.

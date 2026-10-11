@@ -1,5 +1,17 @@
 # AburunGo — Testing Strategy
 
+> **Status, 2026-10-11 — read this first.** This document predates the `/learn` daily loop
+> and is partly historical. Current testing status lives in the
+> [roadmap's testing row](plans/99-roadmap.md#capability-inventory); the automated layers
+> are specified in [plan 08](plans/08-autonomous-verification-layers.md). What runs today:
+> the unit suite in CI (content integrity, citations, word scope, the `/learn` sync routes),
+> the guest walkthrough on every PR, and a local signed-in walkthrough of every book
+> (`pnpm walkthrough`, see `CLAUDE.md`). Below: **Plan 1**'s flows target the legacy
+> `/practice` deck screens, not `/learn`, which the walkthrough now drives. **Plans 2 and 3
+> are not built**, and both bill per run (an agent per scenario; Shortest's
+> `SHORTEST_ANTHROPIC_API_KEY`), which conflicts with the fixed-cost reasoning behind
+> DR-023. Revisit them only with that cost decided.
+
 A living document. Three plans, three jobs. None replaces the others.
 
 ## Testing layers
