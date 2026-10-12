@@ -6,7 +6,10 @@ import { listKanji, getKanji, getDueKanji, submitKanjiReview } from '../services
 
 export const kanjiRoutes = new Hono()
 
-kanjiRoutes.use('*', auth)
+// Browsing KANJIDIC2 is a guest feature (CLAUDE.md access tiers); only the
+// learner's own review state needs an account.
+kanjiRoutes.use('/due', auth)
+kanjiRoutes.use('/review', auth)
 
 // GET /api/kanji?jlpt=3&grade=1&limit=20&offset=0
 kanjiRoutes.get('/', async (c) => {
