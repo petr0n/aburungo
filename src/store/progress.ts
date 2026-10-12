@@ -1,29 +1,23 @@
+/**
+ * Profile statistics and kana progress for the current learner.
+ *
+ * DR-036: the store holds one owner's state at a time. The auth store calls
+ * `resetFor` on every identity change, before the new owner is visible, and
+ * every load or write applies its result only if that owner is still the one
+ * held -- so a late response for account A never shows up in B's session.
+ */
 import { create } from "zustand";
-import type { ProgressStats, KanaProgressEntry, KanaScript } from "@/types";
+import type { KanaProgressEntry, KanaScript, Owner, ProgressStats } from "@/types";
+import { GUEST_OWNER } from "@/types";
 import {
   fetchStats,
   fetchKanaProgress,
   submitKanaAnswer,
   resetKanaProgress as apiResetKana,
 } from "@/api/progress";
+import { readGuestKana, writeGuestKana } from "@/db/kanaLocal";
 
-// --- localStorage keys (guest fallback) ---
-
-const LS_KANA_KEY = "aburungo:kana_progress";
-
-function lsReadKana(): KanaProgressEntry[] {
-  try {
-    return JSON.parse(localStorage.getItem(LS_KANA_KEY) ?? "[]") as KanaProgressEntry[];
-  } catch {
-    return [];
-  }
-}
-
-function lsWriteKana(entries: KanaProgressEntry[]): void {
-  localStorage.setItem(LS_KANA_KEY, JSON.stringify(entries));
-}
-
-function lsUpsertKana(
+function upsertKana(
   entries: KanaProgressEntry[],
   character: string,
   script: KanaScript,
@@ -52,123 +46,101 @@ function lsUpsertKana(
 // --- Store ---
 
 type ProgressState = {
+  /** Whose state this is; null until auth has resolved. */
+  owner: Owner | null;
   stats: ProgressStats | null;
   kanaProgress: KanaProgressEntry[];
   statsLoading: boolean;
   kanaLoading: boolean;
 
-  loadStats: (userId: string | null) => Promise<void>;
-  loadKana: (userId: string | null) => Promise<void>;
+  loadStats: (owner: Owner) => Promise<void>;
+  loadKana: (owner: Owner) => Promise<void>;
   recordKanaAnswer: (
-    userId: string | null,
+    owner: Owner,
     character: string,
     script: KanaScript,
     mode: "recognized" | "recalled",
     correct: boolean,
   ) => Promise<void>;
-  resetKana: (userId: string | null, script: KanaScript | "all") => Promise<void>;
-  clearProgress: () => void;
+  resetKana: (owner: Owner, script: KanaScript | "all") => Promise<void>;
+  /** Drop everything held and start holding `owner`'s state. Called on identity change. */
+  resetFor: (owner: Owner) => void;
 };
 
-export const useProgress = create<ProgressState>((set, get) => ({
-  stats: null,
-  kanaProgress: [],
-  statsLoading: false,
-  kanaLoading: false,
+export const useProgress = create<ProgressState>((set, get) => {
+  /** Apply `patch` only while `owner` is still the learner this store holds. */
+  const setFor = (owner: Owner, patch: Partial<ProgressState>) => {
+    if (get().owner === owner) set(patch);
+  };
 
-  async loadStats(userId) {
-    if (!userId) return;
-    set({ statsLoading: true });
-    try {
-      const stats = await fetchStats();
-      set({ stats });
-    } catch {
-      // non-fatal — widget stays empty
-    } finally {
-      set({ statsLoading: false });
-    }
-  },
+  return {
+    owner: null,
+    stats: null,
+    kanaProgress: [],
+    statsLoading: false,
+    kanaLoading: false,
 
-  async loadKana(userId) {
-    if (!userId) {
-      // Guest: read from localStorage
-      set({ kanaProgress: lsReadKana() });
-      return;
-    }
-    set({ kanaLoading: true });
-    try {
-      const entries = await fetchKanaProgress();
-      // Dual-write: merge any local guest data into server on first sign-in
-      const local = lsReadKana();
-      if (local.length > 0) {
-        // Guest had progress — upload it, then clear local
-        await Promise.allSettled(
-          local.map((e) => {
-            const promises: Promise<unknown>[] = [];
-            for (let i = 0; i < e.recognizedCount; i++) {
-              promises.push(submitKanaAnswer(e.character, e.script, "recognized", true));
-            }
-            for (let i = 0; i < e.recalledCount; i++) {
-              promises.push(submitKanaAnswer(e.character, e.script, "recalled", true));
-            }
-            return Promise.all(promises);
-          }),
-        );
-        localStorage.removeItem(LS_KANA_KEY);
-        const merged = await fetchKanaProgress();
-        set({ kanaProgress: merged });
-      } else {
-        set({ kanaProgress: entries });
+    async loadStats(owner) {
+      if (owner === GUEST_OWNER) return;
+      setFor(owner, { statsLoading: true });
+      try {
+        const stats = await fetchStats(owner);
+        setFor(owner, { stats });
+      } catch {
+        // non-fatal — widget stays empty
+      } finally {
+        setFor(owner, { statsLoading: false });
       }
-    } catch {
-      set({ kanaProgress: lsReadKana() });
-    } finally {
-      set({ kanaLoading: false });
-    }
-  },
+    },
 
-  async recordKanaAnswer(userId, character, script, mode, correct) {
-    // Optimistic local update
-    const next = lsUpsertKana(get().kanaProgress, character, script, mode, correct);
-    set({ kanaProgress: next });
+    async loadKana(owner) {
+      if (owner === GUEST_OWNER) {
+        setFor(owner, { kanaProgress: readGuestKana() });
+        return;
+      }
+      setFor(owner, { kanaLoading: true });
+      try {
+        setFor(owner, { kanaProgress: await fetchKanaProgress(owner) });
+      } catch {
+        // Offline: show nothing rather than another owner's kana (DR-036 rule 5).
+      } finally {
+        setFor(owner, { kanaLoading: false });
+      }
+    },
 
-    if (!userId) {
-      // Guest: persist to localStorage only
-      lsWriteKana(next);
-      return;
-    }
+    async recordKanaAnswer(owner, character, script, mode, correct) {
+      if (get().owner !== owner) return;
+      const next = upsertKana(get().kanaProgress, character, script, mode, correct);
+      set({ kanaProgress: next });
 
-    // Signed-in: fire-and-forget to server
-    submitKanaAnswer(character, script, mode, correct).then((updated) => {
-      set((s) => ({
-        kanaProgress: s.kanaProgress.map((e) =>
-          e.character === updated.character ? updated : e,
-        ),
-      }));
-    }).catch(() => {
-      // Server write failed — local state already updated, will sync on next load
-    });
-  },
+      if (owner === GUEST_OWNER) {
+        writeGuestKana(next);
+        return;
+      }
 
-  async resetKana(userId, script) {
-    if (!userId) {
-      const filtered =
-        script === "all"
-          ? []
-          : get().kanaProgress.filter((e) => e.script !== script);
-      lsWriteKana(filtered);
+      // Signed-in: fire-and-forget to server, bound to this owner's token.
+      submitKanaAnswer(owner, character, script, mode, correct)
+        .then((updated) => {
+          if (get().owner !== owner) return;
+          set((s) => ({
+            kanaProgress: s.kanaProgress.map((e) => (e.character === updated.character ? updated : e)),
+          }));
+        })
+        .catch(() => {
+          // Server write failed — the optimistic count is shown until the next load.
+        });
+    },
+
+    async resetKana(owner, script) {
+      if (owner !== GUEST_OWNER) await apiResetKana(owner, script);
+      if (get().owner !== owner) return;
+      const filtered = script === "all" ? [] : get().kanaProgress.filter((e) => e.script !== script);
+      if (owner === GUEST_OWNER) writeGuestKana(filtered);
       set({ kanaProgress: filtered });
-      return;
-    }
-    await apiResetKana(script);
-    const filtered =
-      script === "all"
-        ? []
-        : get().kanaProgress.filter((e) => e.script !== script);
-    set({ kanaProgress: filtered });
-  },
+    },
 
-  clearProgress() {
-    set({ stats: null, kanaProgress: [], statsLoading: false, kanaLoading: false });
-  },
-}));
+    resetFor(owner) {
+      set({ owner, stats: null, kanaProgress: [], statsLoading: false, kanaLoading: false });
+    },
+  };
+});

@@ -1,4 +1,5 @@
 import { apiFetch } from "./client";
+import type { Owner } from "@/types";
 
 export type KanjiEntry = {
   id: string;
@@ -54,12 +55,14 @@ export type KanjiReviewResult = {
   lapses: number;
 };
 
-export async function fetchDueKanji(limit = 20): Promise<DueKanjiEntry[]> {
-  const res = await apiFetch<{ data: DueKanjiEntry[] }>(`/api/kanji/due?limit=${limit}`);
+/** Learner state, so bound to its Owner like src/api/progress.ts (DR-036). */
+export async function fetchDueKanji(owner: Owner, limit = 20): Promise<DueKanjiEntry[]> {
+  const res = await apiFetch<{ data: DueKanjiEntry[] }>(`/api/kanji/due?limit=${limit}`, {}, owner);
   return res.data;
 }
 
 export async function submitKanjiReview(
+  owner: Owner,
   kanjiId: string,
   rating: KanjiRating,
   reviewedAt: number,
@@ -68,6 +71,6 @@ export async function submitKanjiReview(
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ kanjiId, rating, reviewedAt }),
-  });
+  }, owner);
   return res.data;
 }

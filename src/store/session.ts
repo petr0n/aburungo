@@ -11,9 +11,15 @@
  * Queue order:
  *   1. Due cards first, oldest-due first.
  *   2. New cards (never reviewed) in source order.
+ *
+ * DR-036: a session belongs to the owner it was initialized for. Ratings are
+ * written under that owner, `reset` (called by the auth store on identity
+ * change) invalidates it, and an initialize that finishes after a newer one
+ * or a reset is discarded.
  */
 import { create } from "zustand";
-import type { Phrase, Word, ReviewRating } from "@/types";
+import type { Owner, Phrase, Word, ReviewRating } from "@/types";
+import { GUEST_OWNER } from "@/types";
 import { getAll, getOne, upsert } from "@/db/reviewStore";
 import { schedule, isDue } from "@/srs/leitner";
 import { fetchVocabulary } from "@/api/vocabulary";
@@ -29,6 +35,8 @@ type SessionState = {
   currentIndex: number;
   /** japanese text → server card UUID; populated for authenticated users */
   cardIdMap: Map<string, string>;
+  /** Whose session this is; ratings are recorded for this owner only. */
+  owner: Owner | null;
 
   /**
    * Build a review queue from the supplied items (phrases or words).
@@ -36,10 +44,13 @@ type SessionState = {
    * Items never reviewed come after, in the order supplied.
    * For authenticated users, also fetches the card ID map from the server.
    */
-  initialize: (items: Array<Phrase | Word>, userId: string | null) => Promise<void>;
-  rate: (rating: ReviewRating, userId: string | null) => Promise<void>;
+  initialize: (items: Array<Phrase | Word>, owner: Owner) => Promise<void>;
+  rate: (rating: ReviewRating) => Promise<void>;
   reset: () => void;
 };
+
+/** Bumped by every initialize and reset; an initialize whose number is stale drops its result. */
+let generation = 0;
 
 export const useSession = create<SessionState>((set, get) => ({
   status: "idle",
@@ -47,9 +58,13 @@ export const useSession = create<SessionState>((set, get) => ({
   queue: [],
   currentIndex: 0,
   cardIdMap: new Map(),
+  owner: null,
 
-  async initialize(items, userId) {
-    set({ status: "loading", error: null, queue: [], currentIndex: 0, cardIdMap: new Map() });
+  async initialize(items, owner) {
+    const mine = ++generation;
+    const current = () => mine === generation;
+    const userId = owner === GUEST_OWNER ? null : owner;
+    set({ status: "loading", error: null, queue: [], currentIndex: 0, cardIdMap: new Map(), owner });
 
     // Kick off vocabulary fetch in parallel with local queue build so the map
     // is ready before the first card is shown. Failure is non-fatal.
@@ -61,7 +76,7 @@ export const useSession = create<SessionState>((set, get) => ({
 
     try {
       const now = Date.now();
-      const stored = await getAll();
+      const stored = await getAll(owner);
       const stateMap = new Map(stored.map((s) => [s.phraseId, s]));
       const itemMap = new Map(items.map((p) => [p.id, p]));
 
@@ -82,7 +97,7 @@ export const useSession = create<SessionState>((set, get) => ({
       let serverDue: Array<Phrase | Word> = [];
       if (userId && cardIdMap.size > 0) {
         try {
-          const due = await fetchDue(100);
+          const due = await fetchDue(owner, 100);
           const dueCardIds = new Set(due.map((d) => d.cardId));
           serverDue = items.filter((p) => {
             const cardId = cardIdMap.get(p.japanese);
@@ -107,37 +122,40 @@ export const useSession = create<SessionState>((set, get) => ({
       const newQueue = items.filter((p) => !stateMap.has(p.id) && !dueIds.has(p.id));
 
       const queue = [...dueQueue, ...newQueue];
+      if (!current()) return;
       set({ queue, currentIndex: 0, status: queue.length === 0 ? "empty" : "ready", cardIdMap });
     } catch (err) {
       const cardIdMap = await cardIdMapPromise;
+      if (!current()) return;
       set({ status: "error", error: err instanceof Error ? err.message : "Failed to load", cardIdMap });
     }
   },
 
-  async rate(rating, userId) {
-    const { queue, currentIndex, cardIdMap } = get();
+  async rate(rating) {
+    const { queue, currentIndex, cardIdMap, owner } = get();
     const phrase = queue[currentIndex];
-    if (!phrase) return;
+    if (!phrase || owner === null) return;
+    const mine = generation;
 
     // Local Leitner — always runs for all users
     try {
-      const current = await getOne(phrase.id);
-      const next = schedule(current, rating, Date.now(), phrase.id);
-      await upsert(next);
+      const existing = await getOne(owner, phrase.id);
+      await upsert(owner, schedule(existing, rating, Date.now(), phrase.id));
     } catch {
       // Best-effort — advance the queue even if persistence fails
     }
 
     // Server sync — fire-and-forget for authenticated users
-    if (userId) {
+    if (owner !== GUEST_OWNER) {
       const cardId = cardIdMap.get(phrase.japanese);
       if (cardId) {
-        submitReview(cardId, rating, Date.now())
-          .then(() => { useProgress.getState().loadStats(userId); })
+        submitReview(owner, cardId, rating, Date.now())
+          .then(() => useProgress.getState().loadStats(owner))
           .catch(() => {});
       }
     }
 
+    if (mine !== generation) return; // reset or replaced while the write was in flight
     const nextIndex = currentIndex + 1;
     set({
       currentIndex: nextIndex,
@@ -146,6 +164,7 @@ export const useSession = create<SessionState>((set, get) => ({
   },
 
   reset() {
-    set({ status: "idle", error: null, queue: [], currentIndex: 0, cardIdMap: new Map() });
+    generation++;
+    set({ status: "idle", error: null, queue: [], currentIndex: 0, cardIdMap: new Map(), owner: null });
   },
 }));

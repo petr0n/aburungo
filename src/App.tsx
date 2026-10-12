@@ -26,8 +26,7 @@ import { AdminLogsPage } from "@/pages/admin/AdminLogsPage";
 
 export default function App() {
   const initialize = useAuth((s) => s.initialize);
-  const authLoading = useAuth((s) => s.loading);
-  const user = useAuth((s) => s.user);
+  const owner = useAuth((s) => s.owner);
   const loadStats = useProgress((s) => s.loadStats);
   const loadKana = useProgress((s) => s.loadKana);
 
@@ -36,11 +35,10 @@ export default function App() {
   }, [initialize]);
 
   useEffect(() => {
-    if (authLoading) return;
-    const userId = user?.id ?? null;
-    void loadKana(userId);
-    void loadStats(userId);
-  }, [authLoading, user?.id, loadKana, loadStats]);
+    if (owner === null) return;
+    void loadKana(owner);
+    void loadStats(owner);
+  }, [owner, loadKana, loadStats]);
 
   return (
     <Routes>

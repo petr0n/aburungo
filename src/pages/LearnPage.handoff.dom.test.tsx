@@ -15,6 +15,7 @@
  */
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 import { render, screen, cleanup } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import { MemoryRouter } from "react-router";
 import type { Book, PathProgress, UserTier } from "@/types";
 import { bookFour, bookOne, bookThree, bookTwo, books } from "@/content/books";
@@ -28,18 +29,37 @@ const state = vi.hoisted(() => ({
 }));
 
 vi.mock("@/store/auth", () => ({
-  useAuth: (selector: (s: { user: { id: string } | null }) => unknown) =>
-    selector({ user: state.signedIn ? { id: "u1" } : null }),
+  useAuth: (selector: (s: { user: { id: string } | null; owner: string }) => unknown) =>
+    selector({ user: state.signedIn ? { id: "u1" } : null, owner: state.signedIn ? "u1" : "guest" }),
   useUserTier: () => state.tier,
 }));
 
-const getPathProgress = vi.fn((pathId: string, signedIn: boolean): Promise<PathProgress> => {
-  void signedIn;
+const getPathProgress = vi.fn((owner: string, pathId: string): Promise<PathProgress> => {
+  void owner;
   return Promise.resolve({ pathId, seenLessonIds: state.seen.get(pathId) ?? [] });
 });
 
+
+const adoption = vi.hoisted(() => ({
+  offer: null as "guest" | "legacy" | null,
+  bringIn: vi.fn(() => Promise.resolve()),
+  keepSeparate: vi.fn(),
+}));
+vi.mock("@/db/adoption", () => ({
+  adoptionOffer: () => Promise.resolve(adoption.offer),
+  resumeGuestImport: () => Promise.resolve(),
+  bringIn: (...a: unknown[]) => {
+    adoption.offer = null;
+    return adoption.bringIn(...(a as []));
+  },
+  keepSeparate: (...a: unknown[]) => {
+    adoption.offer = null;
+    adoption.keepSeparate(...(a as []));
+  },
+}));
+
 vi.mock("@/db/pathProgressStore", () => ({
-  getPathProgress: (pathId: string, signedIn: boolean) => getPathProgress(pathId, signedIn),
+  getPathProgress: (owner: string, pathId: string) => getPathProgress(owner, pathId),
   markLessonSeen: vi.fn(() => Promise.resolve({ pathId: "n5", seenLessonIds: [] })),
 }));
 
@@ -101,6 +121,9 @@ beforeEach(() => {
   state.tier = "free";
   state.signedIn = true;
   state.seen = new Map();
+  adoption.offer = null;
+  adoption.bringIn.mockClear();
+  adoption.keepSeparate.mockClear();
 });
 afterEach(cleanup);
 
@@ -142,7 +165,7 @@ describe("LearnPage picks the book off the learner's progress", () => {
     // "book-1" is Book One's id; "n5" is its progress key, and the key is the
     // primary key of every stored row. Asking on the id reads an empty row.
     await renderLearn();
-    const asked = getPathProgress.mock.calls.map((c) => c[0]);
+    const asked = getPathProgress.mock.calls.map((c) => c[1]);
     // Derived from `books` rather than listed, so adding a book does not break
     // a test about key-versus-id. The vacuity guard is the id check below: an
     // empty `asked` would satisfy the equality on its own.
@@ -202,5 +225,39 @@ describe("the gated hand-off", () => {
     for (const banned of ["unlock", "Unlock", "congrat", "Congrat", "🎉", "N5", "N4", "unit"]) {
       expect(text).not.toContain(banned);
     }
+  });
+});
+
+/** DR-036: progress crosses owners only on the learner's explicit choice. */
+describe("guest progress waiting for a signed-in learner", () => {
+  async function renderWithOffer() {
+    adoption.offer = "guest";
+    render(
+      <MemoryRouter>
+        <LearnPage />
+      </MemoryRouter>,
+    );
+    return screen.findByRole("button", { name: "Bring it in" });
+  }
+
+  it("asks first, and builds no session until the learner answers", async () => {
+    await renderWithOffer();
+    expect(buildDailySession).not.toHaveBeenCalled();
+    expect(adoption.bringIn).not.toHaveBeenCalled();
+  });
+
+  it("keeping it separate moves nothing and carries on", async () => {
+    await renderWithOffer();
+    await userEvent.setup().click(screen.getByRole("button", { name: "Keep separate" }));
+    await vi.waitFor(() => expect(buildDailySession).toHaveBeenCalled());
+    expect(adoption.keepSeparate).toHaveBeenCalledWith("guest", "u1");
+    expect(adoption.bringIn).not.toHaveBeenCalled();
+  });
+
+  it("bringing it in imports into this account, then carries on", async () => {
+    const bring = await renderWithOffer();
+    await userEvent.setup().click(bring);
+    await vi.waitFor(() => expect(buildDailySession).toHaveBeenCalled());
+    expect(adoption.bringIn).toHaveBeenCalledWith("guest", "u1");
   });
 });

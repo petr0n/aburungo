@@ -154,7 +154,7 @@ function BrowseScreen({ words, selected, onSelect, onStartDrill, soundOn, onTogg
 
 export function WordsPage() {
   const tier = useUserTier();
-  const signedIn = useAuth((s) => s.user !== null);
+  const owner = useAuth((s) => s.owner);
   const words = wordsForTier(tier);
 
   const [screen, setScreen] = useState<Screen>("browse");
@@ -230,7 +230,7 @@ export function WordsPage() {
   function handleRate(correct: boolean) {
     const current = queue[queueIndex];
     if (current === undefined) return;
-    void recordReview(current.id, correct, signedIn);
+    if (owner !== null) void recordReview(owner, current.id, correct);
     if (correct) {
       setCorrectCount((n) => n + 1);
     } else {
@@ -286,7 +286,9 @@ export function WordsPage() {
       <RecognitionPass
         queue={recognitionQueue}
         pool={words}
-        onMissed={(word) => void recordReview(word.id, false, signedIn)}
+        onMissed={(word) => {
+          if (owner !== null) void recordReview(owner, word.id, false);
+        }}
         onDone={() => setScreen("browse")}
       />
     );
