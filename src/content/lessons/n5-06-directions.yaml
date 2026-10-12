@@ -79,6 +79,8 @@
     - vocab.omoshiroi
     - vocab.hashi
     - vocab.kouen
+    - vocab.tooi
+    - vocab.chikai
   phraseIds:
     - directions.is-it-far
     - directions.walking-distance

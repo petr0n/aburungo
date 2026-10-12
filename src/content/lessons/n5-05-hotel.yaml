@@ -41,6 +41,7 @@
     - vocab.nankai
     - vocab.furo
     - vocab.shawaa
+    - vocab.choushoku
   phraseIds:
     - hotel.toilet-where
     - hotel.bath-floor
