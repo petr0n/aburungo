@@ -1,4 +1,5 @@
-# Book Three, Band 0 vocabulary -- deliberately empty.
+# Book Three, Band 0 vocabulary -- one word, 彼, and otherwise deliberately
+# empty.
 #
 # This band teaches four auxiliaries (れる, られる, せる, させる) and not one
 # word. Every auxiliary is kana with no independent kanji of its own, so there
@@ -14,11 +15,33 @@
 # example sentences' vocabulary back into a curated list would be re-importing
 # the model this book was designed to leave behind.
 #
-# The file exists so the band's four content files stay a matched set and so
-# the next author does not go looking for a missing one. An empty array parses;
-# a file of comments alone does not, which is why the `[]` below is load-bearing
-# rather than decorative.
+# 彼 is the one exception, added 2026-10-12 from the word-scope baseline
+# (src/content/wordScope.baseline.txt, roadmap "Content QA"). It is not example
+# furniture: it is the pronoun this book's and Book Four's verified sentences
+# lean on most, from this band's opening card (彼はケーキをつまみ食いする
+# のを見られた) onwards, and before this card no lesson taught it; the word-scope check could only see it inside 彼ら, which Book Four
+# chapter 7 teaches. It is the same case vocabulary/b3-09-reference.yaml makes
+# for ところ: a common word no card carries that the lessons cannot read around.
+# The lesson that first uses it, b3.passive-ichidan, lists it in wordIds.
 #
-# content-source: n/a -- this file adds no Japanese content.
+# content-source: training -- headword, reading, part of speech and gloss
+#   verified against JMdict for Applications 3.6.2 on 2026-10-12, sequence
+#   number inline. The entry is flagged common. The example is the Tatoeba
+#   sentence JMdict attaches to sense 1, quoted verbatim with its id.
+# jlpt-source: training -- JLPT level unverified (JMdict carries no JLPT data).
+#   data/jlpt/reference-n4.json lists 彼/かれ at N4 (tanos and open-anki agree),
+#   matching vocab.karera.
 
-[]
+- id: vocab.kare
+  jlpt: N4
+  word_type: noun
+  theme: people
+  japanese: 彼
+  reading: かれ
+  romaji: kare
+  english: he; him
+  notes: "JMdict seq 1483070, sense 1, the pronoun. Sense 2 is boyfriend -- 私の前の彼 is my ex -- and context sorts the two. Written Japanese uses it freely; in conversation people are usually named, or left out entirely, so meet it in reading first. 彼ら, they, is 彼 plus the plural ら, and the word for she is 彼女."
+  example:
+    japanese: 彼のスイングは実に見事だ。
+    english: He has a perfect swing.
+    tatoeba_id: "75797"

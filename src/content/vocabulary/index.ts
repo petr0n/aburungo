@@ -39,6 +39,7 @@ import b2QuotedSpeechRaw from "./b2-07-quoted-speech.yaml";
 import b2MakingPlansRaw from "./b2-08-making-plans.yaml";
 import b2ConditionalsRaw from "./b2-09-conditionals.yaml";
 import b2TroubleRaw from "./b2-10-trouble.yaml";
+import b3PassiveRaw from "./b3-00-passive.yaml";
 import b3ReferenceRaw from "./b3-09-reference.yaml";
 import b4FinishingRaw from "./b4-00-finishing.yaml";
 import b4MeaningRaw from "./b4-01-meaning.yaml";
@@ -89,6 +90,7 @@ export const allWords: Word[] = [
   ...parseWords(b2MakingPlansRaw, "vocabulary/b2-08-making-plans.yaml"),
   ...parseWords(b2ConditionalsRaw, "vocabulary/b2-09-conditionals.yaml"),
   ...parseWords(b2TroubleRaw, "vocabulary/b2-10-trouble.yaml"),
+  ...parseWords(b3PassiveRaw, "vocabulary/b3-00-passive.yaml"),
   ...parseWords(b3ReferenceRaw, "vocabulary/b3-09-reference.yaml"),
   ...parseWords(b4FinishingRaw, "vocabulary/b4-00-finishing.yaml"),
   ...parseWords(b4MeaningRaw, "vocabulary/b4-01-meaning.yaml"),
