@@ -171,7 +171,9 @@ API server with `FRONTEND_URL` pointing at the preview: the walk signs in, reach
 Four, and its summary line says which way it walked. Use the throwaway
 `walkthrough@aburungo.app` account: `walkthrough.sh` wipes its lesson progress first
 (`scripts/walkthrough-reset.mjs`), because an account that has seen the ladder teaches
-nothing and the driver fails a walk that walked zero lessons. From a second checkout, set
+nothing and the driver fails a walk that walked zero lessons. To force a guest walk with
+credentials present, set `WALKTHROUGH_GUEST=1` -- unsetting the variables does not work,
+the script reads them back from `.env.local` and resets the walk account. From a second checkout, set
 `WALKTHROUGH_PORT` and `VITE_API_URL` (with your own API on a matching `PORT`) so you do
 not kill or share another agent's :4173 / :3000. Run it before merging content that
 adds or renumbers units. It deliberately does **not** use the dev server: HMR from another

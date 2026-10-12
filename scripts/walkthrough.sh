@@ -75,7 +75,14 @@ fi
 # Credentials live in .env.local, which is gitignored. Read only the two keys we
 # want, so nothing else in that file leaks into the driver's environment. An
 # existing WALKTHROUGH_EMAIL in the shell wins, for a one-off run as someone else.
-if [ -z "${WALKTHROUGH_EMAIL:-}" ]; then
+#
+# WALKTHROUGH_GUEST=1 forces a guest walk. Unsetting the two variables does not:
+# they are read back from .env.local below, and a run meant as a guest then
+# resets and signs in to the walk account -- which on 2026-10-12 wiped it under
+# another agent mid-test. Only this flag skips both.
+if [ -n "${WALKTHROUGH_GUEST:-}" ]; then
+  WALKTHROUGH_EMAIL="" WALKTHROUGH_PASSWORD=""
+elif [ -z "${WALKTHROUGH_EMAIL:-}" ]; then
   WALKTHROUGH_EMAIL="$(sed -n 's/^WALKTHROUGH_EMAIL=//p' .env.local | tr -d '"' | head -1)"
   WALKTHROUGH_PASSWORD="$(sed -n 's/^WALKTHROUGH_PASSWORD=//p' .env.local | tr -d '"' | head -1)"
 fi
