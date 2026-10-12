@@ -107,8 +107,9 @@ versus FSRS is accepted.
 ## Account ownership and session transitions
 
 **Planning correction, 2026-09-06 (DR-036):** isolate each account's progress and guest progress.
-Implementation is pending. The current shared Dexie database and automatic local/server merges
-cannot distinguish another account's cached progress from guest work.
+**Core boundary implemented 2026-10-12:** one Dexie database per owner, owner-bound API
+requests, identity-change resets, explicit guest adoption and legacy recovery on `/learn`.
+Remaining acceptance items are listed in the roadmap's isolation row.
 
 ### Ownership rules
 
