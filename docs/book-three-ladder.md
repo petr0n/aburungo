@@ -13,7 +13,7 @@ never reads it.
 |---|---|
 | Chapters | 11 |
 | Lessons | 81 (70 teaching, 11 checkpoints) |
-| Words | 126 |
+| Words | 127 |
 | Phrases | 379 |
 | Grammar patterns | 68 |
 | Kanji introduced | 10 |
@@ -25,7 +25,7 @@ never reads it.
 
 *Doing, and being done to*
 
-7 lessons · 33 words · 30 phrases
+7 lessons · 34 words · 30 phrases
 
 ### 196. Something was done to it, the easy half
 
@@ -39,6 +39,7 @@ never reads it.
 | 食べる | たべる | to eat |
 | する | する | to do |
 | 来る | くる | to come |
+| 彼 | かれ | he; him |
 
 - 彼はケーキをつまみ食いするのを見られた。 — He was seen eating a piece of the cake in secret.
 - この回線の細さじゃ、動画は見られないよ。 — This connection is too slow for me to watch videos.

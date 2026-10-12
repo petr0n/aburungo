@@ -72,6 +72,7 @@
     - vocab.fun
     - vocab.ima
     - vocab.jikan
+    - vocab.tsugi
   phraseIds:
     - transit.next-train
     - transit.nanji-desu-ka

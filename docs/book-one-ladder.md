@@ -24,7 +24,7 @@ never reads it.
 
 *Greetings & basics · Food & drink*
 
-12 lessons · 84 words · 29 phrases
+12 lessons · 86 words · 29 phrases
 
 ### 1. Yes, no, and this/that
 
@@ -41,6 +41,7 @@ never reads it.
 | それ | それ | that (thing) |
 | あれ | あれ | that (thing, over there) |
 | そこ | そこ | there |
+| 何 | なに | what |
 
 - これは本です — This is a book.
 - それは何ですか — What is that?
@@ -225,6 +226,7 @@ never reads it.
 | 甘い | あまい | sweet |
 | 辛い | からい | spicy, hot |
 | 果物 | くだもの | fruit |
+| 魚 | さかな | fish |
 
 - これは何ですか — What is this?
 - それは魚です — That is fish.
@@ -276,7 +278,7 @@ never reads it.
 
 *Shopping · Getting around*
 
-9 lessons · 64 words · 24 phrases
+9 lessons · 65 words · 24 phrases
 
 ### 14. In a shop
 
@@ -415,6 +417,7 @@ never reads it.
 | 分 | ふん | minute(s) (counter) |
 | 今 | いま | now |
 | 時間 | じかん | time, hour |
+| 次 | つぎ | next |
 
 - 次の電車は何時ですか — What time is the next train?
 - 何時ですか — What time is it?
@@ -468,7 +471,7 @@ never reads it.
 
 *Hotel · Directions · Weather*
 
-10 lessons · 69 words · 27 phrases
+10 lessons · 72 words · 27 phrases
 
 ### 24. Checking in
 
@@ -503,6 +506,7 @@ never reads it.
 | 何階 | なんかい | which floor |
 | 風呂 | ふろ | bath |
 | シャワー | シャワー | shower |
+| 朝食 | ちょうしょく | breakfast |
 
 - トイレはどこですか — Where is the bathroom?
 - 風呂は何階ですか — What floor is the bath on?
@@ -603,6 +607,8 @@ never reads it.
 | 面白い | おもしろい | interesting, funny |
 | 橋 | はし | bridge |
 | 公園 | こうえん | park |
+| 遠い | とおい | far |
+| 近い | ちかい | near, close |
 
 - 遠いですか — Is it far?
 - 歩いて五分くらいです — It's about 5 minutes on foot.
@@ -678,7 +684,7 @@ never reads it.
 
 *Food preferences · Daily life · People & family · Days & dates · Relative time*
 
-13 lessons · 83 words · 30 phrases
+13 lessons · 84 words · 30 phrases
 
 ### 35. I like sushi
 
@@ -847,6 +853,7 @@ never reads it.
 | 三日 | みっか | the 3rd (of the month) |
 | 四日 | よっか | the 4th (of the month) |
 | 五日 | いつか | the 5th (of the month) |
+| 何日 | なんにち | what date, how many days |
 
 - 今日は何日ですか。 — What is the date today?
 - 今日は三日です。 — Today is the 3rd.
