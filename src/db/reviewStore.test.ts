@@ -1,33 +1,46 @@
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import type { ReviewState } from "@/types";
 
-const store = new Map<string, ReviewState>();
+/** One cache per owner, as dexie.ts's dbFor hands out one database per owner. */
+const caches = new Map<string, Map<string, ReviewState>>();
+function cacheOf(owner: string): Map<string, ReviewState> {
+  let c = caches.get(owner);
+  if (c === undefined) {
+    c = new Map();
+    caches.set(owner, c);
+  }
+  return c;
+}
 
 vi.mock("./dexie", () => ({
-  db: {
+  dbFor: (owner: string) => ({
     reviewStates: {
-      toArray: () => Promise.resolve([...store.values()]),
-      get: (id: string) => Promise.resolve(store.get(id)),
+      toArray: () => Promise.resolve([...cacheOf(owner).values()]),
+      get: (id: string) => Promise.resolve(cacheOf(owner).get(id)),
       put: (v: ReviewState) => {
-        store.set(v.phraseId, v);
+        cacheOf(owner).set(v.phraseId, v);
         return Promise.resolve();
       },
     },
-  },
+  }),
 }));
 
 const fetchContentProgress = vi.fn();
 const saveContentProgress = vi.fn();
 
 vi.mock("@/api/progress", () => ({
-  fetchContentProgress: () => fetchContentProgress(),
-  saveContentProgress: (e: unknown) => saveContentProgress(e),
+  fetchContentProgress: (owner: string) => fetchContentProgress(owner),
+  saveContentProgress: (owner: string, e: unknown) => saveContentProgress(owner, e),
 }));
 
-const { hydrateFromServer, upsertSynced } = await import("./reviewStore");
+const { hydrateFromServer, upsertSynced, recordRating } = await import("./reviewStore");
+
+const USER = "user-a";
+const store = cacheOf(USER);
+const guest = cacheOf("guest");
 
 beforeEach(() => {
-  store.clear();
+  caches.forEach((c) => c.clear());
   fetchContentProgress.mockReset();
   saveContentProgress.mockReset();
   saveContentProgress.mockResolvedValue(undefined);
@@ -53,9 +66,9 @@ describe("box 6-8 states stranded by the old API", () => {
     store.set("low", { phraseId: "low", box: 2, dueAt: 400, lastSeenAt: 700 });
     fetchContentProgress.mockResolvedValue([]);
 
-    await hydrateFromServer(true);
+    await hydrateFromServer(USER);
 
-    const pushed = saveContentProgress.mock.calls[0]?.[0] as Array<{ contentId: string; box: number }>;
+    const pushed = saveContentProgress.mock.calls[0]?.[1] as Array<{ contentId: string; box: number }>;
     expect(pushed.map((e) => e.contentId).sort()).toEqual(["high", "low"]);
     expect(pushed.find((e) => e.contentId === "high")?.box).toBe(7);
   });
@@ -63,12 +76,12 @@ describe("box 6-8 states stranded by the old API", () => {
 
 describe("guest", () => {
   it("never contacts the server", async () => {
-    store.set("a", { phraseId: "a", box: 2, dueAt: 100, lastSeenAt: 50 });
-    const got = await hydrateFromServer(false);
+    guest.set("a", { phraseId: "a", box: 2, dueAt: 100, lastSeenAt: 50 });
+    const got = await hydrateFromServer("guest");
     expect(got).toHaveLength(1);
     expect(fetchContentProgress).not.toHaveBeenCalled();
 
-    await upsertSynced({ phraseId: "b", box: 1, dueAt: 200 }, false);
+    await upsertSynced("guest", { phraseId: "b", box: 1, dueAt: 200 });
     expect(saveContentProgress).not.toHaveBeenCalled();
   });
 });
@@ -80,7 +93,7 @@ describe("signed in — merge", () => {
       { contentId: "a", box: 4, dueAt: 900, lastSeenAt: 500 },
     ]);
 
-    const got = await hydrateFromServer(true);
+    const got = await hydrateFromServer(USER);
 
     expect(got.find((s) => s.phraseId === "a")?.box).toBe(4);
   });
@@ -91,10 +104,10 @@ describe("signed in — merge", () => {
       { contentId: "a", box: 2, dueAt: 200, lastSeenAt: 100 },
     ]);
 
-    const got = await hydrateFromServer(true);
+    const got = await hydrateFromServer(USER);
 
     expect(got.find((s) => s.phraseId === "a")?.box).toBe(5);
-    expect(saveContentProgress).toHaveBeenCalledWith([
+    expect(saveContentProgress).toHaveBeenCalledWith(USER, [
       expect.objectContaining({ contentId: "a", box: 5 }),
     ]);
   });
@@ -104,7 +117,7 @@ describe("signed in — merge", () => {
       { contentId: "a", box: 3, dueAt: 300, lastSeenAt: 200 },
     ]);
 
-    const got = await hydrateFromServer(true);
+    const got = await hydrateFromServer(USER);
 
     expect(got).toHaveLength(1);
     expect(store.get("a")?.box).toBe(3);
@@ -115,9 +128,9 @@ describe("signed in — merge", () => {
     store.set("a", { phraseId: "a", box: 2, dueAt: 100, lastSeenAt: 50 });
     fetchContentProgress.mockResolvedValue([]);
 
-    await hydrateFromServer(true);
+    await hydrateFromServer(USER);
 
-    expect(saveContentProgress).toHaveBeenCalledWith([
+    expect(saveContentProgress).toHaveBeenCalledWith(USER, [
       expect.objectContaining({ contentId: "a" }),
     ]);
   });
@@ -126,7 +139,7 @@ describe("signed in — merge", () => {
     store.set("a", { phraseId: "a", box: 2, dueAt: 100 });
     fetchContentProgress.mockRejectedValue(new Error("offline"));
 
-    const got = await hydrateFromServer(true);
+    const got = await hydrateFromServer(USER);
 
     expect(got).toHaveLength(1);
   });
@@ -134,10 +147,10 @@ describe("signed in — merge", () => {
 
 describe("signed in — writes", () => {
   it("writes locally and sends to the server", async () => {
-    await upsertSynced({ phraseId: "a", box: 3, dueAt: 400, lastSeenAt: 300 }, true);
+    await upsertSynced(USER, { phraseId: "a", box: 3, dueAt: 400, lastSeenAt: 300 });
 
     expect(store.get("a")?.box).toBe(3);
-    expect(saveContentProgress).toHaveBeenCalledWith([
+    expect(saveContentProgress).toHaveBeenCalledWith(USER, [
       expect.objectContaining({ contentId: "a", box: 3, lastSeenAt: 300 }),
     ]);
   });
@@ -145,8 +158,51 @@ describe("signed in — writes", () => {
   it("does not interrupt a lesson when the send fails", async () => {
     saveContentProgress.mockRejectedValue(new Error("500"));
 
-    await expect(upsertSynced({ phraseId: "a", box: 1, dueAt: 10 }, true)).resolves.toBeUndefined();
+    await expect(upsertSynced(USER, { phraseId: "a", box: 1, dueAt: 10 })).resolves.toBeUndefined();
     // Kept locally, so the next hydrate pushes it.
     expect(store.get("a")).toBeDefined();
+  });
+});
+
+/**
+ * DR-036: the browser used to keep one shared cache, and hydrating pushed it
+ * into whoever signed in next, so account A's reviews landed in account B's
+ * server records. Each owner now has its own cache and every write names it.
+ */
+describe("owner isolation", () => {
+  it("hydrating B pushes none of A's cached reviews", async () => {
+    store.set("kanji.日", { phraseId: "kanji.日", box: 1, dueAt: 100, lastSeenAt: 50 });
+    fetchContentProgress.mockResolvedValue([]);
+
+    const got = await hydrateFromServer("user-b");
+
+    expect(got).toEqual([]);
+    expect(fetchContentProgress).toHaveBeenCalledWith("user-b");
+    expect(saveContentProgress).not.toHaveBeenCalled();
+    expect(cacheOf("user-b").size).toBe(0);
+  });
+
+  it("B's server state lands in B's cache, never A's", async () => {
+    fetchContentProgress.mockResolvedValue([{ contentId: "b-only", box: 2, dueAt: 9, lastSeenAt: 8 }]);
+
+    await hydrateFromServer("user-b");
+
+    expect(cacheOf("user-b").has("b-only")).toBe(true);
+    expect(store.has("b-only")).toBe(false);
+  });
+
+  it("a guest never reads or adopts an account's cache", async () => {
+    store.set("a", { phraseId: "a", box: 3, dueAt: 100, lastSeenAt: 50 });
+    expect(await hydrateFromServer("guest")).toEqual([]);
+  });
+
+  it("a write that finishes after a switch still belongs to its owner", async () => {
+    // The owner is bound when the review is recorded, not read from whoever is
+    // signed in when the write lands.
+    await recordRating(USER, "late", "got-it");
+
+    expect(store.has("late")).toBe(true);
+    expect(cacheOf("user-b").has("late")).toBe(false);
+    expect(saveContentProgress).toHaveBeenCalledWith(USER, [expect.objectContaining({ contentId: "late" })]);
   });
 });

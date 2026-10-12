@@ -19,26 +19,26 @@ import type { Kanji, Phrase, ReviewState, Word } from "@/types";
 import { n5Lessons } from "@/content/lessons";
 import type { DailySession } from "@/srs/dailyLoop";
 
-const recordRating = vi.fn<(id: string, rating: string, signedIn: boolean) => Promise<void>>(
+const recordRating = vi.fn<(owner: string, id: string, rating: string) => Promise<void>>(
   () => Promise.resolve(),
 );
-const recordReview = vi.fn<(id: string, correct: boolean, signedIn: boolean) => Promise<void>>(
+const recordReview = vi.fn<(owner: string, id: string, correct: boolean) => Promise<void>>(
   () => Promise.resolve(),
 );
 
-const getOne = vi.fn<(id: string) => Promise<ReviewState | undefined>>(() => Promise.resolve(undefined));
-const upsertSynced = vi.fn<(state: ReviewState, signedIn: boolean) => Promise<void>>(() => Promise.resolve());
+const getOne = vi.fn<(owner: string, id: string) => Promise<ReviewState | undefined>>(() => Promise.resolve(undefined));
+const upsertSynced = vi.fn<(owner: string, state: ReviewState) => Promise<void>>(() => Promise.resolve());
 
 vi.mock("@/db/reviewStore", () => ({
-  recordRating: (id: string, rating: string, signedIn: boolean) => recordRating(id, rating, signedIn),
-  recordReview: (id: string, correct: boolean, signedIn: boolean) => recordReview(id, correct, signedIn),
-  getOne: (id: string) => getOne(id),
-  upsertSynced: (state: ReviewState, signedIn: boolean) => upsertSynced(state, signedIn),
+  recordRating: (owner: string, id: string, rating: string) => recordRating(owner, id, rating),
+  recordReview: (owner: string, id: string, correct: boolean) => recordReview(owner, id, correct),
+  getOne: (owner: string, id: string) => getOne(owner, id),
+  upsertSynced: (owner: string, state: ReviewState) => upsertSynced(owner, state),
   hydrateFromServer: vi.fn(() => Promise.resolve([])),
 }));
 
 vi.mock("@/store/auth", () => ({
-  useAuth: (selector: (s: { user: null }) => unknown) => selector({ user: null }),
+  useAuth: (selector: (s: { user: null; owner: string }) => unknown) => selector({ user: null, owner: "guest" }),
   useUserTier: () => "guest",
 }));
 
@@ -47,6 +47,15 @@ vi.mock("@/store/auth", () => ({
  * from the built session into ReviewStep. Its two Dexie-backed stores and the
  * session builder are stubbed so the assertion is about dispatch, nothing else.
  */
+
+// No progress from another owner waiting on a choice (DR-036); adoption.test.ts covers that.
+vi.mock("@/db/adoption", () => ({
+  adoptionOffer: () => Promise.resolve(null),
+  resumeGuestImport: () => Promise.resolve(),
+  bringIn: vi.fn(),
+  keepSeparate: vi.fn(),
+}));
+
 vi.mock("@/db/pathProgressStore", () => ({
   getPathProgress: vi.fn(() => Promise.resolve({ pathId: "book-one", seenLessonIds: [] })),
   markLessonSeen: vi.fn(() => Promise.resolve({ pathId: "book-one", seenLessonIds: [] })),
@@ -375,8 +384,8 @@ describe("LearnPage seeds a review state for newly introduced kanji", () => {
     // the learner has only just met into box 2, three days out.
     await vi.waitFor(() =>
       expect(upsertSynced).toHaveBeenCalledWith(
+        "guest",
         expect.objectContaining({ phraseId: "kanji.水", box: 1 }),
-        false,
       ),
     );
   });
@@ -393,7 +402,7 @@ describe("LearnPage seeds a review state for newly introduced kanji", () => {
     );
 
     await user.click(await screen.findByRole("button", { name: "Start" }));
-    await vi.waitFor(() => expect(getOne).toHaveBeenCalledWith("kanji.水"));
+    await vi.waitFor(() => expect(getOne).toHaveBeenCalledWith("guest", "kanji.水"));
     expect(upsertSynced).not.toHaveBeenCalled();
   });
 });
@@ -420,7 +429,7 @@ describe("ProduceStep", () => {
 
     expect(screen.getByText("Try it · 2 / 2")).toBeTruthy();
     expect(onDone).not.toHaveBeenCalled();
-    expect(recordRating).toHaveBeenCalledWith("vocab.mizu", "didnt", false);
+    expect(recordRating).toHaveBeenCalledWith("guest", "vocab.mizu", "didnt");
   });
 
   it("does not offer the last card again while the lesson is saved", async () => {

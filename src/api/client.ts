@@ -1,4 +1,5 @@
 import { supabase } from "@/lib/supabase";
+import type { Owner } from "@/types";
 
 const API_BASE = import.meta.env.VITE_API_URL as string;
 
@@ -16,9 +17,25 @@ export class ApiError extends Error {
   }
 }
 
-export async function* apiStreamText(path: string, init: RequestInit = {}): AsyncGenerator<string> {
+/**
+ * The bearer token to send, checked against the learner the request is for.
+ *
+ * DR-036: a request for learner state names its owner when it is started, and
+ * the session is read only when it is actually sent. If the account changed in
+ * between -- sign-out, another account, another tab -- the request is refused
+ * rather than sent with someone else's token. A guest owner never matches, so
+ * guest progress cannot reach the server.
+ */
+async function tokenFor(owner: Owner | undefined): Promise<string | undefined> {
   const { data } = await supabase.auth.getSession();
-  const token = data.session?.access_token;
+  if (owner !== undefined && data.session?.user.id !== owner) {
+    throw new ApiError(401, "Signed-in account changed; request not sent");
+  }
+  return data.session?.access_token;
+}
+
+export async function* apiStreamText(path: string, init: RequestInit = {}): AsyncGenerator<string> {
+  const token = await tokenFor(undefined);
 
   const headers: Record<string, string> = {
     "Content-Type": "application/json",
@@ -49,9 +66,8 @@ export async function* apiStreamText(path: string, init: RequestInit = {}): Asyn
   }
 }
 
-export async function apiFetch<T>(path: string, init: RequestInit = {}): Promise<T> {
-  const { data } = await supabase.auth.getSession();
-  const token = data.session?.access_token;
+export async function apiFetch<T>(path: string, init: RequestInit = {}, owner?: Owner): Promise<T> {
+  const token = await tokenFor(owner);
 
   const headers: Record<string, string> = {
     "Content-Type": "application/json",

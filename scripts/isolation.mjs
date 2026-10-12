@@ -4,9 +4,9 @@
 // A starts a lesson, signs out; B signs in on the same browser. B's server rows
 // and local cache must carry none of A's activity, and A's must survive.
 //
-// EXPECTED TO FAIL until DR-036 is implemented: the browser keeps one shared
-// IndexedDB and hydrateFromServer pushes whatever it holds into whoever signs in
-// next. It is written now so the fix has its acceptance test waiting.
+// Written before the fix, when the browser kept one shared IndexedDB that
+// hydrateFromServer pushed into whoever signed in next; it failed then. Each
+// owner now has its own database, `aburungo:<user id>` (src/db/dexie.ts).
 //
 // Local only, like the signed-in walk: needs the API server and two throwaway
 // accounts (WALKTHROUGH_* and WALKTHROUGH_B_* in .env.local). Both are wiped first.
@@ -69,17 +69,24 @@ async function signOut(page) {
   await until(page, async () => !(await hasSession(page)), "sign-out");
 }
 
-const localIds = (page) =>
-  page.evaluate(
-    () =>
-      new Promise((resolve) => {
-        const req = indexedDB.open("aburungo");
+/** Review-state ids in one owner's local database ("guest" or an email); empty if it has none. */
+const localIds = async (page, who) => {
+  const name = `aburungo:${who === "guest" ? "guest" : await findUserId(who)}`;
+  return page.evaluate(
+    (name) =>
+      new Promise((resolve, reject) => {
+        const req = indexedDB.open(name);
+        req.onerror = () => reject(req.error);
         req.onsuccess = () => {
-          const all = req.result.transaction("reviewStates", "readonly").objectStore("reviewStates").getAllKeys();
+          const db = req.result;
+          if (!db.objectStoreNames.contains("reviewStates")) return resolve([]);
+          const all = db.transaction("reviewStates", "readonly").objectStore("reviewStates").getAllKeys();
           all.onsuccess = () => resolve(all.result.map(String));
         };
       }),
+    name,
   );
+};
 
 await resetAccount(A.email);
 await resetAccount(B.email);
@@ -107,19 +114,21 @@ check(true, `A's activity reached A's server (${MARK}) -- the check has somethin
 
 // A signs out; B signs in on the same browser and opens /learn.
 await signOut(page);
+check(!(await localIds(page, "guest")).includes(MARK), `signing out leaves none of A's activity to the guest`);
 await signIn(page, B);
 await page.goto(`${BASE}/learn`, { waitUntil: "networkidle" });
 await page.waitForTimeout(2000); // let hydrate push whatever it is going to push
 
 check(!(await serverIds(B.email)).includes(MARK), `B's server records hold none of A's activity`);
-check(!(await localIds(page)).includes(MARK), `B's local cache holds none of A's activity`);
+check(!(await localIds(page, B.email)).includes(MARK), `B's local cache holds none of A's activity`);
 
 // Back to A: A's activity is still A's.
 await signOut(page);
 await signIn(page, A);
 check((await serverIds(A.email)).includes(MARK), `returning to A restores A's activity`);
+check((await localIds(page, A.email)).includes(MARK), `A's local cache kept A's activity through B's visit`);
 
 await browser.close();
 const failed = results.filter((ok) => !ok).length;
-console.log(failed ? `\n${failed} check(s) failed -- expected until DR-036 lands` : "\nall isolation checks pass");
+console.log(failed ? `\n${failed} check(s) failed` : "\nall isolation checks pass");
 process.exit(failed ? 1 : 0);

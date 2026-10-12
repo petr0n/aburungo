@@ -19,8 +19,8 @@
  */
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Link } from "react-router";
-import type { Book, GrammarPattern, Kanji, Phrase, ReviewRating, Lesson, UserTier, Word } from "@/types";
-import { isGrammarPattern, isKanji, isWord } from "@/types";
+import type { Book, GrammarPattern, Kanji, Owner, Phrase, ReviewRating, Lesson, UserTier, Word } from "@/types";
+import { GUEST_OWNER, isGrammarPattern, isKanji, isWord } from "@/types";
 import { useAuth, useUserTier } from "@/store/auth";
 import { bookOne, books, currentBook, priorBooks } from "@/content/books";
 import { chapterLabel, placeInChapter } from "@/content/chapters";
@@ -30,6 +30,9 @@ import { produceItemsFor } from "./produceItems";
 import { getPathProgress, markLessonSeen } from "@/db/pathProgressStore";
 import { buildCanDoScope, buildCrossSituationScope, canDoMarkerId, taughtSituations, verifiedCanDos } from "@/srs/canDo";
 import { getOne, hydrateFromServer, recordRating, upsertSynced } from "@/db/reviewStore";
+import { adoptionOffer, bringIn, keepSeparate, resumeGuestImport, type AdoptionSource } from "@/db/adoption";
+import { useProgress } from "@/store/progress";
+import { AdoptionPrompt } from "@/components/AdoptionPrompt";
 import { schedule } from "@/srs/leitner";
 import { buildDailySession, type DailySession } from "@/srs/dailyLoop";
 import { createSessionEvidence } from "@/srs/sessionEvidence";
@@ -53,6 +56,7 @@ import { LoadingPlaceholder, EmptyState, ProgressBar } from "aburungo-design-sys
 
 type Step =
   | "loading"
+  | "adopt"
   | "review"
   | "new-lesson"
   | "checkpoint"
@@ -493,7 +497,7 @@ export function ProduceStep({
   shifted: boolean;
   onDone: () => void;
 }) {
-  const signedIn = useAuth((s) => s.user !== null);
+  const owner = useAuth((s) => s.owner);
   const [index, setIndex] = useState(0);
   const current = items[index];
 
@@ -503,7 +507,7 @@ export function ProduceStep({
   // skipped a lesson's grammar cloze and closed it that way.
   function handleNext(correct: boolean) {
     if (current === undefined) return;
-    void recordRating(current.id, correct ? "got-it" : "didnt", signedIn);
+    if (owner !== null) void recordRating(owner, current.id, correct ? "got-it" : "didnt");
     advance();
   }
 
@@ -512,7 +516,7 @@ export function ProduceStep({
   // a supported exercise does not reset what it has already earned.
   function handleGuidedNext() {
     if (current === undefined) return;
-    void seedWithoutPromotion(current.id, signedIn);
+    if (owner !== null) void seedWithoutPromotion(owner, current.id);
     advance();
   }
 
@@ -588,9 +592,9 @@ export function ProduceStep({
  * also promoting on a hit would move a brand-new word 1 -> 2 -> 3 within one
  * session and skip its short reinforcement intervals.
  */
-async function demoteMissedWord(wordId: string, signedIn: boolean): Promise<void> {
-  const existing = await getOne(wordId);
-  await upsertSynced(schedule(existing, "didnt", Date.now(), wordId), signedIn);
+async function demoteMissedWord(owner: Owner, wordId: string): Promise<void> {
+  const existing = await getOne(owner, wordId);
+  await upsertSynced(owner, schedule(existing, "didnt", Date.now(), wordId));
 }
 
 /**
@@ -613,8 +617,8 @@ async function demoteMissedWord(wordId: string, signedIn: boolean): Promise<void
  * lesson (日 by four), and a re-introduction must not knock a kanji that is
  * already progressing back to box 1.
  */
-async function seedNewKanji(kanji: Kanji[], signedIn: boolean): Promise<void> {
-  for (const k of kanji) await seedWithoutPromotion(k.id, signedIn);
+async function seedNewKanji(owner: Owner, kanji: Kanji[]): Promise<void> {
+  for (const k of kanji) await seedWithoutPromotion(owner, k.id);
 }
 
 /**
@@ -626,9 +630,9 @@ async function seedNewKanji(kanji: Kanji[], signedIn: boolean): Promise<void> {
  * in a supported exercise is not evidence about recall in either direction, so
  * it must neither promote it nor reset the progress it has earned.
  */
-async function seedWithoutPromotion(id: string, signedIn: boolean): Promise<void> {
-  if ((await getOne(id)) !== undefined) return;
-  await upsertSynced(schedule(undefined, "didnt", Date.now(), id), signedIn);
+async function seedWithoutPromotion(owner: Owner, id: string): Promise<void> {
+  if ((await getOne(owner, id)) !== undefined) return;
+  await upsertSynced(owner, schedule(undefined, "didnt", Date.now(), id));
 }
 
 // ── Close step ───────────────────────────────────────────────────────────────
@@ -725,9 +729,23 @@ function CloseStep({ book, session }: { book: Book; session: DailySession }) {
  * no prop is the app's only call site; the prop stays as an override for
  * tests and any future route that pins a book.
  */
-export function LearnPage({ book: pinnedBook }: { book?: Book } = {}) {
+export function LearnPage({ book }: { book?: Book } = {}) {
+  const owner = useAuth((s) => s.owner);
+  // DR-036: nothing is read until auth has resolved -- not even guest data --
+  // and a new owner remounts the session, so no state of the previous
+  // learner's (queue, ladder position, promotion budget) survives the switch.
+  if (owner === null) {
+    return (
+      <PageShell>
+        <LoadingPlaceholder label="Preparing today's session…" />
+      </PageShell>
+    );
+  }
+  return <LearnSession key={owner} owner={owner} book={book} />;
+}
+
+function LearnSession({ book: pinnedBook, owner }: { book?: Book; owner: Owner }) {
   const tier = useUserTier();
-  const userId = useAuth((s) => s.user?.id ?? null);
   /**
    * Which book this session is for. Held in state because it is not known
    * until progress has been read; the loading placeholder covers the gap, so
@@ -756,20 +774,30 @@ export function LearnPage({ book: pinnedBook }: { book?: Book } = {}) {
    * before the write lands.
    */
   const [seenLessonIds, setSeenUnitIds] = useState<string[]>([]);
+  /** Progress from another owner waiting on the learner's choice (DR-036), if any. */
+  const [offer, setOffer] = useState<AdoptionSource | null>(null);
+  /** Bumped after an adoption choice, to load again with the result. */
+  const [reloads, setReloads] = useState(0);
 
   useEffect(() => {
-    // Re-runs on tier/userId change (e.g. guest -> signed-in on sign-up mid-session).
     let cancelled = false;
     async function load() {
-      const signedIn = userId !== null;
+      await resumeGuestImport(owner);
+      const pending = await adoptionOffer(owner);
+      if (cancelled) return;
+      if (pending !== null) {
+        setOffer(pending);
+        setStep("adopt");
+        return;
+      }
       /**
        * Every book's progress, not just this one's, because which book "this
        * one" is falls out of the answer. That is `books.length` local Dexie
        * reads — two today, a dozen eventually, and all of them cheap.
        */
       const [reviewStates, ...rows] = await Promise.all([
-        hydrateFromServer(signedIn),
-        ...books.map((b) => getPathProgress(b.progressKey, signedIn)),
+        hydrateFromServer(owner),
+        ...books.map((b) => getPathProgress(owner, b.progressKey)),
       ]);
       if (cancelled) return;
       // Zipped by position, not by the returned `pathId`: the row is what the
@@ -802,14 +830,29 @@ export function LearnPage({ book: pinnedBook }: { book?: Book } = {}) {
     };
     // `book` is deliberately absent: this effect sets it, and depending on it
     // would re-run the load forever.
-  }, [pinnedBook, tier, userId]);
+  }, [pinnedBook, tier, owner, reloads]);
+
+  async function decide(bring: boolean) {
+    if (offer === null) return;
+    setStep("loading");
+    if (bring) {
+      await bringIn(offer, owner).catch(() => {
+        /* a guest import that did not finish resumes on the next load */
+      });
+      void useProgress.getState().loadKana(owner);
+    } else {
+      keepSeparate(offer, owner);
+    }
+    setOffer(null);
+    setReloads((n) => n + 1);
+  }
 
   const finishUnitAndClose = useCallback(async () => {
     if (session?.lesson != null) {
-      await markLessonSeen(book.progressKey, session.lesson.id, userId !== null);
+      await markLessonSeen(owner, book.progressKey, session.lesson.id);
     }
     setStep("close");
-  }, [book.progressKey, session, userId]);
+  }, [book.progressKey, session, owner]);
 
   function afterReview() {
     const lesson = session?.lesson ?? null;
@@ -825,7 +868,7 @@ export function LearnPage({ book: pinnedBook }: { book?: Book } = {}) {
   const afterNewUnit = useCallback(() => {
     if (session === null) return;
     // Before the branch, so it runs whether or not this lesson has produce items.
-    void seedNewKanji(session.newKanji, userId !== null);
+    void seedNewKanji(owner, session.newKanji);
     const produceItems = produceItemsFor(session);
     if (produceItems.length > 0) {
       setStep("produce");
@@ -834,7 +877,7 @@ export function LearnPage({ book: pinnedBook }: { book?: Book } = {}) {
     } else {
       void finishUnitAndClose();
     }
-  }, [session, userId, finishUnitAndClose]);
+  }, [session, owner, finishUnitAndClose]);
 
   /**
    * Turn one answered card into a schedule change, or into nothing.
@@ -846,9 +889,9 @@ export function LearnPage({ book: pinnedBook }: { book?: Book } = {}) {
   const recordAttempt = useCallback(
     (itemId: string, correct: boolean) => {
       const rating = evidence.current.ratingFor(itemId, correct);
-      if (rating !== null) void recordRating(itemId, rating, userId !== null);
+      if (rating !== null) void recordRating(owner, itemId, rating);
     },
-    [userId],
+    [owner],
   );
 
   function afterProduce() {
@@ -860,7 +903,16 @@ export function LearnPage({ book: pinnedBook }: { book?: Book } = {}) {
   }
 
   let content;
-  if (step === "loading" || session === null) {
+  if (step === "adopt" && offer !== null) {
+    content = (
+      <AdoptionPrompt
+        source={offer}
+        signedIn={owner !== GUEST_OWNER}
+        onBring={() => void decide(true)}
+        onKeep={() => void decide(false)}
+      />
+    );
+  } else if (step === "loading" || session === null) {
     content = <LoadingPlaceholder label="Preparing today's session…" />;
   } else if (step === "review") {
     content = (
@@ -919,7 +971,7 @@ export function LearnPage({ book: pinnedBook }: { book?: Book } = {}) {
       <LessonConversation
         lesson={session.lesson}
         scope={buildCrossSituationScope(book.lessons, seenLessonIds, wordsForTier(tier))}
-        signedIn={userId !== null}
+        signedIn={owner !== GUEST_OWNER}
         onDone={() => void finishUnitAndClose()}
       />
     );
@@ -931,11 +983,11 @@ export function LearnPage({ book: pinnedBook }: { book?: Book } = {}) {
         situations={taughtSituations(book.lessons, seenLessonIds)}
         verified={verifiedCanDos(seenLessonIds)}
         scopeFor={(situation) => buildCanDoScope(book.lessons, situation, words)}
-        signedIn={userId !== null}
+        signedIn={owner !== GUEST_OWNER}
         onVerified={(situation) => {
           const marker = canDoMarkerId(situation);
           setSeenUnitIds((prev) => (prev.includes(marker) ? prev : [...prev, marker]));
-          void markLessonSeen(book.progressKey, marker, userId !== null);
+          void markLessonSeen(owner, book.progressKey, marker);
         }}
         onComplete={() => void finishUnitAndClose()}
         // Deliberately does NOT mark the lesson seen. This is the last lesson on the
@@ -957,7 +1009,7 @@ export function LearnPage({ book: pinnedBook }: { book?: Book } = {}) {
       <RecognitionPass
         queue={session.newWords}
         pool={wordsForTier(tier)}
-        onMissed={(word) => void demoteMissedWord(word.id, userId !== null)}
+        onMissed={(word) => void demoteMissedWord(owner, word.id)}
         onDone={() => void finishUnitAndClose()}
         doneLabel="Finish session"
       />

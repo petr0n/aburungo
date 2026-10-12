@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import type { Phrase, Word, ReviewRating } from "@/types";
 import { useSession } from "@/store/session";
 import { useAuth } from "@/store/auth";
@@ -9,7 +9,7 @@ import type { FlashCardPhase } from "./FlashCard";
 type Props = { cards: Array<Phrase | Word> };
 
 export function FlashcardScreen({ cards }: Props) {
-  const userId = useAuth((s) => s.user?.id ?? null);
+  const owner = useAuth((s) => s.owner);
   const status = useSession((s) => s.status);
   const error = useSession((s) => s.error);
   const queue = useSession((s) => s.queue);
@@ -21,9 +21,12 @@ export function FlashcardScreen({ cards }: Props) {
   const [phase, setPhase] = useState<FlashCardPhase>("entering");
   const [stagedCard, setStagedCard] = useState<Phrase | Word | null>(null);
 
-  useEffect(() => {
-    void initialize(cards, userId);
-  }, [initialize, cards, userId]);
+  // Owner is null until auth resolves; the session waits for it (DR-036).
+  const start = useCallback(() => {
+    if (owner !== null) void initialize(cards, owner);
+  }, [initialize, cards, owner]);
+
+  useEffect(start, [start]);
 
   const currentCard = queue[currentIndex];
   const displayCard = stagedCard ?? currentCard;
@@ -42,7 +45,7 @@ export function FlashcardScreen({ cards }: Props) {
    */
   function handleRate(rating: ReviewRating) {
     setStagedCard(currentCard ?? null);
-    void rate(rating, userId);
+    void rate(rating);
     setStagedCard(null);
     setPhase("entering");
   }
@@ -71,7 +74,7 @@ export function FlashcardScreen({ cards }: Props) {
             type="button"
             onClick={() => {
               reset();
-              void initialize(cards, userId);
+              start();
             }}
             className="h-12 rounded-xl border border-border-strong px-6 text-body font-medium text-fg-muted hover:bg-surface-2 active:bg-surface-2"
           >
@@ -92,7 +95,7 @@ export function FlashcardScreen({ cards }: Props) {
             type="button"
             onClick={() => {
               reset();
-              void initialize(cards, userId);
+              start();
             }}
             className="h-12 rounded-xl border border-border-strong px-6 text-body font-medium text-fg-muted hover:bg-surface-2 active:bg-surface-2"
           >

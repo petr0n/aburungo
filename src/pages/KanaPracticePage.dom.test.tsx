@@ -30,7 +30,7 @@ vi.mock("@/store/progress", () => ({
 }));
 
 vi.mock("@/store/auth", () => ({
-  useAuth: (selector: (s: { user: null }) => unknown) => selector({ user: null }),
+  useAuth: (selector: (s: { user: null; owner: string }) => unknown) => selector({ user: null, owner: "guest" }),
   useUserTier: () => "guest",
 }));
 
@@ -70,7 +70,7 @@ describe("KanaPracticePage", () => {
       string,
       boolean,
     ];
-    expect(call[0]).toBe(null); // guest
+    expect(call[0]).toBe("guest");
     expect(call[3]).toBe("recognized");
     expect(typeof call[1]).toBe("string"); // the kana character
     expect(["hiragana", "katakana"]).toContain(call[2]);

@@ -52,7 +52,7 @@ function checkAnswer(input: string, card: KanaPracticeCard): boolean {
 }
 
 export function KanaPracticePage() {
-  const userId = useAuth((s) => s.user?.id ?? null);
+  const owner = useAuth((s) => s.owner);
   const recordKanaAnswer = useProgress((s) => s.recordKanaAnswer);
   const [screen, setScreen] = useState<Screen>("setup");
   const [practiceMode, setPracticeMode] = useState<PracticeMode>("multiple-choice");
@@ -130,7 +130,7 @@ export function KanaPracticePage() {
     setSelectedChoice(choice);
     setAnswered(isCorrect ? "correct" : "wrong");
     // Picking from options is recognition; typing it unprompted is recall.
-    void recordKanaAnswer(userId, currentCard.kana, currentCard.script, "recognized", isCorrect);
+    if (owner !== null) void recordKanaAnswer(owner, currentCard.kana, currentCard.script, "recognized", isCorrect);
     if (isCorrect) {
       setCorrectCount((n) => n + 1);
     } else {
@@ -143,7 +143,7 @@ export function KanaPracticePage() {
     if (answered !== null || !currentCard || !typeInput.trim()) return;
     const isCorrect = checkAnswer(typeInput, currentCard);
     setAnswered(isCorrect ? "correct" : "wrong");
-    void recordKanaAnswer(userId, currentCard.kana, currentCard.script, "recalled", isCorrect);
+    if (owner !== null) void recordKanaAnswer(owner, currentCard.kana, currentCard.script, "recalled", isCorrect);
     if (isCorrect) {
       setCorrectCount((n) => n + 1);
       timerRef.current = setTimeout(() => advanceRef.current(), 700);

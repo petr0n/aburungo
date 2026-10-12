@@ -4,20 +4,25 @@
  * Everything that reads or writes ReviewState in IndexedDB goes through here.
  * The rest of the app (SRS, components, session store) never touches Dexie
  * directly — that keeps the data layer swappable and the SRS pure.
+ *
+ * Every function takes the Owner whose cache it reads or writes (DR-036). It
+ * is bound when the operation starts, so a write that lands after a sign-out
+ * or account switch still goes to its own owner's cache and server record.
  */
-import type { EpochMs, ReviewRating, ReviewState } from "@/types";
-import { db } from "./dexie";
+import type { EpochMs, Owner, ReviewRating, ReviewState } from "@/types";
+import { GUEST_OWNER } from "@/types";
+import { dbFor } from "./dexie";
 import { fetchContentProgress, saveContentProgress } from "@/api/progress";
 import { schedule } from "@/srs/leitner";
 
 /** Fetch every stored ReviewState. Use sparingly — fine at session start. */
-export function getAll(): Promise<ReviewState[]> {
-  return db.reviewStates.toArray();
+export function getAll(owner: Owner): Promise<ReviewState[]> {
+  return dbFor(owner).reviewStates.toArray();
 }
 
 /** Fetch one phrase's state, or undefined if it's never been reviewed. */
-export function getOne(phraseId: string): Promise<ReviewState | undefined> {
-  return db.reviewStates.get(phraseId);
+export function getOne(owner: Owner, phraseId: string): Promise<ReviewState | undefined> {
+  return dbFor(owner).reviewStates.get(phraseId);
 }
 
 /**
@@ -27,13 +32,13 @@ export function getOne(phraseId: string): Promise<ReviewState | undefined> {
  * reviewed first. Phrases never reviewed have no row here and are surfaced
  * separately (see session store / pickReviewQueue).
  */
-export function getDue(now: EpochMs): Promise<ReviewState[]> {
-  return db.reviewStates.where("dueAt").belowOrEqual(now).sortBy("dueAt");
+export function getDue(owner: Owner, now: EpochMs): Promise<ReviewState[]> {
+  return dbFor(owner).reviewStates.where("dueAt").belowOrEqual(now).sortBy("dueAt");
 }
 
 /** Insert or replace a phrase's review state. Keyed by phraseId. */
-export async function upsert(state: ReviewState): Promise<void> {
-  await db.reviewStates.put(state);
+export async function upsert(owner: Owner, state: ReviewState): Promise<void> {
+  await dbFor(owner).reviewStates.put(state);
 }
 
 /**
@@ -44,10 +49,10 @@ export async function upsert(state: ReviewState): Promise<void> {
  * Fire-and-forget: a failed write must not interrupt a lesson, and
  * hydrateFromServer's merge on next load repairs anything that was lost.
  */
-export async function upsertSynced(state: ReviewState, signedIn: boolean): Promise<void> {
-  await upsert(state);
-  if (!signedIn) return;
-  void saveContentProgress([
+export async function upsertSynced(owner: Owner, state: ReviewState): Promise<void> {
+  await upsert(owner, state);
+  if (owner === GUEST_OWNER) return;
+  void saveContentProgress(owner, [
     {
       contentId: state.phraseId,
       box: state.box,
@@ -69,12 +74,12 @@ export async function upsertSynced(state: ReviewState, signedIn: boolean): Promi
  *
  * Returns the merged set so callers can use it without a second read.
  */
-export async function hydrateFromServer(signedIn: boolean): Promise<ReviewState[]> {
-  const local = await getAll();
-  if (!signedIn) return local;
+export async function hydrateFromServer(owner: Owner): Promise<ReviewState[]> {
+  const local = await getAll(owner);
+  if (owner === GUEST_OWNER) return local;
 
   try {
-    const remote = await fetchContentProgress();
+    const remote = await fetchContentProgress(owner);
     const byId = new Map(local.map((s) => [s.phraseId, s]));
     const toPush: ReviewState[] = [];
 
@@ -88,7 +93,7 @@ export async function hydrateFromServer(signedIn: boolean): Promise<ReviewState[
       };
       if (mine === undefined || (mine.lastSeenAt ?? 0) < (r.lastSeenAt ?? 0)) {
         byId.set(r.contentId, remoteState);
-        await upsert(remoteState);
+        await upsert(owner, remoteState);
       }
     }
 
@@ -100,6 +105,7 @@ export async function hydrateFromServer(signedIn: boolean): Promise<ReviewState[
 
     if (toPush.length > 0) {
       await saveContentProgress(
+        owner,
         toPush.map((s) => ({
           contentId: s.phraseId,
           box: s.box,
@@ -117,8 +123,8 @@ export async function hydrateFromServer(signedIn: boolean): Promise<ReviewState[
 }
 
 /** Wipe everything. Only meant for dev/debug — no UI hook yet. */
-export async function reset(): Promise<void> {
-  await db.reviewStates.clear();
+export async function reset(owner: Owner): Promise<void> {
+  await dbFor(owner).reviewStates.clear();
 }
 
 /**
@@ -133,12 +139,12 @@ export async function reset(): Promise<void> {
  *
  * `now` is read here, at the db boundary, so src/srs/ stays pure per CLAUDE.md.
  */
-export async function recordRating(itemId: string, rating: ReviewRating, signedIn: boolean): Promise<void> {
-  const existing = await getOne(itemId);
-  await upsertSynced(schedule(existing, rating, Date.now(), itemId), signedIn);
+export async function recordRating(owner: Owner, itemId: string, rating: ReviewRating): Promise<void> {
+  const existing = await getOne(owner, itemId);
+  await upsertSynced(owner, schedule(existing, rating, Date.now(), itemId));
 }
 
 /** Boolean-outcome convenience for surfaces that only know correct/incorrect. */
-export async function recordReview(itemId: string, correct: boolean, signedIn: boolean): Promise<void> {
-  return recordRating(itemId, correct ? "got-it" : "didnt", signedIn);
+export async function recordReview(owner: Owner, itemId: string, correct: boolean): Promise<void> {
+  return recordRating(owner, itemId, correct ? "got-it" : "didnt");
 }

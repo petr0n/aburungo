@@ -230,7 +230,7 @@ async function verifyReviewStep(browser) {
   await page.evaluate(
     () =>
       new Promise((resolve) => {
-        const req = indexedDB.open("aburungo");
+        const req = indexedDB.open("aburungo:guest");
         req.onsuccess = () => {
           const db = req.result;
           const tx = db.transaction(["reviewStates", "pathProgress"], "readwrite");
@@ -269,7 +269,7 @@ async function verifyReviewStep(browser) {
   const box = await page.evaluate(
     () =>
       new Promise((resolve) => {
-        const req = indexedDB.open("aburungo");
+        const req = indexedDB.open("aburungo:guest");
         req.onsuccess = () => {
           const get = req.result
             .transaction("reviewStates", "readonly")
@@ -333,7 +333,7 @@ async function verifyKanjiSeeding(browser) {
   const row = await page.evaluate(
     () =>
       new Promise((resolve) => {
-        const req = indexedDB.open("aburungo");
+        const req = indexedDB.open("aburungo:guest");
         req.onsuccess = () => {
           const get = req.result
             .transaction("reviewStates", "readonly")

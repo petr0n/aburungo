@@ -30,6 +30,14 @@ export type JlptLevel = "N5" | "N4" | "N3" | "N2" | "N1";
 export type UserTier = "guest" | "free" | "paid";
 
 /**
+ * Whose learner state a record, write or in-memory store belongs to (DR-036):
+ * `GUEST_OWNER`, or a Supabase user id. Never an email. Routing for local
+ * storage only -- the server derives ownership from the token, not from this.
+ */
+export type Owner = string;
+export const GUEST_OWNER: Owner = "guest";
+
+/**
  * A single phrase the learner is studying.
  *
  * Authored by hand in YAML under src/content/phrases/*.yaml and validated at

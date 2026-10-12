@@ -1304,8 +1304,8 @@ and deployment remain pending; the detailed acceptance criteria live in the grad
 ## DR-036 — Learning state belongs to an explicit account or guest
 
 **Date:** 2026-09-06
-**Status:** Account isolation agreed; implementation pending. Guest-import interaction is proposed
-for implementation review in the linked requirements.
+**Status:** Account isolation agreed; core boundary implemented 2026-10-12, follow-ups tracked in
+the roadmap. The guest-import interaction is built as proposed; its copy awaits owner review.
 
 **Context:**
 The browser uses one shared Dexie database without user keys. Sign-out leaves its contents in

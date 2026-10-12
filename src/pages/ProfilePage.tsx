@@ -109,6 +109,7 @@ function SignedInView() {
   const [resetting, setResetting] = useState<KanaScript | "all" | null>(null);
 
   if (!user) return null;
+  const owner = user.id;
 
   const avatarUrl = user.user_metadata?.avatar_url as string | undefined;
   const displayName =
@@ -131,7 +132,7 @@ function SignedInView() {
   };
 
   function handleReset(script: KanaScript | "all") {
-    void resetKana(user?.id ?? null, script).then(() => setResetting(null));
+    void resetKana(owner, script).then(() => setResetting(null));
   }
 
   return (

@@ -3,8 +3,8 @@
  *
  * Reading imports produced two wrong answers during the 2026-08-09 audit, so
  * this asserts against real storage after driving the real UI: IndexedDB
- * ("aburungo" -> reviewStates) for word/phrase review state, and localStorage
- * ("aburungo:kana_progress") for guest kana progress.
+ * ("aburungo:guest" -> reviewStates) for word/phrase review state, and localStorage
+ * ("aburungo:kana_progress:guest") for guest kana progress.
  *
  * Run it against the current build and against the pre-fix commit. A fix is
  * only demonstrated if the same script fails before it and passes after.
@@ -28,7 +28,7 @@ async function reviewStateCount(page) {
   return page.evaluate(
     () =>
       new Promise((resolve) => {
-        const req = indexedDB.open("aburungo");
+        const req = indexedDB.open("aburungo:guest");
         req.onsuccess = () => {
           const db = req.result;
           if (!db.objectStoreNames.contains("reviewStates")) return resolve(0);
@@ -45,7 +45,7 @@ async function reviewStateCount(page) {
 async function kanaEntryCount(page) {
   return page.evaluate(() => {
     try {
-      return JSON.parse(localStorage.getItem("aburungo:kana_progress") ?? "[]").length;
+      return JSON.parse(localStorage.getItem("aburungo:kana_progress:guest") ?? "[]").length;
     } catch {
       return -1;
     }

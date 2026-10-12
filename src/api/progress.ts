@@ -6,8 +6,12 @@ import type {
   KanaScript,
   PathProgress,
   LeitnerBox,
+  Owner,
 } from "@/types";
 import { apiFetch } from "./client";
+
+// Every call here is learner state, so each takes the Owner it is for and
+// apiFetch refuses to send it under any other account's token (DR-036).
 
 export type DueCard = {
   cardId: string;
@@ -32,13 +36,14 @@ function toFsrsRating(rating: ReviewRating): FsrsRating {
   return rating === "got-it" ? "good" : "again";
 }
 
-export async function fetchDue(limit?: number): Promise<DueCard[]> {
+export async function fetchDue(owner: Owner, limit?: number): Promise<DueCard[]> {
   const qs = limit !== undefined ? `?limit=${limit}` : "";
-  const res = await apiFetch<{ data: DueCard[] }>(`/api/progress/due${qs}`);
+  const res = await apiFetch<{ data: DueCard[] }>(`/api/progress/due${qs}`, {}, owner);
   return res.data;
 }
 
 export async function submitReview(
+  owner: Owner,
   cardId: string,
   rating: ReviewRating,
   reviewedAt: number,
@@ -46,21 +51,22 @@ export async function submitReview(
   const res = await apiFetch<{ data: ReviewResult }>("/api/progress/review", {
     method: "POST",
     body: JSON.stringify({ cardId, rating: toFsrsRating(rating), reviewedAt }),
-  });
+  }, owner);
   return res.data;
 }
 
-export async function fetchStats(): Promise<ProgressStats> {
-  const res = await apiFetch<{ data: ProgressStats }>("/api/progress/stats");
+export async function fetchStats(owner: Owner): Promise<ProgressStats> {
+  const res = await apiFetch<{ data: ProgressStats }>("/api/progress/stats", {}, owner);
   return res.data;
 }
 
-export async function fetchKanaProgress(): Promise<KanaProgressEntry[]> {
-  const res = await apiFetch<{ data: KanaProgressEntry[] }>("/api/progress/kana");
+export async function fetchKanaProgress(owner: Owner): Promise<KanaProgressEntry[]> {
+  const res = await apiFetch<{ data: KanaProgressEntry[] }>("/api/progress/kana", {}, owner);
   return res.data;
 }
 
 export async function submitKanaAnswer(
+  owner: Owner,
   character: string,
   script: KanaScript,
   mode: "recognized" | "recalled",
@@ -69,12 +75,12 @@ export async function submitKanaAnswer(
   const res = await apiFetch<{ data: KanaProgressEntry }>("/api/progress/kana", {
     method: "POST",
     body: JSON.stringify({ character, script, mode, correct }),
-  });
+  }, owner);
   return res.data;
 }
 
-export async function resetKanaProgress(script: KanaScript | "all"): Promise<void> {
-  await apiFetch(`/api/progress/kana?script=${script}`, { method: "DELETE" });
+export async function resetKanaProgress(owner: Owner, script: KanaScript | "all"): Promise<void> {
+  await apiFetch(`/api/progress/kana?script=${script}`, { method: "DELETE" }, owner);
 }
 
 /**
@@ -92,18 +98,20 @@ function fromWire(wire: WirePathProgress): PathProgress {
   return { pathId: wire.pathId, seenLessonIds: wire.seenUnitIds ?? [] };
 }
 
-export async function fetchPathProgress(pathId: string): Promise<PathProgress> {
+export async function fetchPathProgress(owner: Owner, pathId: string): Promise<PathProgress> {
   const res = await apiFetch<{ data: WirePathProgress }>(
     `/api/progress/path?pathId=${encodeURIComponent(pathId)}`,
+    {},
+    owner,
   );
   return fromWire(res.data);
 }
 
-export async function markLessonSeenRemote(pathId: string, lessonId: string): Promise<PathProgress> {
+export async function markLessonSeenRemote(owner: Owner, pathId: string, lessonId: string): Promise<PathProgress> {
   const res = await apiFetch<{ data: WirePathProgress }>("/api/progress/path", {
     method: "POST",
     body: JSON.stringify({ pathId, unitId: lessonId }),
-  });
+  }, owner);
   return fromWire(res.data);
 }
 
@@ -114,8 +122,8 @@ export type ContentProgressEntry = {
   lastSeenAt: number | null;
 };
 
-export async function fetchContentProgress(): Promise<ContentProgressEntry[]> {
-  const res = await apiFetch<{ data: ContentProgressEntry[] }>("/api/progress/content");
+export async function fetchContentProgress(owner: Owner): Promise<ContentProgressEntry[]> {
+  const res = await apiFetch<{ data: ContentProgressEntry[] }>("/api/progress/content", {}, owner);
   return res.data;
 }
 
@@ -123,11 +131,11 @@ export async function fetchContentProgress(): Promise<ContentProgressEntry[]> {
 // push for a large history must go in pieces or none of it lands.
 const SAVE_BATCH = 500;
 
-export async function saveContentProgress(entries: ContentProgressEntry[]): Promise<void> {
+export async function saveContentProgress(owner: Owner, entries: ContentProgressEntry[]): Promise<void> {
   for (let i = 0; i < entries.length; i += SAVE_BATCH) {
     await apiFetch("/api/progress/content", {
       method: "POST",
       body: JSON.stringify({ entries: entries.slice(i, i + SAVE_BATCH) }),
-    });
+    }, owner);
   }
 }

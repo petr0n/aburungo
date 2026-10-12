@@ -3,7 +3,8 @@ import { LoadingPlaceholder, ProgressBar, ScoreCard } from "aburungo-design-syst
 import { fetchKanjiList, fetchDueKanji, submitKanjiReview } from "@/api/kanji";
 import type { KanjiEntry } from "@/api/kanji";
 import { KanjiDrillCard, KunReadings, type DrillPhase } from "@/components/KanjiDrillCard";
-import { useUserTier } from "@/store/auth";
+import { useAuth, useUserTier } from "@/store/auth";
+import type { Owner } from "@/types";
 import { PageShell } from "@/components/PageShell";
 import { ProgressWidget } from "@/components/ProgressWidget";
 
@@ -137,6 +138,13 @@ function BrowseScreen({ jlpt, onJlptChange, kanji, loading, selected, onSelect, 
 // --- Main component ---
 
 export function KanjiPage() {
+  // Keyed by owner so a drill built from one learner's due list does not
+  // survive into the next learner's session (DR-036).
+  const owner = useAuth((s) => s.owner);
+  return <KanjiScreens key={owner ?? "unresolved"} owner={owner} />;
+}
+
+function KanjiScreens({ owner }: { owner: Owner | null }) {
   const tier = useUserTier();
   const maxJlpt = TIER_MAX_JLPT[tier] ?? 5;
   const jlptTabs = ALL_JLPT_TABS.filter((n) => n >= maxJlpt);
@@ -190,7 +198,8 @@ export function KanjiPage() {
   async function startDrill() {
     let q: KanjiEntry[];
     try {
-      const due = await fetchDueKanji();
+      if (owner === null) throw new Error("auth unresolved");
+      const due = await fetchDueKanji(owner);
       const dueIds = new Set(due.map((d) => d.kanjiId));
       const dueKanji = kanjiList.filter((k) => dueIds.has(k.id));
       q = dueKanji.length > 0 ? dueKanji : shuffle([...kanjiList]).slice(0, 20);
@@ -218,7 +227,7 @@ export function KanjiPage() {
     } else {
       setMissed((m) => [...m, current]);
     }
-    void submitKanjiReview(current.id, correct ? "good" : "again", Date.now()).catch(() => {});
+    if (owner !== null) void submitKanjiReview(owner, current.id, correct ? "good" : "again", Date.now()).catch(() => {});
     setPhase("exiting");
   }
 
