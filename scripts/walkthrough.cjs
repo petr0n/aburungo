@@ -426,7 +426,14 @@ async function handleProductionCheckpointIfPresent(page, sessionIndex) {
   if (!(await visible(page, "text=/(\\d+ to write|more to write)/"))) return false;
   log(`  production checkpoint detected (session ${sessionIndex})`);
 
+  // prompt -> readings seen for it. A list, not one answer: Book One has items
+  // sharing an English prompt (red is both 赤い and 赤; woman is 女の人 and 女),
+  // and with the queue order varying, a single remembered answer typed the
+  // other item's reading forever. That stalled one CI walk in ten (2026-10-12).
+  // On a miss the result shows the right reading, so it joins the list and the
+  // next attempt for that prompt rotates to it.
   const answers = new Map();
+  const misses = new Map();
   let guard = 0;
 
   while (guard < 200) {
@@ -448,7 +455,8 @@ async function handleProductionCheckpointIfPresent(page, sessionIndex) {
 
     const prompt = await page.locator("p.text-heading").first().textContent().catch(() => null);
     if (prompt === null) break;
-    const known = answers.get(prompt.trim());
+    const readings = answers.get(prompt.trim());
+    const known = readings && readings[(misses.get(prompt.trim()) ?? 0) % readings.length];
 
     // Reveal once to learn the answer, then type it back when the item
     // re-queues. Both halves are load-bearing: FillBlankCard only reports
@@ -476,7 +484,7 @@ async function handleProductionCheckpointIfPresent(page, sessionIndex) {
         .first()
         .textContent()
         .catch(() => null);
-      if (reading !== null) answers.set(prompt.trim(), reading.split("·")[0].trim());
+      if (reading !== null) answers.set(prompt.trim(), [reading.split("·")[0].trim()]);
     } else {
       await page.selectOption('select[aria-label="Input method"]', "system");
       const input = page.getByPlaceholder(/Japanese/i).first();
@@ -484,6 +492,14 @@ async function handleProductionCheckpointIfPresent(page, sessionIndex) {
       await input.fill(known);
       await page.waitForTimeout(150);
       await clickWhenReady(page, "button:has-text('Check answer')", "Check answer (production)");
+      await page.locator("button:has-text('Next')").first().waitFor({ state: "visible", timeout: CLICK_TIMEOUT });
+      if (await visible(page, "text=Not quite")) {
+        const key = prompt.trim();
+        misses.set(key, (misses.get(key) ?? 0) + 1);
+        const right = await page.locator("p.font-jp.text-jp.text-fg-muted").first().textContent().catch(() => null);
+        const r = right?.split("·")[0].trim();
+        if (r && !readings.includes(r)) readings.push(r);
+      }
     }
 
     await clickWhenReady(page, "button:has-text('Next')", "Next (production)");
