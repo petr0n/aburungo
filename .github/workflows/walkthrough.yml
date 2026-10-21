@@ -20,6 +20,14 @@ on:
   pull_request:
     branches: ["**"]
   workflow_dispatch:
+  # Nightly on main, 08:00 UTC (3am Central): catches what changes without a PR --
+  # dependencies, the design-system pin, Supabase. Failures open an issue (below).
+  schedule:
+    - cron: "0 8 * * *"
+
+permissions:
+  contents: read
+  issues: write
 
 jobs:
   walkthrough:
@@ -111,3 +119,19 @@ jobs:
       - name: Walkthrough
         if: steps.secrets.outputs.ready == 'true'
         run: pnpm walkthrough
+
+      # Nightly only: a failure nobody is watching for must land somewhere seen.
+      # One open issue collects them; each failed night adds a comment.
+      - name: Report a failed nightly run
+        if: failure() && github.event_name == 'schedule'
+        working-directory: .
+        env:
+          GH_TOKEN: ${{ github.token }}
+          R: ${{ github.repository }}
+          RUN: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          gh label create nightly-failure --repo "$R" --color B60205 --force >/dev/null
+          n=$(gh issue list --repo "$R" --label nightly-failure --state open --json number -q '.[0].number')
+          msg="Nightly **${{ github.workflow }}** failed on main ($(date -u +%F)): $RUN"
+          if [ -n "$n" ]; then gh issue comment "$n" --repo "$R" --body "$msg"
+          else gh issue create --repo "$R" --label nightly-failure --title "Nightly tests failing" --body "$msg"; fi
