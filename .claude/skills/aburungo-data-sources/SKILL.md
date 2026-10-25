@@ -18,5 +18,6 @@ description: AburunGo's upstream data sources and their licenses - JMdict, Tatoe
 | STT                  | Web Speech API (V1) → OpenAI Whisper API   | Free / $0.006/min     |
 | Conversation AI      | Claude Haiku via Anthropic API             | $0.80/$4 per M tokens |
 
-Approved and rejected source verdicts, and the deferred Book Four news/exposition
-candidates, are in `docs/data-sources.md`.
+Approved and rejected reading-source verdicts, license must-haves, and the deferred
+Book Four news/exposition candidates are in `docs/text-source-brief.md`. API and dataset
+research (JMdict, Tatoeba, KANJIDIC2, KanjiVG) is in `docs/data-sources.md`.
