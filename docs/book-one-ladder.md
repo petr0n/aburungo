@@ -100,8 +100,8 @@ never reads it.
 | 学生 | がくせい | student |
 | 先生 | せんせい | teacher |
 | 家族 | かぞく | family |
-| 女の人 | おんなのひと | woman |
-| 男の人 | おとこのひと | man |
+| 女の人 | おんなのひと | woman (everyday word) |
+| 男の人 | おとこのひと | man (everyday word) |
 
 - どこから来ましたか — Where are you from?
 - アメリカから来ました — I'm from America.
@@ -322,7 +322,7 @@ never reads it.
 | 五つ | いつつ | five (things) |
 
 - 大きいのをください — The big one, please.
-- ふたつください — Two, please.
+- ふたつください — Two (of anything), please.
 - 大きいサイズはありますか — Do you have a larger size?
 
 ### 16. Do you have it?
@@ -339,9 +339,9 @@ never reads it.
 | おなじ | おなじ | same |
 | 本 | ほん | book |
 | いる | いる | to exist, to be (animate) |
-| 赤い | あかい | red |
-| 白い | しろい | white |
-| 黒い | くろい | black |
+| 赤い | あかい | red (describing a thing) |
+| 白い | しろい | white (describing a thing) |
+| 黒い | くろい | black (describing a thing) |
 
 - ほかのいろはありますか — Do you have other colors?
 - すみません、ありません — I'm sorry, we don't have it.
@@ -506,7 +506,7 @@ never reads it.
 | 何階 | なんかい | which floor |
 | 風呂 | ふろ | bath |
 | シャワー | シャワー | shower |
-| 朝食 | ちょうしょく | breakfast |
+| 朝食 | ちょうしょく | breakfast (formal word) |
 
 - トイレはどこですか — Where is the bathroom?
 - 風呂は何階ですか — What floor is the bath on?
@@ -527,7 +527,7 @@ never reads it.
 | お願いします | おねがいします | please (when requesting something) |
 | 明日 | あした | tomorrow |
 | 電話 | でんわ | telephone |
-| 朝食 | ちょうしょく | breakfast |
+| 朝食 | ちょうしょく | breakfast (formal word) |
 
 - タオルを持ってきてください — Please bring me a towel.
 - 明日の朝、6時に起こしてください — Please wake me at 6 tomorrow morning.
@@ -1046,7 +1046,7 @@ never reads it.
 | 頼む | たのむ | to ask for, to request |
 | 終わる | おわる | to finish, to end |
 
-- 会社で働きます。 — I work at a company.
+- 会社で働きます。 — I work at a company. (ます form)
 - 仕事が終わります。 — The work finishes.
 
 ### 55. Learning and teaching
@@ -1174,7 +1174,7 @@ never reads it.
 **Can do:** Say what you are doing and where you live
 **Grammar:** `～ています` — Doing it now, or doing it as a rule.
 
-- 会社で働いています。 — I work at a company.
+- 会社で働いています。 — I work at a company. (ています form)
 - 知っています。 — I know.
 - 何をしていますか。 — What are you doing?
 
@@ -1233,7 +1233,7 @@ never reads it.
 | 枚 | まい | counter for flat things |
 | 台 | だい | counter for machines and vehicles |
 
-- 二枚ください。 — Two, please.
+- 二枚ください。 — Two (flat things), please.
 - 一台あります。 — There is one.
 
 ### 67. More colours
@@ -1244,8 +1244,8 @@ never reads it.
 
 | Word | Reading | Meaning |
 |---|---|---|
-| 青い | あおい | blue |
-| 黄色い | きいろい | yellow |
+| 青い | あおい | blue (describing a thing) |
+| 黄色い | きいろい | yellow (describing a thing) |
 | 茶色 | ちゃいろ | brown |
 | 緑 | みどり | green |
 
@@ -1567,7 +1567,7 @@ never reads it.
 | Word | Reading | Meaning |
 |---|---|---|
 | 晩 | ばん | evening, night |
-| 朝ご飯 | あさごはん | breakfast |
+| 朝ご飯 | あさごはん | breakfast (everyday word) |
 | 昼ご飯 | ひるごはん | lunch |
 | 晩ご飯 | ばんごはん | dinner, evening meal |
 | 夕方 | ゆうがた | early evening, dusk |
@@ -1675,8 +1675,8 @@ never reads it.
 
 | Word | Reading | Meaning |
 |---|---|---|
-| 男 | おとこ | man |
-| 女 | おんな | woman |
+| 男 | おとこ | man (blunt) |
+| 女 | おんな | woman (blunt) |
 | 男の子 | おとこのこ | boy |
 | 女の子 | おんなのこ | girl |
 | 大勢 | おおぜい | a lot of people, a crowd |
@@ -1751,11 +1751,11 @@ never reads it.
 
 | Word | Reading | Meaning |
 |---|---|---|
-| 黒 | くろ | black |
-| 白 | しろ | white |
-| 赤 | あか | red |
-| 青 | あお | blue |
-| 黄色 | きいろ | yellow |
+| 黒 | くろ | black (the colour itself) |
+| 白 | しろ | white (the colour itself) |
+| 赤 | あか | red (the colour itself) |
+| 青 | あお | blue (the colour itself) |
+| 黄色 | きいろ | yellow (the colour itself) |
 
 - その車は白です。 — That car is white.
 - 赤と黒のかばんです。 — It is a red and black bag.

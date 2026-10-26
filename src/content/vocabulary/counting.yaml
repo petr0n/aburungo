@@ -139,7 +139,7 @@
   japanese: 青い
   reading: あおい
   romaji: aoi
-  english: blue
+  english: blue (describing a thing)
   notes: Also covers the green of a traffic light and of unripe fruit. JMdict seq 1381390.
 
 - id: vocab.kiiroi
@@ -149,7 +149,7 @@
   japanese: 黄色い
   reading: きいろい
   romaji: kiiroi
-  english: yellow
+  english: yellow (describing a thing)
   notes: JMdict seq 1182030.
 
 - id: vocab.chairo

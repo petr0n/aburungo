@@ -41,7 +41,7 @@
   japanese: 男
   reading: おとこ
   romaji: otoko
-  english: man
+  english: man (blunt)
   notes: Bare 男 is blunt — it is the word a police report uses. In conversation say 男の人. JMdict seq 1419990.
 
 - id: vocab.onna
@@ -51,7 +51,7 @@
   japanese: 女
   reading: おんな
   romaji: onna
-  english: woman
+  english: woman (blunt)
   notes: Same warning as 男 — 女の人 is the ordinary way to say it about someone present. JMdict seq 1344930.
 
 - id: vocab.otokonoko
@@ -275,7 +275,7 @@
   japanese: 黒
   reading: くろ
   romaji: kuro
-  english: black
+  english: black (the colour itself)
   notes: The colour itself, where 黒い describes something that has it. JMdict seq 1287410.
 
 - id: vocab.shiro
@@ -285,7 +285,7 @@
   japanese: 白
   reading: しろ
   romaji: shiro
-  english: white
+  english: white (the colour itself)
   notes: Pairs with 白い the same way. JMdict seq 1474900.
 
 - id: vocab.aka
@@ -295,7 +295,7 @@
   japanese: 赤
   reading: あか
   romaji: aka
-  english: red
+  english: red (the colour itself)
   notes: Also the red of a traffic light. JMdict seq 2013900.
 
 - id: vocab.ao
@@ -305,7 +305,7 @@
   japanese: 青
   reading: あお
   romaji: ao
-  english: blue
+  english: blue (the colour itself)
   notes: Stretches over some of what English calls green — a green traffic light is 青, and so is unripe fruit. JMdict seq 1381380.
 
 - id: vocab.kiiro
@@ -315,7 +315,7 @@
   japanese: 黄色
   reading: きいろ
   romaji: kiiro
-  english: yellow
+  english: yellow (the colour itself)
   notes: Built with 色, colour, which also sits inside 茶色 from the counting chapter. JMdict seq 1576760.
 
 # ── Build and body (Lesson 6) ─────────────────────────────────────────────────
