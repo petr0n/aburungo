@@ -352,7 +352,7 @@ never reads it.
 
 | Word | Reading | Meaning |
 |---|---|---|
-| 女 | おんな | woman |
+| 女 | おんな | woman (blunt) |
 | 走る | はしる | to run |
 | 言う | いう | to say |
 
@@ -777,7 +777,7 @@ never reads it.
 | 春 | はる | spring |
 | 行く | いく | to go |
 | 明日 | あした | tomorrow |
-| 朝食 | ちょうしょく | breakfast |
+| 朝食 | ちょうしょく | breakfast (formal word) |
 
 - 荒稼ぎしているらしいね。 — I heard you're raking in the money.
 - 彼女は病気だったらしい。 — Apparently she was ill.
@@ -1304,7 +1304,7 @@ never reads it.
 |---|---|---|
 | 言う | いう | to say |
 | なまえ | なまえ | name |
-| 男 | おとこ | man |
+| 男 | おとこ | man (blunt) |
 | 人 | ひと | person, people |
 | 冬 | ふゆ | winter |
 | 死ぬ | しぬ | to die |

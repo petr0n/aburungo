@@ -147,10 +147,10 @@ These preserve existing backlog items, without assigning them a new priority:
 - Content QA: work down the word-scope baseline (`src/content/wordScope.baseline.txt`), which
   lists sentences using a word the course teaches later. Largest single gap: 彼 ("he") is used
   throughout Book Three and Four sentences and is never taught as a word (found 2026-10-11).
-- Ambiguous production prompts: Book One has items sharing an English gloss (red is both
-  赤い and 赤; woman is 女の人 and 女; breakfast is 朝食 and 朝ごはん; two phrase pairs). A
-  production checkpoint shows only the English, so a learner cannot tell which is wanted and a
-  right answer can be marked "Not quite". Fix by disambiguating the glosses (found 2026-10-20).
+- ~~Ambiguous production prompts~~ (fixed 2026-10-26): Book One had ten pairs sharing an
+  English gloss (red was both 赤い and 赤). Each gloss now names its role (describing a thing
+  against the colour itself, blunt against everyday, ます against ています), and a
+  contentIntegrity test fails if two items a production checkpoint can ask share a prompt.
 - Authoring workflow validation.
 - Release verification, performance, and monitoring — [testing](../testing.md),
   [release guide](../release.md), and [infrastructure](../infrastructure.md).

@@ -229,3 +229,31 @@ describe("chapters", () => {
     expect(placeInChapter(production!, n5Lessons, n5Chapters)).toBeNull();
   });
 });
+
+/**
+ * A production checkpoint shows only the English and grades one reading, so two
+ * items sharing a prompt mark a right answer "Not quite". Book One shipped ten
+ * such pairs (red: 赤 and 赤い) before this check existed.
+ */
+describe("production checkpoints", () => {
+  it.each(books.map((b) => [b.id, b] as const))("%s gives every item it can ask a prompt of its own", (_, book) => {
+    const words = new Map(allWords.map((w) => [w.id, w]));
+    const phrases = new Map(allPhrases.map((p) => [p.id, p]));
+    const clashes: string[] = [];
+    for (const cp of book.lessons.filter((l) => l.checkpoint === "production")) {
+      const before = book.lessons.filter((l) => l.order < cp.order);
+      const items = [
+        ...before.flatMap((l) => l.wordIds).map((id) => words.get(id)),
+        ...before.flatMap((l) => l.phraseIds).map((id) => phrases.get(id)),
+      ];
+      const byPrompt = new Map<string, string[]>();
+      for (const item of items) {
+        if (item === undefined) continue;
+        const key = item.english.trim().toLowerCase();
+        byPrompt.set(key, [...new Set([...(byPrompt.get(key) ?? []), item.id])]);
+      }
+      for (const [prompt, ids] of byPrompt) if (ids.length > 1) clashes.push(`${prompt}: ${ids.join(", ")}`);
+    }
+    expect(clashes).toEqual([]);
+  });
+});

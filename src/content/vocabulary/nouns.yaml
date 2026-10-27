@@ -20,7 +20,7 @@
   japanese: 女の人
   reading: おんなのひと
   romaji: onna no hito
-  english: woman
+  english: woman (everyday word)
 
 - id: vocab.otoko-no-hito
   jlpt: N5
@@ -29,7 +29,7 @@
   japanese: 男の人
   reading: おとこのひと
   romaji: otoko no hito
-  english: man
+  english: man (everyday word)
 
 - id: vocab.tomodachi
   jlpt: N5

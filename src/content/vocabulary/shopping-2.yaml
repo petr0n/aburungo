@@ -80,7 +80,7 @@
   japanese: 赤い
   reading: あかい
   romaji: akai
-  english: red
+  english: red (describing a thing)
   example:
     japanese: 彼女は赤いスカートをはいていた。
     english: She was wearing a red skirt.
@@ -93,7 +93,7 @@
   japanese: 白い
   reading: しろい
   romaji: shiroi
-  english: white
+  english: white (describing a thing)
 
 - id: vocab.kuroi
   jlpt: N5
@@ -102,4 +102,4 @@
   japanese: 黒い
   reading: くろい
   romaji: kuroi
-  english: black
+  english: black (describing a thing)
