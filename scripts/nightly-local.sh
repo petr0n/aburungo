@@ -62,6 +62,8 @@ export NIGHTLY_LOG="$LOG"
 exec >>"$LOG" 2>&1
 echo "=== nightly start $(date) ==="
 
+fail() { echo "=== NIGHTLY FAILED: $1 ==="; report_failure "$LOG" "$1"; exit 1; }
+
 # Two signed-in walks on the walk account reset each other's progress. A
 # manual walk already running makes tonight a skip, not a failure.
 if pgrep -f walkthrough.cjs >/dev/null; then
@@ -70,10 +72,10 @@ if pgrep -f walkthrough.cjs >/dev/null; then
   exit 0
 fi
 
-cd "$NIGHTLY_DIR"
+cd "$NIGHTLY_DIR" || fail "no nightly clone at $NIGHTLY_DIR"
 if [ -z "${NIGHTLY_RESET_DONE:-}" ]; then
-  git fetch -q origin
-  git reset -q --hard origin/main
+  git fetch -q origin || fail "git fetch"
+  git reset -q --hard origin/main || fail "git reset to origin/main"
   echo "=== at $(git log -1 --oneline) ==="
   # Run main's copy of this script from here on, so a merged change to it
   # takes effect the same night. (git replaces the file rather than editing
@@ -82,8 +84,8 @@ if [ -z "${NIGHTLY_RESET_DONE:-}" ]; then
 fi
 
 # Both gitignored; refresh env/ from the main checkout if they change.
-cp "$NIGHTLY_HOME/env/.env.local" .env.local
-cp "$NIGHTLY_HOME/env/server.env" server/.env
+cp "$NIGHTLY_HOME/env/.env.local" .env.local || fail "copy env/.env.local"
+cp "$NIGHTLY_HOME/env/server.env" server/.env || fail "copy env/server.env"
 
 cleanup() {
   [ -n "${API_PID:-}" ] && kill "$API_PID" 2>/dev/null || true
@@ -92,8 +94,6 @@ cleanup() {
 }
 trap cleanup EXIT
 
-fail() { echo "=== NIGHTLY FAILED: $1 ==="; report_failure "$LOG" "$1"; exit 1; }
-
 # Same design-system pin as CI (ci.yml), built the same way.
 pin=$(sed -n 's/^ *ref: \([0-9a-f]\{40\}\).*/\1/p' .github/workflows/ci.yml | head -1)
 [ -n "$pin" ] || fail "no design-system pin in ci.yml"
@@ -101,6 +101,8 @@ pin=$(sed -n 's/^ *ref: \([0-9a-f]\{40\}\).*/\1/p' .github/workflows/ci.yml | he
   && pnpm install --frozen-lockfile && pnpm build) || fail "design-system build at $pin"
 
 pnpm install --frozen-lockfile || fail "pnpm install"
+# The browser is not in node_modules; a Playwright bump needs a new revision.
+pnpm exec playwright install chromium || fail "playwright install chromium"
 
 lsof -ti:"$API_PORT" | xargs kill 2>/dev/null || true
 (cd server && PORT="$API_PORT" FRONTEND_URL="http://localhost:$PREVIEW_PORT" exec ./node_modules/.bin/tsx src/index.ts) &
@@ -109,10 +111,15 @@ for _ in $(seq 1 60); do curl -fsS -o /dev/null "http://localhost:$API_PORT/heal
 curl -fsS -o /dev/null "http://localhost:$API_PORT/health" || fail "API never answered on :$API_PORT"
 echo "=== API up on :$API_PORT ==="
 
-# 3h ceiling: a hung browser must not hold the Mac awake forever.
+# 3h ceiling: a hung browser must not hold the Mac awake forever. The walk
+# runs in its own process group and the whole group dies at the deadline, so
+# no node driver or preview server outlives it to trip tomorrow's pgrep skip.
 status=0
 WALKTHROUGH_PORT="$PREVIEW_PORT" VITE_API_URL="http://localhost:$API_PORT" \
-  perl -e 'alarm shift; exec @ARGV' 10800 bash scripts/walkthrough.sh || status=$?
+  perl -e 'alarm_run(@ARGV); sub alarm_run { my $t = shift; my $p = fork // die "fork: $!";
+    if (!$p) { setpgrp(0, 0); exec @_ or die "exec: $!" }
+    $SIG{ALRM} = sub { print "=== TIMEOUT: killing walk group ===\n"; kill "TERM", -$p; sleep 5; kill "KILL", -$p };
+    alarm $t; waitpid $p, 0; exit($? & 127 ? 124 : $? >> 8) }' 10800 bash scripts/walkthrough.sh || status=$?
 
 # Never trust the exit code alone: the summary must be there, signed in,
 # with lessons walked.
