@@ -128,6 +128,7 @@ pnpm walkthrough     drive every /learn unit end-to-end in headless Chromium
 pnpm ladder          regenerate the book map record: docs/<book>-ladder.md, every book
 pnpm jmdict check    verify every "JMdict seq NNNNNNN" in the content resolves
 pnpm bookmap         run the book map SPA (bookmap/) and open it in the browser
+scripts/nightly-local.sh  launchd nightly signed-in walk (docs/testing.md)
 ```
 
 `pnpm walkthrough` builds, serves the static bundle on :4173, and walks the ladder to
