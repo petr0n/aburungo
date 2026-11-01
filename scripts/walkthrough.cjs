@@ -29,7 +29,9 @@ const CLICK_TIMEOUT_RETRY = 20000;
 // Set WALKTHROUGH_EMAIL and WALKTHROUGH_PASSWORD to sign in first, which lifts the
 // run to "free" and reaches Book Four. Without them the run still works and still
 // passes; it just covers less, and says so in the summary.
-const MAX_SESSIONS = process.env.MAX_SESSIONS ? parseInt(process.env.MAX_SESSIONS, 10) : 200;
+// A runaway guard, not a target: a signed-in walk of Books One-Four is ~350
+// sessions, so 200 stopped it in Book Three and failed the night.
+const MAX_SESSIONS = process.env.MAX_SESSIONS ? parseInt(process.env.MAX_SESSIONS, 10) : 600;
 
 let currentPage = null;
 
