@@ -29,6 +29,39 @@ regression reaching staging becomes real.
 
 ---
 
+## Nightly signed-in walkthrough (local, launchd)
+
+CI's nightly walk is a guest and stops at Book One. The owner's Mac runs a signed-in
+walk of Books One to Four at 03:00 via launchd (`scripts/nightly-local.sh`, about
+1h45m). It runs in `~/aburungo-nightly/`, not `~/Documents`: macOS refuses launchd jobs
+access to `~/Documents` (exit 126, "Operation not permitted"), and a worktree's `.git`
+points back into it, so that tree holds standalone clones of the app and design system
+plus `env/` copies of `.env.local` and `server/.env` (re-copy them if they change). Each
+night it hard-resets the app clone to `origin/main`, builds the design system at CI's
+pin, starts its own API on :3190, previews on :4390, and skips the night (no issue) if
+another `walkthrough.cjs` is already running, because two signed-in walks on the walk
+account reset each other. Never work in that tree. A failed night opens or comments on
+the `nightly-failure` issue with the log tail, and says "Supabase unreachable" when the
+log shows a DNS/connection error. Logs, last 14 kept: `~/Library/Logs/aburungo-nightly/`.
+
+Install:
+
+```
+mkdir -p ~/aburungo-nightly/env ~/Library/Logs/aburungo-nightly && cd ~/aburungo-nightly
+git clone https://github.com/petr0n/aburungo.git
+git clone https://github.com/petr0n/aburungo-design-system.git
+cp ~/Documents/japanese/aburungo/.env.local env/.env.local
+cp ~/Documents/japanese/aburungo/server/.env env/server.env && chmod 600 env/*
+sed "s|__HOME__|$HOME|g" aburungo/scripts/launchd/app.aburungo.nightly-walk.plist \
+  > ~/Library/LaunchAgents/app.aburungo.nightly-walk.plist
+launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/app.aburungo.nightly-walk.plist
+```
+
+Run now: `launchctl kickstart -k gui/$(id -u)/app.aburungo.nightly-walk`.
+Uninstall: `launchctl bootout gui/$(id -u)/app.aburungo.nightly-walk`, then delete the
+plist. Test the failure report without filing anything:
+`NIGHTLY_DRY_RUN=1 scripts/nightly-local.sh --report <some.log>`.
+
 ## Test Plan 1 — Claude-in-Chrome (Manual AI Session)
 
 **Type:** Ad hoc, manually triggered  
