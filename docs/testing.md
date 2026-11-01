@@ -33,20 +33,26 @@ regression reaching staging becomes real.
 
 CI's nightly walk is a guest and stops at Book One. The owner's Mac runs a signed-in
 walk of Books One to Four at 03:00 via launchd (`scripts/nightly-local.sh`, about
-1h45m). It runs in a dedicated worktree, `../aburungo-nightly`, which it hard-resets to
-`origin/main` each night, so never work in that worktree. It copies `.env.local` and
-`server/.env` from the main checkout, starts its own API on :3190, previews on :4390,
-and skips the night (no issue) if another `walkthrough.cjs` is already running, because
-two signed-in walks on the walk account reset each other. A failed night opens or
-comments on the `nightly-failure` issue with the log tail. Logs, last 14 kept:
-`~/Library/Logs/aburungo-nightly/`.
+1h45m). It runs in `~/aburungo-nightly/`, not `~/Documents`: macOS refuses launchd jobs
+access to `~/Documents` (exit 126, "Operation not permitted"), and a worktree's `.git`
+points back into it, so that tree holds standalone clones of the app and design system
+plus `env/` copies of `.env.local` and `server/.env` (re-copy them if they change). Each
+night it hard-resets the app clone to `origin/main`, builds the design system at CI's
+pin, starts its own API on :3190, previews on :4390, and skips the night (no issue) if
+another `walkthrough.cjs` is already running, because two signed-in walks on the walk
+account reset each other. Never work in that tree. A failed night opens or comments on
+the `nightly-failure` issue with the log tail, and says "Supabase unreachable" when the
+log shows a DNS/connection error. Logs, last 14 kept: `~/Library/Logs/aburungo-nightly/`.
 
 Install:
 
 ```
-git worktree add --detach ../aburungo-nightly origin/main
-mkdir -p ~/Library/Logs/aburungo-nightly
-sed "s|__HOME__|$HOME|g" scripts/launchd/app.aburungo.nightly-walk.plist \
+mkdir -p ~/aburungo-nightly/env ~/Library/Logs/aburungo-nightly && cd ~/aburungo-nightly
+git clone https://github.com/petr0n/aburungo.git
+git clone https://github.com/petr0n/aburungo-design-system.git
+cp ~/Documents/japanese/aburungo/.env.local env/.env.local
+cp ~/Documents/japanese/aburungo/server/.env env/server.env && chmod 600 env/*
+sed "s|__HOME__|$HOME|g" aburungo/scripts/launchd/app.aburungo.nightly-walk.plist \
   > ~/Library/LaunchAgents/app.aburungo.nightly-walk.plist
 launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/app.aburungo.nightly-walk.plist
 ```

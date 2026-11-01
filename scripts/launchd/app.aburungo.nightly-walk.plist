@@ -12,7 +12,7 @@
   <key>ProgramArguments</key>
   <array>
     <string>/bin/bash</string>
-    <string>__HOME__/Documents/japanese/aburungo-nightly/scripts/nightly-local.sh</string>
+    <string>__HOME__/aburungo-nightly/aburungo/scripts/nightly-local.sh</string>
   </array>
   <key>EnvironmentVariables</key>
   <dict>

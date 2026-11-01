@@ -7,7 +7,10 @@
 #
 # It never runs in the main checkout, which other agents edit all day. It runs
 # in a dedicated worktree (NIGHTLY_DIR) that it hard-resets to origin/main, so
-# nothing else may use that worktree. A failed night opens or comments on the
+# nothing else may use that worktree. Everything lives under ~/aburungo-nightly,
+# not ~/Documents: macOS refuses launchd jobs access to ~/Documents (exit 126,
+# "Operation not permitted"). So it also keeps its own design-system clone at
+# CI's pin, and its own copies of .env.local and server/.env in env/. A failed night opens or comments on the
 # GitHub issue labelled nightly-failure, same as walkthrough.yml.
 #
 # Usage:  scripts/nightly-local.sh
@@ -15,8 +18,9 @@
 #           (prints the gh commands a failure would run, files nothing)
 set -euo pipefail
 
-NIGHTLY_DIR="${NIGHTLY_DIR:-$HOME/Documents/japanese/aburungo-nightly}"
-MAIN_DIR="${MAIN_DIR:-$HOME/Documents/japanese/aburungo}"
+NIGHTLY_HOME="${NIGHTLY_HOME:-$HOME/aburungo-nightly}"
+NIGHTLY_DIR="$NIGHTLY_HOME/aburungo"
+DS_DIR="$NIGHTLY_HOME/aburungo-design-system"  # package.json links ../aburungo-design-system
 LOG_DIR="${LOG_DIR:-$HOME/Library/Logs/aburungo-nightly}"
 API_PORT="${API_PORT:-3190}"
 PREVIEW_PORT="${PREVIEW_PORT:-4390}"
@@ -24,6 +28,10 @@ REPO=petr0n/aburungo
 
 report_failure() { # $1 = log file, $2 = one-line reason
   local log="$1" reason="$2" n msg
+  # An outage is not a lesson stall; say which it was.
+  if grep -qE 'ENOTFOUND|getaddrinfo|AuthRetryableFetchError|fetch failed|ECONNREFUSED' "$log"; then
+    reason="Supabase unreachable (DNS/connection error in log), not an app defect -- $reason"
+  fi
   msg="Nightly **local signed-in walkthrough** failed on main ($(date +%F), $(hostname -s)): $reason
 
 Log: \`$log\`
@@ -73,9 +81,9 @@ if [ -z "${NIGHTLY_RESET_DONE:-}" ]; then
   NIGHTLY_RESET_DONE=1 exec bash "$NIGHTLY_DIR/scripts/nightly-local.sh" "$@"
 fi
 
-# Both gitignored, so copied fresh from the main checkout each night.
-cp "$MAIN_DIR/.env.local" .env.local
-cp "$MAIN_DIR/server/.env" server/.env
+# Both gitignored; refresh env/ from the main checkout if they change.
+cp "$NIGHTLY_HOME/env/.env.local" .env.local
+cp "$NIGHTLY_HOME/env/server.env" server/.env
 
 cleanup() {
   [ -n "${API_PID:-}" ] && kill "$API_PID" 2>/dev/null || true
@@ -85,6 +93,12 @@ cleanup() {
 trap cleanup EXIT
 
 fail() { echo "=== NIGHTLY FAILED: $1 ==="; report_failure "$LOG" "$1"; exit 1; }
+
+# Same design-system pin as CI (ci.yml), built the same way.
+pin=$(sed -n 's/^ *ref: \([0-9a-f]\{40\}\).*/\1/p' .github/workflows/ci.yml | head -1)
+[ -n "$pin" ] || fail "no design-system pin in ci.yml"
+(cd "$DS_DIR" && git fetch -q origin && git checkout -q --detach "$pin" \
+  && pnpm install --frozen-lockfile && pnpm build) || fail "design-system build at $pin"
 
 pnpm install --frozen-lockfile || fail "pnpm install"
 
