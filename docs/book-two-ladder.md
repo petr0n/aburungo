@@ -13,7 +13,7 @@ never reads it.
 |---|---|
 | Chapters | 10 |
 | Lessons | 93 (82 teaching, 11 checkpoints) |
-| Words | 231 |
+| Words | 232 |
 | Phrases | 284 |
 | Grammar patterns | 63 |
 | Kanji introduced | 19 |
@@ -1189,7 +1189,7 @@ never reads it.
 
 *What people are saying*
 
-9 lessons · 50 words · 29 phrases
+9 lessons · 51 words · 29 phrases
 
 ### 156. What was said
 
@@ -1205,6 +1205,7 @@ never reads it.
 | 買う | かう | to buy |
 | 寒い | さむい | cold (weather) |
 | 友達 | ともだち | friend |
+| 彼 | かれ | he; him |
 
 - 友達は明日行くと言いました。 — My friend said they're going tomorrow.
 - 友達はすしを食べたと言いました。 — My friend said they ate sushi.

@@ -120,6 +120,9 @@
     - vocab.taberu
     - vocab.suru
     - vocab.kuru
+    # Taught in b2.quote-plain. Kept here too: a learner who finished that
+    # lesson before 彼 moved there has no review state for it, and the daily
+    # loop never introduces a word from a lesson already marked seen.
     - vocab.kare
   phraseIds:
     - band0.he-was-seen-eating-the-cake

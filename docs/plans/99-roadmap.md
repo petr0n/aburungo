@@ -145,8 +145,9 @@ These preserve existing backlog items, without assigning them a new priority:
 - Admin Phase 3: flags, announcements, and rate-limit visibility — [admin plan](../admin-dashboard-plan.md).
 - Audio input/Whisper follow-up, Apple Sign-In, and mobile/PWA/offline expansion.
 - Content QA: work down the word-scope baseline (`src/content/wordScope.baseline.txt`), which
-  lists sentences using a word the course teaches later. Largest single gap: 彼 ("he") is used
-  throughout Book Three and Four sentences and is never taught as a word (found 2026-10-11).
+  lists sentences using a word the course teaches later. The largest single gap, 彼 ("he"),
+  used throughout Book Three and Four sentences (found 2026-10-11), is closed: it is taught in
+  late Book Two, in the opening lesson of the quoted-speech chapter, before Book Three needs it.
 - ~~Ambiguous production prompts~~ (fixed 2026-10-26): Book One had ten pairs sharing an
   English gloss (red was both 赤い and 赤). Each gloss now names its role (describing a thing
   against the colour itself, blunt against everyday, ます against ています), and a
