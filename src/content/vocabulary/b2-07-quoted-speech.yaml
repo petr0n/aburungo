@@ -28,6 +28,19 @@
 # jlpt-source: training — JMdict carries no JLPT data. 思う appears at N4 on
 #   both reference lists in data/jlpt (tanos and open-anki agree), and is
 #   tagged N4 here to match.
+#
+# 彼 joined 2026-11-01, moved here from Book Three's passive band, where the
+# word-scope check first placed it (PR #149). Book Three's and Book Four's
+# verified sentences lean on it more than any other pronoun, so it has to be
+# known before Book Three opens; reporting what someone said is where Book Two
+# first has a third person to talk about. Listed on b2.quote-plain.
+#
+# 彼 content-source: training -- headword, reading, part of speech and gloss
+#   verified against JMdict for Applications 3.6.2 on 2026-10-12, sequence
+#   1483070 (flagged common). The example is the Tatoeba sentence JMdict
+#   attaches to sense 1, quoted verbatim with its id.
+# 彼 jlpt-source: training -- data/jlpt/reference-n4.json lists 彼/かれ at N4
+#   (tanos and open-anki agree), matching vocab.karera.
 
 - id: vocab.omou
   jlpt: N4
@@ -43,3 +56,17 @@
     japanese: 晴れだと思うよ。
     english: I think it will be sunny.
     tatoeba_id: "143025"
+
+- id: vocab.kare
+  jlpt: N4
+  word_type: noun
+  theme: people
+  japanese: 彼
+  reading: かれ
+  romaji: kare
+  english: he; him
+  notes: "JMdict seq 1483070, sense 1, the pronoun. Sense 2 is boyfriend, and context sorts the two. Written Japanese uses it freely; in conversation people are usually named, or left out entirely, so meet it in reading first. 彼ら, they, is 彼 plus the plural ら, and the word for she is 彼女."
+  example:
+    japanese: 彼のスイングは実に見事だ。
+    english: He has a perfect swing.
+    tatoeba_id: "75797"

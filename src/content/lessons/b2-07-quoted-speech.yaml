@@ -109,6 +109,7 @@
     - vocab.kau
     - vocab.samui
     - vocab.tomodachi
+    - vocab.kare
   phraseIds:
     - quote.my-friend-said-theyre-going-tomorrow
     - quote.my-friend-said-they-ate-sushi
@@ -116,7 +117,7 @@
     - quote.my-friend-said-its-cold
   kanji: []
   patternId: grammar.b2-quote-plain
-  grammarNote: "Take what the person said, put it in plain form, and close it with と. Then say 言いました. 明日行くと言いました. That is the whole mechanism, and the reason this chapter is where the plain-form chapter pays off: all four verb shapes you built there go in front of と unchanged. The dictionary form for something they will do — 行くと言いました. The past for something they did — 食べたと言いました. The negative for something they will not do — 買わないと言いました, the わ exception still holding. And an い-adjective needs no conversion at all, because Book One taught adjectives in plain form from the first card — 寒いと言いました. Two things to watch. と attaches directly, with nothing between it and the clause: no pause, no punctuation, no politeness. And the clause inside stays plain no matter how polite the sentence around it gets — 行きますと言いました is wrong even though 言いました is polite. The politeness lives on the closing verb only."
+  grammarNote: "Take what the person said, put it in plain form, and close it with と. Then say 言いました. 明日行くと言いました. That is the whole mechanism, and the reason this chapter is where the plain-form chapter pays off: all four verb shapes you built there go in front of と unchanged. The dictionary form for something they will do — 行くと言いました. The past for something they did — 食べたと言いました. The negative for something they will not do — 買わないと言いました, the わ exception still holding. And an い-adjective needs no conversion at all, because Book One taught adjectives in plain form from the first card — 寒いと言いました. Two things to watch. と attaches directly, with nothing between it and the clause: no pause, no punctuation, no politeness. And the clause inside stays plain no matter how polite the sentence around it gets — 行きますと言いました is wrong even though 言いました is polite. The politeness lives on the closing verb only. One word joins your cards here: 彼, he. Reporting speech is where a third person first needs a name, and the next book's sentences use it constantly; these cards name a friend instead, which is how conversation usually does it."
 
 - id: b2.quote-da
   order: 157
