@@ -420,33 +420,24 @@ export async function fetchPathProgress(
 }
 
 /**
- * Append a unit to the seen list, idempotently. Read-modify-write is safe here:
- * a single learner advances one unit at a time, so there is no concurrent writer
- * to lose. If that ever changes, move the append into a Postgres function using
- * array_append with a unique guard.
+ * Append a unit to the seen list, idempotently, in one statement
+ * (mark_unit_seen). Lesson saves run in the background now, so two can be in
+ * flight at once; a read-modify-write here would let one overwrite the other.
  */
 export async function markUnitSeen(
   userId: string,
   pathId: string,
   unitId: string,
 ): Promise<PathProgressResult> {
-  const current = await fetchPathProgress(userId, pathId)
-  if (current.seenUnitIds.includes(unitId)) return current
-
-  const seenUnitIds = [...current.seenUnitIds, unitId]
-  const { error } = await supabase.from('user_path_progress').upsert(
-    {
-      user_id: userId,
-      path_id: pathId,
-      seen_unit_ids: seenUnitIds,
-      updated_at: new Date().toISOString(),
-    },
-    { onConflict: 'user_id,path_id' },
-  )
+  const { data, error } = await supabase.rpc('mark_unit_seen', {
+    p_user_id: userId,
+    p_path_id: pathId,
+    p_unit_id: unitId,
+  })
 
   if (error) throw new Error(error.message)
 
-  return { pathId, seenUnitIds }
+  return { pathId, seenUnitIds: (data as string[] | null) ?? [] }
 }
 
 // ── Content progress: /learn daily loop review state (DR-018) ─────────────────

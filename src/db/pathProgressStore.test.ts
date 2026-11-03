@@ -106,6 +106,12 @@ describe("signed in", () => {
     expect(cacheOf(USER).get("n5")?.seenLessonIds).toEqual(["u1"]);
   });
 
+  it("does not wait on a server that never answers", async () => {
+    markLessonSeenRemote.mockReturnValue(new Promise(() => {}));
+    const next = await markLessonSeen(USER, "n5", "u1");
+    expect(next.seenLessonIds).toEqual(["u1"]);
+  });
+
   it("is idempotent for a lesson already seen", async () => {
     cacheOf(USER).set("n5", { pathId: "n5", seenLessonIds: ["u1"] });
     await markLessonSeen(USER, "n5", "u1");
