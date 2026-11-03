@@ -78,13 +78,12 @@ export async function markLessonSeen(owner: Owner, pathId: string, lessonId: str
   await dbFor(owner).pathProgress.put(next);
 
   if (owner !== GUEST_OWNER) {
-    // A failed write is recovered by the union in getPathProgress on next load,
-    // so this must not break the session the learner is in the middle of.
-    try {
-      await markLessonSeenRemote(owner, pathId, lessonId);
-    } catch {
+    // Not awaited: the lesson is already saved on this device, and the learner
+    // should not wait on the server to move on. A write that fails or never
+    // lands is pushed again by the union in getPathProgress on next load.
+    void markLessonSeenRemote(owner, pathId, lessonId).catch(() => {
       /* retried on next load */
-    }
+    });
   }
 
   return next;

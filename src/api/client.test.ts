@@ -9,7 +9,7 @@ vi.mock("@/lib/supabase", () => ({
 const fetchMock = vi.fn(() => Promise.resolve(new Response("{}", { status: 200 })));
 vi.stubGlobal("fetch", fetchMock);
 
-const { apiFetch } = await import("./client");
+const { apiFetch, API_TIMEOUT_MS } = await import("./client");
 
 afterEach(() => {
   fetchMock.mockClear();
@@ -44,5 +44,25 @@ describe("apiFetch with an owner", () => {
     session.current = { access_token: "tok-a", user: { id: "user-a" } };
     await expect(apiFetch("/x", {}, "guest")).rejects.toThrow();
     expect(fetchMock).not.toHaveBeenCalled();
+  });
+});
+
+describe("apiFetch time limit", () => {
+  it("gives up on a server that took the request and never answered", async () => {
+    vi.useFakeTimers();
+    try {
+      fetchMock.mockImplementationOnce(
+        (_url?: unknown, init?: RequestInit) =>
+          new Promise((_resolve, reject) => {
+            init?.signal?.addEventListener("abort", () => reject(init.signal?.reason));
+          }) as Promise<Response>,
+      );
+      const pending = apiFetch("/x");
+      const settled = expect(pending).rejects.toThrow(/No response/);
+      await vi.advanceTimersByTimeAsync(API_TIMEOUT_MS);
+      await settled;
+    } finally {
+      vi.useRealTimers();
+    }
   });
 });

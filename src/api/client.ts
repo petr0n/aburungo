@@ -66,6 +66,13 @@ export async function* apiStreamText(path: string, init: RequestInit = {}): Asyn
   }
 }
 
+/**
+ * How long a request may take before it is abandoned. Without a limit, a server
+ * that took a request and never answered left the caller awaiting forever: the
+ * nightly walk twice froze on a progress save that way (issue #156).
+ */
+export const API_TIMEOUT_MS = 20_000;
+
 export async function apiFetch<T>(path: string, init: RequestInit = {}, owner?: Owner): Promise<T> {
   const token = await tokenFor(owner);
 
@@ -78,12 +85,19 @@ export async function apiFetch<T>(path: string, init: RequestInit = {}, owner?: 
     headers["Authorization"] = `Bearer ${token}`;
   }
 
-  const res = await fetch(`${API_BASE}${path}`, { ...init, headers });
+  const timeout = new AbortController();
+  const timer = setTimeout(() => timeout.abort(new ApiError(408, `No response after ${API_TIMEOUT_MS}ms`)), API_TIMEOUT_MS);
+  const signal = init.signal ? AbortSignal.any([init.signal, timeout.signal]) : timeout.signal;
+  try {
+    const res = await fetch(`${API_BASE}${path}`, { ...init, headers, signal });
 
-  if (!res.ok) {
-    const text = await res.text();
-    throw new ApiError(res.status, text || res.statusText);
+    if (!res.ok) {
+      const text = await res.text();
+      throw new ApiError(res.status, text || res.statusText);
+    }
+
+    return (await res.json()) as T;
+  } finally {
+    clearTimeout(timer);
   }
-
-  return res.json() as Promise<T>;
 }
