@@ -56,6 +56,20 @@ function query(table: string) {
 vi.mock('../lib/supabase.js', () => ({
   supabase: {
     from: (table: string) => query(table),
+    // Mirrors supabase/migrations/20261102000000_atomic_mark_unit_seen.sql.
+    rpc: async (fn: string, args: { p_user_id: string; p_path_id: string; p_unit_id: string }) => {
+      if (fn !== 'mark_unit_seen') return { data: null, error: { message: `no function ${fn}` } }
+      const rows = tables.get('user_path_progress') ?? []
+      let row = rows.find((r) => r.user_id === args.p_user_id && r.path_id === args.p_path_id)
+      if (row === undefined) {
+        row = { user_id: args.p_user_id, path_id: args.p_path_id, seen_unit_ids: [] }
+        rows.push(row)
+        tables.set('user_path_progress', rows)
+      }
+      const seen = row.seen_unit_ids as string[]
+      if (!seen.includes(args.p_unit_id)) row.seen_unit_ids = [...seen, args.p_unit_id]
+      return { data: row.seen_unit_ids, error: null }
+    },
     auth: {
       getUser: async (token: string) =>
         TOKENS[token]
