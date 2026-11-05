@@ -386,9 +386,18 @@ async function handleCheckpointIfPresent(page, sessionIndex) {
       continue;
     }
 
+    // This pass's blind click below can itself land on "Done", which closes the
+    // checkpoint without the check above ever seeing it. Clicking on from the
+    // close screen is how the walk signed itself out.
+    if (await visible(page, "text=Nice work today.")) {
+      log(`  checkpoint complete after ${rounds} round(s)`);
+      return true;
+    }
+
     // Answer the current card. Any option is fine — a miss simply re-queues,
-    // which is the behaviour under test.
-    const option = page.locator("main button, body button").filter({ hasNotText: "skip" }).last();
+    // which is the behaviour under test. Never the page header: with no card on
+    // screen, the last button on the page is Sign out.
+    const option = page.locator("button:not(header button)").filter({ hasNotText: "skip" }).last();
     if ((await option.count()) === 0) break;
     await option.click({ timeout: CLICK_TIMEOUT }).catch(() => {});
     await page.waitForTimeout(450);
