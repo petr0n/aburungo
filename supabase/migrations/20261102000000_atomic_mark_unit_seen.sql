@@ -7,7 +7,7 @@
 -- lesson saves went to the background so a stalled save cannot freeze /learn
 -- (issue #156). Here the upsert holds the row lock while it appends, so
 -- concurrent calls queue instead of overwriting each other.
-create function mark_unit_seen(p_user_id uuid, p_path_id text, p_unit_id text)
+create or replace function mark_unit_seen(p_user_id uuid, p_path_id text, p_unit_id text)
 returns text[]
 language sql
 as $$
