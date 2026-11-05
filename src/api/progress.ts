@@ -110,6 +110,10 @@ export async function fetchPathProgress(owner: Owner, pathId: string): Promise<P
 export async function markLessonSeenRemote(owner: Owner, pathId: string, lessonId: string): Promise<PathProgress> {
   const res = await apiFetch<{ data: WirePathProgress }>("/api/progress/path", {
     method: "POST",
+    // The save runs in the background now, so moving on or leaving the page can
+    // overtake it. keepalive stops the browser cancelling it mid-send, which
+    // reached the server as a 400 and left the lesson unsaved until the next load.
+    keepalive: true,
     body: JSON.stringify({ pathId, unitId: lessonId }),
   }, owner);
   return fromWire(res.data);
