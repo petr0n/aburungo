@@ -62,9 +62,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # Pinned, not "latest": CLI v3.0.0 refuses this repo's supabase/config.toml
+      # ([inbucket] was renamed) and failed the 2026-11-03 run before applying
+      # anything. Bump deliberately, alongside any config changes it needs.
       - uses: supabase/setup-cli@v1
         with:
-          version: latest
+          version: 2.98.2
 
       - name: Check the secret exists
         env:
