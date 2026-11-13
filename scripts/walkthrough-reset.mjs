@@ -62,6 +62,18 @@ if (import.meta.url === pathToFileURL(process.argv[1]).href) {
     if (error) throw error;
     console.log(`created ${email}\nPASSWORD=${password}`);
   } else {
-    await resetAccount(email);
+    // Retried: a reset that fails on one dropped connection used to fail the
+    // whole night before the walk began (2026-11-11, ECONNRESET). Deletes are
+    // idempotent, so running it again is safe.
+    for (let attempt = 1; ; attempt++) {
+      try {
+        await resetAccount(email);
+        break;
+      } catch (err) {
+        if (attempt === 3) throw err;
+        console.log(`reset attempt ${attempt} failed (${err.message}); retrying`);
+        await new Promise((r) => setTimeout(r, attempt * 5000));
+      }
+    }
   }
 }
