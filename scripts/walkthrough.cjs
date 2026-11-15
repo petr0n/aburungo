@@ -578,9 +578,10 @@ async function handleTerminalCheckpointIfPresent(page, sessionIndex) {
  * drives. A screen that throws on load passed CI unseen, and an unknown URL
  * rendered a blank page until 2026-10-11 -- hence the deliberate miss here.
  *
- * Connection-refused is tolerated: /kanji fetches from the API even for a
- * guest, and the CI runner has no API server. An HTTP error status, a page
- * error or an empty app root still fails.
+ * Network errors (NETWORK_ERROR) are counted, not failed on: /kanji fetches
+ * from the API even for a guest, the CI runner has no API server, and a
+ * dropped connection is the network, not the app. Any other console error, a
+ * page error or an empty app root still fails.
  */
 const SMOKE_ROUTES = ["/", "/learn", "/words", "/practice", "/kana", "/kana/practice",
   "/flashcard", "/kanji", "/how-to", "/profile", "/admin", "/no-such-page"];
@@ -592,7 +593,9 @@ async function verifyRoutes(browser) {
     const page = await ctx.newPage();
     const errors = [];
     page.on("console", (m) => {
-      if (m.type() === "error" && !m.text().includes("net::ERR_CONNECTION_REFUSED")) errors.push(m.text());
+      if (m.type() !== "error") return;
+      if (NETWORK_ERROR.test(m.text())) results.networkErrors.push({ text: `${route}: ${m.text()}`, sessionsCompleted: 0 });
+      else errors.push(m.text());
     });
     page.on("pageerror", (e) => errors.push(String(e)));
     await page.goto(`${BASE}${route}`, { waitUntil: "networkidle" });
