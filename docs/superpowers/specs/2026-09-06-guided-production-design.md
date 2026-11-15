@@ -62,4 +62,6 @@ See [checkpoint/SRS rules](2026-09-06-checkpoints-and-srs-design.md). The protot
 - Keep book-ending checkpoints and later-stage reading/output requirements explicitly unresolved
   until discussed; this choice alone does not redefine what they assess.
 
-Reference implementation: [local prototypes](../../../prototypes/README.md), option 4.
+Implementation: [GuidedProductionCard](../../../src/components/GuidedProductionCard.tsx). The
+[prototypes](https://github.com/petr0n/aburungo/blob/940c24cdb0dac0ca02c1ab6c8e04b21cd085c914/prototypes/README.md) it was chosen
+from (option 4) were removed once it shipped; the link is pinned to the last commit that had them.

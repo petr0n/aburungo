@@ -37,7 +37,7 @@ is tracked in the roadmap; the no-gamification principles remain in force (DR-03
 | Runtime | Node + TypeScript |
 | Framework | Hono |
 | Auth | Supabase JWT validation on every protected route |
-| Routes | `/api/auth`, `/api/vocabulary`, `/api/kanji`, `/api/progress`, `/api/audio`, `/api/stt`, `/api/conversation` |
+| Routes | `/api/auth`, `/api/vocabulary`, `/api/kanji`, `/api/progress`, `/api/conversation` |
 
 ### Infrastructure
 | Concern | Choice |
