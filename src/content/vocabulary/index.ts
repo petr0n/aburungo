@@ -116,18 +116,3 @@ for (const w of allWords) {
 export function findWord(id: string): Word | undefined {
   return allWords.find((w) => w.id === id);
 }
-
-/** Group all words by their theme label. */
-export function wordsByTheme(): Map<string, Word[]> {
-  const map = new Map<string, Word[]>();
-  for (const w of allWords) {
-    const theme = w.theme ?? "other";
-    const existing = map.get(theme);
-    if (existing !== undefined) {
-      existing.push(w);
-    } else {
-      map.set(theme, [w]);
-    }
-  }
-  return map;
-}

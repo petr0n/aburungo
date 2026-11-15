@@ -2,7 +2,7 @@ import { Hono } from 'hono'
 import { zValidator } from '@hono/zod-validator'
 import { z } from 'zod'
 import { auth } from '../middleware/auth.js'
-import { listKanji, getKanji, getDueKanji, submitKanjiReview } from '../services/kanji.js'
+import { listKanji, getDueKanji, submitKanjiReview } from '../services/kanji.js'
 
 export const kanjiRoutes = new Hono()
 
@@ -53,12 +53,3 @@ kanjiRoutes.post(
     return c.json({ data })
   },
 )
-
-// GET /api/kanji/:character
-kanjiRoutes.get('/:character', async (c) => {
-  const character = c.req.param('character')
-  const data = await getKanji(character)
-
-  if (!data) return c.json({ error: 'Not found' }, 404)
-  return c.json({ data })
-})

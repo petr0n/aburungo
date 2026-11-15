@@ -392,8 +392,8 @@ export type Lesson = {
   wordIds: string[];
   phraseIds: string[];
   /**
-   * Kanji characters introduced by this lesson. Informational only for now —
-   * not yet scheduled through SRS (see docs/plans/01-overarching-plan.md §5).
+   * Kanji characters introduced by this lesson; they join the review queue
+   * like its words and phrases.
    */
   kanji: string[];
   /** Short training-sourced explanation of the lesson's grammar pattern. */
@@ -436,8 +436,8 @@ export type ConversationScope = {
 
 /**
  * A learner's position on a Lesson ladder, persisted per path (e.g. "n5").
- * IndexedDB-only for now — guests and signed-in users behave the same until
- * server sync for signed-in users is built (tracked in docs/todo.md).
+ * Cached in IndexedDB; signed-in users also sync it to the server
+ * (src/db/pathProgressStore.ts).
  */
 export type PathProgress = {
   pathId: string;

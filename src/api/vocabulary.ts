@@ -8,7 +8,6 @@ type ListParams = {
 };
 
 type VocabularyListResponse = { data: Card[] };
-type VocabularyItemResponse = { data: Card };
 
 export async function fetchVocabulary(params: ListParams = {}): Promise<Card[]> {
   const query = new URLSearchParams();
@@ -18,10 +17,5 @@ export async function fetchVocabulary(params: ListParams = {}): Promise<Card[]> 
 
   const qs = query.size > 0 ? `?${query}` : "";
   const res = await apiFetch<VocabularyListResponse>(`/api/vocabulary${qs}`);
-  return res.data;
-}
-
-export async function fetchCard(id: string): Promise<Card> {
-  const res = await apiFetch<VocabularyItemResponse>(`/api/vocabulary/${encodeURIComponent(id)}`);
   return res.data;
 }

@@ -13,7 +13,6 @@ export type KanjiEntry = {
 };
 
 type ListResponse = { data: KanjiEntry[] };
-type ItemResponse = { data: KanjiEntry };
 
 export type KanjiListParams = {
   jlpt?: number;
@@ -28,11 +27,6 @@ export async function fetchKanjiList(params: KanjiListParams = {}): Promise<Kanj
   if (params.offset !== undefined) q.set("offset", String(params.offset));
   const qs = q.size > 0 ? `?${q}` : "";
   const res = await apiFetch<ListResponse>(`/api/kanji${qs}`);
-  return res.data;
-}
-
-export async function fetchKanji(character: string): Promise<KanjiEntry> {
-  const res = await apiFetch<ItemResponse>(`/api/kanji/${encodeURIComponent(character)}`);
   return res.data;
 }
 
