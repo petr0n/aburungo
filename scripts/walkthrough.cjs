@@ -13,6 +13,7 @@ const BASE = process.env.BASE || "http://localhost:5173";
 const WAIT_SHORT = Number(process.env.WALKTHROUGH_WAIT ?? 150);
 const SETTLE = Number(process.env.WALKTHROUGH_SETTLE ?? 50);
 const CLICK_TIMEOUT = 10000;
+const NETWORK_ERROR = /status of 503\b|net::ERR_(CONNECTION_\w+|NAME_NOT_RESOLVED|INTERNET_DISCONNECTED|NETWORK_CHANGED|TIMED_OUT)/;
 const CLICK_TIMEOUT_RETRY = 20000;
 // A stop so a genuine stall cannot loop forever -- not a statement about how
 // long the ladder is. It was 60 with a comment reading "44 units", and Chapter 6
@@ -42,6 +43,7 @@ const results = {
   lessonsWalked: 0,
   grammarClozeScreenshots: [],
   consoleErrors: [],
+  networkErrors: [],
   pageErrors: [],
   log: [],
 };
@@ -576,9 +578,10 @@ async function handleTerminalCheckpointIfPresent(page, sessionIndex) {
  * drives. A screen that throws on load passed CI unseen, and an unknown URL
  * rendered a blank page until 2026-10-11 -- hence the deliberate miss here.
  *
- * Connection-refused is tolerated: /kanji fetches from the API even for a
- * guest, and the CI runner has no API server. An HTTP error status, a page
- * error or an empty app root still fails.
+ * Network errors (NETWORK_ERROR) are counted, not failed on: /kanji fetches
+ * from the API even for a guest, the CI runner has no API server, and a
+ * dropped connection is the network, not the app. Any other console error, a
+ * page error or an empty app root still fails.
  */
 const SMOKE_ROUTES = ["/", "/learn", "/words", "/practice", "/kana", "/kana/practice",
   "/flashcard", "/kanji", "/how-to", "/profile", "/admin", "/no-such-page"];
@@ -590,7 +593,9 @@ async function verifyRoutes(browser) {
     const page = await ctx.newPage();
     const errors = [];
     page.on("console", (m) => {
-      if (m.type() === "error" && !m.text().includes("net::ERR_CONNECTION_REFUSED")) errors.push(m.text());
+      if (m.type() !== "error") return;
+      if (NETWORK_ERROR.test(m.text())) results.networkErrors.push({ text: `${route}: ${m.text()}`, sessionsCompleted: 0 });
+      else errors.push(m.text());
     });
     page.on("pageerror", (e) => errors.push(String(e)));
     await page.goto(`${BASE}${route}`, { waitUntil: "networkidle" });
@@ -617,7 +622,15 @@ async function main() {
   currentPage = page;
 
   page.on("console", (msg) => {
-    if (msg.type() === "error") {
+    // The connection to the API or Supabase dropping, or the server answering 503
+    // because Supabase could not be reached, is the network, not the app. Bursts
+    // of these failed three nights in one week on walks that finished every
+    // lesson. Counted and reported, but not failed on: an outage that actually
+    // breaks the app still fails, because the walk then cannot finish the ladder.
+    if (msg.type() === "error" && NETWORK_ERROR.test(msg.text())) {
+      results.networkErrors.push({ text: msg.text(), sessionsCompleted: results.sessionsCompleted });
+      log(`NETWORK ERROR (not failing on it): ${msg.text()}`);
+    } else if (msg.type() === "error") {
       results.consoleErrors.push({ text: msg.text(), sessionsCompleted: results.sessionsCompleted });
       log(`CONSOLE ERROR: ${msg.text()}`);
     }
@@ -826,7 +839,8 @@ async function main() {
     `=== SUMMARY: walkedAs=${signedIn ? "signed-in (reaches Book Four)" : "GUEST (Book One only)"}, ` +
       `sessionsCompleted=${results.sessionsCompleted}, lessonsWalked=${results.lessonsWalked}, ladderEndReached=${ladderEndReached}, ` +
       `allCaughtUpReached=${allCaughtUpReached}, grammarClozeCardsSeen=${grammarClozeCount}, ` +
-      `consoleErrors=${results.consoleErrors.length}, pageErrors=${results.pageErrors.length} ===`,
+      `consoleErrors=${results.consoleErrors.length}, pageErrors=${results.pageErrors.length}, ` +
+      `networkErrors=${results.networkErrors.length} ===`,
   );
   results.walkedAs = signedIn ? "signed-in" : "guest";
   results.ladderEndReached = ladderEndReached;

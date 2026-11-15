@@ -10,6 +10,7 @@
  */
 import { describe, it, expect, vi, beforeEach } from 'vitest'
 import { Hono } from 'hono'
+import { AuthRetryableFetchError } from '@supabase/supabase-js'
 
 type Row = Record<string, unknown>
 const tables = new Map<string, Row[]>()
@@ -72,7 +73,9 @@ vi.mock('../lib/supabase.js', () => ({
     },
     auth: {
       getUser: async (token: string) =>
-        TOKENS[token]
+        token === 'token-outage'
+          ? { data: { user: null }, error: new AuthRetryableFetchError('fetch failed', 0) }
+          : TOKENS[token]
           ? { data: { user: { id: TOKENS[token], email: `${TOKENS[token]}@example.com` } }, error: null }
           : { data: { user: null }, error: { message: 'invalid token' } },
     },
@@ -115,6 +118,10 @@ describe('auth', () => {
 
   it('refuses a token Supabase does not recognise', async () => {
     expect((await call('GET', '/path?pathId=n5', undefined, 'forged')).status).toBe(401)
+  })
+
+  it('answers 503, not 401, when Supabase auth cannot be reached', async () => {
+    expect((await call('GET', '/path?pathId=n5', undefined, 'token-outage')).status).toBe(503)
   })
 })
 
