@@ -9,7 +9,7 @@
  * is bound when the operation starts, so a write that lands after a sign-out
  * or account switch still goes to its own owner's cache and server record.
  */
-import type { EpochMs, Owner, ReviewRating, ReviewState } from "@/types";
+import type { Owner, ReviewRating, ReviewState } from "@/types";
 import { GUEST_OWNER } from "@/types";
 import { dbFor } from "./dexie";
 import { fetchContentProgress, saveContentProgress } from "@/api/progress";
@@ -23,17 +23,6 @@ export function getAll(owner: Owner): Promise<ReviewState[]> {
 /** Fetch one phrase's state, or undefined if it's never been reviewed. */
 export function getOne(owner: Owner, phraseId: string): Promise<ReviewState | undefined> {
   return dbFor(owner).reviewStates.get(phraseId);
-}
-
-/**
- * Phrases whose dueAt is at or before `now`.
- *
- * Returns them in dueAt-ascending order so the oldest-overdue phrase is
- * reviewed first. Phrases never reviewed have no row here and are surfaced
- * separately (see session store / pickReviewQueue).
- */
-export function getDue(owner: Owner, now: EpochMs): Promise<ReviewState[]> {
-  return dbFor(owner).reviewStates.where("dueAt").belowOrEqual(now).sortBy("dueAt");
 }
 
 /** Insert or replace a phrase's review state. Keyed by phraseId. */

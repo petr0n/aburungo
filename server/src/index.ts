@@ -4,12 +4,10 @@ import { Hono } from 'hono'
 import { cors } from 'hono/cors'
 import { logger as honoLogger } from 'hono/logger'
 import { logger } from './lib/logger.js'
-import { audioRoutes } from './routes/audio.js'
 import { conversationRoutes } from './routes/conversation.js'
 import { feedbackRoutes } from './routes/feedback.js'
 import { kanjiRoutes } from './routes/kanji.js'
 import { progressRoutes } from './routes/progress.js'
-import { sttRoutes } from './routes/stt.js'
 import { vocabularyRoutes } from './routes/vocabulary.js'
 import { adminUserRoutes } from './routes/admin/users.js'
 import { adminFeedbackRoutes } from './routes/admin/feedback.js'
@@ -33,8 +31,6 @@ app.use(
 app.route('/api/vocabulary', vocabularyRoutes)
 app.route('/api/kanji', kanjiRoutes)
 app.route('/api/progress', progressRoutes)
-app.route('/api/audio', audioRoutes)
-app.route('/api/stt', sttRoutes)
 app.route('/api/conversation', conversationRoutes)
 app.route('/api/feedback', feedbackRoutes)
 app.route('/api/admin/users', adminUserRoutes)

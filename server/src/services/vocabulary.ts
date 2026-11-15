@@ -54,14 +54,3 @@ export async function listCards(params: ListParams): Promise<CardResult[]> {
   if (error) throw new Error(error.message)
   return (data ?? []).map((row) => toResult(row as CardRow & { decks: { slug: string } }))
 }
-
-export async function getCard(id: string): Promise<CardResult | null> {
-  const { data, error } = await supabase
-    .from('cards')
-    .select('*, decks(slug)')
-    .eq('id', id)
-    .single()
-
-  if (error) return null
-  return toResult(data as CardRow & { decks: { slug: string } })
-}

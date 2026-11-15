@@ -103,17 +103,6 @@ export async function listKanji(params: ListParams): Promise<KanjiResult[]> {
   return (data ?? []).map((row) => toResult(row as KanjiRow))
 }
 
-export async function getKanji(character: string): Promise<KanjiResult | null> {
-  const { data, error } = await supabase
-    .from('kanji')
-    .select('*')
-    .eq('character', character)
-    .single()
-
-  if (error) return null
-  return toResult(data as KanjiRow)
-}
-
 // --- FSRS ---
 
 export type DueKanji = {

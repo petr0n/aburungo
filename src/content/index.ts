@@ -132,8 +132,3 @@ for (const p of allPhrases) {
 export function findPhrase(id: string): Phrase | undefined {
   return allPhrases.find((p) => p.id === id);
 }
-
-/** Set of unique scenarios present in the content — for filtering UI later. */
-export function listScenarios(): string[] {
-  return Array.from(new Set(allPhrases.map((p) => p.scenario)));
-}

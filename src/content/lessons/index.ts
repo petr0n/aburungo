@@ -480,7 +480,3 @@ export const b4Lessons: Lesson[] = [
   ...parseLessons(b4ExceptionRaw, "lessons/b4-07-exception.yaml", knownWordIds, knownPhraseIds, knownPatternIds, b4ChapterIds),
   ...parseLessons(b4ConjunctionRaw, "lessons/b4-08-conjunction.yaml", knownWordIds, knownPhraseIds, knownPatternIds, b4ChapterIds),
 ].sort((a, b) => a.order - b.order);
-
-export function findLesson(id: string): Lesson | undefined {
-  return [...n5Lessons, ...b2Lessons, ...b3Lessons, ...b4Lessons].find((u) => u.id === id);
-}
