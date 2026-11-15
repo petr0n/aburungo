@@ -121,9 +121,7 @@ export function ReviewStep({
 }) {
   const [index, setIndex] = useState(0);
   const [phase, setPhase] = useState<FlashCardPhase>("entering");
-  const [staged, setStaged] = useState<Phrase | Word | null>(null);
-
-  const current = staged ?? items[index] ?? null;
+  const current = items[index] ?? null;
 
   /**
    * Persist and advance on the click itself — never from the exit animation.
@@ -137,20 +135,15 @@ export function ReviewStep({
    * the animation by hand made the same flow work, withholding it froze.
    *
    * The animation would also be disabled for anyone with prefers-reduced-motion,
-   * so correctness must not depend on it under any circumstances. Exit phase is
-   * still set, purely for the visual when the animation does run.
+   * so correctness must not depend on it under any circumstances.
+   *
+   * Every card type reports the same binary: the flip card's rating, the
+   * grammar cloze, the typed recall gate, and the kanji self-judgment
+   * (recognition only, DR-024 — nothing here asks the learner to produce one).
    */
-  function handleRate(rating: ReviewRating) {
+  function handleNext(correct: boolean) {
     const item = items[index];
-    if (item !== undefined) {
-      setStaged(!isGrammarPattern(item) && !isKanji(item) ? item : null);
-      onAnswered(item.id, rating === "got-it");
-    }
-    advance();
-  }
-
-  function advance() {
-    setStaged(null);
+    if (item !== undefined) onAnswered(item.id, correct);
     const nextIndex = index + 1;
     if (nextIndex >= items.length) {
       onDone();
@@ -158,30 +151,6 @@ export function ReviewStep({
     }
     setIndex(nextIndex);
     setPhase("entering");
-  }
-
-  function handleGrammarNext(correct: boolean) {
-    const item = items[index];
-    if (item !== undefined) onAnswered(item.id, correct);
-    advance();
-  }
-
-  /**
-   * Recognition only (DR-024, spec decision 4): the learner reads the
-   * character and judges their own recall. There is no path here that asks
-   * them to produce one.
-   */
-  function handleKanjiNext(correct: boolean) {
-    const item = items[index];
-    if (item !== undefined) onAnswered(item.id, correct);
-    advance();
-  }
-
-  /** The recall gate: a checked typed answer maps onto the same binary rating. */
-  function handleRecallNext(correct: boolean) {
-    const item = items[index];
-    if (item !== undefined) onAnswered(item.id, correct);
-    advance();
   }
 
   if (current === null) return null;
@@ -198,7 +167,7 @@ export function ReviewStep({
           kanji={current}
           phase={phase}
           onReveal={() => setPhase("revealed")}
-          onRate={(correct) => handleKanjiNext(correct)}
+          onRate={handleNext}
           onEntered={() => setPhase("idle")}
           onExited={() => {}}
         />
@@ -220,7 +189,7 @@ export function ReviewStep({
           pattern={current}
           phrase={phrase}
           showRomaji={!shifted}
-          onNext={(correct) => void handleGrammarNext(correct)}
+          onNext={handleNext}
         />
       </div>
     );
@@ -237,7 +206,7 @@ export function ReviewStep({
           Review · {index + 1} / {items.length}
         </p>
         <ProgressBar value={(index + 1) / items.length} />
-        <FillBlankCard key={current.id} card={current} showRomaji={false} onNext={(correct) => void handleRecallNext(correct)} />
+        <FillBlankCard key={current.id} card={current} showRomaji={false} onNext={handleNext} />
       </div>
     );
   }
@@ -253,7 +222,7 @@ export function ReviewStep({
         card={current}
         phase={phase}
         onReveal={() => setPhase("revealed")}
-        onRate={handleRate}
+        onRate={(rating: ReviewRating) => handleNext(rating === "got-it")}
         onEntered={() => setPhase("idle")}
         onExited={() => setPhase("idle")}
       />

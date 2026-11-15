@@ -11,9 +11,8 @@
  * This module sits above all of them and is imported only by pages.
  *
  * The index builder and the predicate are exported and pure because the
- * behaviour is not provable against the shipped content: there is one book,
- * it teaches everything, and every tier therefore sees the same set. Tests
- * feed them fixtures instead.
+ * behaviour should not depend on which books happen to be shipped. Tests feed
+ * them fixtures instead.
  */
 import type { Book, Phrase, UserTier, Word } from "@/types";
 import { allPhrases } from "@/content/index";
