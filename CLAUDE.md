@@ -119,7 +119,7 @@ monetized. The Book Three graded readers are CC BY-NC: ask JF Kansai before any 
   - Explain why in the body when needed.
   - Use ASCII only in all commit messages; never use non-ASCII characters.
   - Do not include AI-generated footers or watermarks.
-- **Push freely**: The app is pre-alpha with no public users, so push, open PRs, and merge green-CI PRs without asking. Only pause for genuinely destructive or irreversible operations (`git reset --hard`, force-push over shared history, deleting data).
+- **Push freely**: The app is pre-alpha with no public users, so push and open PRs without asking. Only pause for genuinely destructive or irreversible operations (`git reset --hard`, force-push over shared history, deleting data).
 
 ## Commands
 
