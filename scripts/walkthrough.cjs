@@ -584,7 +584,7 @@ async function handleTerminalCheckpointIfPresent(page, sessionIndex) {
  * page error or an empty app root still fails.
  */
 const SMOKE_ROUTES = ["/", "/learn", "/words", "/practice", "/kana", "/kana/practice",
-  "/flashcard", "/kanji", "/how-to", "/profile", "/admin", "/no-such-page"];
+  "/flashcard", "/kanji", "/read", "/read/kc.taro", "/how-to", "/profile", "/admin", "/no-such-page"];
 
 async function verifyRoutes(browser) {
   const failures = [];
