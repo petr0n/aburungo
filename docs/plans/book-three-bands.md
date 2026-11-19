@@ -277,5 +277,6 @@ commands named here for current counts.*
 - **Remaining content work:** none.
 - **Content-completion evidence:** **content complete, 2026-10-04.** Every asset above is
   written, verified and in the map. Next-book authoring (Book Five, DR-041) is unblocked.
-- **Interface work still required (separate):** the reader, the library, sentence mining from
-  the glossaries, compose-then-compare, and gate-text checkpoints.
+- **Interface work still required (separate):** sentence mining from the glossaries,
+  compose-then-compare, and gate-text checkpoints. The library and reader are built
+  (`/read`, 2026-11-18).
