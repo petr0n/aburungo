@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router";
 import type { GlossaryEntry, GlossaryKind } from "@/types";
 import { PageShell } from "@/components/PageShell";
 import { Furigana } from "@/components/Furigana";
-import { useUserTier } from "@/store/auth";
+import { useAuth, useUserTier } from "@/store/auth";
+import { hydrateFromServer, keepForReview } from "@/db/reviewStore";
 import { reachable } from "@/content/access";
 import { books } from "@/content/books";
 import { findText, glossaryFor, passages, stories, type ReadingText } from "@/content/reading/library";
@@ -27,17 +28,64 @@ function Credit({ text }: { text: ReadingText }) {
   );
 }
 
-function GlossaryItem({ entry }: { entry: GlossaryEntry }) {
+/** Names are never reviewed, and a spelling variant points at a word already taught. */
+const KEEPABLE: ReadonlySet<GlossaryKind> = new Set(["new", "book-four"]);
+
+/** `keep` is null until the auth store knows whose review this is. */
+type Keeping = { kept: ReadonlySet<string>; keep: ((id: string) => void) | null };
+
+function GlossaryItem({ entry, keeping }: { entry: GlossaryEntry; keeping: Keeping }) {
   const note = KIND_NOTE[entry.kind];
+  const kept = keeping.kept.has(entry.id);
   return (
-    <li className="flex flex-col py-2">
-      <Furigana japanese={entry.japanese} reading={entry.reading} className="text-jp text-fg" />
-      <span className="text-body-sm text-fg-muted">
-        {entry.english}
-        {note !== null && <span className="text-fg-subtle"> · {note}</span>}
-      </span>
+    <li className="flex items-center gap-3 py-2">
+      <div className="flex min-w-0 flex-1 flex-col">
+        <Furigana japanese={entry.japanese} reading={entry.reading} className="text-jp text-fg" />
+        <span className="text-body-sm text-fg-muted">
+          {entry.english}
+          {note !== null && <span className="text-fg-subtle"> · {note}</span>}
+        </span>
+      </div>
+      {KEEPABLE.has(entry.kind) && (
+        <button
+          type="button"
+          onClick={() => keeping.keep?.(entry.id)}
+          disabled={kept || keeping.keep === null}
+          aria-label={kept ? `${entry.japanese} kept for review` : `Keep ${entry.japanese} for review`}
+          className="min-h-[44px] shrink-0 rounded-xl border border-border px-4 text-body-sm font-medium text-fg active:bg-surface-2 disabled:border-transparent disabled:text-fg-subtle"
+        >
+          {kept ? "Kept" : "Keep"}
+        </button>
+      )}
     </li>
   );
+}
+
+/** Which glossary words this owner has kept; read once, then updated as they keep more. */
+function useKeeping(): Keeping {
+  const owner = useAuth((s) => s.owner);
+  const [kept, setKept] = useState<ReadonlySet<string>>(new Set());
+  useEffect(() => {
+    if (owner === null) return;
+    let cancelled = false;
+    // From the server, not just this device: a word kept on the phone reads as kept here.
+    void hydrateFromServer(owner).then((states) => {
+      if (!cancelled) setKept(new Set(states.map((s) => s.phraseId)));
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [owner]);
+  return {
+    kept,
+    keep:
+      owner === null
+        ? null
+        : (id) => {
+            setKept((k) => new Set([...k, id]));
+            void keepForReview(owner, id);
+          },
+  };
 }
 
 function TextRow({ text }: { text: ReadingText }) {
@@ -63,7 +111,8 @@ function Library() {
         <h1 className="text-display text-fg">Read</h1>
         <p className="max-w-prose text-body text-fg-muted">
           Real Japanese stories and news passages. Tap a sentence to see the words it uses that the
-          lessons have not taught yet.
+          lessons have not taught yet, and keep the ones you want to learn: they join your daily review
+          in the sentence you found them in.
         </p>
       </header>
       <section className="flex flex-col gap-2">
@@ -81,6 +130,7 @@ function Library() {
 
 function Reader({ text }: { text: ReadingText }) {
   const [open, setOpen] = useState<number | null>(null);
+  const keeping = useKeeping();
   return (
     <div className="flex flex-col gap-6 py-8">
       <Link to="/read" className="flex min-h-[44px] items-center text-body-sm text-fg-subtle">← Library</Link>
@@ -109,7 +159,7 @@ function Reader({ text }: { text: ReadingText }) {
                   {words.length === 0 ? (
                     <p className="py-2 text-body-sm text-fg-subtle">No glossary words here.</p>
                   ) : (
-                    <ul className="divide-y divide-border">{words.map((e) => <GlossaryItem key={e.id} entry={e} />)}</ul>
+                    <ul className="divide-y divide-border">{words.map((e) => <GlossaryItem key={e.id} entry={e} keeping={keeping} />)}</ul>
                   )}
                 </div>
               )}
@@ -119,7 +169,7 @@ function Reader({ text }: { text: ReadingText }) {
       </ol>
       <section className="flex flex-col gap-2 border-t border-border pt-6">
         <h2 className="text-heading-sm font-semibold text-fg">Glossary</h2>
-        <ul className="divide-y divide-border">{text.glossary.map((e) => <GlossaryItem key={e.id} entry={e} />)}</ul>
+        <ul className="divide-y divide-border">{text.glossary.map((e) => <GlossaryItem key={e.id} entry={e} keeping={keeping} />)}</ul>
       </section>
     </div>
   );

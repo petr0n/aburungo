@@ -218,7 +218,7 @@ export type GrammarPattern = {
 };
 
 /** Type guard — distinguishes GrammarPattern from Phrase/Word in a mixed review queue. */
-export function isGrammarPattern(item: Phrase | Word | GrammarPattern | Kanji): item is GrammarPattern {
+export function isGrammarPattern(item: ReviewItem): item is GrammarPattern {
   return "blank" in item;
 }
 
@@ -252,7 +252,22 @@ export function kanjiId(character: string): string {
   return `kanji.${character}`;
 }
 
-export function isKanji(item: Phrase | Word | GrammarPattern | Kanji): item is Kanji {
+/**
+ * Anything the daily review can surface. A GlossaryEntry is there only once the
+ * learner keeps it from a reading (mining, 04-stage-reading.md section 6).
+ */
+export type ReviewItem = Phrase | Word | GrammarPattern | Kanji | GlossaryEntry;
+
+/** A glossary id is "gloss.<story>.<seq>"; no other content id starts that way. */
+export function isGlossaryId(id: string): boolean {
+  return id.startsWith("gloss.");
+}
+
+export function isGlossaryEntry(item: ReviewItem): item is GlossaryEntry {
+  return "story" in item;
+}
+
+export function isKanji(item: ReviewItem): item is Kanji {
   return "character" in item;
 }
 

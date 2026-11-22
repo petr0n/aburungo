@@ -297,3 +297,27 @@ describe("kanji in the daily session", () => {
     expect(s.reviewItems).toEqual([]);
   });
 });
+
+describe("buildDailySession — glossary words kept from a reading", () => {
+  const kept = {
+    id: "gloss.taro.1",
+    story: "kc.taro",
+    kind: "new" as const,
+    japanese: "x",
+    reading: "x",
+    english: "x",
+    sentence: "x",
+  };
+  const due = (id: string, dueAt = NOW - DAY_MS): ReviewState => ({ phraseId: id, box: 1, dueAt });
+
+  it("reviews a kept word once due, though no lesson teaches it", () => {
+    const session = buildDailySession(book, emptyProgress, allWords, allPhrases, allPatterns, [], [due(kept.id)], NOW, [], [kept]);
+    expect(session.reviewItems).toEqual([kept]);
+  });
+
+  it("waits until it is due, and drops a kept id the glossary no longer has", () => {
+    const states = [due(kept.id, NOW + DAY_MS), due("gloss.gone.1")];
+    const session = buildDailySession(book, emptyProgress, allWords, allPhrases, allPatterns, [], states, NOW, [], [kept]);
+    expect(session.reviewItems).toEqual([]);
+  });
+});
