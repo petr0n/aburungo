@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router";
-import type { GlossaryEntry, GlossaryKind } from "@/types";
+import type { GlossaryEntry, GlossaryKind, Owner } from "@/types";
 import { PageShell } from "@/components/PageShell";
 import { Furigana } from "@/components/Furigana";
 import { SourceCredit } from "@/components/SourceCredit";
@@ -27,10 +27,14 @@ const JMDICT_CREDIT = {
   licenceUrl: "https://www.edrdg.org/edrdg/licence.html",
 };
 
-/** Names are never reviewed, and a spelling variant points at a word already taught. */
-const KEEPABLE: ReadonlySet<GlossaryKind> = new Set(["new", "book-four"]);
+/**
+ * Only words no book teaches. A name is never reviewed, a spelling variant
+ * points at a word already taught, and a Book Four word gets its schedule from
+ * its lesson -- keeping it here would give it a second one.
+ */
+const KEEPABLE: ReadonlySet<GlossaryKind> = new Set(["new"]);
 
-/** `keep` is null until the auth store knows whose review this is. */
+/** `keep` is null until this owner's saved reviews have loaded. */
 type Keeping = { kept: ReadonlySet<string>; keep: ((id: string) => void) | null };
 
 function GlossaryItem({ entry, keeping }: { entry: GlossaryEntry; keeping: Keeping }) {
@@ -60,30 +64,32 @@ function GlossaryItem({ entry, keeping }: { entry: GlossaryEntry; keeping: Keepi
   );
 }
 
-/** Which glossary words this owner has kept; read once, then updated as they keep more. */
+/**
+ * Which glossary words this owner has kept, read from the server so a word kept
+ * on the phone reads as kept here. Keep waits for that read: keeping a word
+ * before it lands could restart a schedule another device already has.
+ */
 function useKeeping(): Keeping {
   const owner = useAuth((s) => s.owner);
-  const [kept, setKept] = useState<ReadonlySet<string>>(new Set());
+  // Tagged with its owner, so a switch of account shows nothing until the new one loads.
+  const [loaded, setLoaded] = useState<{ owner: Owner; kept: ReadonlySet<string> } | null>(null);
   useEffect(() => {
     if (owner === null) return;
     let cancelled = false;
-    // From the server, not just this device: a word kept on the phone reads as kept here.
     void hydrateFromServer(owner).then((states) => {
-      if (!cancelled) setKept(new Set(states.map((s) => s.phraseId)));
+      if (!cancelled) setLoaded({ owner, kept: new Set(states.map((s) => s.phraseId)) });
     });
     return () => {
       cancelled = true;
     };
   }, [owner]);
+  if (owner === null || loaded === null || loaded.owner !== owner) return { kept: new Set(), keep: null };
   return {
-    kept,
-    keep:
-      owner === null
-        ? null
-        : (id) => {
-            setKept((k) => new Set([...k, id]));
-            void keepForReview(owner, id);
-          },
+    kept: loaded.kept,
+    keep: (id) => {
+      setLoaded((l) => (l === null || l.owner !== owner ? l : { owner, kept: new Set([...l.kept, id]) }));
+      void keepForReview(owner, id);
+    },
   };
 }
 

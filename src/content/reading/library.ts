@@ -7,6 +7,7 @@
  */
 import type { GlossaryEntry } from "@/types";
 import { allGlossaryEntries } from "./index";
+import { creditFor, type Credit } from "./credits";
 import kc from "../../../data/reading/kc-yomyom.json";
 import gv from "../../../data/reading/gv-passages.json";
 
@@ -18,7 +19,7 @@ export type ReadingText = {
   sentences: string[];
   glossary: GlossaryEntry[];
   /** Licence credit, shown wherever the text is. GV requires author, translator and link. */
-  credit: { text: string; link: string; licence: string; licenceUrl: string };
+  credit: Credit;
 };
 
 const glossaryByText = new Map<string, GlossaryEntry[]>();
@@ -34,7 +35,7 @@ export const stories: ReadingText[] = [...kc.stories]
     level: s.level,
     sentences: s.sentences.map((x) => x.jpn),
     glossary: glossaryByText.get(s.id) ?? [],
-    credit: { text: kc.attribution.source, link: kc.attribution.sourceUrl, licence: kc.attribution.licence, licenceUrl: kc.attribution.licenceUrl },
+    credit: creditFor(s.id)!,
   }));
 
 export const passages: ReadingText[] = gv.stories.map((p) => ({
@@ -43,12 +44,7 @@ export const passages: ReadingText[] = gv.stories.map((p) => ({
   level: p.level,
   sentences: p.sentences.map((x) => x.jpn),
   glossary: glossaryByText.get(p.id) ?? [],
-  credit: {
-    text: `By ${p.author}, translated by ${p.translator}, Global Voices 日本語`,
-    link: p.link,
-    licence: gv.attribution.licence,
-    licenceUrl: gv.attribution.licenceUrl,
-  },
+  credit: creditFor(p.id)!,
 }));
 
 export function findText(id: string): ReadingText | undefined {

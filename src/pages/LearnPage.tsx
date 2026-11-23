@@ -54,6 +54,7 @@ import { KanjiIntroCard } from "@/components/KanjiIntroCard";
 import { KanjiDrillCard } from "@/components/KanjiDrillCard";
 import { MinedWordCard } from "@/components/MinedWordCard";
 import { allGlossaryEntries } from "@/content/reading";
+import { creditFor } from "@/content/reading/credits";
 import { LoadingPlaceholder, EmptyState, ProgressBar } from "aburungo-design-system";
 
 type Step =
@@ -164,7 +165,7 @@ export function ReviewStep({
           Review · {index + 1} / {items.length}
         </p>
         <ProgressBar value={(index + 1) / items.length} />
-        <MinedWordCard key={current.id} entry={current} onRate={handleNext} />
+        <MinedWordCard key={current.id} entry={current} credit={creditFor(current.story)} onRate={handleNext} />
       </div>
     );
   }

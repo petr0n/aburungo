@@ -1,9 +1,13 @@
 import { useState } from "react";
 import type { GlossaryEntry } from "@/types";
 import { Furigana } from "@/components/Furigana";
+import { SourceCredit } from "@/components/SourceCredit";
+import type { Credit } from "@/content/reading/credits";
 
 type Props = {
   entry: GlossaryEntry;
+  /** The sentence's licence credit, shown above it as in the reader. */
+  credit: Credit | undefined;
   onRate: (correct: boolean) => void;
 };
 
@@ -11,11 +15,14 @@ type Props = {
  * Review for a word kept from a reading: shown in the sentence it came from
  * (04-stage-reading.md section 4), self-judged like the flip card.
  */
-export function MinedWordCard({ entry, onRate }: Props) {
+export function MinedWordCard({ entry, credit, onRate }: Props) {
   const [revealed, setRevealed] = useState(false);
   return (
     <div className="flex w-full flex-col gap-5 rounded-2xl border border-border bg-bg p-6 shadow-card">
-      <p className="text-caption text-fg-subtle">From your reading</p>
+      <div className="flex flex-col">
+        <p className="text-caption text-fg-subtle">From your reading</p>
+        {credit !== undefined && <SourceCredit {...credit} />}
+      </div>
       <p lang="ja" className="text-jp leading-relaxed text-fg wrap-anywhere" style={{ fontFamily: "var(--font-jp)" }}>
         {entry.sentence}
       </p>
