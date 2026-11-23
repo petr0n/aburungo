@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { lazy, Suspense, useEffect } from "react";
 import { Routes, Route, Navigate } from "react-router";
 import { useAuth } from "@/store/auth";
 import { useProgress } from "@/store/progress";
@@ -24,6 +24,9 @@ import { AdminAnalyticsPage } from "@/pages/admin/AdminAnalyticsPage";
 import { AdminContentPage } from "@/pages/admin/AdminContentPage";
 import { AdminLogsPage } from "@/pages/admin/AdminLogsPage";
 
+// Lazy: the reader carries the story texts (~200 KB), which no other page needs.
+const ReadPage = lazy(() => import("@/pages/ReadPage").then((m) => ({ default: m.ReadPage })));
+
 export default function App() {
   const initialize = useAuth((s) => s.initialize);
   const owner = useAuth((s) => s.owner);
@@ -46,6 +49,8 @@ export default function App() {
       <Route path="/" element={<LandingPage />} />
       <Route path="/learn" element={<LearnPage />} />
       <Route path="/words" element={<WordsPage />} />
+      <Route path="/read" element={<Suspense><ReadPage /></Suspense>} />
+      <Route path="/read/:id" element={<Suspense><ReadPage /></Suspense>} />
       <Route path="/practice" element={<PracticePage />} />
       <Route path="/kana" element={<KanaPage />} />
       <Route path="/kana/practice" element={<KanaPracticePage />} />
