@@ -33,7 +33,7 @@ vi.mock("@/api/progress", () => ({
   saveContentProgress: (owner: string, e: unknown) => saveContentProgress(owner, e),
 }));
 
-const { hydrateFromServer, upsertSynced, recordRating } = await import("./reviewStore");
+const { hydrateFromServer, upsertSynced, recordRating, keepForReview } = await import("./reviewStore");
 
 const USER = "user-a";
 const store = cacheOf(USER);
@@ -204,5 +204,20 @@ describe("owner isolation", () => {
     expect(store.has("late")).toBe(true);
     expect(cacheOf("user-b").has("late")).toBe(false);
     expect(saveContentProgress).toHaveBeenCalledWith(USER, [expect.objectContaining({ contentId: "late" })]);
+  });
+});
+
+describe("keepForReview", () => {
+  it("makes a kept word due now, and keeping it again leaves its schedule alone", async () => {
+    await keepForReview(USER, "gloss.taro.1");
+    const first = store.get("gloss.taro.1");
+    expect(first?.box).toBe(1);
+    expect(first?.dueAt).toBeLessThanOrEqual(Date.now());
+    expect(saveContentProgress).toHaveBeenCalledTimes(1);
+
+    store.set("gloss.taro.1", { phraseId: "gloss.taro.1", box: 4, dueAt: 123, lastSeenAt: 100 });
+    await keepForReview(USER, "gloss.taro.1");
+    expect(store.get("gloss.taro.1")).toEqual({ phraseId: "gloss.taro.1", box: 4, dueAt: 123, lastSeenAt: 100 });
+    expect(saveContentProgress).toHaveBeenCalledTimes(1);
   });
 });

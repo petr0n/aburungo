@@ -137,3 +137,14 @@ export async function recordRating(owner: Owner, itemId: string, rating: ReviewR
 export async function recordReview(owner: Owner, itemId: string, correct: boolean): Promise<void> {
   return recordRating(owner, itemId, correct ? "got-it" : "didnt");
 }
+
+/**
+ * Keep a glossary word from a reading for review (mining). It is due at once,
+ * so the next session reviews it in its sentence; after that it schedules like
+ * any other item. Keeping a word already kept leaves its schedule alone.
+ */
+export async function keepForReview(owner: Owner, itemId: string): Promise<void> {
+  if ((await getOne(owner, itemId)) !== undefined) return;
+  const now = Date.now();
+  await upsertSynced(owner, { phraseId: itemId, box: 1, dueAt: now, lastSeenAt: now });
+}

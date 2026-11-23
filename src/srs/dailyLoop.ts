@@ -10,8 +10,8 @@
  * words and phrases, so reviewItems interleaves all three by due date (see
  * docs/superpowers/specs/2026-07-21-grammar-in-context-design.md).
  */
-import type { Book, EpochMs, GrammarPattern, Kanji, PathProgress, Phrase, ReviewState, Lesson, Word } from "@/types";
-import { kanjiId } from "@/types";
+import type { Book, EpochMs, GlossaryEntry, GrammarPattern, Kanji, PathProgress, Phrase, ReviewItem, ReviewState, Lesson, Word } from "@/types";
+import { isGlossaryId, kanjiId } from "@/types";
 import { isDue } from "./leitner";
 
 /** A book the learner has already worked through, with its own progress row. */
@@ -23,8 +23,8 @@ export type BookProgress = {
 export type DailySession = {
   /** The next not-yet-introduced lesson, or null once every lesson has been seen. */
   lesson: Lesson | null;
-  /** Due items (words, phrases, grammar patterns, and kanji) from seen lessons, oldest-due first. */
-  reviewItems: Array<Phrase | Word | GrammarPattern | Kanji>;
+  /** Due items from seen lessons, plus glossary words kept from readings, oldest-due first. */
+  reviewItems: ReviewItem[];
   /** This session's new-lesson words, in lesson order. Empty once `lesson` is null. */
   newWords: Word[];
   /** This session's new-lesson phrases, in lesson order. Empty once `lesson` is null. */
@@ -54,6 +54,8 @@ export function buildDailySession(
   reviewStates: readonly ReviewState[],
   now: EpochMs,
   prior: readonly BookProgress[] = [],
+  /** Every reading glossary entry; a kept one has a review state, which is all "seen" means for it. */
+  glossary: readonly GlossaryEntry[] = [],
 ): DailySession {
   const lessons: readonly Lesson[] = book.lessons;
   const seenLessonIds = new Set(progress.seenLessonIds);
@@ -80,6 +82,7 @@ export function buildDailySession(
   const phraseById = new Map(allPhrases.map((p) => [p.id, p]));
   const patternById = new Map(allPatterns.map((p) => [p.id, p]));
   const kanjiById = new Map(allKanji.map((k) => [k.id, k]));
+  const glossaryById = new Map(glossary.map((g) => [g.id, g]));
 
   // reviewStates has one row per phraseId when it comes from IndexedDB (Dexie's
   // primary key enforces it), but this is a pure function — a future caller
@@ -87,15 +90,15 @@ export function buildDailySession(
   // does) could pass duplicates. Dedupe defensively, keeping the earliest due.
   const seenReviewIds = new Set<string>();
   const reviewItems = reviewStates
-    .filter((s) => isDue(s, now) && seenItemIds.has(s.phraseId))
+    .filter((s) => isDue(s, now) && (seenItemIds.has(s.phraseId) || isGlossaryId(s.phraseId)))
     .sort((a, b) => a.dueAt - b.dueAt)
     .filter((s) => {
       if (seenReviewIds.has(s.phraseId)) return false;
       seenReviewIds.add(s.phraseId);
       return true;
     })
-    .map((s) => wordById.get(s.phraseId) ?? phraseById.get(s.phraseId) ?? patternById.get(s.phraseId) ?? kanjiById.get(s.phraseId))
-    .filter((item): item is Phrase | Word | GrammarPattern | Kanji => item !== undefined);
+    .map((s) => wordById.get(s.phraseId) ?? phraseById.get(s.phraseId) ?? patternById.get(s.phraseId) ?? kanjiById.get(s.phraseId) ?? glossaryById.get(s.phraseId))
+    .filter((item): item is ReviewItem => item !== undefined);
 
   const newWords = nextUnit === null ? [] : nextUnit.wordIds.map((id) => wordById.get(id)).filter((w): w is Word => w !== undefined);
   const newPhrases =

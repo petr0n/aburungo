@@ -34,3 +34,19 @@ describe("reading library", () => {
     expect(findText("no-such-text")).toBeUndefined();
   });
 });
+
+describe("reading credits", () => {
+  // A kept word is reviewed in its sentence on /learn, which credits it from here.
+  it("credits every glossary word's source text", async () => {
+    const { allGlossaryEntries } = await import("./index");
+    const { creditFor } = await import("./credits");
+    const uncredited = [...new Set(allGlossaryEntries.map((e) => e.story))].filter((s) => creditFor(s) === undefined);
+    expect(uncredited).toEqual([]);
+  });
+
+  it("copies the KC credit from the story file", async () => {
+    const { KC_CREDIT } = await import("./credits");
+    const { attribution: a } = await import("../../../data/reading/kc-yomyom.json");
+    expect(KC_CREDIT).toEqual({ text: a.source, link: a.sourceUrl, licence: a.licence, licenceUrl: a.licenceUrl });
+  });
+});

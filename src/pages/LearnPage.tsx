@@ -19,8 +19,8 @@
  */
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Link } from "react-router";
-import type { Book, GrammarPattern, Kanji, Owner, Phrase, ReviewRating, Lesson, UserTier, Word } from "@/types";
-import { GUEST_OWNER, isGrammarPattern, isKanji, isWord } from "@/types";
+import type { Book, GrammarPattern, Kanji, Owner, Phrase, ReviewItem, ReviewRating, Lesson, UserTier, Word } from "@/types";
+import { GUEST_OWNER, isGlossaryEntry, isGrammarPattern, isKanji, isWord } from "@/types";
 import { useAuth, useUserTier } from "@/store/auth";
 import { bookOne, books, currentBook, priorBooks } from "@/content/books";
 import { chapterLabel, placeInChapter } from "@/content/chapters";
@@ -52,6 +52,9 @@ import { CanDoCheckpoint } from "@/components/CanDoCheckpoint";
 import { Furigana } from "@/components/Furigana";
 import { KanjiIntroCard } from "@/components/KanjiIntroCard";
 import { KanjiDrillCard } from "@/components/KanjiDrillCard";
+import { MinedWordCard } from "@/components/MinedWordCard";
+import { allGlossaryEntries } from "@/content/reading";
+import { creditFor } from "@/content/reading/credits";
 import { LoadingPlaceholder, EmptyState, ProgressBar } from "aburungo-design-system";
 
 type Step =
@@ -109,7 +112,7 @@ export function ReviewStep({
   onAnswered,
   onDone,
 }: {
-  items: Array<Phrase | Word | GrammarPattern | Kanji>;
+  items: ReviewItem[];
   shifted?: boolean;
   /**
    * Every answered card. The step no longer writes a rating itself: DR-040
@@ -154,6 +157,18 @@ export function ReviewStep({
   }
 
   if (current === null) return null;
+
+  if (isGlossaryEntry(current)) {
+    return (
+      <div className="flex w-full flex-col gap-4 py-4">
+        <p className="text-body-sm text-fg-subtle">
+          Review · {index + 1} / {items.length}
+        </p>
+        <ProgressBar value={(index + 1) / items.length} />
+        <MinedWordCard key={current.id} entry={current} credit={creditFor(current.story)} onRate={handleNext} />
+      </div>
+    );
+  }
 
   if (isKanji(current)) {
     return (
@@ -782,7 +797,7 @@ function LearnSession({ book: pinnedBook, owner }: { book?: Book; owner: Owner }
       // Earlier books' progress rides along so their due items keep surfacing
       // here (03 §6) — review is cumulative, new material is not.
       const prior = priorBooks(active).map((b) => ({ book: b, progress: progressFor(b) }));
-      const built = buildDailySession(active, progress, words, phrases, allGrammarPatterns, allKanji, reviewStates, Date.now(), prior);
+      const built = buildDailySession(active, progress, words, phrases, allGrammarPatterns, allKanji, reviewStates, Date.now(), prior, allGlossaryEntries);
       evidence.current = createSessionEvidence();
       setSession(built);
       if (built.reviewItems.length > 0) {
