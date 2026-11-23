@@ -56,11 +56,11 @@ export function findText(id: string): ReadingText | undefined {
 }
 
 /**
- * The glossary words a sentence uses: the entry was taken from this sentence,
- * or its headword appears in it. Conjugated verbs only match the sentence they
- * were taken from -- there is no morphological analyser -- so the reader also
- * lists the whole glossary after the text.
+ * The glossary words a sentence uses: only the entries taken from it. A
+ * substring match would find 日 ("day") inside 日本, and there is no
+ * morphological analyser to tell them apart, so a word that recurs is found in
+ * the full glossary the reader lists after the text.
  */
 export function glossaryFor(sentence: string, glossary: readonly GlossaryEntry[]): GlossaryEntry[] {
-  return glossary.filter((e) => e.sentence === sentence || sentence.includes(e.japanese));
+  return glossary.filter((e) => e.sentence === sentence);
 }
