@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router";
 import type { GlossaryEntry, GlossaryKind } from "@/types";
 import { PageShell } from "@/components/PageShell";
 import { Furigana } from "@/components/Furigana";
+import { SourceCredit } from "@/components/SourceCredit";
 import { useUserTier } from "@/store/auth";
 import { reachable } from "@/content/access";
 import { books } from "@/content/books";
@@ -17,15 +18,13 @@ const KIND_NOTE: Record<GlossaryKind, string | null> = {
 
 const BOOK_THREE_ORDER = books.find((b) => b.id === "book-3")?.order ?? 3;
 
-function Credit({ text }: { text: ReadingText }) {
-  return (
-    <p className="text-caption text-fg-subtle">
-      <a href={text.credit.link} className="underline">{text.credit.text}</a>
-      {" · "}
-      <a href={text.credit.licenceUrl} className="underline">{text.credit.licence}</a>
-    </p>
-  );
-}
+/** The glossary's readings and meanings come from JMdict, credited apart from the text. */
+const JMDICT_CREDIT = {
+  text: "Glossary: JMdict, Electronic Dictionary Research and Development Group",
+  link: "https://www.edrdg.org/jmdict/j_jmdict.html",
+  licence: "EDRDG licence",
+  licenceUrl: "https://www.edrdg.org/edrdg/licence.html",
+};
 
 function GlossaryItem({ entry }: { entry: GlossaryEntry }) {
   const note = KIND_NOTE[entry.kind];
@@ -86,7 +85,7 @@ function Reader({ text }: { text: ReadingText }) {
       <Link to="/read" className="flex min-h-[44px] items-center text-body-sm text-fg-subtle">← Library</Link>
       <header className="flex flex-col gap-2">
         <h1 lang="ja" className="text-heading text-fg" style={{ fontFamily: "var(--font-jp)" }}>{text.title}</h1>
-        <Credit text={text} />
+        <SourceCredit {...text.credit} />
       </header>
       <ol className="flex flex-col gap-1">
         {text.sentences.map((s, i) => {
@@ -120,6 +119,7 @@ function Reader({ text }: { text: ReadingText }) {
       <section className="flex flex-col gap-2 border-t border-border pt-6">
         <h2 className="text-heading-sm font-semibold text-fg">Glossary</h2>
         <ul className="divide-y divide-border">{text.glossary.map((e) => <GlossaryItem key={e.id} entry={e} />)}</ul>
+        <SourceCredit {...JMDICT_CREDIT} />
       </section>
     </div>
   );

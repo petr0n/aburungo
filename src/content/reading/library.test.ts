@@ -23,6 +23,12 @@ describe("reading library", () => {
     expect(unreachable).toEqual([]);
   });
 
+  it("does not find a word inside a longer one", () => {
+    const kabocha = findText("kc.kabocha")!;
+    const s = kabocha.sentences.find((x) => x.includes("日本"))!;
+    expect(glossaryFor(s, kabocha.glossary).map((e) => e.japanese)).not.toContain("日");
+  });
+
   it("finds texts by id and nothing else", () => {
     expect(findText("kc.taro")?.title).toBe("太郎くんの夏休み");
     expect(findText("no-such-text")).toBeUndefined();
